@@ -1,0 +1,57 @@
+/* VIEW cert (also styles the course flow used on Courses) */
+.v-cert .req { display: flex; flex-direction: column; gap: 8px; }
+.v-cert .req-icon { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; background: var(--accent-2-soft); color: var(--accent-2); }
+.v-cert .req-icon svg { width: 26px; height: 26px; }
+.v-cert .req h3 { font-size: 1.5rem; font-weight: 800; font-stretch: 92%; }
+.v-cert .roles .card b { font-family: var(--font-display); font-size: var(--fs-lg); }
+.steps-list { counter-reset: st; list-style: none; padding: 0; margin: var(--space-4) 0 0; display: flex; flex-direction: column; gap: 14px; }
+.steps-list > li { counter-increment: st; position: relative; padding-left: 46px; min-height: 32px; }
+.steps-list > li::before { content: counter(st); position: absolute; left: 0; top: -2px; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: var(--accent-ink); font-family: var(--font-display); font-weight: 800; }
+.steps-list > li > b { display: block; margin-bottom: 2px; }
+.steps-list > li .rich { color: var(--ink-2); font-size: var(--fs-sm); }
+ul.tips { margin: 10px 0 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 8px; }
+ul.tips li::marker { color: var(--accent-2); }
+.v-cert .facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(190px, 100%), 1fr)); gap: 12px; margin-top: var(--space-4); }
+.v-cert .fact { padding: 12px 14px; border-radius: var(--r-md); background: var(--panel-2); border: 1px solid var(--line); min-width: 0; }
+.v-cert .fact-k { font-size: var(--fs-xs); font-weight: 800; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.v-cert .fact-v { font-family: var(--font-display); font-weight: 800; font-size: 1.25rem; margin-top: 2px; }
+.v-cert .fact-n { font-size: var(--fs-xs); color: var(--muted); margin-top: 4px; }
+.v-cert .bp-card { border-top: 5px solid var(--ph-gp); }
+.v-cert .bp-card.ph-pre { border-top-color: var(--ph-pre); } .v-cert .bp-card.ph-awd { border-top-color: var(--ph-awd); } .v-cert .bp-card.ph-post { border-top-color: var(--ph-post); }
+.v-cert .bp-card h3 { font-size: var(--fs-lg); }
+.v-cert .bp-total { font-weight: 600; color: var(--muted); }
+.v-cert .bp-row .bar { height: 7px; margin-top: 3px; }
+.v-cert .src svg { width: 18px; height: 18px; color: var(--muted); margin-top: 3px; }
+.v-cert .list-item.src { padding: 12px 16px; }
+.v-cert .my-exam .input[type=number] { max-width: 140px; }
+
+/* course flow */
+.flow { display: flex; flex-direction: column; gap: 14px; }
+.flow-row { display: flex; }
+.flow-step { display: flex; align-items: center; gap: 10px; }
+.flow-n { display: none; }
+.flow-split { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); gap: 14px; }
+.flow-lane { border: 1px dashed var(--line-2); border-radius: var(--r-lg); padding: 12px; min-width: 0; }
+.flow-lane-label { font-size: var(--fs-xs); font-weight: 800; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 8px; }
+.flow-chain { display: flex; align-items: stretch; gap: 6px; flex-wrap: wrap; min-width: 0; }
+.flow-node { position: relative; display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border-radius: var(--r-md); background: var(--panel); border: 1px solid var(--line-2); text-decoration: none; color: var(--ink); min-width: 130px; flex: 1 1 130px; max-width: 220px; transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease); }
+a.flow-node:hover { border-color: var(--accent); transform: translateY(-1px); }
+.flow-node b { font-size: .9rem; }
+.flow-node span { font-size: .78rem; color: var(--ink-2); line-height: 1.3; }
+.flow-node em { font-size: .7rem; color: var(--muted); font-style: normal; }
+.flow-node > svg { position: absolute; top: 8px; right: 8px; width: 16px; height: 16px; color: var(--ok); }
+.flow-node.done { background: var(--ok-soft); border-color: color-mix(in srgb, var(--ok) 40%, var(--line)); }
+.flow-node.prereq { background: var(--panel-2); border-style: dashed; }
+.flow-node.opt { border-style: dashed; }
+.flow-node.exam { border: 2px solid var(--accent-2); background: var(--accent-2-soft); }
+.flow-node.exp { background: var(--bg-2); }
+.flow-node.cert { border: 2px solid var(--accent); background: var(--accent-soft); }
+.flow-node.cert > svg { position: static; width: 22px; height: 22px; color: var(--accent); }
+.flow-arrow { display: grid; place-items: center; color: var(--muted-2); flex: none; }
+.flow-arrow svg { width: 18px; height: 18px; }
+@media (max-width: 760px) {
+  .flow-split { grid-template-columns: minmax(0, 1fr); }
+  .flow-chain { flex-direction: column; }
+  .flow-node { max-width: none; }
+  .flow-arrow svg { transform: rotate(90deg); }
+}

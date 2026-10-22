@@ -1,0 +1,159 @@
+/* VIEW quiz — practice questions with explanations, missed-question review, and a timed exam simulator weighted like CON 3990V */
+(function () {
+  'use strict';
+  var CORB = window.CORB;
+  var S = null;           // the quiz in progress (kept while the reader moves around the app)
+  var timerId = null;
+
+  function pickWeighted(n) {
+    var phases = CORB.data.phases(), all = CORB.data.questions(), out = [], used = {};
+    var total = CORB.util.sum(phases.map(function (p) { return p.qs; })) || 150;
+    phases.forEach(function (p) {
+      var want = Math.round(n * p.qs / total), pool = CORB.util.shuffle(all.filter(function (q) { return q.phase === p.id; }));
+      pool.slice(0, want).forEach(function (q) { out.push(q); used[q.id] = 1; });
+    });
+    var rest = CORB.util.shuffle(all.filter(function (q) { return !used[q.id]; }));
+    while (out.length < n && rest.length) out.push(rest.pop());
+    return CORB.util.shuffle(out).slice(0, n);
+  }
+  function start(o) {
+    var all = CORB.data.questions(), pool;
+    if (o.mode === 'exam') pool = pickWeighted(o.n);
+    else if (o.mode === 'missed') pool = CORB.util.shuffle(CORB.scoring.missedIds().map(CORB.data.question).filter(Boolean)).slice(0, o.n || 25);
+    else pool = CORB.util.shuffle(all.filter(function (q) { return !o.phase || q.phase === o.phase; })).slice(0, o.n || 10);
+    if (!pool.length) { CORB.ui.toast(o.mode === 'missed' ? 'No missed questions right now. Nice.' : 'No questions match that choice.', 'warn'); return; }
+    S = { mode: o.mode, phase: o.phase || '', label: o.label, items: pool.map(function (q) { return { q: q, opts: CORB.util.shuffle(q.options), pick: -1, flag: false, done: false }; }), i: 0, started: Date.now(),
+      limit: o.mode === 'exam' ? Math.round(pool.length * 72) : 0, finished: false };
+    CORB.go('quiz', { run: '1' });
+  }
+  function finish() {
+    if (!S || S.finished) return;
+    clearInterval(timerId);
+    S.finished = true; S.ended = Date.now();
+    var byPhase = {}, right = 0;
+    S.items.forEach(function (it) {
+      var ok = it.pick >= 0 && !!it.opts[it.pick].correct; it.ok = ok; if (ok) right++;
+      var b = byPhase[it.q.phase] = byPhase[it.q.phase] || [0, 0]; b[1]++; if (ok) b[0]++;
+      if (S.mode === 'exam' || !it.done) CORB.scoring.recordAnswer(it.q.id, ok);
+    });
+    S.right = right;
+    CORB.scoring.recordQuiz({ mode: S.mode, label: S.label, total: S.items.length, correct: right, byPhase: byPhase, items: S.items.map(function (it) { return { id: it.q.id, ok: it.ok }; }) });
+    CORB.go('quiz', { result: '1' });
+  }
+  function fmtTime(sec) { sec = Math.max(0, Math.round(sec)); var hh = Math.floor(sec / 3600), mm = Math.floor(sec % 3600 / 60), ss = sec % 60; return (hh ? hh + ':' + String(mm).padStart(2, '0') : mm) + ':' + String(ss).padStart(2, '0'); }
+
+  // ---- setup ----
+  function setup(root, h, icon, p) {
+    var missed = CORB.scoring.missedIds().length, bank = CORB.data.questions().length;
+    root.appendChild(CORB.ui.pageHead({ title: 'Practice test', lede: 'Exam-style questions written from the official competency list and the RFO FAR. Each answer explains why, and shows where the rule is written.' }));
+    if (S && !S.finished) root.appendChild(h('div.callout.brass.mb-4', {}, icon('clock'), h('div', {}, h('b', {}, 'You have a quiz in progress'), h('span', {}, (S.label || 'Quiz') + ' · question ' + (S.i + 1) + ' of ' + S.items.length + '. '), h('a', { href: '#/quiz?run=1' }, 'Go back to it'))));
+    root.appendChild(h('div.card.raised.quiz-hero', {},
+      h('div', {}, h('h2', {}, 'Quick 10'), h('p.muted', {}, '10 mixed questions with the answer explained after each one. A good daily habit.')),
+      h('button.btn.primary.lg', { type: 'button', onclick: function () { start({ mode: 'practice', n: 10, label: 'Quick 10' }); } }, icon('play'), 'Start')));
+    var phaseSel = h('select.select#q-phase', {}, [h('option', { value: '' }, 'All four areas')].concat(CORB.data.phases().map(function (ph) { return h('option', { value: ph.id, selected: p.phase === ph.id }, ph.code + ' ' + ph.name); })));
+    var nSel = h('select.select#q-n', {}, [10, 25, 50].map(function (n) { return h('option', { value: String(n) }, n + ' questions'); }));
+    var exN = h('div.seg', { role: 'radiogroup', 'aria-label': 'Exam length' }), exChoice = 50;
+    function paintEx() { exN.innerHTML = ''; [[25, '25 · 30 min'], [50, '50 · 1 hr'], [100, '100 · 2 hrs'], [150, '150 · 3 hrs']].forEach(function (x) { exN.appendChild(h('button' + (exChoice === x[0] ? '.on' : ''), { type: 'button', onclick: function () { exChoice = x[0]; paintEx(); } }, x[1])); }); }
+    paintEx();
+    root.appendChild(h('div.grid.cols-3.mt-4.quiz-modes', {},
+      h('div.card', {}, h('div.mode-icon', {}, icon('target')), h('h3', {}, 'By exam area'), h('p.small.muted', {}, 'Practice one area at a time, with explanations.'),
+        h('div.stack.tight.mt-3', {}, phaseSel, nSel, h('button.btn', { type: 'button', onclick: function () { var ph = CORB.data.phase(phaseSel.value); start({ mode: 'practice', phase: phaseSel.value, n: +nSel.value, label: ph ? ph.name : 'Mixed practice' }); } }, icon('play'), 'Start practice'))),
+      h('div.card', {}, h('div.mode-icon', {}, icon('repeat')), h('h3', {}, 'Missed questions'), h('p.small.muted', {}, missed ? 'You have ' + CORB.util.plural(missed, 'question') + ' to try again. Get one right and it leaves this list.' : 'Questions you miss anywhere in the guide collect here.'),
+        h('button.btn.mt-3', { type: 'button', disabled: !missed, onclick: function () { start({ mode: 'missed', n: 25, label: 'Missed questions' }); } }, icon('play'), 'Retry missed')),
+      h('div.card.exam-mode', {}, h('div.mode-icon', {}, icon('timer')), h('h3', {}, 'Exam simulator'), h('p.small.muted', {}, 'Timed like the real exam (72 seconds a question), mixed in the same proportions, no answers until you finish.'),
+        h('div.mt-3', {}, exN), h('button.btn.brass.mt-3', { type: 'button', onclick: function () { start({ mode: 'exam', n: Math.min(exChoice, bank), label: 'Exam simulator · ' + Math.min(exChoice, bank) }); } }, icon('play'), 'Start the timer'))));
+    var hist = (CORB.get('progress.quiz', []) || []).slice(-8).reverse();
+    if (hist.length) root.appendChild(h('section', {}, h('div.section-head', {}, h('h2', {}, 'Recent results')),
+      h('div.card.flush', {}, h('div.list', {}, hist.map(function (r) {
+        var pc = CORB.util.pct(r.correct, r.total);
+        return h('div.list-item.hist', {}, h('span.num.hist-pc' + (pc >= 70 ? '.ok' : '.low'), {}, pc + '%'), h('div.grow', {}, h('b', {}, r.label || r.mode), h('div.tiny.muted', {}, r.correct + ' of ' + r.total + ' right · ' + CORB.util.fmtDateTime(r.ts))));
+      })))));
+    root.appendChild(h('p.muted.small.mt-5', {}, 'The bank has ' + bank + ' questions. They are practice questions written for this guide, not questions from the real exam, which WarU keeps secure. Pass mark on the real exam: 70%.'));
+  }
+
+  // ---- running ----
+  function run(root, h, icon) {
+    if (!S) { CORB.go('quiz'); return; }
+    if (S.finished) { CORB.go('quiz', { result: '1' }); return; }
+    var it = S.items[S.i], q = it.q, exam = S.mode === 'exam';
+    var top = h('div.q-top', {}, h('div.row.between', {}, h('b', {}, S.label), h('div.row.tight', {},
+      exam ? h('span.timer.num', { id: 'qtimer' }, '') : null,
+      h('button.btn.sm.ghost', { type: 'button', onclick: function () { CORB.ui.confirm('Stop this quiz? Questions you answered so far are scored.', { ok: 'Stop and score it' }).then(function (ok) { if (ok) finish(); }); } }, icon('stop'), 'Stop'))),
+      h('div.row.between.mt-2', {}, h('span.small.muted', {}, 'Question ' + (S.i + 1) + ' of ' + S.items.length), CORB.ui.phaseBadge(q.phase, true)),
+      CORB.ui.bar((S.i) / S.items.length * 100));
+    root.appendChild(top);
+    var fb = h('div.q-feedback', { hidden: true });
+    var card = h('div.card.raised.q-card', {}, h('div.q-stem-big', {}, q.stem));
+    var btns = it.opts.map(function (o, oi) {
+      var b = h('button.opt' + (it.pick === oi ? '.picked' : ''), { type: 'button', 'aria-pressed': it.pick === oi ? 'true' : 'false' }, h('span.opt-l', {}, 'ABCD'[oi]), h('span', {}, o.text));
+      b.addEventListener('click', function () {
+        if (!exam && it.done) return;
+        it.pick = oi;
+        if (exam) { btns.forEach(function (x, xi) { x.classList.toggle('picked', xi === oi); x.setAttribute('aria-pressed', xi === oi ? 'true' : 'false'); }); return; }
+        it.done = true; var ok = !!o.correct; CORB.scoring.recordAnswer(q.id, ok);
+        btns.forEach(function (x, xi) { x.disabled = true; if (it.opts[xi].correct) x.classList.add('right'); });
+        if (!ok) b.classList.add('wrong');
+        showFeedback(ok, o);
+      });
+      return b;
+    });
+    function showFeedback(ok, o) {
+      fb.hidden = false; fb.innerHTML = '';
+      var right = it.opts.filter(function (x) { return x.correct; })[0];
+      fb.appendChild(CORB.ui.callout(ok ? 'ok' : 'warn', ok ? 'check' : 'info', ok ? 'Right.' : 'Not quite. The answer is: ' + right.text, CORB.ui.rich((ok ? '' : (o.why ? 'Why not your pick: ' + o.why + '\n\n' : '')) + (right.why || '') + (q.cite ? '\n\nWhere it is written: ' + q.cite : ''))));
+      if (q.lesson && CORB.data.lesson(q.lesson)) fb.appendChild(h('a.btn.sm.ghost.mt-2', { href: '#/lesson?id=' + q.lesson }, icon('book'), 'Lesson: ' + CORB.data.lesson(q.lesson).title));
+      nextBtn.disabled = false; nextBtn.focus();
+    }
+    card.appendChild(h('div.opts', {}, btns));
+    card.appendChild(h('div.row.tight.mt-3', {}, CORB.ui.listenBtn(function () { return q.stem + ' ' + it.opts.map(function (o, i) { return 'ABCD'[i] + '. ' + o.text; }).join('. '); }, 'Listen'),
+      exam ? h('button.btn.sm' + (it.flag ? '.on' : ''), { type: 'button', onclick: function () { it.flag = !it.flag; CORB.render(); } }, icon('flag'), it.flag ? 'Flagged' : 'Flag for review') : null));
+    card.appendChild(fb);
+    root.appendChild(card);
+    var last = S.i === S.items.length - 1;
+    var nextBtn = h('button.btn.primary.lg', { type: 'button', disabled: !exam && !it.done, onclick: function () { if (last) { if (exam) { var un = S.items.filter(function (x) { return x.pick < 0; }).length; CORB.ui.confirm(un ? CORB.util.plural(un, 'question') + ' not answered. Finish anyway?' : 'Finish and see your score?', { ok: 'Finish' }).then(function (ok) { if (ok) finish(); }); } else finish(); } else { S.i++; CORB.render(); } } }, last ? 'Finish' : 'Next', icon(last ? 'check' : 'arrow-right'));
+    root.appendChild(h('div.q-nav', {}, h('button.btn', { type: 'button', disabled: S.i === 0 || !exam, hidden: !exam, onclick: function () { S.i--; CORB.render(); } }, icon('arrow-left'), 'Back'), h('span.grow'), nextBtn));
+    if (!exam && it.done) showFeedback(!!it.opts[it.pick].correct, it.opts[it.pick]);
+    if (exam) {
+      root.appendChild(h('details.acc.mt-4', {}, h('summary', {}, icon('grid'), 'All questions', icon('chevron', 'chev')), h('div.acc-body', {}, h('div.q-grid', {}, S.items.map(function (x, xi) {
+        return h('button' + (xi === S.i ? '.cur' : '') + (x.pick >= 0 ? '.ans' : '') + (x.flag ? '.flag' : ''), { type: 'button', 'aria-label': 'Question ' + (xi + 1), onclick: function () { S.i = xi; CORB.render(); } }, String(xi + 1));
+      })), h('p.tiny.muted.mt-2', {}, 'Filled = answered · brass outline = flagged'))));
+      var tick = function () { var el = document.getElementById('qtimer'); var left = S.limit - (Date.now() - S.started) / 1000; if (!el) return; el.textContent = fmtTime(left); el.classList.toggle('warn', left < 600); if (left <= 0) { clearInterval(timerId); CORB.ui.toast('Time is up', 'warn'); finish(); } };
+      clearInterval(timerId); tick(); timerId = setInterval(tick, 1000);
+    }
+  }
+
+  // ---- results ----
+  function result(root, h, icon) {
+    if (!S || !S.finished) { CORB.go('quiz'); return; }
+    var pc = CORB.util.pct(S.right, S.items.length), pass = pc >= 70;
+    root.appendChild(h('div.card.raised.result-hero', {}, CORB.ui.ring(pc, pc + '%', pass ? 'var(--ok)' : 'var(--accent-2)', 120),
+      h('div', {}, h('div.eyebrow', {}, S.label), h('h1', {}, pass ? 'Passing score' : 'Keep going'), h('p.lede', {}, S.right + ' of ' + S.items.length + ' right. The real exam needs 70%.' + (S.mode === 'exam' ? ' Time used: ' + fmtTime((S.ended - S.started) / 1000) + '.' : '')),
+        h('div.row.tight.mt-3', {}, h('button.btn.primary', { type: 'button', onclick: function () { S = null; CORB.go('quiz'); } }, icon('refresh'), 'New quiz'),
+          S.items.some(function (x) { return !x.ok; }) ? h('button.btn', { type: 'button', onclick: function () { start({ mode: 'missed', n: 25, label: 'Missed questions' }); } }, icon('repeat'), 'Retry the ones I missed') : null))));
+    var by = {}; S.items.forEach(function (it) { var b = by[it.q.phase] = by[it.q.phase] || [0, 0]; b[1]++; if (it.ok) b[0]++; });
+    root.appendChild(h('div.section-head', {}, h('h2', {}, 'By exam area'), h('span.muted', {}, 'The Pearson score report shows the same four areas')));
+    root.appendChild(h('div.grid.cols-4', {}, CORB.data.phases().map(function (p) {
+      var b = by[p.id]; var v = b ? CORB.util.pct(b[0], b[1]) : null;
+      return h('div.stat', {}, h('div.label', {}, p.short), h('div.value', {}, v == null ? '—' : v + '%'), CORB.ui.bar(v || 0, 'ph-' + p.id), h('div.sub', {}, b ? b[0] + ' of ' + b[1] : 'none in this quiz'));
+    })));
+    root.appendChild(h('div.section-head', {}, h('h2', {}, 'Review')));
+    root.appendChild(h('div.stack.tight', {}, S.items.map(function (it, i) {
+      var right = it.opts.filter(function (o) { return o.correct; })[0], mine = it.pick >= 0 ? it.opts[it.pick] : null;
+      return h('details.acc.review' + (it.ok ? '.ok' : '.no'), {}, h('summary', {}, icon(it.ok ? 'check' : 'x'), h('span.grow', {}, (i + 1) + '. ' + it.q.stem), icon('chevron', 'chev')),
+        h('div.acc-body', {}, h('p', {}, h('b', {}, 'Your answer: '), mine ? mine.text : 'not answered'), it.ok ? null : h('p', {}, h('b', {}, 'Right answer: '), right.text),
+          CORB.ui.rich((right.why || '') + (it.q.cite ? '\n\nWhere it is written: ' + it.q.cite : '')),
+          it.q.lesson && CORB.data.lesson(it.q.lesson) ? h('a.btn.sm.ghost.mt-2', { href: '#/lesson?id=' + it.q.lesson }, icon('book'), 'Lesson: ' + CORB.data.lesson(it.q.lesson).title) : null));
+    })));
+  }
+
+  CORB.registerView({ id: 'quiz', title: 'Practice test', section: 'Practice', icon: 'quiz', nav: true, order: 70, mobile: true, short: 'Practice',
+    blurb: 'Exam-style questions and a timed exam simulator', keywords: 'quiz test exam practice simulator questions CON 3990V',
+    badge: function () { return 0; },
+    render: function (root, ctx) {
+      var h = CORB.ui.h, icon = CORB.ui.icon, p = ctx.params;
+      if (p.start === 'quick') { start({ mode: 'practice', n: 10, label: 'Quick 10' }); return; }
+      if (p.start === 'missed') { start({ mode: 'missed', n: 25, label: 'Missed questions' }); return; }
+      if (p.run) run(root, h, icon); else if (p.result) result(root, h, icon); else setup(root, h, icon, p);
+    },
+    onLeave: function () { clearInterval(timerId); } });
+})();

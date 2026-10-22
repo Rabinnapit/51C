@@ -1,0 +1,46 @@
+[
+  {"id": "exam-facts", "title": "Certification and exam facts", "sub": "The rules of your certification", "icon": "award", "cards": [
+    {"id": "q", "front": "How many questions are on CON 3990V?", "back": "150 multiple-choice questions", "more": "Drawn at random from a large bank."},
+    {"id": "t", "front": "How long is CON 3990V?", "back": "3 hours of seat time", "more": "Includes the tutorial, breaks and review: about 72 seconds per question."},
+    {"id": "p", "front": "Passing score on CON 3990V?", "back": "70%", "more": "Pass or fail. The FY26 average was 74.8%."},
+    {"id": "b", "front": "Is CON 3990V open book?", "back": "No. Completely closed book.", "more": "No FAR, notes, phone or computer."},
+    {"id": "a", "front": "How many exam attempts are allowed?", "back": "3 in 12 months, at least 30 days apart", "more": "A fourth may be authorized a year after the first failed attempt."},
+    {"id": "f", "front": "What must you take after failing CON 3990V the first time?", "back": "CON 3900V (instructor-led exam prep)", "more": "CON 3910 is its prerequisite."},
+    {"id": "c", "front": "The five required courses?", "back": "CON 1100 (or 1100V), 1200V, 1300V, 7300V and 1400V", "more": "CON 7300V became required on 1 October 2026."},
+    {"id": "e", "front": "How much experience does certification need?", "back": "12 months of full-time contracting experience", "more": "A representative sample of the competencies; your component decides what counts."},
+    {"id": "g", "front": "How long do you have to get certified?", "back": "36 months (a 3-year grace period)", "more": "From entering a contracting-coded position. Many units set a 6-month goal for courses and the exam."},
+    {"id": "cl", "front": "Continuous learning after certification?", "back": "80 hours every 2 years", "more": "DPCAP recommends at least 40 on contracting topics."},
+    {"id": "w", "front": "Biggest exam area?", "back": "Guiding Principles: 42 questions", "more": "Then Award 40, Post-Award 38, Pre-Award 30."},
+    {"id": "m", "front": "Which FAR part does the exam FAQ say to read thoroughly?", "back": "Part 15, Contracting by Negotiation"},
+    {"id": "s", "front": "Where do Army members apply for WarU courses and the exam?", "back": "AITAS (in ATRRS)", "more": "Then supervisor and training office approval."},
+    {"id": "d", "front": "How long do you have to test after Pearson's Authorization to Test?", "back": "90 days"}
+  ]},
+  {"id": "who-does-what", "title": "Who does what", "sub": "Authority and roles, as scenarios", "icon": "users", "cards": [
+    {"id": "1", "front": "Who can change a contract's price or delivery date?", "back": "Only the contracting officer, by written modification", "more": "FAR 43.202."},
+    {"id": "2", "front": "A COR tells the contractor to add work. What is it?", "back": "An unauthorized direction: possibly a constructive change or unauthorized commitment", "more": "CORs cannot change contracts."},
+    {"id": "3", "front": "Who ratifies an unauthorized commitment?", "back": "The head of the contracting activity, delegable no lower than the chief of the contracting office", "more": "FAR 1.405."},
+    {"id": "4", "front": "Who certifies that funds are available?", "back": "The resource manager", "more": "No award or added-cost modification without certified funds."},
+    {"id": "5", "front": "Who makes the source selection decision?", "back": "The source selection authority (often the contracting officer)", "more": "FAR 15.201, 15.205."},
+    {"id": "6", "front": "Who approves a $50 million DoW justification?", "back": "The competition advocate", "more": "DFARS 206.104-71 Table 206-1."},
+    {"id": "7", "front": "Who audits contractor proposals and costs for DoW?", "back": "DCAA (Defense Contract Audit Agency)"},
+    {"id": "8", "front": "Who administers many contracts at contractor plants?", "back": "DCMA, through administrative contracting officers"},
+    {"id": "9", "front": "Who sets small business size standards?", "back": "SBA, by NAICS code"},
+    {"id": "10", "front": "Who decides bid protests in 100 days?", "back": "GAO (Government Accountability Office)"},
+    {"id": "11", "front": "Who hears DoW contractors' appeals of final decisions?", "back": "The ASBCA (90 days) or the Court of Federal Claims (12 months)"},
+    {"id": "12", "front": "Who approves your training requests in AITAS?", "back": "Your supervisor, then your Acquisition Training Office"}
+  ]},
+  {"id": "contract-types", "title": "Contract types", "sub": "Match the description to the type", "icon": "layers", "cards": [
+    {"id": "1", "front": "One price, whatever it costs the contractor", "back": "Firm-fixed-price (FFP)", "more": "Most risk on the contractor (FAR 16.202)."},
+    {"id": "2", "front": "Fixed price that moves with named market changes like fuel prices", "back": "Fixed-price with economic price adjustment (FP-EPA)"},
+    {"id": "3", "front": "Target cost, target profit, ceiling price and a share ratio", "back": "Fixed-price incentive (FPIF)"},
+    {"id": "4", "front": "Allowable costs plus a fee set at award", "back": "Cost-plus-fixed-fee (CPFF)"},
+    {"id": "5", "front": "Allowable costs plus a fee based on a subjective performance rating", "back": "Cost-plus-award-fee (CPAF)"},
+    {"id": "6", "front": "Allowable costs plus a fee that moves with cost results", "back": "Cost-plus-incentive-fee (CPIF)"},
+    {"id": "7", "front": "Hourly rates that include profit, plus materials at cost", "back": "Time-and-materials (T&M)", "more": "Least preferred; needs a determination and ceiling (FAR 16.601)."},
+    {"id": "8", "front": "A minimum and a maximum quantity, filled by orders", "back": "Indefinite-delivery indefinite-quantity (IDIQ)"},
+    {"id": "9", "front": "All of the Government's actual needs for an item from one contractor", "back": "Requirements contract"},
+    {"id": "10", "front": "Lets work start at once, with terms agreed later", "back": "Letter contract (an undefinitized contract action)"},
+    {"id": "11", "front": "Terms set in advance; each call is a contract", "back": "Blanket purchase agreement (BPA)"},
+    {"id": "12", "front": "Which types are used for commercial products and services?", "back": "Firm-fixed-price or fixed-price with economic price adjustment", "more": "FAR 12.104."}
+  ]}
+]

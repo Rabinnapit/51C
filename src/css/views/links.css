@@ -1,0 +1,5 @@
+/* VIEW links */
+.v-links .link-card { display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: inherit; }
+.v-links .link-card b { font-size: var(--fs-md); }
+.v-links .link-card > .row svg[data-icon="external"] { width: 16px; height: 16px; color: var(--muted); }
+.v-links .link-host { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }

@@ -1,0 +1,115 @@
+/* =====================================================================
+   01-tokens.css — design tokens for B2B Guide
+   Layout concept: a field guide. A calm, cool paper workspace; pine for actions, brass for
+   milestones; each stage of the contract life cycle has its own colour so a reader always
+   knows where a lesson or question sits (Guiding Principles, Pre-Award, Award, Post-Award).
+   Never hardcode colours in view CSS. Use these roles.
+   ===================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* ---- type ---- */
+  --font-display: "Archivo", "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Manrope", "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", "Consolas", "SFMono-Regular", monospace;
+  --fs-xs: .75rem; --fs-sm: .875rem; --fs-md: 1rem; --fs-lg: 1.125rem; --fs-xl: 1.35rem;
+  --fs-2xl: clamp(1.55rem, 2.3vw, 2rem); --fs-3xl: clamp(1.9rem, 3.4vw, 2.75rem); --fs-hero: clamp(2.2rem, 5vw, 3.6rem);
+  --lh-tight: 1.15; --lh-body: 1.6;
+  --track-caps: .1em;
+
+  /* ---- palette: cool paper with a green bias ---- */
+  --bg: #f3f5f1;
+  --bg-2: #e8ece5;
+  --panel: #ffffff;
+  --panel-2: #f8faf6;
+  --ink: #141b16;
+  --ink-2: #2a352d;
+  --muted: #56625a;
+  --muted-2: #7f8a83;
+  --line: #dce2d9;
+  --line-2: #c3ccc0;
+  --accent: #1f5e46;          /* pine: primary actions, links, progress */
+  --accent-ink: #ffffff;
+  --accent-soft: #e1eee7;
+  --accent-2: #a87622;        /* brass: milestones, highlights, focus */
+  --accent-2-ink: #1d1406;
+  --accent-2-soft: #f5ebd6;
+  --ok: #1f7a4d; --ok-soft: #e0f2e8;
+  --warn: #9a5a07; --warn-soft: #fbedd6;
+  --danger: #b4322f; --danger-soft: #fbe4e2;
+  --info: #2a5ca6; --info-soft: #e3ebf8;
+  --selection: #f3dfa8;
+  --scrim: rgba(10, 16, 12, .55);
+
+  /* ---- contract life cycle phases (exam blueprint areas) ---- */
+  --ph-gp: #4e57b0;   --ph-gp-soft: #e8e9f8;     /* 1.0 Guiding Principles */
+  --ph-pre: #23649f;  --ph-pre-soft: #e2edf8;    /* 2.0 Pre-Award */
+  --ph-awd: #a2620f;  --ph-awd-soft: #f8ebd6;    /* 3.0 Award */
+  --ph-post: #0e7480; --ph-post-soft: #dff2f3;   /* 4.0 Post-Award */
+  --ph-job: #6a5a46;  --ph-job-soft: #efe9e1;    /* On the job (not an exam area) */
+
+  /* ---- elevation, radius, spacing, motion ---- */
+  --shadow-sm: 0 1px 2px rgba(20, 27, 22, .06), 0 1px 1px rgba(20, 27, 22, .04);
+  --shadow-md: 0 10px 26px -14px rgba(20, 27, 22, .28), 0 2px 6px rgba(20, 27, 22, .05);
+  --shadow-lg: 0 26px 60px -24px rgba(20, 27, 22, .38), 0 6px 18px -8px rgba(20, 27, 22, .12);
+  --r-sm: 6px; --r-md: 10px; --r-lg: 14px; --r-xl: 20px; --r-pill: 999px;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 72px;
+  --ease: cubic-bezier(.22, .61, .36, 1);
+  --ease-spring: cubic-bezier(.34, 1.4, .64, 1);
+  --dur: 200ms; --dur-slow: 420ms;
+  --side-w: 264px; --top-h: 60px;
+  --content-max: 1120px;
+  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* ---- dark theme: system setting (unless the reader picked light) ---- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0e1411; --bg-2: #0a0f0d; --panel: #151d19; --panel-2: #1a241f;
+    --ink: #e6ede8; --ink-2: #cbd6cf; --muted: #95a39a; --muted-2: #6d7b73;
+    --line: #25302a; --line-2: #36443c;
+    --accent: #6fc7a5; --accent-ink: #07130d; --accent-soft: #15322a;
+    --accent-2: #e2b65c; --accent-2-ink: #1d1406; --accent-2-soft: #3a2e15;
+    --ok: #63d39b; --ok-soft: #12301f; --warn: #f0b35a; --warn-soft: #3a2a12;
+    --danger: #ff8d88; --danger-soft: #3d1a19; --info: #86b4ff; --info-soft: #172a47;
+    --selection: #4a3b17; --scrim: rgba(0, 0, 0, .62);
+    --ph-gp: #a3a9f2; --ph-gp-soft: #23264a; --ph-pre: #82b6ef; --ph-pre-soft: #16293f;
+    --ph-awd: #f0b863; --ph-awd-soft: #3a2a12; --ph-post: #6fd3d9; --ph-post-soft: #12313a;
+    --ph-job: #d1bfa6; --ph-job-soft: #2f2a22;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, .45);
+    --shadow-md: 0 10px 26px -14px rgba(0, 0, 0, .75), 0 2px 6px rgba(0, 0, 0, .35);
+    --shadow-lg: 0 26px 60px -24px rgba(0, 0, 0, .85), 0 6px 18px -8px rgba(0, 0, 0, .45);
+  }
+}
+/* ---- dark theme: the reader's explicit choice (same values) ---- */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0e1411; --bg-2: #0a0f0d; --panel: #151d19; --panel-2: #1a241f;
+  --ink: #e6ede8; --ink-2: #cbd6cf; --muted: #95a39a; --muted-2: #6d7b73;
+  --line: #25302a; --line-2: #36443c;
+  --accent: #6fc7a5; --accent-ink: #07130d; --accent-soft: #15322a;
+  --accent-2: #e2b65c; --accent-2-ink: #1d1406; --accent-2-soft: #3a2e15;
+  --ok: #63d39b; --ok-soft: #12301f; --warn: #f0b35a; --warn-soft: #3a2a12;
+  --danger: #ff8d88; --danger-soft: #3d1a19; --info: #86b4ff; --info-soft: #172a47;
+  --selection: #4a3b17; --scrim: rgba(0, 0, 0, .62);
+  --ph-gp: #a3a9f2; --ph-gp-soft: #23264a; --ph-pre: #82b6ef; --ph-pre-soft: #16293f;
+  --ph-awd: #f0b863; --ph-awd-soft: #3a2a12; --ph-post: #6fd3d9; --ph-post-soft: #12313a;
+  --ph-job: #d1bfa6; --ph-job-soft: #2f2a22;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .45);
+  --shadow-md: 0 10px 26px -14px rgba(0, 0, 0, .75), 0 2px 6px rgba(0, 0, 0, .35);
+  --shadow-lg: 0 26px 60px -24px rgba(0, 0, 0, .85), 0 6px 18px -8px rgba(0, 0, 0, .45);
+}
+
+/* ---- text size (Settings → Display, or the Aa button): every size is in rem ---- */
+html { font-size: 100%; }
+html[data-text="1"] { font-size: 112.5%; }
+html[data-text="2"] { font-size: 125%; }
+html[data-text="3"] { font-size: 140%; }
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur: 0ms; --dur-slow: 0ms; }
+}
+html[data-motion="reduce"] { --dur: 0ms; --dur-slow: 0ms; }

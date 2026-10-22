@@ -1,0 +1,21 @@
+# Built files: GitHub Actions rebuilds them on every push (see .github/workflows/pages.yml)
+docs/
+dist/
+src/index.dev.html
+src/data/_bundle.js
+
+# Reference documents (WarU material, memos) stay on this computer, out of the public repository
+*.pdf
+*.docx
+*.pptx
+*.xlsx
+
+# Claude Code local permissions
+.claude/settings.local.json
+
+# Python and editor clutter
+__pycache__/
+*.pyc
+~$*
+.DS_Store
+Thumbs.db

@@ -1,0 +1,26 @@
+/* VIEW games */
+.v-games { max-width: 900px; margin: 0 auto; }
+.v-games .game-tile { display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: inherit; }
+.v-games .game-tile b { font-family: var(--font-display); font-size: 1.2rem; }
+.v-games .game-icon { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; background: var(--accent-2-soft); color: var(--accent-2); }
+.v-games .game-icon svg { width: 24px; height: 24px; }
+.v-games .game-best { color: var(--accent); font-weight: 800; margin-top: 4px; }
+.v-games .g-title { font-size: var(--fs-2xl); }
+.v-games .g-clock { font-size: 1.2rem; font-weight: 600; }
+.v-games .match-board { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 12px; margin-top: var(--space-4); }
+.v-games .match-col { display: flex; flex-direction: column; gap: 8px; }
+.v-games .match { min-height: 52px; padding: 10px 14px; border-radius: var(--r-md); border: 1.5px solid var(--line-2); background: var(--panel); font-weight: 750; text-align: left; transition: all var(--dur) var(--ease); }
+.v-games .match-col:first-child .match { font-family: var(--font-mono); text-align: center; }
+.v-games .match:hover { border-color: var(--accent); }
+.v-games .match.sel { border-color: var(--accent); background: var(--accent-soft); box-shadow: 0 0 0 3px var(--accent-soft); }
+.v-games .match.ok { border-color: var(--ok); background: var(--ok-soft); color: var(--ok); cursor: default; }
+.v-games .match.bad { border-color: var(--danger); background: var(--danger-soft); animation: shake .3s; }
+.v-games .g-prompt { font-size: 1.2rem; font-weight: 700; line-height: 1.45; margin-top: 10px; }
+.v-games .risk-scale { display: flex; justify-content: space-between; gap: 12px; margin-top: var(--space-4); padding: 8px 12px; border-radius: var(--r-md); background: linear-gradient(90deg, var(--ph-awd-soft), var(--ph-post-soft)); font-size: var(--fs-xs); font-weight: 800; text-transform: uppercase; letter-spacing: .05em; }
+.v-games .risk-placed { margin: var(--space-4) 0; padding-left: 1.4em; display: flex; flex-direction: column; gap: 8px; }
+.v-games .risk-placed li { padding: 8px 12px; border-radius: var(--r-md); background: var(--ok-soft); }
+.v-games .risk-placed li b { display: block; }
+.v-games .risk-pool { display: flex; flex-wrap: wrap; gap: 8px; }
+.v-games .risk-chip { min-height: 48px; font-size: var(--fs-sm); }
+.v-games .risk-chip.bad { border-color: var(--danger); background: var(--danger-soft); animation: shake .3s; }
+@media (max-width: 560px) { .v-games .match-board { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); } .v-games .match { font-size: .85rem; padding: 8px 10px; } }

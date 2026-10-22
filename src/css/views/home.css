@@ -1,0 +1,29 @@
+/* VIEW home */
+.v-home { display: flex; flex-direction: column; gap: var(--space-5); }
+.v-home .home-hero { padding: var(--space-4) 0 var(--space-2); }
+.v-home .home-hero h1 { font-size: var(--fs-hero); margin-top: var(--space-2); }
+.v-home .home-hero .lede { margin-top: var(--space-3); }
+.v-home .home-three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: var(--space-5); }
+.v-home .three-item { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; border-radius: var(--r-lg); background: var(--panel); border: 1px solid var(--line); min-width: 0; }
+.v-home .three-item svg { width: 28px; height: 28px; color: var(--accent-2); flex: none; }
+.v-home .three-item b { display: block; font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; font-stretch: 90%; }
+.v-home .three-item span { font-size: var(--fs-sm); color: var(--muted); }
+.v-home .setup-card h2 { margin-bottom: 4px; }
+.v-home .setup-card .setup-form { margin-top: var(--space-4); }
+.v-home .home-head h1 { margin-top: 4px; }
+.v-home .next-step { border-left: 5px solid var(--accent-2); }
+.v-home .next-step h2 { margin: 8px 0 8px; font-size: var(--fs-xl); }
+.v-home .milestones .stat .bar { margin-top: 10px; }
+.v-home .milestones .value.deadline { font-size: 1.6rem; }
+.v-home .lesson-next { display: block; text-decoration: none; color: inherit; }
+.v-home .lesson-next h3 { margin: 8px 0 6px; }
+.v-home .quick { display: flex; flex-direction: column; gap: 4px; text-decoration: none; color: inherit; }
+.v-home .quick svg { width: 24px; height: 24px; color: var(--accent); }
+.v-home .readiness h3 { font-size: var(--fs-lg); }
+.v-home .rd-row .bar { margin-top: 4px; height: 8px; }
+.v-home .news .list-item { padding: 14px 18px; }
+.v-home .news-date { color: var(--muted); min-width: 92px; padding-top: 2px; }
+.v-home .tour-tile { display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: inherit; }
+.v-home .tour-tile .tile-icon { width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); }
+.v-home .tour-tile .tile-icon svg { width: 22px; height: 22px; }
+@media (max-width: 760px) { .v-home .home-three { grid-template-columns: minmax(0, 1fr); } .v-home .news .list-item { flex-direction: column; gap: 2px; } }

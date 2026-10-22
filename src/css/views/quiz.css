@@ -1,0 +1,29 @@
+/* VIEW quiz */
+.v-quiz { max-width: 860px; margin: 0 auto; }
+.v-quiz .quiz-hero { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; border-left: 5px solid var(--accent); }
+.v-quiz .quiz-modes .card { display: flex; flex-direction: column; }
+.v-quiz .quiz-modes h3 { font-size: var(--fs-lg); margin: 10px 0 4px; }
+.v-quiz .mode-icon { width: 42px; height: 42px; border-radius: 11px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); }
+.v-quiz .exam-mode .mode-icon { background: var(--accent-2-soft); color: var(--accent-2); }
+.v-quiz .mode-icon svg { width: 22px; height: 22px; }
+.v-quiz .quiz-modes .card > .btn, .v-quiz .quiz-modes .stack .btn { margin-top: auto; }
+.v-quiz .hist { padding: 12px 16px; align-items: center; }
+.v-quiz .hist-pc { font-weight: 600; font-size: 1.1rem; min-width: 58px; }
+.v-quiz .hist-pc.ok { color: var(--ok); } .v-quiz .hist-pc.low { color: var(--warn); }
+.v-quiz .q-top { margin-bottom: var(--space-4); display: flex; flex-direction: column; gap: 6px; }
+.v-quiz .q-top .bar { height: 6px; }
+.v-quiz .timer { font-size: 1.15rem; font-weight: 600; padding: 2px 10px; border-radius: 8px; background: var(--bg-2); }
+.v-quiz .timer.warn { color: var(--warn); background: var(--warn-soft); }
+.v-quiz .q-stem-big { font-size: 1.2rem; font-weight: 700; line-height: 1.45; letter-spacing: -.005em; }
+.v-quiz .q-nav { display: flex; gap: 10px; margin-top: var(--space-4); align-items: center; }
+.v-quiz .q-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(42px, 1fr)); gap: 6px; }
+.v-quiz .q-grid button { height: 40px; border-radius: 8px; border: 1px solid var(--line-2); font-family: var(--font-mono); font-size: .8rem; background: var(--panel); }
+.v-quiz .q-grid button.ans { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.v-quiz .q-grid button.flag { box-shadow: inset 0 0 0 2px var(--accent-2); }
+.v-quiz .q-grid button.cur { outline: 2px solid var(--ink); outline-offset: 1px; }
+.v-quiz .result-hero { display: flex; gap: var(--space-5); align-items: center; flex-wrap: wrap; }
+.v-quiz .result-hero h1 { margin-top: 4px; }
+.v-quiz .review > summary > svg:first-child { color: var(--ok); }
+.v-quiz .review.no > summary > svg:first-child { color: var(--danger); }
+.v-quiz .review > summary { font-weight: 600; align-items: flex-start; }
+.v-quiz .review .acc-body p { font-size: var(--fs-sm); }

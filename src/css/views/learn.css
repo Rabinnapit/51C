@@ -1,0 +1,46 @@
+/* VIEW learn + lesson */
+.v-learn .learn-top { display: flex; flex-direction: column; gap: 12px; }
+.v-learn .lesson-group .section-head h2 { display: flex; align-items: center; gap: 8px; }
+.v-learn .group-plain { margin: -6px 0 12px; max-width: 70ch; }
+.v-learn .lesson-tile { display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: inherit; border-top: 4px solid var(--ph-job); }
+.v-learn .ph-gp .lesson-tile { border-top-color: var(--ph-gp); } .v-learn .ph-pre .lesson-tile { border-top-color: var(--ph-pre); }
+.v-learn .ph-awd .lesson-tile { border-top-color: var(--ph-awd); } .v-learn .ph-post .lesson-tile { border-top-color: var(--ph-post); }
+.v-learn .lesson-tile.done { background: var(--panel-2); }
+.v-learn .l-num { font-size: .8rem; color: var(--muted); font-weight: 600; }
+.v-learn .l-title { font-family: var(--font-display); font-size: 1.1rem; line-height: 1.25; }
+.v-learn .l-comp { color: var(--muted-2); margin-top: auto; }
+
+.v-lesson { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--space-5); }
+.v-lesson .lesson-head { margin-bottom: 0; }
+.v-lesson .lesson-head h1 { margin-top: var(--space-3); }
+.v-lesson .plain-box { padding: 18px 20px; border-radius: var(--r-lg); background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent); font-size: var(--fs-lg); line-height: 1.55; }
+.v-lesson .plain-box .eyebrow { color: var(--accent); margin-bottom: 6px; }
+.v-lesson .why h2, .v-lesson .l-sec h2 { font-size: var(--fs-xl); margin-bottom: 8px; }
+.v-lesson .l-sec .rich, .v-lesson .why .rich { font-size: 1.04rem; }
+.v-lesson .example { border-left: 5px solid var(--ph-pre); background: var(--panel); }
+.v-lesson .example h3 { margin: 4px 0 8px; font-size: var(--fs-lg); }
+.v-lesson .remember { background: var(--accent-2-soft); border-color: color-mix(in srgb, var(--accent-2) 35%, transparent); }
+.v-lesson .remember h3, .v-lesson .mistakes h3 { font-size: var(--fs-lg); }
+.v-lesson .remember .row svg { width: 22px; height: 22px; color: var(--accent-2); }
+.v-lesson .mistakes .row svg { width: 22px; height: 22px; color: var(--danger); }
+.v-lesson .l-refs h4 { font-size: var(--fs-md); font-family: var(--font-body); font-weight: 800; }
+.v-lesson .lesson-check .section-head h2 { display: flex; align-items: center; gap: 8px; }
+.v-lesson .qbox { margin-bottom: 12px; }
+.v-lesson .q-stem { display: flex; gap: 8px; font-weight: 700; font-size: var(--fs-md); line-height: 1.45; }
+.v-lesson .q-n { color: var(--muted); }
+.opts { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+.opt { display: flex; gap: 12px; align-items: flex-start; text-align: left; width: 100%; min-height: 48px; padding: 11px 14px; border-radius: var(--r-md); border: 1.5px solid var(--line-2); background: var(--panel); font-size: var(--fs-md); line-height: 1.4; transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease); }
+.opt:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-soft); }
+.opt:disabled { cursor: default; opacity: 1; }
+.opt .opt-l { flex: none; width: 26px; height: 26px; border-radius: 7px; display: grid; place-items: center; background: var(--bg-2); font-weight: 800; font-size: .8rem; color: var(--ink-2); }
+.opt.right { border-color: var(--ok); background: var(--ok-soft); }
+.opt.right .opt-l { background: var(--ok); color: #fff; }
+.opt.wrong { border-color: var(--danger); background: var(--danger-soft); animation: shake .3s; }
+.opt.wrong .opt-l { background: var(--danger); color: #fff; }
+.opt.picked { border-color: var(--accent); background: var(--accent-soft); }
+.q-feedback { margin-top: 12px; }
+.v-lesson .lesson-nav { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 12px; align-items: center; margin-top: var(--space-4); }
+.v-lesson .lesson-nav a.card { display: flex; flex-direction: column; gap: 2px; text-decoration: none; color: inherit; padding: 12px 14px; }
+.v-lesson .lesson-nav a.next { text-align: right; }
+@media (max-width: 640px) { .v-lesson .lesson-nav { grid-template-columns: minmax(0, 1fr); } .v-lesson .lesson-nav a.next { text-align: left; } }
+@media print { .v-lesson .lesson-check { display: none; } }

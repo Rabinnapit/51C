@@ -1,0 +1,322 @@
+{
+ "parts": [
+  {
+   "n": 1,
+   "title": "Federal Acquisition Regulations System",
+   "plain": "How the FAR works, deviations, and who has contracting authority (warrants and ratification).",
+   "exam": true
+  },
+  {
+   "n": 2,
+   "title": "Definitions of Words and Terms",
+   "plain": "Definitions, including the micro-purchase and simplified acquisition thresholds and what counts as commercial.",
+   "exam": true
+  },
+  {
+   "n": 3,
+   "title": "Improper Business Practices and Personal Conflicts of Interest",
+   "plain": "Ethics: procurement integrity, gratuities, kickbacks, contractor ethics programs and whistleblowers.",
+   "exam": true
+  },
+  {
+   "n": 4,
+   "title": "Administrative and Information Matters",
+   "plain": "Contract files, SAM registration, signatures, contract reporting, closeout and records.",
+   "exam": true
+  },
+  {
+   "n": 5,
+   "title": "Publicizing Contract Actions",
+   "plain": "When and where to post notices and solicitations (SAM.gov) and announce awards.",
+   "exam": true
+  },
+  {
+   "n": 6,
+   "title": "Competition Requirements",
+   "plain": "Full and open competition, the seven exceptions, and justifications.",
+   "exam": true
+  },
+  {
+   "n": 7,
+   "title": "Acquisition Planning",
+   "plain": "Planning a buy, consolidation and bundling, and inherently governmental functions.",
+   "exam": true
+  },
+  {
+   "n": 8,
+   "title": "Required Sources of Supplies and Services",
+   "plain": "Mandatory sources such as AbilityOne and Federal Prison Industries, and the GSA schedules.",
+   "exam": true
+  },
+  {
+   "n": 9,
+   "title": "Contractor Qualifications",
+   "plain": "Responsibility, debarment and suspension, and organizational conflicts of interest.",
+   "exam": false
+  },
+  {
+   "n": 10,
+   "title": "Market Research",
+   "plain": "When market research is required and how much to document.",
+   "exam": true
+  },
+  {
+   "n": 11,
+   "title": "Describing Agency Needs",
+   "plain": "Writing requirements that invite competition, and limits on brand names.",
+   "exam": false
+  },
+  {
+   "n": 12,
+   "title": "Acquisition of Commercial Products and Commercial Services",
+   "plain": "Buying commercial items, including simplified procedures up to $9 million and micro-purchases.",
+   "exam": true
+  },
+  {
+   "n": 13,
+   "title": "Simplified Procedures for Noncommercial Acquisitions",
+   "plain": "Simplified buying for noncommercial items at or below the simplified acquisition threshold.",
+   "exam": true
+  },
+  {
+   "n": 14,
+   "title": "Sealed Bidding",
+   "plain": "Invitations for bids, public bid opening and award on price.",
+   "exam": false
+  },
+  {
+   "n": 15,
+   "title": "Contracting by Negotiation",
+   "plain": "Source selection, proposals, negotiations, pricing and debriefings.",
+   "exam": true
+  },
+  {
+   "n": 16,
+   "title": "Types of Contracts",
+   "plain": "Fixed-price, cost-reimbursement, time-and-materials, IDIQ and ordering.",
+   "exam": true
+  },
+  {
+   "n": 17,
+   "title": "Special Contracting Methods",
+   "plain": "Options, multiyear contracts and buying through other agencies.",
+   "exam": false
+  },
+  {
+   "n": 18,
+   "title": "Emergency Acquisitions",
+   "plain": "A list of flexibilities for emergencies and contingencies.",
+   "exam": false
+  },
+  {
+   "n": 19,
+   "title": "Small Business",
+   "plain": "Size standards, set-asides, 8(a), HUBZone, SDVOSB, WOSB and subcontracting plans.",
+   "exam": true
+  },
+  {
+   "n": 20,
+   "title": "Reserved",
+   "plain": "Reserved: no text.",
+   "exam": false
+  },
+  {
+   "n": 21,
+   "title": "Reserved",
+   "plain": "Reserved: no text.",
+   "exam": false
+  },
+  {
+   "n": 22,
+   "title": "Application of Labor Laws to Government Acquisitions",
+   "plain": "Labor laws in contracts: service and construction wages, trafficking in persons, E-Verify.",
+   "exam": false
+  },
+  {
+   "n": 23,
+   "title": "Sustainable Acquisition, Material Safety, and Pollution Prevention",
+   "plain": "Sustainable products, energy savings contracts, material safety and pollution prevention.",
+   "exam": false
+  },
+  {
+   "n": 24,
+   "title": "Protection of Privacy and Freedom of Information",
+   "plain": "The Privacy Act and Freedom of Information Act in contracting.",
+   "exam": false
+  },
+  {
+   "n": 25,
+   "title": "Foreign Acquisition",
+   "plain": "Buy American, trade agreements and contracts performed overseas.",
+   "exam": false
+  },
+  {
+   "n": 26,
+   "title": "Other Socioeconomic Programs",
+   "plain": "Other socioeconomic programs, such as the Indian Incentive Program and disaster-area preference.",
+   "exam": false
+  },
+  {
+   "n": 27,
+   "title": "Patents, Data, and Copyrights",
+   "plain": "Who owns inventions, technical data, software and copyrights.",
+   "exam": false
+  },
+  {
+   "n": 28,
+   "title": "Bonds and Insurance",
+   "plain": "Bid guarantees, performance and payment bonds, sureties and insurance.",
+   "exam": false
+  },
+  {
+   "n": 29,
+   "title": "Taxes",
+   "plain": "How federal, state, local and foreign taxes are treated in contracts.",
+   "exam": false
+  },
+  {
+   "n": 30,
+   "title": "Cost Accounting Standards Administration",
+   "plain": "When Cost Accounting Standards apply and how they are administered.",
+   "exam": false
+  },
+  {
+   "n": 31,
+   "title": "Contract Cost Principles and Procedures",
+   "plain": "Which contract costs are allowable.",
+   "exam": true
+  },
+  {
+   "n": 32,
+   "title": "Contract Financing",
+   "plain": "Financing, payments, the Prompt Payment Act and contract funding.",
+   "exam": false
+  },
+  {
+   "n": 33,
+   "title": "Protests, Disputes, and Appeals",
+   "plain": "Bid protests, contract claims and appeals.",
+   "exam": true
+  },
+  {
+   "n": 34,
+   "title": "Major System Acquisition",
+   "plain": "Earned value management and industrial resources for major systems.",
+   "exam": false
+  },
+  {
+   "n": 35,
+   "title": "Research and Development Contracting",
+   "plain": "Research and development contracting and broad agency announcements.",
+   "exam": false
+  },
+  {
+   "n": 36,
+   "title": "Construction and Architect-Engineer Contracts",
+   "plain": "Construction and architect-engineer contracts.",
+   "exam": false
+  },
+  {
+   "n": 37,
+   "title": "Service Contracting",
+   "plain": "Performance-based services, personal services and inherently governmental functions.",
+   "exam": false
+  },
+  {
+   "n": 38,
+   "title": "Reserved",
+   "plain": "Reserved: removed by the FAR Overhaul; schedule coverage moved to Part 8.",
+   "exam": false
+  },
+  {
+   "n": 39,
+   "title": "Acquisition of Information and Communication Technology",
+   "plain": "Buying information and communication technology, including Section 508 accessibility.",
+   "exam": false
+  },
+  {
+   "n": 40,
+   "title": "Information Security and Supply Chain Security",
+   "plain": "Supply chain security prohibitions and safeguarding information.",
+   "exam": false
+  },
+  {
+   "n": 41,
+   "title": "Acquisition of Utility Services",
+   "plain": "Buying electricity, gas, water and other utility services.",
+   "exam": false
+  },
+  {
+   "n": 42,
+   "title": "Contract Administration and Audit Services",
+   "plain": "Contract administration, audits, stop-work orders, novation and CPARS.",
+   "exam": true
+  },
+  {
+   "n": 43,
+   "title": "Contract Modifications",
+   "plain": "Contract changes and modifications.",
+   "exam": false
+  },
+  {
+   "n": 44,
+   "title": "Subcontracting Policies and Procedures",
+   "plain": "Consent to subcontract and contractor purchasing system reviews.",
+   "exam": true
+  },
+  {
+   "n": 45,
+   "title": "Government Property",
+   "plain": "Property the Government furnishes to contractors or contractors buy for it.",
+   "exam": false
+  },
+  {
+   "n": 46,
+   "title": "Quality Assurance",
+   "plain": "Inspection, acceptance and warranties.",
+   "exam": true
+  },
+  {
+   "n": 47,
+   "title": "Transportation",
+   "plain": "Shipping terms and transportation rules.",
+   "exam": false
+  },
+  {
+   "n": 48,
+   "title": "Value Engineering",
+   "plain": "Sharing savings from contractors' cost-saving ideas (value engineering).",
+   "exam": false
+  },
+  {
+   "n": 49,
+   "title": "Termination of Contracts",
+   "plain": "Termination for convenience and for default.",
+   "exam": true
+  },
+  {
+   "n": 50,
+   "title": "Extraordinary Contractual Actions and the SAFETY Act",
+   "plain": "Rare extraordinary relief actions and anti-terrorism technology protections.",
+   "exam": false
+  },
+  {
+   "n": 51,
+   "title": "Reserved",
+   "plain": "Reserved: removed by the FAR Overhaul; contractor use of Government sources moved to 8.105.",
+   "exam": false
+  },
+  {
+   "n": 52,
+   "title": "Solicitation Provisions and Contract Clauses",
+   "plain": "The text of every solicitation provision and contract clause.",
+   "exam": false
+  },
+  {
+   "n": 53,
+   "title": "Forms",
+   "plain": "Standard and optional forms.",
+   "exam": false
+  }
+ ]
+}

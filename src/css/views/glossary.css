@@ -1,0 +1,15 @@
+/* VIEW glossary */
+.v-glossary .gl-tools { position: sticky; top: calc(var(--top-h) + env(safe-area-inset-top, 0px)); z-index: 5; background: var(--bg); padding: 8px 0 12px; display: flex; flex-direction: column; gap: 10px; border-bottom: 1px solid var(--line); margin-bottom: var(--space-4); }
+.v-glossary .search .input { min-height: 50px; font-size: var(--fs-lg); }
+.v-glossary .az { display: flex; flex-wrap: wrap; gap: 4px; }
+.v-glossary .az button { min-width: 34px; min-height: 34px; padding: 0 6px; border-radius: 8px; font-weight: 800; font-size: .8rem; color: var(--ink-2); border: 1px solid transparent; }
+.v-glossary .az button:hover:not(:disabled) { border-color: var(--line-2); }
+.v-glossary .az button.on { background: var(--ink); color: var(--bg); }
+.v-glossary .az button:disabled { color: var(--muted-2); opacity: .45; cursor: default; }
+.v-glossary .gl-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)); gap: 12px; }
+.v-glossary .gl-item { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.v-glossary .gl-head { display: flex; flex-direction: column; gap: 2px; }
+.v-glossary .gl-head h3 { font-size: 1.3rem; font-weight: 800; font-stretch: 92%; }
+.v-glossary .gl-exp { color: var(--accent); font-weight: 750; font-size: var(--fs-sm); }
+.v-glossary .gl-item p { margin: 0; color: var(--ink-2); }
+@media (max-width: 860px) { .v-glossary .gl-tools { top: calc(var(--top-h) + env(safe-area-inset-top, 0px)); } }

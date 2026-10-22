@@ -1,0 +1,56 @@
+/* =====================================================================
+   04-shell.css — sidebar, top bar, mobile bar, search palette, notices
+   ===================================================================== */
+.side .brand { display: flex; align-items: center; gap: 12px; padding: 18px 18px 12px; text-decoration: none; color: var(--ink); }
+.side .brand .mark { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: linear-gradient(150deg, var(--accent), color-mix(in srgb, var(--accent) 70%, #000)); color: #f6f8f4; font-family: var(--font-display); font-weight: 800; font-stretch: 88%; font-size: 15px; letter-spacing: -.01em; box-shadow: var(--shadow-sm); flex: none; }
+:root[data-theme="dark"] .side .brand .mark { color: #07130d; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .side .brand .mark { color: #07130d; } }
+.side .brand b { display: block; font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; letter-spacing: -.01em; }
+.side .brand small { display: block; color: var(--muted); font-size: .75rem; line-height: 1.3; }
+.side .nav-group { padding: 4px 12px; }
+.side .nav-label { padding: 12px 10px 4px; font-size: .68rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--muted-2); }
+.side .nav { width: 100%; display: flex; align-items: center; gap: 11px; min-height: 42px; padding: 8px 10px; margin: 1px 0; border-radius: var(--r-md); color: var(--ink-2); font-weight: 650; font-size: .92rem; text-align: left; transition: background var(--dur) var(--ease), color var(--dur) var(--ease); }
+.side .nav svg { width: 19px; height: 19px; flex: none; opacity: .8; }
+.side .nav:hover { background: var(--bg-2); color: var(--ink); }
+.side .nav.active { background: var(--accent-soft); color: var(--accent); font-weight: 800; }
+.side .nav.active svg { opacity: 1; }
+.side .nav .count { margin-left: auto; font-family: var(--font-mono); font-size: .7rem; padding: 1px 7px; border-radius: 999px; background: var(--accent-2-soft); color: var(--accent-2); font-weight: 600; }
+.side .side-tools { display: none; }
+.side .side-foot { margin-top: auto; padding: 14px 18px 18px; border-top: 1px solid var(--line); font-size: .75rem; color: var(--muted); line-height: 1.5; }
+.side .side-foot a { font-weight: 700; }
+
+.topbar .top-title { display: flex; flex-direction: column; line-height: 1.15; min-width: 0; }
+.topbar .top-eyebrow { font-size: .66rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-2); }
+.topbar .top-heading { font-family: var(--font-display); font-weight: 800; font-size: 1.02rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.topbar .menu-btn { display: none; }
+.topbar .search-btn { min-width: 44px; }
+.topbar .search-btn .kbd-hint { color: var(--muted-2); font-weight: 600; margin-left: 4px; }
+@media (max-width: 860px) {
+  .topbar .menu-btn { display: inline-flex; }
+  .hide-sm { display: none !important; }
+  .side .side-tools { display: flex; flex-direction: column; gap: 8px; padding: var(--space-3) var(--space-4) 0; }
+}
+@media (min-width: 861px) { .show-sm { display: none !important; } }
+
+/* search palette */
+.palette .search { margin-bottom: 10px; }
+.palette .search .input { min-height: 52px; font-size: var(--fs-lg); }
+.palette-results { display: flex; flex-direction: column; gap: 2px; max-height: 60vh; overflow: auto; }
+.palette-item { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 48px; padding: 10px 12px; border-radius: var(--r-md); text-align: left; font-size: var(--fs-sm); color: var(--ink); }
+.palette-item:hover, .palette-item.on { background: var(--accent-soft); }
+.palette-item .badge { min-width: 86px; justify-content: center; }
+.palette-item .sub { color: var(--muted); font-size: var(--fs-xs); }
+
+/* update / install / preview notices (web and preview editions) */
+/* sits just under the top bar, clear of toasts and the phone's bottom menu */
+.update-bar { position: fixed; z-index: 120; top: calc(var(--top-h) + 10px + env(safe-area-inset-top, 0px)); left: max(16px, env(safe-area-inset-left, 0px)); right: max(16px, env(safe-area-inset-right, 0px)); max-width: 560px; margin-inline: auto; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 10px 12px 10px 16px; border-radius: var(--r-lg); box-shadow: var(--shadow-lg); background: var(--accent); color: var(--accent-ink); font-size: var(--fs-sm); font-weight: 700; }
+.update-bar > svg { width: 20px; height: 20px; flex: none; }
+.update-bar .btn { background: var(--panel); color: var(--ink); border-color: transparent; }
+.update-bar .btn.ghost { background: transparent; color: inherit; }
+@media (min-width: 861px) { .update-bar { left: calc(var(--side-w) + 24px); } }
+.notice-line { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: var(--fs-xs); color: var(--muted); }
+
+/* page head shared helpers */
+.page-head .meta-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: var(--space-3); }
+.back-link { display: inline-flex; align-items: center; gap: 6px; font-weight: 750; font-size: var(--fs-sm); text-decoration: none; min-height: 36px; }
+.back-link svg { width: 18px; height: 18px; }

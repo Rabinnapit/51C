@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "b2b-dev",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8790", "--directory", "src"],
+      "port": 8790
+    },
+    {
+      "name": "b2b-site",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8791", "--directory", "docs"],
+      "port": 8791
+    },
+    {
+      "name": "b2b-dist",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8792", "--directory", "dist"],
+      "port": 8792
+    }
+  ]
+}
