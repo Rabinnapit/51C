@@ -48,31 +48,46 @@
     return list.length ? (Array.isArray(found) ? list : list[0]) : null;
   }
   function homeTarget() { return q('.path-now') || q('.setup-card') || q('.home-head'); }
+  function pageHead() { return q('.page-head'); }
 
-  // Twelve stops. Each one points at a control or a menu group; the pages themselves explain their own screens.
+  // About eighteen stops. For many people the tour is the only explanation of the guide they will ever see, so it says
+  // what the guide is, opens the main pages (Certification 101, Official documents, Courses, Lessons, a lesson with its
+  // pictures) and points at every other part of the menu and the top bar.
   function steps() {
     var ed = CORB.edition();
     var list = [
+      { title: 'What B2B Guide is', view: 'home', target: homeTarget,
+        text: 'A study and certification guide for new 51C Soldiers and 1102 civilians. It takes you to the DoW Contracting Professional certification: five courses, the CON 3990V exam and 12 months of experience. It works without internet; it is a training aid, not official guidance.' },
       { title: 'Your home page', view: 'home', target: homeTarget,
         text: 'Home opens with this week on your exam path and your next step. Until you build your plan, it asks three quick questions to set your dates.' },
       { title: 'Exam path', target: function () { return side(navItem('path'), 'path'); },
         text: '26 dated weeks to pass CON 3990V. Each week has a goal, lessons, a FAR reading, flashcards and a 10-question check, and each month ends with a timed checkpoint.' },
       { title: 'My plan', target: function () { return side(navItem('plan')); },
         text: 'Every step to certification with a date: your courses, the exam, 12 months of experience and the 36-month deadline. You can add the dates to your calendar.' },
-      { title: 'Get certified', target: function () { return side(navGroup('Get certified')); },
-        text: 'Certification 101 explains the rules, the exam and who does what, with pictures. Courses shows each course and how to sign up. Official documents holds the real DoW and WarU documents, readable without internet.' },
-      { title: 'Learn', target: function () { return side(navGroup('Learn'), 'learn'); },
-        text: '35 short lessons in plain English, each with an example, the common mistakes and a quick check, plus how-to guides for real tasks at work.' },
+      { title: 'Certification 101', view: 'cert', target: function () { return q('.v-cert .tabs') || pageHead(); },
+        text: 'The rules in one place, explained with pictures: what certification takes, signing up for courses in AITAS, the exam step by step, retakes, the 36-month clock, life after certification and 21 questions answered. Each tab is one topic.' },
+      { title: 'Official documents', view: 'official', target: function () { return q('.doc-grid') || pageHead(); },
+        text: '26 real DoW and WarU documents behind the certification: the exam FAQ, roadmap and flowchart, policy memos, the career and competency models. Each has a Simple version in pictures and the real pages, which open even without internet.' },
+      { title: 'Courses', view: 'courses', target: pageHead,
+        text: 'Every course you need, in order: what it teaches, how to get ready, how long it runs and how to sign up. Set each one to Signed up or Done to track your progress.' },
+      { title: 'Lessons', view: 'learn', target: function () { return q('.learn-top') || pageHead(); },
+        text: '35 short lessons in plain English, in the same four areas as the exam. Each has an example, the common mistakes and a quick check at the end.' },
+      { title: 'Pictures you can play', view: 'lesson', params: { id: 'L01' }, target: function () { return q('.lesson-figs'); },
+        text: 'Every lesson starts with pictures. Press Play to see each part light up and hear it read aloud. In lessons with dollar rules, Try it tools answer for any amount you pick.' },
+      { title: 'How-to guides', target: function () { return side(navItem('howto'), 'learn'); },
+        text: '13 step-by-step checklists for real tasks: your first week, signing up for a course in AITAS, scheduling the exam, a simplified buy, a modification, closeout and more.' },
       { title: 'Practice', target: function () { return side(navGroup('Practice'), 'quiz'); },
-        text: 'The practice test has 374 questions with every answer explained and a timed exam simulator. Flashcards bring back what you miss.' },
+        text: 'The practice test has 374 questions, each answer explained with where it is written. Practice by exam area, retry your misses, or take a timed simulator weighted like CON 3990V. Flashcards bring back what you miss.' },
       { title: 'Arcade', optional: true, target: function () { return narrow() ? null : navItem('arcade'); },
         text: 'Six games on the same facts: RPG battles, a supply convoy, artillery, a qualification range, a space shooter and a sorting yard. Pick a pace from Recruit to Elite; every run ends with a study list.' },
       { title: 'Look it up', target: function () { return side(navGroup('Look it up'), 'glossary'); },
-        text: 'The glossary explains every acronym (tap any underlined acronym on a page to see it), and FAR & key numbers lists the parts, thresholds and deadlines in FAR Overhaul numbering.' },
+        text: 'The glossary explains every acronym (tap any underlined acronym on a page to see it). FAR & key numbers lists the parts, thresholds and deadlines in FAR Overhaul numbering. Official links opens WarU, AITAS, Pearson and SAM.gov.' },
       { title: 'Search everything', target: function () { return q('.topbar .search-btn'); },
         text: 'Find any lesson, term, course or FAR part from any page. On a keyboard, press the / key.' },
       { title: 'Easier to read', target: function () { return narrow() ? q('.topbar .menu-btn') : [q('.topbar .text-btn'), q('.topbar .theme-btn')].filter(Boolean); },
-        text: narrow() ? 'Open the menu for a bigger text size and for day or night. Day is the default.' : 'Make the text bigger, or switch between day and night. Day is the default.' },
+        text: (narrow() ? 'Open the menu for a bigger text size and for day or night.' : 'Make the text bigger, or switch between day and night.') + ' Day is the default. Listen buttons read lessons aloud.' },
+      { title: 'About and feedback', target: function () { return side(navItem('about')); },
+        text: 'About tells you who builds this guide and how it stays current. Send feedback or report a problem from there.' },
       { title: 'Keep your progress', target: function () { return q('.topbar .save-btn') || side(navItem('settings')); },
         text: ed === 'offline' ? 'Your progress lives in this browser. Save progress stores it inside the B2B Guide file, so a restart or a cleared browser cannot erase it. Settings & help can also export it.'
           : ed === 'web' ? 'Your progress lives in this browser on this device. Settings & help can export it to a file and bring it back on another device.'
@@ -186,8 +201,9 @@
     if (i < 0) i = 0;
     T.i = i;
     var s = T.list[i], token = ++T.token;
-    var needRoute = !!(s.view && CORB.route().id !== s.view);
-    if (needRoute) CORB.go(s.view);
+    var here = CORB.route() || {};
+    var needRoute = !!(s.view && (here.id !== s.view || (s.params && (here.params || {}).id !== s.params.id)));
+    if (needRoute) CORB.go(s.view, s.params || {});
     var started = Date.now(), wait = needRoute ? 1800 : 300;
     (function poll() {
       if (!T || token !== T.token) return;
@@ -249,7 +265,7 @@
       body: h('div.tour-offer', {},
         h('div.tour-offer-icon', {}, icon('help')),
         h('div', {},
-          h('p', {}, 'New here? A short tour shows what each part of the guide is for.'),
+          h('p', {}, 'New here? A three-minute tour shows what B2B Guide is, opens the main pages and shows what each part is for.'),
           h('p.muted.small', {}, 'The ? button at the top of the page starts it again any time.'))),
       sticky: true,
       actions: [

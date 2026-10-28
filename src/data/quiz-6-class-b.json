@@ -90,12 +90,12 @@
     "why": "The FAR pushes decisions to the lowest level consistent with law (1.102(a)(7))."
    },
    {
-    "text": "Only if the contractor agrees",
+    "text": "Only if the contractor agrees to the delegation in writing",
     "correct": false,
     "why": "Delegation is an internal Government matter."
    },
    {
-    "text": "Only authorities above the SAT can be delegated",
+    "text": "Only authorities above the SAT can be delegated, and only in writing",
     "correct": false,
     "why": "Dollar value has nothing to do with whether an authority is delegable."
    }
@@ -114,12 +114,12 @@
   "cite": "FAR 1.107(c)",
   "options": [
    {
-    "text": "Apply the threshold exactly, using the final anticipated value including all options",
+    "text": "Apply it exactly, using the final anticipated value with all options",
     "correct": true,
     "why": "A threshold is the final anticipated dollar value of the action, including all options (1.107(c)). Over is over."
    },
    {
-    "text": "Round down to avoid the extra clauses",
+    "text": "Round down to avoid the extra clauses, since $1 is immaterial",
     "correct": false,
     "why": "No rounding is allowed, and splitting or shaving to dodge a threshold is prohibited."
    },
@@ -148,22 +148,22 @@
   "cite": "FAR 1.107(d)(2)",
   "options": [
    {
-    "text": "If award of the resulting contract will happen on or after the change's effective date",
+    "text": "If award will happen on or after the change's effective date",
     "correct": true,
     "why": "Contracting officers may include FAR changes in earlier solicitations if award occurs on or after the effective date (1.107(d)(2))."
    },
    {
-    "text": "Only if award happens before the effective date",
+    "text": "Only if award happens before the change's effective date",
     "correct": false,
     "why": "That is backwards."
    },
    {
-    "text": "Only if the contractor agrees",
+    "text": "Only if the contractor agrees to the change in writing",
     "correct": false,
     "why": "The decision is the contracting officer's for solicitations; consideration matters only for existing contracts (1.107(d)(3))."
    },
    {
-    "text": "Only if the agency head orders it",
+    "text": "Only if the agency head orders it in a class deviation",
     "correct": false,
     "why": "It is at the contracting officer's discretion."
    }
@@ -187,17 +187,17 @@
     "why": "Citations to statutes, Executive orders, OMB circulars, OFPP letters and the CFR include all applicable amendments (1.107(e))."
    },
    {
-    "text": "Only the original version",
+    "text": "Only the original version, as first issued",
     "correct": false,
     "why": "Amendments are included."
    },
    {
-    "text": "Only the most recent amendment",
+    "text": "Only the most recent amendment, if any",
     "correct": false,
     "why": "The citation includes all applicable amendments."
    },
    {
-    "text": "The circular plus every related statute",
+    "text": "The circular plus every related statute and regulation",
     "correct": false,
     "why": "The convention is about amendments to what is cited."
    }
@@ -221,7 +221,7 @@
     "why": "When a sentence directs action, the contracting officer is responsible unless another party is expressly cited (1.107(f))."
    },
    {
-    "text": "The contractor",
+    "text": "The contractor, under its clauses",
     "correct": false,
     "why": "Contractor duties come from the contract clauses, not FAR directions to the Government."
    },
@@ -231,7 +231,7 @@
     "why": "The agency head is responsible only when named."
    },
    {
-    "text": "GAO",
+    "text": "GAO, as the oversight agency",
     "correct": false,
     "why": "GAO decides protests; it does not carry out FAR directions."
    }
@@ -255,12 +255,12 @@
     "why": "Using a clause with unauthorized modified language is a deviation (1.301(c)). Individual deviations need agency-head authorization documented in the file (1.303); class deviations follow 1.304."
    },
    {
-    "text": "Nothing, if the change is minor",
+    "text": "Nothing, if the change is minor and the contractor agrees",
     "correct": false,
     "why": "The definition has no size exception."
    },
    {
-    "text": "Legal review only",
+    "text": "Legal review only, with a note to the file",
     "correct": false,
     "why": "Legal review does not authorize a deviation."
    },
@@ -294,12 +294,12 @@
     "why": "The principles stress value and mission, not lowest price."
    },
    {
-    "text": "Eliminating all risk",
+    "text": "Eliminating all risk from every acquisition",
     "correct": false,
     "why": "The RFO says the System must manage risk, because trying to eliminate all of it is too costly (1.102(c))."
    },
    {
-    "text": "Requiring Government-unique solutions",
+    "text": "Requiring Government-unique solutions to fit each need",
     "correct": false,
     "why": "The principles say to maximize commercial products and services instead (1.102(a)(3))."
    }
@@ -317,22 +317,22 @@
   "cite": "FAR 1.402-1 and 1.402-2",
   "options": [
    {
-    "text": "To make sure buys comply with law and regulation, and to sign, administer and terminate contracts",
+    "text": "To ensure compliance, and to sign, administer and terminate contracts",
     "correct": true,
     "why": "Only contracting officers may sign, administer or terminate contracts (1.402-1). Before signing they make sure all requirements are met and funds are available (1.402-2)."
    },
    {
-    "text": "To give legal advice to contractors",
+    "text": "To give legal advice to contractors about their obligations",
     "correct": false,
     "why": "Contracting officers seek legal advice from counsel; they do not advise contractors."
    },
    {
-    "text": "To oversee only the technical side of a project",
+    "text": "To oversee only the technical side of a project for the customer",
     "correct": false,
     "why": "Technical monitoring is the COR's support role."
    },
    {
-    "text": "To manage a program's financial accounts",
+    "text": "To manage a program's financial accounts and certify the funds",
     "correct": false,
     "why": "Resource managers handle accounts and certify funds."
    }
@@ -350,22 +350,22 @@
   "cite": "FAR 1.402-1 and 1.403-2",
   "options": [
    {
-    "text": "Authority delegated in writing through a warrant (SF 1402) with any limits stated on it",
+    "text": "Authority delegated in writing through a warrant (SF 1402), with stated limits",
     "correct": true,
     "why": "Contracting officers are appointed in writing on an SF 1402 that states limits on their authority (1.403-2(a)), and they bind the Government only within that authority (1.402-1(a))."
    },
    {
-    "text": "Authority that comes with a job title",
+    "text": "Authority that comes with a job title such as contracting chief",
     "correct": false,
     "why": "A title gives no contracting authority."
    },
    {
-    "text": "Authority from behavior or common understanding",
+    "text": "Authority from behavior or the common understanding of the office and the contractor",
     "correct": false,
     "why": "That is apparent authority, which does not bind the Government."
    },
    {
-    "text": "Authority delegated orally by a supervisor",
+    "text": "Authority delegated orally by a supervisor for urgent buys",
     "correct": false,
     "why": "Appointments must be in writing."
    }
@@ -383,22 +383,22 @@
   "cite": "FAR 1.402-1 and 1.405",
   "options": [
    {
-    "text": "Contractors are expected to know that only officials with actual authority can bind the Government",
+    "text": "Contractors must know that only officials with actual authority can bind the Government",
     "correct": true,
     "why": "Anyone dealing with the Government takes the risk of checking the other person's authority. Only actual authority binds; an unauthorized commitment can only be ratified (1.405)."
    },
    {
-    "text": "The Government always has implied liability",
+    "text": "The Government always has implied liability for the promises its employees make to contractors",
     "correct": false,
     "why": "The opposite: without actual authority there is no binding commitment."
    },
    {
-    "text": "Only military officers can bind the Government",
+    "text": "Only military officers in uniform can bind the Government to a contract",
     "correct": false,
     "why": "Warranted civilians and enlisted contracting officers bind the Government too."
    },
    {
-    "text": "Apparent authority applies only to sealed bidding",
+    "text": "Apparent authority applies only to sealed bidding, not to negotiation",
     "correct": false,
     "why": "It does not apply in any method."
    }
@@ -416,22 +416,22 @@
   "cite": "FAR 1.402-1 and 1.405",
   "options": [
    {
-    "text": "The Government is not bound, because only a contracting officer has actual authority; the commitment may be ratified if the 1.405 criteria are met",
+    "text": "Not bound: only a contracting officer can commit, but ratification under 1.405 may be possible",
     "correct": true,
     "why": "This is an unauthorized commitment. An official with ratification authority may ratify it if the Government received a benefit, the price is fair and reasonable, funds were and are available, and the other criteria in 1.405(c) are met."
    },
    {
-    "text": "The Government must pay because the PM had apparent authority",
+    "text": "The Government must pay because the PM had apparent authority over the program",
     "correct": false,
     "why": "Apparent authority does not bind the Government."
    },
    {
-    "text": "The Government must pay because the contractor acted in good faith",
+    "text": "The Government must pay because the contractor acted in good faith on the program manager's promise",
     "correct": false,
     "why": "Good faith does not create authority."
    },
    {
-    "text": "The Government must pay only if a funding document was signed",
+    "text": "The Government must pay only if a funding document was signed before the work",
     "correct": false,
     "why": "Funding is not authority to commit."
    }
@@ -487,7 +487,7 @@
     "why": "You can bind the Government only within your warrant's limits (1.402-1(a))."
    },
    {
-    "text": "Award it because your supervisor directed it",
+    "text": "Award it because your supervisor directed it in writing and accepts the risk",
     "correct": false,
     "why": "A supervisor cannot expand your warrant."
    },
@@ -497,7 +497,7 @@
     "why": "Changing the requirement to fit your warrant is splitting, not solving."
    },
    {
-    "text": "Award it and seek ratification later",
+    "text": "Award it now and seek ratification of the excess later",
     "correct": false,
     "why": "Knowingly exceeding authority is never a plan."
    }
@@ -515,22 +515,22 @@
   "cite": "FAR 1.404",
   "options": [
    {
-    "text": "To help monitor contract performance as designated in writing by the contracting officer",
+    "text": "To help monitor performance as designated in writing by the contracting officer",
     "correct": true,
     "why": "A COR assists with technical monitoring (1.404(e)) but has no authority to change price, quality, quantity, delivery or other terms (1.404(d))."
    },
    {
-    "text": "To negotiate contract terms",
+    "text": "To negotiate contract terms with the contractor's managers",
     "correct": false,
     "why": "Only contracting officers negotiate and change terms."
    },
    {
-    "text": "To manage contract payments",
+    "text": "To manage contract payments and approve the invoices",
     "correct": false,
     "why": "Payment is handled by the finance office after acceptance."
    },
    {
-    "text": "To give legal advice to the contracting officer",
+    "text": "To give legal advice to the contracting officer on disputes, claims and protests",
     "correct": false,
     "why": "Legal advice comes from counsel."
    }
@@ -548,22 +548,22 @@
   "cite": "FAR 3.101-1 and 3.104",
   "options": [
    {
-    "text": "A conflict of interest that threatens the integrity and impartiality of the evaluation",
+    "text": "A conflict of interest that threatens the impartiality of the evaluation",
     "correct": true,
     "why": "Government business must be conducted with complete impartiality and no preferential treatment (3.101-1). She should disclose it and be removed from the evaluation."
    },
    {
-    "text": "Failure to evaluate technical factors properly",
+    "text": "Failure to evaluate the technical factors in the order the RFP stated them",
     "correct": false,
     "why": "The problem is her relationship, not her technique."
    },
    {
-    "text": "Disclosing source selection information",
+    "text": "Disclosing source selection information to her cousin's firm",
     "correct": false,
     "why": "Nothing says she disclosed anything yet."
    },
    {
-    "text": "Breach of warranty",
+    "text": "Breach of warranty by the cousin's company",
     "correct": false,
     "why": "Warranties are contract terms about supplies, not ethics."
    }
@@ -586,17 +586,17 @@
     "why": "31 U.S.C. 1341 forbids obligating more than is available, or before it is available."
    },
    {
-    "text": "Accepting voluntary services",
+    "text": "Accepting voluntary services from the contractor",
     "correct": false,
     "why": "That is a different ADA prohibition (31 U.S.C. 1342)."
    },
    {
-    "text": "Failing to report a funds shortfall",
+    "text": "Failing to report a funds shortfall within 30 days",
     "correct": false,
     "why": "Reporting comes after a violation; the violation is the obligation."
    },
    {
-    "text": "Paying without a certified invoice",
+    "text": "Paying an invoice without a certified receiving report from the COR",
     "correct": false,
     "why": "That is a payment-process problem, not the ADA violation described."
    }
@@ -614,22 +614,22 @@
   "cite": "31 U.S.C. 1351",
   "options": [
    {
-    "text": "Report it immediately through the agency head to the President (through OMB) and Congress",
+    "text": "Report it immediately through the agency head to the President and Congress",
     "correct": true,
     "why": "31 U.S.C. 1351 requires the agency head to report all relevant facts and actions taken immediately to the President and Congress."
    },
    {
-    "text": "Tell the contractor and withhold payment",
+    "text": "Tell the contractor and withhold payment until replacement funds are found",
     "correct": false,
     "why": "The contractor's payment is not the remedy for an internal violation."
    },
    {
-    "text": "Notify GAO and the contractor within 60 days",
+    "text": "Notify GAO and the contractor within 60 days of finding it",
     "correct": false,
     "why": "That is not the statutory reporting chain."
    },
    {
-    "text": "Quietly deobligate to fix it without reporting",
+    "text": "Quietly deobligate the excess to fix it without reporting",
     "correct": false,
     "why": "Fixing the numbers does not remove the duty to report."
    }
@@ -648,22 +648,22 @@
   "cite": "FAR 15.403-3(a); DFARS 215.403-3",
   "options": [
    {
-    "text": "No. For DoW prime contracts awarded after 30 June 2026 the threshold is $10 million, but you may still ask for data other than certified data to judge the price",
+    "text": "No: DoW's threshold is $10 million after 30 June 2026, though you may request other data",
     "correct": true,
     "why": "The FY2026 NDAA raised DoW's threshold to $10 million. Below it, request only the data other than certified cost or pricing data you need (15.403-1)."
    },
    {
-    "text": "Yes, for all contracts over $2 million",
+    "text": "Yes, because $3 million is above the $2 million FAR threshold for certified data",
     "correct": false,
     "why": "$2 million is outdated: the FAR figure is $2.5 million, and DoW's is now $10 million."
    },
    {
-    "text": "Yes, for every firm-fixed-price contract",
+    "text": "Yes, for every firm-fixed-price sole-source contract above the SAT",
     "correct": false,
     "why": "Contract type does not trigger certified data."
    },
    {
-    "text": "Only if it is competitive and over $10 million",
+    "text": "Only if it is competitive and over $10 million in total value",
     "correct": false,
     "why": "Adequate price competition is an exception: competitive awards normally do not need certified data."
    }
@@ -681,22 +681,22 @@
   "cite": "FAR 15.403-2",
   "options": [
    {
-    "text": "At or below the simplified acquisition threshold, or when an exception applies such as adequate price competition or a commercial item",
+    "text": "At or below the SAT, or when an exception applies, such as adequate price competition",
     "correct": true,
     "why": "Certified data must not be obtained at or below the SAT (15.403-2(a)) or when an exception applies (15.403-2(b)): adequate price competition, prices set by law, commercial items, or a waiver."
    },
    {
-    "text": "Whenever the contract is cost-reimbursement",
+    "text": "Whenever the contract is cost-reimbursement, because costs are audited later anyway",
     "correct": false,
     "why": "Cost-type contracts often need certified data."
    },
    {
-    "text": "Whenever the contractor objects",
+    "text": "Whenever the contractor objects to giving the data in writing",
     "correct": false,
     "why": "Contractor preference is not an exception."
    },
    {
-    "text": "Only on construction",
+    "text": "Only on construction contracts, whatever their value",
     "correct": false,
     "why": "No construction exception exists."
    }
@@ -714,22 +714,22 @@
   "cite": "FAR 15.403-2(c)(1)",
   "options": [
    {
-    "text": "When two or more responsible offerors, competing independently, submit priced offers that meet the requirement, price is a substantial factor, and the winning price is not found unreasonable",
+    "text": "Two or more responsible offerors compete independently, price is a substantial factor, and the price is not unreasonable",
     "correct": true,
     "why": "15.403-2(c)(1)(i). The one-offer path in (c)(1)(ii) does not apply to DoW, which also resolicits when only one offer comes in (DFARS 215.371)."
    },
    {
-    "text": "When one offer is received but the contracting officer expected competition",
+    "text": "Only one offer is received, but the contracting officer reasonably expected real competition when the solicitation was issued",
     "correct": false,
     "why": "That path is for agencies other than DoW, NASA and the Coast Guard."
    },
    {
-    "text": "When the IGCE matches the price",
+    "text": "The IGCE matches the price within ten percent and the offeror is responsible",
     "correct": false,
     "why": "An IGCE comparison is a price analysis technique, not adequate price competition."
    },
    {
-    "text": "When the offer comes from a small business",
+    "text": "The offer comes from a small business that competed in a set-aside with one offer",
     "correct": false,
     "why": "Size status has nothing to do with it."
    }
@@ -747,22 +747,22 @@
   "cite": "DFARS PGI part 215 (CBAR)",
   "options": [
    {
-    "text": "Finding acquisition-related data on contractors, such as business system status, rates, and records of negotiations other DoW contracting officers completed",
+    "text": "Finding data on contractors, such as business system status, rates and other DoW negotiations",
     "correct": true,
     "why": "CBAR, run by DCMA, gives contracting officers data on contractors and negotiations completed by DoW procuring contracting officers, which helps you prepare."
    },
    {
-    "text": "Tracking performance ratings for source selections",
+    "text": "Tracking contractor performance ratings and comments for use in DoW source selections",
     "correct": false,
     "why": "Performance ratings are in CPARS."
    },
    {
-    "text": "Submitting invoices for audit",
+    "text": "Submitting invoices for audit before payment by DFAS",
     "correct": false,
     "why": "Invoices go through PIEE (WAWF)."
    },
    {
-    "text": "Reporting procurement integrity violations to the IG",
+    "text": "Reporting procurement integrity violations to the Inspector General",
     "correct": false,
     "why": "Violations go to the chain and the HCA (3.104-7), not CBAR."
    }
@@ -781,22 +781,22 @@
   "cite": "FAR 5.101(b)(2)",
   "options": [
    {
-    "text": "Post a presolicitation notice on SAM.gov unless another exemption applies; the only-one-source exception does not exempt you",
+    "text": "Post a notice unless another exemption applies; sole source alone does not exempt it",
     "correct": true,
     "why": "Using other than full and open competition exempts you from the notice EXCEPT for 6.103-1 (only one source) and 6.103-6 (national security) (5.101(b)(2)). Posting may find another source."
    },
    {
-    "text": "Skip notices because it is sole source",
+    "text": "Skip notices, because a sole-source award has only one possible offeror",
     "correct": false,
     "why": "That is exactly the case the RFO still requires a notice for."
    },
    {
-    "text": "Notify only small businesses and internal stakeholders",
+    "text": "Notify only small businesses and internal stakeholders by email",
     "correct": false,
     "why": "Notices go to the GPE (SAM.gov) for everyone."
    },
    {
-    "text": "Post only the justification after award",
+    "text": "Post only the justification after award, which replaces the presolicitation notice",
     "correct": false,
     "why": "The justification is posted after award (6.301), but the presolicitation notice is still required here."
    }
@@ -815,22 +815,22 @@
   "cite": "FAR 5.101 (Table 5-2) and 5.201 (Table 5-3)",
   "options": [
    {
-    "text": "Post a presolicitation notice on SAM.gov at least 15 days before issuing the solicitation, then allow at least 30 days for offers",
+    "text": "Post a notice 15 days before the solicitation, then allow at least 30 days for offers",
     "correct": true,
     "why": "Above the SAT, noncommercial buys need a notice 15 days before the solicitation (Table 5-2) and at least 30 days from the solicitation to receive offers (Table 5-3): about 45 days from notice to closing."
    },
    {
-    "text": "No notice, because it is under the SAT",
+    "text": "No notice, because $500,000 is under the simplified acquisition threshold for supplies",
     "correct": false,
     "why": "$500,000 is above the $350,000 SAT."
    },
    {
-    "text": "Post it on the contractor's website",
+    "text": "Post it on the contractor's website and the agency's social media",
     "correct": false,
     "why": "Notices go to the Governmentwide point of entry, SAM.gov."
    },
    {
-    "text": "Post only if fewer than three sources exist",
+    "text": "Post only if market research found fewer than three sources",
     "correct": false,
     "why": "The notice rule does not depend on how many sources exist."
    }
@@ -849,22 +849,22 @@
   "cite": "FAR 5.101(b)(2), 6.103-2 and 6.301(b)(1)",
   "options": [
    {
-    "text": "No presolicitation notice is required, but document the urgency, solicit as many sources as practicable, and post the justification within 30 days after award",
+    "text": "Skip the notice, but document urgency, solicit as many sources as practicable, and post the J&A",
     "correct": true,
     "why": "Urgency is an other-than-full-and-open authority that is exempt from the notice (5.101(b)(2)). Its justification may follow award (6.103-2(d)) and is posted within 30 days (6.301(b)(1))."
    },
    {
-    "text": "Skip all publicizing and documentation entirely",
+    "text": "Skip all publicizing and documentation entirely, since disaster buys are exempt from Part 5",
     "correct": false,
     "why": "The justification and its posting are still required."
    },
    {
-    "text": "Post a special notice only after award",
+    "text": "Post a special notice only after award, explaining the hurricane",
     "correct": false,
     "why": "Special notices are not the urgency mechanism."
    },
    {
-    "text": "Wait 15 days for the notice period before soliciting",
+    "text": "Wait 15 days for the notice period before soliciting any offers",
     "correct": false,
     "why": "The urgency exemption removes the notice requirement."
    }
@@ -883,22 +883,22 @@
   "cite": "FAR 5.101(b)(1)(ii)",
   "options": [
    {
-    "text": "The 5.101(b) exemption for actions whose notice could not be written without disclosing needs in a way that compromises national security",
+    "text": "The 5.101(b) exemption for notices that would compromise national security",
     "correct": true,
     "why": "5.101(b)(1)(ii) exempts these actions. The related competition exception is national security (6.103-6)."
    },
    {
-    "text": "The 10-day posting rule for actions between $20,000 and $25,000",
+    "text": "The 10-day posting rule for proposed actions valued between $20,000 and $25,000",
     "correct": false,
     "why": "That sets a posting time, not an exemption."
    },
    {
-    "text": "Paid advertisement rules",
+    "text": "Paid advertisement rules for classified buys",
     "correct": false,
     "why": "5.102 covers optional paid advertisements."
    },
    {
-    "text": "Requests from small businesses for copies",
+    "text": "Requests from small businesses for copies of the solicitation",
     "correct": false,
     "why": "5.202 covers giving solicitation copies to small businesses on request."
    }
@@ -922,7 +922,7 @@
     "why": "Award notices are required over $25,000 for actions likely to result in subcontracts or covered by trade agreements; when subcontracts are likely, post as soon as possible (5.301(d))."
    },
    {
-    "text": "Nothing, because it was competed",
+    "text": "Nothing, because it was competed in the open",
     "correct": false,
     "why": "Competition does not exempt an award notice."
    },
@@ -932,7 +932,7 @@
     "why": "Offeror notices are separate (15.207-2); the public award notice is still required."
    },
    {
-    "text": "Post within 60 days in every case",
+    "text": "Post within 60 days in every case, with the price and the winner's name",
     "correct": false,
     "why": "60 days applies when subcontracts are not likely and only trade agreements require the notice."
    }
@@ -950,22 +950,22 @@
   "cite": "FAR 15.109",
   "options": [
    {
-    "text": "Standardizes how solicitations and contracts are organized into sections A to M",
+    "text": "Standardizes how solicitations and contracts are organized (sections A to M)",
     "correct": true,
     "why": "The UCF puts the same information in the same place every time: Part I the Schedule (A-H), Part II clauses (I), Part III attachments (J) and Part IV representations and instructions (K-M)."
    },
    {
-    "text": "Sets the evaluation criteria",
+    "text": "Sets the evaluation criteria for every negotiated buy",
     "correct": false,
     "why": "Evaluation factors are one section (M) of the UCF."
    },
    {
-    "text": "Defines performance standards",
+    "text": "Defines the performance standards and the inspection rules for service contracts",
     "correct": false,
     "why": "Those go in Section C and the PWS."
    },
    {
-    "text": "Establishes the contract terms",
+    "text": "Establishes the contract terms and the prices for each line",
     "correct": false,
     "why": "Terms go in the sections; the format just organizes them."
    }
@@ -984,22 +984,22 @@
   "cite": "FAR 14.201-1 and 15.102(b)",
   "options": [
    {
-    "text": "For invitations for bids and requests for proposals, with exceptions such as construction, subsistence and streamlined RFPs",
+    "text": "For IFBs and RFPs, with exceptions such as construction and streamlined RFPs",
     "correct": true,
     "why": "IFBs use the UCF to the maximum practicable extent (14.201-1(a)); RFPs should use it (15.102(b)(1)), except construction, A-E, subsistence, special formats, streamlined RFPs and agency-exempted buys (15.102(b)(2))."
    },
    {
-    "text": "Only for purchase orders",
+    "text": "Only for purchase orders under simplified procedures",
     "correct": false,
     "why": "Purchase orders use simple forms such as the SF 1449, OF 347 or DD 1155."
    },
    {
-    "text": "Only for major systems",
+    "text": "Only for major systems and other buys over $100 million that need formal source selection",
     "correct": false,
     "why": "It is the default for negotiated and sealed-bid contracts, not just major systems."
    },
    {
-    "text": "Never; the RFO eliminated it",
+    "text": "Never; the RFO eliminated it for all contracts",
     "correct": false,
     "why": "The RFO kept the UCF (15.109)."
    }
@@ -1121,17 +1121,17 @@
     "why": "Part II, Section I, Contract Clauses."
    },
    {
-    "text": "Section C",
+    "text": "Section C (Part I)",
     "correct": false,
     "why": "Section C is the requirement."
    },
    {
-    "text": "Section L",
+    "text": "Section L (Part IV)",
     "correct": false,
     "why": "Section L holds solicitation provisions for offerors."
    },
    {
-    "text": "Section K",
+    "text": "Section K (Part IV)",
     "correct": false,
     "why": "Section K holds representations and certifications."
    }
@@ -1183,7 +1183,7 @@
   "cite": "FAR 15.109 and 14.307(e)(3)",
   "options": [
    {
-    "text": "Section K, Representations, certifications and other statements",
+    "text": "Section K, Representations and certifications",
     "correct": true,
     "why": "Part IV (K, L and M) stays in the contract file, not the contract; Section K is incorporated by reference through clauses such as 52.204-19 (15.109)."
    },
@@ -1193,12 +1193,12 @@
     "why": "Section B is the heart of the contract and is always included."
    },
    {
-    "text": "Section I, Contract Clauses",
+    "text": "Section I, Contract Clauses (Part II)",
     "correct": false,
     "why": "Section I is part of the contract."
    },
    {
-    "text": "Section M, Evaluation Factors",
+    "text": "Section M, Evaluation Factors for Award",
     "correct": false,
     "why": "Section M is not physically included, but it is not incorporated by reference either; it simply has no role after award."
    }
@@ -1216,22 +1216,22 @@
   "cite": "FAR 15.109-1(b)",
   "options": [
    {
-    "text": "The supplies or services and their prices or costs (the line items)",
+    "text": "The supplies or services and their prices (the line items)",
     "correct": true,
     "why": "Section B lists the contract line items (CLINs) with quantities and prices."
    },
    {
-    "text": "The statement of work",
+    "text": "The statement of work and the delivery schedule",
     "correct": false,
     "why": "That is Section C."
    },
    {
-    "text": "Evaluation criteria",
+    "text": "Evaluation criteria and their relative importance for award",
     "correct": false,
     "why": "That is Section M."
    },
    {
-    "text": "Special contract requirements",
+    "text": "Special contract requirements for the work",
     "correct": false,
     "why": "That is Section H."
    }
@@ -1287,17 +1287,17 @@
     "why": "Section J lists every attached document, exhibit and attachment."
    },
    {
-    "text": "Section G",
+    "text": "Section G (Part I)",
     "correct": false,
     "why": "Section G is administration data."
    },
    {
-    "text": "Section H",
+    "text": "Section H (Part I)",
     "correct": false,
     "why": "Section H is special requirements."
    },
    {
-    "text": "Section L",
+    "text": "Section L (Part IV)",
     "correct": false,
     "why": "Section L is instructions to offerors."
    }
@@ -1320,17 +1320,17 @@
     "why": "Section G holds accounting and appropriation data and administration instructions, including payment information."
    },
    {
-    "text": "Section B",
+    "text": "Section B, Supplies or Services and Prices",
     "correct": false,
     "why": "Section B has the prices, not payment instructions."
    },
    {
-    "text": "Section C",
+    "text": "Section C, Description/Specifications",
     "correct": false,
     "why": "Section C is the requirement."
    },
    {
-    "text": "Section F",
+    "text": "Section F, Deliveries or Performance",
     "correct": false,
     "why": "Section F is delivery."
    }
@@ -1381,12 +1381,12 @@
   "cite": "FAR 2.101",
   "options": [
    {
-    "text": "A term or condition used only in solicitations that applies only before award",
+    "text": "A term used only in solicitations that applies only before award",
     "correct": true,
     "why": "Provisions apply before award; clauses apply after award, or both before and after (2.101)."
    },
    {
-    "text": "A term that applies only after award",
+    "text": "A term that applies only after award, during contract performance",
     "correct": false,
     "why": "That describes a clause."
    },
@@ -1396,7 +1396,7 @@
     "why": "Contract requirements are clauses."
    },
    {
-    "text": "A general policy for all acquisitions",
+    "text": "A general policy for all acquisitions in the agency",
     "correct": false,
     "why": "Policy is in the FAR text, not provisions."
    }
@@ -1419,7 +1419,7 @@
     "why": "A clause is used in contracts, or in both solicitations and contracts, and applies after award or both before and after (2.101)."
    },
    {
-    "text": "A provision, kept only in Section K",
+    "text": "A provision, kept only in Section K of the contract",
     "correct": false,
     "why": "Provisions apply only before award."
    },
@@ -1429,7 +1429,7 @@
     "why": "Provisions do not convert into clauses."
    },
    {
-    "text": "A clause incorporated only after award",
+    "text": "A clause incorporated only after award, by a bilateral modification",
     "correct": false,
     "why": "Offerors need to see clauses in the solicitation to price them."
    }
@@ -1452,7 +1452,7 @@
     "why": "It tells offerors how to respond, which matters only before award."
    },
    {
-    "text": "It applies only after award",
+    "text": "It applies only after award, during performance",
     "correct": false,
     "why": "That would make it a clause."
    },
@@ -1485,17 +1485,17 @@
     "why": "Payment terms apply after award, so it is a clause."
    },
    {
-    "text": "It is a provision",
+    "text": "It is a provision that offerors must sign",
     "correct": false,
     "why": "Provisions apply only before award."
    },
    {
-    "text": "It matters only before award",
+    "text": "It matters only before award, for pricing",
     "correct": false,
     "why": "Payment happens after award."
    },
    {
-    "text": "It is optional in fixed-price contracts",
+    "text": "It is optional in fixed-price contracts over the simplified acquisition threshold",
     "correct": false,
     "why": "It is prescribed for fixed-price supply and service contracts."
    }
@@ -1519,7 +1519,7 @@
     "why": "Agency regulations implement the FAR (more detail on a FAR topic) or supplement it (topics the FAR does not cover) (1.201(a)(1)). They may not repeat or conflict with the FAR (1.201(a)(2))."
    },
    {
-    "text": "To replace the FAR for DoW",
+    "text": "To replace the FAR for DoW contracting offices",
     "correct": false,
     "why": "The DFARS works alongside the FAR, never instead of it."
    },
@@ -1529,7 +1529,7 @@
     "why": "The DFARS covers far more than foreign acquisition."
    },
    {
-    "text": "To simplify buying from small businesses",
+    "text": "To simplify buying from small businesses in DoW by raising the thresholds",
     "correct": false,
     "why": "That is not its purpose."
    }
@@ -1552,17 +1552,17 @@
     "why": "The SF 30 is used for amendments, change orders, administrative changes, supplemental agreements and funding actions (43.401(a))."
    },
    {
-    "text": "SF 1449",
+    "text": "SF 1449, Solicitation/Contract/Order for Commercial Products",
     "correct": false,
     "why": "The SF 1449 is the commercial solicitation/contract/order form."
    },
    {
-    "text": "DD 1155",
+    "text": "DD 1155, Order for Supplies or Services",
     "correct": false,
     "why": "The DD 1155 is DoW's order for supplies or services."
    },
    {
-    "text": "SF 1442",
+    "text": "SF 1442, Solicitation, Offer, and Award (Construction)",
     "correct": false,
     "why": "The SF 1442 is the construction solicitation, offer and award."
    }
@@ -1581,7 +1581,7 @@
   "cite": "FAR 12.201-1(c)(1) and 12.204(c)",
   "options": [
    {
-    "text": "Solicitation, contract and order for commercial products and commercial services",
+    "text": "Solicitation, contract and order for commercial products and services",
     "correct": true,
     "why": "The SF 1449 is used for commercial RFQs, purchase orders and contracts (12.201-1(c)(1), 12.204(c))."
    },
@@ -1591,12 +1591,12 @@
     "why": "Noncommercial RFPs use the SF 33, OF 308 or no prescribed form."
    },
    {
-    "text": "A small business subcontracting plan",
+    "text": "A small business subcontracting plan submitted by large prime contractors",
     "correct": false,
     "why": "Subcontracting plans are not on a standard form."
    },
    {
-    "text": "A contract modification",
+    "text": "A contract modification for commercial contracts",
     "correct": false,
     "why": "Modifications use the SF 30."
    }
@@ -1615,22 +1615,22 @@
   "cite": "FAR part 53 and 36",
   "options": [
    {
-    "text": "SF 1442, Solicitation, Offer, and Award (Construction, Alteration, or Repair)",
+    "text": "SF 1442, Solicitation, Offer, and Award (Construction)",
     "correct": true,
     "why": "Construction solicitations and awards use the SF 1442."
    },
    {
-    "text": "SF 30",
+    "text": "SF 30, Amendment of Solicitation/Modification of Contract",
     "correct": false,
     "why": "The SF 30 amends solicitations and modifies contracts."
    },
    {
-    "text": "SF 1449",
+    "text": "SF 1449, Solicitation/Contract/Order for Commercial Products",
     "correct": false,
     "why": "The SF 1449 is for commercial products and services."
    },
    {
-    "text": "SF 44",
+    "text": "SF 44, Purchase Order-Invoice-Voucher",
     "correct": false,
     "why": "The SF 44 is a pocket purchase order for over-the-counter micro-purchases."
    }
@@ -1648,22 +1648,22 @@
   "cite": "FAR 4.201",
   "options": [
    {
-    "text": "A Governmentwide-unique number that identifies each solicitation, contract, agreement or order",
+    "text": "A Governmentwide-unique number for each solicitation, contract, agreement or order",
     "correct": true,
     "why": "The PIID is used on all related actions and forms (4.201(a)). Modifications and amendments get a separate supplementary number."
    },
    {
-    "text": "A document describing the technical requirement",
+    "text": "A document describing the technical requirement, its standards and the delivery schedule",
     "correct": false,
     "why": "That is the SOW or PWS."
    },
    {
-    "text": "A list of data deliverables",
+    "text": "A list of the data deliverables and their due dates",
     "correct": false,
     "why": "That is the contract data requirements list."
    },
    {
-    "text": "A plan for evaluating contractor performance",
+    "text": "A plan for evaluating contractor performance during the contract",
     "correct": false,
     "why": "That is a QASP."
    }
@@ -1692,7 +1692,7 @@
     "why": "BPAs use A."
    },
    {
-    "text": "A lease agreement",
+    "text": "A lease agreement for equipment",
     "correct": false,
     "why": "Leases use L."
    },
@@ -1720,12 +1720,12 @@
     "why": "A in position 9 means a BPA."
    },
    {
-    "text": "A contract",
+    "text": "A contract (other than indefinite-delivery)",
     "correct": false,
     "why": "Contracts other than indefinite-delivery use C."
    },
    {
-    "text": "A grant",
+    "text": "A grant to a university",
     "correct": false,
     "why": "Grants are not procurement instruments and have no PIID letter."
    },
@@ -1753,17 +1753,17 @@
     "why": "C in position 9 means a contract other than an indefinite-delivery contract."
    },
    {
-    "text": "A grant",
+    "text": "A grant or other assistance instrument",
     "correct": false,
     "why": "Grants have no PIID letter."
    },
    {
-    "text": "A cooperative agreement",
+    "text": "A cooperative agreement with a nonprofit",
     "correct": false,
     "why": "Not a procurement instrument."
    },
    {
-    "text": "An interagency agreement",
+    "text": "An interagency agreement with another Government office",
     "correct": false,
     "why": "Not identified by C."
    }
@@ -1814,22 +1814,22 @@
   "cite": "FAR 4.201(b)(1)",
   "options": [
    {
-    "text": "The issuing office's activity address code (the agency and office)",
+    "text": "The issuing office's activity address code (agency and office)",
     "correct": true,
     "why": "Positions 1 to 6 are the issuing office's Activity Address Code (4.201(b)(1)). Positions 7 and 8 are the fiscal year, 9 the instrument type, then the serial number."
    },
    {
-    "text": "That it is a grant",
+    "text": "That it is a grant from the Army research office",
     "correct": false,
     "why": "The first six characters identify the office, not the instrument."
    },
    {
-    "text": "The instrument type",
+    "text": "The instrument type and the fiscal year",
     "correct": false,
     "why": "The type is position 9."
    },
    {
-    "text": "That it is a purchase order",
+    "text": "That it is a purchase order issued under the simplified procedures",
     "correct": false,
     "why": "Purchase orders are P in position 9."
    }
@@ -1847,7 +1847,7 @@
   "cite": "FAR 43.203(a)",
   "options": [
    {
-    "text": "A modification signed by both the contractor and the contracting officer (a supplemental agreement)",
+    "text": "A modification signed by both the contractor and the contracting officer",
     "correct": true,
     "why": "Bilateral modifications make negotiated equitable adjustments, definitize letter contracts and reflect other agreements of the parties (43.203(a))."
    },
@@ -1857,7 +1857,7 @@
     "why": "That is unilateral."
    },
    {
-    "text": "A modification that changes only the price",
+    "text": "A modification that changes only the price and nothing else in the contract",
     "correct": false,
     "why": "A bilateral modification can change any term both parties agree to."
    },
@@ -1918,7 +1918,7 @@
     "why": "An administrative change does not affect the parties' substantive rights (43.201) and is issued unilaterally on an SF 30 (43.203(b)(1), 43.401(a)(1)(iv))."
    },
    {
-    "text": "A substantive bilateral SF 30",
+    "text": "A substantive bilateral SF 30 signed by both parties",
     "correct": false,
     "why": "No substantive right changes, so no agreement is needed."
    },
@@ -2022,7 +2022,7 @@
     "why": "Options are exercised unilaterally under the option clause."
    },
    {
-    "text": "A change under the Changes clause",
+    "text": "A change order under the Changes clause for new work",
     "correct": false,
     "why": "The change order is unilateral; only the later equitable adjustment is bilateral."
    },
@@ -2045,22 +2045,22 @@
   "cite": "FAR 43.203(a) and 49.402-3",
   "options": [
    {
-    "text": "Evaluate the request and, if justified, issue a bilateral modification revising the schedule, getting consideration when the delay is the contractor's fault",
+    "text": "If justified, revise the schedule by bilateral modification, with consideration if the contractor is at fault",
     "correct": true,
     "why": "A schedule change by agreement is a supplemental agreement. If the delay is not excusable, the Government should get consideration for giving up its right to on-time delivery."
    },
    {
-    "text": "Deny it and terminate for default immediately",
+    "text": "Deny it and terminate for default immediately to protect the Government",
     "correct": false,
     "why": "Default needs a careful review of the facts and remedies first (49.402-3(a))."
    },
    {
-    "text": "Approve it informally without modifying the contract",
+    "text": "Approve it informally by email, since a schedule change does not need a modification",
     "correct": false,
     "why": "An informal extension can waive the Government's rights; put it in a modification."
    },
    {
-    "text": "Let the contractor keep working and deal with the schedule at the end",
+    "text": "Let the contractor keep working, and deal with the late schedule and any damages at the very end of the contract",
     "correct": false,
     "why": "Ignoring the delay can waive the delivery date."
    }
@@ -2113,12 +2113,12 @@
   "cite": "FAR 43.304(b) and 43.203(a)(1)",
   "options": [
    {
-    "text": "Negotiate the equitable adjustment and definitize it with a supplemental agreement",
+    "text": "Negotiate the adjustment and definitize it with a supplemental agreement",
     "correct": true,
     "why": "Negotiate equitable adjustments from change orders in the shortest practicable time (43.304(b)) and record them in a bilateral modification (43.203(a)(1)) with a release (43.304(c))."
    },
    {
-    "text": "Deny it unless the contractor proves Government fault",
+    "text": "Deny it unless the contractor proves the Government was at fault for the change",
     "correct": false,
     "why": "A change order you issued entitles the contractor to an equitable adjustment for its effects."
    },
@@ -2128,7 +2128,7 @@
     "why": "The adjustment must be negotiated first."
    },
    {
-    "text": "Send it to legal counsel and do nothing else",
+    "text": "Send it to legal counsel and wait for their decision",
     "correct": false,
     "why": "Counsel can help, but negotiating is your job."
    }
@@ -2147,22 +2147,22 @@
   "cite": "FAR 43.202(a), 43.204 and 1.405",
   "options": [
    {
-    "text": "Review the facts: the QAR had no authority, so treat it as a possible unauthorized commitment that may be ratified if the Government benefited and the 1.405 criteria are met",
+    "text": "Review the facts: the QAR lacked authority, so treat it as a possible unauthorized commitment for ratification",
     "correct": true,
     "why": "Only contracting officers may change contracts (43.202(a)). Contractors should notify the Government of unwritten changes (43.204). A proper ratification lets you pay a fair price for a benefit the Government received."
    },
    {
-    "text": "Pay it automatically because a Government employee directed it",
+    "text": "Pay it automatically, because a Government employee directed the change",
     "correct": false,
     "why": "Direction by someone without authority does not bind the Government."
    },
    {
-    "text": "Deny it without reviewing the facts",
+    "text": "Deny it without reviewing the facts, since only a contracting officer can ever change the terms of the contract",
     "correct": false,
     "why": "You must look at the facts; ratification may be appropriate."
    },
    {
-    "text": "Tell the contractor to settle it with the QAR",
+    "text": "Tell the contractor to settle it with the QAR, who made the decision",
     "correct": false,
     "why": "The QAR cannot pay or change anything."
    }
@@ -2180,22 +2180,22 @@
   "cite": "FAR 33.205-6",
   "options": [
    {
-    "text": "Appeal to the agency board of contract appeals within 90 days, or sue in the Court of Federal Claims within 12 months",
+    "text": "Appeal to the board within 90 days, or sue in the Court of Federal Claims within 12 months",
     "correct": true,
     "why": "Both deadlines run from receipt of the final decision, and the decision itself must say so. For DoW the board is the ASBCA."
    },
    {
-    "text": "Protest to GAO within 10 days",
+    "text": "Protest to GAO within 10 days of the final decision",
     "correct": false,
     "why": "GAO decides bid protests, not contract claims."
    },
    {
-    "text": "Sue in a U.S. District Court within 60 days",
+    "text": "Sue in a U.S. District Court within 60 days, or ask GAO to review the decision",
     "correct": false,
     "why": "District courts do not hear Contract Disputes Act claims."
    },
    {
-    "text": "Resubmit with new evidence within 30 days",
+    "text": "Resubmit the claim with new evidence within 30 days, or ask the board for mediation before deciding",
     "correct": false,
     "why": "A final decision is appealed, not resubmitted."
    }
@@ -2214,22 +2214,22 @@
   "cite": "FAR 33.205-2, 33.205-6 and 52.233-1",
   "options": [
    {
-    "text": "The contracting officer must decide within 60 days or tell the contractor when a decision will be issued, and the contractor keeps working meanwhile",
+    "text": "The CO must decide within 60 days or set a decision date, and the contractor keeps working",
     "correct": true,
     "why": "For claims over $100,000, decide within 60 days of receiving the certified claim or say when you will (33.205-6). The Disputes clause requires the contractor to proceed diligently pending resolution."
    },
    {
-    "text": "The contractor must stop work until the claim is resolved",
+    "text": "The contractor must stop work until the claim is resolved by the board",
     "correct": false,
     "why": "The contractor must keep performing."
    },
    {
-    "text": "The contractor should go straight to the Court of Federal Claims without a claim",
+    "text": "The contractor should go straight to the Court of Federal Claims without filing a claim first",
     "correct": false,
     "why": "A claim and a final decision (or deemed denial) come first."
    },
    {
-    "text": "The claim is invalid unless filed within 60 days of discovery",
+    "text": "The claim is invalid unless it was filed within 60 days of discovering the rock",
     "correct": false,
     "why": "Claims may be filed within 6 years of accrual; the clause's prompt-notice rule is separate."
    }
@@ -2247,22 +2247,22 @@
   "cite": "FAR 33.101 and 33.106",
   "options": [
    {
-    "text": "The agency (contracting officer), GAO, or the U.S. Court of Federal Claims",
+    "text": "The agency, GAO, or the Court of Federal Claims",
     "correct": true,
     "why": "The three protest forums. Subpart 33.1 covers agency and GAO protests; the Court of Federal Claims follows its own rules (33.106)."
    },
    {
-    "text": "DCMA",
+    "text": "DCMA, which administers the contract",
     "correct": false,
     "why": "DCMA administers contracts; it does not decide protests."
    },
    {
-    "text": "The Small Business Administration",
+    "text": "The Small Business Administration or the agency",
     "correct": false,
     "why": "SBA decides size and status protests, not bid protests generally."
    },
    {
-    "text": "OMB",
+    "text": "OMB, through the agency's budget office",
     "correct": false,
     "why": "OMB does not decide protests."
    }
@@ -2313,22 +2313,22 @@
   "cite": "FAR 42.202 and 42.302",
   "options": [
    {
-    "text": "To administer contracts delegated to it, overseeing contractor performance and compliance",
+    "text": "To administer contracts delegated to it, overseeing performance and compliance",
     "correct": true,
     "why": "Contracting officers can delegate contract administration functions to a contract administration office such as DCMA (42.202, 42.302)."
    },
    {
-    "text": "To give legal advice to the contracting officer",
+    "text": "To give legal advice to the contracting officer on claims",
     "correct": false,
     "why": "Counsel gives legal advice."
    },
    {
-    "text": "To make contract payments",
+    "text": "To make contract payments to the contractors after the receiving report is signed",
     "correct": false,
     "why": "DFAS and other finance offices pay."
    },
    {
-    "text": "To do market research",
+    "text": "To do market research for the requiring activities",
     "correct": false,
     "why": "Market research is done by the acquisition team before solicitation."
    }
@@ -2379,22 +2379,22 @@
   "cite": "FAR 42.1102 and 42.1103",
   "options": [
    {
-    "text": "The contracting officer or the designated assessing official under agency procedures",
+    "text": "The contracting officer or the assessing official the agency designates",
     "correct": true,
     "why": "Agencies assign evaluation roles (42.1103(a)); evaluations are due at least annually and when the work is complete (42.1102(a))."
    },
    {
-    "text": "The contractor",
+    "text": "The contractor, who drafts its own evaluation",
     "correct": false,
     "why": "The contractor comments on the evaluation; it does not write it."
    },
    {
-    "text": "The program manager alone",
+    "text": "The program manager alone, as the customer",
     "correct": false,
     "why": "The PM gives input, but the assigned official is responsible."
    },
    {
-    "text": "Nobody; CPARS is optional",
+    "text": "Nobody; CPARS evaluations are optional once the contract has been completed",
     "correct": false,
     "why": "Evaluations are required above the SAT (42.1102(b))."
    }
@@ -2412,22 +2412,22 @@
   "cite": "FAR 42.1101(b) and 15.202(c)",
   "options": [
    {
-    "text": "It is the Governmentwide official source of documented contractor past performance",
+    "text": "It is the official Governmentwide source of contractor past performance",
     "correct": true,
     "why": "CPARS is the official source for past performance information (42.1101(b)); evaluators also use information from other sources (15.202(c)(3))."
    },
    {
-    "text": "It is where offerors upload testimonials",
+    "text": "It is where offerors upload their customer testimonials and performance awards",
     "correct": false,
     "why": "Ratings come from Government assessing officials."
    },
    {
-    "text": "It gives independent cost analyses",
+    "text": "It gives independent cost analyses of each offeror's rates",
     "correct": false,
     "why": "Cost analysis comes from your team and DCAA."
    },
    {
-    "text": "It verifies subcontractor payment history only",
+    "text": "It verifies subcontractor payment history only, for primes",
     "correct": false,
     "why": "Payment behavior is one element; CPARS covers all performance."
    }
@@ -2445,22 +2445,22 @@
   "cite": "FAR 4.308",
   "options": [
    {
-    "text": "Confirming that all contract terms have been met and all administrative actions are complete",
+    "text": "Confirming all contract terms are met and all administrative actions are done",
     "correct": true,
     "why": "Closeout verifies the checklist in 4.308-1(a) and ends with a contract completion statement (4.308-1(b))."
    },
    {
-    "text": "Conducting market research",
+    "text": "Conducting market research for the follow-on contract so there is no gap in service",
     "correct": false,
     "why": "Pre-award."
    },
    {
-    "text": "Evaluating proposals",
+    "text": "Evaluating proposals for the next requirement",
     "correct": false,
     "why": "Pre-award."
    },
    {
-    "text": "Writing the statement of work",
+    "text": "Writing the statement of work for the replacement contract",
     "correct": false,
     "why": "Pre-award."
    }
@@ -2511,12 +2511,12 @@
   "cite": "FAR 16.202-1",
   "options": [
    {
-    "text": "A contract that pays a set price regardless of the contractor's actual costs",
+    "text": "A contract that pays a set price whatever the contractor's actual costs",
     "correct": true,
     "why": "The contractor carries maximum cost risk and full responsibility for costs and profit or loss (16.202-1)."
    },
    {
-    "text": "A contract that pays actual costs incurred",
+    "text": "A contract that pays the actual costs incurred plus a fixed fee for the contractor",
     "correct": false,
     "why": "That is cost-reimbursement."
    },
@@ -2526,7 +2526,7 @@
     "why": "That is cost-reimbursement."
    },
    {
-    "text": "A contract that pays based on outcomes",
+    "text": "A contract that pays based on outcomes measured each month",
     "correct": false,
     "why": "Outcome-based features belong to incentive or performance-based arrangements."
    }
@@ -2582,7 +2582,7 @@
     "why": "Cost-reimbursement fits when requirements cannot be defined well enough for fixed price, or uncertainties prevent a good cost estimate (16.301-2)."
    },
    {
-    "text": "Firm-fixed-price",
+    "text": "Firm-fixed-price with a detailed specification",
     "correct": false,
     "why": "FFP needs clearly defined requirements and a fair price you can set at the outset (16.202-2)."
    },
@@ -2643,22 +2643,22 @@
   "cite": "FAR part 37 and 2.101",
   "options": [
    {
-    "text": "To describe the required results and the performance standards the contractor must meet",
+    "text": "To describe the required results and the standards the contractor must meet",
     "correct": true,
     "why": "A PWS states outcomes in measurable terms, leaving the how to the contractor (performance-based acquisition)."
    },
    {
-    "text": "To list the technical specifications only",
+    "text": "To list the technical specifications and the step-by-step methods the contractor must use",
     "correct": false,
     "why": "Detailed how-to specifications fit a SOW, not a PWS."
    },
    {
-    "text": "To set the evaluation criteria",
+    "text": "To set the evaluation criteria for the source selection",
     "correct": false,
     "why": "Evaluation criteria are in Section M."
    },
    {
-    "text": "To set the contract terms and conditions",
+    "text": "To set the contract terms, conditions and clauses",
     "correct": false,
     "why": "Terms are in clauses."
    }
@@ -2681,7 +2681,7 @@
     "why": "Two capable sources mean competition is possible. Document the results in a way that suits the buy (10.001(e))."
    },
    {
-    "text": "Go sole source because there are only two",
+    "text": "Go sole source because there are only two capable vendors",
     "correct": false,
     "why": "Two sources can compete; sole source needs one source and a justification."
    },
@@ -2691,7 +2691,7 @@
     "why": "Two sources are competition."
    },
    {
-    "text": "Solicit both without documenting the research",
+    "text": "Solicit both vendors right away without documenting the market research results",
     "correct": false,
     "why": "Market research must be documented."
    }
@@ -2709,22 +2709,22 @@
   "cite": "FAR 6.104-1",
   "options": [
    {
-    "text": "To explain and document why only one source can fill the requirement, citing the statutory authority",
+    "text": "To document why only one source can meet the need, citing the statutory authority",
     "correct": true,
     "why": "A justification must cite the authority and show why the source's unique qualifications or the nature of the buy require it (6.104-1(a))."
    },
    {
-    "text": "To ask a vendor for a lower price",
+    "text": "To ask a vendor for a lower price before negotiations begin",
     "correct": false,
     "why": "Pricing is negotiated, not justified."
    },
    {
-    "text": "To protest an award",
+    "text": "To protest an award that went to another source",
     "correct": false,
     "why": "Protests are under Part 33."
    },
    {
-    "text": "To speed up the buy",
+    "text": "To speed up the buy when the customer needs it quickly and cannot wait for competition",
     "correct": false,
     "why": "Speed alone is not a justification; lack of planning never is."
    }
@@ -2742,22 +2742,22 @@
   "cite": "FAR 33.102 and 2.101 (claim)",
   "options": [
    {
-    "text": "A protest objects to a solicitation or award before or around award; a claim is a demand by a party to an existing contract seeking money or other relief under it",
+    "text": "A protest challenges a solicitation or award; a claim seeks relief under an existing contract",
     "correct": true,
     "why": "Protests are filed by interested parties about the buying process (33.102). Claims are written demands under a contract and follow the Disputes process (2.101, subpart 33.2)."
    },
    {
-    "text": "They are the same thing",
+    "text": "They are the same thing, filed with different offices",
     "correct": false,
     "why": "Different parties, timing, forums and rules."
    },
    {
-    "text": "A protest is filed only after performance ends",
+    "text": "A protest is filed only after performance ends; a claim is filed before the contract is awarded",
     "correct": false,
     "why": "Protests concern solicitations and awards."
    },
    {
-    "text": "A claim is filed with GAO",
+    "text": "A claim is filed with GAO, and a protest goes to the contracting officer",
     "correct": false,
     "why": "Claims go to the contracting officer, then a board or the Court of Federal Claims."
    }
@@ -2785,12 +2785,12 @@
     "why": "Price is evaluated along with the other factors, not alone."
    },
    {
-    "text": "Verify past performance before anything else",
+    "text": "Verify past performance before anything else, then look at the prices to rank them",
     "correct": false,
     "why": "Past performance is one factor in the evaluation, not a gate in front of it."
    },
    {
-    "text": "Hold negotiations with all offerors",
+    "text": "Hold negotiations with all offerors to clarify their proposals",
     "correct": false,
     "why": "Negotiations, if any, come after the competitive range is set."
    }

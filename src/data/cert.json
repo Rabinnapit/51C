@@ -45,7 +45,7 @@
       {"t": "Watch for the reservation and the welcome letter", "d": "You get a reservation email. About 25 days before class, WarU sends a welcome letter with the links, any pre-work and a technical check. Do the pre-work: some courses grade it."},
       {"t": "Clear your calendar", "d": "Virtual instructor-led (VILT) courses are full time. Your supervisor should put your workload on hold. Test your camera, microphone and the class software on the computer you will use."}
     ],
-    "verify": "AITAS screens and approval routing differ by organization. Confirm these steps with your training NCO or Acquisition Training Office.",
+    "verify": "AITAS screens and approval routing differ by organization. Confirm these steps with your training NCO or Acquisition Training Office.", "links": [{"label": "Open AITAS", "url": "https://www.atrrs.army.mil/Aitas/Public/Landing/"}],
     "tips": [
       "Apply early. Seats fill fast. Ask your training office whether you may apply for the next course before you finish its prerequisite; usually the prerequisite only has to be done before that class starts.",
       "While you wait for CON 1300V, finish its five online modules (FAC 069, FAC 082, FAC 085, CON 0074 and CON 0470) and keep the completion certificates. The instructor asks for them.",

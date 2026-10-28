@@ -1,5 +1,37 @@
 # Changelog
 
+## 0.14.0 (29 October 2026): lesson pictures, a fairer question bank and the AITAS link
+
+- **A picture at the top of every lesson** ("At a glance"): 49 diagrams across the 35 lessons, built from each lesson's
+  own facts with icons and short labels, for readers of every English level. Among them: who does what on the team,
+  where a warrant comes from, the rulebook layers and how to read a FAR citation, the three money rules, the dollar
+  ladder from micro-purchase to negotiation, the contract-type risk scale, the J&A approval ladder, the debriefing and
+  protest clocks, privity between the Government, the prime and the sub, unilateral versus bilateral modifications,
+  convenience versus default, the closeout time limits and the exam blueprint. They reflow on phones, work in night
+  mode and print. New `src/data/figs.json` and `views/lessonfig.js`.
+- **Pictures that move and answer back:** each picture builds itself as it scrolls into view (not with reduced motion);
+  **Play** lights up one part at a time and reads it aloud; tap a part of a contract to take it away (no consideration,
+  no contract), fail one of the five allowable-cost tests, or tap a contract type to see who carries the risk. Five
+  **Try it** tools answer for any dollar value you slide or type: which buying method fits, who approves a DoW J&A,
+  whether a notice is needed, whether certified cost or pricing data are required (with the DoW 30 June 2026 switch)
+  and whether a claim must be certified.
+- **The question bank no longer gives answers away by length.** In 79% of the 374 questions the right answer was the
+  longest option (in 60% by a wide margin), so "pick the longest" scored far above chance and practice scores looked
+  better than real readiness. Options in 303 questions were rewritten: every right answer keeps its meaning, wrong
+  options got plausible detail and padding came off right ones. The right answer is now the longest in 22% of
+  questions, close to the 25% of pure chance, and clearly longer in 5%. The threshold drill got the same fix (from 15 of
+  16 items to 1), and the content check now warns if the cue creeps back. This also makes the Arcade fairer.
+- **Duplicates and a giveaway removed:** the Award bank's debriefing question is now a scenario (a losing offeror asks
+  to see the winner's proposal) and the job-systems question now asks where signed DoW contracts are viewed (EDA),
+  instead of repeating other questions. The exam-areas question no longer prints each area's question count in its
+  options, which gave the answer away.
+- **A fuller guided tour** (about 18 stops): it now says what B2B Guide is and opens the main pages, including Certification
+  101, the new Official documents page, Courses, Lessons and a lesson's playable pictures, then How-to guides, Practice, the
+  Arcade, Look it up (with Official links), search, reading aids and read-aloud, saving progress, and About and feedback.
+- **AITAS link fixed:** Official links, Certification 101 (a new Open AITAS button on Sign up for courses) and the
+  how-tos for the first week, registering for a course and scheduling the exam now open the AITAS landing page,
+  https://www.atrrs.army.mil/Aitas/Public/Landing/, where you register for courses, instead of the ATRRS home page.
+
 ## 0.13.0 (28 October 2026): official documents, picture explanations and Supply Line
 
 - **Supply Line**, a new Arcade game (a story convoy, original to B2B Guide): lead two trucks from the Ops Center to

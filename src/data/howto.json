@@ -15,7 +15,7 @@
    ],
    "tips": ["Write down every login, office phone number and point of contact in one place.", "Ask to sit with a contract specialist for a day to see real actions."],
    "watch": ["Do not wait for someone to request your system access for you.", "Never share your CAC PIN or let someone use your login."],
-   "verify": "Systems and onboarding steps differ by office.", "lessons": ["L01", "L34"]},
+   "verify": "Systems and onboarding steps differ by office.", "lessons": ["L01", "L34"], "links": [{"label": "AITAS", "url": "https://www.atrrs.army.mil/Aitas/Public/Landing/"}]},
   {"id": "register-course", "cat": "career", "title": "Register for a WarU course (Army)", "time": "15 minutes, then approvals", "who": "You, your supervisor and your training office",
    "when": "Any time you need a certification course, such as CON 1100V or CON 1200V.",
    "steps": [
@@ -33,7 +33,7 @@
    "tips": ["Apply for the next course as soon as you know the current one's dates.", "Keep every completion certificate in one folder."],
    "watch": ["Missing a prerequisite can get you dropped from the class.", "Dropping late can cost your unit and the next student a seat."],
    "verify": "AITAS screens and routing differ by organization. Ask your training NCO or Acquisition Training Office.",
-   "links": [{"label": "WarU iCatalog", "url": "https://icatalog.waru.edu/"}]},
+   "links": [{"label": "WarU iCatalog", "url": "https://icatalog.waru.edu/"}, {"label": "AITAS", "url": "https://www.atrrs.army.mil/Aitas/Public/Landing/"}]},
   {"id": "schedule-exam", "cat": "career", "title": "Sign up for and schedule CON 3990V", "time": "30 minutes, then up to 90 days to test", "who": "You, your supervisor and your training office",
    "when": "When you have finished your courses and CON 3910 and score 75% or better on practice exams.",
    "steps": [
@@ -50,7 +50,7 @@
    ],
    "tips": ["Reschedule instead of canceling: rescheduling at least 48 hours ahead does not use an attempt.", "Inside 48 hours, have your supervisor email scheduling@waru.edu."],
    "watch": ["A no-show counts as a failed attempt and costs the Government a seat fee.", "OnVUE online testing usually does not work on government computers."],
-   "lessons": ["L35"], "links": [{"label": "Pearson VUE WarU exams", "url": "https://www.pearsonvue.com/us/en/waru.html"}]},
+   "lessons": ["L35"], "links": [{"label": "AITAS", "url": "https://www.atrrs.army.mil/Aitas/Public/Landing/"}, {"label": "Pearson VUE WarU exams", "url": "https://www.pearsonvue.com/us/en/waru.html"}]},
   {"id": "apply-cert", "cat": "career", "title": "Apply for your certification", "time": "1 hour to gather, then approvals", "who": "You and your supervisor",
    "when": "When all five courses, the exam and 12 months of experience are done.",
    "steps": [

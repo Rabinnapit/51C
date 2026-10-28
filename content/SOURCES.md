@@ -18,7 +18,7 @@ arrives, should be checked against this list and take precedence.
 | 40 of 80 CL hours on contracting recommended; credentials | DPCAP memo, Workforce Development and Continuous Learning Recommendations for 2025 (3 Feb 2025) |
 | FAC-C (Professional) and DoW certification reciprocity; civilian 100 CL hours | Reciprocity MOU FAQs (Aug 2025) |
 | 24 business credit hours removed; bachelor's degree for DoW 1102 under 10 U.S.C. 1724 | DPC memo, 3 Sep 2020 |
-| AITAS: Army training application in ATRRS; help through CAMP | USAASC FAQ pages (via search; asc.army.mil blocks Korean IP addresses) |
+| AITAS: Army training application in ATRRS; help through CAMP; address https://www.atrrs.army.mil/Aitas/Public/Landing/ | USAASC FAQ pages (via search; asc.army.mil blocks Korean IP addresses); address confirmed by the developer, SFC Rabin Napit, 29 Oct 2026 |
 | 51C: 9-week Army Acquisition Transition Course at TAAS, redesigned pilot July 2026 | Army.mil, "ALT-IO and DACM Office Shape a Stronger Acquisition Workforce" (25 Aug 2026) |
 | MICC Launch program for new 51Cs (July 2026) | Army.mil, "MICC Launch Program builds elite talent, strengthens contracting force" (2026), https://www.army.mil/article/294806/ |
 | DAU renamed Warfighting Acquisition University; catalog at icatalog.waru.edu | WarU iCatalog; press coverage of the November 2025 acquisition transformation |

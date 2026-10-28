@@ -47,7 +47,8 @@ src/js/core/07-plan       dated plan: goal, 12-month experience, 36-month deadli
 src/js/core/08-tour       the guided tour (same engine as Board Ready's): spotlight + card, offered once, ? button and ? key
 src/js/core/09-pwa        web edition only: service worker, update bar, install prompt
 src/js/views/*.js         home, path, plan, cert, courses, official, learn (+ lesson), howto, quiz, cards, arcade, games (quick drills), glossary, far, links, settings, about;
-                          explain.js is not a view: the picture explainers (CORB.explain) shared by cert and official
+                          explain.js is not a view: the picture explainers (CORB.explain) shared by cert and official;
+                          lessonfig.js is not a view either: the lesson pictures (CORB.lessonFig) drawn from the figs module
 src/js/arcade/00-engine   window.ARCADE: register, palette, storage through A.host, pace levels, XP ranks, question memory, text, particles, floaters, sound, music
 src/js/arcade/01-shell   lobby, play screen (HUD, prompt panel, fluid canvas, answer panel, reading pause, pause menu), results with the study list
 src/js/arcade/games/*.js contract-quest, supply-line, fire-mission, qual-range, part-patrol, sort-yard
@@ -77,11 +78,19 @@ Script order in the build: data, then `core/*` in file order, then `views/*`, th
   Same option shape as Board Ready's `mcq.json`, so either app's quiz can run the other's questions. `quiz-6-class-*.json` holds the B2B
   class material: `src: 'class'` questions (ids C…) carry `check: same | updated | fixed` and, when changed, a `note` saying what changed
   under the RFO; `src: 'tips'` questions (ids T…) cover topics past test takers reported. Recalled real exam questions are never copied.
+  Keep the four options alike in length: the right answer must not be the longest by habit (the content check warns when it is
+  the longest in more than 35% of questions, or much longer than every other option).
 - `path`: the 6-month exam path. `{title, lede, baseline_days: 182, exam_week, checked_on, how[], months: [{n, title, sub, phase}],
   weeks: [{n, m, title, goal, tasks: [{id, kind, t?, d?, …}], tip, class}], files[], checks: [{topic, src, said, now, status: ok|updated|fixed|verify, cite, verify?}], intel: [{t, d, lesson?, deck?}]}`.
   Task kinds: `lesson` (lesson), `read` (far: part number), `cards` (deck), `drill` (lessons[] | src | phase | missed | weak, n), `exam` (timed, n, target),
   `course` (course), `game` (game: an Arcade id or a quick drill id; `realm` gp|pre|awd|post|all opens a Contract Quest realm or a Supply Line checkpoint; Supply Line also takes `mission`, the full run), `do` and `realexam` (view, params).
   Week dates scale like `plan` steps (`baseline_days`). An Arcade run started from a task ticks it after three or more answers.
+- `figs`: `{lesson id: figure | [figure, ...]}`, the "At a glance" pictures on lesson pages. A figure is `{type, title, note?, ...}`;
+  type is roles | flow | stack | sum | compare | ladder | scale | timeline | parts | chain | rank | bars | check (views/lessonfig.js
+  shows each type's fields). Icons are `CORB.ui.icon` names; the content check rejects unknown types and icons.
+  Hands-on options: `calc` is a Try it tool (`input {label, min, max, start}`, `toggles [{id, t, on}]`, `rules [{max?, if?, t, s, tone?}]`,
+  first match wins, and the last rule must have no max and no if); `sum` with `interactive` loses a part when tapped (`fail`);
+  `check` with `test {pass, fail}` fails a condition when tapped; `scale` items may be `{t, d}` to explain the item tapped.
 - `glossary`: `[{term, expansion, definition, cat, cite?}]` (Board Ready uses the same fields with `domain` for `cat`).
   Terms that look like acronyms are tapped-to-define everywhere in rich text.
 - `howto`: `[{id, cat: career|job, title, when, who, time, steps: [{t, d, cite?}], tips[], watch[], lessons[], links[], verify?}]`

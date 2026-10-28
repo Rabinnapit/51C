@@ -104,6 +104,26 @@ for l in M["lessons"]:
     if per_lesson.get(l["id"], 0) == 0:
         warns.append(f"lesson {l['id']} has no check questions")
 
+# the right answer must not give itself away by length (shuffling the options does not hide it)
+def long_answer(right, wrong):
+    return right > 1.3 * max(wrong) and right - max(wrong) >= 15
+
+
+longest = 0
+for q in M["quiz"]:
+    right = [len(o["text"]) for o in q["options"] if o.get("correct")]
+    wrong = [len(o["text"]) for o in q["options"] if not o.get("correct")]
+    if len(right) != 1 or not wrong:
+        continue
+    longest += right[0] > max(wrong)
+    if long_answer(right[0], wrong):
+        warns.append(f"question {q['id']}: the right answer is much longer than every other option")
+if M["quiz"] and longest > 0.35 * len(M["quiz"]):
+    warns.append(f"the right answer is the longest option in {longest} of {len(M['quiz'])} questions; keep it near a quarter")
+for g in M["games"]["threshold"]:
+    if long_answer(len(g["answer"]), [len(c) for c in g["choices"] if c != g["answer"]]):
+        warns.append(f"threshold drill '{g['scenario'][:40]}': the answer is much longer than the other choices")
+
 by_phase = {}
 for q in M["quiz"]:
     by_phase[q["phase"]] = by_phase.get(q["phase"], 0) + 1
@@ -235,6 +255,36 @@ if "official" in M:
             errors.append(f"journey step {s.get('n')}: unknown owner {s.get('owner')}")
 else:
     errors.append("missing module: official")
+
+# lesson pictures (src/data/figs.json, drawn by views/lessonfig.js): known lessons, known figure types, known icons
+FIG_TYPES = {"roles", "flow", "stack", "sum", "compare", "ladder", "scale", "timeline", "parts", "chain", "rank", "bars", "check", "calc"}
+ui_js = (ROOT / "src" / "js" / "core" / "03-ui.js").read_text(encoding="utf-8")
+icons = set(re.findall(r"(?:^|[\s{,])'?([\w-]+)'?: '<", ui_js))
+figs = M.get("figs", {})
+for lid, spec in figs.items():
+    if lid not in lesson_ids:
+        errors.append(f"figs.json: unknown lesson {lid}")
+    for f in spec if isinstance(spec, list) else [spec]:
+        if f.get("type") not in FIG_TYPES:
+            errors.append(f"figs.json {lid}: unknown figure type {f.get('type')}")
+        named = [x.get("icon") for k in ("items", "steps", "cols", "nodes") for x in f.get(k, []) if isinstance(x, dict)]
+        named += [f["result"].get("icon")] if f.get("result") else []
+        for name in named:
+            if name and name not in icons:
+                errors.append(f"figs.json {lid}: unknown icon {name}")
+        if f.get("type") == "calc":   # every value must reach an answer, and switches must exist
+            rules, ids = f.get("rules", []), {t["id"] for t in f.get("toggles", [])}
+            if not rules or "max" in rules[-1] or "if" in rules[-1]:
+                errors.append(f"figs.json {lid}: a calc needs a last rule with no max and no if")
+            for r in rules:
+                if set(r.get("if", {})) - ids:
+                    errors.append(f"figs.json {lid}: calc rule uses an unknown switch {sorted(set(r['if']) - ids)}")
+            inp = f.get("input", {})
+            if not 0 < inp.get("min", 0) <= inp.get("start", 0) <= inp.get("max", 0):
+                errors.append(f"figs.json {lid}: calc input needs 0 < min <= start <= max")
+for l in M["lessons"]:
+    if l["id"] not in figs:
+        warns.append(f"lesson {l['id']} has no picture in figs.json")
 
 for w in warns:
     print("warning:", w)

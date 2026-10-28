@@ -48,7 +48,8 @@
       h('ol.steps-list', {}, (R.steps || []).map(function (s) { return h('li', {}, h('b', {}, s.t), s.d ? CORB.ui.rich(s.d) : null); })),
       R.verify ? h('div.mt-3', {}, CORB.ui.verifyBadge(R.verify)) : null));
     if ((R.tips || []).length) root.appendChild(h('div.card.mt-4', {}, h('h3', {}, 'Tips that save you a month'), h('ul.tips', {}, R.tips.map(function (t) { return h('li', {}, CORB.ui.rich(t)); }))));
-    root.appendChild(h('div.row.mt-4', {}, h('a.btn', { href: '#/howto?id=register-course' }, icon('steps'), 'Checklist: register for a course'), h('a.btn', { href: '#/courses' }, icon('school'), 'All courses')));
+    root.appendChild(h('div.row.mt-4', {}, (R.links || []).map(function (l) { return CORB.ui.extLink(l.url, l.label, '.btn.primary'); }),
+      h('a.btn', { href: '#/howto?id=register-course' }, icon('steps'), 'Checklist: register for a course'), h('a.btn', { href: '#/courses' }, icon('school'), 'All courses')));
   }
 
   function exam(root, C, h, icon) {

@@ -1,0 +1,384 @@
+{
+  "L01": {"type": "roles", "title": "Who does what on the team",
+    "items": [
+      {"icon": "users", "t": "Customer", "s": "Needs it and pays for it"},
+      {"icon": "search", "t": "Contract specialist (you)", "s": "Researches, writes, recommends"},
+      {"icon": "certificate", "t": "Contracting officer", "s": "Decides and signs", "tone": "key"},
+      {"icon": "eye", "t": "COR", "s": "Watches the work and reports"},
+      {"icon": "dollar", "t": "Resource manager", "s": "Certifies the funds"},
+      {"icon": "shield", "t": "Legal counsel", "s": "Reviews risky actions"},
+      {"icon": "flag", "t": "Small business professional", "s": "Advises on set-asides"}],
+    "note": "PCO buys it. ACO administers it. TCO terminates it."},
+
+  "L02": [
+    {"type": "flow", "title": "Where a contracting officer's authority comes from",
+      "steps": [
+        {"icon": "landmark", "t": "Congress", "s": "Gives agencies the power"},
+        {"icon": "users", "t": "Agency head", "s": "Delegates it"},
+        {"icon": "award", "t": "HCA", "s": "Appoints contracting officers"},
+        {"icon": "certificate", "t": "Contracting officer", "s": "Acts within the warrant (SF 1402)"}]},
+    {"type": "compare", "title": "Which authority binds the Government?",
+      "cols": [
+        {"icon": "check", "tone": "ok", "t": "Actual authority", "rows": ["Written in the warrant, or part of the assigned duties", "Binds the Government"]},
+        {"icon": "x", "tone": "bad", "t": "Apparent authority", "rows": ["Only looks like authority", "Never binds the Government"]}],
+      "note": "A promise made without authority is an **unauthorized commitment**. Only the HCA can ratify it (delegated no lower than the chief of the contracting office), and only when all six conditions are met."}],
+
+  "L03": [
+    {"type": "stack", "title": "The rulebook in layers",
+      "items": [
+        {"t": "FAR", "s": "All agencies. 53 parts. Example: FAR 15"},
+        {"t": "DFARS", "s": "DoW. FAR part + 200. Example: DFARS 215"},
+        {"t": "AFARS", "s": "Army. FAR part + 5100. Example: AFARS 5115"},
+        {"t": "Local policy", "s": "Your command"}],
+      "note": "A lower layer can add to the FAR, but it must not contradict it unless a deviation allows it."},
+    {"type": "parts", "title": "How to read FAR 15.404-1(b)",
+      "items": [
+        {"x": "15", "t": "Part"}, {"x": ".4", "t": "Subpart"}, {"x": "04", "t": "Section"},
+        {"x": "-1", "t": "Subsection"}, {"x": "(b)", "t": "Paragraph"}]}],
+
+  "L04": [
+    {"type": "sum", "title": "What makes a contract", "interactive": true,
+      "fail": "Not a contract: {x} missing", "hint": "Tap a part to take it away and see what happens.",
+      "items": [
+        {"icon": "mail", "t": "Offer"},
+        {"icon": "check", "t": "Acceptance", "s": "Same terms"},
+        {"icon": "dollar", "t": "Consideration", "s": "Each side gives value"},
+        {"icon": "certificate", "t": "Authority", "s": "A warranted KO"},
+        {"icon": "shield", "t": "Lawful purpose"}],
+      "result": {"icon": "file", "t": "A binding contract"}},
+    {"type": "compare", "title": "Who makes the offer?",
+      "cols": [
+        {"icon": "quiz", "t": "Request for quotations (RFQ)", "rows": ["The vendor's quote is information, not an offer", "The purchase order is the offer", "A contract forms when the vendor accepts"]},
+        {"icon": "file", "t": "RFP or IFB", "rows": ["The proposal or bid is the offer", "The Government's award is the acceptance"]}]}],
+
+  "L05": {"type": "compare", "title": "The three money rules",
+    "cols": [
+      {"icon": "target", "t": "Purpose", "rows": ["Use the right kind of money", "O&M cannot build a new building"]},
+      {"icon": "calendar", "t": "Time", "rows": ["Pay for a need of that period", "O&M 1 year, RDT&E 2, Procurement 3, MILCON 5"]},
+      {"icon": "dollar", "t": "Amount", "rows": ["Never obligate more than you have", "Antideficiency Act"]}],
+    "note": "Check all three before you sign anything."},
+
+  "L06": {"type": "compare", "title": "Integrity in practice",
+    "cols": [
+      {"icon": "ban", "tone": "bad", "t": "Never", "rows": ["Share bid, proposal or source selection information", "Accept gifts from contractors", "Meet one offeror privately during a competition", "Take or offer kickbacks"]},
+      {"icon": "check", "tone": "ok", "t": "Always", "rows": ["Report a job offer from an offeror", "Report signs of collusion through legal counsel", "Treat every offeror the same", "Stop and ask when in doubt"]}],
+    "note": "Above reproach, impartial, no favorites (FAR 3.101)."},
+
+  "L07": {"type": "flow", "title": "The file grows with every step",
+    "steps": [
+      {"icon": "search", "t": "Plan", "s": "Market research, acquisition plan"},
+      {"icon": "file", "t": "Solicit", "s": "Notices, solicitation, answers"},
+      {"icon": "award", "t": "Award", "s": "Evaluation, price, decision"},
+      {"icon": "eye", "t": "Administer", "s": "Modifications, letters, MFRs"},
+      {"icon": "folder", "t": "Close out", "s": "Completion statement"}],
+    "note": "If it is not in the file, it did not happen. Army files go in the VCE Paperless Contract File."},
+
+  "L08": [
+    {"type": "compare", "title": "Rights on each side",
+      "cols": [
+        {"icon": "landmark", "t": "The Government can", "rows": ["Inspect and test", "Accept (then it is final, with few exceptions)", "Use a warranty after acceptance", "Order changes within scope", "Terminate for convenience or default"]},
+        {"icon": "briefcase", "t": "The contractor can", "rows": ["Get paid within 30 days, or get interest", "Get an equitable adjustment for changes", "Be excused for delays beyond its control", "Get a settlement after a convenience termination"]}]},
+    {"type": "compare", "title": "Who carries the risk on the road?",
+      "cols": [
+        {"icon": "truck", "t": "F.o.b. origin", "rows": ["Risk passes when the seller hands the goods to the carrier", "The Government owns the trip"]},
+        {"icon": "truck", "t": "F.o.b. destination", "rows": ["The seller keeps the risk until delivery", "The seller owns the trip"]}]}],
+
+  "L09": {"type": "compare", "title": "Three ways to describe the need",
+    "cols": [
+      {"icon": "clipboard", "t": "SOW", "rows": ["Says what to do, often how", "Detailed tasks or specifications"]},
+      {"icon": "target", "t": "PWS", "rows": ["Says the results needed", "Measurable standards", "The contractor picks the how"]},
+      {"icon": "flag", "t": "SOO", "rows": ["States the goals only", "Each offeror writes its own PWS"]}],
+    "note": "For services, the QASP tells the COR what to check, how and how often."},
+
+  "L10": {"type": "flow", "title": "Market research in four steps",
+    "steps": [
+      {"icon": "clock", "t": "When", "s": "Before new requirements, and before buying above the SAT"},
+      {"icon": "search", "t": "How", "s": "Past buys, SAM.gov, catalogs, RFIs, industry days"},
+      {"icon": "bulb", "t": "Learn", "s": "Commercial? How many sources? Small businesses? Prices?"},
+      {"icon": "file", "t": "Write it down", "s": "In proportion to the buy"}],
+    "note": "Commercial first: look for what the market already sells."},
+
+  "L11": {"type": "flow", "title": "Look in this order",
+    "steps": [
+      {"icon": "shield", "t": "1. Required sources", "s": "Inventories, AbilityOne, FPI (when comparable)"},
+      {"icon": "layers", "t": "2. Existing contracts", "s": "IDIQs, GSA schedules, governmentwide contracts"},
+      {"icon": "globe", "t": "3. Open market", "s": "Only after 1 and 2"}]},
+
+  "L12": [
+    {"type": "sum", "title": "The rule of two (above the micro-purchase threshold)",
+      "items": [
+        {"icon": "users", "t": "Two or more", "s": "Responsible small businesses"},
+        {"icon": "dollar", "t": "Fair market prices", "s": "Quality and delivery too"}],
+      "result": {"icon": "flag", "t": "Set it aside for small business"}},
+    {"type": "roles", "title": "The small business programs",
+      "items": [
+        {"icon": "trend", "t": "8(a)", "s": "Socially and economically disadvantaged owners"},
+        {"icon": "map", "t": "HUBZone", "s": "Historically underutilized business zones"},
+        {"icon": "star", "t": "SDVOSB", "s": "Service-disabled veteran-owned"},
+        {"icon": "user", "t": "WOSB / EDWOSB", "s": "Women-owned"}],
+      "note": "The NAICS code picks the size standard. Overseas, Part 19 is optional."}],
+
+  "L13": [
+    {"type": "stack", "title": "Three levels of competition",
+      "items": [
+        {"t": "Full and open", "s": "Every responsible source may compete"},
+        {"t": "After excluding sources", "s": "For example, a small business set-aside"},
+        {"t": "Other than full and open", "s": "Only under one of the 7 exceptions, with a written justification"}]},
+    {"type": "ladder", "title": "Who approves a DoW justification (DFARS Table 206-1)",
+      "rungs": [
+        {"v": "$10 million or less", "t": "Contracting officer"},
+        {"v": "Over $10 million to $100 million", "t": "Competition advocate"},
+        {"v": "Over $100 million to $500 million", "t": "Head of the contracting activity"},
+        {"v": "Over $500 million", "t": "Senior procurement executive"}]},
+    {"type": "calc", "title": "Try it: who approves this DoW justification?",
+      "input": {"label": "Value of the justification", "min": 100000, "max": 1000000000, "start": 8000000},
+      "rules": [
+        {"max": 10000000, "t": "The contracting officer", "s": "$10 million or less: the contracting officer's certification"},
+        {"max": 100000000, "t": "The competition advocate", "s": "Over $10 million up to $100 million"},
+        {"max": 500000000, "t": "The head of the contracting activity", "s": "Over $100 million up to $500 million"},
+        {"t": "The senior procurement executive", "s": "Over $500 million"}]}],
+
+  "L14": {"type": "flow", "title": "Planning, step by step",
+    "steps": [
+      {"icon": "bulb", "t": "Need known", "s": "Start planning now"},
+      {"icon": "users", "t": "Team up", "s": "Customer, contracting, finance, legal, small business"},
+      {"icon": "search", "t": "Market research", "s": "What the market sells"},
+      {"icon": "lock", "t": "IGCE", "s": "Made by the Government, never shared"},
+      {"icon": "map", "t": "The plan", "s": "Type, method, risks, milestones"}],
+    "note": "Count the lead time: every step takes days."},
+
+  "L15": {"type": "scale", "title": "Contract types and who carries the cost risk",
+    "left": "Contractor carries the risk", "right": "Government carries the risk",
+    "items": [
+      {"t": "FFP", "d": "Firm-fixed-price: one price, no matter what it costs the contractor. Most risk on the contractor, least administration."},
+      {"t": "FP-EPA", "d": "Fixed-price with economic price adjustment: a fixed price that can move with set market changes, such as fuel or steel prices."},
+      {"t": "FPIF", "d": "Fixed-price incentive: a target cost, target profit and ceiling price. A share ratio rewards coming in under target."},
+      {"t": "CPIF", "d": "Cost-plus-incentive-fee: the Government pays allowable costs, and the fee moves with the cost results."},
+      {"t": "CPAF", "d": "Cost-plus-award-fee: the Government pays allowable costs, and the fee is earned through a judgment of performance."},
+      {"t": "CPFF", "d": "Cost-plus-fixed-fee: the Government pays allowable costs up to a ceiling, plus a fee set at award. Most risk on the Government."}],
+    "hint": "Tap a type to see how it works.",
+    "note": "Commercial buys: FFP or FP-EPA. Time-and-materials and labor-hour are the last resort: no reason to save hours."},
+
+  "L16": [
+    {"type": "ladder", "title": "Pick the method by dollar value",
+      "rungs": [
+        {"v": "Up to $15,000", "t": "Micro-purchase", "s": "No quotes needed if the price is reasonable"},
+        {"v": "Up to $350,000 (SAT)", "t": "Simplified procedures", "s": "Commercial (Part 12) or noncommercial (Part 13)"},
+        {"v": "Commercial, up to $9 million", "t": "Commercial simplified (FAR 12.201-1)", "s": "RFQ, then a purchase order"},
+        {"v": "Larger or complex buys", "t": "Sealed bidding or negotiation", "s": "Part 14 (price only) or Part 15 (price and other factors)"}],
+      "note": "With a contingency or emergency determination: MPT $25,000 inside the U.S. and $40,000 outside, SAT $1 million and $2 million, commercial simplified $15 million. Never split a buy to fit a lower rung."},
+    {"type": "calc", "title": "Try it: which method fits this buy?",
+      "input": {"label": "Value of the buy", "min": 1000, "max": 50000000, "start": 120000},
+      "toggles": [{"id": "com", "t": "Commercial product or service", "on": true}],
+      "rules": [
+        {"max": 15000, "t": "Micro-purchase", "s": "No competitive quotes needed if the price is reasonable; usually the purchase card"},
+        {"max": 350000, "if": {"com": true}, "t": "Commercial simplified procedures (FAR 12.201-1)", "s": "RFQ, then a purchase order; quotes from at least 3 sources when practicable"},
+        {"max": 350000, "t": "Noncommercial simplified procedures (FAR Part 13)", "s": "Only when nothing commercial meets the need; one source needs a D&F"},
+        {"max": 9000000, "if": {"com": true}, "t": "Commercial simplified procedures (FAR 12.201-1)", "s": "Allowed up to $9 million for commercial buys"},
+        {"t": "Sealed bidding or negotiation", "s": "Part 14 when price alone decides; Part 15 to weigh more than price"}],
+      "note": "Normal thresholds, with no contingency or emergency determination."}],
+
+  "L17": {"type": "flow", "title": "A commercial buy",
+    "steps": [
+      {"icon": "search", "t": "Market research", "s": "It is sold commercially"},
+      {"icon": "file", "t": "One notice", "s": "Combined synopsis and solicitation"},
+      {"icon": "clipboard", "t": "52.212 clauses", "s": "-1 instructions, -2 evaluation, -4 terms"},
+      {"icon": "dollar", "t": "Fixed price", "s": "FFP or FP-EPA"},
+      {"icon": "check", "t": "Up to $9 million", "s": "Simplified procedures (12.201-1)"}],
+    "note": "No certified cost or pricing data for commercial items. Terminate under 52.212-4, not Part 49."},
+
+  "L18": [
+    {"type": "timeline", "title": "A noncommercial buy over $25,000",
+      "marks": [
+        {"at": "Day 0", "t": "Post the notice on SAM.gov"},
+        {"at": "15 days or more", "t": "Issue the solicitation"},
+        {"at": "30 days or more", "t": "Offers are due"},
+        {"at": "Then", "t": "Evaluate and award"}],
+      "note": "Notices start above $20,000. From $20,000 to $25,000 the notice stays up 10 days. Research and development: 45 days. Commercial buys and buys at or below the SAT: a reasonable time."},
+    {"type": "calc", "title": "Try it: does this buy need a notice?",
+      "input": {"label": "Expected value of the action", "min": 1000, "max": 5000000, "start": 22000},
+      "rules": [
+        {"max": 20000, "t": "No presolicitation notice needed", "s": "$20,000 or less", "tone": "ok"},
+        {"max": 25000, "t": "Notice required, unless an exemption applies", "s": "Post it on SAM.gov; it stays up 10 days"},
+        {"t": "Notice required, unless an exemption applies", "s": "Post it on SAM.gov at least 15 days before the solicitation"}],
+      "note": "Exemptions include buys at or below the SAT when the solicitation itself is posted for electronic response, national security and orders under existing contracts."}],
+
+  "L19": {"type": "flow", "title": "How a company decides to bid",
+    "steps": [
+      {"icon": "search", "t": "Find", "s": "SAM.gov, forecasts, industry days"},
+      {"icon": "scale", "t": "Bid or no-bid", "s": "Fit, odds, risk, profit"},
+      {"icon": "users", "t": "Team", "s": "Subcontractors or a joint venture"},
+      {"icon": "dollar", "t": "Price", "s": "Costs, risk, competition"},
+      {"icon": "mail", "t": "Submit on time", "s": "Late offers usually lose"}]},
+
+  "L20": [
+    {"type": "compare", "title": "Two ways to judge a price",
+      "cols": [
+        {"icon": "scale", "t": "Price analysis", "rows": ["Looks at the price as a whole", "Compares it with other prices", "Used when certified data are not required"]},
+        {"icon": "search", "t": "Cost analysis", "rows": ["Looks inside the price", "Each cost element and the profit", "Required with certified cost or pricing data"]}]},
+    {"type": "rank", "title": "Price analysis techniques (the first two are preferred)",
+      "items": [
+        {"t": "Compare the prices offered", "star": true},
+        {"t": "Compare with prior prices", "s": "Adjust for time, quantity and terms", "star": true},
+        {"t": "Parametric yardsticks", "s": "Such as dollars per pound"},
+        {"t": "Catalogs and market prices"},
+        {"t": "The IGCE"},
+        {"t": "Prices found in market research"},
+        {"t": "Other data from the offeror"}]}],
+
+  "L21": [
+    {"type": "ladder", "title": "When certified cost or pricing data are required",
+      "rungs": [
+        {"v": "At or below $350,000 (SAT)", "t": "Never", "tone": "ok"},
+        {"v": "Over $2.5 million", "t": "Required by the FAR, unless an exception applies"},
+        {"v": "Over $10 million", "t": "DoW threshold for prime contracts awarded after 30 June 2026", "tone": "key"}],
+      "note": "Exceptions include adequate price competition, prices set by law, commercial items and an HCA waiver."},
+    {"type": "calc", "title": "Try it: are certified cost or pricing data required?",
+      "input": {"label": "Value of the contract or modification", "min": 100000, "max": 100000000, "start": 6000000},
+      "toggles": [{"id": "dow", "t": "DoW prime contract awarded after 30 June 2026", "on": true}],
+      "rules": [
+        {"max": 350000, "t": "Never required", "s": "At or below the simplified acquisition threshold", "tone": "ok"},
+        {"max": 2500000, "t": "Not required", "s": "At or below $2.5 million; you may still ask for other data", "tone": "ok"},
+        {"max": 10000000, "if": {"dow": true}, "t": "Not required", "s": "DoW's threshold is $10 million for prime contracts awarded after 30 June 2026", "tone": "ok"},
+        {"t": "Required, unless an exception applies", "s": "Adequate price competition, prices set by law, commercial items or an HCA waiver"}]},
+    {"type": "check", "title": "A cost is allowable only if it is",
+      "test": {"pass": "Allowable", "fail": "Not allowable: it fails {x}"},
+      "items": ["Reasonable", "Allocable", "Consistent with CAS or GAAP", "Consistent with the contract terms", "Not limited or disallowed by the cost principles"]}],
+
+  "L22": [
+    {"type": "flow", "title": "Negotiation in four steps",
+      "steps": [
+        {"icon": "search", "t": "Analyze", "s": "Price, cost, technical, risk"},
+        {"icon": "target", "t": "Set objectives", "s": "Your positions and your BATNA"},
+        {"icon": "message", "t": "Negotiate", "s": "Trade concessions; use facts"},
+        {"icon": "file", "t": "Document", "s": "Price negotiation memorandum (PNM)"}]},
+    {"type": "compare", "title": "Clarification or negotiation?",
+      "cols": [
+        {"icon": "info", "t": "Clarifications", "rows": ["Award without negotiations is planned", "Clear up minor issues", "No proposal revisions"]},
+        {"icon": "message", "t": "Negotiations", "rows": ["Only with the competitive range", "Point out deficiencies and significant weaknesses", "Offerors may revise their proposals"]}]}],
+
+  "L23": [
+    {"type": "compare", "title": "Two ways to reach best value",
+      "cols": [
+        {"icon": "scale", "t": "Tradeoff", "rows": ["May pay more for a better offer", "Write down why it is worth the price"]},
+        {"icon": "check", "t": "Lowest price technically acceptable", "rows": ["Lowest price that meets every requirement", "No tradeoffs"]}]},
+    {"type": "flow", "title": "From proposals to award",
+      "steps": [
+        {"icon": "filter", "t": "Evaluate", "s": "Only on the stated factors"},
+        {"icon": "users", "t": "Competitive range", "s": "If negotiations will be held"},
+        {"icon": "message", "t": "Negotiate", "s": "Then final revisions"},
+        {"icon": "award", "t": "SSA decides", "s": "Own judgment, in writing"},
+        {"icon": "shield", "t": "Responsible?", "s": "Then award"}]}],
+
+  "L24": {"type": "timeline", "title": "After award: the clock",
+    "marks": [
+      {"at": "Day 0", "t": "Award"},
+      {"at": "Within 3 days", "t": "Award notices to the unsuccessful offerors"},
+      {"at": "3 days from the notice", "t": "Last day to ask for a debriefing (in writing)"},
+      {"at": "5 days from the request", "t": "Debriefing held, when practicable"},
+      {"at": "5 days after the debriefing", "t": "A GAO protest by now stops performance"}]},
+
+  "L25": [
+    {"type": "compare", "title": "Where to protest",
+      "cols": [
+        {"icon": "landmark", "t": "The agency", "rows": ["Tries to decide in 35 days"]},
+        {"icon": "scale", "t": "GAO", "rows": ["Agency report in 30 days", "Decision in 100 days"]},
+        {"icon": "shield", "t": "Court of Federal Claims", "rows": ["A federal court"]}]},
+    {"type": "roles", "title": "Protest deadlines",
+      "items": [
+        {"icon": "file", "t": "Problem in the solicitation", "s": "Before bid opening or the closing time"},
+        {"icon": "clock", "t": "Other problems", "s": "Within 10 days of knowing"},
+        {"icon": "message", "t": "From a required debriefing", "s": "Within 5 days after it"}],
+      "note": "Performance stops if a GAO protest comes within 10 days of award or 5 days after a required debriefing, whichever is later. Only the HCA can override, in writing."}],
+
+  "L26": {"type": "flow", "title": "Running the contract",
+    "steps": [
+      {"icon": "users", "t": "Kick off", "s": "Post-award orientation"},
+      {"icon": "eye", "t": "Watch", "s": "The COR monitors and reports"},
+      {"icon": "check", "t": "Accept", "s": "Receiving report in PIEE"},
+      {"icon": "dollar", "t": "Pay", "s": "In 30 days, or interest is owed"},
+      {"icon": "star", "t": "Rate", "s": "CPARS evaluation"}],
+    "note": "More tools: stop-work order (up to 90 days), novation, key personnel, Government property."},
+
+  "L27": [
+    {"type": "flow", "title": "From delivery to warranty",
+      "steps": [
+        {"icon": "eye", "t": "Inspect", "s": "At the source or destination"},
+        {"icon": "check", "t": "Accept", "s": "Then it is final"},
+        {"icon": "shield", "t": "Warranty", "s": "Remedies after acceptance"}]},
+    {"type": "check", "title": "Acceptance is final, except for", "tone": "bad",
+      "items": ["Latent defects (hidden from a reasonable inspection)", "Fraud", "Gross mistakes amounting to fraud", "What the contract provides, such as a warranty"]}],
+
+  "L28": {"type": "chain", "title": "Who has a contract with whom",
+    "nodes": [
+      {"icon": "landmark", "t": "Government"},
+      {"icon": "briefcase", "t": "Prime contractor"},
+      {"icon": "users", "t": "Subcontractor"}],
+    "links": ["Prime contract", "Subcontract"],
+    "skip": "No contract between the Government and the subcontractor (no privity)",
+    "note": "Consent to a subcontract does not make the Government a party to it."},
+
+  "L29": [
+    {"type": "compare", "title": "Who signs the modification?",
+      "cols": [
+        {"icon": "user", "t": "Unilateral (the contracting officer alone)", "rows": ["Administrative change", "Change order (within scope)", "Option exercise"]},
+        {"icon": "users", "t": "Bilateral (both parties)", "rows": ["Supplemental agreement", "For example, an agreed price for a change"]}]},
+    {"type": "roles", "title": "Is the change in scope?",
+      "items": [
+        {"icon": "check", "t": "Within scope", "s": "A change order works", "tone": "ok"},
+        {"icon": "ban", "t": "Outside scope (cardinal change)", "s": "New work: compete or justify it", "tone": "bad"},
+        {"icon": "alert", "t": "Constructive change", "s": "Government words or actions force extra work", "tone": "warn"}]}],
+
+  "L30": [
+    {"type": "flow", "title": "The path of a claim",
+      "steps": [
+        {"icon": "mail", "t": "Claim", "s": "Written demand; certify it if over $100,000; within 6 years"},
+        {"icon": "certificate", "t": "Final decision", "s": "Within 60 days, or a set date"},
+        {"icon": "scale", "t": "Appeal", "s": "Board within 90 days, or the Court of Federal Claims within 12 months"}],
+      "note": "The contractor keeps working while the dispute goes on."},
+    {"type": "calc", "title": "Try it: what does this claim need?",
+      "input": {"label": "Amount claimed", "min": 1000, "max": 10000000, "start": 75000},
+      "rules": [
+        {"max": 100000, "t": "No certification needed", "s": "$100,000 or less: decide within 60 days if the contractor asks for a decision", "tone": "ok"},
+        {"t": "The contractor must certify it", "s": "Over $100,000: within 60 days, decide or tell the contractor when you will"}]}],
+
+  "L31": {"type": "compare", "title": "Two kinds of termination",
+    "cols": [
+      {"icon": "pause", "tone": "ok", "t": "Convenience", "rows": ["The need went away", "Pay costs for work done, profit on that work and settlement costs", "No profit on the unfinished work"]},
+      {"icon": "x", "tone": "bad", "t": "Default", "rows": ["The contractor failed", "Cure notice (10 days) or show cause first", "No pay for unaccepted work; excess costs charged"]}],
+    "note": "Commercial contracts: terminate under 52.212-4, for convenience or for cause."},
+
+  "L32": {"type": "ladder", "title": "Close the file within (from evidence of physical completion)",
+    "rungs": [
+      {"v": "Simplified buys", "t": "Closed on receipt and final payment"},
+      {"v": "Firm-fixed-price", "t": "6 months"},
+      {"v": "All other contracts", "t": "20 months"},
+      {"v": "Indirect cost rates to settle", "t": "36 months"}],
+    "note": "Closeout gives money back: deobligate what will not be spent."},
+
+  "L33": {"type": "compare", "title": "Higher thresholds, only with a determination",
+    "cols": [
+      {"icon": "home", "t": "Inside the U.S.", "rows": ["Micro-purchase: $25,000", "SAT: $1 million", "Commercial simplified: $15 million"]},
+      {"icon": "globe", "t": "Outside the U.S.", "rows": ["Micro-purchase: $40,000", "SAT: $2 million", "Commercial simplified: $15 million"]}],
+    "note": "No determination, no higher threshold. Field tools: FOOs and paying agents, the SF 44, the purchase card."},
+
+  "L34": {"type": "compare", "title": "Which system for what",
+    "cols": [
+      {"icon": "globe", "t": "SAM.gov", "rows": ["Vendor registration", "Exclusions", "Notices and solicitations", "Award data"]},
+      {"icon": "key", "t": "PIEE", "rows": ["WAWF: invoices and receiving reports", "EDA: signed contracts", "JAM: COR appointments"]},
+      {"icon": "folder", "t": "Army and DoW tools", "rows": ["ACWS: contract writing", "VCE: contract files", "GFEBS: funds", "CPARS, SPRS, eSRS"]}]},
+
+  "L35": [
+    {"type": "bars", "title": "Where the 150 exam questions come from",
+      "items": [
+        {"t": "Guiding Principles", "n": 42, "phase": "gp"},
+        {"t": "Award", "n": 40, "phase": "awd"},
+        {"t": "Post-Award", "n": 38, "phase": "post"},
+        {"t": "Pre-Award", "n": 30, "phase": "pre"}]},
+    {"type": "roles", "title": "Test day in numbers",
+      "items": [
+        {"icon": "quiz", "t": "150 questions"},
+        {"icon": "timer", "t": "About 72 seconds each"},
+        {"icon": "target", "t": "70% to pass", "s": "Aim for 75% in practice"},
+        {"icon": "landmark", "t": "Test center", "s": "Pass rates about 4% higher"}]}]
+}

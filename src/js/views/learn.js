@@ -85,6 +85,7 @@
         h('h1', {}, l.title),
         h('div.row.tight.mt-3.no-print', {}, CORB.ui.listenBtn(fullText, 'Listen to the lesson'), doneBtn, CORB.can('print') ? h('button.btn.sm.ghost', { type: 'button', onclick: function () { window.print(); } }, icon('print'), 'Print') : null)));
       root.appendChild(h('div.plain-box', {}, h('div.eyebrow', {}, 'In plain English'), CORB.ui.rich(l.summary)));
+      var fig = CORB.lessonFig(l); if (fig) root.appendChild(fig);
       if (l.why) root.appendChild(h('div.why', {}, h('h2', {}, 'Why it matters'), CORB.ui.rich(l.why)));
       (l.sections || []).forEach(function (s) { root.appendChild(h('section.l-sec', {}, h('h2', {}, s.h), CORB.ui.rich(s.body))); });
       if (l.example) root.appendChild(h('section.card.example', {}, h('div.eyebrow', {}, 'Picture this'), h('h3', {}, l.example.title), CORB.ui.rich(l.example.body)));
