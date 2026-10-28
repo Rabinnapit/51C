@@ -55,6 +55,12 @@
     CORB.quiz.start(o);
   }
 
+  // Arcade games tick their task themselves after a run of three or more answers; the quick drills are ticked by hand
+  function gameHref(t) {
+    if (window.ARCADE && window.ARCADE.games && window.ARCADE.games[t.game]) return '#/arcade?game=' + encodeURIComponent(t.game) + (t.realm ? '&realm=' + t.realm : '') + '&path=' + encodeURIComponent(t.id);
+    return '#/games?game=' + encodeURIComponent(t.game);
+  }
+
   // ---- one task row ----
   function taskRow(t, h, icon) {
     var U = CORB.util, done = path.taskDone(t), lesson = t.kind === 'lesson' ? CORB.data.lesson(t.lesson) : null, course = t.kind === 'course' ? CORB.data.course(t.course) : null;
@@ -76,7 +82,7 @@
       else if (t.target) acts.push(CORB.ui.badge('neutral', 'Target ' + t.target + '%', 'target'));
     }
     if (course) acts.push(h('a.btn.sm', { href: '#/courses?id=' + course.id }, icon('school'), 'About the course'));
-    if (t.kind === 'game') acts.push(h('a.btn.sm', { href: '#/games?game=' + t.game }, icon('gamepad'), 'Play'));
+    if (t.kind === 'game') acts.push(h('a.btn.sm', { href: gameHref(t) }, icon('gamepad'), 'Play'));
     if (t.view) acts.push(h('button.btn.sm', { type: 'button', onclick: function () { CORB.go(t.view, t.params || {}); } }, icon('arrow-right'), 'Open'));
     var sub = h('div', {}, h('div.row.tight', {}, CORB.ui.badge('neutral', kind[1], kind[0]), t.d ? h('span.small.muted', {}, t.d) : null), acts.length ? h('div.row.tight.mt-2.task-acts', {}, acts) : null);
     sub.addEventListener('click', function (e) { if (!e.target.closest('a, button, input')) e.preventDefault(); });   // reading the details must not tick the task

@@ -44,12 +44,15 @@ src/js/core/05-speech     read-aloud in sentence-sized chunks
 src/js/core/06-learning   SM-2 lite flashcards, quiz records, readiness by exam area, streak
 src/js/core/07-plan       dated plan: goal, 12-month experience, 36-month deadline, step status, .ics export
 src/js/core/09-pwa        web edition only: service worker, update bar, install prompt
-src/js/views/*.js         home, path, plan, cert, courses, learn (+ lesson), howto, quiz, cards, games, glossary, far, links, settings
+src/js/views/*.js         home, path, plan, cert, courses, learn (+ lesson), howto, quiz, cards, arcade, games (quick drills), glossary, far, links, settings
+src/js/arcade/00-engine   window.ARCADE: register, palette, storage through A.host, pace levels, XP ranks, question memory, text, particles, floaters, sound, music
+src/js/arcade/01-shell   lobby, play screen (HUD, prompt panel, fluid canvas, answer panel, reading pause, pause menu), results with the study list
+src/js/arcade/games/*.js contract-quest, fire-mission, qual-range, part-patrol, sort-yard
 src/data/*.json           content (see section 4). <module>-<part>.json files join into <module>.
 src/web/                  icons (tools/make_icons.py), favicon.svg, sw.js template
 ```
 
-Script order in the build: data, then `core/*` in file order, then `views/*`, then the boot block, which must stay last
+Script order in the build: data, then `core/*` in file order, then `views/*`, then `arcade/*` and `arcade/games/*`, then the boot block, which must stay last
 (it snapshots the page for "save progress into this file").
 
 ## 4. Data modules (`window.CORB_DATA`)
@@ -69,14 +72,19 @@ Script order in the build: data, then `core/*` in file order, then `views/*`, th
 - `path`: the 6-month exam path. `{title, lede, baseline_days: 182, exam_week, checked_on, how[], months: [{n, title, sub, phase}],
   weeks: [{n, m, title, goal, tasks: [{id, kind, t?, d?, …}], tip, class}], files[], checks: [{topic, src, said, now, status: ok|updated|fixed|verify, cite, verify?}], intel: [{t, d, lesson?, deck?}]}`.
   Task kinds: `lesson` (lesson), `read` (far: part number), `cards` (deck), `drill` (lessons[] | src | phase | missed | weak, n), `exam` (timed, n, target),
-  `course` (course), `game` (game), `do` and `realexam` (view, params). Week dates scale like `plan` steps (`baseline_days`).
+  `course` (course), `game` (game: an Arcade id or a quick drill id; `realm` gp|pre|awd|post|all opens a Contract Quest realm), `do` and `realexam` (view, params).
+  Week dates scale like `plan` steps (`baseline_days`). An Arcade run started from a task ticks it after three or more answers.
 - `glossary`: `[{term, expansion, definition, cat, cite?}]` (Board Ready uses the same fields with `domain` for `cat`).
   Terms that look like acronyms are tapped-to-define everywhere in rich text.
 - `howto`: `[{id, cat: career|job, title, when, who, time, steps: [{t, d, cite?}], tips[], watch[], lessons[], links[], verify?}]`
 - `far` (`far.json` + `far-parts.json`): basics, parts (1 to 53 with `exam: true` on the 20 the exam names), crosswalk, numbers, deadlines, notes.
 - `updates`: `far_updates` (newest first) and `guide_changes`.
 - `links`: `[{group, title, url, access: public|cac, note}]`
-- `games`: risk_order, phase_sort, threshold. `cards`: extra flashcard decks.
+- `games`: risk_order, phase_sort, threshold (the quick drills; `phase_sort` is also Sort Yard's first line). `cards`: extra flashcard decks.
+- The Arcade has no data file of its own: `views/arcade.js` builds `ARCADE.DATA` from the modules above: `bank` (quiz), `facts`
+  (fam dollars|days|form|ja|type|part|ucf|piid from `far` numbers, deadlines and parts and the forms, UCF, PIID and contract-type decks),
+  `terms` (glossary with the term blanked in its own definition), `sorts` (life cycle, dollar lanes from the MPT and SAT, UCF parts,
+  contract-type families) and `quick` (the quick drills). Change the content and the games follow.
 
 Text fields are plain text: blank line = new paragraph, `- ` = bullet, `1. ` = numbered, `**bold**`. FAR, DFARS, AFARS,
 U.S.C. and CFR citations are linked automatically. No HTML in content.
@@ -105,7 +113,20 @@ CORB.path.currentWeek()/week(n)/weekStart(n)/taskDone(t)/weekStats(w)/progress()
 CORB.edition()  CORB.can(what)  CORB.setTheme  CORB.setTextSize
 ```
 
-State (`b2b.state.v1`): `{version: 'b2b-state-1', profile: {track, start, goalMonths, goalDate, theme, textSize}, progress: {steps, courses, lessons, checks, quiz, missed, srs, howto, exp, games, exam, seen, bookmarks, path}, settings: {tts, ttsRate, glossaryLinks, motion, setupDone, welcomeSeen}, meta: {updatedAt, lastOpened}}`.
+The Arcade (same shape as Board Ready's, so the two can merge):
+
+```js
+ARCADE.register({ id, title, icon, accent, genre, tagline, drills, controls, music, aspect: [lo, hi], orient, gateAt, countdown, letterKeys,
+                  noLives, livesLabel, livesText(state), outTitle, dataOk(DATA), thumb(ctx, w, h, t), create(api) -> { update(dt), draw(ctx), resize(W, H), onKey(k, down), onPointer(e), destroy() } })
+api.W / api.H (fluid: logical px = CSS px up to 960 x 900, inside the game's aspect range)  api.difficulty  api.opts  api.progress.pick(pool, keyOf) / correct()
+api.prompt.set({kicker, text, sub, color, big})  api.choices.set(items, onPick, {readOnly}) / lock / mark / disable / feedback({ok, title, body, cite, auto}, next) / tools(list) / timer(frac) / clear
+api.ready({text})  api.review.add({prompt, given, correct, ok, explanation, cite, lesson, qid, key})  api.score(n)  api.life(n)  api.xp(n)  api.end({won, title, message, badge, xpBonus})
+api.hud.set({...})  api.particles  api.floaters  api.audio  api.music  api.shake(px)  api.flash(color)
+ARCADE.host = { get(k), set(k, v, quiet), speak(text), onAnswer(qid, ok), onRunEnd(summary), lessonHref(id), pathHref() }   (set by views/arcade.js)
+ARCADE._debug.play(id, opts) / start() / step(seconds) / run()   (automated checks; no UI)
+```
+
+State (`b2b.state.v1`): `{version: 'b2b-state-1', profile: {track, start, goalMonths, goalDate, theme, textSize}, progress: {steps, courses, lessons, checks, quiz, missed, srs, howto, exp, games, exam, seen, bookmarks, path, arcade: {best, xp, quest, rot}}, settings: {tts, ttsRate, glossaryLinks, motion, setupDone, welcomeSeen, arcade: {tier, mute, music}}, meta: {updatedAt, lastOpened}}`.
 The copy saved inside the HTML file wins over the browser's copy when its `meta.updatedAt` is newer.
 
 ## 7. Fusing with Board Ready (the "ultimate guide")
@@ -122,3 +143,6 @@ The goal is one app a 51C or 1102 uses from day one through the warrant board an
    text size, glossary auto-links, plan math (`07-plan.js`), editions and PWA (`09-pwa.js`).
 4. **Storage:** migrate `b2b.state.v1` into the merged state once, on first open.
 5. **Design:** both use tokenized CSS; pick one palette and keep B2B's phase colours for the exam areas.
+6. **Arcade:** both arcades use `window.ARCADE`, `A.register` and `def.create(api)`. Keep this engine (fluid canvas, prompt and
+   answer panels, `A.host` storage); Board Ready's eight games draw on a fixed 960 x 540 stage, so give them `aspect: [16/9, 16/9]`
+   and they fit unchanged. Board Ready's warrant-class filter becomes a second lobby setting next to the pace.

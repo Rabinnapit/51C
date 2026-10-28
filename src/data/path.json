@@ -66,6 +66,7 @@
        {"id": "w04-far3", "kind": "read", "far": 3, "t": "Read FAR 3.101 and 3.104", "d": "Standards of conduct, gratuities, and procurement integrity."},
        {"id": "w04-far4", "kind": "read", "far": 4, "t": "Read FAR 4.101, 4.201, 4.308 and 4.309", "d": "Contract files, the PIID (Table 4-1), closeout time standards (Table 4-2) and retention (Table 4-3)."},
        {"id": "w04-cards", "kind": "cards", "deck": "b2b-piid", "t": "Flashcards: PIID letters"},
+       {"id": "w04-game", "kind": "game", "game": "contract-quest", "realm": "gp", "t": "Arcade: Contract Quest, Principles Peaks"},
        {"id": "w04-cp", "kind": "exam", "t": "Month 1 checkpoint: 25 questions, timed", "n": 25, "target": 60, "phase": "gp"}
      ],
      "tip": "Checkpoint target: 60%. You have not finished the courses yet, so this checks the habit, not the score. Review every miss in the results.",
@@ -90,6 +91,7 @@
        {"id": "w06-l13", "kind": "lesson", "lesson": "L13"},
        {"id": "w06-far6", "kind": "read", "far": 6, "t": "Read FAR Part 6", "d": "6.101 (competitive procedures), 6.103-1 to 6.103-7 (the seven exceptions), 6.104 (justifications), 6.301 (posting the justification)."},
        {"id": "w06-far19", "kind": "read", "far": 19, "t": "Skim FAR Part 19", "d": "19.000(b) (where Part 19 applies, changed by the RFO) and the rule of two."},
+       {"id": "w06-game", "kind": "game", "game": "qual-range", "t": "Arcade: Qual Range (glossary terms and acronyms)"},
        {"id": "w06-chk", "kind": "drill", "t": "Weekly check: sources, small business, competition", "lessons": ["L11", "L12", "L13"], "n": 10}
      ],
      "tip": "Memorize the seven exceptions in order: one source, urgency, industrial mobilization/expert, international agreement, statute, national security, public interest. Then learn which two need no justification (statute and public interest).",
@@ -103,7 +105,7 @@
        {"id": "w07-far16", "kind": "read", "far": 16, "t": "Read FAR 16.1, 16.202 and 16.301", "d": "Selecting a contract type, when FFP must be used, and when cost-reimbursement is allowed."},
        {"id": "w07-c1200", "kind": "course", "course": "con1200", "t": "Finish CON 1200V"},
        {"id": "w07-cards", "kind": "cards", "deck": "contract-types", "t": "Flashcards: Contract types"},
-       {"id": "w07-game", "kind": "game", "game": "risk", "t": "Game: Who carries the risk?"},
+       {"id": "w07-game", "kind": "game", "game": "sort-yard", "t": "Arcade: Sort Yard (phases, thresholds, UCF parts, contract types)"},
        {"id": "w07-chk", "kind": "drill", "t": "Weekly check: planning, types and methods", "lessons": ["L14", "L15", "L16"], "n": 10}
      ],
      "tip": "Contract type questions turn on risk. Clear, stable requirement with good price history: FFP. Requirement you cannot define: cost-reimbursement. A 4th production lot of a mature missile is the classic FFP case.",
@@ -118,6 +120,7 @@
        {"id": "w08-far5", "kind": "read", "far": 5, "t": "Read FAR Part 5", "d": "Table 5-2 (notice times), Table 5-3 (response times) and Table 5-4 (award notices)."},
        {"id": "w08-mods", "kind": "do", "t": "Finish the five online modules for CON 1300V", "d": "FAC 069, FAC 082, FAC 085, CON 0074 and CON 0470. Save every certificate.", "view": "courses", "params": {"id": "con1300"}},
        {"id": "w08-cards", "kind": "cards", "deck": "b2b-ucf", "t": "Flashcards: UCF sections"},
+       {"id": "w08-game", "kind": "game", "game": "contract-quest", "realm": "pre", "t": "Arcade: Contract Quest, Pre-Award Plains"},
        {"id": "w08-cp", "kind": "exam", "t": "Month 2 checkpoint: 50 questions, timed", "n": 50, "target": 65}
      ],
      "tip": "Make a one-page sheet: >$20K to $25K post 10 days; >$25K notice 15 days before the solicitation; >SAT noncommercial 30 days to respond; R&D 45 days from the notice. Commercial over the SAT: a combined synopsis/solicitation with a reasonable response time.",
@@ -156,6 +159,7 @@
        {"id": "w11-far33", "kind": "read", "far": 33, "t": "Read FAR subpart 33.2", "d": "Claims, certification over $100,000, the final decision, and the 90-day / 12-month appeal clocks."},
        {"id": "w11-far49", "kind": "read", "far": 49, "t": "Read FAR 49.002, 49.102 and 49.402-3", "d": "When Part 49 does not apply (commercial), notice of termination, cure and show cause notices."},
        {"id": "w11-cards", "kind": "cards", "deck": "deadlines", "t": "Flashcards: Deadlines and time limits"},
+       {"id": "w11-game", "kind": "game", "game": "fire-mission", "t": "Arcade: Fire Mission (thresholds, deadlines, forms)"},
        {"id": "w11-chk", "kind": "drill", "t": "Weekly check: disputes, terminations, closeout", "lessons": ["L30", "L31", "L32"], "n": 10}
      ],
      "tip": "Three terminations: convenience (Government no longer needs it), default (noncommercial, contractor at fault, Part 49), cause (commercial, contractor at fault, 52.212-4(m)). Cure notice when 10 or more days remain; show cause when fewer.",
@@ -165,7 +169,7 @@
      "tasks": [
        {"id": "w12-l20", "kind": "lesson", "lesson": "L20"},
        {"id": "w12-far15", "kind": "read", "far": 15, "t": "Read FAR 15.404 and 15.404-1", "d": "When to use price, cost and cost realism analysis, and the price analysis techniques (the first two are preferred)."},
-       {"id": "w12-game", "kind": "game", "game": "threshold", "t": "Game: Threshold check"},
+       {"id": "w12-game", "kind": "game", "game": "contract-quest", "realm": "post", "t": "Arcade: Contract Quest, Post-Award Fortress"},
        {"id": "w12-chk", "kind": "drill", "t": "Weekly check: price analysis", "lessons": ["L20"], "n": 10}
      ],
      "tip": "Price analysis looks at the total price; cost analysis looks at the pieces. If certified data are not required, you must do price analysis (15.404(a)(2)).",
@@ -206,6 +210,7 @@
      "tasks": [
        {"id": "w16-l24", "kind": "lesson", "lesson": "L24"},
        {"id": "w16-far15", "kind": "read", "far": 15, "t": "Read FAR 15.206, 15.207 and 15.301", "d": "Preaward notices and debriefings, award, award notice in 3 days, postaward debriefing (request in 3 days, held within 5)."},
+       {"id": "w16-game", "kind": "game", "game": "contract-quest", "realm": "awd", "t": "Arcade: Contract Quest, Award Arena"},
        {"id": "w16-chk", "kind": "drill", "t": "Weekly check: award and debriefings", "lessons": ["L24"], "n": 10}
      ],
      "tip": "Postaward orientation (with the winner, about running the contract) and postaward debriefing (with offerors, about the evaluation) are different things. Test takers say the exam checks that.",
@@ -247,7 +252,7 @@
        {"id": "w20-c3910", "kind": "course", "course": "con3910", "t": "Do CON 3910 (online exam prep)"},
        {"id": "w20-missed", "kind": "drill", "t": "Missed-question sweep", "missed": true, "n": 25},
        {"id": "w20-gp", "kind": "drill", "t": "Guiding Principles drill (25)", "phase": "gp", "n": 25},
-       {"id": "w20-game", "kind": "game", "game": "farmatch", "t": "Game: FAR Part Match"}
+       {"id": "w20-game", "kind": "game", "game": "part-patrol", "t": "Arcade: Part Patrol (FAR parts, UCF, PIID letters)"}
      ],
      "tip": "Guiding Principles is the biggest area: 42 of 150 questions. If your readiness there is under 70%, spend an extra session on lessons L01 to L08.",
      "class": "Test takers recommend memorizing the 20 FAR part titles; some questions just ask which part covers a topic."},
@@ -262,6 +267,7 @@
     {"n": 22, "m": 6, "title": "Fix your weakest area",
      "goal": "Use your readiness scores to spend this week where the points are.",
      "tasks": [
+       {"id": "w22-game", "kind": "game", "game": "contract-quest", "realm": "all", "t": "Arcade: Contract Quest, Exam Citadel"},
        {"id": "w22-weak", "kind": "drill", "t": "Weakest-area drill (25)", "weak": true, "n": 25},
        {"id": "w22-missed", "kind": "drill", "t": "Missed-question sweep", "missed": true, "n": 25},
        {"id": "w22-relearn", "kind": "do", "t": "Redo the lessons for your weakest area", "d": "Open Lessons and filter by the area with the lowest readiness.", "view": "learn"},

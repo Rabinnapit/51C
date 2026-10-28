@@ -1,4 +1,5 @@
-/* VIEW games — four short games: FAR Part Match, Which phase?, Threshold check, Who carries the risk? */
+/* VIEW games — the quick drills (tap-to-answer, screen-reader friendly): FAR Part Match, Which phase?, Threshold check,
+   Who carries the risk? The menu entry is the Arcade (views/arcade.js); its lobby lists these drills at the bottom. */
 (function () {
   'use strict';
   var CORB = window.CORB;
@@ -15,7 +16,7 @@
     if (g.best == null || (lowerIsBetter ? score < g.best : score > g.best)) { g.best = score; g.newBest = true; } else g.newBest = false;
     CORB.set('progress.games.' + id, g); CORB.touch('game-' + id); return g;
   }
-  function header(h, icon, g, extra) { return h('div.row.between.mb-3', {}, h('a.back-link', { href: '#/games' }, icon('arrow-left'), 'All games'), extra || null); }
+  function header(h, icon, g, extra) { return h('div.row.between.mb-3', {}, h('a.back-link', { href: '#/arcade' }, icon('arrow-left'), 'Arcade'), extra || null); }
 
   // ---- FAR Part Match ----
   function farmatch(root, h, icon) {
@@ -57,7 +58,7 @@
         var g = record(id, right);
         stage.appendChild(h('div.center', {}, CORB.ui.ring(CORB.util.pct(right, round.length), right + '/' + round.length, right / round.length >= 0.7 ? 'var(--ok)' : 'var(--accent-2)', 110),
           h('h2.mt-3', {}, right === round.length ? 'Perfect round' : right / round.length >= 0.7 ? 'Solid' : 'Keep at it'), h('p.muted', {}, 'Best: ' + g.best + ' of ' + round.length),
-          h('div.row.mt-4', { style: { justifyContent: 'center' } }, h('button.btn.primary', { type: 'button', onclick: function () { CORB.render(); } }, icon('refresh'), 'Play again'), h('a.btn', { href: '#/games' }, 'Other games'))));
+          h('div.row.mt-4', { style: { justifyContent: 'center' } }, h('button.btn.primary', { type: 'button', onclick: function () { CORB.render(); } }, icon('refresh'), 'Play again'), h('a.btn', { href: '#/arcade' }, 'Arcade'))));
         return;
       }
       var it = round[i], choices = choicesFor(it), answered = false;
@@ -104,7 +105,7 @@
     }
   }
 
-  CORB.registerView({ id: 'games', mobileAs: 'quiz', title: 'Games', section: 'Practice', icon: 'gamepad', nav: true, order: 90,
+  CORB.registerView({ id: 'games', mobileAs: 'quiz', navAs: 'arcade', title: 'Quick drills', section: 'Practice', icon: 'gamepad', nav: false, order: 91,
     blurb: 'Quick games for FAR titles, phases, thresholds and risk', keywords: 'game match FAR part titles phase sort thresholds contract type risk',
     render: function (root, ctx) {
       var h = CORB.ui.h, icon = CORB.ui.icon, G = CORB.DATA.games || {}, id = ctx.params.game;
@@ -117,7 +118,7 @@
       }
       if (id === 'threshold') { mcRound(root, h, icon, 'threshold', 'Threshold check', 'Pick the rule that applies. Dollar values are the ones in force for DoW in ' + new Date().getFullYear() + '; they are checked in FAR & key numbers.', G.threshold || [], function (it) { return CORB.util.shuffle(it.choices.map(function (c) { return { label: c, value: c }; })); }); return; }
       if (id === 'risk') { risk(root, h, icon); return; }
-      root.appendChild(CORB.ui.pageHead({ title: 'Games', lede: 'Five-minute games that make the hard-to-memorize parts stick. Play them on a phone while you wait.' }));
+      root.appendChild(CORB.ui.pageHead({ back: { view: 'arcade', label: 'Arcade' }, title: 'Quick drills', lede: 'Tap-to-answer rounds on the hard-to-memorize parts. They work with a screen reader. For the action games, open the Arcade.' }));
       root.appendChild(h('div.grid.cols-2', {}, GAMES.map(function (g) {
         var b = best(g.id);
         var bestTxt = b.best == null ? 'Not played yet' : g.id === 'farmatch' ? 'Best: ' + b.best + ' s' : g.id === 'risk' ? 'Best: ' + b.best + ' misses' : 'Best: ' + b.best + ' of 10';

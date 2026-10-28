@@ -7,7 +7,7 @@ every course, lessons, practice exams, flashcards, games, a glossary and a FAR r
 Unofficial training aid. Not endorsed by the U.S. Army, the Department of War or the Warfighting Acquisition University
 (WarU, formerly DAU). Content checked 28 October 2026.
 
-## What is inside (version 0.10.0)
+## What is inside (version 0.11.0)
 
 | Area | What the reader gets |
 |---|---|
@@ -19,7 +19,7 @@ Unofficial training aid. Not endorsed by the U.S. Army, the Department of War or
 | How-to guides | 13 step-by-step checklists: first week, registering in AITAS, scheduling the exam, applying for certification, a simplified buy, price reasonableness, market research, unauthorized commitments, modifications, options, closeout, finding things in the FAR, and protests. |
 | Practice test | 374 exam-style questions, every answer explained with a citation: 197 written for the guide, 143 from the B2B class practice exam checked against the RFO (each says whether it changed and why), and 34 on topics past test takers reported. Quick 10, practice by exam area, the class exam, missed-question review, and a timed exam simulator weighted like CON 3990V. |
 | Flashcards | 14 decks with spaced repetition: FAR part titles (the 20 on the exam and all 53), acronyms, key terms, key numbers, deadlines, courses, certification facts, roles, contract types, and from the B2B class: the Jeopardy review, UCF sections, common forms and PIID letters. |
-| Games | FAR Part Match, Which phase?, Threshold check, Who carries the risk? |
+| Arcade | Five action games on the guide's own content, with four paces (Recruit to Elite), XP and ranks, sound and optional music, and a study list after every run: **Contract Quest** (RPG battles through the four exam areas and the Exam Citadel, all 374 bank questions), **Fire Mission** (artillery: thresholds, deadlines, forms, J&A approvals, contract types), **Qual Range** (pop-up targets for the 243 glossary terms, scored Expert to Marksman), **Part Patrol** (space shooter: FAR parts, UCF sections, PIID letters, boss fights on bank questions) and **Sort Yard** (conveyor sorting: life-cycle phases, dollar thresholds, UCF parts, contract-type families). Works with a mouse, a keyboard or a touch screen, and on a phone held upright. The four quick drills (FAR Part Match, Which phase?, Threshold check, Who carries the risk?) stay at the bottom of the lobby. |
 | Look it up | Glossary of 243 terms (any acronym in the guide can be tapped for its meaning), FAR & key numbers (how to read a citation, all 53 RFO part titles, 44 old-to-new numbers, thresholds and deadlines, what changed lately) and 35 official links. |
 | For everyone | Read-aloud on every lesson, card and question; four text sizes; day/night; search with `/`; works on phones; no network needed; progress can be saved inside the file itself. |
 
@@ -120,7 +120,7 @@ merging them into one career-long guide is in `CONTRACT.md`.
 ## Files
 
 ```
-src/            the app: index.html template, css/, js/core/, js/views/, data/*.json (content), web/ (icons, service worker)
+src/            the app: index.html template, css/, js/core/, js/views/, js/arcade/ (Arcade engine and games), data/*.json (content), web/ (icons, service worker)
 tools/          check_content.py, build.py, make_docx.py, fetch_fonts.py, make_icons.py
 content/        SOURCES.md (what was checked, where, when), VERIFY.md (items to confirm locally),
                 CLASS-MATERIAL-CHECK.md (the B2B class materials checked against the RFO FAR)

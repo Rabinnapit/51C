@@ -29,7 +29,8 @@
         exam: { scheduled: '', attempts: [] },
         seen: {},         // any id -> last date (drives the study streak)
         bookmarks: {},
-        path: {}          // exam path task id -> date ticked, or { d, last, best } for drills and checkpoints
+        path: {},         // exam path task id -> date ticked, or { d, last, best } for drills, checkpoints and Arcade runs
+        arcade: {}        // Arcade: best (game@pace -> { best, plays, last, lastAt }), xp, quest (realm -> { stars, clears }), rot (seen/missed memory)
       },
       settings: { tts: true, ttsRate: 1, glossaryLinks: true, motion: '', setupDone: false, welcomeSeen: false },
       meta: { updatedAt: '', lastOpened: '' }

@@ -117,7 +117,7 @@
     shell.querySelector('.top-heading').textContent = def.topTitle ? def.topTitle(r.params) : def.title || '';
     document.title = (def.title ? def.title + ' · ' : '') + CORB.appName();
     var content = shell.querySelector('#content'); content.innerHTML = '';
-    content.className = 'content' + (def.wide ? ' wide' : '');
+    content.className = 'content' + (def.wide ? ' wide' : '') + (def.full ? ' full' : '');
     var view = CORB.ui.h('div.view.view-enter.v-' + def.id); content.appendChild(view);
     try { def.render(view, { params: r.params }); }
     catch (e) { console.error('[B2B] view error', def.id, e); view.appendChild(CORB.ui.callout('danger', 'alert', 'This page hit an error', String(e && e.message || e))); }

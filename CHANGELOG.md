@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.11.0 (28 October 2026): the B2B Arcade
+
+- **Arcade** (Practice → Arcade, in place of Games): five canvas action games built on the guide's checked content, on an engine
+  shaped like Board Ready's so the two arcades can merge:
+  - **Contract Quest**: RPG battles. Five realms (one per exam area plus the Exam Citadel), two monsters and a boss each, bank
+    questions as attacks, streaks, fast-answer hits, a Warrant Strike, 50/50 scrolls and potions, realm stars.
+  - **Fire Mission**: artillery with wind, craters and observer corrections; targets carry dollar thresholds, deadlines, forms,
+    J&A approvers and contract types; a battery rating at the end.
+  - **Qual Range**: pop-up targets for the glossary (expansions first, then definitions); 20 exposures and 30 rounds, scored
+    Expert, Sharpshooter or Marksman like a rifle table.
+  - **Part Patrol**: a vertical space shooter on FAR parts, UCF sections and PIID letters, with drones, power-ups and an Audit
+    Dreadnought boss that asks bank questions.
+  - **Sort Yard**: a conveyor sorting line for life-cycle phases, dollar lanes, UCF parts and contract-type families, with Rush mode.
+- Four paces (Recruit waits for Go on every question), XP and ten ranks from Trainee to Contracting Legend, question memory
+  (missed items come back), sound effects, optional music, read-aloud of each question, and a study list with the reason, the
+  cite and the lesson after every run. Missed bank questions also go to Practice test → Missed questions.
+- Scores, XP, realm stars and question memory are part of your progress (exported, and saved into the file).
+- **Exam path:** nine Arcade tasks across the six months (Contract Quest realms in weeks 4, 8, 12, 16 and 22, Qual Range in
+  week 6, Sort Yard in week 7, Fire Mission in week 11, Part Patrol in week 20). A run started from a task ticks it.
+- The four old games are now **Quick drills** (tap-to-answer, screen-reader friendly), listed at the bottom of the Arcade lobby.
+- `check_content.py` knows the Arcade game ids and Contract Quest realms; the dev page loads files with a version stamp.
+
 ## 0.10.0 (28 October 2026): 6-Month Exam Path and the B2B class materials
 
 - **Exam path** (new, second in the menu and on the phone bar): 26 dated weeks from the reader's start date, each with a goal,

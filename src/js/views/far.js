@@ -37,7 +37,7 @@
     input.addEventListener('input', CORB.util.debounce(function () { st.q = input.value.trim(); paint(); }, 100));
     tog.querySelector('input').addEventListener('change', function (e) { st.exam = e.target.checked; paint(); });
     root.appendChild(list); paint();
-    root.appendChild(h('div.row.mt-4', {}, h('a.btn', { href: '#/cards?deck=far-exam' }, icon('cards'), 'Flashcards: exam part titles'), h('a.btn', { href: '#/games?game=farmatch' }, icon('gamepad'), 'FAR Part Match')));
+    root.appendChild(h('div.row.mt-4', {}, h('a.btn', { href: '#/cards?deck=far-exam' }, icon('cards'), 'Flashcards: exam part titles'), h('a.btn', { href: '#/arcade?game=part-patrol' }, icon('gamepad'), 'Arcade: Part Patrol'), h('a.btn', { href: '#/games?game=farmatch' }, icon('gamepad'), 'FAR Part Match')));
   }
 
   function moved(root, F, h) {
@@ -57,7 +57,7 @@
     root.appendChild(table(F.numbers || []));
     root.appendChild(h('div.section-head', {}, h('h2', {}, 'Deadlines and time limits')));
     root.appendChild(table(F.deadlines || []));
-    root.appendChild(h('div.row.mt-4', {}, h('a.btn', { href: '#/cards?deck=numbers' }, icon('cards'), 'Flashcards: key numbers'), h('a.btn', { href: '#/games?game=threshold' }, icon('gamepad'), 'Threshold check game')));
+    root.appendChild(h('div.row.mt-4', {}, h('a.btn', { href: '#/cards?deck=numbers' }, icon('cards'), 'Flashcards: key numbers'), h('a.btn', { href: '#/arcade?game=fire-mission' }, icon('gamepad'), 'Arcade: Fire Mission'), h('a.btn', { href: '#/games?game=threshold' }, icon('gamepad'), 'Threshold check')));
     root.appendChild(h('p.tiny.muted.mt-3', {}, 'Checked ' + CORB.util.fmtDate(F.checked_on || (CORB.meta().content_verified_on)) + '.'));
   }
 

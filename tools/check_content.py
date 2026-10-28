@@ -131,7 +131,8 @@ for s in M["plan"]["steps"]:
 
 # 6-month exam path: dated weeks of tasks that point at lessons, courses, decks, games and question sets
 deck_ids = {"far-exam", "far-all", "acronyms", "terms", "numbers", "deadlines", "courses"} | {d["id"] for d in M["cards"]}
-game_ids = {"farmatch", "phase", "threshold", "risk"}
+game_ids = {"farmatch", "phase", "threshold", "risk"}                                       # quick drills (views/games.js)
+arcade_ids = {"contract-quest", "fire-mission", "qual-range", "part-patrol", "sort-yard"}    # the Arcade (js/arcade/games)
 srcs = {q.get("src") for q in M["quiz"] if q.get("src")}
 if "path" in M:
     weeks = M["path"]["weeks"]
@@ -153,8 +154,10 @@ if "path" in M:
                 errors.append(f"path task {t['id']}: unknown course {t.get('course')}")
             if k == "cards" and t.get("deck") not in deck_ids:
                 errors.append(f"path task {t['id']}: unknown deck {t.get('deck')}")
-            if k == "game" and t.get("game") not in game_ids:
+            if k == "game" and t.get("game") not in game_ids | arcade_ids:
                 errors.append(f"path task {t['id']}: unknown game {t.get('game')}")
+            if k == "game" and t.get("realm") and (t.get("game") != "contract-quest" or t["realm"] not in ("gp", "pre", "awd", "post", "all")):
+                errors.append(f"path task {t['id']}: realm {t.get('realm')} needs Contract Quest and one of gp, pre, awd, post, all")
             if k == "read" and not 1 <= t.get("far", 0) <= 53:
                 errors.append(f"path task {t['id']}: FAR part out of range")
             if k in ("drill", "exam"):

@@ -63,7 +63,7 @@
         h('a.btn.sm.mt-4', { href: '#/learn?phase=' + p.id }, icon('book'), 'Study ' + p.short));
     })));
     root.appendChild(h('div.callout.brass.mt-4', {}, icon('bulb'), h('div', {}, h('b', {}, 'Two tips straight from the exam FAQ'), h('span', {}, 'Learn the titles of FAR Parts 1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 13, 15, 16, 19, 31, 33, 42, 44, 46 and 49, and read FAR Part 15 thoroughly: many questions come from it. '),
-      h('a', { href: '#/cards?deck=far-exam' }, 'Drill the FAR part titles'), ' · ', h('a', { href: '#/games?game=farmatch' }, 'Play FAR Part Match'))));
+      h('a', { href: '#/cards?deck=far-exam' }, 'Drill the FAR part titles'), ' · ', h('a', { href: '#/arcade?game=part-patrol' }, 'Play Part Patrol'), ' · ', h('a', { href: '#/games?game=farmatch' }, 'FAR Part Match'))));
     root.appendChild(h('div.section-head', {}, h('h2', {}, 'How to sign up for the exam')));
     root.appendChild(h('div.card', {}, h('ol.steps-list', {}, (E.steps || []).map(function (s) { return h('li', {}, h('b', {}, s.t), s.d ? CORB.ui.rich(s.d) : null); }))));
     root.appendChild(h('div.grid.cols-2.mt-4', {},
