@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   var CORB = window.CORB;
-  var TABS = [['help', 'Help'], ['profile', 'My profile'], ['display', 'Display'], ['data', 'My data'], ['about', 'About']];
+  var TABS = [['help', 'Help'], ['profile', 'My profile'], ['display', 'Display'], ['data', 'My data']];
 
   function help(root, h, icon) {
     var meta = CORB.meta(), ed = CORB.edition();
@@ -15,6 +15,8 @@
       ['cards', 'Drill what you must memorize', 'Flashcards bring back what you miss. Start with the FAR part titles.'],
       ['search', 'Find anything', 'Press / or the Search button, then type a word, an acronym or a course number.']
     ];
+    root.appendChild(h('div.callout.brass.mb-4', {}, icon('help'), h('div', {}, h('b', {}, 'New here?'), h('span', {}, 'A short tour points at each part of the guide and says what it is for. '),
+      h('div.row.mt-2', {}, h('button.btn.sm.primary', { type: 'button', onclick: function () { if (CORB.tour) CORB.tour.start(); } }, icon('play'), 'Take the tour'), h('a.btn.sm.ghost', { href: '#/about' }, icon('info'), 'About B2B Guide')))));
     root.appendChild(h('div.grid.cols-2.help-grid', {}, steps.map(function (s) { return h('div.card.tight.help-step', {}, h('div.help-icon', {}, icon(s[0])), h('div', {}, h('b', {}, s[1]), h('p.small.muted', {}, s[2]))); })));
     root.appendChild(h('div.section-head', {}, h('h2', {}, 'Where your progress lives')));
     root.appendChild(h('div.card', {}, CORB.ui.rich(
@@ -57,13 +59,14 @@
   }
 
   function display(root, h, icon) {
-    var theme = CORB.get('profile.theme') || '', size = +CORB.get('profile.textSize', 0) || 0;
+    var theme = CORB.get('profile.theme'), size = +CORB.get('profile.textSize', 0) || 0;
+    theme = theme === 'dark' || theme === 'system' ? theme : 'light';
     function seg(opts, cur, fn) { return h('div.seg', {}, opts.map(function (o) { return h('button' + (o[0] === cur ? '.on' : ''), { type: 'button', onclick: function () { fn(o[0]); CORB.render(); } }, o[1]); })); }
     var rate = h('input#tts-rate', { type: 'range', min: '0.7', max: '1.4', step: '0.1', value: String(CORB.get('settings.ttsRate', 1)) });
     rate.addEventListener('change', function () { CORB.set('settings.ttsRate', +rate.value); });
     function sw(path, label, def) { var i = h('input', { type: 'checkbox', checked: CORB.get(path, def) !== false }); i.addEventListener('change', function () { CORB.set(path, i.checked); if (path === 'settings.glossaryLinks') CORB.data.invalidate(); }); return h('label.switch', {}, i, label); }
     root.appendChild(h('div.card.stack.loose', {},
-      h('div.field', {}, h('div.label', {}, 'Day or night'), seg([['', 'Match my device'], ['light', 'Day'], ['dark', 'Night']], theme, function (v) { CORB.setTheme(v); })),
+      h('div.field', {}, h('div.label', {}, 'Day or night'), seg([['light', 'Day'], ['dark', 'Night'], ['system', 'Match my device']], theme, function (v) { CORB.setTheme(v); })),
       h('div.field', {}, h('div.label', {}, 'Text size'), seg([[0, 'Normal'], [1, 'Large'], [2, 'Larger'], [3, 'Largest']], size, function (v) { CORB.setTextSize(v); })),
       h('div.field', {}, h('div.label', {}, 'Motion'), seg([['', 'Normal'], ['reduce', 'Less motion']], CORB.get('settings.motion') || '', function (v) { CORB.setMotion(v); })),
       sw('settings.glossaryLinks', 'Underline acronyms I can tap for a meaning', true)));
@@ -93,25 +96,14 @@
         h('button.btn.danger', { type: 'button', onclick: function () { CORB.ui.confirm('Erase everything, including your profile? The guide will start fresh.', { ok: 'Erase everything', danger: true }).then(function (ok) { if (ok) { st.resetAll(); CORB.go('home'); CORB.render(); } }); } }, icon('trash'), 'Erase everything'))));
   }
 
-  function about(root, h, icon) {
-    var m = CORB.meta();
-    root.appendChild(h('div.card.about-card', {}, h('div.row', {}, h('div.about-mark', {}, 'B2B'), h('div', {}, h('h2', {}, m.app_name), h('p.muted', {}, m.tagline))),
-      h('div.facts-mini.mt-4', {},
-        [['Version', m.version], ['Edition', { offline: 'Offline file', web: 'Website / app', preview: 'Preview' }[CORB.edition()]], ['Built', m.built_on], ['Content checked', CORB.util.fmtDate(m.content_verified_on)], ['Build id', m.build_id]].map(function (x) { return h('div', {}, h('span', {}, x[0]), h('b.num', {}, x[1] || '—')); }))));
-    root.appendChild(h('div.mt-4', {}, CORB.ui.callout('warn', 'alert', 'Unofficial training aid', m.disclaimer)));
-    root.appendChild(h('div.card.mt-4', {}, h('h3', {}, 'How this guide stays current'), CORB.ui.rich(m.currency || '')));
-    var maint = CORB.ui.maintainer();
-    if (maint) root.appendChild(h('div.card.mt-4', {}, h('h3', {}, maint.role), h('p', {}, maint.name, ' · ', h('a', { href: 'mailto:' + maint.email }, maint.email))));
-    root.appendChild(h('div.card.mt-4', {}, h('h3', {}, 'Credits'), h('p.small.muted', {}, m.credits || '')));
-  }
-
   CORB.registerView({ id: 'settings', title: 'Settings & help', section: 'Help', icon: 'settings', nav: true, order: 130,
     blurb: 'Help, display, read-aloud, your data, feedback', keywords: 'help settings text size dark mode night read aloud voice export import save progress reset feedback install app update version about',
     render: function (root, ctx) {
       var h = CORB.ui.h, icon = CORB.ui.icon, tab = ctx.params.tab || 'help';
+      if (tab === 'about') { location.replace('#/about'); return; }   // About has its own page now; old links still work
       root.appendChild(CORB.ui.pageHead({ title: 'Settings & help' }));
       root.appendChild(h('div.tabs', { role: 'tablist' }, TABS.map(function (t) { return h('button' + (t[0] === tab ? '.on' : ''), { type: 'button', role: 'tab', 'aria-selected': t[0] === tab ? 'true' : 'false', onclick: function () { CORB.go('settings', { tab: t[0] }); } }, t[1]); })));
       var body = h('div'); root.appendChild(body);
-      ({ help: help, profile: profile, display: display, data: data, about: about }[tab] || help)(body, h, icon);
+      ({ help: help, profile: profile, display: display, data: data }[tab] || help)(body, h, icon);
     } });
 })();

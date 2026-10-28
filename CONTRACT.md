@@ -33,7 +33,8 @@ src/css/00-fonts.css      embedded fonts (tools/fetch_fonts.py)
 src/css/01-tokens.css     colour, type, spacing tokens; light + dark (system and explicit); text sizes; phase colours
 src/css/02-base.css       reset, type, shell layout, utilities, print
 src/css/03-components.css buttons, cards, badges, inputs, choice cards, check items, modal, toast, rich text, glossary popover
-src/css/04-shell.css      side menu, top bar, phone bar, search palette, update bar
+src/css/04-shell.css      side menu (and its collapsed icon rail), top bar, phone bar, search palette, update bar
+src/css/05-tour.css       the guided tour
 src/css/views/<view>.css  one file per view, selectors prefixed .v-<view> (shared course-flow styles live in cert.css)
 src/js/core/00-namespace  CORB namespace, events, registerView, editions, date helpers (local dates only)
 src/js/core/01-store      state, persistence, export/import, save progress into the file
@@ -43,8 +44,9 @@ src/js/core/04-data       queries over CORB_DATA, search index, citation URLs (F
 src/js/core/05-speech     read-aloud in sentence-sized chunks
 src/js/core/06-learning   SM-2 lite flashcards, quiz records, readiness by exam area, streak
 src/js/core/07-plan       dated plan: goal, 12-month experience, 36-month deadline, step status, .ics export
+src/js/core/08-tour       the guided tour (same engine as Board Ready's): spotlight + card, offered once, ? button and ? key
 src/js/core/09-pwa        web edition only: service worker, update bar, install prompt
-src/js/views/*.js         home, path, plan, cert, courses, learn (+ lesson), howto, quiz, cards, arcade, games (quick drills), glossary, far, links, settings
+src/js/views/*.js         home, path, plan, cert, courses, learn (+ lesson), howto, quiz, cards, arcade, games (quick drills), glossary, far, links, settings, about
 src/js/arcade/00-engine   window.ARCADE: register, palette, storage through A.host, pace levels, XP ranks, question memory, text, particles, floaters, sound, music
 src/js/arcade/01-shell   lobby, play screen (HUD, prompt panel, fluid canvas, answer panel, reading pause, pause menu), results with the study list
 src/js/arcade/games/*.js contract-quest, fire-mission, qual-range, part-patrol, sort-yard
@@ -110,7 +112,8 @@ CORB.ui.h  icon  badge  phaseBadge  verifyBadge  rich  inline  callout  checkIte
 CORB.data.phases/phase  lessons/lesson/nextLesson  questions/questionsFor  glossary/term  courses/course  howtos  farParts  search  citeUrl
 CORB.speech.speak/stop   CORB.scoring.srs.grade/isDue   CORB.scoring.readiness()   CORB.plan.steps()/goal()/deadline()/ics()
 CORB.path.currentWeek()/week(n)/weekStart(n)/taskDone(t)/weekStats(w)/progress()   CORB.quiz.start({mode, n, label, phase, lessons, src, path})
-CORB.edition()  CORB.can(what)  CORB.setTheme  CORB.setTextSize
+CORB.edition()  CORB.can(what)  CORB.setTheme('light' | 'dark' | 'system')  CORB.setTextSize  CORB.setSideMini(on)
+CORB.tour.start() / offer() / stop() / running()   CORB.decks()   (the flashcard decks, counted on the About page)
 ```
 
 The Arcade (same shape as Board Ready's, so the two can merge):
@@ -126,7 +129,7 @@ ARCADE.host = { get(k), set(k, v, quiet), speak(text), onAnswer(qid, ok), onRunE
 ARCADE._debug.play(id, opts) / start() / step(seconds) / run()   (automated checks; no UI)
 ```
 
-State (`b2b.state.v1`): `{version: 'b2b-state-1', profile: {track, start, goalMonths, goalDate, theme, textSize}, progress: {steps, courses, lessons, checks, quiz, missed, srs, howto, exp, games, exam, seen, bookmarks, path, arcade: {best, xp, quest, rot}}, settings: {tts, ttsRate, glossaryLinks, motion, setupDone, welcomeSeen, arcade: {tier, mute, music}}, meta: {updatedAt, lastOpened}}`.
+State (`b2b.state.v1`): `{version: 'b2b-state-1', profile: {track, start, goalMonths, goalDate, theme ('' or 'light' = day, the default; 'dark'; 'system'), textSize}, progress: {steps, courses, lessons, checks, quiz, missed, srs, howto, exp, games, exam, seen, bookmarks, path, arcade: {best, xp, quest, rot}}, settings: {tts, ttsRate, glossaryLinks, motion, setupDone, welcomeSeen, tourSeen, arcade: {tier, mute, music}}. Browser-only keys: `b2b.theme`, `b2b.textsize`, `b2b.side` ('mini' = the collapsed menu), meta: {updatedAt, lastOpened}}`.
 The copy saved inside the HTML file wins over the browser's copy when its `meta.updatedAt` is newer.
 
 ## 7. Fusing with Board Ready (the "ultimate guide")

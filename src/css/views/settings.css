@@ -6,8 +6,3 @@
 .v-settings .help-step p { margin-top: 2px; }
 .v-settings h3 { font-size: var(--fs-lg); }
 .v-settings input[type=range] { flex: 1; max-width: 320px; accent-color: var(--accent); }
-.v-settings .about-mark { width: 64px; height: 64px; border-radius: 16px; display: grid; place-items: center; background: linear-gradient(150deg, var(--accent), color-mix(in srgb, var(--accent) 65%, #000)); color: var(--accent-ink); font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; }
-.v-settings .facts-mini { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(170px, 100%), 1fr)); gap: 10px; }
-.v-settings .facts-mini > div { padding: 10px 12px; border-radius: var(--r-md); background: var(--panel-2); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.v-settings .facts-mini span { font-size: var(--fs-xs); font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
-.v-settings .facts-mini b { overflow-wrap: anywhere; }

@@ -26,6 +26,7 @@
     (D.cards || []).forEach(function (dk) { out.push({ id: dk.id, title: dk.title, sub: dk.sub, icon: dk.icon || 'cards', cards: (dk.cards || []).map(function (c, i) { return { id: dk.id + '-' + (c.id || i), front: c.front, back: c.back, more: c.more }; }) }); });
     return out.filter(function (d) { return d.cards.length; });
   }
+  CORB.decks = decks;   // the About page counts them
   function counts(dk) {
     var n = 0, due = 0, known = 0;
     dk.cards.forEach(function (c) { var s = CORB.scoring.srs.get(c.id); if (!s) n++; else { if (s.due <= CORB.util.today()) due++; if (s.reps >= 2) known++; } });

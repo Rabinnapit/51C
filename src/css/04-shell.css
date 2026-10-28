@@ -54,3 +54,31 @@
 .page-head .meta-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: var(--space-3); }
 .back-link { display: inline-flex; align-items: center; gap: 6px; font-weight: 750; font-size: var(--fs-sm); text-decoration: none; min-height: 36px; }
 .back-link svg { width: 18px; height: 18px; }
+
+/* ---- the menu button: on a wide screen it collapses the side menu to a rail of icons; on a phone it opens the menu ---- */
+.topbar .menu-btn { display: inline-flex; }
+/* top bar tooltips open below their buttons: above, they would run off the top of the window */
+@media (hover: hover) {
+  .topbar [data-tip]:hover::after { bottom: auto; top: calc(100% + 6px); }
+  .topbar .menu-btn[data-tip]:hover::after { left: 0; transform: none; }
+  .topbar > [data-tip]:last-child:hover::after { left: auto; right: 0; transform: none; }
+}
+.side .side-collapse { display: flex; align-items: center; gap: 10px; margin: 10px 12px 0; padding: 8px 10px; min-height: 40px; border-radius: var(--r-md); color: var(--muted); font-weight: 700; font-size: .85rem; text-align: left; }
+.side .side-collapse:hover { background: var(--bg-2); color: var(--ink); }
+.side .side-collapse svg { width: 18px; height: 18px; flex: none; transition: transform var(--dur) var(--ease); }
+.side-tip { position: fixed; z-index: 70; transform: translateY(-50%); padding: 5px 9px; border-radius: 6px; background: var(--ink); color: var(--bg); font-size: .75rem; font-weight: 650; white-space: nowrap; pointer-events: none; box-shadow: var(--shadow-sm); }
+@media (max-width: 860px) { .side .side-collapse { display: none; } }
+@media (min-width: 861px) {
+  html[data-side="mini"] { --side-w: 76px; }
+  html[data-side="mini"] .side .brand { justify-content: center; padding: 18px 0 12px; }
+  html[data-side="mini"] .side .brand > div:not(.mark) { display: none; }
+  html[data-side="mini"] .side .nav-group { padding: 2px 10px; }
+  html[data-side="mini"] .side .nav-label { height: 1px; padding: 0; margin: 8px 8px; overflow: hidden; color: transparent; background: var(--line); }
+  html[data-side="mini"] .side .nav { position: relative; justify-content: center; padding: 8px 0; }
+  html[data-side="mini"] .side .nav > span:not(.count) { display: none; }
+  html[data-side="mini"] .side .nav .count { position: absolute; top: 1px; right: 2px; margin: 0; padding: 0 5px; font-size: .6rem; }
+  html[data-side="mini"] .side .side-foot { display: none; }
+  html[data-side="mini"] .side .side-collapse { justify-content: center; margin: auto 10px 14px; }
+  html[data-side="mini"] .side .side-collapse span { display: none; }
+  html[data-side="mini"] .side .side-collapse svg { transform: rotate(180deg); }
+}

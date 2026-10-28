@@ -65,7 +65,8 @@
         }))));
     root.appendChild(h('section.card.raised.setup-card', {}, h('h2', {}, 'Build my plan'), h('p.muted', {}, 'Takes 30 seconds. Nothing leaves this device.'), f.el,
       h('div.row.mt-5', {}, h('button.btn.primary.lg', { type: 'button', onclick: function () { if (f.save()) { CORB.ui.toast('Your plan and 6-month exam path are ready', 'ok'); CORB.go('path'); } } }, 'Build my plan', icon('arrow-right')),
-        h('button.btn.ghost', { type: 'button', onclick: function () { CORB.set('settings.welcomeSeen', true); CORB.render(); } }, 'Look around first'))));
+        h('button.btn.ghost', { type: 'button', onclick: function () { CORB.set('settings.welcomeSeen', true); CORB.render(); } }, 'Look around first'),
+        h('button.btn.ghost', { type: 'button', onclick: function () { if (CORB.tour) CORB.tour.start(); } }, icon('help'), 'Show me around'))));
     root.appendChild(tour());
   }
 

@@ -21,10 +21,41 @@
 
   function navDefs() { return CORB.viewOrder.map(function (id) { return CORB.views[id]; }).filter(function (d) { return d.nav; }).sort(function (a, b) { return (a.order || 99) - (b.order || 99); }); }
   function isDark() { var t = document.documentElement.getAttribute('data-theme'); if (t) return t === 'dark'; return !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches); }
+  // Day is the default. 'dark' is night; 'system' follows the device's own light or dark setting.
+  function applyTheme(t) {
+    var d = document.documentElement;
+    if (t === 'dark') d.setAttribute('data-theme', 'dark'); else if (t === 'system') d.removeAttribute('data-theme'); else d.setAttribute('data-theme', 'light');
+  }
   CORB.setTheme = function (t) {
-    if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); else document.documentElement.removeAttribute('data-theme');
-    CORB.set('profile.theme', t || ''); paintTools();
+    t = t === 'dark' || t === 'system' ? t : 'light';
+    applyTheme(t); CORB.set('profile.theme', t); paintTools();
   };
+  // ---- the side menu can shrink to a rail of icons on a wide screen (remembered in this browser) ----
+  function narrow() { try { return window.matchMedia('(max-width: 860px)').matches; } catch (e) { return window.innerWidth <= 860; } }
+  function isMini() { return document.documentElement.getAttribute('data-side') === 'mini'; }
+  CORB.setSideMini = function (on) {
+    if (on) document.documentElement.setAttribute('data-side', 'mini'); else document.documentElement.removeAttribute('data-side');
+    CORB.store.safeSet('b2b.side', on ? 'mini' : '');
+    sideTip(null); paintSide();
+  };
+  function paintSide() {
+    sideTip(null);
+    if (!shell) return;
+    var mini = isMini(), mb = shell.querySelector('.topbar .menu-btn'), cb = shell.querySelector('.side-collapse');
+    if (mb) { mb.setAttribute('aria-expanded', narrow() ? 'false' : String(!mini)); mb.setAttribute('data-tip', mini ? 'Show the menu' : 'Collapse the menu'); }
+    if (cb) { cb.setAttribute('aria-label', mini ? 'Expand the menu' : 'Collapse the menu'); cb.lastChild.textContent = mini ? 'Expand' : 'Collapse menu'; }
+  }
+  function menuButton() { if (narrow()) openSide(); else CORB.setSideMini(!isMini()); }
+  // In the rail the labels are hidden, so hovering or focusing an icon shows its name beside it. The side menu scrolls, which
+  // would clip a CSS tooltip, so this one floats on the page.
+  var tipEl = null;
+  function sideTip(btn) {
+    if (!btn || !isMini() || narrow()) { if (tipEl) tipEl.hidden = true; return; }
+    if (!tipEl) { tipEl = CORB.ui.h('div.side-tip', { role: 'tooltip' }); document.body.appendChild(tipEl); }
+    var r = btn.getBoundingClientRect();
+    tipEl.textContent = btn.getAttribute('data-mini-tip') || ''; tipEl.hidden = false;
+    tipEl.style.left = Math.round(r.right + 10) + 'px'; tipEl.style.top = Math.round(r.top + r.height / 2) + 'px';
+  }
   CORB.toggleTheme = function () { CORB.setTheme(isDark() ? 'light' : 'dark'); CORB.ui.toast(isDark() ? 'Night mode on' : 'Day mode on'); };
   CORB.setTextSize = function (n) {
     n = CORB.util.clamp(+n || 0, 0, 3);
@@ -46,12 +77,15 @@
       h('a.brand', { href: '#/home', onclick: closeSide }, h('div.mark', {}, 'B2B'), h('div', {}, h('b', {}, CORB.appName()), h('small', {}, meta.tagline_short || 'Contracting certification, step by step'))),
       h('nav', { 'aria-label': 'Sections' }, SECTIONS.filter(function (s) { return groups[s]; }).map(function (s) {
         return h('div.nav-group', {}, h('div.nav-label', {}, s), groups[s].map(function (d) {
-          return h('button.nav', { type: 'button', 'data-view': d.id, onclick: function () { CORB.go(d.id); closeSide(); } }, icon(d.icon || 'dot'), h('span', {}, d.title), d.badge ? h('span.count', { 'data-badge': d.id }) : null);
+          return h('button.nav', { type: 'button', 'data-view': d.id, 'data-mini-tip': d.title, onclick: function () { sideTip(null); CORB.go(d.id); closeSide(); },
+            onmouseenter: function (e) { sideTip(e.currentTarget); }, onmouseleave: function () { sideTip(null); }, onfocus: function (e) { sideTip(e.currentTarget); }, onblur: function () { sideTip(null); } },
+            icon(d.icon || 'dot'), h('span', {}, d.title), d.badge ? h('span.count', { 'data-badge': d.id }) : null);
         }));
       })),
       h('div.side-tools', {},
         h('button.btn.sm', { type: 'button', onclick: function () { CORB.toggleTheme(); } }, icon('moon'), 'Day / night'),
         h('button.btn.sm', { type: 'button', onclick: function () { CORB.cycleTextSize(); } }, icon('text'), 'Text size')),
+      h('button.side-collapse', { type: 'button', 'aria-label': 'Collapse the menu', onclick: function () { CORB.setSideMini(!isMini()); } }, icon('arrow-left'), h('span', {}, 'Collapse menu')),
       h('div.side-foot', {},
         h('div', {}, 'Unofficial training aid. Not endorsed by the Army, DoW or WarU.'),
         h('div.mt-2', {}, 'v' + (meta.version || '') + ' · content checked ' + CORB.util.fmtDate(meta.content_verified_on || '')),
@@ -60,20 +94,20 @@
     );
 
     var top = h('header.topbar', {},
-      h('button.btn.icon.ghost.menu-btn', { type: 'button', 'aria-label': 'Open menu', onclick: openSide }, icon('menu')),
+      h('button.btn.icon.ghost.menu-btn', { type: 'button', 'aria-label': 'Menu', 'data-tip': 'Collapse the menu', onclick: menuButton }, icon('menu')),
       h('div.top-title.grow', {}, h('span.top-eyebrow', {}, ''), h('strong.top-heading', {}, '')),
       h('button.btn.sm.ghost.search-btn', { type: 'button', onclick: function () { CORB.ui.palette(); }, 'aria-label': 'Search', title: 'Search (press /)' }, icon('search'), h('span.hide-sm', {}, 'Search'), h('kbd.hide-sm', {}, '/')),
       h('button.btn.sm.save-btn', { type: 'button', hidden: true, onclick: saveToFile, title: 'Your progress is only in this browser. Save it into the B2B Guide file so a restart cannot erase it.' }, icon('save'), h('span.hide-sm', {}, 'Save progress')),
-      h('button.btn.icon.sm.ghost.hide-sm', { type: 'button', 'aria-label': 'Text size', 'data-tip': 'Text size', onclick: function () { CORB.cycleTextSize(); } }, icon('text')),
+      h('button.btn.icon.sm.ghost.hide-sm.text-btn', { type: 'button', 'aria-label': 'Text size', 'data-tip': 'Text size', onclick: function () { CORB.cycleTextSize(); } }, icon('text')),
       h('button.btn.icon.sm.ghost.hide-sm.theme-btn', { type: 'button', 'aria-label': 'Day or night mode', 'data-tip': 'Day / night', onclick: function () { CORB.toggleTheme(); } }, icon('moon')),
-      h('button.btn.icon.sm.ghost', { type: 'button', 'aria-label': 'Help', 'data-tip': 'Help', onclick: function () { CORB.go('settings', { tab: 'help' }); } }, icon('help'))
+      h('button.btn.icon.sm.ghost.tour-btn', { type: 'button', 'aria-label': 'Take the tour', 'data-tip': 'Tour (press ?)', onclick: function () { if (CORB.tour) CORB.tour.start(); else CORB.go('settings', { tab: 'help' }); } }, icon('help'))
     );
     var mobileItems = navDefs().filter(function (d) { return d.mobile; }).slice(0, 5);
     var mobile = h('nav.mobile-nav', { 'aria-label': 'Quick menu' }, mobileItems.map(function (d) { return h('button', { type: 'button', 'data-view': d.id, onclick: function () { CORB.go(d.id); } }, icon(d.icon || 'dot'), h('span', {}, d.short || d.title)); }));
     var main = h('main.main', {}, h('div.update-slot'), top, h('div.content#content', { tabindex: '-1' }), mobile);
     shell = h('div.shell', {}, side, main);
     app.innerHTML = ''; app.appendChild(shell);
-    paintTools(); paintBadges();
+    paintTools(); paintBadges(); paintSide();
   }
   function paintTools() {
     if (!shell) return;
@@ -135,18 +169,24 @@
     if (tag === 'input' || tag === 'textarea' || tag === 'select' || (e.target && e.target.isContentEditable)) return;
     if (e.ctrlKey || e.metaKey || e.altKey) return;
     if (e.key === '/') { e.preventDefault(); CORB.ui.palette(); }
+    if (e.key === '?' && CORB.tour && current.id !== 'arcade') { e.preventDefault(); CORB.tour.start(); }
     if (e.key === 'Escape') { CORB.ui.closeModal(); closeSide(); }
   });
+  window.addEventListener('resize', CORB.util.debounce(paintSide, 150));
+  document.addEventListener('scroll', function () { sideTip(null); }, true);
 
   // ---- boot ----
   CORB.boot = function () {
     CORB.store.load();
-    var th = CORB.get('profile.theme'); if (th === 'dark' || th === 'light') document.documentElement.setAttribute('data-theme', th);
+    applyTheme(CORB.get('profile.theme'));
+    if (CORB.store.safeGet('b2b.side') === 'mini') document.documentElement.setAttribute('data-side', 'mini');
     var tx = +CORB.get('profile.textSize', 0) || 0; if (tx) document.documentElement.setAttribute('data-text', String(tx)); else document.documentElement.removeAttribute('data-text');
     if (CORB.get('settings.motion') === 'reduce') document.documentElement.setAttribute('data-motion', 'reduce');
     window.addEventListener('hashchange', render);
     if (!location.hash || location.hash === '#') { try { history.replaceState(null, '', '#/home'); } catch (e) { location.hash = '#/home'; } }
     render();
     CORB.emit('boot');
+    // the first time the guide opens, offer the tour once the page has drawn
+    setTimeout(function () { if (CORB.tour) CORB.tour.offer(); }, 900);
   };
 })();

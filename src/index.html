@@ -10,15 +10,17 @@
 <!--@webhead-->
 <script id="embeddedState" type="application/json">null</script>
 <script>
-/* Runs before first paint: the reader's theme and text size. Reader's choice > choice saved in this file > system. */
+/* Runs before first paint: theme, text size and a collapsed side menu. Reader's choice > choice saved in this file > day
+   (the default). Night is 'dark'; 'system' follows the device. */
 (function () {
-  var d = document.documentElement, t = null, s = null, es = null;
+  var d = document.documentElement, t = null, s = null, es = null, side = null;
   try { es = JSON.parse(document.getElementById('embeddedState').textContent || 'null'); } catch (e) {}
-  try { t = localStorage.getItem('b2b.theme'); s = localStorage.getItem('b2b.textsize'); } catch (e) {}
+  try { t = localStorage.getItem('b2b.theme'); s = localStorage.getItem('b2b.textsize'); side = localStorage.getItem('b2b.side'); } catch (e) {}
   if (!t && es && es.settings && es.settings.theme) t = es.settings.theme;
   if (!s && es && es.settings && es.settings.textSize != null) s = String(es.settings.textSize);
-  if (t === 'dark' || t === 'light') d.setAttribute('data-theme', t);
+  if (t === 'dark') d.setAttribute('data-theme', 'dark'); else if (t !== 'system') d.setAttribute('data-theme', 'light');
   if (s && /^[0-3]$/.test(s)) d.setAttribute('data-text', s);
+  if (side === 'mini') d.setAttribute('data-side', 'mini');
 })();
 </script>
 <!--@styles-->

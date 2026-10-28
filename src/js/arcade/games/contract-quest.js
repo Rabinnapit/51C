@@ -1,6 +1,6 @@
 /* GAME: contract-quest — RPG battles across the four exam areas and the Exam Citadel.
-   Pick a realm (one exam area), then beat two monsters and a boss with questions from the bank. A right answer swings the
-   hero's pen: more damage on a streak, on a fast answer, and on a Warrant Strike (charged by three right in a row). A wrong
+   Pick a realm (one exam area), then beat two monsters and a boss with questions from the bank. A right answer fires the
+   hero's RPG: more damage on a streak, on a fast answer, and on a Warrant Strike (charged by three right in a row). A wrong
    answer or a timeout lets the monster hit back for a heart. Every answer shows the reason and the FAR cite.
    Realm stars (3 = no hearts lost) are kept in the reader's progress (progress.arcade.quest). */
 (function () {
@@ -243,7 +243,9 @@
   };
   function monsterHeight(kind, r) { return { blob: 1.9, imp: 2.0, wisp: 2.8, demon: 2.7, serpent: 2.4, vine: 2.3, wraith: 2.5, golem: 2.1, kraken: 2.2, eye: 2.4, gate: 2.5 }[kind] * r || 2 * r; }
 
-  // The hero: a Soldier in OCP with a giant fountain pen. o = { flash, swing, charged }
+  // The hero: a Soldier in OCP with a shoulder-fired RPG launcher. o = { flash, aim (radians, 0 = level), recoil (0..1),
+  // loaded (a warhead sits in the muzzle), charged (Warrant Strike ready: the warhead glows gold) }
+  var REST_AIM = -0.12;
   function drawHero(ctx, x, y, s, t, o) {
     o = o || {};
     var f = o.flash > 0, bob = Math.sin(t * 3) * 1.5 * s;
@@ -259,25 +261,48 @@
       ctx.fillStyle = '#5c6142'; ellipse(ctx, 6 * s, -62 * s, 5 * s, 3 * s); ctx.fill(); ellipse(ctx, -7 * s, -37 * s, 6 * s, 4 * s); ctx.fill();
       ctx.fillStyle = '#3f3f2c'; ctx.fillRect(-15 * s, -36 * s, 30 * s, 4 * s);
       ctx.restore();
-      ctx.fillStyle = '#2d2c20'; ctx.fillRect(2 * s, -62 * s, 10 * s, 3 * s);
     }
     ctx.fillStyle = f ? '#fff' : '#d9a77c'; ellipse(ctx, 1 * s, -79 * s, 11 * s, 12 * s); ctx.fill();
     ctx.fillStyle = f ? '#fff' : '#6a6648'; A.roundRect(ctx, -11 * s, -97 * s, 24 * s, 11 * s, 3 * s); ctx.fill(); ctx.fillRect(0, -88 * s, 18 * s, 3 * s);
     ctx.fillStyle = '#1c1a14'; ellipse(ctx, 6 * s, -79 * s, 1.6 * s, 2 * s); ctx.fill();
-    ctx.save(); ctx.translate(9 * s, -58 * s); ctx.rotate(o.swing == null ? -0.9 : o.swing);
-    ctx.strokeStyle = f ? '#fff' : '#76724f'; ctx.lineWidth = 7 * s; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(14 * s, 0); ctx.stroke();
-    ctx.fillStyle = f ? '#fff' : '#d9a77c'; ellipse(ctx, 16 * s, 0, 4.2 * s, 4.2 * s); ctx.fill();
-    if (o.charged) { ctx.shadowColor = '#f6d991'; ctx.shadowBlur = 18 * s; }
-    ctx.fillStyle = '#16181c'; A.roundRect(ctx, 14 * s, -3.6 * s, 44 * s, 7.2 * s, 3 * s); ctx.fill();
-    ctx.fillStyle = '#e6b85a'; ctx.fillRect(26 * s, -3.6 * s, 3 * s, 7.2 * s); ctx.fillRect(48 * s, -3.6 * s, 2 * s, 7.2 * s);
-    ctx.beginPath(); ctx.moveTo(58 * s, -3.6 * s); ctx.lineTo(72 * s, 0); ctx.lineTo(58 * s, 3.6 * s); ctx.closePath(); ctx.fill();
+    // the launcher pivots on the right shoulder and kicks back when it fires
+    ctx.save(); ctx.translate(4 * s - (o.recoil || 0) * 6 * s, -66 * s); ctx.rotate(o.aim == null ? REST_AIM : o.aim);
+    ctx.strokeStyle = f ? '#fff' : '#76724f'; ctx.lineWidth = 6 * s; ctx.lineCap = 'round';
+    ctx.beginPath(); ctx.moveTo(-6 * s, 10 * s); ctx.lineTo(0, 12 * s); ctx.moveTo(-2 * s, 6 * s); ctx.lineTo(14 * s, 12 * s); ctx.stroke();
+    ctx.fillStyle = f ? '#fff' : '#3a3e2e';
+    ctx.beginPath(); ctx.moveTo(-30 * s, -4.5 * s); ctx.lineTo(-38 * s, -7.5 * s); ctx.lineTo(-38 * s, 7.5 * s); ctx.lineTo(-30 * s, 4.5 * s); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = f ? '#fff' : '#4a4f3a'; A.roundRect(ctx, -30 * s, -4.5 * s, 64 * s, 9 * s, 3 * s); ctx.fill();
+    ctx.fillStyle = f ? '#fff' : '#8a5a2b'; A.roundRect(ctx, -6 * s, -5.5 * s, 18 * s, 11 * s, 2 * s); ctx.fill();
+    ctx.fillStyle = '#23261c'; ctx.fillRect(2 * s, -10 * s, 8 * s, 5 * s);
+    ctx.fillStyle = f ? '#fff' : '#3a3e2e'; ctx.fillRect(14 * s, 4 * s, 4 * s, 9 * s); ctx.fillRect(-2 * s, 4 * s, 4 * s, 8 * s);
+    ctx.fillStyle = f ? '#fff' : '#d9a77c'; ellipse(ctx, 0, 12 * s, 3.6 * s, 3.6 * s); ctx.fill(); ellipse(ctx, 15 * s, 12.5 * s, 3.6 * s, 3.6 * s); ctx.fill();
+    if (o.loaded !== false) {
+      if (o.charged) { ctx.shadowColor = '#f6d991'; ctx.shadowBlur = 16 * s; }
+      ctx.fillStyle = f ? '#fff' : o.charged ? '#e6b85a' : '#6d7348';
+      ctx.beginPath(); ctx.moveTo(34 * s, -4 * s); ctx.quadraticCurveTo(42 * s, -9 * s, 50 * s, -5 * s); ctx.lineTo(60 * s, 0); ctx.lineTo(50 * s, 5 * s); ctx.quadraticCurveTo(42 * s, 9 * s, 34 * s, 4 * s); ctx.closePath(); ctx.fill();
+      ctx.shadowBlur = 0;
+    }
     ctx.restore();
+    ctx.restore();
+  }
+  // a rocket in flight: warhead forward, fins and an engine flame behind
+  function drawRocket(ctx, x, y, ang, s, big, t) {
+    ctx.save(); ctx.translate(x, y); ctx.rotate(ang);
+    var fl = 8 + Math.sin(t * 60) * 3;
+    ctx.fillStyle = '#ffb347'; ctx.beginPath(); ctx.moveTo(-9 * s, -3 * s); ctx.lineTo(-(9 + fl) * s, 0); ctx.lineTo(-9 * s, 3 * s); ctx.fill();
+    ctx.fillStyle = '#fff3c4'; ctx.beginPath(); ctx.moveTo(-9 * s, -1.6 * s); ctx.lineTo(-(9 + fl * 0.55) * s, 0); ctx.lineTo(-9 * s, 1.6 * s); ctx.fill();
+    if (big) { ctx.shadowColor = '#f6d991'; ctx.shadowBlur = 14 * s; }
+    ctx.fillStyle = big ? '#e6b85a' : '#5f6640'; A.roundRect(ctx, -9 * s, -2.6 * s, 12 * s, 5.2 * s, 2 * s); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(3 * s, -4.5 * s); ctx.quadraticCurveTo(9 * s, -5 * s, 14 * s, 0); ctx.quadraticCurveTo(9 * s, 5 * s, 3 * s, 4.5 * s); ctx.closePath(); ctx.fill();
+    ctx.shadowBlur = 0; ctx.fillStyle = '#2b2e22';
+    ctx.beginPath(); ctx.moveTo(-9 * s, -2.6 * s); ctx.lineTo(-12 * s, -5.5 * s); ctx.lineTo(-7 * s, -2.6 * s); ctx.closePath(); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(-9 * s, 2.6 * s); ctx.lineTo(-12 * s, 5.5 * s); ctx.lineTo(-7 * s, 2.6 * s); ctx.closePath(); ctx.fill();
     ctx.restore();
   }
 
   A.register({
     id: 'contract-quest', title: 'Contract Quest', icon: '⚔️', accent: '#b98cff', genre: 'RPG battles', music: 'quest',
-    tagline: 'Fight through the four exam areas and the Exam Citadel. Right answers swing your pen; wrong ones let the monsters hit back.',
+    tagline: 'Fight through the four exam areas and the Exam Citadel. Right answers fire your RPG; wrong ones let the monsters hit back.',
     drills: 'All 374 bank questions, by exam area',
     controls: 'Answer with 1 to 4, A to D, or a tap; Enter continues. Three right in a row charges a Warrant Strike (triple damage on your next right answer). Fast answers and streaks hit harder. Items: a 50/50 scroll removes two wrong answers; a potion gives back a heart. Clear a realm without losing a heart for three stars.',
     aspect: [0.95, 2.3], countdown: false, letterKeys: true, outTitle: 'Defeated',
@@ -286,11 +311,18 @@
       var g = ctx.createLinearGradient(0, 0, 0, h); g.addColorStop(0, '#120a2a'); g.addColorStop(1, '#4a3786'); ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
       ctx.fillStyle = '#251b52'; ctx.beginPath(); ctx.moveTo(0, h); for (var x = 0; x <= w; x += 12) ctx.lineTo(x, h * 0.66 - 18 * Math.sin(x * 0.012 + t * 0.2) - 8 * Math.sin(x * 0.03)); ctx.lineTo(w, h); ctx.fill();
       ctx.fillStyle = '#1a1338'; ctx.fillRect(0, h * 0.84, w, h);
-      var ph = t % 2.6, atk = ph > 1.3 && ph < 1.9, k = atk ? (ph - 1.3) / 0.6 : 0;
-      drawHero(ctx, w * 0.26 + Math.sin(k * Math.PI) * 70, h * 0.9, 1.05, t, { swing: atk ? -2.1 + k * 3 : -0.9 });
-      ctx.save(); ctx.translate(w * 0.73, h * 0.9); KINDS.blob(ctx, { r: 40, t: t, c: '#b39dff', flash: ph > 1.55 && ph < 1.65, look: -1 }); ctx.restore();
-      for (var i = 0; i < 3; i++) { ctx.fillStyle = i < (ph > 1.6 ? 1 : 3) ? '#ff6b6b' : 'rgba(255,255,255,.2)'; A.roundRect(ctx, w * 0.73 - 30 + i * 21, h * 0.35, 17, 8, 3); ctx.fill(); }
-      if (ph > 1.55 && ph < 2.3) A.text(ctx, '-2', w * 0.73, h * 0.3 - (ph - 1.55) * 30, { size: 30, fam: 'display', weight: 900, color: '#f6d991', align: 'center', stroke: 'rgba(0,0,0,.7)' });
+      var ph = t % 2.4, s = 1.05, aim = -0.08, px = w * 0.24 + 4 * s, py = h * 0.9 - 66 * s;
+      var fired = ph > 1.1 && ph < 1.9, fly = ph > 1.1 && ph < 1.42, k = (ph - 1.1) / 0.32;
+      var mx = px + Math.cos(aim) * 60 * s, my = py + Math.sin(aim) * 60 * s, tx = w * 0.72, ty = h * 0.9 - 40;
+      ctx.save(); ctx.translate(w * 0.73, h * 0.9); KINDS.blob(ctx, { r: 40, t: t, c: '#b39dff', flash: ph > 1.42 && ph < 1.52, look: -1 }); ctx.restore();
+      drawHero(ctx, w * 0.24, h * 0.9, s, t, { aim: aim, loaded: !fired, recoil: ph > 1.1 && ph < 1.3 ? 1 - (ph - 1.1) / 0.2 : 0 });
+      if (fly) {
+        for (var j = 1; j < 7; j++) { var kk = Math.max(0, k - j * 0.07); ctx.fillStyle = 'rgba(220,214,200,' + (0.5 - j * 0.07) + ')'; ctx.beginPath(); ctx.arc(A.lerp(mx, tx, kk), A.lerp(my, ty, kk), 4 + j, 0, Math.PI * 2); ctx.fill(); }
+        drawRocket(ctx, A.lerp(mx, tx, k), A.lerp(my, ty, k), Math.atan2(ty - my, tx - mx), s, false, t);
+      }
+      if (ph >= 1.42 && ph < 1.9) { var e = (ph - 1.42) / 0.48; ctx.globalAlpha = 1 - e; ctx.fillStyle = '#ff8a3d'; ctx.beginPath(); ctx.arc(tx, ty, 14 + e * 52, 0, Math.PI * 2); ctx.fill(); ctx.fillStyle = '#fff3c4'; ctx.beginPath(); ctx.arc(tx, ty, 8 + e * 26, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1; }
+      for (var i = 0; i < 3; i++) { ctx.fillStyle = i < (ph > 1.45 ? 1 : 3) ? '#ff6b6b' : 'rgba(255,255,255,.2)'; A.roundRect(ctx, w * 0.73 - 30 + i * 21, h * 0.35, 17, 8, 3); ctx.fill(); }
+      if (ph > 1.42 && ph < 2.2) A.text(ctx, '-2', w * 0.73, h * 0.3 - (ph - 1.42) * 30, { size: 30, fam: 'display', weight: 900, color: '#f6d991', align: 'center', stroke: 'rgba(0,0,0,.7)' });
     },
     create: function (api) {
       var W = api.W, H = api.H, tier = api.difficulty, t = 0;
@@ -299,7 +331,7 @@
       var q = null, order = [], shown = 0, limit = 0, timer = 0, answered = false, used5050 = false;
       var streak = 0, focus = 0, charged = false, items = { scroll: 1, potion: 1 }, lost = 0;
       var anim = null, pending = null, clearT = 0, mapSel = 0, mapHover = -1, earned = 1;
-      var hero = { flash: 0, dx: 0, swing: -0.9, kb: 0 }, slash = null, beam = 0, motes = [];
+      var hero = { flash: 0, aim: null, recoil: 0, loaded: true }, rockets = [], beam = 0, motes = [];
       api.progress.configure({ perLevel: 4 });
 
       function sc() { return api.clamp(Math.min(H / 360, W / 540), 0.55, 1.5); }
@@ -308,6 +340,49 @@
       function foeX() { return W * 0.7; }
       function foeR() { return api.clamp(Math.min(H * 0.16, W * 0.12), 24, 92) * (foe && foe.def.boss ? 1.25 : 1); }
       function lives() { return api.life(0); }
+      function pivot() { var s = sc(); return { x: heroX() + 4 * s - hero.recoil * 6 * s, y: groundY() + Math.sin(t * 3) * 1.5 * s - 66 * s }; }
+      function along(p, ang, d) { return { x: p.x + Math.cos(ang) * d, y: p.y + Math.sin(ang) * d }; }
+      function foeAim() { var r = foeR(); return foe ? { x: foeX() - r * 0.15, y: groundY() - monsterHeight(foe.def.kind, r) * 0.5 } : { x: W * 0.7, y: H * 0.6 }; }
+      function aimNow() { return hero.aim == null ? REST_AIM : hero.aim; }
+      // a rocket waits `delay` seconds, then leaves the muzzle with a backblast; the first rocket of a volley carries the damage
+      function launch(a, delay, first) { rockets.push({ a: a, t: -delay, first: first, big: !!a.strike, launched: false, dur: 0.3 }); }
+      function impact(rk) {
+        var a = rk.a, x = rk.tx, y = rk.ty;
+        api.particles.emit({ x: x, y: y, n: rk.big ? 60 : 38, color: rk.big ? ['#fff3c4', '#f6d991', '#ffb347', '#ff8a3d'] : ['#ffd166', '#ff8a3d', '#ff5d3d', '#fff3c4'], speed: rk.big ? 460 : 340, gravity: 160, life: 0.7, size: 7 });
+        api.particles.emit({ x: x, y: y, n: 12, color: ['#6f6a62', '#8d877c'], speed: 70, gravity: -40, life: 1.3, size: 16, drag: 0.95 });
+        api.particles.ring(x, y, { color: rk.big ? '#f6d991' : '#fff1c4', grow: rk.big ? 460 : 300, life: 0.45, width: rk.big ? 7 : 5 });
+        if (rk.big) api.audio.bigBoom(); else api.audio.boom();
+        api.shake(rk.big ? 12 : 7);
+        if (!rk.first || !foe || a.hit) return;
+        a.hit = true; a.hitAt = a.t; foe.hp = Math.max(0, foe.hp - a.dmg); foe.flash = 0.14; foe.kb = 1;
+        api.audio.hit();
+        api.floaters.add('-' + a.dmg, x, y - foeR() * 0.7, { size: a.strike ? 46 : a.dmg > 1 ? 36 : 30, color: a.strike ? '#f6d991' : '#fff' });
+        if (a.fast) api.floaters.add('FAST!', x + 40, y - foeR() * 1.2, { size: 18, color: '#8be0b9' });
+        if (a.strike) { beam = 0.5; api.flash('rgba(246,217,145,.55)'); }
+        if (foe.hp <= 0) { a.kill = true; a.killAt = a.t + 0.25; }
+      }
+      function updateRockets(dt) {
+        for (var i = rockets.length - 1; i >= 0; i--) {
+          var rk = rockets[i], s = sc(); rk.t += dt;
+          if (rk.t < 0) continue;
+          if (!rk.launched) {
+            rk.launched = true;
+            var ang = aimNow(), pv = pivot(), m = along(pv, ang, 60 * s), rear = along(pv, ang, -38 * s), tg = foeAim();
+            rk.sx = m.x; rk.sy = m.y; rk.tx = tg.x + (rk.first ? 0 : A.rand(-16, 16) * s); rk.ty = tg.y + (rk.first ? 0 : A.rand(-14, 14) * s);
+            rk.dur = api.clamp(A.dist(m.x, m.y, rk.tx, rk.ty) / (rk.a.fast ? 1500 : 1100), 0.16, 0.45);
+            hero.recoil = 1; hero.loaded = false;
+            api.audio.shot(); api.audio.whoosh();
+            api.particles.emit({ x: rear.x, y: rear.y, n: 16, color: ['#cfc8bb', '#a9a294', '#e9e4da'], speed: 170, gravity: -30, life: 1, size: 14, angle: ang + Math.PI, spread: 0.45, drag: 0.93 });
+            api.particles.emit({ x: rear.x, y: rear.y, n: 10, color: ['#ffd166', '#ff8a3d'], speed: 230, gravity: 0, life: 0.25, size: 6, angle: ang + Math.PI, spread: 0.35 });
+            api.particles.emit({ x: m.x, y: m.y, n: 8, color: ['#fff3c4', '#ffd166'], speed: 140, gravity: 0, life: 0.18, size: 5, angle: ang, spread: 0.5 });
+          }
+          var u = Math.min(1, rk.t / rk.dur), e = u * u * 0.35 + u * 0.65, wob = Math.sin(u * Math.PI * 3) * 4 * s * (1 - u);
+          var dx = rk.tx - rk.sx, dy = rk.ty - rk.sy, len = Math.sqrt(dx * dx + dy * dy) || 1;
+          rk.x = rk.sx + dx * e - dy / len * wob; rk.y = rk.sy + dy * e + dx / len * wob; rk.ang = Math.atan2(dy, dx);
+          api.particles.emit({ x: rk.x - Math.cos(rk.ang) * 10 * s, y: rk.y - Math.sin(rk.ang) * 10 * s, n: 2, color: ['#ddd6c8', '#bdb5a6'], speed: 24, gravity: -18, life: 0.7, size: 8, drag: 0.94 });
+          if (u >= 1) { rockets.splice(i, 1); impact(rk); }
+        }
+      }
 
       // ---- realm map ----
       function mapNodes() {
@@ -523,22 +598,12 @@
         if (anim) {
           anim.t += dt; var a = anim, s = sc();
           if (a.type === 'attack') {
-            var reach = foeX() - heroX() - 95 * s;
-            hero.dx = a.t < 0.25 ? A.ease.outCubic(a.t / 0.25) * reach : a.t < 0.6 ? (1 - A.ease.inOutQuad((a.t - 0.25) / 0.35)) * reach : 0;
-            hero.swing = a.t < 0.18 ? -0.9 - a.t / 0.18 * 1.3 : a.t < 0.32 ? -2.2 + (a.t - 0.18) / 0.14 * 2.8 : -0.9;
-            if (!a.hit && a.t >= 0.25) {
-              a.hit = true; foe.hp = Math.max(0, foe.hp - a.dmg); foe.flash = 0.14; foe.kb = 1;
-              var fx = foeX(), fy = groundY() - foeR() * 1.1;
-              slash = { t: 0, x: fx, y: fy, big: a.strike };
-              api.audio.slash(); api.audio.hit();
-              api.particles.emit({ x: fx, y: fy, n: a.strike ? 60 : 24, color: a.strike ? ['#f6d991', '#fff', '#e6b85a'] : ['#fff', foe.def.color, '#f6d991'], speed: a.strike ? 520 : 320, gravity: 300, life: 0.7, shape: 'spark', size: 6 });
-              api.floaters.add('-' + a.dmg, fx, fy - foeR() * 0.6, { size: a.strike ? 46 : a.dmg > 1 ? 36 : 30, color: a.strike ? '#f6d991' : '#fff' });
-              if (a.fast) api.floaters.add('FAST!', fx + 40, fy - foeR() * 1.2, { size: 18, color: '#8be0b9' });
-              if (a.strike) { beam = 0.5; api.shake(14); api.flash('rgba(246,217,145,.55)'); api.audio.bigBoom(); api.particles.ring(fx, fy, { color: '#f6d991', grow: 520, life: 0.6, width: 8 }); }
-              else api.shake(a.dmg > 1 ? 7 : 4);
-              if (foe.hp <= 0) a.kill = true;
-            }
-            if (a.kill && !a.killed && a.t >= 0.5) {
+            // aim, fire (one rocket, or a golden volley of three on a Warrant Strike), reload, then the monster falls
+            var tg = foeAim(), pv = pivot(), want = api.clamp(Math.atan2(tg.y - pv.y, tg.x - pv.x), -0.6, 0.35);
+            hero.aim = a.t < 0.16 ? A.lerp(REST_AIM, want, A.ease.outCubic(a.t / 0.16)) : want;
+            if (!a.fired && a.t >= 0.16) { a.fired = true; var shots = a.strike ? 3 : 1; for (var si = 0; si < shots; si++) launch(a, si * 0.13, si === 0); }
+            if (a.fired && !a.reloaded && a.t >= (a.strike ? 1.05 : 0.8)) { a.reloaded = true; hero.loaded = true; api.audio.clank(); }
+            if (a.kill && !a.killed && a.t >= a.killAt) {
               a.killed = true; foe.dead = 0.001;
               var kx = foeX(), ky = groundY() - foeR();
               api.particles.emit({ x: kx, y: ky, n: 80, color: [foe.def.color, '#fff', A.shade(foe.def.color, 0.4)], speed: 380, gravity: 120, life: 1.2, size: 8 });
@@ -549,7 +614,8 @@
               if (drop) { items[drop]++; api.floaters.add(drop === 'potion' ? '+1 🧪 Potion' : '+1 📜 Scroll', kx, ky - foeR() * 0.4, { size: 18, color: '#8be0b9', life: 1.6, vy: -40 }); api.audio.coin(); }
               tools();
             }
-            if (a.t >= (a.kill ? 1.7 : 0.75)) { anim = null; hero.dx = 0; hero.swing = -0.9; }
+            var endAt = a.kill ? a.killAt + 1.25 : (a.hitAt || 0) + 0.5;
+            if (a.hit && !rockets.length && a.t >= Math.max(endAt, a.strike ? 1.1 : 0.85)) { anim = null; hero.loaded = true; }
           } else if (a.type === 'hurt') {
             foe.lunge = a.t < 0.3 ? A.ease.inCubic(a.t / 0.3) : a.t < 0.7 ? 1 - A.ease.outCubic((a.t - 0.3) / 0.4) : 0;
             if (!a.hit && a.t >= 0.3) {
@@ -562,7 +628,9 @@
           }
           if (!anim && pending) pending();
         }
-        if (slash) { slash.t += dt; if (slash.t > 0.3) slash = null; }
+        updateRockets(dt);
+        hero.recoil = Math.max(0, hero.recoil - dt * 5);
+        if (!anim || anim.type !== 'attack') hero.aim = hero.aim == null ? REST_AIM : A.lerp(hero.aim, REST_AIM, Math.min(1, dt * 6));
         beam = Math.max(0, beam - dt);
         if (mode === 'clear' && clearT) {
           clearT += dt;
@@ -581,12 +649,8 @@
         var s = sc();
         if (beam > 0) { ctx.save(); ctx.globalAlpha = beam * 2 > 1 ? 1 : beam * 2; var bx = foeX(), bw = foeR() * 1.3, bg = ctx.createLinearGradient(bx - bw, 0, bx + bw, 0); bg.addColorStop(0, 'rgba(246,217,145,0)'); bg.addColorStop(0.5, 'rgba(255,248,220,.95)'); bg.addColorStop(1, 'rgba(246,217,145,0)'); ctx.fillStyle = bg; ctx.fillRect(bx - bw, 0, bw * 2, groundY()); ctx.restore(); }
         drawFoe(ctx);
-        drawHero(ctx, heroX() + hero.dx, groundY(), s, t, { flash: hero.flash, swing: hero.swing, charged: charged });
-        if (slash) {
-          var k = slash.t / 0.3, rr = foeR() * (slash.big ? 1.6 : 1.1);
-          ctx.save(); ctx.globalAlpha = 1 - k; ctx.strokeStyle = slash.big ? '#f6d991' : '#ffffff'; ctx.lineCap = 'round'; ctx.shadowColor = '#f6d991'; ctx.shadowBlur = 16;
-          ctx.lineWidth = (slash.big ? 14 : 8) * (1 - k * 0.6); ctx.beginPath(); ctx.arc(slash.x - rr * 0.2, slash.y, rr, -Math.PI * 0.75 + k * 0.6, -Math.PI * 0.1 + k * 0.9); ctx.stroke(); ctx.restore();
-        }
+        drawHero(ctx, heroX(), groundY(), s, t, { flash: hero.flash, aim: hero.aim, recoil: hero.recoil, loaded: hero.loaded, charged: charged });
+        rockets.forEach(function (rk) { if (rk.launched && rk.x != null) drawRocket(ctx, rk.x, rk.y, rk.ang, s, rk.big, t); });
         if (foe || mode === 'clear') drawHud(ctx);
       }
 

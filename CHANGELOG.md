@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.12.0 (28 October 2026): guided tour, About page and day mode
+
+- **Guided tour** (same engine as Board Ready's): twelve stops that spotlight each part of the guide and say what it is
+  for, on a computer or a phone. Offered once on first open; the ? button in the top bar, the ? key, Home and Settings &
+  help start it again.
+- **About** page (Help → About): what B2B Guide is and is not, the developer and maintainer (SFC Rabin Napit) with Send
+  feedback and Report a problem buttons, live counts of what is inside, how it works offline, how it stays current with
+  the latest changes, keyboard shortcuts, the disclaimer and credits. The old About tab in Settings & help forwards there.
+  The Send feedback link stays in the side menu.
+- **Side menu collapses** to a rail of icons on a wide screen (the menu button or "Collapse menu"); hovering an icon shows
+  its name. The choice is remembered. On a phone the menu button still opens the full menu.
+- **Day mode is the default.** Settings & help → Display offers Day, Night or Match my device.
+- Top bar labels (Text size, Day / night, Tour) open below their buttons instead of running off the top of the window.
+- **Contract Quest:** a right answer fires your RPG (aim, backblast, a rocket on a smoke trail, an explosion) instead of
+  running in with a pen; a Warrant Strike fires a golden volley of three.
+
 ## 0.11.0 (28 October 2026): the B2B Arcade
 
 - **Arcade** (Practice → Arcade, in place of Games): five canvas action games built on the guide's checked content, on an engine
