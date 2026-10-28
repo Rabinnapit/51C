@@ -1,5 +1,35 @@
 # Changelog
 
+## 0.13.0 (28 October 2026): official documents, picture explanations and Supply Line
+
+- **Supply Line**, a new Arcade game (a story convoy, original to B2B Guide): lead two trucks from the Ops Center to
+  FOB Keystone through five checkpoints, one for each part of the contract life cycle (Ops Center: Guiding Principles,
+  Market Square: Pre-Award, River Bridge: Award, Supply Depot: Post-Award, FOB Gate: all four). At each stop a contact
+  sets the scene and six crates wait: a right answer loads a crate onto the truck, a wrong answer costs fuel and the radio
+  explains the right answer with its citation. All six earn the checkpoint's gold challenge coin (four or five, silver).
+  Run one checkpoint or the full 30-question mission, which ends with the gate opening. Route map, day-to-night scenes,
+  phone layout, and a new exam path task in week 18 (the full mission).
+- **Official documents** (Get certified → Official documents): 26 documents from the DPCAP Contract Policy workforce page
+  and the WarU iCatalog, grouped into the exam, what certification takes, after certification, and background policy.
+  Each opens with a **Simple version** (pictures, icons and short sentences for readers of every English level) and an
+  **Official document** switch. Eight PDFs (27 pages) are stored inside the file as images, so the real exam FAQ, roadmap,
+  flowchart, CON 7300V memo, Career Field Model, Competency Model, reciprocity FAQs and CL memo open offline, with zoom
+  and full screen. The rest link to the official site; the broken 2024 A&S Workforce Framework link is flagged.
+- **Certification 101 with pictures:** the exam as a road of 11 picture steps colour-coded by who acts (you, supervisor and
+  training office, WarU, Pearson) with the official step numbers, the test center or OnVUE choice, the pass and fail
+  branches, the four systems behind the scenes, and six fine-print cards (48-hour rule, reschedule versus cancel, the
+  90-day window, matching ID names, cancelling in AITAS and Pearson, accommodations). Also pictures for the exam at a
+  glance, retakes (including the fourth-try rule), the 36-month clock, continuous learning points, the career path,
+  warrants, reciprocity and the WarU OJT tool. The words stay one tap away ("Read it in words").
+- **New and corrected facts** from the official documents: continuous learning starts when you enter an acquisition
+  position (DoDI 5000.66), not at certification, and the certification courses earn points (CON 1200V = 45); a waiver
+  never certifies anyone; the 12 months of tries count from the first try; cancel in both AITAS and Pearson; the name on
+  your ID must match Pearson; current credential codes (CCON 015B, 022A, 024A).
+- **Tips from the WarU exam team** (June 2024 podcast and December 2024 webinar): study the competency model, use the
+  CON 3910 practice exam as a diagnostic, know the UCF and common forms, read FAR Parts 1 and 15, learn the voice of the
+  FAR. Six new FAQs; two WarU videos added to Official links.
+- `tools/render_official.py` makes the page images from the official PDFs; the build embeds them as short base64 lines.
+
 ## 0.12.0 (28 October 2026): guided tour, About page and day mode
 
 - **Guided tour** (same engine as Board Ready's): twelve stops that spotlight each part of the guide and say what it is

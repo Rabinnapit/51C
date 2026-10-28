@@ -1,4 +1,4 @@
-# Sources (checked 22 October 2026; class materials and exam path checked 28 October 2026)
+# Sources (checked 22 October 2026; class materials, exam path and official documents checked 28 October 2026)
 
 Everything in B2B Guide 0.9.0 comes from these public sources. Official WarU material from the maintainer, when it
 arrives, should be checked against this list and take precedence.
@@ -51,3 +51,24 @@ The full results are in `content/CLASS-MATERIAL-CHECK.md`.
 | Contracting Study Guide V9 (19 May 2025) | Not used: protected by an Army Microsoft Purview sensitivity label | — |
 | How the RFO Will Affect CON Certification, Student FAQ Sheet v1.8 (WarU, 16 Apr 2026) | Exam updated for the RFO on 31 Mar 2026, ~30% of the bank changed, threshold updates did not change questions | Maintainer's copy (PDF) |
 
+## Official documents (0.13.0, checked 28 October 2026)
+
+Every document linked from the DPCAP Contract Policy workforce development page
+(https://www.acq.osd.mil/asda/dpc/cp/policy/workforce-development.html) and the links inside those PDFs were read in full.
+Local copies are in `B2B Exam Prep_Resources/Official DPCAP and WarU documents/`; the page images in `src/official/` come
+from them (`python tools/render_official.py`). The list with links lives in `src/data/official.json`.
+
+| Fact used in the guide | Source |
+|---|---|
+| CL: at least 80 hours every 2 years, goal 40 a year, starting when the member enters an AWF position; grace period 3 years for the foundational category; certification standards cannot be waived; position waivers let the incumbent stay in the position | DoDI 5000.66, Change 3 (25 Mar 2022), paragraphs 4.4, 5.1 and 5.2 |
+| Fourth attempt one year after the first failed attempt; DACM may approve more; cancel in the agency TAS and in Pearson; remediation table; condition of employment; grace period does not reset on promotion within contracting, resets on leaving and returning | Contracting Certification Exam FAQs (1 Oct 2026), questions 8, 14, 15 and 16 |
+| 15-step exam process, task owners, 48-hour rule, 90-day window, reminders 3 days and 1 day before, score report by four areas, no certificate, transcript within 3 business days (sample report) | CON 3990V User Experience Roadmap (11 May 2026) with Attachment 1, and Flowchart (June 2026) |
+| Eligibility (GS 1102, 1103, 1105 or military equivalent, coded, TAS approval), ID name must match, accommodations flag in the TAS profile, "Military Community" test centers, contact scheduling@waru.edu before travel, reschedule as often as needed in 90 days, expired authorization means a 30-day wait, Pearson phone 877-269-8108 | Pearson VUE WarU page, https://www.pearsonvue.com/us/en/waru.html |
+| CON 3990V 150 questions, 3-hour seat time, 70%, test center recommended, CON 3900V only after a failed first try; CON 3910 about 22 hours (22 CLPs); CON 3900V 4 days, 13 hours, needs CON 3910; CON 7300V 28 hours over 7 days with a graded capstone simulation; course CLPs (1100V 29, 1200V 45, 1300V 41, 1400V 34, 7300V 28, 3990V 3) | WarU iCatalog course pages 12540, 12833, 12539, 12565, 12495, 12501, 12526, 12527 |
+| Credential codes (CCON 014B, 015B, 022A, 024A, 025A, 003A) | WarU iCatalog Credentials, Contracting tab |
+| CL point chart: formal at least 20, informal up to 60, professional up to 60, experience up to 60; points per activity | WarU Continuous Learning Point Credit chart |
+| OJT tool: sample tasks per competency, rated 1 to 3 by employee and supervisor, signature page, start at entry on duty, review twice a year | WarU On-the-Job Training Tool for Contract Specialists (updated 22 Apr 2026) |
+| Career ladder, credentials encouraged, graduate education, leader programs, DACM offices | DoW Contracting Career Field Model (Mar 2026) and the DCPAS leader development page it links |
+| Exam built on the competency model, not on CON 1100-1400 alone; CON 3910 takers passed at about 9 in 10 (FY24); practice exam is a diagnostic, real exam a little harder; easy points: 20 FAR part titles, UCF, SF 30, SF 1449, DD 1155; read FAR Parts 1 and 15; about 9 in 10 questions come from the FAR; test-day habits | WarU podcast "CON 3990V: June 2024 Update" and WarU webinar "CON 3900/3910V Preparatory Course and CON 3990 Certification Exam" (Dec 2024); transcripts from the maintainer |
+| Warrant model: selection, appointment on SF 1402, termination by letter; baseline certification, bachelor's degree (1102s and military equivalents) and 2 years of experience | Contracting Officer Warranting Program Model (Aug 2022) |
+| 2024 A&S Workforce Framework | Listed on the DPCAP page; the link returned 404 on 28 Oct 2026 |

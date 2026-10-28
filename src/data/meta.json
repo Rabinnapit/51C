@@ -4,7 +4,7 @@
   "tagline": "From day one to certified, one step at a time.",
   "tagline_short": "Contracting certification, step by step",
   "description": "Unofficial step-by-step guide for new Army 51C contracting NCOs and 1102 contract specialists working toward the DoW Contracting Professional certification.",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "content_verified_on": "2026-10-28",
   "site_url": "",
   "experience_months": 12,
@@ -16,5 +16,5 @@
   },
   "disclaimer": "B2B Guide is an unofficial training aid built by a contracting NCO for new 51Cs and 1102s. It is not endorsed by the U.S. Army, the Department of War, or the Warfighting Acquisition University (WarU, formerly DAU), and it is not authoritative guidance. Rules, course requirements and dollar thresholds change. Verify anything you rely on against the current FAR, DFARS and AFARS, the WarU catalog, your Acquisition Training Office, and your supervisor or contracting policy office. The practice questions were written for this guide; they are not questions from the real exam.",
   "currency": "Every fact in the guide was checked against public sources on the date shown on each page: the WarU iCatalog, Defense Pricing, Contracting, and Acquisition Policy (DPCAP) workforce pages and memos, the Contracting Certification Exam FAQs, acquisition.gov's FAR Overhaul pages and the DoW class deviations.\n\nWhen something changes (a new FAR rule, a course added to the certification, a new threshold), the maintainer updates the guide. On the website, everyone gets the update the next time they open it. A copy saved on a computer keeps the date it was built; About shows that date, and Help links to the newest version.",
-  "credits": "Built with no outside services: everything, including the fonts, is inside one file so it works offline and on government networks. Fonts: Archivo, Manrope and JetBrains Mono (SIL Open Font License). Contract life cycle structure from the DoD Contracting Competency Model (November 2024). Regulation structure and verified FAR Overhaul numbering shared with Board Ready, the warrant board study app from the same maintainer."
+  "credits": "Built with no outside services: everything, including the fonts, is inside one file so it works offline and on government networks. Fonts: Archivo, Manrope and JetBrains Mono (SIL Open Font License). Contract life cycle structure from the DoD Contracting Competency Model (November 2024). Regulation structure and verified FAR Overhaul numbering shared with Board Ready, the warrant board study app from the same maintainer. The pages in Official documents are images of public DoW and WarU documents, stored in the file so they open offline; the official websites keep the current versions."
 }

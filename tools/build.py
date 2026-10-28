@@ -13,12 +13,13 @@ Writes:
 
 Content lives in src/data/*.json. A file named <module>-<part>.json is joined into <module>, in file-name order
 (lists are concatenated, objects are merged), so lessons-1-principles.json and lessons-2-preaward.json become `lessons`.
+Official document pages in src/official/*.webp (tools/render_official.py) are embedded as the `pages` module.
 
 Checks: no external script, style, font or image references; one embeddedState block; the boot block is the last
 script; the offline and preview editions contain no fetch, XMLHttpRequest or service worker code; size budget.
 Run tools/check_content.py first to validate the content itself.
 """
-import json, os, re, sys, shutil, hashlib, datetime
+import base64, json, os, re, sys, shutil, hashlib, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -66,7 +67,29 @@ def load_modules():
     return mods
 
 
+def load_pages():
+    """Official document pages (src/official/<doc id>-<page>.webp, made by tools/render_official.py) as base64,
+    cut into short lines so the Word email package never holds a giant paragraph: {doc id: [[line, ...], ...]}."""
+    found = {}
+    for f in (SRC / "official").glob("*.webp"):
+        m = re.fullmatch(r"(.+)-(\d+)", f.stem)
+        if m:
+            found.setdefault(m.group(1), {})[int(m.group(2))] = f
+    pages = {}
+    for doc_id in sorted(found):
+        nums = sorted(found[doc_id])
+        if nums != list(range(1, len(nums) + 1)):
+            raise SystemExit(f"src/official/{doc_id}: pages {nums} are not numbered 1..{len(nums)}")
+        pages[doc_id] = []
+        for n in nums:
+            b64 = base64.b64encode(found[doc_id][n].read_bytes()).decode("ascii")
+            pages[doc_id].append([b64[i:i + PAGE_LINE] for i in range(0, len(b64), PAGE_LINE)])
+    return pages
+
+
+PAGE_LINE = 8000
 MODS = load_modules()
+PAGES = load_pages()
 META = MODS["meta"]
 NOW = datetime.datetime.now()
 META["built_on"] = NOW.strftime("%Y-%m-%d %H:%M")
@@ -76,6 +99,7 @@ if repo and "/" in repo and not META.get("site_url"):
     owner, name = repo.split("/", 1)
     META["site_url"] = f"https://{owner.lower()}.github.io/{name}/"
 CONTENT_HASH = hashlib.sha256(json.dumps(MODS, sort_keys=True, ensure_ascii=False).encode("utf-8")
+                              + json.dumps(PAGES, sort_keys=True).encode("ascii")
                               + b"".join(f.read_bytes() for f in core_files + view_files + arcade_files + css_files)).hexdigest()[:10]
 META["build_id"] = CONTENT_HASH
 APP_FILE = re.sub(r"[^\w-]+", "-", META.get("app_name", "B2B Guide")).strip("-") or "B2B-Guide"
@@ -87,6 +111,7 @@ def data_js(edition: str) -> str:
         if name == "meta":
             obj = dict(META, edition=edition)
         parts.append(f"window.CORB_DATA[{json.dumps(name)}] = {dumps_lines(obj)};")
+    parts.append(f"window.CORB_DATA[\"pages\"] = {dumps_lines(PAGES)};")
     return js_safe("\n".join(parts))
 
 

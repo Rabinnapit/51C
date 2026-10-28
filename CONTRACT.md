@@ -46,11 +46,14 @@ src/js/core/06-learning   SM-2 lite flashcards, quiz records, readiness by exam 
 src/js/core/07-plan       dated plan: goal, 12-month experience, 36-month deadline, step status, .ics export
 src/js/core/08-tour       the guided tour (same engine as Board Ready's): spotlight + card, offered once, ? button and ? key
 src/js/core/09-pwa        web edition only: service worker, update bar, install prompt
-src/js/views/*.js         home, path, plan, cert, courses, learn (+ lesson), howto, quiz, cards, arcade, games (quick drills), glossary, far, links, settings, about
+src/js/views/*.js         home, path, plan, cert, courses, official, learn (+ lesson), howto, quiz, cards, arcade, games (quick drills), glossary, far, links, settings, about;
+                          explain.js is not a view: the picture explainers (CORB.explain) shared by cert and official
 src/js/arcade/00-engine   window.ARCADE: register, palette, storage through A.host, pace levels, XP ranks, question memory, text, particles, floaters, sound, music
 src/js/arcade/01-shell   lobby, play screen (HUD, prompt panel, fluid canvas, answer panel, reading pause, pause menu), results with the study list
-src/js/arcade/games/*.js contract-quest, fire-mission, qual-range, part-patrol, sort-yard
+src/js/arcade/games/*.js contract-quest, supply-line, fire-mission, qual-range, part-patrol, sort-yard
 src/data/*.json           content (see section 4). <module>-<part>.json files join into <module>.
+src/official/*.webp       official document pages, <doc id>-<page>.webp, made by tools/render_official.py from the PDFs
+                          (PDFs stay out of git); the build embeds them as the `pages` module
 src/web/                  icons (tools/make_icons.py), favicon.svg, sw.js template
 ```
 
@@ -62,7 +65,10 @@ Script order in the build: data, then `core/*` in file order, then `views/*`, th
 - `meta`: app_name, version, content_verified_on, site_url (filled automatically on GitHub Actions), experience_months,
   deadline_months, maintainer, disclaimer, currency, credits. The build adds `built_on`, `build_id`, `edition`.
 - `cert`: `phases` (the four exam areas with the official question counts; they must total 150), requirements, deadlines,
-  roles, education, register (steps, tips, verify), exam (facts, steps, testday, retake), experience (items), after, faq, sources.
+  roles, education, register (steps, tips, verify), exam (facts with icon, source, study, study_source, testday, retake), experience (items), after, faq, sources.
+- `official`: `{lede, checked, hub, groups: [{id, title, icon}], docs: [{id, group, icon, title, who, date, url, kind?: web|xlsx, broken?, simple?: [explainer], summary}], explain: {owners, journey, attempts, grace, fy27, requirements, career, cl, reciprocity, ojt, warrant}}`.
+  `simple` names picture versions drawn by `CORB.explain.render(key)`: journey, examfacts, blueprint, attempts, grace, fy27, requirements, competency, career, cl, reciprocity, ojt, warrant.
+- `pages` (built, not a data file): `{doc id: [[base64 line, ...] per page]}` from `src/official/`. `CORB.official.src(id, n)` returns a page as a data: URL.
 - `courses`: `[{id, code, short, title, group: required|prereq|prep|exam|recommended, delivery, length, clps, prereq_text, about, learn[], before[], pass[], notes[], lessons[], url, verified_on}]`
 - `plan`: `{baseline_days: 182, steps: [{id, phase: setup|courses|exam|certify|after, day | months, title, detail, who, course?, howto?, lesson?, auto?: exam|experience|goal, tracks?: [51c|1102], verify?}]}`.
   `day` values spread across a 6-month goal and scale to the reader's own goal; `months` are fixed from the start date.
@@ -74,7 +80,7 @@ Script order in the build: data, then `core/*` in file order, then `views/*`, th
 - `path`: the 6-month exam path. `{title, lede, baseline_days: 182, exam_week, checked_on, how[], months: [{n, title, sub, phase}],
   weeks: [{n, m, title, goal, tasks: [{id, kind, t?, d?, …}], tip, class}], files[], checks: [{topic, src, said, now, status: ok|updated|fixed|verify, cite, verify?}], intel: [{t, d, lesson?, deck?}]}`.
   Task kinds: `lesson` (lesson), `read` (far: part number), `cards` (deck), `drill` (lessons[] | src | phase | missed | weak, n), `exam` (timed, n, target),
-  `course` (course), `game` (game: an Arcade id or a quick drill id; `realm` gp|pre|awd|post|all opens a Contract Quest realm), `do` and `realexam` (view, params).
+  `course` (course), `game` (game: an Arcade id or a quick drill id; `realm` gp|pre|awd|post|all opens a Contract Quest realm or a Supply Line checkpoint; Supply Line also takes `mission`, the full run), `do` and `realexam` (view, params).
   Week dates scale like `plan` steps (`baseline_days`). An Arcade run started from a task ticks it after three or more answers.
 - `glossary`: `[{term, expansion, definition, cat, cite?}]` (Board Ready uses the same fields with `domain` for `cat`).
   Terms that look like acronyms are tapped-to-define everywhere in rich text.

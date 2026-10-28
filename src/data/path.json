@@ -231,7 +231,8 @@
        {"id": "w18-check", "kind": "do", "t": "Read the Class material check", "d": "What the class materials say, what the FAR says now, and why some answers changed.", "view": "path", "params": {"tab": "check"}},
        {"id": "w18-cx1", "kind": "drill", "t": "Class practice exam, set 1 (50 questions)", "src": "class", "n": 50},
        {"id": "w18-missed", "kind": "drill", "t": "Retry what you missed", "missed": true, "n": 25},
-       {"id": "w18-cards", "kind": "cards", "deck": "b2b-jeopardy", "t": "Flashcards: B2B Jeopardy review"}
+       {"id": "w18-cards", "kind": "cards", "deck": "b2b-jeopardy", "t": "Flashcards: B2B Jeopardy review"},
+       {"id": "w18-game", "kind": "game", "game": "supply-line", "realm": "mission", "t": "Arcade: Supply Line, the full mission (all four exam areas)"}
      ],
      "tip": "Read every explanation, including on the questions you got right. The class versions that were wrong under the RFO say what changed.",
      "class": "143 questions from the class practice exam were checked: 91 still right as written, 38 updated (new FAR numbers, thresholds or wording) and 14 fixed (wrong or unclear under the RFO). A few true/false items that repeated other questions were dropped."},

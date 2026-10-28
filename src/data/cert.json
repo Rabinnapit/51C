@@ -20,7 +20,7 @@
     {"id": "experience", "icon": "clipboard", "title": "12 months", "body": "of full-time experience doing a representative sample of contracting work.\n\nYour component decides what counts. Documented equivalent experience from government or industry can be considered."}
   ],
   "deadlines": [
-    {"label": "The rule", "title": "36 months to get certified", "body": "From the day you enter a position that requires the Contracting Professional certification, you have a 3-year grace period (36 months) to earn it. Certification is a condition of employment for contracting-coded positions.\n- The clock does not restart if you are promoted within contracting.\n- It does restart if you leave a contracting-coded position and later come back.\n- If you will miss it, your agency can request a waiver under DoDI 5000.66. Plan never to need one."},
+    {"label": "The rule", "title": "36 months to get certified", "body": "From the day you enter a position that requires the Contracting Professional certification, you have a 3-year grace period (36 months) to earn it. Certification is a condition of employment for contracting-coded positions.\n- The clock does not restart if you are promoted within contracting.\n- It does restart if you leave a contracting-coded position and later come back.\n- If you will miss it, your agency can request a position waiver under DoDI 5000.66. A waiver only lets you stay in the job longer; it never gives you the certification. Plan never to need one."},
     {"label": "Your unit", "title": "Often 6 months for training and the exam", "body": "Many brigades and offices set a faster goal, such as finishing every course and the exam in your first 6 months, so you can start working toward a warrant sooner. That goal is local; ask your supervisor what yours is.\n\nThe certificate itself still needs 12 months of experience, so a 6-month goal really means: courses and exam done, experience on track."}
   ],
   "roles": [
@@ -56,43 +56,44 @@
   },
   "exam": {
     "facts": [
-      {"k": "Questions", "v": "150", "note": "Multiple choice, drawn at random from a large bank"},
-      {"k": "Time", "v": "3 hours", "note": "Includes the tutorial, breaks and your final review"},
-      {"k": "To pass", "v": "70%", "note": "Pass or fail. The FY26 average score was 74.8%"},
-      {"k": "First-try pass rate", "v": "79%", "note": "FY26"},
-      {"k": "Books and notes", "v": "None", "note": "Completely closed book: no FAR, notes, phone or computer"},
-      {"k": "Where", "v": "Test center", "note": "Or online with OnVUE. Test centers pass about 4% more"},
-      {"k": "Attempts", "v": "3 in 12 months", "note": "At least 30 days apart"},
-      {"k": "Cost to you", "v": "$0", "note": "WarU pays. A no-show still costs the Government a fee"}
+      {"k": "Questions", "v": "150", "icon": "quiz", "note": "Multiple choice, drawn at random from a large bank. No two exams are the same"},
+      {"k": "Time", "v": "3 hours", "icon": "clock", "note": "Includes the tutorial, breaks and your final review"},
+      {"k": "To pass", "v": "70%", "icon": "target", "note": "Pass or fail. The FY26 average score was 74.8%"},
+      {"k": "First-try pass rate", "v": "79%", "icon": "trophy", "note": "FY26"},
+      {"k": "Books and notes", "v": "None", "icon": "x", "note": "Completely closed book: no FAR, notes, phone or computer"},
+      {"k": "Where", "v": "Test center", "icon": "map", "note": "Or online with OnVUE. Test centers pass about 4% more"},
+      {"k": "Attempts", "v": "3 in 12 months", "icon": "repeat", "note": "At least 30 days apart, counted from your first try"},
+      {"k": "Cost to you", "v": "$0", "icon": "check", "note": "WarU pays. A no-show still costs the Government a fee"}
     ],
-    "source": "Sources: DoW Contracting Professional Certification Exam FAQs (as of 1 October 2026), CON 3990V User Experience Roadmap (11 May 2026), WarU iCatalog CON 3990V page and the Pearson VUE WarU page, checked 22 October 2026.",
-    "steps": [
-      {"t": "Be eligible", "d": "You must be coded in the contracting functional area and have your supervisor's approval. Finish your courses first; CON 3910 (online exam prep) is strongly recommended before your first try."},
-      {"t": "Apply for CON 3990V in AITAS", "d": "Apply just like a course. AITAS will not let you register within 30 days of an earlier attempt or no-show, or for a fourth attempt inside 12 months."},
-      {"t": "Approvals", "d": "Your supervisor and Acquisition Training Office approve. The approval flows through ATRRS to WarU, and WarU sends your name to Pearson."},
-      {"t": "Look for the Authorization to Test email", "d": "Pearson emails an Authorization to Test, usually within 24 hours of approval. Check your junk folder."},
-      {"t": "Create a Pearson account and book a seat", "d": "Use the WarU page at pearsonvue.com/us/en/waru.html. Choose a test center (recommended) or OnVUE. You have 90 days from authorization to take the exam."},
-      {"t": "Get the confirmation email", "d": "No confirmation email means the booking did not finish; go back in and complete it. Pearson sends reminders 3 days and 1 day before."},
-      {"t": "Need to change the date?", "d": "Reschedule or cancel at least 48 hours ahead in your Pearson account. Rescheduling is free, but canceling without rescheduling uses one of your three attempts, and a no-show counts like a failed attempt. Inside 48 hours, your supervisor emails scheduling@waru.edu."},
-      {"t": "Take it and read your score report", "d": "You see the result when you finish. The report shows your percentage in four areas: Guiding Principles, Pre-Award, Award and Post-Award. A pass shows on your WarU transcript; WarU does not print a separate exam certificate."}
+    "source": "Sources: DoW Contracting Professional Certification Exam FAQs (as of 1 October 2026), CON 3990V User Experience Roadmap (11 May 2026) and Flowchart (June 2026), WarU iCatalog CON 3990V page and the Pearson VUE WarU page, checked 28 October 2026.",
+    "study": [
+      {"icon": "layers", "t": "Study the competency model, not only your class notes", "d": "The exam is built on the DoW Contracting Competency Model, not on CON 1100 to 1400 alone. Use the model as a checklist to find your weak spots, then go back to those course notes."},
+      {"icon": "school", "t": "Take CON 3910 before your first try", "d": "About 9 in 10 people who took CON 3910 passed in FY24. Its 150-question practice exam is a diagnostic: time yourself for 3 hours, then look up the FAR reference for every miss. Do not memorize it; the real exam is a little harder."},
+      {"icon": "target", "t": "Take the easy points", "d": "Know the 20 FAR part numbers and titles, the sections of the Uniform Contract Format (A to M), and common forms such as the SF 30, SF 1449 and DD 1155."},
+      {"icon": "book", "t": "Read FAR Parts 1 and 15", "d": "Give each one an afternoon. Many questions come from Part 15, and Parts 1 and 15 together answer several more."},
+      {"icon": "scale", "t": "Learn the voice of the FAR", "d": "About 9 in 10 questions come from the FAR. When you know how the FAR says things, wrong answers stand out. When the FAR gives a list, such as the exceptions to certified cost or pricing data, know every item."},
+      {"icon": "users", "t": "Plan it with your supervisor", "d": "Schedule when you feel ready (seats are not scarce), ask for study time, and form a study group if it helps."}
     ],
+    "study_source": "From the WarU exam and prep-course managers: Contracting Conversations podcast \"CON 3990V: June 2024 Update\" and the WarU webinar \"CON 3900/3910V Preparatory Course and CON 3990 Certification Exam\" (December 2024). Pass-rate numbers are from those dates.",
     "testday": [
-      "Bring a valid government-issued photo ID with a name that matches your Pearson profile exactly.",
-      "Arrive early; check-in takes a while. Your phone, smartwatch and notes go in a locker.",
+      "Sleep well and eat breakfast. An empty stomach is a distraction you do not need.",
+      "Arrive early with only your photo ID; the name must match your Pearson profile exactly. Your phone, smartwatch and notes go in a locker.",
       "OnVUE (online) only: run the system check days before. Most government computers block the OnVUE software, so plan on a personal computer, a webcam, a quiet room and a clear desk.",
-      "Pace yourself at about 72 seconds a question. Flag the hard ones and come back.",
-      "Read every word. NOT, EXCEPT, FIRST and BEST decide many answers.",
+      "Pace yourself at about 72 seconds a question. The 3 hours include your breaks, so watch the clock.",
+      "Read every question fully. There are no trick questions, but NOT, EXCEPT, FIRST and BEST decide many answers.",
+      "Cross out the answers the FAR would never say, then choose from what is left. Stuck? Flag it and come back.",
       "Answer every question. A blank is always wrong; a careful guess might be right."
     ],
     "retake": [
-      "Wait at least 30 days, then apply again in AITAS. You get up to three attempts in 12 months.",
-      "After a first failed attempt, DoW requires **CON 3900V** (instructor-led exam prep) before your next try. CON 3910 is its prerequisite.",
-      "Use your score report. Spend most of your time on the area with the lowest percentage.",
-      "After a third failed attempt, review your exam feedback and both prep courses. Your agency must validate your remedial steps before you test again, and your DACM can approve more attempts case by case."
+      "Wait at least 30 days, then apply again in AITAS. You get up to three tries in 12 months, counted from your first try.",
+      "After a first failed try, DoW requires **CON 3900V** (instructor-led exam prep) before your next try. CON 3910 is its prerequisite. Already took CON 3900V? You do not need it again.",
+      "Use your score report. Spend most of your time on the part with the lowest percentage.",
+      "After a third failed try, review your exam feedback and both prep courses. Your agency must validate your remedial steps before you test again.",
+      "A fourth try can be allowed in the 12 months that start one year after your first failed try. Your DACM can approve more tries case by case."
     ]
   },
   "experience": {
-    "intro": "The certification needs 12 months of full-time experience applying a representative sample of the contracting competencies. Your component decides what counts and your supervisor confirms it.\n\nUse this list to track the kinds of work that build that experience. Ask your supervisor or mentor to let you do each one, then tick it. WarU also publishes an On-the-Job Training Tool for contract specialists that lists job tasks by competency; ask whether your office uses it.",
+    "intro": "The certification needs 12 months of full-time experience applying a representative sample of the contracting competencies. Your component decides what counts and your supervisor confirms it.\n\nUse this list to track the kinds of work that build that experience. Ask your supervisor or mentor to let you do each one, then tick it.\n\nWarU's On-the-Job Training Tool for contract specialists goes further: sample tasks for every competency, which you and your supervisor rate from 1 to 3 and sign off. Start it in your first weeks and review it at least twice a year; ask whether your office uses it.",
     "items": [
       {"id": "x01", "phase": "gp", "text": "Learn who the contracting officers in your office are and what their warrants allow", "tip": "1.1 Skills and Roles"},
       {"id": "x02", "phase": "gp", "text": "Finish your annual ethics training and know who your ethics counselor is", "tip": "1.3 Standards of Conduct"},
@@ -115,25 +116,31 @@
     "note": "This list is a study aid, not an official checklist. Your component sets the representative sample. Keep copies of your work (without sensitive or proprietary information) to show what you did."
   },
   "after": {
-    "cl": "Once certified, keep it current with **80 hours of continuous learning every 2 years** (DoDI 5000.66). DPCAP recommends that at least 40 of those hours be on contracting topics tied to your job.\n\nWarU courses and credentials, webinars, conferences, college courses and some on-the-job assignments can count. Follow your component's process for recording them.",
+    "cl": "Keep your certification current with **80 hours of continuous learning every 2 years** (DoDI 5000.66), with a goal of 40 a year. The clock starts when you enter an acquisition position, not when you are certified, and your certification courses earn points too. DPCAP recommends that at least 40 of the 80 hours be on contracting topics tied to your job.\n\nWarU courses and credentials, webinars, conferences, college courses and some on-the-job assignments can count. Follow your component's process for recording them; points for WarU events must be requested.",
     "next": "Most new contracting professionals aim for a contracting officer warrant next. In the Army, warrants follow the Army Warranting Program Policy and usually include a Contracting Officer Review Board (CORB).\n\nBoard Ready, the warrant board study app from the same maintainer, picks up where this guide ends.",
     "credentials": [
       {"code": "CCON 014B", "title": "Foundational Contingency Contracting Credential", "for": "51C", "why": "Contingency contracting basics for Soldiers who deploy as contingency contracting officers."},
-      {"code": "CCON 015A", "title": "Advanced Contingency Contracting Credential", "for": "51C", "why": "The next step after the foundational contingency credential."},
-      {"code": "CCON 024", "title": "Operational Contracting Credential", "for": "", "why": "Base, post, camp and station contracting: the work of most installation offices."},
-      {"code": "CCON 022", "title": "Simplified Acquisition Procedures (Purchasing) Credential", "for": "", "why": "Buys at or below the simplified acquisition threshold, where most new specialists start."},
+      {"code": "CCON 015B", "title": "Advanced Contingency Contracting Credential", "for": "51C", "why": "The next step after the foundational contingency credential."},
+      {"code": "CCON 024A", "title": "Operational Contracting Credential", "for": "", "why": "Base, post, camp and station contracting: the work of most installation offices."},
+      {"code": "CCON 022A", "title": "Simplified Acquisition Procedures (Purchasing) Credential", "for": "", "why": "Buys at or below the simplified acquisition threshold, where most new specialists start."},
       {"code": "CCON 025A", "title": "Contracting for Services Credential", "for": "", "why": "Service contracts, performance work statements and surveillance."},
       {"code": "CCON 003A", "title": "Proposal Analysis Credential", "for": "", "why": "More practice with price and cost analysis after CON 7300V."}
     ],
-    "reciprocity": "The FAC-C (Professional) certification used by civilian agencies and the DoW Contracting Professional certification are treated as equal under a memorandum of understanding signed 16 October 2023, so your DACM can accept one for the other. If you came to DoW with only a legacy FAC-C, or none, ask your career manager what you still need. Civilian agencies require 100 continuous learning hours every 2 years; DoW requires 80."
+    "reciprocity": "The FAC-C (Professional) certification used by civilian agencies and the DoW Contracting Professional certification are treated as equal under a memorandum of understanding signed 16 October 2023, so your DACM can accept one for the other. Both require the CON 3990V exam. If you came to DoW with only a legacy FAC-C, or none, ask your career manager what you still need. Civilian agencies require 100 continuous learning hours every 2 years (since May 2024); DoW requires 80."
   },
   "faq": [
     {"q": "Do I have to finish in 6 months?", "a": "The rule is 36 months for the whole certification. Many units set a faster local goal, often 6 months for the courses and the exam. Ask your supervisor what your goal is; My plan uses whatever goal you pick."},
     {"q": "Can I take the exam before I finish the courses?", "a": "Eligibility for CON 3990V is being coded in contracting plus your supervisor's approval, and passing the exam never replaces a course. It is built to come after the courses, so finish them (and CON 3910) first. Your training office decides when you sit for it."},
     {"q": "Is the exam open book? Can I bring the FAR?", "a": "No. It is completely closed book: no FAR, notes, books, phone or computer."},
-    {"q": "What should I study most?", "a": "Weight your time like the exam: Guiding Principles 42 questions, Award 40, Post-Award 38, Pre-Award 30. Learn the titles of the 20 FAR parts the exam names, and read FAR Part 15 carefully; the exam FAQ says many questions come from it."},
-    {"q": "Should I test online or at a test center?", "a": "A test center, if you can. DoW data shows about a 4% higher pass rate at test centers, and most government computers block the OnVUE software anyway. If no center is within commuting distance, talk to your supervisor about travel before you schedule."},
-    {"q": "What happens if I fail?", "a": "Wait at least 30 days and apply again; you get three attempts in 12 months. After a first failure DoW requires CON 3900V before the next try. Use your score report to focus on your weakest area."},
+    {"q": "What should I study most?", "a": "Weight your time like the exam: Guiding Principles 42 questions, Award 40, Post-Award 38, Pre-Award 30. Learn the titles of the 20 FAR parts the exam names, the Uniform Contract Format sections and the common forms (SF 30, SF 1449, DD 1155), and read FAR Parts 1 and 15 carefully; the exam FAQ says many questions come from Part 15."},
+    {"q": "Should I test online or at a test center?", "a": "A test center, if you can. DoW data shows about a 4% higher pass rate at test centers, and most government computers block the OnVUE software anyway. Some test centers are on military bases. If none is within commuting distance, email scheduling@waru.edu first; WarU and Pearson try to avoid official travel. Get travel approved before you schedule if you still need it."},
+    {"q": "Can I take the exam on my government computer?", "a": "Usually not. Online testing (OnVUE) needs a software add-on that most government computers block, so online testers use a personal computer and must pass a system check. A test center is the better choice anyway."},
+    {"q": "What if I need to change my exam date?", "a": "Reschedule in your Pearson account at least 48 hours ahead; it is free, as many times as you need inside your 90 days. Cancelling without a new date uses one of your three tries, and a no-show counts like a failed try. Inside 48 hours, your supervisor emails scheduling@waru.edu. If you cancel, cancel in both AITAS and Pearson."},
+    {"q": "The name in my Pearson email does not match my ID. What do I do?", "a": "Email scheduling@waru.edu with official proof of your legal name before you book. The name on your ID must match the testing system exactly, or you cannot test."},
+    {"q": "What happens if I fail?", "a": "You and your supervisor get a letter. Wait at least 30 days and apply again; you get three tries in 12 months, counted from your first try. After a first failure DoW requires CON 3900V before the next try. Use your score report to focus on your weakest part. After three failures, a fourth try can be allowed one year after your first failed try."},
+    {"q": "Do I get a certificate when I pass?", "a": "Not for the exam. Your pass shows on your WarU transcript (the sample score report says within 3 business days), and your Pearson score report also proves it. Use either one when you apply for certification."},
+    {"q": "Is there more than one practice exam?", "a": "WarU has one, inside CON 3910. Use it to find weak areas, not to memorize questions: the real exam is a little harder and the questions are different. This guide's practice tests and Arcade add more practice."},
+    {"q": "When does my continuous learning clock start?", "a": "When you enter an acquisition workforce position, not when you are certified (DoDI 5000.66). Your certification courses earn CL points too, for example 45 for CON 1200V. Your component sets your 2-year dates."},
     {"q": "What is CON 7300V, and do I need it if I started before October 2026?", "a": "CON 7300V Price Analysis became a required course for the DoW Contracting Professional certification on 1 October 2026, taken after CON 1300V. If you were already working on your certification, your component decides whether it applies to you, but DoW leadership expects you to take it. If you were certified before then, it is encouraged, not required."},
     {"q": "DAU or WarU?", "a": "Same school, new name. In late 2025 the Defense Acquisition University became the Warfighting Acquisition University (WarU) as part of DoW's acquisition transformation. Older links, certificates and people may still say DAU."},
     {"q": "What is the RFO, and does it change what I study?", "a": "The Revolutionary FAR Overhaul (RFO) rewrote and renumbered much of the FAR. DoW adopted it through class deviations effective 1 February 2026, and the exam's answers now come from the RFO-updated FAR and DFARS. This guide uses RFO numbers; expect older materials to show old ones. See FAR & key numbers → Old → new numbers."},
@@ -145,18 +152,25 @@
     {"q": "How do I apply for the certification once I am done?", "a": "Your component's process applies. In the Army, certification goes through the Army DACM Office's systems (the CAMP portal). Ask your supervisor or Acquisition Training Office to walk you through it, and have your transcript and exam result ready. Verify locally."}
   ],
   "sources": [
-    {"title": "WarU iCatalog: Contracting Professional certification standard", "url": "https://icatalog.waru.edu/CertificationStandard?cfld=3&lvl=4", "who": "Warfighting Acquisition University", "checked": "22 Oct 2026"},
-    {"title": "WarU iCatalog course pages: CON 1100/1100V, 1200V, 1300V, 1400V, 7300V, 3910, 3900V, 3990V", "url": "https://icatalog.waru.edu/", "who": "Warfighting Acquisition University", "checked": "22 Oct 2026"},
+    {"title": "WarU iCatalog: Contracting Professional certification standard", "url": "https://icatalog.waru.edu/CertificationStandard?cfld=3&lvl=4", "who": "Warfighting Acquisition University", "checked": "28 Oct 2026"},
+    {"title": "WarU iCatalog course pages: CON 1100/1100V, 1200V, 1300V, 1400V, 7300V, 3910, 3900V, 3990V", "url": "https://icatalog.waru.edu/", "who": "Warfighting Acquisition University", "checked": "28 Oct 2026"},
+    {"title": "DoDI 5000.66, Defense Acquisition Workforce Education, Training, Experience, and Career Development Program (Change 3)", "url": "https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodi/500066p.PDF", "who": "USD(A&S)", "date": "25 Mar 2022"},
+    {"title": "DoW Contracting Career Field Model", "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/DoW%20Contracting%20Career%20Field%20Model%20(Mar%202026).pdf", "who": "CON FIT", "date": "Mar 2026"},
+    {"title": "WarU Continuous Learning Point Credit chart", "url": "https://www.waru.edu/continuous-learning-center/point-credit", "who": "Warfighting Acquisition University", "checked": "28 Oct 2026"},
+    {"title": "WarU iCatalog: Defense Acquisition Credentials, Contracting", "url": "https://icatalog.waru.edu/Credential?tab=CON", "who": "Warfighting Acquisition University", "checked": "28 Oct 2026"},
+    {"title": "WarU On-the-Job Training Tool for Contract Specialists", "url": "https://www.waru.edu/tools/job-training-tool-contract-specialists", "who": "Warfighting Acquisition University", "date": "updated 22 Apr 2026"},
+    {"title": "Contracting Conversations podcast: CON 3990V, the CON Certification Exam, June 2024 Update", "url": "https://cdnapisec.kaltura.com/index.php/extwidget/preview/partner_id/2203981/uiconf_id/54104082/entry_id/1_fzdjfqsd/embed/dynamic", "who": "WarU (DAU) Media", "date": "Jun 2024"},
+    {"title": "Webinar: CON 3900/3910V Preparatory Course and CON 3990 Certification Exam", "url": "https://cdnapisec.kaltura.com/index.php/extwidget/preview/partner_id/2203981/uiconf_id/54104082/entry_id/1_ionxx6gg/embed/dynamic", "who": "WarU (DAU)", "date": "Dec 2024"},
     {"title": "Contracting Functional Area Certification Change for Fiscal Year 2027 (CON 7300V)", "url": "https://www.acq.osd.mil/dpap/policy/policyvault/USA001296-26-DPCAP.pdf", "who": "Principal Director, DPCAP", "date": "5 Jun 2026"},
     {"title": "DoW Contracting Professional Certification Exam FAQs", "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/CON_Certification_Exam_FAQs_(As_of_01_Oct_2026).pdf", "who": "DPCAP", "date": "1 Oct 2026"},
     {"title": "CON 3990V User Experience Roadmap and Flowchart", "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/workforce-development.html", "who": "DPCAP", "date": "May and June 2026"},
-    {"title": "Contracting workforce development page (certification, continuous learning, memos)", "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/workforce-development.html", "who": "DPCAP", "checked": "22 Oct 2026"},
+    {"title": "Contracting workforce development page (certification, continuous learning, memos)", "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/workforce-development.html", "who": "DPCAP", "checked": "28 Oct 2026"},
     {"title": "DoD Contracting Competency Model", "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/DoD_Contracting_Competency_Model_(November_2024).pdf", "who": "DPCAP", "date": "Nov 2024"},
     {"title": "Transition Plan, DoD Contracting Professional Certification Program", "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/CON-Transition-Plan-(January2022).pdf", "who": "CON FIT / DPC", "date": "Jan 2022"},
     {"title": "Contracting Functional Area Workforce Development and Continuous Learning Recommendations for 2025", "url": "https://www.acq.osd.mil/dpap/policy/policyvault/USA000183-25-DPCAP.pdf", "who": "DPCAP", "date": "3 Feb 2025"},
     {"title": "Reciprocity between the DoD Contracting Professional Certification and FAC-C (Professional): FAQs", "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/workforce-development.html", "who": "DPCAP", "date": "Aug 2025"},
     {"title": "Elimination of the 24-Semester Credit Business Hour Qualification Requirement", "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/Signed-Memo-Re-Elimination-of-the-24-Semester-Credit-Hours.pdf", "who": "DPC", "date": "3 Sep 2020"},
-    {"title": "WarU certification exams at Pearson VUE", "url": "https://www.pearsonvue.com/us/en/waru.html", "who": "Pearson VUE", "checked": "22 Oct 2026"},
+    {"title": "WarU certification exams at Pearson VUE", "url": "https://www.pearsonvue.com/us/en/waru.html", "who": "Pearson VUE", "checked": "28 Oct 2026"},
     {"title": "ALT-IO and DACM Office Shape a Stronger Acquisition Workforce (AATC is nine weeks)", "url": "https://www.army.mil/article/294668/alt_io_and_dacm_office_shape_a_stronger_acquisition_workforce", "who": "Army.mil", "date": "25 Aug 2026"}
   ]
 }

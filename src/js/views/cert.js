@@ -24,14 +24,19 @@
       h('div.flow-row', {}, h('div.flow-chain', {}, h('div.flow-node.exp', {}, h('b', {}, '12 months'), h('span', {}, 'full-time contracting experience')), arrow(), h('div.flow-node.cert', {}, icon('certificate'), h('b', {}, 'Certified'), h('span', {}, 'DoW Contracting Professional')))));
   };
 
+  // the same content in words, folded under a picture version
+  function inWords(text, h) { return text ? h('details.in-words', {}, h('summary', {}, 'Read it in words'), CORB.ui.rich(text)) : null; }
+
   function overview(root, C, h, icon) {
+    var X = CORB.explain;
     root.appendChild(h('div.grid.cols-3.req-cards', {}, (C.requirements || []).map(function (r) {
       return h('div.card.req', {}, h('div.req-icon', {}, icon(r.icon)), h('h3', {}, r.title), CORB.ui.rich(r.body));
     })));
-    root.appendChild(h('div.section-head', {}, h('h2', {}, 'The order of the courses'), h('a', { href: '#/courses' }, 'Course details')));
+    root.appendChild(h('div.section-head', {}, h('h2', {}, 'The order of the courses'), h('div.row.tight', {}, X.docButton('cert-standard', 'Official standard'), h('a', { href: '#/courses' }, 'Course details'))));
     root.appendChild(h('div.card.flow-card', {}, CORB.courseFlow()));
-    root.appendChild(h('div.section-head', {}, h('h2', {}, 'Deadlines')));
-    root.appendChild(h('div.grid.cols-2', {}, (C.deadlines || []).map(function (d) { return h('div.card', {}, h('div.eyebrow', {}, d.label), h('h3.mt-2', {}, d.title), CORB.ui.rich(d.body)); })));
+    root.appendChild(h('div.section-head', {}, h('h2', {}, 'Deadlines'), X.docButton('exam-faq', 'Official FAQ')));
+    root.appendChild(h('div.card', {}, X.grace()));
+    root.appendChild(h('div.grid.cols-2.mt-4', {}, (C.deadlines || []).map(function (d) { return h('div.card', {}, h('div.eyebrow', {}, d.label), h('h3.mt-2', {}, d.title), CORB.ui.rich(d.body)); })));
     root.appendChild(h('div.section-head', {}, h('h2', {}, 'Who does what')));
     root.appendChild(h('div.grid.auto.roles', {}, (C.roles || []).map(function (r) { return h('div.card.tight', {}, h('b', {}, r.name), h('p.small.muted.mt-2', {}, r.does)); })));
     if (C.education) root.appendChild(h('div.mt-5', {}, CORB.ui.callout('info', 'school', 'College degree?', C.education)));
@@ -47,10 +52,9 @@
   }
 
   function exam(root, C, h, icon) {
-    var E = C.exam || {};
-    root.appendChild(h('div.card.raised', {}, h('h2', {}, 'CON 3990V at a glance'),
-      h('div.facts', {}, (E.facts || []).map(function (f) { return h('div.fact', {}, h('div.fact-k', {}, f.k), h('div.fact-v', {}, f.v), f.note ? h('div.fact-n', {}, f.note) : null); })),
-      E.source ? h('p.tiny.muted.mt-3', {}, E.source) : null));
+    var E = C.exam || {}, X = CORB.explain;
+    root.appendChild(h('div.card.raised', {}, h('div.row.between', {}, h('h2', {}, 'CON 3990V at a glance'), X.docButton('exam-faq', 'Official FAQ')),
+      h('div.mt-4', {}, X.examFacts()), E.source ? h('p.tiny.muted.mt-3', {}, E.source) : null));
     // blueprint
     var phases = CORB.data.phases(), max = 18;
     root.appendChild(h('div.section-head', {}, h('h2', {}, 'What the 150 questions cover'), h('span.muted', {}, 'Official question count per competency')));
@@ -64,11 +68,19 @@
     })));
     root.appendChild(h('div.callout.brass.mt-4', {}, icon('bulb'), h('div', {}, h('b', {}, 'Two tips straight from the exam FAQ'), h('span', {}, 'Learn the titles of FAR Parts 1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 13, 15, 16, 19, 31, 33, 42, 44, 46 and 49, and read FAR Part 15 thoroughly: many questions come from it. '),
       h('a', { href: '#/cards?deck=far-exam' }, 'Drill the FAR part titles'), ' · ', h('a', { href: '#/arcade?game=part-patrol' }, 'Play Part Patrol'), ' · ', h('a', { href: '#/games?game=farmatch' }, 'FAR Part Match'))));
-    root.appendChild(h('div.section-head', {}, h('h2', {}, 'How to sign up for the exam')));
-    root.appendChild(h('div.card', {}, h('ol.steps-list', {}, (E.steps || []).map(function (s) { return h('li', {}, h('b', {}, s.t), s.d ? CORB.ui.rich(s.d) : null); }))));
-    root.appendChild(h('div.grid.cols-2.mt-4', {},
-      h('div.card', {}, h('h3', {}, 'Test day checklist'), h('ul.tips', {}, (E.testday || []).map(function (t) { return h('li', {}, t); }))),
-      h('div.card', {}, h('h3', {}, 'If you do not pass'), h('ul.tips', {}, (E.retake || []).map(function (t) { return h('li', {}, CORB.ui.rich(t)); })))));
+    if ((E.study || []).length) {
+      root.appendChild(h('div.section-head', {}, h('h2', {}, 'Tips from the WarU exam team')));
+      root.appendChild(h('div.grid.cols-2.study-tips', {}, E.study.map(function (s) { return h('div.card.tight', {}, h('div.row.tight', {}, h('span.tip-ic', {}, icon(s.icon)), h('b', {}, s.t)), h('p.small.mt-2', {}, s.d)); })));
+      if (E.study_source) root.appendChild(h('p.tiny.muted.mt-2', {}, E.study_source));
+    }
+    root.appendChild(h('div.section-head', {}, h('h2', {}, 'The exam, step by step'), h('div.row.tight', {}, X.docButton('exam-roadmap', 'Official roadmap'), X.docButton('exam-flowchart', 'Official flowchart'))));
+    root.appendChild(h('div.card', {}, X.journey()));
+    root.appendChild(h('div.section-head', {}, h('h2', {}, 'The fine print')));
+    root.appendChild(X.rules());
+    root.appendChild(h('div.card.mt-4', {}, h('h3', {}, 'Behind the scenes'), h('p.small.muted', {}, 'Your request and your result pass through four systems. You do not need to do anything; this is why the email and the result take a day.'), X.flow()));
+    root.appendChild(h('div.section-head', {}, h('h2', {}, 'If you do not pass'), X.docButton('exam-faq', 'Official FAQ')));
+    root.appendChild(h('div.card', {}, X.attempts(), inWords((E.retake || []).map(function (t) { return '- ' + t; }).join('\n'), h)));
+    root.appendChild(h('div.card.mt-4', {}, h('h3', {}, 'Test day checklist'), h('ul.tips', {}, (E.testday || []).map(function (t) { return h('li', {}, t); }))));
     // my attempts
     var at = CORB.get('progress.exam.attempts', []) || [];
     var sched = h('input.input#exam-date', { type: 'date', value: CORB.get('progress.exam.scheduled') || '' });
@@ -89,6 +101,8 @@
     var items = X.items || [], done = items.filter(function (i) { return CORB.get('progress.exp.' + i.id); }).length;
     root.appendChild(h('div.card.raised', {}, h('h2', {}, '12 months of experience'), CORB.ui.rich(X.intro || ''),
       h('div.row.between.mt-4', {}, h('b', {}, done + ' of ' + items.length + ' tasks done'), h('span.muted.small', {}, 'Your supervisor decides what counts')), CORB.ui.bar(CORB.util.pct(done, items.length), 'ok')));
+    var ojt = CORB.official && CORB.official.doc('ojt-tool');
+    if (ojt) root.appendChild(h('div.card.mt-4', {}, h('div.row.between', {}, h('h3', {}, 'WarU On-the-Job Training Tool'), CORB.ui.extLink(ojt.url, 'Open the tool', '.btn.sm')), CORB.explain.ojt()));
     var byPhase = {};
     items.forEach(function (i) { (byPhase[i.phase] = byPhase[i.phase] || []).push(i); });
     CORB.data.phases().forEach(function (p) {
@@ -102,15 +116,15 @@
   }
 
   function after(root, C, h, icon) {
-    var A = C.after || {};
-    root.appendChild(h('div.grid.cols-2', {},
-      h('div.card', {}, h('h3', {}, 'Stay current: 80 hours every 2 years'), CORB.ui.rich(A.cl || '')),
-      h('div.card', {}, h('h3', {}, 'Next: a warrant'), CORB.ui.rich(A.next || ''))));
+    var A = C.after || {}, X = CORB.explain;
+    root.appendChild(h('div.card', {}, h('div.row.between', {}, h('h2', {}, 'Stay current: 80 hours every 2 years'), X.docButton('cl-recommendations', 'Official memo')), h('div.mt-4', {}, X.cl()), inWords(A.cl, h)));
+    root.appendChild(h('div.card.mt-4', {}, h('div.row.between', {}, h('h2', {}, 'Your career path'), X.docButton('career-model', 'Official career model')), h('div.mt-4', {}, X.career())));
+    root.appendChild(h('div.card.mt-4', {}, h('div.row.between', {}, h('h2', {}, 'Next: a warrant'), X.docButton('warranting-program', 'Warranting Program Model')), CORB.ui.rich(A.next || ''), h('div.mt-4', {}, X.warrant())));
     if ((A.credentials || []).length) {
       root.appendChild(h('div.section-head', {}, h('h2', {}, 'Credentials worth earning')));
       root.appendChild(h('div.grid.auto', {}, A.credentials.map(function (c) { return h('div.card.tight', {}, h('div.row.between', {}, h('b.mono', {}, c.code), c.for ? CORB.ui.badge('brass', c.for) : null), h('div.mt-2', {}, h('b', {}, c.title)), h('p.small.muted.mt-2', {}, c.why)); })));
     }
-    if (A.reciprocity) root.appendChild(h('div.mt-5', {}, CORB.ui.callout('info', 'repeat', 'Coming from a civilian agency with a FAC-C?', A.reciprocity)));
+    if (A.reciprocity) root.appendChild(h('div.card.mt-5', {}, h('div.row.between', {}, h('h2', {}, 'Civilian agencies and the FAC-C'), X.docButton('reciprocity-faq', 'Official FAQs')), h('div.mt-4', {}, X.reciprocity()), inWords(A.reciprocity, h)));
   }
 
   function faq(root, C, h, icon, params) {
@@ -121,6 +135,8 @@
   }
 
   function sources(root, C, h, icon) {
+    root.appendChild(h('div.callout.ok.mb-4', {}, icon('file'), h('div', {}, h('b', {}, 'See the real documents'),
+      h('span', {}, 'Official documents shows the DoW and WarU documents themselves, each with a picture version. The main ones open inside this file, without internet. '), h('a', { href: '#/official' }, 'Open Official documents'))));
     root.appendChild(h('p.muted', {}, 'Everything in Certification 101 was checked against these public sources on the dates shown. Rules change: when your training office or WarU says something different, they win.'));
     root.appendChild(h('div.card.flush', {}, h('div.list', {}, (C.sources || []).map(function (s) {
       return h('div.list-item.src', {}, icon('file'), h('div.grow', {}, s.url ? h('a', { href: s.url, target: '_blank', rel: 'noopener' }, s.title) : h('b', {}, s.title), h('div.tiny.muted', {}, (s.who ? s.who + ' · ' : '') + (s.date ? 'dated ' + s.date : '') + (s.checked ? ' · checked ' + s.checked : ''))));
@@ -128,7 +144,7 @@
   }
 
   CORB.registerView({ id: 'cert', mobileAs: 'path', title: 'Certification 101', section: 'Get certified', icon: 'certificate', nav: true, order: 30,
-    blurb: 'What it takes to get certified', keywords: 'requirements exam CON 3990V AITAS register experience 36 months deadline grace period continuous learning CLP FAQ reciprocity',
+    blurb: 'What it takes to get certified', keywords: 'requirements exam CON 3990V AITAS register experience 36 months deadline grace period continuous learning CLP FAQ reciprocity roadmap flowchart Pearson OnVUE retake 48 hours cancel reschedule career path warrant OJT',
     render: function (root, ctx) {
       var h = CORB.ui.h, icon = CORB.ui.icon, C = CORB.DATA.cert || {};
       var tab = ctx.params.tab || 'overview';

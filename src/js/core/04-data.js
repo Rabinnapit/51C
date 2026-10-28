@@ -61,6 +61,7 @@
     data.howtos().forEach(function (x) { add('How-to', x.title, x.when, [x.title, x.when, arr(x.steps).map(function (s) { return s.t + ' ' + (s.d || ''); }).join(' ')].join(' '), 'howto', { id: x.id }); });
     data.farParts().forEach(function (p) { add('FAR part', 'FAR Part ' + p.n + ': ' + p.title, p.plain, 'far part ' + p.n + ' ' + p.title + ' ' + p.plain, 'far', { tab: 'parts', q: String(p.n) }); });
     arr((D.cert || {}).faq).forEach(function (f, i) { add('FAQ', f.q, '', f.q + ' ' + f.a, 'cert', { tab: 'faq', open: String(i) }); });
+    arr((D.official || {}).docs).forEach(function (d) { add('Official document', d.title, d.summary, [d.title, d.who, d.date, d.summary].join(' '), 'official', { doc: d.id }); });
     Object.keys(CORB.views).forEach(function (k) { var v = CORB.views[k]; if (v.nav) add('Page', v.title, v.blurb || '', v.title + ' ' + (v.blurb || '') + ' ' + (v.keywords || ''), v.id, {}); });
   }
   data.search = function (q, opts) {

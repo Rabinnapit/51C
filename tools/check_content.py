@@ -132,7 +132,7 @@ for s in M["plan"]["steps"]:
 # 6-month exam path: dated weeks of tasks that point at lessons, courses, decks, games and question sets
 deck_ids = {"far-exam", "far-all", "acronyms", "terms", "numbers", "deadlines", "courses"} | {d["id"] for d in M["cards"]}
 game_ids = {"farmatch", "phase", "threshold", "risk"}                                       # quick drills (views/games.js)
-arcade_ids = {"contract-quest", "fire-mission", "qual-range", "part-patrol", "sort-yard"}    # the Arcade (js/arcade/games)
+arcade_ids = {"contract-quest", "supply-line", "fire-mission", "qual-range", "part-patrol", "sort-yard"}    # the Arcade (js/arcade/games)
 srcs = {q.get("src") for q in M["quiz"] if q.get("src")}
 if "path" in M:
     weeks = M["path"]["weeks"]
@@ -156,8 +156,9 @@ if "path" in M:
                 errors.append(f"path task {t['id']}: unknown deck {t.get('deck')}")
             if k == "game" and t.get("game") not in game_ids | arcade_ids:
                 errors.append(f"path task {t['id']}: unknown game {t.get('game')}")
-            if k == "game" and t.get("realm") and (t.get("game") != "contract-quest" or t["realm"] not in ("gp", "pre", "awd", "post", "all")):
-                errors.append(f"path task {t['id']}: realm {t.get('realm')} needs Contract Quest and one of gp, pre, awd, post, all")
+            realms = {"contract-quest": ("gp", "pre", "awd", "post", "all"), "supply-line": ("gp", "pre", "awd", "post", "all", "mission")}
+            if k == "game" and t.get("realm") and t["realm"] not in realms.get(t.get("game"), ()):
+                errors.append(f"path task {t['id']}: realm {t.get('realm')} works only with Contract Quest (gp, pre, awd, post, all) or Supply Line (those or mission)")
             if k == "read" and not 1 <= t.get("far", 0) <= 53:
                 errors.append(f"path task {t['id']}: FAR part out of range")
             if k in ("drill", "exam"):
@@ -201,6 +202,39 @@ for g in M["games"]["threshold"]:
 for l in M["links"]:
     if not re.match(r"^https://", l["url"]):
         errors.append(f"link not https: {l['url']}")
+
+# official documents: every document has its fields and a known group; picture versions exist; page images are numbered 1..n
+EXPLAINERS = {"journey", "examfacts", "blueprint", "attempts", "grace", "fy27", "requirements", "competency", "career", "cl", "reciprocity", "ojt", "warrant"}
+if "official" in M:
+    O = M["official"]
+    groups = {g["id"] for g in O.get("groups", [])}
+    imgs = {}
+    for f in (ROOT / "src" / "official").glob("*.webp"):
+        m = re.fullmatch(r"(.+)-(\d+)", f.stem)
+        if m:
+            imgs.setdefault(m.group(1), []).append(int(m.group(2)))
+    doc_ids = dupes(O.get("docs", []), "id", "official document")
+    for d in O.get("docs", []):
+        for k in ("id", "group", "title", "who", "date", "url", "summary"):
+            if not d.get(k):
+                errors.append(f"official document {d.get('id')}: missing {k}")
+        if d.get("group") not in groups:
+            errors.append(f"official document {d.get('id')}: unknown group {d.get('group')}")
+        if not str(d.get("url", "")).startswith("https://"):
+            errors.append(f"official document {d.get('id')}: url must be https")
+        for k in d.get("simple", []):
+            if k not in EXPLAINERS:
+                errors.append(f"official document {d['id']}: unknown picture version {k}")
+    for doc_id, nums in imgs.items():
+        if doc_id not in doc_ids:
+            errors.append(f"src/official: images for unknown document {doc_id}")
+        if sorted(nums) != list(range(1, len(nums) + 1)):
+            errors.append(f"src/official: {doc_id} pages are not numbered 1..{len(nums)}")
+    for s in O.get("explain", {}).get("journey", {}).get("steps", []):
+        if s.get("owner") not in {o["id"] for o in O["explain"].get("owners", [])}:
+            errors.append(f"journey step {s.get('n')}: unknown owner {s.get('owner')}")
+else:
+    errors.append("missing module: official")
 
 for w in warns:
     print("warning:", w)

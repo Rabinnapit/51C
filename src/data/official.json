@@ -1,0 +1,241 @@
+{
+  "lede": "The real documents from DoW and WarU, each with a simple picture version. Documents marked \"In this file\" open without internet.",
+  "checked": "28 Oct 2026",
+  "hub": {"title": "DPCAP Contract Policy: Workforce Development", "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/workforce-development.html", "note": "The official page that lists these documents. Newer versions appear there first."},
+  "groups": [
+    {"id": "exam", "title": "The exam (CON 3990V)", "icon": "award"},
+    {"id": "cert", "title": "What certification takes", "icon": "certificate"},
+    {"id": "career", "title": "After certification and your career", "icon": "compass"},
+    {"id": "background", "title": "Background and older policy", "icon": "folder"}
+  ],
+  "docs": [
+    {"id": "exam-roadmap", "group": "exam", "icon": "route", "title": "CON 3990V User Experience Roadmap", "who": "DPCAP and WarU", "date": "11 May 2026",
+     "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/CON%203990V%20User%20Experience%20Roadmap%20(As_of_11%20May_2026).pdf",
+     "simple": ["journey"], "summary": "The 15 steps from \"ready to test\" to \"result on your transcript\", with the rules for changing a date and testing again. Page 5 shows a sample score report."},
+    {"id": "exam-flowchart", "group": "exam", "icon": "map", "title": "CON 3990V User Experience Roadmap Flowchart", "who": "DPCAP and WarU", "date": "June 2026",
+     "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/CON%203990V%20User%20Experience%20Roadmap%20Flowchart%20(June%202026).pdf",
+     "simple": ["journey"], "summary": "The same 15 steps on one color-coded page: who does each step, and what happens after a pass or a fail."},
+    {"id": "exam-faq", "group": "exam", "icon": "help", "title": "Contracting Certification Exam FAQs", "who": "DPCAP", "date": "1 Oct 2026",
+     "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/CON_Certification_Exam_FAQs_(As_of_01_Oct_2026).pdf",
+     "simple": ["examfacts", "blueprint", "attempts", "grace"], "summary": "18 answers: the pass mark, the questions per topic, test center or online, retakes, extra training after a fail, and the 3-year grace period."},
+    {"id": "cert-standard", "group": "cert", "icon": "certificate", "kind": "web", "title": "Contracting Professional certification standard", "who": "WarU iCatalog", "date": "checked 28 Oct 2026",
+     "url": "https://icatalog.waru.edu/CertificationStandard?cfld=3&lvl=4",
+     "simple": ["requirements"], "summary": "The official list: 5 courses, the exam, 12 months of experience, no degree requirement, then 80 CL hours every 2 years."},
+    {"id": "fy27-change", "group": "cert", "icon": "plus", "title": "Contracting Certification Change for FY27 (CON 7300V)", "who": "Principal Director, DPCAP", "date": "5 Jun 2026",
+     "url": "https://www.acq.osd.mil/dpap/policy/policyvault/USA001296-26-DPCAP.pdf",
+     "simple": ["fy27"], "summary": "From 1 October 2026, CON 7300V Price Analysis is a required course, taken after CON 1300V."},
+    {"id": "competency-model", "group": "cert", "icon": "layers", "title": "DoW Contracting Competency Model", "who": "DPCAP", "date": "Nov 2024",
+     "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/DoD_Contracting_Competency_Model_(November_2024).pdf",
+     "simple": ["competency", "blueprint"], "summary": "The table the exam is built on: the guiding principles, the three phases of a contract, their competencies and the job tasks under each."},
+    {"id": "competency-narrative", "group": "cert", "icon": "book", "title": "Contracting Competency Model Narrative", "who": "CON FIT", "date": "2024",
+     "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/DoD-Contracting-Competency-Model-(2024).pdf",
+     "simple": ["competency"], "summary": "The long version (32 pages): what each guiding principle, phase and competency means, explained in words."},
+    {"id": "competency-narrative-2020", "group": "cert", "icon": "book", "title": "DoD Contracting Competency Model Narrative (first edition)", "who": "Contracting Certification Taskforce", "date": "29 Apr 2020",
+     "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/DoD-Contracting-Competency-Model-Narrative-(2020).pdf",
+     "simple": ["competency"], "summary": "The first edition, still linked from the Career Field Model. It explains the model and gives sample assessments for a new contracting professional. Use the 2024 versions for the exam."},
+    {"id": "specialty-competencies", "group": "cert", "icon": "grid", "kind": "xlsx", "title": "Contracting Specialty Competencies", "who": "DPCAP", "date": "Dec 2024 (file dated 10 Feb 2025)",
+     "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/CON%20Specialty%20Competencies%20(10_Feb_2025).xlsx",
+     "summary": "An Excel file of specialty areas beyond the basics, such as contingency, construction, A-E and pricing. Not on the exam."},
+    {"id": "career-model", "group": "career", "icon": "compass", "title": "DoW Contracting Career Field Model", "who": "CON FIT", "date": "Mar 2026",
+     "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/DoW%20Contracting%20Career%20Field%20Model%20(Mar%202026).pdf",
+     "simple": ["career"], "summary": "Your whole career on one page: typical jobs, credentials, graduate schools and leader programs, from contract specialist to senior leader."},
+    {"id": "cl-recommendations", "group": "career", "icon": "refresh", "title": "Workforce Development and Continuous Learning Recommendations for 2025", "who": "Principal Director, DPCAP", "date": "3 Feb 2025",
+     "url": "https://www.acq.osd.mil/dpap/policy/policyvault/USA000183-25-DPCAP.pdf",
+     "simple": ["cl"], "summary": "Spend at least 40 of your 80 continuous learning hours on contracting topics for your job, and plan them in your IDP."},
+    {"id": "cl-guide", "group": "career", "icon": "clock", "title": "Professional Currency and Continuous Learning Credit Guide", "who": "USD(A&S)", "date": "14 Nov 2024",
+     "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/USA001628-24%20USD%20Continuous%20Learning_SIGNED%20(14_Nov_2024).pdf",
+     "simple": ["cl"], "summary": "How many continuous learning points each kind of learning earns, and the limits. WarU keeps the same chart online."},
+    {"id": "credentials", "group": "career", "icon": "award", "kind": "web", "title": "Defense Acquisition Credentials: Contracting", "who": "WarU iCatalog", "date": "checked 28 Oct 2026",
+     "url": "https://icatalog.waru.edu/Credential?tab=CON",
+     "summary": "The contracting credentials (CCON). Short, job-focused training. Encouraged, not required."},
+    {"id": "ojt-tool", "group": "career", "icon": "clipboard", "kind": "web", "title": "On-the-Job Training Tool for Contract Specialists", "who": "WarU", "date": "updated 22 Apr 2026",
+     "url": "https://www.waru.edu/tools/job-training-tool-contract-specialists",
+     "simple": ["ojt"], "summary": "A spreadsheet of sample job tasks for each competency. You and your supervisor rate each task from 1 to 3."},
+    {"id": "pricing-plan", "group": "career", "icon": "bar-chart", "kind": "web", "title": "Training Plan Framework for Pricing Professionals", "who": "DPCAP", "date": "checked 28 Oct 2026",
+     "url": "https://www.acq.osd.mil/asda/dpc/pcf/resources-training.html",
+     "summary": "Pricing training and resources to grow after CON 7300V."},
+    {"id": "reciprocity-faq", "group": "career", "icon": "repeat", "title": "Contracting Certification Reciprocity MOU FAQs", "who": "DPCAP", "date": "Aug 2025",
+     "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/Reciprocity%20MOU%20FAQs%20(Aug%202025).pdf",
+     "simple": ["reciprocity"], "summary": "DoW's certification and the civilian FAC-C (Professional) count as equal. The continuous learning rules differ: 80 hours versus 100."},
+    {"id": "reciprocity-mou", "group": "career", "icon": "file", "title": "Reciprocity MOU: FAC-C (Professional) and the DoD Contracting Professional Certification", "who": "PD, DPC and OFPP", "date": "Oct 2023",
+     "url": "https://www.acq.osd.mil/dpap/policy/policyvault/USA002260-23-DPC.pdf",
+     "simple": ["reciprocity"], "summary": "The signed agreement behind reciprocity (signed 16 October 2023)."},
+    {"id": "dodi-5000-66", "group": "background", "icon": "scale", "title": "DoDI 5000.66, Defense Acquisition Workforce program (Change 3)", "who": "USD(A&S)", "date": "25 Mar 2022",
+     "url": "https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodi/500066p.PDF",
+     "simple": ["grace"], "summary": "The DoD rule behind it all: who needs certification, the 3-year grace period, waivers, and 80 CL hours every 2 years."},
+    {"id": "con-fit-charter", "group": "background", "icon": "users", "title": "Contracting Workforce Functional Integration Team (CON FIT) Charter", "who": "PD, DPCAP", "date": "9 Jul 2026",
+     "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/CON_FIT_Charter_July_2026.pdf",
+     "summary": "The team that advises on the certification rules, the exam, the competency model and continuous learning, and who sits on it."},
+    {"id": "warranting-program", "group": "background", "icon": "shield", "title": "Contracting Officer Warranting Program Model", "who": "PD, DPC", "date": "Aug 2022",
+     "url": "https://www.acq.osd.mil/dpap/policy/policyvault/USA001399-22-DPC.pdf",
+     "simple": ["warrant"], "summary": "A model offices can use to select, appoint (SF 1402) and end contracting officer warrants. Your Army program sets the real rules."},
+    {"id": "transition-plan", "group": "background", "icon": "repeat", "title": "Transition Plan for the DoD Contracting Professional Certification Program", "who": "CON FIT", "date": "Jan 2022",
+     "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/CON-Transition-Plan-(January2022).pdf",
+     "summary": "How people moved from the old Level I-III certifications to the single Professional certification in 2022."},
+    {"id": "restructuring-2021", "group": "background", "icon": "file", "title": "Restructuring of the Certification Program for the Contracting Functional Area", "who": "PD, DPC", "date": "17 Feb 2021",
+     "url": "https://www.acq.osd.mil/dpap/policy/policyvault/USA000182-21-DPC.pdf",
+     "summary": "The memo that created one Professional certification with an exam."},
+    {"id": "b2b-2021", "group": "background", "icon": "file", "title": "Back-to-Basics Implementation", "who": "USD(A&S)", "date": "4 Feb 2021",
+     "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/USD(AS)-PTDO-Back-to-Basics-Implementation-Memo-(02-04-2021).pdf",
+     "summary": "Put Back-to-Basics into effect: fewer certification hours, more learning on the job and through credentials."},
+    {"id": "b2b-2020", "group": "background", "icon": "file", "title": "Back-to-Basics for the Defense Acquisition Workforce", "who": "USD(A&S)", "date": "2 Sep 2020",
+     "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/USD(A%26S)-Back-to-Basics-Memo-2-Sept-2020.pdf",
+     "summary": "The memo that started Back-to-Basics and merged the acquisition career fields into six functional areas, one of them Contracting."},
+    {"id": "elimination-24", "group": "background", "icon": "school", "title": "Elimination of the 24-Semester Credit Business Hour Qualification Requirement", "who": "PD, DPC", "date": "3 Sep 2020",
+     "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/Signed-Memo-Re-Elimination-of-the-24-Semester-Credit-Hours.pdf",
+     "summary": "Removed the old rule of 24 business credit hours for DoD contracting jobs. A bachelor's degree is still required for 1102 civilians."},
+    {"id": "as-framework", "group": "background", "icon": "alert", "broken": true, "title": "2024 Acquisition and Sustainment Workforce Framework", "who": "USD(A&S)", "date": "May 2024",
+     "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/docs/wd/2024_A&S_Workforce_Framework.pdf",
+     "summary": "Listed on the DPCAP page, but its link returned \"not found\" on 28 Oct 2026. Ask your DACM office for a copy."}
+  ],
+  "explain": {
+    "owners": [
+      {"id": "you", "label": "You"},
+      {"id": "boss", "label": "Supervisor and training office"},
+      {"id": "waru", "label": "WarU"},
+      {"id": "pearson", "label": "Pearson"}
+    ],
+    "journey": {
+      "steps": [
+        {"n": 1, "owner": "you", "pic": "ready", "title": "Get ready", "line": "You can test when you are coded in contracting and your supervisor agrees.",
+         "chips": [["check", "Coded in contracting"], ["user", "Supervisor says yes"], ["school", "Courses done first"], ["star", "CON 3910 first"]], "official": "1"},
+        {"n": 2, "owner": "you", "pic": "apply", "title": "Apply in AITAS", "line": "Ask for CON 3990V just like a course. Army: AITAS. Navy: eDACM. Air Force: ACQ Now. 4th Estate: DATMS.",
+         "chips": [["clock", "30+ days after a failed try"], ["repeat", "Up to 3 tries in 12 months"]], "official": "2"},
+        {"n": 3, "owner": "boss", "pic": "approve", "title": "Two approvals", "line": "Your supervisor approves, then your Acquisition Training Office (ATO).",
+         "chips": [["check", "Supervisor"], ["check", "Training office"]], "no": "Not approved? Fix the problem and apply again when you are eligible.", "official": "3"},
+        {"n": 4, "owner": "waru", "pic": "sync", "title": "Sent to Pearson", "line": "Automatic. ATRRS tells WarU, and WarU sends your name and WarU ID to Pearson every day.",
+         "chips": [["zap", "Nothing to do"]], "official": "4-5"},
+        {"n": 5, "owner": "pearson", "pic": "mail24", "title": "\"Authorization to Test\" email", "line": "Pearson emails you a link to its WarU page, usually within 24 hours.",
+         "chips": [["clock", "Within 24 hours"], ["mail", "Check your junk folder"]], "official": "6"},
+        {"n": 6, "owner": "you", "pic": "book", "title": "Book your exam", "line": "Make a Pearson account on the WarU page, then pick a date and a place.",
+         "chips": [["calendar", "Test within 90 days"]], "choice": true, "official": "7"},
+        {"n": 7, "owner": "pearson", "pic": "confirm", "title": "Confirmation email", "line": "No email means the booking did not finish. Go back and finish it.",
+         "chips": [["check", "Keep this email"]], "official": "8"},
+        {"n": 8, "owner": "pearson", "pic": "remind", "title": "Two reminders", "line": "Pearson reminds you 3 days and 1 day before your exam.",
+         "chips": [["mail", "3 days before"], ["mail", "1 day before"]], "official": "9"},
+        {"n": 9, "owner": "you", "pic": "testday", "title": "Test day", "line": "150 questions in 3 hours. Closed book. Bring your photo ID.",
+         "chips": [["quiz", "150 questions"], ["clock", "3 hours"], ["x", "No notes, no phone"], ["user", "Photo ID"]], "official": "10"},
+        {"n": 10, "owner": "pearson", "pic": "score", "title": "Score report", "line": "You see your score right away: one total, plus a score for each of the 4 parts of the exam.",
+         "chips": [["target", "70% = pass"], ["print", "Printout at a test center"], ["mail", "Also in your Pearson account"]], "official": "10"},
+        {"n": 11, "owner": "waru", "pic": "records", "title": "Result goes to your records", "line": "Pearson sends results to WarU every day. WarU updates AITAS and ATRRS every night.",
+         "chips": [["zap", "Nothing to do"]], "official": "11-12"}
+      ],
+      "pass": {"pic": "pass", "title": "Passed", "official": "13-14", "lines": ["Your pass shows on your WarU transcript (the sample report says within 3 business days).", "WarU does not print a certificate for the exam.", "Use your WarU transcript or your Pearson score report when you apply for certification."]},
+      "fail": {"pic": "fail", "title": "Not passed", "official": "13", "lines": ["You and your supervisor get a letter from WarU.", "Wait 30 days.", "Before try 2, take CON 3900V (CON 3910 comes first), unless you already took it.", "Then apply again at step 2."]},
+      "help": {"pic": "help", "title": "Questions at any step", "official": "15", "lines": ["The exam, your booking or your result: email scheduling@waru.edu.", "Your Pearson account or a test center: Pearson VUE customer service, 877-269-8108."]},
+      "choice": [
+        {"pic": "center", "title": "Test center", "tag": "Best choice", "line": "Pass rate about 4% higher. Search \"Military Community\" for a test center on a base."},
+        {"pic": "online", "title": "Online (OnVUE)", "tag": "By exception", "line": "Use a personal computer: most government computers block the software. Run the system check first. Quiet room, clear desk, webcam."}
+      ],
+      "flow": ["AITAS", "ATRRS", "WarU", "Pearson"],
+      "rules": [
+        {"pic": "h48", "title": "The 48-hour rule", "line": "More than 48 hours before: change or cancel it yourself in Pearson. Less than 48 hours: your supervisor emails scheduling@waru.edu."},
+        {"pic": "cancel", "title": "Reschedule, do not cancel", "items": [["ok", "Reschedule: free, as many times as you need inside your 90 days"], ["warn", "Cancel without a new date: uses 1 of your 3 tries"], ["danger", "No-show: counts like a failed try, and the Government still pays"]]},
+        {"pic": "book", "title": "The 90-day window", "line": "No exam within 90 days? Your authorization ends. Wait 30 days, then apply again."},
+        {"pic": "idcard", "title": "Your name must match", "line": "The name on your ID must match Pearson exactly. If it does not, email scheduling@waru.edu with proof before you book."},
+        {"pic": "approve", "title": "Cancel in two places", "line": "Cancel in AITAS and in Pearson. Cancelling in only one does not count."},
+        {"pic": "hand", "title": "Need an accommodation?", "line": "Set disability to \"Yes\" in your AITAS profile before you apply. WarU then explains the process."}
+      ]
+    },
+    "attempts": {
+      "chips": [["repeat", "Up to 3 tries in 12 months"], ["calendar", "The 12 months start on your first try"], ["clock", "30+ days between tries"]],
+      "rows": [
+        {"try": "1", "kind": "must", "must": "Take CON 3900V before your next try (CON 3910 comes first). Already took it? You do not need it again.", "should": "Read your score report and study your lowest part."},
+        {"try": "2", "kind": "should", "should": "Review CON 3910 and CON 3900V and your score report again."},
+        {"try": "3", "kind": "must", "must": "Review your feedback and both prep courses. Your agency checks your steps before you test again."},
+        {"try": "4", "kind": "next", "should": "Possible in the 12 months that start one year after your first failed try. Your DACM can approve more tries, case by case."}
+      ],
+      "note": "Your agency (your supervisor and training office) can add its own rules, such as more training, waiting time or counseling."
+    },
+    "grace": {
+      "months": 36, "goal": 6,
+      "start": "You start a contracting-coded job", "end": "Certified by month 36", "goalLabel": "Many units: courses and exam by month 6",
+      "cards": [
+        {"icon": "trophy", "kind": "ok", "title": "Promoted inside contracting?", "line": "The clock keeps running. It does not start over."},
+        {"icon": "refresh", "kind": "info", "title": "Left contracting and came back?", "line": "The clock starts over."},
+        {"icon": "alert", "kind": "warn", "title": "Running late?", "line": "A waiver can let you stay in the job longer. It never gives you the certification. Ask early."},
+        {"icon": "shield", "kind": "danger", "title": "Condition of employment", "line": "Without the certification and without a waiver, you can face employment actions."}
+      ]
+    },
+    "fy27": {
+      "chain": ["CON 1300V", "CON 7300V", "CON 3990V"],
+      "tiles": [
+        ["calendar", "Since 1 Oct 2026", "Required for the certification"],
+        ["clock", "7 days", "28 hours, virtual (VILT)"],
+        ["bar-chart", "Graded simulation", "At the end you price a realistic case"],
+        ["target", "Why", "Exam data showed pricing as the biggest area to improve"]
+      ],
+      "cases": [
+        ["user", "Started your certification before Oct 2026?", "Your Component decides. DoW leadership expects you to take it."],
+        ["certificate", "Already certified?", "Not required, but encouraged."],
+        ["users", "Seats", "People working on their certification get first priority."]
+      ]
+    },
+    "requirements": {
+      "tiles": [
+        ["school", "5 courses", "CON 1100V, 1200V, 1300V, 7300V, 1400V"],
+        ["award", "1 exam", "CON 3990V, 70% to pass"],
+        ["clipboard", "12 months", "Full-time contracting work"],
+        ["x", "No degree needed", "for the certification itself"],
+        ["refresh", "Then 80 CL hours", "every 2 years"]
+      ]
+    },
+    "career": {
+      "stages": [
+        {"title": "Start", "jobs": ["Contract Specialist", "Cost/Price Analyst", "Contract Administrator", "Procurement Analyst", "Small Business Specialist", "Contracting Officer", "Acquisition Analyst"]},
+        {"title": "Grow", "jobs": ["Supervisory Contract Specialist", "Senior Contract Specialist", "Senior Cost/Price Analyst", "Senior Procurement Analyst", "Deputy Director of Small Business", "Agreements Officer"]},
+        {"title": "Lead", "jobs": ["Director of Contracting", "Director of Small Business", "Senior Contracting Official (SCO)", "Head of Contracting Activity (HCA)"]}
+      ],
+      "top": "Senior Executive / Senior Leader",
+      "rails": [
+        ["certificate", "Certified", "Required for every contracting job"],
+        ["award", "Credentials", "Encouraged, not required"],
+        ["refresh", "80 CL hours", "Every 2 years (DoDI 5000.66)"],
+        ["school", "Graduate school", "NPS MS in Contract Management, National Defense University, Senior Service College Fellowship"],
+        ["users", "Leader programs", "DCELP, ELDP, DSLDP, White House LDP, Vanguard"],
+        ["user", "Career help", "Army DACM Office (USAASC)"]
+      ]
+    },
+    "cl": {
+      "total": 80, "years": 2, "goal": "Goal: 40 a year", "contracting": 40,
+      "facts": [
+        ["calendar", "When it starts", "The day you enter an acquisition position, not the day you are certified. Your Component sets the 2-year dates."],
+        ["target", "At least 40 on contracting", "DPCAP asks for at least 40 of your 80 hours on contracting topics for your job."],
+        ["file", "Record it", "Follow your Component's process. Points for WarU events do not post by themselves; request them."]
+      ],
+      "kinds": [
+        {"title": "Formal training", "rule": "at least 20", "pct": 25, "eg": "WarU courses (points listed in the iCatalog) · college: 15 per semester hour · 10 per CEU"},
+        {"title": "Informal learning", "rule": "up to 60", "pct": 75, "eg": "Webinars, videos, workshops: 1 per hour · reading: 1 per hour, up to 4 per item · conferences: up to 24"},
+        {"title": "Professional activities", "rule": "up to 60", "pct": 75, "eg": "Non-DAWIA certificate or license: 10 to 30 · teaching: 2 per hour, up to 20 · writing: up to 20"},
+        {"title": "Experience", "rule": "up to 60", "pct": 75, "eg": "On-the-job assignments: up to 20 · rotations: up to 40 · mentoring: up to 5 a year"}
+      ],
+      "courses": [["CON 1100V", 29], ["CON 1200V", 45], ["CON 1300V", 41], ["CON 1400V", 34], ["CON 7300V", 28], ["CON 3910", 22], ["CON 3900V", 13], ["CON 3990V", 3]],
+      "source": "Points: WarU Continuous Learning Point Credit chart and the iCatalog course pages, checked 28 Oct 2026."
+    },
+    "reciprocity": {
+      "left": "DoW Contracting Professional", "right": "FAC-C (Professional)", "middle": "Equal since 16 Oct 2023",
+      "facts": [
+        ["award", "Same exam", "Both require CON 3990V."],
+        ["refresh", "Different CL rule", "DoW: 80 hours every 2 years. Civilian agencies (OFPP): 100 hours every 2 years since May 2024."],
+        ["arrow-right", "Moving to a civilian agency?", "Your DoW certification counts. Ask the new agency's career manager."],
+        ["arrow-left", "Coming to DoW from a civilian agency?", "Your DACM can accept FAC-C (Professional). Without it, meet all DoW requirements."]
+      ]
+    },
+    "ojt": {
+      "facts": [
+        ["calendar", "Start on day one", "Open it when you start the job, and review it at least twice a year."],
+        ["clipboard", "Sample tasks", "Tasks for each technical and professional competency. Your office can add its own."],
+        ["bar-chart", "Rate 1 to 3", "You and your supervisor rate each task: 1 lowest, 3 highest, or N/A."],
+        ["edit", "Sign-off page", "Your supervisor signs completed tasks. It also helps show your 12 months of experience."]
+      ]
+    },
+    "warrant": {
+      "steps": [
+        ["user", "Selection", "Training, experience, education and judgment are checked (FAR 1.603-2). Often a test, an interview or a CORB."],
+        ["certificate", "Appointment", "Your warrant is an SF 1402 Certificate of Appointment. It states your limits."],
+        ["x", "Termination", "By letter: for example reassignment, leaving the job or poor performance. Never backdated."]
+      ],
+      "baseline": "The model's minimum for a warrant: the DoW Contracting Professional certification, a bachelor's degree (1102s and military equivalents) and 2 years of contracting experience. Your Army warrant program sets the real rules."
+    }
+  }
+}
