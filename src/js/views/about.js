@@ -95,6 +95,25 @@
       h('div.ab-work', {}, h('b', {}, 'Nothing is sent anywhere'), h('p', {}, 'There are no accounts, trackers or outside services. The only link out is the feedback email, and only when you choose to send it.'))));
   }
 
+  // the phone app: a QR code drawn from meta.app_qr (made by tools/make_handout.py), so anyone can share the guide in person
+  function phone(h, icon) {
+    var m = CORB.meta(), rows = arr(m.app_qr), n = rows.length;
+    if (!m.site_url || !n) return null;
+    var d = '';
+    rows.forEach(function (r, y) { var re = /1+/g, run; while ((run = re.exec(r))) d += 'M' + (run.index + 4) + ' ' + (y + 4) + 'h' + run[0].length + 'v1h-' + run[0].length + 'z'; });
+    var svg = '<svg viewBox="0 0 ' + (n + 8) + ' ' + (n + 8) + '" shape-rendering="crispEdges" role="img" aria-label="QR code for ' + m.site_url + '">' +
+      '<rect width="100%" height="100%" fill="#fff"/><path fill="#000" d="' + d + '"/></svg>';
+    return section('phone', 'Get it on your phone', h('div.ab-phone', {},
+      h('div.ab-qr', { html: svg }),
+      h('div', {},
+        h('p', {}, 'Scan this code with a phone camera to get B2B Guide as an app: free, with no app store and no account. Show it to anyone who needs it.'),
+        h('a.ab-url', { href: m.site_url, target: '_blank', rel: 'noopener' }, m.site_url),
+        h('ul.ab-steps', {},
+          h('li', {}, icon('phone'), h('span', {}, h('b', {}, 'iPhone: '), 'open the link in Safari, tap Share, then Add to Home Screen.')),
+          h('li', {}, icon('phone'), h('span', {}, h('b', {}, 'Android: '), 'open the link in Chrome, then tap Install app.')),
+          h('li', {}, icon('refresh'), h('span', {}, 'Open it once while online. After that it works offline, and new versions arrive by themselves.'))))));
+  }
+
   function current(h) {
     var m = CORB.meta(), changes = arr((CORB.data.updates() || {}).guide_changes).slice(0, 4);
     return section('current', 'How it stays current', [
@@ -125,7 +144,7 @@
     blurb: 'What B2B Guide is, who maintains it, how to send feedback', keywords: 'about developer maintainer feedback contact version credits disclaimer offline privacy shortcuts',
     render: function (root) {
       var h = CORB.ui.h, icon = CORB.ui.icon;
-      var page = h('div.ab-app', {}, hero(h), maintainer(h, icon), whatItIs(h, icon), inside(h, icon), works(h), current(h), keys(h), fine(h, icon));
+      var page = h('div.ab-app', {}, hero(h), maintainer(h, icon), whatItIs(h, icon), inside(h, icon), works(h), phone(h, icon), current(h), keys(h), fine(h, icon));
       root.appendChild(page);
     } });
 })();

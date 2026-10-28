@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.14.1 (29 October 2026): the phone app
+
+- **B2B Guide is a free phone app** at https://rabinnapit.github.io/51C/, published from the public repository
+  Rabinnapit/51C by the existing GitHub Pages workflow. Scan the QR code, open the link and add it to the home screen
+  (iPhone: Safari, Share, Add to Home Screen; Android: Chrome, Install app). No app store, no account, no cost; it
+  works offline after the first open, and every change pushed to GitHub reaches installed apps the next time they open.
+- **Get it on your phone** on the About page: the QR code and the install steps, so anyone with the guide can share it.
+- `tools/make_handout.py` makes the QR code (SVG and PNG) and a one-page install sheet to print (HTML and PDF) in
+  `handout/`, modelled on the WHtR app's handout.
+
 ## 0.14.0 (29 October 2026): lesson pictures, a fairer question bank and the AITAS link
 
 - **A picture at the top of every lesson** ("At a glance"): 49 diagrams across the 35 lessons, built from each lesson's

@@ -73,3 +73,13 @@
   .v-about .ab-hero { flex-direction: column; padding: var(--space-5); }
   .v-about .ab-cols, .v-about .ab-works { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Get it on your phone: the QR code stays black on white in night mode so cameras can read it */
+.ab-phone { display: grid; grid-template-columns: 180px 1fr; gap: 22px; align-items: center; }
+.ab-qr { padding: 10px; border-radius: var(--r-md); background: #fff; box-shadow: inset 0 0 0 1px var(--line); line-height: 0; }
+.ab-qr svg { width: 100%; height: auto; }
+.ab-url { display: inline-block; margin: 4px 0 10px; font-weight: 700; word-break: break-all; }
+.ab-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.ab-steps li { display: flex; gap: 8px; align-items: flex-start; font-size: var(--fs-sm); }
+.ab-steps svg { flex: none; width: 16px; height: 16px; margin-top: 3px; color: var(--accent); }
+@media (max-width: 560px) { .ab-phone { grid-template-columns: 1fr; } .ab-qr { max-width: 220px; } }

@@ -56,6 +56,7 @@ src/data/*.json           content (see section 4). <module>-<part>.json files jo
 src/official/*.webp       official document pages, <doc id>-<page>.webp, made by tools/render_official.py from the PDFs
                           (PDFs stay out of git); the build embeds them as the `pages` module
 src/web/                  icons (tools/make_icons.py), favicon.svg, sw.js template
+handout/                  the QR code and the printable install sheet for the phone app (tools/make_handout.py)
 ```
 
 Script order in the build: data, then `core/*` in file order, then `views/*`, then `arcade/*` and `arcade/games/*`, then the boot block, which must stay last
@@ -63,7 +64,8 @@ Script order in the build: data, then `core/*` in file order, then `views/*`, th
 
 ## 4. Data modules (`window.CORB_DATA`)
 
-- `meta`: app_name, version, content_verified_on, site_url (filled automatically on GitHub Actions), experience_months,
+- `meta`: app_name, version, content_verified_on, site_url (https://rabinnapit.github.io/51C/; filled from GITHUB_REPOSITORY on GitHub Actions only when empty), app_qr (the QR code for
+  site_url as rows of 0 and 1, written by tools/make_handout.py and drawn on the About page), experience_months,
   deadline_months, maintainer, disclaimer, currency, credits. The build adds `built_on`, `build_id`, `edition`.
 - `cert`: `phases` (the four exam areas with the official question counts; they must total 150), requirements, deadlines,
   roles, education, register (steps, tips, verify), exam (facts with icon, source, study, study_source, testday, retake), experience (items), after, faq, sources.

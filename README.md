@@ -7,7 +7,7 @@ every course, lessons, practice exams, flashcards, games, a glossary and a FAR r
 Unofficial training aid. Not endorsed by the U.S. Army, the Department of War or the Warfighting Acquisition University
 (WarU, formerly DAU). Content checked 28 October 2026.
 
-## What is inside (version 0.14.0)
+## What is inside (version 0.14.1)
 
 | Area | What the reader gets |
 |---|---|
@@ -26,9 +26,12 @@ Unofficial training aid. Not endorsed by the U.S. Army, the Department of War or
 
 ## How people get it: three ways
 
-1. **The website (best).** Publish it on GitHub Pages (below). People open a link, and can install it like an app on a
-   phone or computer. **When you change the content on GitHub, everyone gets the new version the next time they open it**
-   with an internet connection, and a bar offers a reload if a newer version came out while they had it open.
+1. **The app (best): https://rabinnapit.github.io/51C/.** People scan the QR code (print
+   `handout/B2B_Guide_Install_Sheet.pdf`, or show the code on the guide's About page), open the link and add it to the
+   home screen: on an iPhone, Safari, Share, Add to Home Screen; on Android, Chrome, Install app. It is free, needs no app
+   store and no account, and works offline after the first open. **When you change the content on GitHub, everyone gets
+   the new version the next time they open it** with an internet connection, and a bar offers a reload if a newer
+   version came out while they had it open. Progress stays on each person's device.
 2. **The single file.** `B2B-Guide.html` (download it from the website's Help page, or build it locally into `dist/`).
    Put it on Teams or SharePoint, or a thumb drive. It works with no network. A copy keeps the date it was built, so a
    file someone saved last month will not update itself; its Help page links to the website for the newest version.
@@ -37,31 +40,38 @@ Unofficial training aid. Not endorsed by the U.S. Army, the Department of War or
 
 Test whether `github.io` opens on your NIPR computer. If it does, use the website for everyone. If not, use the file.
 
-## Put it on GitHub (one time, about 15 minutes)
+## On GitHub
 
-This folder is a git repository. `.gitignore` leaves out the built files (`docs/`, `dist/`), which GitHub rebuilds,
-and any PDF or Office documents you keep here for reference, so official course material never goes public by accident.
+The guide lives in the public repository **Rabinnapit/51C** (https://github.com/Rabinnapit/51C), on a GitHub account
+kept apart from the maintainer's personal one. Commits here use that account's private noreply address (set in this
+repository's own git config). `.gitignore` leaves out the built files (`docs/`, `dist/`), which GitHub rebuilds, and
+any PDF or Office documents you keep here for reference, so official course material never goes public by accident.
 
-1. Create a free account at github.com (use a personal email if your Army account cannot sign up).
-2. On github.com, click **New repository**. Name it `b2b-guide`, choose **Public** (free GitHub Pages needs a public
-   repository; everything in the guide is public information) and leave README, .gitignore and license off, so it
-   starts empty.
-3. In the new repository: **Settings, Pages, Build and deployment, Source: GitHub Actions.** Ignore the workflows GitHub
+One-time setup (already described here so it can be repeated):
+
+1. The repository must be **Public** (free GitHub Pages needs it; everything in the guide is public information).
+2. In the repository: **Settings, Pages, Build and deployment, Source: GitHub Actions.** Ignore the workflows GitHub
    suggests; this repository brings its own.
-4. Send this folder up. In a terminal opened in this folder, run:
+3. Connect this folder and send it up:
 
    ```bash
-   git remote add origin https://github.com/<your-github-name>/b2b-guide.git
+   git remote add origin https://Rabinnapit@github.com/Rabinnapit/51C.git
    git push -u origin main
    ```
 
-   If a GitHub sign-in window opens, sign in. (With **GitHub Desktop** instead: File, Add local repository, pick this
-   folder, Publish repository, and untick "Keep this code private". That creates the repository too, so skip step 2
-   and do step 3 right after.)
-5. Open the **Actions** tab. "Build and publish B2B Guide" runs now and after every future change. A green check means
-   your site is live at `https://<your-github-name>.github.io/b2b-guide/`. A red X on the very first run usually means
-   step 3 was not done yet: do it, open the run and click **Re-run all jobs**.
-6. Open that address on a phone and a government computer. Use "Install" (Help page) to add it like an app.
+   The user name in the address makes Git Credential Manager sign in as **Rabinnapit**, separately from any other GitHub
+   account on this computer. When its sign-in window opens, sign in with that account.
+4. Open the **Actions** tab. "Build and publish B2B Guide" runs now and after every future change. A green check means
+   the app is live at https://rabinnapit.github.io/51C/. A red X on the very first run usually means step 2 was not
+   done yet: do it, open the run and click **Re-run all jobs**.
+
+## The QR code and install sheet
+
+`python tools/make_handout.py` (needs `pip install segno`; Microsoft Edge prints the PDF) reads `site_url` from
+`src/data/meta.json` and writes `handout/b2b-guide-qr.svg` and `.png`, the printable
+`handout/B2B_Guide_Install_Sheet.html` and its PDF (PDFs stay off GitHub; print it from this computer), and the code
+the About page draws (`app_qr` in `meta.json`). Run it again only if the address changes: the code points at the
+address, and the address always serves the newest version.
 
 The workflow checks the content, builds the website, the offline file and the Word email package, and publishes them.
 If a check fails, the old site stays up and the Actions tab says what is wrong.
