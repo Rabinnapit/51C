@@ -1,4 +1,4 @@
-# Sources (checked 22 October 2026)
+# Sources (checked 22 October 2026; class materials and exam path checked 28 October 2026)
 
 Everything in B2B Guide 0.9.0 comes from these public sources. Official WarU material from the maintainer, when it
 arrives, should be checked against this list and take precedence.
@@ -34,3 +34,20 @@ arrives, should be checked against this list and take precedence.
 | DoW RFO class deviations effective 1 Feb 2026 | DoW rollout memo (Dec 2025) and Army Warranting Program Policy v12 (via Board Ready) |
 | ACWS replaced PD2/SPS-A; SPS-A retired Dec 2025 | Army.mil and trade press |
 | FPDS.gov retired 24 Feb 2026; award data in SAM.gov | Maintainer's SAM/FPDS skill notes |
+
+## B2B class materials and the exam path (version 0.10.0)
+
+The maintainer supplied the Back to Basics (B2B) class materials on 28 October 2026. They are kept outside the repository
+(`B2B Exam Prep_Resources`, not committed) because they include instructor slides and DAU/WarU material. Their content was
+checked against the RFO text and rewritten in the guide's own words; recalled real exam questions were turned into topics, not copied.
+The full results are in `content/CLASS-MATERIAL-CHECK.md`.
+
+| Material | Used for | Checked against |
+|---|---|---|
+| Back To Basics Day One, Prep Day 3, Day 4, Day 5 (slides) | Exam path week notes, Class material check, flashcards | acquisition.gov FAR Overhaul part pages 1-8, 10, 12-16, 19, 31-33, 42-46, 49 and 52 (read 28 Oct 2026) |
+| Back to Basics final (practice exam, no answer key) | 143 class questions (`quiz-6-class-a/b.json`), answered and checked | Same; DFARS 215.371-2 (acquisition.gov) |
+| Jeoparty B2B review (no answers); Pop quiz FAR parts | B2B Jeopardy flashcard deck; FAR part decks and game | Same |
+| Study Guide for Exam; CON 3990V notes (test-taker recollections) | Test-taker tips and 34 topic questions (`quiz-6-class-c.json`) | Same |
+| Contracting Study Guide V9 (19 May 2025) | Not used: protected by an Army Microsoft Purview sensitivity label | — |
+| How the RFO Will Affect CON Certification, Student FAQ Sheet v1.8 (WarU, 16 Apr 2026) | Exam updated for the RFO on 31 Mar 2026, ~30% of the bank changed, threshold updates did not change questions | Maintainer's copy (PDF) |
+

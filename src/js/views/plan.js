@@ -55,7 +55,7 @@
     return row;
   }
 
-  CORB.registerView({ id: 'plan', title: 'My plan', section: 'Start', icon: 'route', nav: true, order: 20, mobile: true, short: 'Plan', blurb: 'Your dated steps to certification',
+  CORB.registerView({ id: 'plan', mobileAs: 'path', title: 'My plan', section: 'Start', icon: 'route', nav: true, order: 20, short: 'Plan', blurb: 'Your dated steps to certification',
     keywords: 'timeline schedule calendar deadline 36 months 6 months goal checklist',
     render: function (root) {
       var h = CORB.ui.h, icon = CORB.ui.icon, U = CORB.util, plan = CORB.plan;

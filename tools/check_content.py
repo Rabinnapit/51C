@@ -129,6 +129,60 @@ for s in M["plan"]["steps"]:
     if ("day" in s) == ("months" in s):
         errors.append(f"plan step {s['id']}: needs exactly one of day or months")
 
+# 6-month exam path: dated weeks of tasks that point at lessons, courses, decks, games and question sets
+deck_ids = {"far-exam", "far-all", "acronyms", "terms", "numbers", "deadlines", "courses"} | {d["id"] for d in M["cards"]}
+game_ids = {"farmatch", "phase", "threshold", "risk"}
+srcs = {q.get("src") for q in M["quiz"] if q.get("src")}
+if "path" in M:
+    weeks = M["path"]["weeks"]
+    if [w["n"] for w in weeks] != list(range(1, len(weeks) + 1)):
+        errors.append("path weeks must be numbered 1, 2, 3... in order")
+    month_ids = {m["n"] for m in M["path"]["months"]}
+    task_ids = set()
+    for w in weeks:
+        if w["m"] not in month_ids:
+            errors.append(f"path week {w['n']}: unknown month {w['m']}")
+        for t in w["tasks"]:
+            if t["id"] in task_ids:
+                errors.append(f"duplicate path task {t['id']}")
+            task_ids.add(t["id"])
+            k = t["kind"]
+            if k == "lesson" and t.get("lesson") not in lesson_ids:
+                errors.append(f"path task {t['id']}: unknown lesson {t.get('lesson')}")
+            if k == "course" and t.get("course") not in course_ids:
+                errors.append(f"path task {t['id']}: unknown course {t.get('course')}")
+            if k == "cards" and t.get("deck") not in deck_ids:
+                errors.append(f"path task {t['id']}: unknown deck {t.get('deck')}")
+            if k == "game" and t.get("game") not in game_ids:
+                errors.append(f"path task {t['id']}: unknown game {t.get('game')}")
+            if k == "read" and not 1 <= t.get("far", 0) <= 53:
+                errors.append(f"path task {t['id']}: FAR part out of range")
+            if k in ("drill", "exam"):
+                for lid in t.get("lessons", []):
+                    if lid not in lesson_ids:
+                        errors.append(f"path task {t['id']}: unknown lesson {lid}")
+                if t.get("src") and t["src"] not in srcs:
+                    errors.append(f"path task {t['id']}: no questions with src {t['src']}")
+                if t.get("phase") and t["phase"] not in phases:
+                    errors.append(f"path task {t['id']}: unknown phase {t['phase']}")
+            if k not in ("lesson", "read", "cards", "drill", "exam", "course", "game", "do", "realexam"):
+                errors.append(f"path task {t['id']}: unknown kind {k}")
+            if k in ("read", "cards", "drill", "exam", "game", "do", "realexam") and not t.get("t"):
+                errors.append(f"path task {t['id']}: needs a title (t)")
+    for c in M["path"].get("checks", []):
+        if c.get("status") not in ("ok", "updated", "fixed", "verify"):
+            errors.append(f"path check '{c.get('topic')}': unknown status {c.get('status')}")
+    for it in M["path"].get("intel", []):
+        if it.get("lesson") and it["lesson"] not in lesson_ids:
+            errors.append(f"path tip '{it['t']}': unknown lesson {it['lesson']}")
+        if it.get("deck") and it["deck"] not in deck_ids:
+            errors.append(f"path tip '{it['t']}': unknown deck {it['deck']}")
+for q in M["quiz"]:
+    if q.get("src") == "class" and q.get("check") not in ("same", "updated", "fixed"):
+        errors.append(f"question {q['id']}: class question needs check same, updated or fixed")
+    if q.get("check") in ("updated", "fixed") and not q.get("note"):
+        errors.append(f"question {q['id']}: an updated or fixed class question needs a note saying what changed")
+
 parts = M["far"]["parts"]
 if [p["n"] for p in parts] != list(range(1, 54)):
     errors.append("FAR parts must be 1 to 53 in order")

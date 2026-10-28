@@ -44,7 +44,7 @@ src/js/core/05-speech     read-aloud in sentence-sized chunks
 src/js/core/06-learning   SM-2 lite flashcards, quiz records, readiness by exam area, streak
 src/js/core/07-plan       dated plan: goal, 12-month experience, 36-month deadline, step status, .ics export
 src/js/core/09-pwa        web edition only: service worker, update bar, install prompt
-src/js/views/*.js         home, plan, cert, courses, learn (+ lesson), howto, quiz, cards, games, glossary, far, links, settings
+src/js/views/*.js         home, path, plan, cert, courses, learn (+ lesson), howto, quiz, cards, games, glossary, far, links, settings
 src/data/*.json           content (see section 4). <module>-<part>.json files join into <module>.
 src/web/                  icons (tools/make_icons.py), favicon.svg, sw.js template
 ```
@@ -62,8 +62,14 @@ Script order in the build: data, then `core/*` in file order, then `views/*`, th
 - `plan`: `{baseline_days: 182, steps: [{id, phase: setup|courses|exam|certify|after, day | months, title, detail, who, course?, howto?, lesson?, auto?: exam|experience|goal, tracks?: [51c|1102], verify?}]}`.
   `day` values spread across a 6-month goal and scale to the reader's own goal; `months` are fixed from the start date.
 - `lessons` (`lessons-1..5-*.json`): `[{id, phase: gp|pre|awd|post|job, comp, compName, title, minutes, summary, why, sections: [{h, body}], example: {title, body}, remember[], mistakes[], terms[], cites[], verify?}]`
-- `quiz` (`quiz-1..5-*.json`): `[{id, lesson, phase, comp, d: 1-3, stem, options: [{text, correct, why}] (4 options, exactly one correct), cite}]`.
-  Same option shape as Board Ready's `mcq.json`, so either app's quiz can run the other's questions.
+- `quiz` (`quiz-1..6-*.json`): `[{id, lesson, phase, comp, d: 1-3, stem, options: [{text, correct, why}] (4 options, exactly one correct), cite, src?, check?, note?, verify?}]`.
+  Same option shape as Board Ready's `mcq.json`, so either app's quiz can run the other's questions. `quiz-6-class-*.json` holds the B2B
+  class material: `src: 'class'` questions (ids C…) carry `check: same | updated | fixed` and, when changed, a `note` saying what changed
+  under the RFO; `src: 'tips'` questions (ids T…) cover topics past test takers reported. Recalled real exam questions are never copied.
+- `path`: the 6-month exam path. `{title, lede, baseline_days: 182, exam_week, checked_on, how[], months: [{n, title, sub, phase}],
+  weeks: [{n, m, title, goal, tasks: [{id, kind, t?, d?, …}], tip, class}], files[], checks: [{topic, src, said, now, status: ok|updated|fixed|verify, cite, verify?}], intel: [{t, d, lesson?, deck?}]}`.
+  Task kinds: `lesson` (lesson), `read` (far: part number), `cards` (deck), `drill` (lessons[] | src | phase | missed | weak, n), `exam` (timed, n, target),
+  `course` (course), `game` (game), `do` and `realexam` (view, params). Week dates scale like `plan` steps (`baseline_days`).
 - `glossary`: `[{term, expansion, definition, cat, cite?}]` (Board Ready uses the same fields with `domain` for `cat`).
   Terms that look like acronyms are tapped-to-define everywhere in rich text.
 - `howto`: `[{id, cat: career|job, title, when, who, time, steps: [{t, d, cite?}], tips[], watch[], lessons[], links[], verify?}]`
@@ -95,10 +101,11 @@ CORB.store.safeGet/safeSet/safeDel  exportProgress()  importProgress(file)  save
 CORB.ui.h  icon  badge  phaseBadge  verifyBadge  rich  inline  callout  checkItem  listenBtn  modal  confirm  toast  palette  showTerm
 CORB.data.phases/phase  lessons/lesson/nextLesson  questions/questionsFor  glossary/term  courses/course  howtos  farParts  search  citeUrl
 CORB.speech.speak/stop   CORB.scoring.srs.grade/isDue   CORB.scoring.readiness()   CORB.plan.steps()/goal()/deadline()/ics()
+CORB.path.currentWeek()/week(n)/weekStart(n)/taskDone(t)/weekStats(w)/progress()   CORB.quiz.start({mode, n, label, phase, lessons, src, path})
 CORB.edition()  CORB.can(what)  CORB.setTheme  CORB.setTextSize
 ```
 
-State (`b2b.state.v1`): `{version: 'b2b-state-1', profile: {track, start, goalMonths, goalDate, theme, textSize}, progress: {steps, courses, lessons, checks, quiz, missed, srs, howto, exp, games, exam, seen, bookmarks}, settings: {tts, ttsRate, glossaryLinks, motion, setupDone, welcomeSeen}, meta: {updatedAt, lastOpened}}`.
+State (`b2b.state.v1`): `{version: 'b2b-state-1', profile: {track, start, goalMonths, goalDate, theme, textSize}, progress: {steps, courses, lessons, checks, quiz, missed, srs, howto, exp, games, exam, seen, bookmarks, path}, settings: {tts, ttsRate, glossaryLinks, motion, setupDone, welcomeSeen}, meta: {updatedAt, lastOpened}}`.
 The copy saved inside the HTML file wins over the browser's copy when its `meta.updatedAt` is newer.
 
 ## 7. Fusing with Board Ready (the "ultimate guide")

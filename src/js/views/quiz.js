@@ -5,8 +5,9 @@
   var S = null;           // the quiz in progress (kept while the reader moves around the app)
   var timerId = null;
 
-  function pickWeighted(n) {
-    var phases = CORB.data.phases(), all = CORB.data.questions(), out = [], used = {};
+  function pickWeighted(n, all) {
+    var phases = CORB.data.phases(), out = [], used = {};
+    all = all || CORB.data.questions();
     var total = CORB.util.sum(phases.map(function (p) { return p.qs; })) || 150;
     phases.forEach(function (p) {
       var want = Math.round(n * p.qs / total), pool = CORB.util.shuffle(all.filter(function (q) { return q.phase === p.id; }));
@@ -16,16 +17,20 @@
     while (out.length < n && rest.length) out.push(rest.pop());
     return CORB.util.shuffle(out).slice(0, n);
   }
+  // o: { mode: practice|exam|missed, n, label, phase?, lessons?: [ids], src?: 'class'|'tips', path?: exam-path task id }
   function start(o) {
-    var all = CORB.data.questions(), pool;
-    if (o.mode === 'exam') pool = pickWeighted(o.n);
+    var all = CORB.data.questions().filter(function (q) {
+      return (!o.phase || q.phase === o.phase) && (!o.src || q.src === o.src) && (!o.lessons || o.lessons.indexOf(q.lesson) >= 0);
+    }), pool;
+    if (o.mode === 'exam') pool = pickWeighted(o.n, all);
     else if (o.mode === 'missed') pool = CORB.util.shuffle(CORB.scoring.missedIds().map(CORB.data.question).filter(Boolean)).slice(0, o.n || 25);
-    else pool = CORB.util.shuffle(all.filter(function (q) { return !o.phase || q.phase === o.phase; })).slice(0, o.n || 10);
+    else pool = CORB.util.shuffle(all).slice(0, o.n || 10);
     if (!pool.length) { CORB.ui.toast(o.mode === 'missed' ? 'No missed questions right now. Nice.' : 'No questions match that choice.', 'warn'); return; }
-    S = { mode: o.mode, phase: o.phase || '', label: o.label, items: pool.map(function (q) { return { q: q, opts: CORB.util.shuffle(q.options), pick: -1, flag: false, done: false }; }), i: 0, started: Date.now(),
+    S = { mode: o.mode, phase: o.phase || '', label: o.label, path: o.path || '', items: pool.map(function (q) { return { q: q, opts: CORB.util.shuffle(q.options), pick: -1, flag: false, done: false }; }), i: 0, started: Date.now(),
       limit: o.mode === 'exam' ? Math.round(pool.length * 72) : 0, finished: false };
     CORB.go('quiz', { run: '1' });
   }
+  CORB.quiz = { start: start };
   function finish() {
     if (!S || S.finished) return;
     clearInterval(timerId);
@@ -37,8 +42,17 @@
       if (S.mode === 'exam' || !it.done) CORB.scoring.recordAnswer(it.q.id, ok);
     });
     S.right = right;
-    CORB.scoring.recordQuiz({ mode: S.mode, label: S.label, total: S.items.length, correct: right, byPhase: byPhase, items: S.items.map(function (it) { return { id: it.q.id, ok: it.ok }; }) });
+    CORB.scoring.recordQuiz({ mode: S.mode, label: S.label, path: S.path || undefined, total: S.items.length, correct: right, byPhase: byPhase, items: S.items.map(function (it) { return { id: it.q.id, ok: it.ok }; }) });
+    if (S.path) CORB.emit('path-quiz', { id: S.path, pct: CORB.util.pct(right, S.items.length) });
     CORB.go('quiz', { result: '1' });
+  }
+  // where a question came from: the B2B class practice exam (checked against the RFO) or a topic past test takers reported
+  function sourceNote(q) {
+    var h = CORB.ui.h;
+    if (q.src !== 'class' && q.src !== 'tips') return null;
+    var label = q.src === 'tips' ? 'Topic reported by past test takers' : q.check === 'fixed' ? 'B2B class practice exam · corrected for the RFO' : q.check === 'updated' ? 'B2B class practice exam · updated for the RFO' : 'B2B class practice exam · still right under the RFO';
+    return h('div.q-origin.mt-2', {}, CORB.ui.badge(q.check === 'fixed' ? 'warn' : q.src === 'tips' ? 'brass' : 'info', label, q.src === 'tips' ? 'users' : 'school'),
+      q.note ? h('p.small.muted.mt-2', {}, h('b', {}, 'What changed: '), q.note) : null, q.verify ? CORB.ui.verifyBadge(q.verify) : null);
   }
   function fmtTime(sec) { sec = Math.max(0, Math.round(sec)); var hh = Math.floor(sec / 3600), mm = Math.floor(sec % 3600 / 60), ss = sec % 60; return (hh ? hh + ':' + String(mm).padStart(2, '0') : mm) + ':' + String(ss).padStart(2, '0'); }
 
@@ -62,13 +76,21 @@
         h('button.btn.mt-3', { type: 'button', disabled: !missed, onclick: function () { start({ mode: 'missed', n: 25, label: 'Missed questions' }); } }, icon('play'), 'Retry missed')),
       h('div.card.exam-mode', {}, h('div.mode-icon', {}, icon('timer')), h('h3', {}, 'Exam simulator'), h('p.small.muted', {}, 'Timed like the real exam (72 seconds a question), mixed in the same proportions, no answers until you finish.'),
         h('div.mt-3', {}, exN), h('button.btn.brass.mt-3', { type: 'button', onclick: function () { start({ mode: 'exam', n: Math.min(exChoice, bank), label: 'Exam simulator · ' + Math.min(exChoice, bank) }); } }, icon('play'), 'Start the timer'))));
+    var nClass = CORB.data.questions().filter(function (q) { return q.src === 'class'; }).length, nTips = CORB.data.questions().filter(function (q) { return q.src === 'tips'; }).length;
+    if (nClass) root.appendChild(h('div.card.mt-4.class-sets', {}, h('div.row.between', {}, h('div', {}, h('h3', {}, 'From your B2B class'),
+      h('p.small.muted', {}, 'The Back to Basics class practice exam (' + nClass + ' questions), checked against the RFO FAR and corrected where the rules changed, plus ' + nTips + ' questions on topics past test takers reported. Each answer says what changed.')),
+      h('a.btn.sm.ghost', { href: '#/path?tab=check' }, icon('clipboard'), 'What changed')),
+      h('div.row.tight.mt-3', {},
+        h('button.btn', { type: 'button', onclick: function () { start({ mode: 'practice', src: 'class', n: 25, label: 'B2B class practice exam' }); } }, icon('play'), 'Class exam · 25'),
+        h('button.btn', { type: 'button', onclick: function () { start({ mode: 'exam', src: 'class', n: 50, label: 'B2B class exam, timed · 50' }); } }, icon('timer'), 'Timed · 50'),
+        nTips ? h('button.btn', { type: 'button', onclick: function () { start({ mode: 'practice', src: 'tips', n: 20, label: 'Test-taker topics' }); } }, icon('users'), 'Test-taker topics · 20') : null)));
     var hist = (CORB.get('progress.quiz', []) || []).slice(-8).reverse();
     if (hist.length) root.appendChild(h('section', {}, h('div.section-head', {}, h('h2', {}, 'Recent results')),
       h('div.card.flush', {}, h('div.list', {}, hist.map(function (r) {
         var pc = CORB.util.pct(r.correct, r.total);
         return h('div.list-item.hist', {}, h('span.num.hist-pc' + (pc >= 70 ? '.ok' : '.low'), {}, pc + '%'), h('div.grow', {}, h('b', {}, r.label || r.mode), h('div.tiny.muted', {}, r.correct + ' of ' + r.total + ' right · ' + CORB.util.fmtDateTime(r.ts))));
       })))));
-    root.appendChild(h('p.muted.small.mt-5', {}, 'The bank has ' + bank + ' questions. They are practice questions written for this guide, not questions from the real exam, which WarU keeps secure. Pass mark on the real exam: 70%.'));
+    root.appendChild(h('p.muted.small.mt-5', {}, 'The bank has ' + bank + ' questions. They are practice questions written for this guide or adapted from B2B class material and checked against the RFO, not questions from the real exam, which WarU keeps secure. Pass mark on the real exam: 70%.'));
   }
 
   // ---- running ----
@@ -101,6 +123,7 @@
       fb.hidden = false; fb.innerHTML = '';
       var right = it.opts.filter(function (x) { return x.correct; })[0];
       fb.appendChild(CORB.ui.callout(ok ? 'ok' : 'warn', ok ? 'check' : 'info', ok ? 'Right.' : 'Not quite. The answer is: ' + right.text, CORB.ui.rich((ok ? '' : (o.why ? 'Why not your pick: ' + o.why + '\n\n' : '')) + (right.why || '') + (q.cite ? '\n\nWhere it is written: ' + q.cite : ''))));
+      var origin = sourceNote(q); if (origin) fb.appendChild(origin);
       if (q.lesson && CORB.data.lesson(q.lesson)) fb.appendChild(h('a.btn.sm.ghost.mt-2', { href: '#/lesson?id=' + q.lesson }, icon('book'), 'Lesson: ' + CORB.data.lesson(q.lesson).title));
       nextBtn.disabled = false; nextBtn.focus();
     }
@@ -128,7 +151,8 @@
     var pc = CORB.util.pct(S.right, S.items.length), pass = pc >= 70;
     root.appendChild(h('div.card.raised.result-hero', {}, CORB.ui.ring(pc, pc + '%', pass ? 'var(--ok)' : 'var(--accent-2)', 120),
       h('div', {}, h('div.eyebrow', {}, S.label), h('h1', {}, pass ? 'Passing score' : 'Keep going'), h('p.lede', {}, S.right + ' of ' + S.items.length + ' right. The real exam needs 70%.' + (S.mode === 'exam' ? ' Time used: ' + fmtTime((S.ended - S.started) / 1000) + '.' : '')),
-        h('div.row.tight.mt-3', {}, h('button.btn.primary', { type: 'button', onclick: function () { S = null; CORB.go('quiz'); } }, icon('refresh'), 'New quiz'),
+        h('div.row.tight.mt-3', {}, S.path ? h('a.btn.primary', { href: '#/path' }, icon('route'), 'Back to my exam path') : null,
+          h('button.btn' + (S.path ? '' : '.primary'), { type: 'button', onclick: function () { S = null; CORB.go('quiz'); } }, icon('refresh'), 'New quiz'),
           S.items.some(function (x) { return !x.ok; }) ? h('button.btn', { type: 'button', onclick: function () { start({ mode: 'missed', n: 25, label: 'Missed questions' }); } }, icon('repeat'), 'Retry the ones I missed') : null))));
     var by = {}; S.items.forEach(function (it) { var b = by[it.q.phase] = by[it.q.phase] || [0, 0]; b[1]++; if (it.ok) b[0]++; });
     root.appendChild(h('div.section-head', {}, h('h2', {}, 'By exam area'), h('span.muted', {}, 'The Pearson score report shows the same four areas')));
@@ -141,7 +165,7 @@
       var right = it.opts.filter(function (o) { return o.correct; })[0], mine = it.pick >= 0 ? it.opts[it.pick] : null;
       return h('details.acc.review' + (it.ok ? '.ok' : '.no'), {}, h('summary', {}, icon(it.ok ? 'check' : 'x'), h('span.grow', {}, (i + 1) + '. ' + it.q.stem), icon('chevron', 'chev')),
         h('div.acc-body', {}, h('p', {}, h('b', {}, 'Your answer: '), mine ? mine.text : 'not answered'), it.ok ? null : h('p', {}, h('b', {}, 'Right answer: '), right.text),
-          CORB.ui.rich((right.why || '') + (it.q.cite ? '\n\nWhere it is written: ' + it.q.cite : '')),
+          CORB.ui.rich((right.why || '') + (it.q.cite ? '\n\nWhere it is written: ' + it.q.cite : '')), sourceNote(it.q),
           it.q.lesson && CORB.data.lesson(it.q.lesson) ? h('a.btn.sm.ghost.mt-2', { href: '#/lesson?id=' + it.q.lesson }, icon('book'), 'Lesson: ' + CORB.data.lesson(it.q.lesson).title) : null));
     })));
   }

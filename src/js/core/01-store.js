@@ -28,7 +28,8 @@
         games: {},        // game id -> { plays, best, last }
         exam: { scheduled: '', attempts: [] },
         seen: {},         // any id -> last date (drives the study streak)
-        bookmarks: {}
+        bookmarks: {},
+        path: {}          // exam path task id -> date ticked, or { d, last, best } for drills and checkpoints
       },
       settings: { tts: true, ttsRate: 1, glossaryLinks: true, motion: '', setupDone: false, welcomeSeen: false },
       meta: { updatedAt: '', lastOpened: '' }

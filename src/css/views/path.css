@@ -1,0 +1,49 @@
+/* VIEW path — the 6-month exam path */
+.v-path .path-hero { display: flex; gap: var(--space-5); align-items: flex-start; }
+.v-path .path-hero h2 { font-size: 1.6rem; font-weight: 800; font-stretch: 92%; margin-top: 4px; }
+.v-path .path-hero .lede { margin-bottom: 0; }
+.v-path .path-ring { flex: none; display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 128px; }
+.v-path .center { text-align: center; }
+.v-path .week-nav { margin: var(--space-4) 0 0; }
+.v-path .tasks .task { align-items: flex-start; }
+.v-path .tasks .check-sub { margin-top: 6px; }
+.v-path .task-acts .badge { margin-left: 2px; }
+.v-path .task.done .task-acts .btn.primary { background: var(--panel); color: var(--ink); border-color: var(--line-2); }
+.v-path .month-card .list { border-top: 1px solid var(--line); }
+.v-path .week-mini { gap: 10px; padding: 9px 4px; text-decoration: none; color: var(--ink); align-items: center; }
+.v-path .week-mini:hover { background: var(--bg-2); }
+.v-path .week-mini.on { background: var(--accent-2-soft); border-radius: var(--r-sm); }
+.v-path .week-mini .num { min-width: 30px; color: var(--muted); font-weight: 800; }
+.v-path .cp-row { display: flex; gap: 10px; align-items: center; padding: 10px 12px; border-radius: var(--r-md); background: var(--panel-2); border: 1px solid var(--line); }
+.v-path .cp-row > svg { width: 20px; height: 20px; color: var(--accent-2); flex: none; }
+.v-path .how-card { margin-bottom: var(--space-4); }
+.v-path .month-sec { margin-top: var(--space-5); }
+.v-path .month-n { font-size: var(--fs-xs); font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: var(--accent-2); vertical-align: middle; margin-right: 4px; }
+.v-path .month-sub { margin: -6px 0 var(--space-3); }
+.v-path .week-acc summary { gap: 10px; }
+.v-path .week-acc.cur { border-color: color-mix(in srgb, var(--accent-2) 55%, var(--line)); }
+.v-path .week-n { min-width: 34px; font-weight: 800; color: var(--muted); }
+.v-path ul.week-tasks { list-style: none; padding: 0; margin: 8px 0 0; display: flex; flex-direction: column; gap: 6px; font-size: var(--fs-sm); }
+.v-path ul.week-tasks li { display: flex; gap: 8px; align-items: flex-start; color: var(--ink-2); }
+.v-path ul.week-tasks li svg { width: 16px; height: 16px; flex: none; margin-top: 2px; color: var(--muted); }
+.v-path ul.week-tasks li.done { color: var(--muted); text-decoration: line-through; }
+.v-path ul.week-tasks li.done svg { color: var(--ok); }
+.v-path .check-card { border-left: 4px solid var(--line-2); }
+.v-path .check-card.st-ok { border-left-color: var(--ok); }
+.v-path .check-card.st-updated { border-left-color: var(--info); }
+.v-path .check-card.st-fixed { border-left-color: var(--warn); }
+.v-path .check-card.st-verify { border-left-color: var(--accent-2); }
+.v-path .cmp > div { min-width: 0; }
+.v-path .cmp-h { font-size: var(--fs-xs); font-weight: 800; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 4px; }
+.v-path .cmp p { margin: 0; color: var(--ink-2); }
+.v-path .cmp .rich { font-size: var(--fs-sm); }
+.v-path .intel-card b { font-family: var(--font-display); font-size: var(--fs-lg); }
+.q-origin .badge { white-space: normal; }
+@media (max-width: 640px) {
+  .v-path .path-hero { flex-direction: column-reverse; align-items: stretch; }
+  .v-path .path-ring { flex-direction: row; justify-content: flex-start; gap: 14px; min-width: 0; }
+  .v-path .path-ring .center { text-align: left; }
+  .v-path .cmp { grid-template-columns: minmax(0, 1fr); }
+  .v-path .week-nav .btn { padding-left: 10px; padding-right: 10px; }
+}
+@media print { .v-path .week-nav, .v-path .task-acts { display: none; } }

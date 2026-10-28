@@ -58,13 +58,13 @@
     root.appendChild(h('section.home-hero', {},
       h('div.eyebrow', {}, 'Back to Basics · DoW Contracting Professional certification'),
       h('h1', {}, 'From day one to certified.'),
-      h('p.lede', {}, 'A plain-language guide for new 51C contracting NCOs and 1102 contract specialists. Answer three questions and B2B Guide builds a dated plan, then teaches and tests you on everything in it.'),
+      h('p.lede', {}, 'A plain-language guide for new 51C contracting NCOs and 1102 contract specialists. Answer three questions and B2B Guide builds a dated plan and a 26-week path to pass the exam, then teaches and tests you on everything in it.'),
       h('div.home-three', {},
         [['school', '5 courses', 'CON 1100, 1200V, 1300V, 7300V and 1400V'], ['award', '1 exam', 'CON 3990V: 150 questions, 70% to pass'], ['clipboard', '12 months', 'of full-time contracting experience']].map(function (x) {
           return h('div.three-item', {}, icon(x[0]), h('div', {}, h('b', {}, x[1]), h('span', {}, x[2])));
         }))));
     root.appendChild(h('section.card.raised.setup-card', {}, h('h2', {}, 'Build my plan'), h('p.muted', {}, 'Takes 30 seconds. Nothing leaves this device.'), f.el,
-      h('div.row.mt-5', {}, h('button.btn.primary.lg', { type: 'button', onclick: function () { if (f.save()) { CORB.ui.toast('Your plan is ready', 'ok'); CORB.go('plan'); } } }, 'Build my plan', icon('arrow-right')),
+      h('div.row.mt-5', {}, h('button.btn.primary.lg', { type: 'button', onclick: function () { if (f.save()) { CORB.ui.toast('Your plan and 6-month exam path are ready', 'ok'); CORB.go('path'); } } }, 'Build my plan', icon('arrow-right')),
         h('button.btn.ghost', { type: 'button', onclick: function () { CORB.set('settings.welcomeSeen', true); CORB.render(); } }, 'Look around first'))));
     root.appendChild(tour());
   }
@@ -72,6 +72,7 @@
   function tour() {
     var h = CORB.ui.h, icon = CORB.ui.icon;
     var items = [
+      ['path', 'target', 'Exam path', '26 weeks to pass CON 3990V, week by week.'],
       ['plan', 'route', 'My plan', 'Every step to certification, with dates.'],
       ['cert', 'certificate', 'Certification 101', 'The rules, the exam and who does what.'],
       ['courses', 'school', 'Courses', 'What each course covers and how to pass it.'],
@@ -100,6 +101,17 @@
       root.appendChild(h('section.home-head', {}, h('div', {}, h('div.eyebrow', {}, 'Welcome'), h('h1', {}, 'Look around'),
         h('p.lede', {}, 'When you are ready, build your plan so the guide can put dates on every step.'),
         h('button.btn.primary.mt-3', { type: 'button', onclick: function () { CORB.set('settings.welcomeSeen', false); CORB.render(); } }, icon('route'), 'Build my plan'))));
+    }
+
+    // this week on the 6-month exam path
+    if (CORB.path && CORB.path.weeks().length) {
+      var pw = CORB.path.currentWeek(), wk = CORB.path.week(pw), ws = CORB.path.weekStats(wk), nextTask = wk.tasks.filter(function (t) { return !CORB.path.taskDone(t); })[0];
+      root.appendChild(h('section.card.raised.path-now', {},
+        h('div.row.between', {}, h('div.eyebrow', {}, 'Exam path · week ' + pw + ' of ' + CORB.path.total()), CORB.ui.badge(ws.done === ws.total ? 'ok' : 'brass', ws.done + ' of ' + ws.total + ' tasks done', ws.done === ws.total ? 'check' : 'target')),
+        h('h2', {}, wk.title), h('p.muted', {}, wk.goal),
+        CORB.ui.bar(ws.pct, 'brass'),
+        h('div.row.mt-4', {}, h('a.btn.primary', { href: '#/path' }, icon('target'), nextTask ? 'Continue this week' : 'Open my exam path'),
+          nextTask ? h('span.small.muted', {}, 'Next: ' + (nextTask.t || (nextTask.kind === 'lesson' && CORB.data.lesson(nextTask.lesson) ? 'Lesson: ' + CORB.data.lesson(nextTask.lesson).title : ''))) : null)));
     }
 
     // next step

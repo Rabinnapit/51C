@@ -11,6 +11,9 @@
 .v-home .setup-card h2 { margin-bottom: 4px; }
 .v-home .setup-card .setup-form { margin-top: var(--space-4); }
 .v-home .home-head h1 { margin-top: 4px; }
+.v-home .path-now { border-left: 5px solid var(--accent); margin-bottom: var(--space-4); }
+.v-home .path-now h2 { margin: 8px 0 4px; font-size: var(--fs-xl); }
+.v-home .path-now .bar { margin-top: 10px; }
 .v-home .next-step { border-left: 5px solid var(--accent-2); }
 .v-home .next-step h2 { margin: 8px 0 8px; font-size: var(--fs-xl); }
 .v-home .milestones .stat .bar { margin-top: 10px; }

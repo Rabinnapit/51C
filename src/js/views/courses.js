@@ -46,7 +46,7 @@
     return det;
   }
 
-  CORB.registerView({ id: 'courses', mobileAs: 'plan', title: 'Courses', section: 'Get certified', icon: 'school', nav: true, order: 40,
+  CORB.registerView({ id: 'courses', mobileAs: 'path', title: 'Courses', section: 'Get certified', icon: 'school', nav: true, order: 40,
     blurb: 'Every course, in order, and how to pass it', keywords: 'CON 1100 1200V 1300V 7300V 1400V 3910 3900V 3990V WarU DAU iCatalog prerequisites FAC 069 082 085 CON 0074 0470',
     render: function (root, ctx) {
       var h = CORB.ui.h, icon = CORB.ui.icon, p = ctx.params;

@@ -127,7 +127,7 @@
     }))));
   }
 
-  CORB.registerView({ id: 'cert', mobileAs: 'plan', title: 'Certification 101', section: 'Get certified', icon: 'certificate', nav: true, order: 30,
+  CORB.registerView({ id: 'cert', mobileAs: 'path', title: 'Certification 101', section: 'Get certified', icon: 'certificate', nav: true, order: 30,
     blurb: 'What it takes to get certified', keywords: 'requirements exam CON 3990V AITAS register experience 36 months deadline grace period continuous learning CLP FAQ reciprocity',
     render: function (root, ctx) {
       var h = CORB.ui.h, icon = CORB.ui.icon, C = CORB.DATA.cert || {};
