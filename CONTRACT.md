@@ -41,7 +41,7 @@ src/js/core/01-store      state, persistence, export/import, save progress into 
 src/js/core/02-router     hash routing, shell, theme, text size, keyboard, boot
 src/js/core/03-ui         h(), icons, badges, rich text (bold, lists, cite links, glossary links), modal, toast, palette
 src/js/core/04-data       queries over CORB_DATA, search index, citation URLs (FAR cites open the RFO part page)
-src/js/core/05-speech     read-aloud in sentence-sized chunks
+src/js/core/05-speech     read-aloud: voices, contracting pronunciation, and delivery piece by piece with its own tone and pause (settings.ttsTone)
 src/js/core/06-learning   SM-2 lite flashcards, quiz records, readiness by exam area, streak
 src/js/core/07-plan       dated plan: goal, 12-month experience, 36-month deadline, step status, .ics export
 src/js/core/10-account   web edition only: optional accounts (Supabase project 51C via plain fetch): Sign in button in the

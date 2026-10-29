@@ -209,6 +209,7 @@
       document.querySelectorAll('.speaking').forEach(function (x) { x.classList.remove('speaking'); });
       b.classList.add('speaking'); b.lastChild.textContent = 'Stop';
       CORB.speech.speak(typeof getText === 'function' ? getText() : getText, { onend: function () { b.classList.remove('speaking'); b.lastChild.textContent = label || 'Listen'; } });
+      if (!CORB.get('settings.voiceTip')) { CORB.set('settings.voiceTip', true); setTimeout(function () { ui.toast('Want another voice or tone? Settings & help → Display → Read aloud.', '', 5000); }, 1500); }   // once
     });
     return b;
   };

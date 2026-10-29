@@ -77,7 +77,8 @@
       var all = CORB.data.lessons(), i = all.indexOf(l), prev = all[i - 1], next = all[i + 1];
       var p = CORB.data.phase(l.phase), done = CORB.data.lessonDone(l.id);
       CORB.touch(l.id);
-      function fullText() { return [l.title, l.summary, l.why].concat((l.sections || []).map(function (s) { return s.h + '. ' + s.body.replace(/^\s*[-•]\s*/gm, ''); })).concat(l.example ? [l.example.title + '. ' + l.example.body] : []).concat(l.remember || []).join('\n'); }
+      // headings, paragraphs and bullets are kept: the reader gives each its own tone and pause
+      function fullText() { return [l.title, l.summary, l.why].concat((l.sections || []).map(function (s) { return '## ' + s.h + '\n' + s.body; })).concat(l.example ? ['## ' + l.example.title + '\n' + l.example.body] : []).concat((l.remember || []).length ? ['## Remember\n' + l.remember.map(function (r) { return '- ' + r; }).join('\n')] : []).filter(Boolean).join('\n\n'); }
       var doneBtn = h('button.btn.sm' + (done ? '.on' : ''), { type: 'button', onclick: function () { CORB.scoring.setLessonDone(l.id, !CORB.data.lessonDone(l.id)); CORB.ui.toast(CORB.data.lessonDone(l.id) ? 'Lesson marked done' : 'Marked not done', 'ok'); CORB.render(); } }, icon('check'), done ? 'Done' : 'Mark done');
       root.appendChild(h('header.page-head.lesson-head', {},
         h('a.back-link', { href: '#/learn' + (l.phase ? '?phase=' + l.phase : '') }, icon('arrow-left'), 'All lessons'),

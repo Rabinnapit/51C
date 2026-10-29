@@ -62,7 +62,7 @@
     root.appendChild(session.flipped
       ? h('div.fc-grade', {}, h('button.btn.lg.again', { type: 'button', onclick: function () { grade(1); } }, 'Again', h('kbd.hide-sm', {}, '1')), h('button.btn.lg.almost', { type: 'button', onclick: function () { grade(3); } }, 'Almost', h('kbd.hide-sm', {}, '2')), h('button.btn.lg.primary', { type: 'button', onclick: function () { grade(5); } }, 'Got it', h('kbd.hide-sm', {}, '3')))
       : h('div.fc-grade', {}, h('button.btn.lg.primary.block', { type: 'button', onclick: flip }, 'Show the answer', h('kbd.hide-sm', {}, 'Space'))));
-    root.appendChild(h('div.row.tight.mt-3', { style: { justifyContent: 'center' } }, CORB.ui.listenBtn(function () { return session && session.flipped ? front + '. ' + back + '. ' + (c.more || '') : front; })));
+    root.appendChild(h('div.row.tight.mt-3', { style: { justifyContent: 'center' } }, CORB.ui.listenBtn(function () { return session && session.flipped ? front + '\n' + back + '\n' + (c.more || '') : front; })));
     keyHandler = function (e) {
       var tag = (e.target && e.target.tagName || '').toLowerCase(); if (tag === 'input' || tag === 'textarea') return;
       if (!session) return;

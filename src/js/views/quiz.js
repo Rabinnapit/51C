@@ -128,7 +128,7 @@
       nextBtn.disabled = false; nextBtn.focus();
     }
     card.appendChild(h('div.opts', {}, btns));
-    card.appendChild(h('div.row.tight.mt-3', {}, CORB.ui.listenBtn(function () { return q.stem + ' ' + it.opts.map(function (o, i) { return 'ABCD'[i] + '. ' + o.text; }).join('. '); }, 'Listen'),
+    card.appendChild(h('div.row.tight.mt-3', {}, CORB.ui.listenBtn(function () { return q.stem + '\n' + it.opts.map(function (o, i) { return 'ABCD'[i] + ': ' + o.text; }).join('\n'); }, 'Listen'),
       exam ? h('button.btn.sm' + (it.flag ? '.on' : ''), { type: 'button', onclick: function () { it.flag = !it.flag; CORB.render(); } }, icon('flag'), it.flag ? 'Flagged' : 'Flag for review') : null));
     card.appendChild(fb);
     root.appendChild(card);

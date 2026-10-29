@@ -77,7 +77,8 @@
       h('div.field', {}, h('div.label', {}, 'Motion'), seg([['', 'Normal'], ['reduce', 'Less motion']], CORB.get('settings.motion') || '', function (v) { CORB.setMotion(v); })),
       sw('settings.glossaryLinks', 'Underline acronyms I can tap for a meaning', true)));
     root.appendChild(h('div.section-head', {}, h('h2', {}, 'Read aloud')));
-    var SAMPLE = 'This is how B2B Exam Prep sounds. The contracting officer, the KO, is the only person who can bind the Government to a contract. The micro-purchase threshold is $15,000.';
+    var SAMPLE = 'Hi, this is how B2B Exam Prep sounds.\nWho can bind the Government to a contract? Only the contracting officer, the KO.\nBelow the micro-purchase threshold, $15,000, you can buy without competitive quotes, as long as the price is reasonable.\nReady when you are.';
+    var tone = CORB.get('settings.ttsTone', 'lively') === 'even' ? 'even' : 'lively';
     // the device's English voices, natural ones first; the chosen one lives in settings.voice
     function voicePicker() {
       var sel = h('select#tts-voice.input', { 'aria-label': 'Voice' });
@@ -98,6 +99,8 @@
     root.appendChild(h('div.card.stack', {},
       ok ? sw('settings.tts', 'Show Listen buttons', true) : h('p.muted', {}, 'This browser has no built-in voice, so Listen buttons are hidden. Edge on Windows has good voices.'),
       ok ? h('div.field', {}, h('label', { for: 'tts-voice' }, 'Voice'), voicePicker(), h('p.small.muted', {}, 'Voices come from your phone or computer; natural ones sound like a person. The list shows the best first.')) : null,
+      ok ? h('div.field', {}, h('div.label', {}, 'Tone'), seg([['lively', 'Lively'], ['even', 'Even']], tone, function (v) { CORB.set('settings.ttsTone', v); CORB.speech.speak(SAMPLE); }),
+        h('p.small.muted', {}, 'Lively reads the way a person does: questions rise, sentences settle, a heading gets a breath, a list keeps a beat. Even keeps one steady tone.')) : null,
       ok ? h('div.field', {}, h('label', { for: 'tts-rate' }, 'Speed'), h('div.row', {}, h('span.small', {}, 'Slower'), rate, h('span.small', {}, 'Faster'))) : null,
       ok ? h('div.row', {}, h('button.btn', { type: 'button', onclick: function () { CORB.speech.speak(SAMPLE); } }, icon('volume'), 'Hear a sample'), h('button.btn.ghost', { type: 'button', onclick: function () { CORB.speech.stop(); } }, icon('stop'), 'Stop')) : null,
       ok ? h('details.inst-more', {}, h('summary', {}, 'Want a more human voice?'), h('ul.tips', {},

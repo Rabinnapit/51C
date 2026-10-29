@@ -55,7 +55,7 @@
   X.legend = function () { return h('div.own-legend', {}, (E().owners || []).map(function (w) { return h('span.own-key.own-' + w.id, {}, h('i'), w.label); })); };
   X.journey = function () {
     var J = E().journey || {};
-    var say = (J.steps || []).map(function (s) { return 'Step ' + s.n + '. ' + s.title + '. ' + s.line; }).join(' ');
+    var say = (J.steps || []).map(function (s) { return 'Step ' + s.n + ', ' + s.title + '. ' + s.line; }).join('\n');
     var road = h('ol.road', {}, (J.steps || []).map(function (s) {
       return h('li.stop.own-' + s.owner, {}, X.pic(s.pic),
         h('div.stop-body', {},

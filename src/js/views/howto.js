@@ -11,7 +11,7 @@
     root.appendChild(h('header.page-head', {}, h('a.back-link', { href: '#/howto' }, icon('arrow-left'), 'All how-to guides'),
       h('div.row.tight.mt-2', {}, CORB.ui.badge(x.cat === 'career' ? 'brass' : 'accent', x.cat === 'career' ? 'Your certification' : 'Contracting task'), x.time ? h('span.tiny.muted', {}, x.time) : null),
       h('h1', {}, x.title), x.when ? h('p.lede', {}, x.when) : null,
-      h('div.row.tight.mt-3.no-print', {}, CORB.ui.listenBtn(function () { return x.title + '. ' + (x.steps || []).map(function (s, i) { return 'Step ' + (i + 1) + '. ' + s.t + '. ' + (s.d || ''); }).join(' '); }),
+      h('div.row.tight.mt-3.no-print', {}, CORB.ui.listenBtn(function () { return x.title + '\n' + (x.steps || []).map(function (s, i) { return 'Step ' + (i + 1) + ', ' + s.t + '. ' + (s.d || ''); }).join('\n'); }),
         CORB.can('print') ? h('button.btn.sm.ghost', { type: 'button', onclick: function () { window.print(); } }, icon('print'), 'Print') : null,
         h('button.btn.sm.ghost', { type: 'button', onclick: function () { CORB.set('progress.howto.' + x.id, {}); CORB.render(); } }, icon('refresh'), 'Clear ticks'))));
     if (x.who) root.appendChild(h('p.muted.small', {}, h('b', {}, 'Who: '), x.who));

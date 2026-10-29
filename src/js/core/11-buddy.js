@@ -195,7 +195,8 @@
       say(h('div.bcard.plain', {}, h('p', {}, 'Hi, I am ' + n + '. Ask me anything in the guide: a term, a dollar limit, a deadline, a course, the exam, or how to do something.'), chips), 'bot');
       document.body.appendChild(panel);
     }
-    document.querySelectorAll('.buddy-fab').forEach(function (b) { b.hidden = true; });
+    document.querySelectorAll('.buddy-fab').forEach(function (b) { b.hidden = true; b.classList.remove('nudge'); });
+    if (!CORB.get('settings.buddyUsed')) CORB.set('settings.buddyUsed', true);   // the bubble stops nudging once Buddy has been opened
     if (q) buddy.ask(q); else setTimeout(function () { try { input.focus(); } catch (e) {} }, 60);
   };
   buddy.close = function () {
@@ -203,8 +204,8 @@
     document.querySelectorAll('.buddy-fab').forEach(function (b) { b.hidden = false; });
   };
   buddy.isOpen = function () { return !!panel; };
-  // the chat bubble the shell draws on every page
+  // the chat bubble the shell draws on every page; it nudges on a steady beat (CSS) until Buddy has been opened once
   buddy.fab = function () {
-    return h('button.buddy-fab', { type: 'button', 'aria-label': 'Ask ' + name(), title: 'Ask ' + name() + ' a question', hidden: !!panel, onclick: function () { buddy.open(); } }, icon('message'), h('span', {}, 'Ask ' + name()));
+    return h('button.buddy-fab' + (CORB.get('settings.buddyUsed') ? '' : '.nudge'), { type: 'button', 'aria-label': 'Ask ' + name(), title: 'Ask ' + name() + ' a question', hidden: !!panel, onclick: function () { buddy.open(); } }, icon('message'), h('span', {}, 'Ask ' + name()));
   };
 })();

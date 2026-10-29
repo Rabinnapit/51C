@@ -5,6 +5,13 @@
 .buddy-fab svg { width: 22px; height: 22px; }
 .buddy-fab:hover { filter: brightness(1.08); }
 .buddy-fab[hidden] { display: none; }
+/* until Buddy has been opened once: a small lift every 12 seconds, on the beat, with a ring that spreads and fades */
+.buddy-fab.nudge { animation: buddy-nudge 12s ease-in-out 3s infinite; }
+.buddy-fab.nudge::after { content: ''; position: absolute; inset: -3px; border-radius: inherit; border: 2px solid var(--accent); opacity: 0; pointer-events: none; animation: buddy-ring 12s ease-out 3s infinite; }
+@keyframes buddy-nudge { 0%, 10%, 100% { transform: none; } 2% { transform: translateY(-5px) scale(1.06); } 4.5% { transform: none; } 6.5% { transform: translateY(-3px) scale(1.03); } 8.5% { transform: none; } }
+@keyframes buddy-ring { 0% { opacity: .75; transform: scale(1); } 9% { opacity: 0; transform: scale(1.55); } 9.1%, 100% { opacity: 0; transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .buddy-fab.nudge, .buddy-fab.nudge::after { animation: none; } }
+html[data-motion="reduce"] .buddy-fab.nudge, html[data-motion="reduce"] .buddy-fab.nudge::after { animation: none; }
 @media (max-width: 860px) {
   .buddy-fab { bottom: calc(74px + env(safe-area-inset-bottom, 0px)); padding: 13px; }   /* above the quick menu; icon only */
   .buddy-fab span { display: none; }

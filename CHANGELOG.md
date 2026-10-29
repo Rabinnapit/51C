@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.21.0 (29 October 2026): rise and fall
+
+- **Read-aloud talks like a person reads.** Text is now spoken piece by piece, each with its own tone: questions rise,
+  sentences settle, a heading comes a little slower with a breath after it, a short list is said in one breath
+  ("supervisor, training approver, and KMG"), a long one item by item, answer choices with a beat between them, a
+  paragraph ends with a longer pause and the last sentence of a passage settles down. Lessons are read with their
+  section titles, paragraphs and Remember bullets kept, how-tos step by step, flashcards front then back.
+- **Tone setting.** Settings & help → Display → Read aloud has Lively (the default) and Even, beside the voice and
+  speed. The first Listen tap shows once where to change the voice and tone.
+- **More words said right.** FAR and DFARS cites read "fifteen point four oh four dash one", Part IV is "Part four",
+  Table 4-2 is "Table 4 dash 2", a parenthesis becomes an aside between commas, plurals come out as "K O's", capitals
+  used for emphasis (NOT, FIRST) stay words, SAM.gov is "sam dot gov", and CPARS, GFEBS, QASP, TINA, JAM, SPOT, FOO,
+  FOIA, MICC, DFAS, GWAC, MIPR, DPCAP, BATNA, GAAP and a dozen more are said the way contracting people say them.
+- **Buddy says hello.** The chat bubble lifts gently every 12 seconds, on the beat, with a soft ring, until Buddy has
+  been opened once; never under Less motion.
+
 ## 0.20.0 (29 October 2026): a voice you choose, that talks like a person
 
 - **Pick the voice.** Settings & help → Read aloud lists every English voice on the phone or computer, best first, with
