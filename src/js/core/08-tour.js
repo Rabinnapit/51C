@@ -77,7 +77,7 @@
       { title: 'How-to guides', target: function () { return side(navItem('howto'), 'learn'); },
         text: '13 step-by-step checklists for real tasks: your first week, signing up for a course in AITAS, scheduling the exam, a simplified buy, a modification, closeout and more.' },
       { title: 'Practice', target: function () { return side(navGroup('Practice'), 'quiz'); },
-        text: 'The practice test has 374 questions, each answer explained with where it is written. Practice by exam area, retry your misses, or take a timed simulator weighted like CON 3990V. Flashcards bring back what you miss.' },
+        text: 'The practice test has 384 questions, each answer explained with where it is written. Practice by exam area, retry your misses, or take a timed simulator weighted like CON 3990V. Flashcards bring back what you miss.' },
       { title: 'Arcade', optional: true, target: function () { return narrow() ? null : navItem('arcade'); },
         text: 'Six games on the same facts: RPG battles, a supply convoy, artillery, a qualification range, a space shooter and a sorting yard. Pick a pace from Recruit to Elite; every run ends with a study list.' },
       { title: 'Look it up', target: function () { return side(navGroup('Look it up'), 'glossary'); },

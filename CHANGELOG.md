@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.15.0 (29 October 2026): what to trust from outside the guide
+
+- **Study material from other places** on the exam page (Certification, The exam), in three picture cards: use first
+  (CON 3910, the exam FAQ blueprint, the FAR Companion, the whole RFO in one searchable PDF, FAI's FAR Overhaul hub with
+  WarU CONNECT Live, Pearson's demo test), check before you trust (Quizlet and other free sites: check the date, every
+  dollar figure and every part title; the old "communications, discussions and clarifications" answer), and skip
+  (sets sold as the real exam). The data is `exam.outside` in `cert.json`; `content/OUTSIDE-SOURCES.md` records what was
+  checked on 29 October 2026 and why nothing outside was copied in.
+- **Ten new practice questions** (384 in all) for the competencies the bank covered thinly against the official
+  blueprint: 1.1 Skills and Roles, 1.5 Situational Assessment, 1.6 Team Dynamics, 2.2.1 Plan Sales, 2.2.2 Prepare Offer
+  and 3.1.2 Plan Negotiations, written from the DoW Contracting Competency Model and RFO FAR 15.408-1, with balanced
+  option lengths.
+- **Five new official links:** FAR Companion (Version 2.0), the searchable RFO PDF, the FAR Overhaul FAQs, FAI's FAR
+  Overhaul training hub and the Pearson VUE demo test.
+
 ## 0.14.2 (29 October 2026): install the app from the browser
 
 - People who scan the QR code land in a browser, so the website now shows a **Get the B2B Guide app** card (after the

@@ -303,7 +303,7 @@
   A.register({
     id: 'contract-quest', title: 'Contract Quest', icon: '⚔️', accent: '#b98cff', genre: 'RPG battles', music: 'quest',
     tagline: 'Fight through the four exam areas and the Exam Citadel. Right answers fire your RPG; wrong ones let the monsters hit back.',
-    drills: 'All 374 bank questions, by exam area',
+    drills: 'All 384 bank questions, by exam area',
     controls: 'Answer with 1 to 4, A to D, or a tap; Enter continues. Three right in a row charges a Warrant Strike (triple damage on your next right answer). Fast answers and streaks hit harder. Items: a 50/50 scroll removes two wrong answers; a potion gives back a heart. Clear a realm without losing a heart for three stars.',
     aspect: [0.95, 2.3], countdown: false, letterKeys: true, outTitle: 'Defeated',
     dataOk: function (D) { return bankOf(D).length >= 40; },

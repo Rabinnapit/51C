@@ -74,6 +74,19 @@
       root.appendChild(h('div.grid.cols-2.study-tips', {}, E.study.map(function (s) { return h('div.card.tight', {}, h('div.row.tight', {}, h('span.tip-ic', {}, icon(s.icon)), h('b', {}, s.t)), h('p.small.mt-2', {}, s.d)); })));
       if (E.study_source) root.appendChild(h('p.tiny.muted.mt-2', {}, E.study_source));
     }
+    // what to trust from outside the guide: official first, free decks checked, "real exam" sets skipped
+    var O = E.outside;
+    if (O && (O.tiers || []).length) {
+      root.appendChild(h('div.section-head', {}, h('h2', {}, O.title)));
+      if (O.lede) root.appendChild(h('p.small', {}, O.lede));
+      root.appendChild(h('div.grid.cols-3.outside-tiers.mt-3', {}, O.tiers.map(function (t) {
+        return h('div.callout.' + t.tone, {}, icon(t.icon), h('div', {}, h('b', {}, t.t), h('ul.tips', {}, (t.items || []).map(function (it) {
+          var go = it.href ? h('a', { href: it.href }, it.link) : it.url ? h('a', { href: it.url, target: '_blank', rel: 'noopener' }, it.link) : null;
+          return h('li', {}, it.t, go ? ' ' : null, go);
+        }))));
+      })));
+      if (O.checked) root.appendChild(h('p.tiny.muted.mt-2', {}, O.checked));
+    }
     root.appendChild(h('div.section-head', {}, h('h2', {}, 'The exam, step by step'), h('div.row.tight', {}, X.docButton('exam-roadmap', 'Official roadmap'), X.docButton('exam-flowchart', 'Official flowchart'))));
     root.appendChild(h('div.card', {}, X.journey()));
     root.appendChild(h('div.section-head', {}, h('h2', {}, 'The fine print')));

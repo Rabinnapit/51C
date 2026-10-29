@@ -288,5 +288,15 @@
    "options": [{"text": "Not considered", "correct": true, "why": "Late offers are generally rejected, with narrow exceptions stated in the rules and solicitation."},
      {"text": "Considered if they are the lowest price", "correct": false, "why": "Price does not cure lateness."},
      {"text": "Always considered", "correct": false, "why": "Deadlines protect fairness."},
-     {"text": "Considered if they are within 24 hours", "correct": false, "why": "There is no 24-hour grace period."}]}
+     {"text": "Considered if they are within 24 hours", "correct": false, "why": "There is no 24-hour grace period."}]},
+  {"id": "Q1905", "lesson": "L19", "phase": "pre", "comp": "2.2.1", "d": 1, "stem": "In the competency model, Plan Sales is the seller's work to:", "cite": "DoW Contracting Competency Model 2.2.1",
+   "options": [{"text": "Understand the customer's needs, size up the competition and plan its sales strategy", "correct": true, "why": "That is the model's definition: understand the requirement, assess the competition and organize presales work into a market strategy."},
+     {"text": "Assemble and submit the offer that answers the Government's solicitation", "correct": false, "why": "That is Prepare Offer, the next task, where the seller carries out its sales plan."},
+     {"text": "Negotiate final prices with the contracting officer after the competitive range is set", "correct": false, "why": "Negotiation belongs to the Award phase (Plan Negotiations), not to the seller's pre-award planning."},
+     {"text": "Study the Government's past evaluations so it can plan a protest in advance", "correct": false, "why": "Protests are disagreements in the Award phase; Plan Sales is about winning business before an offer is made."}]},
+  {"id": "Q1906", "lesson": "L19", "phase": "pre", "comp": "2.2.2", "d": 1, "stem": "Which seller task is part of Prepare Offer?", "cite": "DoW Contracting Competency Model 2.2.2",
+   "options": [{"text": "Writing and pricing the proposal so it answers the solicitation", "correct": true, "why": "Prepare Offer is the seller carrying out its sales plan as it assembles an offer to win the business."},
+     {"text": "Choosing which Government markets to go after over the next year", "correct": false, "why": "Choosing markets is sales planning (Plan Sales), done before any one offer."},
+     {"text": "Writing the evaluation factors that go in Section M of the solicitation", "correct": false, "why": "Section M is written by the Government buyer, not by the seller."},
+     {"text": "Reviewing and approving the Government's independent cost estimate", "correct": false, "why": "The independent Government cost estimate is an internal Government document; sellers never see or approve it."}]}
 ]

@@ -75,6 +75,92 @@
       {"icon": "users", "t": "Plan it with your supervisor", "d": "Schedule when you feel ready (seats are not scarce), ask for study time, and form a study group if it helps."}
     ],
     "study_source": "From the WarU exam and prep-course managers: Contracting Conversations podcast \"CON 3990V: June 2024 Update\" and the WarU webinar \"CON 3900/3910V Preparatory Course and CON 3990 Certification Exam\" (December 2024). Pass-rate numbers are from those dates.",
+    "outside": {
+      "title": "Study material from other places",
+      "lede": "Free decks and study sites are everywhere. The exam moved to the overhauled FAR (RFO) on 31 March 2026, and most of what is online is older than that.",
+      "tiers": [
+        {
+          "tone": "ok",
+          "icon": "shield",
+          "t": "Use first: official and current",
+          "items": [
+            {
+              "t": "CON 3910 and its 150-question practice exam.",
+              "href": "#/courses?id=con3910",
+              "link": "CON 3910"
+            },
+            {
+              "t": "The exam FAQ: its blueprint shows how many questions each topic gets.",
+              "href": "#/official?doc=exam-faq&show=official",
+              "link": "Open the FAQ"
+            },
+            {
+              "t": "FAR Companion: the FAR Council's plain-language guide to the overhauled FAR.",
+              "url": "https://www.acquisition.gov/sites/default/files/page_file_uploads/far-companion.pdf",
+              "link": "acquisition.gov"
+            },
+            {
+              "t": "The whole overhauled FAR in one searchable PDF.",
+              "url": "https://www.acquisition.gov/sites/default/files/page_file_uploads/RFO.pdf",
+              "link": "acquisition.gov"
+            },
+            {
+              "t": "FAI's FAR Overhaul hub: WarU CONNECT Live sessions and short RFO courses.",
+              "url": "https://www.fai.gov/node/40180",
+              "link": "fai.gov"
+            },
+            {
+              "t": "Pearson VUE's demo test: see the exam screen before test day.",
+              "url": "https://www.pearsonvue.com/us/en/redirects/demo-test.html",
+              "link": "pearsonvue.com"
+            }
+          ]
+        },
+        {
+          "tone": "warn",
+          "icon": "eye",
+          "t": "Check before you trust: Quizlet and other free sites",
+          "items": [
+            {
+              "t": "Look at the date. Anything made before 31 March 2026 teaches the old FAR."
+            },
+            {
+              "t": "Check every dollar figure: micro-purchase $15,000, SAT $350,000.",
+              "href": "#/far?tab=numbers",
+              "link": "Key numbers"
+            },
+            {
+              "t": "Check every part title. Part 13 is now Simplified Procedures for Noncommercial Acquisitions, and Part 19 is Small Business.",
+              "href": "#/far?tab=parts",
+              "link": "Part titles"
+            },
+            {
+              "t": "An old answer to watch for: exchanges after proposals arrive are now clarifications and negotiations, not \"communications, discussions and clarifications\"."
+            },
+            {
+              "t": "Nobody checks free decks. Use them to find topics, then learn the rule from the FAR or this guide."
+            }
+          ]
+        },
+        {
+          "tone": "danger",
+          "icon": "ban",
+          "t": "Skip: \"real exam questions\"",
+          "items": [
+            {
+              "t": "WarU does not release exam questions."
+            },
+            {
+              "t": "A set sold as the real exam, \"most tested questions\" or \"verified answers\" is made up or leaked."
+            },
+            {
+              "t": "Made-up sets are often wrong, and using leaked ones is cheating."
+            }
+          ]
+        }
+      ],
+      "checked": "Checked 29 October 2026 against the CON 3990V exam FAQ (1 October 2026), acquisition.gov, FAI.gov and Pearson VUE. Quizlet decks and other free study sites were reviewed and none was copied in: most were made before the RFO, and some had wrong answers."
+    },
     "testday": [
       "Sleep well and eat breakfast. An empty stomach is a distraction you do not need.",
       "Arrive early with only your photo ID; the name must match your Pearson profile exactly. Your phone, smartwatch and notes go in a locker.",
