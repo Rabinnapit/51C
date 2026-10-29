@@ -77,10 +77,34 @@
       h('div.field', {}, h('div.label', {}, 'Motion'), seg([['', 'Normal'], ['reduce', 'Less motion']], CORB.get('settings.motion') || '', function (v) { CORB.setMotion(v); })),
       sw('settings.glossaryLinks', 'Underline acronyms I can tap for a meaning', true)));
     root.appendChild(h('div.section-head', {}, h('h2', {}, 'Read aloud')));
+    var SAMPLE = 'This is how B2B Exam Prep sounds. The contracting officer, the KO, is the only person who can bind the Government to a contract. The micro-purchase threshold is $15,000.';
+    // the device's English voices, natural ones first; the chosen one lives in settings.voice
+    function voicePicker() {
+      var sel = h('select#tts-voice.input', { 'aria-label': 'Voice' });
+      function fill() {
+        var list = CORB.speech.voices(), cur = CORB.get('settings.voice', '');
+        sel.innerHTML = '';
+        sel.appendChild(h('option', { value: '' }, 'Best voice on this device' + (list[0] ? ': ' + list[0].name : '')));
+        function group(label, vs) { if (!vs.length) return; var g = h('optgroup', { label: label }); vs.forEach(function (v) { g.appendChild(h('option', { value: v.id }, v.name)); }); sel.appendChild(g); }
+        group('Natural voices', list.filter(function (v) { return v.natural; })); group('Standard voices', list.filter(function (v) { return !v.natural; }));
+        sel.value = list.some(function (v) { return v.id === cur; }) ? cur : '';
+      }
+      fill();
+      var off = CORB.on('voices', function () { if (sel.isConnected) fill(); else off(); });
+      sel.addEventListener('change', function () { CORB.speech.setVoice(sel.value); CORB.speech.speak(SAMPLE); });
+      return sel;
+    }
+    var ok = CORB.speech.available;
     root.appendChild(h('div.card.stack', {},
-      CORB.speech.available ? sw('settings.tts', 'Show Listen buttons', true) : h('p.muted', {}, 'This browser has no built-in voice, so Listen buttons are hidden. Edge on Windows has good voices.'),
-      CORB.speech.available ? h('div.field', {}, h('label', { for: 'tts-rate' }, 'Speed'), h('div.row', {}, h('span.small', {}, 'Slower'), rate, h('span.small', {}, 'Faster'))) : null,
-      CORB.speech.available ? h('div', {}, h('button.btn', { type: 'button', onclick: function () { CORB.speech.speak('This is how B2B Exam Prep sounds. A contracting officer is the only person who can bind the Government to a contract.'); } }, icon('volume'), 'Test the voice')) : null));
+      ok ? sw('settings.tts', 'Show Listen buttons', true) : h('p.muted', {}, 'This browser has no built-in voice, so Listen buttons are hidden. Edge on Windows has good voices.'),
+      ok ? h('div.field', {}, h('label', { for: 'tts-voice' }, 'Voice'), voicePicker(), h('p.small.muted', {}, 'Voices come from your phone or computer; natural ones sound like a person. The list shows the best first.')) : null,
+      ok ? h('div.field', {}, h('label', { for: 'tts-rate' }, 'Speed'), h('div.row', {}, h('span.small', {}, 'Slower'), rate, h('span.small', {}, 'Faster'))) : null,
+      ok ? h('div.row', {}, h('button.btn', { type: 'button', onclick: function () { CORB.speech.speak(SAMPLE); } }, icon('volume'), 'Hear a sample'), h('button.btn.ghost', { type: 'button', onclick: function () { CORB.speech.stop(); } }, icon('stop'), 'Stop')) : null,
+      ok ? h('details.inst-more', {}, h('summary', {}, 'Want a more human voice?'), h('ul.tips', {},
+        h('li', {}, h('b', {}, 'iPhone or iPad: '), 'Settings → Accessibility → Spoken Content → Voices → English → download an Enhanced or Premium voice (Ava, Zoe, Evan). Reload this page, then pick it above.'),
+        h('li', {}, h('b', {}, 'Android: '), 'Settings → General management (or System) → Language → Text-to-speech → Google Speech Services → Install voice data. Samsung phones also offer Samsung text-to-speech voices.'),
+        h('li', {}, h('b', {}, 'Windows: '), 'Microsoft Edge has natural voices built in (Aria, Guy, Jenny); Chrome has only the basic ones.'),
+        h('li', {}, h('b', {}, 'Mac: '), 'System Settings → Accessibility → Spoken Content → System voice → Manage Voices → download an Enhanced voice.'))) : null));
   }
 
   function data(root, h, icon) {

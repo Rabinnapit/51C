@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.20.0 (29 October 2026): a voice you choose, that talks like a person
+
+- **Pick the voice.** Settings & help → Read aloud lists every English voice on the phone or computer, best first, with
+  the natural ones (Apple's Enhanced and Premium voices, Google's and Samsung's on Android, Microsoft's natural voices
+  in Edge) grouped at the top; "Best voice on this device" is the default. Hear a sample, set the speed, and read how
+  to download a more human voice on an iPhone, Android, Windows or Mac.
+- **Said the way people say it.** Read-aloud now spells or says acronyms the way contracting people do (K O, "core",
+  "eye-tass", "dee-fars", "fifty-one charlie", "eleven oh two"), reads course numbers as "thirteen hundred V" and
+  "thirty-nine ninety V", says "Department of War" for DoW, and turns bullets and markdown into pauses. Every Listen
+  button, lesson picture and Buddy answer uses it.
+
 ## 0.19.2 (29 October 2026): the Contracting Master Gunner
 
 - Your training contact is the **Contracting Master Gunner (KMG)**, the unit's senior 51C trainer: My plan, the exam
