@@ -82,3 +82,7 @@
   html[data-side="mini"] .side .side-collapse span { display: none; }
   html[data-side="mini"] .side .side-collapse svg { transform: rotate(180deg); }
 }
+
+/* top-bar buttons keep their tap size when the title is long */
+.topbar .btn.icon { flex: none; min-width: 40px; }
+.topbar .menu-btn { min-width: 44px; }

@@ -150,6 +150,7 @@
     if (/^(hi|hello|hey|yo|sup|good (morning|afternoon|evening)|hola)\b/.test(s)) return 'Hi! Ask me anything about contracting, the courses or the exam, in plain words. Try one of the questions below.';
     if (/\bthank/.test(s)) return 'Any time. Ask me another one.';
     if (/\b(who|what) (are|r) (you|u)\b|who made you|are you (an? )?(ai|robot|bot)/.test(s)) return 'I am ' + name() + ', the study buddy built into B2B Exam Prep' + (CORB.meta().owner ? ' by ' + CORB.meta().owner : '') + '. I am not an AI: I find the part of the guide that answers you, right on this device, so I work with no signal. For more depth, the buttons under my answers send your question to an AI in your own account.';
+    if (/\b(voice|voices|accent|male voice|female voice|man.s voice|woman.s voice|read aloud|read-aloud|listen button|robotic)\b/.test(s)) return 'Pick a voice in Settings & help → Display → Read aloud. The App voices (Amber and Joe for US English, Cori and Leo for UK English; Joe and Leo are men) download once, about 63 MB each plus 31 MB the first time, and then work offline on any phone. The list also shows the voices your phone already has; on an iPhone the Apple Enhanced and Premium voices sound best. Speed and Tone are on the same card.';
     if (/^(help|\?)$/.test(s)) return 'Ask like you would ask a mentor: "what is a J&A", "how much is the SAT", "when do I have to protest", "which course comes after CON 1200V", "how do I get a CAC". I answer from the guide and show where to read more.';
     return null;
   }

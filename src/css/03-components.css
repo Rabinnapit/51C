@@ -180,7 +180,7 @@ button.card { text-align: left; width: 100%; display: block; font: inherit; colo
 .empty h3 { color: var(--ink); margin-bottom: 6px; font-size: var(--fs-lg); }
 
 /* ---- citations and glossary terms in running text ---- */
-.cite { display: inline-flex; align-items: center; gap: 4px; padding: 1px 7px; border-radius: 5px; background: var(--bg-2); border: 1px solid var(--line); font-family: var(--font-mono); font-size: .8em; color: var(--ink-2); text-decoration: none; white-space: nowrap; }
+.cite { display: inline-flex; align-items: center; gap: 4px; padding: 5px 9px; min-height: 30px; border-radius: 5px; background: var(--bg-2); border: 1px solid var(--line); font-family: var(--font-mono); font-size: .8em; color: var(--ink-2); text-decoration: none; white-space: nowrap; }
 a.cite:hover { border-color: var(--accent); color: var(--accent); }
 .gl { text-decoration: underline dotted var(--accent-2); text-decoration-thickness: 2px; text-underline-offset: .2em; cursor: help; border-radius: 3px; }
 .gl:hover, .gl:focus-visible { background: var(--accent-2-soft); }

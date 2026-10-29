@@ -122,7 +122,7 @@
 /* header: title and the Play button */
 .lf-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
 .lf-head .lf-title { margin: 0; }
-.lf-play { flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: var(--r-pill); border: 1px solid var(--line); background: var(--panel-2); color: var(--ink-2); font: inherit; font-size: var(--fs-xs); font-weight: 700; cursor: pointer; }
+.lf-play { flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; min-height: 36px; border-radius: var(--r-pill); border: 1px solid var(--line); background: var(--panel-2); color: var(--ink-2); font: inherit; font-size: var(--fs-xs); font-weight: 700; cursor: pointer; }
 .lf-play svg { width: 14px; height: 14px; }
 .lf-play:hover { border-color: var(--lf); color: var(--lf); }
 .lf-play[aria-pressed="true"] { background: var(--lf); border-color: var(--lf); color: var(--panel); }

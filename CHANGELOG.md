@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.25.1 (30 October 2026): the sweep
+
+- **Eleven more questions** on the three thin job lessons: contingency thresholds and the determination behind them,
+  the field ordering officer, the SF 44, SAM registration and exclusions, ACWS, why system roles are requested in
+  week one, exam attempts and spacing, closed book, CON 3900V after a failed try, and the 72 seconds a question.
+- **Lesson 33 cite fixed.** Contractor personnel accountability and SPOT are DFARS 225.371-3 and clause 252.225-7040,
+  not DFARS 225.770 (which is the Chinese military companies prohibition).
+- **Buddy answers voice questions** ("male voice", "accent", "robotic") with where the App voices are and which are men.
+- **Bigger tap targets on phones.** FAR cite chips, the Play button on lesson pictures, the glossary letter buttons and
+  the top-bar buttons no longer fall under 36 pixels on narrow screens; the top-bar buttons stop shrinking under a
+  long title. Every screen was checked at phone width for sideways scrolling, unlabeled buttons and clipped text.
+
 ## 0.25.0 (30 October 2026): Range Day, the first game in real 3D
 
 - **Range Day.** The qualification range rebuilt in real 3D, first in the Arcade: the tower reads a glossary clue, three

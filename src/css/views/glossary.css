@@ -2,7 +2,7 @@
 .v-glossary .gl-tools { position: sticky; top: calc(var(--top-h) + env(safe-area-inset-top, 0px)); z-index: 5; background: var(--bg); padding: 8px 0 12px; display: flex; flex-direction: column; gap: 10px; border-bottom: 1px solid var(--line); margin-bottom: var(--space-4); }
 .v-glossary .search .input { min-height: 50px; font-size: var(--fs-lg); }
 .v-glossary .az { display: flex; flex-wrap: wrap; gap: 4px; }
-.v-glossary .az button { min-width: 34px; min-height: 34px; padding: 0 6px; border-radius: 8px; font-weight: 800; font-size: .8rem; color: var(--ink-2); border: 1px solid transparent; }
+.v-glossary .az button { min-width: 40px; min-height: 40px; padding: 0 6px; border-radius: 8px; font-weight: 800; font-size: .8rem; color: var(--ink-2); border: 1px solid transparent; }
 .v-glossary .az button:hover:not(:disabled) { border-color: var(--line-2); }
 .v-glossary .az button.on { background: var(--ink); color: var(--bg); }
 .v-glossary .az button:disabled { color: var(--muted-2); opacity: .45; cursor: default; }
