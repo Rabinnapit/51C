@@ -60,7 +60,7 @@
     arr(ex.testday).forEach(function (s) { add('The exam', 'Test day', s, 'cert', { tab: 'exam' }, 'test day exam center pearson online', 1); });
     arr(ex.retake).forEach(function (s) { add('The exam', 'Retakes', s, 'cert', { tab: 'exam' }, 'retake fail failed again attempts wait', 1.1); });
     arr(cert.requirements).forEach(function (s) { add('Requirement', pick(s, T_KEYS) || 'Requirement', pick(s, X_KEYS), 'cert', { tab: 'overview' }, 'need required requirement certification', 1.2); });
-    arr(cert.deadlines).forEach(function (s) { add('Deadline', pick(s, T_KEYS) || 'Certification deadline', pick(s, X_KEYS), 'cert', { tab: 'overview' }, 'months deadline grace time', 1.2); });
+    arr(cert.deadlines).forEach(function (s) { add('Deadline', pick(s, T_KEYS) || 'Certification deadline', pick(s, X_KEYS), 'cert', { tab: 'overview' }, 'months deadline grace time how long', 1.5); });
     arr(cert.roles).forEach(function (s) { add('Who does what', pick(s, T_KEYS) || 'Role', pick(s, X_KEYS), 'cert', { tab: 'overview' }, 'role who does', 1); });
     if (cert.education) add('Certification', 'Education requirement', cert.education, 'cert', { tab: 'overview' }, 'degree college credits education', 1.1);
     if (reg.intro) add('Registering', 'How to register in AITAS for courses and the exam', reg.intro, 'cert', { tab: 'signup' }, 'aitas register sign up enroll apply', 1.3);
@@ -80,9 +80,13 @@
     D.links().forEach(function (l) { add('Link', l.title, (l.note || '') + ' ' + l.url, 'links', {}, (l.group || '') + ' website link address where find', 1); });
     arr(D.updates().far_updates).forEach(function (u) { add('What changed', u.title + ' (' + u.date + ')', u.body, 'far', { tab: 'new' }, 'changed change new update latest recent overhaul', 1); });
   }
+  var INTENT = [
+    [/how long|how many (months|days|years)|deadline|time limit|grace period|by when|when (do|must|should) i/, 'Deadline', 1.6],
+    [/how much|dollar|\$|threshold|limit/, 'Key number', 1.3], [/which course|what course|course/, 'Course', 1.3],
+    [/how do i|how to|where do i|steps to/, 'How-to', 1.3], [/what is|what does|whats|mean|define|stand for/, 'Term', 1.25]];
   buddy.search = function (q, limit) {
     if (!idx) build();
-    var qs = toks(q), whole = norm(q).split(/\s+/).filter(function (w) { return w && !STOP[w]; }).join(' ');   // the question without its filler
+    var ql = String(q || '').toLowerCase(), qs = toks(q), whole = norm(q).split(/\s+/).filter(function (w) { return w && !STOP[w]; }).join(' ');   // the question without its filler
     if (!qs.length) return [];
     var out = [];
     for (var i = 0; i < idx.length; i++) {
@@ -96,7 +100,9 @@
       if (hits < qs.length) s *= hits / qs.length;                 // a passage that misses half the words ranks low
       var tl = it.title.toLowerCase(), head = tl.replace(/\s*\(.*$/, '').replace(/[?.:]+$/, '');   // "KO (Contracting Officer)" answers "what is a KO"
       if (head === whole || tl === whole) s += 14; else if (whole.length > 2 && tl.indexOf(whole) >= 0) s += 7;
-      out.push({ it: it, s: s * it.w, hits: hits, n: qs.length });
+      s *= it.w;
+      for (var m = 0; m < INTENT.length; m++) if (it.type === INTENT[m][1] && INTENT[m][0].test(ql)) s *= INTENT[m][2];   // the kind of question hints at the kind of answer
+      out.push({ it: it, s: s, hits: hits, n: qs.length });
     }
     out.sort(function (a, b) { return b.s - a.s; });
     return out.slice(0, limit || 6);
