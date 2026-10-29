@@ -221,3 +221,5 @@ a.cite:hover { border-color: var(--accent); color: var(--accent); }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 html[data-motion="reduce"] .reveal { opacity: 1; transform: none; transition: none; }
 @media print { .reveal { opacity: 1; transform: none; } }
+/* the eyebrow line reads at 4.5:1 or better in day and night mode (it was 3.6:1 in day mode) */
+.eyebrow { color: color-mix(in srgb, var(--accent-2) 76%, var(--ink)); }

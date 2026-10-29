@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.19.1 (29 October 2026): $0 to run, and a persona pass
+
+- **Accounts stay awake for free:** `.github/workflows/keepalive.yml` pings the Supabase project every third day, so the
+  free plan never pauses it. No email password reset, by design (no email service to maintain): "Forgot your password?"
+  now explains the no-email way (create a new account; the progress on the device stays) and points at Google sign-in
+  once that is switched on.
+- **Six readers walked through the app** on a phone-sized screen: a brand-new 51C on a Samsung, an 1102 on an iPhone,
+  a sharp E-6 in a hurry, a reader with the largest text and less motion, an instructor checking claims, and a NIPR
+  user with the offline file. Found: no page overflows at any text size, the quick menu and the chat bubble are at
+  least 48 px to tap, less motion turns the scroll animation off, the offline file has Buddy and no network code, and
+  the first open is install page → terms (291 words) → tour offer. Changed from their feedback: the eyebrow line is
+  darker (4.5:1 contrast, it was 3.6:1), the proof chip names its year ("79% pass on the first try (FY26)"), Buddy's
+  AI row says it needs the internet, and the chat bubble never covers the last button on a page.
+
 ## 0.19.0 (29 October 2026): Buddy, a new Home, pages that move
 
 - **Buddy, the study buddy.** A chat bubble on every page, in every edition (the offline file too). Ask in plain

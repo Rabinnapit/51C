@@ -101,8 +101,11 @@ comes back on any device where they sign in, and Home greets them by first name.
      never into the app or this repository.
   4. Set `sync.google` to true in `meta.json`, build and publish: the sign-in and sign-up pop-ups then show
      "Continue with Google".
-- **Free-plan note:** Supabase pauses a free project after about a week with no activity. If accounts stop working after
-  a quiet spell, open the project in the dashboard and choose Restore. The guide keeps working on each device meanwhile.
+- **Free-plan note:** Supabase pauses a free project after about a week with no activity. `.github/workflows/keepalive.yml`
+  pings it every third day (free; GitHub turns scheduled workflows off after 60 days without a push, and any push turns
+  them on again). If accounts ever stop working after a quiet spell, open the project in the dashboard and choose
+  Restore. The guide keeps working on each device meanwhile. There is no email password reset by design (no email to
+  maintain): a reader who forgets a password creates a new account, or the owner sets a new password in the dashboard.
 - **Managing users:** Supabase dashboard → project 51C → Authentication → Users (deleting a user deletes their progress).
 - **Sources:** `supabase/migrations/` (the table and its rules), `supabase/functions/signup/` and
   `supabase/functions/delete-account/`.

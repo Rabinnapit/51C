@@ -244,12 +244,13 @@
     } }, email, pw.el, err, btn);
     CORB.ui.modal({ title: 'Sign in to B2B Exam Prep', body: h('div.acct-modal', {},
       c.google ? googleButton(h) : null, c.google ? h('div.acct-or', {}, h('span', {}, 'or')) : null, form,
-      c.reset ? h('button.linkish', { type: 'button', onclick: function () {
-        err.textContent = '';
+      h('button.linkish', { type: 'button', onclick: function () {
+        err.className = 'acct-msg bad'; err.textContent = '';
+        if (!c.reset) { err.className = 'acct-msg'; err.textContent = 'This app sends no email, so there is no reset link. Create a new account with a new password: the progress on this device stays with you' + (c.google ? ', or continue with Google, which needs no password.' : '.'); return; }
         if (!email.value) { err.textContent = 'Type your email above first.'; return; }
         acct.sendReset(email.value).then(function () { err.className = 'acct-msg ok'; err.textContent = 'Check your email for a link to set a new password.'; },
           function (x) { err.className = 'acct-msg bad'; err.textContent = x.message; });
-      } }, 'Forgot your password?') : null,
+      } }, 'Forgot your password?'),
       h('p.acct-switch', {}, 'New here? ', h('button.linkish', { type: 'button', onclick: function () { acct.openSignUp(email.value); } }, 'Create an account'))) });
     setTimeout(function () { try { (prefill ? pw.input : email).focus(); } catch (e) {} }, 60);
   };

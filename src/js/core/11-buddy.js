@@ -127,7 +127,7 @@
   function scrollDown() { if (log) log.scrollTop = log.scrollHeight; }
   function say(node, who) { var m = h('div.bmsg.' + who, {}, node); log.appendChild(m); scrollDown(); return m; }
   function aiRow(q) {
-    return h('div.buddy-ai', {}, h('span', {}, 'More depth? Ask'), buddy.aiLinks(q).map(function (a) { return h('a.btn.sm.ghost', { href: a.url, target: '_blank', rel: 'noopener' }, icon('external'), a.label); }));
+    return h('div.buddy-ai', {}, h('span', {}, 'More depth? Ask online:'), buddy.aiLinks(q).map(function (a) { return h('a.btn.sm.ghost', { href: a.url, target: '_blank', rel: 'noopener' }, icon('external'), a.label); }));
   }
   function openIt(it) { CORB.go(it.view, it.params); if (narrow()) buddy.close(); }
   function card(it) {

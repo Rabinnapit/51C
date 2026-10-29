@@ -39,3 +39,4 @@
 .buddy-ask { display: flex; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--line); background: var(--panel); }
 .buddy-ask .input { flex: 1; min-width: 0; }
 .buddy-foot { margin: 0; padding: 0 12px 10px; font-size: .7rem; color: var(--muted); }
+@media (max-width: 860px) { .content:not(.full) { padding-bottom: calc(150px + env(safe-area-inset-bottom, 0px)); } }   /* the bubble never covers the last button */
