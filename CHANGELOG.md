@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.23.0 (29 October 2026): Continue with Google
+
+- **Sign in with Google.** The sign-in and create-account pop-ups now start with a Continue with Google button: one tap
+  with a Google account, no password to make up or remember, and the app says hello by the name on that account.
+  Progress saves to the account the same way as with an email address and a password, and the two ways can be mixed:
+  an email account and a Google account with the same address are the same reader. Switched on by the owner in the
+  Supabase and Google Cloud dashboards (README → Accounts); the Google client secret lives only there, never in the app
+  or this repository. Password reset stays off: the app still sends no email. A Google sign-in finished too late (the
+  sign-in link lives a few minutes) now says so and asks for another tap, instead of landing silently on Home.
+
 ## 0.22.0 (29 October 2026): the content audit
 
 - **Every lesson and question read against the FAR Overhaul.** All 35 lessons and 384 questions were checked, cite by

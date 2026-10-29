@@ -168,14 +168,19 @@
     return call('/auth/v1/recover?redirect_to=' + encodeURIComponent(home()), { method: 'POST', body: { email: String(email || '').trim().toLowerCase() } });
   };
 
-  // back from Google or from a password-reset email: the sign-in arrives in the address after #
+  // back from Google or from a password-reset email: the sign-in arrives in the address after #. An error that Supabase
+  // could not tie to a sign-in (an expired or lost state, say) arrives after ? at the site URL instead.
   function fromRedirect() {
     var raw = location.hash || '';
-    if (raw.indexOf('access_token=') < 0 && raw.indexOf('error_description=') < 0) return;
+    if (raw.indexOf('access_token=') < 0 && raw.indexOf('error_description=') < 0) raw = (location.search || '').indexOf('error_description=') >= 0 ? location.search : '';
+    if (!raw) return;
     var p = {};
-    raw.replace(/^#/, '').split('&').forEach(function (kv) { var i = kv.indexOf('='); if (i > 0) p[decodeURIComponent(kv.slice(0, i))] = decodeURIComponent(kv.slice(i + 1).replace(/\+/g, ' ')); });
+    raw.replace(/^[#?]/, '').split('&').forEach(function (kv) { var i = kv.indexOf('='); if (i > 0) p[decodeURIComponent(kv.slice(0, i))] = decodeURIComponent(kv.slice(i + 1).replace(/\+/g, ' ')); });
     try { history.replaceState(null, '', location.pathname + '#/home'); } catch (e) {}
-    if (p.error_description) { whenFree(function () { CORB.ui.toast(p.error_description, 'warn', 7000); }); return; }
+    if (p.error_description) {
+      var msg = /state has expired|bad_oauth_state/i.test(p.error_description + ' ' + (p.error_code || '')) ? 'That sign-in took too long. Tap Continue with Google again and finish within a few minutes.' : p.error_description;
+      whenFree(function () { CORB.ui.toast(msg, 'warn', 8000); }); return;
+    }
     call('/auth/v1/user', { token: p.access_token }).then(function (u) {
       keep({ access_token: p.access_token, refresh_token: p.refresh_token, expires_in: +p.expires_in || 3600, user: u }, u && u.email, null); changed();
       if (p.type === 'recovery') whenFree(newPassword);

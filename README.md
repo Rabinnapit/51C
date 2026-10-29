@@ -85,9 +85,10 @@ One-time setup (already described here so it can be repeated):
 
 ## Accounts (optional)
 
-Readers tap **Sign in** in the top bar (website and installed app only) to create an account with their name, an email
-address and a password, or to sign in. Their progress then saves to the account a few seconds after each change and
-comes back on any device where they sign in, and Home greets them by first name.
+Readers tap **Sign in** in the top bar (website and installed app only) to continue with their Google account, or to
+create an account with their name, an email address and a password, or to sign in. Their progress then saves to the
+account a few seconds after each change and comes back on any device where they sign in, and Home greets them by first
+name.
 
 - **Where:** the Supabase project **51C** (ref `efnoeusptnedvlaiomaa`, region us-east-1, free plan), kept apart from the
   owner's other Supabase projects. `src/data/meta.json` → `sync` holds its address and the *publishable* key, which is
@@ -96,23 +97,37 @@ comes back on any device where they sign in, and Home greets them by first name.
   read and write only their own row (row-level security); signed-out visitors cannot read the table at all.
 - **Sign-up:** the `signup` function creates accounts that work at once (no confirmation email: the free plan sends only
   a few an hour) and stores the name. `delete-account` deletes the caller's own account and its progress.
-- **Google sign-in and password reset** are built in but switched off (`src/data/meta.json` → `sync.google` and
-  `sync.reset`) until the owner sets them up, by hand, in their own dashboards:
-  1. Supabase dashboard → project 51C → Authentication → URL Configuration: Site URL `https://rabinnapit.github.io/51C/`,
-     redirect URLs `https://rabinnapit.github.io/51C/**` and `http://localhost:8791/**`. This alone makes password
-     reset work: set `sync.reset` to true, build and publish.
-  2. Google Cloud Console, signed in as the owner: a project, the OAuth consent screen (External, app name B2B Exam
-     Prep) and an OAuth client of type Web application with the authorised JavaScript origin
-     `https://rabinnapit.github.io` and the redirect URI `https://efnoeusptnedvlaiomaa.supabase.co/auth/v1/callback`.
-  3. Supabase → Authentication → Providers → Google: switch it on and paste the client ID and client secret there,
-     never into the app or this repository.
-  4. Set `sync.google` to true in `meta.json`, build and publish: the sign-in and sign-up pop-ups then show
-     "Continue with Google".
+- **Google sign-in** is on (`src/data/meta.json` → `sync.google`): the sign-in and sign-up pop-ups start with
+  "Continue with Google". The app sends the reader to Supabase's `/auth/v1/authorize?provider=google` with `redirect_to`
+  set to the page's own address; Supabase sends them to Google and back, and the session arrives after `#` in the
+  address, where `src/js/core/10-account.js` picks it up, saves the first sync and greets the reader by the name on
+  their Google account. A Google account with the same email address as an existing email-and-password account is the
+  same reader (Supabase links identities with the same verified email address). It was set up by hand, by the owner, in
+  two dashboards; the only secret (the Google client secret) lives in those dashboards, never in the app or this
+  repository:
+  1. Supabase dashboard → project 51C → Authentication → URL Configuration: Site URL `https://rabinnapit.github.io/51C/`;
+     redirect URLs `https://rabinnapit.github.io/51C/**`, `http://localhost:8791/**` (the built site served locally)
+     and `http://localhost:8790/**` (the source served locally).
+  2. Google Cloud Console, signed in as the owner (rabinnapit700@gmail.com): project **B2B Exam Prep** (ID
+     `b2b-exam-prep-51c`, no billing account); Google Auth Platform (the OAuth consent screen): External, app name
+     B2B Exam Prep, the owner's support email, authorized domains `rabinnapit.github.io` and `supabase.co`, published
+     (in production: only the basic sign-in scopes are used, so no Google verification is needed); an OAuth client of
+     type Web application named "B2B Exam Prep web" with the authorized JavaScript origins
+     `https://rabinnapit.github.io` and `http://localhost:8791` and the authorized redirect URI
+     `https://efnoeusptnedvlaiomaa.supabase.co/auth/v1/callback`.
+  3. Supabase → Authentication → Sign In / Providers → Google: enabled, with that client's ID and secret pasted in.
+  To switch Google off again, set `sync.google` to false, build and publish; readers who signed in with Google stay
+  signed in on their devices until they sign out. (Should the Google client ever be reset, Supabase holds a Client
+  Secret you can replace there; nothing in the repository changes.)
+- **Password reset** is built in but stays off (`sync.reset` false) because the app sends no email by design. Turning it
+  on would need only `sync.reset` true, a build and a publish (the Site URL and redirect URLs above are already set),
+  but then Supabase would send reset emails from its shared free sender, which allows only a few an hour.
 - **Free-plan note:** Supabase pauses a free project after about a week with no activity. `.github/workflows/keepalive.yml`
   pings it every third day (free; GitHub turns scheduled workflows off after 60 days without a push, and any push turns
   them on again). If accounts ever stop working after a quiet spell, open the project in the dashboard and choose
   Restore. The guide keeps working on each device meanwhile. There is no email password reset by design (no email to
-  maintain): a reader who forgets a password creates a new account, or the owner sets a new password in the dashboard.
+  maintain): a reader who forgets a password continues with Google or creates a new account, or the owner sets a new
+  password in the dashboard.
 - **Managing users:** Supabase dashboard → project 51C → Authentication → Users (deleting a user deletes their progress).
 - **Sources:** `supabase/migrations/` (the table and its rules), `supabase/functions/signup/` and
   `supabase/functions/delete-account/`.
