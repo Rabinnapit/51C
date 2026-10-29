@@ -53,7 +53,7 @@
     KO: 'K O', KOs: 'K Os', COR: 'core', CORs: 'cores', PWS: 'P W S', SOW: 'S O W', IGCE: 'I G C E', PIID: 'pid', PIIDs: 'pids', CLIN: 'clin', CLINs: 'clins', SLIN: 'slin', UCF: 'U C F',
     CAC: 'cack', NIPR: 'nipper', SIPR: 'sipper', FOB: 'fob', OnVUE: 'on view', RFO: 'R F O', FFP: 'F F P', CPFF: 'C P F F', IDIQ: 'I D I Q', GSA: 'G S A', SBA: 'S B A', OJT: 'O J T',
     NCO: 'N C O', NCOs: 'N C Os', MOS: 'M O S', MPT: 'M P T', SAT: 'S A T', PALT: 'palt', NAICS: 'nakes', SAM: 'sam', CAGE: 'cage', GAO: 'G A O', WAWF: 'wawf', PIEE: 'P I E E',
-    FPDS: 'F P D S', CAMP: 'camp', IDP: 'I D P', CLP: 'C L P', CLPs: 'C L Ps', FAR: 'far', DFARS: 'dee-fars', AFARS: 'ay-fars', FAC: 'F A C', FAQ: 'F A Q', PDF: 'P D F', QR: 'Q R',
+    FPDS: 'F P D S', CAMP: 'camp', CON: 'con', ATRRS: 'atters', CONUS: 'konus', OCONUS: 'oh-konus', DAWIA: 'da-wee-ah', COTS: 'cots', CICA: 'sika', SBIR: 'sibber', KMG: 'K M G', IDP: 'I D P', CLP: 'C L P', CLPs: 'C L Ps', FAR: 'far', DFARS: 'dee-fars', AFARS: 'ay-fars', FAC: 'F A C', FAQ: 'F A Q', PDF: 'P D F', QR: 'Q R',
     B2B: 'B to B', '51C': 'fifty-one charlie', '51Cs': 'fifty-one charlies', '1102': 'eleven oh two', '1102s': 'eleven oh twos', 'e.g.': 'for example', 'i.e.': 'that is', 'vs.': 'versus', 'U.S.': 'U S', 'U.S.C.': 'U S code' };
   var SAY_RE = new RegExp('(^|[^A-Za-z0-9&])(' + Object.keys(SAY).sort(function (a, b) { return b.length - a.length; }).map(function (k) { return k.replace(/[.&]/g, '\\$&'); }).join('|') + ')(?=$|[^A-Za-z0-9&])', 'g');
   sp.prepare = function (text) {
