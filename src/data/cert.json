@@ -216,7 +216,7 @@
   },
   "faq": [
     {"q": "Do I have to finish in 6 months?", "a": "The rule is 36 months for the whole certification. Many units set a faster local goal, often 6 months for the courses and the exam. Ask your supervisor what your goal is; My plan uses whatever goal you pick."},
-    {"q": "Can I take the exam before I finish the courses?", "a": "Eligibility for CON 3990V is being coded in contracting plus your supervisor's approval, and passing the exam never replaces a course. It is built to come after the courses, so finish them (and CON 3910) first. Your training office decides when you sit for it."},
+    {"q": "Can I take the exam before I finish the courses?", "a": "Eligibility for CON 3990V is being coded in contracting plus your supervisor's approval, and passing the exam never replaces a course. It is built to come after the courses, so finish them (and CON 3910) first. Your KMG decides when you sit for it."},
     {"q": "Is the exam open book? Can I bring the FAR?", "a": "No. It is completely closed book: no FAR, notes, books, phone or computer."},
     {"q": "What should I study most?", "a": "Weight your time like the exam: Guiding Principles 42 questions, Award 40, Post-Award 38, Pre-Award 30. Learn the titles of the 20 FAR parts the exam names, the Uniform Contract Format sections and the common forms (SF 30, SF 1449, DD 1155), and read FAR Parts 1 and 15 carefully; the exam FAQ says many questions come from Part 15."},
     {"q": "Should I test online or at a test center?", "a": "A test center, if you can. DoW data shows about a 4% higher pass rate at test centers, and most government computers block the OnVUE software anyway. Some test centers are on military bases. If none is within commuting distance, email scheduling@waru.edu first; WarU and Pearson try to avoid official travel. Get travel approved before you schedule if you still need it."},
@@ -234,7 +234,7 @@
     {"q": "Do I need a degree?", "a": "Not for the certification. DoW 1102 hiring requires a bachelor's degree under 10 U.S.C. 1724. For 51C Soldiers, the Army sets MOS education standards."},
     {"q": "Does experience from before this job count?", "a": "It might. Equivalent experience in government or industry can be considered if it is documented in detail. Your component decides."},
     {"q": "What if I miss the 36-month deadline?", "a": "Certification is a condition of employment for contracting-coded positions. Without it, and without an approved waiver, you can face employment actions under your agency's procedures; Soldiers can face MOS-related actions. If you are falling behind, tell your supervisor early so a waiver can be requested in time."},
-    {"q": "Who pays for the courses and the exam?", "a": "WarU pays the exam fee. WarU courses for the acquisition workforce usually cost your unit nothing; travel for a classroom course is the usual exception. Ask your training office."},
+    {"q": "Who pays for the courses and the exam?", "a": "WarU pays the exam fee. WarU courses for the acquisition workforce usually cost your unit nothing; travel for a classroom course is the usual exception. Ask your KMG."},
     {"q": "How do I apply for the certification once I am done?", "a": "Your component's process applies. In the Army, certification goes through the Army DACM Office's systems (the CAMP portal). Ask your supervisor or your Contracting Master Gunner (KMG) to walk you through it, and have your transcript and exam result ready. Verify locally."}
   ],
   "sources": [

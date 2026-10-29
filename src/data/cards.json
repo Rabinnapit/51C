@@ -12,7 +12,7 @@
     {"id": "cl", "front": "Continuous learning after certification?", "back": "80 hours every 2 years", "more": "DPCAP recommends at least 40 on contracting topics."},
     {"id": "w", "front": "Biggest exam area?", "back": "Guiding Principles: 42 questions", "more": "Then Award 40, Post-Award 38, Pre-Award 30."},
     {"id": "m", "front": "Which FAR part does the exam FAQ say to read thoroughly?", "back": "Part 15, Contracting by Negotiation"},
-    {"id": "s", "front": "Where do Army members apply for WarU courses and the exam?", "back": "AITAS (in ATRRS)", "more": "Then supervisor and training office approval."},
+    {"id": "s", "front": "Where do Army members apply for WarU courses and the exam?", "back": "AITAS (in ATRRS)", "more": "Then your supervisor's approval and your organization's training approver in AITAS."},
     {"id": "d", "front": "How long do you have to test after Pearson's Authorization to Test?", "back": "90 days"}
   ]},
   {"id": "who-does-what", "title": "Who does what", "sub": "Authority and roles, as scenarios", "icon": "users", "cards": [
@@ -27,7 +27,7 @@
     {"id": "9", "front": "Who sets small business size standards?", "back": "SBA, by NAICS code"},
     {"id": "10", "front": "Who decides bid protests in 100 days?", "back": "GAO (Government Accountability Office)"},
     {"id": "11", "front": "Who hears DoW contractors' appeals of final decisions?", "back": "The ASBCA (90 days) or the Court of Federal Claims (12 months)"},
-    {"id": "12", "front": "Who approves your training requests in AITAS?", "back": "Your supervisor, then your Acquisition Training Office"}
+    {"id": "12", "front": "Who approves your training requests in AITAS?", "back": "Your supervisor, then your organization's training approver in AITAS (your KMG knows who)"}
   ]},
   {"id": "contract-types", "title": "Contract types", "sub": "Match the description to the type", "icon": "layers", "cards": [
     {"id": "1", "front": "One price, whatever it costs the contractor", "back": "Firm-fixed-price (FFP)", "more": "Most risk on the contractor (FAR 16.202)."},

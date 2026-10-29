@@ -84,7 +84,7 @@
 
   // ---- badges ----
   ui.badge = function (kind, label, iconName) { return h('span.badge.' + kind, {}, iconName ? ui.icon(iconName) : null, label); };
-  ui.verifyBadge = function (tip) { var b = ui.badge('verify', 'Verify locally', 'flag'); b.title = tip || 'Confirm this with your supervisor, training office or policy office before you rely on it.'; return b; };
+  ui.verifyBadge = function (tip) { var b = ui.badge('verify', 'Verify locally', 'flag'); b.title = tip || 'Confirm this with your supervisor, your KMG or the policy office before you rely on it.'; return b; };
   ui.phaseBadge = function (id, short) { var p = CORB.data.phase(id); if (!p) return null; return h('span.badge.ph-' + p.id, { title: p.code + ' ' + p.name }, h('span.phase-dot.ph-' + p.id), short ? p.short : (p.code ? p.code + ' ' : '') + p.name); };
 
   // ---- rich text: plain text -> safe HTML with paragraphs, lists, **bold**, citation links and glossary terms ----

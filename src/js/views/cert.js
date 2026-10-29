@@ -151,7 +151,7 @@
   function sources(root, C, h, icon) {
     root.appendChild(h('div.callout.ok.mb-4', {}, icon('file'), h('div', {}, h('b', {}, 'See the real documents'),
       h('span', {}, 'Official documents shows the DoW and WarU documents themselves, each with a picture version. The main ones open inside this file, without internet. '), h('a', { href: '#/official' }, 'Open Official documents'))));
-    root.appendChild(h('p.muted', {}, 'Everything in Certification 101 was checked against these public sources on the dates shown. Rules change: when your training office or WarU says something different, they win.'));
+    root.appendChild(h('p.muted', {}, 'Everything in Certification 101 was checked against these public sources on the dates shown. Rules change: when your KMG or WarU says something different, they win.'));
     root.appendChild(h('div.card.flush', {}, h('div.list', {}, (C.sources || []).map(function (s) {
       return h('div.list-item.src', {}, icon('file'), h('div.grow', {}, s.url ? h('a', { href: s.url, target: '_blank', rel: 'noopener' }, s.title) : h('b', {}, s.title), h('div.tiny.muted', {}, (s.who ? s.who + ' · ' : '') + (s.date ? 'dated ' + s.date : '') + (s.checked ? ' · checked ' + s.checked : ''))));
     }))));

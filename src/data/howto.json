@@ -16,7 +16,7 @@
    "tips": ["Write down every login, office phone number and point of contact in one place.", "Ask to sit with a contract specialist for a day to see real actions."],
    "watch": ["Do not wait for someone to request your system access for you.", "Never share your CAC PIN or let someone use your login."],
    "verify": "Systems and onboarding steps differ by office.", "lessons": ["L01", "L34"], "links": [{"label": "AITAS", "url": "https://www.atrrs.army.mil/Aitas/Public/Landing/"}]},
-  {"id": "register-course", "cat": "career", "title": "Register for a WarU course (Army)", "time": "15 minutes, then approvals", "who": "You, your supervisor and your training office",
+  {"id": "register-course", "cat": "career", "title": "Register for a WarU course (Army)", "time": "15 minutes, then approvals", "who": "You, your supervisor and your KMG",
    "when": "Any time you need a certification course, such as CON 1100V or CON 1200V.",
    "steps": [
      {"t": "Find the course in the WarU iCatalog", "d": "Search the course number, open the course page and read the prerequisites."},
@@ -34,7 +34,7 @@
    "watch": ["Missing a prerequisite can get you dropped from the class.", "Dropping late can cost your unit and the next student a seat."],
    "verify": "AITAS screens and routing differ by organization. Ask your Contracting Master Gunner (KMG).",
    "links": [{"label": "WarU iCatalog", "url": "https://icatalog.waru.edu/"}, {"label": "AITAS", "url": "https://www.atrrs.army.mil/Aitas/Public/Landing/"}]},
-  {"id": "schedule-exam", "cat": "career", "title": "Sign up for and schedule CON 3990V", "time": "30 minutes, then up to 90 days to test", "who": "You, your supervisor and your training office",
+  {"id": "schedule-exam", "cat": "career", "title": "Sign up for and schedule CON 3990V", "time": "30 minutes, then up to 90 days to test", "who": "You, your supervisor and your KMG",
    "when": "When you have finished your courses and CON 3910 and score 75% or better on practice exams.",
    "steps": [
      {"t": "Apply for CON 3990V in AITAS", "d": "Apply like a course. You must be coded in contracting and have your supervisor's approval."},
@@ -56,7 +56,7 @@
    "steps": [
      {"t": "Gather your proof", "d": "WarU transcript showing the five courses, your exam result (transcript or Pearson score report), and a record of your experience."},
      {"t": "Review your experience with your supervisor", "d": "Use the Experience checklist in Certification 101. Your supervisor confirms you have done a representative sample of contracting work."},
-     {"t": "Submit the request through your component's process", "d": "In the Army this runs through the Army DACM Office's systems (CAMP). Your training office will show you the screen."},
+     {"t": "Submit the request through your component's process", "d": "In the Army this runs through the Army DACM Office's systems (CAMP). Your KMG will show you the screen."},
      {"t": "Follow up", "d": "Track the request until it is approved, then save a copy of the certification."},
      {"t": "Update your records", "d": "Make sure your acquisition record and IDP show the certification."},
      {"t": "Start your continuous learning clock", "d": "80 hours every 2 years, at least 40 on contracting topics recommended."}

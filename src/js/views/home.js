@@ -166,7 +166,7 @@
     var ups = (CORB.data.updates().far_updates || []).slice(0, 3);
     if (ups.length) root.appendChild(h('section', {}, h('div.section-head', {}, h('h2', {}, 'What changed lately'), h('a', { href: '#/far?tab=new' }, 'All updates')),
       h('div.card.flush', {}, h('div.list.news', {}, ups.map(function (u) { return h('div.list-item', {}, h('span.num.small.news-date', {}, CORB.util.fmtDate(u.date)), h('div.grow', {}, h('b', {}, u.title), h('div.muted.small', {}, u.body))); })))));
-    if (CORB.get('profile.track') === 'mentor') root.appendChild(h('section.mt-5', {}, CORB.ui.callout('brass', 'users', 'Helping someone new?', 'Sit down with them on day one and build their plan together. Walk the Week 1 steps, introduce them to your training office, and sign off experience tasks in Certification 101 → Experience as they do them.')));
+    if (CORB.get('profile.track') === 'mentor') root.appendChild(h('section.mt-5', {}, CORB.ui.callout('brass', 'users', 'Helping someone new?', 'Sit down with them on day one and build their plan together. Walk the Week 1 steps, introduce them to your KMG, and sign off experience tasks in Certification 101 → Experience as they do them.')));
     root.appendChild(tour());
   }
 

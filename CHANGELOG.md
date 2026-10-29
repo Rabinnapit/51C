@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.19.2 (29 October 2026): the Contracting Master Gunner
+
+- Your training contact is the **Contracting Master Gunner (KMG)**, the unit's senior 51C trainer: My plan, the exam
+  path, the how-to guides, Certification 101, the official-documents pictures, the flashcards and the glossary now
+  say so (the owner's correction). "Training NCO" and the "Acquisition Training Office" are gone; where AITAS needs
+  a second approval after the supervisor, the text says "your organization's training approver in AITAS; your KMG
+  knows who that is". The glossary's ATO entry became KMG.
+
 ## 0.19.1 (29 October 2026): $0 to run, and a persona pass
 
 - **Accounts stay awake for free:** `.github/workflows/keepalive.yml` pings the Supabase project every third day, so the

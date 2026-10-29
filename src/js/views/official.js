@@ -93,7 +93,7 @@
     var tab = show === 'official' || !simple.length ? 'official' : 'simple';
     root.appendChild(CORB.ui.pageHead({ back: { view: 'official', label: 'Official documents' }, eyebrow: g ? g.title : '', title: d.title,
       meta: [h('span.small.muted', {}, [d.who, d.date].filter(Boolean).join(' · ')), stored(d, h, icon)], lede: d.summary }));
-    if (d.broken) root.appendChild(CORB.ui.callout('danger', 'alert', 'This link is broken on the official site', 'Checked ' + (O().checked || '') + '. Ask your DACM office or training office for a copy.'));
+    if (d.broken) root.appendChild(CORB.ui.callout('danger', 'alert', 'This link is broken on the official site', 'Checked ' + (O().checked || '') + '. Ask your DACM office or KMG for a copy.'));
     root.appendChild(h('div.seg.doc-seg', { role: 'tablist', 'aria-label': 'Version' },
       simple.length ? h('button' + (tab === 'simple' ? '.on' : ''), { type: 'button', role: 'tab', 'aria-selected': String(tab === 'simple'), onclick: function () { CORB.go('official', { doc: d.id, show: 'simple' }); } }, icon('eye'), 'Simple version') : null,
       h('button' + (tab === 'official' ? '.on' : ''), { type: 'button', role: 'tab', 'aria-selected': String(tab === 'official'), onclick: function () { CORB.go('official', { doc: d.id, show: 'official' }); } }, icon('file'), 'Official document')));

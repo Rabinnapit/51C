@@ -97,7 +97,7 @@ def readme(out: Path, lines: int, utf8: int, site_url: str):
     doc.add_paragraph("Once saved, the file can go on Teams or SharePoint or be emailed inside the Army network, and people just open it. "
                       "A file with progress saved inside carries that progress, so share a fresh copy, not your own.")
     doc.add_paragraph("Unofficial training aid. Not endorsed by the U.S. Army, the Department of War or WarU. Verify rules and numbers with your "
-                      "training office and contracting policy office before relying on them.")
+                      "Contracting Master Gunner (KMG) and contracting policy office before relying on them.")
     doc.save(out)
 
 

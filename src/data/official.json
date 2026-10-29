@@ -91,7 +91,7 @@
   "explain": {
     "owners": [
       {"id": "you", "label": "You"},
-      {"id": "boss", "label": "Supervisor and training office"},
+      {"id": "boss", "label": "Supervisor and training approver"},
       {"id": "waru", "label": "WarU"},
       {"id": "pearson", "label": "Pearson"}
     ],
@@ -101,8 +101,8 @@
          "chips": [["check", "Coded in contracting"], ["user", "Supervisor says yes"], ["school", "Courses done first"], ["star", "CON 3910 first"]], "official": "1"},
         {"n": 2, "owner": "you", "pic": "apply", "title": "Apply in AITAS", "line": "Ask for CON 3990V just like a course. Army: AITAS. Navy: eDACM. Air Force: ACQ Now. 4th Estate: DATMS.",
          "chips": [["clock", "30+ days after a failed try"], ["repeat", "Up to 3 tries in 12 months"]], "official": "2"},
-        {"n": 3, "owner": "boss", "pic": "approve", "title": "Two approvals", "line": "Your supervisor approves, then your Acquisition Training Office (ATO).",
-         "chips": [["check", "Supervisor"], ["check", "Training office"]], "no": "Not approved? Fix the problem and apply again when you are eligible.", "official": "3"},
+        {"n": 3, "owner": "boss", "pic": "approve", "title": "Two approvals", "line": "Your supervisor approves, then your organization's training approver in AITAS. Your KMG knows who that is.",
+         "chips": [["check", "Supervisor"], ["check", "Training approver"]], "no": "Not approved? Fix the problem and apply again when you are eligible.", "official": "3"},
         {"n": 4, "owner": "waru", "pic": "sync", "title": "Sent to Pearson", "line": "Automatic. ATRRS tells WarU, and WarU sends your name and WarU ID to Pearson every day.",
          "chips": [["zap", "Nothing to do"]], "official": "4-5"},
         {"n": 5, "owner": "pearson", "pic": "mail24", "title": "\"Authorization to Test\" email", "line": "Pearson emails you a link to its WarU page, usually within 24 hours.",
@@ -145,7 +145,7 @@
         {"try": "3", "kind": "must", "must": "Review your feedback and both prep courses. Your agency checks your steps before you test again."},
         {"try": "4", "kind": "next", "should": "Possible in the 12 months that start one year after your first failed try. Your DACM can approve more tries, case by case."}
       ],
-      "note": "Your agency (your supervisor and training office) can add its own rules, such as more training, waiting time or counseling."
+      "note": "Your agency (your supervisor and your KMG) can add its own rules, such as more training, waiting time or counseling."
     },
     "grace": {
       "months": 36, "goal": 6,

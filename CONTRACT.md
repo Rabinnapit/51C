@@ -122,7 +122,7 @@ U.S.C. and CFR citations are linked automatically. No HTML in content.
 
 1. Cite **RFO numbering** (in force for DoW since 1 February 2026); `far.json` keeps the old-to-new pairs.
 2. Prefer part-level cites when a section number is uncertain. Never invent local procedures or approval levels; describe
-   the role ("your Acquisition Training Office") and add a `verify` note.
+   the role ("your Contracting Master Gunner (KMG)") and add a `verify` note.
 3. Every practice question explains every option. Practice questions are written for the guide; never copy real exam items.
 4. Plain language for someone in their first week: short sentences, define every acronym in the glossary.
 5. Date anything that will age ("checked 22 October 2026") and add it to `updates.json` when it changes.
