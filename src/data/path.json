@@ -27,7 +27,7 @@
        {"id": "w01-l35", "kind": "lesson", "lesson": "L35"},
        {"id": "w01-l03", "kind": "lesson", "lesson": "L03"},
        {"id": "w01-far1", "kind": "read", "far": 1, "t": "Read FAR Part 1", "d": "Focus on 1.102 (the seven guiding principles), 1.107 (FAR conventions) and subpart 1.3 (deviations)."},
-       {"id": "w01-reg", "kind": "do", "t": "Apply for CON 1100V", "d": "Use AITAS. Ask your training office which class dates fit.", "view": "howto", "params": {"id": "register-course"}},
+       {"id": "w01-reg", "kind": "do", "t": "Apply for CON 1100V", "d": "Use AITAS. Ask your KMG which class dates fit.", "view": "howto", "params": {"id": "register-course"}},
        {"id": "w01-cards", "kind": "cards", "deck": "far-exam", "t": "Flashcards: FAR part titles on the exam", "d": "Do 10 cards a day until you know all 20."},
        {"id": "w01-chk", "kind": "drill", "t": "Weekly check: the rulebook", "lessons": ["L03", "L35"], "n": 10}
      ],

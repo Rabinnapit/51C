@@ -26,7 +26,7 @@
   "roles": [
     {"name": "You", "does": "Own your plan. Apply for courses early, attend full time, study every day, take the exam, and keep a record of the work you do."},
     {"name": "Your supervisor", "does": "Approves your course and exam requests, protects your time during class, confirms your experience and supports your certification request."},
-    {"name": "Acquisition Training Office (ATO)", "does": "Your organization's training office. Approves training requests after your supervisor and answers registration questions."},
+    {"name": "Contracting Master Gunner (KMG)", "does": "Your unit's senior 51C trainer. First stop for the local certification goal, AITAS questions, what already counts toward your certification, and who approves what."},
     {"name": "Army DACM Office (USAASC)", "does": "The Army Director, Acquisition Career Management. Runs the Army acquisition workforce program, career records and certification, and answers help requests through the CAMP portal."},
     {"name": "WarU", "does": "The Warfighting Acquisition University (the Defense Acquisition University until late 2025). Writes and teaches the courses and owns the certification exam."},
     {"name": "Pearson VUE", "does": "The testing company that delivers CON 3990V at its test centers or online (OnVUE). WarU pays the fee."},
@@ -41,17 +41,17 @@
       {"t": "Check your AITAS profile", "d": "Make sure your name, organization and your supervisor's email address are right. A wrong supervisor email is the most common reason a request stalls."},
       {"t": "Apply", "d": "In AITAS choose Student, then Apply for Training. Pick the course and class and submit. You need your CAC."},
       {"t": "Your supervisor approves", "d": "Your supervisor gets an email and approves in AITAS. Remind them politely; nothing moves until they do."},
-      {"t": "Your training office approves", "d": "The Acquisition Training Office reviews and approves. Approved requests flow to ATRRS and then to WarU."},
+      {"t": "Your training approver approves", "d": "After your supervisor, your organization's training approver in AITAS reviews it; your KMG knows who that is. Approved requests flow to ATRRS and then to WarU."},
       {"t": "Watch for the reservation and the welcome letter", "d": "You get a reservation email. About 25 days before class, WarU sends a welcome letter with the links, any pre-work and a technical check. Do the pre-work: some courses grade it."},
       {"t": "Clear your calendar", "d": "Virtual instructor-led (VILT) courses are full time. Your supervisor should put your workload on hold. Test your camera, microphone and the class software on the computer you will use."}
     ],
-    "verify": "AITAS screens and approval routing differ by organization. Confirm these steps with your training NCO or Acquisition Training Office.", "links": [{"label": "Open AITAS", "url": "https://www.atrrs.army.mil/Aitas/Public/Landing/"}],
+    "verify": "AITAS screens and approval routing differ by organization. Confirm these steps with your Contracting Master Gunner (KMG).", "links": [{"label": "Open AITAS", "url": "https://www.atrrs.army.mil/Aitas/Public/Landing/"}],
     "tips": [
-      "Apply early. Seats fill fast. Ask your training office whether you may apply for the next course before you finish its prerequisite; usually the prerequisite only has to be done before that class starts.",
+      "Apply early. Seats fill fast. Ask your KMG whether you may apply for the next course before you finish its prerequisite; usually the prerequisite only has to be done before that class starts.",
       "While you wait for CON 1300V, finish its five online modules (FAC 069, FAC 082, FAC 085, CON 0074 and CON 0470) and keep the completion certificates. The instructor asks for them.",
       "Already took an equivalent course at another agency or school? Ask about equivalency or fulfillment instead of taking it again.",
       "Keep every completion certificate and your WarU transcript in one folder. You need them for certification and later for your warrant.",
-      "Reserve and National Guard Soldiers: some classes need orders or funding. Start with your unit training office."
+      "Reserve and National Guard Soldiers: some classes need orders or funding. Start with your KMG."
     ]
   },
   "exam": {
@@ -230,12 +230,12 @@
     {"q": "What is CON 7300V, and do I need it if I started before October 2026?", "a": "CON 7300V Price Analysis became a required course for the DoW Contracting Professional certification on 1 October 2026, taken after CON 1300V. If you were already working on your certification, your component decides whether it applies to you, but DoW leadership expects you to take it. If you were certified before then, it is encouraged, not required."},
     {"q": "DAU or WarU?", "a": "Same school, new name. In late 2025 the Defense Acquisition University became the Warfighting Acquisition University (WarU) as part of DoW's acquisition transformation. Older links, certificates and people may still say DAU."},
     {"q": "What is the RFO, and does it change what I study?", "a": "The Revolutionary FAR Overhaul (RFO) rewrote and renumbered much of the FAR. DoW adopted it through class deviations effective 1 February 2026, and the exam's answers now come from the RFO-updated FAR and DFARS. This guide uses RFO numbers; expect older materials to show old ones. See FAR & key numbers → Old → new numbers."},
-    {"q": "Does the 51C course at TAAS count for any certification course?", "a": "Verify locally. The 9-week Army Acquisition Transition Course (AATC) at The Army Acquisition School is the 51C MOS course. Check your WarU transcript and ask your training NCO or the 51C proponent which certification courses your records already show as complete."},
+    {"q": "Does the 51C course at TAAS count for any certification course?", "a": "Verify locally. The 9-week Army Acquisition Transition Course (AATC) at The Army Acquisition School is the 51C MOS course. Check your WarU transcript and ask your Contracting Master Gunner (KMG) or the 51C proponent which certification courses your records already show as complete."},
     {"q": "Do I need a degree?", "a": "Not for the certification. DoW 1102 hiring requires a bachelor's degree under 10 U.S.C. 1724. For 51C Soldiers, the Army sets MOS education standards."},
     {"q": "Does experience from before this job count?", "a": "It might. Equivalent experience in government or industry can be considered if it is documented in detail. Your component decides."},
     {"q": "What if I miss the 36-month deadline?", "a": "Certification is a condition of employment for contracting-coded positions. Without it, and without an approved waiver, you can face employment actions under your agency's procedures; Soldiers can face MOS-related actions. If you are falling behind, tell your supervisor early so a waiver can be requested in time."},
     {"q": "Who pays for the courses and the exam?", "a": "WarU pays the exam fee. WarU courses for the acquisition workforce usually cost your unit nothing; travel for a classroom course is the usual exception. Ask your training office."},
-    {"q": "How do I apply for the certification once I am done?", "a": "Your component's process applies. In the Army, certification goes through the Army DACM Office's systems (the CAMP portal). Ask your supervisor or Acquisition Training Office to walk you through it, and have your transcript and exam result ready. Verify locally."}
+    {"q": "How do I apply for the certification once I am done?", "a": "Your component's process applies. In the Army, certification goes through the Army DACM Office's systems (the CAMP portal). Ask your supervisor or your Contracting Master Gunner (KMG) to walk you through it, and have your transcript and exam result ready. Verify locally."}
   ],
   "sources": [
     {"title": "WarU iCatalog: Contracting Professional certification standard", "url": "https://icatalog.waru.edu/CertificationStandard?cfld=3&lvl=4", "who": "Warfighting Acquisition University", "checked": "28 Oct 2026"},
