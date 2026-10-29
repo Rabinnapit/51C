@@ -265,6 +265,8 @@ Fiscal Law & Funding · Competition & Market Research · Acquisition Planning & 
   landing page footer shows `meta.copyright` and opens the terms. `check_content.py` requires `owner`, `copyright`,
   `site_url`, `terms` {version, points, agree}, a square `app_qr`, a self-contained install sheet that shows `site_url`,
   and a `whats_new` entry for the current version. READ ME FIRST (`make_docx.py`) names the owner and the website.
+  The modal header and footer are sticky inside the scrolling `.modal` (`03-components.css`), so Close and I agree
+  stay in view on a phone while a long body such as the terms scrolls.
 - Content that is not in the source lists goes in `tools/content_patches.py` as a dated function; `merge_content.py`
   applies it before writing `src/data`, so a merge never undoes it. `regulations.updates[]` (`{id, date, title, text,
   url, status, source}`) is the "What changed" panel in the Regulation explorer.
