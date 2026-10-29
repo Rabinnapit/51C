@@ -93,6 +93,12 @@
   ],
   "guide_changes": [
     {
+      "version": "0.26.1",
+      "date": "2026-10-30",
+      "title": "Text size in one place",
+      "notes": "The side menu's bottom panel now shows Day / night only. Text size is set under Settings & help, Display tab; on a wide screen the Aa button at the top still cycles it."
+    },
+    {
       "version": "0.26.0",
       "date": "2026-10-30",
       "title": "Supply Line in real 3D, four bosses, the Master Gunner and the campaign",

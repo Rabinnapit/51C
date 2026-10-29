@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.26.1 (30 October 2026): text size in one place
+
+- **Text size left the side menu.** The bottom panel of the menu now shows Day / night only; text size stays under
+  Settings & help, Display tab, where it already was (on a wide screen the Aa button in the top bar still cycles it).
+  The tour's "Easier to read" step on a phone now points there.
+
 ## 0.26.0 (30 October 2026): the convoy in real 3D, the four bosses, the Master Gunner and the campaign
 
 - **Supply Line in real 3D.** The convoy stage is now drawn by the same engine as Range Day: an FMTV-style cargo truck

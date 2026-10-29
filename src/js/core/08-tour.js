@@ -87,7 +87,7 @@
       { title: 'Search everything', target: function () { return q('.topbar .search-btn'); },
         text: 'Find any lesson, term, course or FAR part from any page. On a keyboard, press the / key.' },
       { title: 'Easier to read', target: function () { return narrow() ? q('.topbar .menu-btn') : [q('.topbar .text-btn'), q('.topbar .theme-btn')].filter(Boolean); },
-        text: (narrow() ? 'Open the menu for a bigger text size and for day or night.' : 'Make the text bigger, or switch between day and night.') + ' Day is the default. Listen buttons read lessons aloud.' },
+        text: (narrow() ? 'Open the menu for day or night. For a bigger text size, go to Settings & help, Display tab.' : 'Make the text bigger, or switch between day and night.') + ' Day is the default. Listen buttons read lessons aloud.' },
       { title: 'About and feedback', target: function () { return side(navItem('about')); },
         text: 'About tells you who builds this guide and how it stays current. Send feedback or report a problem from there.' },
       { title: 'Keep your progress', target: function () { return q('.topbar .save-btn') || side(navItem('settings')); },
