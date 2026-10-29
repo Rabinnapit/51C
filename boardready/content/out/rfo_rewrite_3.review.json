@@ -1,0 +1,173 @@
+{
+  "reviewed_file": "content/out/rfo_rewrite_3.json",
+  "reviewed_on": "2026-09-14",
+  "reviewer": "rfo_rewrite_3 review pass",
+  "checked": 27,
+  "changed_items": 13,
+  "corrected": 3,
+  "reverted": 0,
+  "method": "For each changed item the new answer was mechanically reduced (strip trailing Cite: line, remove the listed parentheticals, map each crosswalk new number back to the old number) and asserted equal to the original questions.json answer; every citations_rfo entry asserted to be a literal substring of the answer; every crosswalk pair matched against regulations.json or acquisition.gov.",
+  "changes": [
+    {
+      "id": "Q0068",
+      "action": "cite-line-fix",
+      "before": "Cite: 33 U.S.C. 622 and 624; UAI 36.205-100.",
+      "after": "Cite: 33 U.S.C. 622; 33 U.S.C. 624; UAI 36.205-100.",
+      "why": "citations_rfo entry \"33 U.S.C. 624\" did not appear literally in the answer text."
+    },
+    {
+      "id": "Q0115",
+      "action": "cite-line-fix",
+      "before": "Cite: FAR Part 31; FAR Appendix, 48 CFR 9901.306;",
+      "after": "Cite: FAR 31; FAR Appendix, 48 CFR 9901.306;",
+      "why": "citations_rfo entry \"FAR 31\" did not appear literally (text had \"FAR Part 31\"); Cite line now uses the bank citation style."
+    },
+    {
+      "id": "Q0123",
+      "action": "cite-line-fix",
+      "before": "Cite: FAR 32.104; FAR Subpart 32.2; FAR Part 12.",
+      "after": "Cite: FAR 32.104; FAR 32.2; FAR 12.",
+      "why": "citations_rfo entries \"FAR 32.2\"/\"FAR 12\" must appear literally in the Cite line; Cite line now uses the bank citation style."
+    },
+    {
+      "id": "Q0142",
+      "action": "notes-append",
+      "why": "record reviewer verification of the out-of-crosswalk pair 15.406 -> 15.408"
+    },
+    {
+      "id": "Q0213",
+      "action": "notes-append",
+      "why": "record reviewer verification of the out-of-crosswalk pair 15.406 -> 15.408"
+    }
+  ],
+  "crosswalk_verification": [
+    {
+      "id": "Q0001",
+      "old": "FAR 22.404-6(c)",
+      "new": "FAR 22.403",
+      "verified_against": "regulations.json crosswalk (verified)"
+    },
+    {
+      "id": "Q0019",
+      "old": "FAR 15.404-1",
+      "new": "FAR 15.404",
+      "verified_against": "regulations.json crosswalk (verified)"
+    },
+    {
+      "id": "Q0063",
+      "old": "FAR 15.406-2",
+      "new": "FAR 15.403-4",
+      "verified_against": "regulations.json crosswalk (verified)"
+    },
+    {
+      "id": "Q0063",
+      "old": "FAR 15.403-1(b)",
+      "new": "FAR 15.403-2(b)",
+      "verified_against": "regulations.json crosswalk (verified)"
+    },
+    {
+      "id": "Q0063",
+      "old": "FAR 15.403-2",
+      "new": "FAR 15.403-3(b)(3)(iii)",
+      "verified_against": "regulations.json crosswalk (verified)"
+    },
+    {
+      "id": "Q0066",
+      "old": "FAR 15.101-2",
+      "new": "FAR 15.103-2",
+      "verified_against": "regulations.json crosswalk (verified)"
+    },
+    {
+      "id": "Q0066",
+      "old": "FAR 15.101-1",
+      "new": "FAR 15.103-1",
+      "verified_against": "regulations.json crosswalk (verified)"
+    },
+    {
+      "id": "Q0112",
+      "old": "FAR 15.503",
+      "new": "FAR 15.206-1",
+      "verified_against": "regulations.json crosswalk (verified)"
+    },
+    {
+      "id": "Q0118",
+      "old": "FAR 36.102",
+      "new": "FAR 2.101 (definition of 'Construction')",
+      "verified_against": "regulations.json crosswalk (verified)"
+    },
+    {
+      "id": "Q0142",
+      "old": "FAR 15.101-1",
+      "new": "FAR 15.103-1",
+      "verified_against": "regulations.json crosswalk (verified)"
+    },
+    {
+      "id": "Q0142",
+      "old": "FAR 15.406",
+      "new": "FAR 15.408",
+      "verified_against": "acquisition.gov Part 15 deviation guide, fetched 14 Sep 2026 (15.408 Documentation; 15.408-1/-2); consistent with regulations.json note on FAR 15.405 -> 15.407"
+    },
+    {
+      "id": "Q0213",
+      "old": "FAR 15.405",
+      "new": "FAR 15.407",
+      "verified_against": "regulations.json crosswalk (verified)"
+    },
+    {
+      "id": "Q0213",
+      "old": "FAR 15.406",
+      "new": "FAR 15.408",
+      "verified_against": "acquisition.gov Part 15 deviation guide, fetched 14 Sep 2026 (15.408 Documentation; 15.408-1/-2); consistent with regulations.json note on FAR 15.405 -> 15.407"
+    },
+    {
+      "id": "Q0251",
+      "old": "FAR 15.207(c)",
+      "new": "FAR 15.108(c)",
+      "verified_against": "regulations.json crosswalk (verified)"
+    }
+  ],
+  "allowed_parentheticals": [
+    " — the RFO deleted 22.404-6, so this rule now sits at 22.403",
+    " (threshold updated — see Thresholds)",
+    " — the RFO reuses the number 15.403-2 for a different section, Prohibitions",
+    " — the RFO moved the definition of 'construction' out of 36.102, which is now Architect-Engineer Services",
+    " (the RFO moved documentation from 15.406 to 15.408; 15.406 is now 'Data to support proposal analysis')"
+  ],
+  "no_change_needed": [
+    "Q0001",
+    "Q0019",
+    "Q0063",
+    "Q0066",
+    "Q0104",
+    "Q0112",
+    "Q0118",
+    "Q0142",
+    "Q0213",
+    "Q0251"
+  ],
+  "skipped_items_left_as_is": [
+    "Q0004",
+    "Q0028",
+    "Q0064",
+    "Q0065",
+    "Q0114",
+    "Q0128",
+    "Q0130",
+    "Q0133",
+    "Q0135",
+    "Q0136",
+    "Q0214",
+    "Q0217",
+    "Q0250",
+    "Q0262"
+  ],
+  "open_issues_for_orchestrator": [
+    "Q0114 needs a content rewrite: $750K/$2M stale; TINA is $10M for DoD primes awarded after 30 Jun 2026 (DFARS 215.403-3(a), Class Deviation 2026-O0048 Rev. 1), $2.5M otherwise.",
+    "Q0019 $700k figure is stale on both counts; marker applied per rule, figure not corrected.",
+    "Q0115 substantive issues (CAS is Part 30 / 48 CFR ch. 99, not Part 31; CAS applicability decoupled from TINA, $35M from 1 Oct 2026) untouched per scope.",
+    "Q0066 does not mention RFO 15.103-3 (highest technically rated, fair and reasonable price).",
+    "Q0217 and Q0250 paraphrase renumbered rules (15.301/15.207-2; 15.404-6) but cite no section; content pass recommended.",
+    "Add FAR 15.406 -> FAR 15.408 (Documentation) to regulations.json crosswalk.",
+    "rfo_status \"n/a\" used for Q0068, Q0104, Q0115, Q0123 (cites present, none renumbered); accepted, noted in each item."
+  ]
+}

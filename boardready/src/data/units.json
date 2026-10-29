@@ -1,0 +1,12 @@
+[
+  { "id": "411th CSB", "name": "411th Contracting Support Brigade (Korea)", "short": "411th CSB · Korea", "default": true, "description": "Korea-specific questions plus the ACC-wide set." },
+  { "id": "ACC-All", "name": "Army Contracting Command (all)", "short": "ACC-All", "default": false, "description": "The ACC-wide question set only." },
+  { "id": "409th CSB", "name": "409th Contracting Support Brigade (Germany, ABG-75)", "short": "409th CSB · Germany", "default": false, "description": "Germany ABG-75 indirect contracting questions plus the ACC-wide set." },
+  { "id": "ACC-WRN", "name": "ACC-Warren", "short": "ACC-WRN", "default": false, "description": "ACC-Warren questions plus the ACC-wide set." },
+  { "id": "USACE Alexandria", "name": "USACE Alexandria", "short": "USACE Alexandria", "default": false, "description": "USACE PCO board questions plus the ACC-wide set." },
+  { "id": "USACE Atlanta", "name": "USACE Atlanta", "short": "USACE Atlanta", "default": false, "description": "" },
+  { "id": "USACE Dallas", "name": "USACE Dallas", "short": "USACE Dallas", "default": false, "description": "" },
+  { "id": "USAMRAA", "name": "U.S. Army Medical Research Acquisition Activity", "short": "USAMRAA", "default": false, "description": "USAMRAA questions plus the ACC-wide set." },
+  { "id": "MICC - HQ", "name": "Mission and Installation Contracting Command HQ", "short": "MICC HQ", "default": false, "description": "" },
+  { "id": "all", "name": "All organizations", "short": "All organizations", "default": false, "description": "Every question in the repository regardless of organization." }
+]

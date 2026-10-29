@@ -1,0 +1,500 @@
+{
+  "reviewed_on": "2026-09-17",
+  "reviewer_model": "claude-fable-5-1",
+  "scope": "PC78-PC113",
+  "relevance_standard": "Kept only cards a Class I-IV warrant board could plausibly ask a contracting officer (protest, claim, debriefing, termination, payment, options, publicizing, bonds, labor standards, subcontracting reports, property disposition the KO or TCO owns) or that teach a rule the KO applies personally; removed counts that only a specialist office applies, logged as 'removed: not board material'.",
+  "items": [
+    {
+      "id": "PC78",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "difficulty",
+          "before": 1,
+          "after": 2,
+          "source": "RFO 4.203-1(c) is an exception for 4.203-1(b)(4) urgency awards only - https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4"
+        }
+      ],
+      "notes": "30 calendar days confirmed. RFO 4.203-1(b)(4) lists 'Contracts awarded without providing full and open competition due to unusual or compelling urgency' among the SAM-at-award exceptions and 4.203-1(c) says the contractor 'must register in SAM within 30 days after contract award or at least three days before submitting the first invoice, whichever occurs first'; 4.304(b)(1) makes the contracting officer validate registration at that same point; 52.204-13(b) (Oct 2018) carries the same words. RFO Part 2 makes an unqualified day a calendar day. Not a duplicate: PC65's 30 days is the FPDS report for urgency awards. Relevance: keep - a board can ask whether the awardee must be registered in SAM and the contracting officer validates the late registration. Difficulty lowered from 1 to 2: this is the urgency-award exception, not a headline deadline every contracting officer knows. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4 (4.203-1(b)(4), (c); 4.304(b)(1)) ; https://www.acquisition.gov/far/52.204-13 (paragraph (b))"
+    },
+    {
+      "id": "PC79",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "difficulty",
+          "before": 2,
+          "after": 3,
+          "source": "little-known clause count; RFO 4.305(b) and 52.204-13(d)(3) - https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4"
+        }
+      ],
+      "notes": "30 calendar days confirmed. RFO 4.305(b): 'Contractors must communicate any change to their UEI or CAGE code to the contracting officer within 30 days after the change, so the contracting officer can issue a modification'; 52.204-13(d)(3) (Oct 2018) says the same for the unique entity identifier. Relevance: borderline, kept - the contracting officer is the party acting on it (issues the modification) and it fits a contract-administration board scenario; unlike the SAM exclusion-entry cards the actor is not a specialist office. Difficulty raised from 2 to 3: a precise, little-known count. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4 (4.305(b)) ; https://www.acquisition.gov/far/52.204-13 (paragraph (d)(3))"
+    },
+    {
+      "id": "PC80",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "60 calendar days confirmed. RFO 5.301(a): post an award notice for contract actions greater than $25,000 that are (1) covered by the WTO GPA or FTA or (2) likely to result in subcontract awards; Table 5-4: 'As soon as possible after award' for the likely-subcontracting row and 'Within 60 days of award' for 'Not likely to result in subcontracting opportunities, but subject to WTO GPA or FTA'; 5.301(b) exempts actions that were exempt from the presolicitation notice. No existing card carries the award notice. Relevance: keep (publicizing). Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5 (5.301(a), (b), (d), Table 5-4)"
+    },
+    {
+      "id": "PC81",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "anchor",
+          "before": "for the posting period before the solicitation is issued",
+          "after": "as the minimum period the presolicitation notice stays posted",
+          "source": "Table 5-2 row '>$20,000 to <=$25,000 | Any acquisition | Must be posted for 10 days' - https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5"
+        }
+      ],
+      "notes": "10 days confirmed, but the anchor was wrong. Table 5-2 reads '>$20,000 to <=$25,000* | Any acquisition | Must be posted for 10 days': a posting duration with no 'before solicitation issuance' language (that phrase belongs to the two 15-day rows). The old anchor 'for the posting period before the solicitation is issued' added that detail and, because it contained the word 'before', would have been treated by the game as a before-rule. Replaced with a plain duration anchor. The rule's other sentences match the table and the footnote in the note is verbatim. Relevance: keep (publicizing); difficulty 3 fits a table row few know. Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5 (5.101(d), Table 5-2 and its footnote)"
+    },
+    {
+      "id": "PC82",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "rule",
+          "before": "Table 5-3 sets the minimum time for receipt of quotations or offers. When an acquisition is subject to the WTO GPA or a free trade agreement but was not included in the agency's annual forecast, allow 40 days from the presolicitation notice or the solicitation, as applicable. The same 40 days applies to a commercial acquisition above the simplified acquisition threshold using a combined synopsis and solicitation, and to orders under a basic ordering agreement.",
+          "after": "Table 5-3 sets the minimum time for receipt of quotations or offers. For an acquisition from $15,000 up to the simplified acquisition threshold that is subject to the WTO GPA or a free trade agreement but was not included in the agency's annual forecast, allow 40 days from the presolicitation notice or the solicitation, as applicable. The same 40 days applies to a commercial acquisition above the threshold using a combined synopsis and solicitation and to orders under a basic ordering agreement; other noncommercial acquisitions above the threshold stay at 30 days from the solicitation.",
+          "source": "Table 5-3, third column, all five rows - https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5"
+        }
+      ],
+      "notes": "40 calendar days confirmed. Table 5-3 column 'Subject to WTO GPA or FTA, but not included in annual forecast': '>=$15K to <=SAT | Any acquisition | 40 days from presolicitation notice or solicitation, as applicable'; '>SAT commercial | 40 days from combined synopsis/solicitation'; 'R&D | N/A'; 'Orders under a BOA | 40 days from presolicitation notice'; 'All other non-commercial acquisitions | 30 days from solicitation'. The card's first sentence stated the 40 days as a general rule for any acquisition subject to a trade agreement and left out of the forecast, which over-applies it to noncommercial acquisitions above the SAT (30 days) and R&D (N/A); the rule now names the $15,000-to-SAT band and the 30-day row. Not a duplicate of PC72 (30 days) or PC73 (45 days). Relevance: keep (publicizing). Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5 (5.201(d), Table 5-3)"
+    },
+    {
+      "id": "PC83",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "difficulty",
+          "before": 2,
+          "after": 3,
+          "source": "little-known FAPIIS mechanics; 9.105-2(b)(2)(iii)(B) - https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9"
+        }
+      ],
+      "notes": "14 calendar days confirmed. RFO 9.105-2(b)(2)(iii)(B): the publicly-available segment is the one 'to which all data in the non-public segment of FAPIIS is automatically transferred after a waiting period of 14 calendar days, except for (1) Past performance reviews required by part 42; (2) Information that was entered prior to April 15, 2011; or (3) Information that is withdrawn during the 14-calendar-day waiting period by the Government official who posted it'. The card's three exceptions match. Not a duplicate (PC70 and PC74 are different 14-day clocks). Relevance: borderline, kept - 9.105-2(b)(2)(i)-(ii) has the contracting officer posting nonresponsibility determinations to FAPIIS, so the contractor's 14-day window before publication is a consequence of the contracting officer's own posting. Difficulty raised from 2 to 3 as a precise, little-known count. Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9 (9.105-2(b)(2)(i)-(iii))"
+    },
+    {
+      "id": "PC84",
+      "verdict": "removed",
+      "changes": [
+        {
+          "field": "card",
+          "before": {
+            "id": "PC84",
+            "event": "Contractor assertion that posted FAPIIS information is exempt from disclosure",
+            "days": 7,
+            "day_type": "calendar",
+            "anchor": "after the information is posted to the non-public segment of FAPIIS",
+            "rule": "Information covered by a Freedom of Information Act disclosure exemption must not be posted in the non-public segment of FAPIIS. If the contractor asserts within 7 calendar days, to the Government official who posted it, that some of the posted information is covered by a FOIA exemption, that official must remove the posting within 7 calendar days and resolve the issue under agency FOIA procedures before reposting anything releasable.",
+            "cite": "RFO FAR 9.105-2(b)(2)(iv)",
+            "difficulty": 3,
+            "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9 (9.105-2(b)(2)(iv)). Both the contractor's assertion and the official's removal carry the same 7 calendar days."
+          },
+          "after": null,
+          "source": "not board material - see notes"
+        }
+      ],
+      "notes": "removed: not board material. Accurate as written: RFO 9.105-2(b)(2)(iv) gives the contractor 7 calendar days to assert a FOIA exemption to the official who posted the information, and that official 7 calendar days to remove it. But the actor is the posting official working agency FOIA procedures; a warrant board would not ask a Class I-IV contracting officer for this count (named as administrative minutiae in the review instruction). Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9 (9.105-2(b)(2)(iv))"
+    },
+    {
+      "id": "PC85",
+      "verdict": "removed",
+      "changes": [
+        {
+          "field": "card",
+          "before": {
+            "id": "PC85",
+            "event": "Entering a debarment, suspension or other exclusion in SAM",
+            "days": 3,
+            "day_type": "business",
+            "anchor": "after the action becomes effective",
+            "rule": "For each exclusion it takes, including a voluntary exclusion, the agency must enter the exclusion record information required by 9.404(b) into SAM within 3 business days after the action becomes effective.",
+            "cite": "RFO FAR 9.404(c)(3)(i)",
+            "difficulty": 2,
+            "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9 (9.404(c)(3)(i)). The exclusion record contents are listed at 9.404(b)."
+          },
+          "after": null,
+          "source": "not board material - see notes"
+        }
+      ],
+      "notes": "removed: not board material. Accurate as written: RFO 9.404(c)(3)(i) requires each agency to enter the 9.404(b) exclusion record 'within 3 business days after the action becomes effective'. The duty belongs to the agency staff assigned SAM exclusion roles under 9.404(c)(1), not to the contracting officer, whose rule is to check SAM before award (9.404(c)(5), 9.405). Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9 (9.404(c)(1), (c)(3)(i))"
+    },
+    {
+      "id": "PC86",
+      "verdict": "removed",
+      "changes": [
+        {
+          "field": "card",
+          "before": {
+            "id": "PC86",
+            "event": "Updating an exclusion record in SAM after the action is modified or rescinded",
+            "days": 5,
+            "day_type": "business",
+            "anchor": "after modifying or rescinding an action",
+            "rule": "The agency must update the exclusion record in SAM generally within 5 business days after modifying or rescinding an exclusion action.",
+            "cite": "RFO FAR 9.404(c)(3)(iii)",
+            "difficulty": 3,
+            "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9 (9.404(c)(3)(iii)). The word 'generally' is in the source, so this is the standard rather than an absolute bar."
+          },
+          "after": null,
+          "source": "not board material - see notes"
+        }
+      ],
+      "notes": "removed: not board material. Accurate as written: RFO 9.404(c)(3)(iii) says 'Update the exclusion record in SAM, generally within 5 business days after modifying or rescinding an action'. Same specialist actor as PC85; named as administrative minutiae in the review instruction. Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9 (9.404(c)(3)(iii))"
+    },
+    {
+      "id": "PC87",
+      "verdict": "removed",
+      "changes": [
+        {
+          "field": "card",
+          "before": {
+            "id": "PC87",
+            "event": "Notice to the prosecuting official before a suspension's 12-month period runs out",
+            "days": 30,
+            "day_type": "calendar",
+            "anchor": "before the 12-month period after the suspension notice expires",
+            "rule": "If legal proceedings are not initiated within 12 months after the date of the suspension notice, the suspension must be terminated unless a prosecuting official requests an extension, which can add 6 months; no suspension may run past 18 months without legal proceedings. The suspending and debarring official must notify the Department of Justice or other responsible prosecuting official of the proposed termination at least 30 days before the 12-month period expires, so that official can ask for an extension.",
+            "cite": "RFO FAR 9.407-4(b), (c)",
+            "difficulty": 3,
+            "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9 (9.407-4(b) and (c)). The 12-month, 6-month and 18-month limits are stated in months, not days, so only the 30-day notice is scored here."
+          },
+          "after": null,
+          "source": "not board material - see notes"
+        }
+      ],
+      "notes": "removed: not board material. Accurate as written: RFO 9.407-4(b) (12 months, extension of 6 months on a prosecuting official's request, never beyond 18 months without legal proceedings) and 9.407-4(c) (the suspending and debarring official notifies DOJ or the responsible prosecuting official 'at least 30 days before the 12-month period expires'). The board-askable part is the 12/6/18-month suspension length, which is stated in months and cannot be scored; the 30 days that the card scores is the suspending and debarring official's notice to a prosecutor, which only that office applies. Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9 (9.407-4(b)-(c))"
+    },
+    {
+      "id": "PC88",
+      "verdict": "removed",
+      "changes": [
+        {
+          "field": "card",
+          "before": {
+            "id": "PC88",
+            "event": "Award of a multiyear contract after congressional notification",
+            "days": 31,
+            "day_type": "calendar",
+            "anchor": "after the agency head notifies Congress in writing",
+            "rule": "Except for DoD, NASA and the Coast Guard, a multiyear contract with a cancellation ceiling over $20 million may not be awarded until the agency head notifies Congress in writing; for DoD, NASA and the Coast Guard the trigger is a ceiling over $200 million and the notice goes to the House and Senate armed services and appropriations committees. The contract may not be awarded until 31 days after notification.",
+            "cite": "RFO FAR 17.104-3(a)-(c)",
+            "difficulty": 3,
+            "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-17 (17.104-3 Congressional notification, paragraphs (a), (b) and (c))."
+          },
+          "after": null,
+          "source": "not board material - see notes"
+        }
+      ],
+      "notes": "removed: not board material. Accurate as written: RFO 17.104-3(a)-(c) - cancellation ceiling over $20 million (civilian) or $200 million (DoD, NASA, Coast Guard), agency-head notice to Congress or the armed services and appropriations committees, and 'The contract may not be awarded until 31 days after notification.' A multiyear contract with a cancellation ceiling over $200 million is outside anything a Class I-IV contracting officer at a contracting support brigade would award, and a board question on Part 17 goes to options and the multiyear versus multiple-year distinction, not this count. Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-17 (17.104-3)"
+    },
+    {
+      "id": "PC89",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "10 calendar days confirmed. 52.228-1(d) (Sept 1996): if the successful bidder 'fails to execute all contractual documents or furnish executed bond(s) within 10 days after receipt of the forms by the bidder, the Contracting Officer may terminate the contract for default'; RFO 28.101-2(a)(1) lets the contracting officer modify the provision 'To set a period of time that is other than 10 days for the return of executed bonds'; RFO 28.103-4 sets 'normally 10 days' for 52.228-16, as the note says. Anchor and rule match. Relevance: keep (bonds); difficulty 1 is acceptable for a count printed in every bid guarantee provision. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-28 (28.101-2(a)(1), 28.103-4) ; https://www.acquisition.gov/far/52.228-1 (paragraph (d))"
+    },
+    {
+      "id": "PC90",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "30 calendar days confirmed. RFO 28.204-3(d): 'If the contractor does not furnish an acceptable replacement ILC, or other acceptable substitute, at least 30 days before an ILC's scheduled expiration, the contracting officer must immediately draw on the ILC'; 28.204-3(c) names the sight draft in 52.228-14; 28.204-3(g)(3) carries the parallel 30 days when an issuer's rating drops below investment grade, as the note says. Real before-rule. Relevance: keep (bonds). Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-28 (28.204-3(c), (d), (g)(3))"
+    },
+    {
+      "id": "PC91",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "60 calendar days confirmed. RFO 28.204-3(f)(1): 'If used as a bid guarantee, the ILC should expire no earlier than 60 days after the close of the bid acceptance period'; (f)(2): initial expiration of at least one year and automatic one-year extensions 'unless the issuer provides the beneficiary written notice of non-renewal at least 60 days in advance of the current expiration date'. Rule matches; the year-long coverage periods are correctly left unscored. Relevance: keep (bonds); difficulty 3 fits. Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-28 (28.204-3(f)(1)-(2))"
+    },
+    {
+      "id": "PC92",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "cite",
+          "before": "FAR 52.219-9(l)(1)(i); RFO FAR 19.109(a)(2)(i)",
+          "after": "FAR 52.219-9(l)(1)(i); RFO FAR 19.109(e)(2)(i)",
+          "source": "RFO 19.109(e)(2)(i) is the prescription; (a)(2) is the multiple-NAICS paragraph - https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19"
+        },
+        {
+          "field": "note",
+          "before": "Read 17 Sep 2026: https://www.acquisition.gov/far/52.219-9 (paragraph (l)(1)(i)); https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19 (19.109(a)(2)(i) prescribes the clause for solicitations and contracts that offer subcontracting possibilities and are expected to exceed $900,000, or $2 million for construction of any public facility). Candidate 23 asked whether the clause states dates rather than days: it states both - fixed period-end dates of 31 March and 30 September, and a 30-day due date after each of them.",
+          "after": "Read 17 Sep 2026: https://www.acquisition.gov/far/52.219-9 (paragraph (l)(1)(i)); https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19 (19.109(e)(2)(i) prescribes the clause for solicitations and contracts that offer subcontracting possibilities and are expected to exceed $900,000, or $2 million for construction of any public facility). Candidate 23 asked whether the clause states dates rather than days: it states both - fixed period-end dates of 31 March and 30 September, and a 30-day due date after each of them.",
+          "source": "same - https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19"
+        }
+      ],
+      "notes": "30 calendar days confirmed in 52.219-9 (Jan 2025) paragraph (l)(1)(i), verbatim: semi-annual ISRs for the periods ending March 31 and September 30, a report within 30 days of contract completion, reports 'due 30 days after the close of each reporting period, unless otherwise directed by the Contracting Officer', due regardless of activity, and a corrected report within 30 days of an ISR rejection. The prescription cite was wrong: the clause is prescribed at RFO 19.109(e)(2)(i) ('Insert the clause at 52.219-9 ... expected to exceed $900,000 ($2 million for construction of any public facility)'), while 19.109(a)(2) is the multiple-award, multiple-NAICS paragraph; cite and note corrected. Alternate III (Jan 2025), used when the action is not reported in FPDS, substitutes an SF 294 with the same period ends and 30-day timing, so the count holds. Class tag II-IV is right: $900,000 is above the simplified acquisition threshold. Relevance: keep (subcontracting reports). Sources: https://www.acquisition.gov/far/52.219-9 (paragraph (l)(1)(i); Alternate III paragraph (l)(1)(i)) ; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19 (19.109(a)(1), (a)(2), (e)(2)(i))"
+    },
+    {
+      "id": "PC93",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "10 calendar days confirmed. RFO 22.403(b)(1)(i): a modification is effective if received by the contracting agency or published on Wage Determinations at SAM.gov '10 or more calendar days before the date of bid opening'; (b)(1)(ii): also effective if received or published 'less than 10 calendar days before the date of bid opening, unless the contracting officer finds that there is not reasonable time available before bid opening to notify the prospective bidders', with the written finding placed in the contract file and available to DOL; (b)(2): modifications received or published after bid opening are not effective (subject to (b)(6)). Rule and before-anchor match; the note is right that this is the RFO home of the old 22.404-6 rule. Relevance: keep (labor standards). Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22 (22.403(b)(1)-(2))"
+    },
+    {
+      "id": "PC94",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "90 calendar days confirmed. RFO 22.403(b)(6): 'If an award is not made within 90 days after bid opening, any modification to a general wage determination which is published on the Wage Determinations at SAM.gov before award, shall be effective for any resultant contract unless an extension of the 90-day period is obtained from the Administrator, Wage and Hour Division', on an agency-head request supported by a written finding that it 'is necessary and proper in the public interest to prevent injustice, undue hardship, or to avoid serious impairment in the conduct of Government business'. Rule matches. Relevance: keep (labor standards). Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22 (22.403(b)(6))"
+    },
+    {
+      "id": "PC95",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "30 calendar days confirmed. RFO 22.1004-6(a): where the incumbent's service employees have a collective bargaining agent, the contracting officer gives the incumbent and the agent written notice of the successor contract, modification or multiple-year anniversary date and the applicable acquisition dates; (b): 'This written notification must be given at least 30 days in advance of the earliest applicable acquisition date or the applicable annual or biennial anniversary date in order for the time-of-receipt limitations in 22.1003(b)(1) and (2) to apply.' Real before-rule; rule matches. Relevance: keep (labor standards, contracting officer's own duty). Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22 (22.1004-6(a)-(b))"
+    },
+    {
+      "id": "PC96",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "10 calendar days confirmed. RFO 22.1004-7: at a Federal facility where employees may be hired or retained by a succeeding contractor, the incumbent prime furnishes 'a certified list of all service employees on the contractor's or subcontractor's payroll during the last month of the contract, together with anniversary dates of employment, to the contracting officer no later than 10 days before contract completion', and the contracting officer gives the list to the successor; 52.222-41(n) (Aug 2018): 'Not less than 10 days prior to completion of any contract'. Rule follows the RFO text; the clause adds that the wage determination must contain length-of-service benefit provisions, which is a condition, not a different count. Relevance: keep (labor standards). Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22 (22.1004-7) ; https://www.acquisition.gov/far/52.222-41 (paragraph (n))"
+    },
+    {
+      "id": "PC97",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "30 calendar days confirmed. RFO 32.904(e): 'the due date for making interim payments on cost-reimbursement contracts for services is 30 days after the date of receipt of a proper invoice'; 32.905(b)(2): an interim payment request under such a contract 'constitutes a proper invoice for purposes of this section if it includes all of the information required by the contract'; 32.907(a)(5): the penalty runs automatically 'when payment is made more than 30 days after the designated billing office receives a proper invoice'. 52.232-25 Alternate I (Feb 2002) paragraph (e)(2) says the same. Distinct from PC25. Relevance: keep (payment). Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32 (32.904(e), 32.905(b)(2), 32.907(a)(5)) ; https://www.acquisition.gov/far/52.232-25 (Alternate I, paragraph (e))"
+    },
+    {
+      "id": "PC98",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "7 calendar days confirmed. RFO 32.904(f) table rows (1) meat or meat food products (including edible fresh or frozen poultry meat, perishable poultry meat food products, fresh eggs and perishable egg products) and (2) fresh or frozen fish: '7th day after product delivery'; 52.232-25(a)(2)(i)(A)-(B) (Jan 2017) matches and the clause preamble makes all days calendar days. Distinct from PC39's 3-day invoice return. Relevance: keep (payment). Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32 (32.904(f)) ; https://www.acquisition.gov/far/52.232-25 (paragraph (a)(2)(i)(A)-(B))"
+    },
+    {
+      "id": "PC99",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "10 calendar days confirmed. RFO 32.904(f) rows (3) perishable agricultural commodities: '10th day after product delivery, unless another date is specified in the contract' and (4) dairy products, edible fats or oils and food products prepared from them: '10th day after a proper invoice has been received'; 52.232-25(a)(2)(i)(C)-(D) matches. The card correctly separates the two triggers. Relevance: keep (payment). Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32 (32.904(f)) ; https://www.acquisition.gov/far/52.232-25 (paragraph (a)(2)(i)(C)-(D))"
+    },
+    {
+      "id": "PC100",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "40 calendar days confirmed. RFO 32.907(c)(1)(i)-(iii): the additional penalty is paid only if the Government owes an interest penalty of $1 or more, the designated payment office does not pay it within 10 days after the invoice amount is paid, and the contractor's written demand is 'postmarked not later than 40 days after the date the invoice amount is paid'; 52.232-25(a)(7)(i)(A)-(C) matches, and (a)(7)(ii)(B) uses the 40th day for undated or illegibly postmarked demands. Relevance: keep (payment under the clause every contract carries); difficulty 3 fits. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32 (32.907(c)(1)) ; https://www.acquisition.gov/far/52.232-25 (paragraph (a)(7))"
+    },
+    {
+      "id": "PC101",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "90 calendar days confirmed. RFO 49.001: 'Plant clearance period means a set time period that starts when the contract is completed or terminated and ends 90 days after the contracting officer receives acceptable inventory schedules for each property classification. The parties can agree to make this period longer if needed.' Rule matches. Not a duplicate of PC37 (120-day inventory schedules) or PC38 (90-day partial-termination proposal). Relevance: keep (termination and property disposition the contracting officer owns). Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49 (49.001)"
+    },
+    {
+      "id": "PC102",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "30 calendar days confirmed. RFO 49.105-1(a): the TCO estimates settlement funds 'and within 30 days of receiving the termination notice, recommend that the contracting officer release excess funds', and 'must not recommend releasing amounts under $1,000 unless requested by the contracting officer'; (b): if earlier releases create a shortage, 'The contracting officer must restore the funds within 30 days.' Rule matches. Relevance: keep (termination; both the TCO's and the contracting officer's clocks). Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49 (49.105-1(a)-(b))"
+    },
+    {
+      "id": "PC103",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "15 calendar days confirmed. RFO 49.109-7(b): 'Before issuing a determination of the amount due the contractor, the TCO must give the contractor at least 15 days' notice by certified mail (return receipt requested) to submit written evidence. The evidence must reach the TCO on or before a stated date and must support the amount previously proposed.' 49.109-7(a) confirms the note: determination is used when no settlement is reached or the proposal is late. Real before-rule. Relevance: keep (termination). Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49 (49.109-7(a)-(b))"
+    },
+    {
+      "id": "PC104",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "difficulty",
+          "before": 2,
+          "after": 3,
+          "source": "count appears only in the 49.603 settlement agreement formats - https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49"
+        }
+      ],
+      "notes": "10 calendar days confirmed. The identical sentence 'The Contractor shall, within 10 days after receipt of the payment specified in this agreement, pay to each of its immediate subcontractors (or their respective assignees) the amounts to which they are entitled, after deducting any prior payments and, if the Contractor so elects, any amounts due and payable to the Contractor by those subcontractors' appears as paragraph (5) of the 49.603-1 format, (6) of 49.603-2, (5) of 49.603-3 and (4) of 49.603-8. Rule matches. Relevance: keep - a term of the settlement agreement the TCO signs. Difficulty raised from 2 to 3: the count lives only inside the agreement formats. Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49 (49.603-1, 49.603-2, 49.603-3, 49.603-8)"
+    },
+    {
+      "id": "PC105",
+      "verdict": "removed",
+      "changes": [
+        {
+          "field": "card",
+          "before": {
+            "id": "PC105",
+            "event": "Plant clearance officer's acceptance or return of an inventory disposal schedule",
+            "days": 10,
+            "day_type": "calendar",
+            "anchor": "following receipt from a contractor",
+            "rule": "Plant clearance officers should review and accept, or return for correction, inventory disposal schedules within 10 days following receipt from the contractor. A schedule completed in accordance with the instructions for Standard Form 1428 should be accepted.",
+            "cite": "RFO FAR 45.602-1(a)",
+            "difficulty": 2,
+            "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-45 (45.602-1(a) Inventory disposal schedules)."
+          },
+          "after": null,
+          "source": "not board material - see notes"
+        }
+      ],
+      "notes": "removed: not board material. Accurate as written: RFO 45.602-1(a) says plant clearance officers 'should review and accept, or return for correction, inventory disposal schedules within 10 days following receipt from a contractor'. It is the plant clearance officer's internal processing target (and a 'should'), named as administrative minutiae in the review instruction. Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-45 (45.602-1(a))"
+    },
+    {
+      "id": "PC106",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "difficulty",
+          "before": 1,
+          "after": 2,
+          "source": "property-disposition rule, not a headline deadline; 45.602-1(b)(4) - https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-45"
+        }
+      ],
+      "notes": "120 calendar days confirmed. RFO 45.602-1(b)(4): plant clearance officers must 'Provide the contractor disposition instructions for property identified on an acceptable inventory disposal schedule within 120 days. A failure to provide timely disposition instructions may entitle the contractor to an equitable adjustment'; 52.245-1(j)(6)(i) (Sep 2021): the Government's failure to furnish disposal instructions 'within 120 days following acceptance of an inventory disposal schedule may entitle the Contractor to an equitable adjustment for costs incurred to store such property on or after the 121st day'. Rule matches. Relevance: keep - the Government Property clause consequence (storage-cost equitable adjustment) that lands on the contracting officer. Difficulty lowered from 1 to 2: a property-disposition count is not a headline deadline every contracting officer knows. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-45 (45.602-1(b)(4)) ; https://www.acquisition.gov/far/52.245-1 (paragraph (j)(6)(i))"
+    },
+    {
+      "id": "PC107",
+      "verdict": "removed",
+      "changes": [
+        {
+          "field": "card",
+          "before": {
+            "id": "PC107",
+            "event": "Standard screening period for reutilization of contractor inventory",
+            "days": 46,
+            "day_type": "calendar",
+            "anchor": "from the plant clearance officer's acceptance of an inventory disposal schedule",
+            "rule": "The screening period begins when the plant clearance officer accepts an inventory disposal schedule. The standard screening period is 46 days: the contracting agency screens during the first 20 days, days 21 through 41 are concurrent screening by other Federal agencies and screening for donation, and days 42 through 46 are reserved for GSA to allocate property to donees.",
+            "cite": "RFO FAR 45.602-3(a)(1)-(2)",
+            "difficulty": 3,
+            "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-45 (45.602-3 Screening, paragraph (a) 'The standard screening period is 46 days' and the day-by-day breakdown in (a)(1) and (a)(2))."
+          },
+          "after": null,
+          "source": "not board material - see notes"
+        }
+      ],
+      "notes": "removed: not board material. Accurate as written: RFO 45.602-3(a) 'The standard screening period is 46 days', with days 1-20 agency screening, 21-41 concurrent Federal and donation screening and 42-46 GSA allocation to donees. It is GSA and plant clearance officer reutilization mechanics, named as administrative minutiae in the review instruction. Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-45 (45.602-3(a)(1)-(2))"
+    },
+    {
+      "id": "PC108",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "rule",
+          "before": "The contractor must submit inventory disposal schedules to the plant clearance officer no later than 60 days following completion of contract deliveries or performance, or such longer period as the plant clearance officer approves. After a termination in whole or in part the deadline is 120 days, extendable by the termination contracting officer.",
+          "after": "The contractor must submit inventory disposal schedules to the plant clearance officer no later than 60 days following completion of contract deliveries or performance, or such longer period as the plant clearance officer approves. After a termination in whole or in part the deadline is 120 days, extendable by the termination contracting officer, and for an item the contractor decides during performance it no longer needs, the schedule is due 30 days after that determination.",
+          "source": "52.245-1(j)(3)(i)(A) - https://www.acquisition.gov/far/52.245-1"
+        },
+        {
+          "field": "cite",
+          "before": "FAR 52.245-1(j)(3)(i)(B)-(C)",
+          "after": "FAR 52.245-1(j)(3)(i)(A)-(C)",
+          "source": "same"
+        },
+        {
+          "field": "note",
+          "before": "Read 17 Sep 2026: https://www.acquisition.gov/far/52.245-1 (paragraph (j) Contractor inventory disposal, (j)(3) Submission requirements, (j)(3)(i)(A) through (C)).",
+          "after": "Read 17 Sep 2026: https://www.acquisition.gov/far/52.245-1 (paragraph (j) Contractor inventory disposal, (j)(3) Submission requirements, (j)(3)(i)(A) through (C)). Reviewer 17 Sep 2026: the 30-day trigger in (j)(3)(i)(A) was folded in from removed card PC109.",
+          "source": "same"
+        }
+      ],
+      "notes": "60 calendar days confirmed. 52.245-1(j)(3)(i) (Sep 2021): the contractor submits inventory disposal schedules to the plant clearance officer no later than '(A) 30 days following the Contractor's determination that a property item is no longer required for performance of this contract; (B) 60 days, or such longer period as may be approved by the Plant Clearance Officer, following completion of contract deliveries or performance; or (C) 120 days, or such longer period as may be approved by the Termination Contracting Officer, following contract termination in whole or in part.' The card's rule matched (B)-(C); PC109 (the (A) trigger) is removed as not board material, so its 30-day trigger is folded into this rule and the cite widened to (A)-(C) so the clause's three triggers stay on one card. The 120 days after termination agrees with PC37. Relevance: keep - the disposal-schedule deadline under the Government Property clause the contracting officer administers. Source: https://www.acquisition.gov/far/52.245-1 (paragraph (j)(3)(i)(A)-(C))"
+    },
+    {
+      "id": "PC109",
+      "verdict": "removed",
+      "changes": [
+        {
+          "field": "card",
+          "before": {
+            "id": "PC109",
+            "event": "Contractor's inventory disposal schedule for property it no longer needs",
+            "days": 30,
+            "day_type": "calendar",
+            "anchor": "following the contractor's determination that a property item is no longer required for performance",
+            "rule": "The contractor must submit an inventory disposal schedule to the plant clearance officer no later than 30 days following its own determination that a property item is no longer required for performance of the contract. Unless the plant clearance officer decides otherwise, production scrap need not be reported and may be handled under the contractor's own scrap procedures.",
+            "cite": "FAR 52.245-1(j)(3)(i)(A), (j)(3)(ii)",
+            "difficulty": 3,
+            "note": "Read 17 Sep 2026: https://www.acquisition.gov/far/52.245-1 (paragraph (j)(3)(i)(A) and (j)(3)(ii))."
+          },
+          "after": null,
+          "source": "not board material - see notes"
+        }
+      ],
+      "notes": "removed: not board material. Accurate as written: 52.245-1(j)(3)(i)(A) - 30 days following the contractor's determination that an item is no longer required - and (j)(3)(ii) on production scrap. The trigger runs from a contractor property-administration decision that only the contractor and the plant clearance officer see; the count is preserved as the third sentence of PC108, so nothing the clause teaches is lost. Source: https://www.acquisition.gov/far/52.245-1 (paragraph (j)(3)(i)(A), (j)(3)(ii))"
+    },
+    {
+      "id": "PC110",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "anchor",
+          "before": "looking ahead at the costs the contractor expects to incur next",
+          "after": "of expected costs ahead, the look-ahead window for the 75 percent notice",
+          "source": "52.232-20(b)(1) 'in the next 60 days, when added to all costs previously incurred' - https://www.acquisition.gov/far/52.232-20"
+        }
+      ],
+      "notes": "60 calendar days confirmed. 52.232-20(b)(1) (Apr 1984): notify the contracting officer in writing whenever the contractor has reason to believe 'The costs the Contractor expects to incur under this contract in the next 60 days, when added to all costs previously incurred, will exceed 75 percent of the estimated cost specified in the Schedule', or (b)(2) the total cost will be greater or substantially less than estimated; (c) the notice carries a revised estimate; RFO 32.706-2(a) and the clause preamble: 'The 60-day period may be varied from 30 to 90 days and the 75 percent from 75 to 85 percent.' Rule matches. The anchor was rewritten: the game prints the anchor after '___ calendar days', and 'looking ahead at the costs the contractor expects to incur next' did not read as a phrase there; the new anchor contains none of from/after/following, so the game will not turn a forecasting window into a due-date card, which is correct because this is not a deadline. No class tag: 32.706-2(a) applies to every fully funded cost-reimbursement contract. Relevance: keep (Limitation of Cost is core cost-type administration). Sources: https://www.acquisition.gov/far/52.232-20 (preamble, paragraphs (b)-(c)) ; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32 (32.706-2(a))"
+    },
+    {
+      "id": "PC111",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "20 calendar days confirmed. 52.242-14(c) (Apr 1984): a claim is not allowed '(1) For any costs incurred more than 20 days before the Contractor shall have notified the Contracting Officer in writing of the act or failure to act involved (but this requirement shall not apply as to a claim resulting from a suspension order); and (2) Unless the claim, in an amount stated, is asserted in writing as soon as practicable after the termination of the suspension, delay, or interruption, but not later than the date of final payment'. RFO 42.1005(a) prescribes the clause for fixed-price construction and architect-engineer contracts with no threshold, so no class tag; the clause page still prints '42.1305(a)'. I agree with the author's two notes: the candidate list's '20 days after the suspension ends' is not what the clause says, and RFO 42.1005(a)'s 'may reduce the 90-day period in the clause' is a drafting slip - 52.242-14 has no 90-day period (52.242-15 does). The 'before' anchor is a real look-back limit, parallel to PC66 (52.242-17) and PC75 (52.243-4) but a different clause. Relevance: keep (construction claims). Sources: https://www.acquisition.gov/far/52.242-14 (paragraph (c)) ; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-42 (42.1005(a)-(b))"
+    },
+    {
+      "id": "PC112",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "3 days confirmed. RFO 14.309-1(a)(1): 'Notify each unsuccessful bidder in writing or electronically within three days after contract award, that its bid was not accepted. \"Day,\" for purposes of the notification process, means calendar day, except that the period will run until a day which is not a Saturday, Sunday, or legal holiday'; (a)(2): when award is to other than a low bidder, state the reason in the notice to each unsuccessful low bidder. Rule matches; day_type calendar with the roll-forward stated in the rule. Distinct from PC30 (negotiated, RFO 15.207-2). Relevance: keep (sealed bidding headline). Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-14 (14.309-1(a))"
+    },
+    {
+      "id": "PC113",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "30 calendar days confirmed. RFO 14.210(a)-(c): allow a reasonable time to prepare and submit bids; '(b) Provide at least 30 calendar days when a synopsis is required (see subpart 5.1)'; sealed bids opened publicly at the time and place stated in the IFB. Rule matches. Same number as PC72 but a different rule and source, as the note says. Relevance: keep (sealed bidding headline). Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-14 (14.210)"
+    }
+  ],
+  "findings": {
+    "sources_read": "Every card checked against the live text fetched 17 Sep 2026 from acquisition.gov (RFO deviation-guide pages for Parts 4, 5, 9, 14, 17, 19, 22, 28, 32, 42, 45 and 49, all marked Last Updated 09/14/2026; clause pages 52.204-13, 52.219-9, 52.222-41, 52.228-1, 52.232-20, 52.232-25, 52.242-14, 52.245-1, FAC 2026-01). Every day count, day type and anchor in the 36 cards matched its source; the ten fixes are one wrong cite (PC92), two rule or anchor statements that went beyond the source (PC81, PC82), one anchor that did not read after the game's prompt (PC110), one consolidation (PC108 absorbs PC109) and five difficulty ratings.",
+    "author_report": [
+      "PC88: the author's note '31 days, not 30' is correct (RFO 17.104-3(c)); the card was removed for relevance, not accuracy.",
+      "PC92: the author read the clause correctly (dates and a 30-day due date) but cited the prescription as RFO 19.109(a)(2)(i); the clause is prescribed at 19.109(e)(2)(i). Fixed.",
+      "PC111: I agree with both of the author's observations - the candidate list's '20 days after the suspension ends' is not in 52.242-14, and RFO 42.1005(a)'s sentence about reducing 'the 90-day period in the clause' is a drafting slip that belongs with 52.242-15.",
+      "PC81: the author's note that it is distinct from PC64 is right, but the anchor added 'before the solicitation is issued', which Table 5-2 does not say for the 10-day row. Fixed.",
+      "PC82: the author's note correctly lists the rows carrying 40 days; the rule's first sentence stated the 40 days more broadly than the table. Fixed.",
+      "PC78: RFO 4.203-1(b)(4) reads 'unusual or compelling urgency'; the card says 'unusual and compelling urgency' (the Part 6 authority's name). Left as written."
+    ],
+    "not_board_material": {
+      "PC84": "FAPIIS FOIA-exemption assertion and removal (7 calendar days) - posting official's FOIA procedure",
+      "PC85": "entering an exclusion in SAM (3 business days) - agency exclusion-entry staff",
+      "PC86": "updating an exclusion record in SAM (5 business days) - same",
+      "PC87": "notice to the prosecuting official 30 days before a suspension's 12-month period ends - suspending and debarring official",
+      "PC88": "award 31 days after congressional notification of a multiyear contract with a cancellation ceiling over $200 million (DoD) - agency head",
+      "PC105": "plant clearance officer's 10-day acceptance or return of an inventory disposal schedule",
+      "PC107": "46-day standard reutilization screening period - GSA and plant clearance officer",
+      "PC109": "30-day disposal schedule after the contractor's own no-longer-required determination - folded into PC108"
+    },
+    "file_handling": "Removed cards were also dropped from the author's verification_log inside games_add_protest_clock.json so its ids stay aligned with protest_clock; the full text of each removed card is preserved in this log under changes[].before, and the author's sources are quoted in the notes.",
+    "possible_future_card": "RFO 9.105-2(b)(2)(ii): the contracting officer submits documentation of a nonresponsibility determination to FAPIIS within three working days of making it. A contracting-officer-owned count not in PC01-PC113; not added, as adding cards was outside this review."
+  },
+  "summary": {
+    "checked": 36,
+    "fixed": 10,
+    "removed": 8,
+    "unverifiable": [],
+    "removed_ids": [
+      "PC84",
+      "PC85",
+      "PC86",
+      "PC87",
+      "PC88",
+      "PC105",
+      "PC107",
+      "PC109"
+    ],
+    "fixed_ids": [
+      "PC78",
+      "PC79",
+      "PC81",
+      "PC82",
+      "PC83",
+      "PC92",
+      "PC104",
+      "PC106",
+      "PC108",
+      "PC110"
+    ],
+    "cards_remaining": 28
+  }
+}

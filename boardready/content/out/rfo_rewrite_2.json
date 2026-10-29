@@ -1,0 +1,334 @@
+[
+  {
+    "id": "Q0014",
+    "changed": true,
+    "answer": "A wide selection of contract types is available to the Government and contractors to provide needed flexibility in acquiring the large variety and volume of supplies and services required by agencies. Contract types vary according to: (1) The degree and timing of the responsibility assumed by the contractor for the costs of performance, and (2) The amount and nature of the profit incentive offered to the contractor for achieving or exceeding specified standards or goals. (b) The contract types are grouped into two broad categories, fixed-price contracts, cost-reimbursement contracts. The specific contract types range from firm-fixed-price, in which the contractor has full responsibility for the performance costs and resulting profit (or loss), to cost-plus-fixed-fee, in which the contractor has minimal responsibility for the performance costs and the negotiated fee (profit) is fixed. In between are the various incentive contracts in which the contractor's responsibility for the performance costs and the profit or fee incentives offered are tailored to the uncertainties involved in contract performance. There are many factors that the contracting officer should consider in selecting and negotiating the contract type. They include the following: (a) Price competition. Normally, effective price competition results in realistic pricing, and fixed-price contract is ordinarily in the Government's interest. (b) Price analysis. Price analysis, with or without competition, may provide a basis for selecting the contract type. The degrees to which price analysis can provide a realistic pricing standard should be carefully considered. See FAR 15.404-1 (c) Cost analysis. In the absence of effective price competition and if price analysis is not sufficient, the cost estimates of the offeror and the Government provide the basis for negotiating contract pricing arrangements. It is essential that the uncertainties involved in performance and their possible impact upon costs be identified and evaluated, so that a contract type that places a reasonable degree of cost responsibility upon the contractor can be negotiated. (d) type and complexity of the requirement. Complex requirements, particularly those unique to the Government, usually result in greater risk assumption by the Government. This is especially true for complex research and development contracts, when performance uncertainties or the likelihood of changes makes it difficult to estimate performance costs in advance. As a requirement recurs or as quantity production begins, the cost risk should shift to the contractor, and a fixed-price contract should be considered. (e) Combining contract types. If the entire contract cannot be firm-fixed-price, the contracting officer shall consider whether or not a portion of the contract can be established on a firm-fixed-price basis. (f) Urgency of the requirement. If urgency is a primary factor, the Government may choose to assume a greater proportion of risk or it may offer incentives tailored to performance outcomes to ensure timely contract performance. (g) Period of performance or length of production risk in times of economic uncertainty, contracts extending over a relatively long period may require economic price adjustment or price redetermination clauses (h) Contractor's technical capability and financial responsibility (i) Adequacy of the contractor's accounting system. Before agreeing on a contract type other than firm-fixed-price, the contracting officer shall ensure that the contractor's accounting system will permit timely development of all necessary cost data in the form required by the proposed contract type.\nCite: RFO FAR 15.404-1.",
+    "crosswalk": [
+      {
+        "old": "FAR 15.404-1(b)",
+        "new": "FAR 15.404-1"
+      }
+    ],
+    "citations_rfo": [
+      "RFO FAR 15.404-1"
+    ],
+    "rfo_status": "updated",
+    "notes": "Single cite in the text. Verified crosswalk: FAR 15.404-1(b) (price analysis) -> RFO FAR 15.404-1, confidence \"verified\". Wording otherwise untouched; the uncited narrative paraphrases legacy FAR 16.103/16.104 contract-type selection factors and was left exactly as written. Cite: line added."
+  },
+  {
+    "id": "Q0023",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "Skipped per scope rule: the answer text carries no FAR/DFARS/U.S.C./CFR cite and names no FAR part in words (the 10/41 U.S.C. cites live only in the item metadata). Not touched. Flag for a separate pass: the answer states acquisition-plan thresholds ($50M/$25M/$10M) that are DFARS 207.103 values and are not covered by the verified thresholds table."
+  },
+  {
+    "id": "Q0046",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "Skipped per scope rule: the answer is one uncited sentence (\"It drives contract type decisions and which clauses are to be used.\"). The \"DFARS 21\" entry in the item metadata is a truncated key, not a cite in the answer."
+  },
+  {
+    "id": "Q0047",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "Skipped per scope rule: the SOW vs PWS answer contains no cite and names no FAR part in words."
+  },
+  {
+    "id": "Q0050",
+    "changed": true,
+    "answer": "FAR 12.104: FFP, FFP w/EPA and TM/LH are acceptable. Any type of cost contracts or CLINs are prohibited.\nCite: RFO FAR 12.104.",
+    "crosswalk": [
+      {
+        "old": "FAR 12.207",
+        "new": "FAR 12.104"
+      }
+    ],
+    "citations_rfo": [
+      "RFO FAR 12.104"
+    ],
+    "rfo_status": "updated",
+    "notes": "Verified crosswalk: FAR 12.207 (contract types for commercial items) -> RFO FAR 12.104 \"Contract type (commercial)\", confidence \"verified\". Substance (FFP, FFP w/EPA and T&M/LH acceptable; cost-reimbursement prohibited) untouched. Cite: line added."
+  },
+  {
+    "id": "Q0051",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "Skipped per scope rule: no cite in the answer text. Substantively the same content as Q0059, which was processed (legacy FAR 13.004 -> RFO FAR 12.201-1(b)); recommend the orchestrator align the two items in a later pass."
+  },
+  {
+    "id": "Q0054",
+    "changed": true,
+    "answer": "Combined synopsis/solicitation procedure combines the synopsis required by 5.201(d) and the issuance of the solicitation into a single document. When using the combined synopsis/solicitation procedure, the SF 1449 is not used for issuing the solicitation. Synopsis prepared as described at 5.201(c).\nCite: RFO FAR 12.202(b); RFO FAR 5.201(c); RFO FAR 5.201(d).",
+    "crosswalk": [
+      {
+        "old": "FAR 12.603",
+        "new": "FAR 12.202(b)"
+      },
+      {
+        "old": "FAR 5.203",
+        "new": "FAR 5.201(d)"
+      },
+      {
+        "old": "FAR 5.207",
+        "new": "FAR 5.201(c)"
+      }
+    ],
+    "citations_rfo": [
+      "RFO FAR 12.202(b)",
+      "RFO FAR 5.201(c)",
+      "RFO FAR 5.201(d)"
+    ],
+    "rfo_status": "updated",
+    "notes": "FAR 12.603 (the section the question stem names) -> RFO FAR 12.202(b) per the verified crosswalk; the question stem itself was not edited, only the answer. FAR 5.203 and 5.207 are NOT in the crosswalk, so they were resolved on https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5: RFO Part 5 keeps only 5.000-5.002, 5.101 Presolicitation notice, 5.102, 5.103, 5.201 Solicitation notice, 5.202 and subpart 5.3. Solicitation-notice content is at 5.201(c) (legacy 5.207 preparation and transmittal of synopses) and the minimum response times are at 5.201(d) (legacy 5.203 publicizing and response time). Confidence: section list and both paragraph roles read off the part deviation guide; the guide publishes no old-to-new table, so these two pairs are my reading of the restructured part rather than a published crosswalk row. The sentence about the SF 1449 was left as written - the RFO 12.202 text does not mention the SF 1449, but dropping it would be a substance edit and is out of scope for a citation pass. Reviewer 14 Sep 2026: confirmed on the RFO Part 5 deviation guide (fetched 14 Sep 2026): Part 5 sections are 5.000-5.002, 5.101, 5.102, 5.103, 5.201, 5.202, 5.301-5.303; 5.201(c) is \"Content\" (information required by 5.101(c), specifications/technical data access, brand-name justification per 6.104) and 5.201(d) is \"Timing\" (minimum response times, Table 5-3). Legacy 5.207 (preparation and transmittal of synopses) -> 5.201(c) and legacy 5.203 (publicizing and response time) -> 5.201(d) are consistent with that structure; no published old-to-new row exists, so treat both pairs as confidence \"probable\". The verified crosswalk row FAR 5.102(a)(6) -> FAR 5.201(c)(3) independently confirms 5.201(c) is the content paragraph. RFO 12.202(b) confirmed verbatim."
+  },
+  {
+    "id": "Q0057",
+    "changed": true,
+    "answer": "RFIs; Sources Sought; Pre-sol/pre-proposal Conferences; Industry or Small business conferences; public hearings; Market Research; One-On-One Meetings with Potential Offerors; Pre-sol Notices; Draft RFPs. (FAR 15.101)\nCite: RFO FAR 15.101.",
+    "crosswalk": [
+      {
+        "old": "FAR 15.201(c)",
+        "new": "FAR 15.101"
+      }
+    ],
+    "citations_rfo": [
+      "RFO FAR 15.101"
+    ],
+    "rfo_status": "updated",
+    "notes": "Verified crosswalk: FAR 15.201(c) (early exchanges with industry) -> RFO FAR 15.101, confidence \"verified\". The list of techniques is untouched. Cite: line added."
+  },
+  {
+    "id": "Q0058",
+    "changed": true,
+    "answer": "Functions that include exercising of discretion in applying Gov authority; making value judgements, interpretation and execution of the laws of the US that bind the US to some action; determine, protect and/or advance US economic political territorial, property and other interests; significantly affect life liberty and property of private persons; exert ultimate control over the acquisition, use or disposition of the property, real or personal, tangible or intangible of the US, including collection, control or disbursement of Federal funds.\n(FAR 2.101)\nCite: RFO FAR 2.101.",
+    "crosswalk": [
+      {
+        "old": "FAR 2.101",
+        "new": "FAR 2.101"
+      }
+    ],
+    "citations_rfo": [
+      "RFO FAR 2.101"
+    ],
+    "rfo_status": "updated",
+    "notes": "No renumbering needed: the crosswalk carries FAR 2.101 -> FAR 2.101 (Definitions), confidence \"verified\", so the inherently-governmental-functions definition stays at 2.101 under the RFO. The only change is the required Cite: line appended after the existing \"(FAR 2.101)\" parenthetical; the answer body is otherwise byte-identical. rfo_status is \"updated\" rather than \"n/a\" because the item does carry a cite that was checked against the RFO and confirmed current."
+  },
+  {
+    "id": "Q0059",
+    "changed": true,
+    "answer": "A quotation is not an offer and, consequently, cannot be accepted by the Government to form a binding contract. Therefore, issuance by the Government of an order in response to a supplier’s quotation does not establish a contract. The order is an offer by the Government to the supplier to buy certain supplies or services upon specified terms and conditions. A contract is established when the supplier accepts the offer.\nWhen appropriate, the contracting officer may ask the supplier to indicate acceptance of an order by notification to the Government, preferably in writing, as defined at 2.101. In other circumstances, the supplier may indicate acceptance by furnishing the supplies or services ordered or by proceeding with the work to the point where substantial performance has occurred.\n(FAR 12.201-1(b))\nCite: RFO FAR 12.201-1(b); RFO FAR 2.101.",
+    "crosswalk": [
+      {
+        "old": "FAR 13.004(a)(b)",
+        "new": "FAR 12.201-1(b)"
+      }
+    ],
+    "citations_rfo": [
+      "RFO FAR 12.201-1(b)",
+      "RFO FAR 2.101"
+    ],
+    "rfo_status": "updated",
+    "notes": "Verified crosswalk: FAR 13.004(a)(b) (legal effect of quotations) -> RFO FAR 12.201-1(b), confidence \"verified\" - the RFO folded the legacy subpart 13.5 simplified-procedures material into FAR 12.201-1. The in-text \"as defined at 2.101\" needs no change (FAR 2.101 -> FAR 2.101, verified). Wording untouched. Cite: line added."
+  },
+  {
+    "id": "Q0073",
+    "changed": true,
+    "answer": "FAR 19.602-1 -- Referral (legacy subpart 19.6; under the RFO the Certificate of Competency referral is consolidated at RFO FAR 19.204)\n\n(1) Withhold contract award (see 19.602-3); and\n\n(2) Refer the matter to the cognizant SBA Government Contracting Area Office (Area Office) serving the area in which the headquarters of the offeror is located, in accordance with agency procedures, except that referral is not necessary if the small business concern --\n\n(i) Is determined to be unqualified and ineligible because it does not meet the standard in 9.104-1(g); provided, that the determination is approved by the chief of the contracting office; or\n\n(ii) Is suspended or debarred under Executive Order 11246 or Subpart 9.4.\nCite: RFO FAR 19.204 (legacy FAR 19.602-1 and 19.602-3); FAR 9.104-1(g); FAR subpart 9.4.",
+    "crosswalk": [
+      {
+        "old": "FAR 19.602-1",
+        "new": "FAR 19.204"
+      },
+      {
+        "old": "FAR 9.104-1(g)",
+        "new": "FAR 9.104-1(g)"
+      },
+      {
+        "old": "FAR subpart 9.4",
+        "new": "FAR subpart 9.4"
+      }
+    ],
+    "citations_rfo": [
+      "RFO FAR 19.204",
+      "FAR 9.104-1(g)",
+      "FAR subpart 9.4"
+    ],
+    "rfo_status": "unverifiable",
+    "notes": "Not in the crosswalk, so resolved on https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19. RFO Part 19 has no subpart 19.6: the Certificate of Competency program is a single section, 19.204, under subpart 19.2 (Evaluation and Award), and RFO 19.101(d) states that when an apparent successful small business offeror is determined nonresponsible the contracting officer must refer the business to SBA for a certificate of competency. Confidence: the 19.204 heading and the 19.101(d) referral rule are verified from the deviation guide, but the full text of 19.204 did not render on that page, so the two referral exceptions quoted in this answer (the 9.104-1(g) qualification standard and the E.O. 11246 / subpart 9.4 exclusion) could not be confirmed to survive verbatim in the RFO section - hence the short parenthetical in the answer noting the consolidation. FAR 9.104-1 and FAR 9.405 are both carried in the crosswalk as unchanged, so 9.104-1(g) and subpart 9.4 were left as written; the paragraph letter (g) was not separately re-verified. Reviewer 14 Sep 2026: reverted the author rewrite. The author replaced the heading \"Referral\" with \"Certificate of Competency\" and changed \"(see 19.602-3)\" to \"(see 19.204)\"; neither is a bare cite-number edit. Re-fetched https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19 twice: RFO Part 19 has no subpart 19.6 and section 19.204 \"Certificate of Competency\" exists under subpart 19.2, but the section text does not render, and 19.101 shows only paragraphs (a)-(c), so the referral procedure quoted here (withhold award, refer to the Area Office, the 9.104-1(g) and E.O. 11246 / subpart 9.4 exceptions) could not be confirmed to exist under the RFO and legacy 19.602-3 (resolving differences with SBA) has no located RFO home. Per the brief the old cites are kept in the text with one short consolidation parenthetical and the item is set unverifiable for human review; the 19.602-3 -> 19.204 pair was dropped from the crosswalk. Substance flag, not fixed here: E.O. 11246 was revoked by E.O. 14173 (21 Jan 2025)."
+  },
+  {
+    "id": "Q0074",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "Skipped per scope rule: no cite in the answer text. Separately worth a content pass: the answer says \"Issue draft PWS on FBO\", and FBO (FedBizOpps) was retired into SAM.gov / the GPE. That is a substance fix, not a citation fix, so it was left alone here."
+  },
+  {
+    "id": "Q0076",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "Skipped per scope rule: the option-exercise determinations are listed with no cite. Q0085 in this same domain covers the same ground with RFO cites."
+  },
+  {
+    "id": "Q0085",
+    "changed": true,
+    "answer": "RFO FAR 17.204-1 Exercise of options.\n(a) If the contract includes an economic price adjustment clause and the contractor requests a price revision, the contracting officer must determine how the adjustment affects option prices before exercising the option.\n(b) The contracting officer may exercise options only after—\n(1) Providing written notice to the contractor of the Government’s intention to exercise the option, within the time specified in the contract;\n(2) Confirming that funds are available; and\n(3) Determining that–\n(i) The option fulfills an existing Government requirement;\n(ii) The option was synopsized as required, unless exempt (see part 5);\n(iii) The Contractor does not have an active exclusion record in the System for Award Management (see part 9);\n(iv) The contractor’s performance on the current contract has been acceptable (for example, satisfactory or better performance ratings);\n(v) After reviewing price and other factors, the option price is fair and reasonable based on current market conditions and exercise of the option is in the Government's best interest; and\n(vi) The option exercise complies with the requirements of part 6 for full and open competition, i.e., the option was evaluated as part of the initial competition and is exercisable at an amount specified in or reasonably determinable from the terms of the contract.\nRFO DFARS 217.204-170 Exercise of options.\nIn addition to the requirements at FAR 17.204-1(b), exercise an option only after:\nDetermining that the contractor’s record in the System for Award Management database is active and the contractor’s unique entity identifier, Commercial and Government Entity (CAGE) code, name, and physical address are accurately reflected in the contract document. See PGI 217.204-170 for the requirement to perform cost or price analysis of spare parts prior to exercising any option for firmfixed-price contracts containing spare parts.\nVerifying in the Supplier Performance Risk System (SPRS) (https://www.sprs.csd.disa.mil/) that—\nThe summary level score of a current NIST SP 800-171 DoD Assessment (i.e., not more than 3 years old, unless a lesser time is specified in the solicitation) for each covered contractor information system that is relevant to an offer, contract, task order, or delivery order are posted.\nThe contractor has a CMMC certificate at the level required by the contract, and that it is current (i.e., not more than 3 years old).\nCite: RFO FAR 17.204-1; RFO DFARS 217.204-170; RFO PGI 217.204-170.",
+    "crosswalk": [
+      {
+        "old": "FAR 17.204-1",
+        "new": "FAR 17.204-1"
+      },
+      {
+        "old": "FAR 17.204-1(b)",
+        "new": "FAR 17.204-1(b)"
+      },
+      {
+        "old": "DFARS 217.204-170",
+        "new": "DFARS 217.204-170"
+      },
+      {
+        "old": "PGI 217.204-170",
+        "new": "PGI 217.204-170"
+      }
+    ],
+    "citations_rfo": [
+      "RFO FAR 17.204-1",
+      "RFO DFARS 217.204-170",
+      "RFO PGI 217.204-170"
+    ],
+    "rfo_status": "updated",
+    "notes": "Already written in RFO numbering; nothing to renumber. The crosswalk confirms FAR 17.204-1 -> FAR 17.204-1, FAR 17.204-1(b) -> FAR 17.204-1(b) and DFARS 217.204-170 -> DFARS 217.204-170 (all \"verified\"), plus PGI 21 -> PGI 217.204-170. The truncated metadata keys \"DFARS 21\" and \"PGI 21\" resolve to DFARS 217.204-170 and PGI 217.204-170 for this item. The only change is the appended Cite: line; the quoted regulatory text is byte-identical, including the in-text part-level references to part 5, part 9 and part 6, which are unaffected by the renumbering."
+  },
+  {
+    "id": "Q0099",
+    "changed": true,
+    "answer": "▪ SAT means $150K, except for supplies and services that, as determined by the Head of the Agency, are to be used to support a contingency operation than the term means $300K for any contract awarded and performed or purchase made inside the US; $1M outside the US (threshold updated — see Thresholds)\n\n▪ SAP are procedures that can be used for procurements that fall under FAR Part 13.\nCite: RFO FAR part 13.",
+    "crosswalk": [
+      {
+        "old": "FAR Part 13",
+        "new": "FAR part 13"
+      }
+    ],
+    "citations_rfo": [
+      "RFO FAR part 13"
+    ],
+    "rfo_status": "updated",
+    "notes": "The only regulatory reference in the answer is \"FAR Part 13\" named in words; RFO Part 13 (Simplified acquisition procedures) still exists, so there is nothing to renumber. Every dollar figure in this answer is stale against the verified thresholds table: the SAT is $350,000 (not $150K); the contingency / CBRN-defense / disaster tier is $1,000,000 inside the United States (not $300K) and $2,000,000 outside the United States (not $1M), all at RFO FAR 2.101. Per the task rule the original numbers were kept in the text and one \"(threshold updated - see Thresholds)\" marker was appended to the bullet that carries them. Note also that legacy subpart 13.5 no longer sits in part 13 (it is RFO FAR 12.201-1), but this answer does not reference it."
+  },
+  {
+    "id": "Q0101",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "Skipped per scope rule: the delivery order vs task order answer contains no cite."
+  },
+  {
+    "id": "Q0119",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "Skipped per scope rule: the severable vs non-severable services answer contains no cite (no 10 U.S.C. 3133 or 31 U.S.C. 1502 reference in the text)."
+  },
+  {
+    "id": "Q0125",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "Skipped per scope rule: the answer text carries no cite (FAR 37.201-2(a) appears only in the item metadata). For reference, the verified crosswalk shows FAR 37.201-2(a) is unchanged under the RFO, so no renumbering would have been needed."
+  },
+  {
+    "id": "Q0131",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "Skipped per scope rule: the performance-based definition is given with no cite."
+  },
+  {
+    "id": "Q0151",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "Skipped per scope rule: the three indefinite-delivery types are listed with no cite."
+  },
+  {
+    "id": "Q0152",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "Skipped per scope rule: no cite in the answer text (\"a statute expressly authorizes\" is not a citation). Flag for a separate pass: the $3,000 fair-opportunity floor in the question stem is stale - RFO FAR 16.507-1 / 16.507-3 key the ordering tiers to the micro-purchase threshold ($15,000) and to $7.5M, and the exceptions moved from FAR 16.505(b)(2) to FAR 16.507-6(b) per the verified crosswalk."
+  },
+  {
+    "id": "Q0271",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "Skipped per scope rule: project-specific additional services are listed with no cite."
+  },
+  {
+    "id": "Q0272",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "Skipped per scope rule: the non-fee services are listed with no cite."
+  },
+  {
+    "id": "Q0273",
+    "changed": true,
+    "answer": "Combined synopsis/solicitation procedure combines the synopsis required by 5.201(d) and the issuance of the solicitation into a single document. When using the combined synopsis/solicitation procedure, the SF 1449 is not used for issuing the solicitation. Synopsis prepared as described at 5.201(c).\n\nRFO 12.202 Publicizing.\n(a) Publicize in accordance with part 5.\n\n(b) To reduce the time required to solicit and award contracts for acquisitions valued over the SAT, combine the presolicitation notice and solicitation notice required by part 5.\n\n(1) Format. Select the “Combined Synopsis/Solicitation” format in the GPE, and include the following information:\n\n(i) In the “Description” section, include the following statements:\n\nThis is a combined synopsis/solicitation for commercial products or commercial services prepared in accordance with part 12. This announcement constitutes the only solicitation. Offers are being requested and a separate written solicitation will not be issued.\n\nSolicitation number [insert solicitation number] is issued as a [insert request for quotation (RFQ), request for proposal (RFP), or invitation for bid (IFB)] for [provide a brief description of the requirement].\n\nThis acquisition [is/is not] set-aside for small business concerns. This solicitation incorporates provisions and clauses by reference. The full text of provisions and clauses may be accessed electronically at www.acquisition.gov.\n\n[If applicable, insert a statement regarding the Defense Priorities and Allocations System (DPAS) and assigned rating.]\n\n(ii) A list of line-item number(s) and items, quantities, and units of measure (including option(s), if applicable).\n\n(iii) Description of requirements for the items to be acquired, including documentation supporting any brand name descriptions (see 12.102).\n\n(iv) Date(s) and place(s) of delivery and acceptance and f.o.b. point (see part 47).\n\n(v) A list of solicitation provisions that apply to the acquisition (see 12.205(a)).\n\n(vi) A list of contract clauses that apply to the acquisition (see 12.205(b)).\n\n(vii) The date, time, and place for receipt of offer and point of contact.\n\n(viii) Any other additional information required by 5.101(c).\n\n(2) Response times. Set a response time that gives offerors a reasonable opportunity to respond, unless the acquisition is subject to the minimum time period for acquisitions covered by the World Trade Organization Government Procurement Agreement or a Free Trade Agreement (see subpart 5.2 and part 25).\nCite: RFO FAR 12.202; RFO FAR 12.202(b); RFO FAR 5.201(c); RFO FAR 5.201(d).",
+    "crosswalk": [
+      {
+        "old": "FAR 12.603",
+        "new": "FAR 12.202(b)"
+      },
+      {
+        "old": "FAR 5.203",
+        "new": "FAR 5.201(d)"
+      },
+      {
+        "old": "FAR 5.207",
+        "new": "FAR 5.201(c)"
+      }
+    ],
+    "citations_rfo": [
+      "RFO FAR 12.202",
+      "RFO FAR 12.202(b)",
+      "RFO FAR 5.201(c)",
+      "RFO FAR 5.201(d)"
+    ],
+    "rfo_status": "updated",
+    "notes": "This item stacks a legacy paragraph (the old FAR 12.603 answer, citing 5.203 and 5.207) on top of a paragraph that already quotes RFO 12.202 verbatim. Only the legacy cites were converted: 5.203 -> 5.201(d) and 5.207 -> 5.201(c), resolved on https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5 (RFO Part 5 keeps only 5.101 Presolicitation notice and 5.201 Solicitation notice; content at 5.201(c), response times at 5.201(d)) - same caveat as Q0054, the guide publishes no old-to-new table. FAR 12.603 -> FAR 12.202(b) is in the verified crosswalk and is the section the question stem names. The already-RFO cites inside the quoted 12.202 text (12.102, 12.205(a), 12.205(b), 5.101(c), subpart 5.2, parts 5, 25 and 47) were left untouched. The first paragraph still says the SF 1449 is not used for a combined synopsis/solicitation; the RFO 12.202 text quoted below it does not carry that sentence, but removing it would be a substance edit and is out of scope for a citation pass - flagged for the orchestrator. Reviewer 14 Sep 2026: confirmed on the RFO Part 5 deviation guide (fetched 14 Sep 2026): Part 5 sections are 5.000-5.002, 5.101, 5.102, 5.103, 5.201, 5.202, 5.301-5.303; 5.201(c) is \"Content\" (information required by 5.101(c), specifications/technical data access, brand-name justification per 6.104) and 5.201(d) is \"Timing\" (minimum response times, Table 5-3). Legacy 5.207 (preparation and transmittal of synopses) -> 5.201(c) and legacy 5.203 (publicizing and response time) -> 5.201(d) are consistent with that structure; no published old-to-new row exists, so treat both pairs as confidence \"probable\". The verified crosswalk row FAR 5.102(a)(6) -> FAR 5.201(c)(3) independently confirms 5.201(c) is the content paragraph. RFO 12.202(b) confirmed verbatim."
+  }
+]

@@ -1,0 +1,566 @@
+[
+  {
+    "id": "Q0006",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart in the answer text (the bona fide need rule is described in words only). Skipped per task rule; listed for coverage. Note: 31 U.S.C. 1502 is the governing statute and is unchanged by the RFO, but it is not cited in this answer."
+  },
+  {
+    "id": "Q0012",
+    "changed": true,
+    "answer": "Ensure market research has been conducted seeking out alternative sources. If the procurement is greater than the SAT, a J&A is required. Review the J&A thoroughly. If under the SAT a limited source justification will be required. (FAR 6.103-1 & DFARS 206.103-170 / 206.104-71)\n\nCite: FAR 6.103-1; DFARS 206.103-170; DFARS 206.104-71",
+    "crosswalk": [
+      {
+        "old": "FAR 6.302-1",
+        "new": "FAR 6.103-1"
+      },
+      {
+        "old": "DFARS Subpart 206.3",
+        "new": "DFARS 206.103-170 / 206.104-71"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 6.103-1",
+      "DFARS 206.103-170",
+      "DFARS 206.104-71"
+    ],
+    "rfo_status": "updated",
+    "notes": "Both pairs from the verified crosswalk (FAR 6.302-1 -> 6.103-1; the 'DFARS 20' entry maps the old DFARS subpart 206.3 content to RFO DFARS 206.103-170 / 206.104-71). Substance untouched. No dollar figure appears in the answer, so no threshold marker was added; the SAT referenced in words is currently $350,000 (thresholds table id 'sat'). Army caution worth knowing for the board but not added to the text: DoD uses DFARS Table 206-1 approval tiers (CO to $10M), not FAR Table 6-1."
+  },
+  {
+    "id": "Q0013",
+    "changed": true,
+    "answer": "Review the requirements for urgent procurements, FAR 6.103-2 -- Unusual and Compelling Urgency. Ensure the J&A includes: (1) The date the requirement was first known and the circumstances leading to urgency. \n(2) The quantity of items or services appropriate for the urgent procurement with supporting rationale. An urgent procurement should rarely, if ever, contain an option quantity. (3) The required product or service delivery schedule. (4) The reason(s) for delay in initiating the acquisition if the date the requirement identified was such that normal contracting and production lead times could have achieved delivery by the required date. \n(5) The harm (financial or other) to the government that would result if the required delivery dates are not met. Include estimated expenses the government would likely incur due to the delay, and explain the basis for this estimate. (6) If the requiring office is specifying the source(s) appropriate for this procurement, explain the expertise required and discuss the contractors' capability to meet the urgent requirement.\nSynopsis not required if Unusual and Compelling Urgency. J&A's citing urgency shall be publically available 30 days after contract award.\n\nCite: FAR 6.103-2",
+    "crosswalk": [
+      {
+        "old": "FAR 6.302-2",
+        "new": "FAR 6.103-2"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 6.103-2"
+    ],
+    "rfo_status": "updated",
+    "notes": "Verified crosswalk pair; heading unchanged. Cite line built only from the cite present in the text. 10 U.S.C. 3204 and 41 U.S.C. 3304 sit in the item's citations array but do not appear in the answer text, so they were not added to the Cite line. No dollar thresholds stated."
+  },
+  {
+    "id": "Q0022",
+    "changed": true,
+    "answer": "Synopsis req’d if > $25K.\nSynopsis is posted 15 days before the Solicitation is posted.\nFAR 5.101(b) has exceptions including, but not limited to, Unusual and Compelling Urgency, if the Synopsis posting would comprimise national security, for utility services.\nFor commercial items, you may use a combined synopsis and solicitation procedure (see 12.202(b)).\n\nCite: FAR 5.101(b); FAR 12.202(b)",
+    "crosswalk": [
+      {
+        "old": "FAR 5.202",
+        "new": "FAR 5.101(b)"
+      },
+      {
+        "old": "FAR 12.603",
+        "new": "FAR 12.202(b)"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 5.101(b)",
+      "FAR 12.202(b)"
+    ],
+    "rfo_status": "updated",
+    "notes": "Both pairs verified in the crosswalk. THRESHOLD CAUTION (deliberately not marked in the text): the answer says synopsis required if greater than $25K; the verified crosswalk note for FAR 5 records RFO 5.101 as a presolicitation notice above $20,000. No synopsis threshold exists in the thresholds table, so per task rule (3) no '(threshold updated - see Thresholds)' marker was appended - flagged here instead for a thresholds-table pass. OCONUS caution from the same crosswalk note: the old 5.202(a)(12) exception for Defense-agency actions made and performed outside the United States does not appear in RFO 5.101(b) - material for 411th CSB; confirm against the DFARS 205 deviation."
+  },
+  {
+    "id": "Q0024",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "Answer text carries no cite (the questions.json citations array has 'FAR 10', but the answer itself names no part or section), so it was skipped per task rule. Audit flag for a later content pass: the eight techniques listed are the pre-RFO FAR 10.001/10.002 technique list, which the RFO removed from the regulation (RFO Part 10 is 10.000 scope, 10.001 market research requirements, 10.002 clause 52.210-1); the techniques now survive only as guidance."
+  },
+  {
+    "id": "Q0029",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory cite in the answer text (Anti-deficiency Act named in words only; 31 U.S.C. 1341/1342/1517 not cited). The $5,000 fine is a criminal penalty, not an acquisition threshold, and has no entry in the thresholds table. Skipped per task rule."
+  },
+  {
+    "id": "Q0030",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory cite in the answer text (appropriation life-cycle described in words only; 31 U.S.C. 1552 not cited). Skipped per task rule."
+  },
+  {
+    "id": "Q0031",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory cite in the answer text. Skipped per task rule."
+  },
+  {
+    "id": "Q0049",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory cite in the answer text. Skipped per task rule."
+  },
+  {
+    "id": "Q0052",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory cite in the answer text. Skipped per task rule."
+  },
+  {
+    "id": "Q0056",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory cite in the answer text (replacement-contract exception stated in words only). Skipped per task rule."
+  },
+  {
+    "id": "Q0060",
+    "changed": true,
+    "answer": "Applicants should understand the concerns related to competition and the need to ensure proper acquisition planning to minimize the need for bridges. \n\nA bridge action describes a non-competitive action requiring a justification to include, but not limited to, a formal justification and approval (FAR Part 6 or 12.201-1), limited sources justification (FAR 8.401; FSS ordering procedures moved to GSAR subpart 538.71), and exception to fair opportunity (FAR 16.507-6), to retain the current or similar product or services as a result of delay in the negotiation and award of a follow-on contract.\n\nThe timely re-competition and renegotiation of our continuing DoD product and service requirements represents a critical opportunity for securing the best deals in support of the warfighter. Bridge contracts represent a lost opportunity for savings that could be realized from new, competitively awarded contracts.\n\nCite: FAR 6; FAR 12.201-1; FAR 8.401; FAR 16.507-6",
+    "crosswalk": [
+      {
+        "old": "FAR 13.5",
+        "new": "FAR 12.201-1"
+      },
+      {
+        "old": "FAR 8.4",
+        "new": "FAR 8.401"
+      },
+      {
+        "old": "FAR 16.5",
+        "new": "FAR 16.507-6"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 6",
+      "FAR 12.201-1",
+      "FAR 8.401",
+      "FAR 16.507-6"
+    ],
+    "rfo_status": "updated",
+    "notes": "FAR part 6 keeps its number (verified 'FAR 6' entry). Old subpart 13.5 is gone - commercial simplified procedures are now FAR 12.201-1 (verified). Old subpart 8.4 is reduced to 8.401 and the FSS ordering procedures (old 8.405, including the limited-sources justification) now live in GSAR subpart 538.71 - recorded here rather than in the text because GSAR is still regulatory, so task rule (4) does not apply. Exception to fair opportunity under old 16.5 is now 16.507-6 (verified). Substance and wording otherwise untouched; no dollar figures in the answer. REVIEW 14 Sep 2026: 8.4 -> 8.401 confirmed on the RFO Part 8 page (subpart 8.4 contains only 8.401 General, which says agencies must follow GSA ordering procedures at subpart 538.71); moved-section parenthetical added in the text. 'Part' casing restored."
+  },
+  {
+    "id": "Q0061",
+    "changed": true,
+    "answer": "FAR 5.201(c)(3) When an acquisition contains brand name specifications, the contracting officer shall include with the solicitation the justification or documentation required by 6.103-1(d), 13.101(b), or 12.102, redacted as necessary (see 6.301).\n\nFAR 6.103-1(d) Application for brand name descriptions. \n(1) An acquisition or portion of an acquisition that uses a brand-name description or other purchase description to specify a particular brand-name, product, or feature of a product, peculiar to one manufacturer—\n(i) Does not provide for full and open competition, regardless of the number of sources solicited; and\n(ii) Shall be justified and approved in accordance with FAR 6.104-1 and 6.104-2.\n(A) If only a portion of the acquisition is for a brand-name product or item peculiar to one manufacturer, the justification and approval is to cover only the portion of the acquisition which is brand-name or peculiar to one manufacturer. The justification should state it is covering only the portion of the acquisition which is brand-name or peculiar to one manufacturer, and the approval level requirements will then only apply to that portion;\n(B) The justification should indicate that the use of such descriptions in the acquisition or portion of an acquisition is essential to the Government's requirements, thereby precluding consideration of a product manufactured by another company; and\n(C) The justification shall be posted with the solicitation (see 5.201(c)(3)).\n(2) Brand-name or equal descriptions, and other purchase descriptions that permit prospective contractors to offer products other than those specifically referenced by brand-name, provide for full and open competition and do not require justifications and approvals to support their use.\n\nReference: FAR 5.201(c)(3) & 6.103-1(d) (the quoted paragraphs above are the pre-RFO 5.102(a)(6) and 6.302-1(c) wording; the RFO sections are renumbered and condensed)\n\nCite: FAR 5.201(c)(3); FAR 6.103-1(d); FAR 6.104-1; FAR 6.104-2; FAR 6.301; FAR 13.101(b); FAR 12.102",
+    "crosswalk": [
+      {
+        "old": "FAR 5.102(a)(6)",
+        "new": "FAR 5.201(c)(3)"
+      },
+      {
+        "old": "FAR 6.302-1(c)",
+        "new": "FAR 6.103-1(d)"
+      },
+      {
+        "old": "FAR 6.303",
+        "new": "FAR 6.104-1"
+      },
+      {
+        "old": "FAR 6.304",
+        "new": "FAR 6.104-2"
+      },
+      {
+        "old": "FAR 6.305",
+        "new": "FAR 6.301"
+      },
+      {
+        "old": "FAR 13.106-1(b)",
+        "new": "FAR 13.101(b)"
+      },
+      {
+        "old": "FAR 13.501",
+        "new": "FAR 12.102"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 5.201(c)(3)",
+      "FAR 6.103-1(d)",
+      "FAR 6.104-1",
+      "FAR 6.104-2",
+      "FAR 6.301",
+      "FAR 13.101(b)",
+      "FAR 12.102"
+    ],
+    "rfo_status": "updated",
+    "notes": "All seven pairs come from verified crosswalk entries: 5.102(a)(6) -> 5.201(c)(3); 6.302-1(c) -> 6.103-1(d); the 'FAR 6.303' entry states old 6.303/6.303-1/-2 and old 6.304 consolidate into 6.104 (content 6.104-1, approval 6.104-2); the 'FAR 6' entry places post-award availability of the justification at 6.301 (old 6.305); 13.106-1(b) -> 13.101(b); the 'FAR 13.5' entry routes old 13.501 commercial sole-source documentation to 12.102. Glued spacing in the source (for example 'by6.302-1(c),13.106-1(b)') was normalized only where the citation itself was being rewritten; no substantive wording changed and no new claims added. CONTENT CAUTION for a later pass, not written into the answer: the block quoted here is pre-RFO 6.302-1(c) text, and RFO 6.103-1(d) is worded differently (except as authorized at 6.103-5, brand-name descriptions or attributes peculiar to one manufacturer prevent full and open competition). No dollar figures in the answer. REVIEW 14 Sep 2026: RFO 6.103-1(d), 6.104, 6.104-1, 6.104-2 and 6.301 headings/first sentences confirmed on the acquisition.gov RFO Part 6 page; 6.301 is 'Availability of the justification', so old 6.305 -> 6.301 holds. One parenthetical added at the Reference line stating the quoted paragraphs are pre-RFO wording."
+  },
+  {
+    "id": "Q0062",
+    "changed": true,
+    "answer": "Certified cost & Pricing threshold increased to $2M, effective for contracts entered into after 30 June 2018. (threshold updated — see Thresholds)\n\nDFARS 215.202-71(c): If only one offer is received when competitive procedures were used and the solicitation allowed at least 30 days for receipt of proposals (unless the 30-day requirement is not applicable in accordance with 215.371-4(a)(3) or has been waived in accordance with section 215.371-5 — old DFARS numbering kept; the RFO renumbering of these two paragraphs could not be verified), the contracting officer shall—\n\n (1) Determine through cost or price analysis that the offered price is fair and reasonable and that adequate price competition exists (with approval of the determination at a level above the contracting officer) or another exception to the requirement for certified cost or pricing data applies (see FAR 15.403-2(c) and 15.403-3). In these circumstances, no further cost or pricing data is required; or\n\n (2)(i) Obtain from the offeror cost or pricing data necessary to determine a fair and reasonable price and comply with the requirement for certified cost or pricing data at FAR 15.403-3. For acquisitions that exceed the cost or pricing data threshold, if no exception at FAR 15.403-2(b) applies, the cost or pricing data shall be certified; and\n\n (ii) Enter into negotiations with the offeror as necessary to establish a fair and reasonable price. The negotiated price should not exceed the offered price.\n\nCite: DFARS 215.202-71(c); FAR 15.403-2(c); FAR 15.403-3; FAR 15.403-2(b); DFARS 215.371-4(a)(3); DFARS 215.371-5 (old numbering retained, unverified)",
+    "crosswalk": [
+      {
+        "old": "DFARS 215.371-3",
+        "new": "DFARS 215.202-71(c)"
+      },
+      {
+        "old": "FAR 15.403-1(c)",
+        "new": "FAR 15.403-2(c)"
+      },
+      {
+        "old": "FAR 15.403-4",
+        "new": "FAR 15.403-3"
+      },
+      {
+        "old": "FAR 15.403-1(b)",
+        "new": "FAR 15.403-2(b)"
+      },
+      {
+        "old": "DFARS 215.371-4(a)(3)",
+        "new": "unresolved - old cite retained"
+      },
+      {
+        "old": "DFARS 215.371-5",
+        "new": "unresolved - old cite retained"
+      }
+    ],
+    "citations_rfo": [
+      "DFARS 215.202-71(c)",
+      "FAR 15.403-2(c)",
+      "FAR 15.403-3",
+      "FAR 15.403-2(b)",
+      "DFARS 215.371-4(a)(3) (unresolved)",
+      "DFARS 215.371-5 (unresolved)"
+    ],
+    "rfo_status": "unverifiable",
+    "notes": "Four cites converted from verified crosswalk entries. Two could NOT be resolved: DFARS 215.371-4(a)(3) and 215.371-5. The crosswalk verifies only 215.371 -> 215.202-71 and 215.371-3 -> 215.202-71(c); extending that to (d) and (e) would be an inference, and the DFARS RFO class deviations are not published on acquisition.gov/far-overhaul (the only fetch target this task permits), so the old numbers were kept and the answer now says so in a parenthetical. Status set 'unverifiable' for that reason even though the other four cites are current. THRESHOLD: the $2M certified cost or pricing data figure has changed - thresholds table shows tina_dod $10,000,000 (DoD prime contracts awarded after 30 Jun 2026, DFARS 215.403-3(a) per Class Deviation 2026-O0048 Rev. 1) and tina_civilian $2,500,000 (civilian agencies and DoD awards on or before 30 Jun 2026). Original number kept in the text with the '(threshold updated - see Thresholds)' marker appended, per task rule (3). At an Army board, quote $10 million for new awards."
+  },
+  {
+    "id": "Q0067",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory cite in the answer text - 'as defined in the FAR' is not a named part or subpart. Skipped per task rule. Audit flag for a later content pass: the RFO consolidated old 7.107-2 (consolidation), 7.107-3 (bundling) and 7.107-4 (substantial bundling) into 7.107-2 'Policy'."
+  },
+  {
+    "id": "Q0069",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory cite in the answer text. Skipped per task rule."
+  },
+  {
+    "id": "Q0070",
+    "changed": true,
+    "answer": "Contracts using procurement appropriations must, under most circumstances, be fully funded to ensure stable production runs, lower costs, and the availability of sufficient funds to complete the product. Half an airplane or tank would not be very useful.\nContracts using R&D appropriations are normally incrementally funded, allowing more flexibility and control, to provide funding as needed and as progress in the research project is accomplished. The cost and progress in R&D projects are not as predictable as in more mature production programs. In R&D, even if a program is stopped before full funding is provided, some benefit is gained from the research accomplished to date.\nFor Fixed Price contracts, incremental funding can only be used if: (see DFARS 232.702 Policy.. Fixed-price contracts shall be fully funded except as permitted by 232.703-1 — old DFARS numbering kept; the RFO renumbering of these sections could not be verified) (1) A fixed-price contract may be incrementally funded only if—(i) The contract (excluding any options) or any exercised option— (A) Is for severable services; (B) Does not exceed one year in length; and (C) Is incrementally funded using funds available (unexpired) as of the date the funds are obligated; or (ii) The contract uses funds available from multiple (two or more) fiscal years and— (A) The contract is funded with research and development appropriations; or (B) Congress has otherwise authorized incremental funding. The Limitation of Funds Clause (FAR 52.232-22 - for Cost Reimbursement contracts) or the Limitation of Government Obligation clause (DFARS 252.232-7007 for Fixed Price contracts) caution the contractor that he is not obligated to incur costs, nor is the Government obligated to pay in excess of the amount allotted. Incremental funding is obligated to cover the amount allotted and any corresponding increment of fee.\n\nCite: FAR 52.232-22; DFARS 252.232-7007; DFARS 232.702; DFARS 232.703-1 (old numbering retained, unverified)",
+    "crosswalk": [
+      {
+        "old": "FAR 52.232-22",
+        "new": "FAR 52.232-22"
+      },
+      {
+        "old": "DFARS 252.232-7007",
+        "new": "DFARS 252.232-7007"
+      },
+      {
+        "old": "DFARS 232.702",
+        "new": "unresolved - old cite retained"
+      },
+      {
+        "old": "DFARS 232.703-1",
+        "new": "unresolved - old cite retained"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 52.232-22",
+      "DFARS 252.232-7007",
+      "DFARS 232.702 (unresolved)",
+      "DFARS 232.703-1 (unresolved)"
+    ],
+    "rfo_status": "unverifiable",
+    "notes": "FAR 52.232-22 is retained in the RFO Part 52 index (verified) and DFARS 252.232-7007 Limitation of Government's Obligation is retained per the verified 'DFARS 25' entry (Class Deviation 2026-O0022). DFARS 232.702 and 232.703-1 are NOT in the crosswalk; the 'DFARS 25' note says only that RFO DFARS subpart 232.7 incremental-funding procedures reference 252.232-7007, which does not fix the section numbers. DFARS class deviations are not on acquisition.gov/far-overhaul, so the old numbers were kept and the answer now says so. Also corrected the source typo 'DFAR' to 'DFARS' (citation form only). No dollar figures in the answer."
+  },
+  {
+    "id": "Q0072",
+    "changed": true,
+    "answer": "Authority: 31 USC 1502(a) \"Bona Fide Needs Rule\"\nYes. O&M funds are for one year. You cannot cross FYs unless there is an exception. This could be considered a violation of the bona fide need rule. The lead-time exception does not apply since the delivery delay is based on the government's request and not the reality of when the contractor could actually deliver the computers.\n\nCite: 31 U.S.C. 1502(a)",
+    "crosswalk": [],
+    "citations_rfo": [
+      "31 U.S.C. 1502"
+    ],
+    "rfo_status": "n/a",
+    "notes": "Only a Cite line was added (task rule 5); no cite changed. The single reference, 31 U.S.C. 1502(a), is a statute and appears in the regulations.json 'unchanged' list - the RFO does not touch statutes (AGENT_BRIEF rule 5). Status recorded as 'n/a' because nothing required conversion; the three allowed values have no 'already current' option. No dollar thresholds stated."
+  },
+  {
+    "id": "Q0078",
+    "changed": true,
+    "answer": "1. FAR 13.101(b) for Simplified Acquisition Threshold\n2. Title III of the Federal Property and Administrative Services Act of 1949 (41 U.S.C. 3101, et. seq.) and Title 40 U.S.C 501, Services for Executive Agencies, as implemented by FAR 8.401.,\n3. 10 U.S.C 3406 as implemented by FAR 16.507-6(b), Section 4202 of the Clinger-Cohen Act of 1996 as implemented by FAR 12.201-1,\n4. 10 U.S.C. 3204(a)(1) as implemented by FAR 6.103-1 -- Only One Responsible Source and No Other Supplies or Services Will Satisfy Agency Requirements,\n5. 10 U.S.C. 3204(a)(2) as implemented by FAR 6.103-2 -- Unusual and Compelling Urgency,\n6. 10 U.S.C. 3204(a)(3) as implemented by FAR 6.103-3 -- Industrial Mobilization; Engineering, Developmental, or Research Capability; or Expert Services,\n7. 10 U.S.C. 3204(a)(4) as implemented by FAR 6.103-4 -- International Agreement,\n8. 10 U.S.C. 3204(a)(5) as implemented by FAR 6.103-5 -- Authorized or Required by Statute,\n9. 10 U.S.C. 3204(a)(6) as implemented by FAR 6.103-6 -- National Security,\n10. 10 U.S.C. 3204(a)(7) as implemented by FAR 6.103-7 -- Public Interest.\n\nCite: FAR 13.101(b); FAR 8.401; FAR 16.507-6(b); FAR 12.201-1; FAR 6.103-1 through 6.103-7; 10 U.S.C. 3204(a); 10 U.S.C. 3406; 41 U.S.C. 3101 et seq.; 40 U.S.C. 501",
+    "crosswalk": [
+      {
+        "old": "FAR 13.106-1(b)",
+        "new": "FAR 13.101(b)"
+      },
+      {
+        "old": "41 U.S.C. 251",
+        "new": "41 U.S.C. 3101 et seq."
+      },
+      {
+        "old": "FAR 8.4",
+        "new": "FAR 8.401"
+      },
+      {
+        "old": "10 U.S.C. 2304C",
+        "new": "10 U.S.C. 3406"
+      },
+      {
+        "old": "FAR 16.505(b)(2)",
+        "new": "FAR 16.507-6(b)"
+      },
+      {
+        "old": "FAR 13.5",
+        "new": "FAR 12.201-1"
+      },
+      {
+        "old": "10 U.S.C. 2304(c)(1)",
+        "new": "10 U.S.C. 3204(a)(1)"
+      },
+      {
+        "old": "FAR 6.302-1",
+        "new": "FAR 6.103-1"
+      },
+      {
+        "old": "10 U.S.C. 2304(c)(2)",
+        "new": "10 U.S.C. 3204(a)(2)"
+      },
+      {
+        "old": "FAR 6.302-2",
+        "new": "FAR 6.103-2"
+      },
+      {
+        "old": "10 U.S.C. 2304(c)(3)",
+        "new": "10 U.S.C. 3204(a)(3)"
+      },
+      {
+        "old": "FAR 6.302-3",
+        "new": "FAR 6.103-3"
+      },
+      {
+        "old": "10 U.S.C. 2304(c)(4)",
+        "new": "10 U.S.C. 3204(a)(4)"
+      },
+      {
+        "old": "FAR 6.302-4",
+        "new": "FAR 6.103-4"
+      },
+      {
+        "old": "10 U.S.C. 2304(c)(5)",
+        "new": "10 U.S.C. 3204(a)(5)"
+      },
+      {
+        "old": "FAR 6.302-5",
+        "new": "FAR 6.103-5"
+      },
+      {
+        "old": "10 U.S.C. 2304(c)(6)",
+        "new": "10 U.S.C. 3204(a)(6)"
+      },
+      {
+        "old": "FAR 6.302-6",
+        "new": "FAR 6.103-6"
+      },
+      {
+        "old": "10 U.S.C. 2304(c)(7)",
+        "new": "10 U.S.C. 3204(a)(7)"
+      },
+      {
+        "old": "FAR 6.302-7",
+        "new": "FAR 6.103-7"
+      },
+      {
+        "old": "40 U.S.C. 501",
+        "new": "40 U.S.C. 501"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 13.101(b)",
+      "FAR 8.401",
+      "FAR 16.507-6(b)",
+      "FAR 12.201-1",
+      "FAR 6.103-1",
+      "FAR 6.103-2",
+      "FAR 6.103-3",
+      "FAR 6.103-4",
+      "FAR 6.103-5",
+      "FAR 6.103-6",
+      "FAR 6.103-7",
+      "10 U.S.C. 3204(a)",
+      "10 U.S.C. 3406",
+      "41 U.S.C. 3101 et seq.",
+      "40 U.S.C. 501"
+    ],
+    "rfo_status": "updated",
+    "notes": "FAR pairs all from verified crosswalk entries (13.106-1(b)->13.101(b); 6.302-1..-7 -> 6.103-1..-7; 16.505(b)(2)->16.507-6(b); 13.5->12.201-1; 8.4->8.401 per the verified 'FAR 8' entry). Statute renumbering is pre-RFO (Pub. L. 116-283) but recorded because the old numbers are repealed: 10 U.S.C. 2304c->3406 (verified); 2304 restated at 3201-3205, with 3204 the other-than-competitive-procedures section (verified). The subparagraph mapping 2304(c)(1)-(7) -> 3204(a)(1)-(7) is an EXTENSION of the verified crosswalk: only (a)(1) is explicitly verified (the FAR 6.302-1 entry records authority 10 U.S.C. 3204(a)(1) / 41 U.S.C. 3304(a)(1)); (2)-(7) follow that numbering pattern and should be spot-checked before board use. 41 U.S.C. 251 -> 41 U.S.C. 3101 et seq. is marked 'probable' in the crosswalk, not verified. 40 U.S.C. 501 is in the 'unchanged' list. No dollar figures in the answer. REVIEW 14 Sep 2026: the 2304(c)(1)-(7) -> 3204(a)(1)-(7) mapping is now VERIFIED, not an extension: the acquisition.gov RFO Part 6 page states the authority for 6.103-1 through 6.103-7 as '10 U.S.C. 3204(a)(1)' through '10 U.S.C. 3204(a)(7)' (each paired with 41 U.S.C. 3304(a)(n)). Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6. 8.4 -> 8.401 confirmed on the RFO Part 8 page (subpart 8.4 = 8.401 only). 41 U.S.C. 251 -> 3101 et seq. remains 'probable' (statute recodification, not an RFO change); left in place with that caveat."
+  },
+  {
+    "id": "Q0088",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/U.S.C./CFR cite in the answer text - the three fiscal statutes are named in words and backed only by GAO and waru.edu URLs. Skipped per task rule. Audit flag: per AGENT_BRIEF, DAU/WARU naming is unverified and should read 'DAU (WARU) Acquipedia'."
+  },
+  {
+    "id": "Q0097",
+    "changed": true,
+    "answer": "FAR Part 5\nMention RFO\nhttps://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5#FAR_Subpart_5_1\n\nCite: FAR 5",
+    "crosswalk": [
+      {
+        "old": "FAR 5",
+        "new": "FAR 5"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 5"
+    ],
+    "rfo_status": "n/a",
+    "notes": "Only a Cite line was added (task rule 5). The single reference is FAR part 5, which keeps its number under the RFO (verified crosswalk entry), so nothing required conversion - status 'n/a' rather than 'updated'. The answer is a stub (FAR Part 5 / Mention RFO / link to the RFO part 5 deviation guide) and the link it already carries is the correct RFO source; nothing was added beyond the Cite line, per the no-new-claims rule. Flag for a content pass: this item needs a real board-ready answer."
+  },
+  {
+    "id": "Q0102",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory cite in the answer text (ADA named in words only). Skipped per task rule."
+  },
+  {
+    "id": "Q0103",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory cite in the answer text. Skipped per task rule."
+  },
+  {
+    "id": "Q0108",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory cite in the answer text (time/purpose/amount stated in words only). Skipped per task rule."
+  },
+  {
+    "id": "Q0116",
+    "changed": true,
+    "answer": "An Unsolicited Proposal (UP) is a essentially a proposal submitted by industry that is not in response to a US Government request. UPs allow unique and innovative ideas or approaches that have been developed outside the Government to be made available to Government agencies for use in accomplishment of their missions. Unsolicited proposals are offered with the intent that the Government will enter into a contract with the offeror for research and development or other efforts supporting the Government mission, and often represent a substantial investment of time and effort by the offeror. There are many discriminators used in validating a UP. If in the end the UP has received a favorable comprehensive evaluation, providing for full and open competition is still required unless a justification and approval has been obtained under 6.103 / 6.104 [see FAR 15.506]\n\nCite: FAR 15.506; FAR 6.103; FAR 6.104",
+    "crosswalk": [
+      {
+        "old": "FAR 15.607",
+        "new": "FAR 15.506"
+      },
+      {
+        "old": "FAR Subpart 6.3",
+        "new": "FAR 6.103 / 6.104"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 15.506",
+      "FAR 6.103",
+      "FAR 6.104"
+    ],
+    "rfo_status": "updated",
+    "notes": "15.607 -> 15.506 is a verified crosswalk pair (unsolicited proposals subpart renumbered 15.6 to 15.5). Old subpart 6.3 maps to RFO 6.103 (other than full and open competition, authorities 6.103-1 to 6.103-7) with justification and approval at 6.104, per the verified 'FAR 6' entry. Note the question stem still says 'FAR 15.6' - this task limited edits to the answer, so the stem was left alone; it should read FAR 15.5 in a later pass. No dollar thresholds stated. REVIEW 14 Sep 2026: conversion of old subpart 6.3 widened to '6.103 / 6.104' because the sentence concerns obtaining a J&A, which the RFO places at 6.104 (6.104(a): 'A justification and approval must support procedures under 6.103'); confirmed on the acquisition.gov RFO Part 6 page."
+  },
+  {
+    "id": "Q0122",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory cite in the answer text (bona fide need rule stated in words only). Skipped per task rule."
+  },
+  {
+    "id": "Q0137",
+    "changed": true,
+    "answer": "FAR Part 8\n\nCite: FAR 8",
+    "crosswalk": [
+      {
+        "old": "FAR 8",
+        "new": "FAR 8"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 8"
+    ],
+    "rfo_status": "n/a",
+    "notes": "Only a Cite line was added (task rule 5); FAR part 8 keeps its number under the RFO (verified), so nothing required conversion. Flag for a content pass: the answer is the bare string 'FAR Part 8' and needs a real board-ready answer; the RFO restructured the part (8.101 mandatory sources for specific supplies/services, 8.102 AbilityOne services, 8.103 mandatory sources of supplies, 8.104 use of existing contracts, 8.105 contractor use of Government supply sources, 8.4 reduced to 8.401 with FSS ordering procedures moved to GSAR subpart 538.71). That detail was NOT written into the answer because the no-new-claims rule applies to this pass."
+  },
+  {
+    "id": "Q0149",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/U.S.C./CFR cite in the answer text - the only references are GAO decision B-318046 and GAO Principles of Federal Appropriations Law, neither of which the RFO touches. Skipped per task rule."
+  },
+  {
+    "id": "Q0153",
+    "changed": true,
+    "answer": "The FAR encourages the use of performance specifications and provides a method to use brand name or equal purchase descriptions. If a requirement is solicited using a brand name or equal description, the solicitation must include salient physical, functional, or performance characteristics of the brand name item. The DFARS requires a justification and approval be completed for solicitation using brand name or equal purchase descriptions.\n\nReference/s: FAR 11.204 & DFARS 211.204 (the RFO deleted old FAR 11.104 from the regulation; the brand-name-or-equal and salient-characteristics guidance now survives only as non-regulatory FAR Companion guidance at FC 11.204)\n\nCite: FAR 11.204; DFARS 211.204",
+    "crosswalk": [
+      {
+        "old": "FAR 11.104",
+        "new": "FAR 11.204"
+      },
+      {
+        "old": "DFARS 211.104",
+        "new": "DFARS 211.204"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 11.204",
+      "DFARS 211.204"
+    ],
+    "rfo_status": "updated",
+    "notes": "Task rule (4) applied: the verified crosswalk records that old FAR 11.104 'Use of brand name or equal purchase descriptions' was DELETED from the regulation and the guidance now appears only in the non-regulatory FAR Companion at FC 11.204; the closest surviving regulatory cite is 11.204 'Items peculiar to one manufacturer' (old 11.105), read with 6.103-1(d) and, for commercial buys, 12.102. That is stated in one short parenthetical inside the answer and rfo_status is 'updated'. DFARS 211.104 -> 211.204 is verified (Class Deviation 2026-O0013): the FY17 NDAA sec. 888 rule requiring a J&A for brand-name-or-equal is now at DFARS 211.204. Caution recorded but not added to the text: RFO 11.204 still carries stale cross-references (6.302-1, 13.106-1(b), 13.501, 5.102(a)(6), 8.405-6, 16.505(a)(4)). No dollar figures in the answer."
+  },
+  {
+    "id": "Q0269",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory cite in the answer text (ABG-75 / German bid-opening practice, outside the FAR). Skipped per task rule."
+  },
+  {
+    "id": "Q0277",
+    "changed": true,
+    "answer": "1. No, it is not permissible. Under the bona fide need rule (31 U.S.C. § 1502), appropriated funds may only be used for goods and services that meet a legitimate need arising in the fiscal year for which the appropriation was made. In this scenario, the janitorial services contract is for a period of performance starting in July 2027, which is in FY27. Since janitorial services are considered severable services (recurring services that can be separated by fiscal year), the bona fide need arises in the year the services are performed, not when the contract is awarded or the funds are available. Therefore, FY26 funds cannot be used for services performed in FY27.\n2. As the Contracting Officer, you should:\nReject the purchase request as currently funded and explain to the requiring activity that FY26 funds cannot be used for a period of performance that begins in FY27.\nEducate the requiring activity on the bona fide need rule and the distinction between severable and non-severable services.\nAdvise the requiring activity to submit a new purchase request using the correct fiscal year’s funds (i.e., FY27 funds for services performed in FY27).\nDocument your actions and communications to ensure compliance with fiscal law and to protect the integrity of the acquisition process.\n3. Violating the bona fide need rule can result in:\nAntideficiency Act (ADA) violations: Using funds for purposes other than those for which they were appropriated is a violation of the ADA, which can lead to administrative and disciplinary actions.\nAudit findings and negative reports: The agency may be cited in audits (e.g., by the GAO or DoD IG) for improper use of funds.\nRequirement to correct the funding: The agency may be required to deobligate the improper funds and re-fund the contract with the correct fiscal year’s appropriation, which can delay the requirement and disrupt services.\nPersonal liability: In severe cases, individuals responsible for the violation may be held personally liable for the improper obligation of funds.\n\nCite: 31 U.S.C. 1502",
+    "crosswalk": [],
+    "citations_rfo": [
+      "31 U.S.C. 1502"
+    ],
+    "rfo_status": "n/a",
+    "notes": "Only a Cite line was added (task rule 5); no cite changed. 31 U.S.C. 1502 is a statute in the regulations.json 'unchanged' list - the RFO does not touch statutes. The Antideficiency Act is named in words only (no 31 U.S.C. 1341 cite), so nothing else to convert. Status 'n/a' because nothing required conversion. No dollar thresholds stated."
+  }
+]

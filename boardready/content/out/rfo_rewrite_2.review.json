@@ -1,0 +1,94 @@
+{
+  "reviewed_file": "C:/Users/rabin/Documents/Army/CORB/app/content/out/rfo_rewrite_2.json",
+  "reviewed_on": "2026-09-14",
+  "reviewer": "rfo_rewrite_2 review pass (Claude)",
+  "method": "Every changed=true answer was character-diffed against src/data/questions.json (same id). Each crosswalk pair was checked against regulations.json crosswalk/unchanged rows; pairs not in the crosswalk were checked on the acquisition.gov RFO part deviation guides (Parts 5, 12, 19 fetched 14 Sep 2026). Every citations_rfo entry was confirmed to appear in the answer text. The 14 changed=false items were re-scanned for cite tokens in the answer text and scope coverage (24 official items in the two domains, bank order) was confirmed.",
+  "checked": 24,
+  "corrected": 1,
+  "reverted": 1,
+  "items": [
+    {
+      "id": "Q0014",
+      "verdict": "pass",
+      "diff": "'FAR 15.404-1(b)' -> 'FAR 15.404-1'; Cite line appended.",
+      "crosswalk_check": "FAR 15.404-1(b) -> FAR 15.404-1 verified (regulations.json).",
+      "action": "none"
+    },
+    {
+      "id": "Q0050",
+      "verdict": "pass",
+      "diff": "'FAR 12.207' -> 'FAR 12.104'; Cite line appended.",
+      "crosswalk_check": "FAR 12.207 -> FAR 12.104 verified (regulations.json); RFO 12.104(a) confirmed on Part 12 guide.",
+      "action": "none"
+    },
+    {
+      "id": "Q0054",
+      "verdict": "pass-with-caveat",
+      "diff": "'5.203' -> '5.201(d)'; '5.207' -> '5.201(c)'; Cite line appended (12.202(b) taken from the question stem's 12.603).",
+      "crosswalk_check": "FAR 12.603 -> FAR 12.202(b) verified (regulations.json). FAR 5.203 -> 5.201(d) and FAR 5.207 -> 5.201(c) are not crosswalk rows; confirmed structurally on the Part 5 guide (5.201(c) Content, 5.201(d) Timing/Table 5-3; no sections 5.203/5.207 exist). Confidence: probable.",
+      "action": "reviewer note appended to notes; no text change. Substance flag left for orchestrator: SF 1449 sentence not in RFO 12.202."
+    },
+    {
+      "id": "Q0057",
+      "verdict": "pass",
+      "diff": "'(FAR 15.201(c))' -> '(FAR 15.101)'; Cite line appended.",
+      "crosswalk_check": "FAR 15.201(c) -> FAR 15.101 verified (regulations.json).",
+      "action": "none"
+    },
+    {
+      "id": "Q0058",
+      "verdict": "pass",
+      "diff": "Cite line appended only; body byte-identical.",
+      "crosswalk_check": "FAR 2.101 -> FAR 2.101 verified. rfo_status 'updated' accepted (cite checked and current).",
+      "action": "none"
+    },
+    {
+      "id": "Q0059",
+      "verdict": "pass",
+      "diff": "'(FAR 13.004(a)(b))' -> '(FAR 12.201-1(b))'; Cite line appended.",
+      "crosswalk_check": "FAR 13.004(a)(b) -> FAR 12.201-1(b) verified (regulations.json); 12.201-1(b)(1) quotation text confirmed on Part 12 guide. FAR 2.101 unchanged.",
+      "action": "none"
+    },
+    {
+      "id": "Q0073",
+      "verdict": "fail - reverted",
+      "diff": "Author replaced heading 'FAR: 19.602-1 -- Referral' with 'RFO FAR 19.204 -- Certificate of Competency (...)' and changed '(see 19.602-3)' to '(see 19.204)'. The heading swap and the 19.602-3 substitution are not bare cite-number edits, and the substituted target could not be verified.",
+      "crosswalk_check": "Not in regulations.json. Part 19 guide fetched twice: subpart 19.6 does not exist; 19.204 'Certificate of Competency' exists under subpart 19.2; the 19.204 body text does not render and 19.101 shows only (a)-(c), so the quoted referral procedure (withhold award, Area Office referral, 9.104-1(g) and E.O. 11246 / subpart 9.4 exceptions) and legacy 19.602-3 have no confirmed RFO home. FAR 9.104-1 and 9.405 (subpart 9.4) verified unchanged.",
+      "action": "Restored the original text with the old cites 19.602-1 and 19.602-3 kept; one short parenthetical added to the heading noting consolidation at RFO FAR 19.204; Cite line rebuilt from cites in the text; crosswalk reduced to 19.602-1 -> 19.204 plus the two unchanged pairs (19.602-3 -> 19.204 dropped); rfo_status set to 'unverifiable'; reviewer note appended. Substance flag: E.O. 11246 revoked by E.O. 14173 (Jan 2025) - not fixed in a citation pass."
+    },
+    {
+      "id": "Q0085",
+      "verdict": "pass",
+      "diff": "Cite line appended only; body byte-identical.",
+      "crosswalk_check": "FAR 17.204-1, FAR 17.204-1(b), DFARS 217.204-170, PGI 21 -> PGI 217.204-170 all verified (regulations.json).",
+      "action": "none"
+    },
+    {
+      "id": "Q0099",
+      "verdict": "pass",
+      "diff": "'(threshold updated — see Thresholds)' marker appended to the SAT bullet; Cite line appended. No number edited.",
+      "crosswalk_check": "FAR 13 -> FAR 13 verified. Thresholds table: SAT $350,000; contingency $1,000,000 inside / $2,000,000 outside the US (RFO FAR 2.101) - the answer's $150K/$300K/$1M are stale, marker is correct.",
+      "action": "none"
+    },
+    {
+      "id": "Q0273",
+      "verdict": "pass-with-caveat",
+      "diff": "'5.203' -> '5.201(d)'; '5.207' -> '5.201(c)'; Cite line appended. Quoted RFO 12.202 text untouched.",
+      "crosswalk_check": "Same as Q0054; RFO 12.202(b) wording confirmed verbatim on the Part 12 guide.",
+      "action": "reviewer note appended to notes; no text change."
+    },
+    {
+      "id": "Q0023,Q0046,Q0047,Q0051,Q0074,Q0076,Q0101,Q0119,Q0125,Q0131,Q0151,Q0152,Q0271,Q0272",
+      "verdict": "pass",
+      "diff": "changed=false, answer null.",
+      "crosswalk_check": "Reviewer regex scan of each original answer for FAR/DFARS/PGI/U.S.C./CFR/part/subpart/x.xxx tokens found none; skip reason is accurate. Cites in citations[] metadata only (Q0023, Q0046, Q0125) were correctly left for a metadata pass.",
+      "action": "none"
+    }
+  ],
+  "citations_rfo_check": "All citations_rfo entries on the 10 changed items appear in the answer text (checked with and without the 'RFO ' prefix) after the Q0073 rewrite.",
+  "open_flags_for_orchestrator": [
+    "Q0073 is now rfo_status 'unverifiable' and needs a human to confirm RFO 19.204 text (acquisition.gov Part 19 guide does not render the section body).",
+    "Q0054 / Q0273 Part 5 pairs (5.203 -> 5.201(d), 5.207 -> 5.201(c)) are confidence 'probable'; consider adding them to regulations.json crosswalk as probable rows.",
+    "Substance items deliberately untouched: Q0054/Q0273 SF 1449 sentence; Q0073 E.O. 11246 (revoked); Q0074 FBO reference; Q0152 $3,000 fair-opportunity floor; Q0023 DFARS 207.103 acquisition-plan thresholds; Q0099 stale SAT figures (marker only)."
+  ]
+}

@@ -1,0 +1,617 @@
+[
+  {
+    "id": "Q0025",
+    "answer": "I start with market research, because the small business decision is really a market research decision. Under RFO FAR Part 10 I find out who can do the work, and I assign one NAICS code and its SBA size standard to the requirement, per RFO FAR 19.103 and 13 CFR 121. That tells me what small means for this buy.\n\nThen I apply the set-aside rules in RFO FAR 19.104-1. Above the micro-purchase threshold, if I have a reasonable expectation of offers from two or more responsible small businesses that are competitive on price, quality and delivery, I set it aside. That is the rule of two. If I do not set it aside, I have to document why. Before I default to a total small business set-aside I look at the socioeconomic programs first: 8(a) under 19.108, HUBZone under 19.105, service-disabled veteran-owned under 19.106, and women-owned and economically disadvantaged women-owned under 19.107. Each has its own set-aside and sole-source authority and its own SBA certification requirement.\n\nDocumentation in my file:\n- The market research report showing the sources I found and their size status.\n- The NAICS code and size standard, stated in the solicitation.\n- The DD Form 2579, Small Business Coordination Record, reviewed by the small business specialist for actions over the micro-purchase threshold, except under-SAT total small business set-asides (RFO DFARS PGI 219.102(g)(1)); if I reject the specialist's recommendation it goes to the SBA procurement center representative, who can appeal.\n- My set-aside determination, or the written reason for not setting aside.\n- The offeror's size and socioeconomic representations in SAM, plus SBA certification for 8(a), HUBZone, SDVOSB and WOSB awards, and the SBA acceptance letter for an 8(a) sole source.\n- A subcontracting plan requirement when the action will exceed $900,000, or $2 million for construction (RFO FAR 19.109).\n\nThe categories: small business, small disadvantaged business, 8(a) participants, HUBZone, service-disabled veteran-owned and veteran-owned, and women-owned and economically disadvantaged women-owned small business. One note from an OCONUS office: RFO FAR 19.000(b) says I must apply Part 19 in the United States and its outlying areas and may apply it outside them, and RFO DFARS 219.104-70(b)(2) says the 19.104-1(a) set-aside requirement does not apply to acquisitions excluded from SBA procurement center representative review, which under 219.102-70(a)(4) and (5) includes awards under a Status of Forces Agreement and acquisitions both awarded and performed outside the United States. So for a Korea or Germany award I confirm the local set-aside practice with my policy shop before I set aside.\n\nCite: RFO FAR 19.000(b), 19.102, 19.103, 19.104-1, 19.105 through 19.109; RFO DFARS 219.102-70(a), 219.104-70(b)(2) and PGI 219.102(g)(1) (Class Deviation 2026-O0037 Rev 1); 15 U.S.C. 644(j); 13 CFR 121.",
+    "key_points": [
+      "Market research first; assign one NAICS code and SBA size standard (RFO FAR 19.103, 13 CFR 121)",
+      "Rule of two: reasonable expectation of 2+ responsible small businesses at fair market prices = set-aside (RFO FAR 19.104-1); document if not set aside",
+      "Check socioeconomic programs first: 8(a) 19.108, HUBZone 19.105, SDVOSB 19.106, WOSB/EDWOSB 19.107",
+      "File: market research report, NAICS/size standard, DD Form 2579 via small business specialist, set-aside determination, SAM reps and SBA certifications",
+      "Subcontracting plan when over $900K ($2M construction) (RFO FAR 19.109)",
+      "Part 19 applies in the U.S. and outlying areas and may be applied outside (RFO FAR 19.000(b)); RFO DFARS 219.104-70(b)(2) exempts SOFA and fully-OCONUS acquisitions from the 19.104-1(a) set-aside requirement; confirm local practice"
+    ],
+    "citations": [
+      "RFO FAR 19.103",
+      "RFO FAR 19.104-1",
+      "RFO FAR 19.105",
+      "RFO FAR 19.106",
+      "RFO FAR 19.107",
+      "RFO FAR 19.108",
+      "RFO FAR 19.109",
+      "RFO FAR 19.102",
+      "15 U.S.C. 644(j)",
+      "13 CFR 121",
+      "RFO DFARS PGI 219.102(g)(1)",
+      "RFO DFARS 219.104-70(b)(2)",
+      "RFO DFARS 219.102-70(a)",
+      "RFO FAR 19.000(b)"
+    ],
+    "crosswalk": [
+      {
+        "old": "FAR 19.502-2",
+        "new": "FAR 19.104-1"
+      },
+      {
+        "old": "FAR 19.102",
+        "new": "FAR 19.103"
+      },
+      {
+        "old": "FAR 19.4",
+        "new": "FAR 19.102"
+      },
+      {
+        "old": "FAR 19.7",
+        "new": "FAR 19.109"
+      },
+      {
+        "old": "FAR 19.8",
+        "new": "FAR 19.108"
+      },
+      {
+        "old": "FAR 19.13",
+        "new": "FAR 19.105"
+      },
+      {
+        "old": "FAR 19.14",
+        "new": "FAR 19.106"
+      },
+      {
+        "old": "FAR 19.15",
+        "new": "FAR 19.107"
+      },
+      {
+        "old": "DFARS 219.201(c)(10)",
+        "new": "DFARS PGI 219.102(g)"
+      }
+    ],
+    "rfo_status": "updated",
+    "flags": [
+      "ai-drafted",
+      "verify-locally"
+    ],
+    "confidence": "high",
+    "confidence_reason": "Reviewer 14 Sep 2026: RFO Part 19 page re-read (19.000(b)(1) apply in U.S./outlying areas, may apply outside; 19.104-1(a)-(c) rule of two; 19.109(a)(1) $900,000/$2 million; 19.102(f) PCR appeal; 19.103 one NAICS code). DFARS Class Deviation 2026-O0037 Rev 1 text extracted: PGI 219.102(g)(1)(i)-(iii) small business specialist review over the MPT except under-SAT total set-asides, DD Form 2579 per PGI 253.219-70, rejected recommendations to the PCR; 219.102-70(a)(4)-(5) SOFA and fully-OCONUS exclusions from PCR review; 219.104-70(b)(2) makes the 19.104-1(a) requirement inapplicable to those acquisitions. Legacy DFARS 219.201(c)(10)(A) (DFARS Change 5/7/2026) cross-checked. Local OCONUS set-aside practice is not in the source files; verify-locally added."
+  },
+  {
+    "id": "Q0038",
+    "answer": "Unbalanced pricing is when the total price is allocated across the contract line items or contract parts in a way that does not reflect an equitable distribution of costs. Typical patterns: a front-loaded base period with cheap option years, an inflated mobilization or first-article line with understated production lines, or on an IDIQ, high prices on the items the offeror thinks we will actually order and nominal prices on the rest.\n\nWhy I care: it creates two risks. Payment risk, because the Government ends up making what amounts to an advance payment for work it has not received yet. And performance risk, because once the profitable line items are done the contractor has no incentive to finish, or the evaluated price is not the price we will really pay if options or quantities do not materialize the way the offeror bet they would.\n\nHow I address it, per RFO FAR 15.404-6:\n- Analyze every offer that has separately priced line items or subline items and look for line items that are significantly over- or understated compared with the IGE, other offers, and historical prices.\n- If I find it, I assess the risk to the Government: could it advance funds, could it drive a walk-away, does it distort the evaluated price.\n- I may reject an offer if the unbalancing poses an unacceptable risk to the Government. Under sealed bidding I may reject a bid whose line item prices are materially unbalanced (RFO FAR 14.306-3(g)).\n- If it is mathematically unbalanced but not materially unbalanced, I document why the risk is acceptable and I may address it in discussions.\n- I protect the Government up front by structuring the solicitation well: realistic quantity estimates, separately evaluated options, and payment terms that do not pay ahead of performance.\n\nI document the analysis in the price negotiation memorandum or source selection record so the decision is defensible in a protest.\n\nCite: RFO FAR 15.404-6 (was 15.404-1(g)); RFO FAR 14.306-3(g) (was 14.404-2(g)).",
+    "key_points": [
+      "Definition: allocation of total price among CLINs or contract parts that does not reflect an equitable distribution of costs (RFO FAR 15.404-6)",
+      "Patterns: front-loaded base year, inflated mobilization/first-article lines, IDIQ items priced to expected order mix",
+      "Risks: advance-payment (payment) risk and performance/walk-away risk; evaluated price may not equal price paid",
+      "Analyze all offers with separately priced line items; assess risk; may reject if unacceptable risk",
+      "Sealed bidding: may reject materially unbalanced bids (RFO FAR 14.306-3(g))",
+      "Mitigate in solicitation design and document the analysis in the PNM/SSDD"
+    ],
+    "citations": [
+      "RFO FAR 15.404-6",
+      "RFO FAR 14.306-3(g)"
+    ],
+    "crosswalk": [
+      {
+        "old": "FAR 15.404-1(g)",
+        "new": "FAR 15.404-6"
+      },
+      {
+        "old": "FAR 14.404-2(g)",
+        "new": "FAR 14.306-3(g)"
+      }
+    ],
+    "rfo_status": "updated",
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "high",
+    "confidence_reason": "Both RFO numbers verified on acquisition.gov/far-overhaul (Part 15 page shows 15.404-6 Unbalanced pricing with the definition and reject-if-unacceptable-risk language; Part 14 page shows 14.306-3(g)). Reviewer 14 Sep 2026: crosswalk 15.404-1(g) to 15.404-6 and 14.404-2(g) to 14.306-3(g) both 'verified' in regulations.json; definition, analyze-all-offers and reject-if-unacceptable-risk statements match; no change."
+  },
+  {
+    "id": "Q0079",
+    "answer": "A contracting officer is a person with the authority to enter into, administer, and/or terminate contracts and make related determinations and findings. That is the RFO FAR 2.101 definition. It includes authorized representatives acting within the limits the KO delegates to them. In the Army we appoint procuring, administrative, termination and contingency contracting officers, and the warrant policy uses KO for all of them.\n\nWhere the authority comes from: only contracting officers may sign, administer or terminate contracts on behalf of the Government, and a KO can bind the Government only within the authority actually delegated (RFO FAR 1.402-1). That authority is in writing on the SF 1402 Certificate of Appointment, with the limits stated on the certificate (RFO FAR 1.403-2). In the Army, ASA(ALT) designated procurement authority to DASA(P), who under RFO FAR 1.403-1(b) delegated warrant-granting to the HCA; the HCA may delegate it to SCOs but no lower than the Chief of the Contracting Office. The warrant is issued at a fixed threshold class, and the cumulative instrument value I sign, base plus options plus ceiling plus the absolute value of a modification, must be at or below my warrant. To hold a warrant above the SAT I must meet 10 U.S.C. 1724 as implemented at RFO DFARS 201.403-70: the required contracting courses for my grade, at least two years in a contracting position, and a baccalaureate degree. If I act outside that authority it is an unauthorized commitment and someone with authority has to ratify it under RFO FAR 1.405.\n\nResponsibilities, from RFO FAR 1.402-2:\n- Ensure all requirements of law, executive orders, regulations and other procedures, including clearances and approvals, are met before I sign, and that sufficient funds are available.\n- Ensure the contractor complies with the terms of the contract and safeguard the interests of the United States in its contractual relationships.\n- Treat offerors and contractors impartially, fairly and equitably.\n- Request and consider the advice of specialists in audit, law, engineering, information security, transportation and other fields, as appropriate.\n\nIn practice that means I am the business advisor and the accountable official: I lead the acquisition team, I make sure the money is right under purpose, time and amount, I keep an ethical distance from industry, and I build a file that shows a complete history and clear support for every action (RFO FAR 4.101). The warrant is personal; the KO owns the decision and its consequences.\n\nCite: RFO FAR 2.101; RFO FAR 1.402-1, 1.402-2, 1.403-1(b), 1.403-2, 1.405, 4.101; RFO DFARS 201.403-70 (Class Deviation 2026-O0002 Rev 1; was 201.603-2); 10 U.S.C. 1724; Army Warranting Program Policy v12 (Mar 2026), Authority and Standard Warrant Thresholds.",
+    "key_points": [
+      "Definition: authority to enter into, administer and/or terminate contracts and make related D&Fs (RFO FAR 2.101)",
+      "Only KOs may sign, administer or terminate contracts; bind the Government only within delegated authority (RFO FAR 1.402-1)",
+      "Authority is written: SF 1402 with stated limits (RFO FAR 1.403-2); Army: DASA(P) to HCA under 1.403-1(b), delegable no lower than CoCO; Table 1 warrant classes",
+      "Cumulative instrument value (base + options + ceiling + absolute value of mod) must not exceed the warrant",
+      "Responsibilities (RFO FAR 1.402-2): legal/regulatory compliance and funds before signing; contract compliance; safeguard U.S. interests; fair and impartial treatment; seek specialist advice",
+      "Outside authority = unauthorized commitment; ratification under RFO FAR 1.405"
+    ],
+    "citations": [
+      "RFO FAR 2.101",
+      "RFO FAR 1.402-1",
+      "RFO FAR 1.402-2",
+      "RFO FAR 1.405",
+      "RFO FAR 4.101",
+      "10 U.S.C. 1724",
+      "Army Warranting Program Policy v12 (Mar 2026)",
+      "RFO FAR 1.403-1(b)",
+      "RFO FAR 1.403-2",
+      "RFO DFARS 201.403-70"
+    ],
+    "crosswalk": [
+      {
+        "old": "FAR 1.602-1",
+        "new": "FAR 1.402-1"
+      },
+      {
+        "old": "FAR 1.602-2",
+        "new": "FAR 1.402-2"
+      },
+      {
+        "old": "FAR 1.602-3",
+        "new": "FAR 1.405"
+      },
+      {
+        "old": "FAR 4.801-4.803",
+        "new": "FAR 4.101"
+      },
+      {
+        "old": "FAR 1.603-1(b)",
+        "new": "FAR 1.403-1(b)"
+      },
+      {
+        "old": "FAR 1.603-3",
+        "new": "FAR 1.403-2"
+      },
+      {
+        "old": "DFARS 201.603-2",
+        "new": "DFARS 201.403-70"
+      }
+    ],
+    "rfo_status": "updated",
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "high",
+    "confidence_reason": "Reviewer 14 Sep 2026: crosswalk entries 1.602-1/1.402-1, 1.602-2/1.402-2, 1.602-3/1.405, 4.801-4.803/4.101 and 1.403-1(b) are 'verified' in regulations.json (SF 1402 mechanics at 1.403-2 per that note). DFARS Class Deviation 2026-O0002 Rev 1 (Part 201) text extracted: 201.403-70(a) implements 10 U.S.C. 1724 (courses, 2 years, baccalaureate) for authority above the SAT; the bare 'DFARS 201.403' cite was replaced. Delegation chain (ASA(ALT) to DASA(P) to HCA, delegable no lower than CoCO) and cumulative instrument value (base + options + ceiling + absolute value of a modification) re-read verbatim in content/sources/army_warranting_policy_v12_mar2026.txt. 1.402-2 responsibilities remain a paraphrase."
+  },
+  {
+    "id": "Q0083",
+    "answer": "One offer is not a failure, but it is a trigger. The DoD rule is RFO DFARS 215.202-71, which used to be 215.371, and it has two parts: promote competition, and make sure the price is fair and reasonable.\n\nFirst question I ask: how long was the solicitation open? If I used competitive procedures and allowed fewer than 30 days for proposals, I must go back to the requiring activity and ask whether the requirement should be revised to open up competition, and then resolicit for at least 30 more days. I would have put the provision at 252.215-7007, Notice of Intent to Resolicit, in the solicitation so offerors expected that. The HCA can waive the resolicitation, and that waiver cannot go below one level above me. The resolicitation rule does not apply at or below the SAT, to contingency or humanitarian support, to small business set-asides including 8(a), HUBZone, SDVOSB and WOSB, to science and technology, A-E services, commercial solutions openings, or commercial products and services bought under Part 12. But an exception never relieves me of seeking maximum practicable competition and getting a fair and reasonable price.\n\nIf the solicitation was open 30 days or more, or I have already resolicited, and the action is over the SAT, I cannot treat one offer as adequate price competition. I have to prove the price. I do price analysis first, using the IGE, historical prices, market research and catalog or published prices under RFO FAR 15.404-1. If that is not enough I obtain data other than certified cost or pricing data, and if the action exceeds the certified cost or pricing data threshold and no exception at RFO FAR 15.403-2(b) applies, the data must be certified. For DoD that threshold is 10 million dollars for a prime contract awarded after 30 June 2026, under RFO DFARS 215.403-3(a); it was 2.5 million for earlier awards. If I still cannot determine the price fair and reasonable I enter negotiations, and the negotiated price should not exceed the offered price. If I cannot negotiate a fair and reasonable price, 215.202-71(c)(4) sends me to RFO FAR 15.407(d): I refer the action to a level above me rather than award at a price I cannot support.\n\nAlong the way I find out why the others did not bid, especially where more than one company expressed interest, per PGI 215.202-71(b)(2), so the next buy is better. I confirm responsibility, and I document all of it in the price negotiation memorandum.\n\nCite: RFO DFARS 215.202-71 and PGI 215.202-71(b)(2) (Class Deviation 2026-O0048 Rev 1; was 215.371); DFARS 252.215-7007; RFO DFARS 215.403-3(a); RFO FAR 15.403-2(b), 15.403-3, 15.404-1, 15.404-2, 15.407(d).",
+    "key_points": [
+      "Rule: RFO DFARS 215.202-71 (was 215.371): promote competition and ensure fair and reasonable price",
+      "Solicitation open under 30 days: consult requiring activity on revising requirement, resolicit at least 30 more days; provision 252.215-7007",
+      "HCA may waive resolicitation; not delegable below one level above the KO",
+      "Exceptions to resolicit: at/below SAT, contingency/humanitarian, small business set-asides, S&T, A-E, CSO, Part 12 commercial",
+      "Over SAT with one offer: not adequate price competition; price analysis, then other-than-certified or certified cost or pricing data as required (DoD threshold $10M for awards after 30 Jun 2026, RFO DFARS 215.403-3(a)); negotiate, never above offered price; if no agreement, refer up under RFO FAR 15.407(d)",
+      "Find out why others did not bid (PGI 215.202-71(b)(2)); document in PNM"
+    ],
+    "citations": [
+      "RFO DFARS 215.202-71",
+      "DFARS 252.215-7007",
+      "RFO FAR 15.404-1",
+      "RFO FAR 15.404-2",
+      "RFO FAR 15.403-2(b)",
+      "RFO FAR 15.403-3",
+      "RFO DFARS 215.403-3(a)",
+      "RFO FAR 15.407(d)",
+      "RFO DFARS PGI 215.202-71(b)(2)"
+    ],
+    "crosswalk": [
+      {
+        "old": "DFARS 215.371",
+        "new": "DFARS 215.202-71"
+      },
+      {
+        "old": "DFARS 215.371-2",
+        "new": "DFARS 215.202-71(b)"
+      },
+      {
+        "old": "DFARS 215.371-3",
+        "new": "DFARS 215.202-71(c)"
+      },
+      {
+        "old": "DFARS 215.371-4",
+        "new": "DFARS 215.202-71(d)"
+      },
+      {
+        "old": "DFARS 215.371-5",
+        "new": "DFARS 215.202-71(e)"
+      },
+      {
+        "old": "DFARS 215.371-6",
+        "new": "DFARS 215.202-71(f)"
+      },
+      {
+        "old": "FAR 15.403-1(b)",
+        "new": "FAR 15.403-2(b)"
+      },
+      {
+        "old": "FAR 15.403-4",
+        "new": "FAR 15.403-3"
+      },
+      {
+        "old": "FAR 15.405(d)",
+        "new": "FAR 15.407(d)"
+      }
+    ],
+    "rfo_status": "updated",
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "high",
+    "confidence_reason": "Reviewer 14 Sep 2026: DFARS Class Deviation 2026-O0048 Rev 1 text extracted and 215.202-71(a)-(f) read in full: (b)(1) consult requiring activity and resolicit 30 days; (b)(2) PGI 215.202-71(b)(2); (c)(1)-(4) certification, negotiate not above offered price, then FAR 15.407(d); (d)(1)(i)-(vii) exceptions exactly as listed in the answer; (e) HCA waiver not delegable below one level above the KO; (f) provision 252.215-7007. 215.403-3(a) read verbatim: $10 million for prime contracts awarded after 30 June 2026, $2.5 million on or before; the answer now states it. Crosswalk 15.403-1(b)/15.403-2(b), 15.403-4/15.403-3 and 15.405/15.407 are 'verified' in regulations.json. The bank's 'DFARS 21' cite is a truncated 'DFARS 215'."
+  },
+  {
+    "id": "Q0089",
+    "answer": "A bid protest can be filed in three forums: with the agency, with the Government Accountability Office, or with the U.S. Court of Federal Claims. All three are covered in RFO FAR Subpart 33.1.\n\n- Agency protest, RFO FAR 33.104. Filed with me as the contracting officer, or the protester can ask for an independent review at a level above me. It is the fastest and cheapest route; the agency must use best efforts to resolve it within 35 days (RFO FAR 33.104-4(c)(1)). A timely post-award agency protest, within 10 days of award or 5 days after an offered debriefing, requires me to suspend performance unless continued performance is justified in writing.\n- GAO protest, RFO FAR 33.105, under the Competition in Contracting Act, 31 U.S.C. 3551 to 3557, and GAO's regulations at 4 CFR Part 21. GAO decides within 100 days (4 CFR 21.9). A timely GAO protest triggers the automatic CICA stay; the agency report is due 30 days after GAO's notice (4 CFR 21.3(c)); and only the HCA, on a nondelegable basis, can override the stay (RFO FAR 33.105-3(b)).\n- Court of Federal Claims, RFO FAR 33.106, under the Tucker Act, 28 U.S.C. 1491(b). It is judicial review, there is no automatic stay, the protester has to ask for an injunction, and the court is not bound by the 100-day clock.\n\nA protester can start at the agency and then go to GAO within 10 days of learning of the initial adverse agency action, and can go to the court after GAO. The moment I get anything that looks like a protest in any forum, I notify legal counsel. And for the board's companion question, claims and disputes are Subpart 33.2, the Contract Disputes Act.\n\nCite: RFO FAR 33.104 and 33.104-4(c)(1), 33.105 and 33.105-3, 33.106; 4 CFR 21.2, 21.3, 21.9; 31 U.S.C. 3551-3557; 28 U.S.C. 1491(b).",
+    "key_points": [
+      "Three forums: agency (RFO FAR 33.104), GAO (33.105), U.S. Court of Federal Claims (33.106)",
+      "Agency: best efforts to resolve within 35 days; independent review above the KO available",
+      "GAO: CICA, 4 CFR 21; 100-day decision; automatic stay if timely; agency report due in 30 days; HCA-only override",
+      "COFC: Tucker Act 28 U.S.C. 1491(b); judicial; no automatic stay, injunction required",
+      "Agency then GAO: 10 days from initial adverse agency action",
+      "Claims and disputes are Subpart 33.2 (Contract Disputes Act)"
+    ],
+    "citations": [
+      "RFO FAR 33.104",
+      "RFO FAR 33.105",
+      "RFO FAR 33.106",
+      "4 CFR Part 21",
+      "31 U.S.C. 3551-3557",
+      "28 U.S.C. 1491(b)",
+      "RFO FAR 33.104-4(c)(1)",
+      "RFO FAR 33.105-3",
+      "4 CFR 21.9"
+    ],
+    "crosswalk": [
+      {
+        "old": "FAR 33.103",
+        "new": "FAR 33.104"
+      },
+      {
+        "old": "FAR 33.104",
+        "new": "FAR 33.105"
+      },
+      {
+        "old": "FAR 33.105",
+        "new": "FAR 33.106"
+      },
+      {
+        "old": "FAR 33.103(g)",
+        "new": "FAR 33.104-4(c)(1)"
+      },
+      {
+        "old": "FAR 33.104(c)",
+        "new": "FAR 33.105-3"
+      }
+    ],
+    "rfo_status": "updated",
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "high",
+    "confidence_reason": "Reviewer 14 Sep 2026: RFO Part 33 page re-read: 33.104 (agency, with 33.104-1 to -4), 33.105 (GAO, 33.105-1 to -4), 33.106 (U.S. Court of Federal Claims) confirmed; 35-day rule located at 33.104-4(c)(1); stay and nondelegable HCA override at 33.105-3(b)(1)-(2); agency-protest suspension at 33.104-3(a). regulations.json note: the RFO text does not restate the GAO 100-day/65-day periods, so 4 CFR 21.9 is cited for them. Statutes unchanged by the RFO."
+  },
+  {
+    "id": "Q0096",
+    "answer": "Termination for default is the Government's most severe remedy, so before I use it I confirm the facts, I give the contractor its notice, I weigh the factors the FAR requires, and I get legal review. The factors are listed at RFO FAR 49.402-3(i):\n\n- The terms of the contract and applicable laws and regulations. Do I actually have a failure to deliver, a failure to perform a provision, or a failure to make progress that endangers performance, under the Default clause at 52.249-8?\n- The specific failure and the contractor's excuses or explanations. Is any of it excusable delay, beyond the contractor's control and without its fault or negligence, like acts of God, acts of the Government in its sovereign or contractual capacity, fires, floods, epidemics, strikes, or unusually severe weather? Did the Government contribute by late GFP, a constructive change, or a COR giving direction?\n- Whether the supplies or services are available from other sources, and how urgently I need them: how long would it take to get them from someone else versus from this contractor if I let it continue?\n- The degree of essentiality of the contractor in Government acquisition programs and the effect of a default on other contracts.\n- The effect on the contractor's ability to liquidate guaranteed loans, progress payments or advance payments.\n- Any other pertinent facts and circumstances.\n\nProcess-wise: if the delivery date has not passed I must issue a cure notice with at least 10 days to cure (RFO FAR 49.402-3(d)); after the date I use a show cause notice (formats at RFO FAR 49.607). Before any of it, 49.402-3(a) has me review the case with technical personnel and legal counsel. I check that I have not waived the delivery schedule by accepting late performance without reserving my rights. I consider the alternatives, a no-cost extension with consideration, or a termination for convenience, because if the default is later found wrongful it converts to a T4C and the Government pays convenience costs. For commercial items I use the Part 12 termination for cause under 12.304 and 52.212-4(m), not Part 49. The notice must say the contract is terminated, state the reasons, address reprocurement liability, and note it is a final decision appealable under Disputes. And I report it in CPARS and FAPIIS.\n\nCite: RFO FAR 49.402-3(i) (factors; was 49.402-3(f)), 49.402-3(a) and (d); RFO FAR 49.401(b), 49.607; FAR 52.249-8; RFO FAR 12.304 and 52.212-4(m) for commercial.",
+    "key_points": [
+      "Factors (RFO FAR 49.402-3(i)): contract terms and law; the specific failure and excuses; availability from other sources; urgency and time to reprocure; essentiality/effect on other contracts; effect on loans, progress and advance payments; other pertinent facts",
+      "Excusable delay under 52.249-8(c) defeats default; check Government contribution and waiver of schedule",
+      "Cure notice (10 days) before the delivery date (RFO FAR 49.402-3(d)); show cause after; formats at 49.607",
+      "Wrongful default converts to termination for convenience (RFO FAR 49.401(b))",
+      "Commercial: termination for cause under RFO FAR 12.304 and 52.212-4(m), not Part 49",
+      "Legal review, written notice with reasons and appeal rights, CPARS/FAPIIS reporting"
+    ],
+    "citations": [
+      "RFO FAR 49.401(b)",
+      "RFO FAR 49.607",
+      "FAR 52.249-8",
+      "RFO FAR 12.304",
+      "FAR 52.212-4(m)",
+      "RFO FAR 49.402-3(i)",
+      "RFO FAR 49.402-3(d)",
+      "RFO FAR 49.402-3(a)"
+    ],
+    "crosswalk": [
+      {
+        "old": "FAR 49.402-3(f)",
+        "new": "FAR 49.402-3(i)"
+      }
+    ],
+    "rfo_status": "updated",
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "high",
+    "confidence_reason": "Reviewer 14 Sep 2026: RFO Part 49 page re-read: 49.401(b) wrongful default treated as convenience termination; 49.402-3(a) consult technical personnel and legal counsel; (d) written notice with 10 days to cure; (i) the factors list (contract terms and law, specific failure and excuses, availability from other sources, urgency, essentiality, effect on guaranteed loans/progress/advance payments, other pertinent facts); 49.607 delinquency notices retained. Paragraph letter (i) now confirmed, so confidence raised to high. 12.304 and 52.212-4(m) 'verified' in regulations.json / May 2026 deck."
+  },
+  {
+    "id": "Q0117",
+    "answer": "The Government has no privity with subcontractors, so consent to subcontract is the tool that lets me look at a prime's buying decisions when the prime's purchasing is my cost or performance risk. RFO FAR 44.201-1 and the clause at 52.244-2 say when my written consent is required.\n\nIf the contractor has an approved purchasing system, meaning it passed a contractor purchasing system review under RFO FAR 44.301, consent is required only for the subcontracts I specifically identify in paragraph (d) of 52.244-2. I identify a subcontract, or a class of subcontracts, when I decide an individual consent action is needed to protect the Government because of the subcontract's type, complexity or value, or because it needs special surveillance: critical systems, subsystems, components or services.\n\nIf the contractor does not have an approved purchasing system, consent is required under cost-reimbursement, time-and-materials, labor-hour and letter contracts, and for unpriced actions under fixed-price contracts over the SAT, for:\n- any cost-reimbursement, T&M or labor-hour subcontract, and\n- any fixed-price subcontract that exceeds the greater of the SAT or 5 percent of the total estimated cost of the contract.\n\nUnder a priced fixed-price contract, consent applies only to unpriced contract actions such as unpriced modifications or unpriced orders, because on a firm-fixed-price deal the prime already owns the risk.\n\nThe reasons behind those triggers are the same reasons I review carefully under RFO FAR 44.201-3(b): the contractor's purchasing system or performance is inadequate; there is a close working relationship or ownership affiliation between prime and sub that could preclude competition or raise prices; the sub is being awarded noncompetitively, at a price that looks unreasonable, or higher than the prime offered the Government; or the sub is cost-type, T&M or labor-hour. When I review, the contractor gives me the description, subcontract type, the proposed subcontractor, the price, its cost or price analysis and negotiation memorandum, and certified data if required, per 52.244-2(e). I check make-or-buy consistency, the small business subcontracting plan, adequate price competition, subcontractor responsibility and exclusions in SAM, an appropriate subcontract type, and no cost-plus-percentage-of-cost. My consent is not a determination that the price or terms are acceptable and does not relieve the prime of responsibility (RFO FAR 44.201-4).\n\nCite: RFO FAR 44.201-1, 44.201-2, 44.201-3(b), 44.201-4, 44.301; FAR 52.244-2(b), (c), (d), (e); 10 U.S.C. 3322(c); RFO DFARS Part 244 (Class Deviation 2026-O0015 Rev 1).",
+    "key_points": [
+      "Approved purchasing system: consent only for subcontracts the KO names in 52.244-2(d) because of type, complexity, value or need for special surveillance",
+      "No approved system: consent under cost-reimbursement, T&M, L-H and letter contracts, and unpriced FP actions over SAT, for cost-type/T&M/L-H subs and FP subs over the greater of SAT or 5% of contract estimated cost",
+      "Priced fixed-price contracts: consent only on unpriced contract actions (52.244-2(b))",
+      "Careful review triggers (RFO FAR 44.201-3(b)): inadequate purchasing system, prime-sub affiliation, noncompetitive or unreasonable prices, cost-type subs",
+      "Contractor submits description, type, sub, price, cost/price analysis, negotiation memo (52.244-2(e))",
+      "Consent is not approval of price or terms and does not relieve the prime (RFO FAR 44.201-4); privity stays with the prime"
+    ],
+    "citations": [
+      "RFO FAR 44.201-1",
+      "RFO FAR 44.201-2",
+      "RFO FAR 44.201-3",
+      "FAR 52.244-2",
+      "10 U.S.C. 3322(c)",
+      "RFO FAR 44.201-4",
+      "RFO FAR 44.301"
+    ],
+    "crosswalk": [
+      {
+        "old": "FAR 44.201-1",
+        "new": "FAR 44.201-1"
+      },
+      {
+        "old": "FAR 44.201-2",
+        "new": "FAR 44.201-2"
+      },
+      {
+        "old": "FAR 44.202-2",
+        "new": "FAR 44.201-3(b)"
+      },
+      {
+        "old": "FAR 44.203",
+        "new": "FAR 44.201-4"
+      },
+      {
+        "old": "FAR 44.302",
+        "new": "FAR 44.301"
+      }
+    ],
+    "rfo_status": "updated",
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "Reviewer 14 Sep 2026: RFO Part 44 page re-read: 44.201-1 consent requirements (approved-system rule quoted), 44.201-2 statutory advance notification, 44.201-3 contracting officer's responsibilities with the careful-review list at (b), 44.201-4 consent limitations ('does not constitute a determination of the acceptability of the subcontract terms or price'), subpart 44.3 Postaward with CPSR at 44.301. 10 U.S.C. 3322(c) read at law.cornell.edu (cost and CPFF contracts must provide notice of CPFF subcontracts and fixed-price subcontracts over the greater of SAT or 5 percent; transferred from 2306(e)). Consent triggers are from the legacy 52.244-2 clause; the RFO Part 52 clause text (FAR Part 52 deviation 2026-O0038) and the DFARS 244 deviation body were not read, so confidence stays medium."
+  },
+  {
+    "id": "Q0143",
+    "answer": "My decision process has six steps, and the sixth one is what lets me defend the first five.\n\nOne, frame the decision. What exactly am I deciding, is it within my warrant and my authority, and what is the real deadline? If it is above my authority I elevate early, I do not stretch.\n\nTwo, get the facts and the rules. I go to the requirement, the market research, the COR, the contractor and the data, and I find the governing rule in order: statute and fiscal law, then FAR, DFARS, AFARS and local policy. If a practice is in the Government's interest and is not prohibited by law, regulation or executive order, RFO FAR 1.102(b)(4) says I may use it; I do not invent prohibitions and I do not invent permissions.\n\nThree, consult. RFO FAR 1.402-2 requires me to request and consider the advice of specialists, so legal, pricing, the small business specialist, policy and the requiring activity are in the room before I decide, not after.\n\nFour, analyze alternatives and risk: mission impact, fiscal risk under purpose, time and amount, competition and protest risk, and contractor performance risk. I pick the course that best serves the Government, not the easiest one.\n\nFive, decide and communicate. I tell the affected parties what I decided and why, in plain language, including the customer who did not get the answer they wanted.\n\nSix, document contemporaneously. The file must show a complete history and clear support for every action (RFO FAR 4.101): the D&F, the J&A, the price negotiation memorandum, and for a source selection the decision document with the rationale for every business judgment and tradeoff (RFO FAR 15.205). I write it the day I decide, never after the fact.\n\nHow I defend it. In the moment, when a commander or customer pushes, I explain the rule, offer a lawful alternative, and put my position in writing. Later, in a protest, audit, IG inquiry or investigation, the standard is whether my decision was reasonable, consistent with the solicitation and regulation, fair to all parties and made in good faith on the record I had at the time. A well-documented file answers that without me having to remember anything. If the record shows I was wrong, I take corrective action rather than defend an error.\n\nThree examples:\n- A commander wants a sole source for a $40K maintenance job. I run market research, and if only the OEM can do it I document the limited-source decision under RFO FAR 12.102 if it is commercial, or RFO FAR 13.101(b) if it is not; if not, I compete it and I tell the commander why in writing.\n- A customer sends a September purchase request with this year's O&M for services starting next July. I reject it, cite the bona fide needs rule at 31 U.S.C. 1502, explain severable services, and keep the email.\n- In a best-value tradeoff I pick a higher-priced offeror. The SSDD explains specifically what the extra strengths buy and why they are worth the price difference, so GAO can follow my reasoning.\n\nCite: RFO FAR 1.102(b)(4), 1.402-2, 4.101, 15.205 (was 15.308), 12.102, 13.101(b); RFO FAR Part 3 standards of conduct; 31 U.S.C. 1341 and 1502.",
+    "key_points": [
+      "Frame the decision and confirm it is within warrant and authority; elevate early if not",
+      "Facts and rules in order: statute and fiscal law, FAR, DFARS, AFARS, local policy; RFO FAR 1.102(b)(4) permits what is not prohibited",
+      "Consult specialists before deciding (RFO FAR 1.402-2): legal, pricing, small business, policy, customer",
+      "Weigh alternatives and risk: mission, fiscal (purpose/time/amount), protest, performance",
+      "Decide, communicate plainly, document contemporaneously (RFO FAR 4.101; SSDD rationale RFO FAR 15.205)",
+      "Defense standard: reasonable, consistent with solicitation and regulation, fair, good faith on the record at the time; correct errors rather than defend them"
+    ],
+    "citations": [
+      "RFO FAR 1.102(b)(4)",
+      "RFO FAR 1.402-2",
+      "RFO FAR 4.101",
+      "RFO FAR 15.205",
+      "RFO FAR 12.102",
+      "31 U.S.C. 1341",
+      "31 U.S.C. 1502",
+      "RFO FAR 13.101(b)"
+    ],
+    "crosswalk": [
+      {
+        "old": "FAR 15.308",
+        "new": "FAR 15.205"
+      },
+      {
+        "old": "FAR 1.102-4(e)",
+        "new": "FAR 1.102(b)(4)"
+      },
+      {
+        "old": "FAR 1.602-2",
+        "new": "FAR 1.402-2"
+      },
+      {
+        "old": "FAR 4.801-4.803",
+        "new": "FAR 4.101"
+      },
+      {
+        "old": "FAR 13.106-1(b)",
+        "new": "FAR 13.101(b)"
+      }
+    ],
+    "rfo_status": "updated",
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "Reviewer 14 Sep 2026: crosswalk entries 1.102-4(e)/1.102(b)(4), 1.602-2/1.402-2, 4.801-4.803/4.101, 15.308/15.205, 12.102 (RFO meaning: restricting competition, at/below SAT record that only one source exists) and 13.106-1(b)/13.101(b) are all 'verified' in regulations.json. The $40K sole-source example now distinguishes commercial (12.102) from noncommercial (13.101(b)). Leadership question; structure is the drafter's. Part 3 is cited without a section because RFO Part 3 numbering was not checked."
+  },
+  {
+    "id": "Q0148",
+    "answer": "There is no statutory deadline for an agency protest, but the FAR sets the standard: the agency must make its best efforts to resolve it within 35 days after the protest is received by the contracting officer or by the official conducting an independent review. That is RFO FAR 33.104-4(c)(1).\n\nHere is what I do with Ali and Sons. First, I check timing. It is post-award, so if the protest came in within 10 days after award, or within 5 days after a debriefing date I offered under a timely request, whichever is later, I must immediately suspend performance on the janitorial contract pending resolution, unless I justify continued performance in writing on urgent and compelling reasons or best interest of the Government (RFO FAR 33.104-3). For a camp janitorial contract, a break in service may well support that written finding, but it is a finding, not an assumption.\n\nSecond, I consult legal as soon as practicable, which AFARS 5133.103(d)(3) requires. Third, I find out whether the protester wants me to decide it or wants an independent review at a level above me; for an ACC contracting office that review is routed under AMC procedures (AFARS 5133.103(d)(4)(i)), so I confirm the current routing with my Chief of Contracting. Fourth, I resolve it on the merits: pull the evaluation record, answer each ground, and issue a written decision that explains the basis. If they are right, I take corrective action; if they are wrong, I say why.\n\nTwo clocks I keep in mind: my 35-day best-efforts target, and the protester's GAO clock, which is 10 days from when they learn of the initial adverse agency action, so a prompt, well-reasoned decision is also my best protection against a follow-on GAO protest.\n\nCite: RFO FAR 33.104-4(c)(1) (was 33.103(g)); RFO FAR 33.104-3(a); AFARS 5133.103(d)(3) and (d)(4)(i) (AFARS still carries legacy section numbers); 4 CFR 21.2(a)(3).",
+    "key_points": [
+      "Best efforts to resolve within 35 days of receipt by the KO or independent-review official (RFO FAR 33.104-4(c)(1))",
+      "Post-award protest within 10 days of award or 5 days after offered debriefing: suspend performance unless written urgent-and-compelling or best-interest finding (RFO FAR 33.104-3)",
+      "Consult legal as soon as practicable (AFARS 5133.103(d)(3))",
+      "Protester may request independent review above the KO; ACC routes under AMC procedures, confirm locally",
+      "Written decision on the merits; corrective action if warranted",
+      "Protester's GAO clock: 10 days from initial adverse agency action"
+    ],
+    "citations": [
+      "RFO FAR 33.104-4(c)(1)",
+      "RFO FAR 33.104-3",
+      "AFARS 5133.103(d)",
+      "4 CFR 21.2(a)(3)",
+      "RFO FAR 33.104-3(a)"
+    ],
+    "crosswalk": [
+      {
+        "old": "FAR 33.103(g)",
+        "new": "FAR 33.104-4(c)(1)"
+      },
+      {
+        "old": "FAR 33.103(f)(3)",
+        "new": "FAR 33.104-3"
+      }
+    ],
+    "rfo_status": "updated",
+    "flags": [
+      "ai-drafted",
+      "verify-locally"
+    ],
+    "confidence": "high",
+    "confidence_reason": "Reviewer 14 Sep 2026: RFO Part 33 page re-read: 35-day best-efforts rule at 33.104-4(c)(1); 10-day/5-day postaward suspension with written urgent-and-compelling or best-interest justification at 33.104-3(a). AFARS Part 5133 on acquisition.gov (revised 01 Oct 2024, change 2025-0711) read: 5133.103(d)(3) 'As soon as practicable, the Contracting officer must consult with the legal office'; (d)(4)(i) AMC contracting officers use AMC procedures for independent review. Note the AFARS on acquisition.gov has not been renumbered for the RFO and the page says the official AFARS now resides on the Army PAM portal; the section numbers may change. AMC/ACC routing is local practice, so verify-locally added. 4 CFR 21.2(a)(3) stated from the regulation, not re-fetched."
+  },
+  {
+    "id": "Q0212",
+    "answer": "Strategic sourcing is the collaborative, structured process of analyzing what an organization spends and using that spend data to buy commodities and services more effectively: aggregate common requirements across the enterprise, standardize them, compete them once with the Government's full buying power, cut duplicate contract vehicles, manage the supplier relationship, and measure the savings. Today it lives inside category management, OMB Memorandum M-19-13 and DoD's category management roles and responsibilities, which measure spend under management and push us to Best-in-Class vehicles before we create our own. The newest Government-wide policy is Executive Order 14240 of 20 March 2025, Eliminating Waste and Saving Taxpayer Dollars by Consolidating Procurement, which directs GSA to consolidate domestic procurement of common goods and services and makes the GSA Administrator the executive agent for all information technology GWACs; OMB implemented it by memorandum in 2025. For a KO that raises the bar even higher for standing up a new Army vehicle for common goods, services or IT.\n\nStrategic sources I use or steer customers to:\n- GSA Federal Strategic Sourcing Initiative BPAs and the Best-in-Class solutions built on the Multiple Award Schedule, plus GWACs like OASIS+, Alliant 2 and NASA SEWP.\n- Army CHESS, the Army's designated source for commercial IT hardware, software and services, and the DoD Enterprise Software Initiative.\n- DLA supply chains and prime vendor programs, and the mandatory sources at RFO FAR 8.102 and 8.103: agency inventory, excess, Federal Prison Industries and AbilityOne. RFO FAR 8.104 tells me to use an existing government-wide contract when it is designated required use.\n- Our own enterprise vehicles: Army multiple-award IDIQs for services and base operations, and in an OCONUS brigade like the 411th, theater-wide BPAs and IDIQs, which I would confirm with the local policy shop.\n\nThe BCA connection: before an agency stands up a new contract vehicle it has to show that the vehicle beats what already exists. Section 865 of the FY2009 NDAA requires a business case for any multi-agency contract, addressing administration, all direct and indirect costs, and the effect on the Government's ability to leverage its purchasing power; that is now RFO FAR 17.502-1(b). OFPP's 29 September 2011 memorandum on business cases set the thresholds: a business case for every new or renewed GWAC regardless of value, and for covered multi-agency contracts, agency-specific contracts and BPAs that would create significant usage by other agencies or significant overlap, defined as roughly 25 percent, with FSSI, SmartBUY or an existing GWAC, when the estimated value is 250 million dollars or more for solicitations released in fiscal 2012, 100 million in fiscal 2013, and 50 million from fiscal 2014 on. The business case is approved no lower than the Senior Procurement Executive, posted to OMB MAX, and GWAC cases go to OMB itself. In the Army, AFARS 5137.590-6, acquisition strategy content, requires a services acquisition strategy to address opportunities for strategic sourcing, describe how category management was applied and analyze existing spend-under-management contracts; it does not use the term business case analysis. The related consolidation and bundling analysis is RFO FAR 7.107: a written determination for consolidation over 2 million and substantial bundling at 8 million for DoD, with AFARS 5107.107-2 putting consolidation approvals at the HCA from 2 million up to 500 million and at DASA(P) at 500 million and above.\n\nWhat I would confirm before I quote a number at the board: whether ASA(ALT) or ACC has a current Army-specific BCA threshold and routing for new enterprise vehicles, because that policy has changed more than once and I could not verify a current Army dollar figure.\n\nCite: OFPP memo, 29 Sep 2011, Development, Review and Approval of Business Cases for Certain Interagency and Agency-Specific Acquisitions; section 865, P.L. 110-417; RFO FAR 17.502-1(b); RFO FAR 7.107-1(b); RFO FAR 8.102, 8.103, 8.104; AFARS 5137.590-6; AFARS 5107.107-2(b); OMB M-19-13; E.O. 14240 (20 Mar 2025).",
+    "key_points": [
+      "Definition: structured spend analysis to aggregate, standardize and compete enterprise requirements; now executed as category management (OMB M-19-13, spend under management, Best-in-Class) and, since E.O. 14240 (Mar 2025), GSA consolidation of common goods/services and IT GWACs",
+      "Sources: GSA FSSI/BIC and GWACs, Army CHESS, DoD ESI, DLA, mandatory sources RFO FAR 8.102-8.104, Army and 411th enterprise IDIQs/BPAs",
+      "Multi-agency contracts require a business case (sec. 865 FY09 NDAA; RFO FAR 17.502-1(b))",
+      "OFPP 2011 thresholds: all GWACs; covered MACs/agency contracts/BPAs at $250M (FY12), $100M (FY13), $50M (FY14 on); SPE approval, OMB MAX",
+      "Army: AFARS 5137.590-6 acquisition strategy must address strategic sourcing and category management; consolidation D&F RFO FAR 7.107 ($2M; $8M substantial bundling DoD), AFARS 5107.107-2 approval levels",
+      "Confirm any current Army/ACC-specific BCA threshold and routing before citing it"
+    ],
+    "citations": [
+      "OFPP Memorandum 29 Sep 2011 (Business Cases for Certain Interagency and Agency-Specific Acquisitions)",
+      "RFO FAR 17.502-1(b)",
+      "RFO FAR 7.107-1",
+      "RFO FAR 8.102",
+      "RFO FAR 8.103",
+      "RFO FAR 8.104",
+      "AFARS 5137.590-6",
+      "AFARS 5107.107-2",
+      "OMB M-19-13",
+      "P.L. 110-417 sec. 865",
+      "E.O. 14240 (20 Mar 2025)"
+    ],
+    "crosswalk": [
+      {
+        "old": "FAR 17.502-1(b)",
+        "new": "FAR 17.502-1(b)"
+      },
+      {
+        "old": "FAR 7.107",
+        "new": "FAR 7.107-1(b)"
+      },
+      {
+        "old": "FAR 8.002",
+        "new": "FAR 8.102 / 8.103"
+      },
+      {
+        "old": "FAR 8.004",
+        "new": "FAR 8.104"
+      }
+    ],
+    "rfo_status": "updated",
+    "flags": [
+      "ai-drafted",
+      "verify-locally"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "Reviewer 14 Sep 2026: RFO Part 8 page re-read (8.102 mandatory source for services/AbilityOne; 8.103(a) supplies priority: agency inventories, excess, FPI, AbilityOne; 8.104 use of existing contracts, 'required use' governmentwide contracts). Crosswalk 17.502-1(b) and 7.107-1(b) determination triggers ($2M consolidation, $8M DoD substantial bundling) 'verified' in regulations.json. AFARS 5107.107-2(b) read on acquisition.gov: DASA(P) determines consolidations of $500 million or more, HCA above $2 million and below $500 million. AFARS 5137.590-6 'Acquisition strategy content' read: strategic sourcing, category management and SUM contracts required; no BCA term. E.O. 14240 (20 Mar 2025) read on whitehouse.gov: GSA consolidation plan, OMB to designate GSA executive agent for IT GWACs. The follow-on OMB memorandum (M-25-31, Consolidating Federal Procurement Activities) was seen only as a whitehouse.gov document title and is not cited by number in the answer. OFPP 2011 thresholds were read by the drafter from the memo PDF and not re-fetched. No current Army- or ACC-specific BCA dollar threshold was found; verify-locally stays. The 411th theater-vehicle statement is softened and marked for local confirmation."
+  },
+  {
+    "id": "Q0219",
+    "answer": "Yes. Under the Contract Disputes Act, 41 U.S.C. 7109, the Government pays interest on a contractor's claim from the date the contracting officer receives a proper claim, or from the date payment would otherwise be due if that is later, until the date of payment. The FAR implementation is RFO FAR 33.205-3, which used to be 33.208. The rate is the one the Secretary of the Treasury sets and publishes every six months for CDA purposes; it is simple interest, and it keeps running through the KO's decision period, the appeal at the ASBCA and any litigation at the Court of Federal Claims.\n\nThe details a Class III KO should know:\n- Interest only runs on a proper claim: a written demand, as a matter of right, for a sum certain, and certified if it is over 100,000 dollars (RFO FAR 33.205-2). A request for equitable adjustment or an undisputed invoice is not a claim; the day the contractor converts it into a claim is the day the interest clock starts.\n- A defective certification does not stop interest. If the contractor corrects it, interest still runs from the date I originally received the claim (RFO FAR 33.205-3(c), carrying legacy 33.208(c); the correction rule itself is 41 U.S.C. 7103(b)(3)).\n- My 60-day decision window under RFO FAR 33.205-6(c) does not pause interest, so slow-rolling a claim costs the Army money. That is a real incentive to resolve legitimate claims quickly, ideally through negotiation or ADR under 33.205-8.\n- If the claim goes to judgment, principal and interest are paid from the Judgment Fund under 31 U.S.C. 1304 and the Army then reimburses the fund from its own appropriations (41 U.S.C. 7108); if I settle it, it is paid from the contract's funds. Either way it is a cost of the dispute.\n- CDA interest is different from Prompt Payment Act interest. Prompt Payment interest under 31 U.S.C. 3901 and RFO FAR 32.907 is an automatic penalty for paying a proper, undisputed invoice late. Once an amount is in dispute and becomes a claim, the CDA interest rules apply instead; the contractor does not collect both on the same dollars.\n\nAnd it runs the other way too. On a Government claim, a contract debt, RFO FAR 32.608-1 and the Interest clause at 52.232-17 charge the contractor simple interest on any amount still unpaid 30 days after my demand, computed from the date of the demand, at the same Treasury rate under 41 U.S.C. 7109; it is not a different rate.\n\nCite: 41 U.S.C. 7109, 7103(b)(3) and 7108; RFO FAR 33.205-3 and 33.205-3(c) (was 33.208), 33.205-2, 33.205-6(c), 33.205-8; RFO FAR 32.907; 31 U.S.C. 3901; RFO FAR 32.608-1 and FAR 52.232-17; 31 U.S.C. 1304.",
+    "key_points": [
+      "Yes: CDA interest from the date the KO receives a proper claim (or payment due date if later) until paid (41 U.S.C. 7109; RFO FAR 33.205-3)",
+      "Rate set by Treasury every six months; simple interest; runs through decision, appeal and litigation",
+      "Proper claim needed: sum certain, as a matter of right, certified over $100K (RFO FAR 33.205-2); defective certification does not stop interest (RFO FAR 33.205-3(c); 41 U.S.C. 7103(b)(3))",
+      "The KO's 60-day decision window does not pause interest; delay costs money, use negotiation/ADR",
+      "Distinct from Prompt Payment Act interest on late undisputed invoices (RFO FAR 32.907; 31 U.S.C. 3901)",
+      "Reverse direction: contractor pays interest on a contract debt unpaid 30 days after the demand, from the demand date, at the same Treasury rate (RFO FAR 32.608-1; 52.232-17; 41 U.S.C. 7109)"
+    ],
+    "citations": [
+      "41 U.S.C. 7109",
+      "41 U.S.C. 7103(b)(3)",
+      "RFO FAR 33.205-3",
+      "RFO FAR 33.205-2",
+      "RFO FAR 33.205-6",
+      "RFO FAR 33.205-8",
+      "RFO FAR 32.907",
+      "31 U.S.C. 3901",
+      "FAR 52.232-17",
+      "31 U.S.C. 1304",
+      "RFO FAR 32.608-1",
+      "RFO FAR 33.205-3(c)",
+      "41 U.S.C. 7108"
+    ],
+    "crosswalk": [
+      {
+        "old": "FAR 33.208",
+        "new": "FAR 33.205-3"
+      },
+      {
+        "old": "FAR 33.207",
+        "new": "FAR 33.205-2"
+      },
+      {
+        "old": "FAR 33.211",
+        "new": "FAR 33.205-6"
+      },
+      {
+        "old": "FAR 33.214",
+        "new": "FAR 33.205-8"
+      },
+      {
+        "old": "FAR 32.907",
+        "new": "FAR 32.907"
+      },
+      {
+        "old": "FAR 32.608-1",
+        "new": "FAR 32.608-1"
+      },
+      {
+        "old": "FAR 33.208(c)",
+        "new": "FAR 33.205-3(c)"
+      }
+    ],
+    "rfo_status": "updated",
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "high",
+    "confidence_reason": "Reviewer 14 Sep 2026: RFO Part 33 page re-read: 33.205-2 certification over $100,000 (52.233-1(d)); 33.205-3 interest from the date the KO receives the claim, with 33.205-3(c) 'Interest must be paid on claims having defective certifications starting on the date that the contracting officer initially receives the claim'; 33.205-6(c)(2) 60-day decide-or-notify rule for claims over $100,000; 33.205-8 ADR. Legacy FAR 32.608-1 (FAC 2026-01) read: interest applies to a contract debt unpaid after 30 days from issuance of a demand, rate per 52.232-17 (the Treasury rate under 41 U.S.C. 7109) - the draft's 'Current Value of Funds Rate' was wrong and was removed. RFO Part 32 keeps 32.608-1 per regulations.json but its body was not re-read. Judgment Fund reimbursement (41 U.S.C. 7108) added from the statute as remembered and not re-fetched; statutes are unchanged by the RFO."
+  },
+  {
+    "id": "Q0275",
+    "answer": "Immediate actions. GAO notifies the agency within one day of the filing, and under RFO FAR 33.105-4(a) the very first thing I do on that notice is notify legal counsel and start assembling the record. In the 411th that means the supporting legal office and my Chief of Contracting, so the protest gets into the ACC and Army legal channel the same day; I confirm the exact routing with C&P. At the same time I give notice of the protest to Company A, the awardee, as 4 CFR 21.3(a) requires, I put a litigation hold on the file and the evaluators' notes, and I identify whether the protest is timely for the stay. I also take an honest early look at whether Company B has a point, because corrective action on day two is far cheaper than a sustained protest on day ninety.\n\nStop work. Yes, I am required to stop performance, and the statute dictates the timeline. Under 31 U.S.C. 3553(d) and RFO FAR 33.105-3(b)(1), if the agency receives GAO's notice within 10 days after contract award, or within 5 days after a debriefing date offered under a timely request, whichever is later, I must immediately suspend performance or terminate the award. For DoD, RFO DFARS 233.105-70 replaces those periods with four and uses whichever is latest: 10 days after award; 10 days after issuance of a task or delivery order over 35 million dollars; 5 days after a debriefing date offered under a timely request; or 5 days after a postaward debriefing is concluded, which under RFO DFARS 215.301-71 is not until the agency answers the follow-up questions the offeror may submit within 2 business days. Company B filed three days after my notice, so we are inside the 10-day window and the CICA stay applies; I issue a stop-work order under 52.242-15 to Company A. At 150,000 dollars this was below the SAT, so it was likely a simplified acquisition where a formal Part 15 debriefing was not required, which is why the 10-days-after-award clock governs. The only way around the stay is the head of the contracting activity, on a nondelegable basis, making a written finding that performance is in the best interests of the United States or that urgent and compelling circumstances will not permit waiting for GAO, and GAO must be told. For network equipment on a camp in Korea I would build that case only if the mission truly cannot wait.\n\nAgency report. The agency report is due to GAO 30 days after GAO's telephone notice of the protest (4 CFR 21.3(c)). It contains my contracting officer's statement of facts, counsel's memorandum of law, and all relevant documents, redacted or produced under a protective order. Company B then has 10 days to comment, and GAO issues its decision within 100 days of filing, or 65 days under the express option (4 CFR 21.9). If GAO sustains, the HCA must report to GAO if the recommendation is not implemented within 60 days (RFO FAR 33.105-4(b)).\n\nCite: RFO FAR 33.105-3(b) and 33.105-4(a)-(b) (was 33.104); RFO DFARS 233.105-70(a)-(d) (Class Deviation 2026-O0026 Rev 1; was 233.104(c)); RFO DFARS 215.301-71 (Class Deviation 2026-O0048 Rev 1); 4 CFR 21.3(a), 21.3(c), 21.9; 31 U.S.C. 3553(d); FAR 52.242-15.",
+    "key_points": [
+      "First: notify legal counsel immediately and start compiling the record (RFO FAR 33.105-4(a)), notify the awardee (4 CFR 21.3(a)), litigation hold, check timeliness, consider early corrective action; confirm 411th/ACC routing",
+      "Stay: GAO notice within 10 days of award or 5 days after offered/concluded debriefing, whichever later, requires immediate suspension or termination (31 U.S.C. 3553(d); RFO FAR 33.105-3(b)(1))",
+      "DoD (RFO DFARS 233.105-70): latest of 10 days after award, 10 days after a task/delivery order over $35M, 5 days after offered debriefing date, or 5 days after the debriefing is concluded incl. follow-up questions (215.301-71)",
+      "Filed 3 days after notice = within 10 days: issue stop-work order (52.242-15) to Company A",
+      "Override only by HCA, nondelegable, written best-interest or urgent-and-compelling finding, GAO notified",
+      "Agency report due 30 days after GAO notice (4 CFR 21.3(c)); GAO decides in 100 days, 65 under express option (4 CFR 21.9)"
+    ],
+    "citations": [
+      "RFO FAR 33.105-3",
+      "RFO DFARS 233.105-70",
+      "RFO DFARS 215.301-71",
+      "4 CFR 21.3(a)",
+      "4 CFR 21.3(c)",
+      "4 CFR 21.9",
+      "31 U.S.C. 3553(d)",
+      "FAR 52.242-15",
+      "RFO FAR 33.105-4(a)",
+      "RFO FAR 33.105-4(b)"
+    ],
+    "crosswalk": [
+      {
+        "old": "FAR 33.104(c)",
+        "new": "FAR 33.105-3"
+      },
+      {
+        "old": "FAR 33.104(a)",
+        "new": "FAR 33.105-4"
+      },
+      {
+        "old": "DFARS 233.104(c)",
+        "new": "DFARS 233.105-70"
+      },
+      {
+        "old": "DFARS 215.506-70",
+        "new": "DFARS 215.301-71"
+      }
+    ],
+    "rfo_status": "updated",
+    "flags": [
+      "ai-drafted",
+      "verify-locally",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "Reviewer 14 Sep 2026: RFO Part 33 page re-read: 33.105-4(a) 'Upon notice that a protest has been filed with GAO, the contracting officer must immediately notify legal counsel and begin compiling the information'; 33.105-3(b)(1)-(2) 10-day/5-day suspension with nondelegable HCA override; 33.105-4(b) 60-day report to GAO. DFARS Class Deviation 2026-O0026 Rev 1 (24 Aug 2026) text extracted and 233.105-70(a)-(d) read verbatim: 10 days after award; 10 days after a task/delivery order over $35 million (10 U.S.C. 3406(f)); 5 days after an offered debriefing date; 5 days after a postaward debriefing is concluded 'in accordance with 215.301-2' - the Part 215 deviation numbers that rule 215.301-71 (2-business-day questions, 5-business-day answers, debriefing not concluded until the written response), a numbering mismatch between the two deviations. SAT $350,000 'verified' in regulations.json. 411th legal and C&P routing for GAO protests is not in the source files; korea-verify-cp and verify-locally stay."
+  }
+]

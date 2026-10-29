@@ -1,0 +1,592 @@
+{
+ "fiscal_sort": [
+  {
+   "id": "FS01",
+   "statement": "A requiring activity asks you to use FY26 annual O&M funds to build a permanent 4,000 square foot addition to a maintenance building at a cost of $6 million.",
+   "bucket": "Purpose",
+   "explanation": "This is a purpose problem. O&M is available for operating and maintaining what the Army already has; erecting a permanent facility of this size and cost is military construction and has to be funded with the construction appropriation Congress provided for that purpose.\n\nThe test is the necessary expense rule: the expenditure must bear a logical relationship to the appropriation charged, must not be prohibited by law, and must not fall within the scope of some other appropriation. This one fails the third prong - MILCON money exists for exactly this.\n\nAs the contracting officer, return the purchase request and tell the requiring activity what color of money the project needs. Do not let \"the money expires in three weeks\" decide the appropriation.",
+   "cite": "31 U.S.C. 1301(a); 10 U.S.C. 2801-2805 (military construction; unspecified minor military construction); GAO Principles of Federal Appropriations Law (Red Book), purpose availability.",
+   "difficulty": 1
+  },
+  {
+   "id": "FS02",
+   "statement": "In August of FY26 a requiring activity submits a purchase request funded with FY26 O&M for a one-year janitorial services contract with a period of performance of 1 July 2027 through 30 June 2028.",
+   "bucket": "Time",
+   "explanation": "This is a bona fide need problem. Janitorial work is severable services, so the need arises as the work is performed - all of it in FY27 and FY28. FY26 funds cannot buy an FY27 need.\n\nThe cross-fiscal-year authority does not save it either, because that authority requires the period to begin in the fiscal year of the appropriation. This period does not begin until nine months into the next fiscal year.\n\nReject the purchase request as funded, explain severable versus non-severable to the requiring activity, and ask for FY27 funds. Document the exchange.",
+   "cite": "31 U.S.C. 1502(a) (bona fide needs rule); 10 U.S.C. 3133 and RFO FAR 32.703-3 (contracts crossing fiscal years, severable services).",
+   "difficulty": 2
+  },
+  {
+   "id": "FS03",
+   "statement": "A contracting officer signs a modification adding $400,000 of in-scope work when only $150,000 remains available on the funding line, intending to have the requiring activity add money next month.",
+   "bucket": "Amount",
+   "explanation": "This is an Antideficiency Act problem. You may not create or authorize an obligation in excess of the funds available. The moment the modification is signed the Government is on the hook for $400,000 against $150,000 of availability.\n\nThe fix is simple and it comes first: get the funding document before you sign, or make the action expressly contingent on the availability of funds where that is authorized. A promise that money is coming is not an obligation authority.\n\nA violation here is reportable. It is investigated and reported through command channels to the President and Congress, and penalties can include adverse personnel action and criminal sanction for a knowing and willful violation.",
+   "cite": "31 U.S.C. 1341(a)(1) (Antideficiency Act); 31 U.S.C. 1351 (reporting); RFO FAR 32.702 (no contract before funds are available).",
+   "difficulty": 1
+  },
+  {
+   "id": "FS04",
+   "statement": "On 20 September of FY26 you award a supply contract with FY26 O&M for equipment the unit needs now; the manufacturer's normal production and delivery lead time puts delivery in January of FY27.",
+   "bucket": "No violation",
+   "explanation": "This is the lead-time exception and it is legitimate. The bona fide need arose in FY26, and a delivery date driven by the normal production and delivery lead time for that item does not move the need into the next fiscal year.\n\nWhat makes it work is that the delay is the market's, not the Government's. Document the lead time in the file - a market research note or the contractor's standard delivery schedule - so a later reviewer can see why FY26 money was correct.",
+   "cite": "31 U.S.C. 1502(a); GAO Principles of Federal Appropriations Law (Red Book), time availability - delivery within normal production lead time.",
+   "difficulty": 2
+  },
+  {
+   "id": "FS05",
+   "statement": "The office accepts a contractor's offer to pay the travel costs for two Government employees to attend a design review at the contractor's plant, and keeps the money it would otherwise have spent for other requirements.",
+   "bucket": "Purpose",
+   "explanation": "This is augmentation of an appropriation. Accepting something of value that relieves the appropriation of a cost it would otherwise bear effectively increases the funds Congress made available, which the office has no authority to do.\n\nMoney received by the Government generally has to go to the Treasury as miscellaneous receipts unless a statute says otherwise. There is a separate and equally serious problem: accepting a gratuity from a contractor during an active procurement relationship is an ethics and procurement integrity matter.\n\nDecline, fund the travel with your own appropriation, and talk to your ethics counselor. This app files augmentation under Purpose, following the purpose statute (31 U.S.C. 1301(a)); GAO also discusses augmentation alongside the Amount rules, so be ready to explain both.",
+   "cite": "31 U.S.C. 3302(b) (miscellaneous receipts); 31 U.S.C. 1301(a); RFO FAR 3.104 (procurement integrity).",
+   "difficulty": 2
+  },
+  {
+   "id": "FS06",
+   "statement": "You use expired FY24 O&M funds to pay a within-scope price adjustment on a contract that was properly awarded with FY24 funds in FY24.",
+   "bucket": "No violation",
+   "explanation": "This is correct. An expired appropriation is no longer available for new obligations, but it stays available for five years to record and pay adjustments to obligations that were properly incurred while it was current.\n\nThe two questions to answer before you do it are whether the original obligation was proper and whether the adjustment is within the scope of that obligation. If the adjustment is really new work, it is a new obligation and needs current funds.",
+   "cite": "31 U.S.C. 1553(a) (expired accounts available for adjustments to prior obligations); 31 U.S.C. 1502(a).",
+   "difficulty": 2
+  },
+  {
+   "id": "FS07",
+   "statement": "It is 28 September. A requiring activity asks you to award a contract for repair parts it acknowledges it will not need until FY28, because this year's money is about to expire.",
+   "bucket": "Time",
+   "explanation": "This is a bona fide need violation and the requiring activity has said so out loud. Current-year funds may only be obligated for a need that arises in the year of the appropriation. A need the activity admits is two years away is not a current need.\n\nThe reasonable-inventory principle does not cover it either. You may buy enough to meet a current need plus a reasonable stock level; you may not stockpile to burn expiring money.\n\nReturn the request. If you are pressed, put the fiscal law concern in writing and route it to your legal advisor.",
+   "cite": "31 U.S.C. 1502(a) (bona fide needs rule); GAO Principles of Federal Appropriations Law (Red Book), stockpiling and reasonable inventory.",
+   "difficulty": 1
+  },
+  {
+   "id": "FS08",
+   "statement": "A contractor on a cost-reimbursement contract notifies you it will exhaust the funded amount in thirty days; you tell it to keep working and that more money will be added when it comes in.",
+   "bucket": "Amount",
+   "explanation": "This is an Antideficiency Act problem. Directing continued performance beyond the funded amount authorizes an obligation the Government does not have money for.\n\nUnder the Limitation of Funds clause the contractor is not obligated to continue beyond the funded amount, and the Government is not obligated to reimburse costs above it, unless and until the contracting officer increases the funded amount by modification. The clause protects both parties - do not talk the contractor out of it.\n\nThe correct action is to get the funding modification signed before the funded amount is reached, or to let performance stop.",
+   "cite": "31 U.S.C. 1341(a)(1); RFO FAR 52.232-22 (Limitation of Funds); RFO FAR 32.702.",
+   "difficulty": 1
+  },
+  {
+   "id": "FS09",
+   "statement": "You award a twelve-month severable services contract for grounds maintenance with a period of performance of 1 April 2026 through 31 March 2027, funded entirely with FY26 O&M.",
+   "bucket": "No violation",
+   "explanation": "This is the severable services cross-fiscal-year authority and it fits. The contract is for severable services, the period begins in the fiscal year of the appropriation, and the period does not exceed one year, so one year's funds may fund the whole thing.\n\nWatch the two limits. The twelve months is measured without regard to options, and the period has to begin in the year of the appropriation - a period that starts wholly in the next fiscal year does not qualify.",
+   "cite": "10 U.S.C. 3133 (contracts for periods crossing fiscal years: severable service contracts); RFO FAR 32.703-3; 31 U.S.C. 1502(a).",
+   "difficulty": 2
+  },
+  {
+   "id": "FS10",
+   "statement": "An office uses FY26 Research, Development, Test and Evaluation funds to pay for routine custodial and grounds services at its headquarters building.",
+   "bucket": "Purpose",
+   "explanation": "This is a purpose problem. RDT&E is appropriated for research and development effort; routine installation support services are an operating expense funded with O&M.\n\nApply the necessary expense test. Custodial work at a headquarters building does not bear a logical relationship to the RDT&E appropriation, and there is a more specific appropriation that covers it.\n\nAs the contracting officer, the question to ask before you obligate is always the same one: what color of money, what fiscal year, and does it match what I am buying.",
+   "cite": "31 U.S.C. 1301(a) (purpose statute); GAO Principles of Federal Appropriations Law (Red Book), necessary expense doctrine.",
+   "difficulty": 1
+  },
+  {
+   "id": "FS11",
+   "statement": "A modification obligates funds from an FY20 appropriation to pay an upward price adjustment on an FY20 contract, six years after that appropriation was current.",
+   "bucket": "Time",
+   "explanation": "This is a closed account problem. An annual appropriation is current for one year, expired for five more, and then the account closes - the balance is cancelled and is no longer available for any purpose.\n\nSix years out, the FY20 account is closed. You cannot charge it. A payment that is still legitimately owed on that old contract is charged to a current appropriation available for the same purpose, subject to the statutory limit tied to the original appropriation.\n\nThis one hurts the current-year program, which is exactly why closeout discipline matters.",
+   "cite": "31 U.S.C. 1552(a) (closing of accounts); 31 U.S.C. 1553(b) (obligations chargeable to current appropriations after closing, subject to the one percent limitation).",
+   "difficulty": 2
+  },
+  {
+   "id": "FS12",
+   "statement": "A contracting office receives a $50,000 refund from a contractor for an overpayment and, rather than returning it, spends it on new office furniture.",
+   "bucket": "Purpose",
+   "explanation": "This is augmentation. Money coming back to the Government has to be credited to the appropriation originally charged, if the law allows, or otherwise deposited in the Treasury as miscellaneous receipts. Treating it as found money for the office spends funds Congress never made available for that purpose.\n\nRoute the refund to the resource manager and let the accounting rules place it. The contracting officer's job is to flag it, not to decide where it lands. This app files augmentation under Purpose, following the purpose statute (31 U.S.C. 1301(a)); GAO also discusses augmentation alongside the Amount rules, so be ready to explain both.",
+   "cite": "31 U.S.C. 3302(b) (miscellaneous receipts statute); 31 U.S.C. 1301(a).",
+   "difficulty": 1
+  },
+  {
+   "id": "FS13",
+   "statement": "An installation obligates more than the amount formally allotted to its account, although the parent appropriation as a whole has not been exhausted.",
+   "bucket": "Amount",
+   "explanation": "This is still an Antideficiency Act violation. The Act reaches obligations in excess of an apportionment or of a formal administrative subdivision of funds, not only obligations in excess of the appropriation itself.\n\nThe practical point for a contracting officer: \"the Army has plenty of O&M\" is never a defense. The certified funding document you are handed represents an administrative subdivision, and exceeding it is reportable.\n\nIf you suspect it has happened, say so to your resource manager and legal advisor immediately. Preliminary reviews and formal investigations have their own timelines.",
+   "cite": "31 U.S.C. 1517(a) (obligations exceeding apportionment or administrative subdivision); 31 U.S.C. 1517(b) (reporting of a 1517 violation; 31 U.S.C. 1351 is the reporting provision for 1341/1342 violations); DoD FMR Volume 14 (Antideficiency Act violation procedures).",
+   "difficulty": 2
+  },
+  {
+   "id": "FS14",
+   "statement": "You award a twenty-four month research study that produces a single final report, fully funding it with FY26 funds obligated at award.",
+   "bucket": "No violation",
+   "explanation": "This is non-severable work and full funding at award is correct. A study that yields one end product is not useful in pieces; the bona fide need for the whole undertaking arises when the work is ordered, so it is funded with the money current at award even though performance runs into later fiscal years.\n\nThe severable versus non-severable call is the one to get right, and it is a factual call about the nature of the work, not the contract type or the length of the period. If each month of effort would have independent value to the Government, it is severable.",
+   "cite": "31 U.S.C. 1502(a) (bona fide needs rule); GAO Principles of Federal Appropriations Law (Red Book), severable and non-severable services.",
+   "difficulty": 2
+  },
+  {
+   "id": "FS15",
+   "statement": "On 3 September of FY26 you award a contract with FY26 O&M for computers to be delivered when a new building is finished in the spring of FY27; the contractor could deliver immediately.",
+   "bucket": "Time",
+   "explanation": "This is a bona fide need violation. The lead-time exception applies when delivery is delayed by the realities of production and shipping, not when the Government chooses to take delivery later.\n\nHere the contractor is ready now and the Government is the one deferring. That tells you the need is an FY27 need and FY26 money is the wrong year.\n\nIf the unit genuinely has a current need, take delivery and store the items. If it does not, use FY27 funds.",
+   "cite": "31 U.S.C. 1502(a); GAO Principles of Federal Appropriations Law (Red Book), time availability - Government-caused delivery delay.",
+   "difficulty": 3
+  },
+  {
+   "id": "FS16",
+   "statement": "A contracting officer awards a contract on the strength of a resource manager's email saying the funding document will be issued next week, with no certified funds in hand.",
+   "bucket": "Amount",
+   "explanation": "This is an Antideficiency Act problem. You may not obligate the Government before funds are available. An email promising money is not an appropriation and not a commitment document.\n\nThe FAR gives you the two legitimate paths: obtain written assurance from a responsible official that adequate funds are available, or make the contract expressly subject to the availability of funds where that authority applies. Anything else puts your signature ahead of the money.\n\nThis is also a personal exposure question, which is worth saying plainly at a board. Warrant authority is not a shield for an obligation Congress did not authorize.",
+   "cite": "31 U.S.C. 1341(a)(1); RFO FAR 32.702 (policy - no contract before funds are available); RFO FAR 32.703-2 (subject to availability of funds).",
+   "difficulty": 1
+  },
+  {
+   "id": "FS17",
+   "statement": "In the fourth quarter, an office uses expiring FY26 O&M to buy repair parts sufficient for the unit's current requirement plus its normal stock level, with delivery expected in FY27.",
+   "bucket": "No violation",
+   "explanation": "This is acceptable. Current-year funds may be used for a current need, and a current need includes maintaining a reasonable inventory level - what the activity actually consumes and normally keeps on hand.\n\nThe line is stockpiling. If the quantity goes past a reasonable stock level and starts building a reserve for future years, the buy fails the bona fide needs rule no matter how the requirement is described.\n\nAs the contracting officer, ask the requiring activity what the normal consumption rate and stock level are, and put the answer in the file. That single question is what separates this from FS07.",
+   "cite": "31 U.S.C. 1502(a); GAO Principles of Federal Appropriations Law (Red Book), current need and reasonable inventory.",
+   "difficulty": 3
+  },
+  {
+   "id": "FS18",
+   "statement": "A requiring activity wants to use appropriated funds to buy refreshments and a catered lunch for the office holiday gathering.",
+   "bucket": "Purpose",
+   "explanation": "This is a purpose problem. Food for Government employees is a personal expense and appropriated funds are generally not available for it, because it does not bear the necessary relationship to the appropriation charged.\n\nThere are narrow statutory and regulatory exceptions - certain formal conferences, award ceremonies, and official representation funds - but they are specific, they are documented, and a holiday party is not one of them.\n\nThe answer at the board is to say no, explain the necessary expense test, and point the activity to the unit's private organization if one exists.",
+   "cite": "31 U.S.C. 1301(a); GAO Principles of Federal Appropriations Law (Red Book), food and refreshments for Government employees.",
+   "difficulty": 1
+  },
+  {
+   "id": "FS19",
+   "statement": "After the Government terminates a contract for default, the contracting officer awards a replacement contract for the same requirement using the same expired funds that funded the original contract.",
+   "bucket": "No violation",
+   "explanation": "This is the replacement contract rule and it works when the conditions are met. If the original contract was properly funded, the Government's need has not changed, the replacement is awarded without undue delay, and the scope is essentially the same, the replacement may be charged to the funds that supported the original obligation even though they have expired.\n\nThe conditions are what get tested. A scope increase, a changed requirement, or a long gap breaks the chain and the replacement becomes a new obligation requiring current funds.\n\nDocument the continuity of the need and the timeline in the file before you charge expired money.",
+   "cite": "31 U.S.C. 1502(a); 31 U.S.C. 1553(a); GAO Principles of Federal Appropriations Law (Red Book), replacement contracts.",
+   "difficulty": 3
+  },
+  {
+   "id": "FS20",
+   "statement": "A contractor's employee continues working after the funded amount runs out, and the contracting officer's representative encourages her to keep going so the schedule does not slip.",
+   "bucket": "Amount",
+   "explanation": "This is the voluntary services prohibition. An officer or employee may not accept voluntary services for the United States or employ personal services exceeding what the law authorizes, except for emergencies involving the safety of human life or the protection of property.\n\nAccepting work the Government cannot pay for creates exactly the liability the Antideficiency Act exists to prevent, and it sets up an unauthorized commitment that will have to be ratified later if it can be ratified at all.\n\nTwo actions: stop the work in writing, and counsel the contracting officer's representative. A representative has no authority to direct work, change scope, or obligate funds, and this is why that limit matters.",
+   "cite": "31 U.S.C. 1342 (voluntary services prohibition); 31 U.S.C. 1341; RFO FAR 1.405 (ratification of unauthorized commitments); DFARS 201.404-70 (contracting officer's representative).",
+   "difficulty": 2
+  },
+  {
+   "id": "FS21",
+   "statement": "A solicitation for base support services in Korea is structured to be funded partly with U.S. Operations and Maintenance appropriations and partly with Logistics Cost Sharing funds under the Special Measures Agreement.",
+   "bucket": "Purpose",
+   "explanation": "This will not work. The source material for the 411th is explicit that O&M and Logistics Cost Sharing funds are not mixed in a single solicitation. They are different sources with different authorities, different approval and award chains, and different competition rules - LCS contracts are approved and awarded by the ROK Ministry of National Defense, managed by USFK J4, with the 411th recommending award, and LCS competition is limited to Korean firms.\n\nThe fix is to separate the requirement into the correct funding lanes before solicitation, not to reconcile it after award.\n\nConfirm the current LCS and SMA procedures and any local implementation with the Chief, C&P before relying on this at a board - do not state local approval levels or points of contact from memory.",
+   "cite": "31 U.S.C. 1301(a) (purpose statute); 411th CSB source material on Logistics Cost Sharing under the Special Measures Agreement; USFK J4 / ROK MND LCS procedures (confirm with C&P).",
+   "difficulty": 2,
+   "flags": [
+    "korea-verify-cp"
+   ]
+  },
+  {
+   "id": "FS22",
+   "statement": "A contracting officer exercises an option in September of FY26, using FY26 O&M, for a severable services option period that runs entirely from 1 October 2026 through 30 September 2027.",
+   "bucket": "Time",
+   "explanation": "This is a bona fide need violation. Exercising the option creates a new obligation for services performed entirely in FY27. Severable services are a need of the year in which the work is performed, so FY27 money is required.\n\nThe cross-fiscal-year authority does not help because the option period does not begin in FY26 at all.\n\nThe mechanics are worth stating: an option exercise is a new obligation, priced and funded in the year the performance falls. Confirm funds availability for the option period before you send the notice, and make sure the option is exercised within the time the contract allows.",
+   "cite": "31 U.S.C. 1502(a); RFO FAR 17.204-1 (exercise of options); 10 U.S.C. 3133; RFO FAR 32.703-3.",
+   "difficulty": 3
+  },
+  {
+   "id": "FS23",
+   "statement": "An office uses expiring FY26 O&M to buy a single end item costing $900,000 that exceeds the Department's expense and investment threshold and should be funded with procurement appropriations.",
+   "bucket": "Purpose",
+   "explanation": "This is a purpose problem driven by the expense and investment rules. Centrally managed and high-cost end items above the Department's expense and investment threshold are investment items funded with procurement money, not O&M.\n\nThe necessary expense test again resolves it: there is a more specific appropriation Congress provided for this category of purchase.\n\nAs the contracting officer, ask the resource manager for the current expense and investment threshold rather than quoting a figure from memory, and put the determination in the file before award.",
+   "cite": "31 U.S.C. 1301(a); DoD Financial Management Regulation Volume 2A, Chapter 1 (expense and investment criteria).",
+   "difficulty": 2
+  },
+  {
+   "id": "FS24",
+   "statement": "A contracting officer records a $1 obligation for the guaranteed minimum on an IDIQ contract at award, and continues to carry $1 on the books after issuing delivery orders totaling $2 million.",
+   "bucket": "Amount",
+   "explanation": "The $1 obligation at award is correct - the guaranteed minimum is what the Government is bound to buy. The problem is what happens next.\n\nThe recording statute requires an obligation to be recorded when it is incurred, supported by documentary evidence of a binding agreement. Each delivery order is a binding order and must be recorded at its value. Carrying $1 on the books while $2 million of orders are outstanding understates the obligation and can mask an over-obligation of the account.\n\nRaise it with the resource manager and get the records corrected. Accurate obligation records are how Antideficiency Act violations get caught early instead of late.",
+   "cite": "31 U.S.C. 1501(a) (documentary evidence requirement for recording obligations); 31 U.S.C. 1341; 31 U.S.C. 1517.",
+   "difficulty": 3
+  },
+  {
+   "id": "FS25",
+   "statement": "You award a fifteen-month severable services contract that begins in June of FY26 and ends in August of FY27, funding the entire period with FY26 O&M.",
+   "bucket": "Time",
+   "explanation": "The period is the problem. The cross-fiscal-year authority for severable services permits a period that begins in one fiscal year and ends in the next, but only if the period does not exceed one year, measured without regard to options.\n\nFifteen months exceeds that. So the authority is unavailable and the bona fide needs rule controls: the FY27 portion is an FY27 need requiring FY27 funds.\n\nRestructure the period to twelve months or less, or fund the FY27 portion separately.",
+   "cite": "10 U.S.C. 3133 (period may not exceed one year); RFO FAR 32.703-3; 31 U.S.C. 1502(a).",
+   "difficulty": 2
+  },
+  {
+   "id": "FS26",
+   "statement": "An office places an order with another agency under the Economy Act, after executing a determination and findings that the interagency acquisition is in the Government's best interest and the supplies cannot be obtained as conveniently or economically by contracting directly with a private source.",
+   "bucket": "No violation",
+   "explanation": "This is the Economy Act done correctly. The Act authorizes one agency to order goods or services from another, and the FAR requires the determination and findings before the order is placed.\n\nThe fiscal discipline is in what happens after. The ordering agency's funds are obligated when the order is accepted, and the amount must be deobligated to the extent the servicing agency has not incurred obligations before the appropriation expires. An Economy Act order is not a way to park expiring money with another agency.\n\nPay the servicing agency's actual cost - the Economy Act does not authorize a fee beyond that.",
+   "cite": "31 U.S.C. 1535 (Economy Act); RFO FAR 17.502-2 (the Economy Act); 31 U.S.C. 1502(a).",
+   "difficulty": 2
+  },
+  {
+   "id": "FS27",
+   "statement": "The Government pays an invoice in November of FY27 for services properly performed and accepted in August of FY26, charging the FY26 appropriation.",
+   "bucket": "No violation",
+   "explanation": "This is routine and correct. The obligation was properly incurred in FY26 while the appropriation was current. An expired appropriation remains available for five years to liquidate obligations properly incurred while it was current.\n\nThe test is not when the check is written. It is when the obligation arose and whether it was proper at that time.",
+   "cite": "31 U.S.C. 1553(a); 31 U.S.C. 1502(a); RFO FAR 32.907 and 5 CFR 1315 (Prompt Payment).",
+   "difficulty": 2
+  },
+  {
+   "id": "FS28",
+   "statement": "A requiring activity wants to pay a settlement of a contractor claim, which the Department has determined must be paid from the Judgment Fund, using the office's FY26 O&M.",
+   "bucket": "Purpose",
+   "explanation": "This is a purpose problem. Where a payment is one the Judgment Fund is established to make, the agency's operating appropriation is not the right source; using it charges an appropriation Congress did not make available for that payment.\n\nThe reverse case matters too. Contract Disputes Act payments made from the Judgment Fund are reimbursed by the agency from appropriations current at the time of the judgment or award, so the money does come back out of the agency's hide - it just comes out through the right door.\n\nGet the finance and legal determination on the source before you sign anything that commits an appropriation.",
+   "cite": "31 U.S.C. 1304 (judgments, awards and compromise settlements); 41 U.S.C. 7108(c) (agency reimbursement of the Judgment Fund for CDA payments); 31 U.S.C. 1301(a).",
+   "difficulty": 3
+  },
+  {
+   "id": "FS29",
+   "statement": "A contracting officer issues a change order under the Changes clause directing additional work, knowing the equitable adjustment will exceed the funds available on the contract, and plans to obtain funds when the adjustment is negotiated.",
+   "bucket": "Amount",
+   "explanation": "This is an Antideficiency Act problem in slow motion. A change order within the general scope of the contract is a unilateral direction the contractor must perform, and it creates a Government liability for the equitable adjustment the moment it is issued - not when the adjustment is later negotiated.\n\nSo the obligation is incurred with funds unavailable to cover it. Confirm funds before you issue the change, or do not issue it.\n\nThis is also why undefinitized work and constructive changes are a fiscal risk and not just an administrative one.",
+   "cite": "31 U.S.C. 1341(a)(1); RFO FAR 43.301 (change orders - general); RFO FAR 52.243-1 (Changes - Fixed-Price); RFO FAR 32.702.",
+   "difficulty": 3
+  },
+  {
+   "id": "FS30",
+   "statement": "A contracting officer returns an unfunded purchase request to the requiring activity in writing, explaining that no award will be made until a certified funding document is received.",
+   "bucket": "No violation",
+   "explanation": "This is the right answer and it is worth being able to state affirmatively at a board, not just to spot what is wrong.\n\nThe contracting officer is the one official who can bind the Government, and part of that responsibility is refusing to obligate funds that do not exist. Documenting the refusal protects the Government, the requiring activity, and the contracting officer personally.\n\nSay the follow-through as well: tell the requiring activity what you need, offer a realistic timeline once funds arrive, and keep the exchange in the file.",
+   "cite": "31 U.S.C. 1341(a)(1); RFO FAR 1.402-1 (contracting officers - authority); RFO FAR 1.402-2 (responsibilities); RFO FAR 32.702.",
+   "difficulty": 1
+  },
+  {
+   "id": "FS31",
+   "statement": "An office uses FY26 O&M to buy a plaque and an engraved gift for a departing contractor employee as a thank-you for her support to the unit.",
+   "bucket": "Purpose",
+   "explanation": "This is a purpose problem. Appropriated funds are available for awards to Government employees under specific awards authority; they are not available to buy gifts for a contractor's employee, who is paid by her employer under a contract the Government already funded.\n\nThere is an ethics dimension too. Gifts flowing to contractor personnel during performance raise the same integrity questions as gifts flowing the other way.\n\nThe necessary expense test gives you the short answer: no logical relationship to the appropriation charged, and no statute authorizing it.",
+   "cite": "31 U.S.C. 1301(a); GAO Principles of Federal Appropriations Law (Red Book), awards and gifts; 5 U.S.C. 4503 (awards to Government employees, by contrast).",
+   "difficulty": 1
+  },
+  {
+   "id": "FS32",
+   "statement": "A contracting officer signs an award that exceeds a dollar ceiling Congress placed on a specific line in the appropriations act, although the appropriation as a whole has money remaining.",
+   "bucket": "Amount",
+   "explanation": "This is an amount problem. A statutory ceiling on a line or program is a limitation on the amount available for that purpose, and obligating past it is obligating in excess of the amount available regardless of what the rest of the appropriation holds.\n\nRead the appropriations act language and any general provisions, and ask the resource manager whether the funding line carries a statutory limitation. Not every limit shows up on the funding document.\n\nIf it has already happened, report it. Antideficiency Act violations are reported through command channels to the President and Congress, and the reporting obligation does not depend on intent.",
+   "cite": "31 U.S.C. 1341(a)(1); 31 U.S.C. 1517(a); 31 U.S.C. 1351; the annual defense appropriations act limitation at issue.",
+   "difficulty": 2
+  },
+  {
+   "id": "FS33",
+   "statement": "On 30 September of FY26 the office issues an undefinitized contract action for a requirement the requiring activity has not yet defined, solely to keep FY26 funds from expiring; the scope is to be worked out in November.",
+   "bucket": "Time",
+   "explanation": "This is banking expiring money and it fails on two fronts. A bona fide need has to exist in the year of the appropriation, and a requirement nobody has defined yet is not a demonstrated current need.\n\nThe recording statute is the second problem. An obligation must be supported by documentary evidence of a binding agreement for specific goods or services. An action with no defined scope does not support a recordable obligation, so the money was not validly obligated in FY26 at all.\n\nUndefinitized contract actions are legitimate when there is a genuine urgent need and the Government cannot wait to negotiate. Preserving funds is not that reason. Push back and put the reason in writing.",
+   "cite": "31 U.S.C. 1502(a) (bona fide needs rule); 31 U.S.C. 1501(a) (documentary evidence of a binding agreement); GAO Principles of Federal Appropriations Law (Red Book), time availability.",
+   "difficulty": 3
+  },
+  {
+   "id": "FS34",
+   "statement": "A contracting office directs a contractor performing a services contract to also mow the lawn at an adjacent tenant activity, whose own appropriation would otherwise pay for that work.",
+   "bucket": "Purpose",
+   "explanation": "This is an augmentation problem in the field. Using your appropriation to perform work another activity's appropriation is meant to fund relieves that appropriation of a cost Congress placed on it and effectively augments it.\n\nIt is also very likely outside the scope of the contract, which makes it an unauthorized commitment and a competition problem on top of the fiscal one.\n\nThe clean route is a funded support agreement or a reimbursable arrangement - an inter-service support agreement or an Economy Act order - so that the correct appropriation bears the cost. This app files augmentation under Purpose, following the purpose statute (31 U.S.C. 1301(a)); GAO also discusses augmentation alongside the Amount rules, so be ready to explain both.",
+   "cite": "31 U.S.C. 1301(a); 31 U.S.C. 3302(b); 31 U.S.C. 1535 (Economy Act); RFO FAR 1.405 (ratification of unauthorized commitments).",
+   "difficulty": 3
+  },
+  {
+   "id": "FS35",
+   "statement": "On 25 September of FY26 you award a twelve-month severable services contract funded with FY26 O&M, with a period of performance of 1 November 2026 through 31 October 2027.",
+   "bucket": "Time",
+   "explanation": "The trap is that the contract is signed in FY26, so it looks like an FY26 action. It is not. The cross-fiscal-year authority requires the period of performance to begin in the fiscal year of the appropriation, and this period begins on 1 November 2026, which is FY27.\n\nSo no part of this severable performance is an FY26 need, and FY26 funds cannot fund any of it.\n\nCompare it to the 1 April 2026 start, which is fine. Award date does not decide the question; the start of performance does.",
+   "cite": "10 U.S.C. 3133; RFO FAR 32.703-3; 31 U.S.C. 1502(a).",
+   "difficulty": 3
+  },
+  {
+   "id": "FS36",
+   "statement": "A new requirement arises in FY26 and the office funds it with FY25 O&M that expired on 30 September 2025, on the reasoning that the money is still carried on the books.",
+   "bucket": "Time",
+   "explanation": "An expired appropriation is not available for new obligations. It stays on the books for five years, but only so the Government can record and pay adjustments to obligations that were properly incurred while it was current.\n\nA requirement that first arose in FY26 is a new obligation, so it needs FY26 funds. The fact that an expired balance is visible in the accounting system tells you nothing about whether it is available.\n\nThe short version for the board: current funds for new obligations, expired funds for adjustments to old ones, closed accounts for nothing at all.",
+   "cite": "31 U.S.C. 1502(a) (bona fide needs rule); 31 U.S.C. 1553(a) (expired accounts available only for adjustments to prior obligations); 31 U.S.C. 1552(a).",
+   "difficulty": 1
+  },
+  {
+   "id": "FS37",
+   "statement": "On 30 September 2026 a unit obligates FY26 O&M to rent vehicles for a training exercise scheduled for May 2027.",
+   "bucket": "Time",
+   "explanation": "A May 2027 exercise is an FY27 need, so FY26 money cannot rent the vehicles. Current funds pay only for needs that arise in the year of the appropriation.",
+   "cite": "31 U.S.C. 1502(a) (bona fide needs rule); GAO Red Book (Availability of Appropriations: Time)",
+   "difficulty": 1
+  },
+  {
+   "id": "FS38",
+   "statement": "On 25 September, with FY26 O&M about to expire, an office buys enough copier paper to last the next three fiscal years.",
+   "bucket": "Time",
+   "explanation": "Three years of paper is a stockpile, not a current need; year-end money may buy what is needed now plus a normal stock level. Expiring funds are never a reason to buy future years' supplies.",
+   "cite": "31 U.S.C. 1502(a) (bona fide needs rule); GAO Red Book (Availability of Appropriations: Time)",
+   "difficulty": 1
+  },
+  {
+   "id": "FS39",
+   "statement": "In September 2026 a unit uses FY26 O&M to buy furniture for a new office that will not open until FY28, because the money is about to expire.",
+   "bucket": "Time",
+   "explanation": "Furniture for an office that opens in FY28 is a need of that later year, not of FY26. Expiring money cannot be used to buy ahead for a future need.",
+   "cite": "31 U.S.C. 1502(a) (bona fide needs rule); GAO Red Book (Availability of Appropriations: Time)",
+   "difficulty": 1
+  },
+  {
+   "id": "FS40",
+   "statement": "At award of an IDIQ contract with a $25,000 guaranteed minimum, the contracting officer obligates $25,000 of current funds to cover the minimum.",
+   "bucket": "No violation",
+   "explanation": "The guaranteed minimum is the only amount the Government is bound to buy at award, so obligating current funds for exactly that amount is correct. Each later order is obligated when it is placed.",
+   "cite": "31 U.S.C. 1501(a) (recording obligations); GAO Red Book (Obligation of Appropriations)",
+   "difficulty": 1
+  },
+  {
+   "id": "FS41",
+   "statement": "An office uses FY26 O&M to repair the leaking roof on an existing barracks the unit occupies.",
+   "bucket": "No violation",
+   "explanation": "Repairing an existing facility is an operation and maintenance expense, so O&M is the correct appropriation. Building a new permanent structure would be construction, which O&M can fund only as an unspecified minor military construction project within the 10 U.S.C. 2805(c) limit.",
+   "cite": "31 U.S.C. 1301(a) (purpose statute); 10 U.S.C. 2805(c) (O&M for unspecified minor military construction); GAO Red Book (Availability of Appropriations: Purpose)",
+   "difficulty": 1
+  },
+  {
+   "id": "FS42",
+   "statement": "In June 2026 an office deobligates FY26 O&M from a canceled order and reobligates it the same month for a different, valid FY26 requirement.",
+   "bucket": "No violation",
+   "explanation": "Funds deobligated while the appropriation is still current are available again for any proper need of that same year. The problem case is deobligated expired money, which cannot fund new work.",
+   "cite": "31 U.S.C. 1502(a) (bona fide needs rule); GAO Red Book (Availability of Appropriations: Time)",
+   "difficulty": 1
+  },
+  {
+   "id": "FS43",
+   "statement": "An incrementally funded cost-reimbursement contract contains the Limitation of Funds clause, and the contracting officer adds the next increment of the same current-year appropriation before the contractor's costs reach the funded amount.",
+   "bucket": "No violation",
+   "explanation": "Keeping the funded amount ahead of the contractor's costs means the Government never owes more than it has obligated, which is how incremental funding stays inside the Antideficiency Act. Adding money before the limit is reached is exactly what the clause expects.",
+   "cite": "31 U.S.C. 1341(a)(1) (Antideficiency Act); GAO Red Book (Availability of Appropriations: Amount)",
+   "difficulty": 1
+  },
+  {
+   "id": "FS44",
+   "statement": "A program office uses RDT&E funds to pay for testing prototypes of the system it is developing.",
+   "bucket": "No violation",
+   "explanation": "Testing prototypes is part of research and development, so RDT&E is the appropriation made for this cost. The color of money matches what is being bought.",
+   "cite": "31 U.S.C. 1301(a) (purpose statute); GAO Red Book (Availability of Appropriations: Purpose)",
+   "difficulty": 1
+  },
+  {
+   "id": "FS45",
+   "statement": "The office's quarterly allotment is fully obligated, and a supervisor tells cardholders to keep buying supplies and sort the money out next quarter.",
+   "bucket": "Amount",
+   "explanation": "Obligating beyond an allotment violates the Antideficiency Act even when the larger appropriation still has money. Stop the purchases and tell the resource manager at once.",
+   "cite": "31 U.S.C. 1517(a) (obligations exceeding an apportionment or administrative subdivision); GAO Red Book (Availability of Appropriations: Amount)",
+   "difficulty": 1
+  },
+  {
+   "id": "FS46",
+   "statement": "In July the resource manager confirms no FY26 O&M funds are available, and a contracting officer signs a new $40,000 order anyway to meet the customer's deadline.",
+   "bucket": "Amount",
+   "explanation": "Signing an order with no funds available obligates the Government beyond the money it has, a textbook Antideficiency Act violation. A deadline never substitutes for funds.",
+   "cite": "31 U.S.C. 1341(a)(1)(A) (Antideficiency Act); 31 U.S.C. 1517(a); GAO Red Book (Availability of Appropriations: Amount)",
+   "difficulty": 1
+  },
+  {
+   "id": "FS47",
+   "statement": "An office uses FY26 O&M to buy business suits for staff members who regularly brief senior leaders.",
+   "bucket": "Purpose",
+   "explanation": "Ordinary business clothing is a personal expense of the employee, so it fails the necessary expense test. Appropriated funds are not available for attire people would wear anyway.",
+   "cite": "31 U.S.C. 1301(a) (purpose statute); GAO Red Book (Availability of Appropriations: Purpose)",
+   "difficulty": 1
+  },
+  {
+   "id": "FS48",
+   "statement": "A unit uses FY26 Research, Development, Test and Evaluation funds to buy fuel for its routine training exercises.",
+   "bucket": "Purpose",
+   "explanation": "Fuel for routine training is an operating cost funded with O&M, while RDT&E is appropriated for research and development work. Charging the wrong color of money is a purpose violation.",
+   "cite": "31 U.S.C. 1301(a) (purpose statute); GAO Red Book (Availability of Appropriations: Purpose)",
+   "difficulty": 1
+  },
+  {
+   "id": "FS49",
+   "statement": "In FY26 an office deobligates FY24 O&M left on a completed contract and reobligates it for a new requirement that first arose this year.",
+   "bucket": "Time",
+   "explanation": "Deobligating expired money does not make it current again; an expired account may only record and adjust obligations incurred while it was current. A new FY26 requirement needs FY26 funds.",
+   "cite": "31 U.S.C. 1553(a) (expired accounts); 31 U.S.C. 1502(a); GAO Red Book (Availability of Appropriations: Time)",
+   "difficulty": 2
+  },
+  {
+   "id": "FS50",
+   "statement": "In November 2026 an office pays a September 2026 electric bill that was never recorded as an obligation, charging FY27 O&M because the FY26 account has expired.",
+   "bucket": "Time",
+   "explanation": "The electricity was an FY26 need, so the bill belongs to the FY26 account, which stays available after it expires to record and pay obligations properly incurred in FY26. Charging FY27 money uses this year's funds for last year's need.",
+   "cite": "31 U.S.C. 1502(a) (bona fide needs rule); 31 U.S.C. 1553(a); GAO Red Book (Availability of Appropriations: Time)",
+   "difficulty": 2
+  },
+  {
+   "id": "FS51",
+   "statement": "You award a non-severable eighteen-month study that yields one final report, obligating FY26 O&M for the first six months and planning to fund the rest with FY27 O&M.",
+   "bucket": "Time",
+   "explanation": "A non-severable effort is a bona fide need of the year of award, so the whole study must be funded with FY26 money when it is awarded. Splitting it pays for part of an FY26 need with FY27 appropriations.",
+   "cite": "31 U.S.C. 1502(a) (bona fide needs rule); GAO Red Book (Availability of Appropriations: Time)",
+   "difficulty": 2
+  },
+  {
+   "id": "FS52",
+   "statement": "On 1 August 2026 you award a twelve-month severable services contract with two option years and obligate FY26 O&M for the base year and both option years.",
+   "bucket": "Time",
+   "explanation": "The cross-fiscal-year authority lets FY26 money fund only the twelve-month base period; each option year is a need of the year it is performed. Fund each option when you exercise it, with the money current for that period.",
+   "cite": "10 U.S.C. 3133 (severable services crossing fiscal years); 31 U.S.C. 1502(a); GAO Red Book (Availability of Appropriations: Time)",
+   "difficulty": 2
+  },
+  {
+   "id": "FS53",
+   "statement": "On 15 September 2026 you award a contract for services starting 1 October 2026, expressly subject to the availability of FY27 funds, and the contractor may not begin until funds are made available.",
+   "bucket": "No violation",
+   "explanation": "A contract made expressly subject to the availability of funds does not bind the Government to pay until the money arrives, so it never gets ahead of the appropriation. This is the lawful way to have next year's services ready to start on time.",
+   "cite": "31 U.S.C. 1341(a)(1)(B) (no obligation before an appropriation is made); GAO Red Book (Availability of Appropriations: Amount)",
+   "difficulty": 2
+  },
+  {
+   "id": "FS54",
+   "statement": "At a remote site where the building's tap water has been tested and declared unsafe to drink, the office buys bottled drinking water for employees with O&M.",
+   "bucket": "No violation",
+   "explanation": "Drinking water is normally a personal expense, but when the Government's own supply is unsafe, providing safe water is a necessary expense of running the office. Keep the test results in the file.",
+   "cite": "31 U.S.C. 1301(a) (purpose statute); GAO Red Book (Availability of Appropriations: Purpose)",
+   "difficulty": 2
+  },
+  {
+   "id": "FS55",
+   "statement": "A Korea base support requirement has an LCS-eligible portion and a U.S.-only portion, so you route the LCS portion through the LCS process and solicit the U.S. portion separately with O&M.",
+   "bucket": "No violation",
+   "explanation": "LCS funds are Republic of Korea funds, not U.S. appropriations, so the LCS work runs through its own ROK Ministry of National Defense award chain while the O&M work is solicited on its own. Keeping the lanes separate is the correct structure; confirm local LCS procedure with C&P.",
+   "cite": "31 U.S.C. 1301(a) (purpose statute); Special Measures Agreement LCS procedures (confirm with C&P)",
+   "difficulty": 2,
+   "flags": [
+    "korea-verify-cp"
+   ]
+  },
+  {
+   "id": "FS56",
+   "statement": "An installation charges a private club a fee to use a Government building and, with no statute letting it keep the money, spends the fee on base maintenance.",
+   "bucket": "Purpose",
+   "explanation": "Money the Government receives goes to the Treasury as miscellaneous receipts unless a law says otherwise, so spending the fee augments the installation's appropriation. Deposit it and fund the maintenance with appropriated money. This app files augmentation under Purpose, following the purpose statute (31 U.S.C. 1301(a)); GAO also discusses augmentation alongside the Amount rules, so be ready to explain both.",
+   "cite": "31 U.S.C. 3302(b) (miscellaneous receipts); 31 U.S.C. 1301(a); GAO Red Book (Availability of Appropriations: Amount), augmentation",
+   "difficulty": 2
+  },
+  {
+   "id": "FS57",
+   "statement": "A vendor competing for an upcoming contract donates new printers to the contracting office, which has no gift acceptance authority and keeps them so it will not have to spend its own O&M.",
+   "bucket": "Purpose",
+   "explanation": "Keeping the printers lets an outside source pay a cost the office's appropriation should bear, which augments its funds without authority. It is also a gift from a prospective offeror, so decline it and involve the ethics counselor. This app files augmentation under Purpose, following the purpose statute (31 U.S.C. 1301(a)); GAO also discusses augmentation alongside the Amount rules, so be ready to explain both.",
+   "cite": "31 U.S.C. 1301(a) (purpose statute); GAO Red Book (Availability of Appropriations: Amount), augmentation",
+   "difficulty": 2
+  },
+  {
+   "id": "FS58",
+   "statement": "Because RDT&E funding is short, an office uses FY26 O&M to pay for engineering and prototype work to develop a new capability the Army does not yet have.",
+   "bucket": "Purpose",
+   "explanation": "Developing a new capability is research and development, which RDT&E exists to fund, so O&M is the wrong purpose even when the right money is short. A shortfall in the correct appropriation never makes a different one available.",
+   "cite": "31 U.S.C. 1301(a) (purpose statute); GAO Red Book (Availability of Appropriations: Purpose)",
+   "difficulty": 2
+  },
+  {
+   "id": "FS59",
+   "statement": "A contract clause commits the Government to reimburse the contractor for any future third-party liability, with no dollar cap and no statute authorizing open-ended indemnity.",
+   "bucket": "Amount",
+   "explanation": "An uncapped promise to cover future liabilities could exceed every dollar available, so it creates an obligation beyond appropriations that the Antideficiency Act forbids. Without specific statutory authority, leave it out or limit it to funds available with no promise of more.",
+   "cite": "31 U.S.C. 1341(a)(1) (Antideficiency Act); GAO Red Book (Availability of Appropriations: Amount)",
+   "difficulty": 2
+  },
+  {
+   "id": "FS60",
+   "statement": "An IDIQ contract with a $100,000 guaranteed minimum is awarded with no funds obligated or available, because the office expects its first order, placed later, to exceed the minimum.",
+   "bucket": "Amount",
+   "explanation": "The guaranteed minimum binds the Government the moment the contract is signed, so current funds must be obligated for it at award. Awarding with no funds available puts the Government's commitment ahead of its money, which the Antideficiency Act forbids.",
+   "cite": "31 U.S.C. 1501(a) (recording obligations); 31 U.S.C. 1341(a)(1); GAO Red Book (Obligation of Appropriations)",
+   "difficulty": 2
+  },
+  {
+   "id": "FS61",
+   "statement": "A two-year contract labeled 'non-severable' covers monthly preventive maintenance inspections on the unit's generators, and the office funds all 24 months with FY26 O&M at award.",
+   "bucket": "Time",
+   "explanation": "Monthly inspections each deliver value on their own, so the work is severable whatever the contract calls it, and severable services are a need of the year performed. The cross-fiscal-year authority stops at twelve months, so FY26 money cannot fund the second year.",
+   "cite": "31 U.S.C. 1502(a) (bona fide needs rule); 10 U.S.C. 3133; GAO Red Book (Availability of Appropriations: Time)",
+   "difficulty": 3
+  },
+  {
+   "id": "FS62",
+   "statement": "With expiring FY26 O&M, a supply room replenishes its authorized stock level of repair parts and adds 50 percent more than that level 'to be safe,' with delivery in FY27.",
+   "bucket": "Time",
+   "explanation": "Replenishing to the normal stock level is a current need, but the extra 50 percent is a reserve for future years and fails the bona fide needs rule. The stock-level exception covers normal levels only.",
+   "cite": "31 U.S.C. 1502(a) (bona fide needs rule); GAO Red Book (Availability of Appropriations: Time)",
+   "difficulty": 3
+  },
+  {
+   "id": "FS63",
+   "statement": "On 28 September 2026 you exercise a twelve-month severable services option whose period of performance begins 30 September 2026, funding the whole period with FY26 O&M.",
+   "bucket": "No violation",
+   "explanation": "The period begins in FY26, if only by one day, and runs no more than twelve months, so the cross-fiscal-year authority lets FY26 money fund all of it. A period starting on 1 October would be an FY27 need.",
+   "cite": "10 U.S.C. 3133 (severable services crossing fiscal years); 31 U.S.C. 1502(a); GAO Red Book (Availability of Appropriations: Time)",
+   "difficulty": 3
+  },
+  {
+   "id": "FS64",
+   "statement": "On 1 August 2026 you order a replacement part the unit needs now with FY26 O&M; normal lead time is 60 days, but a strike at the plant pushes delivery into December 2026.",
+   "bucket": "No violation",
+   "explanation": "The need was current and the scheduled delivery reflected normal lead time when you obligated, so an unforeseen delay outside the Government's control does not move the need into FY27. Document the original schedule and the cause of the delay.",
+   "cite": "31 U.S.C. 1502(a) (bona fide needs rule); GAO Red Book (Availability of Appropriations: Time)",
+   "difficulty": 3
+  },
+  {
+   "id": "FS65",
+   "statement": "A twelve-month severable services contract starts 1 July 2026; the office obligates FY26 O&M for July through September and makes the remaining nine months subject to the availability of FY27 funds.",
+   "bucket": "No violation",
+   "explanation": "The cross-fiscal-year authority is permissive, so severable services may also be funded year by year as they are performed. Making the FY27 months subject to the availability of FY27 funds keeps the award inside the Antideficiency Act.",
+   "cite": "10 U.S.C. 3133; 31 U.S.C. 1502(a); 31 U.S.C. 1341(a)(1)(B); GAO Red Book (Availability of Appropriations: Time)",
+   "difficulty": 3
+  },
+  {
+   "id": "FS66",
+   "statement": "After the FY19 O&M account closed, a valid in-scope bill on an FY19 contract is paid from current O&M available for the same purpose, within the 1 percent cap and the balance canceled at closing.",
+   "bucket": "No violation",
+   "explanation": "Once an account closes, an obligation that would have been properly chargeable to it may be paid from a current appropriation available for the same purpose, capped at the lesser of 1 percent of that current appropriation or the balance canceled when the account closed. What you may never do is charge the closed account itself.",
+   "cite": "31 U.S.C. 1553(b) (obligations after an account closes); 31 U.S.C. 1552(a); GAO Red Book (Availability of Appropriations: Time)",
+   "difficulty": 3
+  },
+  {
+   "id": "FS67",
+   "statement": "On 15 September 2026 a contracting officer signs a contract for services starting 1 October 2026, to be paid with FY27 funds not yet appropriated, with no clause making it subject to the availability of funds.",
+   "bucket": "Amount",
+   "explanation": "Signing a contract to be paid from an appropriation Congress has not yet made commits the Government before the money exists, which the Antideficiency Act forbids. A clause making it subject to the availability of FY27 funds, with no work until funds arrive, is what would have made it lawful.",
+   "cite": "31 U.S.C. 1341(a)(1)(B) (no contract before an appropriation is made); GAO Red Book (Availability of Appropriations: Amount)",
+   "difficulty": 3
+  },
+  {
+   "id": "FS68",
+   "statement": "A contracting officer in Korea awards a $2 million O&M-funded base support contract with only $1.2 million of O&M available, planning to cover the rest with Logistics Cost Sharing funds USFK J4 expects.",
+   "bucket": "Amount",
+   "explanation": "The award obligates $2 million of U.S. money against $1.2 million available, an Antideficiency Act violation at signature, and LCS money cannot fill the gap because it is Republic of Korea funds held by the ROK Ministry of National Defense, not a U.S. appropriation. Confirm local LCS procedure with C&P.",
+   "cite": "31 U.S.C. 1341(a)(1) (Antideficiency Act); GAO Red Book (Availability of Appropriations: Amount); Special Measures Agreement LCS procedures (confirm with C&P)",
+   "difficulty": 3,
+   "flags": [
+    "korea-verify-cp"
+   ]
+  },
+  {
+   "id": "FS69",
+   "statement": "Because an earlier $80,000 order was never recorded, a contracting officer relying on the accounting report obligates what looks like the last of the allotment, putting actual obligations $80,000 over it.",
+   "bucket": "Amount",
+   "explanation": "Obligations above an allotment violate the Antideficiency Act whether or not anyone meant it, so the recording error explains the overage but does not excuse it. Prompt, accurate recording is what prevents this, and the violation still has to be reported.",
+   "cite": "31 U.S.C. 1517(a) (administrative subdivisions); 31 U.S.C. 1501(a) (recording obligations); GAO Red Book (Availability of Appropriations: Amount)",
+   "difficulty": 3
+  },
+  {
+   "id": "FS70",
+   "statement": "The system has finished development and entered production, and the program office buys production units with RDT&E funds that are still within their two-year period of availability.",
+   "bucket": "Purpose",
+   "explanation": "Being within the period of availability answers only the time question; buying production units is a procurement purpose, not research and development. Money that is current but for the wrong purpose is still unavailable.",
+   "cite": "31 U.S.C. 1301(a) (purpose statute); GAO Red Book (Availability of Appropriations: Purpose)",
+   "difficulty": 3
+  },
+  {
+   "id": "FS71",
+   "statement": "To save FY26 O&M, a contracting officer in Korea modifies an existing O&M-funded service contract so part of its cost will be paid with Logistics Cost Sharing funds.",
+   "bucket": "Purpose",
+   "explanation": "LCS funds are Republic of Korea funds that the ROK Ministry of National Defense holds and spends through its own awards, not a U.S. appropriation, so they cannot pay part of a U.S. O&M contract and the two sources are never mixed. Keep each requirement in its own funding lane and confirm local LCS procedure with C&P. This app files augmentation under Purpose, following the purpose statute (31 U.S.C. 1301(a)); GAO also discusses augmentation alongside the Amount rules, so be ready to explain both.",
+   "cite": "31 U.S.C. 1301(a) (purpose statute); Special Measures Agreement LCS procedures (confirm with C&P)",
+   "difficulty": 3,
+   "flags": [
+    "korea-verify-cp"
+   ]
+  },
+  {
+   "id": "FS72",
+   "statement": "An office that could lawfully charge a recurring expense to either of two appropriations has always used Appropriation A, and switches to Appropriation B in June because A is running low.",
+   "bucket": "Purpose",
+   "explanation": "When two appropriations are equally available, the agency picks one and must stick with it; it cannot switch mid-year because the one it chose runs low. A change needs notice to Congress and takes effect the next fiscal year, and switching without that lets the second appropriation augment the first.",
+   "cite": "31 U.S.C. 1301(a) (purpose statute); GAO Red Book (Availability of Appropriations: Purpose)",
+   "difficulty": 3
+  }
+ ]
+}

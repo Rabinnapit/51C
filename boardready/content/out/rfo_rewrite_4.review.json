@@ -1,0 +1,144 @@
+{
+ "reviewed_file": "C:\\Users\\rabin\\Documents\\Army\\CORB\\app\\content\\out\\rfo_rewrite_4.json",
+ "reviewed_on": "2026-09-14",
+ "reviewer": "rfo_rewrite_4 review pass (subagent)",
+ "scope": "All 40 items examined. 13 items with changed=true were diffed word-by-word against src/data/questions.json; the 27 changed=false items were regex-scanned to confirm the original answer text carries no FAR/DFARS/AFARS/PGI/U.S.C./CFR section cite (Q0161's lone 'In accordance with the FAR' names no section).",
+ "rules_applied": [
+  "Only permitted differences vs the original: citation numbers, the trailing Cite: line, short parentheticals about removed/moved sections or updated thresholds.",
+  "Every crosswalk pair verified against regulations.json crosswalk/unchanged; pairs not covered (FAR Part 22 sections, FAR Part 28) re-fetched on acquisition.gov.",
+  "Every citations_rfo entry must appear verbatim in the answer text."
+ ],
+ "summary": {
+  "checked": 40,
+  "diffed": 13,
+  "kept": 9,
+  "corrected": 3,
+  "reverted": 1,
+  "unverifiable": 0
+ },
+ "external_verification": [
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22",
+   "fetched": "2026-09-14",
+   "result": "Subpart 22.10 Service Contract Labor Standards: 22.1002-3 Wage determinations; 22.1004-1 Revisions to wage determinations. Subpart 22.4 is construction."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-28",
+   "fetched": "2026-09-14",
+   "result": "28.305 Overseas workers' compensation and war-hazard insurance retained; 28.309 Contract clauses for workers' compensation insurance, (a) 52.228-3, (b) 52.228-4."
+  }
+ ],
+ "observations_not_changed": [
+  "rfo_status 'updated' is used on six items whose numbers did not move (Q0011, Q0044, Q0048, Q0223, Q0224, Q0252). Left as-is for consistency with rfo_rewrite_1..3; each note states whether a number actually moved.",
+  "Q0106 (post-award orientation) is skipped for lack of an in-text cite, but the crosswalk records old Subpart 42.5 as removed by the RFO with only 42.302(a)(3) surviving; needs a content pass.",
+  "Q0107 states $2,500 services / $2,000 construction wage-determination thresholds with no cite and neither value is in the thresholds table; needs a content pass.",
+  "Q0138 and Q0155 remain bare-cite non-answers; citations are RFO-current but both need drafted answers.",
+  "Q0017 Cite line carries 'FAR part 49' although the original answer text names only FAR Part 12; kept because the question stem names Part 49 and the answer's T4D/T4C content rests on it."
+ ],
+ "items": [
+  {
+   "id": "Q0017",
+   "action": "corrected",
+   "issue": "Parenthetical went beyond a moved-section note: it added a new substantive claim ('FAR 12.304(a) directs that part 49 is not used for commercial terminations') that the original answer does not make.",
+   "answer_before": "Termination for Default - The Government’s contractual right to completely or partially terminate a contract because of the contractor’s actual or anticipated failure to perform its contractual obligations. Termination for Convenience - The Government’s right to unilaterally terminate performance of work under a contract in whole or, from time to time, in part if the Contracting Officer determines that a termination is in the Government's interest.\nTermination for Cause - This is an action that is only applicable to procurements accomplished under FAR Part 12 (RFO commercial terminations are at FAR 12.304; FAR 12.304(a) directs that part 49 is not used for commercial terminations). It is essentially the commercial equivalent of a termination for default.\nThe Government may terminate a commercial contract, or any part thereof, for cause in the event of:\n(i) any default by the Contractor, or\n(ii) if the Contractor fails to comply with any contract terms and conditions, or\n(iii) fails to provide the Government, upon request, with adequate assurances of future performance.\n\nNo-Cost Cancellation- This is an alternative to a Termination (Default/Cause/Convenience) for Contracts/Purchase Orders. This is essentially when the contractor and the Government agree to cancel or partially cancel a requirement without cost to either party.\nRemedies: Cure Notice and Show Cause Notice. \nCure Notice advises the Contractor of a problem and provides an opportunity to correct within a specified time limit. Must be at least 10 days remaining in the performance period to issue a Cure Notice. May be followed by a Show Cause. Show Cause directs the Contractor to show why he should not be terminated for default\n\nCite: FAR part 12 (commercial terminations at FAR 12.304); FAR part 49.",
+   "answer_after": "Termination for Default - The Government’s contractual right to completely or partially terminate a contract because of the contractor’s actual or anticipated failure to perform its contractual obligations. Termination for Convenience - The Government’s right to unilaterally terminate performance of work under a contract in whole or, from time to time, in part if the Contracting Officer determines that a termination is in the Government's interest.\nTermination for Cause - This is an action that is only applicable to procurements accomplished under FAR Part 12 (under the RFO, commercial terminations are at FAR 12.304, formerly 12.403). It is essentially the commercial equivalent of a termination for default.\nThe Government may terminate a commercial contract, or any part thereof, for cause in the event of:\n(i) any default by the Contractor, or\n(ii) if the Contractor fails to comply with any contract terms and conditions, or\n(iii) fails to provide the Government, upon request, with adequate assurances of future performance.\n\nNo-Cost Cancellation- This is an alternative to a Termination (Default/Cause/Convenience) for Contracts/Purchase Orders. This is essentially when the contractor and the Government agree to cancel or partially cancel a requirement without cost to either party.\nRemedies: Cure Notice and Show Cause Notice. \nCure Notice advises the Contractor of a problem and provides an opportunity to correct within a specified time limit. Must be at least 10 days remaining in the performance period to issue a Cure Notice. May be followed by a Show Cause. Show Cause directs the Contractor to show why he should not be terminated for default\n\nCite: FAR part 12 (commercial terminations at FAR 12.304); FAR part 49.",
+   "verification": "FAR 12.304 verified in regulations.json crosswalk (old 12.403 -> 12.304, confidence verified, acquisition.gov RFO Part 12 guide). Cite line retained; all citations_rfo entries (FAR 12.304, FAR part 12, FAR part 49) still appear in the answer text."
+  },
+  {
+   "id": "Q0138",
+   "action": "corrected",
+   "issue": "Parenthetical was longer than a moved-section note, said Subpart 22.10 is 'now' the SCLS location (it already was pre-RFO), and added an unrelated construction-labor aside (Subpart 22.4).",
+   "answer_before": "FAR Part 22 (the RFO retains part 22 but restructures it: Service Contract Labor Standards is now Subpart 22.10, with wage determinations at 22.1002-3 and revisions to wage determinations at 22.1004-1; construction labor standards are Subpart 22.4).\n\nCite: FAR part 22; FAR 22.1002-3; FAR 22.1004-1.",
+   "answer_after": "FAR Part 22 (under the RFO, Service Contract Labor Standards remain Subpart 22.10; wage determinations are now at FAR 22.1002-3 and revisions to wage determinations at FAR 22.1004-1).\n\nCite: FAR part 22; FAR 22.1002-3; FAR 22.1004-1.",
+   "verification": "Fetched https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22 (14 Sep 2026): Subpart 22.10 lists 22.1002-3 Wage determinations and 22.1004-1 Revisions to wage determinations; Subpart 22.4 is construction. Numbers correct; text trimmed. All citations_rfo entries (FAR part 22, FAR 22.1002-3, FAR 22.1004-1) appear in the answer text."
+  },
+  {
+   "id": "Q0155",
+   "action": "reverted",
+   "issue": "Author appended a subpart-by-subpart outline of Part 45 (45.101-45.107, 45.2, 45.3, 45.4, 45.6). That is new content, not a citation edit or a removed/moved-section parenthetical, and the section numbers were not verified.",
+   "answer_before": "FAR Part 45 - and all supplemental rules and guidance. (Part 45 is retained under the RFO: 45.101-45.107 including 45.104 Responsibility and liability; Subpart 45.2 Solicitation and Evaluation; 45.3 Use and rental; 45.4 Title; 45.6 Reporting, Reutilization, and Disposal.)\n\nCite: FAR part 45.",
+   "answer_after": "FAR Part 45 - and all supplemental rules and guidance\n\nCite: FAR part 45.",
+   "verification": "Original text restored verbatim; only the trailing Cite line kept. FAR part 45 retention supported by regulations.json crosswalk entry FAR 52.245-1(h) ('RFO Part 45 still prescribes 52.245-1', verified). citations_rfo ['FAR part 45'] appears in the Cite line."
+  },
+  {
+   "id": "Q0253",
+   "action": "corrected",
+   "issue": "Author deleted the original 'Reference/s:' block (four DOL/acquisition.gov/DPC references including the DPC DBA-waiver URL) and inserted a '(prescribed at FAR 28.309(a) and (b))' parenthetical into the body, which is neither a removed/moved-section note nor a threshold note. Also, citations_rfo entry 'FAR 28.309(b)' did not appear verbatim in the text (author wrote '28.309(a) and (b)').",
+   "answer_before": "The Defense Base Act provides workers' compensation protection to civilian employees working outside the United States on U.S. military bases or under a contract with the U.S. government for public works or for national defense. Federal law requires all U.S. government contractors and subcontractors to secure workers' compensation insurance for their employees working overseas. The Federal Acquisition Regulation (FAR) also sets out the workers' compensation insurance requirements for all overseas contracts at 48 CFR 28.305 (FAR 28.305), and at FAR 52.228-3 and FAR 52.228-4 (prescribed at FAR 28.309(a) and (b)). Companies are required to purchase insurance to cover worker’s compensation benefits, disability, medical and death benefits before commencing performance. If an employer who fails to secure the payment of compensation when required shall be guilty of a misdemeanor and, upon conviction thereof, shall be punished by a fine of not more than $10,000 or by imprisonment for not more than one year, or both. And if the employer is a corporation, the president, secretary, and treasurer shall be also severally liable for such fine and imprisonment. Wavers must be approved by the Department of Labor. Waivers may be approved for a contract, subcontract, subordinate contract, work location, or classification of employee. Waivers do not apply to U.S. citizens, workers hired in the U.S., or legal residents of the U.S. A Geographic waiver may be granted based on the host country having an adequate workers’ compensation system which provides coverage for the local national employees or foreign workers performing work on an applicable contract in that country. The request for new waivers must be made in writing on Form BEC 565, Request for Waiver - Defense Base Act, and signed by the head of a department or agency of the United States government. A list of currently approved country waivers is available at https://www.dol.gov/agencies/owcp/dlhwc/dbawaivers/dbawaivers.\n\nCite: FAR 28.305 (48 CFR 28.305); FAR 52.228-3; FAR 52.228-4 (prescribed at FAR 28.309(a) and (b)).",
+   "answer_after": "The Defense Base Act provides workers' compensation protection to civilian employees working outside the United States on U.S. military bases or under a contract with the U.S. government for public works or for national defense. Federal law requires all U.S. government contractors and subcontractors to secure workers' compensation insurance for their employees working overseas. The Federal Acquisition Regulation (FAR) also sets out the workers' compensation insurance requirements for all overseas contracts at 48 CFR 28.305 (FAR 28.305), and at FAR 52.228-3 and FAR 52.228-4. Companies are required to purchase insurance to cover worker’s compensation benefits, disability, medical and death benefits before commencing performance. If an employer who fails to secure the payment of compensation when required shall be guilty of a misdemeanor and, upon conviction thereof, shall be punished by a fine of not more than $10,000 or by imprisonment for not more than one year, or both. And if the employer is a corporation, the president, secretary, and treasurer shall be also severally liable for such fine and imprisonment. Wavers must be approved by the Department of Labor. Waivers may be approved for a contract, subcontract, subordinate contract, work location, or classification of employee. Waivers do not apply to U.S. citizens, workers hired in the U.S., or legal residents of the U.S. A Geographic waiver may be granted based on the host country having an adequate workers’ compensation system which provides coverage for the local national employees or foreign workers performing work on an applicable contract in that country. The request for new waivers must be made in writing on Form BEC 565, Request for Waiver - Defense Base Act, and signed by the head of a department or agency of the United States government. A list of currently approved country waivers is available at https://www.dol.gov/agencies/owcp/dlhwc/dbawaivers/dbawaivers.\nReference/s: Defense Base Act | U.S. Department of Labor (dol.gov)\nDBA Information | U.S. Department of Labor (dol.gov)\nPart 28 - Bonds and Insurance | Acquisition.GOV\nhttps://www.dol.gov/agencies/owcp/dlhwc/dbawaivers/dbawaivers\nhttps://www.acq.osd.mil/dpap/cpic/cp/waivers_for_defense_base_act_insurance.html#:~:text=DBA%20waivers%2C%20for%20the%20contracts%20with%20performance%20in,52.228-4%20--%20Workers%20Compensation%20and%20War-Hazard%20Insurance%20Overseas.\n\nCite: FAR 28.305 (48 CFR 28.305); FAR 52.228-3; FAR 52.228-4 (prescribed at FAR 28.309(a) and FAR 28.309(b)).",
+   "verification": "Fetched https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-28 (14 Sep 2026): Subpart 28.3 lists 28.305 Overseas workers' compensation and war-hazard insurance and 28.309 Contract clauses for workers' compensation insurance, (a) 52.228-3 Workers' Compensation Insurance (Defense Base Act), (b) 52.228-4 Workers' Compensation and War-Hazard Insurance Overseas. Reference/s block restored verbatim; 28.309 note kept in the Cite line. Cite line spells out 'FAR 28.309(a) and FAR 28.309(b)' so every citations_rfo entry appears verbatim in the answer text (the author's 'and (b)' shorthand did not)."
+  },
+  {
+   "id": "Q0011",
+   "action": "kept",
+   "issue": "No disallowed difference found.",
+   "answer_before": null,
+   "answer_after": null,
+   "verification": "Diff is cite formatting only ('52.243-1, 2, and 4' -> '52.243-1, 52.243-2 and 52.243-4') plus the Cite line. regulations.json crosswalk: FAR 52.243-1 retained (verified); 'FAR 52.243' entry confirms 52.243-1 through -7 on the RFO Part 52 index; DFARS 252.243-7002 retained per 'DFARS 25' entry (Class Deviation 2026-O0034 Rev 1, verified). All four citations_rfo appear in the text."
+  },
+  {
+   "id": "Q0044",
+   "action": "kept",
+   "issue": "No disallowed difference found.",
+   "answer_before": null,
+   "answer_after": null,
+   "verification": "Diff: '(52.243-X)' -> '(FAR 52.243-1 through 52.243-7)' plus the Cite line. Verified via regulations.json crosswalk 'FAR 52.243' -> 'FAR 52.243-1 through 52.243-7' (verified). citations_rfo entry appears verbatim in the Cite line."
+  },
+  {
+   "id": "Q0048",
+   "action": "kept",
+   "issue": "No disallowed difference found.",
+   "answer_before": null,
+   "answer_after": null,
+   "verification": "Diff: '41 U.S.C' -> '41 U.S.C.' plus the Cite line. Statute; unchanged by the RFO (AGENT_BRIEF rule 5). citations_rfo appears in the text. rfo_status 'updated' kept for batch consistency although 'n/a' would also be defensible for a statute-only item."
+  },
+  {
+   "id": "Q0134",
+   "action": "kept",
+   "issue": "No disallowed difference found.",
+   "answer_before": null,
+   "answer_after": null,
+   "verification": "Diff: '(FAR 52-245-1)' -> '(FAR 52.245-1(h))' plus the Cite line. regulations.json crosswalk: 'FAR 52-245' -> 'FAR 52.245-1' (typo, clause retained, verified) and 'FAR 52.245-1(h)' Contractor Liability for Government Property (verified, acquisition.gov clause text). The quoted text is paragraph (h)(1). citations_rfo appears in the text."
+  },
+  {
+   "id": "Q0144",
+   "action": "kept",
+   "issue": "No disallowed difference found.",
+   "answer_before": null,
+   "answer_after": null,
+   "verification": "Diff: 'Reference/s: DFARS PGI 201.602-2' replaced by a removed-section parenthetical plus the Cite line; body untouched. regulations.json crosswalk: DFARS 201.602-2 -> 201.404-70 and PGI 201.602-2 -> PGI 201.404-70 with paragraph (e) (both verified, Class Deviation 2026-O0002 Rev 1). All three citations_rfo entries appear in the Cite line."
+  },
+  {
+   "id": "Q0150",
+   "action": "kept",
+   "issue": "No disallowed difference found.",
+   "answer_before": null,
+   "answer_after": null,
+   "verification": "Diff: 'Reference/s: FAR 43.201(b)' replaced by a moved-section parenthetical plus the Cite line; body untouched. regulations.json crosswalk: FAR 43.201(b) -> FAR 43.301(b) (verified, acquisition.gov RFO Part 43 guide; new 43.201 is Definitions). citations_rfo appears in the text."
+  },
+  {
+   "id": "Q0223",
+   "action": "kept",
+   "issue": "No disallowed difference found.",
+   "answer_before": null,
+   "answer_after": null,
+   "verification": "Diff: trailing bare 'FAR 49.402-2' parenthesized plus the Cite line. regulations.json crosswalk: FAR 49.402-2 retained (verified). citations_rfo appears in the text."
+  },
+  {
+   "id": "Q0224",
+   "action": "kept",
+   "issue": "No disallowed difference found.",
+   "answer_before": null,
+   "answer_after": null,
+   "verification": "Diff: Cite line only. regulations.json crosswalk: FAR 52.249-14 Excusable Delays retained (verified). citations_rfo appears in the text."
+  },
+  {
+   "id": "Q0252",
+   "action": "kept",
+   "issue": "No disallowed difference found.",
+   "answer_before": null,
+   "answer_after": null,
+   "verification": "Diff: trailing bare 'FAR 49.202' parenthesized plus the Cite line. regulations.json crosswalk: FAR 49.202 Profit retained (verified). citations_rfo appears in the text."
+  }
+ ]
+}

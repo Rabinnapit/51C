@@ -1,0 +1,889 @@
+[
+ {
+  "id": "Q0002",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0005",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text (elements of a binding contract only). The record citations[] field carries FAR 6.103-2 / DFARS 225.7002 / PGI 225.7002-1 / 10 U.S.C. 4862 from a Berry Amendment alt_answer, but none of those appear in the answer, so there is nothing to rewrite here."
+ },
+ {
+  "id": "Q0008",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0009",
+  "changed": true,
+  "answer": "An unauthorized commitment is means an agreement that is not binding solely because the Government representative who made it lacked the authority to enter into that agreement on behalf of the Government. The act of approving an unauthorized commitment is called a ratification. Unauthorized commitments may be ratified only when the conditions of FAR 1.405(c) are met. a) Use of appropriated funds, b) Provided to or accepted by the Government - received a benefit, c) Ratification official has the authority to ratify, d) Resulting contract must otherwise be proper, e) Price must be fair & reasonable, f) Funds are available and were available at the time the action occurred, g) The CO recommends payments, h) It is IAW other requirements and limitations\n\nCite: FAR 1.405(c).",
+  "crosswalk": [
+   {
+    "old": "FAR 1.602-3(c)",
+    "new": "FAR 1.405(c)"
+   }
+  ],
+  "citations_rfo": [
+   "FAR 1.405(c)"
+  ],
+  "rfo_status": "updated",
+  "notes": "Ratification conditions renumbered from FAR 1.602-3(c) to RFO FAR 1.405(c) (crosswalk, confidence \"verified\"). Substance and wording otherwise untouched; only the cite and the added Cite: line changed. The section is still regulatory under the RFO (not moved to guidance). No dollar threshold in this answer. Reviewer 14 Sep 2026: crosswalk pair confirmed (regulations.json, verified). Content flag only, not changed here: the answer lists eight conditions (a-h) while RFO FAR 1.405(c) states six criteria; the extra items (appropriated funds, CO recommends payment, IAW other requirements) look like Army/AFARS PGI 5101.405-90 procedure rather than 1.405(c) - for a content-accuracy pass."
+ },
+ {
+  "id": "Q0071",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0105",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0109",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0110",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "Only references are AR 25-1 (Army regulation) and the ITAS process - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Out of scope for a citation-currency pass."
+ },
+ {
+  "id": "Q0158",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0159",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0160",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0163",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0164",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0165",
+  "changed": true,
+  "answer": "Provide award information to the office responsible\n for reporting to the Defense Assistance Award Data System (DAADS) (see DoDGARs Part 21.535). Data from DAADS are used to provide: \n- DoD inputs to meet statutory requirements for Federal reporting related to grants, cooperative agreements, and other instruments\n- Information to support policy formulation and management oversight requirements.\n\nCite: DoDGARs Part 21.535.",
+  "crosswalk": [],
+  "citations_rfo": [
+   "DoDGARs Part 21.535"
+  ],
+  "rfo_status": "n/a",
+  "notes": "Only reference is DoDGARs Part 21.535 (DoD Grant and Agreement Regulations, 32 CFR chapter I subchapter C). The RFO renumbered the FAR, not the DoDGARs or the CFR, so no cite changed; a Cite: line was added. rfo_status \"n/a\" is used here in the sense \"no RFO-driven cite change applies\" - the item does carry a cite."
+ },
+ {
+  "id": "Q0166",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0167",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0168",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0169",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0170",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0171",
+  "changed": true,
+  "answer": "The Grants Officer must prepare a written decision within 60 calendar days of receipt of the claim (or identify to the Recipient the specific date the decision will be issued), identify the relevant data on which the decision is based, and identify the Grant Appeal Authority. Unless a Recipient appeals the Grants Officer decision, the decision is final. If the decision is appealed, the USACE Grant Appeal Authority is the Head of the Contracting Activity (HCA) in accordance with AFARS 5133.9001 (pre-RFO AFARS; Subpart 5133.90 does not appear in the RFO edition of AFARS Part 5133, revised 1 Feb 2026 - confirm the current location).\n\nCite: AFARS 5133.9001 (pre-RFO numbering; not found in RFO AFARS Part 5133 rev. 1 Feb 2026).",
+  "crosswalk": [
+   {
+    "old": "AFAR 5133.9001",
+    "new": "AFARS 5133.9001"
+   }
+  ],
+  "citations_rfo": [
+   "AFARS 5133.9001"
+  ],
+  "rfo_status": "unverifiable",
+  "notes": "Reviewer 14 Sep 2026: the author verified 5133.9001 on acquisition.gov, but that page is the pre-RFO AFARS (Change 2025-0711, effective 11 Jul 2025) and itself says the official AFARS lives on PAM until the RFO is complete. The RFO edition - Army combined AFARS PDF of 30 Jun 2026 (https://api.army.mil/e2/c/downloads/2026/07/07/995d7218/afars-combined-30jun2026.pdf), Part 5133 \"Revised 1 February 2026\" - contains Subparts 5133.1 and 5133.2 only (last section 5133.205-70); there is no Subpart 5133.90 and no 5133.9001, and the words \"grant appeal\" occur nowhere in the PDF (Subpart 5101.91 holds only the general DoDGARs pointer). The designation may have moved to AFARS PGI (CAC-only) or been dropped; the new location could not be verified, so per brief rule 4 the old cite is kept, rfo_status is \"unverifiable\", and a short removed-section parenthetical was added. The \"AFAR\" -> \"AFARS\" label fix stands. Underlying DoDGARs requirement (32 CFR 22.815(e)) is unchanged but is not in the answer text, so it was not added."
+ },
+ {
+  "id": "Q0172",
+  "changed": true,
+  "answer": "(a) Have the management capability and adequate financial and technical resources, given those that would be made available through the grant or cooperative agreement, to execute the program of activities envisioned under the grant or cooperative agreement.\n(b) Have a satisfactory record of executing such programs or activities (if a prior recipient of an award).\n(c) Have a satisfactory record of integrity and business ethics.\n(d) Be otherwise qualified and eligible to receive a grant or cooperative agreement under applicable laws and regulations (see §22.420(c)).\n\nCite: 32 CFR 22.420(c) (DoDGARs).",
+  "crosswalk": [],
+  "citations_rfo": [
+   "32 CFR 22.420(c)"
+  ],
+  "rfo_status": "n/a",
+  "notes": "Reviewer 14 Sep 2026: author recorded this item as having no regulatory reference, but the answer ends \"(see §22.420(c))\" - a DoDGARs cite (32 CFR 22.420(c); the four standards quoted are 32 CFR 22.415, which cross-references 22.420(c) in exactly this form). The CFR is untouched by the RFO, so no number changed; a Cite: line was added for consistency with the other CFR-cited items in this set. Title 32 is inferred from the DoDGARs context of the question; the body text was not altered."
+ },
+ {
+  "id": "Q0173",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0174",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0175",
+  "changed": true,
+  "answer": "Three types of OT agreements: Research, Prototype, and Production\n\na. Research OTs (sometimes referred to as “original” or science and technology (S&T) OTs) are authorized under 10 U.S.C. §4021 for basic, applied, and advanced research projects. These OTs were intended to spur dual-use research and development (R&D), taking advantage of economies of scale without burdening companies with Government regulatory overhead, which would make them non-competitive in the commercial (non-defense) sector. Traditional defense contractors were also encouraged to engage in Research OTs, particularly if they sought to adopt commercial practices or standards, diversify into the commercial sector, or partner with non defense contractor.\n\n**When using Technology Investment Agreements (TIAs), be sure to read this guide in conjunction with the DoD Grant and Agreement Regulations (DoDGARs) — see Part 21 of Title 32 of the Code of Federal Regulations (32 CFR Part 21).\n\nb. Prototype OTs (sometimes referred to as “2371b” or “prototype project” OTs) are authorized under 10 U.S.C. §4022 to acquire prototype capabilities and allow for those prototypes to transition into Production OTs. Both dual-use and defense specific projects are encouraged under section 4022. Per statute, successful Prototype OTs offer a streamlined method for transitioning into follow-on production without competition.\nNote: The solicitation and original Prototype OT agreement shall include notice that a follow-on Production OT is possible to allow greater flexibility to those Government organizations planning to leverage production efforts without re-competing. This should also increase competition and reduce the risk of future protest.\n\nc. Production OTs are authorized under 10 U.S.C. §4022(f) as noncompetitive, follow-on OTs to a Prototype OT agreement that was competitively awarded and successfully completed. \nNote: This statute requires that advanced consideration be given and notice be made of the potential for a follow-on OT; this is a necessary precondition for a follow-on Production OT. As such, solicitation documents and the Prototype OT agreement shall include notice that a follow-on Production OT is possible.\n\nCite: 10 U.S.C. 4021; 10 U.S.C. 4022; 10 U.S.C. 4022(f); 32 CFR Part 21 (DoDGARs).",
+  "crosswalk": [
+   {
+    "old": "10 U.S.C. 2371",
+    "new": "10 U.S.C. 4021"
+   },
+   {
+    "old": "10 U.S.C. 2371b",
+    "new": "10 U.S.C. 4022"
+   },
+   {
+    "old": "10 U.S.C. 2371b(f)",
+    "new": "10 U.S.C. 4022(f)"
+   }
+  ],
+  "citations_rfo": [
+   "10 U.S.C. 4021",
+   "10 U.S.C. 4022",
+   "10 U.S.C. 4022(f)",
+   "32 CFR Part 21"
+  ],
+  "rfo_status": "updated",
+  "notes": "Applied the \"verified\" crosswalk pairs 2371 -> 4021 and 2371b -> 4022 (4022(f) by extension). 32 CFR Part 21 / DoDGARs left as written - the CFR is untouched by the RFO. The informal nickname \"2371b OTs\" was left alone: it is a colloquial label, not a citation. Reviewer 14 Sep 2026: the Q0228/Q0229 conflict is resolved - no section 4003b exists in title 10 (law.cornell.edu chapter 301: subchapter I lists 4002-4003 as Omitted, subchapter II runs 4021-4027), so both items were moved to 10 U.S.C. 4022 and the whole OT cluster now reads 4021/4022/4022(f). Statute cite; the RFO changed FAR numbering only. regulations.json also lists this cite under \"unchanged\", and the crosswalk entry reflects the title 10 recodification rather than the RFO; the crosswalk pair was applied per task instruction."
+ },
+ {
+  "id": "Q0176",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "Mentions \"FAR-based contracts\" generically - not a cite and not a named part or subpart. Nothing to rewrite."
+ },
+ {
+  "id": "Q0177",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "Mentions \"FAR-based procurement contracts\" generically - not a cite and not a named part or subpart."
+ },
+ {
+  "id": "Q0178",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0179",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0180",
+  "changed": true,
+  "answer": "The AO shall coordinate with their program office or other requiring activity representatives, SCO or HCA, and local legal counsel prior to staffing the OT Determination and Findings (D&F) through ODASA(P). \n\nNote: ODASA(P) may directly contact and work with these individuals in \"real time\" to ensure the approval process is expedited for SPE and higher officials. OT D&Fs, prepared in accordance with section 4022(a)(2)(A) and (8) are processed as follows:\n\nCite: 10 U.S.C. 4022(a)(2)(A) and (8).",
+  "crosswalk": [
+   {
+    "old": "10 U.S.C. 2371b",
+    "new": "10 U.S.C. 4022"
+   }
+  ],
+  "citations_rfo": [
+   "10 U.S.C. 4022(a)(2)(A)"
+  ],
+  "rfo_status": "updated",
+  "notes": "The bare \"section 2371b(a)(2)(A) and (8)\" is the 10 U.S.C. OT prototype D&F authority; renumbered per the \"verified\" crosswalk pair 2371b -> 4022. Approval-routing wording (SCO / HCA / ODASA(P)) left exactly as written - no local thresholds or names added. Reviewer 14 Sep 2026: the Q0228/Q0229 conflict is resolved - no section 4003b exists in title 10 (law.cornell.edu chapter 301: subchapter I lists 4002-4003 as Omitted, subchapter II runs 4021-4027), so both items were moved to 10 U.S.C. 4022 and the whole OT cluster now reads 4021/4022/4022(f). Statute cite; the RFO changed FAR numbering only. regulations.json also lists this cite under \"unchanged\", and the crosswalk entry reflects the title 10 recodification rather than the RFO; the crosswalk pair was applied per task instruction. Reviewer 14 Sep 2026: dropped \"10 U.S.C. 4022(a)(8)\" from citations_rfo - that string does not appear in the answer text, and 10 U.S.C. 4022(a) has only three numbered paragraphs (law.cornell.edu), so \"(8)\" as written in the source deck is not a live paragraph (possibly a transcription of (a)(2)(B)). Body and Cite: line left as the author wrote them; flag for a content pass."
+ },
+ {
+  "id": "Q0181",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0182",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0183",
+  "changed": true,
+  "answer": "a. A flexible tool.   \nb. A legally binding instrument.  \nc. Three types: \ni. Research (10 U.S.C. 4021) \nii. Prototype (10 U.S.C. 4022) \niii. Follow-On Production (10 U.S.C. 4022(f)).\n\nCite: 10 U.S.C. 4021; 10 U.S.C. 4022; 10 U.S.C. 4022(f).",
+  "crosswalk": [
+   {
+    "old": "10 U.S.C. 2371",
+    "new": "10 U.S.C. 4021"
+   },
+   {
+    "old": "10 U.S.C. 2371b",
+    "new": "10 U.S.C. 4022"
+   },
+   {
+    "old": "10 U.S.C. 2371b(f)",
+    "new": "10 U.S.C. 4022(f)"
+   }
+  ],
+  "citations_rfo": [
+   "10 U.S.C. 4021",
+   "10 U.S.C. 4022",
+   "10 U.S.C. 4022(f)"
+  ],
+  "rfo_status": "updated",
+  "notes": "Straight cite swap using the \"verified\" crosswalk pairs; the three-type structure and wording are unchanged. Reviewer 14 Sep 2026: the Q0228/Q0229 conflict is resolved - no section 4003b exists in title 10 (law.cornell.edu chapter 301: subchapter I lists 4002-4003 as Omitted, subchapter II runs 4021-4027), so both items were moved to 10 U.S.C. 4022 and the whole OT cluster now reads 4021/4022/4022(f). Statute cite; the RFO changed FAR numbering only. regulations.json also lists this cite under \"unchanged\", and the crosswalk entry reflects the title 10 recodification rather than the RFO; the crosswalk pair was applied per task instruction."
+ },
+ {
+  "id": "Q0184",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "Dollar approval tiers for OT instruments ($50M / $100M / $500M) but no citation at all, so out of scope for this pass. Worth separate verification: these Army OT approval levels are not in the regulations.json thresholds table, and this answer conflicts with Q0192 in the same bank ($50M / $250M tiers)."
+ },
+ {
+  "id": "Q0185",
+  "changed": true,
+  "answer": "There is no set answer and is based on the individual answers. The GORB is looking for the candidate to meet DoDGARs 21.440 - In selecting grants officers and agreements officers, DoD Components must use the following minimum standards:(a) In selecting a grants officer, the appointing official must judge whether the candidate has the necessary experience, training, education, business acumen, judgment, and knowledge of assistance instruments and contracts to function effectively as a grants officer. The appointing official also must take those attributes of the candidate into account when deciding the complexity and dollar value of the grants and cooperative agreements to be assigned. REFERENCE: DoDGARs 21.440, Army Warranting Program v7 para 4.2\n\nCite: DoDGARs 21.440; Army Warranting Program v7 para 4.2.",
+  "crosswalk": [],
+  "citations_rfo": [
+   "DoDGARs 21.440"
+  ],
+  "rfo_status": "n/a",
+  "notes": "DoDGARs 21.440 (32 CFR 21.440) is not touched by the RFO, so no cite changed; only the Cite: line was added. FLAG for a separate pass (deliberately not fixed here - it is outside a citation-currency scope and a version swap would be a new claim): the answer cites \"Army Warranting Program v7 para 4.2\" while the brief states the current policy is Army Warranting Program Policy v12 (MAR 2026). Left verbatim pending verification of the v12 paragraph."
+ },
+ {
+  "id": "Q0186",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "Reads \"not FAR based\" - a generic reference, not a cite or a named part or subpart."
+ },
+ {
+  "id": "Q0187",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0188",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0189",
+  "changed": true,
+  "answer": "Authority: 10 U.S.C. 4022 Section 815 of FY 16 NDAA\n1. Must be for “prototype projects” directly relevant to enhancing mission effectiveness of military Personnel and the supporting platforms, systems, components, or materials proposed to be acquired or developed….OR to improvement of platforms, systems, components, or materials in use by the armed forces.\n2. Must be at least one nontraditional defense contractor “participating to a significant extent” OR mandatory one third cost sharing for traditional defense contractor (unless waived by SPE)\n3. To the maximum extent practicable; competitive procedures shall be used when entering into agreements to carry out projects….(CICA not applicable)\n\nCite: 10 U.S.C. 4022 (sec. 815, FY2016 NDAA).",
+  "crosswalk": [
+   {
+    "old": "10 U.S.C. 2371b",
+    "new": "10 U.S.C. 4022"
+   }
+  ],
+  "citations_rfo": [
+   "10 U.S.C. 4022"
+  ],
+  "rfo_status": "updated",
+  "notes": "Cite renumbered per the \"verified\" crosswalk pair. \"Section 815 of FY 16 NDAA\" is a public-law origin, not a code cite, and was left as written; the CICA reference is untouched. No dollar threshold in this answer (the one-third cost share is a ratio, not a threshold value). Reviewer 14 Sep 2026: the Q0228/Q0229 conflict is resolved - no section 4003b exists in title 10 (law.cornell.edu chapter 301: subchapter I lists 4002-4003 as Omitted, subchapter II runs 4021-4027), so both items were moved to 10 U.S.C. 4022 and the whole OT cluster now reads 4021/4022/4022(f). Statute cite; the RFO changed FAR numbering only. regulations.json also lists this cite under \"unchanged\", and the crosswalk entry reflects the title 10 recodification rather than the RFO; the crosswalk pair was applied per task instruction."
+ },
+ {
+  "id": "Q0190",
+  "changed": true,
+  "answer": "Section 815 of the 2016 NDAA defines A nontraditional defense contractor, with respect to a procurement or with respect to a transaction authorized under section 4021(a) or 4022 of this title, means an entity that is not currently performing and has not performed, for at least the one-year period preceding the solicitation of sources by the Department of Defense for the procurement or transaction, any contract or subcontract for the Department of Defense that is subject to full coverage under the cost accounting standards prescribed pursuant to section 1502 of title 41 and the regulations implementing such section.\n\nCite: 10 U.S.C. 4021(a); 10 U.S.C. 4022; 41 U.S.C. 1502.",
+  "crosswalk": [
+   {
+    "old": "10 U.S.C. 2371",
+    "new": "10 U.S.C. 4021"
+   },
+   {
+    "old": "10 U.S.C. 2371b",
+    "new": "10 U.S.C. 4022"
+   }
+  ],
+  "citations_rfo": [
+   "10 U.S.C. 4021(a)",
+   "10 U.S.C. 4022",
+   "41 U.S.C. 1502"
+  ],
+  "rfo_status": "updated",
+  "notes": "This paragraph quotes the statutory nontraditional-defense-contractor definition; the internal section references were renumbered per the \"verified\" crosswalk pairs so the quotation points at live code. \"section 1502 of title 41\" left as written (41 U.S.C. 1502 is on the regulations.json \"unchanged\" list). Reviewer 14 Sep 2026: the Q0228/Q0229 conflict is resolved - no section 4003b exists in title 10 (law.cornell.edu chapter 301: subchapter I lists 4002-4003 as Omitted, subchapter II runs 4021-4027), so both items were moved to 10 U.S.C. 4022 and the whole OT cluster now reads 4021/4022/4022(f). Statute cite; the RFO changed FAR numbering only. regulations.json also lists this cite under \"unchanged\", and the crosswalk entry reflects the title 10 recodification rather than the RFO; the crosswalk pair was applied per task instruction."
+ },
+ {
+  "id": "Q0191",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0192",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "Dollar approval tiers ($50M / $250M) with no citation at all - out of scope for a citation pass. Note the conflict with the tiers in Q0184 for a verifier to resolve."
+ },
+ {
+  "id": "Q0193",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "Lists statutes and DoDGARs by name only (CICA, Bayh-Dole, TINA, CDA, DoDGARs) with no section numbers - nothing to renumber."
+ },
+ {
+  "id": "Q0194",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "Only a DoD instruction by name (DoDI 5000); no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite."
+ },
+ {
+  "id": "Q0195",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0196",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0197",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0198",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0199",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0200",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0201",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "Mentions \"No FAR/DFARS\" generically - not a cite and not a named part or subpart."
+ },
+ {
+  "id": "Q0202",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0203",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0204",
+  "changed": true,
+  "answer": "Grant: 31 USC 6304 (Grants) states the principal purpose of the relationship is to transfer a thing of value to the state or local government or other recipient to carry out a public purpose of support or stimulation. Additionally, substantial involvement is not expected between the executive agency and the state, local government or other recipient when carrying out the activity contemplated in the agreement.\nCooperative Agreement: 31 USC 6305 (Cooperative Agreements) states the principal purpose of the relationship is to transfer a thing of value to the State, local government, or other recipient to carry out a public purpose of support or stimulation authorized by a law of the United States instead of acquiring (by purchase, lease, or barter) property or services for the direct benefit or use of the United States Government. Substantial involvement is expected between the executive agency and the State, local government, or other recipient when carrying out the activity contemplated in the agreement.\n\nCite: 31 U.S.C. 6304; 31 U.S.C. 6305.",
+  "crosswalk": [],
+  "citations_rfo": [
+   "31 U.S.C. 6304",
+   "31 U.S.C. 6305"
+  ],
+  "rfo_status": "n/a",
+  "notes": "Both cites are on the regulations.json \"unchanged\" list (Federal Grant and Cooperative Agreement Act, 31 U.S.C. 6304 / 6305) and are unaffected by the RFO. Only the Cite: line was added."
+ },
+ {
+  "id": "Q0205",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0206",
+  "changed": true,
+  "answer": "Each award is unique and this would be dependent on the circumstances. Refer to 2 CFR 200. Example: If there is a clinical trial involved then the Clinical Trial Registry term would need to be added. Examples will vary.\n\nCite: 2 CFR 200.",
+  "crosswalk": [],
+  "citations_rfo": [
+   "2 CFR 200"
+  ],
+  "rfo_status": "n/a",
+  "notes": "2 CFR 200 (Uniform Guidance) is on the \"unchanged\" list; the RFO renumbered the FAR only. Cite: line added."
+ },
+ {
+  "id": "Q0207",
+  "changed": true,
+  "answer": "Annual reports are the standard - if the award does not pose a higher risk or there are no special program requirements. Refer to 2 CFR 200 and risk imposed specific conditions.\n\nCite: 2 CFR 200.",
+  "crosswalk": [],
+  "citations_rfo": [
+   "2 CFR 200"
+  ],
+  "rfo_status": "n/a",
+  "notes": "2 CFR 200 is on the \"unchanged\" list; no cite change. Cite: line added."
+ },
+ {
+  "id": "Q0208",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0209",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0210",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0211",
+  "changed": true,
+  "answer": "Review the requirements outlined in 2 CFR 200. 206, Federal awarding agency review of risk posed by applicants. Consider all of the information available through FAPIIS. Has the organization or PI been suspended or debarred? Is there other negative information included in FAPIIS, regarding termination and reason for termination?\nOther areas to consider for review include (these are specifically pulled from 2 CFR 200):\nFinancial stability. Financial stability;\nManagement systems and standards. Quality of management systems and ability to meet the management standards.\nHistory of performance. The applicant's record in managing Federal awards, if it is a prior recipient of Federal awards, including timeliness of compliance with applicable reporting requirements, conformance to the terms and conditions of previous Federal awards, and if applicable, the extent to which any previously awarded amounts will be expended prior to future awards;\nAudit reports and findings. Reports and findings from audits performed under subpart F of this part or the reports and findings of any other available audits; and\nAbility to effectively implement requirements. The applicant's ability to effectively implement statutory, regulatory, or other requirements imposed on non-Federal entities.\nRisk-based requirements adjustment. The Federal awarding agency may adjust requirements when a risk-evaluation indicates that it may be merited either pre-award or post-award.\nSuspension and debarment compliance. These provisions restrict Federal awards, subawards and contracts with certain parties that are debarred, suspended or otherwise excluded from or ineligible for participation in Federal programs or activities.\nAfter a review of all information, if there is question of risk, consider discussion with leadership, advising attorney and policy. If the risk is too serious we can opt to not make the award. If the risk can be mitigated with award specific conditions, apply those as appropriate (i.e. more frequent reporting, reimbursement of payments)\n\nCite: 2 CFR 200.206; 2 CFR 200 subpart F.",
+  "crosswalk": [],
+  "citations_rfo": [
+   "2 CFR 200.206",
+   "2 CFR 200 subpart F"
+  ],
+  "rfo_status": "n/a",
+  "notes": "All references are 2 CFR 200 (including \"subpart F of this part\", the Single Audit subpart) - on the \"unchanged\" list and untouched by the RFO. The source text's \"2 CFR 200. 206\" spacing was left as written to avoid touching substance; the Cite: line gives the clean form 2 CFR 200.206."
+ },
+ {
+  "id": "Q0225",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0226",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0227",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0228",
+  "changed": true,
+  "answer": "10 USC 4022 (previously 10 USC 2371b)\n\nCite: 10 U.S.C. 4022 (previously 10 U.S.C. 2371b; the deck cite \"4003b\" is not a section of title 10).",
+  "crosswalk": [
+   {
+    "old": "10 U.S.C. 4003b",
+    "new": "10 U.S.C. 4022"
+   }
+  ],
+  "citations_rfo": [
+   "10 U.S.C. 4022"
+  ],
+  "rfo_status": "updated",
+  "notes": "Reviewer 14 Sep 2026: author had kept \"4003b\" as unverifiable, reading the crosswalk pair 10 U.S.C. 4003b -> 4022 as running backwards. It does not: the crosswalk note (and law.cornell.edu, re-checked by the reviewer) says no section 4003b exists in title 10 - chapter 301 subchapter I lists 4002-4003 as Omitted and subchapter II runs 4021-4027, with 4022 = \"Authority of the Department of Defense to carry out certain prototype projects\" (source credit: added Pub. L. 114-92 sec. 815 as 2371b, renumbered 4022 by Pub. L. 116-283 sec. 1841(b)). The answer text itself ties 4003b to 2371b, and 2371b -> 4022 is a verified pair, so 4003b was a deck error for 4022. Replaced 4003b with 4022 in the body, kept the original \"(previously 10 USC 2371b)\" wording, and put the 4003b explanation in the Cite: line. questions.json already carried rfo.crosswalk 4003b -> 4022 for this item. The OT cluster (Q0175, Q0180, Q0183, Q0189, Q0190, Q0228, Q0229) now agrees on 4021/4022. Statute cite - title 10 recodification, not an RFO FAR change."
+ },
+ {
+  "id": "Q0229",
+  "changed": true,
+  "answer": "10 USC 4022(f) (previously 10 USC 2371b(f)) provides the authority to enter into a follow-on production contract or transaction with the participants of a prototype transaction awarded under the authority of 10 USC 4022 (previously 10 USC 2371b) without the use of competitive procedures, as long as competitive procedures were used for the prototype selection.\n\nCite: 10 U.S.C. 4022; 10 U.S.C. 4022(f) (previously 10 U.S.C. 2371b and 2371b(f); the deck cite \"4003b\" is not a section of title 10).",
+  "crosswalk": [
+   {
+    "old": "10 U.S.C. 4003b",
+    "new": "10 U.S.C. 4022"
+   },
+   {
+    "old": "10 U.S.C. 4003b(f)",
+    "new": "10 U.S.C. 4022(f)"
+   }
+  ],
+  "citations_rfo": [
+   "10 U.S.C. 4022",
+   "10 U.S.C. 4022(f)"
+  ],
+  "rfo_status": "updated",
+  "notes": "Reviewer 14 Sep 2026: author had kept \"4003b\" as unverifiable, reading the crosswalk pair 10 U.S.C. 4003b -> 4022 as running backwards. It does not: the crosswalk note (and law.cornell.edu, re-checked by the reviewer) says no section 4003b exists in title 10 - chapter 301 subchapter I lists 4002-4003 as Omitted and subchapter II runs 4021-4027, with 4022 = \"Authority of the Department of Defense to carry out certain prototype projects\" (source credit: added Pub. L. 114-92 sec. 815 as 2371b, renumbered 4022 by Pub. L. 116-283 sec. 1841(b)). The answer text itself ties 4003b to 2371b, and 2371b -> 4022 is a verified pair, so 4003b was a deck error for 4022. Replaced 4003b with 4022 in the body, kept the original \"(previously 10 USC 2371b)\" wording, and put the 4003b explanation in the Cite: line. questions.json already carried rfo.crosswalk 4003b -> 4022 for this item. The OT cluster (Q0175, Q0180, Q0183, Q0189, Q0190, Q0228, Q0229) now agrees on 4021/4022. Statute cite - title 10 recodification, not an RFO FAR change."
+ },
+ {
+  "id": "Q0230",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0231",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0232",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0233",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0234",
+  "changed": true,
+  "answer": "(A)There is at least one nontraditional defense contractor or nonprofit research institution participating to a significant extent in the prototype project.\n(B)All significant participants in the transaction other than the Federal Government are small businesses (including small businesses participating in a program described under section 9 of the Small Business Act (15 U.S.C. 638)) or nontraditional defense contractors.\n(C)At least one third of the total cost of the prototype project is to be paid out of funds provided by sources other than the Federal Government.\n(D)The senior procurement executive for the agency determines in writing that exceptional circumstances justify the use of a transaction that provides for innovative business arrangements or structures that would not be feasible or appropriate under a contract, or would provide an opportunity to expand the defense supply base in a manner that would not be practical or feasible under a contract.\n\nCite: 15 U.S.C. 638 (sec. 9, Small Business Act).",
+  "crosswalk": [],
+  "citations_rfo": [
+   "15 U.S.C. 638"
+  ],
+  "rfo_status": "n/a",
+  "notes": "15 U.S.C. 638 is on the regulations.json \"unchanged\" list; the paragraph is quoted statutory text and was not altered. Cite: line added."
+ },
+ {
+  "id": "Q0235",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0236",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0237",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0238",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0239",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0240",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0241",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0242",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0243",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0244",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0245",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0246",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0247",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0248",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0249",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ },
+ {
+  "id": "Q0260",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No regulatory reference in the answer text - no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Included for coverage only; answer left untouched."
+ }
+]

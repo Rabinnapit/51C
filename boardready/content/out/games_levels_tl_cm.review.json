@@ -1,0 +1,513 @@
+{
+ "reviewed_on": "2026-09-14",
+ "scope": [
+  "TL41-TL70",
+  "CM41-CM70"
+ ],
+ "items": [
+  {
+   "id": "TL41",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $64,000, base only, at or below SAT: Class I. Difficulty 1 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL42",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $148,500, base only: Class I. Difficulty 1 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL43",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $236,000, base only: Class I. Difficulty 1 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL44",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $780,000: above SAT, within the $1M tier: Class II. Difficulty 1 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL45",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $1,650,000: Class II, $5M tier. Difficulty 1 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL46",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $3,200,000: Class II, $5M tier; commercial status does not matter at or below $5M. Difficulty 1 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL47",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $27,500,000 construction: Class III, $50M tier. Difficulty 1 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL48",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $58,000,000: Class III, $100M tier. Difficulty 1 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL49",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $175,000,000: Class IV, $250M tier. Difficulty 1 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL50",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $640,000,000: above $500M, Class IV Unlimited tier. Difficulty 1 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL51",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $180,000 + 2 x $190,000 = $560,000: Class II, $1M tier. Difficulty 2 (options) fits. RFO FAR 17.204-1 'Exercise of options' confirmed at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-17. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL52",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $60,000 + 3 x $70,000 = $270,000: Class I; the '$410,000 with two more option years' board point checks. Difficulty 2 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL53",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Order is the instrument: $118,000: Class I. Difficulty 2 (orders) fits. RFO FAR 16.506 'Postaward procedures for placement of task and delivery orders' confirmed at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL54",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed order $1,300,000 + 2 x $900,000 = $3,100,000: Class II, $5M tier. Difficulty 2 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL55",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Call is the instrument: $41,500: Class I. Difficulty 2 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL56",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $6,500,000 + 4 x $6,000,000 = $30,500,000: Class III, $50M tier; options add $24,000,000 as stated. Difficulty 2 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL57",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $62,000,000 + 2 x $31,000,000 = $124,000,000: Class IV, $250M tier. Difficulty 2 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL58",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Order is the instrument: $14,500,000: Class III, $25M tier. Difficulty 2 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL59",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed order $520,000 + 2 x $460,000 = $1,440,000: Class II, $5M tier. Difficulty 2 fits. RFO Part 8 is 'Required Sources of Supplies and Services' with Subpart 8.4 Federal Supply Schedules (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-8). Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL60",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $750,000 + 4 x $780,000 = $3,870,000: Class II, $5M tier. Difficulty 2 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL61",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $110,000 + 2 x $115,000 = $340,000: at or below SAT, Class I; $10,000 under the class line so difficulty 3 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL62",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $200,000 + $162,000 = $362,000: Class II, $500K tier; $12,000 over SAT so difficulty 3 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL63",
+   "verdict": "fixed",
+   "field": "explanation",
+   "before": "A modification is valued at its absolute value, so this deductive modification is a $5,600,000 action - not negative, not zero, and not the $64 million contract behind it.\n\n$5,600,000 is above the $5M Class II tier. The SaP rung is only for commercial products and commercial services acquired under simplified procedures, and this is non-commercial work, so the smallest tier that reaches the action is $10M, which is Class III.\n\nBoard point: a descoping modification can feel like it needs less authority, but the policy measures size, not direction.\n\nCite: Army Warranting Program Policy v12 para 4.2 (absolute value of a modification) and Table 1; RFO FAR 12.201-1 and 12.001(c) (SaP, commercial only, $9,000,000).",
+   "after": "A modification is valued at its absolute value, so this deductive modification is a $5,600,000 action - not negative and not zero.\n\n$5,600,000 is above the $5M Class II tier. The SaP rung is only for commercial products and commercial services acquired under simplified procedures, and this is non-commercial work, so the smallest tier that reaches the action is $10M, which is Class III.\n\nBoard point: a descoping modification can feel like it needs less authority, but the policy measures size, not direction.\n\nCaution: the Policy v12 Summary of Key Changes entry for para 4.2 says that for a modification the warrant must be equal to or greater than the cumulative value of the contract including the modification. Read that way, this action is $64,000,000 plus $5,600,000, or $69,600,000 - still Class III, but at the $100M tier. Confirm which reading your office applies with the Chief, C&P.\n\nCite: Army Warranting Program Policy v12 para 4.2 (absolute value of a modification), Summary of Key Changes, and Table 1; RFO FAR 12.201-1 and 12.001(c) (SaP, commercial only, $9,000,000).",
+   "source": "value_number $5,600,000 (absolute value of the modification, as TL01-TL40 count it) and Class III (non-commercial, so no SaP rung) confirmed. The explanation said the value is 'not the $64 million contract behind it', which the policy's own summary contradicts; a caution was added showing the class holds on that reading too ($64,000,000 + $5,600,000 = $69,600,000, Class III, $100M tier). Policy v12 Summary of Key Changes, entry for 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt line 21): 'when determining the warrant level for a modification, it must be equal to or greater than the cumulative value of the contract including the modification'; para 4.2 body (line 77): 'include the base value, all options, any anticipated or actual ceiling values, plus the absolute value of a modification'."
+  },
+  {
+   "id": "TL64",
+   "verdict": "fixed",
+   "field": "explanation",
+   "before": "Para 4.2 values a modification at its absolute value. The absolute value of minus $410,000 is $410,000.\n\nThat is above the SAT of $350,000, so a Class I warrant cannot sign this reduction. The $500K tier of a Class II warrant covers it.\n\nBoard point: a price reduction is not a pass for a smaller warrant. Sign is irrelevant; size is not.\n\nCite: Army Warranting Program Policy v12 para 4.2 (absolute value of a modification) and Table 1.",
+   "after": "Para 4.2 values a modification at its absolute value. The absolute value of minus $410,000 is $410,000.\n\nThat is above the SAT of $350,000, so a Class I warrant cannot sign this reduction. The $500K tier of a Class II warrant covers it.\n\nBoard point: a price reduction is not a pass for a smaller warrant. Sign is irrelevant; size is not.\n\nCaution: the Policy v12 Summary of Key Changes entry for para 4.2 says that for a modification the warrant must be equal to or greater than the cumulative value of the contract including the modification. Read that way, this action is $1,900,000 plus $410,000, or $2,310,000 - still Class II, but at the $5M tier. Confirm which reading your office applies with the Chief, C&P.\n\nCite: Army Warranting Program Policy v12 para 4.2 (absolute value of a modification), Summary of Key Changes, and Table 1.",
+   "source": "value_number $410,000 and Class II confirmed on the TL01-TL40 count. On the Summary of Key Changes reading the value is $1,900,000 + $410,000 = $2,310,000: still Class II but the $5M tier, not the $500K tier the explanation names; the same caution was added. Policy v12 Summary of Key Changes, entry for 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt line 21): 'when determining the warrant level for a modification, it must be equal to or greater than the cumulative value of the contract including the modification'; para 4.2 body (line 77): 'include the base value, all options, any anticipated or actual ceiling values, plus the absolute value of a modification'."
+  },
+  {
+   "id": "TL65",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Ceiling counts: $98,000,000: Class III, $100M tier. Difficulty 3 (ceiling) fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL66",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Total ceiling with option ordering periods $104,000,000: Class IV, $250M tier. Difficulty 3 fits. RFO FAR 17.204-1 confirmed at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-17. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL67",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $3,000,000 + 2 x $2,500,000 = $8,000,000, commercial under simplified procedures, at or below SaP: Class II (SaP). Difficulty 3 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL68",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $4,000,000 + 2 x $3,000,000 = $10,000,000, above SaP although commercial: Class III, $10M tier. Difficulty 3 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL69",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Order $7,300,000, non-commercial, so no SaP rung: Class III, $10M tier. Difficulty 3 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "TL70",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Recomputed $2,300,000 + 2 x $1,300,000 = $4,900,000: Class II, $5M tier; '$100,001 more' gives $5,000,001, Class III for non-commercial work, as stated. Difficulty 3 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+  },
+  {
+   "id": "CM41",
+   "verdict": "fixed",
+   "field": "applies",
+   "before": "Goes in the solicitation as a provision under RFO 4.208(b)(1); it is the requirement for offerors to be registered in the System for Award Management.",
+   "after": "Goes in the solicitation as a provision under RFO 4.208(b)(1) when offerors are required to be registered in the System for Award Management; it sets that registration requirement for offerors.",
+   "source": "RFO 4.208(b)(1) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4 (Last Updated 07/28/2026): 'When offerors are required to be registered in SAM, insert- (1) The provision at 52.204-7 ... in the solicitation'; 4.208(c) prescribes 52.204-90 and 52.204-91 when they are not. Added the condition. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]. The RFO page prints an em dash in the title; hyphen kept as house style."
+  },
+  {
+   "id": "CM42",
+   "verdict": "fixed",
+   "field": "applies",
+   "before": "Goes in solicitations and contracts under RFO 4.208(b)(2); the contractor must keep its System for Award Management registration current.",
+   "after": "Goes in solicitations and contracts under RFO 4.208(b)(2) when offerors are required to be registered in the System for Award Management; the contractor must keep that registration current.",
+   "source": "RFO 4.208(b)(2) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4: 52.204-13 in the solicitation and contract under the same 'When offerors are required to be registered in SAM' lead-in. Added the condition. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM43",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "RFO 4.208(g) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4: 'in all solicitations and contracts'. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM44",
+   "verdict": "fixed",
+   "field": "applies",
+   "before": "Goes in solicitations and contracts when the Government will pay by electronic funds transfer using the banking information the contractor keeps in the System for Award Management.",
+   "after": "Goes in solicitations and contracts under RFO 32.1110(a)(1) that include the provision at 52.204-7 or an agency clause requiring the contractor to stay registered in the System for Award Management until final payment, unless payment will be made through a third-party arrangement or an exception in RFO 32.1103(a) through (i) applies; the Government pays by electronic funds transfer using the banking information the contractor keeps in that registration.",
+   "source": "RFO 32.1110(a)(1) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32 (Last Updated 07/28/2026; the full page was retrieved and Subpart 32.11 is present): insert 52.232-33 'in solicitations and contracts that include the provision at 52.204-7, System for Award Management, or an agency clause that requires a contractor to be registered in SAM and maintain registration until final payment, unless- (i) Payment will be made through a third party arrangement ...; or (ii) An exception listed in 32.1103(a) through (i) applies.' Clause paragraph (b) on the Part 52 page: 'The Government shall make payment to the Contractor using the EFT information contained in the System for Award Management (SAM).' Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM44",
+   "verdict": "fixed",
+   "field": "note",
+   "before": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026. The far-overhaul-part-32 page returned text only through 32.409-1, so the Subpart 32.11 prescription paragraph was not read; the applies sentence follows the clause title.",
+   "after": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026. Verifier 14 Sep 2026: prescription read at RFO 32.1110(a)(1) on far-overhaul-part-32 (Last Updated 07/28/2026; the full page was retrieved and Subpart 32.11 is present); clause paragraph (b) confirms payment uses the EFT information in SAM.",
+   "source": "RFO 32.1110(a)(1) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32 (Last Updated 07/28/2026; the full page was retrieved and Subpart 32.11 is present): insert 52.232-33 'in solicitations and contracts that include the provision at 52.204-7, System for Award Management, or an agency clause that requires a contractor to be registered in SAM and maintain registration until final payment, unless- (i) Payment will be made through a third party arrangement ...; or (ii) An exception listed in 32.1103(a) through (i) applies.' Clause paragraph (b) on the Part 52 page: 'The Government shall make payment to the Contractor using the EFT information contained in the System for Award Management (SAM).' Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM45",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "RFO 32.111(a)(1) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32 (section title 'Contract clauses for noncommercial purchases') matches. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM46",
+   "verdict": "fixed",
+   "field": "applies",
+   "before": "Goes in all competitive requests for proposals under RFO 15.110(a); it is the standard set of proposal instructions for a negotiated competition.",
+   "after": "Goes in all competitive requests for proposals under RFO 15.110(a) - basic when the Government intends to award without negotiations, with Alternate I when award will follow negotiations within the competitive range; it is the standard set of proposal instructions.",
+   "source": "RFO 15.110(a) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15 (Last Updated 07/28/2026): basic provision 'in all competitive RFPs where the Government intends to award a contract without negotiations'; (a)(1) Alternate I 'If the Government intends to make award after negotiating with offerors within the competitive range'. The old tail 'for a negotiated competition' contradicted the basic prescription. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM47",
+   "verdict": "fixed",
+   "field": "applies",
+   "before": "Goes in solicitations and contracts above the reporting threshold in RFO 4.208(e); it is the Federal Funding Accountability and Transparency Act reporting clause for first-tier subcontract awards and executive compensation.",
+   "after": "Goes in solicitations and contracts valued over $40,000 under RFO 4.208(e) that are not for commercial products or commercial services and whose award must be reported in the Federal Procurement Data System; it is the Federal Funding Accountability and Transparency Act reporting clause for first-tier subcontract awards and executive compensation.",
+   "source": "RFO 4.208(e) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4 (Last Updated 07/28/2026): 'in solicitations and contracts valued over $40,000- (1) That are not for the acquisition of commercial products or commercial services; and (2) When the award is required to be reported in FPDS.' Cross-check: legacy FAR 4.1403(a) at https://www.acquisition.gov/far/4.1403 (FAC 2026-01) '$40,000 or more'; RFO 4.306(a) cites the Federal Funding Accountability and Transparency Act of 2006 (Pub. L. 109-282). Figure confirmed; the old sentence also left out the noncommercial and FPDS conditions. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM47",
+   "verdict": "fixed",
+   "field": "note",
+   "before": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026; RFO 4.208(e) on far-overhaul-part-4 read 'valued over $40,000' - confirm the figure before quoting it at a board.",
+   "after": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026. Verifier 14 Sep 2026: RFO 4.208(e) on far-overhaul-part-4 (Last Updated 07/28/2026) reads 'valued over $40,000' for acquisitions not for commercial products or commercial services when the award is required to be reported in FPDS; legacy FAR 4.1403(a) (FAC 2026-01) also says $40,000 ('or more'), so the figure is confirmed.",
+   "source": "RFO 4.208(e) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4 (Last Updated 07/28/2026): 'in solicitations and contracts valued over $40,000- (1) That are not for the acquisition of commercial products or commercial services; and (2) When the award is required to be reported in FPDS.' Cross-check: legacy FAR 4.1403(a) at https://www.acquisition.gov/far/4.1403 (FAC 2026-01) '$40,000 or more'; RFO 4.306(a) cites the Federal Funding Accountability and Transparency Act of 2006 (Pub. L. 109-282). Figure confirmed; the old sentence also left out the noncommercial and FPDS conditions. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM48",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "DFARS 232.7004(b) in Class Deviation 2026-O0022 (https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-232/2026-O0022_TAB_A_Deviation_Memo_DFARS_232.pdf): orders and FAR part 12 included, 'when 252.232-7003 is used and none of the exceptions at 232.7002(b)(1) apply'. Title on acquisition.gov DFARS Part 252 (Change 5/7/2026)."
+  },
+  {
+   "id": "CM49",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "DFARS 225.7901-4 in Class Deviation 2026-O0041 Rev 1 (https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-225/2026-O0041_Rev_1_TAB_A_Deviation_Memo_Part_225.pdf): 'Insert the clause at 252.225-7048, Export-Controlled Items, in all solicitations and contracts.' Title on acquisition.gov DFARS Part 252 (Change 5/7/2026)."
+  },
+  {
+   "id": "CM50",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "DFARS 232.7102 in Class Deviation 2026-O0022: 'in all solicitations and contracts, including solicitations and contracts using FAR part 12 procedures'; clause (b) is the contractor's notice when a levy may result in inability to perform. Title on acquisition.gov DFARS Part 252 (Change 5/7/2026)."
+  },
+  {
+   "id": "CM51",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "RFO 17.203(c) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-17 (Last Updated 07/28/2026) matches: option clause included, reasonable likelihood of exercise, option not exercised at award. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM52",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "RFO 17.203(e) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-17 matches: except services, option quantity is a separate line item with the same name as a corresponding basic line item. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM53",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "RFO 16.505(b) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16 (Last Updated 07/28/2026): a clause substantially the same as 52.216-19 when a definite-quantity, requirements, or indefinite-quantity contract is contemplated. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM54",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "RFO 43.305(b)(1)-(4) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-43 (Last Updated 07/28/2026): basic for cost-reimbursement supplies; Alternate I services with no supplies; Alternate II services with supplies; Alternate III construction (Alternate V for research and development is not mentioned, which is not an error). Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM55",
+   "verdict": "fixed",
+   "field": "applies",
+   "before": "Goes in service solicitations and contracts under RFO 37.802-5(c) when the services are vital to the Government and must continue without interruption, such as through a change to a successor contractor.",
+   "after": "Goes in service solicitations and contracts under RFO 37.802-5(c) when the services are vital to the Government and must continue without interruption as a successor (the Government or another contractor) takes over, and the Government anticipates difficulties during that transition.",
+   "source": "RFO 37.802-5(c) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-37 (Last Updated 07/28/2026) requires both (1) services vital to the Government that must be continued without interruption when, upon contract expiration, a successor (the Government or another contractor) may continue them, and (2) the Government anticipates difficulties during the transition. The old sentence left out condition (2). Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM56",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "RFO 37.802-5(b) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-37 matches: services on Government installations, unless a construction contract is contemplated. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM57",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "RFO 46.304 at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-46 (Last Updated 07/28/2026) matches: fixed-price, services or supplies involving the furnishing of services, expected to exceed the SAT. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM58",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "RFO 36.101-7(a) and Table 1 at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-36 (Last Updated 07/28/2026): 52.236-2 for a fixed-price construction contract or fixed-price dismantling, demolition, or removal of improvements contract expected to exceed the SAT. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM59",
+   "verdict": "fixed",
+   "field": "applies",
+   "before": "Goes in solicitations and contracts under RFO 4.208(d) when performance requires routine physical access to a Federally-controlled facility.",
+   "after": "Goes in solicitations and contracts under RFO 4.208(d) when performance requires routine physical access to a Federally-controlled facility and/or routine access to a Federally-controlled information system.",
+   "source": "RFO 4.208(d) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4: 'when contract performance requires contractors to have routine physical access to a Federally-controlled facility and/or routine access to a Federally-controlled information system'. The old sentence left out information-system access. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM60",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "RFO 29.402-1(a) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-29 (Last Updated 07/28/2026) matches, including the foreign-government exception. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM61",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "RFO 40.205(b) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-40 (Last Updated 07/28/2026): 'Except as prescribed in paragraph (c), insert the clause at 52.240-91 ... in all solicitations and contracts'; 40.205(c) Alternate I. RFO 40.202(a)-(h) lists TikTok/ByteDance, Kaspersky, drones, section 889 telecommunications and video surveillance, FASCSA orders, OFAC, Sudan and Iran, so the 'such as' list is accurate. 52.204-20 through 52.204-30 show [Reserved] on the Part 52 table of contents. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM62",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "RFO 40.303-2 at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-40: 'when the contractor or a subcontractor at any tier may have Federal contract information residing in or moving through its information system'. 52.204-21 shows [Reserved]. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM63",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "RFO 26.503-1 ('except as provided in 26.501') and 26.501(a)-(e) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-26 (Last Updated 07/28/2026). 52.223-6 shows [Reserved]. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM64",
+   "verdict": "fixed",
+   "field": "applies",
+   "before": "Goes in requests for proposals and contracts under RFO 15.110 when it is reasonably certain that certified cost or pricing data or other data will be required to price modifications, not the initial award.",
+   "after": "Goes in requests for proposals and contracts under RFO 15.110(u) when it is reasonably certain that certified cost or pricing data or other data will be required to price modifications, not the initial award.",
+   "source": "RFO 15.110(u) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15: 52.215-21 'in RFPs and contracts if it is reasonably certain that certified cost or pricing data or data other than certified cost or pricing data will be required for modifications'. Added the paragraph letter; the rest of the sentence is correct. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM65",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "RFO 16.505(d)(1) at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16: 'when a requirements contract is contemplated'; 16.505(e) prescribes 52.216-22. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM66",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "RFO 46.302 at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-46 matches: fixed-price, supplies or services involving the furnishing of supplies, expected to exceed the SAT. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM67",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "RFO 25.603 at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-25 (Last Updated 07/28/2026): 'if anticipating translation into another language'. Number and title on the RFO Part 52 table of contents (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52, Last Updated 07/28/2026), not [Reserved]."
+  },
+  {
+   "id": "CM68",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "DFARS 243.305-70 in Class Deviation 2026-O0034 Rev 1 (https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-243/2026-O0034_Rev1_TAB_A_Class_Deviation.pdf): 'when anticipating and using a fixed price type contract'; 243.305-71 prescribes 252.243-7002, Requests for Equitable Adjustment. Title on acquisition.gov DFARS Part 252 (Change 5/7/2026)."
+  },
+  {
+   "id": "CM69",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "DFARS 203.171-4(b) in Class Deviation 2026-O0031 (https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-203/2026-O0031_TAB_A_Deviation_Memo_DFARS_203.pdf) matches, including FAR part 12 and task and delivery order solicitations; 203.171-4(a) prescribes 252.203-7000. Title on acquisition.gov DFARS Part 252 (Change 5/7/2026)."
+  },
+  {
+   "id": "CM70",
+   "verdict": "ok",
+   "field": null,
+   "before": null,
+   "after": null,
+   "source": "Class Deviation 2026-O0015 Rev 1 (https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-244/2026-O0015_Rev1_TAB_A_Class%20Deviation_DFARS_244.pdf): clause heading '252.244-7999 Subcontracts for Commercial Products or Commercial Services. (DEVIATION 2026-O0015)', prescribed at 244.070(b) in solicitations and contracts including FAR part 12; no 252.244-7000 in the extracted text, while codified DFARS Part 252 (Change 5/7/2026) still lists 252.244-7000. Minor: the 244.070(b) prescription sentence itself says 'Products and Commercial Services'; the item keeps the clause-heading title."
+  }
+ ],
+ "summary": {
+  "checked": 60,
+  "fixed": 10,
+  "reserved_or_removed": 0,
+  "unverifiable": [
+   "Army Warranting Program Policy v12 is internally inconsistent on valuing a modification. Para 4.2 body: 'include the base value, all options, any anticipated or actual ceiling values, plus the absolute value of a modification'. Summary of Key Changes entry for 4.2: 'when determining the warrant level for a modification, it must be equal to or greater than the cumulative value of the contract including the modification'. TL63 and TL64 keep the modification-only value used by TL01-TL40 (their class is the same on either reading) and now carry a caution. Out of scope and NOT changed, but their class flips on the cumulative reading: TL06 ($4,900,200: I to II), TL20 ($42,300,000: II to III), TL33 ($250,000,000: I to IV). TL17 stays Class III ($36,200,000, $50M tier); TL21 cannot be recomputed because it gives no contract value. The practice cards in src/arcade/js/games/threshold-run.js also value a modification alone. Needs an owner decision or confirmation from DASA(P) policy staff or the Chief, C&P."
+  ]
+ }
+}

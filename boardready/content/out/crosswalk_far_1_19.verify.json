@@ -1,0 +1,46 @@
+[
+ {
+  "pass": "completeness-consistency",
+  "verified_on": "2026-09-13",
+  "checked": 93,
+  "refuted": 4,
+  "method": "Second independent verifier, completeness/consistency lens. Read every entry note for internal contradictions; cross-checked against content/citations.json (all 62 FAR 1-19 keys present, none skipped), src/data/questions.json (278 questions; every rfo.crosswalk pair in Parts 1-19 compared to this file), src/data/regulations.json (110 crosswalk rows; the FAR 1-19 rows match except 15.207(c) still reads 15.108/probable and 15.201(c) still 'probable' - orchestrator should re-merge), content/out/crosswalk_far_22_53_dfars.json (no overlap; Parts 3/4/14/18/19 were covered by neither file) and content/out/thresholds.json (its DoD J&A and TINA figures contradicted this file - resolved from the DoD deviations). Re-downloaded RFO Parts 1, 2, 5, 7, 12, 13, 15, 16, 17 and newly Parts 3, 4, 14, 18, 19 with curl; fetched the three DoD RFO class deviations from acq.osd.mil (pdftotext). All 20 URLs in the file returned HTTP 200. Grepped the file for e-mail addresses and rank/name patterns: none. Checked JSON validity, UTF-8 without BOM, and that every entry has old/new/title/note/confidence/source_url and every 'new' value is RFO numbering. Sampled 40 questions for acronyms: src/data/glossary.json is an empty list, so every term is missing (outside this task; reported).",
+  "refuted_entries": [
+   "FAR 7.107-2 (heading not unchanged; section absorbs old 7.107-3/-4)",
+   "FAR 6.303 -> 6.104 (told Army users to quote the FAR DoD $150M column; DoD uses DFARS Table 206-1 $10M/$100M/$500M)",
+   "FAR 16.505(b)(2) -> 16.507-6(b) ((e) tiers do not apply to DoD; DFARS 216 deviation substitutes the 206.104 authorities)",
+   "FAR 15.403-4 -> 15.403-3 (omitted the DoD $10M threshold for awards after 30 Jun 2026)"
+  ],
+  "completed_entries": [
+   "FAR 2.101 (contingency MPT/SAT figures; stale 13.201(g) cross-ref)",
+   "FAR 15.503 (postaward notices -> 15.207-2)",
+   "FAR 12.201-1 ($15M contingency ceiling)"
+  ],
+  "added_entries": 31,
+  "changes": [
+   "FAR 7.107-2: note said 'section number and heading unchanged' - the heading changed from 'Consolidation' to 'Policy' and the section now absorbs old 7.107-3 and 7.107-4; rewritten with the 7.107-1(b) determination thresholds and the shifted 7.107-3/-4 numbering.",
+   "FAR 6.303 -> 6.104: note told Army users to quote the FAR Table 6-1 DoD column ($150M) and 'check DFARS 206.304'; contradicted content/out/thresholds.json (ja_dod_tier1-3). Confirmed from DoD Class Deviation 2026-O0017 Rev 2 that DoD uses DFARS 206.104-71 Table 206-1 ($10M / $100M / $500M) in lieu of Table 6-1; corrected and source_url_dod added.",
+   "FAR 16.505(b)(2) -> 16.507-6(b): the (e) approval tiers were stated as if they applied to DoD; DoD Class Deviation 2026-O0045 Rev 1 substitutes the DFARS 206.104 (Table 206-1) authorities. Added, with source_url_dod.",
+   "FAR 15.403-4 -> 15.403-3: note gave only the $2.5M FAR figure; contradicted thresholds.json (tina_dod $10M). Confirmed DFARS 215.403-3(a) under Class Deviation 2026-O0048 Rev 1 ($10M for DoD prime contracts awarded after 30 Jun 2026); added with source_url_dod.",
+   "FAR 2.101: note said 'with contingency/OCONUS exceptions' without the figures a board asks for; added the fetched contingency MPT/SAT values and flagged the stale '13.201(g)(1)' cross-reference inside the RFO definition (RFO 13.201 has no (g)).",
+   "FAR 15.503 -> 15.206-1: entry covered only old 15.503(a) preaward notices; old 15.503(b) postaward notices map to 15.207-2 Award notice (as the question bank already records). Note completed.",
+   "FAR 12.201-1: added the $15 million contingency ceiling at 12.001(c) (the Army 'SaP' Class II warrant figure).",
+   "Added 31 entries for Parts 1-19 cites that the question bank's rfo.crosswalk pairs or the Army Warranting Policy use but citations.json does not list (so neither crosswalk task covered them): 1.102-4(e), 1.602-1, 1.603, 1.403-1(b), 3.104, 4.801-4.803, 7.107-3/-4/-5/-6, 12.603, 12.301, 13.5, 13.302-5, 14.404-2(g), 15.204-1, 15.304, 15.305, 15.306, 15.506, 17.502-1(b), 18.2, 19.102, 19.4, 19.502-2, 19.805-1, 19.13, 19.14, 19.15, 19.8, 19.7. Each verified against the RFO part page fetched 13 Sep 2026. Parts 3, 4, 14, 18 and 19 were previously absent from the map entirely."
+  ],
+  "unresolved": [
+   "src/data/glossary.json is empty; a 40-question sample (seed 13) yields 58 distinct acronyms (GAO, KO, AO, ITAS, COR, R&D, SAT, OT, PCO, OMB, ABG5, DPW, PD2, PCF, VCE, PAM, SOW, OTA, O&M, FFP, GFP, CPARS, FAPIIS, D&F, T&M, OCONUS, GPE, RFQ, RFP, IFB, DPAS, MFR, LOA, PNM, J&A, CICA, HCA, CAS, IAW ...) with no glossary entry - a separate glossary task is needed.",
+   "content/out/thresholds.json cites 'FAR 13.201(g)(1)(i)/(ii)' for the contingency MPT; that paragraph does not exist in RFO Part 13 (stale cross-reference copied from RFO 2.101). Not edited (outside this task).",
+   "content/out/thresholds.json sb_8a_competitive_thresholds says 'RFO Part 19 section number not confirmed' - it is 19.108-7(a)(2) (confirmed here). Not edited (outside this task).",
+   "src/data/regulations.json still carries the pre-correction rows for 15.207(c) (15.108, probable) and 15.201(c) (probable); orchestrator re-merge needed.",
+   "The DFARS 216 deviation memo refers to '206.104-72' while the Part 206 deviation names the approval section 206.104-71; cited as 206.104-71 (Table 206-1) here.",
+   "'10 U.S.C. 4003b' still matches no section; the question bank's 4003b -> 4022 mapping assumes a typo for 2371b and is unconfirmed.",
+   "FAR 7.102-2 remains 'probable' (no such section pre- or post-RFO).",
+   "Old FAR 19.502-2(a)'s MPT-to-SAT automatic small-business reservation language was not found as a separate paragraph in RFO 19.104-1 (the rule of two at (a) now applies to everything above the MPT); thresholds.json sb_setaside_auto_range should be re-read against 19.104-1."
+  ],
+  "file": "C:/Users/rabin/Documents/Army/CORB/app/content/out/crosswalk_far_1_19.json",
+  "entries_after": 93,
+  "links_checked": 20,
+  "links_ok": 20,
+  "names_or_emails_found": 0
+ }
+]

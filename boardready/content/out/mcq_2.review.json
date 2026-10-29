@@ -1,0 +1,74 @@
+{
+ "file": "content/out/mcq_2.json",
+ "reviewed_on": "2026-09-14",
+ "reviewer": "independent reviewer (ai)",
+ "checked": 45,
+ "corrected": [
+  "Q0222",
+  "Q0038",
+  "Q0118",
+  "Q0075"
+ ],
+ "removed": [],
+ "mechanical_checks": [
+  "45 items, no duplicate qid, every item has exactly four options and exactly one option flagged correct",
+  "every qid resolves to a question in src/data/questions.json",
+  "every domain value is in CONTRACT.md section 7 taxonomy (Source Selection & Evaluation; Pricing, Cost & Payment; Contract Administration)",
+  "file re-parses as valid UTF-8 JSON with no BOM after edits; original one-line option formatting preserved"
+ ],
+ "verification_sources": [
+  "src/data/regulations.json crosswalk and thresholds (verified_on 2026-09-13)",
+  "content/out/crosswalk_far_1_19.json and content/out/crosswalk_far_22_53_dfars.json (verified entries)",
+  "content/out/open_drafts_2.json Q0222 reviewer note (RFO DFARS Part 215 deviation 2026-O0048 Rev 1 read 14 Sep 2026)",
+  "content/out/open_drafts_4.json Q0083 reviewer note (DFARS 215.202-71(b) and (e) read from the deviation text)",
+  "content/out/open_drafts_3.json Q0113 reviewer note (DFARS 215.103-2-70 LPTA limits read from the deviation attachment)",
+  "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32",
+  "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-44",
+  "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-46",
+  "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12"
+ ],
+ "changes": [
+  {
+   "id": "Q0222",
+   "field": "cite",
+   "change": "Replaced pre-RFO 'DFARS 215.506-70 and 215.506' with RFO numbering: 'RFO DFARS 215.301-71 (enhanced postaward debriefing, was DFARS 215.506-70) and 215.301-70 (was DFARS 215.506), DoD Class Deviation 2026-O0048 Rev 1; RFO FAR 15.206-2 (preaward debriefing), 15.301-1 (postaward debriefing)'.",
+   "reason": "The RFO DFARS Part 215 deviation contains no 215.506; the keyed answer (two business days for written questions, five business days to answer, debriefing not concluded until the answers are delivered) is 215.301-71. CONTRACT.md section 8 requires RFO numbering with the old/new pair recorded."
+  },
+  {
+   "id": "Q0038",
+   "field": "options[0].text and options[0].why",
+   "change": "Correct option reworded from 'You may reject the bid as nonresponsive when the line item prices are materially unbalanced' to 'You may reject the bid when you determine that the lack of balance poses an unacceptable risk to the Government'; the why now states the risk test instead of the responsiveness label.",
+   "reason": "RFO FAR 14.306-3(g) (was 14.404-2(g), 'Rejection of individual bids - materially unbalanced') provides a discretionary rejection keyed to unacceptable risk. 'Nonresponsive' is GAO case-law shorthand and made the keyed option arguable. No distractor becomes defensible under the new wording."
+  },
+  {
+   "id": "Q0118",
+   "field": "stem, options[0].why, cite",
+   "change": "Stem changed from 'For DoD, progress payments based on a percentage or stage of completion are authorized for which contracts?' to 'Under the DFARS, progress payments based on a percentage or stage of completion are authorized on DoD contracts for which work?'. The why now names DFARS 232.102(e)(2). Cite changed from 'RFO FAR 32.103 (progress payments under construction contracts); FAR 32.102(b)' to 'RFO DFARS 232.102(e)(2) (DoD Class Deviation 2026-O0022); RFO FAR 32.102(e), 32.103'.",
+   "reason": "RFO FAR 32.102(e), fetched 14 Sep 2026, authorizes percentage or stage of completion progress payments for shipbuilding and ship conversion, alteration or repair AND for construction or architect-engineer services purchased under part 36. Under the FAR alone the keyed three-item answer is incomplete and the item ambiguous. The 'only for construction, shipbuilding, and ship conversion, alteration, or repair' restriction is the DoD rule at DFARS 232.102(e)(2) (recorded verified in src/data/regulations.json from Part 232 Class Deviation 2026-O0022). The old cites 32.102(b) and 32.103 did not support the keyed answer."
+  },
+  {
+   "id": "Q0075",
+   "field": "cite",
+   "change": "Changed 'Official CORB board answer Q0075 (acceptance of a purchase order; legacy FAR 13.004)' to 'RFO FAR 12.201-1(b) (legal effect of quotations; was FAR 13.004(a)-(b)); official CORB board answer Q0075'.",
+   "reason": "The verified crosswalk maps FAR 13.004(a)(b) to FAR 12.201-1(b); the RFO Part 12 page fetched 14 Sep 2026 confirms a binding contract is formed by written acceptance of the purchase order or by substantial performance, which is the keyed answer."
+  }
+ ],
+ "confirmed_no_change": [
+  "Q0001 - RFO FAR 22.403 (was 22.404-6(c)) verified in the crosswalk; keyed option restates the official bank answer.",
+  "Q0020 and Q0063 - RFO FAR 15.403-2 (was 15.403-1(b) and (c)) and RFO FAR 15.403-4 (was 15.406-2) both verified; keyed options track the bank answers.",
+  "Q0083 - RFO DFARS 215.202-71 (was 215.371): consult the requiring activity, resolicit at least 30 additional days, HCA waiver not delegable below one level above the contracting officer, confirmed from the deviation text recorded by the Q0083 reviewer.",
+  "Q0113 - DFARS 215.103-2-70 (was 215.101-2-70): prohibition for personal protective equipment and aviation critical safety items versus the avoid list (IT, cyber, knowledge-based services) corroborated; the avoid-list distractors are not defensible as prohibitions.",
+  "Q0117 - RFO FAR 44.201-1 'Consent requirements' fetched 14 Sep 2026: with an approved purchasing system consent is limited to subcontracts specifically identified by the contracting officer in paragraph (d) of 52.244-2 because of type, complexity, value or need for special surveillance. Keyed option exact.",
+  "Q0036 - RFO FAR 46.401(a) fetched 14 Sep 2026: quality assurance surveillance plans should be prepared in conjunction with the preparation of the statement of work; 46.103 'Contracting office responsibilities' exists. Keyed option exact.",
+  "Q0017, Q0032, Q0104, Q0123, Q0224, Q0112, Q0135, Q0142, Q0150, Q0217, Q0250, Q0251, Q0044, Q0081, Q0010, Q0144 - every cite matches a verified crosswalk row (12.304; 49.607; 9.502 and 9.504; 32.104; 52.249-14; 15.503 to 15.206-1; 15.306 to 15.204; 15.101-1 to 15.103-1; 43.201(b) to 43.301(b); 15.506 to 15.301; 15.404-1(g) to 15.404-6; 15.207(c) to 15.108(c); 43.202, 43.203 and 43.301; DFARS 201.404-70 and PGI 201.404-70).",
+  "Q0086 and Q0087 - AFARS subpart 5107.90 (IGE required over the SAT; preparer and preparer's immediate supervisor sign and date) read on acquisition.gov by the Q0086 reviewer on 14 Sep 2026; RFO FAR 36.101-6 (was 36.203) carries no public-release language, so 'source selection information, not shared with offerors' stands."
+ ],
+ "residual_risks": [
+  "Q0106 cites 'RFO FAR Part 42' at part level only. Part 42 is retained under the RFO but its subparts were renumbered (postaward orientation was old 42.5). The part-level cite is safe; no subpart pinpoint was verified.",
+  "Q0111 cites FAR 52.215-8 (Order of Precedence - Uniform Contract Format). Part 52 clause numbers are retained under the RFO per the Part 52 deviation note, but 52.215-8 itself was not fetched; the uniform contract format section moved to RFO FAR 15.109.",
+  "Q0021 cites RFO FAR 15.404-3 for cost realism. No crosswalk row exists for old 15.404-1(d); the number is inferred from the verified pattern (15.404-1(b) to 15.404-1, 15.404-1(g) to 15.404-6) and is consistent with the question bank. Treat as probable, not verified.",
+  "Q0118 is now a DFARS-scoped item. A candidate answering from RFO FAR 32.102(e) alone would also include architect-engineer services purchased under part 36; the stem now says 'Under the DFARS' to close that gap.",
+  "Q0032 keys on the cure notice requiring at least ten days remaining in the performance period. That rule comes from RFO FAR 49.402-3 and the 49.607 cure notice format, not from the bank answer, which mentions only the ten-day cure period. The added element is regulation-supported but goes beyond the source answer."
+ ],
+ "notes": "No items were deleted. All 45 items were checked against their source question in src/data/questions.json: in every one the keyed option restates the bank's official answer, deck note or ai-draft answer rather than contradicting it. After the four corrections no item has two defensible options and no stem is ambiguous. This file carries no per-item flags or confidence field, so the merge must inherit flags and confidence from the parent question (CONTRACT.md section 1.7: nothing ai-drafted or unverified may render without its badge)."
+}

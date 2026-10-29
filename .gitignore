@@ -1,8 +1,18 @@
 # Built files: GitHub Actions rebuilds them on every push (see .github/workflows/pages.yml)
-docs/
-dist/
-src/index.dev.html
-src/data/_bundle.js
+/docs/
+/dist/
+/src/index.dev.html
+/src/data/_bundle.js
+
+# Board Ready (boardready/): the same rule. Its docs/ folder is documentation and stays in.
+/boardready/dist/
+/boardready/src/index.dev.html
+/boardready/src/data/_bundle.js
+/boardready/src/arcade/data/
+/boardready/src/arcade/index.dev.html
+/boardready/src/arcade/index.standalone.html
+# Text extracts of Army policy memos, unit SOPs and study decks stay on this computer
+/boardready/content/sources/
 
 # Reference documents (WarU material, memos) stay on this computer, out of the public repository
 *.pdf

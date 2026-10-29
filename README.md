@@ -7,6 +7,13 @@ every course, lessons, practice exams, flashcards, games, a glossary and a FAR r
 Unofficial training aid. Not endorsed by the U.S. Army, the Department of War or the Warfighting Acquisition University
 (WarU, formerly DAU). Content checked 28 October 2026.
 
+## Board Ready, in the same repository
+
+`boardready/` holds **Board Ready**, the study and board-support app for the Army Contracting Officer Review Board (the
+warrant board that comes after certification). It is built by the same workflow and served at
+https://rabinnapit.github.io/51C/boardready/ (installable, offline, self-updating); see `boardready/docs/README.md`.
+The two apps share one code base (`CONTRACT.md`) and will be fused into one career-long guide later.
+
 ## Owner and license
 
 B2B Exam Prep is owned by **SFC Rabin Napit** (© 2026 Rabin Napit, all rights reserved). This repository is public so the

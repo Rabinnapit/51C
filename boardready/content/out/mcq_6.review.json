@@ -1,0 +1,180 @@
+{
+  "reviewed_file": "content/out/mcq_6.json",
+  "reviewer": "independent content reviewer",
+  "reviewed_on": "2026-09-17",
+  "items_in": 38,
+  "items_out": 38,
+  "items_removed": 0,
+  "items_corrected": 5,
+  "method": [
+    "Every item checked against its source question in src/data/questions.json (question, answer, key_points, alt_answers, deck_notes, domain, flags, unit, citations_rfo, citations).",
+    "Batch content: Korea (LCS and SOFA), Germany (ABG-75), Grants & Agreements, Source Selection and Protests. Korea and Germany items were read clause by clause against their source answers for invented USFK, LCS, SOFA or ABG-75 offices, forms, thresholds or procedures, and for hedges the answer carries ('confirm with C&P', 'verify locally') that an option must not harden.",
+    "The five items the author flagged (Q0065, Q0180, Q0176 and Q0182 truncated sources; Q0154 stale $25M; Q0276 thin source) were re-derived from their answers line by line before any other check.",
+    "Every RFO number in every cite checked against src/data/regulations.json (crosswalk, unchanged list, thresholds, verified_on 2026-09-13) and, where the crosswalk did not reach a number, against content/out/regulations_map.json (RFO part pages read off acquisition.gov 14 Sep 2026). No acquisition.gov fetch was needed.",
+    "Cite convention for questions whose bank citations are empty compared with the accepted convention in mcq_1 through mcq_5 (framework or governing document plus 'official CORB board answer QXXXX', with the local-verification hedge in the cite line).",
+    "Machine checks over the whole file for option count, single correct option, difficulty range, duplicate qids, duplicate option texts, missing 'why', domain match, stem length, emails, personal names and ranks, markdown or HTML, non-ASCII characters, 'all of the above', and every dollar figure traced to its source."
+  ],
+  "structural_checks": {
+    "exactly_one_correct_per_item": "pass (38/38)",
+    "four_options_per_item": "pass",
+    "difficulty_in_range_1_to_3": "pass",
+    "duplicate_option_text": "none",
+    "duplicate_qids": "none",
+    "every_option_has_a_why": "pass",
+    "every_qid_resolves_to_a_bank_question": "pass (38/38)",
+    "mcq_domain_matches_bank_domain": "pass (38/38, verbatim)",
+    "stem_under_60_words": "pass (longest 57 words, Q0213)",
+    "plain_text_only": "pass (no markdown, no HTML, all ASCII)",
+    "no_names_or_emails": "pass (no email pattern, no rank or honorific, no personal name)",
+    "no_local_411th_approval_levels": "pass - the only approval levels stated anywhere in the file are the Army-wide OT delegation bands in Q0184, which are quoted from that question's own answer (SCO / HCA / ASA(ALT) / USD(A&S or R&E)). Korea items that touch approval levels say to confirm them with C&P and name no level.",
+    "korea_and_germany_hedges_kept": "pass (14 Korea items and 3 Germany items; see korea_and_germany_check)"
+  },
+  "changes": [
+    {
+      "qid": "Q0154",
+      "type": "accuracy of the correct option (source answer imprecise and internally inconsistent with Q0220)",
+      "field": "correct option text, correct option why",
+      "before": "That the contract action increases the scope, period, or maximum value of the order. / why: A protest that the action increases the scope, period or maximum value may be heard regardless of the order's value.",
+      "after": "That the contract action increases the scope, period, or maximum value of the contract under which the order is issued. / why: A protest that the action increases the scope, period or maximum value of the underlying contract may be heard regardless of the order's value.",
+      "reason": "Q0154's own answer says the action increases the scope, period or maximum value 'of the order', which is close to meaningless (an order cannot exceed its own maximum) and is not what the ground actually is. The bank states it correctly in the same domain: Q0220's answer and key points say 'a protest of an order is allowed only if the order exceeds the scope, period or maximum value of the contract', citing 10 U.S.C. 3406(f). The correction takes the wording from inside the bank rather than from outside it, and it stops the app from shipping two different formulations of the same rule. No fact was added; the distractors and the cite are unchanged."
+    },
+    {
+      "qid": "K105",
+      "type": "invented number in a distractor",
+      "field": "distractor 4 text and why",
+      "before": "Simplified procedures for the $2.8 million base period, with each option evaluated separately as MND approves it in its own program year. / why: ... the base period alone cannot be used to bring it under a threshold.",
+      "after": "Simplified procedures for the base period alone, with each option evaluated separately as MND approves it in its own program year. / why: ... the base period cannot be carved out to bring it under a threshold.",
+      "reason": "The source question gives an IGE of $14 million for a base period plus four options and states no per-period value. '$2.8 million' was an even-split inference, not a number from the source, and the rule is never to invent a number even inside a wrong option. Removing it does not weaken the distractor: the trap is carving the base period out of a $14 million acquisition, not the figure."
+    },
+    {
+      "qid": "Q0182",
+      "type": "cite convention",
+      "field": "cite",
+      "before": "DoD Other Transactions Guide; Determination and Findings in support of an OTA",
+      "after": "DoD Other Transactions Guide; official CORB board answer Q0182 (D&F in support of an OTA: cost, technical and schedule risk)",
+      "reason": "Q0182's bank citations_rfo and citations are both empty, so the item's own authority is the board answer. 'Determination and Findings in support of an OTA' is the document the question asks about, not a source that can be cited. Every other uncited item in this file, and in mcq_5, names the board answer in the cite line; this one did not. No number was added or changed."
+    },
+    {
+      "qid": "Q0280",
+      "type": "local-verification hedge (Germany ABG-75)",
+      "field": "cite",
+      "before": "... (ABG5 and ABG5a change order documents; confirm current local requirements locally)",
+      "after": "... (ABG5 and ABG5a change order documents; confirm current local requirements with the 409th CSB)",
+      "reason": "The bank question carries flags:['verify-locally'] and unit '409th CSB'. 'Confirm current local requirements locally' is circular and points the candidate at nobody. Naming the 409th CSB matches the question's own unit field and the convention the reviewer of mcq_5 accepted on Q0261 through Q0264 ('confirm current local practice with the 409th CSB'). Item content unchanged."
+    },
+    {
+      "qid": "Q0065",
+      "type": "fact not in the source (stem)",
+      "field": "stem",
+      "before": "... a 50/50 split of the current positions to speed things up. What do you tell him?",
+      "after": "... a 50/50 split of the current positions to speed things up. What do you tell the project manager?",
+      "reason": "The source question and answer say nothing about the project manager's gender. Minor, but it is a detail the stem added to the source, and the fix costs nothing. Options, whys and cite unchanged."
+    }
+  ],
+  "author_flagged_items": [
+    {
+      "qid": "Q0065",
+      "flag": "truncated source answer",
+      "finding": "keep",
+      "note": "The stored answer is garbled rather than short: the three bullets have run together into one line and the last word is cut ('negotiate with this knowledg'). Every substantive element survives and all four are used by the item - nowhere to go if the contractor says no, credibility gone, only $500K of room left, and the 'telling the jury to ignore the previous statement' point that becomes distractor 1. The arithmetic checks against the question: $15M apart, a 50/50 split is a $7.5M move, and $8M of authorized movement minus $7.5M leaves the $500K the answer states. The item is fair from its source. Note the item correctly does not carry the answer's 'Air Force Negotiation Team', which is a copy-paste artifact in a question whose scenario is USACE."
+    },
+    {
+      "qid": "Q0180",
+      "flag": "truncated source answer",
+      "finding": "keep",
+      "note": "The answer stops dead at 'are processed as follows:' - the processing table is missing. The item is built only on the first paragraph, which is intact and complete: the AO coordinates with the program office or other requiring activity representatives, the SCO or HCA, and local legal counsel before staffing the OT D&F through ODASA(P). The stem asks exactly that and nothing about the missing routing table. Distractor 3's why ('approval may run to that level') is supported by the answer's own note about ODASA(P) expediting for SPE and higher officials. Cite matches the answer's Cite line."
+    },
+    {
+      "qid": "Q0176",
+      "flag": "truncated source answer",
+      "finding": "keep",
+      "note": "The Purpose paragraph is complete and the benefits list a through f is complete (only the final period is missing). The item is built on the Purpose paragraph - flexibility to incorporate commercial standards and best practices, access to state-of-the-art solutions from traditional and nontraditional contractors through tailored teaming arrangements - which is intact word for word. Distractor 3's why uses the benefits list (broadening the industrial base) correctly as a benefit rather than a purpose."
+    },
+    {
+      "qid": "Q0182",
+      "flag": "truncated source answer",
+      "finding": "keep (cite corrected, see changes)",
+      "note": "The Cost and Technical sections carry their a/b/c guidance; the Schedule section ends after its lead sentence, so its sub-guidance is missing. The item does not depend on the missing part: it asks which risks are assessed and how they are stated, and the answer's opening line ('AOs shall address cost, technical and schedule risk assessment of the OT project and plans for mitigating the risks') plus the identical 'State the risk level (Low, Moderate, or High)' lead-in on all three sections carries the whole correct option. Distractor 4's why is taken from the answer's parenthetical note about the risks inherent in the prototype project and the capability of the expected sources."
+    },
+    {
+      "qid": "Q0154",
+      "flag": "stale $25M in the source; item written on non-numeric grounds",
+      "finding": "keep (correct option corrected, see changes)",
+      "note": "Confirmed stale: regulations.json threshold id 'task_order_protest_dod' is $35,000,000 (confidence verified), and the bank answer's own '$25M' carries a '(threshold updated - see Thresholds)' marker. The item is clean of it - the stem says 'Apart from the dollar threshold for Department of Defense orders', no option or why states a figure, and distractor 1's why refers to 'the order value threshold' without a number. That was the right call and it survives review. The separate problem found here was not the number but the wording of the non-numeric ground itself; see changes."
+    },
+    {
+      "qid": "Q0276",
+      "flag": "thin source",
+      "finding": "keep",
+      "note": "The source answer is one line: 'Also need to consider the approval requirements for this size...Can't use simplified acquisition, must create source selection plan.' Every clause of the correct option traces to it - simplified acquisition unavailable at this value, a source selection plan required, approval requirements for an action this size to be considered - and the only addition, that those approvals bear on the schedule, answers the source question's own third part ('What is your timeline looking like?') and is hedged with 'confirm those approval levels with C&P'. No approval level, office, form or procedure is stated. Independently checked: at an $11 million IGE, simplified procedures are unavailable on any route - regulations.json 'sat' is $350,000 and 'sap_commercial_ceiling' is $9,000,000, both verified - so distractor 2's why ('Commercial or not, simplified procedures cannot be used at this dollar value') is true and not merely asserted. Thin but fair; kept."
+    }
+  ],
+  "korea_and_germany_check": {
+    "items": ["Q0276", "K101", "K102", "K103", "K104", "K105", "K106", "K107", "K108", "K109", "K110", "K201", "K204", "K205", "K207", "K210", "Q0279", "Q0280", "Q0281"],
+    "offices_forms_and_procedures": "Every USFK, LCS, SOFA and ABG-75 proper noun in the file traces to its own source answer: USFK J4, ROK MND, the USFK LCS program manager, USFK/FKAQ, ODASA(P), the 411th CSB LCS SOP, the offshore/local materials memo and its January 2022 change, SOFA Article XV and Article XVI, USFKI 4901.01, the USFK SOFA IC/TR contract clause, and on the Germany side the ABG5 and ABG5a change order documents, the Bauamt, DPW and the IMCOM-E ABG-75 representative. No form number is invented anywhere - K107's source explicitly says 'I do not invent a form number' and the item keeps to that, asking only who makes the contract-level request. The one FAR form that appears (SF 30 in a Q0280 distractor) is used to say that ABG-75 changes do not run on it, which is what the answer implies.",
+    "thresholds": "No Korea-specific or Germany-specific dollar threshold is stated anywhere. The only figures in the Korea items are scenario values from the questions themselves and the U.S. thresholds in K105 and K201, all of which were checked against regulations.json: MPT $15,000 ('mpt', verified), SAT $350,000 ('sat', verified), contingency OCONUS MPT $40,000 ('mpt_contingency_oconus', verified) and SAT $2,000,000 ('sat_contingency_oconus', verified), and the $9,000,000 commercial simplified ceiling ('sap_commercial_ceiling', verified). K105's '$10 million' is the DoD Source Selection Procedures applicability point stated in that question's own answer, not a FAR threshold.",
+    "hedges": "Where the source answer hedges, the item hedges. K101, K102, K103, K105, K106, K107, K108, K110, K201, K205, K207, K210 and Q0276 all carry 'confirm ... with C&P' (and where the answer routes it that way, with J4 or legal as well) in the cite line, which is the only field this object shape allows; K105 and Q0276 additionally carry the hedge inside the correct option ('confirm the SSA level with C&P', 'confirm those approval levels with C&P') because that is where the source puts it. Q0279 carries the IMCOM-E ABG-75 representative hedge and Q0280 now carries a 409th CSB hedge. No hedged statement was promoted into a firm option: the firm statements in the correct options are the ones the answers state firmly - LCS is ROK money held by MND, MND approves, awards and pays, the 411th KO recommends award, competition is limited to Korean firms, O&M and LCS cannot share a solicitation, Article XV reaches persons ordinarily resident in the United States, and a 411th KO cannot terminate an MND contract.",
+    "q0281_no_hedge": "Q0281 (why to fully document the contract file) carries no local-verification hedge and needs none: the answer states four general reasons - continuity for a successor, compliance with law and regulation, defensibility to the Army or the German government, and protection of the Army's interests in litigation - and the item asserts no ABG-75 procedure. The parent question still needs its verify-locally flag on merge."
+  },
+  "verified_no_change": [
+    {"qid": "Q0154", "note": "Cite 'RFO FAR 16.508 (protests of orders; legacy FAR 16.505(a)(10))' verified without a fetch. regulations.json's crosswalk carries FAR 16.505 -> FAR 16.507 (verified) and does not reach 16.508, but content/out/regulations_map.json, built off the RFO part pages on acquisition.gov on 14 Sep 2026, records for Part 16 that 'the RFO moved multiple-award ordering procedures from 16.505 to 16.507, put the exceptions to fair opportunity at 16.507-6(b), and created a standalone 16.508 for protests of orders', and lists FAR 16.508 'Protests of orders' as a key section. The bank's citations_rfo for this question is exactly ['FAR 16.508']."},
+    {"qid": "Q0092", "note": "Cite is a subset of the bank's citations_rfo (33.205-1, 33.205-6, 41 U.S.C. 7103). The RFO 33.205 claims series is confirmed in regulations_map.json (FAR 33.205 'Postaward (claims)') and by the crosswalk entry FAR 33.208 -> FAR 33.205-3 (verified). Six years from accrual, the shorter-period-by-agreement carve-out and the same limit running on Government claims all come from the answer's first paragraph; each distractor is a real number from the same answer used in the wrong place (90 days to the board, 12 months to the COFC, 60 days for the KO's decision), which is the trap the source itself sets up."},
+    {"qid": "Q0141", "note": "Cite 'RFO FAR 15.104; 15.202; 15.204; 15.205' is drawn from the bank's citations_rfo and every number is verified in the crosswalk as an RFO destination: 15.304 -> 15.104, 15.305 -> 15.202, 15.306 -> 15.204, 15.308 -> 15.205, all confidence verified, and regulations_map.json lists 15.104, 15.204 and 15.205 as RFO Part 15 key sections. The four cites also match the four options (evaluation factors, proposal evaluation, discussions, source selection decision). The correct option is the source answer's own worked example, stopped verbatim."},
+    {"qid": "Q0220", "note": "Cite 'RFO FAR 33.105-2; 31 U.S.C. 3553' is from the bank's citations_rfo; the crosswalk carries FAR 33.104 -> FAR 33.105 (verified) and regulations_map.json lists FAR 33.105 'Protests to GAO' with the stay timelines, so the 33.105-2 subsection is inside a verified RFO destination. Both statutory elements of the preaward exception (urgent and compelling circumstances significantly affecting the interests of the United States, and award likely within 30 days) and the nondelegable HCA level are in the answer's key point 2 verbatim, and distractor 1's why correctly places 'best interests' as a postaward-only ground."},
+    {"qid": "Q0213", "note": "Cite is 'FAR 15.407; FAR 15.408', exactly as the bank stores citations_rfo, without an 'RFO' prefix the bank does not use for this question. The bank has already done the conversion for the first one: its legacy citations list is ['FAR 15.405'] and the crosswalk carries FAR 15.405 -> FAR 15.407 (verified, 'Price negotiation'). FAR 15.408 appears nowhere in the crosswalk in either direction, so it cannot be confirmed as an RFO destination from local sources; it is left exactly as stored rather than converted or dropped, since the rule is to use the question's citations and never to invent a number. Flagged below for the orchestrator."},
+    {"qid": "Q0184", "note": "The Army OT approval bands are quoted from the answer without change and the item scopes them correctly ('Under the Army's delegation of approval authority'). A $75 million action falls in the HCA band (greater than $50M to $100M) and the three distractors are the three adjacent bands, each wrong for the reason its why states. Difficulty 3 is right for a banded-number item."},
+    {"qid": "Q0162", "note": "Cite (10 U.S.C. 4021, 4022; 31 U.S.C. 6303; DoD Other Transactions Guide (2023)) is a subset of the bank's citations. The correct option is the answer's defining sentence. Distractor 4 ('fiscal law and procurement integrity do not reach an OT either') is refuted by the answer's own closing paragraph, which is the strongest wrong option in the item."},
+    {"qid": "Q0183", "note": "Cite uses the bank's citations_rfo (4021, 4022, 4022(f)) rather than the legacy citations (2371, 2371b). regulations_map.json's OTA framework records 2371 and 2371b as 'do not cite the old number', so using citations_rfo is right. Flexible, legally binding and three types is the answer verbatim."},
+    {"qid": "Q0185", "note": "Cite 'DoDGARs 21.440; Army Warranting Program v7 para 4.2' is the answer's own Cite line, kept as stored. The correct option is the DoDGARs selection standard quoted in the answer, including the tail that ties the complexity and dollar value assigned to the same attributes, which is what makes distractor 1 (a course count and time in the seat) wrong."},
+    {"qid": "Q0168", "note": "The three responsibilities are the answer's (a), (b) and (c) verbatim in substance. The cite names DoDGARs (32 CFR chapter I subchapter C) for a question whose bank citations are empty; this follows the convention already accepted in mcq_4 for Q0225, Q0227, Q0164, Q0166 and Q0167 and is not an invented section number. See the open note on DoDGARs numbering."},
+    {"qid": "Q0176, Q0178, Q0179, Q0214", "note": "Four more items whose bank citations are empty and whose cite names the governing document plus the board answer ('DoD Other Transactions Guide; official CORB board answer QXXXX', and for Q0214 'DoD Source Selection Procedures', which the answer itself quotes as 'DOD source selection guide states'). Same accepted convention; no invented numbers. Q0178's distractor 3 (a library of prior OTs and approved models) is the direct negative of the answer's own instruction not to merely copy previously issued agreements, templates or models, which makes it the best distractor in the set."},
+    {"qid": "Q0100", "note": "Built from one challenge (speed against discipline) of a four-challenge experience answer, which is legitimate: the stem restates that challenge and every element of the correct option - contingency thresholds and quicker methods, a written determination and a fair and reasonable price memo on every action, the weekly requirements meeting with the J4 and unit S4s, ratification of the unauthorized commitments - is in the answer's Challenge 2 paragraph. Cite is a subset of the bank's citations_rfo. The crosswalk confirms FAR 18.2 -> FAR 18.001, FAR 1.602-3 -> FAR 1.405, FAR 6.302-2 -> FAR 6.103-2 and FAR 9.104-1 unchanged, all verified."},
+    {"qid": "K104", "note": "The correct option is firm where the source is firm - this is the one Korea answer that says 'this one I can answer without checking a local SOP' - so no hedge was needed or added. The two contradictory competition requirements are stated exactly as the answer states them, and no SAT figure is quoted even though the answer contains one."},
+    {"qid": "K201", "note": "The only item in the file that quotes standard and contingency thresholds, and all four figures check out against regulations.json as verified. The correct option keeps the conditional structure of the source (the elevated figures exist but require a head-of-agency determination) and routes the candidate to C&P rather than asserting whether anything was issued for the exercise."},
+    {"qid": "K205", "note": "The correct option carries both halves of the source's answer and preserves its hedge - the no-GAO-jurisdiction position over an MND award is stated as a position 'confirmed with legal', which is how the source states it, not as settled law."},
+    {"qid": "K207", "note": "Built on the lowest-confidence source in the batch (answer_status ai-draft, confidence low), and the item is correspondingly narrow: it asserts only what the LCS structure makes certain (MND is the contracting party, so a 411th cure notice or termination has no effect; build the record and drive it through J4) and sends the procedural detail to C&P in the cite. Distractor 2's why does not say the FAR remedies are wrong in general, only that they are U.S.-contract remedies, which is the right distinction."}
+  ],
+  "open_notes_for_the_orchestrator": [
+    "Option-length tell, corpus-wide and not specific to this file. In mcq_6 the correct option is the longest of the four in 37 of 38 items and averages 1.84 times the mean distractor length. Measured for comparison: mcq_1 69% / 1.58, mcq_2 98% / 2.15, mcq_3 90% / 2.31, mcq_4 78% / 1.81, mcq_5 94% / 1.68, and the 260 items already merged into src/data/mcq.json 82% / 1.84. A candidate who always picks the longest option scores far above chance on the Quiz page and the Boss Board. This file is at the corpus average, so nothing was rewritten here - trimming mcq_6's correct options alone would make it inconsistent with the merged bank and would risk cutting the 'confirm with C&P' hedges out of the Korea items, which are part of why those options run long. The fix belongs at corpus level and should lengthen distractors rather than shorten correct options.",
+    "Ten items in this file are built on bank answers whose answer_status is ai-draft (Q0092, Q0100, Q0141, Q0220, K101 through K110, K201, K204, K205, K207, K210 - fourteen Korea items plus four others). Fourteen of those also carry korea-verify-cp and verify-locally, and Q0276, Q0279, Q0280 and Q0281 carry verify-locally. The mcq object shape in CONTRACT.md section 3 has no flags field, so the merge into questions.json must keep each parent question's flags and confidence so the app renders the ai-drafted and verify-locally badges. K207's parent is confidence low; the item is narrow enough for that, but the badge matters.",
+    "Q0213's cite keeps 'FAR 15.408' exactly as the bank stores it in citations_rfo. That number is not in the regulations.json crosswalk in either direction, so it could not be confirmed as an RFO destination from local sources, and it was left alone rather than converted (the bank's own legacy citations list for this question is ['FAR 15.405'], which the crosswalk maps to FAR 15.407, so the first of the pair is already converted and the second may be a legacy number carried forward from the study material). Worth a verifier pass on the RFO Part 15 page before merge.",
+    "Q0168's cite uses 'DoDGARs (32 CFR chapter I subchapter C)'. regulations.json's own notes caution that 'the DoDGARs have been in transition between 32 CFR Chapter I Subchapter C and 2 CFR; 32 CFR Parts 3, 22 and 37 are listed here at medium confidence and should be confirmed before citing.' The same framing is already in four merged mcq_4 items, so this is a bank-wide currency question rather than an item defect, but a single verifier pass over the DoDGARs cites would settle it for all of them.",
+    "Q0185's cite says 'Army Warranting Program v7 para 4.2' because that is what the bank answer's Cite line says. The current policy per docs/AGENT_BRIEF.md and regulations.json is Army Warranting Program Policy v12 (MAR 2026). The cite was not changed, since the rule is to use the question's citations, but the parent answer is carrying a stale policy version."
+  ],
+  "source_answers_found_internally_inconsistent": [
+    {
+      "qid": "Q0154",
+      "problem": "Two problems in one short answer. First, it states GAO's non-numeric ground as an action that 'increases the scope, period, or maximum value of the order', where Q0220's answer and key points in the same domain say 'the scope, period or maximum value of the contract', citing 10 U.S.C. 3406(f). An order cannot exceed its own maximum value, so Q0154's version does not describe a real ground. Second, the dollar figure is stale: the answer says '$25M' with a '(threshold updated - see Thresholds)' marker, while regulations.json 'task_order_protest_dod' is $35,000,000 at confidence verified. The quiz item has been corrected on the first point and never stated the second, but the bank answer itself needs both fixed.",
+      "action_taken": "Item corrected in mcq_6.json only. questions.json not edited."
+    },
+    {
+      "qid": "Q0065",
+      "problem": "The stored answer is damaged: the three bullets have collapsed into a single run-on line, and the text ends mid-word ('they will now negotiate with this knowledg'). It also refers to 'the credibility of the Air Force Negotiation Team' in a question whose scenario is a USACE negotiation - a copy-paste artifact from the original source. The alt_answers entry from pam-csv-legacy has the bullets intact and the same truncated last word, so the bullet damage is in the main answer field only.",
+      "action_taken": "None. The item was built from the intact substance and does not repeat the Air Force reference."
+    },
+    {
+      "qid": "Q0180",
+      "problem": "The answer ends at 'OT D&Fs, prepared in accordance with section 4022(a)(2)(A) and (8) are processed as follows:' - the processing list that sentence introduces is missing entirely.",
+      "action_taken": "None. The item uses only the intact coordination sentence."
+    },
+    {
+      "qid": "Q0182",
+      "problem": "The Cost and Technical risk sections each carry their lettered guidance questions; the Schedule section ends after its lead sentence, so its guidance items are missing.",
+      "action_taken": "None. The item does not depend on the missing text."
+    },
+    {
+      "qid": "Q0276",
+      "problem": "The whole answer is one sentence fragment beginning mid-thought: 'Also need to consider the approval requirements for this size...Can't use simplified acquisition, must create source selection plan.' It answers only the second of the source question's three parts and leaves the procurement process and the timeline unanswered.",
+      "action_taken": "None. The item was narrowed to what the fragment supports and hedged to C&P; it is fair, but the parent answer should be rewritten."
+    },
+    {
+      "qid": "Q0162 against Q0184",
+      "problem": "Two different OT approval regimes are stated in the bank without either saying which it is describing. Q0162 gives the statutory 10 U.S.C. 4022 levels ('above $100 million the head of the contracting activity or agency director; above $500 million the senior procurement executive plus 30 days notice to Congress'); Q0184 gives the Army delegation ('Up to $50M SCO; greater than $50M to $100M HCA; greater than $100M to $500M SPE (ASA(ALT)); greater than $500M USD(A&S or R&E)'). At $100M to $500M they name different approvers. Both may be correct for their own regime, but a candidate reading both will see a contradiction.",
+      "action_taken": "None to questions.json. The mcq_6 items are safe: Q0184's stem scopes the question to 'the Army's delegation of approval authority' and the Q0162 item uses no approval figures at all. A one-line scoping sentence in each parent answer would remove the clash."
+    }
+  ],
+  "fetches": {
+    "acquisition_gov": "none required",
+    "reason": "Every RFO FAR and DFARS number cited in this file was resolved from local verified sources. regulations.json (verified_on 2026-09-13) covered 1.402-2, 1.405, 2.101, 6.103-2, 6.103-4, 9.104-1, 12.201-1, 12.304, 15.103, 15.104, 15.202, 15.204, 15.205, 15.407, 18.001, 33.104-3, 33.105, 49.607, DFARS 218.7001-2 and DFARS 225.770, plus every threshold quoted in the file. content/out/regulations_map.json (RFO part pages read on acquisition.gov 14 Sep 2026) covered the remainder: FAR 6.101, 16.508, 22.10, 25.1 / 25.7 / 25.8 / 25.10, 33.205 and its subsections, 33.105, 44.201-1, and the DFARS Part 206, 213, 215, 225 and 233 class deviations. FAR 15.408 is the one number not confirmed in either local source; it was left exactly as the bank stores it and is flagged for a verifier pass rather than changed. The remaining cites are statutes (10, 31 and 41 U.S.C.), 4 CFR, 29 CFR, 2 CFR and 32 CFR DoDGARs, the DoD FMR, the DoD Source Selection Procedures, the DoD Other Transactions Guide, AFARS, the Joint Ethics Regulation, the SOFA, USFKI 4901.01, USFK Reg 37-5, the Special Measures Agreement and ABG 75, none of which the RFO renumbers."
+  }
+}

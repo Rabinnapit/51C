@@ -1,0 +1,116 @@
+{
+ "reviewed_on": "2026-09-14",
+ "reviewer_model": "claude-opus-5",
+ "items": [
+  {
+   "id": "Q0016",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "Then distribute it and report it in SAM.gov contract award data, which replaced FPDS in February 2026 - any mod that changes previously reported data is reported regardless of dollar value (4.301(a)(1)(ii)).",
+     "after": "Sign the SF 30 (43.401) and report it in FPDS within three business days (4.301).",
+     "source": "RFO FAR 4.301(a)(1)(ii) and (f)(2)(ii) on the acquisition.gov RFO Part 4 page (last updated 28 Jul 2026): agencies report contract actions, including modifications that change previously reported data, to FPDS, and the contract action report is completed within three business days after award. Coordinator correction: GSA moved FPDS.gov public access into SAM.gov on 24 Feb 2026, but contract actions are still reported to the FPDS database."
+    },
+    {
+     "field": "answer",
+     "before": "Only a contracting officer acting within their authority - for me, my warrant - can execute a modification.",
+     "after": "Only a contracting officer acting within their authority executes a modification; no one else may direct work belonging on one (RFO FAR 43.202(a), 1.402-1). My warrant must cover the cumulative contract value including the modification.",
+     "source": "Army Warranting Program Policy v12 (Mar 2026), summary of changes and para 4.2: the warrant must be equal to or greater than the cumulative value of the contract including the modification (base, options, ceilings, plus the absolute value of the modification)."
+    },
+    {
+     "field": "answer",
+     "before": "Answer of 609 words with a five-bullet documentation list and practice points (contractor signs a bilateral first, dated exclusions check).",
+     "after": "Trimmed to under 300 words, keeping types and authorities, the Part 6 boundary, steps (scope, funds, exclusions, pricing and certified data, change order definitization and DFARS 243.370 limits, SF 30 and FPDS), the file contents and the cite line.",
+     "source": "300-word limit in the review task."
+    },
+    {
+     "field": "key_points[0]",
+     "before": "Only a KO acting within the scope of their authority (warrant) executes modifications, and no one else directs changed work (RFO FAR 43.202, 1.402-1); normally on SF 30 (43.401).",
+     "after": "Only a KO acting within the scope of their authority (warrant) executes modifications, and no one else directs changed work (RFO FAR 43.202, 1.402-1); the warrant must cover the cumulative contract value including the modification (Army Warranting Program Policy v12); normally on SF 30 (43.401).",
+     "source": "Army Warranting Program Policy v12, para 4.2."
+    },
+    {
+     "field": "key_points[4]",
+     "before": "... signed SF 30, SAM.gov report (4.301(a)(1)(ii)), all in VCE.",
+     "after": "... signed SF 30, FPDS contract action report within three business days (4.301), all in VCE.",
+     "source": "RFO FAR 4.301(a)(1)(ii), (f)(2)(ii)."
+    },
+    {
+     "field": "citations",
+     "before": "RFO FAR 4.301(a)(1)(ii); RFO FAR 15.403-2; no warranting policy citation.",
+     "after": "RFO FAR 4.301; 15.403-2 removed (no longer cited in the answer or key points); added Army Warranting Program Policy v12.",
+     "source": "Consistency with the revised answer."
+    },
+    {
+     "field": "confidence_reason",
+     "before": "Stated that sam.gov/fpds confirms contract writing systems now report through SAM.gov Contract Awards Management.",
+     "after": "States that RFO FAR 4.301 still names FPDS with a three-business-day report, records the coordinator's FPDS correction, and lists the legacy FAR and 2019 eCFR checks behind the crosswalk pairs.",
+     "source": "Sources listed in the new confidence_reason."
+    }
+   ],
+   "notes": "Confirmed on the RFO pages: 43.202(a)-(b) (only KOs execute modifications; price before execution or at least a ceiling); 43.201 administrative change; 43.203(a)-(b) bilateral and unilateral types; 43.204 notification of changes; 43.205(a) certification of funds; 43.301 and 43.305 change orders and Changes clauses; 43.304(a)-(c) two SF 30s, shortest practicable time, release; 43.401 SF 30; 6.001(c) in-scope modification exemption; 9.405-1(a)(2)(iii); 15.403-3(b)(3)(i) increases and decreases; 15.408-1 and 15.408-2; 17.204-1(b); 1.402-1; 1.405; 4.101; 52.212-4(d) Changes (written agreement of the parties). DFARS 243.370-1 to -4 in Class Deviation 2026-O0034 Rev. 1: unpriced change orders over $5 million, NTE, definitization by the earlier of 180 days after issuance or obligations over 50 percent of the NTE, 50 percent obligation limit rising to 75 percent after a timely qualifying proposal. AFARS 5104.101(a) (VCE) in the combined AFARS of 31 Aug 2026. Crosswalk pairs confirmed: legacy FAR 43.101-43.105 to 43.201-43.205, 43.201 to 43.301, 43.204 to 43.304, 43.205 to 43.305, 43.301 to 43.401 (legacy section titles match); 15.403-4(a)(1)(iii) to 15.403-3(b)(3) (legacy text); 17.207(c) to 17.204-1(b) and 52.212-4(c) to (d) (legacy text); 9.405-1(b) to 9.405-1(a)(2) (eCFR 1 Jun 2019 text: old (b) is the no-new-work rule; renumbered in Oct 2020, before the RFO); DFARS 243.204-70 to 243.370 (codified DFARS table of contents); 1.602-1, 1.602-3, 4.801-4.803, 6.302, 6.303, 15.403-1(b), 15.406-1, 15.406-3 and AFARS 5104.802(f) are verified crosswalk entries. verify-locally kept (local review routing). No answer teaches valuing a modification by itself; the cumulative-value rule is now stated."
+  },
+  {
+   "id": "Q0109",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "Defends the decision. In a protest, GAO and the Court of Federal Claims give the record made at the time far more weight than explanations written afterward, and in a claim the Government's case is built from the file.",
+     "after": "Defends the decision. In a protest, GAO gives little weight to new analyses prepared in the heat of the protest and credits later explanations only when they fit the record made at the time; in a claim, the Government's case is built from the file.",
+     "source": "GAO bid protest decisions on gao.gov applying Boeing Sikorsky Aircraft Support, B-277263.2, B-277263.3, Sept. 29, 1997 (little weight to reevaluations prepared in the heat of the adversarial process; post-protest explanations considered when credible and consistent with the contemporaneous record). The Court of Federal Claims point had no primary source and was removed."
+    },
+    {
+     "field": "answer",
+     "before": "Feeds everything downstream: the contract action report in SAM.gov, closeout under 4.308, audits and Procurement Management Reviews.",
+     "after": "Feeds everything downstream: the FPDS contract action report (4.301), closeout under 4.308, audits and reviews.",
+     "source": "RFO FAR 4.301 (still FPDS; coordinator FPDS correction). 'Procurement Management Reviews' does not appear in the combined AFARS or AFARS PGI of 31 Aug 2026, so the program name was removed."
+    },
+    {
+     "field": "answer",
+     "before": "Cite: RFO FAR 4.101, 1.402-1, 1.402-2, 4.308, 4.309; ...",
+     "after": "Cite: RFO FAR 4.101, 1.402-1, 1.402-2, 4.301, 4.308, 4.309; ...",
+     "source": "RFO FAR 4.301."
+    },
+    {
+     "field": "key_points[3]",
+     "before": "Defends protests and claims: the record made at the time outweighs after-the-fact explanations.",
+     "after": "Defends protests and claims: GAO gives little weight to post-protest reevaluations and credits later explanations only when consistent with the contemporaneous record (Boeing Sikorsky Aircraft Support, B-277263.2, 1997).",
+     "source": "GAO decisions on gao.gov citing Boeing Sikorsky Aircraft Support."
+    },
+    {
+     "field": "key_points[5]",
+     "before": "Feeds SAM.gov contract reporting, closeout (4.308), audits and PMRs; ...",
+     "after": "Feeds the FPDS contract action report (4.301), closeout (4.308), audits and reviews; ...",
+     "source": "RFO FAR 4.301."
+    },
+    {
+     "field": "citations",
+     "before": "No 4.301 citation.",
+     "after": "Added \"RFO FAR 4.301\".",
+     "source": "RFO FAR 4.301."
+    },
+    {
+     "field": "confidence_reason",
+     "before": "Described contract reporting as SAM.gov and the protest point as general practice without a case citation.",
+     "after": "Records the re-read sources, the FPDS correction, the Boeing Sikorsky basis, and the removal of the unsourced COFC and PMR references.",
+     "source": "Sources listed in the new confidence_reason."
+    }
+   ],
+   "notes": "Confirmed: RFO FAR 4.101(a)-(b)(1)-(4) purposes of the contract file; 44 U.S.C. 3101 records duty; RFO FAR 1.402-1 and 1.402-2(a)-(d); RFO FAR 4.309 Table 4-3 (contracts kept 6 years after final payment); 41 U.S.C. 7103(a)(4)(A) (claims within 6 years after accrual); RFO FAR 4.308 closeout; AFARS 5104.101(a) (VCE) in the combined AFARS of 31 Aug 2026. Crosswalk: legacy FAR 4.804 (Closeout of contract files) to 4.308 and 4.805 (Storage, handling, and contract files) to 4.309 confirmed by the legacy section titles; 4.801-4.803, 1.602-1, 1.602-2 and AFARS 5104.802(f) are verified crosswalk entries. Answer about 262 words."
+  }
+ ],
+ "other_files": [
+  {
+   "file": "src/data/questions.json",
+   "issue": "The bank entries for Q0016 and Q0109 still carry the pre-review answers: Q0016 says SAM.gov contract award data replaced FPDS in February 2026 and runs 609 words; Q0109 refers to the contract action report in SAM.gov, an unsourced Court of Federal Claims point and Army Procurement Management Reviews. Re-merge from content/out/open_drafts_5.json; not edited here."
+  }
+ ],
+ "summary": {
+  "checked": 2,
+  "fixed": 2,
+  "withdrawn": 0,
+  "unverifiable": []
+ }
+}

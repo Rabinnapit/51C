@@ -1,0 +1,187 @@
+{
+  "file": "content/out/open_drafts_1.json",
+  "reviewed_on": "2026-09-14",
+  "reviewer": "independent reviewer (AI)",
+  "checked": 13,
+  "corrected": 13,
+  "removed": 0,
+  "sources_used": [
+    "src/data/regulations.json verified crosswalk and thresholds (13 Sep 2026)",
+    "content/out/crosswalk_far_1_19.json, crosswalk_far_22_53_dfars.json, crosswalk_dfars_deviations.json (entry notes)",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-7",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-10",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-11",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-13",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-28",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33",
+    "https://www.acquisition.gov/far/32.703-2 (FAC 2026-01)",
+    "https://www.acquisition.gov/afars/subpart-5137.5-management-oversight-service-contracts (rev. 11 Jul 2025 - superseded, used to trace the old numbering)",
+    "https://www.acquisition.gov/afars/subpart-5104.8-government-contract-files (rev. 11 Jul 2025 - superseded, used for the PCF detail)",
+    "https://api.army.mil/e2/c/downloads/2026/07/07/995d7218/afars-combined-30jun2026.pdf (AFARS combined, Part 5104 rev. 30 Jun 2026, Part 5109 and Part 5137 rev. 4 Jun 2026; text extracted locally)",
+    "https://www.acq.osd.mil/dpap/dars/dfars_far_overhaul_class_deviations.html (RFO DFARS deviation index)",
+    "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-233/2026-O0026_Rev1_TAB_A_Class_Deviation.pdf (24 Aug 2026; text extracted locally)",
+    "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-207/2026-O0020_Rev_1_TAB_A_Deviation_Memo_USA002390-26.pdf (2 Sep 2026; text extracted locally)",
+    "https://www.dol.gov/agencies/owcp/dlhwc/FAQ/dbafaqs (Defense Base Act waiver conditions)",
+    "https://sam.gov/announcements/fpdsgov-decommissions-february-24-2026-0 and https://sam.gov/fpds (FPDS retirement; contract award data now in SAM.gov)"
+  ],
+  "items": [
+    {
+      "id": "Q0018",
+      "changes": [
+        "SAM registration cites sharpened to RFO FAR 4.203-1 (policy) and 4.208(b) (prescribes 52.204-7) after reading the RFO Part 4 page; crosswalk pairs updated to match",
+        "Exclusions check timing tied to RFO FAR 9.405(e)(1)/(e)(4) (after offers or quotes come in; immediately before award)",
+        "Separated the 9.405 bar (solicit/award/subcontract consent) from the 9.405-1 bar (new work, options, extensions) - the draft merged them into one sentence",
+        "Added that in the Army the agency-head compelling-reason determination is made by the Army SDO (AFARS 5109.405(a))",
+        "Added that SAM now holds contract award data (FPDS retired 24 Feb 2026); key points and citations updated"
+      ],
+      "removed": []
+    },
+    {
+      "id": "Q0035",
+      "changes": [
+        "Draft cited no AFARS section and said 'Army use of VCE PCF is directed by AFARS and ACC policy'; now cites AFARS 5104.101(a) (June 2026 revision: use VCE tools throughout; not for classified) and AFARS PGI 5104.101, with the pre-revision AFARS 5104.802(f) recorded as a crosswalk pair",
+        "'Standard document index' replaced with the Army Cabinet Index folder structure; added the rule that documents held in PIEE or the contract-reporting system of record are referenced rather than duplicated",
+        "Reporting reconciliation now refers to the contract action report in SAM.gov (FPDS-NG retired)",
+        "4.101 description aligned to the RFO text (comprehensive record of the transaction history); 4.308 / 4.309 confirmed on the RFO Part 4 page",
+        "confidence kept medium: AFARS PGI 5104.101 and the local PMR checklist were not read"
+      ],
+      "removed": []
+    },
+    {
+      "id": "Q0039",
+      "changes": [
+        "Suspension period corrected: the draft said 'twelve months, extendable to eighteen months if legal proceedings are initiated, and longer if DOJ requests it' - the rule (RFO FAR 9.407-4) is 12 months, one 6-month extension at an Assistant Attorney General's request, 18-month cap unless legal proceedings were initiated within that period",
+        "Added the paragraph-level cites now verified on the RFO Part 9 page: 9.406-3(d) preponderance, 9.406-4 period, 9.407-2(b) indictment/information as adequate evidence, 9.407-4 period",
+        "Added the Army referral path and decision authority: Procurement Fraud Branch processes and recommends to the Army SDO (AFARS 5109.402(c)); Army SDO makes the compelling-reason determination (AFARS 5109.405(a)); notification procedures at AFARS PGI 5109.406-3 / 5109.407-3",
+        "Clarified that 'proposed for debarment' exclusion runs from the SDO's notice"
+      ],
+      "removed": []
+    },
+    {
+      "id": "Q0080",
+      "changes": [
+        "COR appointment now cites RFO FAR 1.404 (stand-alone COR section) and DFARS 201.404-70; crosswalk pairs added",
+        "Market research cite made section-level (RFO FAR 10.001); contract action report in SAM.gov added to the award phase",
+        "No substantive process change; part-level cites verified against the project crosswalk"
+      ],
+      "removed": []
+    },
+    {
+      "id": "Q0084",
+      "changes": [
+        "'Federal Procurement Data System' replaced with SAM.gov contract award data (FPDS retired 24 Feb 2026); 'GSA schedules' made 'GSA Multiple Award Schedule'",
+        "RFO note expanded to what 10.001 actually requires (research before new requirements documents and before any solicitation or order above the SAT; industry exchanges within 3.104; minimum information from sources; documentation proportionate to the buy) - read on the RFO Part 10 page",
+        "Confirmed no enumerated technique list remains in RFO Part 10"
+      ],
+      "removed": []
+    },
+    {
+      "id": "Q0092",
+      "changes": [
+        "KO decision timing for claims of $100,000 or less corrected: 60 days only when the contractor requests a decision in that period, otherwise a reasonable time (RFO FAR 33.205-6)",
+        "Appeal-rights language made specific: 90 days to the board of contract appeals, 12 months to the Court of Federal Claims",
+        "33.205-1 through 33.205-9 titles confirmed on the RFO Part 33 page; old 33.212 was dropped, so the draft's 33.213 -> 33.205-7 pair stands"
+      ],
+      "removed": []
+    },
+    {
+      "id": "Q0098",
+      "changes": [
+        "Nonresponsibility rule restated in the RFO 9.103 wording ('without a clear indication of responsibility') and 9.103 added to the cites",
+        "Formal preaward surveys softened: RFO 9.106 is reserved, so information is obtained under 9.105-1; documentation cite made 9.105-2",
+        "FAPIIS reference updated to the responsibility/qualification record in SAM, mandatory above the SAT under 9.104-6",
+        "Certificate of Competency now cites RFO FAR 19.204 (old subpart 19.6) - read on the RFO Part 19 page; crosswalk pairs added"
+      ],
+      "removed": []
+    },
+    {
+      "id": "Q0139",
+      "changes": [
+        "Unfunded-start example corrected: the draft offered an 'undefinitized action' as a lawful option for starting before funds are available; a UCA still requires funds obligated at award. Replaced with an award conditioned on availability of funds (RFO FAR 32.703-2, clause 52.232-18: fiscal-year O&M / continuing services, no work accepted until the KO notifies funds availability); cites and key point updated",
+        "All other FAR cites re-confirmed as verified crosswalk pairs"
+      ],
+      "removed": []
+    },
+    {
+      "id": "Q0145",
+      "changes": [
+        "AFARS cites replaced: the draft used AFARS 5137.590-2/-3/-4/-6 (acquisition.gov page rev. 11 Jul 2025) and asserted the RFO does not change AFARS numbering. The Army reissued AFARS Part 5137 on 4 Jun 2026; the services oversight text is now 5137.890-1 (applicability, special interest), 5137.890-2 (review thresholds via Appendix GG; approval before final solicitation release; DFARS 201.170 / AFARS 5101.170 peer review), 5137.890-3 (review procedures; routing to the addressee at AFARS PGI 5101.290(b)(4)), 5137.890-4 (independent management reviews); strategy content moved to AFARS PGI 5137.890-4. Crosswalk pairs recorded",
+        "Special-interest designators stated as the AFARS text has them (USD(AT&L), ASA(ALT), DASA(P), Senior Services Manager) with a note that the OSD office is now USD(A&S)",
+        "Added the task-order rule (no separate strategy when issued consistent with the decision authority's conditions) and the AR 70-13 reference from 5137.890-1 / 5137.503",
+        "'AFARS appendix' made specific (Appendix GG); 'Chief, Policy and Compliance' (not a documented role) replaced with 'policy branch - at the 411th, the Chief, C&P'",
+        "confidence kept medium: Appendix GG, AFARS PGI 5137.890-4 and PGI 5101.290(b)(4) were not fetched; no dollar tiers are stated"
+      ],
+      "removed": []
+    },
+    {
+      "id": "Q0156",
+      "changes": [
+        "Waiver description corrected to RFO FAR 28.305 wording: Secretary of Labor waives, on the agency head's recommendation, for a contract, subcontract, work location or classification of employees (the draft said 'a specified class of employees or contracts in a specified country')",
+        "Waiver exclusions completed from DOL guidance: never U.S. citizens, U.S. legal residents, or persons hired in the United States (the draft omitted the hired-in-the-U.S. exclusion); waiver valid only if local-law workers' compensation benefits are provided",
+        "Coverage restated to the 42 U.S.C. 1651 categories (U.S. bases overseas and U.S.-used lands outside the continental U.S.; public work including service contracts; Foreign Assistance Act; welfare services)",
+        "28.309(a)/(b) prescriptions confirmed on the RFO Part 28 page; confidence raised to high with the country-waiver status still flagged verify-locally"
+      ],
+      "removed": []
+    },
+    {
+      "id": "Q0215",
+      "changes": [
+        "Substantial bundling defined with the DoD figure ($8 million or more including options, 7.107-1(b)(3)) instead of 'the agency's published dollar threshold'",
+        "Added the 7.107-1(a) preconditions (market research, alternatives, OSBP coordination, small business impact and inclusion) and the 7.107-2(e) mission-critical exception (SPE only, non-delegable in DoD)",
+        "Section mapping made exact: triggers at 7.107-1(b); SPE/CAO at 7.107-2(a); benefit test at 7.107-2(c)(3); administrative-cost rule at 7.107-2(d); justification to SBA on request at 7.107-2(b)",
+        "Notifications completed: 30-day notice to incumbent small businesses and publication of the determination in SAM.gov (7.107-3); 52.207-6 above the substantial bundling threshold (7.107-4); DoD 30-day SAM.gov notice of intent to bundle at DFARS 207.107-370 (RFO Class Deviation 2026-O0020 Rev. 1)",
+        "confidence_reason corrected: the RFO DFARS Part 207 deviation has no DoD consolidation-approval section (legacy 207.170 is now public-private competitions)"
+      ],
+      "removed": []
+    },
+    {
+      "id": "Q0220",
+      "changes": [
+        "Preaward override corrected: the draft allowed 'a level above the contracting officer - in DoD, the HCA or designee' on 'urgent and compelling' OR 'best interests'. RFO FAR 33.105-2 requires the HCA on a nondelegable basis, finding urgent and compelling circumstances AND that award is likely within 30 days; best interests is not a preaward ground",
+        "Postaward override corrected to the HCA, nondelegable (RFO FAR 33.105-3)",
+        "DoD stay windows added from RFO DFARS 233.105-70 (Class Deviation 2026-O0026 Rev. 1, 24 Aug 2026): 10 days after award; 10 days after an order over $35 million; 5 days after an offered debriefing date regardless of rejection; 5 days after an enhanced postaward debriefing concludes",
+        "Added DoD-specific steps: log the protest in the PIEE Protest Tracker and brief DPCAP within 10 days for protested acquisitions of $1 billion or more (DFARS 233.170)",
+        "Added the 60-day implementation / 5-day HCA report to GAO (RFO FAR 33.105-4) and pinned the 30-day report and 100-day / 65-day decision periods to 4 CFR 21.3, 21.9, 21.10; costs to 4 CFR 21.8",
+        "Order-protest paragraph now states that GAO has exclusive jurisdiction over the $35 million ground (10 U.S.C. 3406(f)(2)); citations and crosswalk (DFARS 233.104(c) -> 233.105-70) updated"
+      ],
+      "removed": []
+    },
+    {
+      "id": "Q0278",
+      "changes": [
+        "Threshold values stated ($15,000 MPT; $350,000 SAT, verified on FAR 2.101 FAC 2026-01 and the RFO Part 2 page) and the answer now says explicitly that Part 6 and the J&A approval tables do not apply below the SAT (RFO FAR 6.001)",
+        "Commercial vs noncommercial paths made regulation-specific: 12.201-1 RFQ/purchase order with a 12.102(a) record that only one source is available; 13.101(b) determination and findings for noncommercial; 11.204 showing for a brand-name description",
+        "Publicizing step added - the draft had none: a sole source under 6.103-1 is not exempt from the SAM.gov notice (5.101(b)(2)); post the RFQ or notice of intent with the redacted justification (5.201(c)(3)). The RFO 5.101(a) dollar figure read as $20,000 (legacy $25,000) and is therefore not stated",
+        "Small business paragraph corrected for Korea: RFO FAR 19.000(b) makes Part 19 mandatory in the U.S. and outlying areas and discretionary overseas, so the set-aside decision follows 411th practice and is documented under 19.104-1(b)(1) - flagged korea-verify-cp",
+        "'FPDS and the contract directory' replaced with SAM.gov contract award data; 'Chief, Policy and Compliance' replaced with 'Chief, C&P'; COR appointment cited to RFO FAR 1.404 / DFARS 201.404-70; exclusions check cited to 9.405(e)",
+        "Korea overlay tightened to what the project sources support (Defense Base Act unless a DOL waiver applies; SOFA Invited Contractor status through USFK; base access; Korean labor law; Korean service agent or host-nation program) with confirmation through C&P and counsel"
+      ],
+      "removed": []
+    }
+  ],
+  "unverified": [
+    "AFARS Appendix GG dollar tiers and delegations for services acquisition strategies (Q0145) - not fetched; the answer deliberately states no tiers",
+    "AFARS PGI 5137.890-4 (strategy content) and PGI 5101.290(b)(4) (routing addressee) - the content list in Q0145 is carried from the superseded AFARS 5137.590-6",
+    "AFARS PGI 5104.101 - the PCF detail in Q0035 (PCF module, Army Cabinet Index, PIEE/FPDS-NG system-of-record rule) was read from the superseded AFARS 5104.802(f) text on acquisition.gov and is presumed to have moved into the PGI",
+    "RFO FAR 5.101(a) notice threshold - the RFO Part 5 page read as $20,000 on two fetches; legacy 5.101(a)(1) is $25,000; not stated in any answer",
+    "Department of Labor Defense Base Act waiver status for the Republic of Korea (Q0156, Q0278) - not checked",
+    "The 'contracts awarded on or after 1 October 1995' sentence in Q0092 - legacy 33.206(a) wording, not re-quoted from the RFO 33.205-1 text",
+    "Legacy DFARS 205.205-70 as the origin of the bundling notice now at 207.107-370 (Q0215 crosswalk) - inferred from the deviation memo's 'relocates bundling notification criteria from DFARS part 205'",
+    "411th CSB local review routing, set-aside practice in the ROK, and SOFA Invited Contractor processing (Q0278) - not in the project sources; korea-verify-cp"
+  ],
+  "cross_cutting": [
+    "Every item keeps flags ['ai-drafted']. Q0035, Q0145 and Q0156 carry verify-locally; Q0278 (411th CSB scenario) carries verify-locally and korea-verify-cp. The other nine are generic ACC-All items with no organization- or Korea-specific content.",
+    "Systemic finding: the Army reissued the AFARS for the RFO (Part 5104 revised 30 Jun 2026; Parts 5109 and 5137 revised 4 Jun 2026; combined PDF on army.mil). acquisition.gov still serves the 11 Jul 2025 AFARS. Two drafts (Q0035, Q0145) cited the old numbering and Q0145 asserted 'the RFO does not change AFARS numbering'. Recommend adding AFARS 5104.802(f) -> 5104.101(a)/PGI 5104.101 and AFARS 5137.590-x -> 5137.890-x to src/data/regulations.json crosswalk, and re-checking every other AFARS cite in the bank against the June 2026 PDF.",
+    "Second systemic finding: FPDS.gov was retired on 24 Feb 2026 and contract award data now lives in SAM.gov; three drafts (Q0035, Q0084, Q0278) still named FPDS as a live system. Other batches should be grepped for 'FPDS'.",
+    "Two substantive legal errors were fixed: Q0220's preaward GAO-protest override (no 'best interests' ground; HCA nondelegable; award-within-30-days finding) and Q0039's suspension-period rule (18 months is the AAG-extended cap, not a consequence of legal proceedings). One misleading option was removed from Q0139 (a UCA does not cure unavailable funds).",
+    "Invented role name 'Chief, Policy and Compliance' appeared in Q0145 and Q0278; replaced with the brief's role descriptor 'Chief, C&P'. No local thresholds, names or emails were found.",
+    "src/data/questions.json already contains merged copies of these thirteen items with the pre-review text; the orchestrator should re-merge from this corrected file. No other file was edited."
+  ]
+}

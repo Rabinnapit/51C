@@ -18,6 +18,24 @@
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "8792", "--directory", "dist"],
       "port": 8792
+    },
+    {
+      "name": "boardready-dev",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8793", "--directory", "boardready/src"],
+      "port": 8793
+    },
+    {
+      "name": "boardready-dist",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8794", "--directory", "boardready/dist"],
+      "port": 8794
+    },
+    {
+      "name": "boardready-site",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8795", "--directory", "docs/boardready"],
+      "port": 8795
     }
   ]
 }

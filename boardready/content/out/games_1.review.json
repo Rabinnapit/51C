@@ -1,0 +1,65 @@
+{
+ "file": "content/out/games_1.json",
+ "reviewer": "independent review agent",
+ "reviewed_on": "2026-09-14",
+ "sets_reviewed": [
+  "threshold_ladder (40 items)",
+  "fiscal_sort (36 items)"
+ ],
+ "items_in": 76,
+ "items_out": 76,
+ "items_corrected": 4,
+ "items_removed": 0,
+ "method": [
+  "Recomputed every threshold_ladder value_number by hand from the stated facts (base plus all priced options, absolute value of a modification, anticipated or actual ceiling) and re-derived correct_class and the covering tier from Army Warranting Program Policy v12 Table 1 (I = SAT; II = $500K/$1M/$5M/SaP; III = $10M/$25M/$50M/$100M; IV = $250M/$500M/Unlimited) using the greater-than-or-equal-to rule. All 40 arithmetic results and all 40 class assignments were reproduced independently and matched.",
+  "Checked every dollar threshold quoted in prose against the verified table in src/data/regulations.json: MPT $15,000; SAT $350,000; contingency SAT OCONUS $2,000,000; SaP ceiling $9,000,000 ($15,000,000 contingency); GPC overseas commercial limit $25,000 (DFARS 213.301); fair-opportunity enhanced tier $7,500,000; DoD task-order protest floor $35,000,000 (10 U.S.C. 3406(f)(1)(B)); CAS full coverage / Disclosure Statement $100,000,000; FAR Table 6-1 KO certification $900,000; DFARS Table 206-1 KO tier $10,000,000. Every quoted figure matched.",
+  "Checked every FAR/DFARS clause number against the verified crosswalk in src/data/regulations.json (1.402-1, 1.402-2, 1.405, 2.101, 3.104, 6.103-2, 6.104-2(b), 12.102, 12.201-1, 12.304, 13, 16.506/16.507, 17.204-1, 43.301, 49, 49.607, 52.232-22, 52.243-1, DFARS 201.404-70, DFARS 206.104-71, DFARS 213.301).",
+  "Fetched acquisition.gov only for the two areas the crosswalk does not cover: the RFO Part 13 deviation guide (BPA section number and the noncommercial scope of Part 13) and the RFO Part 32 deviation guide (32.702, 32.703-2, 32.703-3 and 32.907 confirmed unchanged from legacy numbering).",
+  "Checked every fiscal_sort statutory cite (31 U.S.C. 1301(a), 1304, 1341, 1342, 1351, 1501(a), 1502(a), 1517, 1535, 1552(a), 1553(a)-(b), 3302(b); 10 U.S.C. 2801-2805, 3133; 41 U.S.C. 7108(c); 5 U.S.C. 4503) and re-derived each bucket (Purpose / Time / Amount / No violation) from the stated facts, including recomputing every fiscal-year date calculation (FY start/end, period-of-performance start year, expired vs. closed accounts). All 36 bucket assignments were confirmed.",
+  "Node-graph check: NOT APPLICABLE to this file. games_1.json contains only threshold_ladder and fiscal_sort - both flat arrays of independent items with no nodes, no start node and no next pointers. The branching node graphs live in games.branching and the scenarios cases produced by other tasks, not here. No start-node, next-resolution or terminal-reachability defect could exist in this file and none was found.",
+  "Structural check: valid UTF-8 JSON after edit; two top-level keys; item keys match the shape already in src/data/games.json (threshold_ladder: id/label/facts/value_number/correct_class/explanation; fiscal_sort: id/statement/bucket/explanation/cite); ids TL01-TL40 and FS01-FS36 present, sequential and unique."
+ ],
+ "changes": [
+  {
+   "id": "TL32",
+   "action": "corrected",
+   "what": "board point and cite line - justification approval tier",
+   "why": "The item said $2.9 million sits 'within the contracting officer's certification tier under both the governmentwide FAR table and the DoD table'. That is wrong on the FAR side: RFO FAR 6.104-2(b) Table 6-1 caps the contracting officer certification tier at $900,000, and only DFARS 206.104-71 Table 206-1 (DoD Class Deviation 2026-O0017 Rev. 2) runs the KO tier to $10,000,000. A candidate who repeated this at a board would be corrected. Rewrote the board point to name both tables correctly, said that Army follows the DoD table, and added the two table cites. Class and value_number unchanged (Class II, $2,900,000).",
+   "before": "Board point: the warrant question and the justification question are separate approvals and both have to be satisfied. At $2.9 million the justification for other than full and open competition is within the contracting officer's certification tier under both the governmentwide FAR table and the DoD table, but urgency does not excuse the warrant."
+  },
+  {
+   "id": "TL09",
+   "action": "corrected",
+   "what": "ordering-procedures cite and one garbled sentence",
+   "why": "The item is a delivery order under a SINGLE-award IDIQ but cited 'RFO FAR 16.507 (ordering procedures)'. Per the verified crosswalk note, the RFO split legacy FAR 16.505: general order content and scope rules are at 16.506, while 16.507 is the fair-opportunity procedure for MULTIPLE-award contracts and does not apply here. Repointed the cite to 16.506 with a note on what 16.507 actually covers. Also fixed 'if orders on the order had priced options', which was garbled, to 'if the order itself carried priced options'. Class and value_number unchanged (Class II, $3,800,000).",
+   "before": "Cite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 16.507 (ordering procedures)."
+  },
+  {
+   "id": "TL11",
+   "action": "corrected",
+   "what": "BPA cite",
+   "why": "Cited a bare 'RFO FAR 13 (simplified procedures, blanket purchase agreements)'. Confirmed on the acquisition.gov RFO Part 13 deviation guide that Part 13 now covers NONCOMMERCIAL acquisitions at or below the SAT and that BPAs are addressed at 13.201, which also states that no individual purchase under a BPA may exceed the SAT - a rule that directly supports this item's $88,000 call. Pinned the cite to 13.201, added that rule, and flagged that a commercial BPA runs under Part 12 procedures. Class and value_number unchanged (Class I, $88,000).",
+   "before": "Cite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 13 (simplified procedures, blanket purchase agreements)."
+  },
+  {
+   "id": "FS13",
+   "action": "corrected",
+   "what": "reporting statute in the cite line",
+   "why": "The scenario is an obligation exceeding a formal administrative subdivision of funds, correctly bucketed Amount and correctly cited to 31 U.S.C. 1517(a). The cite then listed 31 U.S.C. 1351 as the reporting provision. 1351 is the reporting provision for violations of 1341 and 1342; a 1517(a) violation is reported under 1517(b). Replaced 1351 with 1517(b) and kept a parenthetical explaining the distinction, because the explanation tells the candidate the violation 'is reportable' and a board member may well ask under which section. Bucket unchanged.",
+   "before": "31 U.S.C. 1517(a) (obligations exceeding apportionment or administrative subdivision); 31 U.S.C. 1351; DoD FMR Volume 14 (Antideficiency Act violation procedures)."
+  }
+ ],
+ "verified_no_change": [
+  "All 40 threshold_ladder value_number figures recomputed and correct, including the option-total items (TL05 250,000 + 4 x 250,000 = 1,250,000; TL07 4,200,000 + 5,300,000 = 9,500,000; TL10 8,900,000 + 3,500,000 = 12,400,000; TL14 95,000,000 + 40,000,000 = 135,000,000; TL36 1,800,000 + 4 x 1,800,000 = 9,000,000; TL39 300,000 + 410,000 = 710,000).",
+  "All 40 correct_class values and every named covering tier are right, including the boundary items that turn on 'greater than or equal to' (TL03 at $350,000 = Class I; TL27 at $500,000, TL29 at $5,000,000 and TL34 at $9,000,000 = Class II; TL15 at $100,000,000 = Class III; TL37 at $250,000,000 = Class IV) and the three absolute-value modification items (TL06 $200, TL21 $1,400,000, TL33 $0).",
+  "The conditional SaP rung is handled correctly and consistently across the commercial / non-commercial pairs TL18 vs TL19 ($8.4M) and TL34 vs TL36 ($9.0M), and in TL17, TL30 and TL35.",
+  "The 'no tier between $100M and $250M' gap (TL16) and the Unlimited tier (TL40) are stated correctly against Table 1.",
+  "All 36 fiscal_sort bucket assignments confirmed; fiscal-year date arithmetic re-derived in every dated item (FS02, FS04, FS07, FS09, FS11, FS15, FS22, FS25, FS27, FS33, FS35, FS36) and correct, including FY20 being a CLOSED account in FY26 (FS11) and FY25 O&M being expired but not closed (FS36).",
+  "FS21 (Korea / LCS under the SMA) carries the korea-verify-cp caution in text, describes roles only, invents no local approval level and no point of contact, and matches the agent brief on ROK MND approval and award, USFK J4 management, 411th recommendation, and the rule that O&M and LCS are not mixed in one solicitation.",
+  "No PII, no invented 411th local thresholds, names or emails anywhere in the file; TL06, TL20 and TL33 correctly route local practice to the Chief, C&P rather than stating a number."
+ ],
+ "open_notes": [
+  "games_1.json has no per-item flags or confidence fields. That matches the games shape in CONTRACT.md section 3 and the already-merged src/data/games.json, so it is not a defect in this file - but it means verification status for these items rides entirely on regulations.json, where every threshold is still status 'verify' rather than 'verified'. If the app renders a games item with no verification badge, that is a view-layer gap to close before the bank is called board-ready.",
+  "src/data/games.json (built 14 Sep 2026 03:34) already contains the pre-correction copies of all 76 items. The four corrections above must be re-merged before the bundle is rebuilt, or the shipped app will keep the wrong FAR Table 6-1 statement in TL32."
+ ]
+}

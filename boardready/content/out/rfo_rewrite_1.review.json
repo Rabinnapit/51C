@@ -1,0 +1,204 @@
+{
+  "reviewed_file": "C:\\Users\\rabin\\Documents\\Army\\CORB\\app\\content\\out\\rfo_rewrite_1.json",
+  "reviewed_on": "2026-09-14",
+  "reviewer": "rfo_rewrite_1 reviewer pass",
+  "method": "Each changed=true answer was word-diffed against the same id in src/data/questions.json. Permitted residuals: citation numbers, the trailing Cite line, short parentheticals about removed/moved sections or updated thresholds. Every crosswalk pair was checked against regulations.json (crosswalk/unchanged/thresholds); two gaps the crosswalk does not cover were checked on acquisition.gov (RFO Part 6 and Part 8 deviation pages). citations_rfo entries were required to appear literally in the answer text (the '(unresolved)' tag stripped first).",
+  "sources_fetched": [
+    {
+      "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6",
+      "used_for": "Authority paragraphs of 6.103-1 through 6.103-7 (10 U.S.C. 3204(a)(1)-(7) / 41 U.S.C. 3304(a)(1)-(7)); headings of 6.104, 6.104-1, 6.104-2, 6.301; text of 6.103-1(d)."
+    },
+    {
+      "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-8",
+      "used_for": "Subpart 8.4 now contains only 8.401 General, which directs FSS ordering to GSAR subpart 538.71."
+    }
+  ],
+  "summary": {
+    "items_in_file": 31,
+    "changed_items_diffed": 14,
+    "substantive_changes_found": 0,
+    "items_reverted": 0,
+    "items_corrected": 7,
+    "edits_applied": 10,
+    "rfo_status_counts": {
+      "n/a": 21,
+      "updated": 8,
+      "unverifiable": 2
+    }
+  },
+  "per_item": [
+    {
+      "id": "Q0012",
+      "verdict": "pass-with-fix",
+      "pairs": "FAR 6.302-1->6.103-1 verified; DFARS Subpart 206.3->206.103-170/206.104-71 per verified 'DFARS 20' entry.",
+      "fix": "Cite line split so 'DFARS 206.104-71' appears literally."
+    },
+    {
+      "id": "Q0013",
+      "verdict": "pass",
+      "pairs": "FAR 6.302-2->6.103-2 verified.",
+      "fix": null
+    },
+    {
+      "id": "Q0022",
+      "verdict": "pass",
+      "pairs": "FAR 5.202->5.101(b) verified; FAR 12.603->12.202(b) verified.",
+      "fix": null,
+      "carry_forward": "'> $25K' synopsis figure has no thresholds-table entry (crosswalk FAR 5 note says RFO 5.101 presolicitation notice above $20,000) - needs a thresholds pass. OCONUS 5.202(a)(12) exception not in RFO 5.101(b) - check DFARS 205 deviation (411th CSB)."
+    },
+    {
+      "id": "Q0060",
+      "verdict": "pass-with-fix",
+      "pairs": "FAR 13.5->12.201-1 verified; FAR 8.4->8.401 confirmed on RFO Part 8 page (subpart 8.4 = 8.401 only; ordering procedures at GSAR 538.71); FAR 16.5->16.507-6 supported by verified 16.505(b)(2)->16.507-6(b) entry and FAR 16 note.",
+      "fix": "Restored 'Part 6' casing; added moved-section parenthetical '(FAR 8.401; FSS ordering procedures moved to GSAR subpart 538.71)'; Cite line made literal ('FAR 6')."
+    },
+    {
+      "id": "Q0061",
+      "verdict": "pass-with-fix",
+      "pairs": "5.102(a)(6)->5.201(c)(3) verified; 6.302-1(c)->6.103-1(d) verified; 6.303->6.104-1 and 6.304->6.104-2 per verified 'FAR 6.303' entry; 6.305->6.301 per verified 'FAR 6' entry and confirmed on Part 6 page ('Availability of the justification'); 13.106-1(b)->13.101(b) verified; 13.501->12.102 per verified 'FAR 13.5' entry.",
+      "fix": "Added one parenthetical at the Reference line stating the quoted paragraphs are pre-RFO 5.102(a)(6)/6.302-1(c) wording, because RFO 6.103-1(d) is a single condensed sentence and the renumbered headings otherwise misattribute old text. Substance untouched.",
+      "carry_forward": "Content pass still owed: quoted text is pre-RFO."
+    },
+    {
+      "id": "Q0062",
+      "verdict": "pass-with-fix",
+      "pairs": "DFARS 215.371-3->215.202-71(c) verified; FAR 15.403-1(c)->15.403-2(c), 15.403-4->15.403-3, 15.403-1(b)->15.403-2(b) verified. DFARS 215.371-4(a)(3) and 215.371-5 unresolved (not in crosswalk; DFARS deviations not on acquisition.gov) - old cites retained, status 'unverifiable' upheld. Threshold marker for the $2M TINA figure correct (tina_dod $10M / tina_civilian $2.5M).",
+      "fix": "Cite line now lists the two retained old cites with the same 'old numbering retained, unverified' tag as Q0070, matching citations_rfo."
+    },
+    {
+      "id": "Q0070",
+      "verdict": "pass-with-fix",
+      "pairs": "FAR 52.232-22 retained (verified); DFARS 252.232-7007 retained (verified 'DFARS 25'); DFARS 232.702/232.703-1 unresolved - old cites retained, 'unverifiable' upheld. 'DFAR'->'DFARS' is citation-form only.",
+      "fix": "Cite line split so 'DFARS 232.703-1' appears literally."
+    },
+    {
+      "id": "Q0072",
+      "verdict": "pass",
+      "pairs": "31 U.S.C. 1502 statute, in 'unchanged' list; Cite line only.",
+      "fix": null
+    },
+    {
+      "id": "Q0078",
+      "verdict": "pass (notes updated)",
+      "pairs": "FAR 13.106-1(b)->13.101(b), 16.505(b)(2)->16.507-6(b), 13.5->12.201-1, 6.302-1..-7->6.103-1..-7 verified; 8.4->8.401 confirmed on Part 8 page; 10 U.S.C. 2304C->3406 verified; 10 U.S.C. 2304(c)(1)-(7)->3204(a)(1)-(7) NOW VERIFIED on the RFO Part 6 page (authority paragraphs of 6.103-1..-7); 40 U.S.C. 501 unchanged; 41 U.S.C. 251->3101 et seq. is 'probable' in the crosswalk (statute recodification, not RFO) - left in place, caveat recorded.",
+      "fix": "Notes updated to record the verification; answer unchanged."
+    },
+    {
+      "id": "Q0097",
+      "verdict": "pass",
+      "pairs": "FAR 5 part number unchanged; Cite line only.",
+      "fix": null,
+      "carry_forward": "Stub answer - needs a board-ready answer."
+    },
+    {
+      "id": "Q0116",
+      "verdict": "pass-with-fix",
+      "pairs": "FAR 15.607->15.506 verified. Old 'Subpart 6.3' held both the authorities (RFO 6.103) and the J&A sections (RFO 6.104); sentence is about obtaining a J&A and RFO 6.104(a) says a J&A must support procedures under 6.103.",
+      "fix": "Conversion widened from '6.103' to '6.103 / 6.104'; crosswalk, citations_rfo and Cite line updated. No wording changed.",
+      "carry_forward": "Question stem still says 'FAR 15.6' (should be 15.5)."
+    },
+    {
+      "id": "Q0137",
+      "verdict": "pass",
+      "pairs": "FAR 8 part number unchanged; Cite line only.",
+      "fix": null,
+      "carry_forward": "Stub answer - needs a board-ready answer."
+    },
+    {
+      "id": "Q0153",
+      "verdict": "pass",
+      "pairs": "FAR 11.104->11.204 verified (old 11.104 deleted; FC 11.204 guidance) - removal parenthetical is within the permitted scope; DFARS 211.104->211.204 verified.",
+      "fix": null
+    },
+    {
+      "id": "Q0277",
+      "verdict": "pass",
+      "pairs": "31 U.S.C. 1502 statute, unchanged; Cite line only.",
+      "fix": null
+    }
+  ],
+  "skipped_items_check": "All 17 changed=false items re-scanned: no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named part or subpart in the original answer text (the only hits for 'FAR'/'Part' are the words 'as defined in the FAR' in Q0067 and 'participate/participation' in Q0024, Q0067, Q0269). Skips upheld.",
+  "edits": [
+    {
+      "id": "Q0012",
+      "field": "answer",
+      "before": "Cite: FAR 6.103-1; DFARS 206.103-170 / 206.104-71",
+      "after": "Cite: FAR 6.103-1; DFARS 206.103-170; DFARS 206.104-71",
+      "why": "citations_rfo entry 'DFARS 206.104-71' did not appear literally in the answer; Cite line split so it does."
+    },
+    {
+      "id": "Q0060",
+      "field": "answer",
+      "before": "(FAR part 6 or 12.201-1)",
+      "after": "(FAR Part 6 or 12.201-1)",
+      "why": "Restored original 'Part' casing; the case change was not a citation-number edit."
+    },
+    {
+      "id": "Q0060",
+      "field": "answer",
+      "before": "limited sources justification (FAR 8.401),",
+      "after": "limited sources justification (FAR 8.401; FSS ordering procedures moved to GSAR subpart 538.71),",
+      "why": "RFO 8.401 (fetched acquisition.gov Part 8, 14 Sep 2026) is the only section left in subpart 8.4 and directs ordering to GSAR 538.71, where the limited-sources procedures now sit. Short moved-section parenthetical added so the cite is not misleading."
+    },
+    {
+      "id": "Q0060",
+      "field": "answer",
+      "before": "Cite: FAR part 6; FAR 12.201-1; FAR 8.401; FAR 16.507-6",
+      "after": "Cite: FAR 6; FAR 12.201-1; FAR 8.401; FAR 16.507-6",
+      "why": "citations_rfo entry 'FAR 6' now appears literally."
+    },
+    {
+      "id": "Q0061",
+      "field": "answer",
+      "before": "Reference: FAR 5.201(c)(3) & 6.103-1(d)\n\nCite:",
+      "after": "Reference: FAR 5.201(c)(3) & 6.103-1(d) (the quoted paragraphs above are the pre-RFO 5.102(a)(6) and 6.302-1(c) wording; the RFO sections are renumbered and condensed)\n\nCite:",
+      "why": "The renumbered headings label verbatim pre-RFO text as RFO 5.201(c)(3)/6.103-1(d). RFO 6.103-1(d) as fetched 14 Sep 2026 is one sentence ('Use of brand-name descriptions, or specification of attributes peculiar to one manufacturer, prevents full and open competition and should only be used when justified and approved according to 6.104'). A short parenthetical keeps the quote honest without rewriting substance."
+    },
+    {
+      "id": "Q0062",
+      "field": "answer",
+      "before": "Cite: DFARS 215.202-71(c); FAR 15.403-2(c); FAR 15.403-3; FAR 15.403-2(b)",
+      "after": "Cite: DFARS 215.202-71(c); FAR 15.403-2(c); FAR 15.403-3; FAR 15.403-2(b); DFARS 215.371-4(a)(3); DFARS 215.371-5 (old numbering retained, unverified)",
+      "why": "citations_rfo lists the two unresolved DFARS cites but the Cite line omitted them; added with the same 'old numbering retained, unverified' tag used in Q0070."
+    },
+    {
+      "id": "Q0070",
+      "field": "answer",
+      "before": "DFARS 232.702 / 232.703-1 (old numbering retained, unverified)",
+      "after": "DFARS 232.702; DFARS 232.703-1 (old numbering retained, unverified)",
+      "why": "citations_rfo entry 'DFARS 232.703-1' now appears literally in the Cite line."
+    },
+    {
+      "id": "Q0078",
+      "field": "notes",
+      "before": "(extension caveat)",
+      "after": "(verified on acquisition.gov Part 6)",
+      "why": "Reviewer fetched RFO Part 6; authorities 6.103-1..-7 = 10 U.S.C. 3204(a)(1)..(7)."
+    },
+    {
+      "id": "Q0116",
+      "field": "answer",
+      "before": "obtained under 6.103 [see FAR 15.506]",
+      "after": "obtained under 6.103 / 6.104 [see FAR 15.506]",
+      "why": "Old subpart 6.3 held both the authorities (RFO 6.103) and the justification-and-approval sections (RFO 6.104); the sentence is about obtaining a J&A, and RFO 6.104(a) (fetched 14 Sep 2026) says a J&A must support procedures under 6.103. Conversion widened to 6.103 / 6.104; no wording changed."
+    },
+    {
+      "id": "Q0116",
+      "field": "answer",
+      "before": "Cite: FAR 15.506; FAR 6.103",
+      "after": "Cite: FAR 15.506; FAR 6.103; FAR 6.104",
+      "why": "Cite line follows the widened conversion."
+    }
+  ],
+  "open_flags_for_orchestrator": [
+    "Q0022: synopsis threshold figure ($25K in text) has no thresholds-table entry; crosswalk FAR 5 note says RFO 5.101 applies above $20,000 - add a thresholds row and re-run the marker rule.",
+    "Q0022: OCONUS Defense-agency synopsis exception (old 5.202(a)(12)) absent from RFO 5.101(b) - confirm DFARS 205 deviation before 411th CSB use.",
+    "Q0061: quoted paragraphs are pre-RFO wording (now labelled as such in the text); a substance pass is still owed.",
+    "Q0062 / Q0070: DFARS 215.371-4(a)(3), 215.371-5, 232.702, 232.703-1 remain unverifiable from acquisition.gov; check the DFARS Part 215 / 232 RFO class deviations on the DPC site.",
+    "Q0078: 41 U.S.C. 251 -> 3101 et seq. is 'probable' only.",
+    "Q0097, Q0137: stub answers.",
+    "Q0116: question stem still reads 'FAR 15.6'.",
+    "Q0024: pre-RFO FAR 10 technique list (not editable in this pass).",
+    "Q0088: waru.edu references; brief says write 'DAU (WARU) Acquipedia'."
+  ]
+}

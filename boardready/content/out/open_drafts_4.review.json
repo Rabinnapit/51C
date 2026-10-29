@@ -1,0 +1,141 @@
+{
+  "file": "content/out/open_drafts_4.json",
+  "reviewed_on": "2026-09-14",
+  "reviewer": "independent reviewer (ai)",
+  "checked": 12,
+  "corrected": 11,
+  "removed": 0,
+  "summary": "All 12 items kept. No hallucinated program names found (GSA FSSI/BIC, OASIS+, Alliant 2, NASA SEWP, Army CHESS, DoD ESI, DD Form 2579, DFARS deviation numbers all check out). One wrong regulatory statement removed (Q0219 'Current Value of Funds Rate'); one unverifiable organization-specific claim softened (Q0212 411th theater vehicles); paragraph-level cites tightened where the RFO page or deviation text confirmed them; DoD certified cost or pricing data threshold added to Q0083.",
+  "items": [
+    {
+      "id": "Q0025",
+      "action": "corrected",
+      "changes": [
+        "PGI 219.102(g) cite tightened to (g)(1) and the under-SAT total set-aside exception added",
+        "OCONUS applicability rewritten on verified text: RFO FAR 19.000(b), RFO DFARS 219.104-70(b)(2) and 219.102-70(a)(4)-(5) (SOFA / fully-OCONUS acquisitions exempt from the 19.104-1(a) requirement)",
+        "citations, key point 6 and Cite line updated; flag verify-locally added"
+      ]
+    },
+    {
+      "id": "Q0038",
+      "action": "checked",
+      "changes": [
+        "no content change; reviewer note appended"
+      ]
+    },
+    {
+      "id": "Q0079",
+      "action": "corrected",
+      "changes": [
+        "bare 'DFARS 201.403' replaced with RFO DFARS 201.403-70 (10 U.S.C. 1724 qualifications) from the Part 201 deviation text",
+        "SF 1402 cite tightened to 1.403-2; DASA(P) delegation tied to 1.403-1(b); crosswalk and citations updated",
+        "Army policy delegation chain and cumulative-value rule confirmed against the v12 source file"
+      ]
+    },
+    {
+      "id": "Q0083",
+      "action": "corrected",
+      "changes": [
+        "DoD certified cost or pricing data threshold ($10M after 30 Jun 2026 / $2.5M before) added from RFO DFARS 215.403-3(a) instead of being omitted",
+        "vague 'elevate through the Part 15 process' replaced with 215.202-71(c)(4) to RFO FAR 15.407(d) referral above the KO",
+        "bare 'RFO FAR 15.403' replaced with 15.403-2(b) and 15.403-3; PGI 215.202-71(b)(2) added to citations; crosswalk extended"
+      ]
+    },
+    {
+      "id": "Q0089",
+      "action": "corrected",
+      "changes": [
+        "paragraph-level cites added (33.104-4(c)(1) 35 days, 33.105-3 stay/override, 4 CFR 21.3(c) and 21.9) since the RFO text does not carry the 100-day period",
+        "crosswalk and citations extended"
+      ]
+    },
+    {
+      "id": "Q0096",
+      "action": "corrected",
+      "changes": [
+        "factors now cited at the confirmed paragraph 49.402-3(i); cure notice at 49.402-3(d); legal review at 49.402-3(a)",
+        "confidence raised medium to high after the paragraph letter was read on the RFO page"
+      ]
+    },
+    {
+      "id": "Q0117",
+      "action": "corrected",
+      "changes": [
+        "'RFO FAR 44.3' replaced with 44.301 (CPSR); careful-review list cited at 44.201-3(b); consent-limitation statement cited to 44.201-4",
+        "crosswalk rebuilt (44.202-2 to 44.201-3(b), 44.203 to 44.201-4, 44.302 to 44.301); 10 U.S.C. 3322(c) confirmed"
+      ]
+    },
+    {
+      "id": "Q0143",
+      "action": "corrected",
+      "changes": [
+        "sole-source example now cites 12.102 for commercial and 13.101(b) for noncommercial below-SAT single-source decisions (crosswalk-verified)",
+        "12.102 and 13.101(b) added to the Cite line and citations"
+      ]
+    },
+    {
+      "id": "Q0148",
+      "action": "corrected",
+      "changes": [
+        "AFARS 5133.103(d)(3) and (d)(4)(i) confirmed verbatim; AMC routing cite added; note that AFARS retains legacy numbering",
+        "33.104-3 tightened to (a); flag verify-locally added for the local independent-review routing"
+      ]
+    },
+    {
+      "id": "Q0212",
+      "action": "corrected",
+      "changes": [
+        "E.O. 14240 (20 Mar 2025, GSA consolidation / IT GWAC executive agent) added as the verified 'recent policy' the question likely targets",
+        "AFARS 5137.590-6 statement tightened to what the section actually says and notes it does not use the term BCA; AFARS 5107.107-2(b) levels confirmed",
+        "unverifiable '411th theater-wide BPAs and IDIQs' softened to a confirm-locally statement; crosswalk 8.002 mapped to 8.102/8.103; 7.107 mapped to 7.107-1(b)"
+      ]
+    },
+    {
+      "id": "Q0219",
+      "action": "corrected",
+      "changes": [
+        "removed wrong 'Treasury Current Value of Funds Rate' for contract-debt interest; corrected to the 41 U.S.C. 7109 Treasury rate, unpaid-after-30-days trigger, per FAR 32.608-1 and 52.232-17",
+        "defective-certification interest now cited to RFO FAR 33.205-3(c) (confirmed on the RFO page) instead of only 41 U.S.C. 7103(b)(3)",
+        "60-day rule cited at 33.205-6(c); Judgment Fund reimbursement (41 U.S.C. 7108) added; citations, key points and crosswalk updated"
+      ]
+    },
+    {
+      "id": "Q0275",
+      "action": "corrected",
+      "changes": [
+        "DoD stay periods restated exactly per RFO DFARS 233.105-70(a)-(d) (the draft compressed the $35M task-order rule into the debriefing sentence)",
+        "notify-legal and 60-day report cited at the confirmed paragraphs 33.105-4(a) and (b); enhanced debriefing tied to 215.301-71 with its 2/5 business-day mechanics",
+        "citations and key points updated; flags unchanged (ai-drafted, verify-locally, korea-verify-cp)"
+      ]
+    }
+  ],
+  "sources_used": [
+    "src/data/regulations.json crosswalk and thresholds (verified_on 2026-09-13)",
+    "content/sources/army_warranting_policy_v12_mar2026.txt",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-44",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-8",
+    "https://www.acquisition.gov/afars/part-5133-protests-disputes-and-appeals",
+    "https://www.acquisition.gov/afars/part-5107-acquisition-planning",
+    "https://www.acquisition.gov/afars/part-5137-service-contracting",
+    "https://www.acquisition.gov/dfars/part-219-small-business-programs (legacy 219.201(c)(10))",
+    "https://www.acquisition.gov/far/32.608-1 (legacy, FAC 2026-01)",
+    "https://www.acq.osd.mil/dpap/dars/dfars_far_overhaul_class_deviations.html",
+    "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-201/2026-O0002_Rev1_TAB_A_Deviation_Memo.pdf (text extracted)",
+    "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-215/2026-O0048_Rev_1_TAB_A_Deviation_Memo_Part_215.pdf (text extracted)",
+    "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-219/2026-O0037_Rev1_TAB_A_Class_Deviation_Part_219.pdf (text extracted)",
+    "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-233/2026-O0026_Rev1_TAB_A_Class_Deviation.pdf (text extracted)",
+    "https://www.law.cornell.edu/uscode/text/10/3322",
+    "https://www.whitehouse.gov/presidential-actions/2025/03/eliminating-waste-and-saving-taxpayer-dollars-by-consolidating-procurement/"
+  ],
+  "not_verified": [
+    "OFPP 29 Sep 2011 business-case memo thresholds (Q0212) - drafter read the PDF; reviewer did not re-fetch",
+    "OMB M-25-31 (Q0212) - seen only as a whitehouse.gov document title; not cited by number in the answer",
+    "41 U.S.C. 7108 Judgment Fund reimbursement (Q0219) - statute stated from memory, not re-fetched",
+    "4 CFR 21.2(a)(3) and 21.10 express option - stated from the regulation, not re-fetched",
+    "RFO FAR Part 52 clause text for 52.244-2 (Q0117) and DFARS 244 deviation body - not read",
+    "AFARS numbering: acquisition.gov AFARS (rev 01 Oct 2024, change 2025-0711) still uses legacy 5133.103; official AFARS now on the Army PAM portal"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+ "file": "content/out/mcq_3.json",
+ "reviewer": "independent review agent",
+ "reviewed_on": "2026-09-14",
+ "items_in": 39,
+ "items_out": 39,
+ "items_corrected": 3,
+ "items_removed": 0,
+ "method": [
+  "Every item read against its source question in src/data/questions.json (question, answer, deck_notes, alt_answers).",
+  "Every cite checked against the verified crosswalk and thresholds in src/data/regulations.json before any fetch.",
+  "acquisition.gov consulted only for two cites the crosswalk does not cover (legacy FAR 19.602-1 Certificates of Competency, FAR 28.305 overseas workers' compensation).",
+  "Structural check: 39 items, no duplicate qids, four options each, exactly one correct:true, a non-empty why on every option."
+ ],
+ "changes": [
+  {
+   "qid": "Q0041",
+   "action": "corrected",
+   "what": "correct option and its rationale",
+   "why": "The keyed option had the support contractor helping build the draft PWS, which is the textbook biased ground rules scenario that option 3 describes, so two options were defensible for a stem asking which situation is unequal access. Rewrote the keyed option to nonpublic information only (IGE, acquisition strategy, draft evaluation approach).",
+   "before": "A support contractor that helped the program office build the independent Government estimate, the draft PWS and the evaluation approach later competes for the follow-on contract."
+  },
+  {
+   "qid": "Q0042",
+   "action": "corrected",
+   "what": "rationale on distractor 2",
+   "why": "Original read 'the GAO stay override is nondelegable to the head of the contracting activity', which states the opposite of the rule. Answer key unchanged.",
+   "before": "The contracting officer never overrides a protest alone, and the GAO stay override is nondelegable to the head of the contracting activity."
+  },
+  {
+   "qid": "Q0096",
+   "action": "corrected",
+   "what": "cite line",
+   "why": "The keyed option says the Part 49 procedures are not used while the cite appended 'default factors at RFO FAR 49.402-3' with no qualifier, which read as a contradiction.",
+   "before": "RFO FAR 12.304; FAR 52.212-4(m); default factors at RFO FAR 49.402-3"
+  },
+  {
+   "qid": "(all 39)",
+   "action": "reordered",
+   "what": "position of the keyed option",
+   "why": "Every item shipped with the correct answer as option 1. The quiz view shuffles options when the Shuffle setting is on (its default), but with shuffle off the set taught 'always pick A'. Keyed option spread deterministically across the four positions. No text changed by this step."
+  }
+ ],
+ "verified_no_change": [
+  {
+   "qid": "Q0107",
+   "note": "Rationale calling $15,000 the micro-purchase threshold was checked against regulations.json thresholds (mpt = $15,000, post Oct-2025 inflation adjustment) and is correct for this bundle, not the older $10,000 figure. Keyed answer $2,500 services / $2,000 construction matches the bank verbatim."
+  },
+  {
+   "qid": "Q0073",
+   "note": "Cite honestly retains legacy FAR 19.602-1 with 'RFO equivalent not verified'. An acquisition.gov fetch returned Subpart 19.6 / 19.602-1 still in place, which conflicts with the heavy Part 19 renumbering in the verified crosswalk (19.502-2 -> 19.104-1, 19.8 -> 19.108). Left the honest legacy cite and the flag rather than assert an RFO number. Answer itself matches the bank verbatim."
+  },
+  {
+   "qid": "Q0253",
+   "note": "acquisition.gov shows 28.305 (overseas workers' compensation and war-hazard insurance) not renumbered by the RFO; cite left as is."
+  },
+  {
+   "qid": "Q0132",
+   "note": "Cite honestly flags legacy FAR 11.501 as the liquidated damages policy section; the crosswalk does not cover it. Left as is."
+  },
+  {
+   "qid": "Q0090 / Q0093",
+   "note": "Both test RFO FAR 33.104-3(a) from different sides (the 10-day-after-award leg and the 5-day-after-debriefing leg). Overlapping but not duplicative; both keys agree with the bank."
+  },
+  {
+   "qid": "Q0096",
+   "note": "Stem is derived, not a restatement: bank Q0096 asks the T4D factors, the MCQ asks the commercial-services path. The bank answer expressly states the Part 12 / 12.304 / 52.212-4(m) route, so the key agrees with the source."
+  }
+ ],
+ "open_concerns": [
+  {
+   "qid": "Q0095",
+   "concern": "The three exceptions to the AT/OPSEC cover sheet (supply contracts below the SAT, field ordering officer actions, GPC purchases) trace to an ai-draft bank answer citing AFARS 5107.9101, not to a fetched AFARS text. The item is consistent with the bank but the underlying rule is unverified. Carry the ai-drafted flag and a medium confidence on merge."
+  },
+  {
+   "qid": "Q0253",
+   "concern": "The keyed option states that a Department of Labor waiver never covers U.S. citizens, U.S. legal residents or workers hired in the United States. That is correct as DOL country-waiver practice but is not in the bank answer text, which only links the DOL waiver pages. Flag for a subject-matter check."
+  },
+  {
+   "qid": "Q0026, Q0079, Q0107, Q0138, Q0221, Q0041",
+   "concern": "Domain labels look mis-taxonomised (a D&F definition and two wage-determination items under 'Terminations & Remedies'; KO authority and agency-law authority under 'Responsibility & Exclusions'; OCI under 'Property, Security & Special Provisions'). Each matches its source question's domain in the bank, so the MCQ was left alone deliberately. The fix, if wanted, belongs in the bank so both stay in step - likely 'Authority, Ethics & Leadership' for Q0079/Q0221 and a labor-standards home for Q0107/Q0138."
+  }
+ ],
+ "removed": []
+}

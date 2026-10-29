@@ -1,0 +1,426 @@
+{
+ "meta": {
+  "generated_on": "2026-09-13",
+  "flags": [
+   "ai-drafted",
+   "verify-locally",
+   "korea-verify-cp"
+  ],
+  "confidence": "medium",
+  "confidence_reason": "Board composition, chair, facilitator, cadence, who prepares the questions and scoring sheet, and the unanimous-recommendation pass rule are taken directly from 411th_warrant_process_workflow_jul2026.txt (steps 5-7, 9 and the CORB membership row). Warrant classes are from Army Warranting Program Policy v12 (MAR 2026) Table 1. The 1-5 anchors, numeric guide, framework, tips, failure modes and probes are generic AI drafts for study use; the real 411th CORB Scoring Sheet prepared by C&P replaces the rubric when available. RFO section numbers used in the probes were checked on acquisition.gov FAR part deviation guide pages on 2026-09-13 (Parts 1, 6, 9, 12, 13, 15, 17, 19, 33, 37, 43, 45, 49). Korea and Germany probes are limited to what the study decks say and carry korea-verify-cp. Source-fidelity pass 2026-09-13: 30 crosswalk pairs, 14 acquisition.gov part pages, AFARS 5101.405, DoD FMR Vol 14, and every 411th/Policy v12/deck claim checked; 6 items refuted or downgraded and corrected in place (see verification_log). Overall confidence stays medium because the anchors, numeric guide, weights and vote form remain AI drafts.",
+  "sources": [
+   {
+    "src": "411th_warrant_process_workflow_jul2026.txt",
+    "note": "Steps 1, 5, 6, 7 and 9; CORB membership and waiver row; note on urgent applications"
+   },
+   {
+    "src": "army_warranting_policy_v12_mar2026.txt",
+    "note": "Table 1 warrant classes; 4.2 calculating instrument value; candidate characteristics; unlimited warrant board cannot be waived"
+   },
+   {
+    "src": "study_group_decks_apr-jul2026.txt",
+    "note": "LCS, SOFA Invited Contractor, inherently governmental examples"
+   },
+   {
+    "src": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide",
+    "note": "RFO part list; per-part pages are at /far-overhaul/far-part-deviation-guide/far-overhaul-part-N (Parts 1, 6, 7, 9, 12, 13, 15, 17, 19, 33, 37, 43, 45, 49 fetched 2026-09-13; the shorter /far-overhaul/far-overhaul-part-N form returns 404)"
+   },
+   {
+    "src": "https://api.army.mil/e2/c/downloads/2026/07/07/995d7218/afars-combined-30jun2026.pdf",
+    "note": "AFARS 5101.405 Ratification of unauthorized commitments; AFARS PGI 5101.405-90; Appendix GG (fetched 2026-09-13)"
+   },
+   {
+    "src": "https://comptroller.defense.gov/FMR/vol14_chapters.aspx",
+    "note": "DoD 7000.14-R Volume 14, Administrative Control of Funds and Antideficiency Act Violations (Ch. 3 preliminary review) - confirms the ADA reference in the worked example"
+   }
+  ],
+  "rfo": {
+   "status": "updated",
+   "crosswalk": [
+    {
+     "old": "FAR 1.602-1",
+     "new": "FAR 1.402-1"
+    },
+    {
+     "old": "FAR 1.602-2",
+     "new": "FAR 1.402-2"
+    },
+    {
+     "old": "FAR 1.602-2(d)",
+     "new": "FAR 1.404"
+    },
+    {
+     "old": "FAR 1.602-3",
+     "new": "FAR 1.405"
+    },
+    {
+     "old": "FAR 1.603",
+     "new": "FAR 1.403"
+    },
+    {
+     "old": "FAR 6.302-1",
+     "new": "FAR 6.103-1"
+    },
+    {
+     "old": "FAR 6.302-2",
+     "new": "FAR 6.103-2"
+    },
+    {
+     "old": "FAR 6.303 / 6.304",
+     "new": "FAR 6.104-1 / 6.104-2 and Table 6-1"
+    },
+    {
+     "old": "FAR 6.501",
+     "new": "FAR 6.003"
+    },
+    {
+     "old": "FAR 12.403",
+     "new": "FAR 12.304"
+    },
+    {
+     "old": "FAR 13.5",
+     "new": "FAR 12.201-1 (simplified procedures, commercial)"
+    },
+    {
+     "old": "FAR 13.2 / 13.201",
+     "new": "FAR 13.401"
+    },
+    {
+     "old": "FAR 15.306(a)",
+     "new": "FAR 15.202(a)(2)"
+    },
+    {
+     "old": "FAR 15.306(c)",
+     "new": "FAR 15.204-1"
+    },
+    {
+     "old": "FAR 15.306(d)",
+     "new": "FAR 15.204-2"
+    },
+    {
+     "old": "FAR 15.505 / 15.506",
+     "new": "FAR 15.206-2 / 15.301-1"
+    },
+    {
+     "old": "FAR 17.207",
+     "new": "FAR 17.204-1"
+    },
+    {
+     "old": "FAR 19.502-2",
+     "new": "FAR 19.104-1"
+    },
+    {
+     "old": "FAR 19.702",
+     "new": "FAR 19.109"
+    },
+    {
+     "old": "FAR 19.6",
+     "new": "FAR 19.204"
+    },
+    {
+     "old": "FAR 33.103",
+     "new": "FAR 33.104"
+    },
+    {
+     "old": "FAR 33.104",
+     "new": "FAR 33.105"
+    },
+    {
+     "old": "FAR 33.206 / 33.207",
+     "new": "FAR 33.205-1 / 33.205-2"
+    },
+    {
+     "old": "FAR 33.211",
+     "new": "FAR 33.205-6"
+    },
+    {
+     "old": "FAR 33.214",
+     "new": "FAR 33.205-8"
+    },
+    {
+     "old": "FAR 37.104",
+     "new": "FAR 37.201-1 / 37.201-2"
+    },
+    {
+     "old": "FAR 7.503",
+     "new": "FAR 37.301-1 (inherently governmental policy); note 7.503 still appears in the overhauled Part 7 deviation guide, so treat as parallel cites, confidence probable"
+    },
+    {
+     "old": "FAR 43.202 (authority to issue change orders; old 43.102 was the general modification policy)",
+     "new": "FAR 43.302"
+    },
+    {
+     "old": "FAR 43.204",
+     "new": "FAR 43.304"
+    },
+    {
+     "old": "FAR 43.105",
+     "new": "FAR 43.205"
+    }
+   ],
+   "notes": "Parts 9 (9.104-1, 9.105-2, 9.405, 9.504-9.505), 15.403/15.404, 45.104, 49.402-3 and 49.607 kept their numbers in the overhauled text. Statutes (31 U.S.C. 1341, 1301(a), 1502(a); 10 U.S.C. 1724, 3133, 4021, 4022; 41 U.S.C. 7101 et seq.) and CFR (2 CFR 200, 32 CFR 21-34 DoDGARs) are unchanged by the RFO. Old numbers are shown once in the answer example so candidates recognize them if a board member uses them. Source-fidelity pass 2026-09-13: every crosswalk pair re-fetched on https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-N for N in 1, 6, 7, 9, 12, 13, 15, 17, 19, 33, 37, 43, 45, 49; all section numbers and headings confirmed except as noted for 43.202 and 7.503. Table 6-1 tiers confirmed: $900K or below KO; >$900K-$20M advocate for competition (not delegable); >$20M-$90M (>$20M-$150M DoD/NASA/Coast Guard) head of the procuring activity; >$90M (>$150M DoD/NASA/Coast Guard) senior procurement executive."
+  }
+ },
+ "rubric": {
+  "scale": "1 to 5 per dimension, scored per question and then summarized for the board. 1 = unacceptable for any warrant, 3 = meets the standard for the class requested, 5 = clearly exceeds it. Score what you heard in the room, not what you assume the candidate knows from the resume.",
+  "dimensions": [
+   {
+    "id": "knowledge",
+    "name": "Regulatory knowledge",
+    "description": "Accuracy and currency of the rule stated: RFO FAR numbering, DFARS and AFARS, fiscal law, Army Warranting Program Policy, and the Korea framework (LCS, SOFA Invited Contractor) where the question calls for it. Knowing what is statute versus policy, and knowing where to look, both count. A candidate who states the correct rule and says 'I would confirm the section number' is not penalized for the number.",
+    "anchors": {
+     "1": "States the wrong rule, or no rule, or a rule that does not apply to the facts. Cites regulations that do not exist or misattributes them (calls a DFARS rule 'the FAR', treats a policy as a statute). Cannot say where the answer would be found. Uses pre-RFO numbering without recognizing it has changed and cannot describe the concept either way.",
+     "3": "States the correct rule in plain words and names the correct part or section, or the correct concept with a reasonable pointer ('FAR Part 6 exception for only one responsible source, the J&A approval table'). Distinguishes statute, FAR/DFARS and Army policy when asked. Minor number slips that do not change the substance. Knows the thresholds that matter for the class requested (MPT, SAT, SaP, J&A approval tiers, TINA / certified cost or pricing data).",
+     "5": "States the rule precisely, cites the current RFO section and the DFARS/AFARS or Army policy layer on top of it, and explains why the rule exists. Volunteers the crosswalk when a board member uses an old number. Knows the exceptions and the edge cases (commercial vs non-commercial, services vs supplies, OCONUS, LCS vs O&M funds) without being led. Corrects a flawed premise in the question politely and accurately."
+    }
+   },
+   {
+    "id": "judgment",
+    "name": "Judgment and risk awareness",
+    "description": "Ability to apply the rule to the facts, see the real problem (fiscal, competition, ethics, performance, mission), weigh options, and choose a defensible course of action with the right approvals and coordination. This is the dimension that separates a warranted KO from a good specialist.",
+    "anchors": {
+     "1": "Answers the question that was not asked or recites the rule without applying it. Misses an obvious red flag (ADA exposure, an unauthorized commitment, personal services, a conflict of interest, a sole-source without a J&A). Proposes an action outside their authority, or one that would violate the rule they just cited. Defers everything to 'legal' or 'my chief' with no analysis of their own.",
+     "3": "Applies the rule to the facts given, identifies the main risk, and proposes a reasonable next step that stays inside the candidate's authority. Names the approval or coordination needed (legal review, competition advocate, C&P, HCA/SCO, resource manager, requiring activity). Asks a clarifying question when a key fact is missing. Balances mission urgency against compliance without pretending one does not exist.",
+     "5": "Sees the second-order problem (the fiscal issue hiding inside the ratification, the protest risk inside the urgency J&A, the LCS/O&M mix inside the 'simple' requirement). Offers more than one compliant option and recommends one with reasons. Says clearly what they would sign at this warrant level and what they would push up, and why. Anticipates what a protester, an auditor or the Commander would ask. Comfortable saying no to a customer and offering a lawful yes."
+    }
+   },
+   {
+    "id": "communication",
+    "name": "Communication",
+    "description": "Clarity, structure and economy of the spoken answer: bottom line first, rule, cite, application, risk, route. Uses the vocabulary a KO uses. Answers in 45 to 90 seconds unless the board asks for more. Listens to the question actually asked.",
+    "anchors": {
+     "1": "Rambles or stops mid-answer. No bottom line; the board cannot tell what the candidate would do. Jargon used incorrectly or acronyms the candidate cannot expand. Talks over the questioner or answers a different question. Reads from notes.",
+     "3": "Gives a structured answer with a clear bottom line, a cite line and a recommended action. Stays within time. Expands acronyms when asked. Handles a follow-up without losing the thread. Occasional filler or a restart, but recovers.",
+     "5": "Concise, ordered and confident. Opens with the answer, supports it, closes with a recommendation and the approvals needed. Uses a repeatable framework audibly (state, cite, apply, risk, route). Tailors depth to the question: short for knowledge items, deeper for scenarios. Summarizes cleanly when the board cuts in. Could brief the Commander with the same words."
+    }
+   },
+   {
+    "id": "composure",
+    "name": "Composure and professionalism",
+    "description": "Bearing under pressure, honesty about limits, response to challenge, and the ethics and accountability posture the SCO is being asked to trust with a signature. Includes how the candidate handles not knowing.",
+    "anchors": {
+     "1": "Freezes or becomes defensive or argumentative when probed. Guesses and presents the guess as fact; will not say 'I do not know'. Blames others (customer, legal, previous KO) for a scenario problem. Disrespectful to a board member, or dismissive of ethics, fiscal or PII concerns. Shows no sense of personal accountability for the signature.",
+     "3": "Stays calm under follow-ups. When unsure, says so and explains how they would find out and who they would ask. Accepts correction without collapse. Professional bearing, appropriate tone, no excuses. Shows ownership: 'as the KO I would...'.",
+     "5": "Welcomes hard follow-ups and improves the answer under pressure. Separates what they know, what they believe, and what they would verify, and says which is which. Holds a correct position politely when a board member pushes a wrong premise, and concedes gracefully when the board member is right. Speaks about the warrant as a trust and about the consequences of misuse (suspension, termination, personal liability) without being prompted. Demonstrates the judgment and decision-making the policy asks the HCA to attest to for an unlimited warrant."
+    }
+   }
+  ],
+  "pass_rule": "unanimous",
+  "pass_rule_text": "Per the 411th CSB Warrant Process Workflow (Jul 2026), the SCO makes the appointment on VCE-Warrants only with a unanimous recommendation from the CORB voting members. Voting members are the SCO, PD, CoCO and/or Division Chiefs and KOs. The workflow does not describe the vote form; this study app models each vote as Recommend, Recommend at a lower class, or Do not recommend, and treats one 'Do not recommend' as a non-pass because the recommendation must be unanimous. The actual 411th CORB Scoring Sheet governs how votes are recorded. The facilitator (CONOPS / Chief, C&P) does not vote. The SCO may waive the CORB entirely under Army policy; a waived board does not use this rubric. The board for an Unlimited warrant cannot be waived (Policy v12, Unlimited Warrants).",
+  "numeric_guide": "Suggested guide only, for study boards and for members who want a common yardstick before they vote. Score each dimension 1-5 for each question, average per dimension across all questions, then read: (a) any dimension averaging below 2.5 = do not recommend at the class requested; (b) all four dimensions at 3.0 or above with no single-question score of 1 in judgment or composure = recommend; (c) knowledge at 3.0 or above but judgment between 2.5 and 3.0 = consider recommending at the next lower class or a re-board after a defined study period; (d) 4.0 and above across the board with judgment at 4.0 or above = recommend, and note readiness for a higher class in the board comments. Judgment and composure should never be averaged away by strong knowledge: a candidate who knows the FAR but would sign the wrong thing is a do-not-recommend. The numbers inform the member's vote; they do not replace it.",
+  "weights": {
+   "knowledge": 0.3,
+   "judgment": 0.35,
+   "communication": 0.15,
+   "composure": 0.2
+  },
+  "weights_note": "Weights are a study-app default that reflects the policy's emphasis on sound decision makers and critical thinkers. They are not 411th policy.",
+  "note": "This is a generic study rubric. The real 411th CSB CORB Cover Sheet and Scoring Sheet are prepared by CONOPS / C&P for each board (workflow step 7) and are the only instruments of record. When the 411th scoring sheet is available it replaces this rubric in the app; keep the anchors here only as candidate-facing practice guidance. Do not upload completed scoring sheets or board notes containing PII to VCE-Warrants (workflow step 1: do not upload documents with PII)."
+ },
+ "board_guide": {
+  "answer_framework": {
+   "name": "SCARR: State, Cite, Apply, Risk, Route",
+   "tagline": "Say the rule. Say where it lives. Say what it means here. Say what could go wrong. Say who has to approve.",
+   "say_it_aloud": "State it, cite it, apply it, name the risk, route it.",
+   "steps": [
+    "STATE the rule in one plain sentence, bottom line first. Example: 'That is an unauthorized commitment. It can only be ratified if the Government got the benefit, the price is fair and reasonable, funds were available and proper when it happened, and the ratifying official has the authority.'",
+    "CITE the authority in layers: RFO FAR section, then DFARS/AFARS, then statute or Army policy, then local procedure. If you are not certain of the new number, say the concept and the part and that you would confirm the section. Example: 'Cite: FAR 1.405, formerly 1.602-3; AFARS 5101.405 (Army ratification procedures at AFARS PGI 5101.405-90; delegations in AFARS Appendix GG); confirm the current ratification approval level with the Chief, C&P.'",
+    "APPLY the rule to the facts you were given: which conditions are met, which are not, what you still need to know. Ask one clarifying question if a fact is missing rather than assuming it. Example: 'The generators were delivered and are in use, so the benefit was received; I need the statement of facts from the person who made the promise, the vendor's invoice, a price reasonableness memo and the resource manager's certification that O&M funds were available and proper at the time.'",
+    "RISK: name the real risk in this scenario. Fiscal (Antideficiency Act, purpose, bona fide need), competition (protest, missing J&A), performance (schedule, GFP, safety), ethics (personal services, conflict of interest, gratuities), mission (the unit cannot wait), reputational (the Commander reads about it). Say what would make it worse. Example: 'Two risks: if funds were not available when the promise was made this is a potential ADA violation and must be reported, and if we pay without ratifying we have rewarded a process that bypasses the KO.'",
+    "ROUTE: say what you would do now, what you can approve at your warrant level, and who must approve or be coordinated with (legal, competition advocate, C&P, SCO/HCA, resource manager, requiring activity, USFK J4 / ROK MND for LCS, FKAQ for SOFA IC). Close with a one-sentence recommendation. Example: 'I would open a ratification file, get legal review, route it to the ratifying official for this dollar value, and separately advise the S4 and the Commander in writing that only a warranted KO can bind the Government. My recommendation is ratify if the conditions are met, and counsel the unit.'"
+   ],
+   "example": "Question: A unit commander tells you a local vendor already delivered $40,000 of generators on the S4's verbal promise. What do you do?\n\nSTATE: This is an unauthorized commitment. It is not a contract until a warranted official ratifies it, and ratification is possible only if the Government accepted the benefit, the resulting contract would otherwise have been proper, the price is fair and reasonable, funds were available when it happened and legal counsel has reviewed it.\n\nCITE: Cite: FAR 1.405 (formerly 1.602-3); AFARS 5101.405, with Army ratification procedures at AFARS PGI 5101.405-90 and delegations in AFARS Appendix GG; confirm the current ratification approval authority for this dollar value with the Chief, C&P. If the vendor is Korean and the requirement was LCS-eligible, note that LCS could not have been used this way because ROK MND awards LCS contracts.\n\nAPPLY: Generators were delivered and are in use, so the benefit was received. I need the S4's signed statement of facts, the vendor's invoice, a price reasonableness memo, and the resource manager's certification that O&M funds were available and proper for generators when the promise was made. If the item was not proper for those funds this is a fiscal problem, not just a ratification.\n\nRISK: Two risks. First, a potential Antideficiency Act issue if funds were not available or not proper, which triggers a preliminary review under DoD 7000.14-R Volume 14. Second, a pattern risk: paying quietly rewards bypassing the KO. There is also a smaller responsibility risk on the vendor that I would check in SAM.\n\nROUTE: At my warrant level I would open the ratification file, coordinate with legal and the resource manager, and route to the ratifying official for this amount. I would advise the S4 and the Commander in writing that only a warranted KO can bind the Government and offer a lawful path for the next requirement, for example a BPA or a GPC-eligible action under the MPT. Recommendation: ratify if all conditions are met; if they are not, refer it as a potential ADA matter and process the vendor's claim through the appropriate channel.\n\nTotal: about 80 seconds.",
+   "short_form": "For a pure knowledge question, use SC only: State the rule, Cite it, stop. Do not manufacture a scenario the board did not give you."
+  },
+  "candidate_tips": [
+   "Answer the question that was asked, bottom line first. If the board wants more, they will ask. A 45 to 90 second answer with a clear recommendation beats a five-minute tour of the FAR.",
+   "Use one audible framework for every scenario (State, Cite, Apply, Risk, Route). Boards reward structure because it shows how you will think when nobody is watching.",
+   "Cite in layers: FAR section, then DFARS/AFARS, then statute or Army policy, then local procedure. Say 'Cite:' out loud before the reference; it signals you are done with the analysis.",
+   "Know the RFO numbers for the top twenty concepts cold (ratification 1.405, COR 1.404, only-one-source 6.103-1, urgency 6.103-2, J&A 6.104 and Table 6-1, commercial simplified 12.201-1, commercial termination 12.304, micro-purchase 13.401 and Subpart 12.4, clarifications 15.202(a)(2), competitive range 15.204-1, price analysis 15.404-1, options 17.204-1, set-aside rule of two 19.104-1, agency protest 33.104, GAO protest 33.105, KO final decision 33.205-6, personal services 37.201-2, change orders 43.302, GFP liability 45.104 and 52.245-1, cure and show cause 49.402-3 and 49.607). When a board member uses an old number, answer the concept and offer the new number.",
+   "Know the thresholds for the class you are asking for and one class above: MPT, SAT, SaP, J&A approval tiers in Table 6-1, the certified cost or pricing data threshold, the subcontracting plan threshold, and the cumulative instrument value rule (base plus all options plus ceiling plus the absolute value of a modification) from Policy v12 paragraph 4.2.",
+   "Fiscal law is on every board. Be able to say purpose, time and amount in one breath, define bona fide need, explain the 12-month severable services rule, and say what happens the moment you suspect an ADA violation.",
+   "Never bluff. 'I do not know the section, but the rule is X and I would confirm it in Part Y before I signed' scores a 3 or better. A confident wrong answer scores a 1 and colors every answer after it.",
+   "When a scenario is missing a fact you need, ask for it. 'Is this O&M or LCS funded?' or 'Is the vendor a Korean firm?' shows judgment. Do not ask more than one question per answer.",
+   "Say what you would sign and what you would send up. The board is deciding whether to trust your signature; show that you know its edges. 'That exceeds my authority; I would prepare it for the CoCO' is a strong sentence.",
+   "For every 411th board prepare the Korea layer: LCS is ROK MND awarded and USFK J4 managed, the 411th KO recommends award, competition is limited to Korean firms, and O&M and LCS cannot share a solicitation; SOFA Article XV Invited Contractor designation goes through USFK/FKAQ under USFKI 4901.01. Confirm current local procedures with C&P before the board.",
+   "Practice out loud with a timer and a partner who interrupts you. The study groups exist for this. Record yourself once; you will hear the filler words the board hears.",
+   "Treat the warrant as a trust, and say so when the ethics or leadership question comes. Boards remember the candidate who explained why they would refuse a Commander politely and what lawful alternative they would offer."
+  ],
+  "failure_modes": [
+   "Reciting the rule without applying it to the facts. The board hears a textbook, not a KO.",
+   "Missing the fiscal problem inside a contracting problem: ratifying before checking that funds were available and proper, exercising an option with expired funds, treating a severable service crossing fiscal years as automatic.",
+   "Confusing the layers: calling an Army policy 'the FAR', citing DFARS for a rule that is statutory, or presenting a local 411th threshold as if it were in the regulation.",
+   "Bluffing a cite. A made-up section number is worse than saying 'Part 6, the sole-source exception, I would confirm the paragraph'.",
+   "Proposing an action outside the candidate's warrant or the KO's authority: approving a J&A above the KO tier in Table 6-1, waiving a competition requirement, 'directing' a contractor employee, or agreeing to award an LCS contract that ROK MND awards.",
+   "Deferring everything to legal or the chief with no analysis. Legal review is a route, not an answer.",
+   "Ignoring the customer's mission. 'No' without a lawful 'here is how' fails the judgment dimension even when the 'no' is correct.",
+   "Losing composure under a follow-up: arguing with the board member, changing the answer every time someone frowns, or going silent.",
+   "Talking too long. A candidate who cannot land an answer in ninety seconds is signalling how their memos will read.",
+   "Skipping the Korea layer on a 411th board, or the reverse: inventing local approval levels and points of contact that the candidate has not verified with C&P."
+  ],
+  "day_of_checklist": [
+   "Confirm the board date, time, location or Teams link and the class you are boarding for. The 411th CORB is normally on the Commander's calendar the second Wednesday of the month; the invite comes from CONOPS.",
+   "Confirm your VCE-Warrants application is complete and routed (candidate, supervisor as Requesting Official, 906th CBN Group or TCC Group, CONOPS, BDE group). Incomplete applications are returned by the Program Coordinator, not scored.",
+   "Bring nothing with PII to the board and never upload PII documents to VCE-Warrants. ACRB/ORB/ERB go to your supervisor by e-mail per the workflow.",
+   "One page of notes only: your RFO cite list, the thresholds, the Korea layer, and the SCARR framework. You will probably not look at it; that is the point.",
+   "Re-read Policy v12 Table 1 and paragraph 4.2 (cumulative instrument value) and know exactly which class and dollar threshold you are asking for and why your experience supports it.",
+   "Re-read the acquisition.gov FAR overhaul deviation guide for Parts 1, 6, 12, 13, 15, 33, 43 and 49 the night before; numbers have moved and boards notice who noticed.",
+   "Prepare a two-minute 'who I am' opener: current role, direct contract experience by dollar value and type, and what you would do first with the warrant. Some boards open with it.",
+   "Prepare your three hardest-question answers out loud: a ratification, an urgency J&A, and an LCS or SOFA scenario. Time them.",
+   "Dress and bearing as for a Commander's brief. Arrive early. Expand every acronym the first time you use it.",
+   "Know who is in the room: the SCO chairs; PD, CoCO, Division Chiefs and KOs vote; CONOPS / Chief, C&P facilitates and does not vote. Address answers to the whole board, not only the chair.",
+   "Eat, hydrate, and stop studying an hour before. Composure is scored.",
+   "After the board, do not discuss the questions with candidates still waiting. The facilitator will tell you how and when results are communicated; the SCO appoints on VCE-Warrants only after a unanimous recommendation."
+  ],
+  "class_focus": {
+   "I": "Class I (SAT). The board is checking that the candidate can be trusted with routine actions alone: purpose, time and amount; the micro-purchase threshold and GPC limits; simplified procedures (FAR Part 13, and 12.201-1 for commercial); competition at and below the SAT; the rule of two for small business set-asides (19.104-1); documenting price reasonableness; unauthorized commitments and why the candidate must refuse to be the S4's shortcut; SAM exclusions checks (9.405); basic ethics and gratuities. For the 411th, whether the candidate understands what a KO does and does not do on an LCS action. Expect mostly knowledge questions with one or two short scenarios.",
+   "II": "Class II ($500K, $1M, $5M, SaP). Everything in Class I plus: the full Part 6 exceptions and the J&A content and approval tiers (6.103, 6.104, Table 6-1); market research and commercial determinations; contract type selection and the risk each type places on the Government; options (17.204-1) and the cumulative-value rule for the warrant; the 12-month severable services rule and bona fide need across fiscal years; ratification as the KO who will now run the file (1.405); COR designation and oversight (1.404); personal services and inherently governmental limits (37.201-2, 37.301-1); agency-level protests (33.104) and the KO's role in a GAO protest (33.105); cure and show cause notices (49.402-3, 49.607) and commercial terminations (12.304); change order authority (43.302). Expect a balance of knowledge and scenario questions and at least one judgment question about saying no to a customer.",
+   "III": "Class III ($10M, $25M, $50M, $100M). The board is checking source selection and pricing leadership: competitive range, exchanges and negotiations (15.202, 15.204-1, 15.204-2); debriefings (15.206-2, 15.301-1); price analysis, cost analysis and cost realism (15.404-1 through -3); certified cost or pricing data, the prohibitions and exceptions, and the certificate (15.403-2, 15.403-3, 15.403-4); organizational conflicts of interest (9.504, 9.505); responsibility determinations and certificates of competency (9.104-1, 9.105-2, 19.204); subcontracting plans (19.109, 19.206); the KO's final decision on a claim (33.205-6) and ADR (33.205-8); terminations for default and convenience with settlement basics (Part 49); Government property responsibility (45.104, 52.245-1). Scenarios dominate and the board probes what the candidate would sign versus push up, how they lead a team, and how they handle a Commander who wants a particular outcome. For the 411th, an LCS scenario with ROK MND approval timelines and the O&M/LCS separation is likely.",
+   "IV": "Class IV ($250M, $500M, Unlimited). The board is attesting to superior judgment (Policy v12: the board for an Unlimited warrant cannot be waived). Expect fewer 'what is the rule' questions and more 'what would you do and why' at the enterprise level: acquisition strategy and program risk, high-dollar J&A approval routing (for DoD, DFARS 206.104-71 Table 206-1 under Class Deviation 2026-O0017 Rev 2 applies in lieu of FAR Table 6-1: over $10M to $100M is the competition advocate, not delegable; over $100M to $500M is the head of the contracting activity, delegable only to a general or flag officer or civilian equivalent; over $500M is the senior procurement executive, which for the Army is the ASA(ALT) without further delegation; the FAR Table 6-1 figures of $20M, $90M and $150M do not set DoD approval levels), multiyear and interagency acquisitions (Subparts 17.1 and 17.5), protests at GAO and the Court of Federal Claims (33.105, 33.106), large claims and litigation posture, terminations with major settlement exposure, fiscal law at the appropriation level, ethics and post-Government employment, leadership of a contracting office, mentoring and warrant program stewardship, and how the candidate would brief the Commander or the HCA on a bad-news event. For the 411th, the SMA/LCS policy relationship with USFK J4 and ROK MND and the SOFA framework are fair game."
+  },
+  "board_member_guide": {
+   "composition_and_cadence": "From the 411th CSB Warrant Process Workflow (Jul 2026): the SCO chairs the CORB. Voting members are drawn from the SCO, PD, CoCO and/or Division Chiefs and KOs. CONOPS / Chief, C&P facilitates and is a non-voting member. The CORB sits on the Commander's calendar the second Wednesday of each month; CONOPS checks the Commander's calendar and sends the invite. On receipt of the invite, CONOPS / C&P prepare the CORB questions, the cover sheet and the scoring sheet, generate the warrant number and prepare the draft appointment memo and certificate in PDF and upload them to VCE-Warrants. The SCO makes the appointment on VCE-Warrants only with a unanimous recommendation from the CORB members. The SCO may waive the CORB (the approved waiver, memo and certificate are uploaded to VCE); Army policy does not allow waiving the board for an Unlimited warrant. Urgent warrant applications may have a shorter processing timeline based on mission requirements. Army Warranting Program Policy v12 (Warranting Review Boards) adds the general rule: the HCA (or the delegated official, here the SCO) chairs and administers the board and selects three to five additional members with a mix of experience, legal expertise and supervisory backgrounds appropriate to the warrant type; questions must be commensurate with the warrant threshold, the candidate's role and the organization's mission.",
+   "selecting_questions": [
+    "Start from the class requested and the candidate's VCE application and resume, not from a favorite topic. Class I and II boards weight fiscal law, authority and ratification, competition and simplified/commercial procedures; Class III and IV boards weight source selection, pricing, protests and claims, terminations, OCI and leadership. Agreements and Grants boards use their own instrument-specific sets.",
+    "Cover at least six of the sixteen domains for Class I and II and at least eight for Class III and IV. Always include Fiscal Law and Funding and Authority, Ethics and Leadership. For a 411th board include at least one Korea, LCS and SOFA item.",
+    "Mix kinds: roughly half knowledge questions with a clean cite, a third scenarios with one hidden problem, and at least one leadership question. Put the hardest scenario in the middle, not first or last.",
+    "Pull from the current question bank and let the facilitator (CONOPS / C&P) build the set so that members do not duplicate each other. Agree in the pre-brief who asks what and who probes.",
+    "Check every cite in the answer key against the RFO numbering on acquisition.gov before the board. If the key still shows an old number, accept either numbering from the candidate but note who knew the change.",
+    "Calibrate difficulty to the class. A Class I candidate who cannot recite Table 6-1 has not failed; a Class III candidate who cannot explain a competitive range has.",
+    "Use the same core set for every candidate boarding for the same class in the same session, with probes varied by their answers. Consistency across candidates is what makes the unanimous vote defensible."
+   ],
+   "probing_follow_ups": [
+    "Probe to find the edge of the candidate's understanding, not to trap them. A good probe changes one fact: 'Same scenario, but the funds are LCS.' 'Same scenario, but the value is $12 million.' 'Same scenario, but the vendor is on the exclusion list.'",
+    "When the answer is a rule with no application, ask 'What would you do first?' When the answer is an action with no rule, ask 'What authority lets you do that?'",
+    "When the candidate defers to legal or the chief, ask 'What is your recommendation to them?'",
+    "Ask 'What would you sign, and what would you send up?' at least once per candidate; it is the question the warrant answers.",
+    "Ask 'What is the risk if we do nothing?' to test mission awareness, and 'What is the risk if we do what the customer wants?' to test compliance awareness.",
+    "Limit yourself to two probes per question; then move on so the set stays consistent across candidates.",
+    "If a candidate corrects your premise and is right, say so and move on. It is data for the composure score, and it models the bearing you want from a KO."
+   ],
+   "consistency": [
+    "Score each question immediately, before the next one, on the sheet C&P provided. Do not go back and revise earlier scores after a strong or weak finish.",
+    "Score against the class requested, not against yourself or the last candidate. Write the class at the top of your sheet.",
+    "Use the anchors. A 3 is 'meets the standard for this class'. Reserve 5 for answers you would want to use as the model answer. Reserve 1 for answers that would be a problem if the candidate held the warrant tomorrow.",
+    "Do not discuss the candidate between questions. Deliberate only after the candidate leaves and only after every member has finished writing.",
+    "In deliberation, each voting member states their recommendation and the one or two observations that drove it before any discussion. The chair speaks last. A single 'Do not recommend' is a non-pass; the discussion is to make sure it rests on what was heard, not on a resume opinion.",
+    "If members split, re-read the anchors for the dimension in dispute and identify the specific answer that separates a 2 from a 3. Do not average across members to reach a pass.",
+    "Record the reason for the outcome in a form the candidate can act on: 'Recommend at Class II; re-board for Class III after demonstrated source selection experience.'"
+   ],
+   "note_taking": [
+    "Write what the candidate said, in their words where it matters, not your reaction. 'Said J&A over $900K goes to the competition advocate; did not know it is not delegable' is useful; 'weak on Part 6' is not.",
+    "Note the cite given, whether it was the current RFO number, and whether the concept was correct even if the number was not.",
+    "Note the recommendation the candidate made and the approvals they named. That is the judgment evidence.",
+    "Note bearing only when it affected the answer: 'recovered after a restart', 'argued the premise, then conceded'.",
+    "Keep notes on the scoring sheet or a single sheet that goes back to the facilitator. Do not keep personal copies."
+   ],
+   "avoiding_leading_questions": [
+    "Do not embed the answer in the question. 'Would you get a J&A for that?' tells them; 'What do you need before you can award that?' asks them.",
+    "Do not signal with tone or nodding while the candidate is answering. Save reactions for the deliberation.",
+    "Do not correct the candidate mid-answer unless a premise you gave them was wrong. Let them finish, then probe.",
+    "Ask one question at a time. Compound questions produce compound half-answers that are hard to score consistently.",
+    "Avoid 'gotcha' facts that no KO in this office would know from memory (an obscure clause number, a threshold that changed last month). Test what a KO at this class needs to know, and test where they would look for the rest.",
+    "Keep hypotheticals realistic for this command. A scenario the candidate could face in Korea next month tells you more than an exotic one."
+   ],
+   "handling_a_candidate_who_freezes": [
+    "Pause. Silence for five seconds is normal; the candidate is thinking. Do not fill it.",
+    "If the freeze continues, the chair or facilitator restates the question in simpler words without adding hints: 'Take your time. The question is what you would do first.'",
+    "Offer the framework, not the content: 'Start with the rule as you understand it.' If they produce the rule, follow with 'Now apply it to the facts.'",
+    "If the candidate still cannot proceed, say 'We will come back to that one' and move to a knowledge question they are likely to know, then return later. Score the returned answer on its merits and note the recovery under composure.",
+    "Never let a freeze become a spectacle. One member speaks; the others stay neutral.",
+    "In deliberation, distinguish a single freeze with recovery (composure 3 is possible) from a pattern of inability to structure an answer under any pressure (composure 1 or 2, and a judgment concern)."
+   ],
+   "pii_discipline_in_notes": [
+    "The workflow tells candidates not to upload documents with PII to VCE-Warrants; the board holds itself to the same standard. Notes and scoring sheets carry the candidate's name and the outcome, nothing more: no SSN, DoD ID, date of birth, home address, medical or family details, and nothing from the ACRB/ORB/ERB beyond what is needed to state experience.",
+    "Do not write down anything the candidate volunteers about personal circumstances. If it bears on readiness, tell the facilitator verbally.",
+    "Scoring sheets and notes go to the facilitator (CONOPS / C&P) at the end of the session. Members do not keep copies, photograph sheets, or e-mail them from personal accounts.",
+    "Results are communicated by the SCO or facilitator through the process, not by members in the hallway.",
+    "Board discussion stays in the room. What one candidate answered is not shared with another, and 'who failed' is not a topic for the office.",
+    "If board materials are stored on the Teams share (CCSB-KOH-CP, 14_411th Warranting Program), store only the templates and the outcome records the SOP requires, with PII removed."
+   ]
+  },
+  "probes": {
+   "Fiscal Law & Funding": [
+    "Same requirement, but it is a severable service that starts on 1 August and runs twelve months. Which fiscal year's O&M can you use and what is the authority?",
+    "You discover after award that the funds cited were for a different purpose. Walk me through the next 72 hours: who do you tell, what stops, and what does the preliminary review look like?",
+    "The customer offers you expired-year funds to pay a legitimate upward adjustment on a contract awarded three years ago. Can you accept them, and what do you need to verify first?"
+   ],
+   "Competition & Market Research": [
+    "The customer says only one vendor can do this. What would your market research have to show before you would sign a 6.103-1 justification, and who approves it at this dollar value under Table 6-1?",
+    "Same scenario but the value is $1.2 million and the customer wants award in ten days. Is unusual and compelling urgency available, what are its limits, and what does it cost the customer later?",
+    "You cannot find a second source in SAM but a board member says they know one. What do you do with that, and how does it change your justification?"
+   ],
+   "Acquisition Planning & Contract Types": [
+    "The requirement is poorly defined and the customer wants firm-fixed-price. What do you tell them and what contract type would you recommend, with the risk each one puts on the Government?",
+    "The customer wants five option years. What must be true at each option exercise under 17.204-1, and how does the cumulative value affect which warrant can sign the base award?",
+    "This is a $4 million services requirement in Korea. Is it commercial, and if so what changes about how you solicit and terminate it?"
+   ],
+   "Source Selection & Evaluation": [
+    "One offeror's price is 30 percent below the others. What do you do with that before you establish the competitive range, and what is the difference between a clarification and a negotiation under the overhauled Part 15?",
+    "The Commander wants a contractor employee as a voting member of the technical evaluation team. What is your answer and why?",
+    "An unsuccessful offeror asks for a debriefing three days after award notice. What are they entitled to, what will you not disclose, and what clock does the debriefing affect?"
+   ],
+   "Pricing, Cost & Payment": [
+    "Explain price analysis versus cost analysis in one minute each, and tell me when you are required to get certified cost or pricing data and what the exceptions are.",
+    "The contractor submits an invoice for work you are not sure was accepted. What do you check, and what happens if you pay late on a proper invoice?",
+    "You have one offer on a competitive solicitation. How do you determine the price is fair and reasonable, and what does your file have to show?"
+   ],
+   "Contract Administration": [
+    "The COR e-mails the contractor to add a task 'just for a week'. What has happened, what do you do with the COR, and what authority lets you fix it?",
+    "You need to issue a change order under 43.302 before the price is settled. What must be in place before you sign, and what does 43.304 require you to do afterward?",
+    "Performance is slipping. What is the difference between a cure notice and a show cause notice, when do you use each, and what do you need in the file before you send either?"
+   ],
+   "Terminations & Remedies": [
+    "Walk me through terminating this fixed-price commercial contract for cause under 12.304 and 52.212-4. What is different from a non-commercial default under 49.402?",
+    "The customer no longer needs the service after six months of a twelve-month contract. What are your options short of termination, and if you terminate for convenience what is the contractor entitled to?",
+    "You terminated for default and the contractor says the delay was excusable. What happens to your termination if they are right, and how do you protect the Government in the notice you write?"
+   ],
+   "Protests, Claims & Disputes": [
+    "A protest is filed with GAO four days after award. What must you do to performance, who decides whether to override the stay, and what does your agency report contain?",
+    "The contractor sends an e-mail saying 'we think we are owed another $150,000'. Is that a claim under 33.205-1, what would make it one, and what does your final decision under 33.205-6 have to contain?",
+    "A disappointed offeror comes to you before going to GAO. What is an agency-level protest under 33.104, who decides it, and what is the advantage to the Government of handling it well?"
+   ],
+   "Responsibility & Exclusions": [
+    "Your apparent awardee has a SAM exclusion that posted yesterday. What can you do, and what can you not do, under 9.405?",
+    "You want to find a small business nonresponsible for lack of capacity. What happens next, and who makes the final call?",
+    "Your evaluation support contractor wrote part of the statement of work two years ago. Is that an organizational conflict of interest, which 9.505 rule applies, and what are your options?"
+   ],
+   "Property, Security & Special Provisions": [
+    "The contractor loses a Government-furnished generator. Who bears the loss under 52.245-1, what would shift it, and what does 45.104 say about the Government's assumption of risk?",
+    "The requirement involves a system that handles controlled unclassified information. What does the DFARS cybersecurity framework require you to check before award, and what do you do if the offeror cannot show it?",
+    "The contract will have contractor personnel on an installation in Korea. What has to be in the contract about SOFA status, base access and security, and whose job is each piece?"
+   ],
+   "Authority, Ethics & Leadership": [
+    "The Commander tells you to award to a specific vendor. What do you say in the room, what do you do afterward, and what lawful path do you offer?",
+    "What can you sign today with the warrant you are asking for, what can you not, and how would you handle a modification that pushes the cumulative value over your threshold?",
+    "A vendor invites your team to a dinner after award. What do you tell your team, and what would you do if you learned someone went?"
+   ],
+   "Small Business & Socioeconomic": [
+    "Market research shows two capable small businesses and one large incumbent. What does 19.104-1 require, and what would let you not set it aside?",
+    "The requirement is $3 million in Korea. Does the rule of two apply overseas, and what do you check before you decide?",
+    "When is a subcontracting plan required, what do you evaluate in it, and what happens after award if the contractor ignores it?"
+   ],
+   "Grants & Agreements": [
+    "A program office wants to use a grant so they do not have to compete. What is the principal purpose test, and which instrument does the law require here?",
+    "For an Other Transaction for a prototype under 10 U.S.C. 4022, what makes a nontraditional defense contractor, what are the conditions for a follow-on production award, and which fiscal rules still apply?",
+    "What is substantial involvement, and how does it decide between a grant and a cooperative agreement under the DoDGARs?"
+   ],
+   "Korea, LCS & SOFA": [
+    "An LCS-funded grounds maintenance requirement with an $11 million estimate lands on your desk. Who solicits, who awards, who pays the invoices, and what is your timeline compared with an O&M action?",
+    "The customer wants to combine an O&M-funded task and an LCS-funded task in one solicitation to save time. What is your answer and why?",
+    "A U.S. contractor will perform on this contract in Korea. What are the two steps to SOFA Invited Contractor status under Article XV and USFKI 4901.01, which one is yours, and what are the four conditions a U.S. contractor must meet?"
+   ],
+   "Germany ABG-75": [
+    "Explain in plain terms what ABG-75 is, who executes construction for U.S. forces in Germany under it, and what the Army KO does and does not do on such a project. If you are not certain, tell me where you would find out.",
+    "A customer in Germany wants a routine facility repair done quickly and asks you to award it directly to a German firm. What questions do you ask before you decide whether this is an ABG-75 action or a FAR action?",
+    "What is the KO's role in funding, oversight and acceptance on an ABG-75 project, and where does the fiscal responsibility sit?"
+   ],
+   "General Contracting": [
+    "Give me the six-step path from a purchase request to award for a $180,000 commercial service, with the authority you rely on at each step.",
+    "What is the difference between a contract, a purchase order, a BPA and a task order, and which of them binds the Government when the KO signs?",
+    "Name three documents that must be in every contract file before award, and tell me which one you would refuse to award without."
+   ]
+  },
+  "probe_notes": "Probes are meant to follow a candidate's answer, not open a topic; the facilitator's question set opens the topic. Korea probes are grounded in the study-group deck answers (LCS awarded by ROK MND, managed by USFK J4, 411th KO recommends award, Korean firms only, O&M and LCS cannot share a solicitation; SOFA IC via USFK/FKAQ, Article XV, USFKI 4901.01) and carry korea-verify-cp: confirm current procedures with C&P before use. Germany ABG-75 probes are deliberately framed as 'explain and say where you would look' because no source in this content set describes ABG-75 mechanics; board members should verify with the 409th CSB before using them on a live board. Statutory references in probes (31 U.S.C. 1341, 1301(a), 1502(a); 10 U.S.C. 3133; 10 U.S.C. 4021, 4022; 31 U.S.C. 6303-6305; 41 U.S.C. 7101 et seq.) are unchanged by the RFO."
+ }
+}

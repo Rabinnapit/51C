@@ -1,0 +1,258 @@
+{
+  "reviewed_on": "2026-09-17",
+  "scope": [
+    "TL75-TL104"
+  ],
+  "items": [
+    {
+      "id": "TL75",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $8,450, one purchase amount, no options or ceiling: at or below the SAT, Class I. Difficulty 1 fits (one figure). Micro-purchase threshold $15,000 matches src/data/regulations.json (mpt, RFO FAR 2.101; 41 U.S.C. 1902) - a standard threshold, not a contingency or local figure. Board point (a cardholder is not a warranted KO) is the one the task asked for. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL76",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $1,000,000, single award amount: exactly at the Class II $1M rung, and a value at a tier belongs to that tier. Class I stops at the SAT, correctly excluded. Difficulty 1 fits. The board point tracks the Summary of Key Changes entry removing the 'less than'/'greater than' language from Table 1. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL77",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $50,000,000, single award amount: exactly at the Class III $50M rung. Class II correctly excluded - its top rung is SaP at $9,000,000. Difficulty 1 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL78",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $34,000,000, single award amount: above the $25M rung, so the $50M rung of Class III, and no Class II rung reaches it. Difficulty 1 fits. The board point's claim that construction is not a commercial product or service is standard practice (Part 12 procedures are not used for construction) and the class does not depend on it, since $34,000,000 is far above the SaP ceiling either way. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL79",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $92,000, single award amount: below the SAT, Class I. Unique against existing TL11 ($88,000). Difficulty 1 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL80",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $198,000, single award amount: below the SAT, Class I. Difficulty 1 fits. The board point matches the Table 1 note that SAT and SaP are written as terms so warrants need not be reissued when the values change. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL81",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $430,000, single award amount: above the SAT so Class I is out; smallest rung is the Class II $500K tier. $430,000 - $350,000 = $80,000, as the board point says. Difficulty 1 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL82",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $2,150,000, single award amount: Class II $5M rung. Difficulty 1 fits. Board point is right that the commercial question only starts to matter above $5,000,000. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL83",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $16,000,000, single award amount: above every Class II rung including SaP, above the $10M rung, so the Class III $25M tier. Difficulty 1 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL84",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $210,000,000, single award amount: above the top Class III rung of $100,000,000, so the Class IV $250M tier. Difficulty 1 fits. Unique against existing TL49 ($175,000,000) and TL33/TL37 ($250,000,000). Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL85",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $455,000,000, single award amount: above the $250M rung, so the Class IV $500M tier. Difficulty 1 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL86",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $45,000 + 2 x $45,000 = $135,000, and the facts state the total: well below the SAT, Class I. Difficulty 1 is defensible - the task allows 'a plain sum well inside a tier' at 1, and $135,000 is not near the $350,000 line. Unique against existing TL14 ($135,000,000). Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL87",
+      "verdict": "fixed",
+      "field": "facts[0]; explanation Cite line",
+      "before": "Establishing a blanket purchase agreement for facility repair parts. || RFO FAR 13.201 (simplified procedures - blanket purchase agreements)",
+      "after": "Establishing a noncommercial blanket purchase agreement for facility repair parts. || RFO FAR 13.201 (noncommercial simplified procedures; blanket purchase agreements)",
+      "source": "RFO Part 13 now applies only to noncommercial products and services (13.000, 13.001); commercial simplified procedures moved to 12.201-1. Citing 13.201 presumes a noncommercial agreement, so the facts now say so. Value $3,600,000 (anticipated value, para 4.2 counts it regardless of when funds are obligated) and Class II ($5M rung) confirmed and unchanged; the checker still reads the card as noncommercial. Source: content/out/crosswalk_far_1_19.json entry FAR 13 (verified, https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-13). Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL88",
+      "verdict": "fixed",
+      "field": "facts[2]; explanation Board point and Cite line",
+      "before": "The agreement itself carries an estimated five-year value of $3,600,000. || each call is measured on its own, and no individual purchase under a blanket purchase agreement may exceed the SAT. || RFO FAR 13.201 (blanket purchase agreements; no individual purchase under a BPA may exceed the SAT)",
+      "after": "The noncommercial agreement itself carries an estimated five-year value of $3,600,000. || each call is measured on its own, and under the noncommercial simplified procedures no call against the agreement may exceed the SAT. || RFO FAR 13.201 (noncommercial simplified procedures; calls against a blanket purchase agreement capped at the SAT)",
+      "source": "The SAT cap on calls is real but not universal: RFO 13.201 (noncommercial simplified procedures) caps BPA calls at the SAT, while a commercial BPA runs under 12.201-1(c)-(e) where calls may go to the SaP ceiling. The card stated the cap as a universal rule; it is now scoped to the noncommercial procedures the card is actually using. Value $57,500 (the call is the instrument; the agreement's $3,600,000 estimate is not added) and Class I confirmed and unchanged. Source: content/out/crosswalk_far_1_19.json entry FAR 13, 'BPA calls capped at SAT' (verified). Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL89",
+      "verdict": "fixed",
+      "field": "facts[2]; explanation Cite line",
+      "before": "Ordering under required-sources procedures. || RFO FAR 8 (required sources of supplies and services)",
+      "after": "Ordering under Federal Supply Schedule procedures. || RFO FAR 8.401 (Federal Supply Schedules; FSS ordering procedures at GSAR subpart 538.71)",
+      "source": "A Federal Supply Schedule is not a mandatory source in the RFO 8.101-8.103 sense, so 'required-sources procedures' was loose; the schedules sit at RFO 8.401 and the ordering procedures moved to GSAR subpart 538.71. Cite made specific and the fact line made accurate. Value $645,000 (the order is the instrument) and Class II ($1M rung) confirmed and unchanged. Source: content/out/crosswalk_far_1_19.json entry FAR 8 (verified, https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-8). Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL90",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $4,250,000 - the order is the instrument and carries no options; the parent vehicle's $180,000,000 ceiling is correctly not added. Class II $5M rung; Class I and the $1M rung correctly excluded. Difficulty 2 fits (order). Cite RFO FAR 16.506 (postaward order placement) is the right RFO number per content/out/crosswalk_far_1_19.json (old 16.505 'Ordering' split to 16.506 general order rules and 16.507 multiple-award fair opportunity). Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL91",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $45,000,000 - para 4.2 counts the anticipated or actual ceiling, so the ordering ceiling, not the $2,500 guaranteed minimum. Above every Class II rung and above the $25M rung, so the Class III $50M tier. Difficulty 2 fits. 'RFO FAR 16 (types of contracts)' is coarse but correct; left as a part-level cite rather than inventing an RFO section number for indefinite-delivery contract types, which content/out/crosswalk_far_1_19.json does not verify. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL92",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $2,750,000 - the estimated maximum is the anticipated ceiling para 4.2 counts. Class II $5M rung; Class I and the $500K/$1M rungs correctly excluded. Difficulty 2 fits. Part-level FAR 16 cite left as is for the same reason as TL91. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL93",
+      "verdict": "fixed",
+      "field": "facts",
+      "before": "Firm-fixed-price award for appointment scheduling support, base year $130,000. | Three one-year options priced at $85,000 each, priced and evaluated in the solicitation. | No option is exercised at award and no option funds are obligated.",
+      "after": "Firm-fixed-price award for appointment scheduling support, base year $130,000. | Three one-year options priced at $85,000 each, priced and evaluated in the solicitation. | No option is exercised at award and no option funds are obligated. | Cumulative base plus all three options is $385,000.",
+      "source": "Facts gave $130,000 and 'three one-year options priced at $85,000 each' but never the total, which is the one card in the set the checker flagged as not obviously adding up. Added the cumulative line used by TL86 and TL94 so the reader reaches $385,000 from the facts alone and the checker reports nothing to read by hand. Arithmetic $130,000 + 3 x $85,000 = $385,000 and Class II ($500K rung, base year alone would be Class I) confirmed and unchanged. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL94",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $1,200,000 + 4 x $1,050,000 = $5,400,000, and the facts state the total: past the top fixed Class II tier of $5,000,000, and the facts say non-commercial so the SaP rung is not available. Class III $10M tier. Difficulty 2 fits (a tier line crossed by the sum). Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL95",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $2,600,000 + $2,700,000 = $5,300,000, and the facts state the total: past $5,000,000 and non-commercial, so Class III $10M tier. The option-exercise framing is right - the cumulative value already counted the priced option at award, which is what makes the board point about a possible unauthorized commitment on the base award correct. Difficulty 2 fits. Unique against existing TL30 ($5,200,000). Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL96",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $2,400,000 - para 4.2 counts the not-to-exceed ceiling, not the $610,000 ordered to date. Class II $5M rung, Class I correctly excluded. Difficulty 2 fits. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL97",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $11,600,000 - the order is the instrument; the parent vehicle's $90,000,000 ceiling is correctly not added. Above SaP, so Class III $25M tier. Difficulty 2 fits. The cite is exactly right: content/out/crosswalk_far_1_19.json puts the general order rules that apply to a single-award IDIQ at RFO FAR 16.506 and the multiple-award fair opportunity procedures at 16.507. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL98",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $12,000,000 - para 4.2 counts the not-to-exceed amount regardless of when funds are obligated, not the $4,000,000 initial obligation. Above SaP, so Class III $25M tier. Difficulty 2 fits. Unique against existing TL10 ($12,400,000). Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL99",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $6,450,000, single award amount. The facts state both conditions the SaP rung requires - a commercial services acquisition and the simplified procedures for commercial products and commercial services - and $6,450,000 is at or below the $9,000,000 SaP ceiling, so Class II by the SaP rung. Difficulty 3 fits (the SaP nuance). Pairs correctly with TL100. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL100",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $6,600,000, single award amount. The facts rule the simplified procedures out, so the highest usable Class II rung is $5,000,000 and the award takes the Class III $10M tier. Difficulty 3 fits. This is the non-commercial half of the pair the task asked for; the value differs from TL99's by necessity, since no two cards may share a value_number. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL101",
+      "verdict": "fixed",
+      "field": "explanation",
+      "before": "Board point: taking work off a contract can raise the warrant class needed to sign it, because the calculation adds the absolute value of the change to the contract value - confirm how your office applies this with the Chief, C&P.",
+      "after": "Board point: taking work off a contract can raise the warrant class needed to sign it, because the calculation adds the absolute value of the change to the contract value rather than subtracting it.",
+      "source": "Arithmetic $4,800,000 + $260,000 = $5,060,000 and Class III ($10M rung; non-commercial so the SaP rung is not open) confirmed. Dropped the 'confirm with the Chief, C&P' hedge: the app has settled on the cumulative reading of para 4.2 - existing TL63 carries value_number $69,600,000 ($64,000,000 + $5,600,000) and states the rule flat with no hedge - so hedging on 3 of 30 new cards taught the same rule two ways. The reading that would flip this card to Class I (modification alone, $260,000) is recorded in this log's summary instead. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL102",
+      "verdict": "ok",
+      "field": null,
+      "before": null,
+      "after": null,
+      "source": "Recomputed $95,000,000 + $12,000,000 = $107,000,000 - para 4.2 counts the ceiling plus the absolute value of the modification, and the cumulative value of the contract including the modification is what the warrant must reach. Past the top Class III rung of $100,000,000, so the Class IV $250M tier. Difficulty 3 fits (ceiling, and 7 percent above a tier line). Unique against existing TL16 and TL66 ($104,000,000). Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL103",
+      "verdict": "fixed",
+      "field": "explanation",
+      "before": "Board point: an administrative change must be one the Government can make unilaterally without affecting the rights of the parties, and if it touches anything substantive the dollars of the change come back into the calculation on top of the contract value. Confirm how your office applies the modification rule to administrative changes with the Chief, C&P.",
+      "after": "Board point: an administrative change must be one the Government can make unilaterally without affecting the rights of the parties, and if it touches anything substantive the dollars of the change come back into the calculation on top of the contract value.",
+      "source": "Author's judgment call checked against Table 1 and upheld: Table 1 gives Class IV as $250M, $500M and Unlimited, and para 4.2 requires the warrant to be greater than or equal to the cumulative instrument value, so a $500M warrant does not reach $520,000,000 and Unlimited is the only rung that does. A $0 administrative modification adds nothing, so the cumulative value is the contract's $520,000,000 under either reading of para 4.2. value_number, Class IV and difficulty 3 (4 percent above the $500M line) all stand. Only the 'confirm with the Chief, C&P' hedge was dropped - a $0 modification leaves nothing for an office to decide, and the hedge was inconsistent with how TL63 and TL101 state the same rule. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    },
+    {
+      "id": "TL104",
+      "verdict": "fixed",
+      "field": "explanation",
+      "before": "Para 4.2 counts any anticipated or actual ceiling, so the cumulative value of this instrument is the $9,400,000 not-to-exceed amount it has carried, not only the $8,900,000 definitized price.\n\nBoth figures land in the same class here, which is how you want to answer it: $9,400,000 is above the $9,000,000 SaP ceiling, and $8,900,000 is a non-commercial buy so the SaP rung is not open to it either. Either way the smallest rung that covers the definitization is the Class III $10M tier.\n\nBoard point: definitizing below the not-to-exceed amount does not walk you down a class - use the higher figure, say which figure you used and why, and confirm your office's practice with the Chief, C&P.\n\nCite: Army Warranting Program Policy v12 para 4.2 (anticipated or actual ceiling; cumulative value of the contract including the modification), Summary of Key Changes, and Table 1; RFO FAR 43 (contract modifications); RFO FAR 12.201-1 (simplified procedures apply to commercial products and commercial services).",
+      "after": "Para 4.2 counts any anticipated or actual ceiling, so the cumulative value of this instrument is the $9,400,000 not-to-exceed amount it has carried, not the $8,900,000 definitized price alone.\n\nThe work is non-commercial, so the SaP rung is not open to this contract at any value and the highest Class II rung available is $5,000,000. Both $9,400,000 and $8,900,000 are above it, so the definitization takes the Class III $10M tier either way and the answer does not turn on which of the two figures you use.\n\nBoard point: definitizing below the not-to-exceed amount does not walk you down a class - the contracting officer who issues the letter contract needs the warrant its ceiling calls for, and still needs it when the price is settled.\n\nCite: Army Warranting Program Policy v12 para 4.2 (anticipated or actual ceiling; cumulative value of the contract including the modification), Summary of Key Changes, and Table 1; RFO FAR 43 (contract modifications); RFO FAR 12.201-1 (simplified procedures apply to commercial products and commercial services).",
+      "source": "Author's judgment call: simplified rather than removed. Kept, because the letter-contract definitization archetype was required and the difficulty-3 slot is needed; value_number $9,400,000 (the ceiling para 4.2 counts) and Class III are right. Two defects fixed. (1) The class-below exclusion was muddled: it led with '$9,400,000 is above the $9,000,000 SaP ceiling', which implies the SaP rung was in play for a buy the facts call non-commercial. SaP is a commercial-procedures authority, so the real exclusion is that the top usable Class II rung is $5,000,000 and both figures clear it. (2) The board point told the reader to 'use the higher figure ... and confirm your office's practice with the Chief, C&P' - advice the policy does not give, on a card where both figures give the same class. Now the card states the ceiling rule, shows the answer is the same either way, and makes the point that the letter contract's ceiling sets the warrant. Policy v12 Table 1 and para 4.2 (content/sources/army_warranting_policy_v12_mar2026.txt); SAT $350,000 and SaP $9,000,000 per src/data/regulations.json thresholds (sat, sap_commercial_ceiling)."
+    }
+  ],
+  "summary": {
+    "checked": 30,
+    "fixed": 7,
+    "reserved_or_removed": 0,
+    "unverifiable": [
+      "Army Warranting Program Policy v12 is terse on how a modification is valued, and the earlier review log (content/out/games_levels_tl_cm.review.json) recorded the tension between the para 4.2 body ('include the base value, all options, any anticipated or actual ceiling values, plus the absolute value of a modification') and the Summary of Key Changes entry for 4.2 ('it must be equal to or greater than the cumulative value of the contract including the modification'). The app has since settled on the cumulative reading - existing TL63 now carries value_number $69,600,000 ($64,000,000 + $5,600,000) and TL64 $2,310,000 - and these 30 cards follow it, as the authoring task directed. On the discarded modification-only reading three new cards would change class: TL101 ($260,000, Class I instead of III), TL102 ($12,000,000, Class III instead of IV) and TL103 ($0). Nothing changed here; recording it so the owner sees which cards depend on the settled reading.",
+      "Letter-contract definitization (TL104) is not addressed by name in Policy v12. The card values the instrument at the $9,400,000 not-to-exceed amount on the strength of 'any anticipated or actual ceiling' in para 4.2. The definitized price of $8,900,000 gives the same class, so nothing in the set turns on the choice, and the rewritten card now says so instead of sending the reader to ask.",
+      "Cite numbers for indefinite-delivery contract types, requirements contracts, time-and-materials ceilings and letter contracts (TL91, TL92, TL96, TL98) are left at part level, 'RFO FAR 16 (types of contracts)'. content/out/crosswalk_far_1_19.json verifies the RFO renumbering inside subpart 16.5 (16.506, 16.507, 16.508) but not sections for these contract types, and the AGENT_BRIEF rule is to keep an unverified number out rather than guess one."
+    ]
+  }
+}

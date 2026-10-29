@@ -1,0 +1,273 @@
+[
+  {
+    "id": "Q0015",
+    "changed": true,
+    "answer": "RFO FAR 9.104\nTo demonstrate responsibility, a prospective contractor must—\n(a) Have adequate financial resources to perform the contract, or the ability to obtain them (see 9.104-3(a));\n(b) Be able to comply with the required or proposed delivery or performance schedule, taking into consideration all existing commercial and governmental business commitments;\n(c) Have a satisfactory performance record (see 9.104-3(b) and part 42). Do not determine a prospective contractor responsible or nonresponsible based solely on a lack of relevant performance history;\n(d) Have a satisfactory record of integrity and business ethics (see part 42);\n(e) Have the necessary organization, experience, accounting and operational controls, and technical skills, or the ability to obtain them (including, as appropriate, such elements as production control procedures, property control systems, quality assurance measures, and safety programs applicable to materials to be produced or services to be performed by the prospective contractor and subcontractors) (see 9.104-3(a));\n(f) Have the necessary production, construction, and technical equipment and facilities, or the ability to obtain them (see 9.104-3(a)); and\n(g) Be otherwise qualified and eligible to receive an award under applicable laws and regulations (see also inverted domestic corporation prohibition at 9.108).\n9.105-2 Determinations and documentation.\nAFARS PGI 5109.103 Policy.\n(b) Determination of Responsibility Assistant (DORA) Contractor Responsibility bot\nDifferent BOT for Over and Under SAT\n\nCite: FAR 9.104 (general standards at FAR 9.104-1); FAR 9.104-3; FAR 9.105-2; FAR 9.108; FAR part 42; AFARS PGI 5109.103(b)",
+    "crosswalk": [
+      {
+        "old": "AFARS PGI 51",
+        "new": "AFARS PGI 5109.103(b)"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 9.104",
+      "FAR 9.104-1",
+      "FAR 9.104-3",
+      "FAR 9.105-2",
+      "FAR 9.108",
+      "FAR part 42",
+      "AFARS PGI 5109.103(b)"
+    ],
+    "rfo_status": "updated",
+    "notes": "Every cite in this answer survives the RFO at the same number, verified in the crosswalk against the Part 9 deviation guide and re-confirmed on acquisition.gov 14 Sep 2026: 9.104 (Responsible prospective contractors - Standards) with 9.104-1 General standards and 9.104-3 Application of standards; 9.105-2 Determinations and documentation; 9.108 Prohibition on contracting with inverted domestic corporations; part 42 retained (its subparts were renumbered but the answer cites the part only). The AFARS conversion (AFARS PGI 51 -> AFARS PGI 5109.103(b)) was already applied in the stored text, so no new pair was recorded. Only the Cite: line was added; substance untouched. Precision point flagged in the Cite line rather than edited into the body: the (a)-(g) list the answer labels 'RFO FAR 9.104' is the general-standards list at 9.104-1. No dollar figure appears in the answer (the SAT is referenced in words only; currently $350,000, thresholds id 'sat'), so no threshold marker was added. Status 'n/a' rather than 'updated' because nothing required conversion. REVIEWER (14 Sep 2026): Cite line changed so citations_rfo entry 'FAR 9.104-1' appears literally. rfo_status set to 'updated' and the stored pair AFARS PGI 51 -> AFARS PGI 5109.103(b) carried forward from questions.json rfo.crosswalk (regulations.json crosswalk entry, confidence probable) so the merge does not regress the item from 'updated' to 'n/a' with an empty crosswalk. FAR 9.104, 9.104-1, 9.405 and part 42 pairs verified in regulations.json; 9.104-3, 9.105-2 and 9.108 are sections listed in the verified 'FAR 9.104' entry note and on the Part 9 guide."
+  },
+  {
+    "id": "Q0027",
+    "changed": true,
+    "answer": "Authority: FAR 9.405 -- 1. Agencies may continue contracts or subcontracts in existence at the time the contractor was debarred, suspended, or proposed for debarment unless the agency head or a designee directs otherwise. 2. Ordering activities may continue to place orders against existing contracts, including indefinite delivery contracts, in the absence of a termination. 3. Agencies shall not renew or otherwise extend the duration of current contracts (i.e. exercise options), or consent to subcontracts, unless the agency head or a designee authorized representative states, in writing, the compelling reasons for renewal or extension.\n\nCite: FAR 9.405; FAR 9.405-1",
+    "crosswalk": [],
+    "citations_rfo": [
+      "FAR 9.405",
+      "FAR 9.405-1"
+    ],
+    "rfo_status": "n/a",
+    "notes": "FAR 9.405 (Effect of listing) and 9.405-1 (Continuation of current contracts) both keep their numbers and headings under the RFO - verified crosswalk entries against the Part 9 deviation guide, re-confirmed on acquisition.gov. Nothing required conversion; only the Cite: line was added. 9.405-1 was included because the three rules quoted in the answer are the 9.405-1 text and 9.405-1 is a verified crosswalk entry. 10 U.S.C. 983 is in the item's citations array but does not appear in the answer text, so it was not added to the Cite line; it is on the regulations.json 'unchanged' list in any case (the RFO does not touch statutes). No dollar figure in the answer. Status 'n/a' because nothing required conversion. REVIEWER (14 Sep 2026): Pairs FAR 9.405 and FAR 9.405-1 retained - verified in regulations.json. Only the Cite line was added; body byte-identical."
+  },
+  {
+    "id": "Q0033",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart in the answer text - it is a board-judgment prompt about the KO's unique role and impartiality. Skipped per the task's skip rule; listed for coverage. Nothing in it is affected by the RFO."
+  },
+  {
+    "id": "Q0034",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory reference of any kind in the answer text - it describes the guidance/policy/regulation/statute hierarchy in words and is a board-judgment prompt. Skipped per the task's skip rule; listed for coverage."
+  },
+  {
+    "id": "Q0042",
+    "changed": true,
+    "answer": "FAR RFO 33.104 Protests to the agency\nPreaward: Any alleged solicitation improprieties must be protested within 10 days of when the alleged impropriety was known or should have been known. A contract may not be awarded until the agency resolves the protest, unless a written justification is made for urgent and compelling reasons, or award is determined in writing to be in the best interest of the Government.\nPostaward: (a) If a protest is received, within 10 days after contract award or within 5 days after a debriefing date offered to the protester under a timely debriefing request in accordance with 15.505 or 15.506, whichever is later, then the contracting officer must immediately suspend performance, pending resolution of the protest within the agency, including any independent review by a higher level official, unless continued performance is justified.\n(b)Continued performance may be justified upon a written finding that there are urgent and compelling reasons, or continued performance is determined in writing to be in the best interest of the Government.\nFAR RFO 33.105 Protests to GAO\nPreaward: (a) If the agency receives notice of a protest from GAO before award, then a contract may not be awarded unless the head of the contracting activity authorizes contract award and performance.\n(b) The head of the contracting activity, on a nondelegable basis, may authorize contract award and performance upon a written finding that—\n(1) Urgent and compelling circumstances which significantly affect the interest of the United States will not allow waiting for a decision from GAO; and\n(2) Award is likely to occur within 30 days of the written finding.\nPostaward: (b)(1) If the agency receives notice of a protest from the GAO within 10 days after contract award or within 5 days after a debriefing date offered to the protester for any debriefing that is required by 15.505 or 15.506, whichever is later, then the contracting officer must immediately suspend performance or terminate the awarded contract, unless the head of the contracting activity authorizes contract performance.\n(2) The head of the contracting activity, on a nondelegable basis, may authorize contract performance, upon a written finding that—\n(i) Contract performance will be in the best interests of the United States; or\n(ii) Urgent and compelling circumstances that significantly affect the interests of the United States will not permit waiting for the GAO's decision.\n(Citation note: the RFO text of 33.104-3 and 33.105-3 still cross-references 15.505 and 15.506; under the RFO the preaward debriefing section is 15.206-2 and the postaward debriefing section is 15.301.)\n\nCite: FAR 33.104 (protests to the agency); FAR 33.104-3 (postaward stay); FAR 33.105 (protests to GAO); FAR 33.105-2 (preaward); FAR 33.105-3 (postaward); FAR 15.206-2 and FAR 15.301 (debriefings)",
+    "crosswalk": [
+      {
+        "old": "FAR 15.505",
+        "new": "FAR 15.206-2"
+      },
+      {
+        "old": "FAR 15.506",
+        "new": "FAR 15.301"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 33.104",
+      "FAR 33.104-3",
+      "FAR 33.105",
+      "FAR 33.105-2",
+      "FAR 33.105-3",
+      "FAR 15.206-2",
+      "FAR 15.301"
+    ],
+    "rfo_status": "updated",
+    "notes": "The two part 33 cites in the answer are already correct RFO numbering: under the RFO 33.104 is 'Protests to the agency' and 33.105 is 'Protests to GAO' (the legacy 33.104 = protests to GAO is what the crosswalk maps to 33.105). Confirmed on the Part 33 deviation guide 14 Sep 2026: Subpart 33.1 Protests, 33.104 with -1 through -4, 33.105 with -1 through -4. The '15.505 or 15.506' cross-references inside the quoted 33.104-3 and 33.105-3 text were deliberately LEFT AS WRITTEN because the published RFO text of those sections still reads '15.505 or 15.506' verbatim (read on the deviation guide) - rewriting the quotation would misrepresent the regulation. Instead a one-line citation note was appended giving the current RFO debriefing sections (preaward 15.206-2, postaward 15.301, both verified crosswalk entries), and the pairs are recorded in crosswalk. Status 'updated' on that basis (task rule 4). No dollar threshold appears in this answer - the 10-day, 5-day and 30-day figures are time limits, not dollar values, and are unchanged. REVIEWER (14 Sep 2026): Cite line restructured so 'FAR 33.104-3', 'FAR 33.105-2' and 'FAR 33.105-3' appear literally; no other text change. Verified on the RFO Part 33 page (last updated 07/28/2026) that 33.104-3(a) and 33.105-3(b)(1) still read 'in accordance with 15.505 or 15.506' / 'required by 15.505 or 15.506', so the quotation and the citation note are accurate. Pairs 15.505 -> 15.206-2 and 15.506 -> 15.301 verified in regulations.json."
+  },
+  {
+    "id": "Q0053",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No cite and no named FAR part or subpart - the answer restates the responsibility standards in words only. Skipped per the task's skip rule; listed for coverage. For a later content pass: the underlying source is RFO FAR 9.104-1 (General standards), which the RFO retains at the same number (verified crosswalk)."
+  },
+  {
+    "id": "Q0055",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory reference in the answer text - 'competitive prejudice', with GAO and the U.S. Court of Federal Claims named as forums, which are not FAR/DFARS/AFARS/PGI/U.S.C./CFR cites. Skipped per the task's skip rule; listed for coverage."
+  },
+  {
+    "id": "Q0090",
+    "changed": true,
+    "answer": "RFO FAR 33.104-3 Postaward.\n(a) If a protest is received, within 10 days after contract award or within 5 days after a debriefing date offered to the protester under a timely debriefing request in accordance with 15.505 or 15.506, whichever is later, then the contracting officer must immediately suspend performance, pending resolution of the protest within the agency, including any independent review by a higher level official, unless continued performance is justified.\n(Citation note: the RFO text of 33.104-3 and 33.105-3 still cross-references 15.505 and 15.506; under the RFO the preaward debriefing section is 15.206-2 and the postaward debriefing section is 15.301.)\n\nCite: FAR 33.104-3; FAR 15.206-2 and FAR 15.301 (debriefings)",
+    "crosswalk": [
+      {
+        "old": "FAR 15.505",
+        "new": "FAR 15.206-2"
+      },
+      {
+        "old": "FAR 15.506",
+        "new": "FAR 15.301"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 33.104-3",
+      "FAR 15.206-2",
+      "FAR 15.301"
+    ],
+    "rfo_status": "updated",
+    "notes": "FAR 33.104-3 (Protests to the agency - Postaward) is already RFO numbering and is retained at the same number - verified crosswalk entry, re-confirmed on the Part 33 deviation guide. The stored citations array also carries a bare 'FAR 33', the same part, which needs no conversion. As in Q0042 and Q0093 the '15.505 or 15.506' cross-reference is verbatim published RFO text and was left inside the quotation; the appended citation note supplies the current RFO debriefing sections and the pairs are recorded in crosswalk. No dollar threshold in this answer. REVIEWER (14 Sep 2026): Body byte-identical apart from the citation-note parenthetical and Cite line. RFO Part 33 page (07/28/2026) confirms 33.104-3(a) still reads '15.505 or 15.506'. Pairs 15.505 -> 15.206-2 and 15.506 -> 15.301 verified in regulations.json; FAR 33.104-3 retained (verified entry)."
+  },
+  {
+    "id": "Q0091",
+    "changed": true,
+    "answer": "FAR RFO Part 33\nAgency, GAO, U.S. Court of Federal Claims\nFAR Part 33.2 Disputes and Appeals\nClaim means a written demand or written assertion by one of the contracting parties seeking, as a matter of right, the payment of money in a sum certain, the adjustment or interpretation of contract terms, or other relief arising under or relating to the contract. However, a written demand or written assertion by the contractor seeking the payment of money exceeding $100,000 is not a claim under 41 U.S.C. chapter 71, Contract Disputes, until certified as required by the statute. A voucher, invoice, or other routine request for payment that is not in dispute when submitted is not a claim. The submission may be converted to a claim, by written notice to the contracting officer as provided in 33.205-1, if it is disputed either as to liability or amount or is not acted upon in a reasonable time.\n(Citation note: under the RFO, part 33 no longer carries the FAR definition of \"claim\" and has no 33.206 or 33.207 - contractor claim submission is at 33.205-1, and the certification requirement for claims exceeding $100,000 is at 33.205-2(a), which points to the Disputes clause at 52.233-1(d).)\n\nCite: FAR part 33; FAR subpart 33.2 (Disputes and Appeals); FAR 33.205-1; FAR 33.205-2(a); FAR 52.233-1(d); 41 U.S.C. chapter 71",
+    "crosswalk": [
+      {
+        "old": "FAR 33.206(a)",
+        "new": "FAR 33.205-1"
+      },
+      {
+        "old": "FAR 33.207",
+        "new": "FAR 33.205-2(a)"
+      }
+    ],
+    "citations_rfo": [
+      "FAR part 33",
+      "FAR subpart 33.2",
+      "FAR 33.205-1",
+      "FAR 33.205-2(a)",
+      "FAR 52.233-1(d)",
+      "41 U.S.C. chapter 71"
+    ],
+    "rfo_status": "updated",
+    "notes": "Converted 33.206(a) -> 33.205-1. Confirmed on the Part 33 deviation guide 14 Sep 2026: Subpart 33.2 is still titled 'Disputes and Appeals' (33.200 Scope, 33.201 Definitions, 33.202 Applicability, 33.203, 33.204 Policy, 33.205 Postaward, with 33.205-1 Contractor claim and 33.205-2 Contractor certification); legacy 33.206 and 33.207 were folded into 33.205's subsections. Task rule 4 applied: the RFO's 33.201 definitions list does NOT include 'claim' (it defines accrual of a claim, ADR, defective certification, issue in controversy, misrepresentation of fact), so the definition this answer quotes now lives in the Disputes clause at 52.233-1, and 33.205-2(a) reads 'Contractor requirements for certification of claims exceeding $100,000 are located at 52.233-1(d).' That is stated in one short parenthetical and the 33.207 -> 33.205-2(a) pair is recorded. THRESHOLD: the $100,000 certification figure in the text is CURRENT - thresholds id 'cda_claim_certification' shows claims exceeding $100,000 under 41 U.S.C. 7103(b) - so no '(threshold updated)' marker was added. The part 33 and subpart 33.2 references and 41 U.S.C. chapter 71 are unchanged (statutes are untouched by the RFO). Substance and wording otherwise intact. REVIEWER (14 Sep 2026): Only text edit is '33.206(a)' -> '33.205-1' plus the parenthetical and Cite line. Pair FAR 33.206(a) -> FAR 33.205-1 is not a regulations.json row; confirmed on the RFO Part 33 page (07/28/2026): Subpart 33.2 lists 33.205-1 Contractor claim ('(a)(1) Contractor requirements for submission of claims are located at 52.233-1(d)') and 33.205-2 Contractor certification ('(a) Contractor requirements for certification of claims exceeding $100,000 are located at 52.233-1(d)'), no 33.206 or 33.207 exists, and 33.201 defines only accrual of a claim, ADR, defective certification, issue in controversy and misrepresentation of fact - not 'claim'. Pair FAR 33.207 -> FAR 33.205-2(a) also matches the thresholds entry 'cda_claim_certification' (RFO FAR 33.205-2 and 52.233-1(d), legacy 33.207). $100,000 figure current. Confidence: verified."
+  },
+  {
+    "id": "Q0093",
+    "changed": true,
+    "answer": "FAR RFO 33.104-3 Postaward.\n(a) If a protest is received, within 10 days after contract award or within 5 days after a debriefing date offered to the protester under a timely debriefing request in accordance with 15.505 or 15.506, whichever is later, then the contracting officer must immediately suspend performance, pending resolution of the protest within the agency, including any independent review by a higher level official, unless continued performance is justified.\n(Citation note: the RFO text of 33.104-3 and 33.105-3 still cross-references 15.505 and 15.506; under the RFO the preaward debriefing section is 15.206-2 and the postaward debriefing section is 15.301.)\n\nCite: FAR 33.104-3; FAR 15.206-2 and FAR 15.301 (debriefings)",
+    "crosswalk": [
+      {
+        "old": "FAR 15.505",
+        "new": "FAR 15.206-2"
+      },
+      {
+        "old": "FAR 15.506",
+        "new": "FAR 15.301"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 33.104-3",
+      "FAR 15.206-2",
+      "FAR 15.301"
+    ],
+    "rfo_status": "updated",
+    "notes": "Same quoted text and same handling as Q0090: 33.104-3 is retained RFO numbering (verified crosswalk), the '15.505 or 15.506' cross-reference is verbatim published RFO text and was left inside the quotation, and a one-line citation note supplies the current RFO debriefing sections (preaward 15.206-2, postaward 15.301). Flagged for a later content pass, NOT changed here because this is a citation-currency pass: the question asks how long after a debriefing a protest may be filed, and the quoted 33.104-3 gives the agency-protest stay window, not the GAO window at 33.105-3 - a content issue, not a citation issue. No dollar threshold in this answer. REVIEWER (14 Sep 2026): Same verification as Q0090: body byte-identical apart from the parenthetical and Cite line; 33.104-3(a) still reads '15.505 or 15.506' on the RFO Part 33 page; both pairs verified in regulations.json. Content defect (agency stay window vs GAO window) left for a content pass, as the author noted."
+  },
+  {
+    "id": "Q0121",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart in the answer text: CICA is spelled out in words, GAO is named as a forum, and the quoted '(b) ... (1) ... (2)' block is unattributed. Skipped per the task's skip rule; listed for coverage. For a later content pass, NOT added here: the quoted HCA override language is RFO FAR 33.105-2(b) (preaward GAO stay override; the postaward override is 33.105-3), and the answer carries a media.waru.edu link, which per the agent brief should read 'DAU (WARU) Acquipedia' until the naming is confirmed."
+  },
+  {
+    "id": "Q0129",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory reference in the answer text - it lists forums and remedies in words (ADR, claim under the Disputes clause, REA, Claims Court, ASBCA). 'Disputes clause' is a clause name, not a cite. Skipped per the task's skip rule; listed for coverage. For a later content pass the RFO hooks are subpart 33.2 and the Disputes clause 52.233-1."
+  },
+  {
+    "id": "Q0154",
+    "changed": true,
+    "answer": "The GAO has jurisdiction on orders over $25M (threshold updated — see Thresholds). The GAO may also accept protests for contract actions that increases the scope, period, or maximum value of the order.\nReference/s: RFO FAR 16.508 (protests of orders; legacy FAR 16.505(a)(10))\n\nCite: FAR 16.508",
+    "crosswalk": [
+      {
+        "old": "FAR 16.505(a)(10)",
+        "new": "FAR 16.508"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 16.508"
+    ],
+    "rfo_status": "updated",
+    "notes": "Cite converted: legacy FAR 16.505(a)(10) (task/delivery order protest jurisdiction) is RFO FAR 16.508 'Protests of orders'. Source: the verified crosswalk entry FAR 16.505 -> FAR 16.507, whose note records that old 16.505 was split with 'protests of orders at 16.508'; the thresholds table entry 'task_order_protest_dod' independently cites 'RFO FAR 16.508 (legacy FAR 16.505(a)(10))'. Note the stored rfo.crosswalk on this item maps 16.505 -> 16.507, which is the fair-opportunity half of the split and is the WRONG target for this answer; 16.508 is correct here. THRESHOLD (task rule 3): the $25M in the text is STALE - thresholds id 'task_order_protest_dod' shows the DoD/NASA/Coast Guard GAO task-order protest floor is now in excess of $35,000,000 (10 U.S.C. 3406(f)(1)(B) as amended by FY2025 NDAA, Pub. L. 118-159 sec. 885(f); DFARS 252.216-7010(b)(1) per DoD Class Deviation 2026-O0045 Rev. 1). Per the task rule the original number was kept with '(threshold updated - see Thresholds)' appended rather than rewritten. Board-relevant contrast not added to the text: the civilian-agency floor is in excess of $10,000,000 (41 U.S.C. 4106(f), thresholds id 'task_order_protest_civilian'). The second sentence (GAO also takes protests that an order increases scope, period or maximum value) carries no separate cite. REVIEWER (14 Sep 2026): Diff is the threshold marker, 'FAR 16.505 (a) (10)' -> 'RFO FAR 16.508 (protests of orders; legacy FAR 16.505(a)(10))' and the Cite line; substance intact. Pair FAR 16.505(a)(10) -> FAR 16.508 verified: regulations.json 'FAR 16.505' entry note ('protests of orders at 16.508') and thresholds entry 'task_order_protest_dod' cite 'RFO FAR 16.508 (legacy FAR 16.505(a)(10))'. Author is right that the stored rfo.crosswalk pair 16.505 -> 16.507 is the fair-opportunity half and is wrong for this item; the output pair should replace it on merge. Threshold marker retained: $25M is stale, current DoD floor $35,000,000 (thresholds id task_order_protest_dod). Em-dash marker form matches markers accepted in rfo_rewrite_1/2/3."
+  },
+  {
+    "id": "Q0221",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory reference in the answer text - apparent, implied and express authority are defined from agency-law principles with no FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. Skipped per the task's skip rule; listed for coverage. For a later content pass: RFO FAR subpart 1.6 (contracting authority, KO appointment and limits) and FAR 43.301 (changes) are the FAR hooks, and the RFO puts ratification of unauthorized commitments at 1.405."
+  },
+  {
+    "id": "Q0254",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart - the answer describes ROK MND approval, the Korean-business/Korean-material limitation and a January 2022 offshore-waiver change in words only. Skipped per the task's skip rule; listed for coverage. Nothing here is RFO-affected: the LCS limitations flow from the Special Measures Agreement and USFK J4 procedures, not the FAR. Already flagged verify-locally; per the agent brief it also warrants korea-verify-cp on a content pass."
+  },
+  {
+    "id": "Q0255",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No cite and no named FAR part or subpart. The answer refers to full and open competitive procedures and to 'an exception allowing limited competition' in words only - no FAR part 6 cite is present, so there is nothing to convert. Skipped per the task's skip rule; listed for coverage. For a later content pass the RFO hook for limited competition is FAR 6.103 (legacy 6.302); the Korea/LCS limitation to Korean firms comes from the SMA, not the FAR. Already flagged verify-locally; korea-verify-cp warranted."
+  },
+  {
+    "id": "Q0256",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory reference in the answer text - it describes the Special Measures Agreement and the LCS program in words. Skipped per the task's skip rule; listed for coverage. Not RFO-affected. Already flagged verify-locally; korea-verify-cp warranted per the agent brief."
+  },
+  {
+    "id": "Q0257",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory reference in the answer text - it describes ROK MND fund custody, USFK J4 program management and the 411th CSB KO's recommendation-for-award role in words. Skipped per the task's skip rule; listed for coverage. Not RFO-affected. Already flagged verify-locally; korea-verify-cp warranted."
+  },
+  {
+    "id": "Q0258",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR cite and no named FAR part or subpart. The answer does reference SOFA Article XV and USFKI 4901.01, but those sit outside the FAR/DFARS/AFARS structure the RFO renumbered and are unchanged by it, so there is nothing to convert; recorded as a skip for coverage. Already flagged verify-locally; korea-verify-cp warranted per the agent brief."
+  },
+  {
+    "id": "Q0259",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No regulatory reference in the answer text - it lists packet contents (PR&C, DA Form 4283, Service Contract Approval, ABG action request, IGE, repair-to-replacement ratio, secondary-services justification) with no cite and no named FAR part or subpart. Skipped per the task's skip rule; listed for coverage. ABG-75 is the German construction-administration framework, outside the RFO's scope. Already flagged verify-locally."
+  },
+  {
+    "id": "Q0276",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No cite and no named FAR part or subpart in the ANSWER text - it says only that approval requirements for this size must be considered, simplified acquisition cannot be used and a source selection plan is required. The $11 Million IGE appears in the question stem, not the answer, so no threshold marker applies. Skipped per the task's skip rule; listed for coverage. For a later content pass the answer is a fragment and needs a real board-ready answer: the SAT is $350,000 and the simplified-procedures-for-commercial ceiling is $9,000,000 (thresholds ids 'sat' and 'sap_commercial_ceiling'), which is what rules simplified acquisition out at $11M. Already flagged verify-locally; korea-verify-cp warranted."
+  }
+]

@@ -1,0 +1,587 @@
+[
+ {
+  "qid": "Q0006",
+  "stem": "Under the bona fide needs rule, an annual appropriation such as one-year O&M may be obligated only for what?",
+  "options": [
+   {"text": "A legitimate need that arises during the fiscal year for which the appropriation was made", "correct": true, "why": "That is the rule itself: a fiscal year's appropriation is obligated only to meet a bona fide need arising in (or sometimes before) the year for which it was appropriated."},
+   {"text": "Any need the agency can document at any point during the five-year expired period", "correct": false, "why": "The five-year window after expiration is only for adjusting and liquidating prior obligations, not for meeting new needs."},
+   {"text": "Any need, so long as the contract is awarded before 30 September", "correct": false, "why": "Award date alone does not cure a bad need; the need itself must arise in the period of availability."},
+   {"text": "Next fiscal year's requirements, whenever the current year has fall-out funds available", "correct": false, "why": "Using this year's funds for next year's requirements is exactly what the rule forbids."}
+  ],
+  "difficulty": 1,
+  "cite": "31 U.S.C. 1502(a) (statute unchanged by the RFO)",
+  "domain": "Fiscal Law & Funding"
+ },
+ {
+  "qid": "Q0012",
+  "stem": "A customer submits a requirement above the simplified acquisition threshold and insists only one source can meet it. After market research still supports one source, what document does the file require?",
+  "options": [
+   {"text": "A written justification for other than full and open competition, approved at the level set by the approval table", "correct": true, "why": "Above the SAT the restriction on competition must be justified in writing and approved; below the SAT the file only has to document the decision that one source is available."},
+   {"text": "Nothing beyond the market research report, because the customer's sole-source letter already serves as the justification", "correct": false, "why": "A customer's assertion is an input to the justification, never a substitute for it."},
+   {"text": "A determination and findings signed by the requiring activity commander, who owns the sole-source requirement", "correct": false, "why": "The requiring activity owns the requirement but does not approve restrictions on competition; approval runs through the contracting chain at the level set by dollar value."},
+   {"text": "Only a memorandum for record, since a written justification is required only for sole-source actions above $10 million", "correct": false, "why": "The written justification requirement keys off the SAT, not $10 million; dollar value drives the approval level, not whether a justification exists."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 6.103-1, 6.104-1, 6.104-2 (was FAR 6.302-1, 6.303, 6.304); RFO FAR 12.102 for commercial",
+  "domain": "Competition & Market Research"
+ },
+ {
+  "qid": "Q0013",
+  "stem": "A sole-source action is justified on unusual and compelling urgency. What is true about publicizing that action?",
+  "options": [
+   {"text": "No presolicitation synopsis is required, and the justification is made public within 30 days after award", "correct": true, "why": "Urgency is an exemption from the presolicitation notice, and the urgency justification is posted after award rather than with the solicitation."},
+   {"text": "The synopsis is still required so other sources can respond, but the justification never has to be posted", "correct": false, "why": "It is the reverse: urgency exempts the synopsis, and the justification still becomes publicly available after award."},
+   {"text": "Both the synopsis and the justification must be posted 15 days before the solicitation is issued", "correct": false, "why": "Nothing works this way: the presolicitation notice runs 15 days ahead of the solicitation on a normal action, but a justification is never posted before award, and urgency excuses the notice entirely."},
+   {"text": "Neither the synopsis nor the justification is ever required for an urgent action", "correct": false, "why": "The justification is still written, approved and ultimately made public; only the advance synopsis is excused."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 6.103-2 (was FAR 6.302-2); RFO FAR 6.301 posting of the justification, 30 days for urgency (was FAR 6.305); RFO FAR 5.101(b) presolicitation notice exemptions (was FAR 5.202); 10 U.S.C. 3204, 41 U.S.C. 3304",
+  "domain": "Competition & Market Research"
+ },
+ {
+  "qid": "Q0014",
+  "stem": "Contract types span a spectrum of cost responsibility. Which pairing correctly describes the two ends of that spectrum?",
+  "options": [
+   {"text": "Firm-fixed-price puts full cost responsibility on the contractor; cost-plus-fixed-fee puts minimal responsibility on it, with a fixed fee", "correct": true, "why": "Those are the two poles of the range, with incentive arrangements tailored in between as performance uncertainty varies."},
+   {"text": "Cost-plus-fixed-fee places full cost responsibility on the contractor; firm-fixed-price places it on the Government, which pays any overrun", "correct": false, "why": "This inverts the spectrum; under FFP the contractor absorbs cost growth, including any overrun, not the Government."},
+   {"text": "Time-and-materials places full cost responsibility on the contractor; firm-fixed-price splits any cost growth equally between the two parties", "correct": false, "why": "T&M gives the contractor no positive incentive to control cost, and FFP is not a shared-risk arrangement."},
+   {"text": "Both ends carry identical cost risk; only the profit percentage the contractor may earn differs", "correct": false, "why": "Contract types differ precisely in the degree and timing of cost responsibility, not just in fee."}
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR part 16 (contract types); RFO FAR 15.404-1 (price analysis, was FAR 15.404-1(b))",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0022",
+  "stem": "A noncommercial acquisition over the simplified acquisition threshold requires a presolicitation notice. How long must that notice be posted before the solicitation is issued?",
+  "options": [
+   {"text": "15 days", "correct": true, "why": "The presolicitation notice runs 15 days ahead of the solicitation for a noncommercial buy over the SAT; for commercial acquisitions a shorter period or the combined synopsis and solicitation may be used."},
+   {"text": "30 days", "correct": false, "why": "Thirty days is commonly the minimum response time allowed for receipt of offers, not the synopsis-to-solicitation interval."},
+   {"text": "10 days", "correct": false, "why": "Ten days is associated with protest timeliness, not with publicizing a presolicitation notice."},
+   {"text": "45 days", "correct": false, "why": "No publicizing rule uses a 45-day presolicitation interval."}
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR 5.101 presolicitation notice, 15-day interval (was FAR 5.203(a)); exemptions at RFO FAR 5.101(b) (was FAR 5.202); commercial alternative at RFO FAR 12.202(b)",
+  "domain": "Competition & Market Research"
+ },
+ {
+  "qid": "Q0023",
+  "stem": "Per the thresholds carried in the board study bank, a written acquisition plan is required for a services or production acquisition at what value?",
+  "options": [
+   {"text": "$50 million or more for all years, or $25 million or more in any one fiscal year", "correct": true, "why": "Those are the production and services triggers in the bank answer, with development at a lower figure."},
+   {"text": "$10 million or more for all years, or $5 million or more in any one fiscal year", "correct": false, "why": "$10 million is the development trigger, not the all-years services or production figure."},
+   {"text": "Any acquisition above the simplified acquisition threshold", "correct": false, "why": "Acquisition planning is always performed, but the formal written plan triggers at the dollar levels above."},
+   {"text": "$100 million or more, with no separate single-year test", "correct": false, "why": "There is both an all-years test and a single-fiscal-year test, and neither is set at $100 million."}
+  ],
+  "difficulty": 3,
+  "cite": "RFO FAR 7.102; DFARS 207.103 (thresholds as stated in the bank answer; confirm current values with C&P); 10 U.S.C. 3453, 41 U.S.C. 3307",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0024",
+  "stem": "Which of the following is a recognized market research technique?",
+  "options": [
+   {"text": "Querying Government-wide databases of contracts and other instruments meant for use by multiple agencies", "correct": true, "why": "Reviewing existing multi-agency vehicles and other Government and commercial databases is on the standard list of techniques."},
+   {"text": "Asking the incumbent contractor to certify in writing that no other firm can perform the work", "correct": false, "why": "An incumbent's self-serving statement is not research; it is the assertion market research is supposed to test."},
+   {"text": "Relying on the requiring activity's preference memorandum in place of outside inquiry", "correct": false, "why": "Customer preference is neither a source of market data nor a substitute for contacting industry."},
+   {"text": "Waiting for offers on an unrestricted solicitation and treating the number and quality of responses as the research", "correct": false, "why": "Market research informs the strategy before solicitation; offers received afterward cannot shape the decisions already made."}
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR part 10 (market research; results documented in a manner suited to the acquisition's size and complexity)",
+  "domain": "Competition & Market Research"
+ },
+ {
+  "qid": "Q0029",
+  "stem": "What criminal penalty attaches to a knowing and willful violation of the Antideficiency Act?",
+  "options": [
+   {"text": "Up to two years imprisonment and a $5,000 fine", "correct": true, "why": "Those are the criminal penalties for a knowing and willful violation, on top of administrative discipline up to removal."},
+   {"text": "Up to five years imprisonment and a $10,000 fine", "correct": false, "why": "The figures are higher than the statute provides for this offense."},
+   {"text": "Automatic personal liability for the full contract value", "correct": false, "why": "Personal financial liability for the obligation is not the statutory criminal penalty, although discipline and referral can follow."},
+   {"text": "There is no criminal penalty; only administrative discipline applies", "correct": false, "why": "Administrative discipline is the usual outcome, but a knowing and willful violation carries criminal exposure as well."}
+  ],
+  "difficulty": 2,
+  "cite": "Antideficiency Act, 31 U.S.C. 1341, 1350 (statute unchanged by the RFO)",
+  "domain": "Fiscal Law & Funding"
+ },
+ {
+  "qid": "Q0030",
+  "stem": "An appropriation is described as expired. What can the contracting officer still do with it?",
+  "options": [
+   {"text": "Adjust and liquidate prior obligations for five years, but record no new obligations", "correct": true, "why": "Expired funds remain available for disbursement and adjustment of prior obligations for five years and are cancelled at the end of the fifth full fiscal year after expiration."},
+   {"text": "Record new obligations for the same purpose for five more years, as long as the need is documented", "correct": false, "why": "New obligations end at expiration, however well the need is documented; only adjustments to prior obligations continue."},
+   {"text": "Nothing at all, because expired and cancelled mean the same thing once the fiscal year ends", "correct": false, "why": "Cancelled funds are unavailable for any purpose; expired funds still support adjustments and payments."},
+   {"text": "Transfer the unobligated balance to the current-year appropriation for reuse on new work", "correct": false, "why": "Moving expired balances into a current appropriation would be an improper augmentation."}
+  ],
+  "difficulty": 2,
+  "cite": "31 U.S.C. 1552-1553 (account closing; statutes unchanged by the RFO)",
+  "domain": "Fiscal Law & Funding"
+ },
+ {
+  "qid": "Q0037",
+  "stem": "Where does the authority to include a particular provision or clause in a solicitation actually come from?",
+  "options": [
+   {"text": "The prescription in parts 1 through 51 that says when it is required, required when applicable, or optional", "correct": true, "why": "Every part 52 provision and clause has a prescribing section, and the matrix sends the contracting officer back to that prescribing text when the matrix alone cannot answer the question."},
+   {"text": "The contract writing system's clause logic, which becomes the controlling authority once the system is approved", "correct": false, "why": "The writing system is a tool that only knows what it was told. Approving the system does not make it the authority; the regulation is."},
+   {"text": "The clause matrix alone, which is a complete and self-sufficient list", "correct": false, "why": "The matrix is an index; required-when-applicable and optional entries must be resolved against the prescription."},
+   {"text": "Part 52 itself, since each clause states its own applicability in the line printed just above the clause text", "correct": false, "why": "The line above each clause only points back to its prescribing section. The trigger for using the clause lives in that section, in parts 1 through 51."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 52.101(e), 52.102, 52.104, 52.105 and subpart 52.3; DFARS part 252 and AFARS part 5152 matrices",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0046",
+  "stem": "Why does the commerciality determination matter to the contracting officer?",
+  "options": [
+   {"text": "It drives which contract types may be used and which provisions and clauses apply", "correct": true, "why": "A commercial determination routes the buy into the commercial part, which limits contract type and largely fixes the clause set."},
+   {"text": "It determines whether the action must be synopsized at all", "correct": false, "why": "Publicizing rules turn on dollar value and exemptions, not on commerciality."},
+   {"text": "It sets the warrant class required to sign the award", "correct": false, "why": "Warrant class is set by dollar value under Army warranting policy, not by commerciality."},
+   {"text": "It decides whether the requirement can be set aside for small business or must be open to all firms", "correct": false, "why": "Set-aside decisions turn on the reasonable expectation of offers from responsible small businesses, not on commerciality."}
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR part 12; RFO FAR 12.104 (contract type, was FAR 12.207); RFO FAR 12.205 (provisions and clauses, was FAR 12.301); DFARS subpart 212.1",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0047",
+  "stem": "What is the essential difference between a Statement of Work and a Performance Work Statement?",
+  "options": [
+   {"text": "A SOW prescribes the contractor's actions; a PWS describes the required outcome in measurable terms", "correct": true, "why": "That process-versus-outcome distinction is the whole point, and the PWS is preferred where variance in method carries no risk."},
+   {"text": "A SOW is used for services and a PWS is used for supplies", "correct": false, "why": "Both are work descriptions for services; the difference is how tightly the method is specified."},
+   {"text": "A PWS prescribes the process step by step, and a SOW states only the objective", "correct": false, "why": "This reverses the two; a document that states only the objective is a Statement of Objectives."},
+   {"text": "A SOW is mandatory above the simplified acquisition threshold, and a PWS is used below it", "correct": false, "why": "Neither document is tied to a dollar threshold; the choice depends on where the performance risk sits."}
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR part 37 (service contracting); PWS definition at RFO FAR 2.101",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0050",
+  "stem": "When acquiring commercial products or services, which contract arrangement is prohibited?",
+  "options": [
+   {"text": "Any cost-reimbursement contract or cost-type line item", "correct": true, "why": "Commercial acquisitions are limited to fixed-price arrangements, fixed-price with economic price adjustment, and time-and-materials or labor-hour; cost-type contracts and CLINs are not permitted."},
+   {"text": "Fixed-price with economic price adjustment based on a price index", "correct": false, "why": "FP-EPA, including an adjustment based on a price index, is expressly available for commercial buys and is part of the stated preference."},
+   {"text": "Time-and-materials or labor-hour, for commercial services", "correct": false, "why": "T&M and labor-hour are permitted for commercial services, subject to the required determination."},
+   {"text": "Firm-fixed-price", "correct": false, "why": "FFP is the preferred commercial contract type, not a prohibited one."}
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR 12.104 (was FAR 12.207)",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0052",
+  "stem": "What distinguishes a commitment of funds from an obligation?",
+  "options": [
+   {"text": "A commitment reserves funds for a purchase request; an obligation legally binds the Government to pay", "correct": true, "why": "Funds stay committed until the contract action creates the legal liability that obligates them."},
+   {"text": "A commitment legally binds the Government; an obligation is only an accounting reservation", "correct": false, "why": "This reverses the two; only the obligation creates the legal liability."},
+   {"text": "They are the same act, described by the resource manager and by the contracting officer in their own terms", "correct": false, "why": "They are sequential, distinct events, and treating them as one is how premature obligations happen."},
+   {"text": "A commitment is made after award; an obligation is made before the purchase request", "correct": false, "why": "The sequence is the opposite: purchase request and commitment first, then award and obligation."}
+  ],
+  "difficulty": 1,
+  "cite": "DoD FMR volume 3 (commitments and obligations); Antideficiency Act, 31 U.S.C. 1341",
+  "domain": "Fiscal Law & Funding"
+ },
+ {
+  "qid": "Q0054",
+  "stem": "A contracting officer uses the combined synopsis and solicitation procedure for a commercial acquisition. What is true about the solicitation document?",
+  "options": [
+   {"text": "The synopsis and the solicitation are combined into one notice, and the SF 1449 is not used to issue it", "correct": true, "why": "The procedure exists to cut solicitation time by merging the two notices, and the standard form is not used for issuance."},
+   {"text": "The SF 1449 must still be issued separately as the solicitation document, with the notice pointing to it", "correct": false, "why": "Issuing the SF 1449 separately defeats the procedure; the combined notice is the solicitation."},
+   {"text": "The procedure eliminates any response time for offerors", "correct": false, "why": "A reasonable response time is still set, and trade-agreement minimums still apply where they attach."},
+   {"text": "The procedure may be used only at or below the micro-purchase threshold, so larger buys need a separate synopsis", "correct": false, "why": "There is no such ceiling; the procedure is available for commercial acquisitions generally, to cut the time from notice to award."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 12.202(b) (was FAR 12.603); RFO FAR part 5",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0056",
+  "stem": "A contract is terminated for default after the funds have expired. Under what conditions may the original funds be used for a replacement contract?",
+  "options": [
+   {"text": "Good-faith original contract, a continuing bona fide need, the same size and scope, award without undue delay, and a new contractor", "correct": true, "why": "All five conditions must hold for the replacement-contract rule to let expired funds cover the reprocurement."},
+   {"text": "The need continues and the scope stays the same, but the replacement may go back to the same contractor if its price is lower", "correct": false, "why": "Award to a different contractor is one of the stated conditions; a lower price from the defaulted contractor does not meet it."},
+   {"text": "None: after the funds expire, they can pay only for work the defaulted contractor already delivered", "correct": false, "why": "Expired funds remain available to adjust prior obligations, and the replacement-contract rule is a recognized use of them."},
+   {"text": "The need continues and the award is prompt; the replacement may also expand scope as long as the total stays under the original ceiling", "correct": false, "why": "Same size and scope is a condition; expanding scope means a new need that current-year funds must cover, even under the old ceiling."}
+  ],
+  "difficulty": 3,
+  "cite": "GAO Principles of Federal Appropriations Law, replacement contract rule; 31 U.S.C. 1502",
+  "domain": "Fiscal Law & Funding"
+ },
+ {
+  "qid": "Q0057",
+  "stem": "Which of these is a recognized technique for early exchange of information with industry before receipt of proposals?",
+  "options": [
+   {"text": "Issuing a draft request for proposals for industry comment", "correct": true, "why": "Draft RFPs sit alongside requests for information, presolicitation notices, sources sought, industry days, one-on-one meetings and presolicitation conferences on the recognized list."},
+   {"text": "Sharing the independent Government cost estimate with a preferred offeror", "correct": false, "why": "Releasing the IGCE to one firm is a procurement integrity problem, not an exchange technique."},
+   {"text": "Telling one vendor the evaluation weighting in advance of the solicitation", "correct": false, "why": "Selective disclosure of evaluation information destroys the level playing field the exchange rules protect."},
+   {"text": "Waiting until the competitive range is set and then holding discussions", "correct": false, "why": "That is a post-receipt activity, not an early exchange before proposals come in."}
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR 15.101 (early exchanges with industry; was FAR 15.201(c))",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0058",
+  "stem": "Which activity is an inherently governmental function that may not be contracted out?",
+  "options": [
+   {"text": "Exerting ultimate control over the collection, control or disbursement of Federal funds", "correct": true, "why": "Controlling the acquisition, use or disposition of Government property and the disbursement of Federal funds is squarely on the inherently governmental list."},
+   {"text": "Preparing a technical evaluation worksheet as an advisor under a properly structured non-personal services contract", "correct": false, "why": "Support of this kind can be contracted when it is advisory, safeguarded and the Government retains the decision."},
+   {"text": "Performing quality control on the contractor's own work", "correct": false, "why": "Contractor quality control is the contractor's responsibility; Government quality assurance is the surveillance function."},
+   {"text": "Drafting a first-cut performance work statement for Government review and adoption", "correct": false, "why": "Assistance in drafting is permissible when the Government reviews, edits and owns the final requirement."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 2.101 (definition of inherently governmental function); RFO FAR subpart 37.3",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0059",
+  "stem": "A vendor submits a quotation in response to an RFQ and the Government issues a purchase order. At what point does a binding contract exist?",
+  "options": [
+   {"text": "When the supplier accepts the order, either in writing or by delivering or substantially performing", "correct": true, "why": "The quotation is not an offer and the purchase order is the Government's offer, so the supplier's acceptance is what forms the contract."},
+   {"text": "When the Government issues the purchase order, because the vendor's quotation was the offer it accepts", "correct": false, "why": "A quotation is not an offer and cannot be accepted by the Government to form a contract."},
+   {"text": "When the quotation is received and found acceptable by the contract specialist acting for the Government", "correct": false, "why": "Receipt and evaluation of a quote creates no obligation on either party, whoever reviews it."},
+   {"text": "When funds for the order are obligated in the accounting system and the order number is assigned to it", "correct": false, "why": "Recording an obligation and numbering the order are internal Government acts; contract formation depends on offer and acceptance."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 12.201-1(b) (was FAR 13.004(a) and (b))",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0060",
+  "stem": "What best describes a bridge contract, and why does OSD track them?",
+  "options": [
+   {"text": "A justified sole-source action that keeps the current product or service until a late follow-on is awarded, losing competitive savings", "correct": true, "why": "Bridges are symptoms of late acquisition planning, and each one forgoes the savings a timely competition would have produced."},
+   {"text": "A competitive short-term contract awarded while a protest of the follow-on is pending; OSD tracks them to measure how protests delay awards", "correct": false, "why": "The defining feature is that it is non-competitive and requires a justification. OSD tracks bridges as lost competition, not as a protest statistic."},
+   {"text": "An option exercised beyond the contract's stated ordering period", "correct": false, "why": "An option cannot be exercised outside its terms; that lapse is one of the reasons a bridge becomes necessary."},
+   {"text": "Any modification that adds funding to an existing contract near the end of its period of performance", "correct": false, "why": "Funding actions within scope are not bridges, even near the end of performance."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR part 6 justifications (6.103, 6.104); RFO FAR 13.101(b); RFO FAR 8.4 limited sources; RFO FAR 16.507-6 exceptions to fair opportunity",
+  "domain": "Competition & Market Research"
+ },
+ {
+  "qid": "Q0061",
+  "stem": "A construction solicitation will carry a brand-name specification supported by an approved justification. What must the contracting officer do with that justification?",
+  "options": [
+   {"text": "Include it with the solicitation notice, redacted as necessary", "correct": true, "why": "When an acquisition contains brand-name specifications, the justification or supporting documentation is posted with the solicitation notice."},
+   {"text": "Retain it in the contract file only, releasing it after award on request", "correct": false, "why": "File retention is not enough; the brand-name justification is published with the solicitation notice."},
+   {"text": "Provide it only to offerors who submit a written request before the closing date", "correct": false, "why": "Posting is public, not on request, so that all potential offerors see the basis for the restriction."},
+   {"text": "Post it 30 days after award, as with an urgency justification", "correct": false, "why": "The 30-days-after-award posting belongs to unusual and compelling urgency; brand name posts with the solicitation."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 5.201(c)(3) (was FAR 5.102(a)(6)); RFO FAR 6.103-1(d) (was FAR 6.302-1(c)); approval per RFO FAR 6.104",
+  "domain": "Competition & Market Research"
+ },
+ {
+  "qid": "Q0062",
+  "stem": "An unrestricted solicitation was open at least 30 days and only one offer was received. What are the contracting officer's two permitted paths to a fair and reasonable price?",
+  "options": [
+   {"text": "Determine by cost or price analysis that the price is fair and reasonable and that adequate competition or another exception exists, with approval above the contracting officer; or obtain cost or pricing data and negotiate", "correct": true, "why": "Those are the two alternatives under the DoD one-offer rule, and the determination route requires approval one level above the contracting officer."},
+   {"text": "Cancel the solicitation and resolicit with a longer response period, because a single offer can never be found fair and reasonable without a second offer to compare it against", "correct": false, "why": "One offer is not automatically unreasonable, and a longer response period is not required; the rules provide a path to award without cancelling."},
+   {"text": "Award at the offered price on the strength of adequate price competition alone, because the solicitation stayed open at least 30 days, with no further determination and no approval above the contracting officer", "correct": false, "why": "Keeping the solicitation open 30 days is a precondition, not a finding. The adequate-price-competition determination itself must be approved above the contracting officer."},
+   {"text": "Negotiate a price above the offered price to reflect the lack of competition", "correct": false, "why": "The negotiated price should not exceed the offered price."}
+  ],
+  "difficulty": 3,
+  "cite": "RFO DFARS 215.202-71(c) (was DFARS 215.371-3); RFO FAR 15.403-2(b) and (c) (was FAR 15.403-1(b) and (c)); RFO FAR 15.403-3 (was FAR 15.403-4)",
+  "domain": "Competition & Market Research"
+ },
+ {
+  "qid": "Q0067",
+  "stem": "What is the relationship between consolidation and bundling?",
+  "options": [
+   {"text": "Bundling is a kind of consolidation that pushes out small business; all bundling is consolidation, but not the reverse", "correct": true, "why": "Consolidation is combining previously separate requirements; bundling adds that the result is unsuitable for award to a small business that was doing or could do the work."},
+   {"text": "Consolidation is a kind of bundling that pushes out small business, so every consolidated requirement counts as bundled", "correct": false, "why": "This inverts the set relationship between the two terms."},
+   {"text": "They are interchangeable terms for combining requirements, one used by the small business office and one by contracting", "correct": false, "why": "They are not two names for one thing. Small business participation separates them, and only bundling turns on it."},
+   {"text": "Bundling applies only to supplies and consolidation only to services, so construction is outside both rules", "correct": false, "why": "Both concepts reach services, supplies and construction; for construction, consolidation can exist where two or more discrete sites are involved."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 7.107-2 (consolidation and bundling policy; old FAR 7.107-2, 7.107-3 and 7.107-4 merged); notifications at RFO FAR 7.107-3 (was FAR 7.107-5); 15 U.S.C. 657q",
+  "domain": "Competition & Market Research"
+ },
+ {
+  "qid": "Q0070",
+  "stem": "Under DoD policy, a fixed-price contract may be incrementally funded in which situation?",
+  "options": [
+   {"text": "It is for severable services, lasts one year or less, and uses funds that are unexpired on the date they are obligated", "correct": true, "why": "That is the severable-services path; the alternative is a contract using funds from two or more fiscal years that is funded with R&D appropriations or where Congress has authorized incremental funding."},
+   {"text": "Any fixed-price contract may be incrementally funded whenever the customer's funding stream is sporadic and the contractor agrees", "correct": false, "why": "Fixed-price contracts must be fully funded except in the narrow cases the policy permits; contractor agreement does not create an exception."},
+   {"text": "It uses procurement appropriations and the program office promises the balance next year", "correct": false, "why": "Procurement-funded contracts are the classic full-funding case, and a promise of future funds does not make funds available."},
+   {"text": "It is for non-severable services spanning three fiscal years, funded one year at a time", "correct": false, "why": "A non-severable effort must be funded in full with funds available when the contract is executed."}
+  ],
+  "difficulty": 3,
+  "cite": "DFARS 232.702 and 232.703-1; FAR 52.232-22 Limitation of Funds (cost reimbursement); DFARS 252.232-7007 Limitation of Government's Obligation (fixed price)",
+  "domain": "Fiscal Law & Funding"
+ },
+ {
+  "qid": "Q0074",
+  "stem": "A product development team cannot settle a Performance Work Statement that industry can price. Which option actually shifts the drafting burden to industry?",
+  "options": [
+   {"text": "Issue a Statement of Objectives and have offerors propose the PWS", "correct": true, "why": "A SOO states the desired outcomes and lets each offeror write the performance work statement it will be held to."},
+   {"text": "Issue a draft PWS for industry comment", "correct": false, "why": "A draft PWS improves the Government's document but leaves the Government as author."},
+   {"text": "Issue the whole draft solicitation for comment", "correct": false, "why": "Useful, and a real option, but again the Government keeps the pen."},
+   {"text": "Add a brand-name specification so offerors know exactly what to price", "correct": false, "why": "That restricts competition and does not solve an unclear requirement; it hides it."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR part 37 (performance-based acquisition); RFO FAR 15.101 (early exchanges with industry)",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0076",
+  "stem": "Which determination is NOT among those the contracting officer must make before exercising an option?",
+  "options": [
+   {"text": "That the contractor has agreed in writing to accept the option price", "correct": true, "why": "An option is a unilateral Government right exercisable at a price already set in the contract; contractor agreement is not a precondition."},
+   {"text": "That funds are available", "correct": false, "why": "Confirming availability of funds is a stated precondition to exercise."},
+   {"text": "That the option fulfills an existing Government requirement and is the most advantageous method of meeting it", "correct": false, "why": "Both the continuing requirement and the best-interest finding are required."},
+   {"text": "That the option was synopsized as required, unless exempt", "correct": false, "why": "Synopsis of the option, unless exempt, is one of the listed checks."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 17.204-1(b) (was FAR 17.207(c)); DFARS 217.204-170",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0078",
+  "stem": "Under RFO numbering, where do the seven statutory exceptions permitting other than full and open competition now appear?",
+  "options": [
+   {"text": "RFO FAR 6.103-1 through 6.103-7", "correct": true, "why": "The old 6.302-1 through 6.302-7 series renumbered one for one into 6.103-1 through 6.103-7, with headings unchanged."},
+   {"text": "RFO FAR 6.302-1 through 6.302-7, unchanged by the overhaul", "correct": false, "why": "Those are the pre-overhaul numbers a board will expect a candidate to have updated."},
+   {"text": "RFO FAR 6.104-1 through 6.104-7", "correct": false, "why": "6.104 covers justification content and approval, not the authorities themselves."},
+   {"text": "RFO FAR 13.101 through 13.107", "correct": false, "why": "Part 13 covers soliciting from a single source under simplified procedures, not the statutory exceptions."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 6.103-1 through 6.103-7 (was FAR 6.302-1 through 6.302-7); 10 U.S.C. 3204, 41 U.S.C. 3304",
+  "domain": "Competition & Market Research"
+ },
+ {
+  "qid": "Q0082",
+  "stem": "A customer insists on a specific manufacturer's vehicle. Which approach still provides for full and open competition?",
+  "options": [
+   {"text": "A brand-name-or-equal description listing the salient characteristics an equal product must meet", "correct": true, "why": "Brand-name-or-equal descriptions let other products compete, so under the FAR they provide for full and open competition and need no part 6 justification. Know the DoD wrinkle: DFARS 211.204 still requires a justification and approval to use a brand-name-or-equal purchase description."},
+   {"text": "A brand-name-only description, because the number of dealers solicited is what decides whether competition is full and open", "correct": false, "why": "A brand-name-only description does not provide for full and open competition, however many sources or dealers are solicited."},
+   {"text": "A brand-name-only description supported by the customer's standardization preference memo for its vehicle fleet", "correct": false, "why": "Preference or habit is not a justification; a genuine standardization or interoperability case still requires a written, approved justification."},
+   {"text": "A sole-source award below the simplified acquisition threshold, which needs no documentation in the file", "correct": false, "why": "A sole-source award does not provide for full and open competition, and even below the SAT the decision to restrict competition must be documented in the file."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 6.103-1(d) (was FAR 6.302-1(c)); RFO FAR 11.204 (items peculiar to one manufacturer, was FAR 11.105; old FAR 11.104 brand-name-or-equal guidance moved to FAR Companion FC 11.204); DFARS 211.204 (DoD J&A for brand name or equal, was DFARS 211.104); RFO FAR 12.102 for commercial; RFO FAR 10.001",
+  "domain": "Competition & Market Research"
+ },
+ {
+  "qid": "Q0085",
+  "stem": "Beyond the FAR conditions, what additional verification does DoD require before exercising an option?",
+  "options": [
+   {"text": "Check SPRS (the Supplier Performance Risk System) for the required NIST SP 800-171 score and a current CMMC certificate at the contract's level", "correct": true, "why": "The DoD supplement adds the SPRS checks along with confirming an active SAM registration and accurate unique entity identifier, CAGE code, name and address in the contract."},
+   {"text": "Obtain a new determination of responsibility, signed by the head of the contracting activity and based on a fresh pre-award survey of the contractor", "correct": false, "why": "No HCA responsibility determination or new pre-award survey is required to exercise an option."},
+   {"text": "Obtain updated certified cost or pricing data for every option over the certified data threshold, even though the option price was set at the award", "correct": false, "why": "An option exercised at the price set at award needs no new certified cost or pricing data, whatever its value."},
+   {"text": "Re-synopsize the requirement as a new acquisition", "correct": false, "why": "The option only has to have been synopsized as required in the original competition, unless exempt."}
+  ],
+  "difficulty": 3,
+  "cite": "RFO FAR 17.204-1; RFO DFARS 217.204-170 and PGI 217.204-170",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0088",
+  "stem": "Which set names the three fiscal law checks a contracting officer makes before obligating funds?",
+  "options": [
+   {"text": "The Antideficiency Act, the bona fide need rule, and the Purpose Statute", "correct": true, "why": "Those three, covering amount, time and purpose, are the standard pre-obligation checks."},
+   {"text": "The Antideficiency Act, the Contract Disputes Act, and the Prompt Payment Act", "correct": false, "why": "The Contract Disputes Act and Prompt Payment Act govern claims and payment timing, not the legality of the obligation."},
+   {"text": "The Competition in Contracting Act, the Truthful Cost or Pricing Data statute, and the bona fide need rule", "correct": false, "why": "The first two are procurement statutes, not appropriations constraints."},
+   {"text": "The Miscellaneous Receipts Statute, the Economy Act, and the Prompt Payment Act", "correct": false, "why": "These matter in specific situations but are not the three basic pre-obligation checks."}
+  ],
+  "difficulty": 1,
+  "cite": "31 U.S.C. 1341 (Antideficiency Act); 31 U.S.C. 1502 (bona fide need); 31 U.S.C. 1301(a) (Purpose Statute)",
+  "domain": "Fiscal Law & Funding"
+ },
+ {
+  "qid": "Q0094",
+  "stem": "The contract required options to be exercised by 1 October. On 5 October the contracting officer realizes the option was never exercised, and the need continues. What is the correct action?",
+  "options": [
+   {"text": "Treat the contract as expired, cover the gap with a new justified sole-source action, and start the competition now", "correct": true, "why": "An option not exercised within the time the contract specifies cannot be exercised late, so a bridge is a new contract action supported by a justification, not an option."},
+   {"text": "Issue the option modification dated 30 September to preserve continuity", "correct": false, "why": "Backdating a modification is falsification of the record, not a remedy."},
+   {"text": "Exercise the option now with a bilateral modification, since the contractor is willing and the price is unchanged", "correct": false, "why": "Contractor willingness, even in a bilateral modification, cannot revive an option whose exercise period has passed; any continued work is an unauthorized commitment requiring ratification."},
+   {"text": "Let the contractor keep working while a replacement is competed, then pay for the gap on the old contract", "correct": false, "why": "Work directed without a contract is an unauthorized commitment and must go to ratification, not quiet payment."}
+  ],
+  "difficulty": 3,
+  "cite": "RFO FAR 17.204-1 (was FAR 17.207); RFO FAR 1.405 (ratification, was FAR 1.602-3); RFO FAR 6.103-1, 6.103-2, 6.104-1, 6.104-2; FAR 52.217-9",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0099",
+  "stem": "What is the difference between the simplified acquisition threshold and simplified acquisition procedures?",
+  "options": [
+   {"text": "The SAT is a dollar threshold set in the FAR definitions; SAP are the streamlined procedures used for buys within it", "correct": true, "why": "One is a number that triggers rules, the other is a set of streamlined procedures; mixing them up is a common board stumble."},
+   {"text": "They are the same thing expressed two ways, one in the definitions and one in part 13", "correct": false, "why": "A threshold and a procedure set are different concepts, and several rules key off the threshold without invoking the procedures."},
+   {"text": "The SAT applies only inside the United States; SAP applies only outside it, under contingency authority", "correct": false, "why": "Both apply worldwide, though certain contingency determinations raise the threshold for acquisitions performed outside the United States."},
+   {"text": "The SAT governs commercial buys and SAP governs noncommercial buys, so each one carries its own separate dollar ceiling", "correct": false, "why": "The threshold applies to both; under the overhaul the commercial streamlined authority sits in the commercial part while part 13 covers noncommercial buys."}
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR 2.101 (definition of simplified acquisition threshold); RFO FAR part 13; RFO FAR 12.201-1 (commercial simplified procedures, was FAR subpart 13.5)",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0101",
+  "stem": "What distinguishes a delivery order from a task order?",
+  "options": [
+   {"text": "A delivery order is for supplies; a task order is for the performance of services", "correct": true, "why": "The distinction is simply what is being ordered under the vehicle."},
+   {"text": "A delivery order is placed under an IDIQ; a task order is placed under a BPA", "correct": false, "why": "Both order types can be placed under indefinite-delivery vehicles; the contract type is not the distinction."},
+   {"text": "A delivery order is competitive; a task order is sole source", "correct": false, "why": "Competition requirements apply to orders of either kind, chiefly through fair opportunity."},
+   {"text": "A delivery order obligates funds; a task order only commits them", "correct": false, "why": "Both are contract actions that obligate funds when issued."}
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR 2.101 (definitions of delivery order and task order); RFO FAR subpart 16.5",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0102",
+  "stem": "A customer's Commander offers to certify in writing that funds will be available so a year-end purchase can be awarded now. How does the contracting officer respond?",
+  "options": [
+   {"text": "Decline; the resource manager certifies funds, and awarding without available funds risks an Antideficiency Act violation", "correct": true, "why": "Command emphasis is not a funds certification, and obligating in advance of an appropriation is a classic ADA violation."},
+   {"text": "Accept the Commander's written certification, since a general officer's signature outranks the resource manager's on funding matters", "correct": false, "why": "Authority to certify funds is a comptroller function, not a matter of rank."},
+   {"text": "Award the contract now, put the Commander's memo in the file, and record the obligation once the new year's funds come in", "correct": false, "why": "That is obligating in advance of an appropriation, the precise act the statute forbids; a memo in the file does not change that."},
+   {"text": "Award with a subject-to-availability-of-funds clause on a supply requirement in the current fiscal year, then fund it in October", "correct": false, "why": "That clause is narrowly available and does not exist to paper over funds that are simply not there yet for this buy."}
+  ],
+  "difficulty": 2,
+  "cite": "Antideficiency Act, 31 U.S.C. 1341; RFO FAR 32.7 (contract funding)",
+  "domain": "Fiscal Law & Funding"
+ },
+ {
+  "qid": "Q0103",
+  "stem": "An offeror asks for a letter saying award is imminent so it can lock in a material price break before 1 October funds arrive. What should the contracting officer do?",
+  "options": [
+   {"text": "Refuse, because authorizing spending before funds are available creates Antideficiency Act exposure", "correct": true, "why": "A letter that induces the contractor to incur cost in reliance on a future award is the Government committing itself without an appropriation."},
+   {"text": "Issue the letter but state that it is not a contract and creates no obligation, which removes all risk", "correct": false, "why": "A disclaimer does not cure the substance if the letter is written to make the contractor spend money on the Government's expectation."},
+   {"text": "Issue the letter if the customer's leadership directs it in writing and the resource manager is informed", "correct": false, "why": "Customer direction cannot authorize an act outside the contracting officer's fiscal authority, and informing the resource manager does not create funds."},
+   {"text": "Issue the letter because the savings benefit the Government", "correct": false, "why": "A good price does not create funding authority; the savings can be pursued after award with current funds."}
+  ],
+  "difficulty": 2,
+  "cite": "Antideficiency Act, 31 U.S.C. 1341; RFO FAR 1.405 (ratification of unauthorized commitments, was FAR 1.602-3)",
+  "domain": "Fiscal Law & Funding"
+ },
+ {
+  "qid": "Q0108",
+  "stem": "Appropriated funds are subject to which three basic fiscal constraints?",
+  "options": [
+   {"text": "Purpose, time and amount", "correct": true, "why": "Purpose limits what the money buys, time limits when the need must arise and the funds are available, and amount caps obligations at the appropriation."},
+   {"text": "Purpose, priority and appropriation", "correct": false, "why": "Priority is not a fiscal constraint, and appropriation is the source rather than a limit."},
+   {"text": "Time, amount and competition", "correct": false, "why": "Competition is a procurement requirement under a different body of law."},
+   {"text": "Purpose, amount and contract type", "correct": false, "why": "Contract type is an acquisition strategy choice, not an appropriations constraint."}
+  ],
+  "difficulty": 1,
+  "cite": "31 U.S.C. 1301(a) (purpose); 31 U.S.C. 1502 (time); 31 U.S.C. 1341 (amount)",
+  "domain": "Fiscal Law & Funding"
+ },
+ {
+  "qid": "Q0116",
+  "stem": "An unsolicited proposal receives a favorable comprehensive evaluation. What does that mean for competition?",
+  "options": [
+   {"text": "Full and open competition is still required unless an approved justification supports a sole-source award", "correct": true, "why": "A favorable evaluation is not an award authority; a restriction on competition still needs its own justification and approval."},
+   {"text": "A favorable evaluation is itself the authority to award sole source", "correct": false, "why": "The evaluation establishes technical merit, not a statutory exception to competition."},
+   {"text": "The proposal must be synopsized and competed with no exception available", "correct": false, "why": "An exception is available, but only through a justification approved at the required level."},
+   {"text": "The submitter is entitled to the award because it invested its own time and money in a unique and innovative idea", "correct": false, "why": "Offeror investment creates no entitlement to a contract, even for a unique and innovative idea."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 15.506 (was FAR 15.607); RFO FAR 6.103-1(c) and 6.104",
+  "domain": "Competition & Market Research"
+ },
+ {
+  "qid": "Q0119",
+  "stem": "Which statement correctly describes funding for a non-severable service?",
+  "options": [
+   {"text": "The whole effort is funded with money available when the contract is made, and performance may cross fiscal years", "correct": true, "why": "A non-severable effort produces a single unified outcome that cannot be split by fiscal year, so the year of award funds all of it."},
+   {"text": "It is funded year by year as performance occurs, the same way severable services are funded", "correct": false, "why": "That is the severable rule, where the bona fide need generally arises in the year the services are performed."},
+   {"text": "It may not cross fiscal years at all, so the work must end by 30 September", "correct": false, "why": "Performance may cross years; what cannot be split is the funding."},
+   {"text": "It may be incrementally funded on a fixed-price contract with no further authority, one fiscal year at a time", "correct": false, "why": "Fixed-price incremental funding is limited to severable services within one year or where R&D funds or congressional authorization apply."}
+  ],
+  "difficulty": 2,
+  "cite": "31 U.S.C. 1502; 10 U.S.C. 3133 (severable services contracts crossing fiscal years, up to one year)",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0122",
+  "stem": "On 3 September of FY25, a PCO awards a contract with FY25 O&M funds for computers the contractor could deliver immediately, but delivery is deferred to early CY26 at the Government's request pending a new building. What is the fiscal problem?",
+  "options": [
+   {"text": "A bona fide need violation: the need arises in the next fiscal year, and the lead-time exception does not apply", "correct": true, "why": "The lead-time exception covers delay driven by production and delivery realities, not delay the Government itself imposes."},
+   {"text": "There is no problem, because the contract was awarded and the funds were obligated within the period of availability", "correct": false, "why": "Award and obligation within the year do not validate a need that belongs to the next year."},
+   {"text": "There is no problem, because the lead-time exception covers any deferred delivery that the Government itself requests", "correct": false, "why": "The exception depends on when the contractor could actually deliver, which here was immediately; delay the Government asks for is not lead time."},
+   {"text": "It is a purpose violation, because O&M funds cannot buy computers meant for a new building that is still under construction", "correct": false, "why": "O&M is the right color of money for this buy, even for a new building; the defect is the year, not the purpose."}
+  ],
+  "difficulty": 3,
+  "cite": "31 U.S.C. 1502(a) (bona fide need rule)",
+  "domain": "Fiscal Law & Funding"
+ },
+ {
+  "qid": "Q0125",
+  "stem": "What makes a services contract a personal services contract?",
+  "options": [
+   {"text": "The Government supervises or controls contractor staff, or appears to, as if they were its own employees", "correct": true, "why": "The employer-employee appearance is the test, and such a contract circumvents the civil service laws, so it is permitted only when authorized by law and with the required approval."},
+   {"text": "The contract buys the services of named individuals, listed as key personnel, rather than the services of a firm", "correct": false, "why": "Key personnel requirements are common and do not by themselves create a personal services relationship."},
+   {"text": "The contractor's employees work on a Government installation, using Government desks, phones and computers", "correct": false, "why": "Place of performance and Government-furnished equipment do not decide the question; day-to-day direction does."},
+   {"text": "The contract is time-and-materials rather than firm-fixed-price", "correct": false, "why": "Contract type is unrelated to whether supervision creates an employer-employee appearance."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 37.201-2(a) (retained RFO numbering; was FAR 37.104(c)); RFO FAR subpart 37.3",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0131",
+  "stem": "Which combination is required for a contract to be performance based?",
+  "options": [
+   {"text": "A performance work statement with measurable outcomes, a surveillance plan, price or fee reductions for poor work, and incentives", "correct": true, "why": "All four elements are needed; a PWS alone does not make an acquisition performance based."},
+   {"text": "A performance work statement alone, written in clear and objective terms, with the method of performance left up to the contractor", "correct": false, "why": "The measurement and consequence machinery is what makes it performance based."},
+   {"text": "A firm-fixed-price contract type with a cost-plus-award-fee option for any work the price does not cover", "correct": false, "why": "Contract type is a separate choice; performance-based methods can ride on more than one type, and no option structure makes a contract performance based."},
+   {"text": "A statement of objectives and a technical evaluation panel", "correct": false, "why": "A SOO is one way to develop the PWS, and an evaluation panel is a source selection mechanism, not a performance-based element."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR part 37 (performance-based acquisition); PWS definition at RFO FAR 2.101",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0149",
+  "stem": "What must be obligated at the time an indefinite-quantity contract is awarded?",
+  "options": [
+   {"text": "An amount sufficient to cover the minimum guarantee", "correct": true, "why": "The minimum guarantee is what gives the contract consideration, so it is obligated at award."},
+   {"text": "Nothing, because funds are obligated only when orders are placed", "correct": false, "why": "Orders are funded as issued, but the guaranteed minimum must be covered up front."},
+   {"text": "The full estimated ceiling value of the contract", "correct": false, "why": "The ceiling is a limit on ordering, not an obligation."},
+   {"text": "The value of the first year's anticipated orders", "correct": false, "why": "Anticipated order volume is a planning figure with no obligation effect."}
+  ],
+  "difficulty": 2,
+  "cite": "GAO B-318046; GAO Principles of Federal Appropriations Law, volume II, chapter 7; RFO FAR subpart 16.5",
+  "domain": "Fiscal Law & Funding"
+ },
+ {
+  "qid": "Q0151",
+  "stem": "Which describes a requirements contract, as opposed to the other indefinite-delivery types?",
+  "options": [
+   {"text": "One contractor fills all of the designated activity's actual needs for the supplies or services during a set period", "correct": true, "why": "The definite-quantity type buys a set quantity for a fixed period, and the indefinite-quantity type buys an indefinite amount within stated minimum and maximum limits."},
+   {"text": "It provides for an indefinite quantity within stated minimum and maximum limits, with the minimum obligated at award", "correct": false, "why": "That is the indefinite-quantity type, including the obligated minimum."},
+   {"text": "It provides for delivery of a definite quantity over a fixed period, with each delivery scheduled by a separate order", "correct": false, "why": "That is the definite-quantity type."},
+   {"text": "It is a multiple-award vehicle under which awardees compete for each order", "correct": false, "why": "Multiple award with fair opportunity is a feature of indefinite-quantity vehicles, not the definition of a requirements contract."}
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR subpart 16.5 (indefinite-delivery contracts)",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0152",
+  "stem": "Which of the following is a recognized exception to giving each awardee a fair opportunity to be considered for an order under a multiple-award contract?",
+  "options": [
+   {"text": "The order is a logical follow-on to an earlier order on which all awardees had a fair opportunity", "correct": true, "why": "The recognized exceptions are urgency, only one awardee capable, logical follow-on, satisfying a minimum guarantee, a statute directing a specified source, and a small business set-aside of the order."},
+   {"text": "The incumbent awardee has performed well on earlier orders and the customer prefers continuity of the same team", "correct": false, "why": "Satisfaction with an incumbent is not an exception; that is the reasoning fair opportunity exists to test."},
+   {"text": "The order is below the estimated value used in the acquisition plan, so it is treated as a minor order", "correct": false, "why": "Planning estimates have no bearing on fair opportunity, and there is no minor-order exception."},
+   {"text": "The contracting officer documents that competing the order would take too much of the office's staff time", "correct": false, "why": "Workload is not urgency; the urgency exception requires that the delay would be unacceptable to the Government's need."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 16.507-6(b) (was FAR 16.505(b)(2)); justification content at 16.507-6(d); DoD approval levels per DFARS 206.104-71",
+  "domain": "Acquisition Planning & Contract Types"
+ },
+ {
+  "qid": "Q0153",
+  "stem": "A solicitation uses a brand-name-or-equal purchase description. What must the purchase description itself state, beyond the brand name and model?",
+  "options": [
+   {"text": "The salient physical, functional or performance characteristics that an equal product must meet", "correct": true, "why": "Without stated salient characteristics, offerors cannot know what an equal product has to do, and the competition is illusory."},
+   {"text": "Nothing further, since equal products are self-evident from the brand name and model number", "correct": false, "why": "A bare brand name gives offerors no standard to propose against and effectively restricts competition."},
+   {"text": "The text of a justification approved at the head of the contracting activity level", "correct": false, "why": "A justification is a separate document, not part of the purchase description, and its approval level is set by dollar value rather than being the HCA in every case. Note for DoD: DFARS 211.204 does require a justification and approval to use a brand-name-or-equal description, and the documentation is posted with the notice for acquisitions over $25,000."},
+   {"text": "A determination that only one source is reasonably available", "correct": false, "why": "That determination supports soliciting a single source, which is the opposite of a brand-name-or-equal competition."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 11.204 (items peculiar to one manufacturer; was FAR 11.105, with old FAR 11.104 brand-name-or-equal guidance moved to FAR Companion FC 11.204); RFO FAR 6.103-1(d); RFO FAR 5.201(c)(3) posting; DFARS 211.204 (was DFARS 211.104)",
+  "domain": "Competition & Market Research"
+ }
+]

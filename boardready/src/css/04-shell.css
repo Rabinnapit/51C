@@ -1,0 +1,63 @@
+/* =====================================================================
+   04-shell.css — topbar details, search palette, rich text, misc shell
+   ===================================================================== */
+.topbar .top-title { display: flex; flex-direction: column; line-height: 1.15; min-width: 0; }
+.topbar .top-eyebrow { font-size: 10px; }
+.topbar .top-heading { font-size: 15px; letter-spacing: -.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.topbar .unit-select { width: auto; min-height: 34px; padding: 4px 30px 4px 10px; font-size: var(--fs-xs); font-weight: 700; max-width: 190px; }
+.topbar .role-chip { gap: 6px; }
+/* the menu button: on a wide screen it collapses the side menu to a rail of icons; on a phone it opens the menu */
+.topbar .menu-btn { display: inline-flex; }
+.topbar .search-btn kbd { margin-left: 4px; }
+@media (max-width: 860px) { .topbar .menu-btn { display: inline-flex; } .hide-sm { display: none !important; } .topbar { padding: 0 var(--space-3); gap: 6px; } .topbar .unit-select { max-width: 130px; } }
+
+/* the organization picker, theme and tour live in the side menu on a phone, where the top bar has no room */
+.side-tools { display: none; }
+.side-tools .unit-select { width: 100%; max-width: none; }
+@media (max-width: 860px) { .side-tools { display: flex; flex-direction: column; gap: 8px; padding: var(--space-4) var(--space-4) 0; } }
+
+/* palette */
+.palette .search { margin-bottom: 10px; }
+.palette .search .input { min-height: 48px; font-size: var(--fs-md); }
+.palette-results { display: flex; flex-direction: column; gap: 2px; max-height: 60vh; overflow: auto; }
+.palette-item { display: flex; align-items: center; gap: 10px; width: 100%; padding: 10px 12px; border-radius: var(--r-md); text-align: left; font-size: var(--fs-sm); color: var(--ink); }
+.palette-item:hover, .palette-item.on { background: var(--accent-soft); }
+.palette-item .badge { min-width: 78px; justify-content: center; }
+
+/* rich text */
+.rich p { margin: 0 0 .7em; }
+.rich p:last-child { margin-bottom: 0; }
+.rich ul, .rich ol { margin: .2em 0 .8em; padding-left: 1.3em; }
+.rich li { margin: .25em 0; }
+.rich .li { display: block; padding-left: 1.1em; text-indent: -1.1em; }
+.rich .citeline { display: inline-block; margin-top: .4em; font-family: var(--font-mono); font-size: .86em; color: var(--muted); }
+.rich a.cite:hover { text-decoration: none; border-color: var(--accent); color: var(--accent); }
+
+/* role picker cards */
+.role-card { text-align: left; width: 100%; }
+.role-card h3 { font-size: var(--fs-lg); }
+
+/* generic section header used by many views */
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: var(--space-6) 0 var(--space-4); }
+.section-head h2 { font-size: var(--fs-xl); font-family: var(--font-body); font-weight: 800; letter-spacing: -.01em; }
+.section-head .muted { font-size: var(--fs-sm); }
+.side-foot .side-maint a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.side-foot .side-maint a:hover, .side-foot .side-maint a:focus-visible { text-decoration: underline; }
+
+/* Save notes: shown in the top bar only while a note is not yet saved into the app file */
+.topbar .notes-btn svg { color: var(--accent-2); }
+@media (max-width: 860px) { .topbar .notes-btn { width: 32px; padding: 0; justify-content: center; } }
+
+/* the collapse control at the foot of the side menu, and the name that floats beside a rail icon */
+.side .side-collapse { display: flex; align-items: center; gap: 10px; margin: 10px 12px 0; padding: 8px 10px; min-height: 40px; border-radius: var(--r-md); color: var(--muted); font-weight: 700; font-size: .85rem; text-align: left; }
+.side .side-collapse:hover { background: var(--bg-2); color: var(--ink); }
+.side .side-collapse svg { width: 18px; height: 18px; flex: none; transition: transform var(--dur) var(--ease); }
+.side-tip { position: fixed; z-index: 70; transform: translateY(-50%); padding: 5px 9px; border-radius: 6px; background: var(--ink); color: var(--bg); font-size: .75rem; font-weight: 650; white-space: nowrap; pointer-events: none; box-shadow: var(--shadow-sm); }
+@media (max-width: 860px) { .side .side-collapse { display: none; } }
+
+/* "A newer version is ready" (web edition, core/09-pwa.js) */
+.update-bar { position: fixed; z-index: 120; top: calc(var(--top-h) + 10px + env(safe-area-inset-top, 0px)); left: max(16px, env(safe-area-inset-left, 0px)); right: max(16px, env(safe-area-inset-right, 0px)); max-width: 560px; margin-inline: auto; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 10px 12px 10px 16px; border-radius: var(--r-lg); box-shadow: var(--shadow-lg); background: var(--accent); color: var(--accent-ink); font-size: var(--fs-sm); font-weight: 700; }
+.update-bar > svg { width: 20px; height: 20px; flex: none; }
+.update-bar .btn { background: var(--panel); color: var(--ink); border-color: transparent; }
+.update-bar .btn.ghost { background: transparent; color: inherit; }
+@media (min-width: 861px) { .update-bar { left: calc(var(--side-w) + 24px); } }

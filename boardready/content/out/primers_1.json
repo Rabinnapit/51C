@@ -1,0 +1,971 @@
+[
+  {
+    "id": "ko-authority",
+    "title": "Contracting Officer Authority and the Warrant",
+    "domain": "Authority, Ethics & Leadership",
+    "summary": "A warrant is a limited, personal delegation of the Government's authority to enter into, administer, or terminate contracts and make related determinations. Only a contracting officer acting within the limits printed on the SF 1402 can bind the United States, and no amount of good intentions by anyone else creates that power. The board wants to hear that you know the difference between express, implied and apparent authority, and that you know apparent authority does not bind the Government.",
+    "sections": [
+      {
+        "heading": "The rule: where your authority comes from",
+        "body": "Contracting officers have authority to enter into, administer or terminate contracts and make related determinations and findings, and no contract may be entered into unless it is signed by a warranted contracting officer acting within the limits of the delegated authority.\n\nThat authority flows down a chain, not sideways:\n- Statute gives the agency head the power to contract.\n- The agency head delegates to the head of the contracting activity (HCA).\n- The HCA appoints contracting officers and issues the SF 1402, Certificate of Appointment.\n\nThe SF 1402 states any dollar limitation and any other limitation on your authority. There is no such thing as a general \"contracting authority\" held by a program manager, a COR, a commander, or a resource manager. When a board asks \"where does your authority come from,\" the answer walks that chain and ends at the SF 1402 in your file and the limits written on it.\n\nCite: RFO FAR 1.402-1 (was 1.602-1); RFO FAR 1.403 (was 1.603)."
+      },
+      {
+        "heading": "Express, implied and apparent authority",
+        "body": "Say these three cleanly, because boards ask this almost verbatim.\n\n- Express authority is the power a principal explicitly grants an agent by agreement or appointment. For a KO, that is the SF 1402 and the written limits on it.\n- Implied authority is the power to do the things reasonably necessary to carry out the express authority. A KO warranted to award a contract has implied authority to do the incidental acts that awarding requires.\n- Apparent authority exists only when a third party reasonably infers from the principal's conduct that the agent had power the agent was never actually given.\n\nThe board-critical line: apparent authority does not bind the United States. Contractors deal with the Government at their peril and are charged with knowing the actual limits of a Government agent's authority. A contractor who takes direction from a COR, an engineer, or a colonel has no enforceable contract on that basis. That is why every unauthorized commitment discussion starts here.\n\nCite: RFO FAR 1.402-1; RFO FAR 1.402-2."
+      },
+      {
+        "heading": "What a warrant is - and what it is not",
+        "body": "A warrant is personal, limited, and revocable. It follows the individual, not the desk, and it is granted at a fixed level.\n\nUnder Army Warranting Program Policy v12 (MAR 2026), Table 1 sets four classes:\n- Class I: the simplified acquisition threshold, currently $350,000.\n- Class II: $500K, $1M, $5M, and SaP (the simplified procedures ceiling for commercial products and services, currently $9,000,000; $15,000,000 under a contingency).\n- Class III: $10M, $25M, $50M, $100M.\n- Class IV: $250M, $500M, Unlimited.\n\nA warrant is not:\n- A job title or a grade. It is an appointment based on demonstrated experience, training, and judgment.\n- Permanent. The appointing authority may suspend or terminate it in writing, and it terminates by reassignment or separation unless otherwise stated.\n- A license to exceed the printed limit. Splitting a requirement to fit under your warrant is itself a violation.\n\nCite: RFO FAR 1.403; Army Warranting Program Policy v12 (MAR 2026) Table 1."
+      },
+      {
+        "heading": "Judgment, business sense, and the file",
+        "body": "The FAR expects a KO to be more than a signature. You are to ensure performance of all necessary actions for effective contracting, ensure compliance with the terms of the contract, and safeguard the interests of the United States in its contractual relationships. You are told to request and consider the advice of specialists in audit, law, engineering, information security, transportation and other fields as appropriate.\n\nThe RFO guiding principles also give you room: a strategy, practice, policy or procedure that is in the best interests of the Government and is not addressed in the FAR, prohibited by law, or otherwise prohibited is a permissible exercise of authority. Boards like candidates who cite that and then immediately say \"and I document the rationale in the file.\"\n\nDocumentation is where authority becomes defensible. The contract file must tell a complete story a reviewer, an auditor, or a protest forum can follow without asking you a question.\n\nCite: RFO FAR 1.402-2; RFO FAR 1.102(b)(4) (was 1.102-4(e)); RFO FAR 4.101 (was 4.801 to 4.803)."
+      },
+      {
+        "heading": "Common traps",
+        "body": "- Saying \"I would ask my supervisor.\" Boards read that as avoidance. Say what you would decide, then say whom you would coordinate with and why.\n- Confusing a COR with an agent who can direct the contractor. A COR designation is written, limited, non-delegable, and expressly excludes authority to change price, terms, or scope.\n- Treating apparent authority as a way to save a contractor who relied on bad direction. It is not a remedy. The remedy path is ratification or a claim, not apparent authority.\n- Forgetting the limits are not only dollar limits. A warrant can be limited by contract type, by commodity, by installation, or by authority to terminate.\n- Answering \"the HCA gave it to me\" and stopping. Walk the full chain and name the SF 1402.\n\nCite: DFARS 201.404-70 (was 201.602-2), COR designation; RFO FAR 1.403."
+      },
+      {
+        "heading": "How boards probe it",
+        "body": "Boards rarely ask the definition alone. They build a scenario where someone with no warrant has already acted, then watch whether you reach for the right vocabulary.\n\nExpect a fact pattern like: a facility engineer tells a contractor to start emergency work; a program manager emails a contractor to add tasks; a new KO signs a modification $200K above a Class I warrant. The board is testing three things in sequence:\n1. Do you recognize immediately that no binding contract exists?\n2. Do you name apparent authority and reject it as a basis to bind the Government?\n3. Do you move to the correct remedy (ratification under RFO FAR 1.405) rather than quietly papering it over?\n\nThey also probe your self-awareness: \"You are warranted at $5M and this requirement is $6M. What do you do?\" The only right answer is that you do not sign it, you route it to a KO with sufficient authority, and you never split it.\n\nCite: RFO FAR 1.402-1; RFO FAR 1.405."
+      }
+    ],
+    "key_cites": [
+      {
+        "ref": "RFO FAR 1.402-1",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1",
+        "note": "Contracting officers - Authority. Was FAR 1.602-1. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR 1.402-2",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1",
+        "note": "Contracting officers - Responsibilities. Was FAR 1.602-2. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR 1.403",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1",
+        "note": "Selecting, appointing, and terminating the appointment of contracting officers; SF 1402. Was FAR 1.603. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR 1.102(b)(4)",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1",
+        "note": "Guiding principles - strategies not addressed in the FAR and not prohibited are permissible. Was FAR 1.102-4(e). Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR 1.405",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1",
+        "note": "Ratification of unauthorized commitments. Was FAR 1.602-3. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "Army Warranting Program Policy v12 (MAR 2026), Table 1",
+        "url": "",
+        "note": "Warrant classes I-IV. Local source in content/sources. Class I = SAT; Class II includes SaP. Threshold values carry status 'verify' in regulations.json."
+      },
+      {
+        "ref": "DFARS 201.404-70",
+        "url": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-201/2026-O0002_Rev1_TAB_A_Deviation_Memo.pdf",
+        "note": "Contracting officer's representative designation. Was DFARS 201.602-2. Crosswalk confidence: verified."
+      }
+    ],
+    "board_angles": [
+      {
+        "q": "What is a contracting officer and where does your authority come from?",
+        "a": "A KO is the only person who can enter into, administer or terminate contracts and make related determinations; the authority runs from statute to the agency head to the HCA to me by SF 1402, and it is limited to exactly what that certificate says."
+      },
+      {
+        "q": "Explain the difference between express, implied and apparent authority.",
+        "a": "Express is explicitly granted by the appointment, implied is what is reasonably necessary to carry out the express grant, and apparent is what a third party infers from the principal's conduct - and apparent authority does not bind the Government."
+      },
+      {
+        "q": "A contractor says a COR told them to do the extra work. Are they entitled to be paid?",
+        "a": "Not on that basis - contractors deal with the Government at their peril and are charged with knowing the limits of a Government agent's authority; the path forward is a ratification action under RFO FAR 1.405, not apparent authority."
+      },
+      {
+        "q": "Your warrant is $5M and the requirement is $6M. What do you do?",
+        "a": "I do not sign it; I staff it to a KO warranted at or above that level, and I never split the requirement to fit my warrant, because splitting to evade a threshold is itself a violation."
+      },
+      {
+        "q": "Can your warrant be taken away?",
+        "a": "Yes - the appointing authority may suspend or terminate it in writing at any time, and it also ends on reassignment or separation, because the warrant is personal to me and is not attached to the position."
+      },
+      {
+        "q": "The FAR is silent on what I want to do. Can I do it?",
+        "a": "Yes if it is in the best interests of the Government and is not prohibited by law, executive order or regulation - the RFO guiding principles say so expressly at 1.102(b)(4) - and I document the rationale in the file."
+      }
+    ],
+    "related_questions": [
+      "Q0221",
+      "Q0079",
+      "Q0143",
+      "Q0009",
+      "Q0109"
+    ],
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "high",
+    "confidence_reason": "Every RFO cite used here is a 'verified' entry in the regulations.json crosswalk with an acquisition.gov source URL. Warrant class values come from the local Army Warranting Program Policy v12 Table 1 and are recorded in regulations.json thresholds with status 'verify' - confirm current class thresholds with C&P before quoting dollar figures at a board."
+  },
+  {
+    "id": "fiscal-law-trio",
+    "title": "Purpose, Time and Amount",
+    "domain": "Fiscal Law & Funding",
+    "summary": "Every obligation a KO makes must clear three fiscal tests: the right purpose, within the right time, and inside the amount Congress made available. The bona fide needs rule is the time test applied to a specific requirement, and the Antideficiency Act is the enforcement mechanism with real personal consequences. Boards use this topic because a KO who is loose on fiscal law is a KO who can put the command in a reportable violation.",
+    "sections": [
+      {
+        "heading": "The three constraints",
+        "body": "Appropriated funds are subject to three basic constraints, and a board expects all three by name.\n\n- Purpose. Funds may be used only for the objects for which the appropriation was made, unless another law says otherwise. Wrong color of money is a purpose violation. Operation and maintenance funds do not buy what procurement funds are supposed to buy.\n- Time. An appropriation is available for obligation only during its period of availability. Annual O&M is one year; many procurement appropriations are multi-year; military construction is longer. After the period closes, the appropriation expires for new obligations.\n- Amount. You may not obligate or expend more than the amount available, and you may not obligate in advance of an appropriation.\n\nWhen a board asks \"what fiscal statutes do you check before obligating,\" answer purpose (31 U.S.C. 1301(a)), time (31 U.S.C. 1502(a)), and amount (31 U.S.C. 1341), then add the recording statute (31 U.S.C. 1501) for what must be documented.\n\nCite: 31 U.S.C. 1301(a), 1341, 1501, 1502(a). Statutes are unchanged by the RFO."
+      },
+      {
+        "heading": "The bona fide needs rule",
+        "body": "The bona fide needs rule is the time test made practical: the balance of a fixed-term appropriation is available only for payment of expenses properly incurred during the period of availability, or to complete contracts properly made within that period.\n\nIn plain terms - you obligate this year's money for this year's need.\n\nHow it applies:\n- Supplies: the need generally arises when the supplies are required for use. Delivery after year end is acceptable if the need existed in the funding year and the lead time is normal.\n- Severable services: the need arises in the year the service is performed. A recurring service performed in FY27 is an FY27 need.\n- Non-severable services: the need arises when the single, unified end product is contracted for; the whole effort is funded with the money current at award and performance may cross fiscal years.\n\nThe classic board trap is a purchase request delivered in August of the current year to fund a period of performance that starts the following July. That is not a bona fide need of the current year and you reject it.\n\nCite: 31 U.S.C. 1502(a)."
+      },
+      {
+        "heading": "The Antideficiency Act",
+        "body": "The Antideficiency Act is the amount test with teeth. It prohibits:\n- Obligating or expending in excess of the amount available in an appropriation or fund (31 U.S.C. 1341(a)(1)(A)).\n- Obligating or expending in advance of an appropriation, unless authorized by law (31 U.S.C. 1341(a)(1)(B)).\n- Accepting voluntary services, or employing personal services beyond what is authorized, except in emergencies involving the safety of human life or the protection of property (31 U.S.C. 1342).\n- Exceeding an apportionment or a formal subdivision of funds - the administrative control provision (31 U.S.C. 1517).\n\nExamples that constitute a violation: awarding without funds certified and available; exercising an option before funds are available without a subject-to-availability clause; a purpose violation that cannot be corrected because the correct appropriation has no funds; obligating against an expired appropriation.\n\nConsequences are personal and administrative: an investigation and a report through command channels to OMB, the President and Congress, plus adverse personnel action up to removal and, for knowing and willful violations, criminal penalties.\n\nCite: 31 U.S.C. 1341, 1342, 1350, 1517; DoD FMR Volume 14."
+      },
+      {
+        "heading": "Commitments versus obligations, and certification",
+        "body": "This is a definitional question boards love because the answer is short and either you have it or you do not.\n\n- A commitment is an administrative reservation of funds by an authorized official, based on a firm procurement request. It reserves the money. It does not create a liability for the United States.\n- An obligation is a definite act that creates a legal liability of the Government for the payment of goods or services ordered or received - award of a contract, issuance of an order, exercise of an option, or a definitized modification.\n\nThe KO's rule: do not obligate until funds are committed and certified as available by the resource manager or comptroller. A signed, funded purchase request with the certifying official's certification is what converts intent into something you can sign against.\n\nFor indefinite-quantity contracts, the Government must obligate at least the guaranteed minimum at award; the minimum must be more than a nominal amount, and that obligation is what makes the contract binding.\n\nCite: 31 U.S.C. 1501; RFO FAR 32.702 and 52.232-18 (availability of funds); DoD FMR Volume 3."
+      },
+      {
+        "heading": "Traps and how to stay clean",
+        "body": "- Fourth-quarter fallout money. Late-year funds are legitimate only if the need is a bona fide need of that year. \"Use it or lose it\" is not a legal basis. Ask what the need is and when it arises, not what the balance is.\n- Funding a severable service that starts next fiscal year with this year's money. Wrong year, no exception available.\n- Expired versus cancelled. An expired appropriation is still available for adjustments to obligations properly incurred during its period of availability, for five years. After five years the account cancels and the money is gone for all purposes.\n- Assuming a termination for default frees funds for a new requirement. Funds may be available to complete the original bona fide need, but a new requirement needs current-year money.\n- Certifying funds yourself. The KO does not certify availability; the resource manager or comptroller does, and the KO relies on it.\n\nCite: 31 U.S.C. 1551-1553 (account closing); 31 U.S.C. 1502(a)."
+      },
+      {
+        "heading": "How boards probe it",
+        "body": "Boards test fiscal law through hypotheticals with dates in them. Watch the dates - they are the question.\n\nExpect: \"On 3 September of the current year you award a contract for computers using current-year O&M; delivery is in December. Is that proper?\" The answer depends on whether the need existed in the funding year and whether the delivery lead time is normal for the item.\n\nExpect: \"Your customer wants a modification in September for work starting in November.\" Decide severable or non-severable first; that answer drives everything.\n\nAnd expect the direct one: \"What is the Antideficiency Act and give me two examples of a violation.\" Boards also like to ask what you do when you think a violation already happened: you stop, you do not compound it, you notify your supervisor and the resource manager immediately, and you support the preliminary review and formal investigation. Trying to fix it quietly is the answer that fails a board."
+      }
+    ],
+    "key_cites": [
+      {
+        "ref": "31 U.S.C. 1301(a)",
+        "url": "https://www.law.cornell.edu/uscode/text/31/1301",
+        "note": "Purpose statute. Statutes are unchanged by the RFO."
+      },
+      {
+        "ref": "31 U.S.C. 1502(a)",
+        "url": "https://www.law.cornell.edu/uscode/text/31/1502",
+        "note": "Bona fide needs rule / period of availability. Listed in regulations.json 'unchanged'."
+      },
+      {
+        "ref": "31 U.S.C. 1341",
+        "url": "https://www.law.cornell.edu/uscode/text/31/1341",
+        "note": "Antideficiency Act - obligations exceeding the amount available and obligations in advance of an appropriation."
+      },
+      {
+        "ref": "31 U.S.C. 1342",
+        "url": "https://www.law.cornell.edu/uscode/text/31/1342",
+        "note": "Antideficiency Act - voluntary services prohibition, with the emergency exception for safety of human life or protection of property."
+      },
+      {
+        "ref": "31 U.S.C. 1517",
+        "url": "https://www.law.cornell.edu/uscode/text/31/1517",
+        "note": "Administrative control of funds - exceeding an apportionment or formal subdivision."
+      },
+      {
+        "ref": "31 U.S.C. 1501",
+        "url": "https://www.law.cornell.edu/uscode/text/31/1501",
+        "note": "Recording statute - what constitutes documentary evidence of an obligation."
+      },
+      {
+        "ref": "RFO FAR 32",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32",
+        "note": "Contract Financing part page. Crosswalk confidence: verified at part level. Verify the exact RFO subsection for availability-of-funds before quoting a subsection number."
+      }
+    ],
+    "board_angles": [
+      {
+        "q": "What three fiscal constraints apply to appropriated funds?",
+        "a": "Purpose, time and amount - the right appropriation for the object, obligated within the period of availability, and never in excess of or in advance of what Congress made available."
+      },
+      {
+        "q": "Explain the bona fide needs rule.",
+        "a": "An appropriation is available only for a need that arises during its period of availability, so I fund this year's need with this year's money and I test severability first to decide which year the need arises in."
+      },
+      {
+        "q": "What is the Antideficiency Act and give me two violations.",
+        "a": "It bars obligating in excess of or in advance of an appropriation and bars accepting voluntary services; two violations are awarding without certified available funds and exercising an option using an appropriation that has already expired."
+      },
+      {
+        "q": "What is the difference between a commitment and an obligation?",
+        "a": "A commitment is an administrative reservation of funds by an authorized official against a firm requirement; an obligation is the definite act - award, order, option exercise - that creates a legal liability of the United States."
+      },
+      {
+        "q": "It is 15 September and your customer has fallout money for a requirement starting in January. What do you do?",
+        "a": "I determine whether the need is a bona fide need of the current year and whether the service is severable; if it is severable and performance starts next year, the money is the wrong year and I reject the purchase request and explain why."
+      },
+      {
+        "q": "You believe an ADA violation may have occurred. What are your first three actions?",
+        "a": "Stop the action so I do not compound it, notify my supervisor, legal counsel and the resource manager immediately, and preserve and document the facts to support the preliminary review and any formal investigation."
+      }
+    ],
+    "related_questions": [
+      "Q0108",
+      "Q0029",
+      "Q0052",
+      "Q0088",
+      "Q0006",
+      "Q0149"
+    ],
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "high",
+    "confidence_reason": "The substance rests on U.S. Code sections the RFO did not change; 31 U.S.C. 1502 is expressly listed in the regulations.json 'unchanged' array. The one soft spot is the RFO subsection number for availability-of-funds clauses in Part 32 - the crosswalk verifies Part 32 only at part level, so the primer cites the part and flags the subsection as needing confirmation."
+  },
+  {
+    "id": "severable-crossfy",
+    "title": "Severable Services and Crossing the Fiscal Year",
+    "domain": "Fiscal Law & Funding",
+    "summary": "Whether a service is severable or non-severable decides which year's money pays for it, and that single determination drives more board questions than any other fiscal topic. Severable services are bona fide needs of the year performed; non-severable services are funded entirely with the money current at award. On top of that, a statutory 12-month authority lets DoD fund a severable services contract that crosses fiscal years, and lead-time and stock-level exceptions let supplies cross the year end.",
+    "sections": [
+      {
+        "heading": "The test: severable or non-severable",
+        "body": "A severable service is one that can be separated into components, each of which independently meets a separate need of the Government. Think recurring, continuing, level-of-effort work: janitorial, grounds maintenance, guard services, help desk, refuse collection. If the Government gets value for each month performed and can stop at any month without losing what it already received, it is severable.\n\nA non-severable service produces a single or unified outcome, product or report that cannot be subdivided for separate performance in different fiscal years. Think a study with a final report, a design package, an overhaul of one end item, a single training course delivered as one event. Partial performance gives the Government nothing of independent value.\n\nThe funding consequence:\n- Severable: the bona fide need arises in the year performed, so each year's performance is funded with that year's appropriation.\n- Non-severable: the entire effort is a bona fide need of the year of award and is funded fully with funds available at award; performance may cross fiscal years without a special authority.\n\nCite: 31 U.S.C. 1502(a); GAO Principles of Federal Appropriations Law (Red Book), Chapter 5."
+      },
+      {
+        "heading": "The 12-month cross-fiscal-year authority",
+        "body": "Congress gave DoD a targeted exception so that recurring services do not have to start and stop on 30 September. A severable services contract - or an option or order under one - may begin in one fiscal year and end in the next, so long as the total period does not exceed one year, and the whole period may be funded with the appropriation current at the time of award.\n\nWhat this authority is:\n- Discretionary, not mandatory. You may use it; you are not required to.\n- Limited to 12 months total. A 15-month severable period does not fit.\n- Applied at the funding action, so an option exercised in September for a 12-month period may be funded entirely with that year's money.\n\nWhat it is not:\n- A way to buy 24 months of services with one year's money.\n- An exception to the purpose test. It is a time-rule exception only.\n- A way to convert severable services into non-severable services.\n\nCite: 10 U.S.C. 3133 (formerly 2410a) for DoD; 41 U.S.C. 3902 generally. Verify the recodified number before quoting it - it is not in the verified RFO crosswalk."
+      },
+      {
+        "heading": "Lead-time and stock-level exceptions for supplies",
+        "body": "Supplies raise a different question: the need arises when the supplies are required for use, not when the contract is signed. Two long-standing GAO exceptions let a current-year appropriation pay for supplies delivered after the year ends.\n\n- Lead-time exception. A bona fide need can exist in the current year even though delivery occurs in the next year, when the item cannot be obtained in time because of normal production or delivery lead time. The lead time must be the normal commercial or production lead time for that item, and the need must genuinely exist in the funding year. You cannot use lead time to warehouse next year's requirement.\n- Stock-level exception. An agency may use current-year funds to replenish stock to normal, established stock levels even though the items will be consumed in a later year. The key word is normal - building an abnormal reserve to burn expiring money is a bona fide needs violation.\n\nBoth exceptions are questions of fact, and both live or die on what the file shows about when the need arose and what the normal lead time or stock level is.\n\nCite: 31 U.S.C. 1502(a); GAO Red Book, Chapter 5."
+      },
+      {
+        "heading": "Incremental funding",
+        "body": "Incremental funding means obligating less than the full estimated cost at award and adding funds by modification as they become available. It is a funding technique, not a contract type.\n\nWhere it fits:\n- Cost-reimbursement contracts, using the Limitation of Funds clause. The contractor is not obligated to continue beyond the funded amount and must notify the Government when costs approach the funded ceiling.\n- Non-severable services or research and development efforts spanning more than one year where the agency has specific authority.\n- Multi-year or multiple-year appropriations, where incremental obligation is consistent with the period of availability.\n\nWhere it does not fit: incrementally funding a firm-fixed-price contract for severable services to spread one requirement across appropriations is generally improper - the fixed-price contract creates the full liability at award, so the full amount must be obligated.\n\nThe KO's disciplines: track the funded amount against incurred cost, act on the contractor's limitation-of-funds notice before performance stops, and never let a contractor keep working unfunded.\n\nCite: RFO FAR 52.232-22, Limitation of Funds (crosswalk: unchanged number); RFO FAR 32.104 (providing contract financing)."
+      },
+      {
+        "heading": "Traps",
+        "body": "- Calling a services contract severable because it has monthly invoices. The test is whether each increment independently meets a separate need, not how you bill.\n- Using the 12-month authority to justify a 12-month period that starts entirely in the next fiscal year. The authority covers a period that begins in one year and ends in the next; a period entirely in the next year is simply next year's need.\n- Mixing severable and non-severable CLINs in one contract without separating the funding. Fund each line to its own bona fide need.\n- Treating an option year as a continuation of the original bona fide need. Each option period for severable services is its own need, funded with the money current when the option is exercised, unless you are using the 12-month authority.\n- Incrementally funding to hide an unaffordable requirement. Boards see that as a fiscal and a leadership failure.\n- Assuming Korea LCS funds behave like O&M. LCS funds under the Special Measures Agreement have their own limitations and cannot be mixed with O&M in one solicitation - confirm current rules with C&P before answering an LCS funding question."
+      },
+      {
+        "heading": "How boards probe it",
+        "body": "The severability question almost always comes as a story with dates, and the board is watching for the order of your reasoning.\n\nThe ideal sequence, out loud:\n1. Identify the requirement and ask whether each increment independently meets a separate need.\n2. Declare severable or non-severable.\n3. State which year's money is the bona fide need.\n4. If severable and the period crosses the year end, raise the 12-month authority and say whether it fits.\n5. Say how you document it and whom you coordinate with - resource manager and counsel.\n\nExpect follow-ups that flip one fact: \"Now the period is 14 months.\" \"Now it is a study with a final report.\" \"Now the purchase request arrives in August for a July start.\" Each flip changes exactly one step in that sequence. Candidates who memorized a conclusion get lost; candidates who run the sequence stay right.\n\nCite: 31 U.S.C. 1502(a); 10 U.S.C. 3133 (verify recodification)."
+      }
+    ],
+    "key_cites": [
+      {
+        "ref": "31 U.S.C. 1502(a)",
+        "url": "https://www.law.cornell.edu/uscode/text/31/1502",
+        "note": "Bona fide needs rule. Listed in regulations.json 'unchanged' - statutes are not renumbered by the RFO."
+      },
+      {
+        "ref": "10 U.S.C. 3133 (formerly 10 U.S.C. 2410a)",
+        "url": "",
+        "note": "DoD authority to fund a severable services contract or option crossing fiscal years, period not to exceed one year. NOT in the verified RFO crosswalk - confirm the current recodified section before citing it at a board."
+      },
+      {
+        "ref": "41 U.S.C. 3902",
+        "url": "https://www.law.cornell.edu/uscode/text/41/3902",
+        "note": "Parallel cross-fiscal-year severable services authority for executive agencies. Verify applicability to your action with counsel."
+      },
+      {
+        "ref": "RFO FAR 52.232-22",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52",
+        "note": "Limitation of Funds - the incremental funding clause for cost-reimbursement contracts. Crosswalk: number unchanged, confidence verified."
+      },
+      {
+        "ref": "RFO FAR 32.104",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32",
+        "note": "Providing contract financing. Crosswalk: number unchanged, confidence verified."
+      },
+      {
+        "ref": "GAO Principles of Federal Appropriations Law, Chapter 5",
+        "url": "https://www.gao.gov/legal/appropriations-law/red-book",
+        "note": "Source of the severability test and the lead-time and stock-level exceptions. Persuasive authority, not the FAR."
+      }
+    ],
+    "board_angles": [
+      {
+        "q": "Explain the difference between severable and non-severable services.",
+        "a": "Severable services can be divided into components that each independently meet a separate need, so they are a bona fide need of the year performed; non-severable services produce a single unified outcome, so the whole effort is funded with the money current at award and performance may cross fiscal years."
+      },
+      {
+        "q": "Can you fund a 12-month janitorial contract starting 1 August with current-year money?",
+        "a": "Yes - DoD may fund a severable services contract that begins in one fiscal year and ends in the next with the appropriation current at award, provided the total period does not exceed one year."
+      },
+      {
+        "q": "What if the period is 15 months?",
+        "a": "The cross-fiscal-year authority does not reach it - I would restructure to a base period of no more than 12 months with an option, and fund the option with the money current when I exercise it."
+      },
+      {
+        "q": "You buy generators in September that will not be delivered until January. Is that a bona fide need of the current year?",
+        "a": "It can be, under the lead-time exception, if the need genuinely arose this year and the delay is normal production or delivery lead time for that item - and the file has to document both facts."
+      },
+      {
+        "q": "When can you use incremental funding?",
+        "a": "Primarily on cost-reimbursement efforts using the Limitation of Funds clause where funding arrives in increments; I would not incrementally fund a firm-fixed-price severable services contract, because the full liability arises at award."
+      },
+      {
+        "q": "Your contractor sends a limitation of funds notice. What do you do?",
+        "a": "I treat it as a stop-work warning - I notify the requiring activity and resource manager immediately, work the funding action before the funded ceiling is reached, and I do not let the contractor perform unfunded, because the Government is not obligated beyond the funded amount."
+      }
+    ],
+    "related_questions": [
+      "Q0119",
+      "Q0277",
+      "Q0070",
+      "Q0006",
+      "Q0072",
+      "Q0122"
+    ],
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "The severability test, the bona fide needs rule and the FAR 52.232-22 cite are solid - 31 U.S.C. 1502 is in the 'unchanged' list and 52.232-22 is a verified crosswalk entry. Confidence is held at medium because the DoD cross-fiscal-year severable services authority (10 U.S.C. 3133, formerly 2410a) is not covered by the verified crosswalk in regulations.json and the recodified section number was not fetched; treat that number as unverified and confirm before quoting it."
+  },
+  {
+    "id": "uac-ratification",
+    "title": "Unauthorized Commitments and Ratification",
+    "domain": "Authority, Ethics & Leadership",
+    "summary": "An unauthorized commitment is an agreement that is not binding solely because the Government representative who made it lacked the authority to enter into it. Ratification is the act of approving that commitment after the fact, and it is available only when every criterion in RFO FAR 1.405 is met. Boards use this topic to test whether you protect the Government first, treat the contractor fairly second, and fix the underlying behavior third.",
+    "sections": [
+      {
+        "heading": "What an unauthorized commitment is",
+        "body": "An unauthorized commitment means an agreement that is not binding solely because the Government representative who made it lacked the authority to enter into that agreement on behalf of the Government.\n\nRead the word \"solely\" carefully. It means the only defect is the lack of authority. If the agreement is also illegal, or the price is unreasonable, or the funds were never available, ratification is not the fix - the action fails for a separate reason.\n\nCommon fact patterns:\n- A COR directs work outside the statement of work.\n- A facility engineer tells a contractor to begin emergency repairs at night.\n- A program manager emails added tasks to the contractor.\n- A supply technician calls a vendor and orders goods over the micro-purchase threshold.\n- A KO signs above the limit printed on the SF 1402.\n\nThe contractor's belief that the person had authority does not help - apparent authority does not bind the Government, and contractors are charged with knowing the limits of a Government agent's authority.\n\nCite: RFO FAR 1.405 (was 1.602-3); RFO FAR 1.402-1."
+      },
+      {
+        "heading": "The ratification criteria",
+        "body": "Ratification is the act of approving an unauthorized commitment by an official who has the authority to do so. It may occur only when all of the following are satisfied:\n- Supplies or services were provided to and accepted by the Government, or the Government otherwise obtained a benefit.\n- The ratifying official has the authority to enter into a contractual commitment.\n- The resulting contract would otherwise have been proper if made by an appropriate contracting officer.\n- The contracting officer reviewing the action determines the price to be fair and reasonable.\n- The contracting officer recommends payment and legal counsel concurs, unless agency procedures except the action from that review.\n- Funds are available and were available at the time the unauthorized commitment was made.\n- The ratification is in accordance with any other limitations prescribed under agency procedures.\n\nIf even one criterion fails, do not ratify. The remaining avenues are a claim under the Contract Disputes Act or, in narrow circumstances, relief under Public Law 85-804. Say that out loud at a board - it shows you know ratification is not the only door.\n\nCite: RFO FAR 1.405(c) (was FAR 1.602-3(c))."
+      },
+      {
+        "heading": "Who may ratify, and the file",
+        "body": "Ratification authority is delegated and is held at a level above the contracting officer who is processing the action. The FAR requires agencies to provide for the delegation, and AFARS and ACC policy set the Army levels. Do not invent a name or a local threshold at a board - say \"the ratification authority designated in AFARS and my command's supplement, above my level,\" and say you would confirm the current delegation with the Chief, Contracting and Policy (C&P) before routing.\n\nWhat the file must contain:\n- A written statement of facts from the individual who made the commitment: who, what, when, why, and what was received.\n- A memorandum from the requiring activity commander or director explaining how it happened and what corrective action was taken.\n- Evidence the Government received and accepted the benefit.\n- A price reasonableness determination by the KO.\n- Funds documentation showing availability at the time of the commitment and now.\n- Legal review and concurrence.\n- The ratifying official's written approval, and then a contractual document - normally a purchase order or modification - executed by a warranted KO.\n\nCite: RFO FAR 1.405; AFARS (Army supplement to FAR Part 1)."
+      },
+      {
+        "heading": "How to work the action",
+        "body": "A board wants a sequence, not a lecture. Use this one.\n\n1. Stop the bleeding. Tell the contractor in writing to cease any further unauthorized work, and make clear no one but a KO may direct performance.\n2. Establish the facts. Get the statement from the individual and the requiring activity, and identify exactly what the Government received.\n3. Test the criteria at RFO FAR 1.405(c), one by one, and write down the answer to each.\n4. Determine price reasonableness. Use price analysis - comparison to prior prices, catalog or market prices, or an independent estimate.\n5. Confirm funds were available when the commitment was made and are available now. If they were not, you have a potential Antideficiency Act issue and you raise it immediately.\n6. Obtain legal review, package the file, and route to the ratification authority.\n7. On approval, execute the contractual document as a warranted KO.\n8. Close the loop: train the requiring activity, brief the commander, and track whether it recurs.\n\nCite: RFO FAR 1.405; RFO FAR 15.404-1 (price analysis)."
+      },
+      {
+        "heading": "Prevention is the part candidates skip",
+        "body": "Boards score prevention heavily because ratifications are a symptom of a relationship problem, not a paperwork problem.\n\nWhat a strong candidate says:\n- Train CORs at designation and annually, and put the authority limits in the designation letter in plain language.\n- Brief requiring activity leadership - not just the action officer - so the commander owns the behavior.\n- Publish a one-page \"who can tell a contractor to do something\" product for the installation.\n- Build an after-hours and emergency procedure in advance, so the honest emergency has a lawful path: reach the on-call KO, use the emergency authorities that exist, and do not let a well-meaning engineer improvise.\n- Track ratifications by organization and report the trend. A repeat offender gets a commander-level conversation.\n- Treat the first one as a teaching moment and a repeat as an accountability moment.\n\nAnd say the hard part: the ratification package documents a failure, so you write it honestly. Softening the facts to protect a colleague is an integrity failure a board will not forgive.\n\nCite: RFO FAR 1.405; DFARS 201.404-70 (COR designation)."
+      },
+      {
+        "heading": "How boards probe it",
+        "body": "The most common CORB scenario in this area is an after-hours emergency: a water line bursts, a facility engineer calls a contractor, work gets done overnight, and the invoice lands on your desk Monday.\n\nThe board is watching for four moves:\n1. You name it - this is an unauthorized commitment, and no binding contract exists.\n2. You do not punish the mission. You acknowledge the Government got a real benefit and that ratification exists precisely for this.\n3. You run RFO FAR 1.405(c) criterion by criterion, including funds availability at the time of the commitment.\n4. You separate the payment question from the accountability question, and you address both.\n\nExpect the twist: \"What if the funds were not available that night?\" Then ratification fails on that criterion and you have a potential ADA issue to report. And expect: \"The engineer is a friend and it is his first time.\" The answer is that the file states the facts accurately regardless, and mercy shows up in the corrective action, not in the documentation.\n\nCite: RFO FAR 1.405(c); 31 U.S.C. 1341."
+      }
+    ],
+    "key_cites": [
+      {
+        "ref": "RFO FAR 1.405",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1",
+        "note": "Ratification of unauthorized commitments. Was FAR 1.602-3. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR 1.405(c)",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1",
+        "note": "The ratification criteria. Was FAR 1.602-3(c). Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR 1.402-1",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1",
+        "note": "Contracting officer authority - the reason the commitment is not binding. Was FAR 1.602-1. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "AFARS Part 5101",
+        "url": "https://api.army.mil/e2/c/downloads/2026/07/07/995d7218/afars-combined-30jun2026.pdf",
+        "note": "Army ratification delegation levels and procedures. Confirm the current delegation and any local supplement with C&P - never quote a local threshold from memory."
+      },
+      {
+        "ref": "RFO FAR 15.404-1",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+        "note": "Price analysis - used for the fair and reasonable price determination in the ratification package. Was FAR 15.404-1(b). Crosswalk confidence: verified."
+      },
+      {
+        "ref": "31 U.S.C. 1341",
+        "url": "https://www.law.cornell.edu/uscode/text/31/1341",
+        "note": "Antideficiency Act - relevant when funds were not available at the time the commitment was made."
+      }
+    ],
+    "board_angles": [
+      {
+        "q": "What is an unauthorized commitment?",
+        "a": "An agreement that is not binding solely because the Government representative who made it lacked the authority to enter into it on behalf of the Government."
+      },
+      {
+        "q": "Walk me through the ratification criteria.",
+        "a": "The Government received and accepted a benefit, the ratifying official has contracting authority, the contract would otherwise have been proper, I determine the price fair and reasonable and recommend payment with legal concurrence, and funds were available at the time of the commitment and are available now."
+      },
+      {
+        "q": "Who ratifies?",
+        "a": "An official designated in AFARS and my command's supplement at a level above me - not the contracting officer who processes the package - and I would confirm the current delegation with C&P before routing."
+      },
+      {
+        "q": "An engineer had a contractor fix a burst water line Saturday night. What do you do Monday?",
+        "a": "I direct the contractor in writing to stop any further unauthorized work, gather statements and evidence of the benefit received, run the 1.405(c) criteria, determine price reasonableness, get legal review, and route the package to the ratification authority."
+      },
+      {
+        "q": "What if one of the criteria is not met?",
+        "a": "I do not ratify - the contractor's avenue becomes a claim under the Contract Disputes Act, or in narrow circumstances relief under Public Law 85-804, and if the failure was funds availability I also report a potential Antideficiency Act violation."
+      },
+      {
+        "q": "How do you prevent the next one?",
+        "a": "Train CORs at designation and annually with the authority limits in plain language, brief requiring activity leadership so commanders own the behavior, publish an after-hours procedure that routes emergencies to an on-call KO, and track ratifications by organization so a repeat becomes an accountability conversation."
+      }
+    ],
+    "related_questions": [
+      "Q0009",
+      "Q0274",
+      "Q0221",
+      "Q0109"
+    ],
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "high",
+    "confidence_reason": "RFO FAR 1.405 and 1.405(c) are 'verified' crosswalk entries with acquisition.gov source URLs, and the criteria track the official answer in Q0009. The AFARS ratification delegation level is deliberately described by role rather than by number, per the non-negotiable rule against inventing local approval thresholds."
+  },
+  {
+    "id": "market-research-planning",
+    "title": "Market Research and Acquisition Planning",
+    "domain": "Competition & Market Research",
+    "summary": "Market research is how you learn what the market can actually deliver, and acquisition planning is how you convert that knowledge into a strategy the Government can execute and defend. Under the RFO both are scaled to the size and complexity of the requirement rather than run as a fixed checklist. Boards probe this because weak research is the root cause of most sole-source justifications, failed competitions and protests.",
+    "sections": [
+      {
+        "heading": "When market research is required",
+        "body": "Conduct market research appropriate to the circumstances before:\n- Developing new requirements documents.\n- Soliciting offers above the simplified acquisition threshold, currently $350,000.\n- Soliciting offers at or below the SAT when adequate information is not already available and the circumstances justify the cost.\n- Soliciting offers that could lead to a bundled or consolidated requirement.\n- Awarding a task or delivery order above the SAT under an indefinite-delivery contract.\n\nThe purposes, stated plainly: determine whether commercial products or commercial services are available to meet the need, whether they can be modified to meet the need, what the customary practices of that market are, and whether small businesses can perform.\n\nMarket research is not a one-time event. It has a shelf life. Research done two years ago for a different quantity does not support today's strategy, and a board will ask you how current yours is.\n\nCite: RFO FAR Part 10, Market Research; RFO FAR 2.101 (SAT definition)."
+      },
+      {
+        "heading": "Techniques - have five ready",
+        "body": "Boards frequently ask for five techniques. Know more than five so you never stall.\n\n- Contacting knowledgeable Government and industry personnel about similar requirements.\n- Reviewing the results of recent market research for similar or identical requirements.\n- Publishing a sources sought notice or a request for information on the Governmentwide point of entry.\n- Issuing a draft solicitation or draft performance work statement for industry comment.\n- Querying Government databases - prior contract files, the Federal Procurement Data System successor reporting in SAM.gov, GSA schedules pricing, the Dynamic Small Business Search.\n- Holding an industry day or one-on-one sessions with interested vendors.\n- Reviewing catalogs, published price lists, and commercial product literature.\n- Site visits and product demonstrations.\n- Coordinating with the small business professional and the SBA procurement center representative.\n\nPair each technique with what it tells you. A sources sought tells you whether two or more capable small businesses exist. A draft PWS tells you whether your requirement is written in a way the market can price."
+      },
+      {
+        "heading": "Documentation scaled to size and complexity",
+        "body": "The RFO's central move in Parts 7 and 10 is proportionality: document what you did and what you concluded, at a level of detail that matches the dollar value, complexity and risk of the acquisition.\n\nWhat that means in practice:\n- A $60,000 commercial supply buy may need a short memorandum for record: sources contacted, prices found, conclusion that the item is commercial and that competition is available.\n- A $40 million services recompete needs a full market research report: methodology, who responded, capability findings, small business capacity analysis, pricing history, commerciality determination, and the recommended strategy with the reasoning.\n\nWhat must always be there, regardless of size:\n- What you did.\n- What you found.\n- What you concluded, and why the strategy follows from the finding.\n\nA file that lists techniques but never states a conclusion is the most common defect. The reader has to be able to see the line from the research to the set-aside decision, the contract type, and the competition approach.\n\nCite: RFO FAR Part 10; RFO FAR 7.102 (acquisition plan requirements, crosswalk confidence: probable)."
+      },
+      {
+        "heading": "How research drives the plan",
+        "body": "Acquisition planning is the process of coordinating and integrating the efforts of everyone responsible for an acquisition into a comprehensive plan for fulfilling the need in a timely manner at a reasonable cost. The KO is the integrator, not a bystander waiting for a package.\n\nMarket research feeds specific decisions:\n- Commercial or noncommercial. Drives whether you use RFO Part 12 and the commercial clause structure.\n- Set-aside or full and open. The rule-of-two determination comes straight out of research findings on small business capability.\n- Contract type. What you learn about cost risk, market maturity and pricing history drives fixed-price versus cost-reimbursement.\n- Competition approach. If research finds only one capable source, that finding - not the customer's preference - is what supports a limited-competition justification.\n- Consolidation and bundling. Research identifies whether consolidating will exclude small businesses and triggers the analysis and notification requirements.\n\nEarly exchanges with industry are encouraged and are proper before receipt of proposals, as long as you preserve fair treatment and protect proprietary information.\n\nCite: RFO FAR 7.102; RFO FAR 19.104-1 (rule of two); RFO FAR 15.101 (early exchanges, was 15.201(c))."
+      },
+      {
+        "heading": "Traps",
+        "body": "- Letting the requiring activity write the requirement around one product and calling the resulting research \"market research.\" That is a predetermined outcome, and it is the fastest route to a sustained protest.\n- Relying on a single sources sought with a 5-day response window and concluding no small businesses exist. Give the market a real chance to respond and document who was reached.\n- Ignoring responses that do not fit the preferred strategy. If three capable small businesses respond, your file has to deal with that.\n- Starting planning too late. Compressed timelines produce urgency justifications, and boards see those as self-inflicted.\n- Treating the acquisition plan as a document rather than a coordination process. If counsel, the small business professional, the requiring activity and the resource manager have not touched it, it is not a plan.\n- Stale research. Re-validate before you solicit.\n\nCite: RFO FAR Part 10; RFO FAR 7.107-2 (consolidation and bundling policy)."
+      },
+      {
+        "heading": "How boards probe it",
+        "body": "Boards test market research in two ways: the direct question and the disguised one.\n\nDirect: \"When do you perform market research, why is it necessary, and how is it documented? Name five techniques.\" Answer the trigger points, the four purposes, the proportional documentation rule, and five techniques with what each one yields.\n\nDisguised: any sole-source scenario. \"Your customer says only one source can meet the requirement.\" The board is really asking whether your first move is market research. The right instinct is to say you do not accept the customer's conclusion, you conduct research to test it, and only what the research shows supports a limited-competition justification.\n\nAlso expect the planning question aimed at leadership: \"What can you as a KO do to improve acquisition planning?\" Good answers: get in early, build and enforce a milestone schedule, hold an acquisition strategy session with all stakeholders, push requirements definition back to the customer with specific gaps named, and track the recompete clock so you never end up in a bridge.\n\nCite: RFO FAR Part 10; RFO FAR 6.103-1."
+      }
+    ],
+    "key_cites": [
+      {
+        "ref": "RFO FAR Part 10",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-10",
+        "note": "Market Research. Crosswalk confidence: verified at part level. Part number unchanged by the RFO."
+      },
+      {
+        "ref": "RFO FAR 7.102",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-7",
+        "note": "Acquisition plans - requirements. Was FAR 7.102-2. Crosswalk confidence: probable - verify the subsection before quoting it precisely."
+      },
+      {
+        "ref": "RFO FAR 7.107-2",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-7",
+        "note": "Consolidation, bundling, or substantial bundling - policy; merged former 7.107-3 and 7.107-4. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR 15.101",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+        "note": "Early exchanges with industry. Was FAR 15.201(c). Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR 19.104-1",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19",
+        "note": "Total small business set-asides, the rule of two. Was FAR 19.502-2. Crosswalk confidence: verified. Note regulations.json flags the set-aside dollar band as partly refuted - do not quote an upper SAT ceiling on the set-aside requirement without checking."
+      },
+      {
+        "ref": "RFO FAR 2.101",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-2",
+        "note": "Simplified acquisition threshold, $350,000. Threshold status in regulations.json: 'verify' (read on acquisition.gov, FAC 2026-01)."
+      }
+    ],
+    "board_angles": [
+      {
+        "q": "When are you required to conduct market research?",
+        "a": "Before developing new requirements documents, before soliciting above the SAT of $350,000, at or below the SAT when adequate information is not already available, before any bundled or consolidated requirement, and before a task or delivery order above the SAT."
+      },
+      {
+        "q": "Name five market research techniques.",
+        "a": "Sources sought or RFI on the Governmentwide point of entry, a draft solicitation or draft PWS for industry comment, queries of Government databases and prior contract files, contacting knowledgeable Government and industry personnel, and an industry day or site visits and demonstrations."
+      },
+      {
+        "q": "How much documentation is enough?",
+        "a": "Enough to match the size, complexity and risk of the acquisition - a memorandum for record on a small commercial buy, a full market research report on a major services recompete - but always covering what I did, what I found, and what I concluded."
+      },
+      {
+        "q": "Your customer insists only one source can do the work. What is your first move?",
+        "a": "Market research - I do not accept the requiring activity's conclusion; I test it, and only if the research confirms a single responsible source do I build a limited-competition justification on that finding."
+      },
+      {
+        "q": "How does market research connect to your small business decision?",
+        "a": "It supplies the rule-of-two facts - whether I have a reasonable expectation of offers from two or more responsible small businesses at fair market prices - and my set-aside determination has to be traceable to those findings."
+      },
+      {
+        "q": "What can you as the KO do to make acquisition planning better?",
+        "a": "Engage before the purchase request exists, build and enforce a milestone schedule off the required delivery date, run an acquisition strategy session with the requiring activity, counsel, small business and the resource manager, and track recompete timelines so I never have to justify urgency I created."
+      }
+    ],
+    "related_questions": [
+      "Q0024",
+      "Q0084",
+      "Q0023",
+      "Q0057",
+      "Q0145"
+    ],
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "Part 10 and 7.107-2 are verified crosswalk entries and the SAT value is recorded in regulations.json. Confidence is medium because the acquisition plan requirement cite (RFO FAR 7.102) carries 'probable' confidence in the crosswalk, and regulations.json records that the small business set-aside dollar band at 19.104-1 was partly refuted on verification - so the primer describes the rule-of-two test without asserting a SAT ceiling."
+  },
+  {
+    "id": "competition-exceptions",
+    "title": "Competition, the Exceptions, and Justifications",
+    "domain": "Competition & Market Research",
+    "summary": "Full and open competition is the statutory default: all responsible sources are permitted to compete. Contracting without full and open competition is allowed only under one of seven statutory exceptions, and every one of them requires a written justification approved at a level that rises with dollar value. Boards test this because a KO who cannot defend a competition decision is a KO who generates protests.",
+    "sections": [
+      {
+        "heading": "The default and what satisfies it",
+        "body": "Contracting officers must promote and provide for full and open competition in soliciting offers and awarding Government contracts. Full and open competition means all responsible sources are permitted to compete.\n\nSeveral things satisfy or are treated consistently with the requirement:\n- Competitive procedures - sealed bidding or competitive proposals.\n- Use of multiple-award schedules or other established competitive vehicles where fair opportunity is provided.\n- Set-asides for small business and the socioeconomic programs. These are full and open competition after exclusion of sources, and they are not exceptions requiring a justification.\n- Architect-engineer selection procedures under the Brooks Act.\n\nBenefits a board wants named: lower prices, better technical solutions, access to innovation, broader industrial base, and the integrity that comes from a transparent process. Barriers to name: restrictive specifications, unrealistic delivery schedules, bundling, inadequate lead time, brand-name descriptions, and stale market research.\n\nCite: RFO FAR Part 6; 10 U.S.C. 3201-3205; 41 U.S.C. 3301."
+      },
+      {
+        "heading": "The seven exceptions",
+        "body": "Know all seven by name and number. Under RFO numbering they sit at 6.103-1 through 6.103-7.\n- 6.103-1 Only one responsible source, and no other supplies or services will satisfy agency requirements. This is the workhorse and the one most often abused.\n- 6.103-2 Unusual and compelling urgency - the Government would be seriously injured by delay.\n- 6.103-3 Industrial mobilization; engineering, developmental or research capability; or expert services.\n- 6.103-4 International agreement - the terms of a treaty or written agreement with a foreign government direct the source.\n- 6.103-5 Authorized or required by statute - for example, 8(a) sole source, HUBZone sole source, Javits-Wagner-O'Day.\n- 6.103-6 National security - disclosure of the requirement would compromise national security.\n- 6.103-7 Public interest - agency head determination, with congressional notification.\n\nCritical limit: a lack of advance planning by the requiring activity is not a permissible basis for urgency, and neither are concerns about the expiration of funds.\n\nCite: RFO FAR 6.103-1 through 6.103-7 (was 6.302-1 through 6.302-7). Crosswalk confidence: verified."
+      },
+      {
+        "heading": "The justification, the approvals, and the numbers",
+        "body": "The written justification is what makes a limited-competition award defensible. Required content includes the action and its value, the statutory authority and why it applies, why the contractor's unique qualifications or the nature of the acquisition requires that authority, the efforts made to solicit as many sources as practicable, a fair and reasonable cost determination, the market research conducted, interested sources, the actions taken to remove barriers for future acquisitions, and the KO's certification that the justification is accurate and complete.\n\nGovernmentwide FAR tiers (Table 6-1 at RFO FAR 6.104-2(b)):\n- $900,000 or less: the contracting officer certifies.\n- Above $900,000 to $20 million: the competition advocate.\n- Above $20 million to $90 million ($150 million for DoD, NASA, Coast Guard): the HCA.\n- Above $90 million ($150 million DoD): the senior procurement executive.\n\nDoD tiers (DFARS 206.104-71 Table 206-1, Class Deviation 2026-O0017 Rev. 2):\n- At or below $10 million: the contracting officer.\n- Above $10 million to $100 million: the competition advocate, not delegable.\n- Above $100 million to $500 million: the HCA.\n- Above $500 million: the senior procurement executive.\n\nCite: RFO FAR 6.104 (was 6.303); DFARS 206.104-71."
+      },
+      {
+        "heading": "Brand name and peculiar-to-one-manufacturer",
+        "body": "A brand-name description is a restriction on competition, and it needs the same discipline as any other restriction.\n\nThe framework:\n- The requirement to describe the need in a way that permits full and open competition sits in Part 11. Items peculiar to one manufacturer are addressed at RFO FAR 11.204 (was 11.104), and DFARS 211.204 (was 211.104) carries the DoD justification requirement.\n- When only a brand-name item will satisfy the need, the application of the only-one-responsible-source authority to brand-name descriptions is at RFO FAR 6.103-1(d) (was 6.302-1(c)).\n- \"Brand name or equal\" is less restrictive than brand-name-only, but it still requires the KO to state the salient physical, functional or performance characteristics that an \"equal\" product must meet. Without salient characteristics, \"or equal\" is meaningless and the solicitation is effectively brand-name-only.\n\nFor commercial acquisitions, restricting competition to a brand name is governed by RFO FAR 12.102, and the justification requirement still applies.\n\nThe board's real question is whether you push back on a requiring activity that names a product because it is familiar rather than because it is necessary.\n\nCite: RFO FAR 6.103-1(d); RFO FAR 11.204; RFO FAR 12.102; DFARS 211.204."
+      },
+      {
+        "heading": "Competition below the SAT",
+        "body": "Below the simplified acquisition threshold you are not required to provide full and open competition, but you are required to promote competition to the maximum extent practicable.\n\nThe practical standard:\n- Obtain quotations from a reasonable number of sources - the working convention is at least three - consistent with the dollar value and the administrative cost of the solicitation.\n- Rotate sources so the same vendor does not get every buy.\n- Consider sources beyond those the requiring activity names.\n\nWhen you solicit from only one source at or below the SAT, the file must contain a written documentation of the circumstances. That documentation is lighter than a Part 6 justification, but it is not optional, and the underlying logic is the same: say why only one source was solicited, and say that the price is fair and reasonable.\n\nMicro-purchases are the lightest tier: at or below the micro-purchase threshold of $15,000 you may purchase without obtaining competitive quotations if you consider the price to be reasonable. The contingency and emergency micro-purchase thresholds are $25,000 inside the United States and $40,000 outside.\n\nCite: RFO FAR 13.101(b) (was 13.106-1(b)); RFO FAR 2.101 and 13.201(g)."
+      },
+      {
+        "heading": "How boards probe it",
+        "body": "Almost every CORB set contains a sole-source scenario. The stem is usually a customer insisting that only one product or one vendor will do - a specific four-wheeler, a specific power conditioner, a specific software brand.\n\nThe winning sequence:\n1. Do not accept the conclusion. Ask what the actual requirement is, in performance terms.\n2. Conduct or validate market research.\n3. If research confirms one responsible source, select the right authority by number - usually 6.103-1 - and say why it applies.\n4. Build the justification with all required content, get the technical data package and the requiring activity's technical certification, and confirm your market research section is honest.\n5. Route to the correct approval level, using the DoD table, and synopsize as required.\n6. State what you will do to remove the barrier for the next acquisition. Boards specifically listen for that element - it is a required content item and most candidates forget it.\n\nWatch the urgency trap: if the board's scenario includes \"we ran out of time,\" name it as a lack of advance planning and refuse to use urgency as the basis.\n\nCite: RFO FAR 6.103-2; RFO FAR 6.104."
+      }
+    ],
+    "key_cites": [
+      {
+        "ref": "RFO FAR 6.103-1",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6",
+        "note": "Only one responsible source. Was FAR 6.302-1. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR 6.103-1(d)",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6",
+        "note": "Application of the only-one-source authority to brand-name descriptions. Was FAR 6.302-1(c). Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR 6.103-2 through 6.103-7",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6",
+        "note": "Urgency; industrial mobilization and expert services; international agreement; authorized or required by statute; national security; public interest. Was FAR 6.302-2 through 6.302-7. Crosswalk confidence: verified for each."
+      },
+      {
+        "ref": "RFO FAR 6.104",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6",
+        "note": "Justification and approval, including Table 6-1 approval tiers at 6.104-2(b). Was FAR 6.303/6.304. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "DFARS 206.104-71, Table 206-1",
+        "url": "https://www.acq.osd.mil/dpap/dars/dfars_far_overhaul_class_deviations.html",
+        "note": "DoD justification approval tiers per Class Deviation 2026-O0017 Rev. 2 (5 Aug 2026): KO at or below $10M; competition advocate above $10M to $100M, not delegable; HCA above $100M to $500M; SPE above $500M. Threshold status in regulations.json: 'verify'."
+      },
+      {
+        "ref": "RFO FAR 12.102",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12",
+        "note": "Restricting competition in commercial acquisitions. Crosswalk: number unchanged, confidence verified."
+      },
+      {
+        "ref": "RFO FAR 11.204",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-11",
+        "note": "Items peculiar to one manufacturer. Was FAR 11.104. Crosswalk confidence: verified. DoD counterpart DFARS 211.204 (was 211.104)."
+      },
+      {
+        "ref": "RFO FAR 13.101(b)",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-13",
+        "note": "Soliciting from a single source under simplified procedures - written documentation required. Was FAR 13.106-1(b). Crosswalk confidence: verified."
+      }
+    ],
+    "board_angles": [
+      {
+        "q": "What statutory authorities permit contracting without full and open competition?",
+        "a": "The seven exceptions at RFO FAR 6.103-1 through 6.103-7: only one responsible source, unusual and compelling urgency, industrial mobilization or expert services, international agreement, authorized or required by statute, national security, and public interest."
+      },
+      {
+        "q": "Is a small business set-aside an exception to full and open competition?",
+        "a": "No - a set-aside is full and open competition after exclusion of sources; it does not require a Part 6 justification, only the rule-of-two determination documented in the file."
+      },
+      {
+        "q": "Who approves your justification?",
+        "a": "Under the DoD table it is me at or below $10 million, the competition advocate above $10 million to $100 million on a non-delegable basis, the HCA above $100 million to $500 million, and the senior procurement executive above $500 million."
+      },
+      {
+        "q": "Your customer says they are out of time and need a sole source. Can you use urgency?",
+        "a": "Not on those facts - a lack of advance planning by the requiring activity and concerns about expiring funds are expressly not permissible bases for the urgency exception."
+      },
+      {
+        "q": "What makes a brand-name-or-equal solicitation lawful?",
+        "a": "Stating the salient physical, functional or performance characteristics an equal product must meet, supported by market research and the justification required by RFO FAR 11.204 and DFARS 211.204 - without salient characteristics, 'or equal' is brand-name-only in disguise."
+      },
+      {
+        "q": "You are buying $80,000 in supplies and want one vendor. What do you need?",
+        "a": "Below the SAT I still must promote competition to the maximum extent practicable, so I would solicit a reasonable number of sources - normally at least three - and if I solicit only one I put written documentation of the circumstances and the price reasonableness basis in the file under RFO FAR 13.101(b)."
+      }
+    ],
+    "related_questions": [
+      "Q0078",
+      "Q0012",
+      "Q0013",
+      "Q0082",
+      "Q0153",
+      "Q0278"
+    ],
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "high",
+    "confidence_reason": "All seven exception renumberings and the 6.104 justification cite are 'verified' crosswalk entries with acquisition.gov source URLs, and both approval-tier tables come from regulations.json thresholds (ja_far_table, ja_dod_tier1-3) extracted from DoD Class Deviation 2026-O0017 Rev. 2. Those threshold records carry status 'verify', so confirm current approval levels with C&P before relying on a specific dollar tier."
+  },
+  {
+    "id": "simplified-commercial",
+    "title": "Simplified Acquisition Procedures and Commercial Buying",
+    "domain": "Acquisition Planning & Contract Types",
+    "summary": "Simplified acquisition procedures exist to reduce administrative cost on smaller buys, and the commercial parts of the FAR exist to let the Government buy the way the commercial market sells. The RFO restructured this space: the old FAR 13.5 commercial simplified procedures now live in Part 12, and Part 13 covers simplified procedures for noncommercial acquisitions. Boards test the thresholds, the commerciality determination, and the legal mechanics of quotes and purchase orders.",
+    "sections": [
+      {
+        "heading": "The numbers",
+        "body": "Get these cold. The dollar figures are the most commonly missed item at a board because candidates learned older values.\n\n- Micro-purchase threshold: $15,000. Contingency, CBRN defense, disaster or emergency support: $25,000 inside the United States, $40,000 outside the United States.\n- Simplified acquisition threshold: $350,000. Contingency and emergency: $1,000,000 inside the United States, $2,000,000 outside. Humanitarian or peacekeeping operation outside the United States: $650,000.\n- Simplified procedures for commercial products and commercial services - the \"SaP\" ceiling: $9,000,000; $15,000,000 for contingency, CBRN defense, disaster or emergency support.\n- Overseas GPC commercial purchase limit above the MPT: $25,000.\n\nStatutory acquisition-related thresholds are adjusted for inflation every five years under FAR 1.109; the last adjustment was 1 October 2025 and the next is October 2030.\n\nNote for Army candidates: the SaP ceiling is also a warrant level - Class II under Army Warranting Program Policy v12 includes SaP.\n\nCite: RFO FAR 2.101; RFO FAR 12.201-1 and 12.001(c); RFO FAR 13.201(g); FAR 1.109."
+      },
+      {
+        "heading": "SAT versus SAP - and the RFO restructure",
+        "body": "This is a definitional question boards ask verbatim.\n\n- The simplified acquisition threshold (SAT) is a dollar value, currently $350,000, defined at RFO FAR 2.101.\n- Simplified acquisition procedures (SAP) are the streamlined methods you may use for acquisitions at or below that value.\n\nThe RFO change candidates must know: the old FAR Subpart 13.5, simplified procedures for certain commercial products and commercial services, moved into Part 12 at RFO FAR 12.201-1. Part 13 is now titled Simplified Procedures for Noncommercial Acquisitions. So:\n- Buying commercial at or below $9,000,000 using simplified procedures: RFO Part 12.\n- Buying noncommercial at or below the SAT using simplified procedures: RFO Part 13.\n\nWhat SAP buys you: no requirement for full and open competition (but competition to the maximum extent practicable), simplified solicitation and documentation, no certified cost or pricing data, and reduced clause content. What it does not buy you: relief from the bona fide needs rule, from price reasonableness, or from documenting the file.\n\nCite: RFO FAR 2.101; RFO FAR 12.201-1 (was FAR 13.5); RFO FAR Part 13."
+      },
+      {
+        "heading": "The commerciality determination",
+        "body": "Why it matters: the determination decides which body of law and clauses applies. Commercial acquisitions get a streamlined clause set, a preference for firm-fixed-price or fixed-price with economic price adjustment, no cost accounting standards, and generally no certified cost or pricing data. It changes terminations, inspection and acceptance, and warranty treatment.\n\nWhat the determination is: a documented KO judgment, based on market research, that the product or service is of a type customarily used by the general public or by nongovernmental entities for purposes other than governmental purposes, and has been sold, leased or licensed - or offered for sale, lease or license - to the general public. Services are commercial when they are of a type offered and sold competitively in substantial quantities in the commercial marketplace based on established catalog or market prices for specific tasks performed or specific outcomes to be achieved.\n\nWhat it is not: a label a vendor applies. \"Of a type\" does real work, and so does market research. A determination that rests only on the contractor's assertion will not survive review.\n\nCite: RFO FAR 2.101 (commercial product and commercial service definitions); RFO FAR Part 12."
+      },
+      {
+        "heading": "Quotes, purchase orders and the moment of contract formation",
+        "body": "This is contract law and boards ask it because it separates people who understand formation from people who fill out forms.\n\n- A quotation is not an offer. It is informational, and the Government cannot accept it to form a binding contract.\n- Issuance of a purchase order in response to a quotation is an offer by the Government to buy on the specified terms.\n- A contract is formed when the supplier accepts that offer.\n- Acceptance may be shown by written notification (preferred), by furnishing the supplies or services ordered, or by beginning work to the point where substantial performance has occurred.\n\nConsequences that follow:\n- Until acceptance, the Government may withdraw the purchase order.\n- The KO should obtain written acceptance whenever practicable, so the file is unambiguous about when the contract was formed.\n- A request for quotations is not a solicitation that binds the Government to award, and vendors are not \"offerors\" in the Part 15 sense.\n\nCompare with sealed bidding and negotiated procurement: a bid and a proposal are offers, and Government acceptance forms the contract.\n\nCite: RFO FAR 12.201-1(b) (was FAR 13.004); RFO FAR 13.204 (purchase order clauses, was 13.302-5)."
+      },
+      {
+        "heading": "Traps",
+        "body": "- Quoting old thresholds. The $150,000 SAT and the $6.5 million or $7 million commercial ceiling are out of date. Use $350,000 and $9,000,000.\n- Splitting a requirement into multiple actions to stay under a threshold. That is prohibited, and it is a warrant-level integrity issue.\n- Treating the SAT as a competition exemption. You still promote competition to the maximum extent practicable, and a single-source buy still needs written documentation of the circumstances.\n- Using simplified procedures for commercial items above the SaP ceiling. Above $9,000,000 the streamlined commercial simplified procedures are not available.\n- Skipping the price reasonableness determination because it is a small buy. Every action needs a basis, even if that basis is one sentence comparing the quote to a catalog price.\n- Assuming a commercial determination made by another activity binds you. You make and document your own.\n- Forgetting that combined synopsis/solicitation for commercial buys now sits at RFO FAR 12.202(b), not 12.603.\n\nCite: RFO FAR 12.202(b) (was 12.603); RFO FAR 13.101(b)."
+      },
+      {
+        "heading": "How boards probe it",
+        "body": "Expect three shapes of question.\n\nDefinitional: \"What is the difference between the SAT and SAP?\" Answer the value versus the procedures, then give the current numbers and note the RFO move of commercial simplified procedures into Part 12.\n\nMechanical: \"Explain the legal effect of quotations and how a contractor accepts a purchase order.\" Give the four-step formation chain and name the three ways acceptance can be shown.\n\nJudgment: \"Why is the commerciality determination important?\" Answer that it drives the clause set, contract type preference, pricing data and termination treatment, and that it rests on documented market research rather than a vendor's assertion.\n\nBoards also like to walk a candidate up the ladder: \"$12,000 - what do you do? $200,000? $2 million commercial? $12 million commercial?\" Practice that ladder out loud until the threshold, the authority and the documentation for each rung come without hesitation. Then be ready for the honest close: \"Which of those would your warrant let you sign?\"\n\nCite: RFO FAR 2.101; RFO FAR 12.201-1; RFO FAR Part 13."
+      }
+    ],
+    "key_cites": [
+      {
+        "ref": "RFO FAR 2.101",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-2",
+        "note": "Definitions of micro-purchase threshold ($15,000), simplified acquisition threshold ($350,000), commercial product and commercial service. Crosswalk confidence: verified. Threshold records status: 'verify'."
+      },
+      {
+        "ref": "RFO FAR 12.201-1",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12",
+        "note": "Simplified procedures for commercial products and commercial services, ceiling $9,000,000 ($15,000,000 contingency per 12.001(c)). Absorbed former FAR Subpart 13.5. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR 12.201-1(b)",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12",
+        "note": "Legal effect of quotations under simplified procedures. Was FAR 13.004(a)-(b). Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR Part 13",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-13",
+        "note": "Simplified Procedures for Noncommercial Acquisitions - retitled and rescoped by the RFO. Crosswalk confidence: verified at part level."
+      },
+      {
+        "ref": "RFO FAR 13.204",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-13",
+        "note": "Purchase orders - contract clauses (noncommercial). Was FAR 13.302-5. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR 12.202(b)",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12",
+        "note": "Combined synopsis/solicitation for commercial acquisitions. Was FAR 12.603 - note the bank still has questions citing 12.603. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "DFARS 213.301",
+        "url": "https://www.acq.osd.mil/dpap/dars/dfars_far_overhaul_class_deviations.html",
+        "note": "Governmentwide commercial purchase card - $25,000 overseas commercial purchase limit above the MPT. Threshold status in regulations.json: 'verify'."
+      },
+      {
+        "ref": "FAR 1.109",
+        "url": "https://www.acquisition.gov/far/1.109",
+        "note": "Five-year inflation adjustment cycle for statutory acquisition-related thresholds; last adjustment 1 Oct 2025, next October 2030."
+      }
+    ],
+    "board_angles": [
+      {
+        "q": "What is the difference between the SAT and SAP?",
+        "a": "The SAT is a dollar value - currently $350,000 - and SAP are the streamlined procedures available at or below it; under the RFO, Part 13 covers noncommercial simplified procedures while the commercial simplified procedures moved to Part 12 at 12.201-1."
+      },
+      {
+        "q": "Give me the current thresholds.",
+        "a": "Micro-purchase $15,000, with $25,000 and $40,000 contingency figures inside and outside the United States; SAT $350,000, with $1 million and $2 million contingency figures; and the commercial simplified procedures ceiling at $9 million, $15 million under a contingency."
+      },
+      {
+        "q": "Explain the legal effect of a quotation.",
+        "a": "A quotation is not an offer and cannot be accepted to form a contract; the Government's purchase order is the offer, and the contract forms when the supplier accepts - by written notification, by furnishing the supplies or services, or by proceeding to substantial performance."
+      },
+      {
+        "q": "Why does the commerciality determination matter?",
+        "a": "It decides the clause set, the preference for fixed-price contract types, whether certified cost or pricing data and CAS apply, and how terminations work - and it has to rest on my documented market research, not on the vendor's assertion."
+      },
+      {
+        "q": "Can you use simplified procedures for a $12 million commercial services buy?",
+        "a": "No - the commercial simplified procedures ceiling is $9 million, $15 million only for contingency, CBRN defense, disaster or emergency support, so that acquisition goes to normal Part 12 with Part 15 procedures."
+      },
+      {
+        "q": "Your customer asks you to break a $500,000 requirement into two $250,000 buys. What do you say?",
+        "a": "No - splitting a requirement to avoid a threshold or to fit a warrant is prohibited, I would document the single requirement at its true value and process it at the correct level."
+      }
+    ],
+    "related_questions": [
+      "Q0099",
+      "Q0059",
+      "Q0051",
+      "Q0046",
+      "Q0050",
+      "Q0273"
+    ],
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "high",
+    "confidence_reason": "All RFO renumberings used (12.201-1, 12.201-1(b), 12.202(b), 13.204, Part 13) are 'verified' crosswalk entries with acquisition.gov source URLs, and every dollar figure is taken from regulations.json thresholds rather than memory. Those threshold records carry status 'verify' (read on acquisition.gov at FAC 2026-01), so re-confirm values before a board. Note that bank items Q0099 and Q0273 still carry pre-RFO values and the old 12.603 cite."
+  },
+  {
+    "id": "contract-types",
+    "title": "Selecting a Contract Type",
+    "domain": "Acquisition Planning & Contract Types",
+    "summary": "Contract type selection is a risk allocation decision, not a preference. The question you answer is how well the requirement can be defined and how much cost and performance uncertainty remains, and the answer tells you where on the spectrum from firm-fixed-price to cost-plus-fixed-fee the acquisition belongs. Boards want the risk logic spoken out loud, plus the ordering vehicles - IDIQ, requirements and definite-quantity - and the rules for exercising options.",
+    "sections": [
+      {
+        "heading": "The risk spectrum",
+        "body": "Picture a line. At one end the contractor carries all the cost risk; at the other the Government does.\n\n- Firm-fixed-price. Price is not subject to adjustment based on the contractor's cost. Maximum contractor risk, minimum Government administrative burden. Use when the requirement is well defined and fair and reasonable prices can be established.\n- Fixed-price with economic price adjustment. FFP plus a defined adjustment for specified contingencies - labor or material indices, or actual costs of labor or material.\n- Fixed-price incentive. A target cost, target profit, ceiling price and share ratio. Contractor risk decreases as costs approach the ceiling; use when a firm fixed price is not suitable but incentives can motivate cost control.\n- Cost-plus-incentive-fee and cost-plus-award-fee. Government bears most cost risk; fee varies with cost performance or with subjective evaluation against award-fee criteria.\n- Cost-plus-fixed-fee. Maximum Government risk. Fee is fixed at award and does not vary with actual cost.\n\nThe FAR's stated preference is fixed-price, and the further you move from it the stronger your written rationale must be.\n\nCite: RFO FAR Part 16, Types of Contracts."
+      },
+      {
+        "heading": "Factors that drive the decision",
+        "body": "Say the factors, not just the types. The KO considers:\n- Price competition. Effective competition normally supports fixed-price.\n- Price analysis and cost analysis results. Can you establish a fair and reasonable price without cost data?\n- Type and complexity of the requirement. Complex, first-of-a-kind efforts carry uncertainty that a fixed price would have to be padded to absorb.\n- Combining contract types within one contract - different CLINs may warrant different types.\n- Urgency. A compressed schedule may prevent the definition needed for fixed price.\n- Period of performance and production lead time.\n- Contractor's technical capability and financial responsibility.\n- Adequacy of the contractor's accounting system. This is a hard gate - cost-reimbursement and incentive types require an accounting system adequate for determining costs applicable to the contract.\n- Concurrent contracts and the administrative burden the type imposes on both parties.\n- Extent and nature of proposed subcontracting.\n- Acquisition history for that item or service.\n\nCite: RFO FAR Part 16; RFO FAR 12.104 (commercial contract type, was 12.207)."
+      },
+      {
+        "heading": "Cost-reimbursement and T&M limits",
+        "body": "Cost-reimbursement contracts may be used only when:\n- Uncertainties in performance do not permit costs to be estimated with sufficient accuracy to use any fixed-price type.\n- The contractor's accounting system is adequate for determining costs applicable to the contract.\n- Adequate Government resources are available to award and manage a contract that requires monitoring during performance.\n- Appropriate Government surveillance during performance will provide reasonable assurance that efficient methods and effective cost controls are used.\n\nThey are prohibited for the acquisition of commercial products and commercial services.\n\nTime-and-materials and labor-hour contracts are the least preferred. They may be used only when it is not possible at the time of placing the contract to estimate accurately the extent or duration of the work or to anticipate costs with any reasonable degree of confidence. They require:\n- A written determination and findings that no other contract type is suitable.\n- A ceiling price the contractor exceeds at its own risk.\n- Appropriate Government surveillance during performance, because the contractor has no positive profit incentive to control cost or labor efficiency.\n\nCite: RFO FAR Part 16; RFO FAR 12.104."
+      },
+      {
+        "heading": "Indefinite-delivery vehicles",
+        "body": "Three kinds, and boards ask you to distinguish them.\n\n- Definite-quantity. A definite quantity of specific supplies or services for a fixed period, with deliveries scheduled by placing orders. Use when you know the exact quantity but not the timing.\n- Requirements. Fills all actual purchase requirements of designated activities during a specified period. The Government commits to buy all of that requirement from the contractor. Include a realistic estimated total quantity and, where appropriate, a maximum per order and per period.\n- Indefinite-quantity (IDIQ). Provides for an indefinite quantity within stated minimum and maximum limits during a fixed period. The Government must order and the contractor must furnish at least the stated minimum; the minimum must be more than nominal, and the Government must obligate it at award - that obligation is the consideration that makes the contract binding.\n\nFor multiple-award contracts, orders are placed using fair opportunity procedures. RFO FAR 16.507 carries the ordering procedures (was 16.505), and exceptions to fair opportunity are at 16.507-6(b). The enhanced-procedures tier for orders sits at $7,500,000.\n\nCite: RFO FAR 16.507; RFO FAR 16.508 (task and delivery order protest jurisdiction)."
+      },
+      {
+        "heading": "Options",
+        "body": "An option is a unilateral right, for a specified time, to purchase additional supplies or services or to extend the term.\n\nBefore exercising an option the contracting officer must determine that:\n- Funds are available.\n- The requirement covered by the option fulfills an existing Government need.\n- Exercise is the most advantageous method of fulfilling that need, price and other factors considered.\n- The option was synopsized as required, or an exception applies.\n- The contractor is not excluded and remains responsible, and performance has been acceptable.\n- The option is exercised within the time and manner the contract specifies, by written notice.\n\nThe most advantageous determination is supported by one of: a new solicitation failing to produce a better price, an informal analysis of prices or market indicators showing the option price is better, or a determination that the time since award is so short the option price remains most advantageous.\n\nDo not forget fiscal law: for severable services each option period is normally its own bona fide need, funded with money current at exercise unless the cross-fiscal-year authority applies.\n\nCite: RFO FAR 17.204-1 (was 17.207); DFARS 217.204-170."
+      },
+      {
+        "heading": "How boards probe it",
+        "body": "The standard question is open: \"How do you determine the most appropriate contract type, and give examples of when you would use each.\" Structure the answer.\n\n1. State the principle: contract type allocates risk, and the choice follows from how well the requirement is defined and how much uncertainty remains.\n2. Name the FAR preference for fixed-price and say the burden of justification rises as you move toward cost-reimbursement.\n3. Give one concrete example per family - FFP for recurring janitorial with a clear PWS, FPI for a production run with cost-control incentive, CPFF for a research effort with undefined scope, T&M for emergency repair of unknown extent with a ceiling.\n4. Name the gates: adequate accounting system, adequate Government surveillance resources, the D&F for T&M, the prohibition on cost-reimbursement for commercial.\n\nThen expect the pressure follow-up: \"Your customer wants cost-plus because they cannot define the requirement.\" The right answer is that an undefined requirement is a requirements problem first - you work definition with the requiring activity, and you use a cost-reimbursement type only if the uncertainty genuinely cannot be resolved, with the surveillance resources to manage it.\n\nCite: RFO FAR Part 16; RFO FAR 17.204-1."
+      }
+    ],
+    "key_cites": [
+      {
+        "ref": "RFO FAR Part 16",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16",
+        "note": "Types of Contracts. Crosswalk confidence: verified at part level. The specific RFO subsection numbers for individual contract types were NOT crosswalked in regulations.json - cite at part level or verify the subsection on acquisition.gov before quoting one."
+      },
+      {
+        "ref": "RFO FAR 16.507",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16",
+        "note": "Additional ordering procedures for multiple-award contracts (fair opportunity). Was FAR 16.505. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR 16.507-6(b)",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16",
+        "note": "Exceptions to fair opportunity. Was FAR 16.505(b)(2). Crosswalk confidence: verified. Enhanced-procedures tier at $7,500,000 per RFO FAR 16.507-4 / 16.507-5."
+      },
+      {
+        "ref": "RFO FAR 16.508",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16",
+        "note": "Task and delivery order protest jurisdiction. Was FAR 16.505(a)(10). DoD floor $35,000,000 per 10 U.S.C. 3406(f)(1)(B); civilian floor $10,000,000 per 41 U.S.C. 4106(f)."
+      },
+      {
+        "ref": "RFO FAR 17.204-1",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-17",
+        "note": "Exercise of options. Absorbs former FAR 17.207. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR 12.104",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12",
+        "note": "Contract type for commercial acquisitions - fixed-price or FP/EPA, cost-reimbursement prohibited. Was FAR 12.207. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "DFARS 217.204-170",
+        "url": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-217/2026-O0027_TAB_A_Deviation_Memo_DFARS_217.pdf",
+        "note": "DoD requirements for exercise of options, per RFO class deviation 2026-O0027. Crosswalk confidence: verified."
+      }
+    ],
+    "board_angles": [
+      {
+        "q": "How do you determine the most appropriate contract type?",
+        "a": "By how well the requirement is defined and how much cost and performance uncertainty remains - the FAR prefers fixed-price, and the further I move toward cost-reimbursement the stronger my documented rationale and surveillance plan have to be."
+      },
+      {
+        "q": "When may you use a cost-reimbursement contract?",
+        "a": "Only when uncertainties do not permit costs to be estimated accurately enough for any fixed-price type, the contractor's accounting system is adequate to determine allocable costs, and the Government has the resources to award and monitor it - and never for commercial products or services."
+      },
+      {
+        "q": "What is required before you can use time-and-materials?",
+        "a": "A written determination and findings that no other contract type is suitable, a ceiling price the contractor exceeds at its own risk, and appropriate Government surveillance, because T&M gives the contractor no positive profit incentive to control cost or labor efficiency."
+      },
+      {
+        "q": "What makes an IDIQ contract binding?",
+        "a": "The guaranteed minimum - the Government must order and the contractor must furnish at least the stated minimum, which has to be more than nominal and must be obligated at award as the consideration for the contract."
+      },
+      {
+        "q": "Difference between a requirements contract and an IDIQ?",
+        "a": "A requirements contract commits the Government to buy all of a designated activity's actual requirements from that contractor during the period; an IDIQ commits only to a stated minimum within stated minimum and maximum limits."
+      },
+      {
+        "q": "What must you determine before exercising an option?",
+        "a": "That funds are available, the option fulfills an existing need, exercise is the most advantageous method price and other factors considered, synopsis requirements were met, the contractor remains responsible and not excluded, performance has been acceptable, and I exercise in writing within the time the contract specifies."
+      }
+    ],
+    "related_questions": [
+      "Q0014",
+      "Q0050",
+      "Q0076",
+      "Q0085",
+      "Q0094",
+      "Q0149"
+    ],
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "The ordering-vehicle and option cites (16.507, 16.507-6(b), 16.508, 17.204-1, 12.104) are 'verified' crosswalk entries. Confidence is medium because regulations.json does not crosswalk the RFO subsection numbers for the individual contract types themselves (the old 16.202 through 16.601 series), so this primer deliberately cites Part 16 at part level for the type descriptions - verify a specific subsection on acquisition.gov before quoting one at a board."
+  },
+  {
+    "id": "source-selection",
+    "title": "Source Selection and Evaluation",
+    "domain": "Source Selection & Evaluation",
+    "summary": "Source selection is the process of evaluating proposals against the factors stated in the solicitation and selecting the offeror whose proposal represents the best value to the Government. The two approaches are lowest price technically acceptable and trade-off, and the choice between them is a judgment about whether technical superiority is worth paying for. Boards test this hard because it is where integrity, documentation and protest risk all meet.",
+    "sections": [
+      {
+        "heading": "LPTA versus trade-off",
+        "body": "Best value is the outcome that in the Government's estimation provides the greatest overall benefit in response to the requirement. Two approaches deliver it.\n\n- Lowest price technically acceptable. Award goes to the lowest-priced proposal that meets or exceeds the stated acceptability standards. Technical factors are evaluated acceptable or unacceptable, there is no trade-off between price and technical merit, and proposals are not ranked for technical superiority. Use it when the requirement is well defined, performance risk is minimal, and there is no value in paying more for higher performance.\n- Trade-off. Permits trade-offs among cost or price and non-cost factors, and allows award to other than the lowest-priced or other than the highest technically rated proposal. Use it when the requirement is less definite, development risk exists, performance risk varies, or superior technical performance is worth the added cost.\n\nThe solicitation must state the relative importance of all factors and subfactors, and whether non-cost factors combined are significantly more important than, approximately equal to, or significantly less important than cost or price.\n\nCite: RFO FAR 15.103-1 (trade-off, was 15.101-1); RFO FAR 15.103-2 (LPTA, was 15.101-2)."
+      },
+      {
+        "heading": "Evaluation factors",
+        "body": "Factors are the Government's statement of what will decide the award, and everything that follows is bound by them.\n\nThe rules:\n- Price or cost to the Government must be evaluated in every source selection.\n- The quality of the product or service must be evaluated through one or more non-cost factors - past performance, compliance with requirements, technical excellence, management capability, personnel qualifications, prior experience.\n- Past performance must be evaluated in competitive acquisitions expected to exceed the threshold set by regulation, unless the KO documents why it is not an appropriate factor.\n- Small business participation and subcontracting factors are evaluated when required.\n- Factors and significant subfactors must represent the key areas of importance and emphasis to be considered, and must support meaningful comparison and discrimination between competing proposals.\n\nAnd the hard rule: the Government evaluates proposals based solely on the factors and subfactors specified in the solicitation. Unstated criteria are a protest waiting to happen. Experience is what an offeror has done; past performance is how well they did it - boards ask that distinction directly.\n\nCite: RFO FAR 15.104 (was 15.304); RFO FAR 15.202 (was 15.305)."
+      },
+      {
+        "heading": "Clarifications, communications and discussions",
+        "body": "Three kinds of exchanges after receipt of proposals, and candidates lose points by blurring them.\n\n- Clarifications are limited exchanges when award without discussions is contemplated. They address minor or clerical errors, or let an offeror clarify adverse past performance information it has not previously had an opportunity to address. They need not be offered to all offerors, and no proposal revision is allowed.\n- Communications are exchanges before the competitive range is established. They are limited to offerors whose past performance is the determining factor preventing inclusion, and to offerors whose inclusion or exclusion is uncertain. They may address ambiguities and enhance Government understanding, but may not cure deficiencies or material omissions or materially alter the proposal.\n- Discussions are negotiations after the competitive range is established, with the intent of allowing revision. They must be meaningful: the KO must indicate to each offeror in the range its deficiencies, significant weaknesses, and adverse past performance it has not had an opportunity to address. They are held with all offerors in the range, and final proposal revisions are requested with a common cutoff date.\n\nCite: RFO FAR 15.204 (was 15.306)."
+      },
+      {
+        "heading": "The competitive range and the decision",
+        "body": "If the KO decides to conduct discussions, the KO establishes a competitive range comprising all of the most highly rated proposals, based on their ratings against all evaluation criteria, unless it is further reduced for efficiency. An excluded offeror gets prompt written notice and may request a preaward debriefing.\n\nThe source selection decision is the SSA's. It must be independent, based on a comparative assessment of proposals against all criteria in the solicitation, and documented - including the rationale for any business judgments and trade-offs, and the benefits associated with additional costs.\n\nRoles:\n- SSEB - evaluates proposals against the factors and documents strengths, weaknesses, deficiencies and risk.\n- SSAC - reviews SSEB results and provides comparative analysis and an award recommendation on larger acquisitions.\n- SSA - makes the decision; on many acquisitions the KO is the SSA.\n- KO - runs the process, is the sole point of contact with offerors, and signs the contract.\n\nCite: RFO FAR 15.204; RFO FAR 15.201 (was 15.303); RFO FAR 15.205 (was 15.308)."
+      },
+      {
+        "heading": "Debriefings and integrity",
+        "body": "Debriefings close the loop and, done well, reduce protests.\n\n- Preaward debriefing: available to an offeror excluded from the competitive range, on written request within 3 days after receipt of the notice of exclusion. It covers the evaluation of significant elements of that offeror's proposal, a summary of the rationale for exclusion, and reasonable responses to relevant questions. It does not disclose the number or identity of other offerors or anything about their proposals.\n- Postaward debriefing: available on written request received within 3 days after the offeror received notice of award. It includes the evaluation of significant weaknesses or deficiencies, the overall evaluated cost or price and technical rating of both the awardee and the debriefed offeror, the overall ranking if one was developed, a summary of the rationale for award, and reasonable responses to relevant questions.\n- Never disclosed: point-by-point comparisons with other proposals, and anything exempt from release - trade secrets, privileged manufacturing processes, confidential commercial and financial information, and the names of individuals providing past performance information.\n\nProcurement integrity runs underneath all of it.\n\nCite: RFO FAR 15.206-2 (was 15.505); RFO FAR 15.301 (was 15.506); RFO FAR 3.104."
+      },
+      {
+        "heading": "Traps and how boards probe it",
+        "body": "Traps:\n- Evaluating on unstated criteria, or applying a stated factor differently than the solicitation described.\n- Conducting \"discussions\" and calling them clarifications. If an offeror is given the opportunity to revise its proposal, they were discussions, and they must be held with everyone in the competitive range.\n- Failing to make discussions meaningful by omitting a significant weakness.\n- An SSA decision document that recites ratings without explaining the trade-off - \"Offeror A is higher rated and higher priced, therefore award to A\" is not a rationale.\n- Leadership pressure to reach a preferred outcome. Boards will put this in a scenario on purpose.\n\nHow they probe it: expect a competitive range scenario with five proposals, a trade-off question with a higher-priced superior offeror, a definition question on the three exchanges, and an ethics scenario where a senior official pushes you. On that last one the answer is that you document the direction, state the legal and regulatory basis for your position, involve counsel and the competition advocate, and if directed to act unlawfully you do not sign - the warrant is personal and so is the accountability.\n\nCite: RFO FAR 15.204; RFO FAR 15.205; RFO FAR 3.104."
+      }
+    ],
+    "key_cites": [
+      {
+        "ref": "RFO FAR 15.103-1",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+        "note": "Trade-off approach. Was FAR 15.101-1. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR 15.103-2",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+        "note": "Lowest price technically acceptable approach. Was FAR 15.101-2. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR 15.104",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+        "note": "Establishing competitive evaluation factors and significant subfactors. Was FAR 15.304. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR 15.202",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+        "note": "Evaluating competitive proposals. Was FAR 15.305. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR 15.204",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+        "note": "Competitive award with negotiation - clarifications, communications, competitive range, discussions, final proposal revisions. Was FAR 15.306. Crosswalk confidence: verified."
+      },
+      {
+        "ref": "RFO FAR 15.201 and 15.205",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+        "note": "Source selection responsibilities (was 15.303) and the source selection decision (was 15.308). Crosswalk confidence: verified for both."
+      },
+      {
+        "ref": "RFO FAR 15.206-2 and 15.301",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+        "note": "Preaward debriefing (was 15.505) and postaward debriefing of offerors (was 15.506). Crosswalk confidence: verified for both. Preaward notices are at 15.206-1 (was 15.503)."
+      },
+      {
+        "ref": "RFO FAR 3.104",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-3",
+        "note": "Procurement integrity - restrictions on disclosing contractor bid or proposal information and source selection information. Crosswalk: number unchanged, confidence verified."
+      }
+    ],
+    "board_angles": [
+      {
+        "q": "When would you use LPTA versus trade-off?",
+        "a": "LPTA when the requirement is well defined, performance risk is minimal and there is no value in paying more for better performance; trade-off when the requirement is less definite, risk varies among offerors, or technical superiority is worth the added cost."
+      },
+      {
+        "q": "Explain the three types of exchanges after receipt of proposals.",
+        "a": "Clarifications are limited exchanges when award without discussions is contemplated and allow no proposal revision; communications occur before the competitive range is set and cannot cure deficiencies; discussions occur after the competitive range is established, must be meaningful, and allow proposal revisions."
+      },
+      {
+        "q": "How do you establish the competitive range?",
+        "a": "If I decide to conduct discussions I include all of the most highly rated proposals based on their ratings against all the stated evaluation criteria, and I may reduce it further for efficiency, notifying excluded offerors promptly in writing."
+      },
+      {
+        "q": "What is the difference between experience and past performance?",
+        "a": "Experience is what the offeror has done - the type, size and complexity of work performed; past performance is how well they performed it, including quality, schedule, cost control and customer satisfaction."
+      },
+      {
+        "q": "What must the SSA's decision document contain?",
+        "a": "An independent, comparative assessment of proposals against all the solicitation's source selection criteria, with the rationale for every business judgment and trade-off made - including the benefits associated with any additional cost."
+      },
+      {
+        "q": "What can you not tell an unsuccessful offeror in a debriefing?",
+        "a": "No point-by-point comparison with other proposals, and nothing exempt from release - trade secrets, privileged manufacturing processes, confidential commercial and financial information, or the names of individuals who provided past performance information."
+      }
+    ],
+    "related_questions": [
+      "Q0113",
+      "Q0142",
+      "Q0135",
+      "Q0112",
+      "Q0214",
+      "Q0217",
+      "Q0222"
+    ],
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "high",
+    "confidence_reason": "Every Part 15 renumbering used here (15.103-1, 15.103-2, 15.104, 15.201, 15.202, 15.204, 15.205, 15.206-1, 15.206-2, 15.301) is a 'verified' crosswalk entry in regulations.json with an acquisition.gov source URL, and the substance tracks the official bank answers at Q0135 and Q0142. The 3-day debriefing request windows are longstanding FAR rules but were not separately re-fetched - confirm on acquisition.gov before quoting a day count at a board."
+  }
+]

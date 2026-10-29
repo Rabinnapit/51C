@@ -1,0 +1,82 @@
+{
+  "reviewed_file": "content/out/mcq_4.json",
+  "reviewer": "independent content reviewer",
+  "reviewed_on": "2026-09-14",
+  "items_in": 45,
+  "items_out": 45,
+  "items_removed": 0,
+  "items_corrected": 4,
+  "method": [
+    "Every item checked against its source question in src/data/questions.json (question, answer, deck_notes, alt_answers, domain, citations_rfo).",
+    "Every RFO cite checked against the verified crosswalk and thresholds in src/data/regulations.json before any fetch; no acquisition.gov fetch was needed because every cite in this file is covered by the crosswalk or by statute/OMB/DoDGARs sources outside the FAR.",
+    "Checked for exactly one correct option, agreement between the correct option and the bank answer, defensibility of distractors, and stem ambiguity."
+  ],
+  "structural_checks": {
+    "exactly_one_correct_per_item": "pass (45/45)",
+    "four_options_per_item": "pass",
+    "duplicate_option_text": "none",
+    "duplicate_qids": "none",
+    "every_option_has_a_why": "pass",
+    "every_qid_resolves_to_a_bank_question": "pass (45/45)",
+    "mcq_domain_matches_bank_domain": "pass (45/45)"
+  },
+  "changes": [
+    {
+      "qid": "Q0040",
+      "type": "stem ambiguity",
+      "field": "stem",
+      "before": "...who do you contact first in the servicing legal office?",
+      "after": "...who do you contact first?",
+      "reason": "Two of the four distractors (the contractor's program manager, the COR) are not in the servicing legal office at all, so the original qualifier let a candidate eliminate them without knowing the fraud channel. Removing the qualifier makes the item test the Procurement Fraud Advisor channel itself. Correct option unchanged and still matches the bank answer (AFARS 5109.406-3; AR 27-40 ch. 8)."
+    },
+    {
+      "qid": "Q0105",
+      "type": "citation correction (RFO numbering)",
+      "field": "cite",
+      "before": "RFO FAR 13 (blanket purchase agreements); 31 U.S.C. 1501",
+      "after": "RFO FAR 12.201-1 (BPAs under simplified procedures for commercial products and services; the RFO moved commercial simplified procedures out of Part 13 into Part 12) and RFO FAR 13 (simplified procedures for noncommercial acquisitions); 31 U.S.C. 1501",
+      "reason": "regulations.json (threshold id sap_commercial_ceiling, confidence verified, verified 13 Sep 2026) records that the RFO moved commercial simplified procedures out of Part 13 into Part 12 and that RFO Part 13 is 'Simplified Procedures for Noncommercial Acquisitions' only; the crosswalk carries FAR 13.5 -> FAR 12.201-1 and FAR 13.004(a)(b) -> FAR 12.201-1(b), both verified. The bank's own deck note for Q0105 quotes the BPA definition from 'RFO 12.201-1 Simplified Procedures'. A bare 'RFO FAR 13' cite was incomplete. Answer content unchanged.",
+      "crosswalk": [
+        {"old": "FAR 13.5", "new": "FAR 12.201-1"},
+        {"old": "FAR 13.004(a)(b)", "new": "FAR 12.201-1(b)"}
+      ]
+    },
+    {
+      "qid": "Q0170",
+      "type": "stem ambiguity / currency of the source",
+      "field": "stem, why (correct option)",
+      "before": "Which OMB circular establishes cost principles for State, local and Indian tribal government recipients?",
+      "after": "In the OMB circular framework, which circular set the cost principles for State, local and Indian tribal government recipients before those principles were consolidated into 2 CFR 200 subpart E?",
+      "reason": "The bank answer is OMB Circular A-87, which is the study-group answer, but A-87 (like A-21 and A-122) was consolidated into the 2 CFR 200 uniform guidance, so a present-tense 'establishes' made the stem answerable two ways: A-87 historically, 2 CFR 200 subpart E today. The past-tense stem keeps the bank's correct answer while removing the ambiguity, and the correct option's 'why' now tells the candidate where the principles live today. Distractors unchanged."
+    },
+    {
+      "qid": "Q0254",
+      "type": "stem wording",
+      "field": "stem",
+      "before": "Which is a real limitation on using LCS funds?",
+      "after": "Which of the following is a limitation on the use of LCS funds?",
+      "reason": "'a real limitation' implied the other options were fabricated rather than merely wrong, which is a tell. Content unchanged; the correct option still matches the bank answer (LCS limited to Korean firms, Korean material and labor)."
+    }
+  ],
+  "verified_no_change": [
+    {"qid": "Q0274", "note": "Micro-purchase threshold of $15,000 in the cite and in the correct option's rationale confirmed against regulations.json threshold id 'mpt' (value $15,000, confidence verified, re-read on FAR 2.101 FAC 2026-01 and the RFO Part 2 deviation page on 13 Sep 2026). RFO FAR 1.405 confirmed in the crosswalk (FAR 1.602-3 -> FAR 1.405, FAR 1.602-3(c) -> FAR 1.405(c), both verified). Item is derived from an ai-draft bank answer."},
+    {"qid": "Q0109", "note": "Cite 'RFO FAR 4.101 (was FAR 4.801-4.803)' confirmed in the crosswalk, confidence verified."},
+    {"qid": "Q0157", "note": "Cite 'RFO FAR 12.104 (was FAR 12.207)' confirmed in the crosswalk, confidence verified. Derived from an ai-draft bank answer that states the same rule (FFP or FP-EPA, T&M only with determination and ceiling, cost-type prohibited)."},
+    {"qid": "Q0160", "note": "Cites RFO FAR 33.104-3 and RFO FAR 33.105 both confirmed in the crosswalk (FAR 33.104 -> FAR 33.105; FAR 33.104-3 unchanged), confidence verified."},
+    {"qid": "Q0005", "note": "RFO FAR 2.101 confirmed unchanged in the crosswalk. Five elements match the bank answer verbatim in substance, including 'correct form'."},
+    {"qid": "Q0159", "note": "RFO FAR 3.104 confirmed unchanged in the crosswalk."},
+    {"qid": "Q0158", "note": "Cite matches the bank's citations_rfo exactly (FAR 43, FAR 52.243-1 through 52.243-7, FAR 6); the competitive-impact scope test is the bank answer's first listed test."},
+    {"qid": "Q0175", "note": "Bank cites 10 U.S.C. 2371 / 2371b; the item uses the bank's own citations_rfo mapping to 10 U.S.C. 4021 / 4022. Statutes are unchanged by the RFO."},
+    {"qid": "Q0171", "note": "Distractor B is half-correct on the 60-day decision but flatly wrong on the appeal forum (ASBCA vs. the Grant Appeal Authority), which the 'why' states. Kept: only one option is fully correct."},
+    {"qid": "Q0193", "note": "Bank's non-applicable list also includes DoDGARs and Bayh-Dole; the correct option (TINA and CDA) is a subset of that list and the three distractors all do apply, so exactly one option is correct."}
+  ],
+  "open_notes_for_the_orchestrator": [
+    "Three items in this file are built on bank answers whose answer_status is 'ai-draft' (Q0040, Q0157, Q0274). The mcq object shape in CONTRACT.md section 3 has no flags field, so the ai-drafted provenance cannot be carried inside the item; the merge into questions.json must keep the parent question's flags:['ai-drafted'] and confidence so the app renders the badge.",
+    "Five Korea items (Q0254, Q0255, Q0256, Q0257, Q0258) and the two Germany items (Q0259, Q0260) carry 'confirm with C&P' / 'confirm locally' language inside the cite line, which is the only place this shape allows it. The parent questions still need korea-verify-cp on merge.",
+    "No local 411th approval thresholds, names, or emails appear anywhere in this file - checked."
+  ],
+  "fetches": {
+    "acquisition_gov": "none required",
+    "reason": "Every FAR cite in this file (1.405, 2.101, 3.104, 4.101, 12.104, 12.201-1, 13, 33.104-3, 33.105, 43, 52.243-x, 6) is covered by the verified crosswalk or thresholds in src/data/regulations.json (verified_on 2026-09-13). The remaining cites are statutes (10/31/41 U.S.C.), 2 CFR, 32 CFR DoDGARs, AFARS, AR 25-1, AR 27-40, OMB circulars, SOFA/USFKI and ABG 75, which the RFO does not renumber."
+  }
+}

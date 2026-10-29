@@ -1,0 +1,900 @@
+{
+  "protest_clock": [
+    {
+      "id": "PC01",
+      "event": "Agency protest of an apparent impropriety in the solicitation",
+      "days": null,
+      "day_type": null,
+      "anchor": "before bid opening or the closing date for receipt of proposals",
+      "rule": "A protest against an impropriety that is apparent on the face of the solicitation must reach the agency before bid opening or the closing date for receipt of proposals, or the ground is lost.",
+      "cite": "RFO FAR 33.104-2(a)",
+      "difficulty": 1
+    },
+    {
+      "id": "PC02",
+      "event": "Agency protest of a solicitation impropriety when no closing time is set",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "from when the alleged impropriety was known or should have been known, where no closing time has been established or no further submissions are anticipated",
+      "rule": "If no closing time has been established, or if no further submissions are anticipated, an alleged solicitation impropriety must be protested to the agency within 10 days of when it was known or should have been known. The RFO text of 33.104 carries no separate 10-day rule for other preaward grounds - for those, apply the GAO timeliness rules at 4 CFR 21.2 if the protester goes on to GAO.",
+      "cite": "RFO FAR 33.104-2(a)",
+      "difficulty": 3
+    },
+    {
+      "id": "PC03",
+      "event": "Agency postaward protest that forces suspension of performance",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "from award",
+      "rule": "If the agency receives a protest within 10 days after contract award, the contracting officer must immediately suspend performance pending resolution unless continued performance is justified in writing.",
+      "cite": "RFO FAR 33.104-3(a)",
+      "difficulty": 1
+    },
+    {
+      "id": "PC04",
+      "event": "Agency postaward protest measured from the offered debriefing date",
+      "days": 5,
+      "day_type": "calendar",
+      "anchor": "from the debriefing date offered on a timely debriefing request",
+      "rule": "The suspension trigger is 10 days after award or 5 days after a debriefing date offered on a timely request, whichever is later.",
+      "cite": "RFO FAR 33.104-3(a)",
+      "difficulty": 2,
+      "classes": [
+        "II",
+        "III",
+        "IV"
+      ]
+    },
+    {
+      "id": "PC05",
+      "event": "Agency decision on an agency-level protest",
+      "days": 35,
+      "day_type": "calendar",
+      "anchor": "from receipt by the contracting officer or the independent review official",
+      "rule": "There is no statutory deadline, but the agency must make its best efforts to resolve an agency protest within 35 days of receipt.",
+      "cite": "RFO FAR 33.104-4(c)(1)",
+      "difficulty": 2
+    },
+    {
+      "id": "PC06",
+      "event": "GAO protest of an apparent impropriety in the solicitation",
+      "days": null,
+      "day_type": null,
+      "anchor": "before bid opening or the time set for receipt of initial proposals",
+      "rule": "A solicitation defect apparent on the face of the solicitation must be protested to GAO before the closing time, or the ground is waived.",
+      "cite": "4 CFR 21.2(a)(1)",
+      "difficulty": 1
+    },
+    {
+      "id": "PC07",
+      "event": "GAO protest on any other ground",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "from when the basis of protest was known or should have been known",
+      "rule": "All other GAO protest grounds must be filed within 10 calendar days after the basis is known or should have been known, whichever is earlier.",
+      "cite": "4 CFR 21.2(a)(2)",
+      "difficulty": 1
+    },
+    {
+      "id": "PC08",
+      "event": "GAO protest after a required debriefing",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "from the date of the required debriefing",
+      "rule": "When a debriefing is requested and required, no GAO protest may be filed before the debriefing and it must be filed within 10 days after the debriefing date.",
+      "cite": "4 CFR 21.2(a)(2)",
+      "difficulty": 2,
+      "classes": [
+        "II",
+        "III",
+        "IV"
+      ]
+    },
+    {
+      "id": "PC09",
+      "event": "GAO protest after an initial adverse agency action on an agency protest",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "from the initial adverse agency action",
+      "rule": "A protester who went to the agency first has 10 days from the initial adverse agency action to take the same grounds to GAO.",
+      "cite": "4 CFR 21.2(a)(3)",
+      "difficulty": 2
+    },
+    {
+      "id": "PC10",
+      "event": "CICA stay before award - no contract may be awarded",
+      "days": null,
+      "day_type": null,
+      "anchor": "from the agency's receipt of notice from GAO",
+      "rule": "Once GAO notifies the agency of a protest filed before award, no contract may be awarded until the protest is resolved unless the head of the contracting activity overrides the stay.",
+      "cite": "RFO FAR 33.105-2; 31 U.S.C. 3553(c)",
+      "difficulty": 1
+    },
+    {
+      "id": "PC11",
+      "event": "CICA stay after award - suspension of performance",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "from award",
+      "rule": "A GAO protest filed within 10 days after award obligates the agency to suspend performance or terminate the contract pending GAO's decision.",
+      "cite": "RFO FAR 33.105-3; 31 U.S.C. 3553(d)(4)",
+      "difficulty": 1
+    },
+    {
+      "id": "PC12",
+      "event": "CICA stay after award measured from the required debriefing",
+      "days": 5,
+      "day_type": "calendar",
+      "anchor": "from the debriefing date offered on a timely request",
+      "rule": "The postaward CICA stay window is 10 days after award or 5 days after the offered debriefing date, whichever is later. On a required DoD postaward debriefing the window also runs 5 days after the debriefing is concluded under RFO DFARS 215.301-71, and the debriefing is not concluded until the agency delivers its written answers to timely follow-up questions.",
+      "cite": "RFO FAR 33.105-3; 31 U.S.C. 3553(d)(4); RFO DFARS 215.301-71 and provision 252.215-7996(c) (Class Deviation 2026-O0048 Rev 1)",
+      "difficulty": 2,
+      "classes": [
+        "II",
+        "III",
+        "IV"
+      ]
+    },
+    {
+      "id": "PC13",
+      "event": "Head of the contracting activity override of the CICA stay before award",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "from the written finding",
+      "rule": "The HCA, on a nondelegable basis, may authorize award only on a written finding of urgent and compelling circumstances and that award is likely to occur within 30 days of the finding.",
+      "cite": "RFO FAR 33.105-2; 31 U.S.C. 3553(c)(2)",
+      "difficulty": 3
+    },
+    {
+      "id": "PC14",
+      "event": "Agency report to GAO",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "from GAO's notice of the protest to the agency",
+      "rule": "The agency must file its complete report with GAO and the parties within 30 days after GAO notifies the agency that a protest has been filed.",
+      "cite": "4 CFR 21.3(c)",
+      "difficulty": 3
+    },
+    {
+      "id": "PC15",
+      "event": "GAO decision on a protest",
+      "days": 100,
+      "day_type": "calendar",
+      "anchor": "from filing of the protest with GAO",
+      "rule": "GAO issues its decision within 100 calendar days of filing; under the express option, when GAO grants it, the decision is due in 65 days.",
+      "cite": "4 CFR 21.9(a); 31 U.S.C. 3554(a)(1); 31 U.S.C. 3554(a)(2) (express option)",
+      "difficulty": 1
+    },
+    {
+      "id": "PC16",
+      "event": "Protest at the U.S. Court of Federal Claims",
+      "days": null,
+      "day_type": null,
+      "anchor": "from award or from the agency action being challenged",
+      "rule": "There is no statutory filing deadline and no automatic stay at the court; the protester must ask for an injunction, and a solicitation challenge is still waived if it was not raised before the closing date.",
+      "cite": "RFO FAR 33.106; 28 U.S.C. 1491(b)",
+      "difficulty": 2
+    },
+    {
+      "id": "PC17",
+      "event": "Offeror request for a preaward or postaward debriefing",
+      "days": 3,
+      "day_type": "calendar",
+      "anchor": "from receipt of the notice of exclusion or the award notice",
+      "rule": "A written debriefing request must reach the contracting officer within 3 days after the offeror receives notice of exclusion from the competition or notice of award.",
+      "cite": "RFO FAR 15.206-2; RFO FAR 15.301",
+      "difficulty": 2,
+      "classes": [
+        "II",
+        "III",
+        "IV"
+      ]
+    },
+    {
+      "id": "PC18",
+      "event": "DoD enhanced postaward debriefing - offeror's follow-up questions",
+      "days": 2,
+      "day_type": "business",
+      "anchor": "from receipt of the postaward debriefing",
+      "rule": "On a required DoD postaward debriefing the offeror may submit additional written questions within 2 business days; the agency answers in writing within 5 business days, and the debriefing is not concluded, so the protest clock does not start, until that response is delivered.",
+      "cite": "RFO DFARS 215.301-71 (Class Deviation 2026-O0048 Rev 1, 22 Jul 2026; was DFARS 215.506-70)",
+      "difficulty": 3,
+      "classes": [
+        "III",
+        "IV"
+      ]
+    },
+    {
+      "id": "PC19",
+      "event": "Contractor submission of a claim under the Contract Disputes Act",
+      "days": null,
+      "day_type": null,
+      "anchor": "from accrual of the claim",
+      "rule": "A claim must be submitted in writing to the contracting officer within 6 years after it accrues, and a claim over $100,000 must be certified.",
+      "cite": "RFO FAR 52.233-1(d); RFO FAR 33.205-2; 41 U.S.C. 7103(a)(4)",
+      "difficulty": 3
+    },
+    {
+      "id": "PC20",
+      "event": "Contracting officer's final decision on a claim",
+      "days": 60,
+      "day_type": "calendar",
+      "anchor": "from receipt of the claim or of the contractor's written request for a decision",
+      "rule": "For a claim of $100,000 or less the decision is due within 60 days of the contractor's written request; for a certified claim over $100,000 the contracting officer must within 60 days either decide the claim or notify the contractor of the date a decision will be issued.",
+      "cite": "RFO FAR 33.205-6; 41 U.S.C. 7103(f)",
+      "difficulty": 3
+    },
+    {
+      "id": "PC21",
+      "event": "Contractor appeal of a final decision to the agency board of contract appeals",
+      "days": 90,
+      "day_type": "calendar",
+      "anchor": "from receipt of the contracting officer's final decision",
+      "rule": "The contractor has 90 days from receipt of the final decision to appeal to the board, such as the ASBCA, or 12 months to bring an action at the U.S. Court of Federal Claims.",
+      "cite": "RFO FAR 33.205-6; 41 U.S.C. 7104",
+      "difficulty": 3
+    },
+    {
+      "id": "PC22",
+      "event": "Cure notice before a termination for default",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "from the contractor's receipt of the cure notice",
+      "rule": "When a contractor fails to perform a provision other than delivery, the Default clause requires a cure notice giving at least 10 days to cure before the contract may be terminated for default.",
+      "cite": "RFO FAR 49.607; FAR 52.249-8(a)(2)",
+      "difficulty": 1,
+      "classes": [
+        "II",
+        "III",
+        "IV"
+      ]
+    },
+    {
+      "id": "PC23",
+      "event": "Show cause notice",
+      "days": null,
+      "day_type": null,
+      "anchor": "from the delinquency, when less than 10 days remain in the delivery schedule",
+      "rule": "If the time left in the delivery schedule will not support a cure period of 10 days or more, issue a show cause notice instead; it carries no cure period and asks the contractor to show why the contract should not be terminated for default.",
+      "cite": "RFO FAR 49.607",
+      "difficulty": 2
+    },
+    {
+      "id": "PC24",
+      "event": "Preliminary written notice of intent to exercise an option",
+      "days": null,
+      "day_type": null,
+      "anchor": "before the contract expires (60 days unless the clause inserts a different number)",
+      "rule": "The contracting officer must give the contractor preliminary written notice of intent to extend at least 60 days before the contract expires, unless the contract inserts a different number of days at FAR 52.217-9(a), and the option itself may be exercised only within the time specified in the contract.",
+      "cite": "RFO FAR 17.204-1(b)(1); FAR 52.217-9(a)",
+      "difficulty": 2
+    },
+    {
+      "id": "PC25",
+      "event": "Invoice payment due date under the Prompt Payment clause",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "after the designated billing office receives a proper invoice, or after Government acceptance if that is later",
+      "rule": "Except as the clause provides in paragraphs (a)(2) and (c), the due date for an invoice payment is the later of two events: the 30th day after the designated billing office receives a proper invoice from the contractor, or the 30th day after Government acceptance of the supplies delivered or services performed.",
+      "cite": "FAR 52.232-25(a)(1)(i)",
+      "difficulty": 1
+    },
+    {
+      "id": "PC26",
+      "event": "Stop-work order period under the Stop-Work Order clause",
+      "days": 90,
+      "day_type": "calendar",
+      "anchor": "after the order is delivered to the contractor",
+      "rule": "The contracting officer may, by written order, require the contractor to stop all or any part of the work for a period of 90 days after the order is delivered to the contractor. To get an equitable adjustment afterward, the contractor must assert its right within 30 days after the end of the period of work stoppage, although the contracting officer may act on a proposal submitted any time before final payment if the facts justify it.",
+      "cite": "FAR 52.242-15(a), (b)",
+      "difficulty": 1
+    },
+    {
+      "id": "PC27",
+      "event": "Preliminary notice of intent to extend under 52.217-9 when no other number is inserted",
+      "days": 60,
+      "day_type": "calendar",
+      "anchor": "before the contract expires",
+      "rule": "The Government may extend the term of the contract by written notice within the period the contract states, provided it gives the contractor a preliminary written notice of its intent to extend at least 60 days before the contract expires, unless a different number of days is inserted in the clause. The preliminary notice does not commit the Government to an extension.",
+      "cite": "FAR 52.217-9(a)",
+      "difficulty": 1
+    },
+    {
+      "id": "PC28",
+      "event": "GAO decision under the express option",
+      "days": 65,
+      "day_type": "calendar",
+      "anchor": "after the protest is filed with GAO",
+      "rule": "GAO adopts the express option at its discretion and only for protests suitable for resolution within 65 days. A request for it must be filed within 5 days after the protest is filed, and GAO then runs a shorter schedule for the agency report and comments. The standard decision deadline is 100 days.",
+      "cite": "4 CFR 21.10(b)-(d); 31 U.S.C. 3554(a)(2)",
+      "difficulty": 2
+    },
+    {
+      "id": "PC29",
+      "event": "Postaward debriefing after a timely written request",
+      "days": 5,
+      "day_type": "calendar",
+      "anchor": "after the contracting officer receives the written request, to the maximum extent practicable",
+      "rule": "An offeror requests a postaward debriefing in writing within 3 days after receiving the award notice. To the maximum extent practicable, the debriefing should occur within 5 days after the written request is received. Untimely debriefing requests may be accommodated.",
+      "cite": "RFO FAR 15.301-1(a)(1)-(3)",
+      "difficulty": 2,
+      "classes": [
+        "II",
+        "III",
+        "IV"
+      ]
+    },
+    {
+      "id": "PC30",
+      "event": "Written award notice to offerors in the competitive range who were not selected",
+      "days": 3,
+      "day_type": "calendar",
+      "anchor": "after the date of contract award",
+      "rule": "Within 3 days after the date of contract award, the contracting officer must give written notification to each offeror whose proposal was in the competitive range but was not selected for award. The notice includes, among other things, the name and address of each awardee and the general reasons the offeror's proposal was not accepted.",
+      "cite": "RFO FAR 15.207-2",
+      "difficulty": 2,
+      "classes": [
+        "II",
+        "III",
+        "IV"
+      ]
+    },
+    {
+      "id": "PC31",
+      "event": "Request for reconsideration of a GAO bid protest decision",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "after the basis for reconsideration is known or should have been known, whichever is earlier",
+      "rule": "A request for reconsideration of a bid protest decision must be filed not later than 10 days after the basis for reconsideration is known or should have been known, whichever is earlier. GAO days are calendar days, and a period that ends on a Saturday, Sunday or Federal holiday runs to the next day that is not one.",
+      "cite": "4 CFR 21.14(b); 4 CFR 21.0(d)",
+      "difficulty": 2
+    },
+    {
+      "id": "PC32",
+      "event": "Contractor assertion of its right to an adjustment under the fixed-price Changes clause",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "from the date the contractor receives the written change order",
+      "rule": "The contractor must assert its right to an adjustment within 30 days from the date of receipt of the written order. If the contracting officer decides the facts justify it, the contracting officer may still receive and act on a proposal submitted before final payment of the contract.",
+      "cite": "FAR 52.243-1(c)",
+      "difficulty": 2
+    },
+    {
+      "id": "PC33",
+      "event": "Protester comments on the agency report at GAO",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "after the agency files its report",
+      "rule": "Comments on the agency report must be filed within 10 days after the agency files the report, unless GAO has granted an extension or set a shorter period. GAO dismisses the protest if the protester does not file comments within that period.",
+      "cite": "4 CFR 21.3(i)",
+      "difficulty": 3
+    },
+    {
+      "id": "PC34",
+      "event": "Agency report to GAO under the express option",
+      "days": 20,
+      "day_type": "calendar",
+      "anchor": "after the agency receives GAO's notice that the express option will be used",
+      "rule": "When GAO uses the express option, a shorter schedule applies instead of the usual deadlines: the agency files a complete report within 20 days after GAO's notice, and comments on the report are due within 5 days after it is received. If a case is no longer suitable for the express option, GAO sets a new schedule.",
+      "cite": "4 CFR 21.10(d)",
+      "difficulty": 3
+    },
+    {
+      "id": "PC35",
+      "event": "Protester's copy of a GAO protest to the contracting agency",
+      "days": 1,
+      "day_type": "calendar",
+      "anchor": "after the protest is filed with GAO",
+      "rule": "The individual or location the agency designated (or, if applicable, the contracting officer) must receive a complete copy of the protest and all attachments not later than 1 day after the protest is filed with GAO.",
+      "cite": "4 CFR 21.1(e)",
+      "difficulty": 3
+    },
+    {
+      "id": "PC36",
+      "event": "Protester's claim for protest costs after GAO recommends payment",
+      "days": 60,
+      "day_type": "calendar",
+      "anchor": "after receipt of GAO's recommendation",
+      "rule": "When GAO recommends that the agency pay the protester its protest costs, the protester files its claim with the agency, detailing and certifying the time expended and costs incurred, within 60 days after receiving GAO's recommendation.",
+      "cite": "4 CFR 21.8(f)(1)",
+      "difficulty": 3
+    },
+    {
+      "id": "PC37",
+      "event": "Termination inventory schedules after a fixed-price termination for convenience",
+      "days": 120,
+      "day_type": "calendar",
+      "anchor": "from the effective date of termination",
+      "rule": "Inventory schedules must be submitted within 120 days of the effective date of termination unless the TCO extends the period. The final settlement proposal runs on a longer clock: within one year from the termination date, unless the TCO allows more time.",
+      "cite": "RFO FAR 49.206-3; RFO FAR 49.206-1; FAR 52.249-2(c), (e)",
+      "difficulty": 3,
+      "classes": [
+        "II",
+        "III",
+        "IV"
+      ]
+    },
+    {
+      "id": "PC38",
+      "event": "Contractor proposal for an equitable adjustment after a partial termination for convenience",
+      "days": 90,
+      "day_type": "calendar",
+      "anchor": "from the effective date of termination",
+      "rule": "If the termination is partial, the contractor may propose an equitable adjustment of the price of the continued portion of the contract. Under the fixed-price Termination for Convenience clause the request is due within 90 days from the effective date of termination unless the contracting officer extends it in writing.",
+      "cite": "FAR 52.249-2(l)",
+      "difficulty": 3,
+      "classes": [
+        "II",
+        "III",
+        "IV"
+      ]
+    },
+    {
+      "id": "PC39",
+      "event": "Billing office return of an improper invoice under the Prompt Payment clause",
+      "days": 7,
+      "day_type": "calendar",
+      "anchor": "after the designated billing office receives the invoice",
+      "rule": "If an invoice does not comply with the clause's requirements, the designated billing office returns it within 7 days after receipt with the reasons it is not a proper invoice. Shorter periods apply to meat, meat food products or fish (3 days) and to perishable agricultural commodities, dairy products, edible fats or oils, and food products prepared from edible fats or oils (5 days).",
+      "cite": "FAR 52.232-25(a)(3)",
+      "difficulty": 3
+    },
+    {
+      "id": "PC40",
+      "event": "Contract funds that would otherwise lapse while a GAO protest is pending",
+      "days": 100,
+      "day_type": "calendar",
+      "anchor": "following the date of the final ruling on the protest",
+      "rule": "When a protest is filed with GAO about a solicitation, proposed award or award, and contract funds available when the protest was filed would otherwise lapse, those funds remain available for obligation for 100 days following the date of the final ruling on the protest. Do not confuse this with the 100 days GAO has to decide the protest.",
+      "cite": "RFO FAR 33.103(c)(1); 31 U.S.C. 1558",
+      "difficulty": 3
+    },
+    {
+      "id": "PC41",
+      "event": "Size protest by another offeror against the apparent successful offeror",
+      "days": 5,
+      "day_type": "business",
+      "anchor": "after bid opening, or after receipt of the contracting officer's notice identifying the apparently successful offeror in a negotiated acquisition",
+      "rule": "To be timely, a size protest must be received by the contracting officer by close of business on the fifth business day after bid opening in sealed bidding, or after receipt of the contracting officer's notice identifying the apparently successful offeror in a negotiated acquisition (or other notification when written notice is not required). A protest filed before bid opening or that notification is dismissed as premature; otherwise a protest by the contracting officer or SBA is timely whether filed before or after award.",
+      "cite": "RFO FAR 19.201-2(d); 13 CFR 121.1004(a)",
+      "difficulty": 1,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19 (19.201-2(d)(1), (4), (6)); https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-13.xml?part=121&section=121.1004 (eCFR current to 10 Sep 2026)"
+    },
+    {
+      "id": "PC42",
+      "event": "SBA Area Office formal size determination after a size protest",
+      "days": 15,
+      "day_type": "business",
+      "anchor": "after SBA receives the protest or the request for a formal size determination",
+      "rule": "The SBA Area Office determines the size status of the challenged concern within 15 business days after receiving the protest or request, or within any extension the contracting officer grants. After receiving a protest involving an offeror being considered for award, the contracting officer must not award the contract until SBA decides or 15 business days have passed since SBA received the protest, whichever comes first, unless the contracting officer determines in writing that award must be made to protect the public interest. If SBA has not decided in time, the contracting officer may award after determining in writing that there is an immediate need to award and that waiting would be disadvantageous to the Government.",
+      "cite": "RFO FAR 19.201-2(f)(1), (g)(1)-(2); 13 CFR 121.1009(a)",
+      "difficulty": 2,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19 (19.201-2(f), (g)); https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-13.xml?part=121&section=121.1009 (eCFR current to 10 Sep 2026)"
+    },
+    {
+      "id": "PC43",
+      "event": "Appeal of a formal size determination to SBA's Office of Hearings and Appeals",
+      "days": 15,
+      "day_type": "calendar",
+      "anchor": "after receipt of the formal size determination",
+      "rule": "Size appeals to SBA's Office of Hearings and Appeals (OHA) must be filed within 15 calendar days after receipt of the formal size determination, and an untimely appeal is dismissed. NAICS code appeals run on a different clock: 10 calendar days after the solicitation or the amendment affecting the NAICS code or size standard is issued.",
+      "cite": "13 CFR 134.304(a)-(c)",
+      "difficulty": 3,
+      "note": "Read 14 Sep 2026: https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-13.xml?part=134&section=134.304 (eCFR current to 10 Sep 2026)"
+    },
+    {
+      "id": "PC44",
+      "event": "Appeal of the contracting officer's NAICS code designation",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "after issuance of the initial solicitation or of any amendment affecting the NAICS code or size standard",
+      "rule": "The contracting officer's NAICS code designation is final unless appealed. An appeal of the designation and the applicable size standard must be served and filed within 10 calendar days after the initial solicitation, or any amendment affecting the NAICS code or size standard, is issued. SBA may file a NAICS code appeal at any time before offers are due, and SBA's Office of Hearings and Appeals summarily dismisses an untimely appeal.",
+      "cite": "RFO FAR 19.103(b)(3), (d)(1); 13 CFR 121.1103(b)(1)",
+      "difficulty": 2,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19 (19.103(b)(3), (d)(1)); https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-13.xml?part=121&section=121.1103 (eCFR current to 10 Sep 2026)"
+    },
+    {
+      "id": "PC45",
+      "event": "Award withheld while SBA considers a Certificate of Competency",
+      "days": 15,
+      "day_type": "business",
+      "anchor": "after the SBA Area Office receives a referral that includes all required documentation",
+      "rule": "When the contracting officer determines and documents that an apparent successful small business offeror lacks an element of responsibility, the contracting officer withholds award and refers the concern to the SBA Area Office. Award is withheld for 15 business days after the Area Office receives a referral with all required documentation, and if SBA has not issued a COC within 15 business days after receiving the referral, the contracting officer awards to another appropriately selected and responsible offeror. The COC program applies to all Government acquisitions except 8(a) sole-source awards.",
+      "cite": "RFO FAR 19.204(b), (d), (f), (j); 13 CFR 125.5(c)(2)",
+      "difficulty": 2,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19 (19.204); https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-13.xml?part=125&section=125.5 (eCFR current to 10 Sep 2026)"
+    },
+    {
+      "id": "PC46",
+      "event": "8(a) requirement at or below the SAT: SBA's decision on the offering letter",
+      "days": 2,
+      "day_type": "business",
+      "anchor": "after SBA receives the contracting office's offering letter",
+      "rule": "SBA sends its written decision whether to accept a requirement for the 8(a) program within two working days of receiving the offer when the contract is at or below the simplified acquisition threshold, and within 10 working days when it is likely to exceed the threshold; the contracting office may extend these periods if SBA asks. At or below the threshold, when the offer was made on behalf of a specific 8(a) participant and no reply arrives within two working days, the contracting office may assume the offer is accepted and proceed with award.",
+      "cite": "RFO FAR 19.108-4(c)(1); 13 CFR 124.503(a)",
+      "difficulty": 3,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19 (19.108-4(c)(1)(ii)); https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-13.xml?part=124&section=124.503 (eCFR current to 10 Sep 2026)"
+    },
+    {
+      "id": "PC47",
+      "event": "Small business contractor's size rerepresentation after a novation",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "after execution of the novation agreement",
+      "rule": "A contractor that represented itself as a small business before award must rerepresent its size status within 30 days after executing a novation agreement, and within 30 days after a merger or acquisition that does not require a novation. On long-term contracts it also rerepresents within 60 to 120 days before the end of the fifth year and before the date set for exercising each later option.",
+      "cite": "RFO FAR 19.301(a); FAR 52.219-28(b)",
+      "difficulty": 3,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19 (19.301(a)); https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 (52.219-28(b)); https://www.acquisition.gov/far/52.219-28"
+    },
+    {
+      "id": "PC48",
+      "event": "Contractor's response to a notice of proposed debarment",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "after receipt of the notice of proposed debarment",
+      "rule": "The notice of proposed debarment must tell the contractor that, within 30 days after receipt of the notice, it may submit information and argument in opposition, in person, in writing or through a representative, including any specific information that raises a genuine dispute over the material facts. A general denial is insufficient to raise a genuine dispute over facts material to the proposed debarment.",
+      "cite": "RFO FAR 9.406-3(c)(3)(iv), (viii)",
+      "difficulty": 2,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9 (9.406-3(c))"
+    },
+    {
+      "id": "PC49",
+      "event": "Contractor's response to a notice of suspension",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "after receipt of the notice of suspension",
+      "rule": "When a contractor is suspended, the suspending and debarring official must notify it immediately, and the notice must state that, within 30 days after receipt, the contractor may submit information and argument in opposition to the suspension, in person, in writing or through a representative, including any specific information that raises a genuine dispute over the material facts. The suspension is for a temporary period pending completion of an investigation and any legal proceedings that follow.",
+      "cite": "RFO FAR 9.407-3(c)(2), (c)(5)",
+      "difficulty": 2,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9 (9.407-3(c))"
+    },
+    {
+      "id": "PC50",
+      "event": "Debarring official's decision when no genuine dispute over material facts exists",
+      "days": 45,
+      "day_type": "calendar",
+      "anchor": "from the date the official administrative record is closed",
+      "rule": "In actions based on a conviction or civil judgment, or where no genuine dispute exists over material facts, the suspending and debarring official decides on all the information in the administrative record, including any contractor submission. If no suspension is in effect, the decision is due within 45 days from the date the official record closes, unless the official extends the period for good cause. The record closes when the contractor's time to submit information and argument in opposition, including any extensions, expires.",
+      "cite": "RFO FAR 9.406-3(d)(1)",
+      "difficulty": 3,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9 (9.406-3(d)(1))"
+    },
+    {
+      "id": "PC51",
+      "event": "Prime contractor's accelerated payments to small business subcontractors",
+      "days": 15,
+      "day_type": "calendar",
+      "anchor": "after receipt of accelerated payments from the Government, to the maximum extent practicable",
+      "rule": "To the maximum extent practicable, and before payment is otherwise required, the prime contractor makes accelerated payments to its small business subcontractors within 15 days after receiving accelerated payments from the Government, after receipt of a proper invoice and all other required documentation, and without any further consideration from or fees charged to the subcontractor. The 15 days is therefore a target rather than a hard deadline. The clause goes in all solicitations and contracts and gives no new rights under the Prompt Payment Act.",
+      "cite": "FAR 52.232-40(a)-(b); RFO FAR 32.009-2",
+      "difficulty": 2,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far/52.232-40; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 (52.232-40); https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32 (32.009-1, 32.009-2)"
+    },
+    {
+      "id": "PC52",
+      "event": "Progress payment due date under a construction contract",
+      "days": 14,
+      "day_type": "calendar",
+      "anchor": "after the designated billing office receives a proper payment request",
+      "rule": "Progress payments on a construction contract, based on contracting officer approval of the estimated amount and value of work or services performed, including payments for reaching milestones, are due 14 days after the designated billing office receives a proper payment request. The contracting officer may specify a longer period when needed to inspect the work, documenting the justification in the contract file. Retained amounts are due as the contract specifies or, if not specified, 30 days after the contracting officer approves their release.",
+      "cite": "RFO FAR 32.904(d)(1); FAR 52.232-27(a)(1)(i)",
+      "difficulty": 2,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32 (32.904(d)(1), 32.908(b)); https://www.acquisition.gov/far/52.232-27"
+    },
+    {
+      "id": "PC53",
+      "event": "Construction prime contractor's payment to its subcontractor",
+      "days": 7,
+      "day_type": "calendar",
+      "anchor": "from receipt of payment from the Government",
+      "rule": "Each subcontract under a construction contract must include a payment clause obligating the prime contractor to pay the subcontractor for satisfactory performance not later than 7 days from receipt of payment out of amounts paid to the prime, plus an interest penalty clause for payments not made on time. Each subcontractor must flow the same payment and interest penalty clauses down to its own lower-tier subcontractors and suppliers.",
+      "cite": "FAR 52.232-27(c)(1)-(3)",
+      "difficulty": 3,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far/52.232-27; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 (52.232-27(c))"
+    },
+    {
+      "id": "PC54",
+      "event": "Constructive acceptance date for Prompt Payment interest",
+      "days": 7,
+      "day_type": "calendar",
+      "anchor": "after the contractor delivers the supplies or performs the services",
+      "rule": "For the sole purpose of computing an interest penalty, Government acceptance is deemed to occur constructively on the 7th day after the contractor delivers supplies or performs services in accordance with the contract, unless there is a disagreement over quantity, quality or contractor compliance. If actual acceptance occurs within that period, the actual date is used. Except in a contract for a commercial product or commercial service, the contracting officer may specify a longer period when needed for inspection and testing, documenting the justification.",
+      "cite": "RFO FAR 32.904(b)(1)(ii)(B); FAR 52.232-25(a)(5)(i)",
+      "difficulty": 3,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32 (32.904(b)(1)(ii)(B)); https://www.acquisition.gov/far/52.232-25"
+    },
+    {
+      "id": "PC55",
+      "event": "Miller Act notice by a supplier or subcontractor with no contract with the prime",
+      "days": 90,
+      "day_type": "calendar",
+      "anchor": "from the day the person last performed labor or supplied material for which the claim is made",
+      "rule": "A person with a direct contract with a subcontractor, but no contractual relationship with the prime contractor that furnished the payment bond, may sue on the bond only after giving the prime written notice within 90 days from the date it performed the last of the labor or supplied the last of the material for which the claim is made. Any suit must be brought no later than one year after that last labor or material. Performance and payment bonds are required, subject to waiver, for construction contracts exceeding $150,000.",
+      "cite": "40 U.S.C. 3133(b)(2), (b)(4); RFO FAR 28.102-1(a)",
+      "difficulty": 3,
+      "note": "Read 14 Sep 2026: https://www.law.cornell.edu/uscode/text/40/3133; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-28 (28.102-1(a))"
+    },
+    {
+      "id": "PC56",
+      "event": "Board decision on an appeal under the small claims (expedited) procedure",
+      "days": 120,
+      "day_type": "calendar",
+      "anchor": "from the date the contractor elects to use the procedure",
+      "rule": "Each agency board of contract appeals has a small claims procedure, at the contractor's sole election, for appeals where the amount in dispute is $50,000 or less, or $150,000 or less for a small business concern. The appeal is to be resolved, whenever possible, within 120 days from the date the contractor elects the procedure. A single board member may decide it, and the decision is final and conclusive except for fraud and has no value as precedent.",
+      "cite": "41 U.S.C. 7106(b)",
+      "difficulty": 3,
+      "note": "Read 14 Sep 2026: https://www.law.cornell.edu/uscode/text/41/7106"
+    },
+    {
+      "id": "PC57",
+      "event": "Board decision on an appeal under the accelerated procedure",
+      "days": 180,
+      "day_type": "calendar",
+      "anchor": "from the date the contractor elects to use the procedure",
+      "rule": "Each agency board of contract appeals has an accelerated procedure, at the contractor's sole election, for appeals where the amount in dispute is $100,000 or less. An appeal under the accelerated procedure is to be resolved, whenever possible, within 180 days from the date the contractor elects the procedure. Do not confuse it with the small claims procedure, which aims for 120 days.",
+      "cite": "41 U.S.C. 7106(a)",
+      "difficulty": 3,
+      "note": "Read 14 Sep 2026: https://www.law.cornell.edu/uscode/text/41/7106"
+    },
+    {
+      "id": "PC58",
+      "event": "Contractor appeal of a board of contract appeals decision to the Federal Circuit",
+      "days": 120,
+      "day_type": "calendar",
+      "anchor": "from the date the contractor receives a copy of the board's decision",
+      "rule": "An agency board's decision is final unless appealed. A contractor may appeal it to the U.S. Court of Appeals for the Federal Circuit within 120 days from the date it receives a copy of the decision. If the agency head decides an appeal should be taken, the agency head, with the prior approval of the Attorney General, has 120 days from the date the agency receives its copy. On appeal the board's decision on a question of law is not final or conclusive, while its decision on a question of fact is final and conclusive and may not be set aside unless it is fraudulent, arbitrary or capricious, so grossly erroneous as to necessarily imply bad faith, or not supported by substantial evidence.",
+      "cite": "41 U.S.C. 7107(a)(1), (b)",
+      "difficulty": 3,
+      "note": "Read 14 Sep 2026: https://www.law.cornell.edu/uscode/text/41/7107"
+    },
+    {
+      "id": "PC59",
+      "event": "Parties' comments after a GAO protest hearing",
+      "days": 5,
+      "day_type": "calendar",
+      "anchor": "after the hearing is held",
+      "rule": "If GAO holds a hearing on a protest, each party files comments with GAO within 5 days after the hearing, or as GAO specifies. If the protester has not filed comments by the due date, GAO dismisses the protest. Post-hearing comments should cite the testimony and admissions in the hearing record that the party considers relevant.",
+      "cite": "4 CFR 21.7(g)-(h)",
+      "difficulty": 3,
+      "note": "Read 14 Sep 2026: https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-4.xml?part=21 (21.7; eCFR current to 10 Sep 2026)"
+    },
+    {
+      "id": "PC60",
+      "event": "Agency response to a protester's request for specific documents at GAO",
+      "days": 5,
+      "day_type": "calendar",
+      "anchor": "before the agency files its protest report",
+      "rule": "When the protester has requested specific documents, the agency files its response to the request at least 5 days before it files the report; if that fifth day falls on a weekend or Federal holiday, the response is due by the last business day before it. The response identifies whether the documents exist, which ones the agency will produce or withhold, and the basis for withholding. Objections to the scope of disclosure are due within 2 days of receiving the response, and the report itself is due within 30 days after GAO's notice of the protest.",
+      "cite": "4 CFR 21.3(c)",
+      "difficulty": 3,
+      "note": "Read 14 Sep 2026: https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-4.xml?part=21 (21.3(c); eCFR current to 10 Sep 2026)"
+    },
+    {
+      "id": "PC61",
+      "event": "Protester's request that GAO recommend protest costs after corrective action",
+      "days": 15,
+      "day_type": "calendar",
+      "anchor": "after the protester learned, or should have learned, that GAO closed the protest because of the corrective action",
+      "rule": "If the agency takes corrective action in response to a protest, GAO may recommend that the agency pay the protester's reasonable costs of filing and pursuing the protest, including attorneys' fees and consultant and expert witness fees. The request must be filed not later than 15 days after the protester learned, or should have learned if earlier, that GAO closed the protest based on the corrective action. The agency responds within 15 days after the request is filed, and the protester's comments are due within 10 days of receiving the response, or GAO dismisses the request.",
+      "cite": "4 CFR 21.8(e)",
+      "difficulty": 3,
+      "note": "Read 14 Sep 2026: https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-4.xml?part=21 (21.8(e); eCFR current to 10 Sep 2026)"
+    },
+    {
+      "id": "PC62",
+      "event": "Reporting a possible Procurement Integrity Act violation before protesting it",
+      "days": 14,
+      "day_type": "calendar",
+      "anchor": "after the protester first discovered the possible violation",
+      "rule": "A person may not file a protest alleging a violation of 41 U.S.C. 2102, 2103 or 2104, and GAO may not consider that allegation, unless the person reported the information it believed to be evidence of the offense to the agency responsible for the procurement no later than 14 days after first discovering the possible violation.",
+      "cite": "41 U.S.C. 2106; 4 CFR 21.5(d)",
+      "difficulty": 3,
+      "note": "Read 14 Sep 2026: https://www.law.cornell.edu/uscode/text/41/2106; https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-4.xml?part=21 (21.5(d); eCFR current to 10 Sep 2026)"
+    },
+    {
+      "id": "PC63",
+      "event": "Agency implementation of GAO's protest recommendations before the HCA reports to GAO",
+      "days": 60,
+      "day_type": "calendar",
+      "anchor": "from receipt of GAO's recommendations",
+      "rule": "If the agency has not fully implemented GAO's recommendations on a solicitation, proposed award or award within 60 days of receiving them, the head of the contracting activity must report the failure to GAO no later than 5 days after that 60-day period, explaining why the recommendation, exclusive of costs, has not been followed.",
+      "cite": "RFO FAR 33.105-4(b)",
+      "difficulty": 3,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33 (33.105-4(b))"
+    },
+    {
+      "id": "PC64",
+      "event": "Presolicitation notice before issuing a solicitation",
+      "days": 15,
+      "day_type": "calendar",
+      "anchor": "before the solicitation is issued",
+      "rule": "For proposed contract actions expected to exceed $20,000, the contracting officer posts a presolicitation notice to the GPE unless an exemption applies. When a notice is required, it is posted at least 15 days before the solicitation is issued for acquisitions over $25,000 up to the simplified acquisition threshold and for noncommercial acquisitions above it; above the threshold, a commercial acquisition's notice is combined with the solicitation. At or below the threshold, no notice is needed when the solicitation is posted to the GPE and the public can respond electronically.",
+      "cite": "RFO FAR 5.101(a), (b)(1)(i), (d)",
+      "difficulty": 1,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5 (5.101 and Table 5-2)"
+    },
+    {
+      "id": "PC65",
+      "event": "Contract action report in FPDS after award",
+      "days": 3,
+      "day_type": "business",
+      "anchor": "after contract award",
+      "rule": "The contracting officer who awards the contract action is responsible for completing its contract action report (CAR) in FPDS within three business days after contract award, and an unpublished CAR is not considered complete. A CAR for an action awarded without full and open competition due to unusual or compelling urgency, or under the emergency acquisition flexibilities in part 18, is due within 30 days after award. RFO 4.301 still names FPDS and the reporting duty is unchanged, but the system now sits inside SAM.gov: FPDS.gov redirects there, GSA decommissioned ezSearch on 24 Feb 2026, and CAR data is entered and managed through the SAM.gov Contract Awards Management portal, which GSA calls the former FPDS database.",
+      "cite": "RFO FAR 4.301(f)(2)",
+      "difficulty": 2,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4 (4.301(a), (f)(2); page last updated 28 Jul 2026); https://sam.gov/fpds (GSA FPDS transition page); https://sam.gov/announcements/contract-awards-data-and-searching-now-samgov (last updated 18 Aug 2026); https://content.govdelivery.com/accounts/USGSA/bulletins/408f942 (GSA bulletin, 9 Feb 2026)"
+    },
+    {
+      "id": "PC66",
+      "event": "Contractor's written notice to preserve a Government delay of work claim",
+      "days": 20,
+      "day_type": "calendar",
+      "anchor": "before the contractor notifies the contracting officer in writing of the act or failure to act",
+      "rule": "Under the Government Delay of Work clause, no claim is allowed for costs incurred more than 20 days before the contractor notified the contracting officer in writing of the act or failure to act involved, and the claim, in a stated amount, must be asserted in writing as soon as practicable after the delay ends and not later than final payment. The clause goes in fixed-price contracts for supplies other than commercial or modified-commercial products and is optional for fixed-price services and commercial supplies.",
+      "cite": "FAR 52.242-17(b); RFO FAR 42.1005(c)",
+      "difficulty": 3,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far/52.242-17; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-42 (42.1005(c))"
+    },
+    {
+      "id": "PC67",
+      "event": "Contracting officer's reply to a small business's written contract administration request",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "after receiving the small business concern's written request",
+      "rule": "The contracting officer must make every reasonable effort to respond in writing within 30 days to any written request from a small business concern about a contract administration matter. If that is not possible, the contracting officer must, within the 30 days, notify the contractor in writing of the specific date a response is expected. This does not apply to a request for a contracting officer's decision under the Contract Disputes Act.",
+      "cite": "RFO FAR 42.1201",
+      "difficulty": 3,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-42 (42.1201)"
+    },
+    {
+      "id": "PC68",
+      "event": "Completion invoice or voucher under a cost-reimbursement contract",
+      "days": 120,
+      "day_type": "calendar",
+      "anchor": "after settlement of the final annual indirect cost rates for all years of a physically complete contract",
+      "rule": "Within 120 days after the final annual indirect cost rates are settled for all years of a physically complete contract, or a longer period the contracting officer approves in writing, the contractor submits a completion invoice or voucher reflecting the settled amounts and rates, including settled subcontract amounts and rates.",
+      "cite": "RFO FAR 42.505(b); FAR 52.216-7(d)(5)",
+      "difficulty": 3,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-42 (42.505(b)); https://www.acquisition.gov/far/52.216-7; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 (52.216-7(d)(5))"
+    },
+    {
+      "id": "PC69",
+      "event": "Contractor enrollment in E-Verify after contract award",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "after contract award",
+      "rule": "A contractor not already enrolled must enroll as a Federal contractor in E-Verify within 30 calendar days of contract award, begin using E-Verify for new hires working in the United States within 90 calendar days of enrollment, and initiate each new hire's verification within 3 business days after the date of hire. The RFO text puts the clause in solicitations and contracts that exceed $150,000, except work performed only outside the United States, periods of performance of less than 120 days, and contracts only for COTS or near-COTS items and certain related commercial services.",
+      "cite": "FAR 52.222-54(b)(1); RFO FAR 22.1802-2",
+      "difficulty": 3,
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22 (22.1802-2); https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 (52.222-54(b)(1)); https://www.acquisition.gov/far/52.222-54"
+    },
+    {
+      "id": "PC70",
+      "event": "Posting the justification for other than full and open competition after award",
+      "days": 14,
+      "day_type": "calendar",
+      "anchor": "after contract award",
+      "rule": "The agency makes the justification for other than full and open competition publicly available at the GPE and on the agency website within 14 days after contract award, for a minimum of 30 days, after screening out contractor proprietary data. Exceptions: an unusual and compelling urgency justification under 6.103-2 is posted within 30 days after award, and a brand-name justification under 6.103-1(d) is posted with the solicitation. Part 6 does not apply to contracts awarded using simplified acquisition procedures.",
+      "cite": "RFO FAR 6.301(b)-(d); RFO FAR 6.001(a)",
+      "difficulty": 2,
+      "classes": [
+        "II",
+        "III",
+        "IV"
+      ],
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6 (6.001, 6.301)"
+    },
+    {
+      "id": "PC71",
+      "event": "Posting an unusual and compelling urgency justification after award",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "after contract award",
+      "rule": "A justification under 6.103-2, unusual and compelling urgency, must be posted within 30 days after contract award rather than the usual 14 days, and stays publicly available at the GPE and on the agency website for a minimum of 30 days. The posting requirements do not apply if posting would compromise national security or create other security risks.",
+      "cite": "RFO FAR 6.301(b)(1), (c), (e)",
+      "difficulty": 3,
+      "classes": [
+        "II",
+        "III",
+        "IV"
+      ],
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6 (6.301)"
+    },
+    {
+      "id": "PC72",
+      "event": "Minimum response time for a noncommercial solicitation above the SAT",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "from issuance of the solicitation",
+      "rule": "For noncommercial acquisitions above the simplified acquisition threshold, other than R&D and orders under basic ordering agreements, the date set for receipt of offers must allow at least 30 days from the solicitation; only an acquisition covered by a trade agreement and included in the annual forecast may be reduced to 10 days, if warranted. Commercial acquisitions above the threshold, and acquisitions at or below it, need only a reasonable opportunity to respond unless a trade agreement sets a minimum.",
+      "cite": "RFO FAR 5.201(d)",
+      "difficulty": 1,
+      "classes": [
+        "II",
+        "III",
+        "IV"
+      ],
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5 (5.201(d), Table 5-3)"
+    },
+    {
+      "id": "PC73",
+      "event": "Minimum response time for a research and development solicitation above the SAT",
+      "days": 45,
+      "day_type": "calendar",
+      "anchor": "from the presolicitation notice",
+      "rule": "For research and development acquisitions above the simplified acquisition threshold, the date set for receipt of offers must allow at least 45 days from the presolicitation notice. By comparison, other noncommercial acquisitions above the threshold get 30 days from the solicitation and orders under a basic ordering agreement get 30 days from the presolicitation notice, subject to the trade agreement adjustments in Table 5-3.",
+      "cite": "RFO FAR 5.201(d)",
+      "difficulty": 3,
+      "classes": [
+        "II",
+        "III",
+        "IV"
+      ],
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5 (5.201(d), Table 5-3)"
+    },
+    {
+      "id": "PC74",
+      "event": "Contractor comments on a CPARS past performance evaluation",
+      "days": 14,
+      "day_type": "calendar",
+      "anchor": "from notification that the evaluation is available for comment",
+      "rule": "Contractors get up to 14 calendar days from notification that a past performance evaluation is available to submit comments, rebutting statements or additional information. The agency makes the evaluation, with any contractor response, available to source selection officials in CPARS within 14 days after that notification. Evaluations are generally required for each contract and order that exceeds the simplified acquisition threshold; construction and architect-engineer contracts have their own thresholds, and DoD sets its own higher reporting thresholds by business sector (DFARS 242.1102-70).",
+      "cite": "RFO FAR 42.1103(d)(2), (e)(2)-(3); RFO FAR 42.1102(b)(1), (e)-(f); DFARS 242.1102-70",
+      "difficulty": 1,
+      "classes": [
+        "II",
+        "III",
+        "IV"
+      ],
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-42 (42.1102(b), 42.1103(d)-(e))"
+    },
+    {
+      "id": "PC75",
+      "event": "Construction contractor's written notice of a constructive change",
+      "days": 20,
+      "day_type": "calendar",
+      "anchor": "before the contractor gives written notice of the change",
+      "rule": "Under the fixed-price construction Changes clause, any other written or oral order from the contracting officer that causes a change is treated as a change order only if the contractor gives written notice stating the date, circumstances and source of the order and that it regards the order as a change order. Except for defective specifications, no adjustment is made for costs incurred more than 20 days before that written notice, and the contractor asserts its right to an adjustment within 30 days after the written change order or the notice. The clause is prescribed for dismantling, demolition or removal of improvements and for fixed-price construction contracts above the simplified acquisition threshold.",
+      "cite": "FAR 52.243-4(b), (d), (e); RFO FAR 43.305(d)",
+      "difficulty": 3,
+      "classes": [
+        "II",
+        "III",
+        "IV"
+      ],
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 (52.243-4); https://www.acquisition.gov/far/52.243-4; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-43 (43.305(d))"
+    },
+    {
+      "id": "PC76",
+      "event": "Construction contractor's notice of the causes of an excusable delay",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "from the beginning of any delay",
+      "rule": "Under the fixed-price construction Default clause, the contractor's right to proceed is not terminated, and it is not charged damages, for delay from unforeseeable causes beyond its control and without its fault or negligence only if it notifies the contracting officer in writing of the causes within 10 days from the beginning of the delay, unless the contracting officer extends that time. The contracting officer then ascertains the facts and extends the time for completing the work if the findings warrant it. The clause is prescribed for fixed-price construction contracts above the simplified acquisition threshold and may be used at or below it when appropriate.",
+      "cite": "FAR 52.249-10(b); RFO FAR 49.504(c)(1)",
+      "difficulty": 2,
+      "classes": [
+        "II",
+        "III",
+        "IV"
+      ],
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far/52.249-10; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 (52.249-10(b)); https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49 (49.504(c)(1))"
+    },
+    {
+      "id": "PC77",
+      "event": "8(a) requirement above the SAT: SBA's decision on the offering letter",
+      "days": 10,
+      "day_type": "business",
+      "anchor": "after SBA receives the contracting office's offering letter",
+      "rule": "For a requirement likely to exceed the simplified acquisition threshold, SBA sends its written decision whether to accept it for the 8(a) program within 10 working days of receiving the offer; the contracting office may extend the period if SBA asks. If SBA does not respond within 10 working days, the contracting office may seek acceptance through SBA's Associate Administrator for Business Development and may assume acceptance if no reply arrives within five calendar days of that official's receipt of the request (SBA's own rule at 13 CFR 124.503(a)(5) says 5 business days).",
+      "cite": "RFO FAR 19.108-4(c)(1); 13 CFR 124.503(a)",
+      "difficulty": 3,
+      "classes": [
+        "II",
+        "III",
+        "IV"
+      ],
+      "note": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19 (19.108-4(c)(1)(i)); https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-13.xml?part=124&section=124.503 (eCFR current to 10 Sep 2026)"
+    }
+  ]
+}

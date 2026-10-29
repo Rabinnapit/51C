@@ -1,0 +1,1046 @@
+{
+  "meta": {
+    "module": "process",
+    "built_on": "2026-09-13",
+    "verified_on": "2026-09-13",
+    "unit": "411th CSB",
+    "disclaimer": "Training aid, not authoritative. Local routing groups, calendar practice and packet items come from the 411th CSB Warrant Process Workflow (July 2026); confirm current practice and any local thresholds with the C&P Branch / CONOPS before relying on them. Role titles only; no names or emails by design.",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "high",
+    "confidence_reason": "Every step, list and rule is transcribed from one of the five named sources and cites it. Only the warrant_classes 'who' and 'board_focus' text and the per-step 'tips' are synthesized from the sources rather than quoted, and those are marked. Source-fidelity pass 2026-09-13: one crosswalk pair corrected (1.603-3/1.603-4), DFARS crosswalk upgraded to verified, four unsupported attributions/inferences softened (see verification_log).",
+    "rfo": {
+      "status": "updated",
+      "effective": "2026-02-01",
+      "notes": "Policy v12 cites 'FAR 1.403-1(b)' for DASA(P) authority to delegate selection, appointment and termination of KOs. Verified 2026-09-13 on the acquisition.gov FAR Overhaul Part 1 page (last updated 07/28/2026): 1.403 'Selecting, appointing, and terminating the appointment for contracting officers'; 1.403-1 General, with (b) 'Agency heads or their designees may select and appoint contracting officers and terminate their appointments'; 1.403-2 Appointment; 1.403-3 Termination; 1.405 'Ratification of unauthorized commitments'. Note that the live https://www.acquisition.gov/far/part-1 page (FAC 2026-01, effective 03/13/2026) still displays legacy numbering (1.603, 1.602-3); the RFO numbering lives in the Part 1 model deviation text, which Policy v12 states is effective for FAR/DFARS/AFARS from 1 Feb 2026. Statutes cited by the policy (10 U.S.C. 1724, 2 CFR 1108, 32 CFR 3.4, 32 CFR 21.425, 10 U.S.C. 2808a/4021/4022, 33 U.S.C. 2313) are unchanged by the RFO. Source-fidelity pass 2026-09-13: legacy /far/part-1 and /far/subpart-1.6 re-fetched (FAC 2026-01, eff. 03/13/2026) and show 1.602-3 Ratification, 1.603-1 General, 1.603-2 Selection, 1.603-3 Appointment, 1.603-4 Termination; the RFO Part 1 deviation page (last updated 07/28/2026) shows 1.403, 1.403-1 (b), 1.403-2, 1.403-3 and 1.405 as described. DFARS 201.403 confirmed in the DoD Part 1 / Part 201 class deviation (DARS 2026-O0002, effective 1 Feb 2026).",
+      "crosswalk": [
+        {
+          "old": "FAR 1.603-1",
+          "new": "FAR 1.403-1",
+          "title": "Selecting, appointing, and terminating the appointment for contracting officers - General",
+          "confidence": "verified",
+          "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1"
+        },
+        {
+          "old": "FAR 1.603-4",
+          "new": "FAR 1.403-3",
+          "title": "Termination of contracting officer appointment",
+          "confidence": "verified",
+          "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1",
+          "note": "Corrected by source-fidelity pass 2026-09-13: legacy FAR 1.603-3 is 'Appointment' and 1.603-4 is 'Termination' (acquisition.gov /far/subpart-1.6, FAC 2026-01); RFO 1.403-3 'Termination' confirmed on the Part 1 deviation page (last updated 07/28/2026)."
+        },
+        {
+          "old": "FAR 1.603-3",
+          "new": "FAR 1.403-2",
+          "title": "Appointment of contracting officers",
+          "confidence": "verified",
+          "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1",
+          "note": "Added by source-fidelity pass 2026-09-13: legacy 1.603-3 'Appointment' (acquisition.gov /far/subpart-1.6) maps to RFO 1.403-2 'Appointment' (Part 1 deviation page)."
+        },
+        {
+          "old": "FAR 1.602-3",
+          "new": "FAR 1.405",
+          "title": "Ratification of unauthorized commitments",
+          "confidence": "verified",
+          "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1"
+        },
+        {
+          "old": "DFARS 201.603",
+          "new": "DFARS 201.403",
+          "title": "Selecting, appointing, and terminating the appointment for contracting officers (201.403-1 General carries the 10 U.S.C. 1724 qualification requirements; 201.403-2 Appointment)",
+          "confidence": "verified",
+          "source_url": "https://www.acquisition.gov/sites/default/files/page_file_uploads/DoD_RFO_Deviation_Part-1.pdf",
+          "note": "Verified 2026-09-13 by opening the DoD RFO Part 1 / DFARS Part 201 class deviation (DARS Tracking Number 2026-O0002, Attachment A1, effective 1 Feb 2026) linked from the acquisition.gov Part 1 deviation page: '201.403 Selecting, appointing, and terminating the appointment for contracting officers. 201.403-1 General. (1) In accordance with 10 U.S.C. 1724 ...'. Legacy text was DFARS 201.603 / 201.603-2 Selection (acquisition.gov/dfars/subpart-201.6). OSD's DFARS RFO class deviation index lists this deviation as 2026-O0002 Revision 1 dated 5 Aug 2026; the acquisition.gov PDF opened here does not print a revision number on its face.",
+          "legacy_source_url": "https://www.acquisition.gov/dfars/subpart-201.6-career-development-contracting-authority-and-responsibilities"
+        }
+      ]
+    }
+  },
+  "policy_summary": {
+    "purpose": "The Army Warranting Program Policy (v12, MAR 2026, ODASA(P)) sets the standardized warranting program for Contracting Officers (KOs) as defined in the FAR. 'KO' is used collectively for PCOs, ACOs, CCOs and TCOs, each of which has duties appointed or delegated by specific function. A warrant is an individual's signatory authority to enter into, obligate funding for, administer, terminate and/or sign related documents under specific appointed or delegated authorities, for FAR-based and non-FAR-based contracts, agreements and other contract-like instruments. The policy uses 'warrant' and 'appointment' interchangeably. It governs DA civilians, military personnel and Foreign Local Nationals (FLNs) who require a warrant under Army authority. The FAR/DFARS/AFARS references in the policy implement the Revolutionary FAR Overhaul (RFO) and DFARS RFO class deviations effective 1 February 2026.",
+    "purpose_source": "Army Warranting Program Policy v12 (MAR 2026), Purpose, Authority and Applicability sections",
+    "authority_chain": [
+      "ASA(ALT)",
+      "DASA(P)",
+      "HCA",
+      "SCO/CoCO"
+    ],
+    "authority_chain_detail": "ASA(ALT) designated procurement authority to DASA(P). DASA(P) may further delegate the selection, appointment and termination of KOs under FAR 1.403-1(b) (RFO numbering). DASA(P) delegates warrant-granting authority to the Head of the Contracting Activity (HCA). For KOs and AOs the HCA may delegate granting authority down to Senior Contracting Officials (SCOs) and no lower than the Chief of the Contracting Office (CoCO); where delegated, 'HCA' in the policy means the delegated official. For GOs the HCA appoints directly and shall not delegate further. At the 411th CSB the SCO chairs the CORB and makes the appointment in VCE-Warrants.",
+    "authority_chain_source": "Policy v12, Authority / Delegation for KOs and AOs / Delegation for GOs; 411th workflow Jul 2026 CORB row and step 9",
+    "warrant_types": [
+      {
+        "type": "KO",
+        "name": "Contracting Officer",
+        "defined_in": "FAR",
+        "note": "Used collectively for PCO (Procuring), ACO (Administrative), CCO (Contingency) and TCO (Termination) Contracting Officers. Appointed by HCA; delegable to SCO and no lower than CoCO.",
+        "source": "Policy v12, Purpose; Delegation for KOs"
+      }
+    ],
+    "qualifications": {
+      "ko": [
+        "Before receiving a warrant, obtain the required training and possess the knowledge and experience to support customers effectively and fulfill fiduciary responsibilities, including any additional training or eligibility criteria the assigned organization/office requires. (Policy v12, Candidate Readiness)",
+        "Be a sound decision maker and critical thinker able to interpret and apply statutes and regulations; the HCA uses relevant methods (such as the review board) to verify readiness and strength of decision making. (Policy v12, Candidate Characteristics)",
+        "KO warrant above the SAT: meet 10 U.S.C. 1724 and DFARS 201.403 (RFO numbering) and be designated in an Acquisition, Technology and Logistics (AT&L) position. (Policy v12, KO Qualifications)",
+        "KO warrant below the SAT: follow the same training requirements and possess potential for advancement to levels of greater responsibility and warrant authority. (Policy v12, KO Qualifications)",
+        "Direct-hire FLNs: refer to the DA Contracting Validation for Foreign Local Nationals Policy and Procedures Memorandum (18 Nov 2022). An FLN may occupy an equivalent occupational series to 1102; OCONUS HCAs may recognize equivalent education and training and shall complete an FLN Validation Letter. (Policy v12, KO Qualifications; letter available on the PAM Army Warranting Program page per Summary of Key Changes 3.4.2)",
+        "411th CSB: supervisors ensure the candidate meets the qualification requirements to serve as a KO IAW the Army Warranting Program before routing. (411th workflow Jul 2026 step 1)"
+      ]
+    },
+    "waivers": "The HCA may waive qualification requirements, including the review board, through written documentation justified by a risk assessment of the individual's knowledge, skills and abilities with a sound rationale and a detailed business case. KO qualification waivers must also comply with 10 U.S.C. 1724(d). All waivers must be entered and retained in VCE-Warrants before the warrant appointment. The review board for an Unlimited warrant is mandatory and cannot be waived. At the 411th CSB a waiver of the CORB is based on SCO approval; the candidate uploads the waiver memo for the Commander's approval in VCE, and when approved, the approved KO appointment memo, certificate and waiver are uploaded in VCE (the workflow's CORB row does not name who uploads them; confirm with C&P / CONOPS). (Policy v12, Waivers and Unlimited Warrants; 411th workflow Jul 2026 step 1 and CORB row)",
+    "legacy_warrants": "Individuals holding a current (legacy) warrant are not required to be tested, re-boarded or reappointed to retain it. The exemption also applies to warrant increases within the same warrant threshold classification (Table 1). To increase a legacy warrant to a higher classification, the individual must undergo a new test or warranting review board and be reappointed, including completing any qualifications that changed since the original warrant. (Policy v12, Legacy Warrants)",
+    "multiple_warrants": "HCAs shall not issue the same warrant type (for example both PCO and ACO) to one person simply to separate pre-award and post-award dollar limits; a warrant limited to a specific function (Administrative or Termination) is still allowed. (Policy v12, Multiple Warrants)",
+    "certificate_and_letter": "The Certificate of Appointment specifies the limitations on the scope of authority to enter into, administer and terminate contracts, agreements or other instruments, beyond those already in law or regulation. An accompanying appointment letter details responsibilities, performance expectations and the consequences of non-compliance, which range from warrant suspension to termination of employment. (Policy v12, Certificate of Appointment and Letter)",
+    "thresholds_rule": "The HCA grants all warrants at one of the fixed thresholds in Table 1. The threshold applies to all FAR-based and non-FAR-based instruments, including contracts, delivery and task orders, agreements, other contract-like instruments and any modifications. Appointing at 'SAT' or 'SaP' (the FAR and applicable-deviation relevant values) avoids reappointing individuals if those dollar values change. The warrant must be greater than or equal to the cumulative instrument value: base value plus all options plus any anticipated or actual ceiling plus the absolute value of a modification, regardless of when funds are obligated. (Policy v12, Warrant Thresholds and Calculating Instrument Value; thresholds table MAR 2026 para 4.2)",
+    "more_info": "Army Warranting Program page on Procurement.Army.mil (PAM): https://armyeitaas.sharepoint-mil.us/sites/ASA-ALT-PAM-PP/SitePages/Warrant.aspx (CAC). It hosts the review board Q&A repository, the FLN validation letter and current Warranting Reciprocity MOAs. (Policy v12, Additional Information; Questions; Section 8)"
+  },
+  "warrant_classes": [
+    {
+      "cls": "I",
+      "thresholds": [
+        "SAT"
+      ],
+      "who": "Entry-level KO candidates. Policy v12 says candidates below the SAT should follow the same training requirements as above-SAT KOs and possess potential for advancement to greater responsibility and warrant authority. The policy does not define a grade or years-of-experience profile (v12 removed certification and years of experience from Table 1).",
+      "board_focus": "Board questions are commensurate with the threshold, the candidate's role, the organization's mission and the instruments the candidate will sign (Policy v12, Questions). At the SAT class expect emphasis on simplified acquisition procedures, micro-purchase and SAT rules, commercial products and services, fiscal basics and authority limits. Confirm the 411th question set with CONOPS / C&P.",
+      "source": "Policy v12 Table 1; KO Qualifications; Questions",
+      "flags": [
+        "ai-drafted"
+      ],
+      "confidence": "low",
+      "confidence_reason": "'who' and 'board_focus' are synthesized; Policy v12 Table 1 lists thresholds only (v12 removed certification and years-of-experience columns) and defines no candidate profile or question emphasis per class. Confirm with CONOPS / C&P."
+    },
+    {
+      "cls": "II",
+      "thresholds": [
+        "$500K",
+        "$1M",
+        "$5M",
+        "SaP"
+      ],
+      "who": "KO candidates above the SAT. Must meet 10 U.S.C. 1724 and DFARS 201.403 and be in a designated AT&L position (Policy v12, KO Qualifications). The top fixed value of Class II is SaP so warrants written at 'SaP' need not be reissued if that value changes.",
+      "board_focus": "Questions commensurate with Class II thresholds and the candidate's role and mission (Policy v12, Questions). Typically the first class where full FAR Part 15 style source selection, competition exceptions (RFO FAR 6.103-1 'Only one responsible source' and 6.104 'Justification and approval', verified on the acquisition.gov Part 6 deviation page 2026-09-13), pricing and contract administration depth are tested. Confirm the 411th question set with CONOPS / C&P.",
+      "source": "Policy v12 Table 1; KO Qualifications; Questions",
+      "flags": [
+        "ai-drafted"
+      ],
+      "confidence": "low",
+      "confidence_reason": "'who' and 'board_focus' are synthesized; Policy v12 Table 1 lists thresholds only (v12 removed certification and years-of-experience columns) and defines no candidate profile or question emphasis per class. Confirm with CONOPS / C&P."
+    },
+    {
+      "cls": "III",
+      "thresholds": [
+        "$10M",
+        "$25M",
+        "$50M",
+        "$100M"
+      ],
+      "who": "Experienced KOs seeking authority for larger, more complex actions. Same statutory qualifications as Class II; the specific threshold is set by the HCA/SCO based on the individual's qualifications, experience, abilities and agency requirements (Policy v12, Multiple Warrants). Increasing from a lower class requires a new board and reappointment (Policy v12, Legacy Warrants).",
+      "board_focus": "Questions commensurate with the higher threshold and level of responsibility (Policy v12, Questions). Expect greater depth on leadership, judgment, risk, terminations and remedies, protests and claims, and Korea/LCS/SOFA matters for the 411th. Confirm the 411th question set with CONOPS / C&P.",
+      "source": "Policy v12 Table 1; Multiple Warrants; Legacy Warrants; Questions",
+      "flags": [
+        "ai-drafted",
+        "korea-verify-cp"
+      ],
+      "confidence": "low",
+      "confidence_reason": "'who' and 'board_focus' are synthesized; Policy v12 Table 1 lists thresholds only (v12 removed certification and years-of-experience columns) and defines no candidate profile or question emphasis per class. Confirm with CONOPS / C&P."
+    },
+    {
+      "cls": "IV",
+      "thresholds": [
+        "$250M",
+        "$500M",
+        "Unlimited"
+      ],
+      "who": "Senior KOs. An Unlimited warrant represents one of the highest levels of experience, judgment, responsibility and trust; the HCA shall attest that the individual demonstrates the superior judgment and decision-making necessary (Policy v12, Unlimited Warrants).",
+      "board_focus": "Passing the appropriate warranting review board is mandatory for an Unlimited warrant and cannot be waived (Policy v12, Unlimited Warrants). Questions target the highest level of responsibility: judgment, leadership, policy interpretation and enterprise-level risk. Confirm the 411th question set with CONOPS / C&P.",
+      "source": "Policy v12 Table 1; Unlimited Warrants; Questions",
+      "flags": [
+        "ai-drafted"
+      ],
+      "confidence": "low",
+      "confidence_reason": "'who' and 'board_focus' are synthesized; Policy v12 Table 1 lists thresholds only (v12 removed certification and years-of-experience columns) and defines no candidate profile or question emphasis per class. Confirm with CONOPS / C&P."
+    }
+  ],
+  "warrant_classes_legacy_note": "The VCE-Warrants User Guide (Feb 2025, p.6) prints an older classification table (Class I up to SAT with Level I certification; Class II over $150K to $7M with Level II; Class III over $7M to $250M with Level II or III; Class IV over $250M to Unlimited with Level III). That table predates Policy v12 (MAR 2026), which simplified Table 1 to the fixed thresholds above and removed certification and years-of-experience columns. Use Policy v12 Table 1; the VCE guide table is retained here only so readers recognize it. Warrant classification is not visible in the VCE application itself but appears in VCE-BI reports and dashboards.",
+  "steps": [
+    {
+      "n": 1,
+      "who": "Candidate and Supervisor",
+      "what": "Candidate submits all required documents on VCE-Warrants (https://vce.army.mil/Warrants). Do not upload documents with PII. Fill out the mandatory columns in the 411th CSB Warrant System Application; attach Acquisition Certifications (411th New Appointment), Previous Warrant (411th New Appointment) and a Resume showing direct contract experience (pre- and post-award, dollar value of actions). A candidate with less than a year of experience shows what they have done so far (education, training, DAU courses, etc.). The ACRB/ORB/ERB (411th New Appointment) is a PII document: send it to the supervisor by e-mail, not into VCE. The supervisor ensures the candidate meets the qualification requirements to serve as a KO IAW the Army Warranting Program.",
+      "routing": "VCE route to the Requesting Official (the supervisor). Transfer of warrant: see the transfer step (workflow block 8). Waiver request: upload the waiver memo for the Commander's approval in VCE.",
+      "timeline": "Not stated in the 411th workflow. Note: urgent warrant applications have a shorter processing timeline based on mission requirements (411th workflow note after step 9).",
+      "checklist": [
+        {
+          "id": "s1-a",
+          "text": "Mandatory columns of the 411th CSB Warrant System Application completed in VCE-Warrants",
+          "required": true
+        },
+        {
+          "id": "s1-b",
+          "text": "Acquisition Certifications uploaded (411th New Appointment)",
+          "required": true
+        },
+        {
+          "id": "s1-c",
+          "text": "Previous Warrant uploaded (411th New Appointment), if any",
+          "required": true
+        },
+        {
+          "id": "s1-d",
+          "text": "Resume showing direct contract experience: pre-award and post-award actions with dollar values",
+          "required": true
+        },
+        {
+          "id": "s1-e",
+          "text": "Less than one year of experience: show education, training and DAU courses completed so far",
+          "required": false
+        },
+        {
+          "id": "s1-f",
+          "text": "ACRB/ORB/ERB e-mailed to the supervisor (PII - never uploaded to VCE)",
+          "required": true
+        },
+        {
+          "id": "s1-g",
+          "text": "Waiver memo uploaded in VCE for the Commander's approval, if a waiver is requested",
+          "required": false
+        },
+        {
+          "id": "s1-h",
+          "text": "Supervisor confirmed candidate meets Army Warranting Program qualification requirements",
+          "required": true
+        }
+      ],
+      "tips": [
+        "In VCE the applicant also completes Years of Service, Experience, Education (or Exception to Educational Requirement), Acquisition Corps Member, reason for request and any prior termination-with-prejudice disclosure (VCE guide pp.7-8).",
+        "Prepopulated fields (name, organization, employee type, office symbol, grade/rank) come from VCE-Registration; fix them there, not in the application (VCE guide p.6).",
+        "Documents containing PII are removed from VCE-Warrants without notification (VCE guide p.8)."
+      ],
+      "source": "411th workflow Jul 2026 step 1 (Candidates and Supervisors); tips from VCE-Warrants User Guide Feb 2025 pp.6-8"
+    },
+    {
+      "n": 2,
+      "who": "Supervisor (Requesting Official) to 906th CBN Group",
+      "what": "For candidates whose supervisor routes through the 906th CBN (Contracting Battalion) Group: the Requesting Official is the supervisor. After concurring, the supervisor routes the request in VCE-Warrants to the 906th CBN Group, then the CONOPS Group, then the BDE group for review. The Requesting Official justifies the request, verifies the accuracy of the application and attests to the candidate's qualifications.",
+      "routing": "VCE route: Supervisor to 906th CBN Group.",
+      "timeline": "Not stated in the 411th workflow.",
+      "checklist": [
+        {
+          "id": "s2-a",
+          "text": "Supervisor concurred as Requesting Official in VCE-Warrants",
+          "required": true
+        },
+        {
+          "id": "s2-b",
+          "text": "Justification for the request entered",
+          "required": true
+        },
+        {
+          "id": "s2-c",
+          "text": "Accuracy of the application verified against supporting documents",
+          "required": true
+        },
+        {
+          "id": "s2-d",
+          "text": "Attestation to the candidate's qualifications recorded",
+          "required": true
+        },
+        {
+          "id": "s2-e",
+          "text": "Routed to 906th CBN Group in VCE",
+          "required": true
+        }
+      ],
+      "tips": [
+        "A reviewer must enter comments before using Return To or Re-route To (VCE guide p.3).",
+        "Concur moves the application to the next reviewer; the reviewer must belong to the applicant's organizational structure (VCE guide pp.11-12)."
+      ],
+      "source": "411th workflow Jul 2026 step 2 (Supervisor to 906th BN); tips from VCE-Warrants User Guide Feb 2025 pp.3, 11-12"
+    },
+    {
+      "n": 3,
+      "who": "Supervisor (Requesting Official) to TCC Group",
+      "what": "For candidates whose supervisor routes through the TCC Group (the workflow does not expand 'TCC'; confirm the element name with CONOPS / C&P): the Requesting Official is the supervisor. After concurring, the supervisor routes the request in VCE-Warrants to the TCC Group, then the CONOPS Group, then the BDE group for review.",
+      "routing": "VCE route: Supervisor to TCC Group.",
+      "timeline": "Not stated in the 411th workflow.",
+      "checklist": [
+        {
+          "id": "s3-a",
+          "text": "Supervisor concurred as Requesting Official in VCE-Warrants",
+          "required": true
+        },
+        {
+          "id": "s3-b",
+          "text": "Routed to TCC Group in VCE",
+          "required": true
+        }
+      ],
+      "tips": [
+        "Steps 2 and 3 are parallel paths; a candidate follows the one for their parent element (906th CBN or TCC), then both converge on CONOPS at step 4."
+      ],
+      "source": "411th workflow Jul 2026 step 3 (Supervisor to TCC Group)"
+    },
+    {
+      "n": 4,
+      "who": "906th CBN Group or TCC Group to CONOPS (411th CSB Warrant Program Coordinator)",
+      "what": "The 411th CSB Warrant Program Coordinator (CONOPS) reviews the application for completeness. Incomplete applications are returned to the candidate. Complete requests are submitted to the Chief, C&P for additional coordination.",
+      "routing": "VCE route from 906th CBN Group or TCC Group to CONOPS, then to the BDE group for CORB packet review.",
+      "timeline": "Not stated in the 411th workflow.",
+      "checklist": [
+        {
+          "id": "s4-a",
+          "text": "Application reviewed for completeness by the Warrant Program Coordinator (CONOPS)",
+          "required": true
+        },
+        {
+          "id": "s4-b",
+          "text": "Incomplete application returned to candidate with comments in VCE",
+          "required": false
+        },
+        {
+          "id": "s4-c",
+          "text": "Complete request submitted to Chief, C&P for additional coordination",
+          "required": true
+        },
+        {
+          "id": "s4-d",
+          "text": "Routed to BDE group for CORB packet review",
+          "required": true
+        }
+      ],
+      "tips": [
+        "Reviewers can edit all parts of the application except prepopulated VCE-Registration data (VCE guide p.11)."
+      ],
+      "source": "411th workflow Jul 2026 step 4 (906th BN or TCC Gp to CONOPS); tip from VCE-Warrants User Guide Feb 2025 p.11"
+    },
+    {
+      "n": 5,
+      "who": "CONOPS to SCO Group",
+      "what": "CONOPS checks the Commander's calendar for an available CORB date and sends the calendar invite.",
+      "routing": "Calendar invite from CONOPS to the SCO group.",
+      "timeline": "Tied to the next available CORB slot on the Commander's calendar (see step 6).",
+      "checklist": [
+        {
+          "id": "s5-a",
+          "text": "Commander's calendar checked for an available CORB date",
+          "required": true
+        },
+        {
+          "id": "s5-b",
+          "text": "Calendar invite sent",
+          "required": true
+        }
+      ],
+      "tips": [],
+      "source": "411th workflow Jul 2026 step 5 (CONOPS to SCO Group)"
+    },
+    {
+      "n": 6,
+      "who": "SCO Group",
+      "what": "The current CORB is scheduled in the Commander's calendar on the 2nd Wednesday of each month.",
+      "routing": "Commander's calendar.",
+      "timeline": "2nd Wednesday of each month.",
+      "checklist": [
+        {
+          "id": "s6-a",
+          "text": "CORB date confirmed on the Commander's calendar (2nd Wednesday)",
+          "required": true
+        }
+      ],
+      "tips": [
+        "Candidates: count back from the 2nd Wednesday to make sure the packet clears steps 1-4 in time; the workflow gives no lead-time, so ask CONOPS / C&P for the cutoff."
+      ],
+      "source": "411th workflow Jul 2026 step 6 (SCO Group)"
+    },
+    {
+      "n": 7,
+      "who": "C&P Branch (CORB coordination)",
+      "what": "On receipt of the calendar invite, CONOPS / C&P prepare the CORB questions, prepare the CORB Cover Sheet and Scoring Sheet, generate a warrant number, and prepare the draft Appointment Memo and Certificate as PDF documents and upload them to VCE-Warrants.",
+      "routing": "Internal to C&P / CONOPS; drafts uploaded to the VCE-Warrants application record.",
+      "timeline": "Between the calendar invite and the CORB date.",
+      "checklist": [
+        {
+          "id": "s7-a",
+          "text": "CORB questions prepared (CONOPS / C&P)",
+          "required": true
+        },
+        {
+          "id": "s7-b",
+          "text": "CORB Cover Sheet prepared",
+          "required": true
+        },
+        {
+          "id": "s7-c",
+          "text": "CORB Scoring Sheet prepared",
+          "required": true
+        },
+        {
+          "id": "s7-d",
+          "text": "Warrant number generated in VCE-Warrants",
+          "required": true
+        },
+        {
+          "id": "s7-e",
+          "text": "Draft Appointment Memo (PDF) uploaded to VCE via Manage Appointment Memo",
+          "required": true
+        },
+        {
+          "id": "s7-f",
+          "text": "Draft Certificate (PDF) uploaded to VCE via Manage Warrant Cert",
+          "required": true
+        }
+      ],
+      "tips": [
+        "Warrant number format is Organization/Office - Fiscal Year - Sequence Number; VCE can auto-generate it (Policy v12, Warrant Number Formatting).",
+        "The application must be saved before the Generate Number link appears; once generated the number is removed from circulation (VCE guide p.12).",
+        "Create/sign the certificate in Adobe Acrobat so the 'Terminated' watermark can be applied later if needed (VCE guide p.14).",
+        "The PAM Army Warranting Program page holds a repository of board questions and answers the HCA can customize (Policy v12, Questions)."
+      ],
+      "source": "411th workflow Jul 2026 step 7 (C&P Branch CORB / Coordination); tips from Policy v12 and VCE-Warrants User Guide Feb 2025 pp.12, 14"
+    },
+    {
+      "n": 8,
+      "who": "CORB (SCO chair; voting members; CONOPS / C&P Chief facilitating)",
+      "what": "The candidate appears before the Contracting Officer Review Board. The SCO chairs. Voting members include the SCO, PD, CoCO and/or Division Chiefs, and KOs. CONOPS / C&P Chief facilitates the CORB as a non-voting member. Per Army policy the candidate demonstrates qualifications, experience, training, business acumen and knowledge of policies, procedures and regulations to supervisory and peer professionals; questions are commensurate with the threshold, role, mission and instruments. A waiver of the CORB is possible based on SCO approval.",
+      "routing": "As needed. Approved waiver: upload the approved KO appointment memo, certificate and waiver in VCE.",
+      "timeline": "2nd Wednesday of each month (step 6); waiver as needed.",
+      "checklist": [
+        {
+          "id": "s8-a",
+          "text": "Board convened with SCO as chair and voting members present (SCO, PD, CoCO and/or Division Chiefs, KOs)",
+          "required": true
+        },
+        {
+          "id": "s8-b",
+          "text": "CONOPS / C&P Chief facilitating (non-voting)",
+          "required": true
+        },
+        {
+          "id": "s8-c",
+          "text": "Scoring Sheet completed by voting members",
+          "required": true
+        },
+        {
+          "id": "s8-d",
+          "text": "If CORB waived: SCO approval obtained and approved KO memo, certificate and waiver uploaded in VCE",
+          "required": false
+        }
+      ],
+      "tips": [
+        "Policy v12 has the HCA (here the SCO by delegation) select three to five additional members mixing experience, legal expertise and supervisory backgrounds appropriate to the warrant type.",
+        "An Unlimited warrant board cannot be waived (Policy v12, Unlimited Warrants).",
+        "A previously passed board for the same warrant type can be recognized by the current organization instead of re-boarding (Policy v12, Warranting Review Boards)."
+      ],
+      "source": "411th workflow Jul 2026 CORB / Waiver of CORB row (unnumbered, after step 7); Policy v12 Warranting Review Boards"
+    },
+    {
+      "n": 9,
+      "who": "SCO",
+      "what": "With a unanimous recommendation from the CORB members, the SCO makes the appointment in VCE-Warrants.",
+      "routing": "SCO approves the application in VCE-Warrants (Approve (SCO)).",
+      "timeline": "After the CORB. Urgent warrant applications have a shorter processing timeline based on mission requirements.",
+      "checklist": [
+        {
+          "id": "s9-a",
+          "text": "Unanimous CORB recommendation recorded",
+          "required": true
+        },
+        {
+          "id": "s9-b",
+          "text": "Signed Appointment Memo uploaded in VCE (Manage Appointment Memo, Signed = Yes, Signed By = SCO)",
+          "required": true
+        },
+        {
+          "id": "s9-c",
+          "text": "Signed Certificate of Appointment uploaded in VCE (Manage Warrant Cert)",
+          "required": true
+        },
+        {
+          "id": "s9-d",
+          "text": "Any approved waiver uploaded in VCE before appointment",
+          "required": false
+        },
+        {
+          "id": "s9-e",
+          "text": "Application approved by SCO (or VCE-Warrants Administrator) in VCE-Warrants",
+          "required": true
+        }
+      ],
+      "tips": [
+        "VCE will not allow approval until the signed certificate and appointment memo are uploaded; on approval the applicant and organization Administrator receive an e-mail and the warrant shows 'Approved' in reports (VCE guide p.13).",
+        "During review, reviewers can set the CORB field to Yes and enter the pass date and score (VCE guide p.8).",
+        "All waivers must be entered and retained in VCE-Warrants prior to appointment (Policy v12, Waivers)."
+      ],
+      "source": "411th workflow Jul 2026 step 9 (SCO) and note on urgent applications; tips from VCE-Warrants User Guide Feb 2025 pp.8, 13 and Policy v12"
+    },
+    {
+      "n": 10,
+      "who": "Transferring individual, losing SCO, gaining SCO (411th)",
+      "what": "Transfer of warrants within ACC (internal transfers), per ACC Contracting Note 26-03: warrant transfers within ACC occur only when an individual is permanently reassigned to another ACC organization; the new organization becomes responsible for managing the warrant in VCE-Warrants. The transferring individual downloads all supporting documents from VCE-Warrants (training certificates, experience logs, board results, waivers) and provides them to the gaining organization. The gaining SCO issues a new warrant only after the previous warrant has been terminated, and all supporting documents from the previous warrant are uploaded into the new warrant record.",
+      "routing": "Alternative path for permanently reassigned ACC personnel arriving with an active warrant. The workflow's step 1 routing column points transfers to block 8; neither the workflow nor CN 26-03 states who initiates the new VCE-Warrants record at the gaining organization or whether the candidate re-files a full application. Confirm with CONOPS / C&P.",
+      "timeline": "Not stated; depends on termination of the losing organization's warrant.",
+      "checklist": [
+        {
+          "id": "s10-a",
+          "text": "Permanent reassignment to the 411th CSB confirmed (temporary or OPCON support uses reciprocity instead)",
+          "required": true
+        },
+        {
+          "id": "s10-b",
+          "text": "Complete digital record downloaded from VCE-Warrants: training certificates, experience logs, board results, waivers",
+          "required": true
+        },
+        {
+          "id": "s10-c",
+          "text": "Previous warrant terminated by the losing organization",
+          "required": true
+        },
+        {
+          "id": "s10-d",
+          "text": "New warrant record created at the 411th with all prior supporting documents uploaded (standalone record; no reference to archived files)",
+          "required": true
+        },
+        {
+          "id": "s10-e",
+          "text": "New warrant issued by the gaining SCO at the existing dollar value",
+          "required": true
+        }
+      ],
+      "tips": [
+        "Warrants are recognized or transferred at their existing value; an increase follows standard warrant-increase procedures and may need a new board (CN 26-03 para 5d).",
+        "Each VCE warrant file must independently show the individual meets all requirements because terminated records fall under retention schedules (CN 26-03 para 6b iii)."
+      ],
+      "source": "411th workflow Jul 2026 step 8 (Transfer of Warrants within ACC); ACC Contracting Note 26-03 (12 May 2026) paras 5d, 6b"
+    }
+  ],
+  "board": {
+    "cadence": "2nd Wednesday monthly",
+    "cadence_source": "411th workflow Jul 2026 step 6",
+    "chair": "SCO",
+    "chair_note": "Policy v12 has the HCA chair and administer warranting review boards; at the 411th the SCO chairs by delegation (411th workflow CORB row).",
+    "composition": "SCO (chair) plus voting members drawn from the SCO, PD, CoCO and/or Division Chiefs, and KOs; CONOPS / C&P Chief facilitates and does not vote. Policy v12: three to five additional members with a mix of experience, legal expertise and supervisory backgrounds appropriate to the warrant type.",
+    "voting": [
+      "SCO",
+      "PD",
+      "CoCO and/or Division Chiefs",
+      "KOs"
+    ],
+    "voting_source": "411th workflow Jul 2026 CORB row",
+    "facilitator": "CONOPS / C&P Chief (non-voting)",
+    "format": "Oral review board. The candidate demonstrates qualifications, experience, training, business acumen and policy/procedure/regulatory knowledge to a selection of supervisory and peer professionals. Questions are commensurate with the warrant threshold, the candidate's specific role, the organization's mission, FAR-based or non-FAR-based instruments, and the level of responsibility to be assumed. (Policy v12, Purpose and Composition of the Board; Questions)",
+    "scoring_note": "CONOPS / C&P prepare a CORB Cover Sheet and Scoring Sheet for each board (411th workflow step 7). The workflow does not publish the scoring scale; reviewers may record the CORB pass date and score in VCE-Warrants (VCE guide p.8). Confirm the current scoring sheet with C&P.",
+    "decision_rule": "unanimous recommendation then SCO appoints in VCE-Warrants",
+    "decision_rule_source": "411th workflow Jul 2026 step 9",
+    "waiver": "Waiver of the CORB is based on SCO approval; when approved, the approved KO appointment memo, certificate and waiver are uploaded in VCE (411th workflow CORB row). Policy v12: the HCA may waive qualification requirements, including the review board, in writing on a risk assessment with sound rationale and a detailed business case; KO waivers must also comply with 10 U.S.C. 1724(d); the waiver must be in VCE-Warrants before appointment; the board for an Unlimited warrant cannot be waived. A previously passed board for the same warrant type may be recognized instead of re-boarding.",
+    "prep_artifacts": [
+      "CORB cover sheet",
+      "scoring sheet",
+      "draft appointment memo",
+      "certificate"
+    ],
+    "prep_artifacts_note": "Plus the CORB questions and a generated warrant number (411th workflow step 7).",
+    "question_repository": "The PAM Army Warranting Program page holds a repository of review board questions and answers intended as a basis for the HCA to develop customized questions reflecting the office's mission and complexity of work (Policy v12, Questions).",
+    "flags": [
+      "korea-verify-cp"
+    ]
+  },
+  "packet_checklist": [
+    {
+      "id": "p1",
+      "text": "411th CSB Warrant System Application in VCE-Warrants with all mandatory columns completed",
+      "required": true,
+      "who": "candidate",
+      "pii": false,
+      "source": "411th workflow Jul 2026 step 1"
+    },
+    {
+      "id": "p2",
+      "text": "Acquisition Certifications (411th New Appointment)",
+      "required": true,
+      "who": "candidate",
+      "pii": false,
+      "source": "411th workflow Jul 2026 step 1"
+    },
+    {
+      "id": "p3",
+      "text": "Previous Warrant (411th New Appointment), if the candidate has held one",
+      "required": true,
+      "who": "candidate",
+      "pii": false,
+      "source": "411th workflow Jul 2026 step 1"
+    },
+    {
+      "id": "p4",
+      "text": "Resume of direct contract experience: pre-award and post-award actions with dollar values",
+      "required": true,
+      "who": "candidate",
+      "pii": false,
+      "source": "411th workflow Jul 2026 step 1"
+    },
+    {
+      "id": "p5",
+      "text": "Under one year of experience: summary of education, training and DAU courses completed so far",
+      "required": false,
+      "who": "candidate",
+      "pii": false,
+      "source": "411th workflow Jul 2026 step 1"
+    },
+    {
+      "id": "p6",
+      "text": "ACRB / ORB / ERB (411th New Appointment) - e-mail to supervisor only; do not upload to VCE",
+      "required": true,
+      "who": "candidate",
+      "pii": true,
+      "source": "411th workflow Jul 2026 step 1"
+    },
+    {
+      "id": "p7",
+      "text": "VCE application fields: Years of Service, Experience, Education (or Exception to Educational Requirement), Acquisition Corps Member, Job Series/MOS, warrant type and authority amount, reason for request, terminated-with-prejudice disclosure",
+      "required": true,
+      "who": "candidate",
+      "pii": false,
+      "source": "VCE-Warrants User Guide Feb 2025 pp.6-8"
+    },
+    {
+      "id": "p8",
+      "text": "Educational requirement exception documentation when 'Waiver or Other' is selected",
+      "required": false,
+      "who": "candidate",
+      "pii": false,
+      "source": "VCE-Warrants User Guide Feb 2025 p.9"
+    },
+    {
+      "id": "p10",
+      "text": "Waiver memo for the Commander's approval (only when a qualification or CORB waiver is requested); must be in VCE before appointment",
+      "required": false,
+      "who": "candidate",
+      "pii": false,
+      "source": "411th workflow Jul 2026 step 1; Policy v12 Waivers"
+    },
+    {
+      "id": "p11",
+      "text": "Supervisor justification, accuracy verification and attestation of qualifications as Requesting Official",
+      "required": true,
+      "who": "supervisor",
+      "pii": false,
+      "source": "411th workflow Jul 2026 step 2"
+    },
+    {
+      "id": "p12",
+      "text": "Completeness review by the Warrant Program Coordinator (CONOPS) and coordination with Chief, C&P",
+      "required": true,
+      "who": "facilitator",
+      "pii": false,
+      "source": "411th workflow Jul 2026 step 4"
+    },
+    {
+      "id": "p13",
+      "text": "CORB questions, Cover Sheet and Scoring Sheet",
+      "required": true,
+      "who": "facilitator",
+      "pii": false,
+      "source": "411th workflow Jul 2026 step 7"
+    },
+    {
+      "id": "p14",
+      "text": "Warrant number generated; draft Appointment Memo and Certificate (PDF) uploaded to VCE",
+      "required": true,
+      "who": "facilitator",
+      "pii": false,
+      "source": "411th workflow Jul 2026 step 7"
+    },
+    {
+      "id": "p15",
+      "text": "Transfers only: complete digital record from the prior VCE warrant (training certificates, experience logs, board results, waivers)",
+      "required": false,
+      "who": "candidate",
+      "pii": false,
+      "source": "ACC Contracting Note 26-03 para 6b ii"
+    },
+    {
+      "id": "p16",
+      "text": "FLN candidates: FLN Validation Letter completed by the OCONUS HCA",
+      "required": false,
+      "who": "facilitator",
+      "pii": false,
+      "source": "Policy v12 KO Qualifications (Direct Hire FLNs)"
+    }
+  ],
+  "packet_checklist_note": "No document containing PII may be stored in VCE-Warrants; PII documents are removed without notification (Policy v12 Records Retention; VCE guide p.8). Never invent local approval thresholds: confirm current packet requirements with C&P / CONOPS.",
+  "after_appointment": [
+    {
+      "title": "Read your certificate and appointment letter",
+      "text": "The Certificate of Appointment states the limitations on your authority to enter into, administer and terminate instruments beyond those already in law or regulation. The appointment letter states your responsibilities, performance expectations and the consequences of non-compliance, which range from warrant suspension to termination of employment.",
+      "source": "Policy v12, Certificate of Appointment and Letter"
+    },
+    {
+      "title": "Stay within your threshold on every instrument",
+      "text": "Your warrant must be greater than or equal to the cumulative instrument value: base value plus all options plus any anticipated or actual ceiling plus the absolute value of a modification, regardless of when funds are obligated. The threshold applies to FAR-based and non-FAR-based instruments, task and delivery orders, agreements and all modifications. Exceeding delegated authority is a ground for termination.",
+      "source": "Policy v12, Warrant Thresholds; Calculating Instrument Value; Termination; thresholds table MAR 2026 para 4.2"
+    },
+    {
+      "title": "Warrant remains valid until suspended or terminated",
+      "text": "The warrant remains valid unless the HCA suspends or terminates it. VCE-Warrants may hold an optional expiration date; the module does not auto-terminate but sends 60-day, 30-day and day-of e-mails to the holder and Administrator.",
+      "source": "Policy v12, Warrant Thresholds; VCE-Warrants User Guide Feb 2025 pp.9, 13"
+    },
+    {
+      "title": "Records live in VCE-Warrants",
+      "text": "VCE-Warrants is the official Army repository. The Certificate of Appointment, Approval Memo and all supporting documentation (initial application, nominating form, previous warrants, board documents, waivers, suspension, termination and reinstatement documents) are retained there. Warrant numbers follow Organization/Office - Fiscal Year - Sequence Number.",
+      "source": "Policy v12, Official Repository; Records Retention; Warrant Number Formatting"
+    },
+    {
+      "title": "411th warrants administration",
+      "text": "The 411th workflow's Warrants Administration table lists, without naming the responsible office, a 'Supporting Update Warrant SOP': upload any updated warrant-related documents to the 411th Warranting Program TEAMS share folder, maintain the waiver memo template, and verify the Commander's signature. The adjacent termination row is assigned to the C&P Branch; confirm ownership of the SOP with C&P / CONOPS.",
+      "source": "411th workflow Jul 2026, Warrants Administration table"
+    },
+    {
+      "title": "Increasing your warrant",
+      "text": "Policy v12 states (under Legacy Warrants, i.e., for holders of a current warrant) that an increase within the same Table 1 classification does not require a new test, board or reappointment. Moving to a higher classification requires a new test or review board and reappointment, including any qualifications changed since the original warrant. In VCE, use Change Authority Amount on the approved warrant and submit for review. Your ADCON organization processes increases unless you have permanently transferred, in which case the gaining SCO does.",
+      "source": "Policy v12, Legacy Warrants; VCE-Warrants User Guide Feb 2025 pp.18-20; ACC Contracting Note 26-03 para 5d"
+    },
+    {
+      "title": "No split pre- and post-award warrants",
+      "text": "HCAs will not issue the same warrant type twice (for example PCO and ACO) just to split pre- and post-award limits, although a function-limited warrant (Administrative or Termination) is allowed.",
+      "source": "Policy v12, Multiple Warrants"
+    },
+    {
+      "title": "Working for another SCO or organization",
+      "text": "Within ACC all SCOs must honor active ACC warrants (reciprocity); no new warrant is issued for OPCON or temporary support to another SCO. For a developmental or temporary assignment in VCE, your current organization's Warrants SME suspends your approved warrants before your VCE-Registration organization changes, the gaining organization creates a new warrant, and on the end date the losing SME is notified so the temporary warrant can be terminated and the original reinstated. Access to other DoDAACs is added in PIEE (ACWS), in the PADDS profile, and by PCF cabinet grants.",
+      "source": "ACC Contracting Note 26-03 paras 5b, 6a, 7; VCE-Warrants User Guide Feb 2025 p.20"
+    },
+    {
+      "title": "Name change",
+      "text": "Update VCE-Registration first; the Warrants SME is notified by e-mail and processes a Change Name application on the approved warrant, uploading the new signed appointment memo and certificate.",
+      "source": "VCE-Warrants User Guide Feb 2025 pp.16-18"
+    }
+  ],
+  "suspension_termination": {
+    "suspension_reasons": [
+      "Extended temporary duty assignment",
+      "Imposition of a Performance Improvement Plan",
+      "Investigation of KO actions",
+      "Deployment and support to a contingency operation or an emergency/major disaster"
+    ],
+    "suspension_reasons_source": "Policy v12, Suspension (list is illustrative: 'reasons including')",
+    "suspension_rule": "The HCA must document the suspension and retain the record in VCE-Warrants. In VCE an Administrator selects Suspend Warrant on an approved warrant; suspension should not be used in lieu of termination. Suspension is also the mechanism for developmental/temporary assignments to another organization.",
+    "termination_reasons": [
+      "Individual leaves employment or is reassigned to a non-acquisition/contracting position (mandatory termination)",
+      "Change in the activity's mission requirements and needs",
+      "Unsatisfactory performance or misconduct (for example Anti-Deficiency Act violations, fraud, negligence)",
+      "Loss of required security clearance",
+      "Exceeding delegated authority"
+    ],
+    "termination_reasons_source": "Policy v12, Termination",
+    "termination_rule": "Retroactive terminations are prohibited. The HCA documents every termination and retains the record in VCE-Warrants.",
+    "termination_411th_process": "Trigger: the PCS member's e-mail request, PCS clearance document or other document. C&P Branch goes to VCE-Warrants, uploads the termination-related documents to the person's record, then clicks Terminate. After termination, confirm removal from the VCE TDA (VCE Registration and PCF); the member's PCF actions must be zero (0) before removal is enabled.",
+    "termination_411th_source": "411th workflow Jul 2026, Termination of Warrants and Warrants Administration tables",
+    "termination_vce_steps": "Administrator or SCO: Actions next to the Approved or Suspended warrant, Terminate Warrant, enter the effective date, Manage Termination Memo, mark Signed = Yes and select the signing SCO, upload the signed termination memo (it should list the warrant number of every warrant being terminated), Upload Files, Close, then Terminate. Status becomes Terminated and a 'Terminated' watermark is applied to the uploaded certificate (certificate must have been created/signed in Adobe Acrobat). Multiple approved warrants for one user can be terminated at once. (VCE-Warrants User Guide Feb 2025 pp.13-14)",
+    "reinstatement": "The HCA has discretion to reinstate a suspended warrant (VCE: Actions, Reinstate Warrant; the holder's VCE-Registration organization must match the warrant organization or reinstatement fails). To reinstate a terminated warrant the HCA must issue a new Certificate of Appointment and Letter. Reinstatements are documented and retained in VCE-Warrants. Under ACC CN 26-03, an SCO may recognize a prior warrant terminated in good standing and issue a new warrant of the same type and value for a person arriving without an active warrant. (Policy v12 Reinstatement; VCE guide pp.14-15; CN 26-03 para 6d)",
+    "unapprove": "A VCE-Warrants Administrator can Unapprove an approved warrant (initial requests only, not uploaded existing warrants) to correct documentation or application data, then revise the certificate and memo. (VCE-Warrants User Guide Feb 2025 p.15)",
+    "retention": "Completed warrants: retain records six (6) years from the date of suspension or termination unless a longer period is required and supported in writing, then dispose from VCE-Warrants. Incomplete or unapproved packages: dispose 18 months after submission unless a longer period is justified in writing. Do not store PII in VCE-Warrants. (Policy v12, Records Disposition; Records Retention)"
+  },
+  "reciprocity": {
+    "policy_basis": "ACC Command Policy Memorandum - Warrant Reciprocity Policy, 30 March 2026, implemented by ACC Contracting Note 26-03 (12 May 2026, effective immediately; ACC Acquisition Instruction 1.403 update pending). Background: the PAE restructure placed warranted personnel under the OPCON of SCOs outside their permanent organization, and SCO-discretion re-boarding was administratively burdensome. The DA-DAF Warrant Reciprocity MOA (1 December 2023) covers Air Force transfers; current MOAs are posted on the PAM Army Warranting Program page.",
+    "recognition": "All ACC SCOs are required to honor all active and future warrants issued within ACC. Recognition is the formal acceptance of an individual's existing warrant type and value by a different SCO; the individual executes actions under the recognizing SCO's authority while the warrant remains officially issued by the original SCO. No new warrant is issued. Warrants are recognized at their existing dollar value; to increase the value the responsible SCO follows standard warrant-increase procedures, which may include a new review board, and the individual's ADCON organization processes the increase unless the individual has permanently transferred. Reciprocity (not transfer) applies to: multiple SCOs within one ACC organization; entire organizations realigned under one or more ACC organizations; and personnel operating under the OPCON of an SCO other than the issuing SCO. Transfers may be required in the future pending system-related decisions. (CN 26-03 paras 5b, 5d, 5e, 6a)",
+    "transfer": "Transfer is the administrative process of permanently moving a warrant from one SCO to another in VCE-Warrants. Because the system does not allow transfers, the original warrant is terminated and a completely new one issued under the gaining SCO. Transfers within ACC occur only on permanent reassignment from one ACC organization to another, so the new home organization manages the warrant in VCE. The transferring individual downloads the complete digital record (training certificates, experience logs, board results, waivers) and gives it to the gaining organization; the gaining SCO issues the new warrant only after the previous one is terminated and uploads all prior supporting documents into the new record. Each VCE warrant file must be a complete standalone record; it cannot rely on or reference archived (terminated) files, which are subject to records retention schedules. (CN 26-03 paras 5e, 6b; Policy v12 Transferring Warrants: VCE-Warrants does not support transfer between HCA organizations, but an HCA may reinstate a warrant from a different HCA organization within the policy's limits)",
+    "external": "Warrants issued by organizations outside ACC: SCOs retain full discretion whether to formally recognize them. Regardless of recognition, a new ACC warrant must still be issued in VCE-Warrants. Personnel transferring from the Department of the Air Force follow the Army-DAF Warrant Reciprocity MOA. (CN 26-03 para 6c)",
+    "reinstating_inactive": "When an individual joins an ACC organization without an active warrant and their previous warrant (internal or external to ACC) was terminated in good standing, the SCO has discretion to recognize the prior warrant and issue a new warrant of the same type and value. A new warrant must be issued in VCE-Warrants because the individual arrives without an active one. (CN 26-03 para 6d)",
+    "systems": [
+      "ACWS: a warranted individual gains access to additional DoDAACs by adding that role for the desired DoDAAC(s) in PIEE. (CN 26-03 para 7a)",
+      "PADDS: additional DoDAACs are added manually to the individual's profile. (CN 26-03 para 7b)",
+      "PCF: users must be granted access to the specific organizations and PCF cabinets for actions not executed under their home organization. (CN 26-03 para 7c)",
+      "VCE-Warrants: no transfer function; recognition needs no system action, transfer means terminate-then-new-warrant, and developmental/temporary assignments use suspend-then-new-warrant-then-reinstate. (CN 26-03 para 5e; VCE guide p.20)"
+    ],
+    "at_411th": "The 411th workflow adopts CN 26-03 for internal ACC transfers as workflow block 8 (see step 10). Whether a specific arrival is a recognition, a transfer or a reinstatement depends on assignment status; confirm with C&P / CONOPS.",
+    "source": "ACC Contracting Note 26-03 (12 May 2026); Policy v12 Transferring Warrants and Warranting Reciprocity MOA; 411th workflow Jul 2026 step 8",
+    "flags": [
+      "korea-verify-cp"
+    ]
+  },
+  "vce_howto": [
+    {
+      "title": "Access VCE-Warrants",
+      "steps": [
+        "Open the VCE Portal at https://vce.army.mil/Portal/ (CAC).",
+        "Select Modules from the top menu, then Launch VCE-WARRANTS.",
+        "The home page lists applications you created, reviewed or are awaiting your review; Administrators see all applications in their organization. Use the filters to find applications."
+      ],
+      "source": "VCE guide p.2"
+    },
+    {
+      "title": "Submit a new warrant application",
+      "steps": [
+        "On the home page click New Warrant Application and choose New Application.",
+        "Check the prepopulated fields (Applicant Name, Organization, Employee Type, Office Symbol, Grade/Rank); if wrong, fix them in VCE-Registration (sometimes IDCO) because they cannot be edited here.",
+        "Enter Job Series/MOS. Select Warrant Type, Secondary Warrant Type (PCO warrants only) and Authority Amount from the dropdowns. The Application Number is a tracking number, not the warrant number.",
+        "Review the Warrant Listing of warrants already in VCE. Indicate whether any warrant was ever terminated with prejudice (comments required if yes). Select the Reason for Warrant Request (deployment/exercise, promotion, new employee, other).",
+        "Complete Years of Service, Experience, Education (complete Exception to Educational Requirement if no degree, and upload documentation if Waiver or Other is selected) and Acquisition Corps Member.",
+        "Leave the CORB field at N/A unless you have already passed a CORB; if so set Yes and enter the completion date.",
+        "Add comments to help reviewers; all reviewers can see them.",
+        "Upload attachments by selecting a file type and file, or drag and drop. Never upload documents containing PII.",
+        "Select the reviewer (must be in your organizational structure) and submit; the reviewer receives an e-mail notification."
+      ],
+      "source": "VCE guide pp.5-9, 11"
+    },
+    {
+      "title": "Upload an existing warrant",
+      "steps": [
+        "Click New Warrant Application and choose Upload Existing Warrant Information (for holders of a current warrant; no review process).",
+        "Confirm prepopulated data; Office Symbol and Grade/Rank can be edited here to reflect the date of approval but are not pushed to VCE-Registration.",
+        "Enter Job Series/MOS, Warrant Number, Warrant Signed By, Approval Date, and optionally the Warrant Expiration Date (triggers 60/30/day-of e-mails).",
+        "Select the Reason for Warrant Request and complete Years of Service, Experience, Education and Acquisition Corps Member.",
+        "Upload the Warrant Certificate (the only required attachment) plus any other non-PII documents, then submit; the organization's warrant database updates."
+      ],
+      "source": "VCE guide pp.5, 9-11"
+    },
+    {
+      "title": "Review, concur, return or re-route an application (reviewers)",
+      "steps": [
+        "Open Inbox/For Review from the home page; applications awaiting you are listed with an Actions button.",
+        "Actions: Begin Review (opens the full application), Return To (back to the applicant or a prior reviewer; comments mandatory), Re-route To (to someone who has not yet reviewed; comments mandatory).",
+        "Inside the application you may edit everything except prepopulated VCE-Registration data. Reviewers can enter the CORB pass date and score.",
+        "Choose Update Application to save edits, Concur to send to the next reviewer, Return To, Re-Route To, or Cancel to leave it in your inbox. Workflow History shows the full audit trail.",
+        "Manage Appointment Memo and Manage Warrant Cert let a reviewer attach draft or signed documents visible to all later reviewers. Administrators can also Delete Application (cannot be reactivated)."
+      ],
+      "source": "VCE guide pp.3, 11-12"
+    },
+    {
+      "title": "Generate the warrant number",
+      "steps": [
+        "Save the warrant application first; the Generate Number link only appears after saving.",
+        "An Administrator or SCO clicks Generate Number, either before approval (usual, so the certificate and memo can be prepared) or at approval.",
+        "The generated number is removed from circulation so it cannot be duplicated. Format per Army policy: Organization/Office - Fiscal Year - Sequence Number."
+      ],
+      "source": "VCE guide p.12; Policy v12 Warrant Number Formatting"
+    },
+    {
+      "title": "Approve a warrant (SCO or Administrator)",
+      "steps": [
+        "Upload the SIGNED Appointment Memo via Manage Appointment Memo (Signed = Yes, choose the signing SCO, upload, Close).",
+        "Upload the SIGNED Certificate via Manage Warrant Cert the same way.",
+        "From the Actions menu select Approve (SCO) or Approve (ADMINISTRATOR). The module blocks approval until both signed documents are uploaded.",
+        "The applicant and organization Administrator receive an e-mail; the warrant immediately shows Approved in organization reports."
+      ],
+      "source": "VCE guide pp.12-13"
+    },
+    {
+      "title": "Terminate a warrant (Administrator or SCO)",
+      "steps": [
+        "Click Actions next to the Approved or Suspended warrant and select Terminate Warrant (multiple warrants for one user can be selected).",
+        "Enter the Effective Date and click Manage Termination Memo.",
+        "Select Yes if the memo is signed, pick the signing SCO, upload the signed termination memo (listing every warrant number being terminated), Upload Files, Close; Memo Status shows Uploaded and Signed.",
+        "Click Terminate. Status becomes Terminated and a Terminated watermark is added to the certificate (Adobe Acrobat created/signed certificates only).",
+        "411th: afterwards confirm removal from the VCE TDA (VCE Registration and PCF); PCF actions must be zero first."
+      ],
+      "source": "VCE guide pp.13-14; 411th workflow Jul 2026 Termination and Warrants Administration tables"
+    },
+    {
+      "title": "Suspend and reinstate a warrant (Administrator)",
+      "steps": [
+        "Actions next to the Approved warrant, Suspend Warrant, optional comments, Suspend; status changes to Suspended. Do not suspend in lieu of termination.",
+        "To reinstate: Actions next to the Suspended warrant, Reinstate Warrant, optional comments, Reinstate; status returns to Approved.",
+        "The holder's organization in VCE-Registration must match the warrant's organization or reinstatement will fail."
+      ],
+      "source": "VCE guide pp.14-15"
+    },
+    {
+      "title": "Unapprove a warrant to fix documents (Administrator)",
+      "steps": [
+        "Available only for warrants processed as Initial Requests, not uploaded existing warrants.",
+        "Unapprove the approved warrant, then modify the application and/or replace the certificate and appointment memo, then re-approve."
+      ],
+      "source": "VCE guide p.15"
+    },
+    {
+      "title": "Process a name change (Administrator)",
+      "steps": [
+        "The holder updates VCE-Registration; the Warrants SME receives a system e-mail that a name change is needed.",
+        "Actions next to the Approved warrant, Change Name; the application opens prefilled.",
+        "Add comments and any locally required documents; Save as Draft/Update, or Submit for Review to another approver or to yourself for Administrator Approval.",
+        "Upload the new signed Appointment Memo and Warrant Certificate through Manage Appointment Memo and Manage Warrant Cert (Signed = Yes, signing SCO, upload, Close). Cancel exits without saving."
+      ],
+      "source": "VCE guide pp.16-18"
+    },
+    {
+      "title": "Request a change in authority amount",
+      "steps": [
+        "KO or Administrator: Actions next to the Approved warrant, Change Authority Amount.",
+        "Enter the new authority amount, complete blank fields and upload attachments.",
+        "Save as Draft or Submit for Review (normal review/approval flow). Upload the new signed Appointment Memo and Warrant Certificate through the Manage screens before approval.",
+        "Remember Policy v12: moving to a higher Table 1 classification requires a new board and reappointment."
+      ],
+      "source": "VCE guide pp.18-20; Policy v12 Legacy Warrants"
+    },
+    {
+      "title": "Developmental or temporary assignment to another office",
+      "steps": [
+        "The current organization's Warrants SME suspends all Approved warrants for the KO before the VCE-Registration profile changes.",
+        "Once suspended and all PCF cabinets are reassigned, the KO changes organization in VCE-Registration; after the gaining organization approves the profile, the user or Warrants SME creates a new warrant tied to the gaining organization.",
+        "On the assignment END DATE the losing organization's Warrants SME receives a system e-mail and can terminate the temporary warrant.",
+        "When that warrant is terminated, the original organization's Warrants SME is e-mailed and can reinstate the suspended warrant(s)."
+      ],
+      "source": "VCE guide p.20"
+    },
+    {
+      "title": "Customize the Warrant Summary table",
+      "steps": [
+        "Click the three vertical dots to the right of a column title to choose columns; drag to reorder.",
+        "Available columns: Applicant Name, Application Type, Approved Date, Authority, Center/Division/Sector, Current Reviewer, Last Concurrence/Update, Office ID/DoDAAC, Organization, Status, Termination Date, Type, Username, Warrant Number.",
+        "General users see only their own warrants and applications they review; Administrators see applications under review and approved warrants in their organization."
+      ],
+      "source": "VCE guide p.4"
+    }
+  ],
+  "sources": [
+    {
+      "id": "411th-workflow-2026-07",
+      "title": "411th CSB Warrant Process Workflow (NEW)",
+      "date": "2026-07",
+      "file": "content/sources/411th_warrant_process_workflow_jul2026.txt",
+      "used_for": "steps 1-10, board composition/cadence/decision rule, packet items p1-p6, termination and administration procedures",
+      "access": "local"
+    },
+    {
+      "id": "army-warranting-policy-v12",
+      "title": "Army Warranting Program Policy, Version 12, Office of the DASA(P) (SAAL-ZP)",
+      "date": "2026-03",
+      "file": "content/sources/army_warranting_policy_v12_mar2026.txt",
+      "used_for": "policy_summary, Table 1 classes, qualifications, waivers, legacy and multiple warrants, review boards, VCE repository/retention, suspension/termination/reinstatement",
+      "access": "local; policy page on PAM (CAC)"
+    },
+    {
+      "id": "acc-cn-26-03",
+      "title": "ACC Contracting Note 26-03 - ACC's Warrant Reciprocity Guidance",
+      "date": "2026-05-12",
+      "file": "content/sources/acc_contracting_note_26-03_reciprocity.txt",
+      "used_for": "reciprocity section, step 10, systems guidance",
+      "access": "local"
+    },
+    {
+      "id": "vce-warrants-guide-2025-02",
+      "title": "VCE-Warrants User Guide",
+      "date": "2025-02",
+      "file": "content/sources/vce_warrants_user_guide_feb2025.txt",
+      "used_for": "vce_howto, application field list, approval/termination/suspension mechanics, legacy class table note",
+      "access": "local; module at https://vce.army.mil/Warrants (CAC)"
+    },
+    {
+      "id": "thresholds-table-2026-03",
+      "title": "Table 1 - Warrant Thresholds Classification with para 4.2 calculating instrument value",
+      "date": "2026-03",
+      "file": "content/sources/warrant_thresholds_table_mar2026.txt",
+      "used_for": "warrant_classes thresholds, thresholds_rule",
+      "access": "local"
+    },
+    {
+      "id": "acq-gov-rfo-part-1",
+      "title": "acquisition.gov FAR Overhaul - Part 1 (model deviation text)",
+      "date": "page last updated 2026-07-28; fetched 2026-09-13",
+      "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1",
+      "used_for": "verification of FAR 1.403 / 1.403-1(b) / 1.405 RFO numbering cited by Policy v12",
+      "access": "public"
+    },
+    {
+      "id": "acq-gov-far-part-1-legacy",
+      "title": "acquisition.gov FAR Part 1 (codified text, FAC 2026-01 effective 2026-03-13)",
+      "date": "fetched 2026-09-13",
+      "url": "https://www.acquisition.gov/far/part-1",
+      "used_for": "confirms legacy numbering (1.603, 1.602-3) still appears in the codified FAR; RFO numbering is via deviation",
+      "access": "public"
+    },
+    {
+      "id": "acq-gov-far-subpart-1-6-legacy",
+      "title": "acquisition.gov FAR Subpart 1.6 (codified legacy text, FAC 2026-01)",
+      "date": "fetched 2026-09-13",
+      "url": "https://www.acquisition.gov/far/subpart-1.6",
+      "used_for": "legacy numbering for crosswalk: 1.602-3, 1.603-1, 1.603-2, 1.603-3 Appointment, 1.603-4 Termination",
+      "access": "public"
+    },
+    {
+      "id": "dod-rfo-deviation-part-1",
+      "title": "DoD Class Deviation - RFO Part 1 / DFARS Part 201 (DARS 2026-O0002, Attachment A1)",
+      "date": "effective 2026-02-01; fetched 2026-09-13",
+      "url": "https://www.acquisition.gov/sites/default/files/page_file_uploads/DoD_RFO_Deviation_Part-1.pdf",
+      "used_for": "DFARS 201.403 / 201.403-1 (10 U.S.C. 1724) / 201.403-2 verification",
+      "access": "public"
+    },
+    {
+      "id": "acq-gov-dfars-subpart-201-6-legacy",
+      "title": "acquisition.gov DFARS Subpart 201.6 (codified legacy text)",
+      "date": "fetched 2026-09-13",
+      "url": "https://www.acquisition.gov/dfars/subpart-201.6-career-development-contracting-authority-and-responsibilities",
+      "used_for": "legacy DFARS 201.603 / 201.603-2 Selection for the crosswalk",
+      "access": "public"
+    },
+    {
+      "id": "acq-gov-rfo-part-6",
+      "title": "acquisition.gov FAR Overhaul - Part 6 (model deviation text)",
+      "date": "fetched 2026-09-13",
+      "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6",
+      "used_for": "RFO 6.103-1 and 6.104 cites in warrant_classes Class II board_focus",
+      "access": "public"
+    }
+  ],
+  "verification_log": [
+    {
+      "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1",
+      "fetched": "2026-09-13",
+      "result": "1.403 title, 1.403-1 General with (b) text, 1.403-2 Appointment, 1.403-3 Termination, 1.405 Ratification confirmed; page last updated 07/28/2026."
+    },
+    {
+      "url": "https://www.acquisition.gov/far/part-1",
+      "fetched": "2026-09-13",
+      "result": "Codified FAR still shows 1.603 and 1.602-3 under FAC 2026-01 (03/13/2026); 1.403 there is 'Individual deviations'. RFO numbering therefore cited from the deviation page."
+    },
+    {
+      "url": "https://www.acquisition.gov/far-overhaul",
+      "fetched": "2026-09-13",
+      "result": "Overview page only; links to Parts & Deviations guide and practitioner albums."
+    },
+    {
+      "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide",
+      "fetched": "2026-09-13",
+      "result": "Part 1 deviation index: issued 2 May 2025, updated 16 Mar 2026; lists 38 agency deviations including DoD_RFO_Deviation_Part-1.pdf (not opened)."
+    },
+    {
+      "pass": "source-fidelity",
+      "date": "2026-09-13",
+      "checked": 14,
+      "refuted": 5,
+      "checked_items": [
+        "RFO 1.403 / 1.403-1(b) / 1.403-2 / 1.403-3 / 1.405 on Part 1 deviation page (confirmed)",
+        "Legacy /far/part-1 FAC 2026-01 numbering (confirmed; 1.403 there = Individual deviations)",
+        "Legacy subpart 1.6 titles (crosswalk 1.603-3 REFUTED, corrected)",
+        "DFARS 201.603 -> 201.403 via DoD deviation PDF (confirmed, upgraded)",
+        "Part 1 deviation index dates/DoD file (confirmed: issued 2 May 2025, updated 16 Mar 2026; 34 agency files counted this pass vs 38 claimed - not material)",
+        "far-overhaul overview page (confirmed)",
+        "RFO 6.103-1 / 6.104 on Part 6 deviation page (confirmed)",
+        "Policy v12 purpose/authority/delegation/qualifications/waivers/legacy/multiple/certificate/thresholds/boards/VCE/retention/suspension/termination/reinstatement text (confirmed line by line)",
+        "Table 1 classes and para 4.2 (confirmed)",
+        "VCE guide legacy class table p.6 (confirmed)",
+        "411th workflow steps 1-7, CORB row, 8, 9, note, termination and administration tables (confirmed; TCC expansion REFUTED; waiver-upload actor REFUTED; SOP owner REFUTED; step-10 routing inference REFUTED)",
+        "CN 26-03 paras 4, 5b-e, 6a-d, 7a-c (confirmed; POC names correctly excluded)",
+        "VCE guide pp.2-20 mechanics cited in tips, packet_checklist, after_appointment, suspension_termination and all 13 vce_howto items (confirmed)",
+        "No names, e-mails or invented local thresholds in output (confirmed by scan)"
+      ],
+      "changes": [
+        "meta.rfo.crosswalk: REFUTED 'FAR 1.603-3 -> FAR 1.403-3 Termination'. Legacy 1.603-3 is 'Appointment'; 1.603-4 is 'Termination' (fetched https://www.acquisition.gov/far/subpart-1.6). Replaced with 1.603-4 -> 1.403-3 (Termination) and added 1.603-3 -> 1.403-2 (Appointment), both verified on the RFO Part 1 deviation page.",
+        "meta.rfo.crosswalk DFARS 201.603 -> 201.403: upgraded 'probable' to 'verified' after opening DoD_RFO_Deviation_Part-1.pdf (DARS 2026-O0002, Attachment A1) which prints 201.403 / 201.403-1 with the 10 U.S.C. 1724 text; legacy 201.603-2 confirmed on acquisition.gov DFARS subpart 201.6.",
+        "policy_summary.waivers: removed unsupported attribution that the C&P Branch uploads the approved waiver package; the 411th workflow CORB row says only 'Upload approved KO Memo, Certificate and Waiver in VCE' with no actor.",
+        "warrant_classes: added confidence 'low' with reason to all four synthesized class profiles (brief rule 2); added korea-verify-cp to Class III (mentions Korea/LCS/SOFA); annotated the RFO 6.103-1 / 6.104 cites in Class II as verified on the Part 6 deviation page.",
+        "steps[3].what: REFUTED expansion 'Theater Contracting Center' - no source expands 'TCC'; replaced with the source's 'TCC Group' plus a confirm note.",
+        "steps[2].what: reworded to the workflow's '906th CBN Group' wording (expansion 'Contracting Battalion' kept as the standard reading of CBN).",
+        "steps[10].routing: removed the unsupported claim that the candidate 'still starts a VCE application at the 411th (step 1) with the prior record attached'; sources only say the gaining SCO issues a new warrant after termination and that prior documents go into the new record.",
+        "after_appointment[411th warrants administration]: workflow table leaves the WHO column blank for the Update Warrant SOP row; removed the assertion that the C&P Branch 'maintains' it and the phrase 'on issued documents' (not in source).",
+        "after_appointment[Increasing your warrant]: scoped the 'no new board within the same class' rule to its Policy v12 context (Legacy Warrants section).",
+        "sources: added the four additional acquisition.gov pages fetched in this pass."
+      ],
+      "residual_notes": [
+        "warrant_classes uses key 'who' where CONTRACT.md section 3 names 'typical_roles'; left unchanged to preserve shape - orchestrator should map.",
+        "packet_checklist p16 (FLN Validation Letter) is completed by the OCONUS HCA per Policy v12; 'who' is recorded as 'facilitator' because the field only allows candidate/supervisor/facilitator.",
+        "Extra top-level keys (meta, warrant_classes_legacy_note, packet_checklist_note, verification_log) remain beyond the contract shape as the drafting agent reported."
+      ]
+    }
+  ]
+}

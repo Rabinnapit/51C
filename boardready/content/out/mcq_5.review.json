@@ -1,0 +1,176 @@
+{
+  "reviewed_file": "content/out/mcq_5.json",
+  "reviewer": "independent content reviewer",
+  "reviewed_on": "2026-09-17",
+  "items_in": 51,
+  "items_out": 50,
+  "items_removed": 1,
+  "items_corrected": 4,
+  "method": [
+    "Every item checked against its source question in src/data/questions.json (question, answer, key_points, alt_answers, deck_notes, domain, citations_rfo with fallback to citations).",
+    "For each item: the correct option confirmed true on the question's own answer; every distractor confirmed wrong (and not right in part) on that same answer; the stem confirmed answerable from the answer and free of added facts; every 'why' checked for accuracy.",
+    "Every FAR, DFARS and AFARS number in every cite line machine-extracted and checked against the verified crosswalk, unchanged list and thresholds in src/data/regulations.json (verified_on 2026-09-13) before any fetch. No acquisition.gov fetch was needed: every number is either covered there or comes verbatim from the source question's own citations.",
+    "Every cite line machine-traced back to its source question: only two items introduce a number the source question does not carry (Q0051, Q0069), and both were verified against regulations.json and kept.",
+    "Every dollar figure and percentage asserted anywhere in the file extracted and checked against the verified thresholds in regulations.json. This is what caught Q0114.",
+    "The five items the author flagged (Q0069, Q0114, Q0273, Q0097, Q0137) were worked first and in full, each against its source answer.",
+    "Structural and hygiene checks run over the whole file by script (option count, correct count, duplicate option text, duplicate qids, domain match, difficulty range, stem length, names, emails, markup, local 411th approval levels)."
+  ],
+  "structural_checks": {
+    "exactly_one_correct_per_item": "pass (50/50)",
+    "four_options_per_item": "pass (50/50)",
+    "duplicate_option_text": "none",
+    "duplicate_qids": "none",
+    "every_option_has_a_why": "pass",
+    "every_qid_resolves_to_a_bank_question": "pass (50/50)",
+    "mcq_domain_matches_bank_domain": "pass (50/50), verbatim",
+    "difficulty_in_range": "pass (1 to 3; after the removal: 9 at 1, 33 at 2, 8 at 3)",
+    "stem_under_60_words": "pass (longest 50 words, K209)",
+    "plain_text_no_markup_no_names_no_emails": "pass",
+    "no_local_411th_approval_levels": "pass - the only mentions of the 411th are inside cite lines (K206, K209) and are the bank's own source documents (411th CSB Warrant Process Workflow, Jul 2026); no option or stem states a local approval threshold",
+    "korea_and_germany_hedges": "pass - Q0261 to Q0272 (Germany, all flagged verify-locally) and K202, K203, K206, K208, K209, Q0278 (Korea, flagged korea-verify-cp) keep the source's hedges; no invented USFK, LCS, SOFA or ABG-75 procedure, office or threshold",
+    "json_valid_utf8": "pass (ASCII only, LF line endings, trailing newline added to match mcq_1 to mcq_4)"
+  },
+  "changes": [
+    {
+      "qid": "Q0008",
+      "type": "stem not self-contained",
+      "field": "stem",
+      "before": "A recent intern graduate is assigned to your team as a contract specialist. Which approach matches the board answer on mentoring and equipping them?",
+      "after": "A recent intern graduate is assigned to your team as a contract specialist. Which approach best covers mentoring and equipping them?",
+      "reason": "The stem asked which option matched 'the board answer', which a reader with no other context cannot evaluate (AGENT_BRIEF rule 8). The question now asks about mentoring itself. The correct option is unchanged and still matches the bank answer (on-the-job mentoring, PD2, PCF/VCE, PAM and MAP navigation, where the regulations and local procedures sit, and growth opportunities such as DAU). This was the only stem in the file with that defect."
+    },
+    {
+      "qid": "Q0097",
+      "type": "stem ambiguity / rationale not self-contained (author-flagged item)",
+      "field": "stem, correct option text, correct option why",
+      "before": "stem: 'Where do the requirements for publicizing contract actions sit, and how should you cite them at a board today?' | correct option: 'FAR Part 5, publicizing contract actions, cited in RFO numbering since the overhaul rewrote the part.' | why: 'Part 5 carries the publicizing requirements, and the board answer expects the RFO rewrite of that part to be acknowledged.'",
+      "after": "stem: 'Which FAR part sets out the requirements for publicizing contract actions?' | correct option: 'FAR Part 5, publicizing contract actions, which the overhaul rewrote and kept in Part 5 at subpart 5.1.' | why: 'Part 5 carries the publicizing requirements, and the overhaul rewrote the part without moving them, so cite it in RFO numbering.'",
+      "reason": "The source answer for Q0097 is a bare pointer ('FAR Part 5 / Mention RFO' plus the RFO Part 5 deviation guide link to subpart 5.1). The item built on it was fair on the first half of the stem but the second half ('how should you cite them at a board today') had no discriminating function - all four options are FAR parts and none of them answers it - and the correct option's rationale told the candidate what 'the board answer expects' rather than what the rule is. The item is now a clean difficulty-1 part-identification question. Part 5 as the RFO home of publicizing is corroborated inside this same file by Q0273 (RFO FAR 5.201(c), 5.201(d)) and Q0278 (RFO FAR 5.101, 5.201(c)(3)), both from their own bank questions. Distractors unchanged."
+    },
+    {
+      "qid": "Q0137",
+      "type": "rationale not self-contained (author-flagged item)",
+      "field": "why (correct option)",
+      "before": "Part 8 is the coverage the board answer points to for the mandatory source hierarchy.",
+      "after": "Part 8 is the FAR coverage for required sources of supplies and services, which you work through before buying on the open market.",
+      "reason": "Same defect as Q0097 in a single field. The source answer for Q0137 is the bare pointer 'FAR Part 8', which does make the stem ('Which FAR part sets out the required sources of supplies and services you must consider before buying on the open market?') answerable, so the item is fair and was kept; only the rationale needed to stand on its own. Option text and distractors unchanged."
+    },
+    {
+      "qid": "Q0069",
+      "type": "citation attribution (author-flagged item)",
+      "field": "cite",
+      "before": "Bona fide needs rule, 31 U.S.C. 1502(a); official CORB board answer Q0069",
+      "after": "Bona fide needs rule, 31 U.S.C. 1502(a); official CORB board answer Q0069 (the answer names the rule; the source carries no citation of its own)",
+      "reason": "Q0069 has citations: [] and no citations_rfo, so the statute is the reviewer-visible addition of the item author, not a bank citation, and the cite line now says so. The statute itself is correct and is kept: the source answer names the bona fide needs rule explicitly, 31 U.S.C. 1502 is on the 'unchanged by the RFO' list in regulations.json, and the bank cites it for this same rule at Q0072 (where the answer's own cite line reads '31 U.S.C. 1502(a)') and at Q0277. Item content unchanged."
+    }
+  ],
+  "removed": [
+    {
+      "qid": "Q0114",
+      "domain": "Pricing, Cost & Payment",
+      "difficulty": 3,
+      "removed_because": "The item cannot be made fair from its source answer, because the only substantive thing the source answer contains is a dollar threshold that the app's own verified regulation data shows is superseded twice over.",
+      "detail": [
+        "Bank question: 'When is certified cost and pricing data required? What are the exceptions to certified cost and pricing data?' Bank answer, in full: 'Threshold for Obtaining Cost or Pricing Data has changed from $750K to $2M. However, the Answer in the Warrant Board Repository Question shows as $750K. IAW DoD Class Deviation 2018-O0015 threshold changed to $2M.' The answer never reaches the exceptions half of its own question.",
+        "The item narrowed the stem to the threshold - 'What dollar threshold triggers certified cost or pricing data on a DoD acquisition today?' - and made $2 million the correct option at difficulty 3.",
+        "src/data/regulations.json threshold id 'tina_dod' (confidence verified, verified 13 Sep 2026): the DoD certified cost or pricing data threshold is $10,000,000 for prime contracts awarded after 30 June 2026 - 10 U.S.C. 3702(a)(1)(A) as amended by FY2026 NDAA (Pub. L. 119-60) sec. 1804, implemented at DFARS 215.403-3(a) by DoD Class Deviation 2026-O0048 Rev. 1 (22 Jul 2026). Threshold id 'tina_civilian' carries $2,500,000 for the governmentwide FAR and for DoD primes awarded on or before 30 Jun 2026.",
+        "So the present-tense stem made $2 million false as of today (17 Sep 2026); $2 million is not even the pre-July-2026 figure, which is $2.5 million after the 1 Oct 2025 inflation adjustment (FAR Case 2024-001).",
+        "A historical reframing was considered and rejected. It would have produced a difficulty-3 numeric item whose entire content is a threshold two revisions out of date, in an app whose purpose is to send a candidate into a 2026 board with the right number; and correcting the option to $10 million would mean writing an item against the source answer instead of from it, which the authoring rules forbid.",
+        "No replacement item was written: with the exceptions half of the question unanswered, the source carries nothing else to build one from. Q0114 stays in the bank as an open question."
+      ]
+    }
+  ],
+  "verified_no_change": [
+    {
+      "qid": "Q0069",
+      "note": "Author-flagged ('answer seems to belong to a different scenario'). Confirmed: the bank answer IS mismatched to its own question - the question is a fourth-quarter plotter buy for the design branch, the answer discusses a Program Director buying aircraft replenishment spares. The item is nevertheless fair, because it is built only on the generic fiscal rules the answer states (ask the sending office the color and year of the funds rather than assuming current-year O&M; confirm a bona fide current-year need; one-year money obligated before year end; a current need plus a reasonable inventory, but no stockpiling for a future need). The item does not import the aircraft-spares specifics, and the stockpiling distractor's rationale is the answer's own last paragraph. Kept, cite attribution corrected. The mismatch is a questions.json problem and is reported, not edited."
+    },
+    {
+      "qid": "Q0273",
+      "note": "Author-flagged ('asks the same question twice'). Not a defect in the source: the bank question states the same sentence twice, once under FAR 12.603 and once under FAR 12.202, which are the old and new numbers for the same rule. regulations.json crosswalk entry {old: FAR 12.603, new: FAR 12.202(b), 'Combined synopsis/solicitation (commercial)', confidence verified, confirmed 13 Sep 2026} resolves it. The item asks it once, cites only the bank's citations_rfo (RFO FAR 12.202, 12.202(b), 5.201(c), 5.201(d)), and the stem's 'above the simplified acquisition threshold' qualifier comes from 12.202(b)'s own text as quoted in the answer. Correct option, all three distractors and every rationale confirmed against the answer, including the SF 1449 point."
+    },
+    {
+      "qid": "Q0051",
+      "note": "The only other item whose cite introduces a number the source question does not carry: 'RFO FAR 12.201-1(b) (legal effect of quotations; was FAR 13.004(a)-(b))' against a bank question with citations: []. Verified and kept - the crosswalk carries {old: FAR 13.004(a)(b), new: FAR 12.201-1(b), 'Simplified procedures - legal effect of quotations', confidence verified}, and the bank answer is the legacy FAR 13.004(a)-(b) text almost verbatim (quotation is not an offer; the order is the Government's offer; acceptance by notification, by furnishing, or by substantial performance). The addition improves the item rather than inventing a number."
+    },
+    {
+      "qid": "Q0115",
+      "note": "CAS item. Cite is the bank answer's own cite line. The correct option states the rule the way 48 CFR 9901.306 states it - mandatory above the TINA threshold, other than what the CAS Board exempts - and asserts no dollar figure, so it is correct today. Currency note for the orchestrator: regulations.json threshold id 'cas_applicability' (confidence verified) records that 41 U.S.C. 1502(b)(1)(B) as amended by FY2026 NDAA sec. 1806 and the CAS Board final rule at 91 FR 56056 decouple contract-level CAS applicability from TINA and set it at $35,000,000 effective 1 Oct 2026. The 'above the TINA threshold' phrasing should be revisited after that date."
+    },
+    {
+      "qid": "Q0072",
+      "note": "Cite '31 U.S.C. 1502(a)' matches the bank answer's own cite line exactly (the citations_rfo array stores the section without the subsection). Scenario, lead-time exception reasoning and all three distractor rationales confirmed against the answer."
+    },
+    {
+      "qid": "Q0016",
+      "note": "Cite is a subset of the bank's citations_rfo. The unilateral/bilateral split in the correct option, the commercial-contract point (52.212-4(d)), the in-scope exemption (6.001(c)) and the certified-funds point (43.205) are each stated in the bank answer. Built on an ai-draft answer (confidence high)."
+    },
+    {
+      "qid": "Q0018",
+      "note": "Two-check timing and the conclusive effect of an exclusion confirmed at RFO FAR 9.405(e) and 9.405 in the answer; the 'terminate for convenience' distractor is correctly rebutted from the 9.405-1 continuation rule. Cite is a subset of citations_rfo."
+    },
+    {
+      "qid": "Q0039",
+      "note": "citations_rfo is null; cite falls back to the bank's citations list and is a subset of it, as the authoring rules allow. Timing, evidentiary standard and duration split confirmed; the 'proposed for debarment' distractor is the answer's own middle-state paragraph."
+    },
+    {
+      "qid": "Q0084",
+      "note": "The subsection pointers 'RFO FAR 10.001(b), (c) and (e)' are the bank answer's own cite line, not an addition; RFO FAR 3.104 is in citations_rfo. Five techniques match the answer one for one."
+    },
+    {
+      "qid": "Q0216",
+      "note": "Subsection pointers (7.107-1(b), 7.107-2(c)(3), (c)(6), (d), 7.107-3, 7.107-4) are the bank answer's own cite line. Distractor B ('reduced administrative and personnel workload alone') is wrong as written because of the clause attached to it, and its rationale carries the answer's 'unless the savings are substantial' qualifier, so no option is right in part."
+    },
+    {
+      "qid": "Q0261",
+      "note": "The distractor's characterisation of the ABG9 as the fees invoice is not in Q0261's own answer but is exactly what the bank states at Q0265 ('With an ABG8, the Bauamt invoices for construction cost and with an ABG9 administrative Fees'), and the rationale that rebuts it comes from Q0261's answer (both final invoices requested and verified paid by voucher before deobligation). Accurate, so kept."
+    },
+    {
+      "qid": "Q0271",
+      "note": "Same situation: the distractor about utility connection charges and forestry compensation is rebutted from Q0272's answer (the no-fee list). Accurate, so kept."
+    },
+    {
+      "qid": "K202",
+      "note": "Korea item. The correct option keeps to what the answer states firmly - one requirement of about $19,500 above the $15,000 micro-purchase threshold, splitting over time and splitting among cardholders both prohibited, Korea does not raise the threshold on its own - and stays entirely clear of the answer's hedged legacy DFARS 213.301 $25,000 overseas card authority, which regulations.json carries as threshold id 'gpc_oconus_25k' with confidence 'unverified'. MPT $15,000 and the $40,000 OCONUS contingency figure in the fourth distractor both confirmed against verified thresholds 'mpt' and 'mpt_contingency_oconus'."
+    },
+    {
+      "qid": "K203",
+      "note": "Korea item. 'Head of the contracting activity may ratify and may delegate no lower than the chief of the contracting office' is RFO FAR 1.405(b)(2) as stated in the answer, and the item says to confirm the ratifying official for the value with the Chief, C&P rather than naming a local level - which is what the answer does. Role named, no threshold invented."
+    },
+    {
+      "qid": "K206",
+      "note": "Korea item, FLN warrant. The correct option keeps to Policy v12 applicability and the HCA's authority to recognise equivalent education in an FLN Validation Letter; the answer's hedges (AT&L designation, letter template and routing) stay hedged in the cite line and appear in no option as a firm statement."
+    },
+    {
+      "qid": "K209",
+      "note": "Korea item, warrant reciprocity, difficulty 3. Both halves of the correct option are the answer's own: no new warrant (ACC Contracting Note 26-03), and a $5 million warrant cannot sign a $7 million action because the warrant must cover the cumulative instrument value, with the increase processed by the ADCON organisation. The Air Force distractor is rebutted from the answer's DAF/MOA paragraph. Warrant class values confirmed against regulations.json 'warrant_class_2' (verified)."
+    },
+    {
+      "qid": "Q0278",
+      "note": "Korea-flagged ai-draft. $15,000 micro-purchase threshold and $350,000 SAT in the cite line confirmed against verified thresholds 'mpt' and 'sat'. The item deliberately carries no Korea-specific claim and no local approval level, although the source answer contains both."
+    },
+    {
+      "qid": "Q0145",
+      "note": "The source answer names the 411th Chief, C&P as the local confirmation point; the item correctly leaves that out and keeps to Appendix GG thresholds, special-interest designation and approval before solicitation release."
+    },
+    {
+      "qid": "Q0277",
+      "note": "Severable-services bona fide needs scenario. The 'severable services may cross fiscal years up to twelve months' distractor is a strong one and its rationale does not overreach: it rebuts on the facts (the period of performance lies wholly in FY27) rather than denying the crossing-year authority, which the source answer does not discuss."
+    }
+  ],
+  "open_notes_for_the_orchestrator": [
+    "Stale source answer, reported not edited: Q0114's answer states the certified cost or pricing data threshold as $2 million per DoD Class Deviation 2018-O0015. The app's own verified data (regulations.json threshold 'tina_dod') puts it at $10,000,000 for DoD prime contracts awarded after 30 June 2026, with $2.5 million before that date. The question also asks for the exceptions and its answer never addresses them. The item was removed; the bank answer needs a rewrite before any item can be built on it.",
+    "Internally inconsistent source answer, reported not edited: Q0069's question is a fourth-quarter plotter purchase for the design branch, but its answer is written about a Program Director buying aircraft replenishment spares (and refers to 'the entire war'). The fiscal rules in the answer are sound and generic, which is why the item survives, but the vignette and the answer are two different scenarios.",
+    "Duplicated scenario in the bank: Q0002 and Q0071 are the same situation (leadership direction contrary to legal guidance in a source selection) with two different official answers. Both items are fair and their correct options differ in emphasis (document and decline to sign; work it through the chain and do not go it alone), but a quiz that draws both will feel repetitive. Consider tagging them as alternates so the Quiz page and Boss Board do not serve them in the same run.",
+    "Answer-length tell across the file: in 48 of the 50 remaining items the correct option is the longest, in 43 of them by more than 40 characters. This is a corpus-wide habit rather than a mcq_5 invention (mcq_2 was 44 of 45, the merged src/data/mcq.json is 220 of 260), and it is not an error in any single item, but a candidate can learn to pick the long option. Worth a length-balancing pass across the whole set rather than on this file alone.",
+    "Answer position: all 50 items have the correct option first, which matches the house convention (mcq_1, mcq_2 and mcq_4 are also all-first; only mcq_3 was pre-shuffled). The Quiz page shuffles options by default and the arcade always shuffles, but the Quiz page's 'In order' setting renders options as written, and in that mode the answer is always A for this whole file. Either pre-shuffle on merge or make 'In order' apply to question order only.",
+    "26 rationale strings across 16 of the 50 items explain the answer by pointing at 'the answer' or 'the board answer'; mcq_1 through mcq_4 carry at most two such strings each. (A further 26 occurrences sit in cite lines as 'official CORB board answer QXXXX', which is this file's legitimate provenance label for questions with no regulatory citation.) The instances that made an item unanswerable or unsupported on its own were corrected (Q0008, Q0097, Q0137); the rest are a readable-provenance style choice and were left alone, but they read oddly in the app, where the reader never sees the source answer.",
+    "Ai-drafted provenance: 21 of the 50 items are built on bank answers whose answer_status is 'ai-draft' (Q0016, Q0018, Q0035, Q0039, Q0080, Q0084, Q0098, Q0139, Q0140, Q0143, Q0145, Q0156, Q0212, Q0215, Q0216, Q0278, K202, K203, K206, K208, K209). As noted in the mcq_4 review, the mcq object shape has no flags field, so the merge into questions.json must keep each parent question's flags and confidence for the badge to render.",
+    "Korea and Germany parents: Q0261 to Q0272 carry flags ['verify-locally'] and K202, K203, K206, K208, K209 and Q0278 carry 'korea-verify-cp'. The hedges live in the cite lines, which is the only place this shape allows, so the parent flags must survive the merge.",
+    "Currency watch for 1 Oct 2026: Q0115 states CAS applicability as 'above the Truth in Negotiations Act threshold', which is how 48 CFR 9901.306 reads today but not after the CAS Board rule at 91 FR 56056 takes effect and sets $35 million (regulations.json threshold 'cas_applicability', verified)."
+  ],
+  "fetches": {
+    "acquisition_gov": "none required",
+    "reason": "Every FAR, DFARS and AFARS number in this file comes verbatim from its source question's citations_rfo or citations, except two reviewer-checked additions (Q0051's RFO FAR 12.201-1(b) and Q0069's 31 U.S.C. 1502(a)), and both are covered by src/data/regulations.json: the first by a crosswalk entry at confidence 'verified' (FAR 13.004(a)(b) -> FAR 12.201-1(b), source acquisition.gov RFO Part 13 deviation guide, confirmed 13 Sep 2026) and the second by the 'unchanged' statute list. The dollar figures asserted anywhere in the file were resolved against the verified thresholds in the same file (mpt, mpt_contingency_oconus, sat, sap_commercial_ceiling, tina_dod, tina_civilian, cas_applicability, warrant_class_2). The remaining cites are statutes (10, 15, 31, 33, 41, 42 U.S.C.), CFR, AFARS, DFARS class deviations, ABG-75 host nation procedures, Army Warranting Program Policy v12 and ACC Contracting Note 26-03, none of which the RFO renumbers."
+  }
+}

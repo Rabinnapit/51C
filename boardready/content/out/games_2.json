@@ -1,0 +1,516 @@
+{
+  "protest_clock": [
+    {
+      "id": "PC01",
+      "event": "Agency protest of an apparent impropriety in the solicitation",
+      "days": null,
+      "day_type": null,
+      "anchor": "before bid opening or the closing date for receipt of proposals",
+      "rule": "A protest against an impropriety that is apparent on the face of the solicitation must reach the agency before bid opening or the closing date for receipt of proposals, or the ground is lost.",
+      "cite": "RFO FAR 33.104-2(a)"
+    },
+    {
+      "id": "PC02",
+      "event": "Agency protest of a solicitation impropriety when no closing time is set",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "from when the alleged impropriety was known or should have been known, where no closing time has been established or no further submissions are anticipated",
+      "rule": "If no closing time has been established, or if no further submissions are anticipated, an alleged solicitation impropriety must be protested to the agency within 10 days of when it was known or should have been known. The RFO text of 33.104 carries no separate 10-day rule for other preaward grounds - for those, apply the GAO timeliness rules at 4 CFR 21.2 if the protester goes on to GAO.",
+      "cite": "RFO FAR 33.104-2(a)"
+    },
+    {
+      "id": "PC03",
+      "event": "Agency postaward protest that forces suspension of performance",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "from award",
+      "rule": "If the agency receives a protest within 10 days after contract award, the contracting officer must immediately suspend performance pending resolution unless continued performance is justified in writing.",
+      "cite": "RFO FAR 33.104-3(a)"
+    },
+    {
+      "id": "PC04",
+      "event": "Agency postaward protest measured from the offered debriefing date",
+      "days": 5,
+      "day_type": "calendar",
+      "anchor": "from the debriefing date offered on a timely debriefing request",
+      "rule": "The suspension trigger is 10 days after award or 5 days after a debriefing date offered on a timely request, whichever is later.",
+      "cite": "RFO FAR 33.104-3(a)"
+    },
+    {
+      "id": "PC05",
+      "event": "Agency decision on an agency-level protest",
+      "days": 35,
+      "day_type": "calendar",
+      "anchor": "from receipt by the contracting officer or the independent review official",
+      "rule": "There is no statutory deadline, but the agency must make its best efforts to resolve an agency protest within 35 days of receipt.",
+      "cite": "RFO FAR 33.104-4(c)(1)"
+    },
+    {
+      "id": "PC06",
+      "event": "GAO protest of an apparent impropriety in the solicitation",
+      "days": null,
+      "day_type": null,
+      "anchor": "before bid opening or the time set for receipt of initial proposals",
+      "rule": "A solicitation defect apparent on the face of the solicitation must be protested to GAO before the closing time, or the ground is waived.",
+      "cite": "4 CFR 21.2(a)(1)"
+    },
+    {
+      "id": "PC07",
+      "event": "GAO protest on any other ground",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "from when the basis of protest was known or should have been known",
+      "rule": "All other GAO protest grounds must be filed within 10 calendar days after the basis is known or should have been known, whichever is earlier.",
+      "cite": "4 CFR 21.2(a)(2)"
+    },
+    {
+      "id": "PC08",
+      "event": "GAO protest after a required debriefing",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "from the date of the required debriefing",
+      "rule": "When a debriefing is requested and required, no GAO protest may be filed before the debriefing and it must be filed within 10 days after the debriefing date.",
+      "cite": "4 CFR 21.2(a)(2)"
+    },
+    {
+      "id": "PC09",
+      "event": "GAO protest after an initial adverse agency action on an agency protest",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "from the initial adverse agency action",
+      "rule": "A protester who went to the agency first has 10 days from the initial adverse agency action to take the same grounds to GAO.",
+      "cite": "4 CFR 21.2(a)(3)"
+    },
+    {
+      "id": "PC10",
+      "event": "CICA stay before award - no contract may be awarded",
+      "days": null,
+      "day_type": null,
+      "anchor": "from the agency's receipt of notice from GAO",
+      "rule": "Once GAO notifies the agency of a protest filed before award, no contract may be awarded until the protest is resolved unless the head of the contracting activity overrides the stay.",
+      "cite": "RFO FAR 33.105-2; 31 U.S.C. 3553(c)"
+    },
+    {
+      "id": "PC11",
+      "event": "CICA stay after award - suspension of performance",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "from award",
+      "rule": "A GAO protest filed within 10 days after award obligates the agency to suspend performance or terminate the contract pending GAO's decision.",
+      "cite": "RFO FAR 33.105-3; 31 U.S.C. 3553(d)(4)"
+    },
+    {
+      "id": "PC12",
+      "event": "CICA stay after award measured from the required debriefing",
+      "days": 5,
+      "day_type": "calendar",
+      "anchor": "from the debriefing date offered on a timely request",
+      "rule": "The postaward CICA stay window is 10 days after award or 5 days after the offered debriefing date, whichever is later. On a required DoD postaward debriefing the window also runs 5 days after the debriefing is concluded under RFO DFARS 215.301-71, and the debriefing is not concluded until the agency delivers its written answers to timely follow-up questions.",
+      "cite": "RFO FAR 33.105-3; 31 U.S.C. 3553(d)(4); RFO DFARS 215.301-71 and provision 252.215-7996(c) (Class Deviation 2026-O0048 Rev 1)"
+    },
+    {
+      "id": "PC13",
+      "event": "Head of the contracting activity override of the CICA stay before award",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "from the written finding",
+      "rule": "The HCA, on a nondelegable basis, may authorize award only on a written finding of urgent and compelling circumstances and that award is likely to occur within 30 days of the finding.",
+      "cite": "RFO FAR 33.105-2; 31 U.S.C. 3553(c)(2)"
+    },
+    {
+      "id": "PC14",
+      "event": "Agency report to GAO",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "from GAO's notice of the protest to the agency",
+      "rule": "The agency must file its complete report with GAO and the parties within 30 days after GAO notifies the agency that a protest has been filed.",
+      "cite": "4 CFR 21.3(c)"
+    },
+    {
+      "id": "PC15",
+      "event": "GAO decision on a protest",
+      "days": 100,
+      "day_type": "calendar",
+      "anchor": "from filing of the protest with GAO",
+      "rule": "GAO issues its decision within 100 calendar days of filing; under the express option, when GAO grants it, the decision is due in 65 days.",
+      "cite": "4 CFR 21.9(a); 31 U.S.C. 3554(a)(1); 31 U.S.C. 3554(a)(2) (express option)"
+    },
+    {
+      "id": "PC16",
+      "event": "Protest at the U.S. Court of Federal Claims",
+      "days": null,
+      "day_type": null,
+      "anchor": "from award or from the agency action being challenged",
+      "rule": "There is no statutory filing deadline and no automatic stay at the court; the protester must ask for an injunction, and a solicitation challenge is still waived if it was not raised before the closing date.",
+      "cite": "RFO FAR 33.106; 28 U.S.C. 1491(b)"
+    },
+    {
+      "id": "PC17",
+      "event": "Offeror request for a preaward or postaward debriefing",
+      "days": 3,
+      "day_type": "calendar",
+      "anchor": "from receipt of the notice of exclusion or the award notice",
+      "rule": "A written debriefing request must reach the contracting officer within 3 days after the offeror receives notice of exclusion from the competition or notice of award.",
+      "cite": "RFO FAR 15.206-2; RFO FAR 15.301"
+    },
+    {
+      "id": "PC18",
+      "event": "DoD enhanced postaward debriefing - offeror's follow-up questions",
+      "days": 2,
+      "day_type": "business",
+      "anchor": "from receipt of the postaward debriefing",
+      "rule": "On a required DoD postaward debriefing the offeror may submit additional written questions within 2 business days; the agency answers in writing within 5 business days, and the debriefing is not concluded, so the protest clock does not start, until that response is delivered.",
+      "cite": "RFO DFARS 215.301-71 (Class Deviation 2026-O0048 Rev 1, 22 Jul 2026; was DFARS 215.506-70)"
+    },
+    {
+      "id": "PC19",
+      "event": "Contractor submission of a claim under the Contract Disputes Act",
+      "days": null,
+      "day_type": null,
+      "anchor": "from accrual of the claim",
+      "rule": "A claim must be submitted in writing to the contracting officer within 6 years after it accrues, and a claim over $100,000 must be certified.",
+      "cite": "RFO FAR 33.205-1; RFO FAR 33.205-2; 41 U.S.C. 7103(a)(4)"
+    },
+    {
+      "id": "PC20",
+      "event": "Contracting officer's final decision on a claim",
+      "days": 60,
+      "day_type": "calendar",
+      "anchor": "from receipt of the claim or of the contractor's written request for a decision",
+      "rule": "For a claim of $100,000 or less the decision is due within 60 days of the contractor's written request; for a certified claim over $100,000 the contracting officer must within 60 days either decide the claim or notify the contractor of the date a decision will be issued.",
+      "cite": "RFO FAR 33.205-6; 41 U.S.C. 7103(f)"
+    },
+    {
+      "id": "PC21",
+      "event": "Contractor appeal of a final decision to the agency board of contract appeals",
+      "days": 90,
+      "day_type": "calendar",
+      "anchor": "from receipt of the contracting officer's final decision",
+      "rule": "The contractor has 90 days from receipt of the final decision to appeal to the board, such as the ASBCA, or 12 months to bring an action at the U.S. Court of Federal Claims.",
+      "cite": "RFO FAR 33.205-6; 41 U.S.C. 7104"
+    },
+    {
+      "id": "PC22",
+      "event": "Cure notice before a termination for default",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "from the contractor's receipt of the cure notice",
+      "rule": "When a contractor fails to perform a provision other than delivery, the Default clause requires a cure notice giving at least 10 days to cure before the contract may be terminated for default.",
+      "cite": "RFO FAR 49.607; FAR 52.249-8(a)(2)"
+    },
+    {
+      "id": "PC23",
+      "event": "Show cause notice",
+      "days": null,
+      "day_type": null,
+      "anchor": "from the delinquency, when less than 10 days remain in the delivery schedule",
+      "rule": "If the time left in the delivery schedule will not support a cure period of 10 days or more, issue a show cause notice instead; it carries no cure period and asks the contractor to show why the contract should not be terminated for default.",
+      "cite": "RFO FAR 49.607"
+    },
+    {
+      "id": "PC24",
+      "event": "Preliminary written notice of intent to exercise an option",
+      "days": null,
+      "day_type": null,
+      "anchor": "before the contract expires, within the period filled in at the clause",
+      "rule": "The contracting officer must give written notice of intent to exercise within the time the contract specifies - the number of days is a fill-in at FAR 52.217-9, commonly 60 days - and the option itself may be exercised only within the time specified in the contract.",
+      "cite": "RFO FAR 17.204-1(b)(1); FAR 52.217-9(a)"
+    }
+  ],
+  "clause_match": [
+    {
+      "id": "CM01",
+      "clause": "FAR 52.203-13",
+      "title": "Contractor Code of Business Ethics and Conduct",
+      "applies": "Goes in contracts over the threshold with a performance period over 120 days; requires a written code, an ethics program, and disclosure of credible evidence of fraud to the agency Inspector General.",
+      "status": "verify",
+      "note": "Dollar threshold deliberately not stated; confirm the current figure and its RFO location before quoting it at a board."
+    },
+    {
+      "id": "CM02",
+      "clause": "FAR 52.204-25",
+      "title": "Prohibition on Contracting for Certain Telecommunications and Video Surveillance Services or Equipment",
+      "applies": "Reserved under the RFO. 52.204-25 is listed as [Reserved] in RFO FAR Part 52, so do not cite it as a current clause; the Section 889 prohibition itself is statutory (Pub. L. 115-232 sec. 889) and is still in force. Confirm with counsel or C&P which provision now carries it in your solicitation.",
+      "status": "verify",
+      "note": "RFO FAR Part 52 index read 14 Sep 2026: 52.204-24 through 52.204-27 all show [Reserved]."
+    },
+    {
+      "id": "CM03",
+      "clause": "FAR 52.209-5",
+      "title": "Certification Regarding Responsibility Matters",
+      "applies": "Goes in solicitations above the simplified acquisition threshold; the offeror certifies on debarment, convictions, tax delinquency, and prior terminations for default.",
+      "status": "verified"
+    },
+    {
+      "id": "CM04",
+      "clause": "FAR 52.212-1",
+      "title": "Instructions to Offerors-Commercial Products and Commercial Services",
+      "applies": "Goes in commercial solicitations; it is the instructions to offerors and takes the place of separate proposal preparation instructions.",
+      "status": "verified"
+    },
+    {
+      "id": "CM05",
+      "clause": "FAR 52.212-2",
+      "title": "Evaluation-Commercial Products and Commercial Services",
+      "applies": "Goes in a commercial solicitation when the contracting officer states the evaluation factors in the solicitation itself.",
+      "status": "verified"
+    },
+    {
+      "id": "CM06",
+      "clause": "FAR 52.212-3",
+      "title": "Offeror Representations and Certifications-Commercial Products and Commercial Services",
+      "applies": "Reserved under the RFO. 52.212-3 is listed as [Reserved] in RFO FAR Part 52. Commercial reps and certs are still normally satisfied by the annual registration in SAM; confirm the current vehicle before citing a clause number.",
+      "status": "verify",
+      "note": "RFO FAR Part 52 index read 14 Sep 2026: 52.212-3 shows [Reserved]."
+    },
+    {
+      "id": "CM07",
+      "clause": "FAR 52.212-4",
+      "title": "Terms and Conditions-Commercial Products and Commercial Services",
+      "applies": "Goes in every commercial contract; the commercial terms, including inspection, changes by bilateral modification only, termination, and the disputes reference. The RFO retitled it from 'Contract Terms and Conditions' to 'Terms and Conditions'.",
+      "status": "verified"
+    },
+    {
+      "id": "CM08",
+      "clause": "FAR 52.212-5",
+      "title": "Contract Terms and Conditions Required To Implement Statutes or Executive Orders-Commercial Products and Commercial Services",
+      "applies": "Reserved under the RFO. 52.212-5 is listed as [Reserved] in RFO FAR Part 52, so the legacy checklist clause should not be cited as current. Statutory and executive order clauses still apply to commercial buys; confirm how your office is flowing them down.",
+      "status": "verify",
+      "note": "RFO FAR Part 52 index read 14 Sep 2026: 52.212-5 shows [Reserved]."
+    },
+    {
+      "id": "CM09",
+      "clause": "FAR 52.215-20",
+      "title": "Requirements for Certified Cost or Pricing Data and Data Other Than Certified Cost or Pricing Data",
+      "applies": "Goes in a negotiated solicitation when certified cost or pricing data may be required, or when data other than certified data is needed to establish a fair and reasonable price.",
+      "status": "verified"
+    },
+    {
+      "id": "CM10",
+      "clause": "FAR 52.216-7",
+      "title": "Allowable Cost and Payment",
+      "applies": "Goes in cost-reimbursement contracts; it is the payment clause and it drives the final indirect cost rate proposal due six months after the contractor's fiscal year ends.",
+      "status": "verified"
+    },
+    {
+      "id": "CM11",
+      "clause": "FAR 52.216-18",
+      "title": "Ordering",
+      "applies": "Goes in indefinite-delivery contracts; it states the period during which orders may be issued and that the contract controls over any conflicting order.",
+      "status": "verified"
+    },
+    {
+      "id": "CM12",
+      "clause": "FAR 52.216-22",
+      "title": "Indefinite Quantity",
+      "applies": "Goes in indefinite-quantity contracts; it fixes the guaranteed minimum and the maximum, which is what makes an IDIQ a binding contract.",
+      "status": "verified"
+    },
+    {
+      "id": "CM13",
+      "clause": "FAR 52.217-8",
+      "title": "Option to Extend Services",
+      "applies": "Goes in service solicitations and contracts when a short extension at the same rates may be needed; the total extension may not exceed 6 months.",
+      "status": "verified"
+    },
+    {
+      "id": "CM14",
+      "clause": "FAR 52.217-9",
+      "title": "Option to Extend the Term of the Contract",
+      "applies": "Goes in contracts with priced option periods; it sets the preliminary notice period and the overall contract duration limit, and it governs a timely option exercise.",
+      "status": "verified"
+    },
+    {
+      "id": "CM15",
+      "clause": "FAR 52.219-6",
+      "title": "Notice of Total Small Business Set-Aside",
+      "applies": "Goes in a solicitation and contract totally set aside for small business; offers from other than small business concerns are rejected.",
+      "status": "verified"
+    },
+    {
+      "id": "CM16",
+      "clause": "FAR 52.219-28",
+      "title": "Postaward Small Business Program Rerepresentation",
+      "applies": "Goes in contracts awarded to a small business; the contractor rerepresents its size and socioeconomic status after a novation or merger, and on long-term contracts within 60 to 120 days before the end of the fifth year and before exercising each option after that.",
+      "status": "verified"
+    },
+    {
+      "id": "CM17",
+      "clause": "FAR 52.222-41",
+      "title": "Service Contract Labor Standards",
+      "applies": "Goes in service contracts over $2,500 performed in the United States; it applies the Department of Labor wage determination to service employees.",
+      "status": "verified"
+    },
+    {
+      "id": "CM18",
+      "clause": "FAR 52.232-22",
+      "title": "Limitation of Funds",
+      "applies": "Goes in incrementally funded cost-reimbursement contracts; the contractor must give notice as the allotment is drawn down and the Government is not obligated beyond the amount allotted.",
+      "status": "verified"
+    },
+    {
+      "id": "CM19",
+      "clause": "FAR 52.233-1",
+      "title": "Disputes",
+      "applies": "Goes in every solicitation and contract; the Contract Disputes Act clause covering claim submission, the $100,000 certification, the final decision, and the duty to proceed.",
+      "status": "verified"
+    },
+    {
+      "id": "CM20",
+      "clause": "FAR 52.233-2",
+      "title": "Service of Protest",
+      "applies": "Goes in every solicitation; it tells a protester where and how to serve a copy of an agency or GAO protest on the contracting officer.",
+      "status": "verified"
+    },
+    {
+      "id": "CM21",
+      "clause": "FAR 52.233-3",
+      "title": "Protest after Award",
+      "applies": "Goes in every solicitation and contract; it gives the contracting officer authority to issue a stop-work order when a protest is filed after award and sets how an adjustment is made.",
+      "status": "verified"
+    },
+    {
+      "id": "CM22",
+      "clause": "FAR 52.233-4",
+      "title": "Applicable Law for Breach of Contract Claim",
+      "applies": "Goes in every solicitation and contract; it states that United States law governs any breach of contract claim.",
+      "status": "verified"
+    },
+    {
+      "id": "CM23",
+      "clause": "FAR 52.243-1",
+      "title": "Changes-Fixed-Price",
+      "applies": "Goes in fixed-price supply and service contracts; it gives unilateral change order authority within the general scope and requires the contractor to assert its right to an equitable adjustment within 30 days.",
+      "status": "verified"
+    },
+    {
+      "id": "CM24",
+      "clause": "FAR 52.245-1",
+      "title": "Government Property",
+      "applies": "Goes in contracts where the Government provides property or the contractor acquires property for the Government; it sets the property management system requirement and the contractor's liability rules.",
+      "status": "verified"
+    },
+    {
+      "id": "CM25",
+      "clause": "FAR 52.249-2",
+      "title": "Termination for Convenience of the Government (Fixed-Price)",
+      "applies": "Goes in fixed-price contracts above the simplified acquisition threshold; the settlement proposal is due no later than one year from the effective date of termination.",
+      "status": "verified"
+    },
+    {
+      "id": "CM26",
+      "clause": "FAR 52.249-8",
+      "title": "Default (Fixed-Price Supply and Service)",
+      "applies": "Goes in fixed-price supply and service contracts above the simplified acquisition threshold; it is the authority for a termination for default and the source of the 10-day cure period.",
+      "status": "verified"
+    },
+    {
+      "id": "CM27",
+      "clause": "DFARS 252.203-7000",
+      "title": "Requirements Relating to Compensation of Former DoD Officials",
+      "applies": "Goes in all DoD solicitations and contracts, including commercial buys under FAR part 12 - there is no dollar threshold; the contractor must not compensate a covered former DoD official within 2 years of separation unless that official has the required post-employment ethics opinion.",
+      "status": "verified",
+      "note": "Prescription read at RFO DFARS 203.171-4(a) (Class Deviation 2026-O0031) 14 Sep 2026 - no SAT threshold."
+    },
+    {
+      "id": "CM28",
+      "clause": "DFARS 252.203-7002",
+      "title": "Requirement to Inform Employees of Whistleblower Rights",
+      "applies": "Goes in all DoD solicitations and contracts, including commercial buys under FAR part 12 - there is no dollar threshold; the contractor must inform employees in writing, in their predominant native language, of their whistleblower rights.",
+      "status": "verified",
+      "note": "Prescription read at RFO DFARS 203.970 (Class Deviation 2026-O0031) 14 Sep 2026 - no micro-purchase threshold."
+    },
+    {
+      "id": "CM29",
+      "clause": "DFARS 252.204-7012",
+      "title": "Safeguarding Covered Defense Information and Cyber Incident Reporting",
+      "applies": "Goes in DoD solicitations and contracts except acquisitions solely of commercially available off-the-shelf items; it requires NIST SP 800-171 security and rapid cyber incident reporting.",
+      "status": "verify",
+      "note": "Clause text is codified DFARS; the RFO DFARS Part 204 deviation (2026-O0043) does not reissue 252.204-7012, so confirm the current version before citing it."
+    },
+    {
+      "id": "CM30",
+      "clause": "DFARS 252.204-7020",
+      "title": "NIST SP 800-171 DoD Assessment Requirements",
+      "applies": "Goes in DoD solicitations and contracts that include 252.204-7012; the contractor must have a current assessment posted before award.",
+      "status": "verify",
+      "note": "Clause text is codified DFARS; the RFO DFARS Part 204 deviation (2026-O0043) does not reissue 252.204-7020, so confirm the current version before citing it."
+    },
+    {
+      "id": "CM31",
+      "clause": "DFARS 252.215-7992 (DEVIATION 2026-O0048)",
+      "title": "Only One Offer",
+      "applies": "Goes in competitive solicitations that exceed the simplified acquisition threshold, including solicitations using FAR part 12 procedures; it puts offerors on notice that if only one offer is received the contracting officer may require cost or pricing data to establish a fair and reasonable price. Under the RFO the legacy number 252.215-7008 is Reserved.",
+      "status": "verified",
+      "note": "Read in Class Deviation 2026-O0048 Rev 1 (22 Jul 2026) 14 Sep 2026: 252.215-7008 shows 'Reserved'; the provision is 252.215-7992, prescribed at DFARS 215.110-70(c). Policy sits at DFARS 215.202-71."
+    },
+    {
+      "id": "CM32",
+      "clause": "DFARS 252.216-7010",
+      "title": "Postaward Debriefings for Task Orders and Delivery Orders",
+      "applies": "Goes in DoD multiple-award solicitations and contracts when orders may be valued at $15 million or more; it gives the enhanced postaward debriefing rights on those orders.",
+      "status": "verified",
+      "note": "Prescribed at DFARS 216.505-70(b) per Class Deviation 2026-O0045 Rev 1; the $15M figure matches regulations.json threshold dod_order_debriefing_15m."
+    },
+    {
+      "id": "CM33",
+      "clause": "DFARS 252.222-7002",
+      "title": "Compliance with Local Labor Laws (Overseas)",
+      "applies": "Goes in DoD solicitations and contracts for services or construction to be performed outside the United States and its outlying areas; the contractor complies with local work-hour laws, labor union agreements and labor regulations - a standing issue for contracts performed in Korea.",
+      "status": "verified",
+      "note": "Prescription read at RFO DFARS 222.7201(a) (Class Deviation 2026-O0040 Rev 1) 14 Sep 2026."
+    },
+    {
+      "id": "CM34",
+      "clause": "DFARS 252.225-7001",
+      "title": "Buy American and Balance of Payments Program",
+      "applies": "Goes in DoD solicitations and contracts for supplies, in place of FAR 52.225-1, including commercial buys under FAR part 12, unless one of the exceptions at DFARS 225.1101 applies; it applies the Buy American statute and the Balance of Payments Program to end products.",
+      "status": "verified",
+      "note": "Prescription read in Class Deviation 2026-O0041 Rev 1 14 Sep 2026 - no micro-purchase threshold in the prescription."
+    },
+    {
+      "id": "CM35",
+      "clause": "DFARS 252.225-7012",
+      "title": "Preference for Certain Domestic Commodities",
+      "applies": "Goes in DoD solicitations and contracts, including commercial buys under FAR part 12, unless an exception applies; it implements the Berry Amendment preference for domestic food, clothing, fabrics, hand or measuring tools, and flags. The restrictions do not reach acquisitions not exceeding $200,000, except initial-entry athletic footwear.",
+      "status": "verified",
+      "note": "Prescription at RFO DFARS 225.7002-3 and exception at 225.7002-2(a) read 14 Sep 2026 - the cutoff is $200,000, not the SAT."
+    },
+    {
+      "id": "CM36",
+      "clause": "DFARS 252.225-7040",
+      "title": "Contractor Personnel Supporting U.S. Armed Forces Deployed Outside the United States",
+      "applies": "Goes in DoD contracts whose personnel will support U.S. forces deployed outside the United States; it covers accountability, medical and security support, and compliance with the applicable status agreement.",
+      "status": "verified"
+    },
+    {
+      "id": "CM37",
+      "clause": "DFARS 252.225-7963 (DEVIATION 2026-O0041)",
+      "title": "Antiterrorism/Force Protection Policy for Defense Contractors Outside the United States",
+      "applies": "Goes in DoD solicitations and contracts, including commercial buys under FAR part 12, that require performance or travel outside the United States, except contracts with foreign governments, their representatives, or foreign corporations wholly owned by foreign governments; contractor personnel must comply with theater antiterrorism and force protection requirements. Under the RFO the legacy number 252.225-7043 is gone.",
+      "status": "verified",
+      "note": "Read in Class Deviation 2026-O0041 Rev 1 14 Sep 2026: clause 252.225-7963 (FEB 2026), prescribed at DFARS 225.772-2; no 252.225-7043 appears in the deviation."
+    },
+    {
+      "id": "CM38",
+      "clause": "DFARS 252.232-7003",
+      "title": "Electronic Submission of Payment Requests and Receiving Reports",
+      "applies": "Goes in DoD solicitations and contracts; payment requests and receiving reports must be submitted electronically, normally through Wide Area Workflow.",
+      "status": "verified"
+    },
+    {
+      "id": "CM39",
+      "clause": "DFARS 252.232-7007",
+      "title": "Limitation of Government's Obligation",
+      "applies": "Goes in incrementally funded DoD fixed-price contracts; it caps the Government's obligation at the amount currently allotted and requires the contractor to give notice before that amount is exhausted.",
+      "status": "verified"
+    },
+    {
+      "id": "CM40",
+      "clause": "DFARS 252.243-7002",
+      "title": "Requests for Equitable Adjustment",
+      "applies": "Goes in DoD solicitations and contracts above the simplified acquisition threshold; a request for equitable adjustment over the certification threshold must be certified, and that certificate is not the same as a Contract Disputes Act claim certificate.",
+      "status": "verified"
+    }
+  ]
+}

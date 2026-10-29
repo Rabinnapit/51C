@@ -1,0 +1,92 @@
+{
+ "file_reviewed": "content/out/mcq_1.json",
+ "reviewer": "independent reviewer agent",
+ "reviewed_on": "2026-09-14",
+ "items_checked": 45,
+ "items_corrected": 7,
+ "items_removed": 0,
+ "method": [
+  "Every item compared against its source question in src/data/questions.json (all 45 qids resolved; none missing).",
+  "Every RFO cite checked against the verified crosswalk in src/data/regulations.json (verified_on 2026-09-13).",
+  "acquisition.gov fetched only for cites the crosswalk does not cover: RFO FAR part 5 deviation guide (5.101 presolicitation notice, 15-day interval, 5.101(b) exemptions, 5.201(c)(3)) and the DoD RFO Part 6 deviation PDF (confirms FAR 6.301 Availability of the justification).",
+  "Structural check: 45 items, each with exactly one correct option, four options, no duplicate option text, no duplicate qid. JSON re-parsed after editing."
+ ],
+ "changes": [
+  {
+   "qid": "Q0013",
+   "type": "rationale and cite corrected",
+   "what": "Distractor 'Both the synopsis and the justification must be posted 15 days before the solicitation' was rationalized as 'the normal publicizing sequence'. A justification is never posted before award, so the old rationale taught a false rule. Rewritten. Cite now names RFO FAR 6.301 (was FAR 6.305) as the source of the 14-day / 30-day-for-urgency posting rule.",
+   "confidence": "high",
+   "basis": "Source answer Q0013 (official) plus deck note quoting RFO 6.301; DoD RFO Part 6 deviation PDF references FAR 6.301 Availability of the justification."
+  },
+  {
+   "qid": "Q0022",
+   "type": "stem narrowed, rationale and cite corrected",
+   "what": "Stem did not say which kind of action, but the 15-day interval applies to noncommercial acquisitions over the SAT; commercial buys may use a shorter period or the combined synopsis and solicitation, which made the old stem ambiguous. Stem now specifies a noncommercial acquisition over the SAT; the correct option's rationale no longer rests on 'the study bank' alone; cite now points at RFO FAR 5.101 (was FAR 5.203(a)) rather than only the exemptions paragraph.",
+   "confidence": "high",
+   "basis": "acquisition.gov RFO Part 5 deviation guide: 5.101 Presolicitation notice, 15 days before solicitation issuance for noncommercial acquisitions over the SAT (Table 5-2); exemptions at 5.101(b)."
+  },
+  {
+   "qid": "Q0054",
+   "type": "rationale corrected",
+   "what": "Distractor rationale asserted the combined synopsis and solicitation procedure is 'aimed at commercial acquisitions over the SAT'. That invents a floor the rule does not have. Rewritten to say there is no micro-purchase ceiling and the procedure is available for commercial acquisitions generally.",
+   "confidence": "medium",
+   "basis": "Crosswalk FAR 12.603 -> RFO FAR 12.202(b), verified; source answer Q0054. Exact RFO 12.202(b) text not fetched."
+  },
+  {
+   "qid": "Q0059",
+   "type": "cite trimmed",
+   "what": "Removed 'adopted for part 13 buys at RFO FAR 13.201', which is not in the verified crosswalk and could not be confirmed. The verified mapping FAR 13.004(a)(b) -> RFO FAR 12.201-1(b) is kept.",
+   "confidence": "high",
+   "basis": "src/data/regulations.json crosswalk, confidence 'verified'."
+  },
+  {
+   "qid": "Q0067",
+   "type": "cite corrected",
+   "what": "Cited 'RFO FAR 7.107-1 and 7.107-2'. The crosswalk shows old 7.107-2, -3 and -4 merged into RFO 7.107-2, with notifications at RFO 7.107-3. Cite rewritten to match.",
+   "confidence": "high",
+   "basis": "src/data/regulations.json crosswalk entries for FAR 7.107-2, 7.107-3, 7.107-4, 7.107-5, all 'verified'."
+  },
+  {
+   "qid": "Q0082",
+   "type": "stem and rationale corrected (substantive)",
+   "what": "The stem asked which approach 'provides for full and open competition and needs no justification' and keyed brand-name-or-equal. Under DFARS 211.204 (section 888, FY17 NDAA) DoD still requires a justification and approval to use a brand-name-or-equal purchase description, so the keyed option was wrong for an Army board. Stem now asks which approach still provides for full and open competition; the correct option's rationale states the FAR position and flags the DoD requirement; the sole-source distractor's rationale now also says why it fails the competition test; DFARS 211.204 added to the cite, and the 'was FAR 11.105' predecessor corrected.",
+   "confidence": "high",
+   "basis": "Source bank Q0153 official answer ('The DFARS requires a justification and approval be completed for solicitation using brand name or equal purchase descriptions') and its alt_answer quoting DFARS DEV 211.204; crosswalk DFARS 211.104 -> DFARS 211.204 'verified'."
+  },
+  {
+   "qid": "Q0153",
+   "type": "stem tightened and distractor rationale corrected (substantive)",
+   "what": "Distractor 'A justification approved at the head of the contracting activity level' was marked wrong on the ground that brand-name-or-equal 'does not require a justification and approval' - which contradicts the source question's own answer and DFARS 211.204, making the distractor defensible for a DoD candidate. Stem now asks what the purchase description itself must state, the self-evident distractor was reworded to match, and the justification distractor's rationale explains that a J&A is a separate document whose approval level is set by dollar value, while noting the DoD J&A requirement. Cite adds the posting section and the DFARS predecessor.",
+   "confidence": "high",
+   "basis": "Source bank Q0153 official answer and alt_answer (DFARS DEV 211.204); RFO FAR 11.204 text quoted in the bank; crosswalk FAR 5.102(a)(6) -> RFO FAR 5.201(c)(3) 'verified'."
+  }
+ ],
+ "verified_no_change": [
+  "Q0006, Q0012, Q0014, Q0023, Q0024, Q0029, Q0030, Q0037, Q0046, Q0047, Q0050, Q0052, Q0056, Q0057, Q0058, Q0060, Q0061, Q0062, Q0070, Q0074, Q0076, Q0078, Q0085, Q0088, Q0094, Q0099, Q0101, Q0102, Q0103, Q0108, Q0116, Q0119, Q0122, Q0125, Q0131, Q0149, Q0151, Q0152 - keyed option agrees with the source answer, distractors are not defensible, stems are unambiguous."
+ ],
+ "residual_risks": [
+  {
+   "qid": "Q0023",
+   "note": "The $50M / $25M / $10M written-acquisition-plan thresholds come from the bank answer and DFARS 207.103. Not re-verified against the current DFARS text; the item's cite already tells the reader to confirm current values with C&P.",
+   "confidence": "medium"
+  },
+  {
+   "qid": "Q0119",
+   "note": "Cite asserts 10 U.S.C. 3133 for severable services contracts crossing fiscal years (former 10 U.S.C. 2410a). Recodification not re-verified on a primary source this pass.",
+   "confidence": "medium"
+  },
+  {
+   "qid": "Q0062",
+   "note": "DFARS 215.202-71(c) (was 215.371-3) is 'verified' in the crosswalk, but the RFO DFARS text itself was not fetched.",
+   "confidence": "medium"
+  },
+  {
+   "qid": "Q0085",
+   "note": "SPRS / NIST SP 800-171 / CMMC verification is taken verbatim from the bank's official answer quoting RFO DFARS 217.204-170. Currency of the CMMC phase-in not independently checked.",
+   "confidence": "medium"
+  }
+ ],
+ "notes": "No item was deleted; every defect found was fixable without losing the teaching point. acquisition.gov/far/part-N still serves pre-overhaul text, so RFO numbering was confirmed through the far-overhaul deviation guide pages and the DoD deviation PDFs. Flag for the orchestrator: the FAR-versus-DFARS split on brand-name-or-equal justifications (Q0082, Q0153) is a live trap for candidates and should be consistent wherever else the bank touches brand name.",
+ "flags": ["ai-drafted"]
+}

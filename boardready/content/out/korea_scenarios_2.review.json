@@ -1,0 +1,94 @@
+{
+  "file_reviewed": "content/out/korea_scenarios_2.json",
+  "reviewer": "independent reviewer agent",
+  "reviewed_on": "2026-09-14",
+  "items_checked": 10,
+  "items_corrected": 10,
+  "items_removed": 0,
+  "method": [
+    "Every Korea-specific statement compared against the 411th bank items Q0254-Q0258 and Q0274-Q0278 in src/data/questions.json and the study decks in content/sources (LCS: MND holds funds, USFK J4 manages, 411th KO recommends award through J4, MND approves, awards and pays; Korean firms, labor and materials; O&M and LCS never in one solicitation; IC program: U.S. contractors, KO requests contract SOFA designation from USFK/FKAQ under SOFA Article XV and USFKI 4901.01, RA handles individual designation).",
+    "Warrant statements checked against content/sources/army_warranting_policy_v12_mar2026.txt, 411th_warrant_process_workflow_jul2026.txt and acc_contracting_note_26-03_reciprocity.txt (paragraphs 5, 6.a.iii, 6.b-d, 7 and the 1 Dec 2023 Army-DAF MOA reference all confirmed).",
+    "RFO cites checked against the verified crosswalk and thresholds in src/data/regulations.json (1.405, 1.402-1, 1.403-1(b), 2.101 tiers, 4.101, 6.103-2, 6.104, 12.001, 12.102, 12.201-1, 12.304, 12.402, 13.001, 18.001, 33.104-3/-4, 33.105-3/-4, 37.201-2, 49.402-2, 49.607, DFARS 233.105-70, 201.404-70, Class Deviation 2024-O0011 / 2026-O0029, DFARS 213.301 $25K status).",
+    "acquisition.gov fetched only for cites the crosswalk does not cover: RFO Part 4 (SAM exceptions at 4.203-1(b)), RFO Part 16 (16.203 exists), RFO Part 22 (SCLS scope sits in the 22.001 definition), legacy FAR 22.1001 (definition of United States), RFO Part 37 (37.201-1, 37.201-2, 37.202-1 headings). 10 U.S.C. 4801 read at law.cornell.edu for the NTIB country list.",
+    "Not obtainable: the US-ROK SOFA text and USFKI 4901.01 (usfk.mil and loc.gov returned HTTP 403), DFARS 225.7004-1 page (404). Every positive characterization of SOFA Articles XV, XVI and XVII was therefore softened to a reading to confirm with legal rather than removed, since the scenarios need the concept and the 411th bank confirms Article XV / USFKI 4901.01 exist.",
+    "Structural check: 10 items, same key set as korea_scenarios_1.json, every item carries flags ai-drafted and korea-verify-cp and a confidence with reason; JSON re-parsed after editing; CRLF line endings preserved."
+  ],
+  "changes": [
+    {
+      "id": "K203",
+      "type": "factual correction",
+      "what": "Draft told the KO that a SAM registration exception for foreign vendors performing outside the U.S. would cover the Korean HVAC vendor. RFO FAR 4.203-1(b) caps that exception at $40,000 and the scenario action is about $46,000. Answer, cite line, citations list and key point rewritten: the foreign-vendor exception does not reach it on its own; the overseas-contracting-officer exception and won-payment practice are confirmed with C&P. Bilingual-staff statement softened.",
+      "confidence": "high",
+      "basis": "RFO Part 4 page on acquisition.gov (last updated 28 Jul 2026), 4.203-1(b) exceptions read 14 Sep 2026."
+    },
+    {
+      "id": "K204",
+      "type": "cite and factual correction",
+      "what": "Draft cited an 'RFO FAR Part 22 statutory exclusion' listing territories and omitted the Northern Mariana Islands. The geographic limit is in the 22.001 definition of service contract (services furnished in the United States) and in the legacy 22.1001 / 29 CFR 4.112 definition of United States, which also expressly excludes U.S. bases in foreign countries. Text, cite line, citations and key point corrected. SOFA Article XVII characterization softened to a reading to confirm (text unfetchable). Korean statutory add-ons generalized (no figures, taken from legal/labor advisor). RFO 16.203 confirmed.",
+      "confidence": "high",
+      "basis": "RFO Part 22 page; legacy FAR 22.1001; RFO Part 16 headings; all read on acquisition.gov 14 Sep 2026."
+    },
+    {
+      "id": "K206",
+      "type": "invented local fact removed",
+      "what": "Draft stated the 411th's HCA is the ACC Commanding General with warrant-granting authority delegated to the SCO. Policy v12 only says the HCA may delegate down to SCOs and the 411th workflow shows the SCO appointing; who signs the FLN Validation Letter as the OCONUS HCA is left to C&P. KN system-access rules (not in any source) and the SOFA Article XVII reading softened.",
+      "confidence": "high",
+      "basis": "army_warranting_policy_v12_mar2026.txt lines 39-41 and 64; 411th workflow block 9."
+    },
+    {
+      "id": "K207",
+      "type": "invented document name removed",
+      "what": "All references to an 'LCS SOP' replaced with 'current LCS procedures (confirm with USFK J4 and C&P)'; no SOP exists in the sources, only J4 management of the program (Q0257). FAPIIS cite narrowed to legacy FAR 42.1503(h) with the RFO section marked to confirm. LCS mechanics otherwise match Q0254-Q0257 and the 13 May 2026 deck; confidence stays low as the author set it.",
+      "confidence": "high",
+      "basis": "Q0254-Q0257; regulations.json crosswalk (12.304, 49.607, 49.402-2 verified)."
+    },
+    {
+      "id": "K205",
+      "type": "invented local process and document removed",
+      "what": "Continued-performance justification no longer described as needing 'the Chief, C&P and legal' support (FAR only requires a written justification; approval level is local). 'LCS SOP channel' replaced with current LCS procedures via USFK J4. Korean courtesy translation softened. GAO/agency protest mechanics re-checked against the 7 Jul 2026 deck and crosswalk; unchanged.",
+      "confidence": "high",
+      "basis": "RFO FAR 33.104-3 text quoted in the study deck; Q0257."
+    },
+    {
+      "id": "K201",
+      "type": "Korea-specific softening",
+      "what": "IC-program sentences re-aligned to Q0258 (program applies to U.S. contractors; KO requests contract designation from USFK/FKAQ, RA handles individuals) instead of the draft's 'a Korean vendor does not need IC status' and 'before its people perform'. Per-acquisition authority wording, A/OPC limit-raising mechanics and installation access made local confirmations. Threshold tiers ($15K/$350K standard; $40K/$2M/$15M contingency; $650K humanitarian) match regulations.json.",
+      "confidence": "high",
+      "basis": "Q0258; regulations.json thresholds mpt, sat, mpt_contingency_oconus, sat_contingency_oconus, sap_commercial_ceiling_contingency, sat_humanitarian_peacekeeping."
+    },
+    {
+      "id": "K202",
+      "type": "Korea-specific softening",
+      "what": "Cardholder single-purchase limit no longer asserted to equal the MPT by appointment letter (it is set by the A/OPC and can be no higher than the MPT absent an authority); GPC as payment method on a KO order made conditional on 411th GPC program practice. Split-purchase rule and DFARS 213.301 $25K status match regulations.json (gpc_oconus_25k unverified/displaced).",
+      "confidence": "high",
+      "basis": "regulations.json gpc_oconus_25k; AFARS 5113.270-90 as read by the author."
+    },
+    {
+      "id": "K208",
+      "type": "softening",
+      "what": "KN direct-hire path no longer stated as 'under SOFA Article XVII' as a rule; framed as a civilian-personnel-office action under the SOFA labor article and USFK policy. Korean worker-placement law point framed as a legal question. RFO 37.201-1, 37.201-2, 37.202-1 headings confirmed.",
+      "confidence": "high",
+      "basis": "RFO Part 37 page (28 Jul 2026)."
+    },
+    {
+      "id": "K209",
+      "type": "policy precision",
+      "what": "Added Policy v12's rule that a new test or board is required only to move to a higher Table 1 class, so a $5M-to-SaP increase within Class II is the SCO's call (CN 26-03: may include a new review board), instead of leaving it unexplained. All CN 26-03 paragraph cites and system steps confirmed verbatim; confidence high retained.",
+      "confidence": "high",
+      "basis": "army_warranting_policy_v12_mar2026.txt line 86; CN 26-03 paragraph 5.d."
+    },
+    {
+      "id": "K210",
+      "type": "cite added and SOFA softening",
+      "what": "NTIB country list (U.S., U.K., Australia, New Zealand, Canada) confirmed against 10 U.S.C. 4801 (New Zealand added 2022) and the statute added to the cite line and citations. SOFA Article XVI paragraph rewritten as a reading to confirm with legal since the SOFA text could not be fetched. LCS coverage of non-tactical vehicles matches Q0256.",
+      "confidence": "high",
+      "basis": "law.cornell.edu 10 U.S.C. 4801 read 14 Sep 2026; Q0256."
+    }
+  ],
+  "unresolved": [
+    "SOFA Articles XV, XVI and XVII wording and USFKI 4901.01 mechanics remain unverified from a primary source (usfk.mil 403); items keep korea-verify-cp and say so in the answer.",
+    "DFARS 225.7004-1 / 225.7501 paragraph letters in K210 rest on the author's extraction from deviation 2026-O0041 Rev 1; the acquisition.gov section page returned 404 and was not re-read.",
+    "AFARS 5113.270-90 / Appendix EE (K201, K202) and DFARS 237.201-70 / 237.876 (K204, K208) rest on the author's fetches; not re-read here.",
+    "All local 411th approval levels (ratification official, agency-protest independent-review official, HCA signer for FLN validation, GPC limits) are described by role only and marked confirm with C&P."
+  ]
+}

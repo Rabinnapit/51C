@@ -1,0 +1,2434 @@
+[
+ {
+  "id": "Q0018",
+  "question": "Discuss your understanding of SAM (System for Award Management Exclusions) and how / when it is to be utilized.",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Responsibility & Exclusions",
+  "topic": "Responsibility",
+  "alt_topics": [],
+  "tags": [
+   "Construction",
+   "Evaluation",
+   "Grants",
+   "IDIQ",
+   "OCONUS",
+   "R&D",
+   "Services"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 19
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 22
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0020",
+  "question": "You have received competitive proposals in an LPTA situation. How would you determine the prices to be fair and reasonable.",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Source Selection & Evaluation",
+  "topic": "Pricing LPTA",
+  "alt_topics": [],
+  "tags": [
+   "Services",
+   "Construction",
+   "R&D",
+   "Grants",
+   "IDIQ",
+   "Source Selection",
+   "Communication (written & oral)",
+   "Problem solving situations",
+   "Evaluation"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "scenario",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 21
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 24
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0021",
+  "question": "You have received competitive proposals in a trade-off situation. You are required to evaluate realism as well as the reasonableness of the cost/price. How would you evaluate each each of these.",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Source Selection & Evaluation",
+  "topic": "Pricing Trade-off",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Construction",
+   "Evaluation",
+   "Grants",
+   "IDIQ",
+   "OCONUS",
+   "Problem solving situations",
+   "R&D",
+   "Services",
+   "Source Selection"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "scenario",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 22
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 25
+   }
+  ],
+  "citations": [
+   "FAR 15.404-1"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0025",
+  "question": "How do you determine if a small business category is applicable to your procurement? What documentation is needed to support this determination? What are different categories in the small business program?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Small Business & Socioeconomic",
+  "topic": "Small Business",
+  "alt_topics": [],
+  "tags": [
+   "Construction",
+   "Evaluation",
+   "Grants",
+   "IDIQ",
+   "R&D",
+   "Services"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 26
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 30
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0035",
+  "question": "What is VCE PCF and why is it important? As a contracting officer, what steps will you take to personally ensure data being reported is accurate?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Contract Administration",
+  "topic": "Contract Files",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "R&D",
+   "Services",
+   "Workload management",
+   "Construction",
+   "Grants",
+   "IDIQ",
+   "OCONUS",
+   "Problem solving situations"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "leadership",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 36
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 42
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0036",
+  "question": "What is a Quality Assurance Surveillance Plan (QASP) and when is it required?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Contract Administration",
+  "topic": "Contract Administration",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "R&D",
+   "Services",
+   "IDIQ",
+   "OCONUS",
+   "Problem solving situations"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 37
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 44
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0037",
+  "question": "How do you determine what clauses to include in a solicitation / contract?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Acquisition Planning & Contract Types",
+  "topic": "Acquisition Planning",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "R&D",
+   "Services",
+   "Workload management",
+   "Construction",
+   "Grants",
+   "IDIQ",
+   "OCONUS",
+   "Problem solving situations"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "leadership",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 38
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 45
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0038",
+  "question": "What is unbalanced pricing, and how should you address it?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Pricing, Cost & Payment",
+  "topic": "Pricing",
+  "alt_topics": [],
+  "tags": [
+   "R&D",
+   "Source Selection",
+   "Services",
+   "Construction",
+   "Grants",
+   "IDIQ",
+   "OCONUS",
+   "Problem solving situations"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 39
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 46
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0039",
+  "question": "Explain the difference between suspension and debarment.",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Responsibility & Exclusions",
+  "topic": "Responsibility",
+  "alt_topics": [],
+  "tags": [
+   "R&D",
+   "Construction",
+   "Grants",
+   "IDIQ",
+   "OCONUS"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 40
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 47
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0040",
+  "question": "What should you do if you have any suspicion of any ethics violation or fraud? How do you mentor and train your customer on ethics and fraud concerns?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Authority, Ethics & Leadership",
+  "topic": "Ethics",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "GPC",
+   "Leadership",
+   "Management",
+   "R&D",
+   "Services",
+   "Source Selection",
+   "Team building / dynamics",
+   "Workload management",
+   "Construction",
+   "Grants",
+   "IDIQ",
+   "OCONUS",
+   "Problem solving situations"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "scenario",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 41
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 48
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0041",
+  "question": "What is an organizational conflict of interest as it relates to contractor (or provider) access to acquisition information? Give an example.",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Property, Security & Special Provisions",
+  "topic": "Organizational Conflict of Interest",
+  "alt_topics": [],
+  "tags": [],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 42
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 49
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0079",
+  "question": "What is a Contracting Officer? What is the authority given to a Contracting Officer? What are the responsibilities of a Contracting Officer?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Responsibility & Exclusions",
+  "topic": "Contracting Officer Responsibilities",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Competition / Limited Competition",
+   "Ethics",
+   "Evaluation",
+   "Fiscal Law / Funding",
+   "IDIQ",
+   "Leadership",
+   "Management",
+   "OCONUS",
+   "Pre-award",
+   "Problem solving situations",
+   "Source Selection",
+   "Workload management"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "leadership",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 81
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 111
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0080",
+  "question": "Please explain the contracting process in detail, from cradle to grave.",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Authority, Ethics & Leadership",
+  "topic": "Contracting General",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Competition / Limited Competition",
+   "Construction",
+   "Evaluation",
+   "Fiscal Law / Funding",
+   "Grants",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "Problem solving situations",
+   "Simplified Acquisitions",
+   "Small Business",
+   "Source Selection",
+   "Workload management"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "leadership",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 82
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 112
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0081",
+  "question": "As a contracting officer, your customer comes to you with an urgent change to the current contract that you are working. He comes to you by email and states he needs to include a change to the current scope of work and wants to know what steps need to take place to get the change incorporated into the contract. What is your authority in the contract to issue a change to the scope of work? What are the documents needed from the COR to initiate the change along with the steps to incorporate the change into the contract?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Contract Administration",
+  "topic": "Modifications",
+  "alt_topics": [],
+  "tags": [
+   "Competition / Limited Competition",
+   "Communication (written & oral)",
+   "Fiscal Law / Funding",
+   "IDIQ",
+   "OCONUS",
+   "Problem solving situations",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "scenario",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 83
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 117
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0082",
+  "question": "You receive a requirements package for a Polaris 4-wheeler. The customer insists it has to be Polaris. As the KO, how would you advise the customer?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Competition & Market Research",
+  "topic": "Sole Source",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Competition / Limited Competition",
+   "Ethics",
+   "OCONUS",
+   "Pre-award",
+   "Problem solving situations",
+   "Simplified Acquisitions",
+   "Team building / dynamics"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "scenario",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 84
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 125
+   }
+  ],
+  "citations": [
+   "FAR 6.302-1"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0083",
+  "question": "What do you do if you receive only one offer?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Source Selection & Evaluation",
+  "topic": "Evaluation",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Competition / Limited Competition",
+   "Construction",
+   "Evaluation",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "Problem solving situations",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions",
+   "Source Selection"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "scenario",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 85
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 126
+   }
+  ],
+  "citations": [
+   "DFARS 21"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0084",
+  "question": "Name 5 market research techniques utilized in contracting?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Competition & Market Research",
+  "topic": "Market Research",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Competition / Limited Competition",
+   "Construction",
+   "Grants",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "Problem solving situations",
+   "Protests",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions",
+   "Small Business",
+   "Source Selection",
+   "Team building / dynamics",
+   "Workload management"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "leadership",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 86
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 127
+   }
+  ],
+  "citations": [
+   "FAR 10"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0086",
+  "question": "Who prepares, reviews, and approves the IGE?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Pricing, Cost & Payment",
+  "topic": "Independent Government Estimate",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Construction",
+   "Evaluation",
+   "Fiscal Law / Funding",
+   "Grants",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions",
+   "Source Selection"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 88
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 129
+   }
+  ],
+  "citations": [
+   "AFARS 51"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0087",
+  "question": "What are the elements to the IGE?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Pricing, Cost & Payment",
+  "topic": "Independent Government Estimate",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Construction",
+   "Evaluation",
+   "Fiscal Law / Funding",
+   "Grants",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions",
+   "Source Selection"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 89
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 130
+   }
+  ],
+  "citations": [
+   "AFARS 51"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0089",
+  "question": "What three agencies are protest filed with?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Protests, Claims & Disputes",
+  "topic": "Protest",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Construction",
+   "Evaluation",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "Protests",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions",
+   "Small Business",
+   "Source Selection"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 92
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 133
+   }
+  ],
+  "citations": [
+   "FAR 33"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0092",
+  "question": "After the accrual of a claim, how long does a contractor have to file their claim?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Protests, Claims & Disputes",
+  "topic": "Claims",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Construction",
+   "Fiscal Law / Funding",
+   "Grants",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "Problem solving situations",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 95
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 136
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0094",
+  "question": "You have a contract for cleaning services with a basic period of performance and several one year options for continued performance. The contract states that all options must be exercised by 1 October of each year. The basic period of performance has just expired and on 5 October you realize that you never exercised the option for continued performance. There is still an immediate need for the services. How would you try to rectify this situation?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Acquisition Planning & Contract Types",
+  "topic": "Options",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Construction",
+   "Fiscal Law / Funding",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "Problem solving situations",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "scenario",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 97
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 138
+   }
+  ],
+  "citations": [
+   "FAR 17.207"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0095",
+  "question": "When is AT/OPSEC required?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Property, Security & Special Provisions",
+  "topic": "Security",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Construction",
+   "Grants",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 98
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 139
+   }
+  ],
+  "citations": [
+   "AFARS 51"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0096",
+  "question": "What are factors to consider before terminating for default (T4D)?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Terminations & Remedies",
+  "topic": "Terminations",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Construction",
+   "Fiscal Law / Funding",
+   "IDIQ",
+   "OCONUS",
+   "Problem solving situations",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 99
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 140
+   }
+  ],
+  "citations": [
+   "FAR 49"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0098",
+  "question": "We often hear that it is the Contracting Officer's responsibility to determine that a contractor is \"Responsible \". In your own words please define what it means for a contractor to be Responsible.",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Responsibility & Exclusions",
+  "topic": "Responsibility",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Construction",
+   "Grants",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "Problem solving situations",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions",
+   "Source Selection"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 101
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 154
+   }
+  ],
+  "citations": [
+   "FAR 9.104-1"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0100",
+  "question": "What is your experience in awarding and administering contingency contracts as a Contracting Officer or Contract Specialist? What were your 2 to 4 biggest challenges experienced and how did you resolve or mitigate the challenges?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Protests, Claims & Disputes",
+  "topic": "Contingency",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Competition / Limited Competition",
+   "Construction",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "Problem solving situations",
+   "Protests",
+   "Services",
+   "Simplified Acquisitions"
+  ],
+  "classes": [
+   "I"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 103
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 159
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0113",
+  "question": "If you have a competitive requirement, how will you determine the Best Value Approach to use in regards to choosing LPTA or Tradeoff? Also, give at least one example when each is appropriate.",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Source Selection & Evaluation",
+  "topic": "Source Selection",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Construction",
+   "Evaluation",
+   "IDIQ",
+   "OCONUS",
+   "Problem solving situations",
+   "R&D",
+   "Services",
+   "Source Selection"
+  ],
+  "classes": [
+   "II"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "scenario",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 118
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 11
+   }
+  ],
+  "citations": [
+   "FAR 15.101"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0117",
+  "question": "What would be some of the reasons where the Contracting Officer would need to provide written consent before a prime contractor is allowed to enter into a subcontract?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Contract Administration",
+  "topic": "Subcontracts",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "R&D",
+   "Services",
+   "Source Selection",
+   "Construction",
+   "Grants",
+   "IDIQ",
+   "OCONUS",
+   "Problem solving situations"
+  ],
+  "classes": [
+   "II"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 122
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 43
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0139",
+  "question": "As a contracting officer there will be situations where you will disagree with the decisions/direction/strategies of your customer. How would you reconcile these situations and continue to instill a sense of customer support? How do you prepare yourself for these challenges? Give an example.",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Responsibility & Exclusions",
+  "topic": "Contracting Officer Responsibilities",
+  "alt_topics": [],
+  "tags": [
+   "Competition / Limited Competition",
+   "Communication (written & oral)",
+   "Construction",
+   "Ethics",
+   "Evaluation",
+   "Grants",
+   "IDIQ",
+   "Leadership",
+   "Management",
+   "OCONUS",
+   "Pre-award",
+   "Problem solving situations",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions",
+   "Small Business",
+   "Source Selection",
+   "Team building / dynamics"
+  ],
+  "classes": [
+   "II"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "scenario",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 145
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 116
+   }
+  ],
+  "citations": [
+   "FAR 1.602-2"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0140",
+  "question": "In a competitive source selection environment, there will be disagreements between the contracting officer, Source Selection Evaluation Board (SSEB) members, legal advisor, and/or other advisors regarding decisions/direction/strategies pertaining to the source selection process. Describe how you will reconcile such differences in a productive, cooperative manner.",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Responsibility & Exclusions",
+  "topic": "Contracting Officer Responsibilities",
+  "alt_topics": [],
+  "tags": [
+   "IDIQ",
+   "OCONUS",
+   "Leadership",
+   "Management",
+   "Communication (written & oral)",
+   "Problem solving situations",
+   "Pre-award",
+   "Evaluation",
+   "Ethics",
+   "Protests",
+   "Source Selection",
+   "Team building / dynamics"
+  ],
+  "classes": [
+   "II"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "leadership",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 146
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 119
+   }
+  ],
+  "citations": [
+   "FAR 15.303"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0141",
+  "question": "In your opinion, what are the keys to ensuring that the integrity of the competitive source selection process is maintained and that the overall acquisition is conducted in a fair and impartial manner?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Source Selection & Evaluation",
+  "topic": "Source Selection",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Construction",
+   "Ethics",
+   "Evaluation",
+   "IDIQ",
+   "Leadership",
+   "Management",
+   "OCONUS",
+   "Pre-award",
+   "Problem solving situations",
+   "Protests",
+   "R&D",
+   "Services",
+   "Source Selection",
+   "Team building / dynamics"
+  ],
+  "classes": [
+   "II"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "leadership",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 147
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 121
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0143",
+  "question": "In the performance of your duties as a contracting officer you will be required to use your discretion in making critical decisions. Describe the decision-making process you will employ and the manner in which you will prepare to defend your decisions should they be challenged, whether by others at the time and/or in a future review/investigation.",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Responsibility & Exclusions",
+  "topic": "Contracting Officer Responsibilities",
+  "alt_topics": [],
+  "tags": [
+   "Competition / Limited Competition",
+   "Communication (written & oral)",
+   "Ethics",
+   "Evaluation",
+   "Grants",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "Problem solving situations",
+   "Protests",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions",
+   "Small Business",
+   "Source Selection",
+   "Workload management"
+  ],
+  "classes": [
+   "II"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "leadership",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 149
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 123
+   }
+  ],
+  "citations": [
+   "FAR 15.308"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0145",
+  "question": "When is a Services Acquisition Strategy required?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Acquisition Planning & Contract Types",
+  "topic": "Services",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Competition / Limited Competition",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "R&D",
+   "Services"
+  ],
+  "classes": [
+   "II"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 151
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 142
+   }
+  ],
+  "citations": [
+   "AFARS 51"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0146",
+  "question": "Your contractor is seriously defaulting on a contract. What factors do you need to take into consideration prior to termination for default?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Terminations & Remedies",
+  "topic": "Terminations",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Construction",
+   "IDIQ",
+   "Management",
+   "OCONUS",
+   "Problem solving situations",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions"
+  ],
+  "classes": [
+   "II"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "scenario",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 152
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 143
+   }
+  ],
+  "citations": [
+   "FAR 49"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0147",
+  "question": "Before the award of the contract, you as the Contracting Officer received a protest. Can you proceed with the award, why or why not?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Protests, Claims & Disputes",
+  "topic": "Protest",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Competition / Limited Competition",
+   "Construction",
+   "Evaluation",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "Problem solving situations",
+   "Protests",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions",
+   "Small Business",
+   "Source Selection"
+  ],
+  "classes": [
+   "II"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 153
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 144
+   }
+  ],
+  "citations": [
+   "FAR 33"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0148",
+  "question": "Ali & Sons Cleaning Service has filed a protest with the agency after award of the camp janitorial contract. How long does the agency have to resolve the protest?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Protests, Claims & Disputes",
+  "topic": "Protest",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Competition / Limited Competition",
+   "Construction",
+   "Evaluation",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "Problem solving situations",
+   "Protests",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions",
+   "Small Business",
+   "Source Selection"
+  ],
+  "classes": [
+   "II"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 154
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 145
+   }
+  ],
+  "citations": [
+   "FAR 33.103"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0156",
+  "question": "What is the Defense Base Act, when does it apply and how is it implemented? What are the conditions for a country waiver?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Property, Security & Special Provisions",
+  "topic": "Defense Base Act",
+  "alt_topics": [],
+  "tags": [
+   "Construction",
+   "Evaluation",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "Services",
+   "Simplified Acquisitions"
+  ],
+  "classes": [
+   "II"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 162
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 176
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0157",
+  "question": "Discuss the differences in FAR Part 12 commercial procurements and non-commercial procurements under FAR Part 15.",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Authority, Ethics & Leadership",
+  "topic": "Authority, Ethics & Leadership",
+  "alt_topics": [
+   "Acceptance"
+  ],
+  "tags": [
+   "Commercial Contracts"
+  ],
+  "classes": [
+   "II"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 171
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 264
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0162",
+  "question": "Describe the difference between an OTA vs. a FAR based contract.",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Grants & Agreements",
+  "topic": "OTA vs FAR",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Competition / Limited Competition",
+   "Construction",
+   "Grants",
+   "Problem solving situations"
+  ],
+  "classes": [
+   "III"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 177
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 110
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0212",
+  "question": "Explain what strategic sourcing is. Are you aware of any strategic sources? How is this related to recent policy to conduct and submit a Business Case Analysis (BCA) for review and approval? What dollar thresholds apply to this requirement?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Competition & Market Research",
+  "topic": "Strategic Sourcing",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Construction",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "Problem solving situations",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions",
+   "Small Business",
+   "Workload management"
+  ],
+  "classes": [
+   "III"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "leadership",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 227
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 113
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0215",
+  "question": "What is CONSOLIDATION?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Competition & Market Research",
+  "topic": "Consolidation",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Competition / Limited Competition",
+   "Construction",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "Problem solving situations",
+   "Protests",
+   "R&D",
+   "Services",
+   "Small Business",
+   "Workload management"
+  ],
+  "classes": [
+   "III"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "leadership",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 230
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 148
+   }
+  ],
+  "citations": [
+   "FAR 7.107-2"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0216",
+  "question": "How can CONSOLIDATION be beneficial to the Government?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Competition & Market Research",
+  "topic": "Consolidation",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Competition / Limited Competition",
+   "Construction",
+   "IDIQ",
+   "OCONUS",
+   "Problem solving situations",
+   "Protests",
+   "R&D",
+   "Services",
+   "Small Business",
+   "Workload management"
+  ],
+  "classes": [
+   "III"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "leadership",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 231
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 149
+   }
+  ],
+  "citations": [
+   "FAR 7.102-2"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0218",
+  "question": "What is the protest decision time period for GAO?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Protests, Claims & Disputes",
+  "topic": "Protest",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Construction",
+   "Evaluation",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "Protests",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions",
+   "Small Business",
+   "Source Selection"
+  ],
+  "classes": [
+   "III"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 233
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 151
+   }
+  ],
+  "citations": [
+   "FAR 33.104"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0219",
+  "question": "Does the Govt incur interests on claims? Explain",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Protests, Claims & Disputes",
+  "topic": "Claims",
+  "alt_topics": [],
+  "tags": [
+   "Construction",
+   "Fiscal Law / Funding",
+   "Grants",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "Problem solving situations",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions"
+  ],
+  "classes": [
+   "III"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 234
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 152
+   }
+  ],
+  "citations": [
+   "FAR 33.208"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0220",
+  "question": "A KO is notified that a protest has been filed with GAO, what steps shall the KO and agency take in response to the protest?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Protests, Claims & Disputes",
+  "topic": "Protest",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Competition / Limited Competition",
+   "Construction",
+   "Evaluation",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "Problem solving situations",
+   "Protests",
+   "R&D",
+   "Services",
+   "Simplified Acquisitions",
+   "Source Selection"
+  ],
+  "classes": [
+   "III"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 235
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 153
+   }
+  ],
+  "citations": [
+   "FAR 33.104"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0222",
+  "question": "As the Contracting Officer on a source selection you recently sent out the notice to unsuccessful offerors and have received several requests for debriefings. Some of the requests are for pre-award debriefs and some are for post award debriefs. What are the things you may/may not tell the offerors in the debriefings?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Source Selection & Evaluation",
+  "topic": "Source Selection",
+  "alt_topics": [],
+  "tags": [
+   "Communication (written & oral)",
+   "Competition / Limited Competition",
+   "Construction",
+   "Evaluation",
+   "IDIQ",
+   "OCONUS",
+   "Pre-award",
+   "Problem solving situations",
+   "Protests",
+   "R&D",
+   "Services",
+   "Small Business",
+   "Source Selection"
+  ],
+  "classes": [
+   "III"
+  ],
+  "unit": "ACC-All",
+  "units": [
+   "ACC-All"
+  ],
+  "kind": "knowledge",
+  "sources": [
+   {
+    "src": "pam-xlsx-2026-01",
+    "row": 237
+   },
+   {
+    "src": "pam-csv-legacy",
+    "row": 156
+   }
+  ],
+  "citations": [
+   "FAR 15.505"
+  ],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": []
+ },
+ {
+  "id": "Q0274",
+  "question": "On a late Saturday evening at Osan Air Base, a major water line bursts in a motor pool. The facility manager panics and directly calls an off-base Korean plumbing company to fix the pipe immediately to prevent flooding. The company completes the work and submits an invoice for $18,000 (equivalent in KRW) on Monday morning. The facility manager brings you the invoice and asks you to \"just pay it.\"",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Authority, Ethics & Leadership",
+  "topic": "Unauthorized Commitment",
+  "alt_topics": [],
+  "tags": [
+   "Korea",
+   "Problem solving situations"
+  ],
+  "classes": [
+   "I",
+   "II"
+  ],
+  "unit": "411th CSB",
+  "units": [
+   "411th CSB"
+  ],
+  "kind": "scenario",
+  "sources": [
+   {
+    "src": "deck-2026-06-02",
+    "slide": 3
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": [
+   "verify-locally"
+  ]
+ },
+ {
+  "id": "Q0275",
+  "question": "You have just awarded a $150,000 contract for IT network equipment to Company A. You notify the unsuccessful bidder, Company B, of the award.\nThree days after you notify them, Company B files a formal protest with the Government Accountability Office (GAO). They claim your evaluation of Company A's technical proposal was unfair and that Company A does not meet the requirements.\nImmediate Actions: What is the very first thing you must do when you receive notice of the GAO protest?\nStop-Work Order: Are you required to stop the winning company (Company A) from performing the work? What dictates this timeline?\nAgency Report: How long does your office have to pull together the official Agency Report to submit to the GAO?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Protests, Claims & Disputes",
+  "topic": "GAO Protest",
+  "alt_topics": [],
+  "tags": [
+   "Protests",
+   "Problem solving situations"
+  ],
+  "classes": [
+   "II"
+  ],
+  "unit": "411th CSB",
+  "units": [
+   "411th CSB"
+  ],
+  "kind": "scenario",
+  "sources": [
+   {
+    "src": "deck-2026-07-07",
+    "slide": 3
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": [
+   "verify-locally"
+  ]
+ },
+ {
+  "id": "Q0278",
+  "question": "Your customer has a service requirement for maintenance to some power conditioners with an estimated cost of $40K. They inform you the power conditioners are produced in the U.S. and the maintenance can only be completed by the manufacturer due to proprietary information and specialized parts. What do you need to consider and what are the steps you need to take to award this contract?",
+  "answer": "",
+  "answer_status": "open",
+  "answer_source": "",
+  "deck_notes": [],
+  "alt_answers": [],
+  "domain": "Competition & Market Research",
+  "topic": "Sole Source / Brand Name",
+  "alt_topics": [],
+  "tags": [
+   "Problem solving situations"
+  ],
+  "classes": [
+   "I",
+   "II"
+  ],
+  "unit": "411th CSB",
+  "units": [
+   "411th CSB"
+  ],
+  "kind": "scenario",
+  "sources": [
+   {
+    "src": "deck-2026-04-29",
+    "slide": 3
+   }
+  ],
+  "citations": [],
+  "rfo": {
+   "status": "pending",
+   "crosswalk": [],
+   "notes": ""
+  },
+  "flags": [
+   "verify-locally"
+  ]
+ }
+]

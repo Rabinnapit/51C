@@ -1,0 +1,386 @@
+{
+  "reviewed_on": "2026-09-14",
+  "reviewer_model": "claude-opus-5",
+  "scope": [
+    "FS37-FS72",
+    "TL06 TL17 TL20 TL21 TL33 TL63 TL64",
+    "TL71-TL74"
+  ],
+  "items": [
+    {
+      "id": "TL06",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "Recomputed $4,900,000 + |-$200| = $4,900,200 under Policy v12 para 4.2 ('plus the absolute value of a modification') and the Summary of Key Changes entry for 4.2 (warrant for a modification 'equal to or greater than the cumulative value of the contract including the modification'). Above $1M and at or below $5M: Class II, $5M tier (Table 1). value_number, correct_class and explanation correct."
+    },
+    {
+      "id": "TL17",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "$30,000,000 + $6,200,000 = $36,200,000. Above every Class II tier, including the SaP ceiling of $9,000,000 (regulations.json sap_commercial_ceiling), which in any case applies only to commercial buys; these are non-commercial services. At or below $50M: Class III, $50M tier. Explanation correct."
+    },
+    {
+      "id": "TL20",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "$40,000,000 + $2,300,000 = $42,300,000, Class III, $50M tier, taking the settlement modification at the $2,300,000 payment, the only modification figure the facts give. If an office instead valued the modification at the price it removes, the class is still III (at most $40M + $40M = $80M, $100M tier), and the card already sends the reader to the Chief, C&P. RFO FAR Part 49 is 'Termination of Contracts' and 49.111 is 'Review of proposed settlements' (acquisition.gov RFO Part 49 page), which supports the caution that settlement review is separate from warrant authority."
+    },
+    {
+      "id": "TL21",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "$3,100,000 + |-$1,400,000| = $4,500,000. Above $1M and at or below $5M: Class II, $5M tier. Explanation correct."
+    },
+    {
+      "id": "TL33",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "$250,000,000 + $0 = $250,000,000. Above the Class III top of $100M and at or below $250M: Class IV, $250M tier. RFO FAR 43.201 (Part 43 'Contract Modifications', page updated 07/28/2026) defines administrative change as 'a unilateral contract change, in writing, that does not affect the substantive rights of the parties (e.g., a change in the paying office or the appropriation data)', matching the explanation."
+    },
+    {
+      "id": "TL63",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "$64,000,000 + |-$5,600,000| = $69,600,000. Above $50M and at or below $100M: Class III, $100M tier. Explanation correct."
+    },
+    {
+      "id": "TL64",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "$1,900,000 + |-$410,000| = $2,310,000. Above $1M and at or below $5M: Class II, $5M tier; commercial status does not matter at this value. Explanation correct."
+    },
+    {
+      "id": "TL71",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "explanation",
+          "before": "A later modification is measured against the contract's cumulative value including the modification, so even a small one would take this contract past the SAT and beyond Class I.",
+          "after": "A later modification is measured against the contract's cumulative value including the modification, so any modification worth more than $7,500, added or deducted, would take this contract past the SAT and beyond Class I.",
+          "source": "Policy v12 para 4.2 (absolute value of a modification) and Table 1 (Class I = SAT); SAT re-read on acquisition.gov FAR 2.101 (FAC 2026-01): 'Simplified acquisition threshold means $350,000'. $342,500 + $7,500 = $350,000 is still at the SAT, so a modification of $7,500 or less stays within Class I; the old sentence contradicted the card's own '$7,500 to spare'."
+        }
+      ],
+      "notes": "value_number 342500 and Class I confirmed."
+    },
+    {
+      "id": "TL72",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "Policy v12 applies the threshold to delivery and task orders, and the order is the instrument signed: $287,000, at or below the $350,000 SAT, Class I. The RFO Part 16 page titles 16.506 'Postaward procedures for placement of task and delivery orders', so the '(ordering)' cite is accurate; 16.507 adds procedures for multiple-award contracts."
+    },
+    {
+      "id": "TL73",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "$190,000 + 2 x $95,000 = $380,000. Above the SAT and at or below $500K: Class II, $500K tier. tools/check_ladder.py lists TL73 for a hand check only because it adds each distinct figure once ($190,000 + $95,000); the hand check matches."
+    },
+    {
+      "id": "TL74",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "$310,000 + $62,000 = $372,000. Above the SAT and at or below $500K: Class II, $500K tier. $372,000 - $350,000 = $22,000, as stated."
+    },
+    {
+      "id": "FS37",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "May 2027 falls in FY27. 31 U.S.C. 1502(a) (law.cornell.edu): a balance is available 'only for payment of expenses properly incurred during the period of availability'. The lease authority in 10 U.S.C. 3133(a)(2)(B) needs a period that begins in the funds' fiscal year, so it does not reach a May 2027 rental. Time. GAO chapter title 'Availability of Appropriations: Time' confirmed on the gao.gov Red Book page."
+    },
+    {
+      "id": "FS38",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "GAO, Availability of Appropriations: Time: the bona fide needs rule 'does not prevent maintaining a legitimate inventory at reasonable and historical levels'; the problem arises 'when the inventory crosses the line from reasonable to excessive'. Three years of paper is excessive. Time."
+    },
+    {
+      "id": "FS39",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "Future-year need bought with expiring funds, with no lead-time or stock-level facts. Time under 31 U.S.C. 1502(a)."
+    },
+    {
+      "id": "FS40",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "GAO, Obligation of Appropriations: 'any required minimum purchase must be obligated when the contract is executed; subsequent obligations occur as work orders or delivery orders are placed, and are chargeable to the fiscal year in which the order is placed.' Chapter title confirmed in the Red Book Vol. II table of contents. No violation."
+    },
+    {
+      "id": "FS41",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "explanation",
+          "before": "Building a new permanent structure would be construction and would need construction funds instead.",
+          "after": "Building a new permanent structure would be construction, which O&M can fund only as an unspecified minor military construction project within the 10 U.S.C. 2805(c) limit.",
+          "source": "10 U.S.C. 2805(c) (law.cornell.edu): 'The Secretary concerned may spend from appropriations available for operation and maintenance amounts necessary to carry out an unspecified minor military construction project costing not more than $4,000,000.' The old sentence said new construction always needs construction funds."
+        },
+        {
+          "field": "cite",
+          "before": "31 U.S.C. 1301(a) (purpose statute); GAO Red Book (Availability of Appropriations: Purpose)",
+          "after": "31 U.S.C. 1301(a) (purpose statute); 10 U.S.C. 2805(c) (O&M for unspecified minor military construction); GAO Red Book (Availability of Appropriations: Purpose)",
+          "source": "10 U.S.C. 2805(c), law.cornell.edu, as above."
+        }
+      ],
+      "notes": "Bucket No violation confirmed: repairing an existing barracks roof is an O&M expense. The dollar figure is left out of the explanation on purpose because Congress has changed the 2805(c) limit several times."
+    },
+    {
+      "id": "FS42",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "GAO, Availability of Appropriations: Time (Deobligations): 'If the agency deobligated the appropriation before the expiration of the period of availability, the deobligated amount is available to incur new obligations.' No violation."
+    },
+    {
+      "id": "FS43",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "statement",
+          "before": "adds the next increment of the same appropriation before the contractor's costs reach the funded amount.",
+          "after": "adds the next increment of the same current-year appropriation before the contractor's costs reach the funded amount.",
+          "source": "GAO, Availability of Appropriations: Time: 'a limitation of funds clause does not affect the application of the bona fide needs rule and the severable test.' Incremental funding usually spans fiscal years, so 'the same appropriation' could be read as next year's O&M, which for nonseverable work is a Time problem the clause does not cure. Naming a current-year increment makes No violation follow from the facts."
+        }
+      ],
+      "notes": "Explanation (funded amount kept ahead of costs, within 31 U.S.C. 1341(a)(1)) is correct once the increment is current money."
+    },
+    {
+      "id": "FS44",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "Testing prototypes of a system in development is an RDT&E object; 31 U.S.C. 1301(a) read on law.cornell.edu. No violation."
+    },
+    {
+      "id": "FS45",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "31 U.S.C. 1517(a) (law.cornell.edu) bars obligations exceeding '(1) an apportionment; or (2) the amount permitted by regulations prescribed under section 1514(a)'; 1514 is headed 'Administrative division of apportionments', so the 'administrative subdivision' parenthetical is a fair shorthand. An allotment is a formal subdivision. Amount."
+    },
+    {
+      "id": "FS46",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "statement",
+          "before": "In July the resource manager confirms the FY26 O&M funding line is exhausted, and a contracting officer",
+          "after": "In July the resource manager confirms no FY26 O&M funds are available, and a contracting officer",
+          "source": "31 U.S.C. 1341(a)(1)(A) (govinfo.gov): no obligation 'exceeding an amount available in an appropriation or fund'. A 'funding line' can be an internal budget line whose exhaustion is not by itself a fund-control breach; the explanation already rests on 'no funds available', so the statement now says so."
+        }
+      ],
+      "notes": "Amount."
+    },
+    {
+      "id": "FS47",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "GAO, Availability of Appropriations: Purpose: the general rule is that government employees must clothe themselves in appropriate attire, with three statutory exceptions (5 U.S.C. 7903 protective clothing, the Federal Employees Uniform Act, OSHA), none of which covers business suits; formal wear for official events is also a personal expense. Purpose."
+    },
+    {
+      "id": "FS48",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "Fuel for routine training is an operating (O&M) cost, not an RDT&E object. Purpose under 31 U.S.C. 1301(a)."
+    },
+    {
+      "id": "FS49",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "GAO, Time (Deobligations): after expiration 'the deobligated amount is not available to incur a new obligation, but is available to cover appropriate adjustments to obligations in the expired account.' 31 U.S.C. 1553(a) (law.cornell.edu): the expired account stays available 'for recording, adjusting, and liquidating obligations properly chargeable to that account.' FY24 one-year O&M expired 30 Sep 2024 and is not yet closed. Time."
+    },
+    {
+      "id": "FS50",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "September 2026 electricity is an FY26 need. Under 31 U.S.C. 1553(a) the expired FY26 account records and pays it; charging FY27 funds uses current money for a prior-year need contrary to 1502(a). Time."
+    },
+    {
+      "id": "FS51",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "GAO, Time: a contract for a study and final report is nonseverable and chargeable to the fiscal year current at award, and 'a limitation of funds clause does not affect the application of the bona fide needs rule and the severable test.' The funds are O&M, so no RDT&E incremental-funding policy is in play. Time."
+    },
+    {
+      "id": "FS52",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "10 U.S.C. 3133(a)(1) (law.cornell.edu): a severable services contract may cross fiscal years if '(without regard to any option to extend the period of the contract) the contract period does not exceed one year'; 3133(b) lets that year's funds cover the total amount of that contract only. Unexercised option years are later needs. Time."
+    },
+    {
+      "id": "FS53",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "31 U.S.C. 1341(a)(1)(B) (govinfo.gov): may not 'involve either government in a contract or obligation for the payment of money before an appropriation is made unless authorized by law'. GAO, Availability of Appropriations: Amount, describes 'subject to the availability of appropriations' as language that makes clear contracts cannot become binding in advance of appropriations. No violation."
+    },
+    {
+      "id": "FS54",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "GAO, Purpose: appropriations generally are not available for bottled water where the public supply is safe, 'However, an agency may purchase bottled water where a building's water supply is unpotable'; for remote sites without potable water the choice of method is the agency's. No violation."
+    },
+    {
+      "id": "FS55",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "U.S. fiscal-law part correct: O&M is applied only to its own objects (31 U.S.C. 1301(a)) and no U.S. appropriation pays the LCS portion. The Korea facts (LCS awarded through ROK MND; LCS and O&M not mixed in one solicitation) match docs/AGENT_BRIEF.md; flag korea-verify-cp kept. 10 U.S.C. 2350j (law.cornell.edu) covers cash burden-sharing contributions placed in a DoD account and does not turn ROK-awarded LCS into a U.S. appropriation. No violation."
+    },
+    {
+      "id": "FS56",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "31 U.S.C. 3302(b) (law.cornell.edu): an official 'receiving money for the Government from any source shall deposit the money in the Treasury as soon as practicable without deduction for any charge or claim'; the statement rules out retention authority. GAO, Availability of Appropriations: Amount, says the augmentation rule 'must be derived from several separate enactments', naming 31 U.S.C. 3302(b), 31 U.S.C. 1301(a) and 18 U.S.C. 209, so bucketing augmentation as Purpose with a 1301(a) cite is supportable and matches FS05, FS12 and FS34. The Amount chapter pointer is correct: that is where GAO discusses augmentation. Purpose."
+    },
+    {
+      "id": "FS57",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "GAO, Availability of Appropriations: Amount (Augmentation of Appropriations; Gifts and Donations to the Government), read on gao.gov: 'a government agency may not accept for its own use (i.e., for retention by the agency or credit to its own appropriations) gifts of money or other property in the absence of specific statutory authority', and 'acceptance of a gift of money or other property by an agency lacking statutory authority to do so is an improper augmentation.' The statement rules out gift acceptance authority, so the explanation and the Amount chapter pointer in the cite are right. Purpose bucket and 31 U.S.C. 1301(a) cite (text read on law.cornell.edu): the same chapter says the augmentation rule 'must be derived from several separate enactments', naming 31 U.S.C. 3302(b), 31 U.S.C. 1301(a) and 18 U.S.C. 209, and that it 'is related to the concept of purpose availability'; this matches FS05, FS12, FS34, FS56 and FS71. Game-level caution, no change made: the chapter also says the augmentation rule 'is most closely related to the subject of this chapter' (availability as to amount), so a player who shoots Amount on any augmentation item has a GAO-based argument. Ethics sentence: 5 CFR 2635.203(d) (law.cornell.edu) makes a person who 'does business or seeks to do business with the employee's agency' a prohibited source, and the definition of gift leaves out only a gift 'accepted by the Government under specific statutory authority', which this office lacks, so declining and involving the ethics counselor is sound. GAO also notes that agencies without gift retention authority 'must report gifts of property to the General Services Administration'; the advice to decline is not inconsistent with that. Purpose."
+    },
+    {
+      "id": "FS58",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "Engineering and prototype work to develop a new capability is an RDT&E object; a shortfall in RDT&E does not make O&M available. Purpose under 31 U.S.C. 1301(a)."
+    },
+    {
+      "id": "FS59",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "GAO, Availability of Appropriations: Amount: absent an express appropriation provision, the Antideficiency Act 'proscribes indemnification on the grounds that it would constitute the obligation of funds not yet appropriated'; an agency that needs indemnity may 'insert a provision limiting the government's liability to available appropriations or seek broader authority from Congress', and a promise made subject to future appropriations still creates a moral obligation. Matches the explanation. Amount."
+    },
+    {
+      "id": "FS60",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "statement",
+          "before": "is awarded with no funds obligated, because the office expects its first order, placed later, to exceed the minimum.",
+          "after": "is awarded with no funds obligated or available, because the office expects its first order, placed later, to exceed the minimum.",
+          "source": "GAO, Obligation of Appropriations: 'any required minimum purchase must be obligated when the contract is executed'. GAO, Availability of Appropriations: Amount: 'The incurring of an obligation in excess or advance of appropriations violates the Act, and this is not affected by the agency's failure to record the obligation.' Not recording the minimum breaks 31 U.S.C. 1501(a); it is an Antideficiency Act (Amount) violation only if the $100,000 exceeds the funds available, which the old statement did not say."
+        },
+        {
+          "field": "explanation",
+          "before": "Awarding with none puts the Government's commitment ahead of its money.",
+          "after": "Awarding with no funds available puts the Government's commitment ahead of its money, which the Antideficiency Act forbids.",
+          "source": "31 U.S.C. 1341(a)(1)(A) (govinfo.gov) and the GAO passages above."
+        }
+      ],
+      "notes": "Amount."
+    },
+    {
+      "id": "FS61",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "GAO, Time: 'The bona fide needs determination is based not on the contract type but on the nature of the work being performed', and services that are 'continuing and recurring in nature' are severable. Monthly inspections recur, so the label does not control, and 24 months exceeds the one-year limit in 10 U.S.C. 3133(a)(1). Time."
+    },
+    {
+      "id": "FS62",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "GAO, Time: inventory 'at reasonable and historical levels' is a current need, and replacement stock meets the current year's need 'as long as it is intended to replace stock used in that year'; buying 50 percent above the authorized level is for future needs. Delivery in FY27 is not the defect. Time."
+    },
+    {
+      "id": "FS63",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "30 Sep 2026 is the last day of FY26 and a twelve-month period from that date ends in FY27. 10 U.S.C. 3133 speaks of entering into a contract; FAR 32.703-3(b) (acquisition.gov, FAC 2026-01) extends the authority to 'enter into a contract, exercise an option, or place an order' for severable services for a period of one year or less that begins in one fiscal year and ends in the next. Cite left unchanged: the RFO Part 32 page lists 32.703-3 'Contracts crossing fiscal years' but its text was cut off when fetched. No violation."
+    },
+    {
+      "id": "FS64",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "GAO, Time: 'If an obligation is proper when made, unforeseen delays that cause delivery or performance to extend into the following fiscal year will not invalidate the obligation.' A 60-day lead time from 1 Aug 2026 ends in FY26. No violation."
+    },
+    {
+      "id": "FS65",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "Severable services are a need of the year performed, and 10 U.S.C. 3133 is permissive ('may'), so year-by-year funding is lawful. Making the FY27 months subject to the availability of FY27 funds keeps the award within 31 U.S.C. 1341(a)(1)(B) (text read on govinfo.gov). No violation."
+    },
+    {
+      "id": "FS66",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "statement",
+          "before": "within the statutory 1 percent limit.",
+          "after": "within the 1 percent cap and the balance canceled at closing.",
+          "source": "31 U.S.C. 1553(b)(1) (law.cornell.edu): only obligations 'that would have been properly chargeable to that account, both as to purpose and in amount, before closing'; 1553(b)(2) (govinfo.gov, 2023 ed.): charges 'may not exceed an amount equal to 1 percent of the total appropriations for that account'. GAO, Availability of Appropriations: Time: the cumulative total 'may not exceed the lesser of 1 percent of the current appropriation or the remaining balance (whether obligated or unobligated) canceled when the appropriation account is closed.' The old text gave only the 1 percent cap, so a bill larger than the canceled balance would have fit the facts."
+        },
+        {
+          "field": "explanation",
+          "before": "capped at 1 percent of that current appropriation.",
+          "after": "capped at the lesser of 1 percent of that current appropriation or the balance canceled when the account closed.",
+          "source": "Same sources as the statement change."
+        }
+      ],
+      "notes": "FY19 one-year O&M expired 30 Sep 2019 and closed 30 Sep 2024 under 31 U.S.C. 1552(a). No violation."
+    },
+    {
+      "id": "FS67",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "31 U.S.C. 1341(a)(1)(B) (govinfo.gov) as quoted for FS53; no availability clause and no statute authorizing the advance contract is stated. Amount."
+    },
+    {
+      "id": "FS68",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "statement",
+          "before": "while holding $1.2 million in certified O&M",
+          "after": "with only $1.2 million of O&M available",
+          "source": "31 U.S.C. 1341(a)(1)(A) (govinfo.gov) bars an obligation 'exceeding an amount available in an appropriation or fund'. Holding $1.2 million of certified funds does not by itself show that the O&M account or allotment lacks the other $800,000, so the Amount answer and the explanation's '$1.2 million available' rested on an unstated fact; the statement now states it."
+        }
+      ],
+      "notes": "U.S. fiscal-law part otherwise correct: LCS money is not a U.S. appropriation and cannot fund the gap. Korea LCS description left as is; flag korea-verify-cp kept."
+    },
+    {
+      "id": "FS69",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "Obligations actually exceed the allotment, a 31 U.S.C. 1517(a) violation regardless of intent, and 1517(b) requires the report. 31 U.S.C. 1501(a) (law.cornell.edu): record an obligation only on documentary evidence of 'a binding agreement ... in writing'. Amount."
+    },
+    {
+      "id": "FS70",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "Buying production units is a procurement object; being within RDT&E's period of availability settles only time. Purpose under 31 U.S.C. 1301(a)."
+    },
+    {
+      "id": "FS71",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "U.S. fiscal-law part correct: outside money paying part of a cost an O&M contract must bear is an augmentation, which GAO derives in part from 31 U.S.C. 1301(a), so the Purpose bucket and cite are supportable (see FS56). 10 U.S.C. 2350j covers cash burden-sharing contributions to a DoD account, not ROK-awarded LCS. Korea facts match docs/AGENT_BRIEF.md ('O&M and LCS cannot be mixed in one solicitation'); flag korea-verify-cp kept. Purpose."
+    },
+    {
+      "id": "FS72",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "GAO, Availability of Appropriations: Purpose (read on gao.gov): where 'either of two appropriations can be construed as available for a particular object, but neither can reasonably be called the more specific of the two ... the agency must select which to charge', and 'Once that election has been made, the agency must continue to use the same appropriation for that purpose unless the agency informs Congress of its intent to change for the next fiscal year.' That supports 'picks one and must stick with it', the point that A running low is no reason to switch, and the notice-for-next-year sentence. The augmentation clause is supported by GAO, Availability of Appropriations: Amount: 'Augmentation issues also can arise when an agency is trying to decide which of its appropriations to use for a given object', with an election allowed 'as long as it remained consistent thereafter'. The one exception GAO gives, statutory language that clearly makes both appropriations available to supplement each other, it calls 'Even rarer', and nothing in the statement suggests it. Purpose bucket and 31 U.S.C. 1301(a) cite correct."
+    }
+  ],
+  "generator_templates": [
+    {
+      "template": "severable (genSeverable, src/arcade/js/games/fiscal-asteroids.js)",
+      "finding": "Rule correct; no problem found. The code picks a start date inside the current fiscal year (day 1 to 28, so month arithmetic never clamps), awards in the same fiscal year on or up to 45 days before the start, sets end = start + n months - 1 day, and keeps only periods that end after 30 September. For n = 6 to 12 the period is at most one year, begins in this fiscal year and ends in the next, so 10 U.S.C. 3133(a)(1) applies and 3133(b) lets this year's funds cover the whole amount: No violation. For n = 13 to 24 the authority does not apply at all, so services after 30 September are later-year needs under 31 U.S.C. 1502(a): Time. The explanation's fiscal-year list (fyRun) names each later year correctly.",
+      "source": "10 U.S.C. 3133(a) and (b), law.cornell.edu; 31 U.S.C. 1502(a), law.cornell.edu; code lines 96-118."
+    },
+    {
+      "template": "allotment (genAllotment, src/arcade/js/games/fiscal-asteroids.js)",
+      "finding": "Rule correct; no problem found. used = allotment - room; the over case orders room + $500 to $60,000, so total > allotment exactly when the bucket is Amount; otherwise the order is $1,000 up to room, and reaching the allotment exactly is labeled No violation, which matches the statute's word 'exceeding'. The statement closes off the other buckets: supplies 'needed now' (Time) bought with O&M (Purpose).",
+      "source": "31 U.S.C. 1517(a), law.cornell.edu ('may not make or authorize an expenditure or obligation exceeding (1) an apportionment; or (2) the amount permitted by regulations prescribed under section 1514(a)'); 31 U.S.C. 1514(a) (administrative division of apportionments); code lines 120-136."
+    },
+    {
+      "template": "stored (genStored, src/arcade/js/games/fiscal-asteroids.js)",
+      "finding": "Rule correct; no legal problem found. Next-year case: the purchase is dated 1 to 28 September of the current fiscal year and the event starts between 1 October and 31 July of the next fiscal year (ending 2 to 9 days later), so fyOf(from) > fy always holds and the bucket is Time. The statement says the items are delivered at once and stored for that event, so neither the lead-time exception nor replacement of stock used this year is in the facts, and the purchase serves a next-year need that 31 U.S.C. 1502(a) keeps off this year's money. Current-year case: the purchase is dated 1 to 20 September, the event starts at least 3 days later and no later than 27 September, and its end is capped at 30 September, so the whole event falls in the current fiscal year and No violation is right; buying near year-end is not itself improper. Amounts run $9,000 to $240,000 of O&M for common field items, and no other Purpose or Amount facts are given. Wording nit only, no rule error: when the end date is capped the explanation reads, for example, 'runs 27 to 30 September 2026, before FY26 ends on 30 September 2026'; 'by the time FY26 ends' would be exact.",
+      "source": "31 U.S.C. 1502(a), law.cornell.edu ('available only for payment of expenses properly incurred during the period of availability'); GAO, Availability of Appropriations: Time, read on gao.gov: 'An agency may not obligate funds when it is apparent from the outset that there will be no requirement until the following fiscal year'; 'where an obligation is made toward the end of a fiscal year and it is clear from the facts and circumstances that the need relates to the following fiscal year, the bona fide needs rule has been violated'; lead time applies 'where materials cannot be obtained in the same fiscal year in which they are needed and contracted for'; stock replacement counts 'as long as it is intended to replace stock used in that year'; year-end timing 'does not, in and of itself, establish anything improper'. Code lines 138-160."
+    }
+  ],
+  "summary": {
+    "checked": 47,
+    "fixed": 7,
+    "removed": 0,
+    "unverifiable": [
+      "Korea LCS procedure in FS55, FS68 and FS71 (ROK MND award chain, USFK J4 role, no mixing with O&M) rests on docs/AGENT_BRIEF.md and the 411th sources; no public primary source was found, so the korea-verify-cp flags stay.",
+      "RFO FAR 32.703-3 text could not be read (RFO Part 32 page cut off on fetch); only legacy FAR 32.703-3(b) was read. No in-scope item cites it."
+    ]
+  }
+}

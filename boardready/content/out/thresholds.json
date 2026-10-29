@@ -1,0 +1,543 @@
+{
+  "verified_on": "2026-09-13",
+  "thresholds": [
+    {
+      "id": "mpt",
+      "name": "Micro-purchase threshold (MPT)",
+      "value": "$15,000",
+      "value_number": 15000,
+      "applies": "standard",
+      "cite": "RFO FAR 2.101 (definition of micro-purchase threshold); 41 U.S.C. 1902",
+      "url": "https://www.acquisition.gov/far/2.101",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Read on acquisition.gov FAR 2.101 (page header FAC 2026-01, effective 03/13/2026) and confirmed retained in the RFO Part 2 model deviation text at https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-2. Raised from $10,000 by FAR Case 2024-001 (FAC 2025-06, inflation adjustment) effective 1 Oct 2025. Carve-outs in the same definition: $2,000 for construction subject to wage-rate (Davis-Bacon) requirements; $2,500 for services subject to the Service Contract Labor Standards statute. Board angle: purchases at or below the MPT may be awarded without soliciting competitive quotations if the KO or appointed cardholder considers the price reasonable - RFO FAR 12.402(b) (RFO moved micro-purchase procedures to Subpart 12.4; RFO FAR 13.401(a) simply says 'Follow the procedure in 12.4'). Verified 13 Sep 2026 on the RFO Part 12 and Part 13 pages. DoD note: Class Deviation 2024-O0011 lets combatant commanders authorize higher MPTs for covered operations through 30 Sep 2028 (carried forward by DFARS Part 213 deviation 2026-O0029). Verifier 13 Sep 2026: $15,000 and the $2,000 / $2,500 carve-outs re-read on FAR 2.101 (FAC 2026-01) and the RFO Part 2 page; the 2024-O0011 carry-forward sentence re-read in DFARS deviation 2026-O0029 Attachment A1 (and repeated in the DFARS 212 deviation 2026-O0028)."
+    },
+    {
+      "id": "mpt_contingency_us",
+      "name": "Micro-purchase threshold - contingency / CBRN defense / disaster / emergency, inside the United States",
+      "value": "$25,000",
+      "value_number": 25000,
+      "applies": "contingency (inside US)",
+      "cite": "RFO FAR 2.101; FAR 13.201(g)(1)(i); 41 U.S.C. 1903",
+      "url": "https://www.acquisition.gov/far/2.101",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Read verbatim on FAR 2.101 (FAC 2026-01). Applies to acquisitions that, as determined by the head of the agency, support a contingency operation; facilitate defense against or recovery from cyber, nuclear, biological, chemical or radiological attack; support international disaster assistance; or support an emergency or major disaster response. Legacy FAR 13.201(g) cite still resolves on acquisition.gov; RFO Part 13 section number for this paragraph was not confirmed. Verifier 13 Sep 2026: figure re-read verbatim on FAR 2.101 (FAC 2026-01, eff. 03/13/2026) and FAR 13.201(g)."
+    },
+    {
+      "id": "mpt_contingency_oconus",
+      "name": "Micro-purchase threshold - contingency / CBRN defense / disaster / emergency, outside the United States",
+      "value": "$40,000",
+      "value_number": 40000,
+      "applies": "contingency (outside US)",
+      "cite": "RFO FAR 2.101; FAR 13.201(g)(1)(ii); 41 U.S.C. 1903",
+      "url": "https://www.acquisition.gov/far/13.201",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "FAR 13.201(g)(1)(ii) read verbatim: '$40,000 in the case of any contract to be awarded and performed, or purchase to be made, outside the United States.' Same triggering conditions as the $25,000 tier. Korea-relevant: applies only when the head of the agency has made the contingency/emergency determination - not a standing OCONUS figure. korea-verify-cp for any local implementation. Verifier 13 Sep 2026: figure re-read verbatim on FAR 2.101 (FAC 2026-01, eff. 03/13/2026) and FAR 13.201(g)."
+    },
+    {
+      "id": "sat",
+      "name": "Simplified acquisition threshold (SAT)",
+      "value": "$350,000",
+      "value_number": 350000,
+      "applies": "standard",
+      "cite": "RFO FAR 2.101 (definition of simplified acquisition threshold); 41 U.S.C. 134",
+      "url": "https://www.acquisition.gov/far/2.101",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Read on acquisition.gov FAR 2.101 (FAC 2026-01) and confirmed retained in the RFO Part 2 model deviation text. Raised from $250,000 by FAR Case 2024-001 (FAC 2025-06) effective 1 Oct 2025. Army Warranting Program Policy v12 Table 1: Class I warrant = SAT; the policy deliberately writes 'SAT' rather than a dollar figure so warrants need not be reissued when the value changes. Board angle: SAT drives Part 13 simplified procedures, the automatic small business reservation, synopsis/notice rules, the Service of Protest provision, and 10 U.S.C. 1724 KO qualification requirements above SAT. Verifier 13 Sep 2026: figure re-read verbatim on FAR 2.101 (FAC 2026-01, eff. 03/13/2026) and the RFO Part 2 model deviation page."
+    },
+    {
+      "id": "sat_contingency_us",
+      "name": "Simplified acquisition threshold - contingency / CBRN defense / disaster / emergency, inside the United States",
+      "value": "$1,000,000",
+      "value_number": 1000000,
+      "applies": "contingency (inside US)",
+      "cite": "RFO FAR 2.101; 41 U.S.C. 1903",
+      "url": "https://www.acquisition.gov/far/2.101",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Read verbatim on FAR 2.101 (FAC 2026-01): '$1 million' for contracts awarded and performed, or purchases made, inside the United States when the head of the agency determines the acquisition supports a contingency operation, CBRN attack defense/recovery, international disaster assistance, or emergency/major disaster response. Verifier 13 Sep 2026: figure re-read verbatim on FAR 2.101 (FAC 2026-01, eff. 03/13/2026) and the RFO Part 2 model deviation page."
+    },
+    {
+      "id": "sat_contingency_oconus",
+      "name": "Simplified acquisition threshold - contingency / CBRN defense / disaster / emergency, outside the United States",
+      "value": "$2,000,000",
+      "value_number": 2000000,
+      "applies": "contingency (outside US)",
+      "cite": "RFO FAR 2.101; 41 U.S.C. 1903",
+      "url": "https://www.acquisition.gov/far/2.101",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Read verbatim on FAR 2.101 (FAC 2026-01): '$2 million' for contracts awarded and performed, or purchases made, outside the United States under the same triggering determination. Korea-relevant only when a contingency/emergency determination is in effect; korea-verify-cp. Verifier 13 Sep 2026: figure re-read verbatim on FAR 2.101 (FAC 2026-01, eff. 03/13/2026) and the RFO Part 2 model deviation page."
+    },
+    {
+      "id": "sat_humanitarian_peacekeeping",
+      "name": "Simplified acquisition threshold - humanitarian or peacekeeping operation, outside the United States",
+      "value": "$650,000",
+      "value_number": 650000,
+      "applies": "humanitarian or peacekeeping operation (outside US)",
+      "cite": "RFO FAR 2.101; 10 U.S.C. 3015; 41 U.S.C. 153",
+      "url": "https://www.acquisition.gov/far/2.101",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Read on FAR 2.101 (FAC 2026-01): '$650,000' for any contract to be awarded and performed, or purchase to be made, outside the United States in support of a humanitarian or peacekeeping operation. Included because boards sometimes ask for every SAT tier; distinguish it from the $2 million contingency tier. Verifier 13 Sep 2026: '$650,000' re-read on FAR 2.101. Caution on the statutory cite: 10 U.S.C. 3015 as read at law.cornell.edu is titled 'Simplified acquisition threshold', defines 'humanitarian or peacekeeping operation', and expresses the outside-US figure as 'two times the amount specified in section 134 of title 41' rather than a dollar figure - the FAR 2.101 $650,000 figure (an inflation-adjusted 41 U.S.C. 153 value) is the one a KO applies; do not quote 10 U.S.C. 3015 for the dollar amount."
+    },
+    {
+      "id": "sap_commercial_ceiling",
+      "name": "Simplified procedures for commercial products and commercial services ceiling ('SaP' / legacy FAR 13.5 authority)",
+      "value": "$9,000,000",
+      "value_number": 9000000,
+      "applies": "standard (commercial products/services above the SAT)",
+      "cite": "RFO FAR 12.201-1 and 12.001(c) (legacy FAR 13.500(a)); 41 U.S.C. 1901",
+      "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Two sources agree: legacy FAR 13.500 on acquisition.gov (FAC 2026-01) reads 'greater than the simplified acquisition threshold but not exceeding $9 million ($15 million for acquisitions as described in 13.500(c))'; the RFO Part 12 model deviation text (updated 20 Apr 2026) reads 'For acquisitions valued up to $9 million, issue a request for quotations (RFQ) followed by a purchase order' (12.201-1) with the ceiling stated in 12.001(c). IMPORTANT RFO CROSSWALK: the RFO moved commercial simplified procedures out of Part 13 into Part 12; RFO Part 13 is 'Simplified Procedures for Noncommercial Acquisitions' only (confirmed on the RFO Part 13 page and in DFARS Class Deviation 2026-O0029). Army Warranting Program Policy v12 Table 1 uses 'SaP' (Simplified Procedures - Commercial Products and Commercial Services) as the top Class II warrant value so warrants track this figure automatically. Raised from $7.5 million by FAR Case 2024-001 effective 1 Oct 2025. Verifier 13 Sep 2026: re-read on the RFO Part 12 page (last updated 07/28/2026): 12.001(c) 'The $9 million ceiling for the use of simplified procedures (see 12.201-1) is increased to $15 million if the head of the agency determines...'; 12.201-1(a) 'For acquisitions valued up to $9 million, issue a request for quotations (RFQ) followed by a purchase order'; 12.201-2 covers acquisitions greater than $9 million; the 12.102(b) authority table shows '> SAT, <= $9 million' and '> $9 million, <= $15 million'. Legacy 13.500(a) re-read. Note: the RFO Part 12 page date is 28 Jul 2026, not 20 Apr 2026."
+    },
+    {
+      "id": "sap_commercial_ceiling_contingency",
+      "name": "Simplified procedures for commercial products/services ceiling - contingency / CBRN defense / disaster / emergency",
+      "value": "$15,000,000",
+      "value_number": 15000000,
+      "applies": "contingency (head-of-agency determination; inside or outside US)",
+      "cite": "RFO FAR 12.001(c) (legacy FAR 13.500(c)); 41 U.S.C. 1903",
+      "url": "https://www.acquisition.gov/far/13.500",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "RFO Part 12 text: 'The $9 million ceiling for the use of simplified procedures (see 12.201-1) is increased to $15 million if the head of the agency determines that the supplies or services are to be used to' support a contingency operation, CBRN defense/recovery, international disaster assistance, or emergency/major disaster response. Legacy 13.500(c) page shows the same figure. Raised from $13 million (legacy) by FAR Case 2024-001. Verifier 13 Sep 2026: 12.001(c) sentence and legacy 13.500(c) re-read verbatim."
+    },
+    {
+      "id": "tina_dod",
+      "name": "Certified cost or pricing data (TINA / Truthful Cost or Pricing Data) threshold - DoD prime contracts awarded after 30 June 2026",
+      "value": "$10,000,000",
+      "value_number": 10000000,
+      "applies": "DoD (prime contracts awarded after 30 Jun 2026; modifications use the same criteria as the prime)",
+      "cite": "10 U.S.C. 3702(a)(1) as amended by FY2026 NDAA (Pub. L. 119-60) sec. 1804; DFARS 215.403-3(a) per DoD Class Deviation 2026-O0048, Rev. 1 (22 Jul 2026)",
+      "url": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-215/2026-O0048_Rev_1_TAB_A_Deviation_Memo_Part_215.pdf",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Deviation text extracted from the PDF: '215.403-3 Certified cost or pricing data. (a) Threshold. In lieu of the requirements of FAR 15.403-3(a), obtain certified cost or pricing data when a prime contract is expected to exceed $10 million and is awarded after June 30, 2026, unless an exception at FAR 15.403-2 or 215.403-71 applies. The threshold is $2.5 million when the prime contract is awarded on or before June 30, 2026, unless otherwise stated in the contract (10 U.S.C. 3702).' Statute confirmed at law.cornell.edu/uscode/text/10/3702 ('in the case of a prime contract entered into after June 30, 2026 ... expected to exceed $10,000,000'). The deviation memo says it implements NDAA FY2026 sections 811(a)(5), 812(c) and 1826; the $10M change itself is NDAA sec. 1804 per statute notes and trade press (governmentcontractslaw.com and insidegovernmentcontracts.com returned HTTP 403 so those were not read directly). Board answer: for an Army KO today the DoD threshold is $10 million; cite the statute and the DFARS deviation, and note the FAR text still says $2.5 million. Subcontract flow-down figures in the same deviation still show $2.5 million in places - read 215.403-3(a)(2) before quoting a subcontract number. The deviation index is at https://www.acq.osd.mil/dpap/dars/dfars_far_overhaul_class_deviations.html. Verifier 13 Sep 2026: deviation PDF re-downloaded and text re-extracted - 215.403-3(a) wording confirmed exactly, including '(2) ... subcontract ... (i) After June 30, 2026, and the price of the subcontract is expected to exceed $10 million'. Statute re-read at law.cornell.edu: 10 U.S.C. 3702(a)(1)(A) '$10,000,000' for prime contracts entered into after June 30, 2026, (a)(1)(B) '$2,000,000' on or before that date (the $2.5 million in the deviation is the inflation-adjusted figure), amendment note 'Pub. L. 119-60, div. A, title XVIII, sec. 1804(c)(1)(B)', enacted 18 Dec 2025. Memo's reference to NDAA sections 811(a)(5), 812(c) and 1826(8)-(9) confirmed."
+    },
+    {
+      "id": "tina_civilian",
+      "name": "Certified cost or pricing data threshold - governmentwide FAR (civilian agencies; DoD prime contracts awarded on or before 30 Jun 2026)",
+      "value": "$2,500,000",
+      "value_number": 2500000,
+      "applies": "standard (governmentwide FAR; DoD only for prime contracts awarded on or before 30 Jun 2026)",
+      "cite": "RFO FAR 15.403-3 (legacy FAR 15.403-4(a)(1)); 41 U.S.C. 3502; 10 U.S.C. 3702 (pre-1 Jul 2026)",
+      "url": "https://www.acquisition.gov/far/15.403-4",
+      "status": "verify",
+      "confidence": "probable",
+      "notes": "Value verified verbatim on legacy FAR 15.403-4 (FAC 2026-01): 'The threshold for obtaining certified cost or pricing data is $950,000 for prime contracts awarded before July 1, 2018, and $2.5 million for prime contracts awarded on or after July 1, 2018.' Raised from $2 million by FAR Case 2024-001 effective 1 Oct 2025. The RFO Part 15 page lists '15.403-3 Certified cost or pricing data' as the section heading (crosswalk 15.403-4 -> 15.403-3) but the fetch returned headings only, so the RFO section's body text was not read - hence 'probable'. Legacy 15.404-1 (price analysis) keeps the number 15.404-1 in the RFO. Verifier 13 Sep 2026: legacy 15.403-4(a)(1) '$2.5 million' re-read; the RFO Part 15 page again returned only the 15.403-3 heading (body not served), so the RFO section number stays 'probable'. Note the RFO renumbering makes 15.403-4 'Certificate of current cost or pricing data', so a board answer citing '15.403-4' for the threshold is now the wrong section under RFO."
+    },
+    {
+      "id": "cas_applicability",
+      "name": "Cost Accounting Standards (CAS) contract-level applicability / exemption threshold",
+      "value": "$35,000,000 (effective 1 Oct 2026); $2,500,000 (TINA-linked) until then",
+      "value_number": 35000000,
+      "applies": "governmentwide (statute); date-dependent",
+      "cite": "41 U.S.C. 1502(b)(1)(B) as amended by FY2026 NDAA (Pub. L. 119-60) sec. 1806; 48 CFR 9903.201-1(b)(2) as amended by CAS Board final rule 91 FR 56056 (1 Sep 2026, effective 1 Oct 2026); DFARS 230.201-70(b) per Class Deviation 2026-O0006 Rev. 1 (30 Jul 2026)",
+      "url": "https://www.federalregister.gov/documents/2026/09/01/2026-17901/increase-of-monetary-thresholds-and-other-matters-related-to-cost-accounting-standards-program",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "What was verified: (1) DoD deviation 2026-O0006 Rev. 1 text (PDF extracted) - 'the threshold for determining the tentative applicability of CAS at the contract level is the amount set forth in 41 U.S.C. 1502(b)(1)(B)' and the memo states it implements NDAA FY2026 sec. 1806; (2) acquisition.gov news item dated 2 Sep 2026 confirming the CAS Board published 'Increase of Monetary Thresholds and Other Matters Related to Cost Accounting Standards Program Requirements' at 91 FR 56056 on 1 Sep 2026. What was NOT read directly: the $35 million figure and the 1 Oct 2026 effective date come from web-search summaries of natlawreview.com, hunton.com, bmss.com, insidegovernmentcontracts.com and the Federal Register (federalregister.gov and ecfr.gov redirected to an unblock page; the CFR text at law.cornell.edu still shows the pre-rule 'TINA threshold, as adjusted for inflation' language and a $7.5 million (b)(7) trigger). Board answer as of 13 Sep 2026: the statutory exemption threshold is $35 million per the FY2026 NDAA; the CAS Board rule implementing it in 48 CFR 9903 is published and takes effect 1 Oct 2026; before that the regulation still ties the exemption to the TINA threshold. Confirm the effective-date wording in 91 FR 56056 before release. Verifier 13 Sep 2026 - PRIMARY SOURCES NOW READ: (1) Federal Register final rule 91 FR 56056-56060, document 2026-17901, published 1 Sep 2026, 'Effective October 1, 2026' (read via the FR API and the full-text .txt endpoint; the HTML page redirects to an unblock page). Amended 48 CFR 9903.201-1(b)(2) reads 'Negotiated contracts and subcontracts not in excess of $35 million. For purposes of this paragraph (b)(2), an order issued by one segment to another segment shall be treated as a subcontract.' (2) 41 U.S.C. 1502(b)(1)(B) at law.cornell.edu now reads 'in excess of $35,000,000, as adjusted in accordance with applicable requirements of law, including requirements relating to inflation in section 1908', amendment note Pub. L. 119-60 sec. 1806(d)(1)(A). (3) DoD deviation 2026-O0006 Rev. 1 230.201-70(b) re-read. Upgraded from probable to verified."
+    },
+    {
+      "id": "cas_full_coverage",
+      "name": "CAS full coverage / Disclosure Statement threshold",
+      "value": "$100,000,000",
+      "value_number": 100000000,
+      "applies": "DoD-only business units now (deviation); governmentwide from 1 Oct 2026 (CAS Board rule); legacy value $50,000,000",
+      "cite": "DFARS 230.201-70(a)(1) per Class Deviation 2026-O0006 Rev. 1 (30 Jul 2026), implementing FY2026 NDAA sec. 1806(a)(2); 48 CFR 9903.201-2(a) and 9903.202-1 as amended by 91 FR 56056 (effective 1 Oct 2026)",
+      "url": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-230/2026-O0006_Rev1_TAB_A_Deviation_Memo_DFARS_230.pdf",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Deviation text extracted verbatim: 'full Cost Accounting Standards (CAS) coverage applies to contractor business units that have only DoD contracts and subcontracts and that (i) Receive a single CAS-covered contract award of $100 million or more; or (ii) Received CAS-covered contracts during its preceding cost accounting period with a net value of $100 million or more' and, for Disclosure Statement requirements, 'replace $50 million with $100 million wherever it appears'. Business units with mixed DoD and other federal work stay on FAR 30.201(b)/48 CFR 9903.201-2 ($50 million) until the CAS Board rule takes effect; the $100 million governmentwide figure and 1 Oct 2026 date are from secondary summaries (Federal Register not fetched). 48 CFR 9903.201-2 at law.cornell.edu still shows $50 million (last amended 76 FR 40819, 2011). Modified coverage (Disclosure and Consistency, 52.230-3): RFO FAR 30.205(b)(1) reads 'over $2.5 million but less than $50 million'; DoD deviation substitutes $100 million for $50 million. Verifier 13 Sep 2026: FR final rule 2026-17901 (91 FR 56056, effective 1 Oct 2026) read via the full-text endpoint: 9903.201-2 and 9903.202-1 are amended by 'Removing $50 million, wherever it appears, and adding, in its place, the text $100 million'; 9903.201-5(a) agency-head waiver authority raised from $15 million to $100 million. Deviation 2026-O0006 Rev. 1 230.201-70(a)(1) and (d)(1) text re-read from the PDF. Upgraded from probable to verified. RFO FAR 30.205(b)(1) still prints 'over $2.5 million but less than $50 million' (page last updated 07/28/2026) - expect a FAR Part 30 update after 1 Oct 2026."
+    },
+    {
+      "id": "cas_trigger_exemption",
+      "name": "CAS $7.5 million 'trigger' exemption (business unit not performing any CAS-covered contract of $7.5M or more)",
+      "value": "$7,500,000 (legacy trigger; eliminated effective 1 Oct 2026)",
+      "value_number": 7500000,
+      "applies": "legacy 48 CFR 9903.201-1(b)(7) - in force only until 30 Sep 2026; eliminated by 91 FR 56056 effective 1 Oct 2026",
+      "cite": "48 CFR 9903.201-1(b)(7)",
+      "url": "https://www.federalregister.gov/documents/2026/09/01/2026-17901/increase-of-monetary-thresholds-and-other-matters-related-to-cost-accounting-standards-program",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Read verbatim at law.cornell.edu (current CFR text, last amended 83 FR 33148, 2018): 'Contracts or subcontracts of less than $7.5 million, provided that, at the time of award, the business unit of the contractor or subcontractor is not currently performing any CAS-covered contracts or subcontracts valued at $7.5 million or greater.' The 1 Sep 2026 CAS Board rule (91 FR 56056) raises the basic applicability threshold to $35 million, which makes this trigger largely moot; whether (b)(7) is retained, removed or re-set was not confirmed. Do not teach this figure without checking the final rule text. Verifier 13 Sep 2026: FR final rule 2026-17901 (91 FR 56056) read via the full-text endpoint: amendatory instruction 2 revises 9903.201-1(b) in full and adds (c); '$7.5 million' no longer appears anywhere in the amended 9903.201-1, and the preamble states 'The proposal also eliminated the $7.5 million trigger contract threshold as it would no longer be necessary with a higher applicability threshold.' Board answer: through 30 Sep 2026 the $7.5M trigger still exists in the CFR; from 1 Oct 2026 the single $35M applicability threshold replaces it. Upgraded from unverified to verified (as an eliminated legacy figure). One secondary read of the govinfo HTML suggested a paragraph (b)(7) survives under a different subject (NATO PHM ship program, currently (b)(6)) - the renumbered paragraph list was not itemized, so cite the rule, not a paragraph letter, after 1 Oct 2026."
+    },
+    {
+      "id": "sb_setaside_auto_range",
+      "name": "Total small business set-aside - automatic reservation range",
+      "value": "Above the MPT ($15,000) - RFO FAR 19.104-1 sets no SAT ceiling on the set-aside requirement (legacy 19.502-2(a) band was MPT to SAT $350,000)",
+      "value_number": 350000,
+      "applies": "standard; mandatory in the United States and its outlying areas, discretionary outside (FAR 19.000(b))",
+      "cite": "RFO FAR 19.104-1(a)-(c) (legacy FAR 19.502-2(a)-(b)); 15 U.S.C. 644(j); FAR 19.000(b)",
+      "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "REFUTED IN PART by verifier 13 Sep 2026. Legacy FAR 19.502-2 (FAC 2026-01) re-read verbatim and matches the original notes: (a) above the MPT but not over the SAT 'shall be set aside for small business unless' no reasonable expectation of two or more responsible small businesses competitive on fair market price, quality and delivery; (b) over the SAT, set aside when there is a reasonable expectation of at least two responsible small business offers and award at fair market prices. BUT the RFO text a KO must now use (RFO Part 19 page; DoD deviation 2026-O0037 Rev. 1 directs use of the RFO Part 19 'in lieu of the text codified at 48 CFR chapter 1') collapses the two tiers: 19.104-1(a) read verbatim - 'For contracts above the micro-purchase threshold, the contracting officer must set the contract aside for small business if there is a reasonable expectation of obtaining offers- (1) From two or more responsible small business concerns; and (2) That are competitive in terms of fair market prices, quality, and delivery.' 19.104-1(b)(1): 'The contracting officer must document the reason when a contract is not set aside for small business as required.' 19.104-1(c): the requirement 'does not apply to purchases at or below the micro-purchase threshold or purchases from required sources under part 8.' So under RFO numbering there is no MPT-to-SAT 'automatic reservation' band distinct from the over-SAT rule of two; the original value string described the legacy band only. Korea: FAR 19.000(b) re-read verbatim ('shall apply this part in the United States and its outlying areas' / 'may apply this part outside'), so Part 19 set-asides remain discretionary for 411th CSB awards in the ROK. Correction to the original note on DFARS 219: the Status-of-Forces-Agreement and 'both awarded and performed outside the United States' items in Class Deviation 2026-O0037 Rev. 1 are at 219.102-70(a)(4)-(5) and are exceptions to SBA procurement center representative REVIEW, not exemptions from set-asides. korea-verify-cp before stating any local 411th set-aside practice."
+    },
+    {
+      "id": "sb_8a_competitive_thresholds",
+      "name": "8(a) competitive thresholds (sole-source 8(a) above these requires SBA acceptance / rule-of-two test)",
+      "value": "$8,500,000 (manufacturing NAICS) / $5,500,000 (all other)",
+      "value_number": 5500000,
+      "applies": "standard (8(a) program)",
+      "cite": "RFO FAR 19.108-7(a)(2) (legacy FAR 19.805-1(a)(2)); 13 CFR 124.506; DFARS 206.104-71(d) per Class Deviation 2026-O0017 Rev. 2 (8(a) sole source over $100M)",
+      "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Read on legacy FAR 19.805-1 (FAC 2026-01): competitive 8(a) applies when the anticipated award value exceeds $8.5 million for manufacturing NAICS codes or $5.5 million for all others (raised from $7.5M/$4.5M by FAR Case 2024-001). DoD add-on verified from Class Deviation 2026-O0017 Rev. 2 (DFARS 206): a sole-source 8(a) contract exceeding $100 million requires a written justification with the FAR 6.104-1(b) information, approved by the HCA - DFARS 206.104-71(d) per section 823 of the FY2020 NDAA (Pub. L. 116-92), delegable per 206.104-71(a); the earlier '206.304 S-71' reference was not found in the deviation and is removed.  Verifier 13 Sep 2026: RFO Part 19 page read - 19.108-7(a)(2): 'The anticipated total value of the contract, including options, will exceed $8.5 million for acquisitions assigned manufacturing ... NAICS codes and $5.5 million for all other acquisitions' (same figures also appear as sole-source ceilings at RFO 19.105-3(a)(2) HUBZone, 19.106-3(a)(2) SDVOSB and 19.107-3(c)(1) WOSB). Legacy 19.805-1(a)(2) re-read verbatim. Crosswalk 19.805-1 -> 19.108-7. Upgraded probable -> verified."
+    },
+    {
+      "id": "ja_far_table",
+      "name": "Justification approval tiers - governmentwide FAR Table 6-1 (other than full and open competition / limited competition)",
+      "value": "$900,000 (KO certification) / >$900K-$20M (competition advocate) / >$20M-$90M (HCA; $150M for DoD, NASA, Coast Guard) / >$90M ($150M DoD) SPE",
+      "value_number": 900000,
+      "applies": "governmentwide FAR; superseded for DoD by DFARS 206.104-71 (see ja_dod_* items)",
+      "cite": "RFO FAR 6.104-2(b) Table 6-1 (legacy FAR 6.304); 41 U.S.C. 3304(e); 10 U.S.C. 3204(e)",
+      "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Both the legacy FAR 6.304 page (FAC 2026-01) and the RFO Part 6 page (last updated 28 Jul 2026) show the same tiers: not exceeding $900,000 - the KO's certification at (RFO) 6.104-1(a)(12) serves as approval unless agency procedures set a higher level; over $900,000 to $20 million - competition advocate for the procuring activity (non-delegable); over $20 million to $90 million (or $150 million for DoD, NASA and the Coast Guard) - head of the procuring activity or a general/flag officer or GS-15-equivalent designee; over $90 million (or $150 million for DoD/NASA/Coast Guard) - senior procurement executive. Raised from $750K/$15M/$75M/$100M by FAR Case 2024-001. RFO crosswalk: 6.302-1 -> 6.103-1 (brand name / only one responsible source); 6.303 -> 6.104-1 (justification content); 6.304 -> 6.104-2 (approval). For an Army KO the operative table is the DoD one in DFARS 206.104-71 - see next items; commercial acquisitions over the SAT reach the same approvals through RFO FAR 12.102 ('prepare a written justification and obtain approval of the justification as described in 6.104'). Verifier 13 Sep 2026: RFO Part 6 page (last updated 07/28/2026) Table 6-1 re-read - rows '$900,000 or below', '>$900,000 - $20,000,000', '>$20,000,000 - $90,000,000 (>$20,000,000 - $150,000,000 for DoD, NASA, and the Coast Guard)', '>$90,000,000 (>$150,000,000 for DoD, NASA, and the Coast Guard)'; legacy 6.304 re-read with the same tiers. Note the RFO table's first row prints the certification reference as '6.104(a)(12)' while the justification-content list is at 6.104-1(a)(12) (the DFARS deviation cites 'FAR 6.104-1(a)(12)') - treat the RFO page text as a typo. Statute: 10 U.S.C. 3204(e)(1)(B) at law.cornell.edu now reads $10,000,000 / $100,000,000 / $500,000,000 (Pub. L. 119-60, 18 Dec 2025, replacing $500,000 / $10,000,000 / $75,000,000), so even the DoD $150M rows in Table 6-1 are stale for DoD - use Table 206-1."
+    },
+    {
+      "id": "ja_dod_tier1",
+      "name": "DoD justification approval - contracting officer tier (Table 206-1)",
+      "value": "$10,000,000 or below - contracting officer (certification at FAR 6.104-1(a)(12))",
+      "value_number": 10000000,
+      "applies": "DoD (Army) - value including options",
+      "cite": "DFARS 206.104-71 Table 206-1 per DoD Class Deviation 2026-O0017, Rev. 2 (5 Aug 2026); 10 U.S.C. 3204(e)(1)(B)",
+      "url": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-206/2026-O0017_Rev2_TAB_A_Class_Deviation_USA002119-26.pdf",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Extracted verbatim from the deviation PDF: '206.104-71 Approval of justification. In lieu of the thresholds at FAR 6.104-2(b) Table 6-1 and in accordance with 10 U.S.C. 3204(e)(1)(B), approval levels are as follows: Table 206-1 ... $10 million or below - Contracting officer - Accomplished by certification required at FAR 6.104-1(a)(12)'. This DoD table replaces the FAR $900K/$20M/$90M/$150M tiers for Army J&As. Local Army/ACC/411th routing (e.g., legal review, Chief C&P, PARC) is not in the deviation - describe roles only and confirm with C&P; do not state a local threshold. Verifier 13 Sep 2026: deviation PDF re-downloaded and Table 206-1 text re-extracted - matches verbatim ('In lieu of the thresholds at FAR 6.104-2(b) Table 6-1 and in accordance with 10 U.S.C. 3204(e)(1)(B)'); memo header 'Revision 2 ... revises and supersedes Class Deviation 2026-O0017, Revision 1, issued on January 23, 2026' confirmed; statute 10 U.S.C. 3204(e)(1)(B)(i)-(iii) read at law.cornell.edu with the same $10M / $100M / $500M breakpoints (Pub. L. 119-60)."
+    },
+    {
+      "id": "ja_dod_tier2",
+      "name": "DoD justification approval - competition advocate tier (Table 206-1)",
+      "value": "Exceeding $10,000,000 but not more than $100,000,000 - competition advocate (not delegable)",
+      "value_number": 100000000,
+      "applies": "DoD (Army) - value including options",
+      "cite": "DFARS 206.104-71 Table 206-1 per DoD Class Deviation 2026-O0017, Rev. 2 (5 Aug 2026); 10 U.S.C. 3204(e)(1)(B)",
+      "url": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-206/2026-O0017_Rev2_TAB_A_Class_Deviation_USA002119-26.pdf",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Verbatim from Table 206-1: 'Exceeding $10 million but not more than $100 million - Competition advocate - Not delegable'. The deviation memo (Rev. 2, effective immediately on issue, supersedes Rev. 1 of 23 Jan 2026) directs KOs to use RFO FAR Part 6 and the attached DFARS Part 206 in lieu of the codified text. Sole-source 8(a) contracts exceeding $100 million: HCA approval per 206.104-71(d) (section 823, FY2020 NDAA), delegable per 206.104-71(a). Verifier 13 Sep 2026: deviation PDF re-downloaded and Table 206-1 text re-extracted - matches verbatim ('In lieu of the thresholds at FAR 6.104-2(b) Table 6-1 and in accordance with 10 U.S.C. 3204(e)(1)(B)'); memo header 'Revision 2 ... revises and supersedes Class Deviation 2026-O0017, Revision 1, issued on January 23, 2026' confirmed; statute 10 U.S.C. 3204(e)(1)(B)(i)-(iii) read at law.cornell.edu with the same $10M / $100M / $500M breakpoints (Pub. L. 119-60)."
+    },
+    {
+      "id": "ja_dod_tier3",
+      "name": "DoD justification approval - HCA and SPE tiers (Table 206-1)",
+      "value": "Exceeding $100,000,000 but not more than $500,000,000 - head of the contracting activity (delegable per 206.104-71(a)); exceeding $500,000,000 - senior procurement executive",
+      "value_number": 500000000,
+      "applies": "DoD (Army) - value including options",
+      "cite": "DFARS 206.104-71 Table 206-1 per DoD Class Deviation 2026-O0017, Rev. 2 (5 Aug 2026); 10 U.S.C. 3204(e)(1)(B)",
+      "url": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-206/2026-O0017_Rev2_TAB_A_Class_Deviation_USA002119-26.pdf",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Verbatim from Table 206-1: 'Exceeding $100 million but not more than $500 million - Head of the contracting activity (HCA) - Delegable in accordance with paragraph (a) of this section' and 'Exceeding $500 million - Senior procurement executive (SPE) - Delegable in accordance with paragraph (a)'. For the Army the SPE is the ASA(ALT); the HCA for ACC is the ACC Commanding General - role descriptions only, confirm current designations locally. Verifier 13 Sep 2026: deviation PDF re-downloaded and Table 206-1 text re-extracted - matches verbatim ('In lieu of the thresholds at FAR 6.104-2(b) Table 6-1 and in accordance with 10 U.S.C. 3204(e)(1)(B)'); memo header 'Revision 2 ... revises and supersedes Class Deviation 2026-O0017, Revision 1, issued on January 23, 2026' confirmed; statute 10 U.S.C. 3204(e)(1)(B)(i)-(iii) read at law.cornell.edu with the same $10M / $100M / $500M breakpoints (Pub. L. 119-60)."
+    },
+    {
+      "id": "task_order_protest_dod",
+      "name": "Task/delivery order protest jurisdiction floor - DoD, NASA, Coast Guard (GAO exclusive)",
+      "value": "$35,000,000",
+      "value_number": 35000000,
+      "applies": "DoD (orders under IDIQ contracts; protest permitted only at GAO, on any ground, when the order value exceeds this amount)",
+      "cite": "10 U.S.C. 3406(f)(1)(B) as amended by FY2025 NDAA (Pub. L. 118-159) sec. 885(f), 23 Dec 2024; DFARS 252.216-7010(b)(1) per DoD Class Deviation 2026-O0045 Rev. 1 (15 Jul 2026); RFO FAR 16.508 (legacy FAR 16.505(a)(10))",
+      "url": "https://www.law.cornell.edu/uscode/text/10/3406",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Statute read at law.cornell.edu: 3406(f)(1)(B) 'a protest of an order valued in excess of $35,000,000', with the amendment note that Pub. L. 118-159 sec. 885(f) substituted $35,000,000 for $25,000,000. DoD deviation 2026-O0045 Rev. 1 (DFARS 216, PDF text extracted) carries the same figure in the clause: 'Within 10 days after the date a task order or delivery order is issued, where the value exceeds $35 million, and the protest is on the grounds that the order increases the scope, period, or maximum value of the contract under which the order is issued (10 U.S.C. 3406(f))'. WARNING: the legacy FAR 16.505(a)(10)(i)(B)(2) page on acquisition.gov (FAC 2026-01) still prints '$25 million' - it is stale for DoD; the RFO Part 16 page lists '16.508 Protests of orders' but the body text was not returned. Forum rule for the board: (1) an order protest on the ground that it increases the scope, period or maximum value of the contract may be heard by GAO or the Court of Federal Claims; (2) any other ground is heard ONLY by GAO and ONLY when the order value exceeds $35 million (3406(f)(2) gives GAO exclusive jurisdiction) - COFC has no jurisdiction over DoD task-order protests on other grounds regardless of value. RFO protest cites from the brief (33.104-3 agency, 33.105 GAO) were not re-verified here. Verifier 13 Sep 2026: statute re-read at law.cornell.edu - (f)(1)(B) '$35,000,000', amendment note '2024-Subsec. (f)(1)(B). Pub. L. 118-159 substituted $35,000,000 for $25,000,000', and (f)(2) 'the Comptroller General of the United States shall have exclusive jurisdiction of a protest authorized under paragraph (1)(B)'. The $35 million clause sentence is in DFARS clause 252.216-7010, Postaward Debriefings for Task Orders and Delivery Orders (OCT 2025), paragraph (b)(1), prescribed at 216.505-70 - the deviation does not restate FAR 16.508 itself. Legacy FAR 16.505(a)(10)(i)(B)(2) re-read: still '$25 million' for DoD, NASA and the Coast Guard (stale). RFO Part 16 page: the '16.508 Protests of orders' heading is the last item served and no body text follows it, so the RFO section body remains unread. Memo: Rev. 1 supersedes the 20 Feb 2026 original. Class IV reviewer 14 Sep 2026: RFO FAR 16.508(a)(2)(ii) and DFARS 233.105-70(b) read; both give $35,000,000."
+    },
+    {
+      "id": "task_order_protest_civilian",
+      "name": "Task/delivery order protest jurisdiction floor - civilian agencies",
+      "value": "$10,000,000",
+      "value_number": 10000000,
+      "applies": "civilian agencies (not DoD, NASA, Coast Guard)",
+      "cite": "41 U.S.C. 4106(f); FAR 16.505(a)(10)(i)(B)(1) (RFO FAR 16.508)",
+      "url": "https://www.acquisition.gov/far/16.505",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Read on legacy FAR 16.505 (FAC 2026-01): orders 'valued in excess of $10 million' are protestable at GAO for civilian agencies under 41 U.S.C. 4106(f). Included as a contrast question ('why is the DoD number different?'). Not adjusted by FAR Case 2024-001 (statutory figure not on the inflation list) - confidence in the number is high; the RFO 16.508 body text was not read. Verifier 13 Sep 2026: 41 U.S.C. 4106(f)(1)(B) read at law.cornell.edu - 'a protest of an order valued in excess of $10,000,000'; (f)(2) gives the Comptroller General exclusive jurisdiction; the former sunset paragraph (f)(3) was struck in 2016. Legacy FAR 16.505(a)(10) re-read. Class III reviewer 14 Sep 2026: RFO FAR 16.508 read; it gives $10,000,000 for civilian agencies and $35,000,000 for DoD, NASA and the Coast Guard."
+    },
+    {
+      "id": "fair_opportunity_7_5m",
+      "name": "Fair opportunity enhanced-procedures tier for orders under multiple-award contracts",
+      "value": "$7,500,000",
+      "value_number": 7500000,
+      "applies": "standard (orders above $7.5M: enhanced notice, disclosed evaluation factors, best-value documentation, debriefing opportunity)",
+      "cite": "RFO FAR 16.507-4 (orders above the SAT but not above $7.5 million) and 16.507-5 (orders above $7.5 million) (legacy FAR 16.505(b)(1)(iv)); 10 U.S.C. 3406(d); 41 U.S.C. 4106(d) (statutory $5,000,000, inflation-adjusted to $7.5 million under FAR 1.109)",
+      "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "RFO Part 16 page (updated 1 Jul 2026) headings read: '16.507-1 Placement of orders valued at or below the micro-purchase threshold', '16.507-3 Orders valued above the micro purchase threshold but not above the SAT', '16.507-4 Orders valued above the SAT but not above $7.5 million', '16.507-5 Orders valued above $7.5 million'; the DoD 216 deviation mirrors '216.507-5 Orders valued above $7.5 million'. Legacy 16.505(b)(1)(iv) shows the same $7.5 million (raised from $6 million by FAR Case 2024-001). DoD add-on verified from the DFARS 216 deviation and DFARS 216.505(b)(6): a written or oral postaward debriefing is required for task/delivery orders valued at $15 million or more. Verifier 13 Sep 2026: RFO Part 16 headings 16.507-1 through 16.507-5 and 16.508 re-read; legacy 16.505(b)(1)(iv) 'in excess of $7.5 million' re-read. Cite corrected: the enhanced-fair-opportunity requirement is 10 U.S.C. 3406(d) ('Enhanced competition for orders in excess of $5,000,000' - 'In the case of a task or delivery order in excess of $5,000,000, the requirement to provide all contractors a fair opportunity to be considered under subsection (c) is not met unless...'), not 3406(c), which is the basic fair-opportunity rule for orders over $2,500; the $7.5 million in the FAR is the inflation-adjusted statutory $5 million. DoD add-on re-read from the deviation: 216.507-5(c) 'a written or oral postaward debriefing of successful and unsuccessful awardees is required for task orders and delivery orders valued at $15 million or more (section 818 of the NDAA for FY 2018)'."
+    },
+    {
+      "id": "dod_order_debriefing_15m",
+      "name": "DoD postaward debriefing requirement for task/delivery orders",
+      "value": "$15,000,000 or more",
+      "value_number": 15000000,
+      "applies": "DoD (orders under multiple-award contracts)",
+      "cite": "DFARS 216.507-5(c) and clause 252.216-7010 (prescribed at 216.505-70) per DoD Class Deviation 2026-O0045 Rev. 1 (15 Jul 2026); codified DFARS 216.505(b)(6) (DFARS Change 5/7/2026); 10 U.S.C. 3305 / NDAA FY2018 sec. 818",
+      "url": "https://www.acquisition.gov/dfars/part-216-types-contracts",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "acquisition.gov DFARS Part 216 (DFARS Change 5/7/2026) reads: 'written or oral postaward debriefing of successful and unsuccessful awardees is required for task orders and delivery orders valued at $15 million or more'; the RFO deviation text repeats 'postaward debriefing for task orders or delivery orders valued at $15 million or more'. Related DFARS 215 deviation figures for contracts: enhanced debriefing content for awards over $15 million up to $150 million and disclosure of the agency's evaluation for awards over $150 million (NDAA FY2018 sec. 818) - read those paragraphs in 2026-O0048 Rev. 1 before quoting. Verifier 13 Sep 2026: codified DFARS 216.505(b)(6) sentence re-read on acquisition.gov (DFARS Change 05/07/2026); in the RFO deviation the rule sits at 216.507-5(c) and the clause 252.216-7010 (OCT 2025) is prescribed at 216.505-70(b) 'when a multiple-award contract is contemplated and task orders or delivery orders placed under the contract may be valued at $15 million or more'. The 215 deviation's $150 million disclosure-of-evaluation figure was seen in the extracted text but not read in context - still quote only after reading."
+    },
+    {
+      "id": "cda_claim_certification",
+      "name": "Contract Disputes Act claim certification threshold",
+      "value": "Claims exceeding $100,000",
+      "value_number": 100000,
+      "applies": "standard (contractor claims; certification is a contractor requirement and does not apply to Government claims)",
+      "cite": "RFO FAR 33.205-2 and 52.233-1(d) (legacy FAR 33.207); 41 U.S.C. 7103(b)",
+      "url": "https://www.acquisition.gov/far/33.207",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Legacy FAR 33.207 (FAC 2026-01) read verbatim: certification required for any claim exceeding '$100,000', with the four-part certification ('made in good faith; supporting data are accurate and complete to the best of my knowledge and belief; the amount requested accurately reflects the contract adjustment for which the contractor believes the Government is liable; and that I am duly authorized to certify the claim on behalf of the contractor'). RFO Part 33 page (last updated 28 Jul 2026) reads: '33.205-2 ... Contractor requirements for certification of claims exceeding $100,000 are located at 52.233-1(d).' Not an inflation-adjusted figure (statutory, 41 U.S.C. 7103(b)(1)(A)). Board follow-ups: the KO has 60 days to decide a certified claim of $100,000 or less; for claims over $100,000 the KO must within 60 days either decide or notify the contractor of the date a decision will be issued (41 U.S.C. 7103(f)). Verifier 13 Sep 2026: legacy 33.207(a)/(c) and RFO 33.205-2(a) re-read verbatim; 41 U.S.C. 7103(b)(1) read at law.cornell.edu ('For claims of more than $100,000 made by a contractor, the contractor shall certify...'). The 60-day timelines are now verified on the RFO page at 33.205-6(c)(1)-(2) and in 41 U.S.C. 7103(f)(1)-(2); RFO 33.205-6(e) covers defective certifications."
+    },
+    {
+      "id": "cda_board_expedited_accelerated",
+      "name": "CDA board of contract appeals small-claims (expedited) and accelerated procedure thresholds",
+      "value": "$50,000 or less small claims / $150,000 or less for a small business / $100,000 or less accelerated",
+      "value_number": 100000,
+      "applies": "standard (contractor election at an agency board, e.g., ASBCA)",
+      "cite": "41 U.S.C. 7106(a)-(b); RFO FAR 33.205-6(a)(4)(ii) (KO final-decision notice of board election rights)",
+      "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "The RFO Part 33 page summary listed '$50,000 - small claim procedure threshold for agency board appeals', '$150,000 - small claim threshold for small business concerns' and '$100,000 - accelerated procedure threshold'. These match 41 U.S.C. 7106 (small claims/expedited: $50,000, or $150,000 for a small business concern, 120-day decision; accelerated: $100,000, 180-day decision) but the exact RFO section number was not captured and the statute page was not fetched (uscode.house.gov refused the connection). Verifier 13 Sep 2026: RFO Part 33 page re-read - 33.205-6(a)(4)(ii) (required paragraph in the KO's final decision) references the board's small claims procedure 'for claims of $50,000 or less or, in the case of a small business concern ... $150,000 or less' and 'Accelerated procedure for claims of $100,000 or less'. 41 U.S.C. 7106 read at law.cornell.edu: (a) accelerated disposition where the amount in dispute is $100,000 or less, 180 days; (b) expedited (small claims) disposition where $50,000 or less, or $150,000 or less for a small business concern, 120 days, decision final except for fraud. Upgraded probable -> verified."
+    },
+    {
+      "id": "prompt_payment",
+      "name": "Prompt Payment - standard payment period and current interest-penalty rate",
+      "value": "30 days after receipt of a proper invoice (or acceptance); interest rate 4.75% per year for 1 Jul - 31 Dec 2026",
+      "value_number": 4.75,
+      "applies": "standard (value_number is the Treasury rate in percent, not a dollar threshold)",
+      "cite": "RFO FAR 32.907 and 5 CFR 1315 (OMB Prompt Payment rule); 31 U.S.C. 3902-3903; rate also used for CDA interest under 41 U.S.C. 7109",
+      "url": "https://www.fiscal.treasury.gov/prompt-payment/rates.html",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Rate read verbatim on the Bureau of the Fiscal Service page: 'The Prompt Payment interest rate for July 1 - December 31, 2026 is 4.75%.' (Federal Register notice 2026-13903 of 9 Jul 2026 was not fetchable - redirect to an unblock page.) FAR 32.907 on acquisition.gov (FAC 2026-01): paragraph (e) reads 'The Government will compute interest penalties in accordance with OMB prompt payment regulations at 5 CFR Part 1315'; (a) makes the interest penalty automatic 'without request from the contractor'; the 'more than 30 days after the designated billing office receives a proper invoice' wording at (a)(5) is specific to interim payments on cost-reimbursement service contracts - the general 30-day due-date rule is in 32.904 / 5 CFR 1315.4; the RFO Part 32 page keeps the number 32.907 under Subpart 32.9 but its body text was not returned. Board answer: the due date is 30 days after the later of receipt of a proper invoice or acceptance (7-day constructive acceptance), the rate is set by Treasury every six months, interest is automatic without a contractor request, and the same rate applies to CDA claim interest. The rate changes 1 Jan 2027 - re-check before the 14 Oct 2026 board if quoting a number. Verifier 13 Sep 2026: Treasury sentence re-read verbatim ('The Prompt Payment interest rate for July 1 - December 31, 2026 is 4.75%.'); 32.907 paragraph references corrected as above."
+    },
+    {
+      "id": "gpc_oconus_25k",
+      "name": "Governmentwide commercial purchase card - overseas commercial purchase limit above the MPT",
+      "value": "$25,000",
+      "value_number": 25000,
+      "applies": "DoD, outside the United States - legacy codified DFARS 213.301 rule; NOT restated in the operative RFO deviation text (2026-O0029 replaced DFARS Part 213 in full; the DFARS 212 deviation 2026-O0028 at 212.403(a)(1) does not restate it)",
+      "cite": "DFARS 213.301 (codified text, DFARS Change 5/7/2026); RFO DFARS Part 213 deviation 2026-O0029 points to FAR Part 13 for GPC rules",
+      "url": "https://www.acquisition.gov/dfars/part-213-simplified-acquisition-procedures",
+      "status": "verify",
+      "confidence": "unverified",
+      "notes": "acquisition.gov DFARS Part 213 (DFARS Change 5/7/2026) summary: an individual may use the GPC for a purchase 'that exceeds the micro-purchase threshold but does not exceed $25,000' for overseas commercial acquisitions meeting the section's criteria (purchase made outside the US for use outside the US, commercial, not a Berry/BAA issue, etc.); contingency operations allow card use up to the SAT. The RFO DFARS Part 213 class deviation (2026-O0029, effective 1 Feb 2026) replaced codified DFARS Part 213 with a single paragraph pointing to Class Deviation 2024-O0011 and did not restate this $25,000 rule, so confirm whether 213.301 survives in current DoD GPC policy (DoD GPC Guidebook) before teaching it. Korea-relevant (411th GPC program) - korea-verify-cp. Verifier 13 Sep 2026 - DOWNGRADED probable -> unverified. The $25,000 sentence was re-read in the codified DFARS 213.301 on acquisition.gov (DFARS Change 05/07/2026). However Class Deviation 2026-O0029 (effective 1 Feb 2026) directs KOs to use its attached DFARS Part 213 'in lieu of the text codified at 48 CFR chapter 2', and that attachment is a single paragraph pointing to Class Deviation 2024-O0011 (combatant-commander special authorities through 30 Sep 2028). The DFARS 212 deviation (2026-O0028, PDF read) moves purchase-card rules to 212.403(a)(1) and PGI 212.403 and contains no '$25,000' figure. So the codified $25K overseas GPC authority is displaced for as long as the deviations are in effect and its survival depends on DoD GPC policy (DoD GPC Guidebook) and PGI 212.403, neither read here. Do not teach $25,000 as current DoD text without confirming with the 411th GPC program (korea-verify-cp)."
+    },
+    {
+      "id": "warrant_class_1",
+      "name": "Army warrant Class I",
+      "value": "SAT (currently $350,000)",
+      "value_number": 350000,
+      "applies": "Army Warranting Program (all FAR- and non-FAR-based instruments and modifications)",
+      "cite": "Army Warranting Program Policy v12 (MAR 2026, SAAL-ZP) Table 1",
+      "url": "content/sources/warrant_thresholds_table_mar2026.txt",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Read from the local source table and the policy text: 'Class I | SAT'. Policy v12 changed Class I to be at the SAT and states that appointments written as 'SAT' or 'SaP' do not need reappointment when those values change. Section 4.2 (instrument value): the warrant must be greater than or equal to the cumulative instrument value - base plus all options plus anticipated/actual ceiling plus the absolute value of a modification - regardless of when funds are obligated. Verified against the local Army policy, not a web source. Verifier 13 Sep 2026: Table 1 rows re-read in content/sources/warrant_thresholds_table_mar2026.txt and army_warranting_policy_v12_mar2026.txt (lines 125-128); supporting statements confirmed in the policy text (change log items on SAT/SaP and reappointment; 4.2 cumulative value; KO qualifications above SAT - 10 U.S.C. 1724, DFARS 201.403, AT&L position; legacy warrant increases within a class vs. across classes; 'Warrant thresholds of each warrant type may vary and are determined based on an individual's qualifications, experience, abilities, and agency requirements'). No web source exists for this table; the policy is a local source."
+    },
+    {
+      "id": "warrant_class_2",
+      "name": "Army warrant Class II",
+      "value": "$500K, $1M, $5M and SaP (SaP currently $9,000,000; $15,000,000 contingency)",
+      "value_number": 9000000,
+      "applies": "Army Warranting Program",
+      "cite": "Army Warranting Program Policy v12 (MAR 2026) Table 1; SaP value from RFO FAR 12.201-1 / 12.001(c)",
+      "url": "content/sources/warrant_thresholds_table_mar2026.txt",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Read from the local source: 'Class II | $500K, $1M, $5M and SaP'. Policy v12 changed the top fixed Class II threshold to SaP (Simplified Procedures - Commercial Products and Commercial Services), i.e., the RFO FAR 12.201-1 ceiling ($9 million; $15 million under a contingency determination). A candidate applying above the SAT must meet 10 U.S.C. 1724 and DFARS 201.403 requirements and be in an AT&L position (Policy v12 text). Whether a SaP warrant automatically covers the $15 million contingency ceiling is not stated in the source - flag for the user. Verifier 13 Sep 2026: Table 1 rows re-read in content/sources/warrant_thresholds_table_mar2026.txt and army_warranting_policy_v12_mar2026.txt (lines 125-128); supporting statements confirmed in the policy text (change log items on SAT/SaP and reappointment; 4.2 cumulative value; KO qualifications above SAT - 10 U.S.C. 1724, DFARS 201.403, AT&L position; legacy warrant increases within a class vs. across classes; 'Warrant thresholds of each warrant type may vary and are determined based on an individual's qualifications, experience, abilities, and agency requirements'). No web source exists for this table; the policy is a local source."
+    },
+    {
+      "id": "warrant_class_3",
+      "name": "Army warrant Class III",
+      "value": "$10M, $25M, $50M and $100M",
+      "value_number": 100000000,
+      "applies": "Army Warranting Program",
+      "cite": "Army Warranting Program Policy v12 (MAR 2026) Table 1",
+      "url": "content/sources/warrant_thresholds_table_mar2026.txt",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Read from the local source: 'Class III | $10M, $25M, $50M, and $100M'. Moving up a class requires a new test or warranting review board and reappointment; increases within the same class do not (Policy v12 text in content/sources/army_warranting_policy_v12_mar2026.txt). Verifier 13 Sep 2026: Table 1 rows re-read in content/sources/warrant_thresholds_table_mar2026.txt and army_warranting_policy_v12_mar2026.txt (lines 125-128); supporting statements confirmed in the policy text (change log items on SAT/SaP and reappointment; 4.2 cumulative value; KO qualifications above SAT - 10 U.S.C. 1724, DFARS 201.403, AT&L position; legacy warrant increases within a class vs. across classes; 'Warrant thresholds of each warrant type may vary and are determined based on an individual's qualifications, experience, abilities, and agency requirements'). No web source exists for this table; the policy is a local source."
+    },
+    {
+      "id": "warrant_class_4",
+      "name": "Army warrant Class IV",
+      "value": "$250M, $500M and Unlimited",
+      "value_number": 500000000,
+      "applies": "Army Warranting Program (value_number is the top fixed dollar value; 'Unlimited' has no number)",
+      "cite": "Army Warranting Program Policy v12 (MAR 2026) Table 1",
+      "url": "content/sources/warrant_thresholds_table_mar2026.txt",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "Read from the local source: 'Class IV | $250M, $500M and Unlimited'. The HCA grants every warrant at one of the fixed Table 1 values; warrant type thresholds vary with the individual's qualifications, experience, abilities and agency requirements. Verifier 13 Sep 2026: Table 1 rows re-read in content/sources/warrant_thresholds_table_mar2026.txt and army_warranting_policy_v12_mar2026.txt (lines 125-128); supporting statements confirmed in the policy text (change log items on SAT/SaP and reappointment; 4.2 cumulative value; KO qualifications above SAT - 10 U.S.C. 1724, DFARS 201.403, AT&L position; legacy warrant increases within a class vs. across classes; 'Warrant thresholds of each warrant type may vary and are determined based on an individual's qualifications, experience, abilities, and agency requirements'). No web source exists for this table; the policy is a local source."
+    },
+    {
+      "id": "inflation_adjustment_cycle",
+      "name": "Statutory acquisition-related threshold inflation adjustment cycle",
+      "value": "Every 5 years (last: 1 Oct 2025 via FAR Case 2024-001 / FAC 2025-06; next: October 2030)",
+      "value_number": 2030,
+      "applies": "governmentwide (value_number is the year of the next scheduled adjustment)",
+      "cite": "FAR 1.109; 41 U.S.C. 1908",
+      "url": "https://www.acquisition.gov/far/1.109",
+      "status": "verify",
+      "confidence": "verified",
+      "notes": "FAR 1.109 (FAC 2026-01, effective 03/13/2026) read: the FAR Council adjusts statutory acquisition-related thresholds for inflation 'every 5 years, starting in October 2005, using the Consumer Price Index for All Urban Consumers (CPI-U)'; the matrix for the latest adjustment is in FAR Case 2024-001 on regulations.gov. Thresholds FAR 1.109 says are NOT escalated under 41 U.S.C. 1908: those set by 40 U.S.C. chapter 31 (Davis-Bacon $2,000), 41 U.S.C. chapter 67 (SCLS $2,500) and the Trade Agreements Act figures set by USTR. Separately, the CDA certification $100,000 and the task-order protest floors ($10M / $35M) were not changed by FAR Case 2024-001 - an observation from the current FAR/statute text, not a statement in 1.109. FAR 1.109 also notes (NDAA FY2018 sec. 821) that adjusted thresholds apply throughout the remaining term of a contract regardless of award date. Useful board answer to 'why did the SAT change?'."
+    }
+  ],
+  "notes": "Method: every FAR figure was read from a live acquisition.gov page on 13 Sep 2026 (legacy-numbered FAR pages show FAC 2026-01, effective 03/13/2026; RFO part guide pages show 'last updated 07/28/2026'). Key finding on numbering: the codified FAR at acquisition.gov/far still carries legacy section numbers and, for DoD, is stale in at least one place (FAR 16.505(a)(10) prints $25M for DoD task-order protests; the statute and the DoD DFARS 216 deviation say $35M). RFO numbering used here was confirmed on the RFO part pages: 2.101 (unchanged), 6.103-1 / 6.104-1 / 6.104-2 (legacy 6.302-1 / 6.303 / 6.304), 12.001(c) and 12.201-1 (legacy 13.500 - commercial simplified procedures moved from Part 13 to Part 12; RFO Part 13 is noncommercial only), 12.102 (restricting commercial competition), 15.403-3 (legacy 15.403-4, heading only - body not read), 16.507-1 through 16.507-5 and 16.508 (legacy 16.505), 19.104-1 (legacy 19.502-2), 30.201 / 30.205(b)(1) (legacy 30.201-4), 32.907 (unchanged), 33.205-2 and 52.233-1(d) (legacy 33.207). DoD-specific figures come from the DFARS RFO class deviations (PDF text extracted locally): 2026-O0017 Rev. 2 (Part 206, 5 Aug 2026) - DoD J&A approval table $10M / $100M / $500M replaces FAR Table 6-1 for DoD; 2026-O0048 Rev. 1 (Part 215, 22 Jul 2026) - $10M certified cost or pricing data threshold for DoD primes awarded after 30 Jun 2026; 2026-O0045 Rev. 1 (Part 216, 15 Jul 2026) - $35M order protest, $15M debriefing; 2026-O0006 Rev. 1 (Part 230, 30 Jul 2026) - $100M full CAS coverage for DoD-only business units; 2026-O0029 (Part 213, eff. 1 Feb 2026); 2026-O0037 Rev. 1 (Part 219, 24 Jul 2026). Date-dependent answers a board may probe: TINA/DoD is $10M for primes awarded after 30 Jun 2026 ($2.5M before; $2.5M remains the governmentwide FAR figure); CAS applicability becomes $35M and full coverage $100M governmentwide when the CAS Board rule at 91 FR 56056 takes effect on 1 Oct 2026 (DoD-only business units already use $100M under the deviation). Not verified directly and therefore marked probable/unverified: the $35M/$100M CAS figures and 1 Oct 2026 date (Federal Register and eCFR redirected to an unblock page; governmentcontractslaw.com and insidegovernmentcontracts.com returned 403; uscode.house.gov refused the connection - statute text was read at law.cornell.edu instead); the RFO 15.403-3 body text; the fate of the $7.5M CAS trigger exemption; the CDA board procedure section number; survival of the DFARS 213.301 $25K overseas GPC rule after the Part 213 deviation. No FY2026 NDAA change to the MPT or SAT was found - the $15,000 / $350,000 figures come from the FAR Case 2024-001 inflation adjustment effective 1 Oct 2025 (web summaries that attribute them to the NDAA are wrong). Army warrant classes are verified against the local Policy v12 table only. All items remain status 'verify' for user confirmation before release; Korea/411th local practices are not stated and must be confirmed with C&P (korea-verify-cp). VERIFIER PASS (source-fidelity, 13 Sep 2026): all 33 items re-checked against live pages (acquisition.gov FAR 2.101, 13.201, 13.500, 15.403-4, 6.304, 16.505, 19.502-2, 19.805-1, 19.000, 33.207, 32.907, 1.109; RFO part pages 2, 6, 12, 13, 15, 16, 19, 30, 33; DFARS 213/216 codified; law.cornell.edu 10 U.S.C. 3204, 3406, 3702, 3015, 41 U.S.C. 1502, 4106, 7103, 7106, 48 CFR 9903.201-1; fiscal.treasury.gov; the DoD RFO deviation index and PDFs 2026-O0006 Rev.1, -O0017 Rev.2, -O0028, -O0029, -O0037 Rev.1, -O0045 Rev.1, -O0048 Rev.1 re-downloaded and text-extracted) plus the Federal Register final rule 2026-17901 (91 FR 56056, effective 1 Oct 2026) read through the FR API/full-text endpoints. Material corrections: small-business set-aside range (RFO 19.104-1 is a single above-MPT rule; DFARS 219 SOFA item is an SBA-review exception), overseas GPC $25K (codified DFARS 213.301 displaced by deviation - unverified), fair-opportunity statute cite (3406(d), not (c)), micro-purchase RFO cite (12.402(b), not 13.203), stray '206.304 S-71' cite, prompt-payment paragraph references, and the FAR 1.109 'not adjusted' list. Upgrades: CAS $35M / $100M / $7.5M-trigger-eliminated, 8(a) thresholds (RFO 19.108-7) and CDA board tiers (RFO 33.205-6(a)(4)(ii)) are now verified against primary text. Still unread: RFO 15.403-3 and 16.508 body text (acquisition.gov serves the headings only).",
+  "verification_log": [
+    {
+      "pass": "source-fidelity",
+      "checked": 33,
+      "refuted": 7,
+      "changes": [
+        {
+          "id": "mpt",
+          "change": "Replaced wrong RFO cite 'FAR 13.203 - number not verified' with RFO FAR 12.402(b) (via 13.401(a)); values re-confirmed."
+        },
+        {
+          "id": "mpt_contingency_us",
+          "change": "Confirmed on cited page; no change."
+        },
+        {
+          "id": "mpt_contingency_oconus",
+          "change": "Confirmed on cited page; no change."
+        },
+        {
+          "id": "sat",
+          "change": "Confirmed on cited page; no change."
+        },
+        {
+          "id": "sat_contingency_us",
+          "change": "Confirmed on cited page; no change."
+        },
+        {
+          "id": "sat_contingency_oconus",
+          "change": "Confirmed on cited page; no change."
+        },
+        {
+          "id": "sat_humanitarian_peacekeeping",
+          "change": "Confirmed $650K on FAR 2.101; added caution that 10 U.S.C. 3015 text does not state $650K."
+        },
+        {
+          "id": "sap_commercial_ceiling",
+          "change": "Confirmed on RFO Part 12 (12.001(c), 12.201-1(a), 12.102(b)) and legacy 13.500(a); corrected page date."
+        },
+        {
+          "id": "sap_commercial_ceiling_contingency",
+          "change": "Confirmed; no change."
+        },
+        {
+          "id": "tina_dod",
+          "change": "Confirmed against deviation PDF and 10 U.S.C. 3702; no value change."
+        },
+        {
+          "id": "tina_civilian",
+          "change": "Confirmed legacy value; RFO body still unavailable - confidence unchanged (probable)."
+        },
+        {
+          "id": "cas_applicability",
+          "change": "Upgraded probable -> verified: FR final rule 2026-17901 (91 FR 56056, eff. 1 Oct 2026) and 41 U.S.C. 1502(b)(1)(B) read directly; url changed to the FR document."
+        },
+        {
+          "id": "cas_full_coverage",
+          "change": "Upgraded probable -> verified from the FR final rule text; added waiver-threshold change."
+        },
+        {
+          "id": "cas_trigger_exemption",
+          "change": "Upgraded unverified -> verified as ELIMINATED effective 1 Oct 2026 (FR final rule text read); value/applies reworded; url set to the FR rule."
+        },
+        {
+          "id": "sb_setaside_auto_range",
+          "change": "REFUTED framing: RFO 19.104-1 has a single above-MPT rule with no SAT ceiling (legacy two-tier 19.502-2 band no longer the operative text); value/cite/url rewritten. Corrected DFARS 219 note: SOFA/outside-US items are 219.102-70 SBA-review exceptions, not set-aside carve-outs."
+        },
+        {
+          "id": "sb_8a_competitive_thresholds",
+          "change": "Upgraded probable -> verified; RFO cite 19.108-7(a)(2) confirmed; removed unfound '206.304 S-71' cite (DoD 8(a) >$100M rule is 206.104-71(d))."
+        },
+        {
+          "id": "ja_far_table",
+          "change": "Confirmed on RFO Part 6 and legacy 6.304; noted RFO page '6.104(a)(12)' typo and that 10 U.S.C. 3204(e) now carries the $10M/$100M/$500M figures."
+        },
+        {
+          "id": "ja_dod_tier1",
+          "change": "Confirmed verbatim against deviation PDF and 10 U.S.C. 3204(e)(1)(B)."
+        },
+        {
+          "id": "ja_dod_tier2",
+          "change": "Confirmed verbatim against deviation PDF and 10 U.S.C. 3204(e)(1)(B); stray '206.304 S-71' cite corrected to 206.104-71(d)."
+        },
+        {
+          "id": "ja_dod_tier3",
+          "change": "Confirmed verbatim against deviation PDF and 10 U.S.C. 3204(e)(1)(B)."
+        },
+        {
+          "id": "task_order_protest_dod",
+          "change": "Confirmed $35M in statute and in clause 252.216-7010(b)(1); cite made specific; RFO 16.508 body still unreadable."
+        },
+        {
+          "id": "task_order_protest_civilian",
+          "change": "Confirmed in statute and FAR; no change."
+        },
+        {
+          "id": "fair_opportunity_7_5m",
+          "change": "Corrected statutory cite 3406(c) -> 3406(d) / 4106(d) and noted the $5M statutory base; FAR figures confirmed."
+        },
+        {
+          "id": "dod_order_debriefing_15m",
+          "change": "Confirmed; cite made specific to the RFO deviation section/clause."
+        },
+        {
+          "id": "cda_claim_certification",
+          "change": "Confirmed; 60-day timelines now verified at RFO 33.205-6(c) and 41 U.S.C. 7103(f)."
+        },
+        {
+          "id": "cda_board_expedited_accelerated",
+          "change": "Upgraded probable -> verified; RFO section 33.205-6(a)(4)(ii) and 41 U.S.C. 7106 read directly."
+        },
+        {
+          "id": "prompt_payment",
+          "change": "Rate confirmed; corrected which 32.907 paragraphs carry the quoted language ((e) and (a)(5)); pointed the general 30-day rule to 32.904 / 5 CFR 1315.4."
+        },
+        {
+          "id": "gpc_oconus_25k",
+          "change": "REFUTED as current text: DFARS Part 213 is replaced by deviation 2026-O0029 and the 212 deviation does not restate $25K; downgraded to unverified."
+        },
+        {
+          "id": "warrant_class_1",
+          "change": "Confirmed against local Policy v12 text; no change."
+        },
+        {
+          "id": "warrant_class_2",
+          "change": "Confirmed against local Policy v12 text; no change."
+        },
+        {
+          "id": "warrant_class_3",
+          "change": "Confirmed against local Policy v12 text; no change."
+        },
+        {
+          "id": "warrant_class_4",
+          "change": "Confirmed against local Policy v12 text; no change."
+        },
+        {
+          "id": "inflation_adjustment_cycle",
+          "change": "Confirmed 5-year/CPI-U cycle; corrected the 'not adjusted' list to what 1.109 actually says and removed the wrong 'last updated 28 Jul 2026' date."
+        }
+      ]
+    }
+  ]
+}

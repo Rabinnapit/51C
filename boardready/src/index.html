@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Offline CORB preparation and warrant program guide: question library, flashcards, quiz, mock board, mentor, games, and board-member tools.">
+<meta name="theme-color" content="#173a6b">
+<title>Board Ready · CORB Prep & Warrant Guide</title>
+<!--@icon-->
+<!--@webhead-->
+<script id="embeddedState" type="application/json">null</script>
+<script>
+/* Runs before first paint: theme, text size and a collapsed side menu. Viewer choice > setting saved in this file > day
+   (the default). Night is 'dark'; 'system' follows the device. */
+(function () {
+  var d = document.documentElement, t = null, s = null, side = null, es = null;
+  try { es = JSON.parse(document.getElementById('embeddedState').textContent || 'null'); } catch (e) {}
+  try { t = localStorage.getItem('corb.theme'); s = localStorage.getItem('corb.textsize'); side = localStorage.getItem('corb.side'); } catch (e) {}
+  if (!t && es && es.settings && es.settings.theme) t = es.settings.theme;
+  if (t === 'dark') d.setAttribute('data-theme', 'dark'); else if (t !== 'system') d.setAttribute('data-theme', 'light');
+  if (s && /^[0-3]$/.test(s)) d.setAttribute('data-text', s);
+  if (side === 'mini') d.setAttribute('data-side', 'mini');
+})();
+</script>
+<!--@styles-->
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to content</a>
+<div id="app"></div>
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+<!--@data-->
+<!--@core-->
+<!--@views-->
+<!--@boot-->
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "app_name": "Board Ready",
+  "tagline": "Prepare the packet. Master the board. Sign with authority.",
+  "org": "411th Contracting Support Brigade",
+  "org_short": "CORB prep · 411th CSB",
+  "maintainer": {
+    "role": "Developer and maintainer",
+    "name": "SFC Rabin Napit",
+    "email": "rabin.napit.mil@army.mil"
+  },
+  "version": "1.2.0",
+  "built_on": "",
+  "content_verified_on": "2026-10-29",
+  "next_board": "2026-10-14",
+  "board_cadence": "Second Wednesday of each month",
+  "disclaimer": "Training aid, not authoritative guidance. Verify every citation, threshold and local procedure against the current FAR/DFARS/AFARS on acquisition.gov, the Army Warranting Program Policy, and your Contracting & Policy office before relying on it.",
+  "name_options": [
+    "Board Ready",
+    "Signatory",
+    "The Warrant Room"
+  ],
+  "sources": [
+    "PAM Warrant Board Q&A list (SharePoint extract, January 2026)",
+    "Legacy WarrantQA CSV extract",
+    "411th CSB Warrant Board Study Group decks, April–July 2026",
+    "Army Warranting Program Policy v12, March 2026",
+    "411th CSB Warrant Process Workflow, July 2026",
+    "ACC Contracting Note 26-03, Warrant Reciprocity Guidance, May 2026",
+    "VCE-Warrants User Guide, February 2025",
+    "Re-check of 29 October 2026: acquisition.gov/far-overhaul and the DPCAP class deviations page; the Army policy and AFARS on PAM were not re-checked (CAC needed)"
+  ],
+  "board_rule": {
+    "week": 2,
+    "weekday": 3
+  }
+}

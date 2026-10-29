@@ -1,0 +1,936 @@
+[
+ {
+  "id": "protests",
+  "title": "Protests: Agency, GAO and the Court of Federal Claims",
+  "domain": "Protests, Claims & Disputes",
+  "summary": "A protest is a written objection to a solicitation or an award, and a disappointed offeror has three forums: me as the contracting officer, the Government Accountability Office, or the U.S. Court of Federal Claims. What changes between forums is speed, cost, who decides, and whether performance stops automatically. Know the clocks, know who signs the override, and never decide a protest alone.",
+  "sections": [
+   {
+    "heading": "The three forums and what each one buys the protester",
+    "body": "All three live in RFO FAR Subpart 33.1.\n\n- Agency protest, RFO FAR 33.104. Filed with me, or the protester may ask for an independent review at a level above me. Fastest and cheapest; the agency uses best efforts to resolve it in 35 days. No filing fee, no discovery, and I can take corrective action the same week.\n- GAO protest, RFO FAR 33.105, under the Competition in Contracting Act at 31 U.S.C. 3551-3556 and GAO's own rules at 4 CFR Part 21. A neutral forum, a written decision in 100 days, and the automatic stay if the protest is timely.\n- Court of Federal Claims, RFO FAR 33.106, under the Tucker Act at 28 U.S.C. 1491(b). Real litigation before a judge. There is no automatic stay; the protester must win an injunction. No time bar comparable to GAO's, and the court can hear a protest GAO has already denied.\n\nA protester who loses at the agency still has 10 days from initial adverse agency action to get to GAO."
+   },
+   {
+    "heading": "Timeliness: the clocks that decide most protests",
+    "body": "Boards love this because timeliness disposes of more protests than the merits do.\n\n- Solicitation improprieties apparent on the face of the solicitation must be protested before the closing date for receipt of proposals (agency rule at RFO FAR 33.104-2; GAO rule at 4 CFR 21.2(a)(1)).\n- All other grounds: within 10 days after the basis is known or should have been known (4 CFR 21.2(a)(2)).\n- Where a debriefing is requested and required, within 10 days after the debriefing is held.\n- Agency-to-GAO: within 10 days of initial adverse agency action (4 CFR 21.2(a)(3)).\n- The stay clocks are separate and shorter: a postaward protest must reach the agency or GAO within 10 days after award, or 5 days after the debriefing date offered under a timely request, whichever is later.\n\nDays are calendar days; a deadline landing on a weekend or federal holiday rolls to the next business day. Timely for the stay and timely for the protest are two different tests - say both out loud."
+   },
+   {
+    "heading": "The CICA stay and the override finding",
+    "body": "The stay is statutory, not discretionary. Preaward: if GAO notifies the agency before award, I may not award (RFO FAR 33.105-2; 31 U.S.C. 3553(c)). Postaward: if GAO notice arrives within 10 days of award or 5 days after the offered debriefing date, whichever is later, I must immediately suspend performance or terminate the award (RFO FAR 33.105-3; 31 U.S.C. 3553(d)). In practice that means a stop-work order under FAR 52.242-15 the same day.\n\nThe override is the head of the contracting activity's alone and is nondelegable. Preaward it takes a written finding of urgent and compelling circumstances significantly affecting the interests of the United States, plus a finding that award is likely within 30 days. Postaward the HCA may find urgent and compelling circumstances or that performance is in the best interests of the Government. GAO must be notified of the finding. The agency-level equivalent is at RFO FAR 33.104-2(b)(1) and 33.104-3; it is still a written finding, not an assumption.\n\nOverride findings are themselves protestable at the Court of Federal Claims. Say that."
+   },
+   {
+    "heading": "Running a GAO protest: the agency report and the decision",
+    "body": "GAO notifies the agency within one day of filing. My first call is legal counsel, as RFO FAR 33.105-4 requires, then my chief and the SCO; in the 411th the supporting legal office and C&P route it into the ACC and Army legal channel.\n\nSame day: notify the awardee (4 CFR 21.3(a)), put a litigation hold on the file and the evaluators' notes, run the timeliness test, and issue the stop-work order if the stay applies. Then take an honest look at whether the protester has a point - corrective action on day two costs far less than a sustained protest on day ninety.\n\nThe agency report is due to GAO 30 days after notice (4 CFR 21.3(c)) and contains the contracting officer's statement of facts, a legal memorandum, and the relevant documents. The protester comments within 10 days. GAO decides within 100 days of filing, or 65 days under the express option (4 CFR 21.9, 21.10). GAO's recommendation is not binding, but if the agency does not implement it within 60 days the head of the procuring activity must report that to GAO (RFO FAR 33.105-4(b); 31 U.S.C. 3554(e))."
+   },
+   {
+    "heading": "Task-order protests and the DoD dollar floor",
+    "body": "Orders under multiple-award contracts are mostly protest-proof, with two exceptions: a protest that the order increases the scope, period or maximum value of the underlying contract, and a protest at GAO of an order over the statutory dollar floor. GAO's jurisdiction over those is exclusive (RFO FAR 16.508, legacy 16.505(a)(10)).\n\nThe numbers in regulations.json: the DoD, NASA and Coast Guard floor is $35,000,000, raised from $25 million by FY2025 NDAA section 885(f) and carried in DFARS 252.216-7010(b)(1) under DoD Class Deviation 2026-O0045 Rev. 1. The civilian-agency floor is $10,000,000 (41 U.S.C. 4106(f)).\n\nThis is a live trap: parts of the bank and older study decks still say $25 million. If a board member uses $25 million, answer with the current figure, name the NDAA change, and offer to confirm it. Two related numbers worth carrying: fair-opportunity enhanced procedures kick in above $7,500,000 (RFO FAR 16.507-5), and DoD postaward debriefings are required on orders of $15,000,000 or more."
+   },
+   {
+    "heading": "How boards probe this",
+    "body": "The board is testing whether you will stop performance when you are supposed to and whether you know the limit of your own signature. Expect a fact pattern with a date in it, and expect the follow-up to move the date by two days to see whether the stay still applies.\n\nThe answer that scores well does four things in order: names the forum, applies the timeliness test to the facts you were given, states what happens to performance and who signs any override, then says what you do in the first 24 hours - legal, notify the awardee, litigation hold, consider corrective action.\n\nThings that score a 1: confusing the 35-day agency best-effort rule with the 100-day GAO decision period; saying you would override the stay yourself; treating a vague objection letter as not a protest without asking legal (see Q0160); citing FAR 33.103 or 33.104 for GAO, which is pre-RFO numbering. Boards also like the closing question from Q0055: without competitive prejudice, no protest is sustained, no matter what the agency did wrong."
+   }
+  ],
+  "key_cites": [
+   {
+    "ref": "RFO FAR 33.104",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33",
+    "note": "Protests to the agency; 33.104-1 Scope, -2 Preaward, -3 Postaward, -4 Other procedures. Pre-RFO this subject was at 33.103."
+   },
+   {
+    "ref": "RFO FAR 33.104-3",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33",
+    "note": "Postaward agency protest: suspend performance if filed within 10 days after award or 5 days after an offered debriefing, whichever is later, unless continued performance is justified in writing."
+   },
+   {
+    "ref": "RFO FAR 33.104-4(c)(1)",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33",
+    "note": "Agency uses best efforts to resolve an agency protest within 35 days of receipt. Was 33.103(g)."
+   },
+   {
+    "ref": "RFO FAR 33.105",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33",
+    "note": "Protests to GAO; 33.105-2 preaward stay, 33.105-3 postaward stay and nondelegable HCA override, 33.105-4 other procedures including notify legal counsel and the 60-day report to GAO. Pre-RFO this was 33.104."
+   },
+   {
+    "ref": "RFO FAR 33.106",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33",
+    "note": "Protests to the U.S. Court of Federal Claims. No automatic stay; injunctive relief under 28 U.S.C. 1491(b)."
+   },
+   {
+    "ref": "4 CFR Part 21",
+    "url": "https://www.ecfr.gov/current/title-4/chapter-I/part-21",
+    "note": "GAO Bid Protest Regulations: 21.2 timeliness, 21.3 notice to the awardee and the 30-day agency report, 21.9 the 100-day decision, 21.10 the 65-day express option. Unchanged by the RFO."
+   },
+   {
+    "ref": "31 U.S.C. 3551-3556",
+    "url": "https://www.law.cornell.edu/uscode/text/31/3553",
+    "note": "CICA. 3553(c) preaward stay, 3553(d) postaward stay and the HCA override findings, 3554(a) the 100-day and 65-day periods, 3554(e) the report when a recommendation is not followed."
+   },
+   {
+    "ref": "RFO FAR 16.508",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16",
+    "note": "Task and delivery order protest limits (legacy 16.505(a)(10)). DoD floor $35,000,000 per 10 U.S.C. 3406(f)(1)(B) as amended by FY2025 NDAA sec. 885(f); civilian floor $10,000,000 per 41 U.S.C. 4106(f)."
+   },
+   {
+    "ref": "RFO DFARS 233.105-70",
+    "url": "https://www.acquisition.gov/dfars",
+    "note": "DoD: the 5-day stay clock runs from the conclusion of the enhanced postaward debriefing, including the follow-up question period."
+   }
+  ],
+  "board_angles": [
+   {
+    "q": "What are the three forums for a bid protest and what is the practical difference?",
+    "a": "Agency under RFO FAR 33.104 - fastest, 35-day best effort, I or an official above me decide; GAO under 33.105 - 100-day decision, automatic CICA stay if timely; Court of Federal Claims under 33.106 - a judge, no automatic stay, injunction required."
+   },
+   {
+    "q": "A GAO protest is filed four days after award. What happens to performance and who can change that?",
+    "a": "The stay applies, so I immediately suspend performance with a stop-work order under 52.242-15; only the head of the contracting activity, on a nondelegable basis, can override it with a written urgent-and-compelling or best-interest finding, and GAO must be told."
+   },
+   {
+    "q": "How long does the agency have to decide an agency-level protest?",
+    "a": "There is no statutory deadline, but RFO FAR 33.104-4(c)(1) requires best efforts to resolve it within 35 days of receipt by me or by the independent-review official."
+   },
+   {
+    "q": "What is the GAO jurisdictional floor for a DoD task order protest?",
+    "a": "$35 million for DoD, NASA and the Coast Guard since the FY2025 NDAA raised it from $25 million; $10 million for civilian agencies - plus GAO always hears a protest that the order exceeds the scope, period or maximum value of the contract."
+   },
+   {
+    "q": "What is in the agency report and when is it due?",
+    "a": "The contracting officer's statement of facts, a legal memorandum and the relevant record, due to GAO 30 days after notice under 4 CFR 21.3(c); the protester comments 10 days later and GAO decides within 100 days."
+   },
+   {
+    "q": "An unsuccessful offeror sends an angry letter that never uses the word protest. What do you do?",
+    "a": "I send it to legal the same day for an opinion on whether it is a protest, preserve the file, and do not start the clock or dismiss it on my own reading of the words."
+   }
+  ],
+  "related_questions": [
+   "Q0089",
+   "Q0090",
+   "Q0093",
+   "Q0121",
+   "Q0147",
+   "Q0148",
+   "Q0154",
+   "Q0218",
+   "Q0275",
+   "Q0042",
+   "Q0055",
+   "Q0160"
+  ],
+  "flags": [
+   "ai-drafted"
+  ],
+  "confidence": "high",
+  "confidence_reason": "Part 33 RFO renumbering (33.104 agency, 33.105 GAO, 33.106 COFC, 33.104-4(c)(1) 35-day rule) is verified in the regulations.json crosswalk against the acquisition.gov Part 33 deviation guide. 4 CFR 21 and 31 U.S.C. 3551-3556 are statutory and unchanged. The $35M DoD task-order floor comes from the verified thresholds entry. The only soft spot is the DFARS 233.105-70 debriefing-clock cite, taken from the bank's Q0275 answer rather than a fresh fetch."
+ },
+ {
+  "id": "claims-disputes",
+  "title": "Claims and Disputes Under the CDA",
+  "domain": "Protests, Claims & Disputes",
+  "summary": "A claim is a written demand, as a matter of right, for a sum certain or other contract relief - and almost everything a contractor sends me is not one until it is. The Contract Disputes Act gives the contractor a path from request to my final decision to the ASBCA or the Court of Federal Claims, and it puts interest on the Government's meter from the day I receive a proper claim. My job is to know when the clock starts, to decide rather than to stall, and to keep the file good enough that somebody else can defend it.",
+  "sections": [
+   {
+    "heading": "What is a claim, and what is not",
+    "body": "A claim is a written demand or written assertion by one of the contracting parties seeking, as a matter of right, the payment of money in a sum certain, the adjustment or interpretation of contract terms, or other relief arising under or relating to the contract.\n\nThree words do the work. Written - a phone call or a hallway complaint is never a claim. As a matter of right - not a request for a favor. Sum certain - a specific number, not \"we think we are owed something in the range of.\"\n\nWhat is not a claim: a voucher, invoice or routine request for payment that is not in dispute when submitted. It can become one by written notice to the contracting officer if it is disputed as to liability or amount, or if it is not acted on in a reasonable time.\n\nEither party can claim. A Government demand for money - defective work, overpayment, liquidated damages - is a claim too, and it also requires a contracting officer's final decision. Boards like that reversal; be ready for it."
+   },
+   {
+    "heading": "REA or claim: the distinction that costs money",
+    "body": "A request for equitable adjustment is a business proposal for more money or time under a contract clause - Changes, Government Delay of Work, Suspension of Work, Differing Site Conditions. It is negotiated. It does not require certification, it does not start CDA interest, and there is no 60-day decision deadline.\n\nA claim is a legal demand. It triggers certification over the threshold, CDA interest, my duty to issue a final decision, and the contractor's right to appeal.\n\nThe practical sequence: the contractor submits an REA, we negotiate, and if we cannot settle, the contractor converts it to a claim in writing. Most disputes should never get past the REA stage. When an REA arrives I notify legal, evaluate merit, negotiate, and use ADR through legal if negotiation stalls - ADR is available before or after my final decision.\n\nThe trap is the e-mail that says \"we think we are owed another $150,000.\" Is that a claim? Not yet - it lacks the demand as a matter of right and, depending on wording, a sum certain. Say why, and say what would make it one."
+   },
+   {
+    "heading": "Certification and the six-year limit",
+    "body": "A contractor claim exceeding $100,000 is not a claim under 41 U.S.C. chapter 71 until it is certified. The certificate states that the claim is made in good faith, that the supporting data are accurate and complete to the best of the contractor's knowledge and belief, that the amount accurately reflects the contract adjustment for which the contractor believes the Government is liable, and that the certifier is authorized to certify on the contractor's behalf.\n\nThe threshold value is in regulations.json: $100,000, at RFO FAR 33.205-2 and the Disputes clause 52.233-1(d), implementing 41 U.S.C. 7103(b).\n\nTwo nuances boards probe. First, a defective certification is curable and does not stop interest from running (41 U.S.C. 7103(b)(3)); a complete absence of certification is jurisdictional and I should return the submission and say why. Second, aggregation - a contractor cannot split one claim into pieces under $100,000 to dodge certification.\n\nEach claim must be submitted to the contracting officer within six years after accrual (41 U.S.C. 7103(a)(4)). Accrual is when all events fixing liability were known or should have been known."
+   },
+   {
+    "heading": "The contracting officer's final decision",
+    "body": "For a claim of $100,000 or less, I issue a written decision within 60 days of receiving a written request for a decision. For a claim over $100,000, within 60 days I either issue the decision or notify the contractor of a firm date by which I will - and that date must be reasonable given the size and complexity.\n\nThe decision has to contain a description of the claim, a statement of the factual areas of agreement and disagreement, a statement of the decision with supporting rationale, the paragraph that tells the contractor about its appeal rights to the agency board and to the Court of Federal Claims, and my signature (RFO FAR 33.205-6). It states that it is the contracting officer's final decision.\n\nWhat I do not do: sit on it. Failure to issue a decision within the required period is a deemed denial, the contractor appeals anyway, and interest has been running the whole time. What I also do not do is issue a decision without legal review, or decide a claim involving fraud - those go to the appropriate investigative channel, not to me."
+   },
+   {
+    "heading": "Interest",
+    "body": "Yes, the Government pays interest. Under 41 U.S.C. 7109 and RFO FAR 33.205-3 (formerly 33.208), interest runs on a contractor's claim from the date the contracting officer receives a proper claim - certified if certification is required - or from the date payment would otherwise be due if that is later, until the date of payment.\n\nThe rate is set and published by the Secretary of the Treasury every six months for CDA purposes. It is simple interest, and it keeps running through my decision period, through an ASBCA appeal, and through litigation at the Court of Federal Claims. The Prompt Payment rate published for 1 July to 31 December 2026 in regulations.json is 4.75 percent per year; confirm the current semiannual rate before you quote a number.\n\nThree things to keep straight. CDA interest is not Prompt Payment Act interest, which is about late payment of undisputed proper invoices (RFO FAR 32.907; 31 U.S.C. 3901). Interest runs in the other direction too - the contractor owes interest on a contract debt from the date of my demand letter (RFO FAR 32.608; FAR 52.232-17). And delay is expensive: every week I take to decide is a week of interest."
+   },
+   {
+    "heading": "Appeals: ASBCA or the Court of Federal Claims",
+    "body": "After my final decision the contractor elects one road and cannot take both.\n\n- Armed Services Board of Contract Appeals: notice of appeal within 90 days of receipt of the decision (41 U.S.C. 7104(a)). Administrative judges, less formal, generally cheaper. The board offers a small-claims expedited procedure for claims of $50,000 or less, or $150,000 or less for a small business, and an accelerated procedure for claims of $100,000 or less - my decision letter has to tell the contractor these rights exist.\n- U.S. Court of Federal Claims: a direct action within 12 months of receipt of the decision (41 U.S.C. 7104(b)). A judge, full litigation, appealable to the Federal Circuit.\n\nThe contractor may also use alternative dispute resolution at any point (RFO FAR 33.205-8) - and I should offer it. Q0129's short answer names the whole toolbox: ADR, an REA, a claim under the Disputes clause, the ASBCA, the Court of Federal Claims.\n\nThroughout, performance continues. Under the Disputes clause the contractor must proceed diligently with performance pending final resolution of any request for relief."
+   }
+  ],
+  "key_cites": [
+   {
+    "ref": "RFO FAR Subpart 33.2",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33",
+    "note": "Disputes and Appeals, sections 33.205-1 through 33.205-9. The Part 33 deviation guide confirms the subpart and the 33.205-x series; the legacy numbers were 33.201 through 33.215."
+   },
+   {
+    "ref": "RFO FAR 33.205-2",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33",
+    "note": "Certification of claims over $100,000 (legacy 33.207). Threshold verified in regulations.json thresholds entry cda_claim_certification."
+   },
+   {
+    "ref": "RFO FAR 33.205-3",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33",
+    "note": "Interest on claims, formerly 33.208. Crosswalk confidence: verified."
+   },
+   {
+    "ref": "RFO FAR 33.205-6",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33",
+    "note": "Contracting officer's final decision: 60-day rule, required content, notice of the contractor's board and court election rights."
+   },
+   {
+    "ref": "RFO FAR 33.205-8",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33",
+    "note": "Alternative dispute resolution; available before or after the final decision."
+   },
+   {
+    "ref": "FAR 52.233-1",
+    "url": "https://www.acquisition.gov/far/52.233-1",
+    "note": "Disputes clause: definition of claim, certification language at (d), duty to proceed diligently with performance pending resolution."
+   },
+   {
+    "ref": "41 U.S.C. 7101-7109",
+    "url": "https://www.law.cornell.edu/uscode/text/41/subtitle-III/chapter-71",
+    "note": "Contract Disputes Act. 7103(a)(4) six-year submission limit; 7103(b) certification and the curable-defect rule; 7104 appeal elections; 7106 expedited and accelerated board procedures; 7109 interest. Statute - unchanged by the RFO."
+   },
+   {
+    "ref": "RFO FAR 32.907",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32",
+    "note": "Prompt Payment interest penalties - a different animal from CDA interest. Standard payment period 30 days after a proper invoice; rate 4.75 percent for 1 Jul - 31 Dec 2026 per regulations.json."
+   }
+  ],
+  "board_angles": [
+   {
+    "q": "What makes a submission a claim?",
+    "a": "A written demand or assertion by a party, as a matter of right, for a sum certain or for adjustment or interpretation of contract terms - and over $100,000 it is not a claim until it is certified."
+   },
+   {
+    "q": "Is a routine invoice a claim?",
+    "a": "No, not when it is submitted undisputed; it converts to a claim by written notice if it becomes disputed as to liability or amount, or if it is not acted on in a reasonable time."
+   },
+   {
+    "q": "How long do you have to issue a final decision?",
+    "a": "Sixty days for a claim of $100,000 or less; for a larger claim, within 60 days I either decide or notify the contractor of a firm, reasonable date when I will, and failure to act is a deemed denial."
+   },
+   {
+    "q": "Does the Government pay interest on claims?",
+    "a": "Yes - CDA interest at the Treasury rate from the date I receive a proper claim, or the date payment would otherwise be due if later, until payment, and it keeps running through my decision, the appeal and any litigation."
+   },
+   {
+    "q": "Where does the contractor go after your final decision?",
+    "a": "Either the ASBCA within 90 days or the Court of Federal Claims within 12 months of receipt - the contractor elects one road, and my decision letter has to tell them both exist."
+   },
+   {
+    "q": "What is the difference between an REA and a claim, and why do you care?",
+    "a": "An REA is a negotiable business proposal under a contract clause; a claim is a legal demand that starts certification, interest, my 60-day decision duty and appeal rights - so I try hard to settle at the REA stage."
+   }
+  ],
+  "related_questions": [
+   "Q0091",
+   "Q0092",
+   "Q0129",
+   "Q0219",
+   "Q0011"
+  ],
+  "flags": [
+   "ai-drafted"
+  ],
+  "confidence": "medium",
+  "confidence_reason": "Statutory content (41 U.S.C. 7103, 7104, 7106, 7109) and the $100,000 certification threshold are verified in regulations.json. The RFO section numbers 33.205-2, -3, -6 and -8 are verified in the crosswalk and used in the bank's own answers. Lower confidence on two points not fetched fresh: the exact RFO section that carries the definition of claim (the crosswalk confirms the 33.205-1 through -9 series but not which subsection holds the definitions - the rubric probe set uses 33.205-1), and the current Treasury CDA interest rate, which changes every six months."
+ },
+ {
+  "id": "government-property",
+  "title": "Government Property: GFP, CAP and Who Eats the Loss",
+  "domain": "Property, Security & Special Provisions",
+  "summary": "Government property is anything the Government owns or acquires under a contract - property it furnishes to the contractor, and property the contractor buys with Government money. The default rule is that the Government self-insures and the contractor is not liable for loss, with a short list of exceptions that shift the risk. Furnishing property is a business decision that must be made before the solicitation goes out, not an afterthought a customer adds at kickoff.",
+  "sections": [
+   {
+    "heading": "Two kinds of property, one clause",
+    "body": "Government-furnished property is property in the possession of, or acquired by, the Government and later furnished to the contractor. Contractor-acquired property is property the contractor buys or fabricates for performance and for which the Government has title or will take title under the contract.\n\nBoth are Government property, and both are managed under RFO FAR Part 45 with the basic clause FAR 52.245-1, Government Property. The clause obligates the contractor to have a property management system covering acquisition, receipt, records, physical inventory, subcontractor control, reports, relief of stewardship responsibility, utilization, maintenance, property closeout and disposition.\n\nGovernment-furnished property also includes contractor-acquired property when that CAP is a deliverable under a cost contract and the Government accepts it for continued use under the contract.\n\nTitle depends on contract type and on what the contract says. Under cost-reimbursement and time-and-materials contracts the Government generally takes title to CAP when the cost is charged. Under fixed-price contracts, absent contract financing that vests title, the contractor typically holds title until delivery and acceptance - so read the contract before answering, as Q0161 does."
+   },
+   {
+    "heading": "The decision to furnish, and getting it into the solicitation",
+    "body": "Yes, a customer can have GFP - but the policy preference is that contractors furnish what they need to perform. Providing Government property is an exception that must be justified. Part 45 requires the Government to furnish property only when doing so is in the Government's best interest, and the decision drives evaluation, price and risk.\n\nWhat has to happen before the solicitation goes out:\n\n- The requiring activity identifies each item, its condition, quantity, location, and the date it will be available.\n- The contracting officer confirms the property is available and serviceable - a promise of a forklift that is deadlined is a change order waiting to happen.\n- The property is listed in the solicitation and in the contract, with a GFP attachment, so every offeror prices the same thing.\n- The right clauses go in: FAR 52.245-1 with the appropriate alternate, plus the DFARS 252.245-70xx series.\n- Property administration is assigned, and the COR's surveillance duties include it.\n\nIf the customer wants to add property after award, that is a change - price it, mod it, update the attachment."
+   },
+   {
+    "heading": "Liability for loss: the default and the four exceptions",
+    "body": "This is the single most-asked property question and the answer is counterintuitive to most customers. Under FAR 52.245-1(h), unless the contract provides otherwise, the contractor is not liable for loss of Government property furnished or acquired under the contract. The Government assumes the risk - it self-insures (RFO FAR 45.104).\n\nThe contractor is liable when any one of these applies:\n\n- The risk is covered by insurance or the contractor is otherwise reimbursed.\n- The loss results from willful misconduct or lack of good faith on the part of the contractor's managerial personnel.\n- The contracting officer has, in writing, revoked the Government's assumption of risk because of a determination that the contractor's property management practices are inadequate, increase the Government's risk, or fail to provide adequate stewardship.\n- The contract expressly makes the contractor liable - for example some fixed-price contracts, or where the contract specifies liability for particular items.\n\nSo the answer to \"who pays to repair the GFP generator\" is: normally the Government, unless one of those applies. And note the lever in the third exception - the revocation is mine, it is in writing, and it is prospective."
+   },
+   {
+    "heading": "Property administration, reporting and disposal",
+    "body": "The contracting officer is accountable, but the work is shared. A property administrator - often at DCMA under a contract administration delegation - conducts property management system analysis, approves or disapproves the contractor's system, and processes reports of loss. The COR does day-to-day surveillance and is usually the first to notice something wrong, as in the Q0161 fact pattern where the contractor is buying CAP and claiming it is theirs.\n\nThe contractor reports loss of Government property to the property administrator and the contracting officer. Relief of stewardship responsibility does not automatically mean relief of financial liability - those are two determinations.\n\nWhen property is no longer needed, RFO FAR Subpart 45.6 governs reporting, reutilization and disposal: screening for reutilization within DoD, then transfer, donation, sale or abandonment, generally through the plant clearance process. At closeout, property disposition is one of the closeout steps - an open property account is a common reason a file cannot close.\n\nOverseas adds layers. Property on an installation in Korea brings customs, import and SOFA questions; confirm the local procedure with C&P rather than assuming CONUS practice applies."
+   },
+   {
+    "heading": "Traps and how boards probe it",
+    "body": "The traps:\n\n- Assuming the contractor pays for damage. The default is the opposite, and a candidate who gets this backwards looks like they have never administered a property contract.\n- Letting a customer add GFP by e-mail after award. That is a change under the Changes clause and may be an unauthorized commitment if someone else promised it.\n- Confusing title with possession, and answering the CAP question without asking what contract type it is.\n- Forgetting that the clause has to be in the contract. No 52.245-1, no property management system requirement, and a much harder conversation later.\n- Ignoring property at closeout.\n\nHow boards probe: they give you a lost or damaged item and ask who pays, then they add a fact - the contractor's property system was disapproved last quarter, or the loss happened because the site supervisor ignored a written warning - to see whether you can find the exception. Another common probe is the customer who wants to furnish property to \"save money on the bid\": the right answer is that it can, but only if it is identified, available, priced into the solicitation and administered, and that it transfers risk to the Government."
+   }
+  ],
+  "key_cites": [
+   {
+    "ref": "RFO FAR Part 45",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-45",
+    "note": "Government Property. Part retained: 45.101-45.107 including 45.104 Responsibility and liability; Subpart 45.2 Solicitation and evaluation; 45.3 Use and rental; 45.4 Title; 45.6 Reporting, reutilization and disposal."
+   },
+   {
+    "ref": "RFO FAR 45.104",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-45",
+    "note": "Responsibility and liability for Government property - the Government's assumption of risk and the conditions under which the contractor becomes liable."
+   },
+   {
+    "ref": "FAR 52.245-1",
+    "url": "https://www.acquisition.gov/far/52.245-1",
+    "note": "Government Property clause, retained under the RFO and still prescribed by Part 45. Defines GFP and CAP, the property management system outcomes, reporting and disposition."
+   },
+   {
+    "ref": "FAR 52.245-1(h)",
+    "url": "https://www.acquisition.gov/far/52.245-1",
+    "note": "Contractor liability for Government property: not liable unless insured or reimbursed, willful misconduct or lack of good faith by managerial personnel, the contracting officer has revoked the assumption of risk in writing, or the contract provides otherwise."
+   },
+   {
+    "ref": "DFARS Part 245 and the 252.245-70xx clause series",
+    "url": "https://www.acquisition.gov/dfars/part-245-government-property",
+    "note": "DoD supplement for Government property, including reporting of Government property in the accountable property system of record. Confirm the current RFO DFARS deviation numbering before the board."
+   }
+  ],
+  "board_angles": [
+   {
+    "q": "Who is responsible for the cost of repair of Government-furnished property?",
+    "a": "Normally the Government - under 52.245-1(h) the contractor is not liable for loss of Government property unless the risk is insured or reimbursed, the loss came from willful misconduct or bad faith by managerial personnel, I have revoked the assumption of risk in writing, or the contract says otherwise."
+   },
+   {
+    "q": "Your customer wants GFP in the solicitation. Can they do that, and what has to happen?",
+    "a": "Yes, if it is in the Government's best interest - but it has to be identified item by item with condition, quantity and availability, listed in the solicitation so every offeror prices the same thing, covered by 52.245-1 and the DoD clauses, and assigned to a property administrator."
+   },
+   {
+    "q": "The COR reports the contractor is buying property under the contract and calling it their own. What do you do?",
+    "a": "I read the contract first - title to contractor-acquired property turns on contract type and the contract terms; under cost-type contracts the Government generally takes title as cost is charged, and if the contract vests title in the Government I correct the record and check the property management system."
+   },
+   {
+    "q": "When would you revoke the Government's assumption of risk?",
+    "a": "When I determine in writing that the contractor's property management practices are inadequate, increase the Government's risk or fail to provide adequate stewardship - it is a written, prospective contracting officer action, usually after a disapproved property system."
+   },
+   {
+    "q": "What happens to Government property at the end of the contract?",
+    "a": "Disposition under Subpart 45.6 - inventory, report, screen for reutilization, then transfer, donate, sell or abandon through plant clearance - and the property account has to be closed before the contract file can close."
+   }
+  ],
+  "related_questions": [
+   "Q0134",
+   "Q0155",
+   "Q0161"
+  ],
+  "flags": [
+   "ai-drafted"
+  ],
+  "confidence": "medium",
+  "confidence_reason": "FAR 52.245-1(h) liability language and the retention of Part 45 (including 45.104) are verified in the regulations.json crosswalk against the acquisition.gov Part 45 and Part 52 deviation guides and the clause text. Lower confidence on the subpart-level details I did not fetch - the exact RFO content of 45.2, 45.4 and 45.6, the alternates of 52.245-1, and the current DFARS 252.245-70xx numbering under the RFO DoD class deviations. Title rules under fixed-price versus cost contracts are stated as the bank's official Q0161 answer states them."
+ },
+ {
+  "id": "closeout-reporting",
+  "title": "Closeout, CPARS and Contract Reporting",
+  "domain": "Contract Administration",
+  "summary": "The last twenty percent of a contract is where money gets left on the table and where the record either defends me or does not. Closeout deobligates funds and releases withholdings, contract action reports make the Government's spending visible, CPARS turns performance into something the next contracting officer can rely on, and the VCE Paperless Contract File is where all of it has to actually live. None of it is optional and all of it is graded.",
+  "sections": [
+   {
+    "heading": "The file: one place, complete, contemporaneous",
+    "body": "The RFO collapsed old Subpart 4.8 into a single section. RFO FAR 4.101 requires each contracting, administration or paying office to establish a file for each solicitation and contractual action that comprehensively records the transaction history. The purposes stated in the rule are the ones to say aloud: background for the decisions made, support for the actions taken, information for reviews and investigations, and the facts if there is litigation or a congressional inquiry.\n\nNote what changed. The old 4.803 itemized contents checklist is no longer regulatory. That is not a license to document less - it means the standard is now the outcome, not the checklist, and the burden of proving the file is complete moved to me.\n\nQ0109 gives the practical framing: document so that anyone who picks up the file knows exactly where it stands, so the action complies with law and regulation, so I can defend the decision later, and so the Army's interests can be protected in litigation. Contract retention is Subpart 4.7; contractor record retention is generally three years after final payment (4.703), with category-specific periods at 4.705."
+   },
+   {
+    "heading": "Closeout: why it matters and what it takes",
+    "body": "Closeout is at RFO FAR 4.308, with 4.308-1 procedures and 4.308-2 closeout by the administering office. Why it matters, in the words of Q0007: excess funds may need to be deobligated, and many contract types withhold final payments that can be large sums to the contractor - a real cash-flow issue for a small business.\n\nThe timeframes carried on the RFO Part 4 deviation guide: six months for firm-fixed-price contracts and thirty-six months for contracts requiring settlement of indirect cost rates. The legacy rule also allowed twenty months for other contracts; confirm the current figure before you quote it.\n\nThe physically-complete-to-closed checklist: all deliverables accepted and the receiving report in place; final invoice and final payment; final indirect cost rate settlement where applicable; subcontract settlements; Government property disposed of and the property account closed; classified material dispositioned; patent and royalty reports; final CPARS entered; any claim or termination settled; contractor's release of claims; excess funds deobligated; and the file annotated and closed in the system of record.\n\nQuick-closeout procedures for smaller unsettled indirect cost amounts sit in the indirect cost rate subpart (RFO Subpart 42.5, legacy 42.708) - confirm the section."
+   },
+   {
+    "heading": "Contract action reporting after FPDS moved to SAM.gov",
+    "body": "RFO FAR 4.301 requires agencies to report contract actions above the micro-purchase threshold to the Federal Procurement Data System, generally within three business days after award. What changed is the front door, not the duty: FPDS.gov was decommissioned in February 2026 and contract award data now lives in SAM.gov, which carries the contract data and the public search and reporting that FPDS.gov used to host. Verify the current entry point and any local workflow with C&P before the board - this transition is recent and the study decks still say FPDS-NG.\n\nWhy accuracy matters, per Q0048: the data is the basis for reports to the President, the Congress, GAO, federal agencies and the public; it measures the effect of federal contracting on the economy; and it is how small business, service-disabled veteran-owned, HUBZone, women-owned and other socioeconomic achievement is counted. A wrong NAICS code, set-aside code or dollar value misstates somebody's goal attainment and can distort a set-aside decision on the next requirement.\n\nSo I verify the CAR against the contract before it is finalized and fix errors by correcting the record, not by a workaround."
+   },
+   {
+    "heading": "CPARS: writing a record somebody else will rely on",
+    "body": "Contractor performance information is RFO FAR Subpart 42.11 (legacy 42.15), with 42.1100 scope, 42.1101 general, 42.1102 policy, 42.1103 procedures and 42.1104 the contract clause. Evaluations are required above dollar thresholds that vary by acquisition type; the legacy FAR 42.1502 figures were $1 million for services and IT, $5 million for systems and operations support, $750,000 for construction and $35,000 for architect-engineer work. Confirm the current RFO values before quoting them.\n\nAs assessing official, Q0124 tells you what to look for: complete and correct contract data - interim or final, contiguous periods of performance, program title and description; a meaningful narrative for every assessed area; specific events cited for any rating other than Satisfactory; a small business narrative addressing subcontracting goals and eSRS reporting; and assessments that are objective and verifiable rather than opinion.\n\nWhy it matters: other contracting officers evaluate past performance from these records, and an inflated rating on a poor performer is how a bad contractor keeps winning. The contractor gets to comment, so write something that survives a rebuttal."
+   },
+   {
+    "heading": "VCE PCF discipline",
+    "body": "The Virtual Contracting Enterprise Paperless Contract File is the Army's system of record for the contract file. If the document is not in the PCF, for practical purposes it does not exist: reviewers, auditors, the IG, a successor contracting officer and Army legal all work from the PCF.\n\nWhat I do personally, not by delegation:\n\n- Build the file as I go rather than at closeout. A file assembled from memory six months later is a file with holes.\n- Check that documents in the PCF are the signed, final versions and that the metadata - contract number, modification number, dates, dollar values - matches the contract and the contract action report.\n- Spot-check my specialists' files at award and at each modification.\n- Reconcile the PCF against the CAR and CPARS entries; three systems telling three stories is an audit finding.\n- Close out PCF actions before a departure. In VCE-Warrants a departing member's PCF actions must be zero before removal from the TDA is enabled.\n\nConfirm the current 411th PCF review procedures and any local checklist with C&P."
+   }
+  ],
+  "key_cites": [
+   {
+    "ref": "RFO FAR 4.101",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4",
+    "note": "Contract files. Old 4.801, 4.802 and 4.803 collapsed into one section; the itemized contents checklist is no longer regulatory."
+   },
+   {
+    "ref": "RFO FAR 4.301",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4",
+    "note": "Contract reporting: report actions above the micro-purchase threshold to FPDS within three business days after award. Fetched from the Part 4 deviation guide 14 Sep 2026."
+   },
+   {
+    "ref": "RFO FAR 4.308",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4",
+    "note": "Contract closeout; 4.308-1 procedures, 4.308-2 closeout by the administering office with six months for firm-fixed-price and thirty-six months for indirect cost rate settlement."
+   },
+   {
+    "ref": "RFO FAR Subpart 4.7",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4",
+    "note": "Contractor records retention: generally three years after final payment (4.703), with category-specific periods at 4.705."
+   },
+   {
+    "ref": "RFO FAR Subpart 42.11",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-42",
+    "note": "Contractor performance information, formerly Subpart 42.15. Sections 42.1100 scope, 42.1101 general, 42.1102 policy, 42.1103 procedures, 42.1104 contract clause."
+   },
+   {
+    "ref": "RFO FAR 42.202",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-42",
+    "note": "Assignment of contract administration - how functions are delegated to a contract administration office such as DCMA, which matters for who actually closes the file."
+   },
+   {
+    "ref": "SAM.gov contract data",
+    "url": "https://sam.gov/",
+    "note": "FPDS.gov was decommissioned in February 2026 and federal contract award data moved to SAM.gov. Verify the current reporting entry point and local workflow with C&P; the FAR text still names FPDS."
+   }
+  ],
+  "board_angles": [
+   {
+    "q": "Why is contract closeout important?",
+    "a": "Because excess funds have to be deobligated and put back to work, withheld final payments are released to the contractor, and an open file keeps property, indirect rates and subcontract settlements unresolved - it is the last chance to get the record right."
+   },
+   {
+    "q": "What are the closeout timeframes?",
+    "a": "Under RFO FAR 4.308-2, six months after the file is physically complete for firm-fixed-price contracts and thirty-six months where indirect cost rates have to be settled; I would confirm the intermediate figure for other contract types."
+   },
+   {
+    "q": "Why must contract action reports be complete and accurate?",
+    "a": "The data feeds reports to the President, Congress, GAO and the public, measures the effect of federal contracting on the economy, and is how socioeconomic goal achievement is counted - a wrong code misstates somebody's numbers and can distort the next set-aside decision."
+   },
+   {
+    "q": "You are the assessing official on a CPARS evaluation. What are you looking for?",
+    "a": "Complete and correct contract data, a meaningful narrative for every area, specific events cited for any rating other than Satisfactory, a small business narrative that addresses goals and eSRS, and assessments that are objective and verifiable - because other contracting officers will make source selection decisions from it."
+   },
+   {
+    "q": "What is the VCE PCF and how do you personally ensure the data is accurate?",
+    "a": "It is the Army's paperless contract file, the system of record - so I build the file as I go, verify signed final versions and matching metadata, reconcile the PCF against the contract action report and CPARS, and spot-check my specialists' files at award and at each modification."
+   },
+   {
+    "q": "Why document the file at all?",
+    "a": "So anyone who picks it up knows exactly where it stands, so the action complies with law and regulation, so I can defend my decisions later, and so the Army's interests are protected if it goes to litigation."
+   }
+  ],
+  "related_questions": [
+   "Q0007",
+   "Q0035",
+   "Q0048",
+   "Q0124",
+   "Q0109"
+  ],
+  "flags": [
+   "ai-drafted",
+   "verify-locally"
+  ],
+  "confidence": "medium",
+  "confidence_reason": "RFO FAR 4.101, 4.301, 4.308/4.308-1/4.308-2, Subpart 4.7 and Subpart 42.11 section numbers were fetched from the acquisition.gov Part 4 and Part 42 deviation guides on 14 Sep 2026; the 4.101 collapse is also verified in the regulations.json crosswalk. Medium rather than high because three items are not confirmed against primary sources: the twenty-month closeout figure for other contract types (legacy value), the current CPARS dollar thresholds under RFO 42.1102 (legacy 42.1502 values given), and the exact status and entry point of contract action reporting after FPDS.gov was decommissioned - the FAR text still says FPDS while the data now sits on SAM.gov. VCE PCF review practices are local and carry verify-locally."
+ },
+ {
+  "id": "grants-agreements-ota",
+  "title": "Grants, Cooperative Agreements and Other Transactions",
+  "domain": "Grants & Agreements",
+  "summary": "Not everything the Government funds is a contract. When the principal purpose is to transfer a thing of value to carry out a public purpose, the law requires an assistance instrument - a grant or a cooperative agreement - and when the Government needs a prototype from companies that will not take a FAR contract, an Other Transaction may be the right tool. Different instrument, different rulebook, different warrant: Grants Officer, Agreements Officer and Contracting Officer are three separate appointments.",
+  "sections": [
+   {
+    "heading": "Choosing the instrument: the principal purpose test",
+    "body": "Congress settled this in 31 U.S.C. 6303-6305, and it is a purpose test, not a preference test.\n\n- Procurement contract, 31 U.S.C. 6303: the principal purpose is to acquire property or services for the direct benefit or use of the Federal Government. Agencies have inherent constitutional authority to contract.\n- Grant, 31 U.S.C. 6304: the principal purpose is to transfer a thing of value to a recipient to carry out a public purpose of support or stimulation authorized by law, and substantial involvement between the agency and the recipient is not expected.\n- Cooperative agreement, 31 U.S.C. 6305: same public purpose, but substantial involvement is expected between the agency and the recipient in carrying out the activity.\n\nSubstantial involvement is the hinge between the last two - collaborative participation in the work, agency approval of stages or personnel, direction of the effort. Attending meetings and reading reports is not substantial involvement.\n\nOne more rule boards love: unlike contracting, an assistance instrument requires authorizing legislation. So a program office that wants a grant because it is faster gets a purpose test and an authority question, not a form."
+   },
+   {
+    "heading": "The rulebook and its order of precedence",
+    "body": "For DoD assistance the stack is:\n\n- Federal statute and law.\n- Government-wide regulation, executive orders and OMB guidance - principally 2 CFR Part 200, the uniform administrative requirements, cost principles and audit requirements for federal awards.\n- Agency regulation: the DoD Grants and Agreements Regulations, the DoDGARs, at 32 CFR Chapter I Subchapter C - Part 21 general, Part 22 grants and cooperative agreements, Part 28 drug-free workplace and lobbying, Part 34 administrative requirements for for-profit recipients, Part 37 technology investment agreements - plus the DoD implementation of 2 CFR 200 in the 2 CFR Part 1100 series. The Grants Officer is defined in 2 CFR 1108.\n- Standard terms and conditions, then award-specific terms and conditions, then agency policy.\n\nThe point to make out loud is the ordering principle: law trumps everything, then government-wide regulation, then agency regulation, then the award's own terms. Different sources present this list slightly differently, so state the principle and offer to confirm the exact sequence.\n\nAssistance awards are reported to the Defense Assistance Award Data System, DAADS, under DoDGARs Part 21.535, and announcements of funding opportunities go out electronically through Grants.gov."
+   },
+   {
+    "heading": "Running an assistance award",
+    "body": "The Grants Officer's core responsibilities are compact: ensure awards are used effectively in executing DoD programs and are made and administered in accordance with law, executive orders, regulation and DoD policy; ensure sufficient funds are available for obligation; and ensure recipients receive impartial, fair and equitable treatment.\n\nThe life cycle: announce the opportunity electronically; conduct merit review; determine recipient qualification and run the risk review under 2 CFR 200 - financial stability, quality of management systems, history of performance, audit findings, ability to meet the requirements; determine allowability under the applicable cost principles; make the award with standard and special terms; monitor performance and reporting; handle noncompliance with the remedies ladder up to suspension and termination; audit; and close out.\n\nAudits of a state or local government recipient come through the Single Audit process under 2 CFR 200 Subpart F, not by sending an auditor - the Grants Officer obtains and reviews the Single Audit report and follows up findings.\n\nCompetition: there is no CICA for assistance, but merit-based competitive procedures are the policy expectation, and a Grants Officer should seek competition. Fiscal law does not relax because the instrument is a grant."
+   },
+   {
+    "heading": "Other Transactions: authority, conditions and limits",
+    "body": "An Other Transaction is not a procurement contract, not a grant, not a cooperative agreement and not a CRADA. It is a binding instrument used where the FAR-based system would keep the right performers out.\n\nAuthorities: 10 U.S.C. 4021 for research OTs (formerly 2371) and 4022 for prototype projects (formerly 2371b), with follow-on production at 4022(f).\n\nA prototype OT under 4022 requires a project directly relevant to enhancing the mission effectiveness of military personnel and the supporting platforms, systems, components or materials, or improving those in use by the armed forces - plus one condition: a nontraditional defense contractor participating to a significant extent; all significant participants nontraditional or small business; at least one-third of total cost from non-federal sources; or a senior procurement executive determination that exceptional circumstances justify innovative business arrangements not feasible under a contract.\n\nA nontraditional defense contractor has not performed, for at least one year before the solicitation, a DoD contract or subcontract subject to full CAS coverage.\n\nWhat does not apply: CICA, TINA, the Contract Disputes Act, the protest system, Bayh-Dole, the DoDGARs. What does apply: criminal law, fiscal law in full, Comptroller General access to records, security and OPSEC, export control."
+   },
+   {
+    "heading": "Follow-on production and the numbers",
+    "body": "The most probed OT rule is the follow-on. Under 10 U.S.C. 4022(f) a follow-on production contract or transaction may go to the participants without further competition only if competitive procedures were used to select the parties for the transaction and the participants successfully completed the prototype project. Say both, in that order - candidates routinely give only the second.\n\nApproval thresholds are where the bank is inconsistent. Q0184 gives up to $50 million to the SCO, $50-100 million the HCA, $100-500 million the SPE, above $500 million OSD. Q0192 gives up to $50 million SCO, $50-250 million SPE, over $250 million USD. Both are official. Do not pick one - say the level scales by dollar value from SCO through HCA, the Army SPE and OSD, name the $50 million SCO tier they agree on, and confirm the current table. A separate D&F is executed for each prototype project.\n\nWarrants: the Grants Officer is appointed by the HCA, not delegable. Agreements Officer warrants are delegable to the SCO and no lower than the chief of the contracting office; Policy v12 wants CON 0660 and Neg-OTA-tion 101 or equivalent, a commensurate KO or GO warrant, and working knowledge of data rights."
+   }
+  ],
+  "key_cites": [
+   {
+    "ref": "31 U.S.C. 6303-6305",
+    "url": "https://www.law.cornell.edu/uscode/text/31/6304",
+    "note": "The principal purpose test: 6303 procurement contract, 6304 grant, 6305 cooperative agreement with substantial involvement. Statute, unchanged by the RFO; 6304 and 6305 are on the regulations.json unchanged list."
+   },
+   {
+    "ref": "2 CFR Part 200",
+    "url": "https://www.ecfr.gov/current/title-2/subtitle-A/chapter-II/part-200",
+    "note": "Uniform administrative requirements, cost principles and audit requirements for federal awards, including the recipient risk review and the Subpart F Single Audit. On the regulations.json unchanged list. DoD implementation is the 2 CFR 1100 series; Grants Officer is defined at 2 CFR 1108."
+   },
+   {
+    "ref": "DoDGARs, 32 CFR Chapter I Subchapter C",
+    "url": "https://www.ecfr.gov/current/title-32/subtitle-A/chapter-I/subchapter-C",
+    "note": "Parts 21 general (including 21.535 DAADS reporting), 22 grants and cooperative agreements, 28 drug-free workplace and lobbying, 34 for-profit recipients, 37 technology investment agreements. Agreements Officer is defined at 32 CFR 3.4."
+   },
+   {
+    "ref": "10 U.S.C. 4021",
+    "url": "https://www.law.cornell.edu/uscode/text/10/4021",
+    "note": "Research projects: transactions other than contracts and grants. Renumbered from 10 U.S.C. 2371 by Pub. L. 116-283, effective 1 Jan 2022. Crosswalk confidence: verified."
+   },
+   {
+    "ref": "10 U.S.C. 4022",
+    "url": "https://www.law.cornell.edu/uscode/text/10/4022",
+    "note": "DoD authority for prototype projects, renumbered from 2371b. Subsection (f) governs follow-on production: competitive procedures used to select participants, and successful completion of the prototype project. Some sources in the bank call this 4003b; no such section exists."
+   },
+   {
+    "ref": "Army Warranting Program Policy v12 (MAR 2026)",
+    "url": "",
+    "note": "GO warrants appointed by the HCA, not delegable; AO warrants delegable to SCO and no lower than CoCO; AO qualifications CON 0660 and Neg-OTA-tion 101 or equivalent, OTA credential preferred, commensurate KO or GO warrant, data rights and IP knowledge. Hosted on the PAM Army Warranting Program page (CAC)."
+   }
+  ],
+  "board_angles": [
+   {
+    "q": "A program office wants a grant so they do not have to compete. What do you tell them?",
+    "a": "The instrument is decided by the principal purpose test, not by convenience - if the purpose is to acquire property or services for the Government's direct benefit it is a contract under 31 U.S.C. 6303, and an assistance award also requires authorizing legislation, which a contract does not."
+   },
+   {
+    "q": "What is the difference between a grant and a cooperative agreement?",
+    "a": "Both transfer a thing of value to carry out a public purpose; the difference is substantial involvement - expected in a cooperative agreement under 31 U.S.C. 6305, not expected in a grant under 6304."
+   },
+   {
+    "q": "What is the authority for a prototype Other Transaction, and what conditions must be met?",
+    "a": "10 U.S.C. 4022 - a prototype project directly relevant to mission effectiveness, plus one of the four conditions: a nontraditional participating significantly, all significant participants nontraditional or small business, at least one-third non-federal cost share, or an SPE determination of exceptional circumstances."
+   },
+   {
+    "q": "When can a follow-on production award go to the OT participants without competition?",
+    "a": "Under 10 U.S.C. 4022(f), only if competitive procedures were used to select the parties for the prototype transaction and the participants successfully completed the prototype project."
+   },
+   {
+    "q": "What does not apply to an OT, and what still does?",
+    "a": "CICA, TINA, the Contract Disputes Act, the protest system, Bayh-Dole and the DoDGARs do not apply; criminal law, federal fiscal law, Comptroller General access to records, security and OPSEC, export control and DoDI 5000 programmatic requirements still do."
+   },
+   {
+    "q": "Can a Grants Officer sign an Other Transaction?",
+    "a": "No - an OT is not a grant or cooperative agreement, and it takes an Agreements Officer warrant with its own qualifications; a person may hold KO, GO and AO warrants, but each is a separate appointment with separate requirements."
+   }
+  ],
+  "related_questions": [
+   "Q0163",
+   "Q0204",
+   "Q0173",
+   "Q0175",
+   "Q0189",
+   "Q0190",
+   "Q0230",
+   "Q0193",
+   "Q0194",
+   "Q0184",
+   "Q0192",
+   "Q0203"
+  ],
+  "flags": [
+   "ai-drafted",
+   "verify-locally"
+  ],
+  "confidence": "medium",
+  "confidence_reason": "The statutory core is solid: 31 U.S.C. 6303-6305 and 2 CFR 200 are on the regulations.json unchanged list, and the 2371 to 4021 and 2371b to 4022 renumberings are verified in the crosswalk with law.cornell.edu source URLs. The four prototype conditions, the nontraditional definition, what does and does not apply to OTs, and the DoDGARs part structure come from the official bank answers and the process.json policy summary, not from a fresh fetch of 32 CFR. The OT approval thresholds are flagged deliberately: Q0184 and Q0192, both official, give different tiers above $50 million, so the primer teaches the shape and directs the candidate to confirm the current table. DAADS and Grants.gov announcement mechanics are from legacy bank answers and may have moved."
+ },
+ {
+  "id": "korea-lcs-sofa",
+  "title": "Korea for Contracting Officers: LCS and SOFA",
+  "domain": "Korea, LCS & SOFA",
+  "summary": "Two things make contracting in the Republic of Korea different from anywhere else an Army contracting officer works: Logistics Cost Sharing money, which the Republic of Korea holds and spends on behalf of United States Forces Korea, and the Status of Forces Agreement, which decides whether a U.S. contractor can even perform here. On an LCS action the 411th contracting officer recommends; the Republic of Korea Ministry of National Defense approves, awards and pays. Everything in this primer is drawn from 411th study-group sources and must be confirmed with C&P before you rely on it at a board or on a file.",
+  "sections": [
+   {
+    "heading": "The Special Measures Agreement and what LCS is",
+    "body": "The Special Measures Agreement is the defense cost-sharing arrangement between the United States and the Republic of Korea under which the ROK provides financial support for the costs of stationing United States Forces Korea on the peninsula.\n\nThe Logistics Cost Sharing program is one portion of the SMA. It partially offsets the logistical costs of USFK operations - things like movement of personnel and assets, repair and maintenance services, and the purchase of non-tactical vehicles.\n\nThe critical structural fact: LCS funds are never transferred to the United States. They are held by the ROK Ministry of National Defense, which uses them to purchase goods and services for USFK. That single sentence explains every downstream oddity - who awards, who pays, who competes, and why the timeline is longer.\n\nBecause it is ROK money spent under ROK rules for a shared purpose, an LCS action is not an ordinary Army procurement that happens to be overseas. A candidate who treats it as one will get the whole scenario wrong, and the 411th board will ask."
+   },
+   {
+    "heading": "Who does what on an LCS action",
+    "body": "The lanes, as the 411th study-group sources describe them:\n\n- USFK J4 manages the LCS program. Packages route through J4.\n- The 411th CSB provides the contract vehicles and runs the procurement work - requirement development with the customer, solicitation, evaluation.\n- The 411th contracting officer makes a recommendation for award through USFK J4. The 411th KO does not award LCS contracts.\n- ROK MND approves and awards the LCS contract.\n- Invoices are submitted to ROK MND and payments are made by ROK MND.\n\nSay the boundary out loud at a board, because the whole question is whether you know the limit of your own signature: on an LCS requirement my authority is to run a sound procurement and recommend; the award decision and the money are the ROK's.\n\nThe practical consequence is time. ROK MND approval adds a step no O&M action has. On an $11 million grounds maintenance requirement like Q0276, I plan backward from the customer's need date with the MND window built in, tell the customer that date early and in writing, and do not promise an award date I do not control."
+   },
+   {
+    "heading": "Restrictions and the O&M separation",
+    "body": "Limitations on LCS, from the 411th sources:\n\n- The program is limited to local Korean businesses; Korean material and Korean labor must be used.\n- LCS contracts require additional time for ROK MND approval.\n- As of January 2022 ROK MND no longer requires an approved offshore waiver before submission; instead a memo documenting whether offshore or local materials are used must be submitted with all LCS packages to J4. Confirm the current form and routing with C&P - this one has already changed once.\n\nThe rule that shows up most often: O&M and LCS funds cannot be combined in a single solicitation. The reason is a competition conflict, not an accounting preference. A U.S. O&M requirement must generally be solicited using full and open competitive procedures unless a FAR exception applies; an LCS requirement must be solicited under procedures limited to Korean contractors. One solicitation cannot carry contradictory competition requirements. So when the customer asks to bundle the two to save time, the answer is no, the explanation is competition, and the lawful path is two separate actions.\n\nAt an $11 million estimate, note the ordinary consequences: simplified procedures are unavailable and a source selection plan is required."
+   },
+   {
+    "heading": "SOFA Article XV and the Invited Contractor program",
+    "body": "All U.S. contractors supporting USFK contracts are required to obtain SOFA designation through the FKAQ Invited Contractor program. Article XV of the SOFA and USFK Instruction 4901.01 carry the requirements.\n\nIt is a two-step process and the split matters:\n\n- Step one is mine. The contracting officer submits a request for contract SOFA designation to USFK/FKAQ, after reviewing Article XV and USFKI 4901.01 for requirements unique to performance in the ROK.\n- Step two belongs to the requiring activity. The RA obtains SOFA designation for the individual contractor employees.\n\nThe 411th source describes four unique requirements a U.S. contractor must meet to perform in the ROK, beginning with security considerations. Get the current list from C&P and FKAQ rather than reciting a guess - a wrong list is worse than saying you would confirm it.\n\nWhat IC status affects in practice: entry and residence status, access to installations and to the logistics support system, customs handling, and taxation treatment. None of it is mine to grant - I request it, FKAQ designates it. Build the lead time into the acquisition schedule and put the contractor's SOFA obligations into the contract."
+   },
+   {
+    "heading": "Exercise and contingency support, and how boards probe Korea",
+    "body": "Korea runs on exercises. Requirements arrive with fixed, externally driven dates, and the pressure to shortcut is real. Two guardrails: an exercise is foreseeable, so a late requirement is a planning failure, not an urgency justification - unusual and compelling urgency under Part 6 is narrow, documented, and costly to the customer later. And contingency dollar thresholds do not apply just because something feels urgent; the higher micro-purchase and simplified acquisition figures attach to a designated contingency, humanitarian or emergency operation. The OCONUS contingency values in regulations.json are $40,000 and $2,000,000. Confirm a designation is actually in effect before using them.\n\nHow the board probes Korea: they hand you an LCS scenario and watch whether you claim the award, ask to combine funding sources and watch for the competition explanation, and ask the two-step SOFA question to see which step you think is yours. A 411th board must include at least one Korea item, so this is not optional study.\n\nSafe closing sentence on any Korea answer: name the rule from the source, then say you would confirm the current procedure with C&P and, for LCS, USFK J4."
+   }
+  ],
+  "key_cites": [
+   {
+    "ref": "Special Measures Agreement (U.S.-ROK) and the Logistics Cost Sharing program",
+    "url": "",
+    "note": "LCS is a portion of the SMA; ROK MND holds the funds, USFK J4 manages the program, 411th KOs recommend award, ROK MND approves, awards and pays. From 411th study-group sources; confirm with C&P and USFK J4."
+   },
+   {
+    "ref": "U.S.-ROK SOFA, Article XV",
+    "url": "",
+    "note": "Invited Contractor status for U.S. contractors performing in the ROK. Designation is obtained through USFK/FKAQ."
+   },
+   {
+    "ref": "USFK Instruction 4901.01",
+    "url": "",
+    "note": "Implements the Invited Contractor program: the two-step process, the contracting officer's request for contract SOFA designation and the requiring activity's request for individual designation, and the unique requirements for performance in the ROK."
+   },
+   {
+    "ref": "RFO FAR 2.101 (contingency thresholds)",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-2",
+    "note": "Micro-purchase threshold $40,000 and simplified acquisition threshold $2,000,000 outside the United States for a contingency, CBRN defense, disaster or emergency operation; 41 U.S.C. 1903. Values from regulations.json thresholds, status 'verify'."
+   },
+   {
+    "ref": "RFO FAR 6.103-2 and 6.104",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6",
+    "note": "Unusual and compelling urgency and the justification and approval tiers - relevant when an exercise requirement arrives late. Lack of advance planning is not a justification."
+   }
+  ],
+  "board_angles": [
+   {
+    "q": "What is the Logistics Cost Sharing program?",
+    "a": "It is the portion of the U.S.-ROK Special Measures Agreement that partially offsets USFK logistical costs - movement of personnel and assets, repair and maintenance, non-tactical vehicles - with funds the ROK holds rather than transfers to the United States."
+   },
+   {
+    "q": "An $11 million LCS grounds maintenance requirement lands on your desk. Who awards it?",
+    "a": "Not me. The 411th runs the procurement and I make a recommendation for award through USFK J4; ROK MND approves and awards the contract and pays the invoices - and I build the MND approval window into the schedule I give the customer."
+   },
+   {
+    "q": "Can you fund one contract with both O&M and LCS?",
+    "a": "No. O&M actions are solicited under full and open competition unless a FAR exception applies, and LCS actions are limited to Korean contractors - one solicitation cannot carry contradictory competition requirements, so it has to be two actions."
+   },
+   {
+    "q": "What are the limitations of LCS funds?",
+    "a": "Korean businesses only, Korean labor and material, a longer timeline for ROK MND approval, and a memo documenting offshore or local materials with every package to J4 - and I would confirm the current package requirements with C&P."
+   },
+   {
+    "q": "What is the Invited Contractor program and whose job is each step?",
+    "a": "It is the FKAQ program that gives U.S. contractors SOFA status under Article XV and USFKI 4901.01; step one, SOFA designation for the contract, is the contracting officer's, and step two, designation of the individual contractor employees, is the requiring activity's."
+   },
+   {
+    "q": "The exercise starts in three weeks and the requirement just arrived. Does that justify a sole source?",
+    "a": "Not on its own - an exercise is foreseeable and lack of advance planning is not a justification; unusual and compelling urgency under RFO FAR 6.103-2 is narrow, has to be justified and approved at the right level, and limits what I can buy."
+   }
+  ],
+  "related_questions": [
+   "Q0254",
+   "Q0255",
+   "Q0256",
+   "Q0257",
+   "Q0258",
+   "Q0276"
+  ],
+  "flags": [
+   "ai-drafted",
+   "korea-verify-cp",
+   "verify-locally"
+  ],
+  "confidence": "medium",
+  "confidence_reason": "The LCS structure (SMA portion, ROK MND holds funds and awards, USFK J4 manages, 411th KO recommends, Korean firms and Korean labor and material, no mixing O&M and LCS in one solicitation, the January 2022 offshore-waiver change) and the two-step SOFA IC process under Article XV and USFKI 4901.01 come directly from the official 411th study-group answers Q0254 through Q0258 and Q0276. They are not verifiable on acquisition.gov and all carry korea-verify-cp. The four unique requirements for U.S. contractor performance in the ROK are deliberately not listed because the source answer is truncated after 'security considerations' - inventing the remaining three would be worse than flagging it. Contingency thresholds are from the regulations.json thresholds table, status 'verify'."
+ },
+ {
+  "id": "ethics-oci",
+  "title": "Ethics, Procurement Integrity and Conflicts of Interest",
+  "domain": "Authority, Ethics & Leadership",
+  "summary": "A warrant is a trust, and the board is deciding whether to give you one. Procurement integrity law controls what you may do with proposal and source selection information and what happens when you talk to a company about a job; the organizational conflict of interest rules control whether a company can compete fairly at all; and the fraud and gratuities rules control what you do the moment something smells wrong. The through-line is the same in every one of them: disclose early, involve legal and the ethics counselor, document, and never decide alone.",
+  "sections": [
+   {
+    "heading": "Procurement integrity: the three prohibitions",
+    "body": "RFO FAR 3.104 implements 41 U.S.C. chapter 21, and the section number survived the overhaul: 3.104-1 definitions through 3.104-9 clauses, with 3.104-3 prohibitions, 3.104-4 disclosure and protection of information, 3.104-5 disqualification and 3.104-7 violations.\n\nThe three things the statute forbids:\n\n- Disclosing contractor bid or proposal information or source selection information before award to anyone not authorized to receive it. The Q0159 list: cost or pricing data, indirect cost and direct labor rates, proprietary manufacturing or operational information the contractor marked as protected by law, and anything marked contractor bid or proposal information.\n- Obtaining such information improperly.\n- Employment discussions. An official participating personally and substantially in a procurement over the simplified acquisition threshold who is contacted by a bidder about non-federal employment must report the contact in writing and either reject it or disqualify themselves (3.104-3 and 3.104-5).\n\nIf I learn of a possible violation, 3.104-7 governs: I do not investigate and I do not confront. I notify legal and my chief immediately, assess the impact on the pending award, and report through the chain to the head of the contracting activity, who decides whether award proceeds."
+   },
+   {
+    "heading": "Organizational conflicts of interest: three types, four responses",
+    "body": "An OCI exists when, because of other activities or relationships, a contractor is unable or potentially unable to render impartial assistance or advice, its objectivity in performing the work is or might be impaired, or it has an unfair competitive advantage (RFO FAR 9.501).\n\nThe three types:\n\n- Unequal access to information. The contractor got nonpublic Government or third-party information through other work - the IGE, the draft work statement, the evaluation approach, a competitor's proprietary data (9.505-4).\n- Biased ground rules. The contractor wrote the specification, the work statement or the evaluation criteria and then competes against them (9.505-2).\n- Impaired objectivity. The contractor would evaluate, audit or advise on its own work or a competitor's.\n\nThe duty at 9.504 is to identify potential conflicts as early in the acquisition process as possible and to avoid, neutralize or mitigate them before award. The tools: restructure the requirement, exclude the contractor, firewall with real teeth, release the information to everyone, or a waiver - which only the agency head or designee grants under 9.503, not me.\n\nWhatever the resolution, it goes into the solicitation as a term (9.507) and into the file with legal's concurrence."
+   },
+   {
+    "heading": "Gifts, gratuities and post-Government employment",
+    "body": "Personal ethics sits on top of the procurement rules, and the standards are stricter for contracting people because our signature moves money.\n\nGifts and gratuities. The Standards of Ethical Conduct and the Joint Ethics Regulation, DoD 5500.07-R, govern. The working rule: do not accept gifts, meals, entertainment or anything of value from a prohibited source - a current or prospective contractor - because the narrow exceptions are not worth the risk when you hold a warrant. The Gratuities clause lets the Government terminate for gratuities offered to obtain a contract or favorable treatment. When a vendor invites the team to dinner after award the answer is no, the team is told why on the spot, and if someone already went I report it rather than handling it quietly.\n\nPost-Government employment. Three layers: the criminal statutes at 18 U.S.C. 207 - a lifetime ban on switching sides on a particular matter you worked personally and substantially, a two-year ban on matters under your official responsibility, a one-year cooling-off for senior officials; the procurement integrity one-year compensation ban at 41 U.S.C. 2104; and the employment-contact reporting rule above. Anyone approaching retirement or a job offer sees the ethics counselor first, in writing."
+   },
+   {
+    "heading": "Fraud indicators and reporting",
+    "body": "Indicators worth naming: bids with suspiciously similar language or identical errors; a rotation pattern in who wins; prices that jump when one bidder drops out; invoices for work the COR cannot confirm; a vendor pressing for a specific person on the evaluation team; changed or missing receiving reports; split purchases that hug a threshold; a requirement written around one product; a COR who resists giving surveillance documentation; relationships that are too comfortable.\n\nWhat I do, and the order matters: do not investigate, do not confront the suspected party, preserve documents and electronic records, report the same day. Channels from Q0040: the Procurement Fraud Advisor under AFARS 5109.406-3; a flash report through legal under AR 27-40 chapter 8 and the Procurement Fraud Branch through the HCA; the DoD Inspector General hotline and Army CID; the ethics counselor for gratuities and conflicts; and for a procurement integrity violation the 3.104-7 route to the HCA. On legal advice I may hold suspicious invoices - but I do not stop payment on my own theory.\n\nMentoring the customer is part of the job: brief ethics and fraud at the post-award conference, meet the hotline poster requirement at RFO FAR 3.1003, and use real cases."
+   },
+   {
+    "heading": "Saying no to leadership",
+    "body": "This question is on nearly every board, and it is not a test of courage - it is a test of method.\n\nThe method: first, make sure you are right - get the legal parameters from counsel before you plant a flag. Second, understand their reasoning; ask what outcome leadership needs, because there is often a lawful way to get it. Third, take the legal position and the leadership position back to counsel together. Fourth, if a conflict remains, raise it to your supervisor and up the chain; you do not have to go it alone. Fifth, put it in writing - a memorandum to file or confirming e-mail recording the direction, the concern and the advice received. Sixth, offer the lawful alternative.\n\nAnd the line. If it is still wrong, I do not sign. Management cannot make a contracting officer sign. The warrant is mine and so is the accountability. The bank's official answers say it plainly: never sign a contract you are not comfortable signing.\n\nThe related boundary is inherently governmental work: a contractor employee cannot be a voting member of a source selection board, no matter how unique the expertise or how senior the person asking (Q0133)."
+   }
+  ],
+  "key_cites": [
+   {
+    "ref": "RFO FAR 3.104",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-3",
+    "note": "Procurement integrity, implementing 41 U.S.C. chapter 21. Section number and heading retained under the RFO; 3.104-3 prohibitions, 3.104-4 disclosure and protection, 3.104-5 disqualification, 3.104-7 violations. Confirmed 13 Sep 2026."
+   },
+   {
+    "ref": "RFO FAR 9.502 and 9.504",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9",
+    "note": "OCI applicability and the contracting officer's duty to identify, evaluate and resolve potential conflicts as early as possible. Section numbers and headings retained."
+   },
+   {
+    "ref": "RFO FAR 9.503, 9.505-2, 9.505-4, 9.507",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9",
+    "note": "Waiver by the agency head or designee; biased ground rules where the contractor prepared specifications or work statements; unequal access to information; solicitation provisions and contract clauses to implement the resolution. Numbering from the bank's Q0041 cite set - confirm on the Part 9 deviation guide."
+   },
+   {
+    "ref": "41 U.S.C. chapter 21",
+    "url": "https://www.law.cornell.edu/uscode/text/41/subtitle-I/division-B/chapter-21",
+    "note": "Procurement integrity, including 2102 prohibitions on disclosing or obtaining proposal and source selection information, 2103 employment contact reporting and disqualification, and 2104 the one-year post-employment compensation ban. Statute, unchanged by the RFO."
+   },
+   {
+    "ref": "18 U.S.C. 207",
+    "url": "https://www.law.cornell.edu/uscode/text/18/207",
+    "note": "Criminal post-Government employment restrictions: lifetime bar on particular matters involving specific parties in which the employee participated personally and substantially, two-year bar on matters under official responsibility, one-year cooling-off for senior officials."
+   },
+   {
+    "ref": "DoD 5500.07-R, Joint Ethics Regulation",
+    "url": "https://www.esd.whs.mil/Directives/issuances/dodm/",
+    "note": "DoD standards of conduct: gifts and gratuities, financial interests, misuse of position, outside activities, and the role of the ethics counselor."
+   },
+   {
+    "ref": "AFARS 5109.406-3 and AR 27-40 chapter 8",
+    "url": "",
+    "note": "Army procurement fraud channels: the Procurement Fraud Advisor, the flash report, and the Procurement Fraud Branch through the head of the contracting activity. Confirm the current AFARS numbering under the RFO deviations."
+   },
+   {
+    "ref": "RFO FAR 3.1003",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-3",
+    "note": "Contractor code of business ethics and conduct, including the requirement to display agency Inspector General hotline information. Cite carried from the bank's Q0040 answer; confirm the section on the Part 3 deviation guide."
+   }
+  ],
+  "board_angles": [
+   {
+    "q": "What is an organizational conflict of interest and what do you do about one?",
+    "a": "It is when a contractor cannot be impartial, its objectivity is impaired, or it has an unfair competitive advantage - and under 9.504 I identify it as early as possible and avoid, neutralize or mitigate it before award, with legal, with the resolution written into the solicitation; only the agency head can waive it."
+   },
+   {
+    "q": "Give me an example of unequal access to information.",
+    "a": "A program-office support contractor that saw the independent Government estimate, the draft performance work statement and the evaluation approach, then bids on the follow-on - I either release the information to everyone, firewall it, or exclude them."
+   },
+   {
+    "q": "What proposal information may you not disclose?",
+    "a": "Cost or pricing data, indirect cost and direct labor rates, proprietary manufacturing or operational information the contractor marked as protected, and anything marked as contractor bid or proposal information - disclosure before award is a procurement integrity violation under 3.104."
+   },
+   {
+    "q": "A company offers you a job during a source selection. What happens?",
+    "a": "I report the contact in writing and then either reject it outright or disqualify myself from the procurement, and I tell my chief and the ethics counselor - that is 3.104-3 and 3.104-5, and it is criminal law behind it, not etiquette."
+   },
+   {
+    "q": "You suspect fraud on one of your contracts. What do you do?",
+    "a": "I do not investigate and I do not confront anyone. I preserve the documents and records, notify legal and my chief the same day, contact the Procurement Fraud Advisor, and let the flash report and IG or CID channels work - and I hold suspicious invoices only on legal advice."
+   },
+   {
+    "q": "Leadership directs you to do something you believe is contrary to your legal guidance. What do you do?",
+    "a": "I confirm the legal position, ask what outcome they need, take both positions back to counsel, raise it through my chain, put the direction and my concern in writing, and offer the lawful alternative - and if it is still wrong I do not sign, because management cannot make a contracting officer sign."
+   }
+  ],
+  "related_questions": [
+   "Q0002",
+   "Q0040",
+   "Q0041",
+   "Q0071",
+   "Q0159",
+   "Q0133"
+  ],
+  "flags": [
+   "ai-drafted"
+  ],
+  "confidence": "medium",
+  "confidence_reason": "RFO FAR 3.104 and its subsection structure, and RFO FAR 9.502 and 9.504, are verified in the regulations.json crosswalk against the acquisition.gov Part 3 and Part 9 deviation guides. The remaining Part 9 section numbers (9.503, 9.505-2, 9.505-4, 9.507) and RFO FAR 3.1003 come from the bank's own cite sets rather than a fresh fetch and are flagged in the key_cites notes. Statutory content at 41 U.S.C. chapter 21 and 18 U.S.C. 207 is unchanged by the RFO; the $10 million trigger for the 41 U.S.C. 2104 compensation ban and the AFARS numbering for the Procurement Fraud Advisor should be confirmed before a board."
+ },
+ {
+  "id": "warrant-program",
+  "title": "The Army Warranting Program",
+  "domain": "Authority, Ethics & Leadership",
+  "summary": "A warrant is an individual's signatory authority to enter into, obligate funds for, administer, terminate and sign documents under specific appointed or delegated authorities, for FAR-based and non-FAR-based instruments alike. The Army Warranting Program Policy, version 12 of March 2026, sets four warrant classes, a fixed threshold at each class, a rule for calculating the value an instrument counts against your warrant, and a review board that says whether you are ready. VCE-Warrants is the record for all of it.",
+  "sections": [
+   {
+    "heading": "Who appoints, and the three warrant types",
+    "body": "The chain: ASA(ALT) designated procurement authority to DASA(P); DASA(P) may further delegate selection, appointment and termination of contracting officers under RFO FAR 1.403-1(b), and of Grants Officers and Agreements Officers under 32 CFR 21.425; DASA(P) delegates warrant-granting authority to the head of the contracting activity.\n\nFor KOs and AOs the HCA may delegate down to a Senior Contracting Official and no lower than the Chief of the Contracting Office; where delegated, 'HCA' in the policy means that delegated official. For Grants Officers the HCA appoints directly and shall not delegate further. At the 411th CSB the SCO chairs the board and makes the appointment in VCE-Warrants.\n\nThree warrant types, three definitions: KO, defined in the FAR and used collectively for procuring, administrative, contingency and termination contracting officers; GO, defined in 2 CFR 1108; AO, defined in 32 CFR 3.4.\n\nOne person may hold more than one type, but must meet the qualifications for each. What HCAs may not do is issue the same type twice - a PCO and an ACO warrant to one person - merely to split pre-award and post-award dollar limits. A warrant genuinely limited to an administrative or termination function is still allowed."
+   },
+   {
+    "heading": "Classes, thresholds and calculating instrument value",
+    "body": "Policy v12 Table 1 sets four classes and fixed thresholds:\n\n- Class I: SAT, currently $350,000.\n- Class II: $500K, $1M, $5M and SaP - simplified procedures for commercial products and services, currently $9,000,000, or $15,000,000 for a contingency, CBRN defense, disaster or emergency operation.\n- Class III: $10M, $25M, $50M and $100M.\n- Class IV: $250M, $500M and Unlimited.\n\nWarrants are granted at one of those fixed values. Appointing at 'SAT' or 'SaP' rather than a dollar figure means nobody has to be reappointed when the underlying value changes. The threshold applies to everything: FAR-based and non-FAR-based instruments, contracts, delivery and task orders, agreements and modifications.\n\nThe calculation rule from paragraph 4.2 is the one boards test. The warrant must be greater than or equal to the cumulative instrument value, and that equals base value plus all options plus any anticipated or actual ceiling plus the absolute value of a modification - regardless of when funds are obligated. Two consequences: a five-year requirement with a modest first year can exceed a Class II warrant on day one, and a deobligating modification still counts at its absolute value. Work the math before you accept the file, not at signature."
+   },
+   {
+    "heading": "The boards: CORB, GORB and AORB",
+    "body": "The review board is how the HCA verifies readiness and the strength of a candidate's decision making. There is one per warrant type - the Contracting Officer Review Board, the Grants Officer Review Board and the Agreements Officer Review Board.\n\nPolicy v12's general rule: the HCA, or the delegated official, chairs and administers the board and selects three to five additional members with a mix of experience, legal expertise and supervisory backgrounds appropriate to the warrant type. Questions must be commensurate with the warrant threshold, the candidate's role, the organization's mission, the instruments the candidate will sign, and the responsibility to be assumed.\n\nAt the 411th CSB, per the July 2026 warrant process workflow: the SCO chairs; voting members come from the SCO, PD, CoCO and/or Division Chiefs and KOs; CONOPS and the Chief, C&P facilitate and do not vote; the board sits the second Wednesday of each month. CONOPS and C&P prepare the questions, cover sheet and scoring sheet, generate the warrant number, and prepare the draft appointment memorandum and certificate for VCE-Warrants. The SCO appoints only on a unanimous recommendation. Confirm current procedures with C&P."
+   },
+   {
+    "heading": "Waivers, legacy warrants and reciprocity",
+    "body": "Waivers. The HCA may waive qualification requirements, including the review board, in writing, justified by a risk assessment of the individual's knowledge, skills and abilities with sound rationale and a business case. KO waivers must also comply with 10 U.S.C. 1724(d). Every waiver goes into VCE-Warrants before appointment. The hard limit: the board for an Unlimited warrant cannot be waived. At the 411th a CORB waiver rests on SCO approval, with the memoranda and certificate uploaded in VCE.\n\nLegacy warrants. A person holding a current warrant is not required to be tested, re-boarded or reappointed to keep it, and the exemption extends to increases within the same Table 1 class. To move up a class, the individual takes a new board and is reappointed, completing any qualifications that changed.\n\nReciprocity. Under ACC Contracting Note 26-03, all ACC SCOs must honor all active and future warrants issued within ACC. Recognition is formal acceptance of an existing warrant's type and value by a different SCO - the individual acts under the recognizing SCO's authority and no new warrant is issued. Warrants from outside ACC are recognized at the SCO's discretion, and a new ACC warrant must still be issued in VCE."
+   },
+   {
+    "heading": "VCE-Warrants: suspension, termination, reinstatement, transfer",
+    "body": "VCE-Warrants is the system of record. Every appointment, waiver, suspension, termination and reinstatement is documented and retained there.\n\nSuspension. Reasons in Policy v12 include extended temporary duty, a performance improvement plan, investigation of the holder's actions, and deployment or support to a contingency. It is also the mechanism for a developmental assignment to another organization - and must not be used in lieu of termination.\n\nTermination. Mandatory when the individual leaves employment or moves to a non-acquisition position; also for a change in mission requirements, unsatisfactory performance or misconduct such as Antideficiency Act violations, fraud or negligence, loss of a required clearance, or exceeding delegated authority. Retroactive terminations are prohibited. At the 411th, C&P uploads the termination documents to the VCE record and then terminates; removal from the VCE TDA requires the member's PCF actions to be zero.\n\nReinstatement. The HCA may reinstate a suspended warrant; a terminated warrant requires a new Certificate of Appointment and letter. Transfer between HCA organizations is not supported by the system, so the original is terminated and a complete new record is built under the gaining SCO. Records are retained six years from suspension or termination unless a longer period is justified in writing."
+   }
+  ],
+  "key_cites": [
+   {
+    "ref": "Army Warranting Program Policy v12 (MAR 2026), SAAL-ZP",
+    "url": "https://armyeitaas.sharepoint-mil.us/sites/ASA-ALT-PAM-PP/SitePages/Warrant.aspx",
+    "note": "Table 1 warrant classes and thresholds; paragraph 4.2 calculating instrument value; KO, GO and AO qualifications; waivers and the unwaivable Unlimited board; legacy warrants; multiple warrants; suspension, termination and reinstatement. Hosted on the Procurement.Army.mil Army Warranting Program page (CAC required)."
+   },
+   {
+    "ref": "RFO FAR 1.403-1(b)",
+    "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1",
+    "note": "Agency heads or their designees may select and appoint contracting officers and terminate their appointments. Pre-RFO 1.603-1; paragraph (b) confirmed on the fetched page 13 Sep 2026. Appointment mechanics (SF 1402) are at 1.403-2."
+   },
+   {
+    "ref": "10 U.S.C. 1724",
+    "url": "https://www.law.cornell.edu/uscode/text/10/1724",
+    "note": "Statutory qualification requirements for contracting officers above the simplified acquisition threshold; subsection (d) governs waivers. Implemented at DFARS 201.403."
+   },
+   {
+    "ref": "ACC Contracting Note 26-03 (12 May 2026)",
+    "url": "",
+    "note": "Implements the ACC Warrant Reciprocity Policy of 30 March 2026: mandatory recognition of ACC-issued warrants at existing value, recognition versus transfer, discretion for non-ACC warrants, and the DA-DAF Warrant Reciprocity MOA of 1 Dec 2023."
+   },
+   {
+    "ref": "411th CSB Warrant Process Workflow (Jul 2026)",
+    "url": "",
+    "note": "SCO chairs the CORB; voting members from SCO, PD, CoCO and/or Division Chiefs and KOs; CONOPS/C&P facilitate non-voting; second Wednesday monthly; unanimous recommendation required before the SCO appoints in VCE-Warrants. Local - confirm with C&P."
+   },
+   {
+    "ref": "VCE-Warrants User Guide (Feb 2025)",
+    "url": "",
+    "note": "Application, approval, suspend, terminate, reinstate and unapprove mechanics; termination memorandum handling and the Terminated watermark; PCF actions must be zero before TDA removal."
+   },
+   {
+    "ref": "Threshold values",
+    "url": "",
+    "note": "From regulations.json thresholds (status 'verify'): SAT $350,000; SaP ceiling $9,000,000 and $15,000,000 contingency; MPT $15,000; warrant class values from Policy v12 Table 1."
+   }
+  ],
+  "board_angles": [
+   {
+    "q": "What are the four warrant classes and their thresholds?",
+    "a": "Class I at the SAT, currently $350,000; Class II at $500K, $1M, $5M and SaP, currently $9 million; Class III at $10M, $25M, $50M and $100M; Class IV at $250M, $500M and Unlimited."
+   },
+   {
+    "q": "How do you calculate the value an instrument counts against your warrant?",
+    "a": "Cumulative instrument value - base plus all options plus any anticipated or actual ceiling plus the absolute value of a modification, regardless of when funds are obligated - and my warrant has to be greater than or equal to that number."
+   },
+   {
+    "q": "Your $4M contract needs a modification that pushes cumulative value past your threshold. What do you do?",
+    "a": "I stop, because the threshold covers modifications at absolute value; I prepare the action completely and route it to a contracting officer whose warrant covers the cumulative value, and I tell the customer early rather than at signature."
+   },
+   {
+    "q": "Can a warrant board be waived?",
+    "a": "Yes by the HCA in writing, on a documented risk assessment with sound rationale and a business case, with the waiver in VCE-Warrants before appointment and compliance with 10 U.S.C. 1724(d) for KOs - except the board for an Unlimited warrant, which cannot be waived."
+   },
+   {
+    "q": "You PCS to another ACC organization. What happens to your warrant?",
+    "a": "Under ACC Contracting Note 26-03 all ACC SCOs must honor active ACC warrants; if I am working under a different SCO the warrant is recognized at its existing value with no new warrant, and on a permanent reassignment the old warrant is terminated and a complete new record is built under the gaining SCO because VCE does not transfer."
+   },
+   {
+    "q": "When is a warrant suspended versus terminated?",
+    "a": "Suspension is temporary - extended TDY, a performance improvement plan, an investigation, a deployment, or a developmental assignment - and it must not be used in lieu of termination; termination is mandatory on leaving the position and applies for misconduct, loss of clearance or exceeding authority, and it can never be retroactive."
+   }
+  ],
+  "related_questions": [
+   "Q0009",
+   "Q0274",
+   "Q0002",
+   "Q0080"
+  ],
+  "flags": [
+   "ai-drafted",
+   "verify-locally"
+  ],
+  "confidence": "medium",
+  "confidence_reason": "Content is drawn from the already-derived process.json policy summary, which is itself sourced to Army Warranting Program Policy v12 (MAR 2026), ACC Contracting Note 26-03, the 411th CSB warrant process workflow of July 2026 and the VCE-Warrants User Guide of February 2025; the RFO FAR 1.403-1(b) cite is verified in the regulations.json crosswalk. Threshold dollar values come from the regulations.json thresholds table, which carries status 'verify'. The 411th board composition, cadence, waiver routing and PCF-zero rule are local procedures that change without notice - verify-locally applies. No local approval levels, names or e-mail addresses are stated. Related questions are the nearest fits in the bank, which contains no dedicated warrant-program items."
+ },
+ {
+  "id": "board-day",
+  "title": "Board Day: How a CORB Works and How to Answer",
+  "domain": "Authority, Ethics & Leadership",
+  "summary": "A warrant board is not a test of memory; it is a panel of people deciding whether they would be comfortable with your signature on a contract they have to defend. At the 411th, the SCO chairs, three to five voting members ask questions calibrated to the class you requested, the Chief of C&P facilitates without voting, and the recommendation has to be unanimous. The way to sound like a contracting officer is to answer in one repeatable structure - State, Cite, Apply, Risk, Route - in forty-five to ninety seconds, and to tell the truth when you do not know.",
+  "sections": [
+   {
+    "heading": "The 411th board: who is in the room and what happens",
+    "body": "From the 411th CSB warrant process workflow of July 2026: the SCO chairs the CORB. Voting members are drawn from the SCO, the PD, the CoCO and/or Division Chiefs, and KOs. CONOPS and the Chief, C&P facilitate and do not vote. The board sits on the Commander's calendar the second Wednesday of each month.\n\nOn receipt of the invitation, CONOPS and C&P prepare the CORB questions, the cover sheet and the scoring sheet, generate the warrant number, and prepare the draft appointment memorandum and certificate for upload to VCE-Warrants. The SCO makes the appointment in VCE-Warrants only on a unanimous recommendation from the board members. The SCO may waive the CORB; Army policy does not permit waiving the board for an Unlimited warrant. Urgent applications may run on a shorter timeline based on mission requirements.\n\nPolicy v12 adds the general rule: the HCA or the delegated official chairs and administers the board and selects three to five additional members with a mix of experience, legal expertise and supervisory background appropriate to the warrant type. Confirm the current cadence, scoring sheet and routing with C&P before your board."
+   },
+   {
+    "heading": "SCARR: the answer framework",
+    "body": "One framework, used out loud, for every scenario question. State, Cite, Apply, Risk, Route.\n\n- STATE the rule in one plain sentence, bottom line first. Not background - the rule.\n- CITE the authority in layers: the RFO FAR section, then DFARS or AFARS, then statute or Army policy, then local procedure. Say 'Cite:' out loud; it signals you are done analyzing and are now sourcing.\n- APPLY the rule to the facts you were given. Which conditions are met, which are not, what you still need to know. Ask at most one clarifying question rather than assuming a missing fact.\n- RISK: name the real exposure - fiscal (Antideficiency Act, purpose, bona fide need), competition, performance, ethics, mission, reputational. Say what would make it worse.\n- ROUTE: what you do now, what you can approve at your warrant level, and who must approve or be coordinated with - legal, the competition advocate, C&P, the SCO or HCA, the resource manager, USFK J4 for LCS, FKAQ for SOFA. Close with a one-sentence recommendation.\n\nFor a pure knowledge question use the short form - State and Cite, then stop. Do not manufacture a scenario the board did not give you."
+   },
+   {
+    "heading": "Timing, structure and the sound of a good answer",
+    "body": "Forty-five to ninety seconds. A clear answer with a recommendation beats a five-minute tour of the FAR, and the board will ask for more if they want more.\n\nAnswer the question asked. If it is 'how many days,' say the number first. If it is 'what would you do,' say the action first. Then supply the structure underneath.\n\nCite in layers and know what layer you are in. Calling an Army policy 'the FAR', citing DFARS for a statutory rule, or presenting a local threshold as if it were regulation are scored as knowledge failures, not slips.\n\nKnow the RFO numbers for the top concepts cold: ratification 1.405, COR designation 1.404, only one responsible source 6.103-1, urgency 6.103-2, justification and approval 6.104, commercial simplified procedures 12.201-1, commercial termination 12.304, price analysis 15.404-1, options 17.204-1, rule of two 19.104-1, agency protest 33.104, GAO protest 33.105, final decision 33.205-6, personal services 37.201-2, change orders 43.302, GFP liability 45.104 and 52.245-1, cure and show cause 49.402-3 and 49.607. When a board member uses an old number, answer the concept and offer the new number - politely, once.\n\nKnow the thresholds for your class and one above, and know the cumulative instrument value rule."
+   },
+   {
+    "heading": "Saying 'I don't know' correctly",
+    "body": "Every candidate hits a question they cannot answer. The board expects it. What they measure is what you do next, because that is what you will do at your desk with nobody watching.\n\nThe scoring reality: 'I do not know the section number, but the rule is that the contractor is not liable for loss of Government property unless one of four exceptions applies, and I would confirm the paragraph in Part 45 before I signed anything' scores a 3 or better. A confident wrong answer scores a 1 and colors every answer that follows, because the board now has to discount everything you say.\n\nThe formula: say what you know, name where the answer lives, say how you would confirm it, and stop. Do not fill the silence and do not invent a section number - a fabricated cite is the fastest way to lose a board.\n\nTwo related moves. If a scenario is missing a fact you actually need, ask for it: 'Is this O&M or LCS funded?' or 'Is this cost-type or fixed-price?' shows judgment. Ask one question, not three. If you realize mid-answer you were wrong, say so and correct it; composure is a scored dimension."
+   },
+   {
+    "heading": "Follow-up probes and what they are testing",
+    "body": "Probes follow your answer; they do not open a new topic. The pattern is that a board member takes your answer and changes one fact to see whether you understood the rule or memorized the outcome.\n\nWhat that looks like: you explain the CICA stay and the probe moves the filing date from day four to day twelve. You explain a set-aside and the probe adds a second interested source. You explain ratification and the probe removes the funds availability.\n\nThe right reaction is to re-run the test out loud, not to defend the prior answer: 'That changes it - at day twelve the stay no longer applies, so performance continues and my focus shifts to the agency report.' Boards reward a candidate who visibly re-applies the rule.\n\nCommon probes from the board guide: how severability changes your funding answer; what market research must show before you sign a justification and who approves it; whether a contractor e-mail claiming money is a claim; who bears the loss on Government property; who awards an LCS action; what you can sign today and what you push up; and what you say when a Commander names a vendor."
+   },
+   {
+    "heading": "Class-specific expectations and how you are scored",
+    "body": "Questions are calibrated to the class you requested, your role and the organization's mission.\n\n- Class I: purpose, time and amount; micro-purchase and GPC limits; simplified and commercial procedures; competition at and below the SAT; the rule of two; price reasonableness; unauthorized commitments; exclusion checks; basic ethics. Mostly knowledge with a short scenario or two.\n- Class II: the above plus Part 6 exceptions and justification approval tiers, contract type and risk, options and cumulative value, severable services, ratification, COR designation, personal services limits, agency protests and the KO's role at GAO, cure and show cause, commercial terminations, change orders. At least one judgment question about saying no.\n- Class III: source selection and pricing leadership - competitive range, exchanges, debriefings, price and cost analysis, cost realism, certified cost or pricing data, OCI, responsibility, subcontracting plans, claims, terminations, property. Scenarios dominate.\n- Class IV: enterprise judgment - strategy, high-dollar approval routing, protests at GAO and the court, large claims, appropriation-level fiscal law, post-Government employment, leading an office. The Unlimited board cannot be waived.\n\nThe rubric weights judgment 35 percent, regulatory knowledge 30, composure 20 and communication 15, and the 411th recommendation must be unanimous."
+   }
+  ],
+  "key_cites": [
+   {
+    "ref": "411th CSB Warrant Process Workflow (Jul 2026)",
+    "url": "",
+    "note": "CORB composition (SCO chairs; voting members from SCO, PD, CoCO and/or Division Chiefs, KOs; CONOPS/C&P facilitate non-voting), second-Wednesday-monthly cadence, question, cover sheet and scoring sheet preparation, unanimous recommendation, SCO appointment in VCE-Warrants, waiver handling. Local - confirm with C&P."
+   },
+   {
+    "ref": "Army Warranting Program Policy v12 (MAR 2026), Warranting Review Boards and Questions",
+    "url": "https://armyeitaas.sharepoint-mil.us/sites/ASA-ALT-PAM-PP/SitePages/Warrant.aspx",
+    "note": "HCA or delegated official chairs and administers the board and selects three to five additional members with mixed experience, legal and supervisory backgrounds; questions commensurate with threshold, role, mission and instruments; the Unlimited warrant board cannot be waived. Review board Q&A repository on the PAM page (CAC)."
+   },
+   {
+    "ref": "SCARR answer framework and CORB rubric",
+    "url": "",
+    "note": "From rubric_board.json: State, Cite, Apply, Risk, Route; four scored dimensions - judgment 0.35, regulatory knowledge 0.30, composure 0.20, communication 0.15 - with a unanimous pass rule. An app-internal training construct, not Army policy."
+   },
+   {
+    "ref": "RFO FAR numbering to know cold",
+    "url": "https://www.acquisition.gov/far-overhaul",
+    "note": "1.404 COR, 1.405 ratification, 6.103-1 only one responsible source, 6.103-2 urgency, 6.104 justification and approval, 12.201-1 commercial simplified procedures, 12.304 commercial termination, 15.404-1 price analysis, 17.204-1 options, 19.104-1 rule of two, 33.104 agency protest, 33.105 GAO protest, 33.205-6 final decision, 37.201-2 personal services, 43.302 change orders, 45.104 and 52.245-1 Government property, 49.402-3 and 49.607 cure and show cause."
+   }
+  ],
+  "board_angles": [
+   {
+    "q": "Who sits on the 411th CORB and how often does it meet?",
+    "a": "The SCO chairs, voting members come from the SCO, PD, CoCO and/or Division Chiefs and KOs, CONOPS and the Chief of C&P facilitate without voting, and it meets on the Commander's calendar the second Wednesday of each month."
+   },
+   {
+    "q": "What happens after the board?",
+    "a": "The SCO appoints in VCE-Warrants only on a unanimous recommendation; CONOPS and C&P have already generated the warrant number and prepared the appointment memorandum and certificate for upload."
+   },
+   {
+    "q": "You do not know the answer. What do you say?",
+    "a": "What I do know, where the answer lives, and how I would confirm it before signing - 'I do not know the section, but the rule is X and I would confirm it in Part Y' scores far better than a confident wrong cite."
+   },
+   {
+    "q": "A board member uses a pre-RFO FAR number. What do you do?",
+    "a": "I answer the concept, then offer the current RFO number once - 'that is the sole-source exception, now at 6.103-1' - and move on without correcting them twice."
+   },
+   {
+    "q": "How long should an answer be?",
+    "a": "Forty-five to ninety seconds: bottom line first, then state the rule, cite it, apply it to the facts, name the risk, and say who has to approve - and stop and let them probe."
+   },
+   {
+    "q": "What is scored, and what weighs the most?",
+    "a": "Judgment at 35 percent, regulatory knowledge at 30, composure at 20 and communication at 15 - so a candidate who reasons soundly and says they would confirm a number outscores one who recites numbers but cannot decide."
+   }
+  ],
+  "related_questions": [
+   "Q0002",
+   "Q0009",
+   "Q0040",
+   "Q0080",
+   "Q0100"
+  ],
+  "flags": [
+   "ai-drafted",
+   "verify-locally"
+  ],
+  "confidence": "medium",
+  "confidence_reason": "Board composition, cadence, facilitation, unanimity, waiver handling and the artifacts prepared by CONOPS/C&P come from the 411th CSB warrant process workflow of July 2026 as captured in process.json and rubric_board.json; the three-to-five-member rule and the unwaivable Unlimited board come from Army Warranting Program Policy v12. Local procedures change without notice, so verify-locally applies to everything in the first section. SCARR and the four scored dimensions with their weights are an app-internal training construct from rubric_board.json, not Army policy, and are presented as such. The RFO section numbers listed are the crosswalk-verified set; a candidate should still confirm any number before citing it in a signed document. No names, e-mail addresses or local approval thresholds are stated."
+ }
+]

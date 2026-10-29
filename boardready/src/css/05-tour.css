@@ -1,0 +1,48 @@
+/* =====================================================================
+   05-tour.css — the warrant class chip and picker, and the guided tour
+   ===================================================================== */
+.topbar .class-chip { gap: 6px; }
+.topbar .class-chip svg { color: var(--accent-2); }
+.topbar .class-chip .short { display: none; }
+@media (max-width: 860px) {
+  .topbar .class-chip .long { display: none; }
+  .topbar .class-chip .short { display: inline; }
+  .topbar .role-chip span { display: none; }
+}
+@media (max-width: 520px) { .topbar .unit-select { max-width: 96px; } }
+
+.class-pick { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin-top: var(--space-3); }
+.class-pick-item { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; padding: 10px 12px; border-radius: var(--r-md); border: 1px solid var(--line-2); background: var(--panel); color: var(--ink); text-align: left; transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease); }
+.class-pick-item b { font-size: var(--fs-md); }
+.class-pick-item span { font-size: var(--fs-xs); color: var(--muted); line-height: 1.35; }
+.class-pick-item:hover { border-color: var(--accent); }
+.class-pick-item.on { border-color: var(--accent); background: var(--accent-soft); box-shadow: inset 0 0 0 1px var(--accent); }
+
+/* dialogs can open over the dark landing page, whose text color would otherwise carry into the white dialog */
+.modal-scrim .modal { color: var(--ink); }
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+.tour-offer { display: flex; gap: var(--space-4); align-items: flex-start; }
+.tour-offer-icon { flex: none; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-2-soft); color: var(--accent-2); }
+.tour-offer-icon svg { width: 24px; height: 24px; }
+.tour-offer p { margin: 0 0 var(--space-2); }
+
+.tour-layer { position: fixed; inset: 0; z-index: 150; }
+.tour-spot { position: fixed; left: 50%; top: 50%; width: 0; height: 0; border-radius: 12px; box-shadow: 0 0 0 200vmax rgba(7, 11, 19, .58); pointer-events: none; transition: left .28s var(--ease), top .28s var(--ease), width .28s var(--ease), height .28s var(--ease); }
+.tour-spot.on { outline: 2px solid var(--accent-2); outline-offset: 2px; }
+.tour-card { position: fixed; left: 50%; top: 40%; width: min(380px, calc(100vw - 24px)); padding: 14px 18px 14px; border-radius: var(--r-lg); background: var(--panel); color: var(--ink); border: 1px solid var(--line); box-shadow: var(--shadow-lg); transition: left .28s var(--ease), top .28s var(--ease); }
+.tour-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.tour-step { font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-2); font-variant-numeric: tabular-nums; }
+.tour-x { width: 30px; height: 30px; margin-right: -8px; display: grid; place-items: center; border-radius: 8px; color: var(--muted); }
+.tour-x:hover { background: var(--bg-2); color: var(--ink); }
+.tour-x svg { width: 16px; height: 16px; }
+.tour-card h3 { margin: 4px 0 6px; font-family: var(--font-display); font-weight: 400; font-size: 1.55rem; letter-spacing: -.01em; text-wrap: balance; }
+.tour-text { margin: 0; color: var(--ink-2); font-size: var(--fs-sm); line-height: 1.55; }
+.tour-foot { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
+.tour-dots { display: flex; flex-wrap: wrap; gap: 4px; min-width: 0; }
+.tour-dots i { width: 6px; height: 6px; border-radius: 50%; background: var(--line-2); }
+.tour-dots i.on { background: var(--accent); }
+.tour-actions { display: flex; gap: 6px; margin-left: auto; flex: none; }
+@media (prefers-reduced-motion: reduce) { .tour-spot, .tour-card { transition: none; } }
+@media print { .tour-layer { display: none !important; } }

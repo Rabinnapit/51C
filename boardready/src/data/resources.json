@@ -1,0 +1,407 @@
+[
+ {
+  "title": "Revolutionary FAR Overhaul (RFO) hub - acquisition.gov",
+  "url": "https://www.acquisition.gov/far-overhaul",
+  "kind": "regulation",
+  "note": "Start here for anything RFO: links to the overhauled parts, per-part deviation guides, practitioner albums, policy memos and FAQs.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "RFO Parts and Deviations index (per-part deviation guides)",
+  "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide",
+  "kind": "regulation",
+  "note": "Lists every overhauled FAR part (1-19, 22-53) with issuance dates and each agency's deviation PDF (pattern AGENCY_RFO_Deviation_Part-N.pdf); pick the part, then the DoD or Army deviation before you cite.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "RFO FAR Part 1 - overhauled text (ratification 1.405, deviations, KO responsibilities)",
+  "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1",
+  "kind": "regulation",
+  "note": "Read RFO part text online; change the trailing part number (far-overhaul-part-6, -12, -33) to browse another part. Confirmed 1.405 = Ratification of unauthorized commitments; 1.403 = selecting, appointing and terminating contracting officers; 1.404 = contracting officer's representative.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "RFO FAR Part 6 - Competition (limited competition 6.103-1, approvals 6.104)",
+  "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6",
+  "kind": "regulation",
+  "note": "Use when a board question turns on sole-source, brand-name or J&A authority; confirmed 6.103 = Other than full and open competition, 6.103-1 = Only one responsible source, 6.104 = Justification and approval.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "RFO Practitioner Albums (training and key-changes summaries by part)",
+  "url": "https://www.acquisition.gov/far-overhaul/practitioner-albums",
+  "kind": "training",
+  "note": "Quickest way to learn what changed in a part and where old cites moved (key changes, line-out documents, tested tools); good pre-board review material.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "RFO Policy and Guidance (Executive Order, OMB memo, FAR Council guidance)",
+  "url": "https://www.acquisition.gov/far-overhaul/policy-and-guidance",
+  "kind": "policy",
+  "note": "The authority trail for the overhaul: EO 14275 Restoring Common Sense to Federal Procurement and its fact sheet, OMB memo M-25-26 Overhauling the Federal Acquisition Regulation, and three FAR Council guidance documents (RFO deviations; implementing EO 14398; implementing EO 14402). Page last updated 28 Jul 2026.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "RFO Frequently Asked Questions",
+  "url": "https://www.acquisition.gov/far-overhaul/faqs",
+  "kind": "reference",
+  "note": "Official answers on the deviation process and model deviation text, non-regulatory guidance (buying guides, practitioner albums), transition timing and agency actions; check here before arguing an RFO transition question. Page last updated 28 Jul 2026.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "FAR (legacy numbering) - acquisition.gov browse",
+  "url": "https://www.acquisition.gov/browse/index/far",
+  "kind": "regulation",
+  "note": "The codified FAR as acquisition.gov currently posts it (FAC 2026-01, effective 13 Mar 2026). It still carries the pre-overhaul numbering (6.302-1 is here; 6.103-1 is not) because the RFO is being applied through agency deviations; use it to read an old cite in a legacy document or to build a crosswalk pair, not as the RFO text.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "DFARS - Defense Federal Acquisition Regulation Supplement",
+  "url": "https://www.acquisition.gov/dfars",
+  "kind": "regulation",
+  "note": "DoD supplement; current change dated 7 May 2026. Check DFARS before answering any DoD-unique rule (Berry Amendment and the DFARS 225 foreign acquisition rules, 252 clauses). The RFO overlay for DFARS is on the DPC class-deviations page, not yet in this codified text.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "DFARS PGI - Procedures, Guidance and Information",
+  "url": "https://www.acquisition.gov/dfarspgi",
+  "kind": "regulation",
+  "note": "Non-regulatory DoD procedures (change 7 May 2026). In this posted PGI the COR designation rule sits at PGI 201.602-2 (designate a COR within 3 business days of award); the 411th decks cite PGI 201.404-70(e), which does not exist on this page and would only appear in the RFO-deviation PGI 201 (Class Deviation 2026-O0002 Rev 1, 5 Aug 2026, DPC page) - unverified, confirm before citing.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "AFARS - Army Federal Acquisition Regulation Supplement",
+  "url": "https://www.acquisition.gov/afars",
+  "kind": "regulation",
+  "note": "Army supplement (change 2025-0711 shown). Subpart 5101.6 Career Development, Contracting Authority and Responsibilities holds the warrant rules (5101.603 selection, appointment and termination of KOs; 5101.602-3 ratification). Appendix GG is the Army approval-authority matrix; Appendix EE is the Army Government Purchase Card operating procedures; Appendix FF is the nonstandard-clause control plan.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "DoD Class Deviations (DPC / DARS)",
+  "url": "https://www.acq.osd.mil/dpap/dars/class_deviations.html",
+  "kind": "policy",
+  "note": "Master list of DoD class deviations (latest shown 2026-O0051, 11 Jun 2026), maintained by Defense Pricing, Contracting and Acquisition Policy. DPC home moved to acq.osd.mil/asda/dpc but the deviations list still lives at this URL.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "DFARS Revolutionary FAR Overhaul Class Deviations (DPC)",
+  "url": "https://www.acq.osd.mil/dpap/dars/dfars_far_overhaul_class_deviations.html",
+  "kind": "policy",
+  "note": "Index of the DoD class deviations that implement the RFO (EO 14275) across DFARS parts 201-270: per part, the deviation memo, revised DFARS text with line-out, and revised PGI text. Page last updated 9 Sep 2026. Use to confirm the DoD-specific text that overlays an overhauled FAR part.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "FAR Council (Federal Acquisition Regulatory Council)",
+  "url": "https://www.acquisition.gov/far-council",
+  "kind": "reference",
+  "note": "Who issues and maintains the FAR: membership is the OFPP Administrator, the GSA Administrator, the Secretary of Defense and the NASA Administrator; board questions on who owns the FAR start here.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "Army Warranting Program page on PAM (ASA(ALT) Procurement Policy)",
+  "url": "https://armyeitaas.sharepoint-mil.us/sites/ASA-ALT-PAM-PP/SitePages/Warrant.aspx",
+  "kind": "policy",
+  "note": "Authoritative home of the Army Warranting Program Policy (v12, Mar 2026); per the policy it also holds the review-board question-and-answer repository, the current warranting reciprocity MOAs and the letters referenced in policy sections 3.4.2 and 8.0. CAC and Army 365 required.",
+  "access": "cac",
+  "status": "not-checked",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "VCE Portal (Virtual Contracting Enterprise)",
+  "url": "https://vce.army.mil/Portal/",
+  "kind": "system",
+  "note": "Army contracting enterprise portal; entry point for VCE-Warrants, PCF and other Army tools. CAC required.",
+  "access": "cac",
+  "status": "not-checked",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "VCE-Warrants (warrant nomination, board and appointment workflow)",
+  "url": "https://vce.army.mil/warrants",
+  "kind": "system",
+  "note": "Where the candidate packet is built, routed and the warrant issued; see the VCE-Warrants user guide in the process module. CAC required.",
+  "access": "cac",
+  "status": "not-checked",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "GAO Red Book - Principles of Federal Appropriations Law",
+  "url": "https://www.gao.gov/legal/appropriations-law/red-book",
+  "kind": "reference",
+  "note": "The fiscal-law treatise behind purpose, time and amount, bona fide need and Antideficiency Act questions (4th edition chapters 1-3, 3rd edition chapters 5-15, PDF only).",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "4 CFR Part 21 - GAO Bid Protest Regulations (eCFR)",
+  "url": "https://www.ecfr.gov/current/title-4/chapter-I/subchapter-B/part-21",
+  "kind": "regulation",
+  "note": "The 10-day filing and 100-day decision rules as GAO writes them. Pair with RFO FAR 33.105 Protests to GAO (33.105-1 points to 4 CFR 21; 33.105-2 preaward stay and 33.105-3 postaward suspension carry the CICA stay). RFO 33.104-3 is the agency-level postaward protest, not GAO.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "GAO Bid Protests (overview, filing, decisions)",
+  "url": "https://www.gao.gov/legal/bid-protests",
+  "kind": "reference",
+  "note": "Overview of the GAO protest process (standard 100-day timeline) and links to decisions; useful for the what-happens-after-a-protest-is-filed board question.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "GAO EPDS - Electronic Protest Docketing System",
+  "url": "https://epds.gao.gov/",
+  "kind": "system",
+  "note": "GAO protest docket where protests are filed and agency reports uploaded; the legal office files here on the KO's behalf.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "U.S. Court of Federal Claims",
+  "url": "https://www.uscfc.uscourts.gov/",
+  "kind": "reference",
+  "note": "The judicial protest forum and the Contract Disputes Act alternative to the ASBCA (a contractor appeals a KO final decision to the board or to the COFC, not both); use when explaining protest venues or claim appeals.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "SAM.gov home",
+  "url": "https://sam.gov/",
+  "kind": "system",
+  "note": "Landing page for entity, exclusions, contract data and wage determinations; a 25 Feb notice on the home page confirms FPDS.gov ezSearch is retired and all contract-award data searches now run in SAM.gov (the FPDS ATOM feed retires later in FY26).",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "SAM.gov - Entity search (registration and reps and certs)",
+  "url": "https://sam.gov/search/?index=ei",
+  "kind": "system",
+  "note": "Verify active registration, UEI and CAGE before award; part of the responsibility determination.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "SAM.gov - Exclusions search",
+  "url": "https://sam.gov/search/?index=ex",
+  "kind": "system",
+  "note": "Check debarment and suspension before award and before exercising options; document the check in the file.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "SAM.gov - Contract Data (successor to FPDS reporting and search)",
+  "url": "https://sam.gov/search/?index=cd",
+  "kind": "system",
+  "note": "Where contract action reports are searched now that FPDS.gov is retired; use for market research and reporting questions.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "SAM.gov - Wage Determinations (Davis-Bacon and Service Contract Act)",
+  "url": "https://sam.gov/wage-determinations",
+  "kind": "system",
+  "note": "Pull the DBA (construction) or SCA (services) wage determination to incorporate in the solicitation; CONUS-focused, note OCONUS applicability limits.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "PIEE - Procurement Integrated Enterprise Environment",
+  "url": "https://piee.eb.mil/",
+  "kind": "system",
+  "note": "DoD single sign-on suite for WAWF, CORT, EDA, SPRS access and more; where invoices and receiving reports live.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "WAWF - Wide Area Workflow (invoicing and receiving reports)",
+  "url": "https://wawf.eb.mil/",
+  "kind": "system",
+  "note": "Legacy WAWF URL now redirects (302) to the PIEE login; use it to explain the invoice-receipt-payment flow and the KO role in acceptance.",
+  "access": "public",
+  "status": "redirect",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "CPARS - Contractor Performance Assessment Reporting System",
+  "url": "https://www.cpars.gov/",
+  "kind": "system",
+  "note": "Past performance evaluations; know the thresholds, the 14-calendar-day contractor comment period (confirmed in RFO FAR 42.1503) and the KO assessing-official role.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "SPRS - Supplier Performance Risk System",
+  "url": "https://www.sprs.csd.disa.mil/",
+  "kind": "system",
+  "note": "Authoritative source for supplier risk, NIST SP 800-171 assessment scores and item risk; check before award where DFARS 252.204-7019/7020 apply. Version 4.2 shown, updated 3 Sep 2026.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "WarU (Warfighting Acquisition University, formerly DAU) home - dau.edu redirects to waru.edu",
+  "url": "https://www.dau.edu/",
+  "kind": "training",
+  "note": "dau.edu returns a permanent (301) redirect to www.waru.edu, the Warfighting Acquisition University (DAU renamed in Nov 2025 under the Secretary of War memo Transforming the Defense Acquisition System into the Warfighting Acquisition System, dated 7 Nov 2025).",
+  "access": "public",
+  "status": "redirect",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "WarU ACQuipedia - defense acquisition encyclopedia (formerly DAU)",
+  "url": "https://www.waru.edu/acquipedia",
+  "kind": "training",
+  "note": "Short articles on bona fide need, ratification, options, etc.; the study decks cite waru.edu/acquipedia-article/... URLs.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "2 CFR Part 200 - Uniform Guidance for grants and cooperative agreements (eCFR)",
+  "url": "https://www.ecfr.gov/current/title-2/subtitle-A/chapter-II/part-200",
+  "kind": "regulation",
+  "note": "Uniform Administrative Requirements, Cost Principles, and Audit Requirements for Federal Awards; unaffected by the RFO.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "32 CFR Subchapter C - DoD Grant and Agreement Regulations (DoDGARs) (eCFR)",
+  "url": "https://www.ecfr.gov/current/title-32/subtitle-A/chapter-I/subchapter-C",
+  "kind": "regulation",
+  "note": "DoD-specific grants and agreements rules (parts 21-37) for agreements officers; unaffected by the RFO.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "10 U.S.C. 4021 - Research projects: transactions other than contracts and grants (uscode.house.gov)",
+  "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title10-section4021&num=0&edition=prelim",
+  "kind": "regulation",
+  "note": "Statutory authority for research Other Transactions. uscode.house.gov refused the TCP connection from this host today (DNS resolves); the same section and title were confirmed same-day at law.cornell.edu/uscode/text/10/4021.",
+  "access": "public",
+  "status": "unreachable",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "10 U.S.C. 4022 - Authority to carry out certain prototype projects (uscode.house.gov)",
+  "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title10-section4022&num=0&edition=prelim",
+  "kind": "regulation",
+  "note": "Statutory authority for prototype OTs and follow-on production. uscode.house.gov refused the connection from this host today; section and title confirmed same-day at law.cornell.edu/uscode/text/10/4022.",
+  "access": "public",
+  "status": "unreachable",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "U.S.-ROK Status of Forces Agreement (SOFA) text (USFK)",
+  "url": "https://www.usfk.mil/Portals/105/Documents/Contracting/Contractor%20Links%20Sept%2015/US-ROK%20SOFA_1966-67.pdf",
+  "kind": "korea",
+  "note": "Full SOFA text including Article XV (Invited Contractors) and Article XVI (Local Procurement). Open it from a .mil network.",
+  "access": "public",
+  "status": "unreachable",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "USFK Publications (regulations, instructions, pamphlets)",
+  "url": "https://www.usfk.mil/Resources/USFK-Publications/",
+  "kind": "korea",
+  "note": "USFK publications index. Individual PDFs sit under /Portals/105/Documents/Publications/. Related to contracting: USFK Reg 700-19 The Invited Contractor and Technical Representative Program (older regulation posted in the 411th CSB folder; check whether USFKI 4901.01 superseded it) and USFK Reg 550-51 International Agreements. Neither regulation appears in the app's source documents, so confirm them with C&P. Open it from a .mil network.",
+  "access": "public",
+  "status": "unreachable",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "USFKI 4901.01 - Invited Contractor and Technical Representative Program",
+  "url": "https://www.usfk.mil/Portals/105/Documents/Publications/Instructions/USFK-Instruction-4901-01-Invited-Contractor-and-Technical-Representative-Program.pdf",
+  "kind": "korea",
+  "note": "The USFK instruction (OPR FKAQ) for SOFA Article XV IC/TR designation; the study decks say the KO submits the contract SOFA-designation request to USFK/FKAQ and must review SOFA Article XV and USFKI 4901.01. Open it from a .mil network. Confirm the current version with C&P.",
+  "access": "public",
+  "status": "unreachable",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "Army Contracting Command (ACC) homepage",
+  "url": "https://www.acc.army.mil/",
+  "kind": "reference",
+  "note": "Parent command of the 411th CSB; source of ACC Contracting Notes (e.g., 26-03 reciprocity) and policy alerts. Host refused the connection from this machine today (DNS resolves to 143.84.38.37); open from a .mil network.",
+  "access": "public",
+  "status": "unreachable",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "Defense Base Act (DOL OWCP)",
+  "url": "https://www.dol.gov/agencies/owcp/dlhwc/lsdba",
+  "kind": "reference",
+  "note": "Workers compensation coverage required for contractor employees working OCONUS; RFO FAR 28.305 Overseas workers' compensation and war-hazard insurance (subpart 28.3 Insurance) and the DBA clause; relevant to every Korea services contract.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "GSA Multiple Award Schedule (MAS)",
+  "url": "https://www.gsa.gov/buy-through-us/purchasing-programs/multiple-award-schedule",
+  "kind": "reference",
+  "note": "How Schedule ordering works. In the RFO, subpart 8.4 Ordering under the Federal Supply Schedule has been reduced to a single section, 8.401 General; the legacy 8.405 ordering procedures no longer appear in the FAR text, so lean on GSA ordering guidance and the Part 8 practitioner album. Check each SIN's geographic scope before using MAS OCONUS.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "GSA eBuy (RFQs against Schedule contracts)",
+  "url": "https://www.ebuy.gsa.gov/",
+  "kind": "system",
+  "note": "Post RFQs to Schedule holders to compete an order under RFO FAR 8.401 (the legacy 8.405 procedures are not in the RFO text).",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ },
+ {
+  "title": "Section508.gov - ICT accessibility",
+  "url": "https://www.section508.gov/",
+  "kind": "reference",
+  "note": "Section 508 accessibility requirements for IT buys (RFO FAR 39); use for the standard what-must-an-IT-requirement-include question.",
+  "access": "public",
+  "status": "ok",
+  "checked_on": "2026-09-13"
+ }
+]

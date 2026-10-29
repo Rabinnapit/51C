@@ -1,0 +1,949 @@
+{
+  "threshold_ladder": [
+    {
+      "id": "TL01",
+      "label": "Open-market buy of office supplies",
+      "facts": [
+        "New purchase for consumable office supplies.",
+        "Total price $9,850. No options, no ceiling, not a modification.",
+        "Commercial products, open market, paid by purchase card."
+      ],
+      "value_number": 9850,
+      "correct_class": "I",
+      "explanation": "Cumulative instrument value is $9,850 - base only, nothing else to add.\n\nThat is below the micro-purchase threshold of $15,000 and far below the SAT of $350,000, so the lowest warrant tier in Table 1 covers it. Class I is a SAT warrant.\n\nBoard point: a purchase card cardholder is not a warranted contracting officer. The card gives purchase authority under the micro-purchase rules; a warrant gives authority to sign contracts and obligate the Government generally.\n\nCite: Army Warranting Program Policy v12 (MAR 2026) Table 1 and para 4.2; RFO FAR 2.101 (micro-purchase threshold $15,000; SAT $350,000).",
+      "difficulty": 1
+    },
+    {
+      "id": "TL02",
+      "label": "Simplified acquisition purchase order",
+      "facts": [
+        "Firm-fixed-price purchase order for commercial repair parts.",
+        "Award amount $310,000. No options. No ceiling.",
+        "Awarded under simplified acquisition procedures."
+      ],
+      "value_number": 310000,
+      "correct_class": "I",
+      "explanation": "Cumulative instrument value is $310,000, which is under the SAT of $350,000.\n\nA Class I warrant is written as \"SAT\" rather than a dollar figure, so it moves with the threshold and does not have to be reissued when the SAT is adjusted for inflation.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 2.101 (SAT); 41 U.S.C. 134.",
+      "difficulty": 1
+    },
+    {
+      "id": "TL03",
+      "label": "Award exactly at the simplified acquisition threshold",
+      "facts": [
+        "Firm-fixed-price supply contract.",
+        "Award amount exactly $350,000. No options, no ceiling.",
+        "Not a contingency or emergency acquisition."
+      ],
+      "value_number": 350000,
+      "correct_class": "I",
+      "explanation": "The rule is that the warrant must be greater than or equal to the cumulative instrument value. At exactly $350,000 a SAT warrant covers the action, so this is still Class I.\n\nOne dollar more and it is Class II. Know which side of the line \"equal to\" falls on before you sign.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 2.101 (SAT $350,000).",
+      "difficulty": 3
+    },
+    {
+      "id": "TL04",
+      "label": "Award just over the SAT",
+      "facts": [
+        "Firm-fixed-price services contract, non-commercial.",
+        "Award amount $352,400. No options, no ceiling.",
+        "Twelve-month period of performance."
+      ],
+      "value_number": 352400,
+      "correct_class": "II",
+      "explanation": "Cumulative instrument value is $352,400, which exceeds the SAT. A Class I warrant no longer reaches it.\n\nThe lowest Class II tier is $500,000, and that tier covers this action. Class II tiers are $500K, $1M, $5M and SaP.\n\nCite: Army Warranting Program Policy v12 Table 1 and para 4.2.",
+      "difficulty": 3
+    },
+    {
+      "id": "TL05",
+      "label": "Base under the SAT with four option years",
+      "facts": [
+        "Base year $250,000 for grounds maintenance.",
+        "Four one-year options priced at $250,000 each.",
+        "Options are priced and evaluated in the solicitation; none exercised at award."
+      ],
+      "value_number": 1250000,
+      "correct_class": "II",
+      "explanation": "This is the classic trap. The base is under the SAT, but para 4.2 counts base plus all options regardless of when funds are obligated: $250,000 plus four times $250,000 equals $1,250,000.\n\nA Class I warrant cannot sign this award. You need Class II at the $5M tier - the $500K and $1M tiers are both below $1.25M.\n\nBoard point: you count option value at award even though no option has been exercised and no option money has been obligated.\n\nCite: Army Warranting Program Policy v12 para 4.2 (base plus all options) and Table 1; RFO FAR 17.204-1 (exercise of options).",
+      "difficulty": 2
+    },
+    {
+      "id": "TL06",
+      "label": "Two-hundred-dollar deductive modification on a $4.9M contract",
+      "facts": [
+        "Existing firm-fixed-price contract with a total value of $4,900,000.",
+        "Bilateral modification deletes one minor CLIN item and deobligates $200.",
+        "The modification is the only action being signed; no other change to scope or period."
+      ],
+      "value_number": 4900200,
+      "correct_class": "II",
+      "explanation": "For a modification the warrant must be equal to or greater than the cumulative value of the contract including the modification, and a deductive modification counts at its absolute value: minus $200 counts as $200.\n\n$4,900,000 + $200 = $4,900,200. That is above the SAT of $350,000, so a Class I warrant cannot sign even this $200 change. The smallest tier that reaches it is the Class II $5M tier.\n\nBoard point: the size of the contract decides who signs a modification, not the size of the change. Confirm how your office applies the rule with the Chief, C&P.\n\nCite: Army Warranting Program Policy v12 para 4.2 (cumulative instrument value, absolute value of a modification), Summary of Key Changes, and Table 1.",
+      "difficulty": 3
+    },
+    {
+      "id": "TL07",
+      "label": "Option exercise that carries the contract across SaP",
+      "facts": [
+        "Commercial services contract awarded using simplified procedures for commercial products and commercial services.",
+        "Base year $4,200,000. Three priced option years totaling $5,300,000.",
+        "Cumulative base plus all options is $9,500,000.",
+        "The contracting officer holds a Class II warrant at the SaP tier and is about to exercise option year one."
+      ],
+      "value_number": 9500000,
+      "correct_class": "III",
+      "explanation": "Cumulative instrument value is $4,200,000 plus $5,300,000, which is $9,500,000. That is above the SaP ceiling of $9,000,000, so the SaP tier of a Class II warrant never reached this instrument - not at award and not at option exercise.\n\nThe lowest tier that covers $9.5M is the $10M tier, which is Class III.\n\nBoard point: this acquisition should not have been placed under the commercial simplified procedures at all, because those procedures are capped at $9 million. A warrant problem and a procedures problem usually travel together. Stop, get the file reviewed, and consider whether a ratification is in play.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 12.201-1 and 12.001(c) (SaP ceiling $9,000,000, $15,000,000 for contingency); RFO FAR 17.204-1; RFO FAR 1.405 (ratification of unauthorized commitments).",
+      "difficulty": 3
+    },
+    {
+      "id": "TL08",
+      "label": "Award of a single-award IDIQ with a $600M ceiling",
+      "facts": [
+        "Single-award indefinite-delivery indefinite-quantity contract for base operations support.",
+        "Guaranteed minimum $1,000. Maximum ceiling $600,000,000.",
+        "Five-year ordering period. No orders issued at award."
+      ],
+      "value_number": 600000000,
+      "correct_class": "IV",
+      "explanation": "Para 4.2 counts the anticipated or actual ceiling, not the guaranteed minimum and not what you expect to order. The instrument value is $600,000,000.\n\nThat is above $250 million, so you need Class IV. The $500M tier covers it.\n\nBoard point: do not let anyone argue the value is $1,000 because that is all the Government is obligated to buy. The ceiling is the authority you are signing away.\n\nCite: Army Warranting Program Policy v12 para 4.2 (anticipated or actual ceiling) and Table 1.",
+      "difficulty": 3
+    },
+    {
+      "id": "TL09",
+      "label": "Delivery order under the $600M IDIQ",
+      "facts": [
+        "Delivery order placed against the single-award IDIQ with the $600,000,000 ceiling.",
+        "Order value $3,800,000 firm-fixed-price. No options on the order.",
+        "Ordering period has four years remaining."
+      ],
+      "value_number": 3800000,
+      "correct_class": "II",
+      "explanation": "The order is its own instrument. Its cumulative value is $3,800,000 - base plus options on the order - so the warrant requirement keys on $3.8M, not on the parent contract's $600M ceiling.\n\nThe $5M tier of a Class II warrant covers it.\n\nBoard point: the $600M ceiling drove the warrant class of the person who signed the IDIQ. It does not follow every order. But if the order itself carried priced options, you would add those in before picking your tier.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 16.506 (ordering - general order rules; 16.507 is the fair-opportunity procedure for multiple-award contracts and does not apply to a single-award IDIQ).",
+      "difficulty": 2
+    },
+    {
+      "id": "TL10",
+      "label": "Task order against a multiple-award contract",
+      "facts": [
+        "Cost-plus-fixed-fee task order for engineering support under a DoD multiple-award contract.",
+        "Order base $8,900,000 plus one priced option period of $3,500,000.",
+        "Total order value $12,400,000."
+      ],
+      "value_number": 12400000,
+      "correct_class": "III",
+      "explanation": "Base plus the priced option equals $12,400,000. Above the $9 million SaP ceiling, so no Class II tier reaches it.\n\nThe $25M tier of a Class III warrant covers it.\n\nBoard point at this dollar level: orders above $7.5 million under a multiple-award contract get enhanced fair opportunity procedures, and a DoD order of $35 million or more is within GAO's task-order protest jurisdiction.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 16.507-5 (orders above $7.5 million); 10 U.S.C. 3406(f)(1)(B) (DoD task-order protest floor, $35 million).",
+      "difficulty": 2
+    },
+    {
+      "id": "TL11",
+      "label": "Call against an established BPA",
+      "facts": [
+        "Call placed against an existing blanket purchase agreement for janitorial supplies.",
+        "Call amount $88,000.",
+        "The BPA itself carries an estimated five-year value of $22,000,000."
+      ],
+      "value_number": 88000,
+      "correct_class": "I",
+      "explanation": "The call is the instrument being signed and it is worth $88,000, which is under the SAT. Class I covers the call.\n\nBoard point: the BPA's estimated value governs the warrant needed to establish the BPA, not the warrant needed for each call. Keep the two decisions separate and be ready to say why.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 13.201 (simplified procedures - BPAs; no individual purchase under a BPA may exceed the SAT). Note RFO Part 13 covers noncommercial acquisitions at or below the SAT; a commercial BPA runs under Part 12 procedures.",
+      "difficulty": 2
+    },
+    {
+      "id": "TL12",
+      "label": "Establishing the BPA itself",
+      "facts": [
+        "Establishing a blanket purchase agreement for recurring janitorial supplies.",
+        "Anticipated value $22,000,000 over five years.",
+        "No funds obligated at establishment; calls will be funded individually."
+      ],
+      "value_number": 22000000,
+      "correct_class": "III",
+      "explanation": "Para 4.2 counts the anticipated ceiling regardless of when funds are obligated. The anticipated value is $22,000,000.\n\nAbove SaP, so Class II is out. The $25M tier of a Class III warrant covers it.\n\nBoard point: \"no money is obligated today\" is never the answer to a warrant question. The policy says the calculation is made without regard to when funds are obligated.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1.",
+      "difficulty": 3
+    },
+    {
+      "id": "TL13",
+      "label": "Firm-fixed-price construction award",
+      "facts": [
+        "Construction contract for a vehicle maintenance facility.",
+        "Award amount $18,500,000. No options, no ceiling.",
+        "Davis-Bacon wage rates apply."
+      ],
+      "value_number": 18500000,
+      "correct_class": "III",
+      "explanation": "Cumulative instrument value is $18,500,000. Above the $9 million SaP ceiling, so no Class II tier reaches it; the $25M tier of a Class III warrant does.\n\nBoard point: the SaP tier is a commercial-procedures authority. Construction is not a commercial product or commercial service under those procedures, so do not reach for SaP to cover a construction award.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 2.101 (definition of construction); RFO FAR 12.201-1.",
+      "difficulty": 1
+    },
+    {
+      "id": "TL14",
+      "label": "Large services award with option years",
+      "facts": [
+        "Base year $95,000,000 for logistics support services.",
+        "Four option years priced at $10,000,000 each, totaling $40,000,000.",
+        "Cumulative base plus all options is $135,000,000."
+      ],
+      "value_number": 135000000,
+      "correct_class": "IV",
+      "explanation": "Base plus all options is $135,000,000. The base alone would have fit inside the $100M Class III tier; the options push it past.\n\nAbove $100 million, so you need Class IV. The $250M tier covers it.\n\nBoard point: this is the same trap as the small base with four options, just with more zeros. Add the options before you pick the tier.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1.",
+      "difficulty": 2
+    },
+    {
+      "id": "TL15",
+      "label": "Award at exactly $100 million",
+      "facts": [
+        "Firm-fixed-price award for a materiel buy.",
+        "Award amount exactly $100,000,000. No options, no ceiling.",
+        "Single instrument, no follow-on ordering vehicle."
+      ],
+      "value_number": 100000000,
+      "correct_class": "III",
+      "explanation": "The warrant must be greater than or equal to the instrument value. At exactly $100,000,000 the $100M tier covers the action, and that tier is the top of Class III.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1.\n\nBoard point at this dollar level: $100 million is also the DFARS threshold for CAS full coverage and Disclosure Statement, and the point at which DoD justification approval moves above the competition advocate.",
+      "difficulty": 3
+    },
+    {
+      "id": "TL16",
+      "label": "Award just above the top Class III tier",
+      "facts": [
+        "Firm-fixed-price award for a materiel buy.",
+        "Award amount $104,000,000. No options, no ceiling."
+      ],
+      "value_number": 104000000,
+      "correct_class": "IV",
+      "explanation": "At $104,000,000 the top Class III tier of $100M no longer reaches the instrument. The next tier up is $250M, which is Class IV.\n\nBoard point: there is no tier between $100M and $250M. A requirement that lands in that gap jumps a whole warrant class, which is a real staffing consideration for the office.\n\nCite: Army Warranting Program Policy v12 Table 1.",
+      "difficulty": 3
+    },
+    {
+      "id": "TL17",
+      "label": "Bilateral modification adding scope to a $30M contract",
+      "facts": [
+        "Existing non-commercial services contract with a total value of $30,000,000.",
+        "Bilateral modification adds in-scope work worth $6,200,000.",
+        "The modification is the action being signed."
+      ],
+      "value_number": 36200000,
+      "correct_class": "III",
+      "explanation": "For a modification the warrant must be equal to or greater than the cumulative value of the contract including the modification: $30,000,000 + $6,200,000 = $36,200,000.\n\nNo Class II tier reaches that. Even the SaP ceiling of $9,000,000 falls short, and SaP applies only to commercial products and commercial services in any case. The smallest tier that covers the action is the Class III $50M tier.\n\nBoard point: the $6.2 million of new work is not the number that decides authority; the contract it modifies is.\n\nCite: Army Warranting Program Policy v12 para 4.2 (cumulative instrument value, absolute value of a modification), Summary of Key Changes, and Table 1.",
+      "difficulty": 3
+    },
+    {
+      "id": "TL18",
+      "label": "Commercial services at $8.4M under simplified procedures",
+      "facts": [
+        "Commercial services acquisition for facility maintenance.",
+        "Award amount $8,400,000 firm-fixed-price, no options.",
+        "Acquired using simplified procedures for commercial products and commercial services; the items meet the commercial definition and market research supports it."
+      ],
+      "value_number": 8400000,
+      "correct_class": "II",
+      "explanation": "Cumulative instrument value is $8,400,000. That is above $5 million but at or below the $9,000,000 SaP ceiling, and this is a genuine commercial acquisition under the simplified procedures.\n\nSo the SaP rung of Class II covers it. A contracting officer with a Class II SaP warrant can sign; you do not need Class III.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 12.201-1 and 12.001(c); RFO FAR 12.102 (restricting competition for commercial).",
+      "difficulty": 3
+    },
+    {
+      "id": "TL19",
+      "label": "Non-commercial services at the same $8.4M",
+      "facts": [
+        "Non-commercial services acquisition, negotiated under RFO FAR Part 15.",
+        "Award amount $8,400,000 firm-fixed-price, no options.",
+        "Market research did not support a commercial determination."
+      ],
+      "value_number": 8400000,
+      "correct_class": "III",
+      "explanation": "Same dollar figure as the commercial item, different answer. Because this is not a commercial acquisition under the simplified procedures, the SaP rung of Class II is not available. The highest Class II tier you can use is $5 million, and $8.4M exceeds it.\n\nThe lowest tier that covers the action is $10M, which is Class III.\n\nBoard point: this pair is the cleanest demonstration that Table 1's SaP entry is an authority, not just a dollar amount. Be able to say it out loud.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 12.201-1 (SaP applies to commercial products and commercial services).",
+      "difficulty": 3
+    },
+    {
+      "id": "TL20",
+      "label": "Termination for convenience settlement modification",
+      "facts": [
+        "Contract with a total value of $40,000,000 terminated for the convenience of the Government.",
+        "Negotiated settlement agreement modification pays the contractor $2,300,000.",
+        "The settlement modification is the instrument being signed."
+      ],
+      "value_number": 42300000,
+      "correct_class": "III",
+      "explanation": "The settlement is executed by modification. For a modification the warrant must be equal to or greater than the cumulative value of the contract including the modification: $40,000,000 + $2,300,000 = $42,300,000. No Class II tier reaches it, so the smallest tier that does is the Class III $50M tier.\n\nTwo cautions. First, settlement authority is not the same thing as warrant authority - termination contracting officer authority and settlement approval levels are set separately, and a settlement above the approval level needs review regardless of your warrant. Second, confirm the current local settlement review levels, and how your office applies the modification rule, with the Chief, C&P; do not state a number from memory at the board.\n\nCite: Army Warranting Program Policy v12 para 4.2 (cumulative instrument value, absolute value of a modification), Summary of Key Changes, and Table 1; RFO FAR 49 (termination of contracts); RFO FAR 12.304 (commercial terminations).",
+      "difficulty": 3
+    },
+    {
+      "id": "TL21",
+      "label": "Closeout modification deobligating excess funds",
+      "facts": [
+        "Completed cost-reimbursement contract in closeout, with a total value (estimated cost plus fee) of $3,100,000.",
+        "Modification deobligates $1,400,000 of unexpended funds back to the requiring activity.",
+        "No change to scope, price of completed work, or period."
+      ],
+      "value_number": 4500000,
+      "correct_class": "II",
+      "explanation": "For a modification the warrant must be equal to or greater than the cumulative value of the contract including the modification, and a deobligation counts at its absolute value: $3,100,000 + $1,400,000 = $4,500,000.\n\nThat is above the SAT, so Class I does not reach it; the Class II $5M tier does.\n\nBoard point: this is the companion to the $200 deductive. The sign of the change is irrelevant; the contract plus the size of the change decides the warrant you need.\n\nCite: Army Warranting Program Policy v12 para 4.2 (cumulative instrument value, absolute value of a modification), Summary of Key Changes, and Table 1.",
+      "difficulty": 3
+    },
+    {
+      "id": "TL22",
+      "label": "Undefinitized contract action with a not-to-exceed ceiling",
+      "facts": [
+        "Letter contract issued for urgent depot-level repairs.",
+        "Not-to-exceed ceiling $48,000,000.",
+        "Initial obligation limited to $14,000,000 pending definitization."
+      ],
+      "value_number": 48000000,
+      "correct_class": "III",
+      "explanation": "Para 4.2 counts the anticipated or actual ceiling regardless of when funds are obligated. The instrument value is the $48,000,000 not-to-exceed ceiling, not the $14 million obligated today.\n\nThe $50M tier of a Class III warrant covers it.\n\nBoard point: the ceiling is the exposure. That is exactly why the policy writes \"anticipated or actual ceiling\" into the calculation.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1.",
+      "difficulty": 3
+    },
+    {
+      "id": "TL23",
+      "label": "Order against a Federal Supply Schedule contract",
+      "facts": [
+        "Firm-fixed-price order for commercial IT hardware against a GSA Federal Supply Schedule contract.",
+        "Order value $260,000. No options.",
+        "Ordering under required-sources procedures."
+      ],
+      "value_number": 260000,
+      "correct_class": "I",
+      "explanation": "The order is the instrument and it is worth $260,000, under the SAT. Class I covers it.\n\nBoard point: placing an order under a schedule contract is still an exercise of contracting officer authority. The schedule contract was awarded by GSA; your order obligates the Army, and you need a warrant that reaches the order value.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 8 (required sources of supplies and services).",
+      "difficulty": 2
+    },
+    {
+      "id": "TL24",
+      "label": "Overseas purchase card buy above the micro-purchase threshold",
+      "facts": [
+        "Commercial supplies purchased overseas using the Governmentwide commercial purchase card.",
+        "Purchase amount $22,000.",
+        "Above the $15,000 micro-purchase threshold but within the DFARS overseas commercial purchase limit of $25,000."
+      ],
+      "value_number": 22000,
+      "correct_class": "I",
+      "explanation": "Instrument value is $22,000, well under the SAT, so Class I is the warrant class.\n\nBoard point: the DFARS overseas $25,000 limit raises the purchase card's usable limit for commercial purchases overseas; it does not raise the micro-purchase threshold and it does not create warrant authority. The cardholder still needs the appropriate delegation, and above the micro-purchase threshold the normal competition and documentation rules apply.\n\nCite: Army Warranting Program Policy v12 Table 1; DFARS 213.301 (overseas commercial purchase limit $25,000); RFO FAR 2.101 (micro-purchase threshold $15,000).",
+      "difficulty": 1
+    },
+    {
+      "id": "TL25",
+      "label": "Contingency buy under the raised OCONUS SAT",
+      "facts": [
+        "Acquisition supporting a contingency operation as determined by the head of the agency, performed and awarded outside the United States.",
+        "The simplified acquisition threshold for this acquisition is $2,000,000.",
+        "Award amount $1,600,000. No options."
+      ],
+      "value_number": 1600000,
+      "correct_class": "II",
+      "explanation": "The buy is inside the raised contingency SAT, so you may use simplified acquisition procedures. That is a procedures question, not a warrant question.\n\nFor the warrant, Table 1 lists Class I as \"SAT\" without qualifying it. The conservative reading - and the one to give at a board - is that a Class I warrant carries the standard SAT of $350,000 unless the appointing authority has said otherwise in writing on the warrant itself. At $1,600,000 you therefore need Class II; the $5M tier covers it.\n\nBoard point: say plainly that the policy is silent on whether a Class I warrant floats up with a contingency SAT, and that you would read your own warrant and confirm with the Chief, C&P rather than assume.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 2.101 and 41 U.S.C. 1903 (contingency SAT, $2,000,000 outside the United States).",
+      "difficulty": 3
+    },
+    {
+      "id": "TL26",
+      "label": "Supply award just under the first Class II tier",
+      "facts": [
+        "Firm-fixed-price supply contract for generator sets.",
+        "Award amount $475,000. No options, no ceiling."
+      ],
+      "value_number": 475000,
+      "correct_class": "II",
+      "explanation": "Above the SAT so Class I is out. $475,000 fits inside the $500,000 tier, which is the lowest rung of Class II.\n\nCite: Army Warranting Program Policy v12 Table 1.",
+      "difficulty": 1
+    },
+    {
+      "id": "TL27",
+      "label": "Award at exactly $500,000",
+      "facts": [
+        "Firm-fixed-price services contract.",
+        "Award amount exactly $500,000. No options, no ceiling."
+      ],
+      "value_number": 500000,
+      "correct_class": "II",
+      "explanation": "The warrant must be greater than or equal to the instrument value, so a $500,000 Class II warrant exactly covers a $500,000 action.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1.",
+      "difficulty": 1
+    },
+    {
+      "id": "TL28",
+      "label": "Award just above the $500K tier",
+      "facts": [
+        "Firm-fixed-price services contract.",
+        "Award amount $525,000. No options, no ceiling."
+      ],
+      "value_number": 525000,
+      "correct_class": "II",
+      "explanation": "Still Class II - the class does not change, the tier within it does. A $500,000 warrant no longer covers the action; a $1M warrant does.\n\nBoard point: be precise about the difference between the warrant class and the dollar tier inside it. A board member who asks \"what warrant do you need\" wants the tier, not just the Roman numeral.\n\nCite: Army Warranting Program Policy v12 Table 1.",
+      "difficulty": 1
+    },
+    {
+      "id": "TL29",
+      "label": "Non-commercial award at exactly $5 million",
+      "facts": [
+        "Non-commercial firm-fixed-price supply contract.",
+        "Award amount exactly $5,000,000. No options, no ceiling."
+      ],
+      "value_number": 5000000,
+      "correct_class": "II",
+      "explanation": "Exactly $5,000,000 is covered by the $5M tier, the highest dollar-denominated rung of Class II.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1.",
+      "difficulty": 3
+    },
+    {
+      "id": "TL30",
+      "label": "Non-commercial award just above $5 million",
+      "facts": [
+        "Non-commercial firm-fixed-price supply contract, negotiated under RFO FAR Part 15.",
+        "Award amount $5,200,000. No options, no ceiling.",
+        "The requirement did not meet the commercial definition."
+      ],
+      "value_number": 5200000,
+      "correct_class": "III",
+      "explanation": "At $5,200,000 the $5M Class II tier no longer covers the action. The only Class II rung above it is SaP, and SaP is limited to commercial products and commercial services acquired under simplified procedures - this requirement is not commercial.\n\nSo the lowest tier that reaches the action is $10M, which is Class III. This is the gap that catches people: the Class II ladder effectively stops at $5 million for non-commercial work.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 12.201-1 and 12.001(c).",
+      "difficulty": 3
+    },
+    {
+      "id": "TL31",
+      "label": "IDIQ with option ordering periods that raise the ceiling",
+      "facts": [
+        "Multiple-award IDIQ, base ordering period of three years with a $9,000,000 ceiling.",
+        "Two option ordering periods that, if exercised, raise the total ceiling to $24,000,000.",
+        "Award of the IDIQ is the action being signed."
+      ],
+      "value_number": 24000000,
+      "correct_class": "III",
+      "explanation": "Para 4.2 adds base plus all options plus the anticipated or actual ceiling. The instrument you are signing carries an anticipated ceiling of $24,000,000 once the option ordering periods are counted.\n\nAbove SaP, so the $25M tier of a Class III warrant is what you need. The base ordering period's $9,000,000 ceiling, standing alone, is not the measure.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 17.204-1.",
+      "difficulty": 3
+    },
+    {
+      "id": "TL32",
+      "label": "Sole-source bridge contract",
+      "facts": [
+        "Six-month sole-source bridge contract to continue base operations services while a follow-on competition is resolved.",
+        "Award amount $2,900,000. No options.",
+        "Justification and approval executed under unusual and compelling urgency."
+      ],
+      "value_number": 2900000,
+      "correct_class": "II",
+      "explanation": "Instrument value is $2,900,000, covered by the $5M tier of a Class II warrant.\n\nBoard point: the warrant question and the justification question are separate approvals and both have to be satisfied. At $2.9 million the justification for other than full and open competition is approved by the contracting officer under the DoD table, which runs the contracting officer's tier up to $10,000,000 - but it is above the $900,000 contracting officer certification tier in the governmentwide FAR table, where it would sit with the advocate for competition. Army follows the DoD table. Know which table you are on, and do not let urgency excuse either the warrant or the justification.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 6.103-2 (unusual and compelling urgency); RFO FAR 6.104-2(b) Table 6-1 (KO certification to $900,000); DFARS 206.104-71 Table 206-1 per DoD Class Deviation 2026-O0017 Rev. 2 (KO to $10,000,000).",
+      "difficulty": 1
+    },
+    {
+      "id": "TL33",
+      "label": "No-cost administrative change on a $250M contract",
+      "facts": [
+        "Existing contract with a total value of $250,000,000.",
+        "Unilateral administrative modification changes the payment office and the DoDAAC.",
+        "No change to price, scope, delivery, or period. Modification value is $0."
+      ],
+      "value_number": 250000000,
+      "correct_class": "IV",
+      "explanation": "For a modification the warrant must be equal to or greater than the cumulative value of the contract including the modification. A true no-cost administrative change adds $0, so the value is the contract itself: $250,000,000, which takes the Class IV $250M tier.\n\nSay the caveats out loud at the board. An administrative change must be one the Government can make unilaterally and must not affect the rights of the parties - if it changes anything substantive, the dollars of the change come back into the calculation. Administrative contracting officer functions are also assigned by delegation. Confirm how your office applies the modification rule to administrative changes with the Chief, C&P.\n\nCite: Army Warranting Program Policy v12 para 4.2 (cumulative instrument value, absolute value of a modification), Summary of Key Changes, and Table 1; RFO FAR 43 (contract modifications); RFO FAR 42 (contract administration).",
+      "difficulty": 3
+    },
+    {
+      "id": "TL34",
+      "label": "Commercial award at exactly the SaP ceiling",
+      "facts": [
+        "Commercial products acquisition using simplified procedures for commercial products and commercial services.",
+        "Award amount exactly $9,000,000. No options, no ceiling.",
+        "Not a contingency or emergency acquisition."
+      ],
+      "value_number": 9000000,
+      "correct_class": "II",
+      "explanation": "The SaP ceiling is $9,000,000, and the warrant must be greater than or equal to the instrument value. At exactly $9,000,000 the SaP rung of a Class II warrant covers the award.\n\nBoard point: the SaP figure is not fixed in Table 1 - the policy writes \"SaP\" so the warrant tracks the regulation. If the ceiling moves, the warrant moves with it. The contingency version of the ceiling is $15,000,000.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 12.201-1 and 12.001(c); 41 U.S.C. 1901.",
+      "difficulty": 3
+    },
+    {
+      "id": "TL35",
+      "label": "Commercial award just above the SaP ceiling",
+      "facts": [
+        "Commercial products acquisition, not a contingency or emergency.",
+        "Award amount $9,050,000. No options, no ceiling."
+      ],
+      "value_number": 9050000,
+      "correct_class": "III",
+      "explanation": "At $9,050,000 the acquisition is over the $9,000,000 SaP ceiling. The commercial simplified procedures are not available, and neither is the SaP rung of the Class II warrant.\n\nThe lowest tier that covers the action is $10M, which is Class III. Being commercial does not help you here - Part 12 still applies to the acquisition, but the simplified procedures and the SaP warrant rung do not.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 12.201-1 and 12.001(c).",
+      "difficulty": 3
+    },
+    {
+      "id": "TL36",
+      "label": "Non-commercial services totaling exactly $9 million with options",
+      "facts": [
+        "Non-commercial services contract supporting installation operations.",
+        "Base year $1,800,000 plus four priced option years at $1,800,000 each.",
+        "Cumulative base plus all options is exactly $9,000,000."
+      ],
+      "value_number": 9000000,
+      "correct_class": "III",
+      "explanation": "Same $9,000,000 as the commercial item, opposite answer. Cumulative value is base plus all options, which is exactly $9,000,000 - but this is non-commercial work, so the SaP rung is unavailable and the highest Class II tier you can reach is $5 million.\n\nThe lowest tier that covers the action is $10M, which is Class III.\n\nBoard point: two facts change the answer - the option total and the commercial determination. Miss either one and you sign without authority.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 12.201-1.",
+      "difficulty": 3
+    },
+    {
+      "id": "TL37",
+      "label": "Award at exactly $250 million",
+      "facts": [
+        "Firm-fixed-price production contract.",
+        "Award amount exactly $250,000,000. No options, no ceiling."
+      ],
+      "value_number": 250000000,
+      "correct_class": "IV",
+      "explanation": "Exactly $250,000,000 is covered by the $250M tier, which is the lowest rung of Class IV.\n\nBoard point: the Class III ladder tops out at $100 million, so anything above that figure is Class IV territory even when it is well short of $500 million.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1.",
+      "difficulty": 1
+    },
+    {
+      "id": "TL38",
+      "label": "Requirements contract with an estimated quantity",
+      "facts": [
+        "Requirements contract for vehicle maintenance and repair.",
+        "Estimated total value over the five-year period is $75,000,000.",
+        "No stated maximum ceiling other than the estimate; actual orders will depend on demand."
+      ],
+      "value_number": 75000000,
+      "correct_class": "III",
+      "explanation": "Para 4.2 counts the anticipated ceiling. With no stated maximum, the $75,000,000 estimate is the anticipated value of the instrument.\n\nThe $100M tier of a Class III warrant covers it.\n\nBoard point: if the estimate later proves low and the instrument grows past $100 million, the warrant question is asked again on the action that takes it there. Do not treat the award-day calculation as permanent.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 16 (types of contracts).",
+      "difficulty": 3
+    },
+    {
+      "id": "TL39",
+      "label": "Option exercise that carries the contract across the SAT",
+      "facts": [
+        "Contract awarded with a base year of $300,000 for recurring maintenance.",
+        "One priced option year of $410,000, evaluated at award.",
+        "Cumulative base plus the option is $710,000. The contracting officer is exercising the option now."
+      ],
+      "value_number": 710000,
+      "correct_class": "II",
+      "explanation": "Cumulative instrument value is $300,000 plus $410,000, which is $710,000. That was the figure at award, before any option money was obligated.\n\n$710,000 is above the SAT, so a Class I warrant never covered this instrument - and it does not cover the option exercise today. You need Class II at the $1M tier.\n\nBoard point: if a Class I contracting officer signed the original award, you have a potential unauthorized commitment on the base contract, not just an option problem. Raise it, document it, and route it for ratification consideration rather than quietly exercising the option.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 17.204-1 (exercise of options); RFO FAR 1.405 (ratification of unauthorized commitments).",
+      "difficulty": 2
+    },
+    {
+      "id": "TL40",
+      "label": "Multi-billion-dollar services vehicle",
+      "facts": [
+        "Single-award indefinite-delivery contract for worldwide sustainment services.",
+        "Maximum ceiling $1,200,000,000 over a ten-year ordering period.",
+        "Guaranteed minimum $100,000."
+      ],
+      "value_number": 1200000000,
+      "correct_class": "IV",
+      "explanation": "Anticipated ceiling is $1,200,000,000, which is above the $500M tier. The only warrant that covers it is the Unlimited tier, and Unlimited sits in Class IV.\n\nBoard point: Class IV runs $250M, $500M and Unlimited. \"Unlimited\" is a specific tier a warrant has to say, not a default that comes with Class IV.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1.",
+      "difficulty": 3
+    },
+    {
+      "id": "TL41",
+      "label": "Firm-fixed-price buy of replacement office furniture",
+      "facts": [
+        "New firm-fixed-price award for replacement office furniture.",
+        "Award amount $64,000. No options, no ceiling, not a modification."
+      ],
+      "value_number": 64000,
+      "correct_class": "I",
+      "explanation": "Cumulative instrument value is $64,000 - one award amount, nothing to add.\n\nThat is well below the SAT of $350,000, so the lowest warrant tier in Table 1 covers it. Class I is a SAT warrant.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 2.101 (SAT $350,000).",
+      "difficulty": 1
+    },
+    {
+      "id": "TL42",
+      "label": "Annual fire-alarm inspection services",
+      "facts": [
+        "Firm-fixed-price services award for annual fire-alarm inspection and testing.",
+        "Award amount $148,500. No options, no ceiling.",
+        "Twelve-month period of performance."
+      ],
+      "value_number": 148500,
+      "correct_class": "I",
+      "explanation": "Cumulative instrument value is $148,500. There are no options and no ceiling to add.\n\nThat is below the SAT of $350,000, so a Class I warrant covers the award.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 2.101 (SAT $350,000).",
+      "difficulty": 1
+    },
+    {
+      "id": "TL43",
+      "label": "Supply award for tactical radio batteries",
+      "facts": [
+        "Firm-fixed-price supply award for rechargeable tactical radio batteries.",
+        "Award amount $236,000. No options, no ceiling, not a modification."
+      ],
+      "value_number": 236000,
+      "correct_class": "I",
+      "explanation": "Cumulative instrument value is $236,000 - base only.\n\nThat is below the SAT of $350,000, so Class I covers it. A SAT warrant reaches any instrument whose cumulative value is at or below $350,000.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 2.101 (SAT $350,000).",
+      "difficulty": 1
+    },
+    {
+      "id": "TL44",
+      "label": "Dining facility equipment award",
+      "facts": [
+        "Firm-fixed-price supply award for dining facility kitchen equipment.",
+        "Award amount $780,000. No options, no ceiling."
+      ],
+      "value_number": 780000,
+      "correct_class": "II",
+      "explanation": "Cumulative instrument value is $780,000. That is above the SAT of $350,000, so Class I is out.\n\nThe $500K Class II tier is too small; the $1M tier covers it. Class II tiers are $500K, $1M, $5M and SaP.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1.",
+      "difficulty": 1
+    },
+    {
+      "id": "TL45",
+      "label": "Vehicle maintenance services award",
+      "facts": [
+        "Firm-fixed-price services award for tactical vehicle maintenance.",
+        "Award amount $1,650,000. No options, no ceiling."
+      ],
+      "value_number": 1650000,
+      "correct_class": "II",
+      "explanation": "Cumulative instrument value is $1,650,000. That is above the SAT and above the $1M tier, so the smallest warrant that reaches it is the $5M tier of Class II.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1.",
+      "difficulty": 1
+    },
+    {
+      "id": "TL46",
+      "label": "Maintenance shop tooling award",
+      "facts": [
+        "Firm-fixed-price supply award for maintenance shop tooling and test sets.",
+        "Award amount $3,200,000. No options, no ceiling."
+      ],
+      "value_number": 3200000,
+      "correct_class": "II",
+      "explanation": "Cumulative instrument value is $3,200,000, comfortably inside the $5M tier of a Class II warrant.\n\nBoard point: at this value it does not matter whether the tooling is commercial. The commercial question only changes the answer between $5 million and the $9 million SaP ceiling.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1.",
+      "difficulty": 1
+    },
+    {
+      "id": "TL47",
+      "label": "Company operations facility construction",
+      "facts": [
+        "Firm-fixed-price construction award for a company operations facility.",
+        "Award amount $27,500,000. No options, no ceiling."
+      ],
+      "value_number": 27500000,
+      "correct_class": "III",
+      "explanation": "Cumulative instrument value is $27,500,000. That is above the $9 million SaP ceiling, so no Class II tier reaches it, and it is above the $25M tier.\n\nThe $50M tier of a Class III warrant covers it. Class III tiers are $10M, $25M, $50M and $100M.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1.",
+      "difficulty": 1
+    },
+    {
+      "id": "TL48",
+      "label": "Tactical shelter systems award",
+      "facts": [
+        "Firm-fixed-price supply award for tactical shelter systems.",
+        "Award amount $58,000,000. No options, no ceiling."
+      ],
+      "value_number": 58000000,
+      "correct_class": "III",
+      "explanation": "Cumulative instrument value is $58,000,000. The $50M tier falls short, so the smallest warrant that covers it is the $100M tier - the top rung of Class III.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1.",
+      "difficulty": 1
+    },
+    {
+      "id": "TL49",
+      "label": "Armor kit production award",
+      "facts": [
+        "Firm-fixed-price production award for vehicle armor kits.",
+        "Award amount $175,000,000. No options, no ceiling."
+      ],
+      "value_number": 175000000,
+      "correct_class": "IV",
+      "explanation": "Cumulative instrument value is $175,000,000. That is above the top Class III tier of $100M, so Class III cannot sign it.\n\nThe lowest Class IV tier, $250M, covers it. Class IV tiers are $250M, $500M and Unlimited.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1.",
+      "difficulty": 1
+    },
+    {
+      "id": "TL50",
+      "label": "Aircraft spare parts production award",
+      "facts": [
+        "Firm-fixed-price production award for aircraft spare parts.",
+        "Award amount $640,000,000. No options, no ceiling."
+      ],
+      "value_number": 640000000,
+      "correct_class": "IV",
+      "explanation": "Cumulative instrument value is $640,000,000. That is above the $500M tier, so the only warrant that reaches it is the Unlimited tier of Class IV.\n\nBoard point: Unlimited is a tier the warrant has to state. A $500M Class IV warrant does not stretch to cover a $640 million award.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1.",
+      "difficulty": 1
+    },
+    {
+      "id": "TL51",
+      "label": "Custodial services with two option years",
+      "facts": [
+        "Base year $180,000 for custodial services.",
+        "Two one-year options priced at $190,000 each.",
+        "Options are priced and evaluated at award; none exercised yet.",
+        "Cumulative base plus all options is $560,000."
+      ],
+      "value_number": 560000,
+      "correct_class": "II",
+      "explanation": "Para 4.2 counts base plus all options, regardless of when funds are obligated: $180,000 plus two times $190,000 equals $560,000.\n\nThe base year alone would fit under the SAT, but the instrument does not. $560,000 is above the SAT and above the $500K tier, so you need the $1M tier of a Class II warrant.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 17.204-1 (exercise of options).",
+      "difficulty": 2
+    },
+    {
+      "id": "TL52",
+      "label": "Elevator maintenance with three option years",
+      "facts": [
+        "Base year $60,000 for elevator maintenance.",
+        "Three one-year options priced at $70,000 each.",
+        "Cumulative base plus all options is $270,000."
+      ],
+      "value_number": 270000,
+      "correct_class": "I",
+      "explanation": "Base plus all options is $60,000 plus three times $70,000, which is $270,000.\n\nCounting the options did not change the class this time: $270,000 is still at or below the SAT of $350,000, so a Class I warrant covers the whole instrument, options included.\n\nBoard point: add the options first, then compare. Two more option years at the same price would make it $410,000, and a Class I warrant would no longer reach it.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 2.101 (SAT $350,000).",
+      "difficulty": 2
+    },
+    {
+      "id": "TL53",
+      "label": "Delivery order for body armor inserts",
+      "facts": [
+        "Delivery order against a multiple-award IDIQ with a $450,000,000 ceiling.",
+        "Order amount $118,000 for body armor inserts. No options on the order.",
+        "You are signing the order, not the parent contract."
+      ],
+      "value_number": 118000,
+      "correct_class": "I",
+      "explanation": "The order is the instrument being signed, and its cumulative value is $118,000. That is under the SAT of $350,000, so Class I covers the order.\n\nThe $450 million ceiling belongs to the parent IDIQ and drove the warrant of whoever awarded it. It does not follow each order.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 16.506 (ordering).",
+      "difficulty": 2
+    },
+    {
+      "id": "TL54",
+      "label": "Engineering task order with option periods",
+      "facts": [
+        "Task order under an existing multiple-award IDIQ with a $90,000,000 ceiling.",
+        "Order base $1,300,000 plus two priced option periods at $900,000 each.",
+        "Total order value $3,100,000."
+      ],
+      "value_number": 3100000,
+      "correct_class": "II",
+      "explanation": "The order is its own instrument, so count the order's base plus the order's options: $1,300,000 plus two times $900,000 equals $3,100,000.\n\nThat is above the SAT and above the $1M tier; the $5M tier of a Class II warrant covers it. The $90 million parent ceiling is not the measure for the order.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 16.506 (ordering).",
+      "difficulty": 2
+    },
+    {
+      "id": "TL55",
+      "label": "Call against a laboratory supplies BPA",
+      "facts": [
+        "Call placed against an established BPA for laboratory consumables.",
+        "Call amount $41,500.",
+        "The BPA carries an estimated value of $4,000,000 over five years."
+      ],
+      "value_number": 41500,
+      "correct_class": "I",
+      "explanation": "The call is the instrument being signed, and it is worth $41,500. That is under the SAT, so Class I covers the call.\n\nThe BPA's $4 million estimate governs the warrant needed to establish the BPA, not the warrant needed for each call placed under it.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1.",
+      "difficulty": 2
+    },
+    {
+      "id": "TL56",
+      "label": "Installation support services with four option years",
+      "facts": [
+        "Base year $6,500,000 for installation support services.",
+        "Four one-year options priced at $6,000,000 each.",
+        "Cumulative base plus all options is $30,500,000."
+      ],
+      "value_number": 30500000,
+      "correct_class": "III",
+      "explanation": "Para 4.2 counts base plus all options: $6,500,000 plus four times $6,000,000 equals $30,500,000.\n\nThat is above the $25M tier, so the $50M tier of a Class III warrant is the smallest that covers it.\n\nBoard point: the options add $24 million that the base year does not show. Size the warrant to the instrument, not to the first year's funding.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 17.204-1 (exercise of options).",
+      "difficulty": 2
+    },
+    {
+      "id": "TL57",
+      "label": "Theater logistics services with two option years",
+      "facts": [
+        "Base year $62,000,000 for theater logistics services.",
+        "Two one-year options priced at $31,000,000 each.",
+        "Cumulative base plus all options is $124,000,000."
+      ],
+      "value_number": 124000000,
+      "correct_class": "IV",
+      "explanation": "Base plus all options is $62,000,000 plus two times $31,000,000, which is $124,000,000.\n\nThe base year would have fit inside the $100M Class III tier; the options push the instrument past it. Above $100 million you need Class IV, and the $250M tier covers it.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 17.204-1 (exercise of options).",
+      "difficulty": 2
+    },
+    {
+      "id": "TL58",
+      "label": "Task order under a single-award IDIQ",
+      "facts": [
+        "Task order against a single-award IDIQ with a $300,000,000 ceiling.",
+        "Order amount $14,500,000, firm-fixed-price. No options on the order."
+      ],
+      "value_number": 14500000,
+      "correct_class": "III",
+      "explanation": "The order is the instrument being signed: $14,500,000. It is above the $9 million SaP ceiling, so no Class II tier reaches it, and it is above the $10M tier.\n\nThe $25M tier of a Class III warrant covers the order. The $300 million ceiling set the warrant for the IDIQ award, not for this order.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 16.506 (ordering).",
+      "difficulty": 2
+    },
+    {
+      "id": "TL59",
+      "label": "Software licenses ordered from a Federal Supply Schedule",
+      "facts": [
+        "Order for commercial software licenses against a GSA Federal Supply Schedule contract.",
+        "Order base year $520,000 plus two priced option years at $460,000 each.",
+        "Cumulative order value $1,440,000."
+      ],
+      "value_number": 1440000,
+      "correct_class": "II",
+      "explanation": "The order is the instrument, and its value includes the order's options: $520,000 plus two times $460,000 equals $1,440,000.\n\nThat is above the $1M tier, so the $5M tier of a Class II warrant covers it.\n\nBoard point: placing a schedule order is still an exercise of contracting officer authority. GSA awarded the schedule contract; your order obligates the Army, so your warrant has to reach the order's full value.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 8 (required sources of supplies and services).",
+      "difficulty": 2
+    },
+    {
+      "id": "TL60",
+      "label": "Utility plant operations with four option years",
+      "facts": [
+        "Base year $750,000 for central utility plant operations.",
+        "Four one-year options priced at $780,000 each.",
+        "Cumulative base plus all options is $3,870,000."
+      ],
+      "value_number": 3870000,
+      "correct_class": "II",
+      "explanation": "Base plus all options: $750,000 plus four times $780,000 equals $3,870,000.\n\nA $1M Class II warrant would reach the base year but not the instrument. The $5M tier covers the full $3,870,000.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 17.204-1 (exercise of options).",
+      "difficulty": 2
+    },
+    {
+      "id": "TL61",
+      "label": "Fitness center equipment upkeep with two option years",
+      "facts": [
+        "Base year $110,000 for fitness center equipment maintenance.",
+        "Two one-year options priced at $115,000 each.",
+        "Cumulative base plus all options is $340,000."
+      ],
+      "value_number": 340000,
+      "correct_class": "I",
+      "explanation": "Base plus all options is $110,000 plus two times $115,000, which is $340,000.\n\nThe warrant must be greater than or equal to the cumulative instrument value, and $340,000 is at or below the SAT of $350,000. A Class I warrant covers the whole instrument, options included.\n\nBoard point: this one sits $10,000 under the line. Anything above $350,000 and a Class I warrant no longer reaches it, so do the arithmetic before you sign.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 2.101 (SAT $350,000).",
+      "difficulty": 3
+    },
+    {
+      "id": "TL62",
+      "label": "Laundry services with one priced option year",
+      "facts": [
+        "Base year $200,000 for laundry and linen services.",
+        "One option year priced at $162,000, evaluated at award.",
+        "Cumulative base plus the option is $362,000."
+      ],
+      "value_number": 362000,
+      "correct_class": "II",
+      "explanation": "Base plus the option is $200,000 plus $162,000, which is $362,000.\n\nThat is $12,000 over the SAT of $350,000, so a Class I warrant cannot sign the award even though the base year is well under the line. The $500K tier of a Class II warrant covers it.\n\nBoard point: the option counts at award even though it is not exercised and not funded. If a Class I contracting officer signs this, the problem starts at award, not at option exercise.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 17.204-1 (exercise of options).",
+      "difficulty": 3
+    },
+    {
+      "id": "TL63",
+      "label": "Deductive modification on a non-commercial services contract",
+      "facts": [
+        "Existing non-commercial services contract with a total value of $64,000,000.",
+        "Bilateral modification descopes a CLIN and deobligates $5,600,000.",
+        "The modification is the only action being signed."
+      ],
+      "value_number": 69600000,
+      "correct_class": "III",
+      "explanation": "For a modification the warrant must be equal to or greater than the cumulative value of the contract including the modification, and a deductive modification counts at its absolute value - not negative and not zero: $64,000,000 + $5,600,000 = $69,600,000.\n\nThat is above the Class III $50M tier, so the smallest tier that reaches it is the Class III $100M tier.\n\nBoard point: a descoping modification can feel like it needs less authority, but the policy measures the contract plus the size of the change, not its direction.\n\nCite: Army Warranting Program Policy v12 para 4.2 (cumulative instrument value, absolute value of a modification), Summary of Key Changes, and Table 1.",
+      "difficulty": 3
+    },
+    {
+      "id": "TL64",
+      "label": "Price reduction modification on a services contract",
+      "facts": [
+        "Existing services contract with a total value of $1,900,000.",
+        "Bilateral modification reduces the contract price by $410,000.",
+        "The modification is the only action being signed."
+      ],
+      "value_number": 2310000,
+      "correct_class": "II",
+      "explanation": "For a modification the warrant must be equal to or greater than the cumulative value of the contract including the modification. The absolute value of minus $410,000 is $410,000, so the value is $1,900,000 + $410,000 = $2,310,000.\n\nThat is above the SAT of $350,000 and above the Class II $1M tier, so the smallest tier that reaches it is the Class II $5M tier.\n\nBoard point: a price reduction is not a pass for a smaller warrant. The sign of the change is irrelevant; the contract and the size of the change are not.\n\nCite: Army Warranting Program Policy v12 para 4.2 (cumulative instrument value, absolute value of a modification), Summary of Key Changes, and Table 1.",
+      "difficulty": 3
+    },
+    {
+      "id": "TL65",
+      "label": "Single-award IDIQ for training support",
+      "facts": [
+        "Single-award IDIQ contract for training support services.",
+        "Maximum ordering ceiling $98,000,000 over a five-year ordering period.",
+        "Minimum guarantee $25,000; no orders issued at award."
+      ],
+      "value_number": 98000000,
+      "correct_class": "III",
+      "explanation": "Para 4.2 counts the anticipated or actual ceiling, not the minimum guarantee and not what is obligated at award. The instrument value is the $98,000,000 ceiling.\n\nThat fits inside the $100M tier, the top rung of Class III.\n\nBoard point: do not size the warrant to the $25,000 minimum. The ceiling is the authority being signed away.\n\nCite: Army Warranting Program Policy v12 para 4.2 (anticipated or actual ceiling) and Table 1.",
+      "difficulty": 3
+    },
+    {
+      "id": "TL66",
+      "label": "IDIQ with option ordering periods",
+      "facts": [
+        "Single-award IDIQ, base ordering period ceiling $60,000,000.",
+        "Two option ordering periods raise the total ceiling to $104,000,000.",
+        "The IDIQ award is the action being signed."
+      ],
+      "value_number": 104000000,
+      "correct_class": "IV",
+      "explanation": "Para 4.2 adds base plus all options plus the anticipated or actual ceiling. Counting the option ordering periods, the anticipated ceiling of the instrument you are signing is $104,000,000.\n\nThe base period's $60,000,000 ceiling standing alone is not the measure. $104,000,000 is above the top Class III tier of $100M, so Class III cannot sign the award; the $250M tier of a Class IV warrant covers it.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 17.204-1.",
+      "difficulty": 3
+    },
+    {
+      "id": "TL67",
+      "label": "Commercial services under simplified procedures with options",
+      "facts": [
+        "Commercial services acquired using simplified procedures for commercial products and commercial services.",
+        "Base year $3,000,000 plus two priced option years at $2,500,000 each.",
+        "Cumulative base plus all options is $8,000,000."
+      ],
+      "value_number": 8000000,
+      "correct_class": "II",
+      "explanation": "Base plus all options is $3,000,000 plus two times $2,500,000, which is $8,000,000.\n\nThat is above the $5M tier but at or below the $9,000,000 SaP ceiling, and this is a commercial acquisition under the simplified procedures. The SaP rung of a Class II warrant covers it; you do not need Class III.\n\nBoard point: take away the commercial determination and the same $8,000,000 needs a Class III warrant at the $10M tier.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 12.201-1 and 12.001(c) (SaP ceiling $9,000,000).",
+      "difficulty": 3
+    },
+    {
+      "id": "TL68",
+      "label": "Commercial products buy planned under simplified procedures",
+      "facts": [
+        "Commercial products acquisition planned under simplified procedures for commercial products and commercial services.",
+        "Base year $4,000,000 plus two priced option years at $3,000,000 each.",
+        "Cumulative base plus all options is $10,000,000."
+      ],
+      "value_number": 10000000,
+      "correct_class": "III",
+      "explanation": "Base plus all options is $4,000,000 plus two times $3,000,000, which is $10,000,000.\n\nThat is above the $9,000,000 SaP ceiling. Being commercial does not help: the simplified procedures stop at $9 million, and so does the SaP rung of a Class II warrant. The $10M tier, which is Class III, is the smallest that covers the instrument.\n\nBoard point: once the options are counted, this acquisition should not be planned under the commercial simplified procedures at all. A warrant problem and a procedures problem usually travel together.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 12.201-1 and 12.001(c) (SaP ceiling $9,000,000).",
+      "difficulty": 3
+    },
+    {
+      "id": "TL69",
+      "label": "Non-commercial depot repair delivery order",
+      "facts": [
+        "Delivery order for non-commercial depot repair services under a multiple-award IDIQ.",
+        "Order amount $7,300,000, firm-fixed-price. No options on the order."
+      ],
+      "value_number": 7300000,
+      "correct_class": "III",
+      "explanation": "The order is the instrument, and it is worth $7,300,000. That is above the $5M Class II tier.\n\nThe only Class II rung above $5 million is SaP, and SaP covers commercial products and commercial services acquired under simplified procedures. This depot repair work is non-commercial, so the SaP rung is not available and the smallest tier that covers the order is $10M, which is Class III.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 12.201-1 and 12.001(c); RFO FAR 16.506 (ordering).",
+      "difficulty": 3
+    },
+    {
+      "id": "TL70",
+      "label": "Non-commercial supply contract with two option years",
+      "facts": [
+        "Non-commercial supply contract negotiated under RFO FAR Part 15.",
+        "Base year $2,300,000 plus two priced option years at $1,300,000 each.",
+        "Cumulative base plus all options is $4,900,000."
+      ],
+      "value_number": 4900000,
+      "correct_class": "II",
+      "explanation": "Base plus all options is $2,300,000 plus two times $1,300,000, which is $4,900,000.\n\nThat is at or below $5,000,000, so the $5M tier of a Class II warrant covers it - the commercial question never comes up.\n\nBoard point: $100,001 more and this non-commercial contract would need a Class III warrant at the $10M tier, because the SaP rung is not available for non-commercial work.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 12.201-1 (SaP applies to commercial products and commercial services).",
+      "difficulty": 3
+    },
+    {
+      "id": "TL71",
+      "label": "Generator repair parts just under the SAT",
+      "facts": [
+        "New firm-fixed-price award for generator repair parts.",
+        "Award amount $342,500. No options, no ceiling, not a modification."
+      ],
+      "value_number": 342500,
+      "correct_class": "I",
+      "difficulty": 3,
+      "explanation": "Cumulative instrument value is $342,500 - one award amount, nothing to add.\n\nThat is at or below the SAT of $350,000, so a Class I warrant covers it, with $7,500 to spare. A later modification is measured against the contract's cumulative value including the modification, so any modification worth more than $7,500, added or deducted, would take this contract past the SAT and beyond Class I.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 2.101 (SAT $350,000)."
+    },
+    {
+      "id": "TL72",
+      "label": "Delivery order for tactical vehicle tires",
+      "facts": [
+        "Delivery order against a multiple-award IDIQ with a $95,000,000 ceiling.",
+        "Order amount $287,000 for tactical vehicle tires. No options on the order.",
+        "You are signing the order, not the parent contract."
+      ],
+      "value_number": 287000,
+      "correct_class": "I",
+      "difficulty": 2,
+      "explanation": "The order is the instrument being signed, and its cumulative value is $287,000. That is under the SAT of $350,000, so Class I covers the order.\n\nThe $95 million ceiling belongs to the parent IDIQ and drove the warrant of whoever awarded it. It does not follow each order.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 16.506 (ordering)."
+    },
+    {
+      "id": "TL73",
+      "label": "Custodial services with two $95,000 option years",
+      "facts": [
+        "Firm-fixed-price custodial services award with a base year priced at $190,000.",
+        "Two one-year options priced at $95,000 each.",
+        "No option is exercised at award."
+      ],
+      "value_number": 380000,
+      "correct_class": "II",
+      "difficulty": 2,
+      "explanation": "Para 4.2 counts the base value and all options at award: $190,000 + 2 x $95,000 = $380,000.\n\nThat is above the SAT of $350,000, so Class I does not reach it, even though the base year alone would. The smallest tier that covers it is the Class II $500K tier.\n\nBoard point: options count at award even though no option money is obligated yet.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 2.101 (SAT $350,000)."
+    },
+    {
+      "id": "TL74",
+      "label": "Laptop buy with an option quantity",
+      "facts": [
+        "Firm-fixed-price award for 40 laptop computers at $310,000.",
+        "Priced option for 8 more laptops at $62,000.",
+        "The option is evaluated at award and not exercised yet."
+      ],
+      "value_number": 372000,
+      "correct_class": "II",
+      "difficulty": 3,
+      "explanation": "Para 4.2 counts all options: $310,000 + $62,000 = $372,000. That is above the SAT of $350,000, so the smallest tier that reaches it is the Class II $500K tier.\n\nBoard point: an unexercised option quantity is part of the instrument value at award. Leaving it out would put a Class I warrant $22,000 past its authority.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 2.101 (SAT $350,000)."
+    }
+  ]
+}

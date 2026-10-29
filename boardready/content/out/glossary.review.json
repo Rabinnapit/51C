@@ -1,0 +1,47 @@
+{
+  "reviewed_by": "independent reviewer pass",
+  "reviewed_on": "2026-09-14",
+  "scope": "Read full glossary.json (149 entries) plus AGENT_BRIEF.md, CONTRACT.md sections 3 and 8, full regulations.json crosswalk, and a random sample of 40/278 questions.json entries (seed 42). No acquisition.gov fetch was needed - the verified regulations.json crosswalk covered every RFO cite touched below.",
+  "checked_definitions_sampled": 60,
+  "person_names_or_emails_found": 0,
+  "acronym_expansions_confirmed": "All ~149 term/expansion pairs reviewed; all resolve to a real term. Entries that already carried an honest 'confirm local expansion' caveat (C&P, PD, MAP) were left as-is per content rule 1 (never invent local titles/expansions).",
+  "corrections": [
+    {
+      "term": "ASBCA",
+      "issue": "Cite duplicated the exact section (RFO FAR 33.205-6) used by a different glossary entry (Contracting officer's final decision), which cannot both be correct - at least one was a fabricated/guessed section number.",
+      "fix": "Softened to 'RFO FAR subpart 33.2 (exact appeal-deadline section unverified)' rather than inventing a specific paragraph."
+    },
+    {
+      "term": "Contracting officer's final decision",
+      "issue": "Same duplicate-section conflict as ASBCA above (both cited 33.205-6).",
+      "fix": "Softened to 'RFO FAR subpart 33.2 (was 33.211; exact new section unverified)'."
+    },
+    {
+      "term": "Competition advocate",
+      "issue": "Cite included 'RFO FAR 6.003', which is not supported anywhere in the verified regulations.json crosswalk (Part 6 crosswalk entries only document 6.101-6.104 and 6.301) and reads as an invented section.",
+      "fix": "Removed the unverified 6.003 cite; kept the verified 6.104-2 and DFARS 206.104-71 Table 206-1 cites."
+    },
+    {
+      "term": "VKE",
+      "issue": "The 'expansion' field was a description, not an actual expansion of the acronym VKE, and gave a false impression the letters were verified.",
+      "fix": "Reworded to flag that the German-language expansion of the letters is not confirmed, matching the house style already used for C&P/PD/MAP."
+    }
+  ],
+  "terms_added_from_question_sample": [
+    {
+      "term": "Order of precedence",
+      "reason": "Q0111 asks for the order of precedence under FAR 52.215-8 and the term had no glossary entry.",
+      "confidence": "flagged verify-locally; clause number carried from pre-RFO FAR without re-verification against acquisition.gov this pass"
+    },
+    {
+      "term": "Partnering / PPP",
+      "reason": "Q0236 asks about benefits of Partnering / Public-Private Partnerships and the term had no glossary entry.",
+      "confidence": "flagged verify-locally; specific FAR/RFO cite not verified this pass"
+    }
+  ],
+  "terms_checked_not_missing": [
+    "FPDS-NG (already covered under 'SAM' and 'SAM.gov Contract Awards' entries, which explain the FPDS decommission and successor system)"
+  ],
+  "not_independently_re-fetched": "acquisition.gov was not fetched directly; every RFO cite touched by this review was already covered, with confidence and source_url, in the verified src/data/regulations.json crosswalk, per the task's 'use them before fetching' instruction.",
+  "not_in_scope_this_pass": "Full line-by-line verification of all ~149 entries' cites was not performed at this effort level; the sample covered domains with the highest RFO-renumbering risk (competition, source selection, protests/disputes, terminations, small business, pricing) plus every acronym expansion and a person-name/email sweep of the whole file."
+}

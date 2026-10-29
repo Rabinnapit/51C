@@ -1,0 +1,1095 @@
+[
+  {
+    "id": "price-cost-analysis",
+    "title": "Fair and Reasonable Price: Price Analysis, Cost Analysis and Certified Data",
+    "domain": "Pricing, Cost & Payment",
+    "summary": "No contract action gets signed until the contracting officer has made and documented an affirmative determination that the price is fair and reasonable. Price analysis looks at the bottom-line price against outside benchmarks; cost analysis pulls the proposal apart element by element and is used when price analysis alone will not do the job. The board wants to hear the ladder you climb - competition first, then other price benchmarks, then data other than certified data, and only at the top certified cost or pricing data with its statutory threshold and its exceptions.",
+    "sections": [
+      {
+        "heading": "The rule: what the determination actually is",
+        "body": "The contracting officer must purchase supplies and services at fair and reasonable prices, and must document that conclusion in the file. RFO FAR 15.404 frames it as cost and/or price analysis: you always do enough analysis to support the determination, and you use the least burdensome technique that will get you there.\n\n- Price analysis (RFO FAR 15.404-1) evaluates the proposed total price without evaluating the separate cost elements or the profit. It is the required minimum on every action.\n- Cost analysis (RFO FAR 15.404-2) is the review and evaluation of each separate cost element - labor hours and rates, material, overhead, G&A, profit or fee - plus judgment of how those elements should behave in efficient performance.\n- Use cost analysis when you have no adequate price competition and no other reliable price benchmark, which usually means a sole-source negotiated action where you are getting certified cost or pricing data or data other than certified.\n\nSay it out loud the way a KO does: adequate price competition is the preferred basis; everything else is a fallback I have to justify."
+      },
+      {
+        "heading": "Price analysis techniques you should be able to name",
+        "body": "RFO FAR 15.404-1 lists the techniques. A board will often just ask you to name them, so have them ready in order of strength.\n\n- Comparison of proposed prices received in response to the solicitation - the strongest, because it is competition doing the work.\n- Comparison with historical prices for the same or similar items, adjusted for quantity, time and terms.\n- Parametric estimating or rough yardsticks - dollars per square foot, dollars per labor hour - to see if the total is in the right neighborhood.\n- Comparison with competitive published price lists, market prices, catalogs or advertisements; note that appearing in a catalog does not by itself prove reasonableness.\n- Comparison with the independent Government estimate.\n- Comparison with prior prices found fair and reasonable, and comparison to similar items in a related industry.\n- The contracting officer's own knowledge of the item, and any other reasonable basis.\n\nTwo techniques are stronger than one. When I use the IGE, I say why I trust the IGE."
+      },
+      {
+        "heading": "Cost realism and the single-offer trap",
+        "body": "Cost realism analysis (RFO FAR 15.404-3) asks a different question from reasonableness: are the proposed costs realistic for the work to be performed, do they reflect a clear understanding of the requirement, and are they consistent with the technical proposal? It is required on cost-reimbursement contracts, where it drives probable cost - the evaluated number you actually award on, which can be higher than the offeror's proposed cost. On fixed-price it may be used to assess performance risk or an unrealistically low proposal, but it never changes the price you pay.\n\nThe single-offer case is a favorite. When a solicitation used competitive procedures, was open at least 30 days, and one offer comes in, DFARS 215.202-71(c) (legacy DFARS 215.371-3) gives two paths: determine through cost or price analysis that the price is fair and reasonable and that adequate price competition existed, approved one level above the contracting officer, or another exception applies - or obtain cost or pricing data from the offeror, certified if the action is over the threshold and no exception applies, and negotiate. The negotiated price should not exceed the offered price."
+      },
+      {
+        "heading": "Certified cost or pricing data: the numbers and the exceptions",
+        "body": "Certified cost or pricing data is required when the action exceeds the statutory threshold and no exception applies. Know both numbers and know which one is yours.\n\n- DoD prime contracts awarded after 30 June 2026: $10,000,000, per 10 U.S.C. 3702(a)(1) as amended by the FY2026 NDAA and DFARS 215.403-3 under DoD Class Deviation 2026-O0048 Rev. 1.\n- Governmentwide FAR figure, and DoD primes awarded on or before 30 June 2026: $2,500,000 (RFO FAR 15.403-3).\n- Old study decks still say $750K or $2M. Correct them out loud - that is a credibility point.\n\nThe exceptions are at RFO FAR 15.403-2 (legacy 15.403-1): adequate price competition; prices set by law or regulation; a commercial product or commercial service acquisition; a waiver granted by the head of the contracting activity; and modifications of a contract or subcontract for commercial products or services. Standards for these exceptions are at 15.403-2(c). Even when an exception applies you still must get data other than certified cost or pricing data - to the extent necessary - to determine the price fair and reasonable. Exception does not mean no analysis."
+      },
+      {
+        "heading": "Certificate, defective pricing and CAS in one breath",
+        "body": "When certified data is required, the contractor executes the Certificate of Current Cost or Pricing Data (RFO FAR 15.403-4, legacy 15.406-2) as of the date of final agreement on price. That certificate is what makes the Truthful Cost or Pricing Data statute bite: if the data was not accurate, complete and current as of that date, the Government is entitled to a price reduction for the defect - defective pricing - plus interest and, for knowing submission, penalties.\n\nCost Accounting Standards ride alongside and are separate from TINA. Coming out of the FY2026 NDAA and the CAS Board rule effective 1 October 2026, contract-level CAS applicability moves to $35,000,000, full coverage and the Disclosure Statement threshold sits at $100,000,000 under DFARS 230.201-70 per Class Deviation 2026-O0006 Rev. 1, and the legacy $7.5 million trigger exemption goes away. Until that effective date the older TINA-linked $2.5 million applicability still governs. Say the effective date when you say the number; that is what separates a candidate who read the deviation from one who memorized a slide."
+      },
+      {
+        "heading": "The IGE and unbalanced pricing - two traps boards set",
+        "body": "The IGE is the Government's independent estimate of what performance should cost. Under AFARS 5107.9002 the requiring activity prepares it, the preparer's immediate supervisor signs as reviewer and approver, and the contracting officer reviews it and accepts it into the file. It is required above the SAT (currently $350,000) and the KO may require one below. It must be developed independently, before proposals are sought, never from a contractor's quote, and for construction RFO FAR 36.101-6 requires it in the KO's hands before receipt of proposals. Protect it as source selection information under RFO FAR 3.104.\n\nUnbalanced pricing (RFO FAR 15.404-6) is an allocation of the total price across line items that does not reflect an equitable distribution of costs - a front-loaded base year, an inflated mobilization CLIN, an IDIQ priced to the items the offeror thinks we will actually order. It creates advance-payment risk and walk-away risk. Analyze every offer with separately priced line items, assess the risk, and reject when the risk is unacceptable; under sealed bidding a materially unbalanced bid may be rejected (RFO FAR 14.306-3(g))."
+      }
+    ],
+    "key_cites": [
+      {
+        "ref": "RFO FAR 15.404",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+        "note": "Cost and/or price analysis (legacy FAR 15.404-1)."
+      },
+      {
+        "ref": "RFO FAR 15.404-1",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+        "note": "Price analysis techniques (legacy FAR 15.404-1(b))."
+      },
+      {
+        "ref": "RFO FAR 15.404-2",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+        "note": "Cost analysis - element-by-element review including profit."
+      },
+      {
+        "ref": "RFO FAR 15.404-3",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+        "note": "Cost realism analysis; probable cost on cost-reimbursement."
+      },
+      {
+        "ref": "RFO FAR 15.404-6",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+        "note": "Unbalanced pricing. Section number carried from the bank's verified item Q0038; confirm on the Part 15 page."
+      },
+      {
+        "ref": "RFO FAR 15.403-2",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+        "note": "Prohibitions on obtaining certified cost or pricing data and the exceptions (legacy 15.403-1(b) and (c))."
+      },
+      {
+        "ref": "RFO FAR 15.403-3",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+        "note": "Certified cost or pricing data - threshold and actions (legacy 15.403-4)."
+      },
+      {
+        "ref": "RFO FAR 15.403-4",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+        "note": "Certificate of Current Cost or Pricing Data (legacy 15.406-2)."
+      },
+      {
+        "ref": "DFARS 215.202-71(c)",
+        "url": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-215/2026-O0048_Rev_1_TAB_A_Deviation_Memo_Part_215.pdf",
+        "note": "One offer received - fair and reasonable price determination path (legacy DFARS 215.371-3)."
+      },
+      {
+        "ref": "DFARS 215.403-3 (Class Deviation 2026-O0048 Rev. 1)",
+        "url": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-215/2026-O0048_Rev_1_TAB_A_Deviation_Memo_Part_215.pdf",
+        "note": "DoD certified cost or pricing data threshold $10M for primes awarded after 30 Jun 2026."
+      },
+      {
+        "ref": "RFO FAR 14.306-3(g)",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-14",
+        "note": "Rejection of a materially unbalanced bid under sealed bidding (legacy 14.404-2(g))."
+      },
+      {
+        "ref": "AFARS 5107.9002",
+        "url": "https://api.army.mil/e2/c/downloads/2026/07/07/995d7218/afars-combined-30jun2026.pdf",
+        "note": "Army IGE preparation, review and approval."
+      }
+    ],
+    "board_angles": [
+      {
+        "q": "What is the difference between price analysis and cost analysis?",
+        "a": "Price analysis evaluates the total price against outside benchmarks without looking at cost elements and is required on every action; cost analysis evaluates each separate cost element including profit and is used when price analysis alone cannot support the determination."
+      },
+      {
+        "q": "You receive a sole-source proposal at $12 million for a DoD non-commercial requirement. Walk me through fair and reasonable.",
+        "a": "No adequate price competition, over the $10M DoD threshold and no exception, so I require certified cost or pricing data, perform cost analysis of each element with any field pricing or DCAA support I need, negotiate against the IGE, obtain the Certificate at final agreement on price, and document it all in the price negotiation memorandum."
+      },
+      {
+        "q": "Name the exceptions to certified cost or pricing data.",
+        "a": "Adequate price competition, prices set by law or regulation, commercial products or commercial services, a waiver by the head of the contracting activity, and modifications for commercial products or services - and even then I still obtain data other than certified data as necessary to determine the price fair and reasonable."
+      },
+      {
+        "q": "Your solicitation was open 30 days and you got exactly one offer. Now what?",
+        "a": "I follow DFARS 215.202-71(c): either determine through cost or price analysis that the price is fair and reasonable and that adequate price competition existed, with approval one level above me, or obtain cost or pricing data from the offeror - certified if over the threshold with no exception - and negotiate a price no higher than the offered price."
+      },
+      {
+        "q": "What is cost realism and when must you do it?",
+        "a": "It tests whether proposed costs are realistic for the work and consistent with the technical proposal; it is required on cost-reimbursement contracts to set probable cost for evaluation, and may be used on fixed-price to assess performance risk without changing the price."
+      },
+      {
+        "q": "An offeror prices the base year very high and the option years near zero. What do you do?",
+        "a": "That is potential unbalanced pricing under RFO FAR 15.404-6 - I analyze the line item prices against the IGE and other offers, assess the advance-payment and performance risk, discuss it in negotiations, and reject the offer if the unbalancing poses an unacceptable risk to the Government."
+      }
+    ],
+    "related_questions": [
+      "Q0019",
+      "Q0028",
+      "Q0038",
+      "Q0114",
+      "Q0062",
+      "Q0086",
+      "Q0087",
+      "Q0115"
+    ],
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "Part 15 section numbers (15.403-2, 15.403-3, 15.403-4, 15.404, 15.404-1) come from verified crosswalk entries and the RFO Part 15 deviation guide page; the $10M DoD and $2,500,000 FAR certified-data figures and the CAS numbers come from regulations.json thresholds that are still marked status verify. RFO FAR 15.404-6 for unbalanced pricing is carried from the question bank and was not separately confirmed on the Part 15 page."
+  },
+  {
+    "id": "responsibility",
+    "title": "Responsibility Determinations and SAM Exclusions",
+    "domain": "Responsibility & Exclusions",
+    "summary": "Before award the contracting officer must make an affirmative determination that the prospective contractor is responsible, and no award goes to anyone the KO cannot so find. Responsibility is a present-tense business judgment against the general standards at RFO FAR 9.104-1, informed by SAM exclusion records, CPARS, financial data and, in the Army, the DORA responsibility tool. Suspension and debarment are separate discretionary actions by the suspending and debarring official - they are not punishment, they protect the Government's business interest.",
+    "sections": [
+      {
+        "heading": "The general standards - the list a board expects verbatim",
+        "body": "RFO FAR 9.104-1 sets the general standards. To be determined responsible a prospective contractor must:\n\n- Have adequate financial resources to perform, or the ability to obtain them.\n- Be able to comply with the required or proposed delivery or performance schedule, taking into account all existing commercial and Government business commitments.\n- Have a satisfactory performance record.\n- Have a satisfactory record of integrity and business ethics.\n- Have the necessary organization, experience, accounting and operational controls, and technical skills, or the ability to obtain them.\n- Have the necessary production, construction and technical equipment and facilities, or the ability to obtain them.\n- Be otherwise qualified and eligible to receive an award under applicable laws and regulations.\n\nTwo things to stress. First, responsibility is determined at the time of award, on the facts then known, and a contractor that was responsible last year is not automatically responsible today. Second, no award may be made unless the KO makes an affirmative determination; a failure of information means a determination of nonresponsibility."
+      },
+      {
+        "heading": "How you actually build the determination",
+        "body": "Under RFO FAR 9.105-1 the contracting officer obtains information sufficient to be satisfied, promptly after bid opening or receipt of offers, and the burden is on the prospective contractor to demonstrate responsibility.\n\n- Check SAM: registration status and, critically, the exclusion records.\n- Check past performance in CPARS and PPIRS-type records, and talk to the losing and winning KOs if the record is thin.\n- Look at financial capacity - audited statements, Dun and Bradstreet data, bonding capacity for construction.\n- Check FAPIIS for integrity and performance information, terminations for default and non-responsibility determinations.\n- Request a preaward survey through the cognizant contract administration office when the risk warrants it - big dollar, new source, surge capacity questions.\n- In the Army, the DORA (Determination of Responsibility Assistant) bot at AFARS PGI 5109.103(b) pulls the standard checks together into one product. Treat it as a tool that supports my determination, not a substitute for my judgment, and confirm current use with the policy shop.\n\nDocument the determination in the file. The signed determination is the record."
+      },
+      {
+        "heading": "Small business and the certificate of competency",
+        "body": "This is the trap. If the apparent awardee is a small business and I find it nonresponsible, I do not simply move to the next offeror. I must refer the matter to the Small Business Administration under the certificate of competency procedures. SBA may issue a COC - a certificate that the concern has the capability, competency, credit, integrity, perseverance and tenacity to perform - and if SBA issues it, I must award.\n\n- The referral requirement covers nonresponsibility determinations based on the elements of responsibility; it does not cover eligibility determinations such as size or NAICS status, which go to SBA under different procedures.\n- Do not disguise a responsibility problem as a technical evaluation failure to avoid the referral; that is a protest ground.\n- Under simplified acquisition procedures the COC process still applies, though there is an expedited path.\n\nSay clearly on the board: nonresponsible small business equals SBA referral. That single sentence answers the whole question."
+      },
+      {
+        "heading": "Exclusions, suspension and debarment",
+        "body": "Debarment and suspension are covered by RFO FAR subpart 9.4 and are taken by the agency suspending and debarring official, not by the contracting officer. They are discretionary, they protect the Government's interest, and they are not punishment.\n\n- Debarment (causes at 9.406-2) rests on a conviction, a civil judgment, or a preponderance of the evidence for offenses such as fraud, antitrust violations in bidding, embezzlement, falsification, willful or serious contract violations, delinquent federal taxes over the stated amount, or failure to timely disclose credible evidence of a violation of federal criminal law or a False Claims Act violation. It runs for a fixed period, generally not more than three years.\n- Suspension (causes at 9.407-2) rests on adequate evidence of the same kinds of conduct plus an immediate need to protect the Government's interest. It is temporary and pending completion of investigation or legal proceedings, generally not more than 12 months, extendable when legal proceedings have been initiated.\n- Both are governmentwide in effect and both are posted in the SAM exclusions records.\n\nThe distinction to hold in your head: suspension is immediate and evidence-based; debarment is final and conviction- or judgment-based, after due process."
+      },
+      {
+        "heading": "Effect of listing and continuing existing contracts",
+        "body": "RFO FAR 9.405 is the effect-of-listing rule. Contractors with an active exclusion are excluded from receiving contracts, and agencies must not solicit offers from, award contracts to, renew or otherwise extend contracts with them, unless the agency head (or designee) determines in writing that there is a compelling reason. I review the exclusion records in SAM after bid opening or receipt of proposals, and immediately before award - and again before I exercise an option, because RFO FAR 17.204-1 makes an active exclusion record a bar to option exercise.\n\nRFO FAR 9.405-1 handles the contract already in place. Agencies may continue performance on existing contracts unless the agency head directs otherwise. But new work is different: placing orders exceeding the guaranteed minimum under indefinite-quantity contracts, placing orders under Federal Supply Schedule contracts, adding new work, exercising options, or otherwise extending the duration requires a written determination of compelling reasons at the agency-head level. Continuing to pay for and accept work already under contract is not the same as giving the excluded firm anything new."
+      },
+      {
+        "heading": "How boards probe this",
+        "body": "The scenario is nearly always the same shape: you are about to award or about to exercise an option and the firm shows up on the exclusions list. The board is testing three things.\n\n- Do you know it is a bar to new awards and option exercises, but not an automatic termination of what is already running?\n- Do you know that only the agency head, on a written compelling-reasons determination, can go forward anyway - not you?\n- Do you know that if your nonresponsible offeror is a small business you must refer to SBA for a certificate of competency?\n\nSecondary probes: what if the exclusion appears after award but before the option? Same answer, no option without the agency-head determination. What if a subcontractor is excluded? Consent to subcontract with an excluded party is barred under 9.405 and 9.405-2 absent the same written determination, and the prime is on notice through its clauses. And expect the flat knowledge question - define responsibility, list the standards, difference between suspension and debarment."
+      }
+    ],
+    "key_cites": [
+      {
+        "ref": "RFO FAR 9.104-1",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9",
+        "note": "General standards a prospective contractor must meet."
+      },
+      {
+        "ref": "RFO FAR 9.105-1",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9",
+        "note": "Obtaining information; preaward surveys; burden on the offeror."
+      },
+      {
+        "ref": "RFO FAR 9.4",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9",
+        "note": "Debarment, suspension and ineligibility subpart."
+      },
+      {
+        "ref": "RFO FAR 9.405",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9",
+        "note": "Effect of listing; review SAM exclusion records; agency-head compelling reasons."
+      },
+      {
+        "ref": "RFO FAR 9.405-1",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9",
+        "note": "Continuation of current contracts; new orders, options and extensions require a written determination."
+      },
+      {
+        "ref": "RFO FAR 9.406-2",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9",
+        "note": "Causes for debarment."
+      },
+      {
+        "ref": "RFO FAR 9.407-2",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9",
+        "note": "Causes for suspension."
+      },
+      {
+        "ref": "RFO FAR 17.204-1",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-17",
+        "note": "No option exercise when the contractor has an active exclusion record in SAM."
+      },
+      {
+        "ref": "AFARS PGI 5109.103(b)",
+        "url": "https://api.army.mil/e2/c/downloads/2026/07/07/995d7218/afars-combined-30jun2026.pdf",
+        "note": "Army DORA responsibility determination tool. Confirm current version and local use with the policy office."
+      },
+      {
+        "ref": "10 U.S.C. 983",
+        "url": "https://www.law.cornell.edu/uscode/text/10/983",
+        "note": "Statutory ineligibility provision cited alongside exclusions in the bank."
+      }
+    ],
+    "board_angles": [
+      {
+        "q": "Define what it means for a contractor to be responsible.",
+        "a": "It means I have made an affirmative, documented determination at the time of award that the firm meets the general standards at RFO FAR 9.104-1 - financial resources, ability to meet the schedule, satisfactory performance record, satisfactory integrity and business ethics, necessary organization and controls, necessary facilities and equipment, and otherwise eligible under law."
+      },
+      {
+        "q": "Your apparent awardee appears on the SAM exclusions list. What do you do?",
+        "a": "I do not award. An active exclusion bars solicitation, award, renewal or extension under RFO FAR 9.405 unless the agency head makes a written compelling-reasons determination, so I document the SAM check, notify my chain, and move to the next responsible offeror or resolicit."
+      },
+      {
+        "q": "That excluded firm already holds one of your contracts. Do you terminate it?",
+        "a": "Not automatically - RFO FAR 9.405-1 lets the agency continue performance on the existing contract unless the agency head directs otherwise, but I cannot exercise options, add new work, extend the duration, or place orders above the guaranteed minimum without a written agency-head determination of compelling reasons."
+      },
+      {
+        "q": "Explain the difference between suspension and debarment.",
+        "a": "Suspension is an immediate, temporary exclusion based on adequate evidence plus an immediate need to protect the Government, generally up to 12 months pending proceedings; debarment is a final exclusion for a fixed period, generally up to three years, based on a conviction, civil judgment or a preponderance of the evidence - both are governmentwide and both are taken by the suspending and debarring official, not by me."
+      },
+      {
+        "q": "You find a small business apparent awardee nonresponsible. What must you do?",
+        "a": "Refer the determination to SBA under the certificate of competency procedures - if SBA issues a COC, I must make the award."
+      },
+      {
+        "q": "How does the Army DORA tool fit into your determination?",
+        "a": "It assembles the standard responsibility checks - SAM, exclusions, FAPIIS, performance - into one staffed product under AFARS PGI 5109.103(b), but the determination and the signature are mine, and I confirm current use with the policy shop."
+      }
+    ],
+    "related_questions": [
+      "Q0015",
+      "Q0018",
+      "Q0027",
+      "Q0039",
+      "Q0053",
+      "Q0098",
+      "Q0073"
+    ],
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "high",
+    "confidence_reason": "RFO FAR 9.104, 9.104-1, 9.405 and 9.405-1 are verified crosswalk entries with acquisition.gov source URLs, and the Part 9 deviation guide page confirmed 9.105-1, 9.406-2, 9.407-2 and the SAM exclusion-review requirement. Certificate of competency procedures and the debarment/suspension duration figures are longstanding statutory and FAR content unchanged by the RFO. AFARS PGI 5109.103(b) for DORA is marked probable in the crosswalk, so it is flagged for local confirmation."
+  },
+  {
+    "id": "ordering-options",
+    "title": "IDIQ Ordering, Fair Opportunity, BPAs and Exercising Options",
+    "domain": "Acquisition Planning & Contract Types",
+    "summary": "Indefinite-delivery contracts move the competition from the base award to the order, so the contracting officer's discipline shifts to fair opportunity, scope and the guaranteed minimum. Blanket purchase agreements are not contracts - they are charge accounts against which calls are placed, and each call must stand on its own competition and funding. Option exercise is a determination, not an administrative act: notice, funds, need, synopsis, exclusions, performance, price and best interest, plus the DoD checks at DFARS 217.204-170.",
+    "sections": [
+      {
+        "heading": "The three indefinite-delivery types",
+        "body": "Know the three and the one-line difference, because it is a standing board question.\n\n- Definite-quantity (RFO FAR 16.502): a definite quantity of specific supplies or services for a fixed period, with deliveries scheduled by placing orders. You know how much; you do not know exactly when or where.\n- Requirements (RFO FAR 16.503): fills all actual purchase requirements of designated activities during a period, from one contractor. The Government promises exclusivity; the consideration is that all requirements go there. Include a realistic estimated total quantity.\n- Indefinite-quantity (RFO FAR 16.504): an indefinite quantity within stated minimum and maximum limits during a fixed period. The Government must order and the contractor must furnish at least the stated minimum. The guaranteed minimum has to be more than nominal - it is the consideration that makes the contract binding. Order above the minimum and the contractor must deliver up to the maximum.\n\nDelivery orders buy supplies, task orders buy services; both are orders placed under an existing indefinite-delivery contract, not new contracts."
+      },
+      {
+        "heading": "Fair opportunity - the rule and the tiers",
+        "body": "Under RFO FAR 16.507 the contracting officer must give each awardee under a multiple-award contract a fair opportunity to be considered for each order exceeding the micro-purchase threshold, unless an exception applies. The procedures scale with dollars:\n\n- At or below the micro-purchase threshold, currently $15,000: the order may be placed with any awardee, and the KO should rotate to the extent practicable (RFO FAR 16.507-1).\n- Above the MPT up to the simplified acquisition threshold, currently $350,000: streamlined fair opportunity - give every awardee a fair notice of the requirement and a reasonable opportunity to respond.\n- Above the SAT but not above $7,500,000: the enhanced procedures of RFO FAR 16.507-4 apply - notice to all awardees, a statement of work, evaluation and price basis.\n- Above $7,500,000: RFO FAR 16.507-5 adds the statutory enhanced-competition requirements - a notice of the work with a clear statement of requirements, a reasonable response period, disclosure of the significant factors and subfactors including price and their relative importance, an award decision based on those factors, and an opportunity for a postaward debriefing.\n\nDoD adds a postaward debriefing requirement for orders of $15,000,000 or more."
+      },
+      {
+        "heading": "Exceptions to fair opportunity and order protests",
+        "body": "RFO FAR 16.507-6 (legacy 16.505(b)(2)) lists the exceptions. Name them and say that each one must be documented in the file, and that the higher-dollar ones carry justification and approval requirements like a sole-source action.\n\n- Urgency - delay would result in unacceptable delay.\n- Only one awardee is capable because the supplies or services are unique or highly specialized.\n- The order is a logical follow-on to an order already issued under the contract, provided all awardees were given a fair opportunity on the original order.\n- The order is necessary to satisfy the minimum guarantee.\n- Statute expressly authorizes or requires the order be placed with a specified source.\n- The order is set aside for small business concerns.\n\nProtests: task and delivery orders are generally not protestable, with two exceptions - the order increases the scope, period or maximum value of the contract, or the order exceeds the statutory jurisdictional floor. That floor is $35,000,000 for DoD, NASA and the Coast Guard (10 U.S.C. 3406(f)) and $10,000,000 for civilian agencies, and GAO has exclusive jurisdiction over those."
+      },
+      {
+        "heading": "BPAs and calls",
+        "body": "A blanket purchase agreement is a simplified method of filling anticipated repetitive needs. It is an agreement, not a contract: there is no obligation on either side until a call is placed, no guaranteed minimum, and no funds obligated by the BPA itself. Establish it when there is a wide variety of items in a broad class, the exact items and quantities are not known in advance, and you want to avoid writing numerous purchase orders.\n\nIn the RFO, simplified purchase procedures including BPAs sit in RFO FAR 13.201, and the maximum value of each individual purchase under a BPA may not exceed the simplified acquisition threshold. Note that the legacy BPA section number 13.303 is now used for contract financing and payments, so do not cite the old number.\n\nDiscipline points a board looks for: compete the calls, not just the BPA; establish BPAs with multiple sources when practicable and rotate calls; document price reasonableness on each call; obligate funds on the call; review the BPA at least annually; and never let a BPA become a way to avoid a competitive contract for a known, definite requirement. GSA schedule BPAs are governed by Part 8 ordering procedures."
+      },
+      {
+        "heading": "Exercising an option - the determination, step by step",
+        "body": "RFO FAR 17.204-1 is the checklist. I may exercise an option only after:\n\n- Providing written notice of intent within the time specified in the contract - and if the contract required a preliminary notice, I gave that too. Miss the notice window and the option lapses; I cannot resurrect it by paying more.\n- Confirming funds are available.\n- Determining that the option fulfills an existing Government requirement.\n- Determining the option was synopsized as required, unless exempt under Part 5.\n- Confirming the contractor does not have an active exclusion record in SAM.\n- Determining the contractor's performance has been acceptable - satisfactory or better ratings.\n- Determining, after reviewing price and other factors, that the option price is fair and reasonable based on current market conditions and that exercise is in the Government's best interest.\n- Confirming the exercise complies with Part 6 - the option was evaluated as part of the original competition, so exercising it is not a new sole-source action.\n\nIf the contract has an economic price adjustment clause and the contractor requests a price revision, determine the effect on option prices before exercising."
+      },
+      {
+        "heading": "DoD and Army overlays on option exercise",
+        "body": "DFARS 217.204-170 and its PGI add DoD-specific checks on top of the FAR determination. In practice the option-exercise file at an Army activity should show:\n\n- Active SAM registration and no active exclusion record.\n- Current representations and certifications, and any required annual representations refreshed.\n- Supplier Performance Risk System (SPRS) and, where the contract carries the DoD cybersecurity requirements, the contractor's current assessment status under the CMMC and NIST SP 800-171 clauses - an option should not be exercised into a lapsed or downgraded status without resolving it.\n- Funds certified for the new period, and for a severable service option crossing fiscal years, the appropriation that is current at the start of the option period with a period of performance not exceeding twelve months under 10 U.S.C. 3133.\n- The contracting officer's fair and reasonable price determination for the option period, comparing option prices to current market conditions - not just to the priced option in the contract.\n\nBecause DFARS content is being issued through RFO class deviations, confirm the current deviation revision before you cite a paragraph number on the board."
+      }
+    ],
+    "key_cites": [
+      {
+        "ref": "RFO FAR 16.504",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16",
+        "note": "Indefinite-quantity contracts; the guaranteed minimum must be more than nominal."
+      },
+      {
+        "ref": "RFO FAR 16.507",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16",
+        "note": "Additional ordering procedures for multiple-award contracts (legacy FAR 16.505)."
+      },
+      {
+        "ref": "RFO FAR 16.507-1",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16",
+        "note": "Placement of orders at or below the micro-purchase threshold."
+      },
+      {
+        "ref": "RFO FAR 16.507-4 and 16.507-5",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16",
+        "note": "Fair opportunity tiers above the SAT, split at $7.5 million."
+      },
+      {
+        "ref": "RFO FAR 16.507-6",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16",
+        "note": "Exceptions to fair opportunity (legacy FAR 16.505(b)(2))."
+      },
+      {
+        "ref": "RFO FAR 13.201",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-13",
+        "note": "Simplified purchase procedures including blanket purchase agreements; individual purchases under a BPA may not exceed the SAT. Legacy BPA cite was 13.303."
+      },
+      {
+        "ref": "RFO FAR 17.204-1",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-17",
+        "note": "Exercise of options - the full determination checklist (legacy FAR 17.207)."
+      },
+      {
+        "ref": "DFARS 217.204-170",
+        "url": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-217/2026-O0027_TAB_A_Deviation_Memo_DFARS_217.pdf",
+        "note": "DoD exercise-of-options coverage issued by RFO class deviation; PGI 217.204-170 carries the procedures."
+      },
+      {
+        "ref": "10 U.S.C. 3406(f)",
+        "url": "https://www.law.cornell.edu/uscode/text/10/3406",
+        "note": "Order protest jurisdiction - DoD floor is orders valued in excess of $35,000,000."
+      }
+    ],
+    "board_angles": [
+      {
+        "q": "What are the three types of indefinite-delivery contracts?",
+        "a": "Definite-quantity, requirements, and indefinite-quantity - definite quantity with uncertain timing, all actual requirements of designated activities from one source, and an indefinite quantity within a stated minimum and maximum where the guaranteed minimum is the consideration."
+      },
+      {
+        "q": "When must you provide fair opportunity, and what are the exceptions?",
+        "a": "For every order over the micro-purchase threshold under a multiple-award contract, unless urgency, a unique or highly specialized capability, a logical follow-on where all awardees competed originally, the need to satisfy the minimum guarantee, a statutory single source, or a small business set-aside applies - each documented in the file."
+      },
+      {
+        "q": "Why does the guaranteed minimum matter?",
+        "a": "It is the consideration that makes an indefinite-quantity contract binding; it must be more than nominal, and if I never order it I have a breach exposure and a contractor claim for the minimum."
+      },
+      {
+        "q": "What determinations must you make before exercising an option?",
+        "a": "Written notice within the contract's time limit, funds available, the option fulfills an existing requirement, it was synopsized or exempt, no active SAM exclusion, acceptable contractor performance, the option price is fair and reasonable in current market conditions, and exercise is in the Government's best interest and complies with Part 6."
+      },
+      {
+        "q": "Is a BPA a contract? How do you keep it clean?",
+        "a": "No - it is an agreement for anticipated repetitive needs with no obligation until a call is placed; I keep it clean by competing calls among multiple BPA holders, keeping each purchase at or below the SAT, obligating funds on the call, documenting price reasonableness per call, and reviewing the BPA annually."
+      },
+      {
+        "q": "Can a contractor protest your task order award?",
+        "a": "Generally no, except where the order increases the scope, period or maximum value of the underlying contract, or the order exceeds the statutory floor - in excess of $35 million for DoD, where GAO has exclusive jurisdiction."
+      }
+    ],
+    "related_questions": [
+      "Q0076",
+      "Q0085",
+      "Q0094",
+      "Q0101",
+      "Q0151",
+      "Q0152",
+      "Q0059"
+    ],
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "RFO FAR 16.507, 16.507-6 and 17.204-1 are verified crosswalk entries, the 17.204-1 determination text matches the official answer in the question bank (Q0085), and the fair-opportunity tier numbers and the $35M/$15M order thresholds come from regulations.json thresholds that remain status verify. BPA placement at RFO FAR 13.201 comes from a single reading of the Part 13 deviation guide page and should be re-read before it is quoted as a paragraph cite. The SPRS/CMMC option checks are described as practice; confirm the current DFARS class deviation revision."
+  },
+  {
+    "id": "services-pws",
+    "title": "Services Acquisition: PWS, Performance-Based Requirements and the Personal Services Line",
+    "domain": "Acquisition Planning & Contract Types",
+    "summary": "Services are most of what an Army contracting activity buys, and the contracting officer's job is to push the requiring activity toward outcomes rather than instructions. A performance work statement states what result the Government needs and how it will be measured; a statement of work tells the contractor how to do the job and shifts risk back to the Government. The two hard lines a KO must never cross are the personal services line - no Government supervision of contractor employees - and the inherently governmental line.",
+    "sections": [
+      {
+        "heading": "PWS versus SOW versus SOO",
+        "body": "All three describe the requirement. The difference is who owns the how.\n\n- Statement of work: the Government prescribes the tasks, the methods, the staffing, sometimes the hours. Appropriate when the process itself is the requirement - a research effort, construction to a design, work that must follow a technical manual. The cost of being prescriptive is that the Government owns the outcome; if the contractor does exactly what we told it to do and the result is bad, we usually cannot hold it responsible.\n- Performance work statement: the Government states the required outcomes, the measurable performance standards, and the acceptable quality levels, and leaves the method to the contractor. It is the preferred approach for services under RFO FAR 37.101 - use performance-based methods to the maximum extent practicable.\n- Statement of objectives: the Government states the high-level objectives and the offerors propose the PWS. Useful when industry knows the solution space better than we do.\n\nOn a board, say which one you would pick and why, in terms of who carries performance risk."
+      },
+      {
+        "heading": "What makes a requirement performance-based",
+        "body": "Performance-based means four things travel together, and a board will test whether you can name them without the buzzwords.\n\n- A performance work statement (or SOO) written in terms of required results, not how-to.\n- Measurable performance standards - what quality, what quantity, what timeliness, in numbers.\n- An acceptable quality level for each standard, so both sides know what constitutes conforming performance.\n- A quality assurance surveillance plan tied to those same standards, plus, where appropriate, positive and negative incentives.\n\nA firm-fixed-price contract is the preferred vehicle because the contractor carries the cost risk of its own chosen method. If you cannot describe the output in measurable terms, that is a signal the requirement is not ready, not a signal to write a task list. Push it back to the requiring activity and use the acquisition planning process - market research, industry engagement, a draft PWS out for comment - to get it measurable."
+      },
+      {
+        "heading": "The QASP",
+        "body": "The quality assurance surveillance plan is the Government's document. It is prepared by the requiring activity with the KO and the COR, and it says how the Government will verify that the contractor met the standards in the PWS. Under the RFO's Part 46 quality assurance coverage and the service contracting policy at Part 37, a QASP is required for service contracts and is developed in conjunction with the PWS - not written after award to paper the file.\n\nContents a board will ask you to name:\n\n- Each performance objective from the PWS, with its standard and acceptable quality level.\n- The surveillance method for each - 100 percent inspection, random sampling, periodic inspection, customer complaint, third-party audit.\n- The frequency of surveillance and who performs it, normally the COR.\n- How results are documented and fed to the KO, and how they feed CPARS and any incentives, deductions or nonconformance actions.\n\nThe QASP is not attached as a contract requirement on the contractor - it describes Government surveillance. The contractor's own quality control plan is the contractor's obligation and is separate."
+      },
+      {
+        "heading": "Personal services - the line and the tests",
+        "body": "A personal services contract is one that, by its express terms or as administered, makes the contractor personnel appear to be Government employees. The essential element under RFO FAR 37.201-2(a) is relatively continuous supervision and control of contractor employees by Government personnel. Agencies may not award personal services contracts unless specifically authorized by statute, because that circumvents civil service laws.\n\nThe descriptive elements the board wants:\n\n- Performance on site at a Government installation, using Government equipment or principal tools.\n- Services applied directly to an integral effort of the agency, of a continuing and not a one-time nature.\n- Comparable services being performed in the same or similar agency by civil servants.\n- The need for the service reasonably expected to last beyond one year.\n- The inherent nature of the service, or the manner of performance, requires Government direction or supervision of contractor employees to protect Government interests or retain control of the function.\n\nI prevent it by writing the PWS to outcomes, routing direction through the COR to the contractor's supervisor, and training the COR that they may not assign work, set hours or direct individual employees."
+      },
+      {
+        "heading": "Inherently governmental functions",
+        "body": "An inherently governmental function is one so intimately related to the public interest that it must be performed by Government employees. The definition sits at RFO FAR 2.101 with policy at RFO FAR subpart 37.3, and OFPP Policy Letter 11-01 is the governing policy behind it.\n\nExamples to have ready: determining agency policy; determining federal program priorities for budget requests; directing and controlling federal employees; awarding, administering or terminating contracts; determining what supplies or services the Government will acquire; approving contractual documents; determining whether contractor performance is acceptable for payment purposes; commanding military forces; conducting criminal investigations; and voting on source selection boards as the decision authority.\n\nClosely associated functions - drafting a PWS, assembling budget data, supporting a source selection as a nonvoting advisor - are not inherently governmental, but they require enhanced Government oversight and safeguards against contractor employees performing what amounts to a Government function. When the customer asks for contractor support that would give the contractor the pen on a decision document, the answer is enhanced oversight and Government sign-off, or do not buy it."
+      },
+      {
+        "heading": "Services acquisition strategy and thresholds",
+        "body": "The Army requires a services acquisition strategy under AFARS 5137.890 for service acquisitions above stated dollar levels, and DoD requires services requirements review board review and a services designated official for higher-dollar services. The practical rule for the board: know that a written, approved strategy is required for significant service acquisitions, know that the level of the approving official rises with dollars, and say that you would confirm the current dollar tier with your policy office rather than guess a number.\n\nWhat is safe to say without a number:\n\n- Service acquisitions are reviewed through the requirements review process before the requirements package is accepted.\n- The acquisition plan or services acquisition strategy addresses the performance-based approach, the small business strategy, the contract type and why, competition, the QASP approach, and the workforce and Government oversight required.\n- A services acquisition above the simplified acquisition threshold carries an independent Government estimate under AFARS 5107.9002.\n- Multi-year and severable services crossing fiscal years carry their own fiscal law constraints.\n\nSaying I would verify the threshold with policy is a stronger answer than a wrong figure."
+      }
+    ],
+    "key_cites": [
+      {
+        "ref": "RFO FAR 37",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-37",
+        "note": "Service contracting part page."
+      },
+      {
+        "ref": "RFO FAR 37.101",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-37",
+        "note": "Presolicitation - use performance-based acquisition methods to the maximum extent practicable."
+      },
+      {
+        "ref": "RFO FAR 37.102",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-37",
+        "note": "Evaluation and award; PWS describing outcomes with meaningful and measurable performance standards."
+      },
+      {
+        "ref": "RFO FAR 37.201-2(a)",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-37",
+        "note": "Characteristics of personal services contracts - continuous supervision and control."
+      },
+      {
+        "ref": "RFO FAR 37.301-1",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-37",
+        "note": "Inherently governmental functions - policy against contracting for them."
+      },
+      {
+        "ref": "RFO FAR 2.101",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-2",
+        "note": "Definition of inherently governmental function."
+      },
+      {
+        "ref": "RFO FAR 46.401 and 46.103",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-46",
+        "note": "Government contract quality assurance and the QASP, cited with 37.102-1 in the bank item on QASPs."
+      },
+      {
+        "ref": "AFARS 5137.890",
+        "url": "https://api.army.mil/e2/c/downloads/2026/07/07/995d7218/afars-combined-30jun2026.pdf",
+        "note": "Army services acquisition strategy requirement. Confirm the current dollar tier locally."
+      },
+      {
+        "ref": "AFARS 5107.9002",
+        "url": "https://api.army.mil/e2/c/downloads/2026/07/07/995d7218/afars-combined-30jun2026.pdf",
+        "note": "IGE required above the SAT, currently $350,000."
+      }
+    ],
+    "board_angles": [
+      {
+        "q": "What is the difference between a SOW and a PWS, and which do you prefer?",
+        "a": "A SOW tells the contractor how to do the work and leaves the Government owning the outcome; a PWS states measurable required outcomes and leaves the method to the contractor - I prefer the PWS for services because it puts performance risk where the expertise is and it is what RFO FAR Part 37 directs to the maximum extent practicable."
+      },
+      {
+        "q": "What is a QASP and when is it required?",
+        "a": "It is the Government's plan for verifying that the contractor met the PWS standards - objectives, standards, acceptable quality levels, surveillance methods and frequency, and documentation - developed with the PWS for service contracts and executed by the COR."
+      },
+      {
+        "q": "How do you know a requirement has crossed into personal services?",
+        "a": "When Government personnel exercise relatively continuous supervision and control over contractor employees - directing individuals, assigning work, setting hours - so the relationship looks like an employer-employee one under RFO FAR 37.201-2(a); absent specific statutory authority I cannot award or administer it that way, so I fix the PWS and retrain the COR."
+      },
+      {
+        "q": "Name some inherently governmental functions.",
+        "a": "Awarding, administering or terminating contracts, approving contractual documents, determining what the Government will buy, directing and controlling federal employees, determining agency policy and budget priorities, commanding military forces, and making the final acceptance decision for payment."
+      },
+      {
+        "q": "The PDT cannot write a PWS that captures the requirement. What do you do as the PCO?",
+        "a": "I do not accept an unmeasurable requirement - I run more market research, hold industry engagement or a draft PWS comment period, consider a statement of objectives so industry proposes the solution, and get the objectives and acceptable quality levels nailed down before I issue anything."
+      },
+      {
+        "q": "When is a services acquisition strategy required?",
+        "a": "For Army service acquisitions above the AFARS 5137.890 dollar tiers, with approval level rising with dollars and review through the requirements review process - I would confirm the current tier with my policy office rather than quote a number from memory."
+      }
+    ],
+    "related_questions": [
+      "Q0047",
+      "Q0074",
+      "Q0125",
+      "Q0131",
+      "Q0036",
+      "Q0145",
+      "Q0058",
+      "Q0119"
+    ],
+    "flags": [
+      "ai-drafted",
+      "verify-locally"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "RFO FAR 37.201-2(a) and the Part 37 part page are verified crosswalk entries; 37.101, 37.102 and 37.301-1 come from a reading of the Part 37 deviation guide page and were not cross-checked against a second source. The QASP citation is carried from the question bank item Q0036 (RFO FAR 46.401, 46.103, 37.102-1). AFARS 5137.890 is a probable crosswalk entry and its dollar tiers are deliberately not stated - flagged verify-locally."
+  },
+  {
+    "id": "small-business",
+    "title": "Small Business Programs, the Rule of Two and Subcontracting Plans",
+    "domain": "Small Business & Socioeconomic",
+    "summary": "Every acquisition starts with a small business decision, and that decision is a market research decision: one NAICS code, one size standard, and an honest read of who can do the work. The rule of two says that if you reasonably expect offers from two or more responsible small businesses at fair market prices, you set it aside. Overseas is the wrinkle Army KOs in Korea and Germany have to get right, because Part 19 applies in the United States and its outlying areas and may be applied outside it.",
+    "sections": [
+      {
+        "heading": "Start with NAICS and the size standard",
+        "body": "Under RFO FAR 19.103 the contracting officer assigns one North American Industry Classification System code and its corresponding SBA size standard to the acquisition, based on the principal purpose of what is being acquired - what the largest share of the contract value buys, not what is most interesting technically. The size standard in effect on the date the solicitation is issued is the one that applies, and it is stated in the solicitation.\n\n- Size standards are at 13 CFR 121.201, expressed in employees for manufacturing and in average annual receipts for most services.\n- The NAICS choice is consequential and protestable: it decides who is small, which can decide who wins. An offeror may appeal the NAICS designation to SBA's Office of Hearings and Appeals within the stated window after solicitation issuance.\n- Size is self-certified in SAM under the assigned code, and a size protest goes to the SBA Area Office - the KO refers it, SBA decides it.\n- Status is determined as of the date of the initial offer including price, with recertification rules for long-term contracts.\n\nCoordinate with the small business professional and the SBA procurement center representative early, under RFO FAR 19.102."
+      },
+      {
+        "heading": "The rule of two and the order of precedence",
+        "body": "RFO FAR 19.104-1 is the total small business set-aside rule. The contracting officer must set the acquisition aside for small business if there is a reasonable expectation of obtaining offers from two or more responsible small business concerns that are competitive in terms of market prices, quality and delivery. Under the RFO restructuring the reservation applies above the micro-purchase threshold and the old simplified-acquisition ceiling language on the automatic reservation has changed - check the current 19.104-1 text before you quote a band.\n\nTwo points a board digs at:\n\n- Reasonable expectation is based on market research evidence - sources sought responses, SAM dynamic small business search, prior procurement history, industry days - not on hope and not on a single capable firm.\n- Before defaulting to a total small business set-aside, consider the socioeconomic programs: 8(a) at 19.108, HUBZone at 19.105, service-disabled veteran-owned at 19.106, and women-owned and economically disadvantaged women-owned at 19.107. Each has its own set-aside and sole-source authorities and its own eligibility verification.\n\nIf the rule of two is not met, document why, and consider a partial set-aside or a subcontracting goal instead."
+      },
+      {
+        "heading": "Socioeconomic categories and their sole-source authorities",
+        "body": "Have the categories and what makes each different ready in one breath.\n\n- 8(a) business development (RFO FAR 19.108): SBA is the prime and the 8(a) firm performs, or a direct award is made under a partnership agreement. Sole source is available; above the competitive thresholds - $8,500,000 for manufacturing NAICS codes, $5,500,000 for all others - the requirement must generally be competed among 8(a) firms unless SBA accepts a sole-source offering. DoD sole-source 8(a) awards above $100 million carry an additional justification and approval under the DFARS.\n- HUBZone (19.105): set-aside when two or more HUBZone firms are expected and award will be at fair market price; sole source available; the HUBZone price evaluation preference applies in full and open competitions.\n- SDVOSB (19.106) and WOSB/EDWOSB (19.107): set-asides and sole-source authority within the program rules, with eligibility verified through SBA certification.\n- Note the certification direction of travel: HUBZone, WOSB, EDWOSB, SDVOSB and 8(a) all now rest on SBA certification rather than self-certification alone, so verify status in SAM and the SBA systems, not on the offeror's word."
+      },
+      {
+        "heading": "Subcontracting plans",
+        "body": "Under RFO FAR 19.109 a subcontracting plan is required when a contract award to other than a small business exceeds the plan threshold - $900,000, or $2,000,000 for construction of a public facility - and there are subcontracting possibilities. Small businesses never submit subcontracting plans.\n\nWhat a board wants:\n\n- Individual plan covers one contract; master plan is approved company-wide and is effective for three years, then applied to individual contracts; commercial plan covers the offeror's fiscal year across all commercial items sold.\n- The plan must contain separate percentage goals for small, veteran-owned, service-disabled veteran-owned, HUBZone, small disadvantaged and women-owned small business concerns, the total dollars planned to each, a description of the methods used to develop the goals, the name of the individual administering the program, and assurances of good-faith effort and required reporting.\n- Reporting is through the electronic subcontracting reporting system - individual subcontract reports and summary subcontract reports.\n- The plan is a material contract requirement. Failure to make a good-faith effort can support liquidated damages and is a performance and past-performance issue, not a paperwork issue.\n- The KO obtains the small business professional's review before approving the plan."
+      },
+      {
+        "heading": "Overseas applicability - the 411th and 409th question",
+        "body": "This is the OCONUS wrinkle. RFO FAR 19.000(b) states that contracting officers must apply Part 19 in the United States and its outlying areas, and may apply it outside the United States and its outlying areas. The legacy rule was a flat statement that the part applied only in the United States and its outlying areas, so the overhaul language reads as discretionary rather than prohibited - read the current text before relying on it.\n\nWhat that means in practice for a KO in Korea or Germany:\n\n- The set-aside rules are not mandatory for a contract awarded and performed overseas, but the Government still competes, still does market research, and still reports socioeconomic data in FPDS.\n- Local national firm participation is driven by international agreements and command policy rather than by Part 19 - in Korea, SOFA and Logistics Cost Sharing arrangements shape who may compete, and LCS actions are approved and awarded by ROK MND with 411th KOs recommending award.\n- Never state a local set-aside rule or threshold from memory. Describe the roles - the small business professional, the Chief of Contracting and Policy - and say you would confirm current command guidance."
+      }
+    ],
+    "key_cites": [
+      {
+        "ref": "RFO FAR 19.000(b)",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19",
+        "note": "Applicability - must apply in the United States and outlying areas; may apply outside."
+      },
+      {
+        "ref": "RFO FAR 19.103",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19",
+        "note": "Small business size standards; NAICS assignment (legacy FAR 19.102)."
+      },
+      {
+        "ref": "RFO FAR 19.104-1",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19",
+        "note": "Total small business set-asides - the rule of two (legacy FAR 19.502-2)."
+      },
+      {
+        "ref": "RFO FAR 19.102",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19",
+        "note": "Cooperation with SBA; procurement center representatives (legacy FAR subpart 19.4)."
+      },
+      {
+        "ref": "RFO FAR 19.105",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19",
+        "note": "HUBZone Program (legacy FAR subpart 19.13)."
+      },
+      {
+        "ref": "RFO FAR 19.106",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19",
+        "note": "Service-Disabled Veteran-Owned Small Business Program (legacy FAR subpart 19.14)."
+      },
+      {
+        "ref": "RFO FAR 19.107",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19",
+        "note": "Women-Owned Small Business Program (legacy FAR subpart 19.15)."
+      },
+      {
+        "ref": "RFO FAR 19.108-7",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19",
+        "note": "Competitive and sole-source 8(a) policy; thresholds $8.5M manufacturing / $5.5M other (legacy FAR 19.805-1)."
+      },
+      {
+        "ref": "RFO FAR 19.109",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19",
+        "note": "Small business subcontracting plans; $900,000 and $2,000,000 construction (legacy FAR subpart 19.7)."
+      },
+      {
+        "ref": "13 CFR 121.201",
+        "url": "https://www.ecfr.gov/current/title-13/chapter-I/part-121",
+        "note": "SBA table of size standards - unchanged by the RFO."
+      },
+      {
+        "ref": "15 U.S.C. 644(j)",
+        "url": "https://www.law.cornell.edu/uscode/text/15/644",
+        "note": "Statutory reservation for small business."
+      }
+    ],
+    "board_angles": [
+      {
+        "q": "How do you decide whether to set an acquisition aside for small business?",
+        "a": "I assign the NAICS code and size standard, run market research, and apply the rule of two at RFO FAR 19.104-1 - if I reasonably expect offers from two or more responsible small businesses competitive on price, quality and delivery, I set it aside; if not, I document why and consider a partial set-aside or subcontracting goals."
+      },
+      {
+        "q": "Walk me through the socioeconomic programs and where each lives in the RFO.",
+        "a": "8(a) business development at 19.108, HUBZone at 19.105, SDVOSB at 19.106, and WOSB and EDWOSB at 19.107 - each has its own set-aside and sole-source authority, its own eligibility verification through SBA, and I consider them before defaulting to a total small business set-aside."
+      },
+      {
+        "q": "When is a subcontracting plan required and what has to be in it?",
+        "a": "When award goes to other than a small business over $900,000, or $2 million for construction of a public facility, with subcontracting possibilities - it needs separate percentage and dollar goals by socioeconomic category, the method used to develop them, the program administrator, good-faith assurances, and reporting through the electronic subcontracting reporting system."
+      },
+      {
+        "q": "Does FAR Part 19 apply to your contracts in Korea?",
+        "a": "RFO FAR 19.000(b) requires application in the United States and its outlying areas and permits it outside them, so the set-aside rules are not mandatory for work awarded and performed overseas - I still compete, do market research, report socioeconomic data, and follow SOFA and command guidance, and I would confirm current local policy with the small business professional and C and P."
+      },
+      {
+        "q": "Your apparent awardee's small business status is challenged. What do you do?",
+        "a": "I refer the size protest to the SBA Area Office, which decides status - I do not decide it myself - and I hold award or proceed per the protest rules depending on timing, documenting the decision either way."
+      },
+      {
+        "q": "What are the 8(a) competitive thresholds?",
+        "a": "$8.5 million for manufacturing NAICS codes and $5.5 million for all others - above those, the requirement is generally competed among 8(a) firms unless SBA accepts a sole-source offering."
+      }
+    ],
+    "related_questions": [
+      "Q0025",
+      "Q0073",
+      "Q0067",
+      "Q0215",
+      "Q0216"
+    ],
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "The Part 19 renumbering (19.103, 19.104-1, 19.105 through 19.109, 19.102) is verified in the crosswalk with acquisition.gov source URLs. The 8(a) competitive thresholds and the $900,000 / $2,000,000 subcontracting plan figures come from regulations.json thresholds and a single reading of the Part 19 deviation guide page, both still status verify. The regulations.json entry for the set-aside range is expressly marked refuted in part, so this primer tells the reader to check the current 19.104-1 text rather than quoting a band. Korea specifics are limited to what the source material supports and are flagged korea-verify-cp."
+  },
+  {
+    "id": "labor-standards",
+    "title": "Labor Standards: Service Contract Act, Davis-Bacon and the Defense Base Act",
+    "domain": "Property, Security & Special Provisions",
+    "summary": "Three labor statutes reach almost every Army services or construction contract, and the contracting officer owns getting them into the solicitation correctly and on time. The Service Contract Labor Standards statute sets minimum wages and fringe benefits for service employees on contracts over $2,500; the Construction Wage Rate Requirements statute does the same for laborers and mechanics on construction over $2,000; and the Defense Base Act requires workers' compensation insurance for employees working overseas. Wage determination timing is where boards catch candidates.",
+    "sections": [
+      {
+        "heading": "Service Contract Labor Standards",
+        "body": "The Service Contract Labor Standards statute, still commonly called the Service Contract Act, is implemented at RFO FAR subpart 22.10. It applies to contracts over $2,500 whose principal purpose is to furnish services in the United States through service employees. It requires payment of not less than the wages and fringe benefits in the Department of Labor wage determination for the locality and labor categories used, plus safety and health provisions and posting of the determination.\n\nKO mechanics:\n\n- Obtain the applicable wage determination from the DOL system of record and incorporate it in the solicitation, by locality and labor category.\n- Where the incumbent contract is subject to a collective bargaining agreement, the successor generally must pay at least those rates, so the CBA must be obtained and incorporated in time to bind the successor.\n- When a new wage determination is incorporated at an option or annual anniversary, the price adjustment clause entitles the contractor to increased wage and fringe costs and associated payroll taxes - not overhead and not profit.\n- Conformance: a labor category not listed in the determination goes to DOL as a conformance request through the KO."
+      },
+      {
+        "heading": "Construction wage rates - Davis-Bacon",
+        "body": "The Construction Wage Rate Requirements statute, Davis-Bacon, is implemented at RFO FAR subpart 22.4. It applies to contracts in excess of $2,000 for construction, alteration or repair, including painting and decorating, of public buildings or public works in the United States. Laborers and mechanics must be paid not less than the prevailing wage rates and fringe benefits in the applicable wage determination, and weekly, with certified payrolls submitted.\n\nThe classification of the work matters. Construction, alteration and repair fall under Davis-Bacon; maintenance service that is not construction falls under the Service Contract Act. A single contract can carry both, and the KO must specify which work is covered by which determination.\n\nRelated statutes the board may fold in: the Contract Work Hours and Safety Standards Act for overtime on laborers and mechanics, and the Copeland Anti-Kickback Act for payroll deductions and certified payrolls."
+      },
+      {
+        "heading": "Wage determination timing - the part boards test",
+        "body": "This is the trap. Under RFO FAR 22.403 (legacy 22.404-6) the effect of a wage determination modification depends on when it is received against the bid opening or award date.\n\n- For sealed bidding, a modification to the wage determination is effective if it is received by the contracting officer at least 10 days before bid opening - unless the KO finds there is not a reasonable time still available before opening to notify bidders, in which case it is not effective.\n- For negotiated acquisitions, a modification received before award is generally effective, with a carve-out tied to the 90 days after the closing date for receipt of proposals; past 90 days any modification received before award is effective unless DOL grants an extension.\n- At option exercise and each annual anniversary of a multiple-year service contract, obtain a current wage determination and incorporate it, which triggers the price adjustment clause.\n\nThe safe board answer: I check for a modified determination before every solicitation issuance, before every award, and before every option exercise, and I apply the timing rules at RFO FAR 22.403 rather than guessing."
+      },
+      {
+        "heading": "Defense Base Act",
+        "body": "The Defense Base Act, 42 U.S.C. 1651 et seq., extends the Longshore and Harbor Workers' Compensation Act to employees working outside the United States. It is implemented at RFO FAR 28.305 - overseas workers' compensation and war-hazard insurance - with the clauses prescribed at RFO FAR 28.309.\n\nWhen it applies:\n\n- Public works contracts performed outside the United States, including work on military installations overseas.\n- Contracts approved or financed under the Foreign Assistance Act, and service contracts performed outside the United States for the national defense.\n- It covers employees regardless of nationality - U.S. citizens, third-country nationals and local nationals - unless a waiver applies.\n\nThe contractor buys the insurance from an authorized carrier and the cost is an allowable, reimbursable contract cost. The KO's job is to ensure the requirement is in the solicitation, that the offeror's price includes it, and that proof of coverage is in the file before performance starts. Failure to carry DBA insurance exposes the contractor to direct liability and the Government to a very bad day."
+      },
+      {
+        "heading": "Defense Base Act waivers - the Korea and Germany angle",
+        "body": "The Secretary of Labor may waive the applicability of the Defense Base Act to any contract, subcontract, work location, or classification of employees, on the recommendation of the head of the agency, under RFO FAR 28.305(d). Waivers are typically granted for local nationals and third-country nationals in a specific country, on the condition that those employees are covered by the host nation's workers' compensation law or an equivalent - so the waiver does not leave the employee uncovered, it substitutes the host nation scheme.\n\nWhat that means for a KO in Korea or Germany:\n\n- U.S. citizens and U.S. residents are generally not waived; DBA coverage stays required for them.\n- A country waiver for local hires is only effective if the contractor actually provides the host nation coverage required by the waiver condition, and the contract still carries the war-hazard compensation clause where prescribed.\n- The waiver list is maintained by DOL and changes - do not recite from memory which countries are waived. Say you would check the current list and confirm implementing guidance with the Chief of Contracting and Policy."
+      },
+      {
+        "heading": "How boards probe labor standards",
+        "body": "Expect one recall question and one scenario.\n\nThe recall question is usually the dollar thresholds: $2,500 for services under the Service Contract Labor Standards statute and $2,000 for construction under the Construction Wage Rate Requirements statute. Have both numbers and do not swap them.\n\nThe scenario is usually one of three:\n\n- A wage determination modification arrives days before award or bid opening. They want the timing rule and the 90-day concept, and they want you to say you would go to RFO FAR 22.403 and to your labor advisor rather than improvise.\n- An option is coming up on a services contract. They want you to say you pull a current wage determination, incorporate it, and process the price adjustment limited to increased wages, fringes and payroll taxes.\n- A contractor overseas has an injured local national and no DBA coverage. They want you to know DBA applies unless the Secretary of Labor waived it for that country and classification, that a waiver is conditioned on host nation coverage, and that you verify proof of insurance before performance."
+      }
+    ],
+    "key_cites": [
+      {
+        "ref": "RFO FAR 22",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22",
+        "note": "Application of Labor Laws to Government Acquisitions - part page."
+      },
+      {
+        "ref": "RFO FAR 22.10 (22.1002, 22.1003, 22.1004)",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22",
+        "note": "Service Contract Labor Standards - presolicitation, evaluation and award, postaward."
+      },
+      {
+        "ref": "RFO FAR 22.4 (22.402, 22.403, 22.404)",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22",
+        "note": "Labor standards for construction; 22.402-1(a) applies over $2,000."
+      },
+      {
+        "ref": "RFO FAR 22.403",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22",
+        "note": "Evaluation and award - effect of wage determination modifications received before award (legacy FAR 22.404-6(c))."
+      },
+      {
+        "ref": "RFO FAR 28.305",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-28",
+        "note": "Overseas workers' compensation and war-hazard insurance; Defense Base Act applicability at 28.305(b) and Secretary of Labor waivers at 28.305(d)."
+      },
+      {
+        "ref": "RFO FAR 28.309",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-28",
+        "note": "Contract clauses for workers' compensation insurance, including the waiver case."
+      },
+      {
+        "ref": "42 U.S.C. 1651 et seq.",
+        "url": "https://www.law.cornell.edu/uscode/text/42/1651",
+        "note": "Defense Base Act - statute unchanged by the RFO."
+      },
+      {
+        "ref": "41 U.S.C. 6702",
+        "url": "https://www.law.cornell.edu/uscode/text/41/6702",
+        "note": "Service Contract Labor Standards statute - contracts over $2,500."
+      },
+      {
+        "ref": "40 U.S.C. 3142",
+        "url": "https://www.law.cornell.edu/uscode/text/40/3142",
+        "note": "Construction Wage Rate Requirements statute - contracts over $2,000."
+      }
+    ],
+    "board_angles": [
+      {
+        "q": "What dollar thresholds trigger a Department of Labor wage determination?",
+        "a": "Over $2,500 for service contracts under the Service Contract Labor Standards statute and in excess of $2,000 for construction under the Construction Wage Rate Requirements statute."
+      },
+      {
+        "q": "Describe the Service Contract Act and how adjustments are made.",
+        "a": "It requires service employees on covered contracts over $2,500 to be paid at least the DOL wage determination rates and fringe benefits for the locality and labor category; when a new determination is incorporated at an option or an annual anniversary, the price adjustment clause entitles the contractor to the increased wage and fringe costs plus associated payroll taxes - no overhead, no profit."
+      },
+      {
+        "q": "A modified wage determination lands two days before bid opening. Is it effective?",
+        "a": "Under sealed bidding a modification is effective only if received at least 10 days before opening, or later if there is still reasonable time to notify bidders - so at two days I would apply the rule at RFO FAR 22.403, document the decision, and coordinate with my labor advisor rather than unilaterally incorporating it."
+      },
+      {
+        "q": "What is the Defense Base Act and when does it apply?",
+        "a": "It extends Longshore and Harbor Workers' Compensation Act coverage to employees working outside the United States on public works and national defense service contracts, covering U.S. citizens, third-country nationals and local nationals alike, and the contractor must carry the insurance with the cost allowable as a contract cost."
+      },
+      {
+        "q": "What are the conditions for a country waiver of the Defense Base Act?",
+        "a": "The agency head recommends it and the Secretary of Labor may waive applicability for a contract, work location or classification of employees - typically for local and third-country nationals and conditioned on their being covered by host nation workers' compensation or an equivalent; U.S. citizens and residents are generally not waived, and I would verify the current DOL waiver list."
+      },
+      {
+        "q": "You are exercising an option on a janitorial services contract in month eleven. What labor step do you take?",
+        "a": "I obtain the current wage determination, incorporate it into the option period, and process the resulting price adjustment under the SCA price adjustment clause limited to increased wages, fringes and payroll taxes."
+      }
+    ],
+    "related_questions": [
+      "Q0107",
+      "Q0138",
+      "Q0156",
+      "Q0253"
+    ],
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "RFO FAR Part 22 and 22.403 are verified crosswalk entries and the Part 22 and Part 28 deviation guide pages confirmed the subpart structure, 22.402-1(a)'s $2,000 construction figure, and the 28.305 / 28.309 numbering with Defense Base Act applicability and waiver text. The $2,500 services figure comes from the official bank answer at Q0107 and the underlying statute. The wage determination timing rules are described at the level the Part 22 page supports; the specific day counts inside the negotiated-acquisition rule should be read on 22.403 before quoting, and the DOL country waiver list must be checked current."
+  },
+  {
+    "id": "publicizing",
+    "title": "Publicizing Contract Actions: Synopsis, SAM.gov and Timing",
+    "domain": "Competition & Market Research",
+    "summary": "Publicizing is how the Government keeps the marketplace open, and it is a statutory duty, not a courtesy. The contracting officer posts the presolicitation notice, the solicitation and the award notice on the governmentwide point of entry at SAM.gov, observing the required waiting periods, unless one of the listed exemptions applies and is documented. Boards test the $25,000 award-notice threshold, the 15-day and 30-day waiting periods, the exemptions, and the combined synopsis and solicitation shortcut for commercial buys.",
+    "sections": [
+      {
+        "heading": "What must be publicized and where",
+        "body": "The governmentwide point of entry is SAM.gov - the successor to FedBizOpps - and RFO FAR Part 5 requires the contracting officer to post there. Three postings carry the load:\n\n- The presolicitation notice, historically called the synopsis, at RFO FAR 5.101. It tells industry a requirement is coming, what it is, and how to respond or express interest.\n- The solicitation itself at RFO FAR 5.201, with content requirements at 5.201(c) including the point of contact and the response instructions.\n- The award notice at RFO FAR 5.301 for contract actions exceeding $25,000, and a public announcement at RFO FAR 5.302 for awards over $5.5 million, which is coordinated through public affairs and congressional notification channels.\n\nThe purposes stated in the FAR are worth quoting on a board: increase competition, broaden industry participation in meeting Government requirements, and assist small business concerns in obtaining contracts and subcontracts."
+      },
+      {
+        "heading": "The timing rules",
+        "body": "The waiting periods are the most-tested facts in this topic. Under the RFO the timing tables sit at 5.101(d) for the presolicitation notice and 5.201(d) for the solicitation, and they run from 10 to 45 days depending on the dollar value and whether a trade agreement applies. The classic sequence, which the question bank still teaches, is:\n\n- Post the presolicitation notice at least 15 days before issuing the solicitation.\n- Allow at least a 30-day response time for receipt of offers from the date the solicitation is issued, for proposed contract actions expected to exceed $25,000.\n- For commercial products and services, the KO may set a shorter reasonable response period, and for acquisitions subject to a trade agreement the longer periods apply.\n\nWhat a board wants is not the table memorized but the discipline: I confirm the applicable period on the current 5.101(d) and 5.201(d) tables, I build the schedule backward from the required award date, and I do not compress a statutory waiting period to make a customer's suspense - I get a documented authority or I move the date."
+      },
+      {
+        "heading": "Exemptions from the presolicitation notice",
+        "body": "RFO FAR 5.101(b) carries the exemptions (legacy FAR 5.202). Name several and say that each must be documented in the file.\n\n- Unusual and compelling urgency, where the Government would be seriously injured by the delay.\n- The posting would compromise national security.\n- The contract action is made under the simplified procedures for micro-purchases, or otherwise below the notice threshold.\n- The action is an order placed under an existing indefinite-delivery contract, a Federal Supply Schedule, or a required source under Part 8.\n- Utility services where only one source is available.\n- Perishable subsistence, or actions where performance can only be by a source under an international agreement.\n- The action is for a brand-name commercial item for authorized resale, or the logical follow-on rules apply.\n\nThe honest board answer names three or four accurately, then says the full list is at RFO FAR 5.101(b) and that an exemption is a documented decision, not an assumption. A synopsis exemption does not excuse competition - it excuses the notice, and I still need a Part 6 authority if I am restricting competition."
+      },
+      {
+        "heading": "Combined synopsis and solicitation",
+        "body": "For commercial products and commercial services the contracting officer may use a combined synopsis and solicitation - one posting that serves as both the notice and the solicitation - under RFO FAR 12.202(b), the RFO home of the legacy FAR 12.603 procedure.\n\nHow it works and what it buys you:\n\n- The single notice contains the information a synopsis would contain plus the solicitation terms, the provisions and clauses incorporated by reference, and the evaluation basis.\n- It eliminates the separate 15-day wait between the notice and the solicitation, so it shortens the cycle materially.\n- It still has to allow a reasonable response time, and the reasonable-time judgment is the KO's and must fit the complexity of the requirement.\n- It is limited to commercial acquisitions - do not use it on a noncommercial buy to save time.\n\nThis is a frequent board question in exactly that form: under the old FAR 12.603, what procedure may the KO use when a written solicitation will be issued for a commercial item? The answer is the combined synopsis and solicitation, now at RFO FAR 12.202(b)."
+      },
+      {
+        "heading": "Synopsis, sole source and the pre-award notices",
+        "body": "Publicizing interacts with competition. Two connections a board likes:\n\n- When you intend to award without full and open competition, the presolicitation notice is still generally required, and the notice itself is one of the things that tests your market assumption. A sole-source notice that draws three capable responses means your market research was wrong; that is a feature, not a failure. Keep the notice period open and actually read the responses before you sign the justification and approval under RFO FAR 6.104.\n- Brand-name restrictions require the justification and the notice to state the brand-name basis (RFO FAR 6.103-1(d) and 11.204), and the notice content requirement at RFO FAR 5.201(c)(3) carries the disclosure.\n\nAlso know the preaward and postaward notice obligations that live in Part 15: preaward notices to unsuccessful offerors excluded from the competitive range at RFO FAR 15.206-1, preaward debriefings at 15.206-2, and postaward debriefings at 15.301. Those are notices to offerors, distinct from the Part 5 public postings, and mixing them up is a common candidate error."
+      },
+      {
+        "heading": "How boards probe publicizing",
+        "body": "The standard opener is flat recall: when are you required to synopsize, and what about the award? Answer with the $25,000 threshold for the award notice, the presolicitation notice before solicitation, the 15-day and 30-day sequence, and SAM.gov as the governmentwide point of entry.\n\nThen the follow-ups:\n\n- Name exemptions. Give three or four real ones and point to RFO FAR 5.101(b).\n- The customer needs award in ten days. What do you do? Do not skip the notice. Options are a documented urgency exemption with the corresponding Part 6 authority and justification, a commercial combined synopsis and solicitation with a reasonable but short response time, an order under an existing contract, or a bridge under the right authority - each with its own approval.\n- Who can waive the waiting period? Nobody in the field waives a statutory period; the KO applies an exemption that exists or accepts the schedule.\n- What happens if you get it wrong? A protest ground, a competition advocate finding, and an award at risk.\n\nThe theme: publicizing is the Government's promise to the market, and the KO keeps it or documents why the rule does not apply."
+      }
+    ],
+    "key_cites": [
+      {
+        "ref": "RFO FAR 5",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5",
+        "note": "Publicizing Contract Actions - part page."
+      },
+      {
+        "ref": "RFO FAR 5.101",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5",
+        "note": "Presolicitation notice, with exemptions at 5.101(b) (legacy FAR 5.202) and the timing table at 5.101(d)."
+      },
+      {
+        "ref": "RFO FAR 5.201(c)(3)",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5",
+        "note": "Solicitation notice content (legacy FAR 5.102(a)(6)); timing table at 5.201(d)."
+      },
+      {
+        "ref": "RFO FAR 5.301",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5",
+        "note": "Award notices - contract actions exceeding $25,000."
+      },
+      {
+        "ref": "RFO FAR 5.302",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5",
+        "note": "Public announcement of awards over $5.5 million."
+      },
+      {
+        "ref": "RFO FAR 12.202(b)",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12",
+        "note": "Combined synopsis and solicitation for commercial acquisitions (legacy FAR 12.603)."
+      },
+      {
+        "ref": "RFO FAR 6.104",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6",
+        "note": "Justification and approval when competition is limited (legacy FAR 6.303)."
+      },
+      {
+        "ref": "RFO FAR 15.206-1, 15.206-2 and 15.301",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+        "note": "Preaward notices, preaward debriefings and postaward debriefings - notices to offerors, not public postings."
+      },
+      {
+        "ref": "41 U.S.C. 1708",
+        "url": "https://www.law.cornell.edu/uscode/text/41/1708",
+        "note": "Statutory publicizing requirement and the governmentwide point of entry."
+      }
+    ],
+    "board_angles": [
+      {
+        "q": "When are you required to synopsize a contract action?",
+        "a": "For proposed contract actions expected to exceed $25,000 I post a presolicitation notice on SAM.gov before issuing the solicitation, and I post an award notice for actions exceeding $25,000 - unless an exemption at RFO FAR 5.101(b) applies and is documented."
+      },
+      {
+        "q": "What is the timing between the synopsis, the solicitation and award?",
+        "a": "The classic sequence is the presolicitation notice at least 15 days before the solicitation issues and at least a 30-day response period for offers, with the current tables at RFO FAR 5.101(d) and 5.201(d) running from 10 to 45 days depending on dollar value and trade agreement coverage - I confirm the applicable period and build the schedule backward from it."
+      },
+      {
+        "q": "Name some exceptions to the synopsis requirement.",
+        "a": "Unusual and compelling urgency, postings that would compromise national security, micro-purchases and other actions below the threshold, orders under existing indefinite-delivery or Federal Supply Schedule contracts, utility services with only one source, and perishable subsistence - the full list is at RFO FAR 5.101(b) and each use is documented."
+      },
+      {
+        "q": "You are buying a commercial service and the schedule is tight. What tool do you use?",
+        "a": "A combined synopsis and solicitation under RFO FAR 12.202(b) - one SAM.gov posting that serves as both notice and solicitation with a reasonable response period, which removes the separate 15-day wait but does not remove my obligation to give industry a fair chance to respond."
+      },
+      {
+        "q": "Your customer says the requirement is urgent and asks you to skip the synopsis. Your answer?",
+        "a": "I do not skip it on a customer's say-so - either an exemption at RFO FAR 5.101(b) genuinely applies and I document it along with the corresponding Part 6 authority and justification at 6.104, or the schedule moves; an unjustified failure to publicize is a protest ground and puts the award at risk."
+      },
+      {
+        "q": "Where do preaward and postaward debriefings fit in publicizing?",
+        "a": "They do not - those are notices to offerors under Part 15 at RFO FAR 15.206-1, 15.206-2 and 15.301, separate from the public SAM.gov postings required by Part 5."
+      }
+    ],
+    "related_questions": [
+      "Q0022",
+      "Q0097",
+      "Q0061",
+      "Q0054",
+      "Q0273"
+    ],
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "RFO FAR 5.101(b) and 5.201(c)(3) are verified crosswalk entries and the Part 5 deviation guide page confirmed 5.101, 5.201, 5.301 (over $25,000) and 5.302 (over $5.5 million) plus the existence of the 5.101(d) and 5.201(d) timing tables running 10 to 45 days. The 15-day and 30-day sequence is carried from the official bank answer at Q0022 and is presented as the classic sequence with an instruction to confirm the current table. RFO FAR 12.202(b) for the combined synopsis and solicitation is a verified crosswalk entry."
+  },
+  {
+    "id": "contract-admin-cor",
+    "title": "Contract Administration: CORs, Modifications and the Changes Clause",
+    "domain": "Contract Administration",
+    "summary": "After award the contracting officer is the only person who can change the contract, and everything else in administration flows from protecting that line. The COR is the KO's designated eyes and ears for technical surveillance with no authority to direct changes, commit funds, or alter the terms. Modifications are either bilateral, signed by both parties, or unilateral under a clause that authorizes the KO to act alone - and the Changes clause is the one that requires the contractor to keep working while the money is sorted out.",
+    "sections": [
+      {
+        "heading": "COR designation and limits",
+        "body": "A COR is designated in writing by the contracting officer to perform technical monitoring and surveillance - the KO's eyes and ears, not a second contracting officer. Under DFARS 201.404-70 and its PGI a COR must be designated for service contracts, and in practice for any contract where surveillance is needed, nominated by the requiring activity as early as practicable in the acquisition process.\n\nThe designation letter is the whole game. It states:\n\n- The specific authorities delegated and the limits - inspect and accept for the Government where delegated, monitor performance, review invoices for technical sufficiency, maintain a COR file.\n- What the COR may never do: change the price, quantity, quality, delivery schedule, period of performance or any other term; authorize work outside the scope; direct the contractor's employees; obligate funds; or make any commitment affecting cost.\n- The training and certification the COR must hold, the appointment effective date, and the requirement to report to the KO.\n\nA COR who directs a change creates an unauthorized commitment, ratifiable only under RFO FAR 1.405 if at all. Say the sentence on the board: the COR has no authority to change the contract."
+      },
+      {
+        "heading": "Post-award orientation",
+        "body": "The post-award orientation conference - the start-of-work meeting - exists to make sure the contractor and the Government have the same understanding of the contract before anyone spends money. RFO FAR 42.302(a)(3) lists conducting post-award orientation conferences among the contract administration functions.\n\nWhat to cover: the scope and the deliverables; the QASP and how surveillance will run; invoicing and payment procedures including who certifies receipt; security, access and installation requirements - which overseas means SOFA status, base access and any invited contractor processing; government-furnished property and information; the key personnel and the points of contact on both sides; the COR's authority and its limits, said out loud in front of the contractor; how changes are requested and who may authorize them; and reporting requirements.\n\nWhat is inappropriate: renegotiating price or terms; directing work beyond the contract; letting the customer give the contractor a to-do list; anything that creates an expectation of extra work. The orientation clarifies the contract; it does not amend it. If something surfaces that genuinely needs to change, that is a modification action afterward, signed by the KO."
+      },
+      {
+        "heading": "Modifications: bilateral, unilateral and administrative",
+        "body": "A contract modification is any written change in the terms of the contract, and RFO FAR Part 43 governs.\n\n- Bilateral modification, a supplemental agreement, is signed by both the contractor and the contracting officer. Use it to definitize a change order, to reflect a negotiated equitable adjustment, to incorporate a settlement, or to make any change that requires the contractor's consent. It is the preferred vehicle because it closes out the price and the schedule at the same time as the change.\n- Unilateral modification is signed only by the contracting officer. Use it to make administrative changes, to issue change orders under the Changes clause, to issue termination notices, and to exercise options under an option clause. The authority must come from a clause already in the contract.\n- Administrative change is a unilateral modification that does not affect the substantive rights of the parties - a change in the paying office, an appropriation data correction, an address change.\n\nOn the board, when handed a scenario, say which type and which clause gives you the authority. A modification with no clause authority and no contractor signature is not a modification - it is a problem."
+      },
+      {
+        "heading": "Scope: the question before every modification",
+        "body": "Before you touch a modification, ask whether the change is within the scope of the contract. If it is outside the scope, it is a new procurement requiring its own competition or a justified sole-source authority under Part 6 - you cannot buy new work under an old contract.\n\nThe test courts and GAO apply: would the modified work be materially different from the work competed? Look at whether the solicitation put offerors on notice that this kind of change could occur, the magnitude relative to the original effort, whether the nature or type of work changes, and whether other firms would have competed differently.\n\n- Within scope: a quantity change inside the stated variation, a design refinement under the Changes clause, a period adjustment consistent with the terms.\n- Outside scope: adding a new line of work, a major increase in quantity beyond what was competed, a change of the end item.\n\nA cardinal change - so far outside scope it is effectively a new contract - is both protest exposure and potential breach. Document the scope analysis and bring in counsel before signing."
+      },
+      {
+        "heading": "The Changes clause and the duty to proceed",
+        "body": "The Changes clauses at RFO FAR 52.243-1 through 52.243-7 give the contracting officer the unilateral right to make changes within the general scope of the contract - in the drawings, designs or specifications; in the method of shipment or packing; in the place of delivery; and for services, in the description of services or the place of performance.\n\nThe rules a board wants:\n\n- Only the contracting officer may issue a change order. Anyone else's direction is a constructive change at best and an unauthorized commitment at worst.\n- If the change causes an increase or decrease in cost or in the time required for performance, the KO must make an equitable adjustment and modify the contract.\n- The contractor must assert its right to an adjustment within the period stated in the clause, normally 30 days from receipt of the change order, though the KO may consider a late assertion at any time before final payment.\n- RFO FAR 43.301(b) and the clause require the contractor to continue performance as changed while the adjustment is negotiated. Disagreement over money is not a stop-work authority, and stop-work is a separate clause."
+      },
+      {
+        "heading": "Requests for equitable adjustment and claims",
+        "body": "A request for equitable adjustment is the contractor asking for more money or time under a clause of the contract - Changes, Government Delay of Work, Differing Site Conditions, Suspension of Work, Government Property. It is not automatically a claim.\n\nMy process:\n\n- Acknowledge receipt and get the REA in writing with the specific clause relied on, the factual basis, and a cost breakdown by element.\n- Determine entitlement first, then quantum. Is there a compensable change, did the Government cause it, and does a clause give relief? If entitlement fails, no amount of cost detail matters.\n- For DoD, the REA certification at DFARS 252.243-7002 applies above the stated threshold - the contractor certifies the request is made in good faith and the supporting data are accurate and complete.\n- Analyze cost with proposal rigor - cost analysis, audit support if the dollars warrant, and the Part 31 cost principles.\n- Negotiate and definitize by bilateral modification with a release of claims.\n- If it arrives as a certified claim over $100,000 under the Contract Disputes Act, the clock runs and appeal rights attach."
+      }
+    ],
+    "key_cites": [
+      {
+        "ref": "DFARS 201.404-70 and PGI 201.404-70",
+        "url": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-201/2026-O0002_Rev1_TAB_A_Deviation_Memo.pdf",
+        "note": "Contracting officer's representative designation, training and limits (legacy DFARS 201.602-2)."
+      },
+      {
+        "ref": "RFO FAR 42",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-42",
+        "note": "Contract Administration and Audit Services - part page."
+      },
+      {
+        "ref": "RFO FAR 42.302(a)(3)",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-42",
+        "note": "Conduct post-award orientation conferences - contract administration function."
+      },
+      {
+        "ref": "RFO FAR 43",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-43",
+        "note": "Contract Modifications - part page."
+      },
+      {
+        "ref": "RFO FAR 43.301(b)",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-43",
+        "note": "Change orders - the contractor must continue performance as changed (legacy FAR 43.201(b))."
+      },
+      {
+        "ref": "RFO FAR 52.243-1",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52",
+        "note": "Changes - Fixed-Price; the Changes clause family runs 52.243-1 through 52.243-7."
+      },
+      {
+        "ref": "RFO FAR 1.405",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1",
+        "note": "Ratification of unauthorized commitments (legacy FAR 1.602-3)."
+      },
+      {
+        "ref": "DFARS 252.243-7002",
+        "url": "https://www.acq.osd.mil/dpap/dars/dfars_far_overhaul_class_deviations.html",
+        "note": "Requests for equitable adjustment - contractor certification."
+      },
+      {
+        "ref": "RFO FAR 33.205-2",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33",
+        "note": "Contract Disputes Act claim certification for claims exceeding $100,000 (legacy FAR 33.207)."
+      }
+    ],
+    "board_angles": [
+      {
+        "q": "What is the role of your COR and what can they not do?",
+        "a": "The COR is my designated technical eyes and ears - surveillance under the QASP, invoice review for technical sufficiency, documentation and reporting - and they may never change price, quantity, quality, schedule or any term, direct contractor employees, obligate funds, or authorize work outside the scope."
+      },
+      {
+        "q": "When would you use a bilateral versus a unilateral modification?",
+        "a": "Bilateral when the change needs the contractor's consent - definitizing a change order, a negotiated equitable adjustment, a settlement; unilateral when a clause already in the contract gives me the authority to act alone - administrative changes, change orders under the Changes clause, option exercises and termination notices."
+      },
+      {
+        "q": "How do you determine whether a change is within scope?",
+        "a": "I ask whether the modified work is materially different from what was competed - whether the solicitation put offerors on notice that this kind of change could occur, the magnitude relative to the original effort, and whether other firms would have competed differently; if it is outside scope it is a new procurement needing competition or a Part 6 justification."
+      },
+      {
+        "q": "You issue a unilateral change order and the contractor disagrees with the price. What must the contractor do?",
+        "a": "Continue performance as changed - RFO FAR 43.301(b) and the Changes clause impose a duty to proceed - while asserting its right to an equitable adjustment within the period stated in the clause, normally 30 days, and we negotiate the adjustment and definitize by bilateral modification."
+      },
+      {
+        "q": "What is the purpose of the post-award orientation, and what is inappropriate there?",
+        "a": "To align both parties on the contract as written - scope, deliverables, surveillance, invoicing, access and property, and the COR's limits stated in front of the contractor; it is inappropriate to renegotiate price or terms, to direct work beyond the contract, or to let the customer hand the contractor a to-do list."
+      },
+      {
+        "q": "A contractor hands you an REA. Walk me through your process.",
+        "a": "Get it in writing with the clause relied on, the facts and a cost breakdown; decide entitlement before quantum; obtain the DFARS 252.243-7002 certification where required; analyze cost against the Part 31 cost principles with audit support if the dollars warrant; negotiate and definitize by bilateral modification with a release - and if it arrives as a certified claim over $100,000, I run the Contract Disputes Act clock and issue a final decision."
+      }
+    ],
+    "related_questions": [
+      "Q0010",
+      "Q0144",
+      "Q0106",
+      "Q0016",
+      "Q0044",
+      "Q0081",
+      "Q0120",
+      "Q0150",
+      "Q0011"
+    ],
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "high",
+    "confidence_reason": "RFO FAR 43.301(b), 52.243-1, 1.405, the Part 42 and Part 43 part pages and DFARS 201.404-70 are all verified crosswalk entries with source URLs, the Part 42 deviation guide page confirmed 42.302(a)(3) for post-award orientation, and the duty-to-proceed language matches the official bank answer at Q0150. The $100,000 CDA certification figure comes from a regulations.json threshold still marked verify, and the 60-day final-decision rule is longstanding statutory content at 41 U.S.C. 7103."
+  },
+  {
+    "id": "terminations",
+    "title": "Terminations: Convenience, Default and the Commercial Path",
+    "domain": "Terminations & Remedies",
+    "summary": "The Government holds a unique right to terminate a contract for its own convenience, and a separate right to terminate for the contractor's failure to perform. Termination for convenience buys out the contractor's incurred costs and profit on work done; termination for default is a drastic sanction that requires a documented failure, consideration of excusable causes, and usually a cure or show-cause notice first. Commercial contracts follow a shorter path under RFO FAR 12.304 with termination for cause rather than default.",
+    "sections": [
+      {
+        "heading": "Termination for convenience",
+        "body": "Termination for convenience is exercised when it is in the Government's interest - the requirement went away, funding changed, the mission changed, or a protest corrective action requires it. It is a unilateral action taken by the contracting officer under the Termination for Convenience clause, and the contractor's remedy is a settlement rather than breach damages.\n\nWhat the contractor gets:\n\n- The contract price for completed and accepted items.\n- Costs incurred on the terminated work, including a reasonable allowance for settlement expenses and subcontractor settlements.\n- Profit on work actually performed. Under RFO FAR 49.202, profit is allowed on preparations made and work done, but never on the terminated - that is, unperformed - portion, and no anticipatory profit and no consequential damages are allowed. If the contract would have been a loss contract, a loss adjustment applies and profit is denied.\n\nProcess: issue the notice stating the effective date and extent; direct the contractor to stop work and preserve property; instruct on subcontract terminations; negotiate the settlement proposal. Partial terminations are common and the surviving work may need an equitable adjustment."
+      },
+      {
+        "heading": "Termination for default - and what to do first",
+        "body": "Termination for default is available when the contractor fails to deliver on time, fails to make progress so as to endanger performance, or fails to perform any other material provision. It is a drastic sanction. Before I sign one I consider the factors the FAR directs: the terms of the contract and the specific failure; the specific failure's effect on the Government; the availability of the supplies or services from other sources and the time to get them; the urgency of the need and the period that would be required to obtain them elsewhere; the degree of essentiality of the contractor in the Government's acquisition program and the effect on its ability to supply other contractors; the contractor's capability and whether a different approach would produce performance; the effect on the contractor's ability to liquidate progress payments; and any excusable cause.\n\nI also coordinate with counsel, with the requiring activity on the impact, with the small business specialist if the contractor is small, and with my chain - a default that is later converted by a board or court to a termination for convenience costs the Government the settlement anyway plus the delay."
+      },
+      {
+        "heading": "Cure notices and show cause notices",
+        "body": "The delinquency notices are at RFO FAR 49.607 and boards ask about the ten-day rule almost every time.\n\n- Cure notice: used when the failure is something other than a failure to deliver on time - for example, failure to make progress or failure to perform a material provision - and there is still delivery time remaining. It gives the contractor 10 days, or longer if the KO allows, to cure the condition. Before issuing it, confirm that a period at least equal to the cure period remains in the delivery schedule. If less than 10 days remain, do not issue a cure notice.\n- Show cause notice: used when the time remaining is insufficient for a cure period, or when the delivery date has already passed. It tells the contractor the Government is considering termination for default and asks it to show cause why it should not be terminated, including any excusable causes, so that the KO has the facts before deciding.\n\nNeither notice is a termination; both build the record and preserve the Government's position. Send by a method that documents receipt, and if the response establishes an excusable cause the answer is an extension, not a default."
+      },
+      {
+        "heading": "Excusable delay",
+        "body": "An excusable delay is a failure to perform arising from causes beyond the control and without the fault or negligence of the contractor. The Excusable Delays clause at RFO FAR 52.249-14 and the default clauses list the classic causes: acts of God or of the public enemy; acts of the Government in either its sovereign or contractual capacity; fires; floods; epidemics; quarantine restrictions; strikes; freight embargoes; and unusually severe weather.\n\nRules that matter:\n\n- The delay must be beyond the contractor's control and without its fault or negligence. A subcontractor delay is excusable only if the cause would be excusable for the prime and the items were not obtainable elsewhere in time.\n- The remedy is normally a no-cost time extension, not money. Money comes only if a clause such as Government Delay of Work or Suspension of Work provides it.\n- An excusable delay defeats a termination for default, which is why the show cause notice asks for it.\n\nHanded a no-cost time extension request, say: I evaluate whether the cause is excusable under the clause, and if it is I extend the schedule by bilateral modification at no cost."
+      },
+      {
+        "heading": "Commercial terminations under 12.304",
+        "body": "Commercial contracts do not use Part 49 mechanics. RFO FAR 12.304 and the commercial terms clause give two routes.\n\n- Termination for the Government's convenience: the Government pays the percentage of the contract price reflecting the percentage of work performed prior to the notice, plus reasonable charges the contractor can demonstrate from its records - and the standard is what a prudent commercial party would pay, not a Part 49 settlement proposal with cost accounting detail.\n- Termination for cause: the commercial analogue to default. The Government may terminate for cause when the contractor fails to comply with contract terms or fails to provide adequate assurance of future performance. The contractor is liable to the Government for any excess reprocurement costs and the Government retains its rights for nonconforming items.\n\nPart 49 may be used as guidance for the commercial case where it does not conflict with Part 12 and the clause. A cure or show cause notice is not required by the commercial clause, but sending one builds the record and is what a reasonable buyer would do."
+      },
+      {
+        "heading": "After a default - the contractor's liabilities and the KO's next moves",
+        "body": "RFO FAR 49.402-2 sets out the effect of a termination for default on a fixed-price contract.\n\n- The Government is not liable for the contractor's costs on undelivered work and is entitled to repayment of any advance and progress payments applicable to that work.\n- The Government may require the contractor to transfer title and deliver completed supplies, manufacturing materials and work in process, and pay the fair value of what it takes.\n- The contractor is liable to the Government for any excess costs incurred in reprocuring supplies or services similar to those terminated - the reprocurement must be at a reasonable price and within a reasonable time, and the KO should document the reasonableness because the excess costs will be challenged.\n- The Government may collect against the performance bond where one exists, and may assess liquidated damages where the clause provides for them.\n\nOther consequences: the default is reported in CPARS and FAPIIS and follows the firm into future responsibility determinations; the contractor may appeal under the Contract Disputes Act; and an improper default converts to a convenience termination. That conversion risk is why the notice step, the excusable-cause analysis and legal review are not optional."
+      }
+    ],
+    "key_cites": [
+      {
+        "ref": "RFO FAR 49",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49",
+        "note": "Termination of Contracts - part page."
+      },
+      {
+        "ref": "RFO FAR 49.202",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49",
+        "note": "Profit on convenience terminations - allowed on work performed, never on the terminated portion, no anticipatory profit."
+      },
+      {
+        "ref": "RFO FAR 49.402-2",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49",
+        "note": "Effect of termination for default - excess reprocurement costs, repayment of advance and progress payments, title transfer."
+      },
+      {
+        "ref": "RFO FAR 49.402-3",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49",
+        "note": "Procedure for default; the factors the KO must consider before terminating."
+      },
+      {
+        "ref": "RFO FAR 49.607",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49",
+        "note": "Delinquency notices - cure notice and show cause notice, with the 10-day cure period."
+      },
+      {
+        "ref": "RFO FAR 12.304",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12",
+        "note": "Commercial terminations - convenience and for cause."
+      },
+      {
+        "ref": "RFO FAR 52.249-14",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52",
+        "note": "Excusable Delays clause."
+      },
+      {
+        "ref": "RFO FAR 33.205-2",
+        "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33",
+        "note": "Claim certification over $100,000 - a default termination appealed as a claim runs under the Contract Disputes Act."
+      }
+    ],
+    "board_angles": [
+      {
+        "q": "Describe the different types of terminations available.",
+        "a": "For noncommercial contracts, termination for convenience when it is in the Government's interest with a cost-based settlement, and termination for default for failure to deliver, failure to make progress or failure to perform a material provision; for commercial contracts, RFO FAR 12.304 gives termination for the Government's convenience paying the percentage of work performed plus demonstrable charges, and termination for cause with excess reprocurement cost liability."
+      },
+      {
+        "q": "When do you issue a cure notice versus a show cause notice?",
+        "a": "A cure notice when the failure is other than late delivery and at least 10 days of the delivery schedule remain, giving the contractor 10 days to cure; a show cause notice when insufficient time remains or the delivery date has passed, asking the contractor to show cause why it should not be terminated for default and to state any excusable causes."
+      },
+      {
+        "q": "What factors do you consider before terminating for default?",
+        "a": "The specific failure and the contract terms, the effect on the Government, availability of the supplies or services from other sources and the time to get them, the urgency and essentiality of the requirement, the contractor's capability and whether another approach would work, the effect on progress payment liquidation, and above all whether the failure is excusable."
+      },
+      {
+        "q": "Define an excusable delay and what the contractor gets for it.",
+        "a": "A failure to perform arising from causes beyond the contractor's control and without its fault or negligence - acts of God, acts of the Government, fires, floods, epidemics, quarantine, strikes, embargoes, unusually severe weather - and the normal remedy is a no-cost time extension by bilateral modification, not money, unless a delay clause provides compensation."
+      },
+      {
+        "q": "Where is profit allowed and not allowed on a fixed-price termination for convenience?",
+        "a": "Profit is allowed on preparations made and work actually performed, and it is not allowed on the terminated unperformed portion - no anticipatory profit and no consequential damages, and if the contract would have been a loss contract a loss adjustment denies profit entirely."
+      },
+      {
+        "q": "What additional liabilities does the contractor incur after a termination for default?",
+        "a": "The Government owes nothing for undelivered work and can recover advance and progress payments applicable to it, can take title to completed supplies and work in process at fair value, and the contractor is liable for the excess costs of reprocuring similar supplies or services - plus the default record follows the firm into future responsibility determinations."
+      }
+    ],
+    "related_questions": [
+      "Q0017",
+      "Q0043",
+      "Q0096",
+      "Q0146",
+      "Q0223",
+      "Q0252",
+      "Q0077",
+      "Q0127"
+    ],
+    "flags": [
+      "ai-drafted"
+    ],
+    "confidence": "high",
+    "confidence_reason": "RFO FAR 49.607, 49.402-2, 49.202, 12.304, 52.249-14 and the Part 49 part page are all verified crosswalk entries with acquisition.gov source URLs, and the substantive content matches the official answers already in the question bank at Q0043, Q0223 and Q0252. RFO FAR 49.402-3 for the default factors is carried from bank items Q0096 and Q0146 rather than from an independent fetch."
+  }
+]

@@ -1,0 +1,1307 @@
+[
+  {
+    "qid": "Q0005",
+    "stem": "A board member asks you to list the elements of a legally binding contract. Which set is correct?",
+    "options": [
+      {
+        "text": "Capacity, agreement (offer, acceptance, mutual assent), consideration, a lawful purpose and the correct form.",
+        "correct": true,
+        "why": "These are the five elements a KO must be able to recite: capacity, agreement, consideration, legality, and form."
+      },
+      {
+        "text": "Offer, acceptance, a signed SF 33 or SF 1449, and a certified funding document from the resource manager's office.",
+        "correct": false,
+        "why": "A specific form and a funding certification are contracting procedures, not the legal elements that make an agreement binding."
+      },
+      {
+        "text": "Competition, a fair and reasonable price, a responsibility determination, and a contract signed by both parties.",
+        "correct": false,
+        "why": "These are procurement policy requirements under the FAR, not the common-law elements of a contract."
+      },
+      {
+        "text": "Mutual assent and consideration only; capacity, legality and form are procedural preferences the courts may overlook.",
+        "correct": false,
+        "why": "Capacity, a legal purpose, and the correct form are elements in their own right, not optional preferences."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "Common law elements of contract formation; see also RFO FAR 2.101 (definition of contract)",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0009",
+    "stem": "Under RFO FAR 1.405, what makes an agreement an unauthorized commitment?",
+    "options": [
+      {
+        "text": "It is not binding only because the person who made it lacked authority to bind the Government.",
+        "correct": true,
+        "why": "That is the regulatory definition; the only defect is the maker's lack of authority, which is why ratification can cure it."
+      },
+      {
+        "text": "It exceeds the contracting officer's warrant threshold, even though a warranted contracting officer signed it.",
+        "correct": false,
+        "why": "Exceeding a warrant is a different problem; the definition turns on the representative having no authority at all to bind the Government."
+      },
+      {
+        "text": "It was made without a certified funding document, so the obligation is void from the very start.",
+        "correct": false,
+        "why": "Missing funds raises Anti-Deficiency Act concerns, but the unauthorized commitment definition rests on lack of authority, not funding."
+      },
+      {
+        "text": "It is any contract later found to have an unreasonable price.",
+        "correct": false,
+        "why": "Price reasonableness is one of the ratification criteria, not the definition of an unauthorized commitment."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "RFO FAR 1.405 (was FAR 1.602-3)",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0274",
+    "stem": "A facility manager directly called a Korean plumbing firm on a Saturday night to stop a burst water line and brings you an $18,000 invoice Monday asking you to \"just pay it.\" What is the correct action?",
+    "options": [
+      {
+        "text": "Process it for ratification as an unauthorized commitment; at $18,000 the purchase card cannot be used.",
+        "correct": true,
+        "why": "The facility manager could not bind the Government, and at $18,000 the action is above the $15,000 micro-purchase threshold, so ratification is the path."
+      },
+      {
+        "text": "Pay the invoice on the purchase card because it was a genuine emergency and the facility manager is a cardholder.",
+        "correct": false,
+        "why": "The value exceeds the micro-purchase threshold, and neither an emergency nor holding a card gives the facility manager authority to bind the Government for this amount."
+      },
+      {
+        "text": "Refuse to act, since the Government never contracted and owes the vendor nothing.",
+        "correct": false,
+        "why": "The Government received the benefit of the repair; the proper course is a ratification review, and if it cannot be ratified the vendor's remedy is a claim under 31 U.S.C. 3702."
+      },
+      {
+        "text": "Issue a sole-source contract dated the prior Saturday to cover the work, citing the emergency.",
+        "correct": false,
+        "why": "Backdating a contract to cover a past act is improper documentation; the regulation provides ratification precisely so the record stays honest."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 1.405; AFARS 5101.602-3-90; micro-purchase threshold $15,000 (RFO FAR 2.101); 31 U.S.C. 3702",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0040",
+    "stem": "You suspect a contractor submitted a false claim on one of your service contracts. Under Army procedure, who do you contact first?",
+    "options": [
+      {
+        "text": "The Procurement Fraud Advisor, who sends a Procurement Flash Report up to the Procurement Fraud Branch.",
+        "correct": true,
+        "why": "AFARS 5109.406-3 and AR 27-40 chapter 8 put the Procurement Fraud Advisor at the front of the suspected-fraud channel."
+      },
+      {
+        "text": "The contractor's program manager, so the company can correct the invoice and refund any overpayment before anyone escalates.",
+        "correct": false,
+        "why": "Confronting the contractor risks destroying evidence and tipping off the subject; you do not investigate or confront."
+      },
+      {
+        "text": "The ethics counselor, because all fraud matters run through the Joint Ethics Regulation and the standards of conduct office.",
+        "correct": false,
+        "why": "The ethics counselor handles gratuities and personal conflicts of interest; suspected fraud goes to the Procurement Fraud Advisor."
+      },
+      {
+        "text": "The COR, who should gather statements and build a case file before legal or the investigators are involved.",
+        "correct": false,
+        "why": "The COR is not an investigator; you preserve the record and report the same day rather than running your own inquiry."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "AFARS 5109.406-3; AR 27-40 chapter 8; RFO FAR 3.104-7",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0109",
+    "stem": "Which statement best captures why the contracting officer must fully document the contract file?",
+    "options": [
+      {
+        "text": "So someone else can pick it up and know its status, to comply with law and regulation, to defend your decisions, and to protect the Army in litigation.",
+        "correct": true,
+        "why": "Continuity, compliance, defensibility, and litigation protection are the four reasons a board expects to hear."
+      },
+      {
+        "text": "So the file can be destroyed sooner once the record retention clock starts.",
+        "correct": false,
+        "why": "Documentation supports retention and later review; it is not a way to shorten the retention period."
+      },
+      {
+        "text": "Because auditors require a complete file only on contracts above the simplified acquisition threshold, and smaller buys need just the order and invoice.",
+        "correct": false,
+        "why": "File documentation is required regardless of dollar value; there is no threshold that excuses it, even for small buys."
+      },
+      {
+        "text": "Because the contractor is entitled to a copy of the complete file on request under the Freedom of Information Act.",
+        "correct": false,
+        "why": "Contractors are not entitled to the full file, under FOIA or otherwise, and much of it is source selection or proprietary information."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "RFO FAR 4.101 (was FAR 4.801-4.803)",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0110",
+    "stem": "An Army requirement includes commercial IT hardware and an access control system. Who is responsible for obtaining the ITAS approval?",
+    "options": [
+      {
+        "text": "The Requiring Activity, which submits the ITAS approval memo as part of the requirements package.",
+        "correct": true,
+        "why": "The RA obtains ITAS approval and includes it in the package, or submits an MFR signed by its ITAS Coordinator if approval is not required."
+      },
+      {
+        "text": "The contracting officer, as part of the acquisition plan, before the solicitation is released to industry.",
+        "correct": false,
+        "why": "The KO checks that the approval is in the package, but obtaining it is the requiring activity's responsibility."
+      },
+      {
+        "text": "The contractor, after award, as a condition of the first delivery order.",
+        "correct": false,
+        "why": "ITAS approval is a Government internal approval that precedes the requirements package, not a post-award contractor deliverable."
+      },
+      {
+        "text": "No one, because access control and CCTV systems are physical security equipment under the installation's provost marshal, not IT.",
+        "correct": false,
+        "why": "The AR 25-1 definition of IT is broad and expressly captures CCTV, fire alarm, access control, and intrusion detection systems."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "AR 25-1; Army ITAS approval policy",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0157",
+    "stem": "Which contract types may a contracting officer use for a commercial product or commercial service acquisition under RFO FAR Part 12?",
+    "options": [
+      {
+        "text": "FFP or FP-EPA, with T&M allowed only under a determination and a ceiling; cost-reimbursement is prohibited.",
+        "correct": true,
+        "why": "RFO FAR 12.104 limits commercial contracts to FFP or FP-EPA, allows T&M only with a determination and ceiling, and bars cost-type."
+      },
+      {
+        "text": "Any contract type in Part 16 that the risk of the acquisition justifies, as with noncommercial buys.",
+        "correct": false,
+        "why": "That is the Part 15 rule; commercial acquisitions are deliberately restricted to fixed-price forms."
+      },
+      {
+        "text": "Cost-plus-fixed-fee whenever the commercial item requires minor modification for Government use.",
+        "correct": false,
+        "why": "Cost-reimbursement contracts are prohibited for commercial products and services regardless of modification."
+      },
+      {
+        "text": "Firm-fixed-price only, with no exceptions.",
+        "correct": false,
+        "why": "Fixed-price with economic price adjustment is also allowed, and T&M is available with a determination and ceiling."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 12.104 (was FAR 12.207)",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0158",
+    "stem": "You are deciding whether a proposed modification is within the scope of the existing contract. Which question is one of the recognized scope tests?",
+    "options": [
+      {
+        "text": "Would other firms have competed if the solicitation had described the modified contract?",
+        "correct": true,
+        "why": "The competitive-impact test asks whether the change would have drawn a materially different field of offerors."
+      },
+      {
+        "text": "Does the modification raise the price by less than ten percent of the original award value?",
+        "correct": false,
+        "why": "There is no fixed percentage test; cost change is one indicator considered with the nature of the work, not a bright line."
+      },
+      {
+        "text": "Has the contractor agreed in writing to the modification and waived any claim for more money?",
+        "correct": false,
+        "why": "Contractor agreement, with or without a waiver, makes a modification bilateral; it does not make an out-of-scope change lawful."
+      },
+      {
+        "text": "Is the contract still within its original period of performance and its original ceiling price?",
+        "correct": false,
+        "why": "Period of performance and price are factors to analyze, but staying inside them does not by itself keep a change in scope."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 43 and 52.243-1 through 52.243-7; RFO FAR 6 (competition consequences of an out-of-scope change)",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0159",
+    "stem": "Which of the following is an example of proposal information that may not be disclosed?",
+    "options": [
+      {
+        "text": "An offeror's indirect cost and direct labor rates.",
+        "correct": true,
+        "why": "Cost or pricing data, indirect costs, and direct labor rates are squarely within protected contractor bid or proposal information."
+      },
+      {
+        "text": "The name of the agency issuing the solicitation.",
+        "correct": false,
+        "why": "The issuing agency is public information published with the solicitation."
+      },
+      {
+        "text": "The evaluation factors stated in Section M of the solicitation.",
+        "correct": false,
+        "why": "Evaluation factors are disclosed to all offerors in the solicitation itself."
+      },
+      {
+        "text": "The total number of proposals received, after award has been announced.",
+        "correct": false,
+        "why": "The number of offerors received is routinely released in postaward notices and debriefings."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "RFO FAR 3.104 (procurement integrity); 41 U.S.C. chapter 21",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0160",
+    "stem": "After award you receive a letter from an unsuccessful offeror objecting to the award in general terms, without using the word \"protest.\" What do you do?",
+    "options": [
+      {
+        "text": "Send it to your legal advisor for an opinion on whether it is a protest and what to do next.",
+        "correct": true,
+        "why": "Whether an ambiguous letter is a protest is a legal determination with suspension and timeliness consequences, so legal reviews it."
+      },
+      {
+        "text": "File it in the contract file, since a protest must use the word \"protest\" to be valid.",
+        "correct": false,
+        "why": "No magic words are required; a letter can be a protest in substance, which is exactly why legal must review it."
+      },
+      {
+        "text": "Immediately suspend contract performance and notify GAO.",
+        "correct": false,
+        "why": "Suspension and GAO notification follow from a determination that a protest exists; you do not act before that determination."
+      },
+      {
+        "text": "Call the offeror and offer a second debriefing to resolve the concern informally.",
+        "correct": false,
+        "why": "An informal call does not address the legal status of the letter and can prejudice the record while a protest clock may be running."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "RFO FAR 33.104-3 (postaward agency protests); RFO FAR 33.105 (protests to GAO)",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0225",
+    "stem": "What is the DoD's regulatory framework governing grants and cooperative agreements?",
+    "options": [
+      {
+        "text": "The DoD Grant and Agreement Regulations (DoDGARs).",
+        "correct": true,
+        "why": "DoDGARs is DoD's implementing regulation for assistance instruments, codified in title 32 CFR."
+      },
+      {
+        "text": "The Federal Acquisition Regulation, Part 35.",
+        "correct": false,
+        "why": "The FAR governs procurement contracts; assistance instruments are outside the FAR."
+      },
+      {
+        "text": "The Defense Federal Acquisition Regulation Supplement, Part 235.",
+        "correct": false,
+        "why": "DFARS supplements the FAR for procurement, not for grants and cooperative agreements."
+      },
+      {
+        "text": "The Army Federal Acquisition Regulation Supplement, Part 5135.",
+        "correct": false,
+        "why": "AFARS is an acquisition supplement; the assistance framework is DoDGARs."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "DoDGARs, 32 CFR chapter I subchapter C; see also 2 CFR 200",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0227",
+    "stem": "Which of the following is an example of an assistance instrument rather than a procurement instrument?",
+    "options": [
+      {
+        "text": "A Technology Investment Agreement.",
+        "correct": true,
+        "why": "TIAs, along with grants, cooperative agreements, and partnership intermediary agreements, are assistance instruments."
+      },
+      {
+        "text": "A Blanket Purchase Agreement.",
+        "correct": false,
+        "why": "A BPA is a simplified procurement method for repetitive supply and service needs, not an assistance instrument."
+      },
+      {
+        "text": "An indefinite-delivery, indefinite-quantity contract.",
+        "correct": false,
+        "why": "An IDIQ acquires supplies or services for the Government's direct benefit, which makes it a procurement contract."
+      },
+      {
+        "text": "A purchase order issued under simplified acquisition procedures.",
+        "correct": false,
+        "why": "A purchase order is a procurement instrument; its principal purpose is acquisition, not public support or stimulation."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "31 U.S.C. 6303-6305; DoDGARs (32 CFR chapter I subchapter C)",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0230",
+    "stem": "For a follow-on production contract or transaction to be awarded to prototype participants without competitive procedures, what must be true?",
+    "options": [
+      {
+        "text": "The prototype parties were chosen competitively, and the participants successfully completed the prototype.",
+        "correct": true,
+        "why": "Both conditions must be met: competitive selection up front and successful completion of the prototype."
+      },
+      {
+        "text": "The prototype was completed on schedule and within the original cost estimate, as certified by the program manager.",
+        "correct": false,
+        "why": "Schedule and cost performance, certified or not, are not the statutory conditions; competitive selection and successful completion are."
+      },
+      {
+        "text": "The senior procurement executive approves a justification for other than full and open competition before the award.",
+        "correct": false,
+        "why": "CICA and its justification machinery do not apply; the statute itself authorizes the follow-on without further competition."
+      },
+      {
+        "text": "At least one third of the production cost is paid from non-Federal sources.",
+        "correct": false,
+        "why": "The cost-share option is one of the eligibility conditions for using prototype authority, not a condition for the follow-on award."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "10 U.S.C. 4022(f) (formerly 10 U.S.C. 2371b(f))",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0232",
+    "stem": "Which statement correctly describes how Federal statutes and regulations apply to Other Transactions?",
+    "options": [
+      {
+        "text": "Laws that apply only to procurement contracts, grants or cooperative agreements drop away, but other laws, such as fiscal and criminal law, still apply.",
+        "correct": true,
+        "why": "OTs are defined in the negative, so acquisition-specific law drops away while appropriations, security, export control, socio-economic, and criminal law still apply."
+      },
+      {
+        "text": "No Federal statutes apply, because an OT is a negotiated instrument outside the U.S. Code and is governed only by the terms the two parties agree and sign.",
+        "correct": false,
+        "why": "OTs are issued under statutory authority and remain subject to fiscal, criminal, security, and export control law, whatever the parties agree."
+      },
+      {
+        "text": "All FAR requirements apply unless the agreements officer writes a deviation and the senior procurement executive approves it.",
+        "correct": false,
+        "why": "The FAR does not apply to OTs at all, so no deviation is needed; any FAR-like term must be negotiated into the agreement."
+      },
+      {
+        "text": "Only the Contract Disputes Act and the Competition in Contracting Act apply.",
+        "correct": false,
+        "why": "Those are precisely the procurement statutes that do not apply to OTs."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "10 U.S.C. 4021 and 4022 (formerly 2371 and 2371b); DoD Other Transactions Guide",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0234",
+    "stem": "Which of the following, standing alone, satisfies the eligibility condition for using prototype Other Transaction authority?",
+    "options": [
+      {
+        "text": "A nontraditional defense contractor or nonprofit research institution plays a significant part in the project.",
+        "correct": true,
+        "why": "Significant participation by a nontraditional or nonprofit research institution is the first of the four alternative conditions."
+      },
+      {
+        "text": "The prototype project is valued below the simplified acquisition threshold, so no approval above the agreements officer is needed.",
+        "correct": false,
+        "why": "Dollar value is not one of the eligibility conditions; it only affects the approval level."
+      },
+      {
+        "text": "The requiring activity certifies in writing that no FAR-based contract type could work for this prototype project.",
+        "correct": false,
+        "why": "A requiring activity certification is not a statutory condition; the four alternatives are set by statute."
+      },
+      {
+        "text": "The senior procurement executive waives the Competition in Contracting Act in writing for the prototype project.",
+        "correct": false,
+        "why": "CICA does not apply to OTs, so there is nothing to waive; exceptional circumstances require a written SPE determination instead."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "10 U.S.C. 4022(d) (formerly 10 U.S.C. 2371b(d)); 15 U.S.C. 638",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0235",
+    "stem": "May costs a party incurred before an Other Transaction becomes effective be counted toward that party's contribution?",
+    "options": [
+      {
+        "text": "Yes, if incurred after negotiations began and an official finds in writing that they were incurred for the transaction and needed for its success.",
+        "correct": true,
+        "why": "The statute allows pre-effective-date costs to count only with that two-part written determination."
+      },
+      {
+        "text": "No, costs incurred before the effective date can never count toward a party's share.",
+        "correct": false,
+        "why": "The statute expressly permits them when the written determination is made."
+      },
+      {
+        "text": "Yes, automatically, because OT cost share is negotiated and not audited.",
+        "correct": false,
+        "why": "There is nothing automatic; the responsible official must determine and document both elements in writing."
+      },
+      {
+        "text": "Only if the costs were incurred before negotiations began, to show independent investment, and the agreements officer approves them in writing.",
+        "correct": false,
+        "why": "The statute reaches costs incurred after the beginning of negotiations, not before, whoever approves them."
+      }
+    ],
+    "difficulty": 3,
+    "cite": "10 U.S.C. 4022 (formerly 10 U.S.C. 2371b), cost-share provisions",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0260",
+    "stem": "Under ABG 75 procedures, how does \"Brand Name or Equal\" work?",
+    "options": [
+      {
+        "text": "The bidder must name and prove any \"or equal\" items; if it names none, it must deliver exactly what is specified.",
+        "correct": true,
+        "why": "The burden is on the bidder to name and prove equality, and silence binds the contractor to the specified brand."
+      },
+      {
+        "text": "The contracting officer must prove that the bidder's substitute is not equal before rejecting it, in writing to the bidder.",
+        "correct": false,
+        "why": "The proof of equality rests with the bidder, not the Government, however the rejection is written."
+      },
+      {
+        "text": "Any equivalent item may be substituted at any time during performance without notice.",
+        "correct": false,
+        "why": "Substitution must be identified and proven in the offer; it is not an open right during performance."
+      },
+      {
+        "text": "Brand name or equal is prohibited under ABG 75; only generic specifications may be used.",
+        "correct": false,
+        "why": "ABG 75 procedures recognize brand name or equal and set the rules for identifying and proving equal items."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "ABG 75 procedures (Germany); compare RFO FAR 11.204 / DFARS 211.204 (items peculiar to one manufacturer)",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0105",
+    "stem": "When are funds actually obligated under a Blanket Purchase Agreement?",
+    "options": [
+      {
+        "text": "When each call is issued, not when the BPA is set up.",
+        "correct": true,
+        "why": "A BPA is not a contract and obligates nothing by itself; the obligation arises when the individual call or order is placed."
+      },
+      {
+        "text": "When the BPA is established, for the full estimated value.",
+        "correct": false,
+        "why": "Establishing a BPA creates no obligation; treating it as one would misstate available funds."
+      },
+      {
+        "text": "When the supplier delivers and submits an invoice.",
+        "correct": false,
+        "why": "Delivery and invoicing trigger payment, but the obligation is recorded when the call is issued."
+      },
+      {
+        "text": "At the end of the fiscal year, based on actual calls placed.",
+        "correct": false,
+        "why": "Obligations are recorded as calls are issued; year-end reconciliation does not create the obligation."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "RFO FAR 12.201-1 (BPAs under simplified procedures for commercial products and services; the RFO moved commercial simplified procedures out of Part 13 into Part 12) and RFO FAR 13 (simplified procedures for noncommercial acquisitions); 31 U.S.C. 1501",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0163",
+    "stem": "What is the principal-purpose test that separates an assistance instrument from a procurement contract?",
+    "options": [
+      {
+        "text": "Assistance transfers value to support or stimulate a public purpose authorized by law; a contract buys property or services for the Government's direct benefit or use.",
+        "correct": true,
+        "why": "Principal purpose, support or stimulation versus direct Government benefit, is the statutory dividing line."
+      },
+      {
+        "text": "Assistance is used below the simplified acquisition threshold, and contracts are used above it, whatever the purpose of the award or the type of recipient.",
+        "correct": false,
+        "why": "Dollar value has nothing to do with choosing between assistance and acquisition; the purpose of the award decides."
+      },
+      {
+        "text": "Assistance is awarded to nonprofits; contracts are awarded to for-profit firms.",
+        "correct": false,
+        "why": "Recipient type does not control; a for-profit can receive assistance and a nonprofit can hold a contract."
+      },
+      {
+        "text": "Assistance is noncompetitive; contracts must be competed.",
+        "correct": false,
+        "why": "DoD policy maximizes competition in assistance awards too, so competition does not distinguish the instruments."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "31 U.S.C. 6303 (contracts), 6304 (grants), 6305 (cooperative agreements)",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0164",
+    "stem": "How must the availability of an assistance vehicle be announced?",
+    "options": [
+      {
+        "text": "Electronically: a synopsis at grants.gov linked to the full announcement on the Internet.",
+        "correct": true,
+        "why": "Notices must be electronic, and the grants.gov posting with a linked full announcement is the required channel."
+      },
+      {
+        "text": "By publication of a Notice of Funding Availability in the Federal Register, with no other posting.",
+        "correct": false,
+        "why": "A Notice of Funding Availability in the Federal Register is an additional optional format, not the required posting."
+      },
+      {
+        "text": "By direct solicitation of known principal investigators.",
+        "correct": false,
+        "why": "Direct approach to a recipient happens only where a statute directs it; it is not the general announcement method."
+      },
+      {
+        "text": "By posting in professional journals and their websites, which satisfies the electronic requirement.",
+        "correct": false,
+        "why": "Journal advertising, in print or online, is supplemental outreach and does not replace the required electronic posting."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "DoDGARs (32 CFR chapter I subchapter C); 2 CFR 200 announcement requirements; grants.gov",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0165",
+    "stem": "Where is DoD assistance award information reported?",
+    "options": [
+      {
+        "text": "To the Defense Assistance Award Data System (DAADS).",
+        "correct": true,
+        "why": "DAADS is DoD's assistance reporting system and feeds statutory Federal reporting and management oversight."
+      },
+      {
+        "text": "To the Federal Procurement Data System, the same as contract actions.",
+        "correct": false,
+        "why": "FPDS-type reporting covers procurement actions; assistance awards report through DAADS."
+      },
+      {
+        "text": "To the Contractor Performance Assessment Reporting System.",
+        "correct": false,
+        "why": "CPARS records contractor past performance on contracts, not assistance award data."
+      },
+      {
+        "text": "Nowhere centrally; each Grants Officer retains the data in the award file.",
+        "correct": false,
+        "why": "Central reporting is required to meet statutory Federal reporting obligations."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "DoDGARs Part 21.535 (Defense Assistance Award Data System)",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0166",
+    "stem": "Who may terminate an assistance award, and on what basis?",
+    "options": [
+      {
+        "text": "The Grants Officer for material noncompliance, both parties by agreement, or the recipient by written notice with reasons.",
+        "correct": true,
+        "why": "Those are the three recognized termination routes for an assistance award."
+      },
+      {
+        "text": "Only the Grants Officer, and only for the convenience of the Government.",
+        "correct": false,
+        "why": "Termination for convenience is a procurement concept; assistance terminations include mutual agreement and recipient-initiated notice."
+      },
+      {
+        "text": "Only the Head of the Contracting Activity, after a Grant Appeal Authority decision on the recipient's compliance.",
+        "correct": false,
+        "why": "The HCA sits as the appeal authority on claims; it is not the termination official."
+      },
+      {
+        "text": "Only the recipient, since assistance is voluntary participation.",
+        "correct": false,
+        "why": "The Grants Officer can terminate for material failure to comply, so the recipient is not the only party who can end the award."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "DoDGARs (32 CFR chapter I subchapter C); 2 CFR 200 termination provisions",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0167",
+    "stem": "Should a Grants Officer seek competition in awarding grants and cooperative agreements?",
+    "options": [
+      {
+        "text": "Yes; DoD policy maximizes competition, and university research awards must use merit-based competitive procedures by statute unless exempt.",
+        "correct": true,
+        "why": "Competition is DoD policy generally and a statutory requirement for university research and research facility awards absent an exemption."
+      },
+      {
+        "text": "No; assistance awards are inherently noncompetitive because they support a public purpose, so the Grants Officer may pick the best-known recipient.",
+        "correct": false,
+        "why": "Supporting a public purpose does not excuse competition; DoD policy is to maximize it."
+      },
+      {
+        "text": "Only when the award exceeds the simplified acquisition threshold, as with procurement contracts, unless the program office waives competition.",
+        "correct": false,
+        "why": "No dollar threshold governs, and a program office cannot waive it; the policy and the statutory merit-based requirement apply regardless."
+      },
+      {
+        "text": "Only when more than one application is received.",
+        "correct": false,
+        "why": "Competition is sought up front through the announcement, not determined after applications arrive."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "DoDGARs (32 CFR chapter I subchapter C); statutory merit-based competition requirement for institutions of higher education",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0169",
+    "stem": "A State agency holds a cooperative agreement. How does the Grants Officer obtain an audit?",
+    "options": [
+      {
+        "text": "The State gets a single audit from an independent auditor under government auditing standards, and the Federal Government relies on it.",
+        "correct": true,
+        "why": "The Single Audit Act places the audit duty on the recipient and directs Federal reliance on it."
+      },
+      {
+        "text": "The Grants Officer requests a DCAA audit of the State agency's incurred costs, the same way as for a contractor holding a cost-type contract.",
+        "correct": false,
+        "why": "DCAA audits contractors under procurement authority; the Single Audit Act route governs State recipients."
+      },
+      {
+        "text": "The Grants Officer performs the audit personally as part of post-award oversight, using the recipient's financial reports.",
+        "correct": false,
+        "why": "Grants Officers oversee and review; they do not conduct financial audits."
+      },
+      {
+        "text": "No audit is obtained, because States are exempt from Federal audit requirements.",
+        "correct": false,
+        "why": "States are not exempt; they are responsible for arranging the single audit."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "Single Audit Act; 2 CFR 200 subpart F",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0170",
+    "stem": "In the OMB circular framework, which circular set the cost principles for State, local and Indian tribal government recipients before those principles were consolidated into 2 CFR 200 subpart E?",
+    "options": [
+      {
+        "text": "OMB Circular A-87.",
+        "correct": true,
+        "why": "A-87 set cost principles for State, local and Indian tribal governments; A-21 covered educational institutions and A-122 nonprofits. All three were consolidated into 2 CFR 200 subpart E, so answer the circular and then say where the principles live today."
+      },
+      {
+        "text": "OMB Circular A-21.",
+        "correct": false,
+        "why": "A-21 establishes cost principles for colleges and universities, not State and local governments."
+      },
+      {
+        "text": "OMB Circular A-122.",
+        "correct": false,
+        "why": "A-122 applies to nonprofit organizations."
+      },
+      {
+        "text": "OMB Circular A-76.",
+        "correct": false,
+        "why": "A-76 addresses commercial activities and public-private competition, not allowable costs on assistance awards."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "OMB Circular A-87 (State, local, tribal); A-21 (educational institutions); A-122 (nonprofits); see also 2 CFR 200 subpart E",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0171",
+    "stem": "A recipient submits a claim that meets DoDGARs requirements. What must the Grants Officer do?",
+    "options": [
+      {
+        "text": "Decide in writing within 60 days, or give the date the decision will issue, citing the data relied on and the Grant Appeal Authority.",
+        "correct": true,
+        "why": "The 60-day written decision, the data relied on, and identification of the appeal authority are the required elements."
+      },
+      {
+        "text": "Issue a written decision within 60 days, citing the data relied on, and refer any appeal to the Armed Services Board of Contract Appeals.",
+        "correct": false,
+        "why": "The Contract Disputes Act boards handle procurement claims; an assistance appeal goes to the designated Grant Appeal Authority."
+      },
+      {
+        "text": "Forward the claim to the servicing legal office, which issues the decision.",
+        "correct": false,
+        "why": "Legal advises, but the Grants Officer issues the written decision."
+      },
+      {
+        "text": "Take no action unless the recipient first certifies the claim over $100,000.",
+        "correct": false,
+        "why": "Claim certification thresholds are a Contract Disputes Act feature, not a DoDGARs assistance requirement."
+      }
+    ],
+    "difficulty": 3,
+    "cite": "DoDGARs claim procedures; AFARS 5133.9001 (USACE Grant Appeal Authority is the HCA)",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0172",
+    "stem": "Which of the following is one of the standards a recipient must meet to be qualified for a grant or cooperative agreement?",
+    "options": [
+      {
+        "text": "A satisfactory record of integrity and business ethics.",
+        "correct": true,
+        "why": "Integrity and business ethics sit alongside management capability, resources, past execution record, and legal eligibility."
+      },
+      {
+        "text": "Registration as a small business concern under the applicable NAICS code.",
+        "correct": false,
+        "why": "Small business size status is a procurement socioeconomic concept, not a recipient qualification standard."
+      },
+      {
+        "text": "An approved accounting system audited by DCAA.",
+        "correct": false,
+        "why": "The standard is adequate financial and technical resources and management capability, not a DCAA-approved system."
+      },
+      {
+        "text": "Prior receipt of at least one Federal award.",
+        "correct": false,
+        "why": "A prior award record is evaluated only if the applicant is a prior recipient; it is not a prerequisite."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "DoDGARs recipient qualification standards (see 32 CFR 22.420(c)); 2 CFR 200.206",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0173",
+    "stem": "Must a DoD Component have statutory authority to make an assistance award?",
+    "options": [
+      {
+        "text": "Yes; assistance needs authorizing legislation, unlike a procurement contract, which agencies may use on inherent authority.",
+        "correct": true,
+        "why": "Assistance requires an authorizing statute; acquisition authority is inherent."
+      },
+      {
+        "text": "No; an appropriation alone is enough authority to make a grant, as long as the grant's purpose matches the appropriation act.",
+        "correct": false,
+        "why": "An appropriation provides funds, even for a matching purpose; the program still needs authorizing legislation to use an assistance instrument."
+      },
+      {
+        "text": "Only for grants; cooperative agreements may be awarded under general agency authority because the Government stays substantially involved.",
+        "correct": false,
+        "why": "Both instruments are assistance and both require authorizing legislation, whatever the Government's involvement."
+      },
+      {
+        "text": "No; DoDGARs itself supplies the authority for any DoD assistance award, because it is a regulation codified in title 32 of the CFR.",
+        "correct": false,
+        "why": "DoDGARs implements how assistance is awarded; a regulation in the CFR does not create the underlying program authority."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "31 U.S.C. 6304-6305; DoDGARs (32 CFR chapter I subchapter C)",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0174",
+    "stem": "Reviewing a local government's expenditures under a cooperative agreement, you find funds were used to buy staff tickets to a professional football game. What do you do?",
+    "options": [
+      {
+        "text": "Disallow it as unallowable entertainment, and consider an added audit or high-risk status with closer financial reporting.",
+        "correct": true,
+        "why": "Entertainment is unallowable under the applicable cost principles, and the finding justifies further audit or risk-based conditions."
+      },
+      {
+        "text": "Allow the cost if the recipient documents that the event was a team morale and retention activity approved by its director.",
+        "correct": false,
+        "why": "Entertainment costs such as sporting event tickets are unallowable regardless of the morale rationale or who approved them."
+      },
+      {
+        "text": "Terminate the award immediately for material failure to comply.",
+        "correct": false,
+        "why": "Termination is an enforcement option of last resort; the first step is disallowing the cost and adjusting oversight."
+      },
+      {
+        "text": "Refer the matter to the Grant Appeal Authority for a binding decision on allowability before taking any action on it yourself.",
+        "correct": false,
+        "why": "The Grants Officer makes the allowability determination; the appeal authority only hears an appeal from that decision."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "OMB Circular A-87 (State, local, tribal cost principles); 2 CFR 200 subpart E",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0175",
+    "stem": "What are the three types of Other Transactions?",
+    "options": [
+      {
+        "text": "Research, Prototype, and follow-on Production.",
+        "correct": true,
+        "why": "Research OTs, prototype project OTs, and noncompetitive follow-on production OTs are the three recognized types."
+      },
+      {
+        "text": "Research, Cooperative Research and Development Agreements, and Prototype.",
+        "correct": false,
+        "why": "A CRADA is a separate instrument; an OT is by definition not a CRADA."
+      },
+      {
+        "text": "Prototype, Production, and Technology Investment Agreement.",
+        "correct": false,
+        "why": "A TIA is an assistance instrument under DoDGARs, not one of the three OT types."
+      },
+      {
+        "text": "Basic research, applied research, and commercial solutions openings.",
+        "correct": false,
+        "why": "A commercial solutions opening is a solicitation vehicle, not a type of Other Transaction."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "10 U.S.C. 4021 (research, formerly 2371); 10 U.S.C. 4022 (prototype, formerly 2371b); 10 U.S.C. 4022(f) (follow-on production)",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0177",
+    "stem": "Can a Grants Officer execute an Other Transaction the way they execute a grant or cooperative agreement?",
+    "options": [
+      {
+        "text": "No; an OT is not a contract, grant, cooperative agreement or CRADA, and a warranted Agreements Officer signs it.",
+        "correct": true,
+        "why": "OTs are defined in the negative and require an Agreements Officer with the appropriate warrant."
+      },
+      {
+        "text": "Yes; grants officer authority covers all non-FAR instruments.",
+        "correct": false,
+        "why": "Grants Officer authority reaches assistance instruments, not Other Transactions."
+      },
+      {
+        "text": "Yes, but only for research OTs, since those most resemble assistance and are awarded to universities.",
+        "correct": false,
+        "why": "Even research OTs are Other Transactions and require Agreements Officer authority, whoever the recipient is."
+      },
+      {
+        "text": "No; only a warranted contracting officer may sign an OT, using the same warrant that covers FAR contracts.",
+        "correct": false,
+        "why": "A KO warrant is not the instrument of OT authority; the Agreements Officer warrant is."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "10 U.S.C. 4021 and 4022 (formerly 2371 and 2371b); DoD Other Transactions Guide; Army Warranting Program Policy v12 (MAR 2026)",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0190",
+    "stem": "What makes an entity a nontraditional defense contractor?",
+    "options": [
+      {
+        "text": "For at least the year before the solicitation, it has held no DoD contract or subcontract under full CAS coverage.",
+        "correct": true,
+        "why": "The statutory test is the absence of a full-CAS-covered DoD contract or subcontract in the preceding year."
+      },
+      {
+        "text": "It has never held a prime contract or a subcontract of any kind with the Department of Defense or any of its components.",
+        "correct": false,
+        "why": "Prior DoD work, prime or sub, is permitted; what matters is no full-CAS-covered work in the preceding one-year period."
+      },
+      {
+        "text": "It qualifies as a small business under the applicable size standard.",
+        "correct": false,
+        "why": "Small business status is a separate category; a large firm can be nontraditional and a small firm may not be."
+      },
+      {
+        "text": "It is a commercial firm that sells only to the commercial marketplace and has never accepted Government contract terms.",
+        "correct": false,
+        "why": "The definition does not require exclusively commercial sales or a clean record of Government terms, only the absence of full-CAS-covered DoD work in the past year."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "10 U.S.C. 3014 / 4022 nontraditional defense contractor definition (Section 815, FY2016 NDAA); 41 U.S.C. 1502 (Cost Accounting Standards)",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0193",
+    "stem": "Which of these does NOT apply to an Other Transaction Agreement?",
+    "options": [
+      {
+        "text": "The Truth in Negotiations Act and the Contract Disputes Act.",
+        "correct": true,
+        "why": "Procurement-specific statutes such as TINA, the CDA, CICA, Bayh-Dole and the procurement protest system do not apply to OTs."
+      },
+      {
+        "text": "Federal fiscal law, including the purpose and bona fide need rules.",
+        "correct": false,
+        "why": "Fiscal law applies fully to OTs; appropriations discipline is never waived."
+      },
+      {
+        "text": "Criminal law on false claims and false statements.",
+        "correct": false,
+        "why": "Criminal statutes apply to OTs like any other Government dealing."
+      },
+      {
+        "text": "Export control and limited distribution restrictions.",
+        "correct": false,
+        "why": "Export control and distribution restrictions apply because they are not acquisition-process statutes."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "DoD Other Transactions Guide; 10 U.S.C. 4021 and 4022 (formerly 2371 and 2371b)",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0181",
+    "stem": "Is market research required before awarding an Other Transaction?",
+    "options": [
+      {
+        "text": "Yes; the D&F supporting the OT summarizes the market research, including outreach to nontraditional defense contractors.",
+        "correct": true,
+        "why": "The D&F must capture the market research and the outreach strategy aimed at nontraditional participation."
+      },
+      {
+        "text": "No; FAR Part 10 does not apply to OTs, so no market research is performed and the D&F covers only the prototype's purpose.",
+        "correct": false,
+        "why": "FAR Part 10 does not apply, but market research is still required and documented in the D&F."
+      },
+      {
+        "text": "Only for prototype OTs above the senior procurement executive approval threshold.",
+        "correct": false,
+        "why": "The requirement is not tied to a dollar tier."
+      },
+      {
+        "text": "Only if a consortium is not being used, because the consortium manager does the outreach.",
+        "correct": false,
+        "why": "Consortium use does not excuse market research, whoever does the outreach; the D&F still captures it."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "DoD Other Transactions Guide; Determination and Findings in support of an OTA",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0198",
+    "stem": "How are intellectual property rights handled on an OT prototype project?",
+    "options": [
+      {
+        "text": "Bayh-Dole does not apply; IP rights are negotiated for each project by the agreements officer, requiring activity and IP counsel.",
+        "correct": true,
+        "why": "IP terms are negotiable on each OT, which is why IP counsel involvement is essential to support follow-on development."
+      },
+      {
+        "text": "The DFARS data rights clauses apply by operation of the Christian doctrine, as they would in any FAR-based research or prototype contract.",
+        "correct": false,
+        "why": "The Christian doctrine reads clauses into FAR contracts; it does not reach Other Transactions, whatever the project."
+      },
+      {
+        "text": "The Government always receives unlimited rights in all technical data delivered, since it funds most of the prototype project work.",
+        "correct": false,
+        "why": "Nothing is automatic in an OT, even when the Government funds most of the work; unlimited rights would have to be negotiated and paid for."
+      },
+      {
+        "text": "The contractor always retains all rights, and the Government receives none.",
+        "correct": false,
+        "why": "Rights are whatever the parties negotiate, which can and often should include rights supporting follow-on production."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "DoD Other Transactions Guide (intellectual property); 10 U.S.C. 4022 (formerly 2371b)",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0203",
+    "stem": "In the order of precedence governing grants and cooperative agreements, which source controls over the others?",
+    "options": [
+      {
+        "text": "Federal statutes and law.",
+        "correct": true,
+        "why": "Law trumps all, followed by Federal regulations, executive orders and circulars, then agency regulation, then standard and award-specific terms."
+      },
+      {
+        "text": "Award-specific terms and conditions negotiated with the recipient.",
+        "correct": false,
+        "why": "Award-specific terms sit near the bottom of the order and cannot override statute or regulation."
+      },
+      {
+        "text": "Agency regulation such as DoDGARs.",
+        "correct": false,
+        "why": "Agency regulation ranks below Federal statutes and Federal regulations, executive orders and circulars."
+      },
+      {
+        "text": "Standard terms and conditions published in the award package.",
+        "correct": false,
+        "why": "Standard terms rank below law, Federal regulation, and agency regulation."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "DoDGARs (32 CFR chapter I subchapter C); 2 CFR 200",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0204",
+    "stem": "Under 31 U.S.C. 6304 and 6305, what distinguishes a cooperative agreement from a grant?",
+    "options": [
+      {
+        "text": "Both transfer value for a public purpose of support or stimulation, but only a cooperative agreement expects substantial agency involvement.",
+        "correct": true,
+        "why": "The principal purpose is identical; substantial involvement is the sole statutory difference."
+      },
+      {
+        "text": "A grant transfers money while a cooperative agreement transfers property or services, such as equipment on loan.",
+        "correct": false,
+        "why": "Both transfer a thing of value; the form of the value is not the distinction."
+      },
+      {
+        "text": "A grant is for state and local governments, while a cooperative agreement is for universities and nonprofit research groups.",
+        "correct": false,
+        "why": "Recipient type does not determine the instrument; substantial involvement does."
+      },
+      {
+        "text": "A cooperative agreement acquires property or services for the Government's direct use.",
+        "correct": false,
+        "why": "That is the definition of a procurement contract under 31 U.S.C. 6303."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "31 U.S.C. 6304 (grants); 31 U.S.C. 6305 (cooperative agreements)",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0209",
+    "stem": "How does the authority of the Grants Officer's Representative compare to that of the Grants Officer?",
+    "options": [
+      {
+        "text": "The GOR advises on technical matters; only the Grants Officer issues or changes the award and approves exceptions.",
+        "correct": true,
+        "why": "The GOR advises on technical matters and performance; decision authority over the award stays with the Grants Officer."
+      },
+      {
+        "text": "The GOR may approve extensions to report due dates as long as no funds change and the Grants Officer is copied on it.",
+        "correct": false,
+        "why": "Approving exceptions such as extended report submission is expressly a Grants Officer authority, copied or not."
+      },
+      {
+        "text": "The GOR may modify the statement of work when technical direction is needed, if the change stays within the budget.",
+        "correct": false,
+        "why": "Any change to the award, including scope, requires a Grants Officer modification, even within budget."
+      },
+      {
+        "text": "The GOR and the Grants Officer share equal authority over the award, each one within their own part of the agreement.",
+        "correct": false,
+        "why": "The Grants Officer holds ultimate authority for decisions related to the award."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "DoDGARs (32 CFR chapter I subchapter C); 2 CFR 200 post-award administration",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0211",
+    "stem": "You are helping a Grants Specialist apply the pre-award risk review under 2 CFR 200.206. Which source do you check for prior terminations and negative integrity information about the applicant?",
+    "options": [
+      {
+        "text": "FAPIIS, together with suspension and debarment status.",
+        "correct": true,
+        "why": "FAPIIS carries termination history and other integrity information, and exclusion status restricts awards and subawards."
+      },
+      {
+        "text": "CPARS narrative ratings on the applicant's prior contracts.",
+        "correct": false,
+        "why": "CPARS covers contractor performance on procurement contracts, not the assistance risk review sources named in 2 CFR 200.206."
+      },
+      {
+        "text": "The Defense Assistance Award Data System.",
+        "correct": false,
+        "why": "DAADS is the reporting system for award data, not a source of integrity or termination findings."
+      },
+      {
+        "text": "The recipient's own certification in its application, which is conclusive.",
+        "correct": false,
+        "why": "Self-certification does not replace the agency's independent review of available information."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "2 CFR 200.206 (Federal awarding agency review of risk posed by applicants); FAPIIS",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0256",
+    "stem": "What is the Logistics Cost Sharing (LCS) Program?",
+    "options": [
+      {
+        "text": "Part of the Special Measures Agreement, the U.S.-ROK cost-sharing deal, that partly offsets USFK logistics costs.",
+        "correct": true,
+        "why": "LCS sits inside the SMA and offsets logistics costs such as movement of personnel and assets, repair and maintenance, and non-tactical vehicle purchases."
+      },
+      {
+        "text": "A U.S. appropriation that reimburses the ROK for base construction and relocation costs on the peninsula.",
+        "correct": false,
+        "why": "LCS is ROK-provided support under the SMA, not a U.S. appropriation flowing to the ROK."
+      },
+      {
+        "text": "A NATO-style host nation support agreement administered by the Defense Logistics Agency for all U.S. forces in Asia.",
+        "correct": false,
+        "why": "LCS is a Korea-specific SMA program managed by USFK J4, not a DLA program for the region."
+      },
+      {
+        "text": "A working capital fund the 411th CSB uses to finance local purchases in Korea.",
+        "correct": false,
+        "why": "LCS funds are held by ROK MND, not in a U.S. working capital fund."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "U.S.-ROK Special Measures Agreement; USFK LCS Program (confirm current program guidance with C&P)",
+    "domain": "Korea, LCS & SOFA"
+  },
+  {
+    "qid": "Q0257",
+    "stem": "Who ultimately approves and awards an LCS contract, and what is the 411th CSB contracting officer's role?",
+    "options": [
+      {
+        "text": "ROK MND approves and awards the contract; the 411th KO makes a recommendation for award through USFK J4.",
+        "correct": true,
+        "why": "LCS funds stay with ROK MND, USFK J4 manages the program, and the KO recommends rather than awards."
+      },
+      {
+        "text": "The 411th CSB contracting officer awards the contract and ROK MND reimburses the United States.",
+        "correct": false,
+        "why": "Funds are never transferred to the U.S., and the KO does not award LCS contracts."
+      },
+      {
+        "text": "USFK J4 awards the contract and the 411th KO administers it.",
+        "correct": false,
+        "why": "J4 manages the program, but the approval and award authority rests with ROK MND."
+      },
+      {
+        "text": "The Head of the Contracting Activity awards it after ROK MND concurrence.",
+        "correct": false,
+        "why": "The HCA has no award role in LCS; ROK MND approves and awards."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "USFK LCS Program under the Special Measures Agreement; 411th CSB LCS workflow (confirm current procedures with C&P)",
+    "domain": "Korea, LCS & SOFA"
+  },
+  {
+    "qid": "Q0254",
+    "stem": "Which of the following is a limitation on the use of LCS funds?",
+    "options": [
+      {
+        "text": "The program is limited to local Korean businesses, and Korean material and labor must be used.",
+        "correct": true,
+        "why": "LCS competition is limited to Korean firms and the program requires Korean material and labor, with offshore or local material documented to J4."
+      },
+      {
+        "text": "LCS contracts may only be awarded below the simplified acquisition threshold, with larger needs paid from O&M.",
+        "correct": false,
+        "why": "There is no such ceiling; LCS actions can be large and require the corresponding approvals and source selection planning."
+      },
+      {
+        "text": "LCS contracts must be competed among U.S. and Korean firms on an equal basis, as with any SOFA procurement.",
+        "correct": false,
+        "why": "LCS competition is limited to Korean contractors, which is why it cannot be mixed with full and open O&M competition."
+      },
+      {
+        "text": "LCS funds expire at the end of the U.S. fiscal year like O&M.",
+        "correct": false,
+        "why": "LCS funds are ROK funds held by ROK MND, not U.S. annual appropriations."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "USFK LCS Program guidance; J4 offshore/local material memo requirement (confirm current guidance with C&P)",
+    "domain": "Korea, LCS & SOFA"
+  },
+  {
+    "qid": "Q0255",
+    "stem": "Can a single solicitation be funded with both O&M and LCS funds?",
+    "options": [
+      {
+        "text": "No; O&M needs full and open competition while LCS is limited to Korean firms, and one solicitation cannot carry both rules.",
+        "correct": true,
+        "why": "The two funding streams impose incompatible competition rules, so they cannot share a solicitation."
+      },
+      {
+        "text": "Yes, if the contracting officer documents a justification for other than full and open competition for the O&M part.",
+        "correct": false,
+        "why": "A justification does not reconcile two contradictory competition requirements in one solicitation."
+      },
+      {
+        "text": "Yes, as long as separate contract line items are used for each fund type.",
+        "correct": false,
+        "why": "Separate CLINs do not fix the competition conflict, which attaches to the solicitation as a whole."
+      },
+      {
+        "text": "Yes, with ROK MND approval, since MND awards the LCS portion.",
+        "correct": false,
+        "why": "MND approval does not change the competition rules that govern the U.S. solicitation."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 6 (competition requirements); USFK LCS Program guidance (confirm current procedures with C&P)",
+    "domain": "Korea, LCS & SOFA"
+  },
+  {
+    "qid": "Q0258",
+    "stem": "In the SOFA Invited Contractor program, who is responsible for each step of obtaining IC status?",
+    "options": [
+      {
+        "text": "The contracting officer gets the contract's SOFA designation from USFK/FKAQ; the requiring activity gets each individual's designation.",
+        "correct": true,
+        "why": "It is a two-step process with the KO handling the contract-level designation and the RA handling the individual designation."
+      },
+      {
+        "text": "The contractor applies directly to the ROK government for both designations.",
+        "correct": false,
+        "why": "The request for contract SOFA designation goes from the contracting officer to USFK/FKAQ."
+      },
+      {
+        "text": "The requiring activity obtains both the contract designation and the individual designations from USFK/FKAQ, since it owns the requirement.",
+        "correct": false,
+        "why": "Contract-level designation is the contracting officer's responsibility, even though the requiring activity owns the requirement."
+      },
+      {
+        "text": "The contracting officer obtains both designations from USFK/FKAQ as part of contract administration, after the contractor arrives in Korea.",
+        "correct": false,
+        "why": "Individual contractor designation is the requiring activity's step, whenever the contractor arrives."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "SOFA Article XV; USFKI 4901.01; USFK/FKAQ Invited Contractor program (confirm current procedures with C&P)",
+    "domain": "Korea, LCS & SOFA"
+  },
+  {
+    "qid": "Q0259",
+    "stem": "A customer brings you a procurement package for a new ABG3 action. Which set of documents would you tell them is vital to include?",
+    "options": [
+      {
+        "text": "PR&C, DA Form 4283, Service Contract Approval, a description of the action, the IGE, the repair to replacement ratio, and a secondary services justification.",
+        "correct": true,
+        "why": "These are the package elements the customer must supply for a new ABG3 action."
+      },
+      {
+        "text": "Only a PR&C and a statement of work; the contracting office then develops the estimate, the approvals and every justification it needs from those two documents alone.",
+        "correct": false,
+        "why": "The requiring activity owns the estimate, approvals, and justifications, not just the funding and work description."
+      },
+      {
+        "text": "A PR&C, a DD Form 254, and a small business coordination record.",
+        "correct": false,
+        "why": "A DD Form 254 covers classified performance and small business coordination is a different process; neither is the ABG3 package core."
+      },
+      {
+        "text": "A DA Form 4283 and a sole source justification signed by the requiring activity, since ABG actions are noncompetitive by design.",
+        "correct": false,
+        "why": "ABG actions are not inherently noncompetitive, and the package needs the IGE, approvals, and ratio and services justifications as well."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "ABG 75 procedures (Germany); 409th CSB local ABG package requirements (confirm current requirements locally)",
+    "domain": "Germany ABG-75"
+  }
+]

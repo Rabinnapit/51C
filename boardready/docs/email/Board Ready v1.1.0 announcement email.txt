@@ -1,0 +1,29 @@
+Subject: Free warrant board study app: Board Ready (v1.1, feedback wanted)
+
+Team,
+
+BLUF: Board Ready is a free study app for anyone preparing for a warrant board or working toward a higher warrant. It is one file (attached) that opens in Edge or Chrome. No install, no account, no internet needed.
+
+Why I built it: I had a hard time studying from the Q&A spreadsheet. Hundreds of rows, no way to focus on my warrant class, and no way to see what I actually knew. I wished there were a better organized way to learn, so I built one. I designed it the way paid study apps are built, with the features they normally save for premium plans, and I am giving it away free.
+
+What is inside:
+- More than 300 board questions across 16 topics. Set your warrant class (I to IV) and your organization once, and every page shows only what applies to you. Every answer says whether it is official or an AI draft you should double-check.
+- Flashcards that bring back what you miss, a quiz that explains why each answer choice is right or wrong, and a timed mock board you score against the board rubric.
+- Board scenarios, including Korea LCS and SOFA situations, plus branching "You're the KO" cases.
+- The Arcade: eight games that make the material stick, starting with Threshold Run (race into the lane of the warrant class that can sign the action) and Deadline Dash (protest and claim clocks). Higher levels bring harder questions, never faster play.
+- A warrant process guide (411th steps, packet checklist, VCE-Warrants how-to), a regulation explorer with the FAR Overhaul old-to-new citations and dollar thresholds, study primers, a glossary and an offline mentor.
+- A readiness dashboard with a study plan, and notes you can save into the file itself.
+
+To start: save the attachment to Documents or OneDrive and open it from there. Take the short tour, set your warrant class, then do the three steps the dashboard gives you.
+
+New in this version: I asked people who had never seen the app to walk through it and tell me what felt overwhelming, then cut what they named. Answers now stay hidden until you ask for them, so you recall first and check second. The dashboard opens with your next three steps instead of a page of empty scores. The quiz, flashcards and mock board start with one button and keep their settings out of the way. It reads better on a phone. Nothing was removed from the question bank.
+
+Good to know: this is a training aid, not official guidance, so confirm citations, thresholds and local procedures with C&P. Your progress and notes stay on your computer, and this version has no AI connector.
+
+There is still a lot to improve, so your feedback matters. Tell me what is wrong, missing or confusing: reply to this email, or use the email link on the app's About page.
+
+If you already have the earlier version, just open this one instead. Your progress and notes carry over.
+
+V/r,
+SFC Rabin Napit
+rabin.napit.mil@army.mil

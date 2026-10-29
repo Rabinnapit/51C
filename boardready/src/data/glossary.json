@@ -1,0 +1,1570 @@
+[
+ {
+  "term": "411th CSB",
+  "expansion": "411th Contracting Support Brigade",
+  "definition": "The ACC brigade providing contracting support to Eighth Army and USFK across the Republic of Korea. Its KOs award appropriated-fund contracts and recommend award on ROK-funded LCS contracts, and its CORB runs on the second Wednesday of each month.",
+  "domain": "Korea, LCS & SOFA",
+  "cite": "411th CSB Warrant Process Workflow (Jul 2026)"
+ },
+ {
+  "term": "8(a) Program",
+  "expansion": "8(a) Business Development Program",
+  "definition": "SBA's program for small disadvantaged businesses under which the Government may award sole source (up to $8.5 million for manufacturing NAICS and $5.5 million for others) or compete among 8(a) firms, with SBA as the nominal prime through a partnership agreement. Above those thresholds a competitive 8(a) award is generally required.",
+  "domain": "Small Business & Socioeconomic",
+  "cite": "RFO FAR 19.108 (was 19.8); 13 CFR 124; 15 U.S.C. 637(a)"
+ },
+ {
+  "term": "ABG-75",
+  "expansion": "Auftragsbautengrundsaetze 1975 (German indirect construction procedures)",
+  "definition": "The 1975 U.S.-German agreement under which German construction authorities (Bauamt) design and build for U.S. forces using German procedures and contractors, with the U.S. paying fees. Advantages: funds can be obligated without a completed design, host-nation fees are lower than direct contracting, and the Bauamt knows German norms; disadvantages include less control, late notification, and invoice timing.",
+  "domain": "Germany ABG-75",
+  "cite": "ABG-75; 409th CSB question bank"
+ },
+ {
+  "term": "ABG3 / ABG5",
+  "expansion": "ABG-75 forms: ABG3 request and ABG5/ABG5a change documents",
+  "definition": "The ABG3 is the project request that opens an ABG-75 action; the package should include a PR&C, DA Form 4283, the service contract approval, the ABG action request describing design and construction, and the IGE. An ABG5a is initiated by the Government to notify the Bauamt of a requirement or administrative change; an ABG5 comes from the Bauamt with proposed changes and justification for DPW technical review and acceptance.",
+  "domain": "Germany ABG-75",
+  "cite": "ABG-75; 409th CSB question bank"
+ },
+ {
+  "term": "AbilityOne",
+  "expansion": "AbilityOne Program",
+  "definition": "A mandatory source for supplies and services on the Procurement List, provided by nonprofit agencies employing people who are blind or severely disabled. The KO must buy from AbilityOne before other sources when the item is on the list.",
+  "domain": "Small Business & Socioeconomic",
+  "cite": "RFO FAR subpart 8.2; 41 U.S.C. chapter 85"
+ },
+ {
+  "term": "ACC",
+  "expansion": "Army Contracting Command",
+  "definition": "The Army Materiel Command subordinate that runs most Army contracting, including the contracting support brigades. The 411th CSB in Korea is an ACC organization, and ACC Contracting Notes (like 26-03 on warrant reciprocity) apply to it.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "ACC Contracting Note 26-03 (12 May 2026)"
+ },
+ {
+  "term": "ACO",
+  "expansion": "Administrative Contracting Officer",
+  "definition": "A contracting officer whose warrant is limited to administering contracts after award, such as a DCMA ACO handling payments, property, and indirect rates. The Army uses 'KO' collectively for PCOs, ACOs, CCOs, and TCOs.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "RFO FAR 2.101; Army Warranting Program Policy v12 sec. 1.0"
+ },
+ {
+  "term": "Acquisition plan",
+  "expansion": "Acquisition plan (AP)",
+  "definition": "The written or oral plan that lays out the acquisition strategy: requirement, market research, competition approach, contract type, sources, risks, milestones, and the team. Agencies set the thresholds for when a written plan is required and who approves it.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 7.102, 7.104; AFARS 5107.1"
+ },
+ {
+  "term": "ACWS",
+  "expansion": "Army Contract Writing System",
+  "definition": "The Army's PIEE-based contract writing system that is replacing PD2 and PADDS. A warranted KO gets signing access to additional DoDAACs by having that role added for each DoDAAC in PIEE.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "ACC Contracting Note 26-03 para 7a"
+ },
+ {
+  "term": "ADA",
+  "expansion": "Antideficiency Act",
+  "definition": "The statute that prohibits obligating or spending more than the amount appropriated or apportioned, obligating before funds are available, or accepting voluntary services. Violations carry administrative and possibly criminal penalties and must be reported to the President and Congress.",
+  "domain": "Fiscal Law & Funding",
+  "cite": "31 U.S.C. 1341, 1342, 1517"
+ },
+ {
+  "term": "ADR",
+  "expansion": "Alternative dispute resolution",
+  "definition": "Voluntary methods such as mediation, mini-trials, or settlement judges used to resolve claims without formal litigation, encouraged by the FAR and the boards. The KO may use ADR at any stage but cannot be compelled to.",
+  "domain": "Protests, Claims & Disputes",
+  "cite": "RFO FAR 33.205-8; RFO FAR 33.204; 5 U.S.C. 571-584"
+ },
+ {
+  "term": "AFARS",
+  "expansion": "Army Federal Acquisition Regulation Supplement",
+  "definition": "The Army's supplement to the FAR and DFARS, with its own PGI-style procedures and appendices. Army-unique rules such as IGE requirements (5107.90), AT/OPSEC cover sheets (5107.91), and ratification packages live here.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "AFARS 5101.601"
+ },
+ {
+  "term": "Agency protest",
+  "expansion": "Agency-level protest",
+  "definition": "A protest filed with the contracting agency instead of GAO: preaward solicitation defects must be raised before the closing date, and postaward protests filed within 10 days of award or 5 days after a debriefing suspend performance unless continued performance is justified in writing. The agency aims to resolve within 35 days, and an agency protest does not extend GAO's deadlines.",
+  "domain": "Protests, Claims & Disputes",
+  "cite": "RFO FAR 33.104-2, 33.104-3, 33.104-4 (was 33.103)"
+ },
+ {
+  "term": "AO",
+  "expansion": "Agreements Officer",
+  "definition": "A warranted official authorized to enter into, administer, and terminate Other Transactions and similar non-FAR agreements. Army AO candidates must complete CON 0660 and CON 2880V (OTA credential CCON 023 preferred) and hold or have held a commensurate KO or GO warrant.",
+  "domain": "Grants & Agreements",
+  "cite": "32 CFR 3.4; Army Warranting Program Policy v12 sec. 3.0"
+ },
+ {
+  "term": "ASBCA",
+  "expansion": "Armed Services Board of Contract Appeals",
+  "definition": "The board where a contractor may appeal a DoD contracting officer's final decision within 90 days, with small claims (expedited, $50,000 or $150,000 for a small business) and accelerated ($100,000) procedures available. The alternative forum is the Court of Federal Claims within 12 months.",
+  "domain": "Protests, Claims & Disputes",
+  "cite": "RFO FAR subpart 33.2 (exact appeal-deadline section unverified); 41 U.S.C. 7104, 7106"
+ },
+ {
+  "term": "AT/OPSEC cover sheet",
+  "expansion": "Antiterrorism / Operations Security cover sheet",
+  "definition": "An Army requirements-package document, signed by the requiring activity's AT and OPSEC officers, that identifies contractor access and security training requirements for the contract. Required with every package except supply contracts below the SAT, field ordering officer actions, and GPC buys.",
+  "domain": "Property, Security & Special Provisions",
+  "cite": "AFARS subpart 5107.91; AR 525-13; AR 530-1"
+ },
+ {
+  "term": "BAA",
+  "expansion": "Broad Agency Announcement",
+  "definition": "A general announcement of research interests, with evaluation criteria, used to solicit proposals for basic and applied research; proposals are evaluated by peer or scientific review and may result in contracts, grants, cooperative agreements, or OTs. Grants BAAs are posted on Grants.gov and, if a contract may result, in SAM.gov.",
+  "domain": "Grants & Agreements",
+  "cite": "RFO FAR 6.102; 32 CFR 22.315; DoDGARs"
+ },
+ {
+  "term": "Bauamt",
+  "expansion": "Bauamt (German state construction authority)",
+  "definition": "The German building authority that executes design and construction under ABG-75 on behalf of U.S. forces and receives fees for doing so. It forwards design stages (KVM, HU, AFU Bau) and change requests (ABG5) to the U.S. side.",
+  "domain": "Germany ABG-75",
+  "cite": "ABG-75; 409th CSB question bank"
+ },
+ {
+  "term": "Berry Amendment",
+  "expansion": "Berry Amendment",
+  "definition": "The statute requiring DoD to buy food, clothing, textiles, fabrics, hand or measuring tools, and certain other items that are grown, reprocessed, reused, or produced in the United States, with limited exceptions such as acquisitions outside the U.S. in support of combat operations, non-availability, and purchases under the simplified threshold. Distinct from Buy American.",
+  "domain": "Property, Security & Special Provisions",
+  "cite": "10 U.S.C. 4862 (was 2533a); DFARS 225.7002"
+ },
+ {
+  "term": "Best value",
+  "expansion": "Best value",
+  "definition": "The expected outcome of an acquisition that, in the Government's estimation, provides the greatest overall benefit in response to the requirement. It spans a continuum from LPTA to tradeoff, and the RFP must say which approach applies.",
+  "domain": "Source Selection & Evaluation",
+  "cite": "RFO FAR 2.101; RFO FAR 15.103"
+ },
+ {
+  "term": "Binding contract elements",
+  "expansion": "Elements of a legally binding contract",
+  "definition": "Two or more parties with capacity to contract; mutual agreement shown by offer, acceptance, and mutual assent; consideration (something of value exchanged); a legal purpose; and the correct form. A Government contract also requires an authorized KO and available funds.",
+  "domain": "General Contracting",
+  "cite": "411th study deck 2 Jun 2026 (Line 6); RFO FAR 1.402-1"
+ },
+ {
+  "term": "Bona fide need rule",
+  "expansion": "Bona fide need rule",
+  "definition": "An appropriation may be obligated only for a legitimate need that arises during its period of availability. Severable services are the need of the year performed, supplies are the need of the year ordered (with lead-time and stock-level exceptions), and using this year's O&M for next year's requirement violates the rule.",
+  "domain": "Fiscal Law & Funding",
+  "cite": "31 U.S.C. 1502(a)"
+ },
+ {
+  "term": "BPA",
+  "expansion": "Blanket Purchase Agreement",
+  "definition": "A simplified method of filling anticipated repetitive needs by establishing charge accounts with qualified vendors; it is not a contract and obligates no funds until a call is placed. BPAs may be set up under simplified procedures or against Federal Supply Schedule contracts.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 13.201; RFO FAR 8.104; 411th study deck 16 Jun 2026 (Line 108)"
+ },
+ {
+  "term": "Brand name",
+  "expansion": "Brand-name and brand-name-or-equal descriptions",
+  "definition": "Specifying a brand name (or attributes peculiar to one manufacturer) without allowing equals restricts competition and must be justified and approved; 'brand name or equal' preserves full and open competition if salient characteristics are stated. Under the SAT the KO documents the sole-source basis; above it a written justification approved under 6.104 is required.",
+  "domain": "Competition & Market Research",
+  "cite": "RFO FAR 6.103-1(d) (was 6.302-1(c)); RFO FAR 11.204; RFO FAR 12.102"
+ },
+ {
+  "term": "Bundling",
+  "expansion": "Bundling",
+  "definition": "Consolidating requirements previously performed under separate smaller contracts into one solicitation that is likely to be unsuitable for award to a small business. Bundling requires market research, a written determination of measurably substantial benefits, and notice to incumbent small businesses and the SBA.",
+  "domain": "Small Business & Socioeconomic",
+  "cite": "RFO FAR 2.101; RFO FAR 7.107-2; 15 U.S.C. 644(e)"
+ },
+ {
+  "term": "Buy American",
+  "expansion": "Buy American statute",
+  "definition": "The requirement to buy domestic end products and construction materials unless an exception applies, such as use outside the United States, non-availability, unreasonable cost, or coverage by a trade agreement. Most 411th acquisitions for use in Korea fall under the use-outside-the-U.S. exception, but the KO still documents it.",
+  "domain": "Property, Security & Special Provisions",
+  "cite": "RFO FAR subpart 25.1 and 25.2; 41 U.S.C. chapter 83"
+ },
+ {
+  "term": "Buying guide",
+  "expansion": "Buying guide (RFO non-regulatory guidance)",
+  "definition": "Non-regulatory guides the RFO pairs with the slimmed FAR to give practitioners practical strategies grounded in common sense while staying outside the regulation, for example the Category Management Buying Guide on choosing a buying pathway. They inform judgment but are not binding rules.",
+  "domain": "General Contracting",
+  "cite": "acquisition.gov/far-overhaul (Buying Guides)"
+ },
+ {
+  "term": "C&P",
+  "expansion": "C&P Branch (411th CSB policy and compliance branch; confirm local expansion)",
+  "definition": "The 411th CSB branch that, with CONOPS, coordinates the CORB, prepares questions and scoring sheets, generates the warrant number, drafts the appointment memo and certificate, and processes warrant terminations in VCE-Warrants. Local approval thresholds are confirmed with the Chief, C&P rather than assumed.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "411th CSB Warrant Process Workflow (Jul 2026)"
+ },
+ {
+  "term": "CAS",
+  "expansion": "Cost Accounting Standards",
+  "definition": "Nineteen standards governing how contractors measure, assign, and allocate costs on covered negotiated contracts; coverage is triggered by dollar thresholds and exempts small businesses, commercial, and firm-fixed-price competitive awards. Thresholds were raised by the FY26 NDAA (contract-level $35M from 1 Oct 2026, full coverage $100M); confirm the current deviation.",
+  "domain": "Pricing, Cost & Payment",
+  "cite": "41 U.S.C. 1502; 48 CFR 9903; DFARS 230.201-70 (class deviation 2026-O0006)"
+ },
+ {
+  "term": "CCO",
+  "expansion": "Contingency Contracting Officer",
+  "definition": "A contracting officer appointed to support contingency, humanitarian, or peacekeeping operations, often deployed and using raised thresholds, SF 44s, and oral solicitations where allowed. Every action still needs a written determination and a fair-and-reasonable price memo.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "RFO FAR 2.101 (contingency operation); Army Warranting Program Policy v12 sec. 1.0"
+ },
+ {
+  "term": "CDA",
+  "expansion": "Contract Disputes Act of 1978",
+  "definition": "The statute that governs claims by and against the Government under contracts: the KO issues a final decision, the contractor may appeal to a board of contract appeals or the Court of Federal Claims, and interest runs from the date the claim is received. It requires certification of claims over $100,000.",
+  "domain": "Protests, Claims & Disputes",
+  "cite": "41 U.S.C. chapter 71; RFO FAR subpart 33.2"
+ },
+ {
+  "term": "Certified cost or pricing data",
+  "expansion": "Certified cost or pricing data (Truthful Cost or Pricing Data / TINA)",
+  "definition": "Facts prospective offerors must submit and certify as current, accurate, and complete for noncommercial actions above the statutory threshold when no exception (adequate competition, commercial, set by law, or waiver) applies. The governmentwide threshold is $2.5 million; the FY26 NDAA raised it to $10 million for DoD prime contracts awarded after 30 June 2026 - confirm the current deviation before quoting.",
+  "domain": "Pricing, Cost & Payment",
+  "cite": "RFO FAR 15.403-3 (was 15.403-4); RFO FAR 15.403-2 (exceptions); 10 U.S.C. 3702; 41 U.S.C. 3502"
+ },
+ {
+  "term": "Change order",
+  "expansion": "Change order",
+  "definition": "A unilateral written order under the Changes clause directing a change within the general scope of the contract, issued on SF 30; the contractor must continue performance as changed (except cost-type work beyond funding limits) and may seek an equitable adjustment. The KO definitizes the price in the shortest practicable time.",
+  "domain": "Contract Administration",
+  "cite": "RFO FAR 43.301 (was 43.201); RFO FAR 43.304; FAR 52.243-1"
+ },
+ {
+  "term": "CHESS",
+  "expansion": "Computer Hardware, Enterprise Software and Solutions",
+  "definition": "The Army's designated primary source for commercial IT hardware, software, and services; Army buyers must use CHESS contracts or obtain a statement of non-availability. Pairs with ITAS approval for the purchase itself.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "AFARS 5139.101; AR 25-1"
+ },
+ {
+  "term": "CICA",
+  "expansion": "Competition in Contracting Act of 1984",
+  "definition": "The statute requiring full and open competition through competitive procedures unless one of seven statutory exceptions applies, and creating the competition advocate and the GAO bid protest system with its automatic stay. RFO FAR Part 6 implements it.",
+  "domain": "Competition & Market Research",
+  "cite": "10 U.S.C. 3201-3205; 41 U.S.C. 3301-3311; RFO FAR 6.101"
+ },
+ {
+  "term": "CICA stay",
+  "expansion": "CICA stay (automatic suspension of award or performance)",
+  "definition": "The statutory pause triggered when GAO notifies the agency of a protest before award, or within 10 days of award or 5 days after a required debriefing. Only the HCA, non-delegably, may override it with a written finding of urgent and compelling circumstances (preaward, with award likely within 30 days) or best interests of the United States (postaward).",
+  "domain": "Protests, Claims & Disputes",
+  "cite": "RFO FAR 33.105-2(b), 33.105-3(b) (was 33.104(b), (c)); 31 U.S.C. 3553"
+ },
+ {
+  "term": "Claim",
+  "expansion": "Claim",
+  "definition": "A written demand by one of the contracting parties seeking, as a matter of right, payment of a sum certain, adjustment or interpretation of contract terms, or other relief. A contractor demand over $100,000 is not a claim until certified, and a routine invoice not in dispute is not a claim until converted by written notice.",
+  "domain": "Protests, Claims & Disputes",
+  "cite": "RFO FAR 2.101; RFO FAR 33.201, 33.205-2; 41 U.S.C. 7103"
+ },
+ {
+  "term": "Clarifications vs. discussions",
+  "expansion": "Clarifications, communications, and discussions",
+  "definition": "Clarifications are limited exchanges to resolve minor issues without allowing proposal revisions; discussions (negotiations) with offerors in the competitive range let them revise proposals and must be meaningful and even-handed. Choosing one over the other is a common protest ground.",
+  "domain": "Source Selection & Evaluation",
+  "cite": "RFO FAR 15.204-2 (was 15.306)"
+ },
+ {
+  "term": "Class deviation",
+  "expansion": "Class deviation",
+  "definition": "A deviation from the FAR that affects more than one contract action, approved at the agency level (for DoD, the Director of Defense Pricing, Contracting, and Acquisition Policy). DoD implemented the RFO through class deviations to the DFARS effective 1 February 2026, so many RFO DFARS cites carry a deviation number.",
+  "domain": "General Contracting",
+  "cite": "RFO FAR 1.304; DFARS 201.404"
+ },
+ {
+  "term": "CMMC",
+  "expansion": "Cybersecurity Maturity Model Certification",
+  "definition": "DoD's program requiring contractors handling FCI or CUI to hold a current CMMC certificate at the level the contract specifies. Before award and before exercising an option DoD KOs verify in SPRS that the CMMC certificate (not more than 3 years old) and NIST SP 800-171 assessment are posted.",
+  "domain": "Property, Security & Special Provisions",
+  "cite": "DFARS 204.75; DFARS 252.204-7021; RFO DFARS 217.204-170"
+ },
+ {
+  "term": "COC",
+  "expansion": "Certificate of Competency",
+  "definition": "SBA's certification that a small business the KO found nonresponsible is in fact responsible; the KO must refer a small business nonresponsibility determination to SBA, and a COC is binding on elements it addresses. Applies to capacity, credit, integrity, and other responsibility elements.",
+  "domain": "Small Business & Socioeconomic",
+  "cite": "RFO FAR 19.204 (was 19.6); RFO FAR 9.104-3(d); 15 U.S.C. 637(b)(7)"
+ },
+ {
+  "term": "CoCO",
+  "expansion": "Chief of the Contracting Office",
+  "definition": "The lowest level to which the HCA may delegate warrant-granting authority for KOs and AOs. In the 411th CSB, CoCOs also sit as CORB voting members.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "Army Warranting Program Policy v12 sec. 1.0; 411th CSB Warrant Process Workflow (Jul 2026)"
+ },
+ {
+  "term": "COFC",
+  "expansion": "U.S. Court of Federal Claims",
+  "definition": "The Article I court with jurisdiction over bid protests (with no CICA stay, but injunctive relief available) and over CDA appeals filed within 12 months of a final decision. It is the third protest forum after the agency and GAO.",
+  "domain": "Protests, Claims & Disputes",
+  "cite": "RFO FAR 33.106; 28 U.S.C. 1491; 41 U.S.C. 7104(b)"
+ },
+ {
+  "term": "Commercial product",
+  "expansion": "Commercial product",
+  "definition": "A product, other than real property, of a type customarily used by the general public or nongovernmental entities for other than governmental purposes that has been sold, leased, or licensed (or offered) to the public, including minor modifications. Commercial acquisitions use Part 12 and a strong preference for commercial solutions.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 2.101; RFO FAR 12.101; 41 U.S.C. 103"
+ },
+ {
+  "term": "Commercial service",
+  "expansion": "Commercial service",
+  "definition": "Installation, maintenance, repair, training, and similar services offered in support of a commercial product, or services of a type offered and sold competitively in substantial quantities in the commercial marketplace at established catalog or market prices. Also includes services under commercial terms sold to the public.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 2.101; 41 U.S.C. 103a"
+ },
+ {
+  "term": "Competition advocate",
+  "expansion": "Competition advocate",
+  "definition": "The official each agency and contracting activity designates to promote competition, challenge barriers, and approve mid-tier justifications for other than full and open competition. In DoD the competition advocate tier (over $10M to $100M) is not delegable.",
+  "domain": "Competition & Market Research",
+  "cite": "RFO FAR 6.104-2; DFARS 206.104-71 Table 206-1 (class deviation 2026-O0017)"
+ },
+ {
+  "term": "Competitive range",
+  "expansion": "Competitive range",
+  "definition": "The group of most highly rated proposals, determined by the KO after evaluation, with which the Government will hold discussions when award without negotiation is not appropriate. Offerors excluded may request a preaward debriefing.",
+  "domain": "Source Selection & Evaluation",
+  "cite": "RFO FAR 15.204-1 (was 15.306(c)); RFO FAR 15.206-2"
+ },
+ {
+  "term": "CONOPS",
+  "expansion": "Contracting Operations (411th CSB Warrant Program Coordinator)",
+  "definition": "The 411th CSB staff element that coordinates the warrant program: it checks applications for completeness in VCE-Warrants, books the CORB on the Commander's calendar, and with C&P prepares board questions, cover sheet, and scoring sheet. The CONOPS/C&P Chief facilitates the CORB as a non-voting member.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "411th CSB Warrant Process Workflow (Jul 2026)"
+ },
+ {
+  "term": "Consideration",
+  "expansion": "Consideration",
+  "definition": "Something of value exchanged by each party; without it there is no binding contract. When the Government grants a contractor relief it is not entitled to, such as a schedule extension after late performance, the KO obtains consideration (often a price reduction) in return.",
+  "domain": "Contract Administration",
+  "cite": "RFO FAR 43.103; 411th study deck 13 May 2026 (Line 33)"
+ },
+ {
+  "term": "Consolidation",
+  "expansion": "Consolidation",
+  "definition": "Combining two or more requirements previously under separate contracts into a single solicitation, whether or not small businesses are affected. Above $2 million the SPE or delegate must determine the consolidation is necessary and justified, and the determination is published.",
+  "domain": "Competition & Market Research",
+  "cite": "RFO FAR 2.101; RFO FAR 7.107-2; 10 U.S.C. 3063"
+ },
+ {
+  "term": "Constructive change",
+  "expansion": "Constructive change",
+  "definition": "Conduct by a Government representative (often a COR) that has the effect of a change order without a formal one, such as directing extra work or a different method. It can entitle the contractor to an equitable adjustment and is why CORs may not give technical direction beyond the contract.",
+  "domain": "Contract Administration",
+  "cite": "RFO FAR 43.204; RFO FAR 1.404"
+ },
+ {
+  "term": "Contingency contracting",
+  "expansion": "Contingency contracting and emergency thresholds",
+  "definition": "Support to a contingency, CBRN defense, disaster, or emergency operation, during which the micro-purchase threshold rises to $25,000 inside and $40,000 outside the United States, the SAT to $1M inside and $2M outside, and the commercial simplified ceiling to $15M. The KO still documents each action and its price reasonableness.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 2.101; RFO FAR 12.001(c); 41 U.S.C. 1903"
+ },
+ {
+  "term": "Contracting officer's final decision",
+  "expansion": "Contracting officer's final decision (COFD)",
+  "definition": "The KO's written decision on a claim, stating the facts, the decision, and the contractor's appeal rights, issued within 60 days for claims of $100,000 or less and within a reasonable time (notified within 60 days) for larger claims. Failure to decide is a deemed denial that may be appealed.",
+  "domain": "Protests, Claims & Disputes",
+  "cite": "RFO FAR subpart 33.2 (was 33.211; exact new section unverified); 41 U.S.C. 7103(f)"
+ },
+ {
+  "term": "Cooperative agreement",
+  "expansion": "Cooperative agreement",
+  "definition": "A Federal assistance instrument used, like a grant, to transfer something of value to carry out a public purpose, but where the Government expects substantial involvement in the project. The choice between grant, cooperative agreement, and contract is governed by the Federal Grant and Cooperative Agreement Act.",
+  "domain": "Grants & Agreements",
+  "cite": "31 U.S.C. 6305; 32 CFR 22.205, 22.215"
+ },
+ {
+  "term": "COR",
+  "expansion": "Contracting Officer's Representative",
+  "definition": "A Government employee designated in writing by the KO to monitor technical performance; a COR cannot change the contract, direct work outside its scope, or obligate funds. Under DoD rules the KO designates a COR for service contracts within 3 business days of award unless the file documents an exemption.",
+  "domain": "Contract Administration",
+  "cite": "RFO FAR 1.404; RFO DFARS 201.404-70 / PGI 201.404-70(e) (codified 201.602-2)"
+ },
+ {
+  "term": "CORB",
+  "expansion": "Contracting Officer Review Board",
+  "definition": "The oral board a candidate must pass to receive a KO warrant; it tests business acumen, judgment, and knowledge of statute, regulation, and local procedure at the level of the warrant sought. In the 411th CSB the SCO chairs it, it meets the second Wednesday of each month, and a unanimous recommendation is needed before the SCO appoints in VCE-Warrants.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "Army Warranting Program Policy v12 sec. 5.0; 411th CSB Warrant Process Workflow (Jul 2026)"
+ },
+ {
+  "term": "Cost analysis",
+  "expansion": "Cost analysis",
+  "definition": "Review and evaluation of the separate cost elements and proposed profit in an offeror's proposal, plus the judgmental factors used to project them, to see whether the price is fair and reasonable. Required when certified cost or pricing data are obtained and often when data other than certified data are needed.",
+  "domain": "Pricing, Cost & Payment",
+  "cite": "RFO FAR 15.404-2 (was 15.404-1(c))"
+ },
+ {
+  "term": "Cost principles",
+  "expansion": "Cost principles: allowable, allocable, reasonable",
+  "definition": "FAR Part 31 rules for which contractor costs the Government will pay: a cost must be reasonable, allocable to the contract, consistent with CAS or GAAP, and not specifically unallowable (for example entertainment, lobbying, or fines). They govern cost-type contracts, T&M materials, and termination settlements.",
+  "domain": "Pricing, Cost & Payment",
+  "cite": "RFO FAR Part 31 (31.201-2, 31.205)"
+ },
+ {
+  "term": "Cost realism",
+  "expansion": "Cost realism analysis",
+  "definition": "Evaluating whether the costs in a proposal are realistic for the work, reflect a clear understanding of requirements, and match the offeror's technical approach. Mandatory for cost-reimbursement contracts to compute a probable cost; may be used on fixed-price offers where quality concerns exist.",
+  "domain": "Pricing, Cost & Payment",
+  "cite": "RFO FAR 15.404-3 (was 15.404-1(d))"
+ },
+ {
+  "term": "CPARS",
+  "expansion": "Contractor Performance Assessment Reporting System",
+  "definition": "The governmentwide system where the Government records interim and final evaluations of contractor performance on contracts above the reporting thresholds, which other agencies rely on for past performance evaluation. The assessing official ensures data are complete and accurate; the contractor may comment and request review.",
+  "domain": "Contract Administration",
+  "cite": "RFO FAR subpart 42.11 (was 42.15)"
+ },
+ {
+  "term": "CPFF",
+  "expansion": "Cost-plus-fixed-fee contract",
+  "definition": "A cost-reimbursement contract paying allowable costs plus a fee fixed at award that does not change with actual cost. Used when uncertainty prevents fixed pricing; the contractor must have an adequate accounting system and the Government carries most cost risk.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 16.304; RFO FAR 16.301"
+ },
+ {
+  "term": "Crosswalk (RFO)",
+  "expansion": "RFO crosswalk (old-to-new FAR numbering)",
+  "definition": "The acquisition.gov tables and line-out documents that map legacy FAR section numbers to their RFO locations, for example 6.302-1 to 6.103-1, 1.602-3 to 1.405, 17.207 to 17.204-1, and 33.104 to 33.105. When you convert a cite, record the old and new pair and verify it on acquisition.gov rather than from memory.",
+  "domain": "General Contracting",
+  "cite": "acquisition.gov/far-overhaul (part deviation guides and crosswalks)"
+ },
+ {
+  "term": "CSB",
+  "expansion": "Contracting Support Brigade",
+  "definition": "An ACC brigade that provides theater contracting support to an Army Service Component Command; the 411th CSB supports Eighth Army and USFK in the Republic of Korea. Its SCO holds delegated warrant-granting authority for the brigade.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "411th CSB Warrant Process Workflow (Jul 2026)"
+ },
+ {
+  "term": "Cumulative instrument value",
+  "expansion": "Cumulative instrument value (warrant threshold test)",
+  "definition": "Your warrant must be greater than or equal to the cumulative value of the instrument you sign: base plus all options, any anticipated or actual ceiling, plus the absolute value of a modification, regardless of when funds are obligated. A modification is measured against the contract's total including the mod, not the mod alone.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "Army Warranting Program Policy v12 sec. 4.2"
+ },
+ {
+  "term": "Cure notice",
+  "expansion": "Cure notice",
+  "definition": "A written notice, required before a default termination for a failure other than late delivery, telling the contractor its failure is endangering performance and giving at least 10 days to cure. Issue it only if that much time remains in the delivery schedule; for commercial contracts it precedes a termination for cause.",
+  "domain": "Terminations & Remedies",
+  "cite": "RFO FAR 49.607; RFO FAR 49.402-3; RFO FAR 12.304(b)(1)"
+ },
+ {
+  "term": "D&F",
+  "expansion": "Determination and Findings",
+  "definition": "A signed document in which an authorized official states the facts (findings) and the conclusion (determination) that a regulation requires before a specific action, for example choosing a T&M contract or authorizing continued performance during a protest. Class D&Fs can cover a group of like actions.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "RFO FAR subpart 1.5 (1.501 to 1.506)"
+ },
+ {
+  "term": "DAADS",
+  "expansion": "Defense Assistance Award Data System",
+  "definition": "The DoD system where grants, cooperative agreements, and other assistance awards are reported so that Federal reporting requirements and USAspending data are met. The Grants Officer provides award information to the reporting office.",
+  "domain": "Grants & Agreements",
+  "cite": "DoDGARs 32 CFR 21.535"
+ },
+ {
+  "term": "DASA(P)",
+  "expansion": "Deputy Assistant Secretary of the Army (Procurement)",
+  "definition": "The Army official who holds procurement authority from the ASA(ALT) and delegates warrant-granting authority to each HCA. The DASA(P) office (SAAL-ZP) publishes the Army Warranting Program Policy.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "Army Warranting Program Policy v12 sec. 1.0"
+ },
+ {
+  "term": "Data other than certified cost or pricing data",
+  "expansion": "Data other than certified cost or pricing data",
+  "definition": "Pricing, sales, or cost information the KO may require to determine a fair and reasonable price when certified data are not required (for example commercial or below-threshold sole source). The KO asks for the minimum needed and prefers existing data and market information.",
+  "domain": "Pricing, Cost & Payment",
+  "cite": "RFO FAR 15.403-1; RFO FAR 15.404-1"
+ },
+ {
+  "term": "DAU (WARU) Acquipedia",
+  "expansion": "Defense Acquisition University / WARU Acquipedia",
+  "definition": "The acquisition workforce's online reference articles (Acquipedia) and courses, which 411th decks now cite at waru.edu; treat the DAU/WARU naming as unverified until confirmed. Useful for board prep on fiscal law, contract types, and source selection basics, but always cite the FAR, DFARS, or statute at the board.",
+  "domain": "General Contracting",
+  "cite": "waru.edu Acquipedia (naming unverified)"
+ },
+ {
+  "term": "DCMA",
+  "expansion": "Defense Contract Management Agency",
+  "definition": "The DoD agency that performs delegated contract administration functions, including ACO services, property administration, quality assurance at source, and EVM surveillance. The KO may delegate surveillance to a COR or DCMA on a cost-type supply contract but not the same function to both.",
+  "domain": "Contract Administration",
+  "cite": "RFO FAR 42.202, 42.302; PGI 201.404-70(e)(2)"
+ },
+ {
+  "term": "Debarment",
+  "expansion": "Debarment",
+  "definition": "An exclusion from Federal contracting and subcontracting for a fixed period (generally not more than 3 years) imposed by the debarring official for causes such as fraud, conviction, serious performance failure, or other lack of integrity. Debarred contractors are listed in SAM, and agencies may continue existing contracts but not add new work or options without a compelling-reasons determination.",
+  "domain": "Responsibility & Exclusions",
+  "cite": "RFO FAR 9.406; RFO FAR 9.405-1"
+ },
+ {
+  "term": "Debriefing",
+  "expansion": "Preaward and postaward debriefing",
+  "definition": "The explanation given to an offeror of the evaluation of its proposal and the basis for exclusion or award, requested in writing within 3 days of notice. The debriefing date starts the 5-day protest window for a CICA stay, and DoD gives enhanced debriefings with a follow-up question period on larger actions.",
+  "domain": "Source Selection & Evaluation",
+  "cite": "RFO FAR 15.206-2 (was 15.505); RFO FAR 15.301 (was 15.506); DFARS 215.202-71 / 10 U.S.C. 3305"
+ },
+ {
+  "term": "Defense Base Act",
+  "expansion": "Defense Base Act (DBA)",
+  "definition": "A statute requiring workers' compensation insurance for civilian employees, including local nationals and third-country nationals, working on U.S. Government contracts outside the United States. A country waiver (requested on Form BEC 565 and approved by the Department of Labor) may exempt local nationals where the host nation provides adequate coverage; Korea-specific status must be confirmed.",
+  "domain": "Property, Security & Special Provisions",
+  "cite": "42 U.S.C. 1651; FAR 28.305; FAR 52.228-3"
+ },
+ {
+  "term": "DFARS",
+  "expansion": "Defense Federal Acquisition Regulation Supplement",
+  "definition": "DoD's supplement to the FAR, with companion Procedures, Guidance, and Information (PGI). Under the RFO, DoD implemented the renumbered FAR through DFARS class deviations effective 1 February 2026.",
+  "domain": "General Contracting",
+  "cite": "DFARS 201.301; Army Warranting Program Policy v12 sec. 2.0"
+ },
+ {
+  "term": "DFAS",
+  "expansion": "Defense Finance and Accounting Service",
+  "definition": "DoD's payment office that disburses contract payments and computes Prompt Payment interest. Payment clocks run from the date a proper invoice is received by the designated billing office, so the KO checks DFAS receipt dates when a contractor claims late-payment interest.",
+  "domain": "Pricing, Cost & Payment",
+  "cite": "RFO FAR subpart 32.9; 5 CFR 1315"
+ },
+ {
+  "term": "DoDGARs",
+  "expansion": "DoD Grant and Agreement Regulations",
+  "definition": "DoD's regulations for grants, cooperative agreements, and technology investment agreements, at 32 CFR Chapter I, Subchapter C (Parts 21 through 37), implementing 2 CFR 200 for DoD through 2 CFR 1100 series. They set grants officer selection standards (21.440) and delegations (21.425). Statutes and CFR are unchanged by the RFO.",
+  "domain": "Grants & Agreements",
+  "cite": "32 CFR Parts 21-37; 2 CFR Part 1108"
+ },
+ {
+  "term": "DORA bot",
+  "expansion": "Determination of Responsibility Assistant",
+  "definition": "An Army robotic-process-automation bot that pulls SAM, FAPIIS, and other data to help the KO document a contractor responsibility determination. There are separate bots for actions over and under the SAT; the KO still owns the determination.",
+  "domain": "Responsibility & Exclusions",
+  "cite": "AFARS PGI 5109.103(b)"
+ },
+ {
+  "term": "DPW",
+  "expansion": "Directorate of Public Works",
+  "definition": "The garrison engineer organization that owns facility requirements, provides technical review and acceptance of construction changes (including ABG5 documents in Germany), and often serves as the requiring activity for emergency repairs. In the Korea ratification scenario, DPW or base operations support emergency rates are a price-reasonableness comparison.",
+  "domain": "Germany ABG-75",
+  "cite": "409th CSB question bank; 411th study deck 2 Jun 2026"
+ },
+ {
+  "term": "Economy Act",
+  "expansion": "Economy Act (31 U.S.C. 1535)",
+  "definition": "The general authority for one Federal agency to order goods or services from another when it is in the Government's interest and cannot be done as conveniently or cheaply by contract. Economy Act orders need a D&F and deobligate at the end of the funds' availability if the servicing agency has not obligated them.",
+  "domain": "Fiscal Law & Funding",
+  "cite": "RFO FAR 17.502-2; 31 U.S.C. 1535"
+ },
+ {
+  "term": "Effect of listing",
+  "expansion": "Effect of an exclusion listing / continuation of current contracts",
+  "definition": "A contractor debarred, suspended, or proposed for debarment may keep performing existing contracts unless the agency head directs otherwise, but absent a written compelling-reasons determination the agency must not place new orders above a guaranteed minimum, place schedule or BPA orders, add new work, exercise options, or extend the contract. Contractors declared ineligible under 10 U.S.C. 983 must be terminated except SAT and commercial actions.",
+  "domain": "Responsibility & Exclusions",
+  "cite": "RFO FAR 9.405, 9.405-1; 411th study deck 2 Jun 2026 (Line 77)"
+ },
+ {
+  "term": "Equitable adjustment",
+  "expansion": "Equitable adjustment",
+  "definition": "A change in price, schedule, or both to compensate a party for a change within the contract's scope, measured by the reasonable cost difference between the work as originally required and as changed. The contractor asserts it through a request for equitable adjustment or, if disputed, a claim.",
+  "domain": "Contract Administration",
+  "cite": "RFO FAR 43.204; FAR 52.243-1"
+ },
+ {
+  "term": "Excusable delay",
+  "expansion": "Excusable delay",
+  "definition": "A failure to perform caused by events beyond the contractor's control and without its fault or negligence, such as acts of God, epidemics, strikes, or unusually severe weather. It bars default termination for that failure; if a default is later found excusable it converts to a termination for convenience.",
+  "domain": "Contract Administration",
+  "cite": "RFO FAR 49.401(b); FAR 52.249-14; FAR 52.249-8(c)"
+ },
+ {
+  "term": "Experience vs. past performance",
+  "expansion": "Experience versus past performance",
+  "definition": "Experience is what an offeror has done (like a resume); past performance is how well it did it (like a performance appraisal). They are evaluated as separate factors, and an offeror without a record of relevant past performance may not be rated favorably or unfavorably on it.",
+  "domain": "Source Selection & Evaluation",
+  "cite": "RFO FAR 15.104; 411th study deck 7 Jul 2026 (Line 5)"
+ },
+ {
+  "term": "Expired funds",
+  "expansion": "Expired and cancelled appropriations",
+  "definition": "After its period of availability an appropriation is expired for five years: it can pay and adjust existing obligations but cannot fund new ones. After five years it is cancelled and any remaining bills are paid from current funds within a 1 percent cap.",
+  "domain": "Fiscal Law & Funding",
+  "cite": "31 U.S.C. 1552, 1553"
+ },
+ {
+  "term": "Fair and reasonable price",
+  "expansion": "Fair and reasonable price determination",
+  "definition": "The KO's documented conclusion that the price is what a prudent buyer would pay in a competitive market, reached through price analysis first and cost analysis when needed. Adequate price competition normally establishes it; sole-source and single-offer situations require more support.",
+  "domain": "Pricing, Cost & Payment",
+  "cite": "RFO FAR 15.404; RFO FAR 15.402; DFARS 215.202-71(c) (only one offer)"
+ },
+ {
+  "term": "Fair opportunity",
+  "expansion": "Fair opportunity (orders under multiple-award contracts)",
+  "definition": "Every awardee on a multiple-award IDIQ must get a fair opportunity to be considered for each order above the micro-purchase threshold, with enhanced procedures above the SAT and again above $7.5 million. Exceptions include urgency, only one capable source, logical follow-on, and minimum guarantee.",
+  "domain": "Competition & Market Research",
+  "cite": "RFO FAR 16.507 (was 16.505(b)); RFO FAR 16.507-6 (exceptions)"
+ },
+ {
+  "term": "FAPIIS",
+  "expansion": "Federal Awardee Performance and Integrity Information System",
+  "definition": "The SAM-hosted record of terminations for default or cause, defective pricing determinations, nonresponsibility determinations, and administrative agreements, which KOs must review before award above the SAT. Terminations for cause on commercial contracts and defaults are reported here.",
+  "domain": "Responsibility & Exclusions",
+  "cite": "RFO FAR 9.104-6; RFO FAR 12.304(b)(3); RFO FAR 49.402-8"
+ },
+ {
+  "term": "FAR",
+  "expansion": "Federal Acquisition Regulation",
+  "definition": "The primary regulation for executive agencies' acquisition of supplies and services with appropriated funds, codified at 48 CFR Chapter 1 and maintained by the FAR Council (DoD, GSA, NASA) with OFPP. Under the Revolutionary FAR Overhaul it has been rewritten to statute-required text and renumbered, with everything else moved to non-regulatory guidance.",
+  "domain": "General Contracting",
+  "cite": "RFO FAR 1.101, 1.103; 41 U.S.C. 1303"
+ },
+ {
+  "term": "FFP",
+  "expansion": "Firm-fixed-price contract",
+  "definition": "A contract whose price is not subject to adjustment based on the contractor's cost experience, placing maximum cost risk and full responsibility for profit or loss on the contractor. Preferred when requirements are well defined and fair and reasonable prices can be established at award.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 16.202"
+ },
+ {
+  "term": "FKAQ",
+  "expansion": "USFK Acquisition Management (office symbol FKAQ)",
+  "definition": "The USFK staff office that administers the SOFA Invited Contractor and Technical Representative program and receives the KO's request for contract-level SOFA designation. Individual contractor designations are then requested by the requiring activity.",
+  "domain": "Korea, LCS & SOFA",
+  "cite": "USFKI 4901.01; 411th study deck 29 Apr 2026 (Line 278)"
+ },
+ {
+  "term": "FLN",
+  "expansion": "Foreign Local National",
+  "definition": "A host-nation employee of U.S. Forces. OCONUS HCAs may recognize equivalent education and training to appoint direct-hire FLNs as KOs, documented in an FLN Validation Letter under the 2022 DA policy memorandum.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "Army Warranting Program Policy v12 sec. 3.0"
+ },
+ {
+  "term": "Follow-on production",
+  "expansion": "Follow-on production OT",
+  "definition": "A production contract or transaction awarded without further competition after a successfully completed prototype OT, allowed only if the prototype OT was competitively awarded and the solicitation and agreement gave notice of the possibility. It is a key reason to structure prototype OT competitions carefully.",
+  "domain": "Grants & Agreements",
+  "cite": "10 U.S.C. 4022(f)"
+ },
+ {
+  "term": "FP-EPA",
+  "expansion": "Fixed-price contract with economic price adjustment",
+  "definition": "A fixed-price contract with a clause allowing upward or downward price revision on the occurrence of specified contingencies such as labor or material index changes. Used when market or labor conditions are unstable over a long performance period; before exercising an option the KO checks how an EPA request affects option prices.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 16.203; RFO FAR 17.204-1(a)"
+ },
+ {
+  "term": "FSS",
+  "expansion": "Federal Supply Schedule / GSA Multiple Award Schedule (MAS)",
+  "definition": "GSA's long-term governmentwide contracts with commercial firms whose prices have been determined fair and reasonable at the schedule level; ordering activities compete or justify orders at the order level under Part 8 procedures. BPAs may be established against schedule contracts.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR subpart 8.4; RFO FAR 8.104"
+ },
+ {
+  "term": "Full and open competition",
+  "expansion": "Full and open competition",
+  "definition": "All responsible sources are permitted to compete. It is the default rule under CICA; anything less needs either an exclusion-of-sources authority (6.102, including set-asides) or one of the seven other-than-full-and-open authorities in 6.103 with a justification.",
+  "domain": "Competition & Market Research",
+  "cite": "RFO FAR 6.101; RFO FAR 2.101"
+ },
+ {
+  "term": "GAO protest",
+  "expansion": "GAO bid protest",
+  "definition": "A protest filed with the Government Accountability Office by an interested party, generally within 10 days of when the basis was known (preaward solicitation defects before closing), triggering the CICA stay if timely. GAO issues a decision within 100 days, and the agency reports within 30 days.",
+  "domain": "Protests, Claims & Disputes",
+  "cite": "RFO FAR 33.105 (was 33.104); 4 CFR Part 21; 31 U.S.C. 3551-3557"
+ },
+ {
+  "term": "GFP",
+  "expansion": "Government-furnished property",
+  "definition": "Property owned by the Government and provided to the contractor for performance, furnished only when in the Government's interest and listed in the contract. The contractor must manage it under an adequate property system, and the KO tracks accountability through closeout and disposition.",
+  "domain": "Property, Security & Special Provisions",
+  "cite": "RFO FAR 45.101, 45.102; FAR 52.245-1"
+ },
+ {
+  "term": "GO",
+  "expansion": "Grants Officer",
+  "definition": "A warranted official authorized to award and administer grants and cooperative agreements on behalf of DoD; the HCA appoints GOs directly and may not delegate that authority. Army GO candidates complete the Grants and Agreements Management Course (GRT 201V) or equivalent.",
+  "domain": "Grants & Agreements",
+  "cite": "2 CFR 1108; 32 CFR 21.425, 21.440; Army Warranting Program Policy v12 sec. 1.0 and 3.0"
+ },
+ {
+  "term": "GOR",
+  "expansion": "Grants Officer's Representative (Program Manager)",
+  "definition": "The technical point of contact with the recipient who monitors programmatic progress and advises the Grants Officer, but has no authority to change the award, approve budget changes, or obligate funds. The GO alone holds award authority.",
+  "domain": "Grants & Agreements",
+  "cite": "32 CFR 22.715; DoDGARs"
+ },
+ {
+  "term": "GORB",
+  "expansion": "Grants Officer Review Board",
+  "definition": "The board a candidate passes to receive a Grants Officer warrant, testing knowledge of DoDGARs, 2 CFR 200, assistance versus procurement, and recipient monitoring. It applies the selection standards of DoDGARs 21.440 to judge readiness.",
+  "domain": "Grants & Agreements",
+  "cite": "Army Warranting Program Policy v12 sec. 5.0; 32 CFR 21.440"
+ },
+ {
+  "term": "Government property liability",
+  "expansion": "Contractor liability for Government property (52.245-1(h))",
+  "definition": "Unless the contract says otherwise, the contractor is not liable for loss of Government property except where insurance covers it, the loss results from willful misconduct or lack of good faith by managerial personnel, or the KO has revoked the Government's assumption of risk in writing after finding the contractor's property practices inadequate and uncorrected. Fixed-price contracts may use the alternate that shifts risk to the contractor.",
+  "domain": "Property, Security & Special Provisions",
+  "cite": "FAR 52.245-1(h); RFO FAR 45.104"
+ },
+ {
+  "term": "GPE",
+  "expansion": "Governmentwide point of entry (SAM.gov)",
+  "definition": "The single public website where agencies post presolicitation notices, solicitations, and award notices. Presolicitation notices are generally required for actions over $20,000 and solicitation notices above $25,000, with 15-day and 30-day waiting and response periods for noncommercial acquisitions above the SAT.",
+  "domain": "Competition & Market Research",
+  "cite": "RFO FAR 5.101, 5.201; RFO FAR 2.101"
+ },
+ {
+  "term": "Grant",
+  "expansion": "Grant",
+  "definition": "A Federal assistance instrument that transfers money or property to a recipient to carry out a public purpose authorized by law, with no substantial Government involvement. It is not used to buy goods or services for the Government's direct benefit; that requires a procurement contract.",
+  "domain": "Grants & Agreements",
+  "cite": "31 U.S.C. 6304; 32 CFR 22.205; 2 CFR 200.1"
+ },
+ {
+  "term": "HCA",
+  "expansion": "Head of the Contracting Activity",
+  "definition": "The official with overall responsibility for managing a contracting activity; in the Army the HCA holds delegated warrant-granting authority and can pass it down to SCOs and CoCOs. HCA-level approvals include personal services contracts, larger J&As, and the non-delegable override of a GAO protest stay.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "RFO FAR 2.101; RFO FAR 33.105-2(b); Army Warranting Program Policy v12 sec. 1.0"
+ },
+ {
+  "term": "HTRFRP",
+  "expansion": "Highest technically rated with fair and reasonable price",
+  "definition": "An RFO-recognized source selection approach that ranks offerors on technical merit and awards to the highest-rated offeror whose price is found fair and reasonable, without a price tradeoff. It sits alongside tradeoff and LPTA in RFO FAR 15.103.",
+  "domain": "Source Selection & Evaluation",
+  "cite": "RFO FAR 15.103-3"
+ },
+ {
+  "term": "IC / ICP",
+  "expansion": "Invited Contractor / Invited Contractor Program (SOFA)",
+  "definition": "The SOFA Article XV status that lets U.S. contractors and their employees perform USFK contracts in Korea with SOFA privileges. It is a two-step process: the KO obtains SOFA designation for the contract or order through USFK/FKAQ, then the requiring activity obtains designation for individual contractors; qualifying requirements are security considerations, technical qualifications, unavailability of materials or services meeting U.S. standards, and limitations of U.S. law.",
+  "domain": "Korea, LCS & SOFA",
+  "cite": "SOFA Article XV; USFKI 4901.01; 411th study deck 29 Apr 2026 (Line 278)"
+ },
+ {
+  "term": "IDIQ",
+  "expansion": "Indefinite-delivery, indefinite-quantity contract",
+  "definition": "A contract for an indefinite quantity within stated minimum and maximum limits, ordered through task or delivery orders during a fixed period; the Government must order at least the guaranteed minimum. Multiple awards are preferred, with fair opportunity for each order.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 16.504; RFO FAR 16.507"
+ },
+ {
+  "term": "IGE",
+  "expansion": "Independent Government Estimate",
+  "definition": "The requiring activity's estimate of what the requirement should cost, built independently of any offeror, used to judge price reasonableness and detect unbalanced pricing. The Army requires an IGE above the SAT, and construction requires one for any action expected to exceed the SAT.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "AFARS 5107.90; RFO FAR 36.101-6; RFO FAR 15.404-1"
+ },
+ {
+  "term": "Incremental funding",
+  "expansion": "Incremental funding",
+  "definition": "Funding a contract in pieces as funds become available rather than fully at award, normally on cost-reimbursement contracts using the Limitation of Funds clause. The contractor is not obligated to continue work or incur costs beyond the funded amount.",
+  "domain": "Fiscal Law & Funding",
+  "cite": "RFO FAR subpart 32.7; FAR 52.232-22"
+ },
+ {
+  "term": "Inherently governmental function",
+  "expansion": "Inherently governmental function",
+  "definition": "A function so tied to the public interest that only Government employees may perform it, such as deciding what to buy, awarding contracts, and being a voting member of a source selection board. Contractors may support these functions but never perform them.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "RFO FAR 7.503; RFO FAR subpart 37.3"
+ },
+ {
+  "term": "Inspection and acceptance",
+  "expansion": "Inspection and acceptance",
+  "definition": "The Government's right to inspect supplies and services and its formal act of accepting them as conforming, which is normally conclusive except for latent defects, fraud, or gross mistakes amounting to fraud. The KO sets inspection at source or destination and who accepts (often the COR).",
+  "domain": "Contract Administration",
+  "cite": "RFO FAR subpart 46.4 and 46.5; FAR 52.246-2, 52.246-4"
+ },
+ {
+  "term": "ITAS",
+  "expansion": "Information Technology Approval System",
+  "definition": "The Army system through which every purchase of commercial IT hardware, software, and services (broadly defined under AR 25-1, including CCTV, fire alarm, access control, and cloud) receives approval before award. Approvers are local command administrators or HQDA ITAS administrators depending on the item.",
+  "domain": "Property, Security & Special Provisions",
+  "cite": "AR 25-1; AFARS 5139.101"
+ },
+ {
+  "term": "J&A",
+  "expansion": "Justification and Approval",
+  "definition": "The written justification, certified by the KO and approved at the tier set by dollar value, that documents why other than full and open competition is authorized under one of the 6.103 authorities. It states the authority, market research, efforts to remove barriers, and price reasonableness, and is posted publicly after award with limited exceptions.",
+  "domain": "Competition & Market Research",
+  "cite": "RFO FAR 6.104-1 (was 6.303); RFO FAR 6.104-2 (was 6.304); RFO FAR 6.301"
+ },
+ {
+  "term": "KO",
+  "expansion": "Contracting Officer",
+  "definition": "A person with a warrant to enter into, administer, and/or terminate contracts and make related determinations and findings. Only a KO acting within the limits of the warrant can bind the Government, and the KO must ensure all requirements of law, regulation, and policy are met before award.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "RFO FAR 1.402-1, 1.402-2, 2.101"
+ },
+ {
+  "term": "Korean-firm limitation (LCS)",
+  "expansion": "LCS competition limited to Korean firms",
+  "definition": "LCS procurements are competed only among Korean businesses and generally must use Korean materials and labor; since January 2022 an offshore-materials waiver is no longer required before submission, but a memo documenting offshore or local materials must accompany every LCS package to USFK J4. Because O&M actions require full and open competition, the two competition rules cannot coexist in one solicitation.",
+  "domain": "Korea, LCS & SOFA",
+  "cite": "411th study deck 13 May 2026 (LCS scenario); flag korea-verify-cp"
+ },
+ {
+  "term": "KVM / HU / AFU Bau",
+  "expansion": "German design stages under ABG-75",
+  "definition": "KVM-Bau is the pre-concept design at about 15 percent; HU-Bau (Haushaltsunterlage) is the concept design at about 35 percent; AFU-Bau (Ausfuehrungsunterlage) is the 100 percent completed design. Each stage is forwarded by the Bauamt for U.S. review and funding decisions.",
+  "domain": "Germany ABG-75",
+  "cite": "ABG-75; 409th CSB question bank"
+ },
+ {
+  "term": "Latent defect",
+  "expansion": "Latent defect",
+  "definition": "A defect that exists at acceptance but could not have been discovered by reasonable inspection. Acceptance is not conclusive as to latent defects, so the Government may still revoke acceptance and seek correction or damages.",
+  "domain": "Contract Administration",
+  "cite": "RFO FAR 46.101; RFO FAR 46.705(b); FAR 52.246-2(k)"
+ },
+ {
+  "term": "LCS",
+  "expansion": "Logistics Cost Sharing",
+  "definition": "The portion of the U.S.-ROK Special Measures Agreement under which the ROK pays for logistics support to USFK, such as movement of personnel and assets, repair and maintenance services, and non-tactical vehicles. Funds are never transferred to the U.S.; ROK MND holds them, USFK J4 manages the program, 411th KOs recommend award, and MND approves, awards, and pays.",
+  "domain": "Korea, LCS & SOFA",
+  "cite": "Special Measures Agreement; 411th study deck 13 May 2026"
+ },
+ {
+  "term": "Limitation of Funds",
+  "expansion": "Limitation of Cost / Limitation of Funds clauses",
+  "definition": "Clauses in cost-reimbursement contracts that cap the Government's liability at the estimated cost (52.232-20) or the funds allotted so far (52.232-22). The contractor must give notice as it approaches the limit and need not continue past it, even after a change order.",
+  "domain": "Fiscal Law & Funding",
+  "cite": "FAR 52.232-20, 52.232-22; RFO FAR 43.301(b)"
+ },
+ {
+  "term": "Limited source justification",
+  "expansion": "Sole-source documentation at or below the SAT",
+  "definition": "For commercial or simplified acquisitions at or below the SAT, the KO does not prepare a J&A but documents in the file that only one source is available and the basis for that decision. Above the SAT a written justification approved under 6.104 is required.",
+  "domain": "Competition & Market Research",
+  "cite": "RFO FAR 12.102(a); RFO FAR 13.101(b)"
+ },
+ {
+  "term": "LPTA",
+  "expansion": "Lowest price technically acceptable",
+  "definition": "A best-value approach where award goes to the lowest-priced offeror whose proposal meets all acceptability standards, with no tradeoff for superior technical merit. DoD restricts LPTA to requirements where the Government would not realize value from exceeding the minimum.",
+  "domain": "Source Selection & Evaluation",
+  "cite": "RFO FAR 15.103-2 (was 15.101-2); DFARS 215.101-2-70"
+ },
+ {
+  "term": "MAP",
+  "expansion": "Milestone Acquisition Plan (VCE module; confirm local usage)",
+  "definition": "A VCE application used to plan and track acquisition milestones and lead time for pending actions. The 411th study decks list PAM and MAP navigation among the tools a KO should teach a new specialist.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "411th study deck 7 Jul 2026 (Line 132)"
+ },
+ {
+  "term": "Market research",
+  "expansion": "Market research",
+  "definition": "Collecting and analyzing information about the commercial marketplace before developing requirements and before soliciting, to find capable sources, commercial solutions, and small business capability. Results must be documented in a manner suited to the size and complexity of the acquisition; techniques include RFIs, industry days, catalogs, other agencies' contracts, and one-on-one exchanges.",
+  "domain": "Competition & Market Research",
+  "cite": "RFO FAR 10.001; 10 U.S.C. 3453"
+ },
+ {
+  "term": "MIPR",
+  "expansion": "Military Interdepartmental Purchase Request",
+  "definition": "The DD Form 448 used to send funds from one DoD activity to another for an acquisition, either as a direct citation (funds cited on the contract) or reimbursable order. The KO checks appropriation, fiscal year, and acceptance (DD 448-2) before obligating.",
+  "domain": "Fiscal Law & Funding",
+  "cite": "DFARS 208.70 / DoD FMR Vol. 11A ch. 3"
+ },
+ {
+  "term": "MND",
+  "expansion": "Republic of Korea Ministry of National Defense",
+  "definition": "The ROK ministry that holds LCS funds, approves and awards LCS contracts recommended by 411th KOs through USFK J4, and receives invoices and makes payment. MND approval adds time to LCS timelines that the KO must build into the schedule.",
+  "domain": "Korea, LCS & SOFA",
+  "cite": "411th study deck 13 May 2026"
+ },
+ {
+  "term": "Modification",
+  "expansion": "Contract modification (unilateral vs. bilateral)",
+  "definition": "Any written change to a contract, issued on SF 30 by a KO acting within the warrant. Unilateral modifications (administrative changes, change orders, option exercises) need only the KO's signature; bilateral modifications (supplemental agreements) require both parties and are used for negotiated equitable adjustments and new work.",
+  "domain": "Contract Administration",
+  "cite": "RFO FAR 43.202, 43.203; RFO FAR 43.401"
+ },
+ {
+  "term": "MPT",
+  "expansion": "Micro-purchase threshold",
+  "definition": "$15,000 in general ($2,000 for construction subject to Wage Rate Requirements and $2,500 for services subject to the Service Contract Labor Standards), higher in contingency or emergency operations. Micro-purchases may be made without competitive quotes if the price is reasonable and are usually placed with the GPC.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 2.101; RFO FAR 13.401; RFO FAR subpart 12.4; 41 U.S.C. 1902"
+ },
+ {
+  "term": "NAICS",
+  "expansion": "North American Industry Classification System code and size standard",
+  "definition": "The KO assigns the NAICS code that best describes the principal purpose of the acquisition, which fixes the SBA size standard (revenue or employees) that decides who is small. The choice can be appealed to SBA and drives set-aside eligibility.",
+  "domain": "Small Business & Socioeconomic",
+  "cite": "RFO FAR 19.103; 13 CFR 121.201"
+ },
+ {
+  "term": "Non-severable services",
+  "expansion": "Non-severable services",
+  "definition": "Services that produce a single unified outcome, product, or report that cannot be divided across fiscal years, such as a study or a building renovation. The whole effort is funded with money available at award, and performance may cross fiscal years.",
+  "domain": "Fiscal Law & Funding",
+  "cite": "31 U.S.C. 1502; GAO Red Book ch. 5"
+ },
+ {
+  "term": "Nontraditional defense contractor",
+  "expansion": "Nontraditional defense contractor",
+  "definition": "An entity that has not performed a DoD contract or subcontract subject to full CAS coverage for at least one year before the solicitation. Significant participation by a nontraditional (or a small business) is one of the conditions that makes a prototype OT available.",
+  "domain": "Grants & Agreements",
+  "cite": "10 U.S.C. 3014; 10 U.S.C. 4022(d)"
+ },
+ {
+  "term": "O&M",
+  "expansion": "Operation and Maintenance appropriation (OMA for the Army)",
+  "definition": "One-year funds for day-to-day operations, services, and supplies below the expense/investment threshold. OMA cannot cross fiscal years except through an exception such as the 12-month severable services authority, and it cannot be mixed with ROK LCS funds in one solicitation.",
+  "domain": "Fiscal Law & Funding",
+  "cite": "31 U.S.C. 1502; 10 U.S.C. 3133 (was 2410a); 411th study deck 13 May 2026"
+ },
+ {
+  "term": "Obligation",
+  "expansion": "Obligation (commitment vs. obligation)",
+  "definition": "A commitment reserves funds administratively (the PR&C); an obligation is the legal liability created when the KO signs a contract or order. A BPA obligates nothing until a call is placed, and only a KO acting within the warrant can create the obligation.",
+  "domain": "Fiscal Law & Funding",
+  "cite": "31 U.S.C. 1501; RFO FAR 1.402-1"
+ },
+ {
+  "term": "OCI",
+  "expansion": "Organizational conflict of interest",
+  "definition": "A situation in which a contractor's other activities or relationships impair its objectivity, give it unequal access to information, or let it set the ground rules for a competition it may enter. The KO identifies OCIs early, then avoids, neutralizes, or mitigates them with legal, includes provisions in the solicitation, and may waive only through the agency head or designee.",
+  "domain": "Responsibility & Exclusions",
+  "cite": "RFO FAR subpart 9.5 (9.504, 9.505, 9.507)"
+ },
+ {
+  "term": "Only one responsible source",
+  "expansion": "Only one responsible source and no other supplies or services will satisfy agency requirements",
+  "definition": "The most-used exception to full and open competition, covering unique capability, follow-on for continued development or production, and unsolicited proposals with unique concepts. It never justifies a lack of advance planning, and the KO must still seek a fair and reasonable price.",
+  "domain": "Competition & Market Research",
+  "cite": "RFO FAR 6.103-1 (was 6.302-1); 10 U.S.C. 3204(a)(1)"
+ },
+ {
+  "term": "Option",
+  "expansion": "Option",
+  "definition": "A unilateral right in a contract by which the Government may buy additional supplies or services or extend the term. Before exercising, the KO gives timely written notice, confirms funds, and determines the option fulfills an existing need, was synopsized as required, the contractor has no active exclusion, performance has been acceptable, the price is fair and reasonable, and exercise complies with Part 6.",
+  "domain": "Contract Administration",
+  "cite": "RFO FAR 17.204-1 (was 17.207); RFO DFARS 217.204-170; FAR 52.217-9"
+ },
+ {
+  "term": "Order of precedence",
+  "expansion": "Order of precedence for solicitation or contract documents",
+  "definition": "The clause that resolves an inconsistency in a solicitation or contract by reading the documents in a fixed hierarchy - the Schedule (specifications first), then representations/instructions, contract clauses, other documents incorporated by reference, and the like - rather than by which document is later or more specific. Reviewer note: the clause number itself is a Part 52 clause and was not re-verified against acquisition.gov for this pass.",
+  "domain": "General Contracting",
+  "cite": "FAR 52.215-8 (clause number carried over from pre-RFO FAR; flags: verify-locally)"
+ },
+ {
+  "term": "OT",
+  "expansion": "Other Transaction (Other Transaction Authority)",
+  "definition": "A legally binding instrument that is not a procurement contract, grant, or cooperative agreement, so the FAR and most procurement statutes do not apply. DoD uses research OTs (10 U.S.C. 4021, formerly 2371) and prototype OTs (10 U.S.C. 4022, formerly 2371b) with possible follow-on production; only a warranted Agreements Officer may sign one.",
+  "domain": "Grants & Agreements",
+  "cite": "10 U.S.C. 4021, 4022 (were 2371, 2371b); DoD Other Transactions Guide (2023)"
+ },
+ {
+  "term": "PADDS",
+  "expansion": "Procurement Automated Data and Document System",
+  "definition": "A legacy Army contract writing system still in use in some offices. A warranted KO gains access to additional DoDAACs by adding them to the PADDS profile.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "ACC Contracting Note 26-03 para 7b"
+ },
+ {
+  "term": "PAM",
+  "expansion": "Procurement.Army.mil",
+  "definition": "The DASA(P) SharePoint portal that hosts the Army Warranting Program page, including the policy, the CORB question repository, warrant reciprocity MOAs, and templates. Board questions in the Army repository are meant to be tailored by the HCA to the office mission.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "Army Warranting Program Policy v12 sec. 2.0 and 5.0"
+ },
+ {
+  "term": "Part deviation guide",
+  "expansion": "RFO FAR part deviation guide / model deviation",
+  "definition": "For each overhauled FAR part, acquisition.gov publishes a model deviation text that agencies adopt through class deviations, plus a part deviation guide summarizing what changed and where content moved. These are the authoritative RFO text until formal rulemaking finishes, and the reason cites read 'RFO FAR'.",
+  "domain": "General Contracting",
+  "cite": "acquisition.gov/far-overhaul/far-part-deviation-guide"
+ },
+ {
+  "term": "Partnering / PPP",
+  "expansion": "Partnering and Public-Private Partnerships",
+  "definition": "A cooperative approach between the Government and a contractor (or, for a PPP, a broader arrangement combining public and private resources) intended to improve communication, reduce disputes, and align incentives toward common project goals rather than adversarial contract administration. Benefits cited in study materials include earlier issue-spotting, fewer claims, and better use of each party's resources; the KO still administers the contract per its terms. Reviewer note: added from a question-bank term not previously in the glossary; the specific RFO/FAR cite for partnering guidance was not verified this pass.",
+  "domain": "Contract Administration",
+  "cite": "unverified - confirm cite before board use (flags: verify-locally)"
+ },
+ {
+  "term": "PBP",
+  "expansion": "Performance-based payments",
+  "definition": "The preferred Government financing method for noncommercial fixed-price contracts, paying on the completion of measurable events or milestones rather than costs incurred. Not practical on small contracts; DoD considers them for larger actions where deliveries start months after award.",
+  "domain": "Pricing, Cost & Payment",
+  "cite": "RFO FAR subpart 32.10; DFARS 232.10"
+ },
+ {
+  "term": "PCF",
+  "expansion": "Paperless Contract File",
+  "definition": "The VCE module that serves as the Army's electronic official contract file. Access to another organization's PCF cabinets must be granted for actions executed outside your home organization, and a departing KO's PCF actions must be zero before removal from the VCE TDA.",
+  "domain": "Contract Administration",
+  "cite": "ACC Contracting Note 26-03 para 7c; RFO FAR 4.101"
+ },
+ {
+  "term": "PCO",
+  "expansion": "Procuring Contracting Officer",
+  "definition": "The contracting officer who awards the contract and is responsible for it unless administration is delegated to an ACO. VCE-Warrants allows a secondary warrant type only on PCO warrants.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "RFO FAR 2.101; VCE-Warrants User Guide (Feb 2025)"
+ },
+ {
+  "term": "PD",
+  "expansion": "PD (411th CSB senior civilian leader; confirm local title)",
+  "definition": "In the 411th CSB workflow the PD is listed with the SCO, CoCOs, division chiefs, and KOs as a CORB voting member. Describe the role rather than guessing the expansion if asked.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "411th CSB Warrant Process Workflow (Jul 2026)"
+ },
+ {
+  "term": "Performance-based acquisition",
+  "expansion": "Performance-based acquisition (PBA)",
+  "definition": "Structuring a service acquisition around measurable outcomes rather than how the work is done: a PWS or SOO, measurable performance standards, a QASP, and positive or negative incentives or price reductions when standards are not met. PBA is the preferred method for services.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 37.101, 37.102; RFO FAR 2.101 (PWS)"
+ },
+ {
+  "term": "PGI",
+  "expansion": "Procedures, Guidance, and Information (DFARS companion)",
+  "definition": "Non-regulatory DoD procedures published alongside the DFARS; mandatory internal procedures such as COR designation within 3 business days live in PGI rather than the regulation. The Army's AFARS also has a PGI-style companion.",
+  "domain": "General Contracting",
+  "cite": "DFARS 201.301(a)(2); PGI 201.404-70"
+ },
+ {
+  "term": "PIEE",
+  "expansion": "Procurement Integrated Enterprise Environment",
+  "definition": "DoD's single sign-on platform hosting WAWF invoicing, ACWS, and related modules. Role-based access by DoDAAC in PIEE controls what a warranted KO can sign or approve.",
+  "domain": "Contract Administration",
+  "cite": "ACC Contracting Note 26-03 para 7a"
+ },
+ {
+  "term": "PNM",
+  "expansion": "Price Negotiation Memorandum",
+  "definition": "The KO's record of the principal elements of the negotiation: the objectives, what data were relied on, how price reasonableness was established, and the agreed price. It is the file document later used to judge whether a change was within scope and how the price was built.",
+  "domain": "Pricing, Cost & Payment",
+  "cite": "RFO FAR 15.408-2 (was 15.406-3)"
+ },
+ {
+  "term": "PR&C",
+  "expansion": "Purchase Request and Commitment (DA Form 3953)",
+  "definition": "The Army document by which a requiring activity sends a funded requirement to contracting; the resource manager's signature certifies funds are available and committed. A commander's promise that funds will arrive is not a certification and cannot substitute for it.",
+  "domain": "Fiscal Law & Funding",
+  "cite": "DFAS-IN Reg 37-1; 411th study deck 7 Jul 2026 (Line 105)"
+ },
+ {
+  "term": "Practitioner Album",
+  "expansion": "Practitioner Album (RFO)",
+  "definition": "Non-regulatory training materials acquisition.gov publishes for each overhauled FAR part, including deviation summaries and line-out documents that show what was removed, moved, or kept. Use them to see where legacy text went, then cite the RFO FAR section, not the album.",
+  "domain": "General Contracting",
+  "cite": "acquisition.gov/far-overhaul (Practitioner Albums)"
+ },
+ {
+  "term": "Price analysis",
+  "expansion": "Price analysis",
+  "definition": "Examining and evaluating a proposed price as a whole without evaluating its separate cost elements or profit, using comparisons to competing offers, historical prices, published price lists, parametric estimates, market research, or the IGE. It is the first and usually sufficient technique when adequate competition exists.",
+  "domain": "Pricing, Cost & Payment",
+  "cite": "RFO FAR 15.404-1 (was 15.404-1(b))"
+ },
+ {
+  "term": "Procurement Integrity Act",
+  "expansion": "Procurement Integrity Act (41 U.S.C. chapter 21)",
+  "definition": "The statute that bars disclosing or obtaining contractor bid or proposal information and source selection information before award, requires reporting of employment contacts by covered officials, and restricts post-Government employment. Violations can void the award and lead to criminal penalties.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "RFO FAR 3.104; 41 U.S.C. chapter 21"
+ },
+ {
+  "term": "Progress payments",
+  "expansion": "Progress payments based on costs",
+  "definition": "Government financing on noncommercial fixed-price contracts paid as a percentage of costs incurred (customary rate 80 percent, higher for small business), liquidated from delivery payments. Title to work-in-process vests in the Government as security.",
+  "domain": "Pricing, Cost & Payment",
+  "cite": "RFO FAR subpart 32.5; FAR 52.232-16"
+ },
+ {
+  "term": "Prompt Payment Act",
+  "expansion": "Prompt Payment Act",
+  "definition": "Requires the Government to pay a proper invoice within 30 days of receipt (or acceptance, whichever is later) or pay interest automatically at the Treasury rate. The KO checks receipt dates at the billing office, defines acceptance periods, and can use the same rate for CDA claim interest.",
+  "domain": "Pricing, Cost & Payment",
+  "cite": "RFO FAR subpart 32.9; 31 U.S.C. 3901-3907; 5 CFR 1315"
+ },
+ {
+  "term": "Protest",
+  "expansion": "Protest",
+  "definition": "A written objection by an interested party to a solicitation, a proposed award, or an award, filed with the agency, GAO, or the Court of Federal Claims. An unclear letter objecting to an award should go to legal for a determination of whether it is a protest.",
+  "domain": "Protests, Claims & Disputes",
+  "cite": "RFO FAR 33.102, 33.103; 411th study deck 13 May 2026 (Line 175)"
+ },
+ {
+  "term": "Prototype OT",
+  "expansion": "Prototype Other Transaction",
+  "definition": "An OT for a prototype project directly relevant to enhancing the mission effectiveness of personnel or the supporting platforms, systems, or components, available when a nontraditional contractor or small business participates significantly, all significant participants are small or nontraditional, at least one-third of cost is non-Federal, or the SPE determines exceptional circumstances. Competitive procedures to the maximum extent practicable are required.",
+  "domain": "Grants & Agreements",
+  "cite": "10 U.S.C. 4022 (was 2371b); DoD Other Transactions Guide (2023)"
+ },
+ {
+  "term": "Purchase order",
+  "expansion": "Purchase order",
+  "definition": "An offer by the Government to buy supplies or services under simplified procedures, usually on an RFQ-then-order basis; it becomes a contract when the contractor accepts in writing, furnishes the items, or proceeds with the work to the point of substantial performance. Quotations are not offers.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 13.201, 13.203; RFO FAR 12.201-1(b) (was 13.004)"
+ },
+ {
+  "term": "Purpose Statute",
+  "expansion": "Purpose Statute (Misappropriation Act)",
+  "definition": "Appropriations may be applied only to the objects for which they were made. The three-part test asks whether the expense is for the appropriation's purpose or necessary to it, not prohibited by law, and not provided for by another more specific appropriation.",
+  "domain": "Fiscal Law & Funding",
+  "cite": "31 U.S.C. 1301(a)"
+ },
+ {
+  "term": "PWS",
+  "expansion": "Performance Work Statement",
+  "definition": "A statement of work for performance-based acquisitions that describes the required results in clear, specific, and objective terms with measurable outcomes, leaving the method to the contractor. Preferred over a SOW when process variation does not create risk.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 2.101; RFO FAR 37.101; 411th study deck 2 Jun 2026 (Line 48)"
+ },
+ {
+  "term": "QASP",
+  "expansion": "Quality Assurance Surveillance Plan",
+  "definition": "The Government's plan for how it will check that the contractor meets the PWS performance standards: what is surveilled, the method (100 percent, random sampling, customer feedback), who does it (the COR), and what happens when performance falls short. Prepared with the work statement and used with a contract discrepancy report and remedies.",
+  "domain": "Contract Administration",
+  "cite": "RFO FAR 46.401(a); RFO FAR 37.101"
+ },
+ {
+  "term": "Ratification",
+  "expansion": "Ratification of an unauthorized commitment",
+  "definition": "The act by an official with authority of approving an unauthorized commitment so the Government can pay. All six criteria in RFO FAR 1.405(c) must be met: the Government received the benefit, the ratifying official has authority, the contract would otherwise have been proper, the price is fair and reasonable, the KO recommends payment with legal concurrence, and funds were available when the commitment was made.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "RFO FAR 1.405 (was 1.602-3); AFARS 5101.602-3-90"
+ },
+ {
+  "term": "RDT&E",
+  "expansion": "Research, Development, Test and Evaluation appropriation",
+  "definition": "Two-year funds for research and development efforts, including prototypes and OTs for research and prototyping. Unlike O&M, RDT&E is budgeted on an incremental basis and follows its own bona fide need logic for the program year.",
+  "domain": "Fiscal Law & Funding",
+  "cite": "DoD FMR Vol. 2A ch. 1"
+ },
+ {
+  "term": "REA",
+  "expansion": "Request for Equitable Adjustment",
+  "definition": "A contractor's request for a price or schedule adjustment under a contract clause, handled as a negotiation and not yet a claim. If the KO denies it or fails to act, the contractor may convert it to a CDA claim by written notice.",
+  "domain": "Contract Administration",
+  "cite": "RFO FAR 33.205-1; RFO FAR 43.204; DFARS 243.204-70"
+ },
+ {
+  "term": "Reciprocity (warrant)",
+  "expansion": "Warrant reciprocity",
+  "definition": "ACC policy that every SCO must honor an active warrant issued anywhere within ACC at its existing type and value, so no new warrant is needed for OPCON or realignment moves. Recognition is acceptance of another SCO's warrant; transfer is terminating the old warrant and issuing a new one when someone permanently moves organizations.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "ACC Contracting Note 26-03; ACC Command Policy Memorandum on Warrant Reciprocity (30 Mar 2026)"
+ },
+ {
+  "term": "Regulatory sunset",
+  "expansion": "Regulatory sunset (RFO FAR 1.109)",
+  "definition": "The RFO principle that non-statutory FAR provisions expire after a set period (four years under Executive Order 14275) unless the FAR Council affirmatively renews them, so the regulation stays limited to what statute requires or sound procurement demands. Statutes and CFR outside the FAR are unaffected.",
+  "domain": "General Contracting",
+  "cite": "RFO FAR 1.109; Executive Order 14275 (Apr 2025)"
+ },
+ {
+  "term": "Responsibility",
+  "expansion": "Responsibility determination",
+  "definition": "Before award the KO must affirmatively determine the prospective contractor is responsible: adequate financial resources, ability to meet the schedule, satisfactory performance record and integrity, necessary organization and skills, necessary facilities, and otherwise eligible. Above the SAT the KO reviews FAPIIS and documents the determination; below the SAT the process is simpler but still required, and the Army's DORA bot supports both.",
+  "domain": "Responsibility & Exclusions",
+  "cite": "RFO FAR 9.103, 9.104-1, 9.105-2; AFARS PGI 5109.103(b)"
+ },
+ {
+  "term": "Responsiveness",
+  "expansion": "Responsiveness (vs. responsibility)",
+  "definition": "In sealed bidding, a bid is responsive if it conforms to all material requirements of the IFB at bid opening; a nonresponsive bid must be rejected and cannot be fixed later. Responsibility, by contrast, concerns the bidder's ability to perform and is judged at award.",
+  "domain": "Source Selection & Evaluation",
+  "cite": "RFO FAR Part 14 (bid evaluation); RFO FAR 9.103"
+ },
+ {
+  "term": "RFI",
+  "expansion": "Request for Information / sources sought notice",
+  "definition": "A market research tool used to learn about industry capability, pricing, and commercial practices before a solicitation exists. Responses are not offers, the Government cannot award from an RFI, and the notice should say so.",
+  "domain": "Competition & Market Research",
+  "cite": "RFO FAR 10.001; RFO FAR 15.101; RFO FAR 5.103"
+ },
+ {
+  "term": "RFO",
+  "expansion": "Revolutionary FAR Overhaul",
+  "definition": "The 2025-2026 rewrite of the FAR that stripped non-statutory text, moved practice guidance to non-regulatory buying guides and Practitioner Albums, and renumbered parts on a presolicitation/solicitation/postaward pattern. Army policy applies RFO numbering in the FAR, DFARS, and AFARS from 1 February 2026, so board answers cite RFO numbers and note the legacy number when it helps.",
+  "domain": "General Contracting",
+  "cite": "acquisition.gov/far-overhaul; Army Warranting Program Policy v12 sec. 2.0"
+ },
+ {
+  "term": "RFQ",
+  "expansion": "Request for Quotations",
+  "definition": "A request for price and delivery information under simplified or commercial procedures; a quotation is information, not an offer, so a contract forms only when the Government's purchase order is accepted. RFQs are standard under RFO FAR 12.201-1 up to $9 million.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 12.201-1; RFO FAR 13.201"
+ },
+ {
+  "term": "Rule of two",
+  "expansion": "Rule of two (total small business set-aside)",
+  "definition": "Acquisitions above the micro-purchase threshold and up to the SAT are automatically reserved for small business, and above the SAT the KO must set aside when there is a reasonable expectation of offers from two or more responsible small businesses at fair market prices. Market research documents the expectation.",
+  "domain": "Small Business & Socioeconomic",
+  "cite": "RFO FAR 19.104-1 (was 19.502-2); 15 U.S.C. 644(j)"
+ },
+ {
+  "term": "SAM",
+  "expansion": "System for Award Management (SAM.gov)",
+  "definition": "The governmentwide system for entity registration, representations and certifications, exclusions, FAPIIS, and (since 24 February 2026) FPDS contract award reporting and search, which moved into SAM.gov when FPDS.gov was decommissioned. Offerors must be registered at offer and award, and the KO checks for active exclusions before award and before exercising an option.",
+  "domain": "Contract Administration",
+  "cite": "RFO FAR 4.203, 4.304; RFO FAR 9.404; RFO FAR 17.204-1(b)(3)(iii)"
+ },
+ {
+  "term": "SAM.gov Contract Awards",
+  "expansion": "SAM.gov Contract Awards (successor to FPDS)",
+  "definition": "The SAM.gov module that absorbed the Federal Procurement Data System when FPDS.gov was decommissioned on 24 February 2026; contract writing systems now report award data here and public users search it with a SAM account. The reporting duty itself lives at RFO FAR 4.301.",
+  "domain": "General Contracting",
+  "cite": "RFO FAR 4.301 (was 4.6); sam.gov/fpds announcement"
+ },
+ {
+  "term": "SaP",
+  "expansion": "Simplified Procedures for Commercial Products and Commercial Services",
+  "definition": "The RFO name for the former FAR 13.5 authority: commercial acquisitions up to $9 million ($15 million for contingency or emergency support) may use RFQ-and-purchase-order style simplified procedures. Army Class II warrants use 'SaP' as their top fixed value so the warrant tracks the threshold.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 12.201-1 and 12.001(c) (was 13.500); 41 U.S.C. 1901; Army Warranting Program Policy v12 Table 1"
+ },
+ {
+  "term": "SAP",
+  "expansion": "Simplified acquisition procedures (RFO FAR Part 13)",
+  "definition": "Streamlined methods for noncommercial acquisitions at or below the SAT, using quotes, purchase orders, BPAs, and the GPC, with competition to the maximum extent practicable (generally three quotes above the MPT). Commercial simplified buys moved to Part 12 under the RFO, so Part 13 now covers noncommercial actions.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 13.101, 13.201; 41 U.S.C. 1901"
+ },
+ {
+  "term": "SAT",
+  "expansion": "Simplified Acquisition Threshold",
+  "definition": "$350,000, rising to $1 million (inside the U.S.) or $2 million (outside) for contingency, CBRN, disaster, or emergency support, and $650,000 for humanitarian or peacekeeping operations outside the U.S. It is the Army Class I warrant value and the line above which J&As, IGEs, CORs, and certified data rules begin to apply.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 2.101; 41 U.S.C. 134, 1903"
+ },
+ {
+  "term": "SCO",
+  "expansion": "Senior Contracting Official",
+  "definition": "The senior contracting leader of an ACC organization such as a CSB, holding warrant-granting authority delegated from the HCA. In the 411th CSB the SCO chairs the CORB and makes the appointment in VCE-Warrants.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "Army Warranting Program Policy v12 sec. 1.0; 411th CSB Warrant Process Workflow (Jul 2026)"
+ },
+ {
+  "term": "SDVOSB",
+  "expansion": "Service-Disabled Veteran-Owned Small Business program",
+  "definition": "A program allowing set-asides and sole-source awards to SBA-certified SDVOSBs, with certification now handled by SBA's VetCert. Parity with the other socioeconomic programs applies when deciding which set-aside to use.",
+  "domain": "Small Business & Socioeconomic",
+  "cite": "RFO FAR 19.106; 13 CFR 128"
+ },
+ {
+  "term": "Severable services",
+  "expansion": "Severable services",
+  "definition": "Recurring services, like janitorial or grounds maintenance, that can be separated into parts each meeting a separate need. They are the bona fide need of the year performed, but DoD may award a severable services contract crossing fiscal years if the period of performance does not exceed 12 months.",
+  "domain": "Fiscal Law & Funding",
+  "cite": "10 U.S.C. 3133 (was 2410a); 31 U.S.C. 1502; RFO FAR 32.703-3"
+ },
+ {
+  "term": "Show cause notice",
+  "expansion": "Show cause notice",
+  "definition": "A notice used when time does not permit a cure period or the delivery date has passed, asking the contractor to show why the contract should not be terminated for default and inviting any excuse. Not legally required but strongly advised to build the record.",
+  "domain": "Terminations & Remedies",
+  "cite": "RFO FAR 49.607; RFO FAR 49.402-3(e)"
+ },
+ {
+  "term": "SMA",
+  "expansion": "Special Measures Agreement",
+  "definition": "The bilateral defense cost-sharing agreement under which the Republic of Korea provides financial support for the stationing of U.S. Forces Korea, including labor cost sharing, military construction, and Logistics Cost Sharing. LCS is the SMA component that touches 411th contracting.",
+  "domain": "Korea, LCS & SOFA",
+  "cite": "U.S.-ROK Special Measures Agreement; 411th study deck 13 May 2026"
+ },
+ {
+  "term": "SOFA",
+  "expansion": "Status of Forces Agreement (U.S.-ROK)",
+  "definition": "The 1966 agreement, under the Mutual Defense Treaty, that defines the legal status of U.S. forces, civilian component, and invited contractors in Korea, including customs, taxes, and jurisdiction. Contract performance in the ROK must be reviewed against it and USFKI 4901.01.",
+  "domain": "Korea, LCS & SOFA",
+  "cite": "U.S.-ROK SOFA; USFKI 4901.01"
+ },
+ {
+  "term": "SOFA Article XV",
+  "expansion": "SOFA Article XV (Invited Contractors)",
+  "definition": "The SOFA article that lets persons, including corporations, ordinarily resident in the United States and present in Korea solely to perform contracts for U.S. armed forces be designated invited contractors with specified privileges. It is the legal basis for the ICP that the KO must review before contract performance in the ROK.",
+  "domain": "Korea, LCS & SOFA",
+  "cite": "U.S.-ROK SOFA Article XV; USFKI 4901.01"
+ },
+ {
+  "term": "SOO",
+  "expansion": "Statement of Objectives",
+  "definition": "A Government-prepared document stating overall performance objectives, used when the Government wants maximum flexibility for each offeror to propose its own solution; offerors respond with a proposed PWS. It does not become part of the contract.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 2.101; RFO FAR 37.101"
+ },
+ {
+  "term": "SOW",
+  "expansion": "Statement of Work",
+  "definition": "A work statement that tells the contractor what actions to take and how, appropriate where process risk requires the Government to prescribe methods. A PWS describing outcomes is preferred for commercial-type services and mature requirements.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 11.102; 411th study deck 2 Jun 2026 (Line 48)"
+ },
+ {
+  "term": "SPE",
+  "expansion": "Senior Procurement Executive",
+  "definition": "The agency official responsible for management direction of the acquisition system; for the Army this is the ASA(ALT). The SPE is the approval authority for the largest justifications for other than full and open competition.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "RFO FAR 2.101; RFO FAR 6.104-2 Table 6-1; 41 U.S.C. 1702(c)"
+ },
+ {
+  "term": "SPRS",
+  "expansion": "Supplier Performance Risk System",
+  "definition": "The DoD system (sprs.csd.disa.mil) that holds NIST SP 800-171 assessment scores, CMMC status, and supplier risk data. DoD KOs verify SPRS entries before award and before exercising an option.",
+  "domain": "Contract Administration",
+  "cite": "DFARS 204.7302; RFO DFARS 217.204-170"
+ },
+ {
+  "term": "SSA",
+  "expansion": "Source Selection Authority",
+  "definition": "The official responsible for the source selection decision: approves the plan, ensures the evaluation is consistent with the RFP, and makes an independent, documented best-value decision. Unless the agency head appoints another, the KO is the SSA.",
+  "domain": "Source Selection & Evaluation",
+  "cite": "RFO FAR 15.201 (was 15.303); RFO FAR 15.205"
+ },
+ {
+  "term": "SSAC",
+  "expansion": "Source Selection Advisory Council",
+  "definition": "A group of senior advisors that reviews the SSEB's evaluation and gives the SSA a comparative analysis and award recommendation on larger source selections. The SSA may accept or reject the recommendation but must document an independent judgment.",
+  "domain": "Source Selection & Evaluation",
+  "cite": "DoD Source Selection Procedures; RFO FAR 15.201"
+ },
+ {
+  "term": "SSDD",
+  "expansion": "Source Selection Decision Document",
+  "definition": "The SSA's written, independent rationale for the award decision, including any business judgment and tradeoffs made, in enough detail for GAO to follow the reasoning. It may be redacted for release but must exist before award.",
+  "domain": "Source Selection & Evaluation",
+  "cite": "RFO FAR 15.205 (was 15.308)"
+ },
+ {
+  "term": "SSEB",
+  "expansion": "Source Selection Evaluation Board",
+  "definition": "The team of technical, past performance, and cost or price evaluators that rates proposals strictly against the RFP factors and documents strengths, weaknesses, deficiencies, and risks. Only Government employees may be voting members; the SSEB must not credit things the RFP did not ask for.",
+  "domain": "Source Selection & Evaluation",
+  "cite": "RFO FAR 15.202; DoD Source Selection Procedures; RFO FAR 7.503"
+ },
+ {
+  "term": "Stop-work order",
+  "expansion": "Stop-work order",
+  "definition": "A written KO order to stop all or part of the work for up to 90 days, used when advisable for reasons such as a protest or a pending change; the Government then either cancels it or terminates. Not to be confused with the automatic CICA stay.",
+  "domain": "Contract Administration",
+  "cite": "RFO FAR 42.1003; FAR 52.242-15"
+ },
+ {
+  "term": "Subcontracting plan",
+  "expansion": "Small business subcontracting plan",
+  "definition": "A plan with goals and reporting that other-than-small offerors must submit for contracts expected to exceed $750,000 ($1.5 million for construction) with subcontracting possibilities. It is required before award, evaluated during source selection, and monitored with eSRS reports.",
+  "domain": "Small Business & Socioeconomic",
+  "cite": "RFO FAR 19.109, 19.206, 19.302; 15 U.S.C. 637(d)"
+ },
+ {
+  "term": "Substantial involvement",
+  "expansion": "Substantial involvement",
+  "definition": "The test that separates a grant from a cooperative agreement: if the agency expects to be substantially involved in carrying out the project (collaboration, joint decisions, approval of stages), a cooperative agreement is used. Routine monitoring and oversight are not substantial involvement.",
+  "domain": "Grants & Agreements",
+  "cite": "31 U.S.C. 6304, 6305; 32 CFR 22.215"
+ },
+ {
+  "term": "Suspension (contractor)",
+  "expansion": "Suspension of a contractor",
+  "definition": "A temporary exclusion imposed on adequate evidence of serious cause pending investigation or legal proceedings, effective immediately and normally not exceeding 12 months (18 with Justice Department request). Suspended contractors get the same treatment as debarred ones for new work.",
+  "domain": "Responsibility & Exclusions",
+  "cite": "RFO FAR 9.407; RFO FAR 9.405"
+ },
+ {
+  "term": "T&M",
+  "expansion": "Time-and-materials contract",
+  "definition": "A contract paying fixed hourly labor rates (including overhead and profit) plus materials at cost, used only when it is not possible to estimate the extent or duration of work with confidence. Requires a D&F that no other type is suitable, a ceiling price, and close Government surveillance.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 16.601; RFO FAR 12.104 (commercial)"
+ },
+ {
+  "term": "Table 6-1",
+  "expansion": "Table 6-1 justification approval authorities (DoD Table 206-1)",
+  "definition": "The FAR table setting who approves a justification by dollar value: the KO's certification alone up to $900,000, the competition advocate up to $20M, the HCA up to $90M ($150M for DoD, NASA, Coast Guard), and the SPE above that. DoD's class-deviation Table 206-1 uses higher tiers ($10M KO, $100M competition advocate, $500M HCA, then SPE); confirm the current deviation before quoting.",
+  "domain": "Competition & Market Research",
+  "cite": "RFO FAR 6.104-2(a) Table 6-1 (was 6.304); DFARS 206.104-71 Table 206-1 (class deviation 2026-O0017 Rev. 2)"
+ },
+ {
+  "term": "Task order / delivery order",
+  "expansion": "Task order and delivery order",
+  "definition": "Orders for services (task) or supplies (delivery) placed against an indefinite-delivery contract; the order, not the base contract, obligates funds. Orders under multiple-award contracts follow fair opportunity, and only orders over the statutory floor can be protested.",
+  "domain": "Acquisition Planning & Contract Types",
+  "cite": "RFO FAR 16.506, 16.507, 16.508"
+ },
+ {
+  "term": "Task order protest threshold",
+  "expansion": "Protests of task and delivery orders",
+  "definition": "Orders under multiple-award contracts may be protested only for increasing scope, period, or maximum value, or for orders above the statutory floor: $35 million for DoD, NASA, and Coast Guard (GAO exclusive jurisdiction, raised by the FY25 NDAA) and $10 million for civilian agencies. The agency ombudsman handles complaints below the floor.",
+  "domain": "Protests, Claims & Disputes",
+  "cite": "RFO FAR 16.508 (was 16.505(a)(10)); 10 U.S.C. 3406(f); 41 U.S.C. 4106(f)"
+ },
+ {
+  "term": "TCO",
+  "expansion": "Termination Contracting Officer",
+  "definition": "The contracting officer who settles terminated contracts, including reviewing the settlement proposal, releasing excess funds, and negotiating or determining the settlement. May be the PCO, an ACO, or a designated terminations specialist.",
+  "domain": "Terminations & Remedies",
+  "cite": "RFO FAR 49.101, 49.105"
+ },
+ {
+  "term": "Termination for cause",
+  "expansion": "Termination for cause (commercial)",
+  "definition": "The commercial-item equivalent of a default termination under clause 52.212-4(m): the KO sends a cure notice (unless the reason is late delivery), then a written notice stating the termination, reasons, intended remedies, and that it is a final decision appealable under Disputes. Part 49 procedures do not apply; report the action to FAPIIS.",
+  "domain": "Terminations & Remedies",
+  "cite": "RFO FAR 12.304(b); FAR 52.212-4(m)"
+ },
+ {
+  "term": "Termination for convenience",
+  "expansion": "Termination for convenience (T4C)",
+  "definition": "The Government's right to end all or part of a contract when it is in the Government's interest, paying the contractor for work done, reasonable profit on it, and settlement costs but not anticipatory profit. Settled by negotiation on a settlement proposal or by KO determination.",
+  "domain": "Terminations & Remedies",
+  "cite": "RFO FAR subpart 49.1 and 49.2; FAR 52.249-2; RFO FAR 12.304 (commercial)"
+ },
+ {
+  "term": "Termination for default",
+  "expansion": "Termination for default (T4D)",
+  "definition": "Ending a contract because the contractor failed to deliver, make progress, or perform other provisions, after the required notices and consideration of the factors in 49.402-3. The Government is not liable for undelivered work, may recover excess reprocurement costs, and the decision is appealable; an unsupported default converts to a convenience termination.",
+  "domain": "Terminations & Remedies",
+  "cite": "RFO FAR 49.402-1 to 49.402-3; FAR 52.249-8"
+ },
+ {
+  "term": "Time, Purpose, Amount",
+  "expansion": "Three fiscal constraints on appropriated funds",
+  "definition": "Every obligation must be right in time (within the period of availability and a bona fide need of that period), right in purpose (what the appropriation was made for), and right in amount (not exceeding the appropriation or apportionment). Missing any of the three risks an Antideficiency Act violation.",
+  "domain": "Fiscal Law & Funding",
+  "cite": "31 U.S.C. 1301, 1341, 1502"
+ },
+ {
+  "term": "Tradeoff",
+  "expansion": "Tradeoff approach",
+  "definition": "A best-value approach that allows award to other than the lowest-priced or highest-rated offeror when the RFP states the relative importance of factors and the SSDD explains what the extra benefits are worth. Perceived benefits must merit the additional cost.",
+  "domain": "Source Selection & Evaluation",
+  "cite": "RFO FAR 15.103-1 (was 15.101-1)"
+ },
+ {
+  "term": "Unauthorized commitment",
+  "expansion": "Unauthorized commitment",
+  "definition": "An agreement that is not binding solely because the Government representative who made it lacked authority to enter into it. The remedy is ratification if the criteria are met; if not, the vendor's recourse is a claim under 31 U.S.C. 3702, not the KO's signature.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "RFO FAR 1.405 (was 1.602-3)"
+ },
+ {
+  "term": "Unbalanced pricing",
+  "expansion": "Unbalanced pricing",
+  "definition": "Pricing in which line items are significantly over- or understated relative to their cost, even if the total is reasonable, creating risk of advance payments or a walk-away. The KO analyzes line items against the IGE, other offers, and history and may reject an offer whose unbalancing poses unacceptable risk.",
+  "domain": "Pricing, Cost & Payment",
+  "cite": "RFO FAR 15.404-6 (was 15.404-1(g))"
+ },
+ {
+  "term": "Uniform Guidance",
+  "expansion": "Uniform Guidance (2 CFR 200)",
+  "definition": "OMB's governmentwide administrative requirements, cost principles, and audit requirements for Federal assistance awards, adopted by DoD through 2 CFR 1100 series and the DoDGARs. Covers risk review of applicants (including FAPIIS), allowable costs, subawards, and closeout.",
+  "domain": "Grants & Agreements",
+  "cite": "2 CFR Part 200; 2 CFR 200.206"
+ },
+ {
+  "term": "Unusual and compelling urgency",
+  "expansion": "Unusual and compelling urgency",
+  "definition": "An exception to full and open competition when delay would seriously injure the Government; the KO still solicits as many sources as practicable and the justification may be approved after award. Contracts under this authority are limited to the time needed to meet the urgency, generally not more than one year.",
+  "domain": "Competition & Market Research",
+  "cite": "RFO FAR 6.103-2 (was 6.302-2); 10 U.S.C. 3204(a)(2)"
+ },
+ {
+  "term": "USFK",
+  "expansion": "United States Forces Korea",
+  "definition": "The joint sub-unified command for U.S. forces in the Republic of Korea; its staff (J4, FKAQ) manages the LCS program and the SOFA invited contractor program that shape 411th CSB acquisitions.",
+  "domain": "Korea, LCS & SOFA",
+  "cite": "411th study deck 13 May 2026; USFKI 4901.01"
+ },
+ {
+  "term": "USFK J4",
+  "expansion": "USFK Logistics Directorate (J4)",
+  "definition": "The USFK staff directorate that manages the LCS program, receives LCS packages and the offshore materials memo, and forwards the KO's recommendation for award to ROK MND. Weekly coordination with J4 and unit S4s helps requirements reach the KO before the vendor does.",
+  "domain": "Korea, LCS & SOFA",
+  "cite": "411th study deck 13 May 2026"
+ },
+ {
+  "term": "VCE",
+  "expansion": "Virtual Contracting Enterprise",
+  "definition": "The Army's suite of web-based contracting tools at vce.army.mil, including PCF, Warrants, Registration, BI reports, and dashboards. Registration data in VCE pre-populates the warrant application.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "VCE-Warrants User Guide (Feb 2025)"
+ },
+ {
+  "term": "VCE-Warrants",
+  "expansion": "Virtual Contracting Enterprise Warrants module",
+  "definition": "The official Army repository for KO, GO, and AO warrants, used to initiate, route, approve, store, suspend, terminate, and reinstate warrants. Completed warrant records are kept six years after suspension or termination; incomplete packages are disposed of after 18 months; no PII may be uploaded.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "Army Warranting Program Policy v12 sec. 6.0; VCE-Warrants User Guide (Feb 2025)"
+ },
+ {
+  "term": "VKE",
+  "expansion": "VKE (German-language ABG-75 fee term; letters not confirmed) - fees paid to the Bauamt",
+  "definition": "The fees the U.S. Government pays the German construction authority under ABG-75: 5 percent of estimated construction cost for new work, 7 percent for repair work, plus 0.5 percent for translation services. Fees are budgeted with the project funds.",
+  "domain": "Germany ABG-75",
+  "cite": "ABG-75; 409th CSB question bank"
+ },
+ {
+  "term": "Wage determination",
+  "expansion": "Wage determination (Service Contract Labor Standards)",
+  "definition": "The Department of Labor's schedule of minimum wages and fringe benefits that must be incorporated in service contracts over $2,500 covered by the Service Contract Labor Standards statute (SCA), and updated at option exercise. Construction contracts over $2,000 use Construction Wage Rate Requirements (Davis-Bacon) determinations instead.",
+  "domain": "Contract Administration",
+  "cite": "RFO FAR 22.1002-3; RFO FAR 22.402-3; 41 U.S.C. chapter 67; 40 U.S.C. chapter 31"
+ },
+ {
+  "term": "Waiver (warrant)",
+  "expansion": "Waiver of warrant qualification requirements or review board",
+  "definition": "The HCA may waive qualification requirements, including the review board, in writing based on a risk assessment of the person's knowledge, skills, and abilities with a business case; KO waivers must also meet 10 U.S.C. 1724(d). Passing the board cannot be waived for an unlimited warrant; waivers are retained in VCE-Warrants before appointment.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "Army Warranting Program Policy v12 sec. 3.0 and 4.0; 10 U.S.C. 1724(d)"
+ },
+ {
+  "term": "Warrant",
+  "expansion": "Warrant (appointment)",
+  "definition": "An individual's signatory authority to enter into, obligate funds for, administer, terminate, and sign documents for FAR and non-FAR instruments up to a fixed threshold. Army warrants are issued only at Table 1 values and remain valid until the HCA suspends or terminates them.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "Army Warranting Program Policy v12 sec. 1.0 and 4.0; RFO FAR 1.403"
+ },
+ {
+  "term": "Warrant classes",
+  "expansion": "Army warrant classes (Table 1)",
+  "definition": "Class I = SAT; Class II = $500K, $1M, $5M, and SaP; Class III = $10M, $25M, $50M, and $100M; Class IV = $250M, $500M, and Unlimited. Using 'SAT' and 'SaP' on the certificate means the warrant follows those values if the thresholds change.",
+  "domain": "Authority, Ethics & Leadership",
+  "cite": "Army Warranting Program Policy v12 Table 1 (MAR 2026)"
+ },
+ {
+  "term": "WOSB",
+  "expansion": "Women-Owned Small Business / Economically Disadvantaged WOSB program",
+  "definition": "A program allowing set-asides and limited sole-source awards to SBA-certified WOSBs or EDWOSBs in NAICS codes where SBA has found women underrepresented. Certification is through SBA or an approved third party.",
+  "domain": "Small Business & Socioeconomic",
+  "cite": "RFO FAR 19.107; 13 CFR 127"
+ },
+ {
+  "term": "DoW",
+  "expansion": "Department of War",
+  "definition": "The name the Department of Defense has used since the September 2025 executive order that allowed 'Department of War' as its secondary title: the Secretary of War, the Office of the Assistant Secretary of War, and DPCAP memos issued in that name. Statutes (title 10), the DFARS title and most regulation text still say 'Department of Defense' and 'DoD', so both names are correct in a board answer; say which document you are quoting.",
+  "domain": "General Contracting",
+  "cite": "DoW rollout memo for the RFO class deviations, 19 Dec 2025 (acq.osd.mil)"
+ },
+ {
+  "term": "WarU",
+  "expansion": "Warfighting Acquisition University (formerly DAU)",
+  "definition": "The current name of the Defense Acquisition University: waru.edu replaces dau.edu, and ACQuipedia, the contracting certification courses (CON 1100V to CON 7300V) and the FAR overhaul training live there. Older decks and policy memos still say DAU.",
+  "domain": "General Contracting",
+  "cite": "waru.edu"
+ },
+ {
+  "term": "8(a) competition preference",
+  "expansion": "ASA(ALT) memorandum of 7 April 2026",
+  "definition": "Army policy signed by the DASA(P): Army contracting activities using the SBA 8(a) Business Development Program use competitive procedures as the preference over sole source to the maximum extent practicable. Emergency acquisitions under FAR Part 18 are not barred, and small business sole-source and set-aside awards above $20 million go to a senior-level review. The statutory sole-source authority of Alaska Native Corporations, tribes and Native Hawaiian Organizations is unchanged. Confirm the memo on PAM before citing it.",
+  "domain": "Small Business & Socioeconomic",
+  "cite": "ASA(ALT) memorandum, 7 Apr 2026 (secondary source: Schwabe summary); verify on PAM"
+ }
+]

@@ -1,0 +1,990 @@
+{
+ "entries": [
+  {
+   "old": "FAR 1.405",
+   "new": "FAR 1.405",
+   "title": "Ratification of unauthorized commitments",
+   "note": "Already RFO numbering (pre-RFO cite was 1.602-3). Definitions of ratification and unauthorized commitment now sit in 1.405(a); HCA ratifies, not delegable below chief of the contracting office, 1.405(b)(2); six criteria at 1.405(c); nonratifiable actions at 1.405(d). Page updated 16 Mar 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1"
+  },
+  {
+   "old": "FAR 1.602-2",
+   "new": "FAR 1.402-2",
+   "title": "Contracting officers - Responsibilities",
+   "note": "Old 1.602-2(a)-(c) (ensure legal/regulatory compliance and funds availability before signing, ensure contract compliance, fair treatment, request specialist advice) is now 1.402-2. The old 1.602-2(d) COR designation rules moved to a stand-alone section, 1.404 Contracting officer's representative (COR must be a Government employee, certified, no authority to change price/quality/quantity/delivery; mandatory on other than FFP).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1"
+  },
+  {
+   "old": "FAR 1.602-3(c)",
+   "new": "FAR 1.405(c)",
+   "title": "Ratification of unauthorized commitments - Criteria",
+   "note": "Old 1.602-3(c) limitations (Government accepted benefit, ratifying official has authority, contract would otherwise be proper, price fair and reasonable, legal counsel concurs, funds available at time of commitment) are now the six criteria at 1.405(c). Ratification authority itself is 1.405(b)(2).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1"
+  },
+  {
+   "old": "FAR 2.101",
+   "new": "FAR 2.101",
+   "title": "Definitions",
+   "note": "Section number unchanged. RFO 2.101 as fetched 13 Sep 2026: micro-purchase threshold $15,000 (construction subject to 40 U.S.C. chapter 31 subchapter IV $2,000; services subject to 41 U.S.C. chapter 67 $2,500; contingency / CBRN / international disaster assistance / emergency or major disaster $25,000 inside and $40,000 outside the United States; institutions of higher education $15,000 or a higher agency-set amount). Simplified acquisition threshold $350,000 (contingency / CBRN / disaster / emergency $1 million inside and $2 million outside the United States; humanitarian or peacekeeping operation outside the United States $650,000, 10 U.S.C. 3015). Caution: the RFO micro-purchase definition still cross-references 'as described in 13.201(g)(1)' - RFO 13.201 has no paragraph (g) (that was pre-RFO 13.201(g)); the contingency authority now sits in the 2.101 definition itself and in 18.001(b). 'Unauthorized commitment' and 'ratification' definitions now live in 1.405(a), not 2.101.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-2"
+  },
+  {
+   "old": "FAR 5",
+   "new": "FAR 5",
+   "title": "Publicizing Contract Actions (part page)",
+   "note": "Part restructured to 5.1 Presolicitation (5.101 presolicitation notice above $20,000), 5.2 Solicitation (5.201 solicitation notice, 5.202 requests from small businesses), 5.3 Synopses of contract awards. Old subparts 5.4-5.6 removed. NOTE for OCONUS units: the old 5.202(a)(12) exception for Defense-agency actions made and performed outside the United States does not appear in RFO 5.101(b); the only surviving OCONUS language is the public-announcement exemption at 5.302(b)(2) (awards over $5.5 million placed with foreign firms when delivery or performance is outside the United States and its outlying areas); 5.301(b) exempts an award notice only when a 5.101(b)(1) presolicitation exemption applied. Check the DFARS 205 deviation before relying on the old exception. Page updated 16 Mar 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5"
+  },
+  {
+   "old": "FAR 5.102(a)(6)",
+   "new": "FAR 5.201(c)(3)",
+   "title": "Solicitation notice - Content",
+   "note": "Old 5.102(a)(6) (post the brand-name justification with the solicitation) is now 5.201(c)(3): when an acquisition contains brand-name specifications, the solicitation notice must include the justification required by 6.104, redacted as necessary.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5"
+  },
+  {
+   "old": "FAR 5.202",
+   "new": "FAR 5.101(b)",
+   "title": "Presolicitation notice - Exemptions",
+   "note": "Old 5.202 'Exceptions' to synopsis are now the exemptions at 5.101(b) (at/below SAT with solicitation posted, national security, unsolicited/SBIR proposals, orders under requirements/task/delivery-order contracts, perishable subsistence, sole-source utilities, litigation experts, other than full and open competition except 6.103-1 and 6.103-6, agency-head determination). The old OCONUS/Defense-agency exception (5.202(a)(12)) is not in the fetched RFO list; see the FAR 5 note.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5"
+  },
+  {
+   "old": "FAR 6",
+   "new": "FAR 6",
+   "title": "Competition Requirements (part page)",
+   "note": "Renumbered: 6.101 full and open; 6.102 full and open after excluding sources (6.102-1 to -3); 6.103 other than full and open with authorities 6.103-1 to 6.103-7; 6.104 justification and approval (6.104-1 content, 6.104-2 approval); 6.301 post-award availability of the justification. Subpart 6.2 reserved. Issued 27 Jun 2025.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6"
+  },
+  {
+   "old": "FAR 6.103-1(d)",
+   "new": "FAR 6.103-1(d)",
+   "title": "Only one responsible source - Application for brand-name descriptions",
+   "note": "Already RFO numbering. 6.103-1(d): except as authorized at 6.103-5, brand-name descriptions or attributes peculiar to one manufacturer prevent full and open competition and may only be used when justified and approved under 6.104. (Pre-RFO cite was 6.302-1(c).)",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6"
+  },
+  {
+   "old": "FAR 6.103-2",
+   "new": "FAR 6.103-2",
+   "title": "Unusual and compelling urgency",
+   "note": "Already RFO numbering (pre-RFO 6.302-2). Period of performance limit (above SAT: no longer than needed, max one year including options unless the agency head determines otherwise) at 6.103-2(c); J&A may be made after award, 6.103-2(d).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6"
+  },
+  {
+   "old": "FAR 6.302-1",
+   "new": "FAR 6.103-1",
+   "title": "Only one responsible source and no other supplies or services will satisfy agency requirements",
+   "note": "Renumbered 6.302-1 to 6.103-1. Authority 10 U.S.C. 3204(a)(1) / 41 U.S.C. 3304(a)(1) at (a); one responsible source at (b); unsolicited-proposal and follow-on applications at (c); brand-name at (d).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6"
+  },
+  {
+   "old": "FAR 6.302-1(c)",
+   "new": "FAR 6.103-1(d)",
+   "title": "Only one responsible source - Application for brand-name descriptions",
+   "note": "Old 6.302-1(c) (brand-name application) is now paragraph (d) of 6.103-1. Note RFO 6.103-1(c) is a different paragraph (unsolicited research proposal / follow-on contract application).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6"
+  },
+  {
+   "old": "FAR 6.302-2",
+   "new": "FAR 6.103-2",
+   "title": "Unusual and compelling urgency",
+   "note": "Renumbered 6.302-2 to 6.103-2. Heading unchanged.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6"
+  },
+  {
+   "old": "FAR 6.302-3",
+   "new": "FAR 6.103-3",
+   "title": "Industrial mobilization; engineering, developmental, or research capability; or expert services",
+   "note": "Renumbered 6.302-3 to 6.103-3. Heading unchanged.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6"
+  },
+  {
+   "old": "FAR 6.302-4",
+   "new": "FAR 6.103-4",
+   "title": "International agreement",
+   "note": "Renumbered 6.302-4 to 6.103-4. Heading unchanged.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6"
+  },
+  {
+   "old": "FAR 6.302-5",
+   "new": "FAR 6.103-5",
+   "title": "Authorized or required by statute",
+   "note": "Renumbered 6.302-5 to 6.103-5. Heading unchanged. Per 6.104(a) and 6.103-5(e), no written J&A is required under 6.103-5 or 6.103-7, except sole-source 8(a) contracts over $30 million (6.103-5(e); minimum justification content at 6.104-1(b)).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6"
+  },
+  {
+   "old": "FAR 6.302-6",
+   "new": "FAR 6.103-6",
+   "title": "National security",
+   "note": "Renumbered 6.302-6 to 6.103-6. Heading unchanged.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6"
+  },
+  {
+   "old": "FAR 6.302-7",
+   "new": "FAR 6.103-7",
+   "title": "Public interest",
+   "note": "Renumbered 6.302-7 to 6.103-7. Heading unchanged. Individual justifications only, 6.104(c).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6"
+  },
+  {
+   "old": "FAR 6.303",
+   "new": "FAR 6.104",
+   "title": "Justification and approval",
+   "note": "Old 6.303 (justifications) plus 6.303-1/-2 and old 6.304 (approval) are consolidated into 6.104 (general), 6.104-1 (justification content, 12 minimum elements including CO certification at (a)(12)) and 6.104-2 (approval of justification). RFO 6.104-2(a) Table 6-1 approval tiers as fetched 13 Sep 2026: $900,000 or below contracting officer (by the 6.104-1(a)(12) certification); above $900,000 to $20 million advocate for competition (not delegable); above $20 million to $90 million head of the procuring activity (for DoD, NASA and the Coast Guard the HPA tier runs to $150 million; delegable to a general/flag officer or civilian above GS-15); above $90 million (above $150 million for DoD, NASA and the Coast Guard) senior procurement executive (not delegable except USD(A&S) acting as DoD SPE). The $900K/$20M/$90M figures are not an RFO change: they are the statutory inflation adjustments effective 1 Oct 2025 (FAR final rule 90 FR, 27 Aug 2025, FAC 2025-06; old figures were $750K/$15M/$75M). ARMY CAUTION: DoD does not use Table 6-1. DoD Class Deviation 2026-O0017, Revision 2 (5 Aug 2026; DFARS 206.104-71, Table 206-1, 'in lieu of the thresholds at FAR 6.104-2(b) Table 6-1', 10 U.S.C. 3204(e)(1)(B)): $10 million or below contracting officer (by the 6.104-1(a)(12) certification); above $10 million to $100 million competition advocate (not delegable); above $100 million to $500 million head of the contracting activity (delegable per 206.104-71(a)); above $500 million senior procurement executive. Quote Table 206-1 at an Army board and the FAR figures only as the governmentwide baseline. Confirmed from the deviation PDF 13 Sep 2026 (source_url_dod); the pre-RFO DFARS cite was 206.304.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6",
+   "source_url_thresholds": "https://www.federalregister.gov/documents/2025/08/27/2025-16412/federal-acquisition-regulation-inflation-adjustment-of-acquisition-related-thresholds",
+   "source_url_dod": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-206/2026-O0017_Rev2_TAB_A_Class_Deviation_USA002119-26.pdf"
+  },
+  {
+   "old": "FAR 7.102-2",
+   "new": "FAR 7.102",
+   "title": "Acquisition Plans - Requirements",
+   "note": "No section 7.102-2 exists in either the pre-RFO FAR (7.102 Policy had paragraphs (a)-(b) only) or RFO Part 7 (7.102 Requirements has paragraphs (a)-(d)). Treat the source cite as a typo; closest surviving cite is 7.102 (acquisition planning required for all acquisitions; written plan required for cost-reimbursement and other high-risk contracts, 7.102(d)). If the source meant consolidation/bundling policy, use 7.107-2.",
+   "confidence": "probable",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-7"
+  },
+  {
+   "old": "FAR 7.107-2",
+   "new": "FAR 7.107-2",
+   "title": "Consolidation, bundling, or substantial bundling - Policy",
+   "note": "Section number unchanged but the heading and scope are not: pre-RFO 7.107-2 was 'Consolidation' only; RFO 7.107-2 'Policy' merges old 7.107-2 consolidation, 7.107-3 bundling and 7.107-4 substantial bundling into one section. SPE/CAO may determine that consolidation or bundling is necessary and justified when benefits substantially exceed the alternatives identified under 7.107-1(a)(2); substantial-benefit tests at 7.107-2(c)(3): 10 percent of value at or below $94 million, or 5 percent or $9.4 million (whichever is greater) above $94 million; administrative savings alone are not enough (d); mission-critical exception decided non-delegably by the Deputy Secretary (for DoD, the SPE) at (e). The written-determination triggers moved to 7.107-1(b): consolidation above $2 million, any bundling, and substantial bundling at $8 million or more for DoD ($6 million NASA/GSA/DOE, $2.5 million other agencies); substantial-bundling documentation is 7.107-2(c)(6). Old 7.107-5 notifications are now 7.107-3 (30-day notice to incumbent small businesses; GPE notice within 7 days of the determination) and old 7.107-6 provision 52.207-6 is now 7.107-4. Text confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-7"
+  },
+  {
+   "old": "FAR 8",
+   "new": "FAR 8",
+   "title": "Required Sources of Supplies and Services (part page)",
+   "note": "Restructured: 8.101 mandatory sources for specific supplies/services, 8.102 mandatory source for services (AbilityOne), 8.103 mandatory sources of supplies (agency inventory, excess, FPI, AbilityOne), 8.104 use of existing contracts (E.O. 14271, OFPP 'required use' contracts), 8.105 contractor use of Government supply sources; 8.2 AbilityOne; 8.3 FPI; 8.4 Federal Supply Schedules reduced to 8.401 - FSS ordering procedures (old 8.405) now live in GSAR subpart 538.71; 8.5 Government printing. Note RFO 8.102 still cross-references old '6.302-2'. Issued 14 Aug 2025, updated 29 Aug 2025.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-8"
+  },
+  {
+   "old": "FAR 9.104",
+   "new": "FAR 9.104",
+   "title": "Responsible prospective contractors - Standards",
+   "note": "Section number and heading retained. Subsections 9.104-1 general standards, 9.104-3 application, 9.104-4 subcontractor responsibility, 9.104-5 representations, 9.104-6 FAPIIS (above SAT), 9.104-7 provisions/clauses; 9.104-2 reserved. Page updated 20 Apr 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9"
+  },
+  {
+   "old": "FAR 9.104-1",
+   "new": "FAR 9.104-1",
+   "title": "General standards",
+   "note": "Section number and heading retained (financial resources, delivery schedule, performance record, integrity, organization/skills, equipment/facilities, otherwise qualified and eligible).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9"
+  },
+  {
+   "old": "FAR 9.405",
+   "new": "FAR 9.405",
+   "title": "Effect of listing",
+   "note": "Section number and heading retained: excluded contractors may not be solicited or awarded unless the agency head finds a compelling reason.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9"
+  },
+  {
+   "old": "FAR 9.405-1",
+   "new": "FAR 9.405-1",
+   "title": "Continuation of current contracts",
+   "note": "Section number and heading retained: agencies may continue existing contracts/subcontracts unless the agency head directs otherwise.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9"
+  },
+  {
+   "old": "FAR 9.502",
+   "new": "FAR 9.502",
+   "title": "Organizational and consultant conflicts of interest - Applicability",
+   "note": "Section number and heading retained.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9"
+  },
+  {
+   "old": "FAR 9.504",
+   "new": "FAR 9.504",
+   "title": "Contracting officer responsibilities (OCI)",
+   "note": "Section number and heading retained: CO identifies, evaluates and resolves potential OCIs.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9"
+  },
+  {
+   "old": "FAR 10",
+   "new": "FAR 10",
+   "title": "Market Research (part page)",
+   "note": "Part collapsed to 10.000 scope, 10.001 market research requirements (required before developing new requirements documents and before soliciting or ordering above the SAT; document results commensurate with size/complexity; commercial-first hierarchy) and 10.002 clause 52.210-1 for noncommercial acquisitions over $7.5 million. Old 10.001/10.002 technique lists removed from regulation. Page updated 16 Mar 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-10"
+  },
+  {
+   "old": "FAR 11.104",
+   "new": "FAR 11.204",
+   "title": "Items peculiar to one manufacturer",
+   "note": "Old 11.104 'Use of brand name or equal purchase descriptions' was DELETED from the regulation; the brand-name-or-equal and salient-characteristics guidance now appears only as non-regulatory guidance in the FAR Companion at FC 11.204 (which also states that brand-name-or-equal descriptions provide for full and open competition and do not need a 6.104 J&A). Closest surviving regulatory cite is 11.204 Items peculiar to one manufacturer (old 11.105), read with 6.103-1(d) and, for commercial buys, 12.102. Caution: RFO 11.204 text still carries stale cross-references (6.302-1, 13.106-1(b), 13.501, 5.102(a)(6), 8.405-6, 16.505(a)(4)). The 'Last Updated 07/28/2026' stamp is a site-wide footer on every deviation page; the RFO Parts & Deviations Guide index shows Part 11 issued 18 Jun 2025 with no update. FC 11.204 text confirmed in FAR Companion v2.0 (30 Oct 2025) on 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-11"
+  },
+  {
+   "old": "FAR 12",
+   "new": "FAR 12",
+   "title": "Acquisition of Commercial Products and Commercial Services (part page)",
+   "note": "Restructured: 12.1 presolicitation (12.101 preference, 12.102 restricting competition, 12.104 contract type, 12.106 technical data, 12.107 software), 12.2 solicitation/evaluation/award (12.201-1 simplified procedures RFQ/purchase order up to $9 million - replaces old 13.5 and much of old Part 13 for commercial buys; 12.201-2 other procedures above $9 million; 12.203 evaluation; 12.204 award), 12.3 postaward (12.304 terminations), 12.4 micro-purchases. Page updated 20 Apr 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12"
+  },
+  {
+   "old": "FAR 12.102",
+   "new": "FAR 12.102",
+   "title": "Restricting competition",
+   "note": "Ambiguous source cite: pre-RFO 12.102 was 'Applicability' (that content is now 12.001), while RFO 12.102 is 'Restricting competition' (document decisions to restrict competition including brand-name without 'equal': (a) at/below SAT record that only one source exists; (b) above SAT written justification approved per 6.104 citing statutory authority from Table 12-1). Because the bank cites it alongside 6.103-1(d) for brand-name/limited competition, it is treated as the RFO meaning.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12"
+  },
+  {
+   "old": "FAR 12.201-1",
+   "new": "FAR 12.201-1",
+   "title": "Simplified procedures (commercial, up to $9 million)",
+   "note": "Already RFO numbering (no pre-RFO 12.201-1). Replaces old 13.5 and absorbs old 13.004 legal effect of quotations at 12.201-1(b): quotations and purchase orders are not binding until the supplier accepts the Government's offer in writing or by substantial performance. Also covers GPE posting, standing quotes, unpriced orders and BPAs at (c)-(e). The $9 million ceiling rises to $15 million when the head of the agency determines the supplies or services support a contingency operation, CBRN defense or recovery, international disaster assistance or an emergency or major disaster (12.001(c); confirmed on the fetched page 13 Sep 2026).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12"
+  },
+  {
+   "old": "FAR 12.207",
+   "new": "FAR 12.104",
+   "title": "Contract type (commercial)",
+   "note": "Old 12.207 to 12.104. Preference for firm-fixed-price or FP-EPA for commercial products/services.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12"
+  },
+  {
+   "old": "FAR 12.304",
+   "new": "FAR 12.304",
+   "title": "Terminations (commercial)",
+   "note": "Already RFO numbering (pre-RFO cite was 12.403). 12.304(a) do not use Part 49; (b) termination for cause including cure notice unless late delivery, written notice content, FAPIIS reporting; (c) termination for convenience by mutual agreement on documentation.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12"
+  },
+  {
+   "old": "FAR 13",
+   "new": "FAR 13",
+   "title": "Simplified Procedures for Noncommercial Acquisitions (part page)",
+   "note": "Part 13 now applies ONLY to noncommercial products and services above the MPT and at or below the SAT (13.000, 13.001); commercial simplified procedures moved to 12.201-1 (up to $9 million) and micro-purchases to 12.4 (13.401 points there). Old 13.003 policy, 13.004 legal effect of quotations, 13.1-13.3 detail and 13.5 are gone; 13.101 competition, 13.201 procedures (follow 12.201-1; BPA calls capped at SAT), 13.202 evaluation (follow 12.203), 13.203 award (fair and reasonable price, documentation), 13.3 postaward. Issued 18 Sep 2025.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-13"
+  },
+  {
+   "old": "FAR 13.004(a)(b)",
+   "new": "FAR 12.201-1(b)",
+   "title": "Simplified procedures - legal effect of quotations",
+   "note": "Old 13.004 'Legal effect of quotations' was removed from Part 13; the surviving statement (quotation is not an offer; purchase order is the Government's offer, binding on written acceptance or substantial performance) is 12.201-1(b), which Part 13 adopts by reference at 13.201.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-13"
+  },
+  {
+   "old": "FAR 13.106-1(b)",
+   "new": "FAR 13.101(b)",
+   "title": "Competition - soliciting from a single source",
+   "note": "Old 13.106-1(b) (CO may solicit from one source if only one is reasonably available) is now 13.101(b) and requires a determination and findings under subpart 1.5 (e.g., urgency, exclusive licensing, brand-name, industrial mobilization). For commercial buys at/below SAT use 12.102(a) instead.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-13"
+  },
+  {
+   "old": "FAR 15.101",
+   "new": "FAR 15.103",
+   "title": "Developing a competitive source selection approach",
+   "note": "Old 15.101 'Best value continuum' to 15.103. RFO adds 15.103-3 highest technically rated with a fair and reasonable price and 15.103-4 phased acquisition. Issued 30 Sep 2025.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.101-1",
+   "new": "FAR 15.103-1",
+   "title": "Tradeoff approach",
+   "note": "Old 15.101-1 'Tradeoff process' to 15.103-1.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.101-2",
+   "new": "FAR 15.103-2",
+   "title": "Lowest price technically acceptable approach",
+   "note": "Old 15.101-2 'LPTA source selection process' to 15.103-2.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.201(c)",
+   "new": "FAR 15.101",
+   "title": "Early exchanges with industry",
+   "note": "Old 15.201 'Exchanges with industry before receipt of proposals' to 15.101 'Early exchanges with industry' (heading and text confirmed 13 Sep 2026). The old (c) list of techniques is no longer a single paragraph: draft RFPs and industry conferences are 15.101(b), requests for information 15.101(c), disclosure of mission needs 15.101(d), advisory multistep process 15.101(e); the procurement-integrity caveat is 15.101(a). Cite 15.101 (or 15.101(b)-(c) for the specific techniques).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.207(c)",
+   "new": "FAR 15.108(c)",
+   "title": "Receiving proposals - Unreadable proposals",
+   "note": "Old 15.207 'Handling proposals and information' to 15.108 'Receiving proposals'. The old (c) paragraph (unreadable electronic/facsimile proposals: notify the offeror immediately, permit resubmission, resubmission treated as received at the original time) is now 15.108(c) 'Unreadable proposals' - paragraph letter confirmed from the fetched page 13 Sep 2026. Marking is 15.108(a), safeguarding 15.108(b).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.303",
+   "new": "FAR 15.201",
+   "title": "Source selection responsibilities",
+   "note": "Old 15.303 'Responsibilities' (agency head is SSA; CO is focal point) to 15.201.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.308",
+   "new": "FAR 15.205",
+   "title": "Source selection decision",
+   "note": "Old 15.308 to 15.205: SSA's independent judgment based on comparative assessment against RFP criteria, documented with rationale for tradeoffs.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.403-1(b)",
+   "new": "FAR 15.403-2(b)",
+   "title": "Prohibitions on obtaining certified cost or pricing data - Exceptions",
+   "note": "Old 15.403-1(b) exceptions (adequate price competition, prices set by law or regulation, commercial product/service, waiver, modifications of commercial contracts) are now 15.403-2(b)(1)-(5). At/below SAT prohibition is 15.403-2(a).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.403-1(c)",
+   "new": "FAR 15.403-2(c)",
+   "title": "Prohibitions on obtaining certified cost or pricing data - Standards for exceptions",
+   "note": "Old 15.403-1(c) standards to 15.403-2(c): adequate price competition at (c)(1) (two or more responsible offerors competing independently; award on best value with price a substantial factor; no finding of unreasonable price), prices set by law (c)(2), commercial (c)(3), HCA waiver (c)(4).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.403-2",
+   "new": "FAR 15.403-3(b)(3)(iii)",
+   "title": "Certified cost or pricing data - modifications not requiring data",
+   "note": "Old 15.403-2 'Other circumstances where certified cost or pricing data are not required' (modifications solely for overrun funding or interim billing adjustments; exercise of an option at the price established at award) survives as 15.403-3(b)(3)(iii)(A)-(B). RFO 15.403-2 is now a different section (Prohibitions).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.403-4",
+   "new": "FAR 15.403-3",
+   "title": "Certified cost or pricing data (threshold and actions)",
+   "note": "Old 15.403-4 'Requiring certified cost or pricing data' to 15.403-3. RFO 15.403-3(a) states the threshold as $2.5 million for prime contracts awarded on or after 1 Jul 2018 ($950,000 before). This is the statutory inflation adjustment effective 1 Oct 2025 (FAR final rule 90 FR, 27 Aug 2025, FAC 2025-06; previously $2 million), not an RFO change. Actions requiring data at (b); modifications not requiring data at (b)(3)(iii); HCA below-threshold authority at (e). ARMY CAUTION: for DoD the threshold is $10 million for a prime contract expected to exceed $10 million and awarded after 30 June 2026 (DFARS 215.403-3(a) 'in lieu of the requirements of FAR 15.403-3(a)', DoD Class Deviation 2026-O0048, Revision 1, 22 Jul 2026; 10 U.S.C. 3702); $2.5 million continues to apply to DoD prime contracts awarded on or before 30 June 2026 and to civilian agencies. Subcontracts follow the same date split (215.403-3(b)). Confirmed from the deviation PDF 13 Sep 2026 (source_url_dod). Quote $10 million at an Army board for new awards.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+   "source_url_thresholds": "https://www.federalregister.gov/documents/2025/08/27/2025-16412/federal-acquisition-regulation-inflation-adjustment-of-acquisition-related-thresholds",
+   "source_url_dod": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-215/2026-O0048_Rev_1_TAB_A_Deviation_Memo_Part_215.pdf"
+  },
+  {
+   "old": "FAR 15.404-1",
+   "new": "FAR 15.404",
+   "title": "Cost and/or price analysis",
+   "note": "Old 15.404-1 'Proposal analysis techniques' was split: 15.404 general rules (price analysis when certified data not required; cost analysis when required; cost realism for cost-reimbursement), 15.404-1 price analysis, 15.404-2 cost analysis, 15.404-3 cost realism analysis, 15.404-4 technical analysis, 15.404-5 unit prices, 15.404-6 unbalanced pricing. If the source meant price analysis specifically, cite 15.404-1.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.404-1(b)",
+   "new": "FAR 15.404-1",
+   "title": "Price analysis",
+   "note": "Old 15.404-1(b) price analysis to 15.404-1 (definition at (a); techniques at (b): comparison of proposed prices, historical prices, parametric estimates/rough yardsticks, published price lists, IGCE, market research, comparison to cost analysis results).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.405",
+   "new": "FAR 15.407",
+   "title": "Price negotiation",
+   "note": "Old 15.405 'Price negotiation' to 15.407. Prenegotiation objectives are 15.408-1 and the price negotiation memorandum is 15.408-2 (old 15.406-1 / 15.406-3).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.406-2",
+   "new": "FAR 15.403-4",
+   "title": "Certificate of current cost or pricing data",
+   "note": "Old 15.406-2 to 15.403-4; certificate format retained.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.503",
+   "new": "FAR 15.206-1",
+   "title": "Preaward notices",
+   "note": "Old 15.503 'Notifications to unsuccessful offerors' was split. Old 15.503(a) preaward notices (exclusion from the competitive range; preaward notice of the award decision) are 15.206-1. Old 15.503(b) postaward notices are now 15.207-2 'Award notice': within 3 days after award, written notice to each competitive-range offeror not selected (number solicited, number received, awardee, price, reasons in general terms). 15.301-1 keys the postaward-debriefing request window (3 days) to receipt of the 15.207-2 award notice. Text confirmed 13 Sep 2026. Cite 15.206-1 for preaward notices and 15.207-2 for the postaward award notice.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.505",
+   "new": "FAR 15.206-2",
+   "title": "Preaward debriefing",
+   "note": "Old 15.505 'Preaward debriefing of offerors' to 15.206-2. Postaward debriefings are now 15.301 (15.301-1 process, 15.301-2 follow-up questions).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.607",
+   "new": "FAR 15.506",
+   "title": "Criteria for acceptance and negotiation of an unsolicited proposal",
+   "note": "Old 15.607 to 15.506 (unsolicited proposals subpart renumbered 15.6 to 15.5).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 16",
+   "new": "FAR 16",
+   "title": "Types of Contracts (part page)",
+   "note": "Subparts 16.1-16.7 retained with renumbering inside: 16.104 new E.O. 14402 justification for covered contracts/orders; 16.5 indefinite-delivery rewritten (16.504-3 multiple award preference, 16.504-4 on-ramps/off-ramps, 16.506 postaward order placement, 16.507 multiple-award ordering procedures, 16.508 protests of orders). Issued 30 Sep 2025, updated 1 Jul 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16"
+  },
+  {
+   "old": "FAR 16.505",
+   "new": "FAR 16.507",
+   "title": "Additional ordering procedures for multiple-award contracts",
+   "note": "Old 16.505 'Ordering' split: general order content/scope rules at 16.506; multiple-award fair opportunity at 16.507 (16.507-1 orders at/below MPT; 16.507-2 fair opportunity procedures; 16.507-3 to -5 tiers above MPT/SAT/$7.5M; 16.507-6 exceptions to fair opportunity; 16.507-7 items peculiar to one manufacturer/brand-name); protests of orders at 16.508.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16"
+  },
+  {
+   "old": "FAR 16.505(b)(2)",
+   "new": "FAR 16.507-6(b)",
+   "title": "Exceptions to fair opportunity",
+   "note": "Old 16.505(b)(2) exceptions to fair opportunity are now 16.507-6(b): (1) urgency, (2) only one awardee capable, (3) logical follow-on, (4) minimum guarantee, (5) statute (orders above SAT), and (6) for DoD, NASA and the Coast Guard, the order satisfies one of the other-than-full-and-open exceptions at 6.103 (10 U.S.C. 3406(c)(5); public-interest exception requires congressional notice). Justification content at 16.507-6(d) (documentation only for orders at/below SAT, full justification above SAT); approval at (e): CO certification to $900,000, advocate for competition to $20M, HPA to $90M ($150M for DoD, NASA and the Coast Guard), SPE above; posting at (f). ARMY CAUTION: DoD Class Deviation 2026-O0045, Revision 1 (DFARS 216) substitutes 'the approval authorities for exceptions to fair opportunity provided at DFARS 206.104 in lieu of the approval authorities at FAR 16.507(e)' - i.e. Table 206-1: $10M contracting officer / $100M competition advocate / $500M HCA / above that SPE (Class Deviation 2026-O0017 Rev 2; the 216 memo cites the section as 206.104-72, the Part 206 deviation numbers it 206.104-71). DFARS 216.507-6(b) also requires PGI 216.507-6 procedures for follow-on orders above the SAT citing 16.507-6(b)(2) or (3). Confirmed from the deviation PDFs 13 Sep 2026 (source_url_dod). Sole-source orders above the MPT need a justification even though part 6 does not apply, 16.507-6(a).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16",
+   "source_url_dod": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-216/2026-O0045_Rev_1_TAB_A_Deviation_Memo_Part_216.pdf"
+  },
+  {
+   "old": "FAR 17.204-1",
+   "new": "FAR 17.204-1",
+   "title": "Exercise of options",
+   "note": "Already RFO numbering (pre-RFO cite was 17.207; old 17.204 'Contracts' is now 17.201-2). Issued 11 Sep 2025.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-17"
+  },
+  {
+   "old": "FAR 17.204-1(b)",
+   "new": "FAR 17.204-1(b)",
+   "title": "Exercise of options - conditions",
+   "note": "Already RFO numbering (pre-RFO 17.207(c)). CO may exercise only after written notice within the contract's time, confirming funds are available, and determining: existing requirement, synopsized unless exempt, no active SAM exclusion, acceptable performance, option price fair and reasonable under current market conditions and in the Government's best interest, and Part 6 compliance (option evaluated in the original competition).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-17"
+  },
+  {
+   "old": "FAR 17.207",
+   "new": "FAR 17.204-1",
+   "title": "Exercise of options",
+   "note": "Old 17.207 to 17.204-1 (Postaward). Old 17.207(c) conditions to 17.204-1(b); old 17.207(a) EPA/price revision check to 17.204-1(a).",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-17"
+  },
+  {
+   "old": "FAR 1.102-4(e)",
+   "new": "FAR 1.102(b)(4)",
+   "title": "Guiding principles - permitted strategies not addressed in the FAR",
+   "note": "Old 1.102-4(e) (acquisition team may assume that a strategy, practice, policy or procedure in the Government's best interest and not addressed in the FAR nor prohibited by law, Executive order or other regulation is permitted) is now 1.102(b)(4). Old subpart 1.1 structure collapsed into 1.102 'Guiding principles for the System'. Text confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1"
+  },
+  {
+   "old": "FAR 1.602-1",
+   "new": "FAR 1.402-1",
+   "title": "Contracting officers - Authority",
+   "note": "Old 1.602-1 to 1.402-1: only contracting officers may sign, administer or terminate contracts; they bind the Government only within the authority delegated; the appointing authority must give written instructions on what they can and cannot do (a); wide latitude for business judgment (b). Responsibilities are 1.402-2. Text confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1"
+  },
+  {
+   "old": "FAR 1.603",
+   "new": "FAR 1.403",
+   "title": "Selecting, appointing, and terminating the appointment for contracting officers",
+   "note": "Old 1.603 (1.603-1 general, 1.603-2 selection, 1.603-3 appointment, 1.603-4 termination) to 1.403: 1.403-1 General (41 U.S.C. 1702(b)(3)(G) career-management system at (a); agency heads or their designees select, appoint and terminate at (b); OFPP skill-based standards and FAC-C Modernization at (c)); 1.403-2 Appointment (in writing on SF 1402 stating any limitations on scope of authority; micro-purchase authority may be delegated in writing without an SF 1402); 1.403-3 Termination (by letter unless the certificate provides otherwise; reassignment, separation or unsatisfactory performance; never retroactive). Text confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1"
+  },
+  {
+   "old": "FAR 1.403-1(b)",
+   "new": "FAR 1.403-1(b)",
+   "title": "Selection and appointment authority (Army Warranting Program Policy cite)",
+   "note": "Already RFO numbering (pre-RFO 1.603-1). Army Warranting Program Policy v12 (MAR 2026) cites 1.403-1(b) for the DASA(P) delegation of the selection, appointment and termination of KOs: 'Agency heads or their designees may select and appoint contracting officers and terminate their appointments.' Paragraph (b) confirmed on the fetched page 13 Sep 2026. Appointment mechanics (SF 1402) are 1.403-2; termination 1.403-3.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1"
+  },
+  {
+   "old": "FAR 3.104",
+   "new": "FAR 3.104",
+   "title": "Procurement integrity",
+   "note": "Section number and heading retained; subsections 3.104-1 definitions through 3.104-9 contract clauses retained (3.104-2 general implements 41 U.S.C. chapter 21; 3.104-3 prohibitions; 3.104-4 disclosure/protection of bid, proposal and source selection information; 3.104-5 disqualification; 3.104-7 violations). Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-3"
+  },
+  {
+   "old": "FAR 4.801-4.803",
+   "new": "FAR 4.101",
+   "title": "Contract files",
+   "note": "Old subpart 4.8 (4.801 general, 4.802 contract files, 4.803 contents of contract files) collapsed into 4.101: each contracting, administration or paying office must keep a file for each solicitation and contractual action that comprehensively records the transaction history (background for decisions, support for actions, information for reviews and investigations, facts for litigation or congressional inquiry). The old 4.803 itemized contents checklist is no longer regulatory. Closeout is 4.308; retention periods for contract files are in 4.309 (Table 4-3). Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4"
+  },
+  {
+   "old": "FAR 7.107-3",
+   "new": "FAR 7.107-2",
+   "title": "Bundling - policy (merged)",
+   "note": "Old 7.107-3 'Bundling' merged into RFO 7.107-2 'Policy' together with old 7.107-2 consolidation and 7.107-4 substantial bundling. Written determination required for any bundling (7.107-1(b)(2)); substantial-benefit test at 7.107-2(c)(3). Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-7"
+  },
+  {
+   "old": "FAR 7.107-4",
+   "new": "FAR 7.107-2",
+   "title": "Substantial bundling - policy (merged)",
+   "note": "Old 7.107-4 'Substantial bundling' merged into RFO 7.107-2(c)(6) (additional strategy documentation: expected benefits, barriers to small business, actions to maximize participation, alternatives). The substantial-bundling dollar thresholds now sit at 7.107-1(b)(3): $8 million or more for DoD, $6 million NASA/GSA/DOE, $2.5 million other agencies. Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-7"
+  },
+  {
+   "old": "FAR 7.107-5",
+   "new": "FAR 7.107-3",
+   "title": "Consolidation and bundling - Notifications",
+   "note": "Old 7.107-5 to 7.107-3: notify each small business incumbent at least 30 days before issuing the bundled solicitation with SBA PCR contact details (a); SPE/CAO publishes the necessary-and-justified determination in the GPE within 7 days and may not publicize the solicitation until 7 days after that notice (b). Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-7"
+  },
+  {
+   "old": "FAR 7.107-6",
+   "new": "FAR 7.107-4",
+   "title": "Consolidation and bundling - Solicitation provision",
+   "note": "Old 7.107-6 to 7.107-4: insert 52.207-6 in solicitations for multiple-award contracts above the agency's substantial bundling threshold (7.107-1(b)(3)). Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-7"
+  },
+  {
+   "old": "FAR 12.603",
+   "new": "FAR 12.202(b)",
+   "title": "Combined synopsis/solicitation (commercial)",
+   "note": "Old 12.603 'Streamlined solicitation for commercial products and commercial services' (combined synopsis/solicitation) is now 12.202(b): to reduce time for acquisitions over the SAT, combine the part 5 presolicitation notice and solicitation notice. 12.202(a) publicize per part 5. Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12"
+  },
+  {
+   "old": "FAR 12.301",
+   "new": "FAR 12.205",
+   "title": "Solicitation provisions and contract clauses (commercial)",
+   "note": "Old 12.301 (52.212-1 through 52.212-5 prescriptions) is now 12.205; 52.212-1 may be tailored except the statutory debriefing paragraph. Caution: RFO 12.301 is now a different section, 'Notifications' (postaward). Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12"
+  },
+  {
+   "old": "FAR 13.5",
+   "new": "FAR 12.201-1",
+   "title": "Simplified procedures for certain commercial products and services (old subpart 13.5)",
+   "note": "Old subpart 13.5 (13.500-13.501, the $9 million commercial authority) is gone; commercial simplified procedures up to $9 million ($15 million contingency, 12.001(c)) are 12.201-1, and Part 13 is noncommercial-only (13.000). Old 13.501 sole-source justification for commercial buys: at/below SAT document per 12.102(a); above SAT justification approved per 6.104 (12.102(b)). Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-13"
+  },
+  {
+   "old": "FAR 13.302-5",
+   "new": "FAR 13.204",
+   "title": "Purchase orders - contract clauses (noncommercial)",
+   "note": "Old 13.302-5 'Clauses' to 13.204: include FAR clauses as prescribed for noncommercial purchase orders at/below SAT (a); 52.213-4 streamlined terms may be used or tailored (b); do not use part 12 clauses in noncommercial acquisitions (c). Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-13"
+  },
+  {
+   "old": "FAR 14.404-2(g)",
+   "new": "FAR 14.306-3(g)",
+   "title": "Rejection of individual bids - materially unbalanced",
+   "note": "Old 14.404-2(g) (reject a bid whose prices are materially unbalanced) is 14.306-3(g) (see part 15). Old 14.404-2 as a whole is 14.306-3 (unreasonable price at (f); excluded bidders at (h); nonresponsible at (i); bid guarantee at (j)). Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-14"
+  },
+  {
+   "old": "FAR 15.204-1",
+   "new": "FAR 15.109",
+   "title": "Uniform contract format",
+   "note": "Old 15.204-1 (and 15.204-2 to -5 part descriptions) to 15.109 'Uniform contract format' with 15.109-1 Part I Schedule, 15.109-2 Part II clauses, 15.109-3 Part III documents/exhibits/attachments, 15.109-4 Part IV representations and instructions. Confirmed from the fetched TOC 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.304",
+   "new": "FAR 15.104",
+   "title": "Establishing competitive evaluation factors and significant subfactors",
+   "note": "Old 15.304 'Evaluation factors and significant subfactors' to 15.104: factors tailored to the acquisition and stated clearly with relative importance in the RFP (10 U.S.C. 3206(b)(1) / 41 U.S.C. 3306(b)(1)); price or cost must be evaluated in every competitive source selection (b)(1)(i); DoD/NASA/Coast Guard 10 U.S.C. 3206(c) rule at (b)(1)(ii). Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.305",
+   "new": "FAR 15.202",
+   "title": "Evaluating competitive proposals",
+   "note": "Old 15.305 'Proposal evaluation' to 15.202: evaluate solely on the RFP factors and subfactors (a)(1); clarifications are defined and broadened at 15.202(a)(2) (may address ambiguities, perceived deficiencies, weaknesses, errors, omissions and adverse past performance). Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.306",
+   "new": "FAR 15.204",
+   "title": "Competitive award with negotiation (exchanges, competitive range, negotiations)",
+   "note": "Old 15.306 'Exchanges with offerors after receipt of proposals' is split: clarifications now sit in 15.202(a)(2); competitive range is 15.204-1 (established whenever negotiations will occur; may be narrowed for efficiency under 10 U.S.C. 3303 / 41 U.S.C. 3703 at (b); notice to excluded offerors per 15.206-1(a) at (c)); competitive negotiations (old 'discussions') are 15.204-2. Award without negotiation is 15.203. Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 15.506",
+   "new": "FAR 15.301",
+   "title": "Postaward debriefing of offerors",
+   "note": "Old 15.506 to 15.301 (15.301-1 debriefing process; 15.301-2 opportunity for follow-up questions). Request in writing within 3 days after receipt of the 15.207-2 award notice; debrief within 5 days to the maximum extent practicable; untimely requests may be accommodated; an offeror excluded from the competitive range that skipped a timely preaward request is not entitled to a postaward debriefing. Old 15.505 preaward debriefing is 15.206-2. Confirmed 13 Sep 2026. (The 33.104 protest text quoted in the 411th study decks still cites '15.505 or 15.506'.)",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+  },
+  {
+   "old": "FAR 17.502-1(b)",
+   "new": "FAR 17.502-1(b)",
+   "title": "Interagency acquisitions - business-case analysis for MACs/GWACs",
+   "note": "Section and paragraph unchanged: 17.502-1(a) written interagency agreement on roles for assisted and direct acquisitions; (b) business-case analysis for establishing a multi-agency contract or GWAC (section 865 of Pub. L. 110-417; OMB M-19-13). Economy Act is 17.502-2. Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-17"
+  },
+  {
+   "old": "FAR 18.2",
+   "new": "FAR 18.001",
+   "title": "Emergency acquisition flexibilities",
+   "note": "Old subpart 18.2 'Emergency acquisition flexibilities' collapsed into the single section 18.001: (a) general FAR flexibilities (list at acquisition.gov/emergency-procurement); (b) raised MPT/SAT for contingency, CBRN, international disaster assistance, emergency or major disaster, and humanitarian/peacekeeping outside the United States (SAT only); (c) $15 million commercial simplified ceiling (part 12); (d) commercial treatment for CBRN acquisitions; (e) disaster or emergency assistance activities. Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-18"
+  },
+  {
+   "old": "FAR 19.102",
+   "new": "FAR 19.103",
+   "title": "Small business size standards",
+   "note": "Old 19.102 'Small business size standards and NAICS codes' to 19.103: SBA size standards by NAICS at 13 CFR 121.201; NAICS updated every five years. Caution: RFO 19.102 is now 'Coordination' (with SBA/PCRs). Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19"
+  },
+  {
+   "old": "FAR 19.4",
+   "new": "FAR 19.102",
+   "title": "Cooperation with the Small Business Administration (coordination, PCRs)",
+   "note": "Old subpart 19.4 to 19.102 'Coordination': OSDBU (for DoD, the Office of Small Business Programs) is the SBA focal point (a); SBA procurement center representatives and the Area Office when none is assigned (b); PCR access to contract information (c). Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19"
+  },
+  {
+   "old": "FAR 19.502-2",
+   "new": "FAR 19.104-1",
+   "title": "Total small business set-asides (rule of two)",
+   "note": "Old 19.502-2 to 19.104-1: above the micro-purchase threshold the contracting officer must set the acquisition aside for small business when there is a reasonable expectation of offers from two or more responsible small businesses at competitive fair market prices, quality and delivery (a); document the reason when not set aside (b)(1); does not apply at/below MPT or to part 8 required sources (c); does not preclude HUBZone/SDVOSB/WOSB/8(a) awards (e); nonmanufacturer rule at (f). The old MPT-to-SAT automatic-reservation paragraph is not carried as a separate paragraph. Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19"
+  },
+  {
+   "old": "FAR 19.805-1",
+   "new": "FAR 19.108-7",
+   "title": "Competitive 8(a) and sole source 8(a) policy",
+   "note": "Old 19.805-1 'General' (competitive 8(a) thresholds) to 19.108-7: competition among 8(a) participants required when two or more eligible responsible participants are expected and value including options exceeds $8.5 million for manufacturing NAICS codes or $5.5 million for all other acquisitions (a); above the threshold SBA may accept a sole-source 8(a) requirement only after the contracting officer complies with 6.103 (b) (see 6.103-5(e): justification for sole-source 8(a) over $30 million); no splitting (c); competitive 8(a) orders below the threshold via SBA-approved governmentwide contracts (d). Limitations on subcontracting at 19.108-8. Confirmed 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19"
+  },
+  {
+   "old": "FAR 19.13",
+   "new": "FAR 19.105",
+   "title": "HUBZone Program",
+   "note": "Old subpart 19.13 to 19.105 (19.105-1 status, 19.105-2 set-aside procedures, 19.105-3 sole source awards citing 6.103-5(c)(1), 19.105-4 clauses). Price evaluation preference is 19.110; status protests 19.201-4. Confirmed from the fetched TOC and 19.105-3 text 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19"
+  },
+  {
+   "old": "FAR 19.14",
+   "new": "FAR 19.106",
+   "title": "Service-Disabled Veteran-Owned Small Business Program",
+   "note": "Old subpart 19.14 to 19.106 (19.106-1 status, 19.106-2 set-aside procedures, 19.106-3 sole source awards, 19.106-4 clauses); status protests 19.201-5. Confirmed from the fetched TOC 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19"
+  },
+  {
+   "old": "FAR 19.15",
+   "new": "FAR 19.107",
+   "title": "Women-Owned Small Business Program",
+   "note": "Old subpart 19.15 to 19.107 (19.107-1 status, 19.107-2 set-aside procedures, 19.107-3 sole source awards, 19.107-4 clauses); status protests 19.201-6. Confirmed from the fetched TOC 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19"
+  },
+  {
+   "old": "FAR 19.8",
+   "new": "FAR 19.108",
+   "title": "Contracting with the Small Business Administration (the 8(a) Program)",
+   "note": "Old subpart 19.8 to 19.108 (19.108-1 general through 19.108-11 release requirements; eligibility 19.108-2; selecting acquisitions 19.108-3; offering and acceptance 19.108-4; competitive/sole source policy 19.108-7; limitations on subcontracting and nonmanufacturer rule 19.108-8; SBA appeals 19.108-9). Evaluation and award under 8(a) is 19.208. Confirmed from the fetched TOC and 19.108-7/-8 text 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19"
+  },
+  {
+   "old": "FAR 19.7",
+   "new": "FAR 19.109",
+   "title": "Small business subcontracting plans",
+   "note": "Old subpart 19.7 to 19.109 (15 U.S.C. 637(d) plan requirements); reviewing plans in evaluation is 19.206 (19.206-1 types, 19.206-2 elements, 19.206-3 review). Confirmed from the fetched TOC and 19.109(a) opening text 13 Sep 2026.",
+   "confidence": "verified",
+   "source_url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19"
+  }
+ ],
+ "unchanged": [
+  "10 U.S.C. 2304",
+  "10 U.S.C. 2304C",
+  "10 U.S.C. 2371",
+  "10 U.S.C. 2371b",
+  "10 U.S.C. 3204",
+  "10 U.S.C. 3206",
+  "10 U.S.C. 3453",
+  "10 U.S.C. 3862",
+  "10 U.S.C. 4003b",
+  "10 U.S.C. 4862",
+  "10 U.S.C. 983",
+  "15 U.S.C. 638",
+  "2 CFR 200",
+  "31 U.S.C. 1502",
+  "31 U.S.C. 6304",
+  "31 U.S.C. 6305",
+  "33 U.S.C. 622",
+  "40 U.S.C. 501",
+  "41 U.S.C. 1502",
+  "41 U.S.C. 1908",
+  "41 U.S.C. 251",
+  "41 U.S.C. 3304",
+  "41 U.S.C. 3306",
+  "41 U.S.C. 3307"
+ ],
+ "method_notes": "Scope: the 62 citations in content/citations.json whose framework is FAR and whose part is 1-19 (parts 1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17 occur). Verification on 13 Sep 2026: fetched https://www.acquisition.gov/far-overhaul, the RFO Parts & Deviations Guide index (issuance/update dates per part), the per-part model-deviation pages far-overhaul-part-{1,2,5,6,7,8,9,10,11,12,13,15,16,17}, the Practitioner Albums index, the FAQ page, and FAR Companion v2.0 (30 Oct 2025, far-companion.pdf). Long pages (Parts 5, 6, 11, 12, 13, 15, 16) were also downloaded raw with curl and text-searched locally because WebFetch summaries truncated Part 15 around 15.402. Acquisition.gov publishes NO official old-to-new crosswalk table; the FAQ says each Practitioner Album carries only a 'line-out' of deleted text. Mappings were therefore made by matching pre-RFO section content to the RFO table of contents and section text (headings and opening paragraphs quoted from the pages). 'verified' = new number, heading and content confirmed on the fetched page; 'probable' = section confirmed but source-cite intent not confirmable (FAR 7.102-2 only, after the source-fidelity pass upgraded 15.201(c) and 15.207(c)). Whole-part cites map to the part page. Findings worth flagging to authors: (1) old 11.104 brand-name-or-equal is now non-regulatory (FAR Companion FC 11.204); (2) old 13.004, 13.5 and commercial SAP moved to 12.201-1, Part 13 is noncommercial-only; (3) RFO 6.104-2 J&A approval tiers read $900K/$20M/$90M (DoD HPA tier to $150M) and RFO 15.403-3 TINA threshold reads $2.5M - these are the statutory inflation adjustments effective 1 Oct 2025 (90 FR, 27 Aug 2025, FAC 2025-06), not RFO changes, and match the 2.101 MPT $15,000 / SAT $350,000 figures; (4) the old 5.202(a)(12) OCONUS synopsis exception is absent from RFO 5.101(b); the only surviving OCONUS language is the public-announcement exemption at 5.302(b)(2) - material for 411th CSB Korea; (5) some RFO pages still contain stale pre-RFO cross-references (e.g., 8.102 cites 6.302-2; 11.204 cites 6.302-1, 13.106-1(b), 5.102(a)(6), 8.405-6, 16.505(a)(4)). Statutes and CFR in 'unchanged' are unaffected by the RFO (a regulatory rewrite); separately, 10 U.S.C. 2304/2304c/2371/2371b are pre-2022 Title 10 numbering (2304 recodified to 10 U.S.C. 3201-3205 and related sections, 2304c to 3406, 2371 to 4021, 2371b to 4022) and '10 U.S.C. 4003b' could not be matched to a real section - neither is an RFO issue but both deserve a citation cleanup. DFARS/PGI/AFARS cites and FAR parts 20+ were out of scope and not touched. Note on page dates: every deviation page carries a site-wide footer 'Last Updated 07/28/2026'; per-part issuance/update dates in the verification_log come from the Parts & Deviations Guide index. Completeness/consistency pass (13 Sep 2026): scope widened from the 62 citations.json cites to the Parts 1-19 cites that the question bank's rfo.crosswalk pairs and the Army Warranting Program Policy v12 use (31 added; Parts 3, 4, 14, 18 and 19 pages fetched and added to the verification_log). DoD-specific figures that an Army board expects were reconciled with content/out/thresholds.json from the DoD RFO class deviations at acq.osd.mil: DFARS 206.104-71 Table 206-1 ($10M/$100M/$500M) replaces FAR Table 6-1 for DoD (Class Deviation 2026-O0017 Rev 2); DFARS 216 (2026-O0045 Rev 1) points order justifications to those same authorities; DFARS 215.403-3(a) (2026-O0048 Rev 1) sets $10M certified cost or pricing data for DoD prime contracts awarded after 30 Jun 2026. Statute cleanup notes: 41 U.S.C. 251 is pre-2011 numbering (the procurement provisions of the Federal Property and Administrative Services Act are now 41 U.S.C. 3101 et seq., as the question bank maps it); '10 U.S.C. 4003b' is treated by the question bank as a typo for 2371b (now 4022) - plausible but unconfirmed. RFO 2.101's micro-purchase definition still cross-references pre-RFO '13.201(g)(1)'; RFO 13.201 has no paragraph (g). The 'unchanged' key '10 U.S.C. 2304C' keeps the citations.json capitalisation on purpose (the statute is 2304c). No official crosswalk exists; all 20 URLs in this file returned HTTP 200 on 13 Sep 2026.",
+ "verification_log": [
+  {
+   "url": "https://www.acquisition.gov/far-overhaul",
+   "fetched": "2026-09-13",
+   "result": "Landing page: links to RFO Parts & Deviations Guide, FAR Companion v2, Practitioner Albums, searchable RFO.pdf, FAQs. No crosswalk table."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide",
+   "fetched": "2026-09-13",
+   "result": "Index with issuance/update dates: P1 2 May 2025 upd 16 Mar 2026; P2 28 Oct 2025; P5 8 Aug 2025 upd 16 Mar 2026; P6 27 Jun 2025; P7 4 Sep 2025; P8 14 Aug 2025 upd 29 Aug 2025; P9 21 Aug 2025 upd 20 Apr 2026; P10 22 May 2025 upd 16 Mar 2026; P11 18 Jun 2025; P12 14 Aug 2025 upd 20 Apr 2026; P13 18 Sep 2025; P15 30 Sep 2025; P16 30 Sep 2025 upd 1 Jul 2026; P17 11 Sep 2025."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/faqs",
+   "fetched": "2026-09-13",
+   "result": "No crosswalk; Practitioner Albums carry a line-out of deleted text only; removed content preserved in non-regulatory buying guides/albums."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/practitioner-albums",
+   "fetched": "2026-09-13",
+   "result": "Album index for Parts 1-53 (JS apps; Part 6 album returned title only)."
+  },
+  {
+   "url": "https://www.acquisition.gov/sites/default/files/page_file_uploads/far-companion.pdf",
+   "fetched": "2026-09-13",
+   "result": "FAR Companion v2.0 (30 Oct 2025) extracted with pdftotext: no crosswalk table; FC 11.204 holds brand-name-or-equal guidance; Part 13 'No additional guidance'."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-1",
+   "fetched": "2026-09-13",
+   "result": "TOC and full text of 1.402-1, 1.402-2, 1.403, 1.404, 1.405 quoted."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-2",
+   "fetched": "2026-09-13",
+   "result": "2.101 retained; MPT $15,000, SAT $350,000."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5",
+   "fetched": "2026-09-13",
+   "result": "TOC; 5.002, 5.101(a)-(d), 5.102, 5.201, 5.202, 5.301 text; OCONUS exception absent from 5.101(b) (raw page grep)."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6",
+   "fetched": "2026-09-13",
+   "result": "TOC; 6.101-6.104-2 and 6.301 text including 6.103-1(d) brand-name and 6.104-2 approval tiers."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-7",
+   "fetched": "2026-09-13",
+   "result": "TOC and full Subpart 7.1 text; 7.105 and 7.3 reserved; 7.108 teleworking new."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-8",
+   "fetched": "2026-09-13",
+   "result": "TOC and 8.001-8.105-3, 8.401 text; FSS ordering per GSAR 538.71."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9",
+   "fetched": "2026-09-13",
+   "result": "Full TOC; 9.104, 9.104-1, 9.405, 9.405-1, 9.502, 9.504 retained with opening sentences."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-10",
+   "fetched": "2026-09-13",
+   "result": "10.000, 10.001, 10.002 full text."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-11",
+   "fetched": "2026-09-13",
+   "result": "TOC and Subparts 11.1/11.2 text; 'brand name or equal', 'salient', '11.104' absent; 11.204 present with stale cross-references; page updated 28 Jul 2026."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12",
+   "fetched": "2026-09-13",
+   "result": "TOC with opening sentences; 12.102, 12.201-1, 12.203, 12.204, 12.304 text."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-13",
+   "fetched": "2026-09-13",
+   "result": "TOC; 13.000, 13.001, 13.101, 13.201-13.203, 13.401 text; noncommercial-only scope; no legal-effect-of-quotations text (now 12.201-1(b))."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+   "fetched": "2026-09-13",
+   "result": "Full TOC with opening sentences for 15.0-15.3; Subpart 15.4 text (15.402, 15.403-1 to -4, 15.404, 15.404-1, 15.404-2, 15.407, 15.408-1/-2) read from raw download."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16",
+   "fetched": "2026-09-13",
+   "result": "Full TOC; 16.506, 16.507-2(a)(1), 16.507-6(b), 16.507-7 text."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-17",
+   "fetched": "2026-09-13",
+   "result": "Full TOC and complete Subpart 17.2 text including 17.204-1(b)."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-3",
+   "fetched": "2026-09-13",
+   "result": "Full TOC; 3.104 and 3.104-1 to 3.104-9 retained; 3.104-2 text read."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4",
+   "fetched": "2026-09-13",
+   "result": "Full TOC; 4.101 contract files text read (old subpart 4.8 collapsed); 4.308 closeout; subpart 4.7 retention."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-14",
+   "fetched": "2026-09-13",
+   "result": "Full TOC; 14.306-3(a)-(l) rejection of individual bids read ((g) unbalanced)."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-18",
+   "fetched": "2026-09-13",
+   "result": "Part reduced to 18.000 and 18.001; 18.001(a)-(e) read."
+  },
+  {
+   "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19",
+   "fetched": "2026-09-13",
+   "result": "Full TOC; 19.102, 19.103, 19.104-1(a)-(f), 19.105-3, 19.108-7, 19.108-8, 19.109(a) text read; $8.5M/$5.5M competitive 8(a) thresholds at 19.108-7(a)(2)."
+  },
+  {
+   "url": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-206/2026-O0017_Rev2_TAB_A_Class_Deviation_USA002119-26.pdf",
+   "fetched": "2026-09-13",
+   "result": "DoD Class Deviation 2026-O0017 Rev 2 (5 Aug 2026): DFARS 206.104-71 Table 206-1 approval authorities $10M CO / >$10M-$100M competition advocate / >$100M-$500M HCA / >$500M SPE, in lieu of FAR 6.104-2(b) Table 6-1; 206.104-70 justification content."
+  },
+  {
+   "url": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-215/2026-O0048_Rev_1_TAB_A_Deviation_Memo_Part_215.pdf",
+   "fetched": "2026-09-13",
+   "result": "DoD Class Deviation 2026-O0048 Rev 1 (22 Jul 2026): DFARS 215.403-3(a) certified cost or pricing data threshold $10M for prime contracts expected to exceed $10M and awarded after 30 Jun 2026; $2.5M for awards on or before 30 Jun 2026; subcontracts follow the same date split."
+  },
+  {
+   "url": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-216/2026-O0045_Rev_1_TAB_A_Deviation_Memo_Part_216.pdf",
+   "fetched": "2026-09-13",
+   "result": "DoD Class Deviation 2026-O0045 Rev 1 (DFARS 216): approval authorities for exceptions to fair opportunity at DFARS 206.104 in lieu of FAR 16.507(e); 216.507-6 exceptions and PGI 216.507-6 follow-on procedures."
+  },
+  {
+   "url": "https://www.acq.osd.mil/dpap/dars/dfars_far_overhaul_class_deviations.html",
+   "fetched": "2026-09-13",
+   "result": "DFARS RFO class deviation index (links to the Part 206, 215 and 216 deviations above)."
+  },
+  {
+   "pass": "source-fidelity",
+   "verified_on": "2026-09-13",
+   "checked": 62,
+   "refuted": 4,
+   "method": "Independently re-downloaded far-overhaul-part-{1,2,5,6,7,8,9,10,11,12,13,15,16,17} with curl on 13 Sep 2026, stripped to text and confirmed every 'new' cite's heading in the page table of contents and its paragraph text in the body (all 62 entries; the 24 'unchanged' statute/CFR items are outside the RFO by scope). Re-fetched the Parts & Deviations Guide index (issuance/update dates match), the FAQ (line-out statement confirmed verbatim; no crosswalk), and the FAR Companion v2.0 PDF (FC 11.204 confirmed). Threshold figures cross-checked against the FAR inflation-adjustment final rule (90 FR, 27 Aug 2025, effective 1 Oct 2025). 10 U.S.C. 3406 (formerly 2304c) confirmed at law.cornell.edu; uscode.house.gov refused connections.",
+   "refuted_entries": [
+    "FAR 5 (5.301 should be 5.302(b)(2))",
+    "FAR 6.303 (DoD $150M tiers omitted; thresholds wrongly framed as an RFO change)",
+    "FAR 16.505(b)(2) (DoD exception 16.507-6(b)(6) omitted)",
+    "FAR 11.104 (page-date claim was the site-wide footer)"
+   ],
+   "upgraded_entries": [
+    "FAR 15.201(c) probable -> verified",
+    "FAR 15.207(c) probable -> verified, new cite 15.108(c)"
+   ],
+   "confirmed_as_written": "All other 56 entries: new number, heading and quoted content match the fetched pages. Items checked in depth: 1.402-2, 1.404, 1.405(a)-(d); 2.101 MPT/SAT (no unauthorized-commitment definition in 2.101); 5.101(a)-(d), 5.201(c)(3), 5.202; 6.103-1(a)-(d), 6.103-2(c)-(d), 6.103-5, 6.103-7, 6.104, 6.104-1(a)(1)-(12), 6.104-2; 7.102(a)-(d) (no 7.102-2), 7.107-2(c)(3); 8.102 stale 6.302-2, 8.104 E.O. 14271, 8.401 GSAR 538.71; 9.104-1, 9.104-6, 9.405, 9.405-1, 9.502, 9.504; 10.001, 10.002 $7.5M; 11.204 stale cross-references; 12.001, 12.102(a)-(b), 12.104, 12.201-1(a)-(e), 12.304; 13.000, 13.001, 13.101(b), 13.201, 13.203, 13.401; 15.103 to 15.103-4, 15.108, 15.201, 15.205, 15.206-1, 15.206-2, 15.301, 15.403-2(a)-(c), 15.403-3(a)-(g), 15.403-4, 15.404, 15.404-1(b)(1)-(7), 15.407, 15.408-1, 15.408-2, 15.506; 16.104, 16.504-3/-4, 16.506, 16.507-1 to -7, 16.508; 17.201-2, 17.204-1(a)-(b).",
+   "changes": [
+    "FAR 5: corrected cite for the surviving foreign-firm OCONUS exemption from 5.301 to 5.302(b)(2) (public announcement of awards over $5.5M); added what 5.301(b) actually exempts.",
+    "FAR 6.302-5: added the 6.103-5(e) exception (sole-source 8(a) over $30M still requires a justification, 6.104-1(b)).",
+    "FAR 6.303: added the DoD/NASA/Coast Guard $150M tiers that the note omitted; re-characterized $900K/$20M/$90M as the 1 Oct 2025 statutory inflation adjustment (90 FR 2025-16412) rather than an RFO change; added source_url_thresholds.",
+    "FAR 15.403-4: $2.5M TINA threshold re-characterized as the 1 Oct 2025 inflation adjustment (confirmed via Federal Register 2025-16412), removing the misleading 'differs from pre-RFO, confirm against DFARS' caution; added source_url_thresholds.",
+    "FAR 11.104: corrected the page-date claim (28 Jul 2026 is a site-wide footer stamp, index shows Part 11 issued 18 Jun 2025, no update); confirmed FC 11.204 text independently in the FAR Companion PDF.",
+    "FAR 15.201(c): upgraded probable -> verified; 15.101 text fetched and the old (c) techniques located at 15.101(b), (c) and (e).",
+    "FAR 15.207(c): new cite tightened from 15.108 to 15.108(c) and upgraded probable -> verified; paragraph (c) 'Unreadable proposals' confirmed on the page.",
+    "FAR 16.505(b)(2): added the DoD/NASA/Coast Guard exception at 16.507-6(b)(6) that the note omitted; spelled out the (e) approval tiers including the DoD $150M level.",
+    "method_notes: corrected 10 U.S.C. 2304c recodification (to 3406, confirmed at law.cornell.edu); re-characterized the threshold discrepancy as the 1 Oct 2025 inflation adjustment; corrected the OCONUS survivor cite to 5.302(b)(2); explained the site-wide 'Last Updated 07/28/2026' footer."
+   ]
+  },
+  {
+   "pass": "completeness-consistency",
+   "verified_on": "2026-09-13",
+   "checked": 93,
+   "refuted": 4,
+   "method": "Second independent verifier, completeness/consistency lens. Read every entry note for internal contradictions; cross-checked against content/citations.json (all 62 FAR 1-19 keys present, none skipped), src/data/questions.json (278 questions; every rfo.crosswalk pair in Parts 1-19 compared to this file), src/data/regulations.json (110 crosswalk rows; the FAR 1-19 rows match except 15.207(c) still reads 15.108/probable and 15.201(c) still 'probable' - orchestrator should re-merge), content/out/crosswalk_far_22_53_dfars.json (no overlap; Parts 3/4/14/18/19 were covered by neither file) and content/out/thresholds.json (its DoD J&A and TINA figures contradicted this file - resolved from the DoD deviations). Re-downloaded RFO Parts 1, 2, 5, 7, 12, 13, 15, 16, 17 and newly Parts 3, 4, 14, 18, 19 with curl; fetched the three DoD RFO class deviations from acq.osd.mil (pdftotext). All 20 URLs in the file returned HTTP 200. Grepped the file for e-mail addresses and rank/name patterns: none. Checked JSON validity, UTF-8 without BOM, and that every entry has old/new/title/note/confidence/source_url and every 'new' value is RFO numbering. Sampled 40 questions for acronyms: src/data/glossary.json is an empty list, so every term is missing (outside this task; reported).",
+   "refuted_entries": [
+    "FAR 7.107-2 (heading not unchanged; section absorbs old 7.107-3/-4)",
+    "FAR 6.303 -> 6.104 (told Army users to quote the FAR DoD $150M column; DoD uses DFARS Table 206-1 $10M/$100M/$500M)",
+    "FAR 16.505(b)(2) -> 16.507-6(b) ((e) tiers do not apply to DoD; DFARS 216 deviation substitutes the 206.104 authorities)",
+    "FAR 15.403-4 -> 15.403-3 (omitted the DoD $10M threshold for awards after 30 Jun 2026)"
+   ],
+   "completed_entries": [
+    "FAR 2.101 (contingency MPT/SAT figures; stale 13.201(g) cross-ref)",
+    "FAR 15.503 (postaward notices -> 15.207-2)",
+    "FAR 12.201-1 ($15M contingency ceiling)"
+   ],
+   "added_entries": 31,
+   "changes": [
+    "FAR 7.107-2: note said 'section number and heading unchanged' - the heading changed from 'Consolidation' to 'Policy' and the section now absorbs old 7.107-3 and 7.107-4; rewritten with the 7.107-1(b) determination thresholds and the shifted 7.107-3/-4 numbering.",
+    "FAR 6.303 -> 6.104: note told Army users to quote the FAR Table 6-1 DoD column ($150M) and 'check DFARS 206.304'; contradicted content/out/thresholds.json (ja_dod_tier1-3). Confirmed from DoD Class Deviation 2026-O0017 Rev 2 that DoD uses DFARS 206.104-71 Table 206-1 ($10M / $100M / $500M) in lieu of Table 6-1; corrected and source_url_dod added.",
+    "FAR 16.505(b)(2) -> 16.507-6(b): the (e) approval tiers were stated as if they applied to DoD; DoD Class Deviation 2026-O0045 Rev 1 substitutes the DFARS 206.104 (Table 206-1) authorities. Added, with source_url_dod.",
+    "FAR 15.403-4 -> 15.403-3: note gave only the $2.5M FAR figure; contradicted thresholds.json (tina_dod $10M). Confirmed DFARS 215.403-3(a) under Class Deviation 2026-O0048 Rev 1 ($10M for DoD prime contracts awarded after 30 Jun 2026); added with source_url_dod.",
+    "FAR 2.101: note said 'with contingency/OCONUS exceptions' without the figures a board asks for; added the fetched contingency MPT/SAT values and flagged the stale '13.201(g)(1)' cross-reference inside the RFO definition (RFO 13.201 has no (g)).",
+    "FAR 15.503 -> 15.206-1: entry covered only old 15.503(a) preaward notices; old 15.503(b) postaward notices map to 15.207-2 Award notice (as the question bank already records). Note completed.",
+    "FAR 12.201-1: added the $15 million contingency ceiling at 12.001(c) (the Army 'SaP' Class II warrant figure).",
+    "Added 31 entries for Parts 1-19 cites that the question bank's rfo.crosswalk pairs or the Army Warranting Policy use but citations.json does not list (so neither crosswalk task covered them): 1.102-4(e), 1.602-1, 1.603, 1.403-1(b), 3.104, 4.801-4.803, 7.107-3/-4/-5/-6, 12.603, 12.301, 13.5, 13.302-5, 14.404-2(g), 15.204-1, 15.304, 15.305, 15.306, 15.506, 17.502-1(b), 18.2, 19.102, 19.4, 19.502-2, 19.805-1, 19.13, 19.14, 19.15, 19.8, 19.7. Each verified against the RFO part page fetched 13 Sep 2026. Parts 3, 4, 14, 18 and 19 were previously absent from the map entirely."
+   ],
+   "unresolved": [
+    "src/data/glossary.json is empty; a 40-question sample (seed 13) yields 58 distinct acronyms (GAO, KO, AO, ITAS, COR, R&D, SAT, OT, PCO, OMB, ABG5, DPW, PD2, PCF, VCE, PAM, SOW, OTA, O&M, FFP, GFP, CPARS, FAPIIS, D&F, T&M, OCONUS, GPE, RFQ, RFP, IFB, DPAS, MFR, LOA, PNM, J&A, CICA, HCA, CAS, IAW ...) with no glossary entry - a separate glossary task is needed.",
+    "content/out/thresholds.json cites 'FAR 13.201(g)(1)(i)/(ii)' for the contingency MPT; that paragraph does not exist in RFO Part 13 (stale cross-reference copied from RFO 2.101). Not edited (outside this task).",
+    "content/out/thresholds.json sb_8a_competitive_thresholds says 'RFO Part 19 section number not confirmed' - it is 19.108-7(a)(2) (confirmed here). Not edited (outside this task).",
+    "src/data/regulations.json still carries the pre-correction rows for 15.207(c) (15.108, probable) and 15.201(c) (probable); orchestrator re-merge needed.",
+    "The DFARS 216 deviation memo refers to '206.104-72' while the Part 206 deviation names the approval section 206.104-71; cited as 206.104-71 (Table 206-1) here.",
+    "'10 U.S.C. 4003b' still matches no section; the question bank's 4003b -> 4022 mapping assumes a typo for 2371b and is unconfirmed.",
+    "FAR 7.102-2 remains 'probable' (no such section pre- or post-RFO).",
+    "Old FAR 19.502-2(a)'s MPT-to-SAT automatic small-business reservation language was not found as a separate paragraph in RFO 19.104-1 (the rule of two at (a) now applies to everything above the MPT); thresholds.json sb_setaside_auto_range should be re-read against 19.104-1."
+   ]
+  }
+ ]
+}

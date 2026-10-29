@@ -1,0 +1,1133 @@
+[
+ {
+  "qid": "Q0015",
+  "stem": "An offeror for a services requirement is a newly formed firm with no relevant past performance history. Under the general standards for responsibility, how must the contracting officer treat that fact?",
+  "options": [
+   {
+    "text": "The lack of history alone cannot make the firm responsible or nonresponsible; the contracting officer weighs the other standards and documents it.",
+    "correct": true,
+    "why": "RFO FAR 9.104 expressly says not to determine a prospective contractor responsible or nonresponsible based solely on a lack of relevant performance history, and 9.105-2 requires the determination be documented."
+   },
+   {
+    "text": "No past performance history is an automatic finding of nonresponsibility, because a satisfactory performance record is one of the general standards.",
+    "correct": false,
+    "why": "This is the common misreading: a satisfactory record is a standard, but the FAR forbids resting the decision solely on the absence of history."
+   },
+   {
+    "text": "Below the simplified acquisition threshold no responsibility determination is required at all, so the question does not arise.",
+    "correct": false,
+    "why": "A responsibility determination is required before every award; what changes below the SAT is the level of documentation and, in the Army, which DORA tool is used."
+   },
+   {
+    "text": "The contracting officer must refer any offeror with no performance history to the SBA for a Certificate of Competency.",
+    "correct": false,
+    "why": "A Certificate of Competency referral is triggered only when a small business is found nonresponsible, not by the mere absence of past performance."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 9.104, 9.104-3(b), 9.105-2; AFARS PGI 5109.103(b) (DORA)",
+  "domain": "Responsibility & Exclusions"
+ },
+ {
+  "qid": "Q0025",
+  "stem": "What must a contracting officer reasonably expect before setting an acquisition aside for small business under the rule of two?",
+  "options": [
+   {
+    "text": "Offers from two or more responsible sources of any size, at least one of which is a small business, at fair market prices.",
+    "correct": false,
+    "why": "Both expected offerors must be responsible small business concerns; expected offers from large businesses do not count toward the rule of two."
+   },
+   {
+    "text": "Offers from two or more responsible small businesses that are competitive on market price, quality and delivery.",
+    "correct": true,
+    "why": "That is the rule of two in RFO FAR 19.104-1, the successor to legacy FAR 19.502-2."
+   },
+   {
+    "text": "Offers from three or more responsible small business concerns.",
+    "correct": false,
+    "why": "Three is not the standard; the reasonable expectation required is of two or more."
+   },
+   {
+    "text": "Offers from two or more firms certified in the same socioeconomic program, such as two 8(a) participants or two HUBZone firms.",
+    "correct": false,
+    "why": "That is the test for a program-specific set-aside, not for a total small business set-aside."
+   }
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR 19.104-1 (was FAR 19.502-2); 15 U.S.C. 644(j)",
+  "domain": "Small Business & Socioeconomic"
+ },
+ {
+  "qid": "Q0026",
+  "stem": "A new specialist asks you what a Determination and Findings (D&F) is. Which description is correct?",
+  "options": [
+   {
+    "text": "A written legal opinion from counsel confirming that a planned contract action is legally sufficient, signed before the action is approved.",
+    "correct": false,
+    "why": "Legal review may support a D&F, but a D&F is the authorized official's own approval document, not counsel's opinion, whenever counsel signs."
+   },
+   {
+    "text": "The market research report that documents the sources capable of meeting the requirement.",
+    "correct": false,
+    "why": "Market research documentation supports many determinations but is not itself the special form of written approval."
+   },
+   {
+    "text": "A special written approval, required by statute or regulation for certain actions, in which the determination is the conclusion and the findings are the supporting facts.",
+    "correct": true,
+    "why": "This is the FAR definition, and the findings must cover each requirement of the governing statute or regulation."
+   },
+   {
+    "text": "A contractor certification submitted with its proposal attesting to the accuracy of its representations.",
+    "correct": false,
+    "why": "A D&F is a Government document signed by an authorized Government official, not a contractor submission."
+   }
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR 2.101 (definition of Determination and Findings)",
+  "domain": "Terminations & Remedies"
+ },
+ {
+  "qid": "Q0027",
+  "stem": "A contractor performing one of your contracts is debarred. What is the effect on that existing contract?",
+  "options": [
+   {
+    "text": "The contract is automatically terminated for default the moment the debarment takes effect.",
+    "correct": false,
+    "why": "Debarment is an award eligibility action, not a contract remedy; any termination decision is made separately after review by contracting, technical personnel and counsel."
+   },
+   {
+    "text": "The contracting officer must terminate the contract for convenience within 30 days of the debarment and reprocure the remaining work from another firm.",
+    "correct": false,
+    "why": "No such automatic clock exists; continuation is the default rule unless the agency head directs otherwise."
+   },
+   {
+    "text": "Options may be exercised normally, because debarment only restricts new contract awards and not actions under existing contracts.",
+    "correct": false,
+    "why": "Exercising an option is precisely one of the actions barred without a written determination of compelling reasons."
+   },
+   {
+    "text": "Work may continue unless the agency head directs otherwise, but no new work, options or extensions without a written compelling-reasons determination.",
+    "correct": true,
+    "why": "RFO FAR 9.405-1 lets existing work continue while barring renewals, extensions and new work without the compelling-reasons determination."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 9.405, 9.405-1",
+  "domain": "Responsibility & Exclusions"
+ },
+ {
+  "qid": "Q0041",
+  "stem": "Which situation is the unequal access to information type of organizational conflict of interest?",
+  "options": [
+   {
+    "text": "A support contractor that saw the Government estimate and draft evaluation plan while working for the program office now bids on the follow-on.",
+    "correct": true,
+    "why": "Unequal access means nonpublic Government or third-party information obtained through contract work that gives the firm a competitive edge in a later competition; the firm here wrote none of the ground rules, it only saw information its competitors did not."
+   },
+   {
+    "text": "A contractor hired to evaluate the technical performance of competing systems, including the one it produces itself, and to report the results to the program office.",
+    "correct": false,
+    "why": "That is impaired objectivity, a different OCI type, where the firm cannot render impartial assistance or advice."
+   },
+   {
+    "text": "A contractor writes the specification for a future procurement in a way that favors its own product line, then competes for that same procurement.",
+    "correct": false,
+    "why": "That is biased ground rules, addressed at RFO FAR 9.505-2, although it often carries an information advantage as well."
+   },
+   {
+    "text": "A Government employee on the evaluation team owns stock in one of the offerors.",
+    "correct": false,
+    "why": "That is a personal conflict of interest and a standards of conduct matter, not an organizational conflict of interest."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 9.501, 9.504, 9.505-2, 9.505-4",
+  "domain": "Property, Security & Special Provisions"
+ },
+ {
+  "qid": "Q0042",
+  "stem": "Before award, who may authorize award and performance over a pending protest, and how does the answer differ between an agency-level protest and a GAO protest?",
+  "options": [
+   {
+    "text": "The contracting officer may authorize award in both forums as long as legal counsel concurs in writing and the file is documented.",
+    "correct": false,
+    "why": "The contracting officer never overrides a protest alone, and for a GAO protest the authority to authorize award and performance is reserved to the head of the contracting activity on a nondelegable basis."
+   },
+   {
+    "text": "At the agency, a written urgent-and-compelling or best-interest finding under agency procedures; at GAO, only the head of the contracting activity, with no delegation.",
+    "correct": true,
+    "why": "RFO FAR 33.104 and 33.105 set two different gates, and the GAO gate is reserved to the head of the contracting activity and cannot be delegated."
+   },
+   {
+    "text": "The senior contracting official may authorize award in both forums, because protest override authority follows the warrant chain above the contracting officer.",
+    "correct": false,
+    "why": "The GAO override is assigned to the head of the contracting activity by regulation and statute, not to the warrant chain generally."
+   },
+   {
+    "text": "In both forums the Government must obtain GAO's written permission before making award.",
+    "correct": false,
+    "why": "GAO does not grant permission to award; the agency overrides the stay itself through the written finding and notifies GAO."
+   }
+  ],
+  "difficulty": 3,
+  "cite": "RFO FAR 33.104, 33.105",
+  "domain": "Protests, Claims & Disputes"
+ },
+ {
+  "qid": "Q0043",
+  "stem": "Under the delinquency notice procedures, when should a contracting officer issue a cure notice rather than a show cause notice?",
+  "options": [
+   {
+    "text": "Whenever the contractor is delinquent in any way, because a cure notice is always required before any default termination.",
+    "correct": false,
+    "why": "After the delivery date has passed a show cause notice is the correct vehicle, and on a commercial contract no cure notice is required when the reason is late delivery."
+   },
+   {
+    "text": "Only after the default termination notice has been issued, to give the contractor one last chance to fix the failure.",
+    "correct": false,
+    "why": "The cure notice precedes termination; it cannot follow it."
+   },
+   {
+    "text": "When default termination is planned before the delivery date and at least 10 days remain for the contractor to cure.",
+    "correct": true,
+    "why": "If a realistic cure period of 10 days or more does not remain, the cure notice is not issued and a show cause notice is used instead."
+   },
+   {
+    "text": "When at least 30 days remain in the delivery schedule, since 30 days is the minimum cure period stated in the clause.",
+    "correct": false,
+    "why": "The cure period in the FAR format is 10 days, or any longer time the contracting officer considers reasonably necessary."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 49.607; RFO FAR 12.304(b)(1) for commercial",
+  "domain": "Terminations & Remedies"
+ },
+ {
+  "qid": "Q0045",
+  "stem": "What does the Berry Amendment restrict?",
+  "options": [
+   {
+    "text": "It requires competition to be restricted to domestic sources for every DoD acquisition above the simplified acquisition threshold, with waivers by the head of the agency.",
+    "correct": false,
+    "why": "The Berry Amendment restricts specific listed items, not all acquisitions above a dollar threshold, whatever waivers exist."
+   },
+   {
+    "text": "It applies to all federal agencies and works as a price evaluation preference for domestic offers, like the Buy American statute.",
+    "correct": false,
+    "why": "It is a DoD funding restriction and an outright prohibition on covered items, not a governmentwide price preference like the Buy American statute."
+   },
+   {
+    "text": "It restricts the purchase of foreign manufactured information technology hardware and software.",
+    "correct": false,
+    "why": "Information technology supply chain restrictions come from other authorities; the Berry Amendment list is textiles, clothing, flatware, hand or measuring tools and specialty metals."
+   },
+   {
+    "text": "It bars DoD funds from buying listed items, such as clothing, fabrics, flatware, hand tools and specialty metals, unless wholly U.S.-made, with some exceptions.",
+    "correct": true,
+    "why": "That is the scope of the statutory restriction and the item list a board expects to hear."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "10 U.S.C. 4862; RFO DFARS 225.7002 and PGI 225.7002-1",
+  "domain": "Property, Security & Special Provisions"
+ },
+ {
+  "qid": "Q0053",
+  "stem": "Which statement best captures what it means for a prospective contractor to be responsible?",
+  "options": [
+   {
+    "text": "The firm is capable and eligible: adequate finances, able to meet the schedule, good performance and integrity records, the needed skills and facilities, and legally qualified.",
+    "correct": true,
+    "why": "These are the general standards a prospective contractor must meet, and together they mean the firm is capable of performing the work as required."
+   },
+   {
+    "text": "The firm submitted the lowest evaluated price and a technically acceptable proposal, and its past performance rating is at least satisfactory with no adverse reports in the last three years.",
+    "correct": false,
+    "why": "Responsibility is about the offeror's capability and integrity, not about where its price or technical rating landed; a good past performance rating is only one of the standards."
+   },
+   {
+    "text": "The firm is registered in SAM, has no active exclusion, and has completed its representations and certifications.",
+    "correct": false,
+    "why": "Registration, current representations and the absence of an exclusion are necessary eligibility checks, but they do not by themselves establish financial capacity, capability or integrity."
+   },
+   {
+    "text": "The firm's proposal complies with every instruction in the solicitation and takes no exception to its terms.",
+    "correct": false,
+    "why": "That is proposal compliance or responsiveness, a separate concept from the responsibility of the offeror."
+   }
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR 9.104, 9.104-1",
+  "domain": "Responsibility & Exclusions"
+ },
+ {
+  "qid": "Q0055",
+  "stem": "What is the essential element of every viable, sustainable protest at the GAO or the U.S. Court of Federal Claims?",
+  "options": [
+   {
+    "text": "A certified claim submitted to the contracting officer first.",
+    "correct": false,
+    "why": "Certification belongs to claims under the Contract Disputes Act, not to bid protests."
+   },
+   {
+    "text": "Competitive prejudice to the protester.",
+    "correct": true,
+    "why": "No matter what procurement improprieties occurred, a protest will not be sustained unless the protester suffered competitive prejudice."
+   },
+   {
+    "text": "A debriefing requested and received by the protester.",
+    "correct": false,
+    "why": "A debriefing can start the filing clock, but it is not an element of a sustainable protest."
+   },
+   {
+    "text": "A contract value above the simplified acquisition threshold.",
+    "correct": false,
+    "why": "Dollar value affects task order protest jurisdiction, not whether a protest of a contract award can be sustained."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR Subpart 33.1; 4 CFR part 21 (GAO bid protest regulations)",
+  "domain": "Protests, Claims & Disputes"
+ },
+ {
+  "qid": "Q0073",
+  "stem": "A small business is the apparent awardee, but you cannot determine it to be responsible. What do you do?",
+  "options": [
+   {
+    "text": "Award to the next offeror in line and document the nonresponsibility finding in the file before the award is announced.",
+    "correct": false,
+    "why": "Skipping the referral takes away the small business's statutory opportunity to obtain a Certificate of Competency from SBA."
+   },
+   {
+    "text": "Refer the finding to the agency competition advocate for approval before proceeding.",
+    "correct": false,
+    "why": "The competition advocate reviews restrictions on competition, not responsibility determinations for small businesses."
+   },
+   {
+    "text": "Withhold award and refer the matter to the SBA Government Contracting Area Office for a Certificate of Competency.",
+    "correct": true,
+    "why": "A nonresponsibility finding against a small business triggers the referral, with narrow exceptions such as ineligibility under 9.104-1(g) approved by the chief of the contracting office, or suspension or debarment."
+   },
+   {
+    "text": "Initiate suspension or debarment proceedings, since a firm that cannot be found responsible is not eligible for any award.",
+    "correct": false,
+    "why": "Nonresponsibility on one acquisition is a business judgment; suspension and debarment are separate exclusion actions with their own cause and due process."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "FAR 19.602-1 (Certificate of Competency referral; legacy numbering retained, RFO equivalent not verified)",
+  "domain": "Small Business & Socioeconomic"
+ },
+ {
+  "qid": "Q0077",
+  "stem": "How is an excusable delay defined?",
+  "options": [
+   {
+    "text": "Any delay caused by a subcontractor or supplier, since the prime cannot control its supply chain once the Government has approved the subcontracts.",
+    "correct": false,
+    "why": "A subcontractor delay excuses the prime only when it was beyond the control and without the fault or negligence of both the prime and the subcontractor, approved or not."
+   },
+   {
+    "text": "Any delay the contracting officer's representative agreed to in writing at the time it occurred.",
+    "correct": false,
+    "why": "A COR cannot grant relief or change the delivery schedule; only the contracting officer can, by modification."
+   },
+   {
+    "text": "Any delay for which the contractor gave the Government written notice within 10 days, along with a revised delivery schedule.",
+    "correct": false,
+    "why": "Notice, even with a revised schedule, is a procedural requirement in the clause, not the test for whether the delay itself is excusable."
+   },
+   {
+    "text": "A delay from causes beyond the contractor's reasonable control and without its fault or negligence, such as acts of God, acts of the Government, fires, floods or strikes.",
+    "correct": true,
+    "why": "Both elements matter: the cause is beyond the contractor's reasonable control and the contractor is free of fault or negligence."
+   }
+  ],
+  "difficulty": 1,
+  "cite": "FAR 52.249-14 Excusable Delays; FAR 52.249-8(c)",
+  "domain": "Terminations & Remedies"
+ },
+ {
+  "qid": "Q0079",
+  "stem": "Where is a contracting officer's authority, and the limits on it, established?",
+  "options": [
+   {
+    "text": "In writing on the SF 1402 Certificate of Appointment, which states any limits; authority to bind the Government goes no further.",
+    "correct": true,
+    "why": "Appointment and its limits are documented on the SF 1402, and acting beyond them creates an unauthorized commitment that must be ratified."
+   },
+   {
+    "text": "On a DD Form 577, which appoints the individual, states the dollar limit of the warrant, and is filed in the VCE-Warrants system.",
+    "correct": false,
+    "why": "The DD Form 577 appoints certifying and accountable officers; it is not a contracting officer warrant, wherever it is filed."
+   },
+   {
+    "text": "Verbally by the head of the contracting activity, with the written certificate following later.",
+    "correct": false,
+    "why": "Contracting authority must be in writing before it exists; there is no verbal warrant."
+   },
+   {
+    "text": "In the contract file, through the contracting officer's representative designation letter.",
+    "correct": false,
+    "why": "A COR letter delegates limited surveillance duties to a representative and never confers contracting authority."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 1.402-1, 1.402-2, 1.403 (was 1.602-1, 1.602-2, 1.603); RFO FAR 1.405 for ratification",
+  "domain": "Responsibility & Exclusions"
+ },
+ {
+  "qid": "Q0089",
+  "stem": "In which three forums may a bid protest be filed?",
+  "options": [
+   {
+    "text": "With the agency, with the Government Accountability Office, and with the Armed Services Board of Contract Appeals.",
+    "correct": false,
+    "why": "The ASBCA hears appeals of contracting officer final decisions on claims, not bid protests."
+   },
+   {
+    "text": "With the agency, with the Government Accountability Office, and with the U.S. Court of Federal Claims.",
+    "correct": true,
+    "why": "These are the three protest forums addressed in RFO FAR Subpart 33.1."
+   },
+   {
+    "text": "With the Government Accountability Office, the U.S. Court of Federal Claims, and the U.S. Court of Appeals for the Federal Circuit.",
+    "correct": false,
+    "why": "The Federal Circuit reviews decisions on appeal; it is not a forum for filing a protest."
+   },
+   {
+    "text": "With the agency, with the Small Business Administration, and with the Government Accountability Office.",
+    "correct": false,
+    "why": "SBA handles size protests and Certificates of Competency, which are different from bid protests of an award decision."
+   }
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR 33.104, 33.105, 33.106",
+  "domain": "Protests, Claims & Disputes"
+ },
+ {
+  "qid": "Q0090",
+  "stem": "An agency-level protest is filed after award. Within how many days after contract award must it be received for the contracting officer to be required to immediately suspend performance?",
+  "options": [
+   {
+    "text": "Within 5 days after contract award, or 3 days after the debriefing, whichever is earlier.",
+    "correct": false,
+    "why": "Five days is the debriefing leg of the test, not the days-after-award leg, and the rule takes the later date, not the earlier."
+   },
+   {
+    "text": "Within 15 days after contract award, or 10 days after a debriefing, whichever is later.",
+    "correct": false,
+    "why": "There is no 15-day window in the agency protest rules; the two legs are 10 days after award or 5 days after the debriefing."
+   },
+   {
+    "text": "Within 10 days after award, or 5 days after a debriefing date offered on a timely request, whichever is later.",
+    "correct": true,
+    "why": "That is the post-award trigger for the suspension duty at RFO FAR 33.104-3(a)."
+   },
+   {
+    "text": "Within 30 days after contract award, or 10 days after a debriefing held under a timely request, whichever is later.",
+    "correct": false,
+    "why": "Thirty days is the agency report due date in a GAO protest, not a protest filing window."
+   }
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR 33.104-3(a)",
+  "domain": "Protests, Claims & Disputes"
+ },
+ {
+  "qid": "Q0091",
+  "stem": "Which FAR part covers protests, disputes and appeals, and which subpart within it covers claims?",
+  "options": [
+   {
+    "text": "Part 32, with claims and disputes covered at Subpart 32.5.",
+    "correct": false,
+    "why": "Part 32 is contract financing and Subpart 32.5 is progress payments."
+   },
+   {
+    "text": "Part 49, with claims and disputes covered at Subpart 49.2.",
+    "correct": false,
+    "why": "Part 49 is termination of contracts; Subpart 49.2 covers convenience terminations of fixed-price contracts."
+   },
+   {
+    "text": "Part 43, with claims at Subpart 43.2.",
+    "correct": false,
+    "why": "Part 43 is contract modifications, including change orders, not claims."
+   },
+   {
+    "text": "Part 33, with claims and disputes at Subpart 33.2.",
+    "correct": true,
+    "why": "Part 33 covers protests at Subpart 33.1 and disputes and appeals, including claims, at Subpart 33.2."
+   }
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR Part 33; Subpart 33.2; 41 U.S.C. chapter 71",
+  "domain": "Protests, Claims & Disputes"
+ },
+ {
+  "qid": "Q0093",
+  "stem": "A disappointed offeror requested and received a debriefing. How does the debriefing affect the window for a post-award agency protest that requires suspension of performance?",
+  "options": [
+   {
+    "text": "Within 5 days after the offered debriefing date or 10 days after award, whichever is later.",
+    "correct": true,
+    "why": "The rule runs from the later of the two dates, so a properly requested debriefing can extend the window past the tenth day after award."
+   },
+   {
+    "text": "The protest must be received within 10 days after the debriefing date, however long after award that is.",
+    "correct": false,
+    "why": "Ten days runs from award; the debriefing leg of the test is 5 days."
+   },
+   {
+    "text": "The protest must be received within 3 days after the debriefing, counting business days only.",
+    "correct": false,
+    "why": "Three days is not a FAR protest window, in business days or otherwise."
+   },
+   {
+    "text": "The protest must be received no later than the debriefing date itself, since the debriefing ends the window.",
+    "correct": false,
+    "why": "The clock starts at the debriefing date; it does not end there."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 33.104-3(a); debriefings at RFO FAR 15.206-2 and 15.301",
+  "domain": "Protests, Claims & Disputes"
+ },
+ {
+  "qid": "Q0095",
+  "stem": "When is a signed AT/OPSEC cover sheet required in an Army requirements package?",
+  "options": [
+   {
+    "text": "Only for service contracts valued over $1 million, plus any contract with classified work.",
+    "correct": false,
+    "why": "There is no $1 million or classified-work trigger; the requirement is package based with the three stated exceptions."
+   },
+   {
+    "text": "In every package except supply buys below the SAT, field ordering officer actions and Government purchase card buys.",
+    "correct": true,
+    "why": "AFARS subpart 5107.91 makes it a package requirement with those narrow exceptions, and it reaches orders under indefinite-delivery contracts unless the same products or services were already reviewed."
+   },
+   {
+    "text": "Only for contracts performed outside the United States.",
+    "correct": false,
+    "why": "It applies Army-wide; OCONUS performance adds theater-specific content but does not create the requirement."
+   },
+   {
+    "text": "Only when contractor employees will need installation access badges or access to Army networks.",
+    "correct": false,
+    "why": "Installation or network access is one common outcome of the review, not the condition that triggers it."
+   }
+  ],
+  "difficulty": 3,
+  "cite": "AFARS 5107.9101; AR 525-13; AR 530-1",
+  "domain": "Property, Security & Special Provisions"
+ },
+ {
+  "qid": "Q0096",
+  "stem": "You are terminating a contract for commercial services because the contractor failed to perform. Which procedures apply?",
+  "options": [
+   {
+    "text": "Termination for default under the Part 49 procedures and the Default clause at 52.249-8, after a cure notice.",
+    "correct": false,
+    "why": "That is the noncommercial fixed-price path; using it on a Part 12 contract applies the wrong clause and the wrong procedure."
+   },
+   {
+    "text": "Termination for convenience under Subpart 49.2, because commercial contracts have no default remedy.",
+    "correct": false,
+    "why": "Commercial contracts do have a default type remedy; it is called termination for cause."
+   },
+   {
+    "text": "Termination for cause under RFO FAR 12.304 and clause 52.212-4, without the Part 49 procedures.",
+    "correct": true,
+    "why": "Part 12 directs the contracting officer to follow the commercial termination procedures and expressly says not to use Part 49."
+   },
+   {
+    "text": "A unilateral change order under Part 43 deleting the unperformed work.",
+    "correct": false,
+    "why": "A change order adjusts work within the scope of the changes clause; it is not a remedy for failure to perform."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 12.304; FAR 52.212-4(m); Part 49 procedures do not apply to a commercial termination, though the 49.402-3 factors may be consulted as guidance",
+  "domain": "Terminations & Remedies"
+ },
+ {
+  "qid": "Q0107",
+  "stem": "What dollar thresholds establish the need for a Department of Labor wage determination?",
+  "options": [
+   {
+    "text": "$2,000 for service contracts and $2,500 for construction contracts.",
+    "correct": false,
+    "why": "The two figures are reversed; construction is the lower $2,000 figure."
+   },
+   {
+    "text": "$15,000 for service contracts and $35,000 for construction contracts.",
+    "correct": false,
+    "why": "$15,000 is the micro-purchase threshold; neither figure relates to wage determinations."
+   },
+   {
+    "text": "$150,000 for both service and construction contracts.",
+    "correct": false,
+    "why": "$150,000 is not a labor standards threshold; the wage determination triggers are far lower."
+   },
+   {
+    "text": "$2,500 for service contracts and $2,000 for construction contracts.",
+    "correct": true,
+    "why": "The service contract labor standards threshold is $2,500 and the construction wage rate requirements (Davis-Bacon) threshold is $2,000; both are statutory and were not changed by the FAR overhaul."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR Part 22; 41 U.S.C. chapter 67 (service contract labor standards, $2,500); 40 U.S.C. 3142 (Davis-Bacon, $2,000)",
+  "domain": "Terminations & Remedies"
+ },
+ {
+  "qid": "Q0121",
+  "stem": "A timely GAO protest has stayed your pre-award action. What is required to override the CICA stay?",
+  "options": [
+   {
+    "text": "The head of the contracting activity's nondelegable written finding that urgent and compelling circumstances cannot wait for GAO, with award likely within 30 days.",
+    "correct": true,
+    "why": "Those are the two elements of the pre-award override, and the authority cannot be delegated below the head of the contracting activity."
+   },
+   {
+    "text": "A determination by the contracting officer, coordinated with legal counsel, that the protest is untimely or without merit and will be dismissed.",
+    "correct": false,
+    "why": "The contracting officer does not decide the stay; even a weak protest stays the action until the head of the contracting activity acts."
+   },
+   {
+    "text": "Approval by the senior contracting official, supported by the requiring activity's statement of urgency and a finding that award will occur within 30 days.",
+    "correct": false,
+    "why": "The override authority sits with the head of the contracting activity and cannot be exercised by another official, even with the 30-day finding."
+   },
+   {
+    "text": "GAO's written concurrence that award may proceed while the protest is pending.",
+    "correct": false,
+    "why": "GAO does not concur in an override; the agency makes the finding and notifies GAO."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 33.105-2, 33.105-3; 31 U.S.C. 3553",
+  "domain": "Protests, Claims & Disputes"
+ },
+ {
+  "qid": "Q0126",
+  "stem": "What is a latent defect?",
+  "options": [
+   {
+    "text": "A defect that first appears after the warranty period has expired and the item is in use.",
+    "correct": false,
+    "why": "Timing relative to the warranty does not define a latent defect; discoverability at acceptance does."
+   },
+   {
+    "text": "A defect present at acceptance that reasonable inspection could not have found.",
+    "correct": true,
+    "why": "Both elements are required: the defect was present at acceptance and reasonable inspection would not have revealed it."
+   },
+   {
+    "text": "An obvious defect that the Government's inspector simply failed to catch before acceptance.",
+    "correct": false,
+    "why": "A defect discoverable by reasonable inspection is patent, not latent, and acceptance is generally final as to it."
+   },
+   {
+    "text": "A defect caused by a deficiency in the Government's own specification or drawings.",
+    "correct": false,
+    "why": "A defective specification or drawing is a Government-caused problem handled as a change or constructive change, not a latent defect."
+   }
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR Part 46 (inspection and acceptance; latent defect exception to finality of acceptance)",
+  "domain": "Terminations & Remedies"
+ },
+ {
+  "qid": "Q0127",
+  "stem": "What belongs in a stop-work order?",
+  "options": [
+   {
+    "text": "A statement of the contractor's failures and the Government's intent to recover excess reprocurement costs.",
+    "correct": false,
+    "why": "That content belongs in a default termination notice, not a stop-work order."
+   },
+   {
+    "text": "A contracting officer's final decision on the suspension, with notice of the contractor's appeal rights under the Disputes clause.",
+    "correct": false,
+    "why": "A stop-work order is a direction to suspend work, not a final decision on a claim or on the suspension."
+   },
+   {
+    "text": "What work stops, what to do about material orders and subcontracts, how to keep costs down, and the start and end dates.",
+    "correct": true,
+    "why": "The order must tell the contractor exactly what stops, for how long, and how to limit cost exposure while stopped."
+   },
+   {
+    "text": "A certified statement of the sum certain the Government will withhold during the suspension.",
+    "correct": false,
+    "why": "Certification of a sum certain belongs to claims under the Contract Disputes Act."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "FAR 52.242-15 Stop-Work Order",
+  "domain": "Terminations & Remedies"
+ },
+ {
+  "qid": "Q0129",
+  "stem": "A contractor believes it is owed additional time or money under a contract. What avenues of recourse does it have?",
+  "options": [
+   {
+    "text": "A bid protest to the Government Accountability Office challenging the contracting officer's decision, filed within 10 days after the contractor learns of the decision.",
+    "correct": false,
+    "why": "Protests challenge solicitation and award actions; entitlement disputes during performance go the claims route, whatever the filing date."
+   },
+   {
+    "text": "A Certificate of Competency request to the Small Business Administration, which can then direct the agency to pay the added costs or to grant the contractor more time.",
+    "correct": false,
+    "why": "A Certificate of Competency addresses a nonresponsibility finding before award, not entitlement to time or money after award, and SBA cannot order such payments."
+   },
+   {
+    "text": "A size protest filed with the Small Business Administration area office.",
+    "correct": false,
+    "why": "A size protest challenges another firm's small business status and has nothing to do with entitlement claims."
+   },
+   {
+    "text": "An equitable adjustment request, a claim leading to a final decision, alternative dispute resolution, and appeal to the ASBCA or Court of Federal Claims.",
+    "correct": true,
+    "why": "These are the recognized routes under the Contract Disputes Act and the Disputes clause."
+   }
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR Subpart 33.2; FAR 52.233-1 Disputes; 41 U.S.C. chapter 71",
+  "domain": "Protests, Claims & Disputes"
+ },
+ {
+  "qid": "Q0132",
+  "stem": "When may a contracting officer use a liquidated damages clause?",
+  "options": [
+   {
+    "text": "Only when late performance would reasonably be expected to damage the Government and the amount of that damage would be hard or impossible to estimate or prove.",
+    "correct": true,
+    "why": "Both conditions must be met, and the amount must be a reasonable forecast of probable damage rather than a penalty."
+   },
+   {
+    "text": "Whenever the contracting officer wants additional leverage to keep the contractor on schedule, at a rate set high enough to matter.",
+    "correct": false,
+    "why": "Liquidated damages used as leverage rather than as compensation for probable damage become an unenforceable penalty, especially at a rate set to hurt."
+   },
+   {
+    "text": "On cost-reimbursement contracts, where the Government's cost exposure from a late delivery is greatest and hardest to prove.",
+    "correct": false,
+    "why": "The clause is used in fixed-price contracts for supplies, services or research and development when the contracting officer determines the need, however hard the cost of delay is to prove."
+   },
+   {
+    "text": "As a standard clause in every contract, so the remedy is available if it is ever needed.",
+    "correct": false,
+    "why": "Liquidated damages are used only when the two conditions are met and the contracting officer documents that determination."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR Part 11, liquidated damages policy (legacy FAR 11.501); FAR 52.211-11",
+  "domain": "Terminations & Remedies"
+ },
+ {
+  "qid": "Q0134",
+  "stem": "Government furnished property is lost or damaged in the contractor's custody. When is the contractor liable for the loss?",
+  "options": [
+   {
+    "text": "Always, because the contractor has custody of the property and a duty under the Government Property clause to protect it, so any loss or damage while in its custody is always the contractor's to repay in full.",
+    "correct": false,
+    "why": "The clause gives the contractor a duty to protect the property, but unless the contract provides otherwise, the contractor is not liable for its loss except in the stated circumstances."
+   },
+   {
+    "text": "Only when the loss is insured or reimbursed, comes from managers' willful misconduct or bad faith, or follows a written revocation of the Government's risk that the contractor failed to correct in time.",
+    "correct": true,
+    "why": "These are the three exceptions in the Government Property clause; unless the contract provides otherwise, the Government otherwise carries the risk of loss."
+   },
+   {
+    "text": "Whenever any contractor employee is negligent in handling the property, even if the managers had good controls in place.",
+    "correct": false,
+    "why": "Ordinary employee negligence is not enough; the standard is willful misconduct or lack of good faith by managerial personnel."
+   },
+   {
+    "text": "Never, because the Government retains title and therefore the entire risk of loss, whatever the cause.",
+    "correct": false,
+    "why": "Title is not the test, and the clause lists three circumstances in which the contractor is liable."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "FAR 52.245-1(h); RFO FAR Part 45",
+  "domain": "Property, Security & Special Provisions"
+ },
+ {
+  "qid": "Q0138",
+  "stem": "Which FAR part implements the Service Contract Labor Standards (Service Contract Act) and Department of Labor wage determinations?",
+  "options": [
+   {
+    "text": "Part 15, Contracting by Negotiation.",
+    "correct": false,
+    "why": "Part 15 covers source selection and negotiation, not labor standards."
+   },
+   {
+    "text": "Part 31, Contract Cost Principles and Procedures.",
+    "correct": false,
+    "why": "Part 31 governs allowability of costs, not wage determinations."
+   },
+   {
+    "text": "Part 22, Application of Labor Laws to Government Acquisitions.",
+    "correct": true,
+    "why": "Part 22 carries the labor standards statutes, wage determinations, and the related clauses and price adjustment rules."
+   },
+   {
+    "text": "Part 37, Service Contracting, home of the service contract labor rules.",
+    "correct": false,
+    "why": "Part 37 covers service contracting policy such as personal services and performance-based methods; it points to Part 22 for the labor rules rather than holding them."
+   }
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR Part 22",
+  "domain": "Terminations & Remedies"
+ },
+ {
+  "qid": "Q0146",
+  "stem": "The delivery date has passed and the Government allowed the contractor to keep performing without reserving its rights. What must the contracting officer do before terminating for default?",
+  "options": [
+   {
+    "text": "Proceed directly to termination for default, since the original delivery date was missed and the record clearly shows it.",
+    "correct": false,
+    "why": "A default on a waived schedule is likely to be found wrongful and converted to a termination for convenience with costs against the Government."
+   },
+   {
+    "text": "Issue a cure notice giving the contractor at least 10 days to cure the delinquency, then terminate for default if it does not.",
+    "correct": false,
+    "why": "A cure notice is used before the delivery date; after it has passed a show cause notice is the right vehicle, and neither cures a waiver."
+   },
+   {
+    "text": "Terminate for convenience, because default is no longer legally available once the Government has waived the original date.",
+    "correct": false,
+    "why": "Default remains available once a new date is set and rights are reserved; convenience is one alternative, not the only one."
+   },
+   {
+    "text": "Set a new delivery date, by agreement or notice, and reserve the Government's rights; the old schedule was waived.",
+    "correct": true,
+    "why": "Forbearance without reserving rights waives the delivery schedule, and a default cannot stand on a waived date."
+   }
+  ],
+  "difficulty": 3,
+  "cite": "RFO FAR 49.402-3(c), (d), (f), (i); 49.402-4; 49.607",
+  "domain": "Terminations & Remedies"
+ },
+ {
+  "qid": "Q0147",
+  "stem": "Before award you receive notice from GAO that a protest has been filed. May you proceed with the award?",
+  "options": [
+   {
+    "text": "No. After GAO's notice, award must wait unless the head of the contracting activity makes the written, nondelegable override finding.",
+    "correct": true,
+    "why": "The statutory stay bars award, and only the written finding of urgent and compelling circumstances with award likely within 30 days can lift it."
+   },
+   {
+    "text": "Yes, if the contracting officer determines the protest is untimely under GAO's rules and documents that finding in the contract file first.",
+    "correct": false,
+    "why": "Timeliness is decided by GAO, not the contracting officer, and the stay applies in the meantime."
+   },
+   {
+    "text": "Yes, provided legal counsel concurs in writing that award is in the Government's best interest.",
+    "correct": false,
+    "why": "Legal concurrence is not an override authority; the head of the contracting activity must make the finding."
+   },
+   {
+    "text": "Yes, if the acquisition is below the simplified acquisition threshold, because GAO does not stay small dollar actions under its rules.",
+    "correct": false,
+    "why": "The CICA stay is not keyed to the simplified acquisition threshold."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 33.105-2; 33.104-2(b)(1) for agency protests; 31 U.S.C. 3553(c)",
+  "domain": "Protests, Claims & Disputes"
+ },
+ {
+  "qid": "Q0148",
+  "stem": "A protest has been filed with the agency after award of a camp janitorial contract. How long does the agency have to resolve it?",
+  "options": [
+   {
+    "text": "100 days, the same statutory period GAO has to decide a protest, counted from the filing date.",
+    "correct": false,
+    "why": "The 100-day clock is statutory for GAO decisions and does not apply to agency-level protests."
+   },
+   {
+    "text": "No statutory deadline, but the agency must use best efforts to resolve it within 35 days after it is filed.",
+    "correct": true,
+    "why": "The FAR sets a 35-day best efforts standard for agency protests rather than a hard deadline."
+   },
+   {
+    "text": "30 days, matching the agency report due date in a GAO protest, with a 10-day extension on request.",
+    "correct": false,
+    "why": "Thirty days is the GAO agency report deadline, a different obligation, and there is no extension rule of that kind for agency protests."
+   },
+   {
+    "text": "10 days, the same period the protester had to file.",
+    "correct": false,
+    "why": "Ten days is a filing window for the protester, not a resolution period for the agency."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 33.104-4(c)(1) (was FAR 33.103(g)); RFO FAR 33.104-3; AFARS 5133.103(d)",
+  "domain": "Protests, Claims & Disputes"
+ },
+ {
+  "qid": "Q0155",
+  "stem": "A customer wants Government furnished property included in a solicitation and the resulting contract. Which FAR part governs that decision and the property's administration and disposition?",
+  "options": [
+   {
+    "text": "Part 46, Quality Assurance.",
+    "correct": false,
+    "why": "Part 46 covers inspection and acceptance of what the contractor delivers, not Government property furnished to the contractor."
+   },
+   {
+    "text": "Part 42, Contract Administration and Audit Services.",
+    "correct": false,
+    "why": "Part 42 assigns contract administration functions but is not the Government property rule set."
+   },
+   {
+    "text": "Part 45, Government Property.",
+    "correct": true,
+    "why": "Part 45 covers providing property to contractors, accountability during performance, and disposition at the end of the contract."
+   },
+   {
+    "text": "Part 51, Use of Government Sources by Contractors.",
+    "correct": false,
+    "why": "Part 51 lets contractors buy from Government supply sources; it does not govern Government furnished property."
+   }
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR Part 45; FAR 52.245-1",
+  "domain": "Property, Security & Special Provisions"
+ },
+ {
+  "qid": "Q0161",
+  "stem": "A contractor tells the COR it is not tracking contractor-acquired property because the contractor, not the Government, purchased it. What determines who holds title?",
+  "options": [
+   {
+    "text": "The Government always takes title to contractor-acquired property because it paid for the property through the contract price, whatever the contract type or the purchase order used.",
+    "correct": false,
+    "why": "Paying the price does not pass title under a fixed-price contract without financing provisions or a title clause, whatever purchase order was used."
+   },
+   {
+    "text": "The contractor always retains title to property it purchased on its own purchase orders, even under a cost-reimbursement contract.",
+    "correct": false,
+    "why": "Under cost-type and time-and-materials contracts the Government acquires title to reimbursed property regardless of whose purchase order was used."
+   },
+   {
+    "text": "Title passes to the Government at final payment on every contract type.",
+    "correct": false,
+    "why": "There is no universal transfer at final payment; title is set by contract type and the contract's terms."
+   },
+   {
+    "text": "Contract type and terms: the Government owns reimbursable property on cost-type and T&M contracts; on fixed-price contracts the contractor keeps title unless financing, title terms or deliverable status say otherwise.",
+    "correct": true,
+    "why": "Title follows contract type and the terms of the contract, so the contracting officer reads the contract before deciding what tracking is required."
+   }
+  ],
+  "difficulty": 3,
+  "cite": "RFO FAR Part 45; FAR 52.245-1",
+  "domain": "Property, Security & Special Provisions"
+ },
+ {
+  "qid": "Q0218",
+  "stem": "How long does GAO have to decide a bid protest?",
+  "options": [
+   {
+    "text": "100 calendar days after the protest is filed, or 65 days under the express option.",
+    "correct": true,
+    "why": "Both figures are statutory and appear in GAO's bid protest regulations; the express option is used for protests suitable for quick resolution."
+   },
+   {
+    "text": "60 days after the protest is filed, extendable to 100 days for good cause.",
+    "correct": false,
+    "why": "Sixty days is the period within which the agency should implement a sustained recommendation, not the decision period."
+   },
+   {
+    "text": "35 days after the protest is filed.",
+    "correct": false,
+    "why": "Thirty-five days is the agency protest best efforts resolution target."
+   },
+   {
+    "text": "30 days after the agency report is filed.",
+    "correct": false,
+    "why": "Thirty days is the agency report due date measured from GAO's notice, not the decision deadline."
+   }
+  ],
+  "difficulty": 1,
+  "cite": "31 U.S.C. 3554(a)(1) and (a)(2); 4 CFR 21.9, 21.10",
+  "domain": "Protests, Claims & Disputes"
+ },
+ {
+  "qid": "Q0219",
+  "stem": "Does the Government incur interest on a contractor's claim, and if so, from what date does interest run?",
+  "options": [
+   {
+    "text": "Yes, but only from the date of the contracting officer's final decision, once the claim amount is fixed.",
+    "correct": false,
+    "why": "Delay in issuing the decision does not delay interest, which is why slow-rolling a legitimate claim costs the Government money; the amount does not have to be fixed first."
+   },
+   {
+    "text": "Yes, from receipt of a proper claim, or the date payment would be due if later, until it is paid.",
+    "correct": true,
+    "why": "The Contract Disputes Act starts interest at receipt of a proper claim, and the contracting officer's 60-day decision window does not pause it."
+   },
+   {
+    "text": "Yes, from the date of the contractor's original invoice or request for equitable adjustment on the issue.",
+    "correct": false,
+    "why": "An invoice or request for equitable adjustment is not a claim; the clock starts when it is converted into a proper claim received by the contracting officer."
+   },
+   {
+    "text": "No, the Government does not pay interest on contractor claims; only Prompt Payment Act penalties apply.",
+    "correct": false,
+    "why": "Prompt Payment interest applies to late payment of proper undisputed invoices, while Contract Disputes Act interest applies once the amount is in dispute and becomes a claim."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "41 U.S.C. 7109; RFO FAR 33.205-3 (was FAR 33.208); RFO FAR 33.205-2 (certification over $100,000)",
+  "domain": "Protests, Claims & Disputes"
+ },
+ {
+  "qid": "Q0221",
+  "stem": "Which set of definitions correctly distinguishes express, implied and apparent authority?",
+  "options": [
+   {
+    "text": "Express authority is inferred from the principal's conduct; implied authority is stated in writing; apparent authority is whatever the agent believes it holds.",
+    "correct": false,
+    "why": "The first two are reversed, and apparent authority turns on the third party's reasonable belief, not the agent's."
+   },
+   {
+    "text": "Express authority is delegated orally by a supervisor; implied authority is delegated in writing by the contracting officer; apparent authority is delegated by the head of the contracting activity.",
+    "correct": false,
+    "why": "None of these describes agency law, and contracting authority is never delegated orally."
+   },
+   {
+    "text": "Express is granted outright by the principal; implied is what is reasonably needed to carry out the express grant; apparent is what a third party reasonably infers from the principal's conduct.",
+    "correct": true,
+    "why": "This is the standard agency law framework a board expects, and it explains why only the warranted contracting officer can bind the Government."
+   },
+   {
+    "text": "Express authority belongs to the contracting officer, implied authority to the COR, and apparent authority to the requiring activity.",
+    "correct": false,
+    "why": "These are categories of authority, not job titles; a COR holds only the limited authority its written designation grants."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 1.402-1, 1.403; RFO FAR 1.405 (unauthorized commitments)",
+  "domain": "Responsibility & Exclusions"
+ },
+ {
+  "qid": "Q0223",
+  "stem": "What additional liabilities does a contractor incur when a fixed-price contract is terminated for default rather than for convenience?",
+  "options": [
+   {
+    "text": "The contractor automatically owes liquidated damages for the full period of delay, plus the Government's administrative costs of the termination.",
+    "correct": false,
+    "why": "Liquidated damages are owed only if the contract contains the clause and its conditions are met; they are not an automatic consequence of default, and administrative costs are not added."
+   },
+   {
+    "text": "The contractor forfeits the profit already earned on work delivered and accepted before the termination, and must repay it within 30 days.",
+    "correct": false,
+    "why": "Default reaches undelivered work and reprocurement; it does not claw back payment for supplies or services already delivered and accepted, on any schedule."
+   },
+   {
+    "text": "The contractor is automatically debarred from federal contracting for three years.",
+    "correct": false,
+    "why": "Debarment is a separate discretionary action with its own cause and due process, though the default is reported in the performance and integrity systems."
+   },
+   {
+    "text": "No payment for undelivered work, repayment of advance and progress payments for that work, and liability for excess reprocurement costs.",
+    "correct": true,
+    "why": "These are the effects of a default termination on a fixed-price contract, which is why a wrongful default is so costly when it converts to a convenience termination."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 49.402-2; 49.402-6 (repurchase against the contractor's account)",
+  "domain": "Terminations & Remedies"
+ },
+ {
+  "qid": "Q0252",
+  "stem": "Where is profit allowed, and where is it not allowed, when a fixed-price contract is terminated for convenience?",
+  "options": [
+   {
+    "text": "Allowed on preparations and work done on the terminated portion; not on settlement expenses, anticipatory profit, or subcontract work undelivered at termination.",
+    "correct": true,
+    "why": "The settlement pays for work actually performed plus reasonable settlement costs, without profit on what was never performed or delivered."
+   },
+   {
+    "text": "Profit is allowed on all costs in the settlement proposal, including settlement expenses and subcontractor settlements.",
+    "correct": false,
+    "why": "Settlement expenses are reimbursed but do not carry profit."
+   },
+   {
+    "text": "Anticipatory profit on the unperformed portion is allowed because the Government, not the contractor, ended the work, along with profit on the settlement expenses.",
+    "correct": false,
+    "why": "Anticipatory profits and consequential damages are expressly not allowed in a convenience settlement, and settlement expenses carry no profit."
+   },
+   {
+    "text": "No profit is allowed at all, because the contract was never completed.",
+    "correct": false,
+    "why": "Profit is allowed on preparations made and work done for the terminated portion."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 49.202",
+  "domain": "Terminations & Remedies"
+ },
+ {
+  "qid": "Q0253",
+  "stem": "What does the Defense Base Act require, and who may waive it?",
+  "options": [
+   {
+    "text": "It requires coverage only for U.S. citizen employees working overseas, because local and third country national employees are covered by host nation law in every case and need no waiver.",
+    "correct": false,
+    "why": "The Act reaches employees generally, and only an approved Department of Labor country waiver shifts local or third country nationals to host nation coverage."
+   },
+   {
+    "text": "Workers' compensation insurance, in place before performance, for employees overseas on U.S. bases or defense and public works contracts; only the Department of Labor waives it, never for U.S. citizens, residents or U.S. hires.",
+    "correct": true,
+    "why": "Coverage must be in place before performance starts, and waiver authority sits with the Department of Labor, typically as a country waiver based on adequate host nation coverage."
+   },
+   {
+    "text": "The contracting officer may waive the insurance requirement when the host nation has an adequate workers' compensation system for its own nationals.",
+    "correct": false,
+    "why": "Adequate host nation coverage is the basis for a geographic waiver, but only the Department of Labor approves it, on a written request signed by the head of a department or agency."
+   },
+   {
+    "text": "Coverage is optional if the contractor carries commercial general liability insurance of equal value.",
+    "correct": false,
+    "why": "General liability insurance does not substitute for the required workers' compensation coverage, and failing to secure it carries criminal penalties."
+   }
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 28.305; FAR 52.228-3 and 52.228-4; Defense Base Act (42 U.S.C. 1651 et seq.)",
+  "domain": "Property, Security & Special Provisions"
+ },
+ {
+  "qid": "Q0275",
+  "stem": "GAO has notified your agency of a protest of a recent award. How long does the agency have to submit the agency report to GAO?",
+  "options": [
+   {
+    "text": "10 days after GAO's notice of the protest.",
+    "correct": false,
+    "why": "Ten days is the protester's period to comment on the agency report, not the agency's period to produce it."
+   },
+   {
+    "text": "35 days after GAO's notice of the protest.",
+    "correct": false,
+    "why": "Thirty-five days is the agency protest best efforts resolution target, a different rule."
+   },
+   {
+    "text": "30 days after GAO's notice of the protest.",
+    "correct": true,
+    "why": "The agency report, containing the contracting officer's statement of facts, counsel's memorandum of law and the relevant documents, is due 30 days after GAO's notice, and the protester then has 10 days to comment."
+   },
+   {
+    "text": "100 days after GAO's notice of the protest.",
+    "correct": false,
+    "why": "One hundred days is GAO's deadline to issue its decision, measured from the filing of the protest."
+   }
+  ],
+  "difficulty": 1,
+  "cite": "4 CFR 21.3(c); RFO FAR 33.105-3, 33.105-4; 31 U.S.C. 3553(d)",
+  "domain": "Protests, Claims & Disputes"
+ }
+]

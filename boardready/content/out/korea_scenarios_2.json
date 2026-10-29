@@ -1,0 +1,545 @@
+[
+  {
+    "id": "K201",
+    "question": "During a peninsula-wide exercise, the exercise support cell at Camp Humphreys sends you two urgent requests. First, it wants a GPC cardholder to buy $32,000 (KRW equivalent) of portable generators and field lighting from a Korean vendor because \"the contingency micro-purchase threshold is $40,000 overseas.\" Second, it wants a $1.6 million tent-city life-support services package (power, water, latrines, laundry) awarded by simple RFQ under simplified procedures because \"the contingency SAT overseas is $2 million.\" The customer's memo says USFK is \"in a contingency posture.\" You are the KO who must decide which thresholds actually apply and what the file must contain.\n\n1. Do the elevated micro-purchase and simplified acquisition thresholds apply to this exercise? What has to exist before you can use them?\n2. If they do apply, what documentation must you keep in the contract and GPC files?\n3. If they do not apply, how do you still meet the exercise timeline lawfully?\n4. What Korea-specific issues do you check on the services package?",
+    "answer": "My first answer to the customer is that \"contingency posture\" is not a threshold. The elevated figures are real, but they are conditional.\n\nDo they apply? RFO FAR 2.101 raises the micro-purchase threshold to $40,000 and the simplified acquisition threshold to $2 million for a contract awarded and performed, or a purchase made, outside the United States, but only when the head of the agency has determined that the acquisition supports a contingency operation, defense against or recovery from a cyber, nuclear, biological, chemical or radiological attack, international disaster assistance, or an emergency or major disaster response. RFO FAR 18.001 says the same thing and points back to Part 2. A contingency operation is defined in 10 U.S.C. 101(a)(13): an operation the Secretary of Defense designates as one in which the armed forces are or may become involved in hostilities, or one that results in a call-up or retention of reserve forces under the listed statutes. A scheduled training exercise is not that unless someone with authority says it is. Separately, DoD Class Deviation 2024-O0011, carried forward by the RFO DFARS Part 213 deviation 2026-O0029, lets combatant commanders authorize higher micro-purchase thresholds for covered operations through 30 September 2028. So my checklist is: is there a Secretary of Defense designation, a head-of-agency determination, or a combatant commander authorization that names this exercise or the operation it supports? If I cannot put that document in the file, the standard thresholds apply: $15,000 micro-purchase and $350,000 SAT. I confirm with the Chief, C&P whether USFK or ACC has issued anything for this exercise before I answer the customer in writing.\n\nIf they apply, what the file shows:\n- A copy of the designation or determination and a short statement in each file that this specific acquisition supports it. The determination attaches to the acquisition, so I do not assume a standing exercise-wide authority exists; if C&P tells me one has been issued, I still tie each file to it.\n- For the GPC buy: the A/OPC raised the cardholder's single-purchase limit in writing under the Army GPC operating procedures (AFARS 5113.270-90 and Appendix EE) before the purchase (how the 411th GPC program actually does that is local, so I confirm it with the A/OPC and C&P), price reasonableness per RFO FAR 12.402, and no splitting.\n- For the services package: the RFQ, quotes, the basis for award, the price-reasonableness determination, competition to the maximum extent practicable, funds certification, and the ordinary contract file content under RFO FAR 4.101. Elevated thresholds change the procedure, not the need to document it.\n\nIf they do not apply: $32,000 is above the $15,000 micro-purchase threshold, so it is a purchase order issued by a KO, not a card buy. The old DFARS 213.301 overseas card authority up to $25,000 is codified but was displaced when the RFO Part 213 deviation replaced the part, so I do not rely on it unless the 411th GPC program confirms it survives in current DoD GPC policy. The $1.6 million package is commercial services, and RFO FAR 12.201-1 lets me use simplified procedures for commercial acquisitions up to $9 million: RFQ, evaluate, purchase order. That is fast. I still synopsize unless an exception applies, still get competition, and if the customer wants a single source I need a documented justification under RFO FAR 12.102(b) and 6.104, with unusual and compelling urgency (6.103-2) only if the facts support it. Humanitarian or peacekeeping operations have their own $650,000 SAT tier; that is not an exercise either.\n\nKorea checks on the services package: the SOFA Invited Contractor program, as the 411th bank describes it, is for U.S. contractors supporting USFK contracts, so it is not the issue for a Korean vendor; what the contract does carry is DFARS 252.222-7002, so the vendor complies with Korean labor law for its workers, and I confirm any Korean-firm registration or access requirements with C&P. If a U.S. firm wins, the contract needs SOFA designation: I, as the KO, request contract designation from USFK/FKAQ under SOFA Article XV and USFKI 4901.01, and the requiring activity then handles the individual designations before those people perform. O&M funds only; do not mix with LCS. Life-support gear and vendor personnel coming on post need installation access coordination with the garrison; I confirm the current process with C&P. And I write down the threshold decision so the next KO does not get the same memo.\n\nCite: RFO FAR 2.101 (micro-purchase and SAT definitions, contingency tiers); RFO FAR 18.001; 10 U.S.C. 101(a)(13); DoD Class Deviation 2024-O0011 and DFARS RFO deviation 2026-O0029; RFO FAR 12.201-1, 12.402, 12.102(b), 6.103-2, 6.104, 4.101; AFARS 5113.270-90 and Appendix EE; DFARS 252.222-7002 (RFO DFARS 222.7201(a)); SOFA Article XV; USFKI 4901.01; confirm any exercise-specific authorization with the Chief, C&P.",
+    "key_points": [
+      "Elevated OCONUS thresholds ($40K MPT, $2M SAT, $15M SaP) exist only when the head of the agency determines the acquisition supports a contingency operation (10 U.S.C. 101(a)(13)), CBRN defense, disaster assistance or emergency response; an exercise is not one by itself",
+      "Also check for a combatant commander MPT authorization under Class Deviation 2024-O0011 (through 30 Sep 2028); confirm with C&P before answering the customer",
+      "If the authority exists, put the determination in every file plus the normal record: A/OPC limit increase in writing, price reasonableness, competition, funds, RFO FAR 4.101 file content",
+      "If not: $32K is a KO purchase order, not a card buy; $1.6M commercial services can still move fast under RFO FAR 12.201-1 simplified procedures up to $9M",
+      "Sole source needs a documented justification (12.102(b), 6.104); urgency under 6.103-2 only if the facts support it",
+      "Korean vendor: the IC program is for U.S. contractors per the 411th bank, so not the issue, but 252.222-7002 applies (confirm registration/access with C&P); U.S. vendor: KO requests contract SOFA designation from FKAQ, RA handles individuals; O&M and LCS never mixed"
+    ],
+    "citations": [
+      "RFO FAR 2.101",
+      "RFO FAR 18.001",
+      "10 U.S.C. 101(a)(13)",
+      "DoD Class Deviation 2024-O0011",
+      "DFARS RFO Class Deviation 2026-O0029",
+      "RFO FAR 12.201-1",
+      "RFO FAR 12.402",
+      "RFO FAR 12.102(b)",
+      "RFO FAR 6.103-2",
+      "RFO FAR 6.104",
+      "RFO FAR 4.101",
+      "AFARS 5113.270-90",
+      "AFARS Appendix EE",
+      "DFARS 252.222-7002",
+      "RFO DFARS 222.7201(a)",
+      "SOFA Article XV",
+      "USFKI 4901.01"
+    ],
+    "classes": [
+      "I",
+      "II"
+    ],
+    "topic": "Contingency Contracting Thresholds",
+    "domain": "Korea, LCS & SOFA",
+    "tags": [
+      "Korea",
+      "Contingency Contracting",
+      "Thresholds",
+      "OCONUS",
+      "Problem solving situations"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "Threshold figures and triggers verified on RFO FAR 2.101/18.001 and in regulations.json; 10 U.S.C. 101(a)(13) read at LII; RFO 12.001(d)/12.201-1/12.402 read on the RFO Part 12 page; DFARS 222.7201(a)/252.222-7002 read from deviation 2026-O0040 Rev 1. Whether USFK or ACC has any standing exercise-related authorization, and the survival of the $25K overseas GPC authority, are not in the sources and are flagged. Reviewer 14 Sep 2026: IC-program statements re-aligned to Q0258 (two-step: KO requests contract designation from USFK/FKAQ, RA handles individuals; program described as applying to U.S. contractors). USFKI 4901.01 and the SOFA text could not be fetched (usfk.mil 403), so nothing beyond Q0258 is asserted. Per-acquisition authority wording and A/OPC limit-raising mechanics softened to confirm locally.",
+    "sources_used": [
+      "src/data/regulations.json (crosswalk + thresholds, verified 13 Sep 2026)",
+      "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-18",
+      "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12",
+      "https://www.law.cornell.edu/uscode/text/10/101",
+      "https://www.acquisition.gov/afars/5113.270-90-use-government-commercial-purchase-card.",
+      "DFARS RFO Class Deviation 2026-O0040 Rev 1 (Part 222) PDF, 222.7201(a) and 252.222-7002",
+      "content/sources/study_group_decks_apr-jul2026.txt (Q0258 IC program answer)"
+    ]
+  },
+  {
+    "id": "K202",
+    "question": "A GPC cardholder at Camp Casey needs 60 office chairs for a battalion headquarters. The Korean furniture vendor quotes 27,000,000 KRW, about $19,500 at today's rate, delivered. The cardholder tells her billing official she will buy 30 chairs this week and 30 next week, or put half on a colleague's card, \"because the limit is $15,000 and we are overseas anyway.\" The billing official calls you, the KO who supports the office's GPC program, and asks whether that is acceptable. You must decide what to tell them and how the chairs get bought.\n\n1. Is this a split purchase? What rule does it break?\n2. Does being in Korea change the cardholder's limit?\n3. What is the correct way to buy the chairs, and what do you check first?\n4. What happens to a cardholder or billing official who does this anyway?",
+    "answer": "Yes, it is a split purchase, and my answer is no on both versions of it.\n\nThe rule. The requirement is 60 chairs from one vendor for one customer at one time, valued at about $19,500. That is one requirement above the $15,000 micro-purchase threshold in RFO FAR 2.101. RFO FAR 12.001(d) says do not divide requirements whose aggregate value exceeds a threshold merely to permit use of a specific procedure, and RFO FAR 13.001(c) says the same for noncommercial simplified procedures. AFARS 5113.270-90 is explicit: cardholders shall not break down requirements into several purchases merely to avoid any requirement that applies to purchases exceeding the micro-purchase threshold. The DoD Government Charge Card Guidebook defines splitting three ways: among merchants, among cardholders, and over time. Thirty chairs this week and thirty next week is splitting over time; half on a colleague's card is splitting among cardholders. Both are violations.\n\nDoes Korea change the limit? Not on its own. The micro-purchase threshold is $15,000 worldwide; the $40,000 OCONUS figure applies only under a head-of-agency contingency or emergency determination, which we do not have for office chairs. The legacy DFARS 213.301 authority for card purchases above the MPT up to $25,000 overseas is still in the codified DFARS, but the RFO Part 213 deviation replaced the part and did not restate it, so I do not tell a cardholder it exists unless the 411th GPC Agency/Organization Program Coordinator confirms it is implemented in current DoD and Army GPC policy and the cardholder's limit has actually been raised in writing. Until then the cardholder's single-purchase limit is whatever her appointment letter and the 411th A/OPC set, and it can be no higher than the MPT unless one of those authorities has actually been applied to her card.\n\nThe right way to buy them:\n- The requirement comes to contracting as a purchase request with funding. Chairs are commercial, so I use RFO FAR 12.201-1 simplified procedures: get quotes, including the incumbent Korean vendor, check price reasonableness, and issue a purchase order. This takes days, not weeks.\n- Before soliciting I check required sources under RFO FAR Part 8 for office furniture (Federal Prison Industries and AbilityOne rules) and document why they do or do not apply to an overseas delivery; I confirm the office's current practice with C&P.\n- If the vendor accepts the card and the 411th GPC program permits card payment against a KO-issued order, the GPC can be the payment method on the purchase order; that is allowed, splitting is not. I confirm the payment-method practice with the A/OPC.\n- If the unit buys chairs repeatedly, a BPA under simplified procedures with a Korean vendor solves next year's problem.\n\nConsequences. The billing official is the first line of control and is expected to reject the split; approving it makes the official part of the violation. The A/OPC can suspend or cancel the card, require retraining, and refer the matter; commanders can take administrative or disciplinary action under the Army GPC operating procedures in AFARS Appendix EE and the DoD guidebook. If the cardholder exceeded her authority, the purchase can also be an unauthorized commitment that needs ratification under RFO FAR 1.405. I tell the billing official all of that once, in writing, and then I help them get the chairs.\n\nCite: RFO FAR 2.101; RFO FAR 12.001(d) and 12.201-1; RFO FAR 13.001(c); AFARS 5113.270-90 and Appendix EE; DoD Government Charge Card Guidebook (split-purchase definition and violations); DFARS 213.301 (legacy $25,000 overseas authority, displaced by DFARS RFO deviation 2026-O0029, confirm with the 411th A/OPC); RFO FAR Part 8; RFO FAR 1.405.",
+    "key_points": [
+      "One requirement of about $19,500 above the $15,000 MPT; splitting over time or across cardholders is prohibited by RFO FAR 12.001(d), 13.001(c) and AFARS 5113.270-90; DoD guidebook defines splits among merchants, cardholders and time",
+      "Being OCONUS does not raise the limit; the $40K figure needs a head-of-agency contingency determination, and the legacy $25K overseas card authority (DFARS 213.301) is displaced by the RFO Part 213 deviation, so confirm with the 411th A/OPC before relying on it",
+      "Correct path: purchase request to contracting, RFO FAR 12.201-1 simplified procedures, quotes and price reasonableness, purchase order (card may be the payment method if the 411th GPC program allows it)",
+      "Check required sources for office furniture under RFO FAR Part 8 and document the overseas applicability decision",
+      "Billing official must reject the split; A/OPC can suspend the card and refer for action under AFARS Appendix EE; an over-limit purchase may be an unauthorized commitment under RFO FAR 1.405",
+      "Fix the pattern with a BPA if the unit buys this repeatedly"
+    ],
+    "citations": [
+      "RFO FAR 2.101",
+      "RFO FAR 12.001(d)",
+      "RFO FAR 12.201-1",
+      "RFO FAR 13.001(c)",
+      "AFARS 5113.270-90",
+      "AFARS Appendix EE",
+      "DoD Government Charge Card Guidebook",
+      "DFARS 213.301",
+      "DFARS RFO Class Deviation 2026-O0029",
+      "RFO FAR Part 8",
+      "RFO FAR 1.405"
+    ],
+    "classes": [
+      "I",
+      "II"
+    ],
+    "topic": "Government Purchase Card",
+    "domain": "Authority, Ethics & Leadership",
+    "tags": [
+      "Korea",
+      "GPC",
+      "Micro-purchase",
+      "Problem solving situations"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "RFO FAR 12.001(d) and 13.001(c) read on the RFO Part 12 and Part 13 pages (last updated 28 Jul 2026); AFARS 5113.270-90 sentence read on acquisition.gov; DoD guidebook split definition from search summary of the acq.osd.mil guidebook; MPT $15,000 verified in regulations.json. The 411th's A/OPC procedures, current cardholder limits, and whether the DFARS 213.301 overseas authority is implemented locally are not in the sources. Reviewer 14 Sep 2026: Cardholder-limit and card-as-payment-method statements softened; both depend on the 411th A/OPC program, which is not in the sources.",
+    "sources_used": [
+      "src/data/regulations.json (crosswalk + thresholds, verified 13 Sep 2026)",
+      "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-12",
+      "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-13",
+      "https://www.acquisition.gov/afars/5113.270-90-use-government-commercial-purchase-card.",
+      "https://www.acq.osd.mil/asda/dpc/ce/pc/docs/guides-docs/DoD_Govt_Charge_Card_Guide_06_03_20.pdf (via search summary)"
+    ]
+  },
+  {
+    "id": "K203",
+    "question": "In late July, the air conditioning at a child development center on Camp Humphreys fails during a heat advisory. The facility manager calls a Korean HVAC company he has used before; the company replaces two rooftop units over the weekend and invoices 63,000,000 KRW, about $46,000. On Monday the garrison commander tells you he will \"sign whatever is needed\" and the resource manager confirms O&M funds were and are available. The vendor is not registered in SAM and wants payment in won within 30 days. You are the KO assigned to review the action.\n\n1. What is this, and can it be ratified? Who is the ratifying official?\n2. Walk through the package: who writes what, and what do you personally determine?\n3. What if you cannot find the price fair and reasonable, or legal will not concur?\n4. How does a Korean vendor get paid, and what do you do so this does not happen again?",
+    "answer": "This is an unauthorized commitment: an agreement that is not binding solely because the person who made it, the facility manager, had no authority to bind the Government (RFO FAR 1.405). It is not a contract yet, and nobody pays it as if it were. It can be ratified, and I expect it will be, because the Government got two working air conditioners in a child care facility during a heat advisory.\n\nWho ratifies. Under RFO FAR 1.405(b)(2) the head of the contracting activity may ratify and may delegate that authority no lower than the chief of the contracting office; Army delegation levels are in AFARS Appendix GG and the procedures in AFARS 5101.602-3 and 5101.602-3-90. At about $46,000 the ratifying official in the 411th will be whoever the current delegation names for that value; I do not guess, I confirm with the Chief, C&P. The garrison commander cannot ratify by signing the invoice; his signature belongs on the endorsement, not the obligation.\n\nThe package, per AFARS 5101.602-3-90:\n- The facility manager writes a signed statement: what happened, who he called, what was ordered, why normal procedures were not used, plus the vendor's quote or invoice, itemized in won: units, labor, weekend rates.\n- His commander verifies the facts, endorses the request, and states what he is doing to prevent recurrence.\n- The resource manager certifies that funds were available on the date of the commitment and are available now; if either is false this becomes a potential Anti-Deficiency Act problem under 31 U.S.C. 1341 and I say so in writing.\n- I, as the reviewing KO, determine that all six 1.405(c) criteria are met: the Government accepted the benefit; the ratifying official has authority; the contract would otherwise have been proper if a KO had made it; the price is fair and reasonable; I recommend payment and legal concurs; funds were and are available. For price I compare the invoice to our DPW or base operations emergency repair rates, an IGE from the DPW engineer, or a quick quote from another Korean HVAC firm, and I document it.\n- The package goes to legal for concurrence, then to the ratifying official.\n\nIf price or legal fails. If the price is not fair and reasonable I negotiate with the vendor; ratification can be for a lower amount the vendor accepts. If I cannot get there, or legal non-concurs, I do not ratify. The vendor's remedy is then a claim to the appropriate claims authority under 31 U.S.C. 3702, and legal advises whether some recovery on a quantum meruit basis is appropriate. Either way I tell the vendor in writing what the path is, in English and, where the office can support it, Korean, so the company is not left guessing.\n\nPayment and prevention. Once ratified I issue a purchase order that obligates the funds and cites the ratification; the invoice is then paid through the servicing finance office. On SAM: RFO FAR 4.203-1(b) exempts contract actions at or below $40,000 awarded to foreign vendors for work performed outside the United States when registration is impractical, and this action is about $46,000, so that exception does not reach it on its own. The same paragraph exempts contracts awarded by deployed or overseas contracting officers supporting military, diplomatic or emergency operations; whether the 411th applies that exception to a routine ratification, or requires the vendor to register, is something I confirm with C&P before I promise the vendor a payment date, along with the 411th practice for won payments through finance. Prevention: the facility manager had an emergency service order channel, the DPW or BOS maintenance contract, and the contracting office duty number available. I offer the garrison a short class on authority and emergency options, and I note the corrective action in the file. If he does it again, the commander's endorsement will read very differently.\n\nCite: RFO FAR 1.405 (was 1.602-3); AFARS 5101.602-3, 5101.602-3-90 and Appendix GG; 31 U.S.C. 1341; 31 U.S.C. 3702; RFO FAR 4.203-1(b) (SAM registration exceptions: foreign vendors at or below $40,000 for work outside the U.S.; overseas contracting officers supporting military operations); 411th CSB ratification and foreign-vendor payment procedures (confirm with C&P).",
+    "key_points": [
+      "Unauthorized commitment under RFO FAR 1.405; not a binding contract until ratified; nobody pays the invoice as if it were one",
+      "Ratifying official: HCA or delegate no lower than the chief of the contracting office (1.405(b)(2)); Army levels in AFARS Appendix GG; confirm the 411th level with C&P; the commander endorses, he does not ratify",
+      "Package per AFARS 5101.602-3-90: individual's signed statement and invoice, commander's endorsement with prevention measures, RM funds certification (then and now), KO fair-and-reasonable determination and recommendation, legal concurrence",
+      "All six 1.405(c) criteria; price checked against DPW/BOS rates, IGE or a second Korean quote; ADA exposure if funds were not available at the time",
+      "If not ratifiable: negotiate, ratify at a lower agreed amount, or send the vendor to the 31 U.S.C. 3702 claim route with legal's advice",
+      "After ratification issue a purchase order to obligate, pay through finance; the $40,000 foreign-vendor SAM exception (RFO FAR 4.203-1(b)) does not cover a $46,000 action by itself; the overseas-contracting-officer exception and won payment mechanics are confirmed with C&P; fix the root cause with training and the emergency service order channel"
+    ],
+    "citations": [
+      "RFO FAR 1.405",
+      "AFARS 5101.602-3",
+      "AFARS 5101.602-3-90",
+      "AFARS Appendix GG",
+      "31 U.S.C. 1341",
+      "31 U.S.C. 3702",
+      "RFO FAR 4.203-1(b)"
+    ],
+    "classes": [
+      "I",
+      "II"
+    ],
+    "topic": "Unauthorized Commitment",
+    "domain": "Authority, Ethics & Leadership",
+    "tags": [
+      "Korea",
+      "Ratification",
+      "Problem solving situations"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "RFO FAR 1.405 criteria quoted in the 2 Jun 2026 deck; AFARS 5101.602-3/5101.602-3-90 and Appendix GG were verified for Q0274 on 13 Sep 2026 and are reused here. The SAM registration exception for foreign vendors was not re-verified under RFO Part 4 numbering, and the 411th's ratification approval level and won-payment mechanics are local. Reviewer 14 Sep 2026: RFO Part 4 page (last updated 28 Jul 2026) read on acquisition.gov: SAM exceptions are at 4.203-1(b) and the foreign-vendor exception is capped at $40,000, which the draft's $46,000 scenario exceeds; answer corrected. Bilingual-staff statement softened (local).",
+    "sources_used": [
+      "content/sources/study_group_decks_apr-jul2026.txt (2 Jun 2026 deck, slides 3-5)",
+      "src/data/questions.json Q0274",
+      "src/data/regulations.json (crosswalk + thresholds, verified 13 Sep 2026)",
+      "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4 (4.203-1(b) SAM exceptions, read 14 Sep 2026)"
+    ]
+  },
+  {
+    "id": "K204",
+    "question": "You are awarding a five-year, $3.8 million (base plus four options) grounds maintenance and custodial services contract at Camp Walker, Daegu, funded with O&M. The workforce will be about 40 Korean nationals employed by the contractor. During acquisition planning the requiring activity asks you to attach a Service Contract Labor Standards wage determination \"like we did in Texas,\" a prospective offeror asks whether it must pay the U.S. federal minimum wage, and the incumbent's employees ask whether the new contractor has to keep them. You must decide what labor rules go in the solicitation and how you will evaluate price.\n\n1. Do the Service Contract Labor Standards and a wage determination apply? Why or why not?\n2. What law governs the contractor's Korean employees, and what does SOFA Article XVII actually cover?\n3. What do you put in the solicitation and how do you build the IGE and evaluate price realism?\n4. How do you answer the incumbent workforce and the offeror?",
+    "answer": "SCLS and wage determinations. No. The Service Contract Labor Standards statute does not reach contracts performed outside the United States. The statute and RFO FAR Part 22 reach only a contract whose principal purpose is to furnish services in the United States (RFO FAR 22.001 definition of service contract; 41 U.S.C. 6701), and for that purpose the United States means the 50 States, the District of Columbia, Puerto Rico, the Northern Mariana Islands, American Samoa, Guam, the U.S. Virgin Islands, Johnston Island, Wake Island and the outer Continental Shelf, and expressly not a U.S. base within a foreign country (legacy FAR 22.1001; 29 CFR 4.112). Camp Walker is a U.S. base in a foreign country, so there is no wage determination to attach, no 52.222-41 style clause, and the $2,500 SCLS micro-purchase carve-out is not in play either. The same logic applies to the U.S. federal minimum wage: it is a U.S. labor law with a U.S. geographic scope, and it does not govern a Korean company's employees working in Daegu.\n\nWhat law does govern. Korean law. The contractor is a Korean employer of Korean employees, so the Labor Standards Act, the Minimum Wage Act, the statutory severance system and the four social insurances (national pension, health, employment and industrial accident) apply to it directly, and none of that depends on our contract. What our contract does is make compliance a contract obligation: RFO DFARS 222.7201(a) prescribes DFARS 252.222-7002, Compliance with Local Labor Laws (Overseas), for services and construction performed outside the United States. The contractor agrees to comply with local laws, regulations and labor union agreements on hours, workers' compensation, working conditions, fringe benefits and labor standards, and to indemnify the Government for claims arising from non-compliance. On SOFA Article XVII: as I understand it, and I could not put the article text in front of me for this answer, it deals with the employment of Korean civilians by the U.S. armed forces and by Article XV Invited Contractors, and it points those conditions of employment to Korean labor legislation except where inconsistent with the Article or military requirements. A Korean contractor is not an Article XV Invited Contractor, so on that reading Article XVII is not the rule for this workforce; Korean law is. I confirm that reading with the SOFA labor channel through legal before I put it in writing to an offeror.\n\nSolicitation and pricing:\n- Nonpersonal services, PWS with measurable outcomes and a QASP; RFO FAR 37.201-2 and the 237.876 certification of nonpersonal services in the file, because a 40-person on-post workforce is where supervision creep starts.\n- 252.222-7002 and the standard overseas clauses; O&M only, full and open competition, because this is not LCS and LCS competition is limited to Korean firms.\n- The IGE is built from the current Korean minimum wage published by the Ministry of Employment and Labor, prevailing Daegu wage data for these trades, the statutory add-ons under Korean law (severance accrual, social insurance contributions and similar items, which I take from legal or the labor advisor rather than from memory), supervision, equipment and consumables. I do not quote a wage figure in the solicitation; I state the law applies and price accordingly.\n- Over five years Korean wages move every January when the minimum wage changes. I either price the options with that escalation in the IGE or use an economic price adjustment approach tied to the published minimum wage, and I say which in the solicitation.\n- Price realism: if I intend to reject an offer for unrealistically low labor pricing on a firm-fixed-price services contract, the solicitation must say realism will be evaluated. A quote below the statutory floor times headcount is my flag.\n\nAnswering the workforce and the offeror. The FAR does not require a successor contractor to hire incumbent employees; I do not direct hiring and I do not promise retention. Whether the transfer of this work carries obligations to the employees is a question of Korean labor law between the two Korean companies and their workers, and I route those employees to legal and to the contractor, not to me. To the offeror: U.S. minimum wage does not apply; Korean minimum wage and Korean labor law do, and the contract will hold them to it. I answer both in a solicitation amendment so every offeror sees the same answer.\n\nCite: RFO FAR 22.001 (service contract means services furnished in the United States) and Subpart 22.10; legacy FAR 22.1001 definition of United States and 29 CFR 4.112 (U.S. bases in foreign countries excluded); 41 U.S.C. chapter 67; RFO DFARS 222.7201(a) and DFARS 252.222-7002; U.S.-ROK SOFA Articles XV, XVI and XVII; RFO FAR 37.201-2 and DFARS 237.876; RFO FAR 16.203 (economic price adjustment); Korean Labor Standards Act and Minimum Wage Act (current rates from MOEL); confirm the SOFA Article XVII reading (article text not verified here) and 411th pricing practice with C&P and legal.",
+    "key_points": [
+      "SCLS reaches only services furnished in the United States as defined (RFO FAR 22.001; legacy 22.1001 and 29 CFR 4.112 exclude U.S. bases in foreign countries): no wage determination, no SCLS clause, no U.S. minimum wage in Korea",
+      "Korean law governs the Korean contractor's employees (Labor Standards Act, Minimum Wage Act, severance, four social insurances); DFARS 252.222-7002 (RFO DFARS 222.7201(a)) makes compliance a contract obligation with indemnity",
+      "SOFA Article XVII (as understood; text not verified) covers Korean employees of the U.S. armed forces and Article XV Invited Contractors, not a Korean contractor's own workforce; confirm with legal",
+      "Nonpersonal services: PWS, QASP, 237.876 certification; O&M full and open, not LCS",
+      "IGE from MOEL minimum wage plus statutory add-ons and local wage data; handle annual Korean wage changes in option pricing or an EPA approach; state price realism in the solicitation if you will use it",
+      "No FAR right to incumbent retention; successor-employer questions are Korean-law matters between the firms and their workers; answer offerors by amendment"
+    ],
+    "citations": [
+      "RFO FAR 22.001",
+      "RFO FAR Subpart 22.10",
+      "FAR 22.1001 (legacy definition of United States)",
+      "29 CFR 4.112",
+      "41 U.S.C. chapter 67",
+      "RFO DFARS 222.7201(a)",
+      "DFARS 252.222-7002",
+      "SOFA Article XV",
+      "SOFA Article XVI",
+      "SOFA Article XVII",
+      "RFO FAR 37.201-2",
+      "DFARS 237.876",
+      "RFO FAR 16.203"
+    ],
+    "classes": [
+      "II",
+      "III"
+    ],
+    "topic": "Host-Nation Labor",
+    "domain": "Korea, LCS & SOFA",
+    "tags": [
+      "Korea",
+      "Labor Standards",
+      "Services",
+      "OCONUS",
+      "Problem solving situations"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "SCLS geographic exclusion read on the RFO Part 22 page; 222.7201(a) and 252.222-7002 read from DFARS RFO deviation 2026-O0040 Rev 1; DFARS 237.876 and FAR 37.201-2 read from the Part 237 deviation and RFO Part 37 page. SOFA Article XVII scope is from USFK/search summaries (usfk.mil and state.gov PDFs returned 403), so it is stated with a legal-confirmation caveat; Korean statutory benefits are described generally without figures. RFO FAR 16.203 numbering not re-verified. Reviewer 14 Sep 2026: RFO Part 22 page read: the geographic limit sits in the 22.001 definition of service contract (services in the United States), not in an exclusion clause, and the draft's territory list omitted the Northern Mariana Islands; cite and text corrected using legacy FAR 22.1001 (read on acquisition.gov). RFO FAR 16.203 confirmed on the RFO Part 16 page. SOFA text still unfetchable (usfk.mil/loc.gov 403); Article XVII statements softened to a reading to confirm. Korean statutory add-ons generalized.",
+    "sources_used": [
+      "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22",
+      "DFARS RFO Class Deviation 2026-O0040 Rev 1 (Part 222) PDF",
+      "DFARS RFO Class Deviation 2026-O0023 Rev 1 (Part 237) PDF",
+      "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-37",
+      "US-ROK SOFA Articles XVI-XVII (search summaries of usfk.mil SOFA PDF and USFKI 1400.01)",
+      "src/data/questions.json Q0255, Q0258",
+      "https://www.acquisition.gov/far/22.1001 (definition of United States, read 14 Sep 2026)",
+      "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16 (16.203 confirmed, read 14 Sep 2026)"
+    ]
+  },
+  {
+    "id": "K205",
+    "question": "You award a $2.4 million O&M-funded commercial contract for HVAC maintenance across Area III to a Korean firm after a best-value evaluation. Six days after award, an unsuccessful Korean offeror emails you, in Korean with an English summary, saying the evaluation was unfair, that the awardee lacks a required license, and asking \"Can we go to GAO, or do we have to complain to you first?\" The same week, a different Korean vendor asks whether it can protest to GAO an LCS award that ROK MND made on the 411th's recommendation. You must decide how to handle the email and how to answer both jurisdiction questions.\n\n1. Is the email a protest, and what is your first action?\n2. If it is an agency protest, what does RFO FAR 33.104 require of you, including the stay and the independent review?\n3. Can a Korean company protest to GAO, and does GAO have jurisdiction over a 411th award performed in Korea? What about the LCS award?\n4. How do you keep the agency track and the GAO track from tripping over each other?",
+    "answer": "First action. I do not decide alone whether an objection that never uses the word protest is one. The study group answer and my own practice are the same: send it to legal the day it arrives and ask for an opinion on whether it constitutes a protest and what to do next. While that happens I treat it as if it is one: I put a litigation hold on the file and evaluator notes, I have our bilingual staff prepare a faithful English translation, and I note the date and time of receipt. Six days after award matters, because the stay clock is running.\n\nAgency protest handling under RFO FAR 33.104. The subpart's purpose is inexpensive, informal, procedurally simple and quick resolution (33.104-1). Postaward, 33.104-3 says that if a protest is received within 10 days after award, or within 5 days after a debriefing date offered under a timely request, whichever is later, I must immediately suspend performance pending resolution, including any independent review, unless continued performance is justified in writing. Day six is inside the window, so the awardee gets a suspension notice unless continued performance is justified in writing at the level the 411th requires, which I confirm with C&P and legal; for building HVAC in summer that justification may exist, and I document it if so. Under 33.104-4 the protester may request an independent review at a level above me; the solicitation should have told them that, and in the 411th I confirm with C&P which official performs it. The agency makes its best efforts to resolve the protest within 35 days. I write a decision that addresses each ground, including the license issue, which goes to responsibility and technical acceptability, and I send it to the protester in writing. I also remember that filing with the agency does not extend the time for obtaining a stay at GAO.\n\nGAO jurisdiction. Nationality is irrelevant. Under 4 CFR 21.0 and 21.1 an interested party is an actual or prospective offeror whose direct economic interest would be affected by the award, and a protest may challenge a procurement by a Federal agency. The 411th CSB is an Army contracting activity, this is a Federal procurement paid with appropriated funds, and performance in Korea does not change that, so yes, a Korean offeror can protest our award to GAO. Timeliness is 4 CFR 21.2: within 10 days after the basis is known, or, if a required debriefing was requested, within 10 days after the debriefing; and if they filed with the agency first, within 10 days of actual or constructive knowledge of initial adverse agency action. The CICA stay at GAO is 31 U.S.C. 3553(d) and RFO FAR 33.105-3(b)(1): notice within 10 days of award or 5 days after a required debriefing, with the DoD enhanced-debriefing rule in RFO DFARS 233.105-70. The LCS award is different in kind. Under the LCS program the funds are held by ROK MND, the 411th KO only recommends award through USFK J4, and MND approves, awards and pays. MND is not a Federal agency and its award is not a Federal procurement, so my position is that GAO has no jurisdiction over it and the vendor's remedy runs to MND under its own procedures. I give that answer only after legal confirms it, and I refer the vendor to USFK J4 under the current LCS procedures, which I confirm with J4 and C&P, rather than to Washington.\n\nKeeping the tracks straight. I keep one protest file with a running timeline: receipt, legal opinion, suspension notice or justification, independent-review request, decision date, and the GAO deadlines that the agency decision triggers. If GAO notice arrives while the agency protest is pending, the agency protest is overtaken and I shift to 33.105: notify legal and counsel the same day, notify the awardee, and prepare for the agency report due 30 days after GAO's notice (4 CFR 21.3). I answer the protester in English, with a Korean courtesy translation where the office can support it, and I never negotiate the merits by email.\n\nCite: RFO FAR 33.104-1 through 33.104-4 (was 33.103); RFO FAR 33.105-3 and 33.105-4 (was 33.104); RFO DFARS 233.105-70; 4 CFR 21.0, 21.1, 21.2 and 21.3; 31 U.S.C. 3551-3556; 411th CSB protest routing and independent-review official (confirm with C&P and legal); current LCS procedures for MND award disputes (no procedure text in the sources; confirm with USFK J4 and C&P).",
+    "key_points": [
+      "Objection letter without the word protest: send to legal for an opinion immediately, litigation hold, translate, log the receipt date",
+      "Agency protest (RFO FAR 33.104): received within 10 days of award or 5 days after an offered debriefing means immediate suspension unless continued performance is justified in writing; independent review above the KO on request; best efforts to resolve in 35 days; agency filing does not extend the GAO stay window",
+      "GAO: interested party status turns on economic interest, not nationality (4 CFR 21.0, 21.1); a 411th award is a Federal procurement wherever performed, so GAO has jurisdiction; timeliness under 4 CFR 21.2 including 10 days after adverse agency action",
+      "LCS award: ROK MND awards and pays, so it is not a Federal agency procurement; position is no GAO jurisdiction, remedy through MND via J4 under current LCS procedures, confirmed with legal",
+      "CICA stay at GAO: 31 U.S.C. 3553(d), RFO FAR 33.105-3(b)(1), DoD enhanced debriefing rule in RFO DFARS 233.105-70; agency report 30 days after GAO notice",
+      "Keep one timeline file; if GAO notice arrives the agency protest is overtaken and 33.105 duties start the same day"
+    ],
+    "citations": [
+      "RFO FAR 33.104-1",
+      "RFO FAR 33.104-2",
+      "RFO FAR 33.104-3",
+      "RFO FAR 33.104-4",
+      "RFO FAR 33.105-3",
+      "RFO FAR 33.105-4",
+      "RFO DFARS 233.105-70",
+      "4 CFR 21.0",
+      "4 CFR 21.1",
+      "4 CFR 21.2",
+      "4 CFR 21.3",
+      "31 U.S.C. 3551",
+      "31 U.S.C. 3553(d)"
+    ],
+    "classes": [
+      "II",
+      "III"
+    ],
+    "topic": "Agency Protest",
+    "domain": "Protests, Claims & Disputes",
+    "tags": [
+      "Korea",
+      "Protests",
+      "LCS Funding",
+      "Problem solving situations"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "RFO FAR 33.104-1 to 33.104-4 read on the RFO Part 33 page (28 Jul 2026); 4 CFR 21.0, 21.1 and 21.2 read at LII; 33.105-3/33.105-4 and DFARS 233.105-70 carried from the verified Q0275 note. The LCS jurisdiction conclusion is reasoned from Q0257 (MND awards and pays) and the 4 CFR 21.0 definition of Federal agency, not from a GAO decision, so it is framed as a position to confirm with legal. The 411th independent-review official is local. Reviewer 14 Sep 2026: Removed the named 'LCS SOP' (no such document in the sources; only USFK J4 management of LCS is supported by Q0257) and the implied local approval chain for continued performance. Translation-support statement softened.",
+    "sources_used": [
+      "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33",
+      "https://www.law.cornell.edu/cfr/text/4/21.0",
+      "https://www.law.cornell.edu/cfr/text/4/21.1",
+      "https://www.law.cornell.edu/cfr/text/4/21.2",
+      "content/sources/study_group_decks_apr-jul2026.txt (7 Jul 2026 deck agency vs GAO protest; 13 May 2026 deck line 175 objection letter)",
+      "src/data/questions.json Q0257, Q0275",
+      "src/data/regulations.json (crosswalk + thresholds, verified 13 Sep 2026)"
+    ]
+  },
+  {
+    "id": "K206",
+    "question": "A Korean-national direct-hire contract specialist in your branch, employed by U.S. Forces Korea for six years, asks to be warranted. She holds a bachelor's degree from a Korean university, has completed the contracting training the office requires, and has been the specialist on about $12 million of actions, including a $900,000 services award. Her supervisor wants to request a Class II $1 million warrant; the candidate would be content with a Class I (SAT) warrant to sign purchase orders. You are the branch KO asked to advise the supervisor before the application goes into VCE-Warrants.\n\n1. Can a foreign local national hold an Army contracting warrant at all?\n2. What is the OCONUS HCA validation letter, what does it do, and who completes it?\n3. What changes between a Class I (SAT) warrant and a warrant above the SAT for this candidate?\n4. Outline the 411th process and the practical limits you would brief the supervisor on.",
+    "answer": "Yes, she can. The Army Warranting Program Policy, version 12 of March 2026, states that the program governs Department of the Army civilians, military personnel and Foreign Local Nationals who require a warrant under Army authority. Its direct-hire FLN paragraph is the key: U.S. Forces are the legal employer of direct-hire FLNs and assume all administrative and management functions for foreign national employment; an FLN may occupy an occupational series equivalent to the 1102 series for purposes of the policy; and OCONUS HCAs have the authority to recognize equivalent education and training to appoint FLNs as KOs. She is a USFK direct-hire Korean-national employee, which is who that paragraph describes; the SOFA labor article (Article XVII) is the framework for KN employment as I understand it, and I confirm that reading with C&P rather than quote it.\n\nThe validation letter. The policy directs us to the Department of the Army memorandum, Contracting Validation for Foreign Local Nationals, Policy and Procedures, dated 18 November 2022, and says the OCONUS HCA shall complete an FLN Validation Letter. Its function is to document the HCA's recognition that the candidate's non-U.S. education and training are equivalent to what a U.S. candidate would hold, so the warrant file stands on its own. Policy v12 lets the HCA delegate warrant-granting authority down to SCOs, and the 411th workflow has the SCO appoint; whether the SCO or the ACC HCA signs the FLN Validation Letter as the OCONUS HCA, who prepares it, and what it must contain follow the 2022 memorandum and the 411th's C&P practice. I do not describe the letter's format from memory; I confirm the current template with the Chief, C&P and the Warrant Program Coordinator in CONOPS before the packet is built, because the letter must be in VCE-Warrants with the application, not added after the board.\n\nClass I versus above the SAT. For any warrant the candidate must meet the training requirements and show the judgment and experience the policy calls candidate readiness. The line that matters is the SAT. A KO warrant above the SAT requires the 10 U.S.C. 1724 qualifications now carried at RFO DFARS 201.403-70: all contracting courses required for the grade, at least 2 years of contracting experience, a baccalaureate degree from an accredited institution, and any additional requirements the Secretary of Defense sets; the policy adds that the candidate must be designated in an AT&L position. Her six years cover the experience. The Korean degree is precisely what the validation letter addresses, and the AT&L position designation for a KN position is a question for C&P and the HCA, not something I assume. The HCA may waive qualification requirements in writing on a risk-based business case, and for KO qualifications the waiver must also satisfy 10 U.S.C. 1724(d); any waiver goes into VCE-Warrants before appointment. Given a first warrant and a $900,000 largest action, I would advise the supervisor to request Class I now with a documented path to Class II, unless C&P confirms the above-SAT qualifications are already validated.\n\nProcess and limits. Under the 411th warrant workflow: the candidate submits the application, certifications, previous warrant if any, and a resume of direct contract experience in VCE-Warrants without PII; the supervisor, as requesting official, justifies the request and attests to her qualifications and routes it to the 906th CBN or TCC group; CONOPS reviews for completeness and passes the packet to the Chief, C&P; the CORB sits on the second Wednesday of the month, chaired by the SCO with voting members from the SCO, PD, CoCO, division chiefs and KOs and C&P facilitating; a unanimous recommendation lets the SCO appoint in VCE-Warrants, with the Certificate of Appointment and appointment letter stating the scope and limits. Practical limits I brief: the warrant value must cover the cumulative value of any instrument she signs, base plus options and ceilings; system access in PIEE, PADDS and PCF for a Korean-national employee is arranged before the first signature under whatever account rules apply to KN staff, which are not in the warrant policy, so I confirm them with C&P and the system administrators; and her ACC warrant, once issued, is honored by any other ACC SCO under Contracting Note 26-03 without re-boarding.\n\nCite: Army Warranting Program Policy v12 (MAR 2026): Applicability, KO Qualifications and Direct Hire FLN paragraphs, Waivers; DA memorandum, Contracting Validation for Foreign Local Nationals, Policy and Procedures, 18 Nov 2022; 10 U.S.C. 1724 and 1724(d); RFO DFARS 201.403-70 (was 201.603-2); RFO FAR 1.403-1(b); SOFA Article XVII; 411th CSB Warrant Process Workflow (Jul 2026); ACC Contracting Note 26-03; confirm the FLN validation letter template, AT&L designation and system-access steps with C&P.",
+    "key_points": [
+      "Policy v12 applies to FLNs; direct-hire FLNs are U.S. Forces employees, may occupy an 1102-equivalent series, and OCONUS HCAs may recognize equivalent education and training to appoint them as KOs",
+      "The HCA completes an FLN Validation Letter per the DA memorandum of 18 Nov 2022; it documents equivalence and must be in the VCE-Warrants record before appointment; confirm the current template with C&P",
+      "Above the SAT: 10 U.S.C. 1724 / RFO DFARS 201.403-70 (courses, 2 years, baccalaureate, SecDef additions) plus AT&L position designation; HCA waiver possible with a risk-based case and 1724(d) compliance",
+      "Advise Class I (SAT) now with a documented path to Class II unless C&P confirms above-SAT qualifications are validated",
+      "411th workflow: VCE application without PII, supervisor attests, 906th/TCC, CONOPS, Chief C&P, CORB 2nd Wednesday chaired by the SCO, unanimous recommendation, SCO appoints",
+      "Limits: warrant must cover cumulative instrument value; KN system access in PIEE/PADDS/PCF arranged first (rules confirmed with C&P); ACC warrant honored across SCOs under CN 26-03"
+    ],
+    "citations": [
+      "Army Warranting Program Policy v12 (MAR 2026)",
+      "DA Contracting Validation for Foreign Local Nationals Policy and Procedures Memorandum (18 Nov 2022)",
+      "10 U.S.C. 1724",
+      "RFO DFARS 201.403-70",
+      "RFO FAR 1.403-1(b)",
+      "SOFA Article XVII",
+      "411th CSB Warrant Process Workflow (Jul 2026)",
+      "ACC Contracting Note 26-03"
+    ],
+    "classes": [
+      "I",
+      "II"
+    ],
+    "topic": "Warrant Qualifications",
+    "domain": "Authority, Ethics & Leadership",
+    "tags": [
+      "Korea",
+      "Warrant Program",
+      "Foreign Local National",
+      "Problem solving situations"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "FLN, applicability, KO qualification and waiver text read from the local Army Warranting Program Policy v12; 201.403-70 text extracted from DFARS RFO deviation 2026-O0002 Rev 1; 411th workflow and CN 26-03 read locally. The 18 Nov 2022 DA FLN memorandum itself could not be fetched (asc.army.mil 403), so the letter's content and signer are described only as the policy states; AT&L designation for KN positions and system-access steps are local. Reviewer 14 Sep 2026: Removed the assertion that the ACC CG is the HCA with authority delegated to the SCO (Policy v12 only says the HCA may delegate down to SCOs; the 411th workflow shows the SCO appointing); signer of the FLN Validation Letter left to C&P. KN system-access rules and the SOFA Article XVII reading softened.",
+    "sources_used": [
+      "content/sources/army_warranting_policy_v12_mar2026.txt",
+      "DFARS RFO Class Deviation 2026-O0002 Rev 1 (Part 201) PDF, 201.403-70",
+      "content/sources/411th_warrant_process_workflow_jul2026.txt",
+      "content/sources/acc_contracting_note_26-03_reciprocity.txt",
+      "src/data/regulations.json (crosswalk + thresholds, verified 13 Sep 2026)"
+    ]
+  },
+  {
+    "id": "K207",
+    "question": "An LCS-funded $2.1 million roof and drainage repair project at Camp Carroll was awarded by ROK MND to a Korean construction firm on the 411th's recommendation for award. Four months in, the contractor is about 40 percent complete, has missed two milestones, and has pulled its crew to another job. The COR sends you photos and a schedule slip and asks you, as the KO on the file, to \"issue a cure notice and terminate for cause so we can get someone else in before the monsoon.\" You must decide what you actually have authority to do.\n\n1. Who is the contracting party here, and what can a 411th KO do and not do?\n2. What do you document and where does it go?\n3. How would your answer change if this were an O&M-funded 411th award?\n4. What about reprocurement and the schedule?",
+    "answer": "The honest first sentence is that I am not the contracting officer on this contract in the FAR sense, and I say so to the COR before anything else. Under the Logistics Cost Sharing program the funds are not transferred to the United States; they are held by the ROK Ministry of National Defense, USFK J4 manages the program, the 411th uses its contract vehicles and processes to compete the requirement among Korean firms, the 411th KO makes a recommendation for award through USFK J4, and ROK MND approves and awards the contract and pays the invoices. So the party in privity with this contractor is MND. I cannot issue a FAR cure notice or a termination for cause on an instrument MND signed, and if I did it would have no legal effect and would create confusion the contractor could use against us.\n\nWhat I can do is drive the remedy through the channel that does have authority:\n- Build the record now: COR reports, dated photos, the baseline and current schedule, milestone dates and the contractor's explanations, and the notices the COR or I have already sent.\n- Notify USFK J4 in writing immediately, with that record, and recommend the action MND should take under its contract: a formal notice to cure, a show-cause equivalent, or termination and reprocurement. I write it the way I would write a FAR cure notice, because the logic is the same even if the paper is MND's.\n- Ask C&P for the current LCS procedures (whatever guidance USFK J4 and the 411th use today) and any LCS-specific terms the 411th solicitation incorporated; if the instrument carries FAR-style default and termination language by agreement, I follow it as those procedures direct, but I do not assume it.\n- Keep the customer honest about the timeline: every LCS step already takes longer because it goes through J4 and MND, and a termination and reprocurement will too.\n\nIf it were an O&M 411th award, this is ordinary contract administration. For a commercial services or construction award I follow RFO FAR 12.304 and the 52.212-4 termination paragraphs: send a cure notice unless the failure is late delivery, then a written termination for cause that states the reasons, the remedies we will seek, and that it is a final decision appealable under the Disputes clause, and report it to FAPIIS. For a noncommercial award I use the RFO FAR 49.607 cure notice, which requires at least 10 days and enough time remaining in the schedule, then a show-cause and termination for default under 49.402, with excess reprocurement costs charged to the contractor under 49.402-2. In either case I check for Government-caused delay first, involve legal before the notice goes out, and consider whether consideration for a recovery schedule serves the mission better than a break in service.\n\nReprocurement and schedule. Any replacement contract for this work stays LCS unless the customer re-funds it with O&M, and the two cannot be mixed in one solicitation because LCS competition is limited to Korean firms while O&M is full and open. A new LCS award means a new recommendation package through J4 and a new MND approval, so I tell the COR what the realistic award date is and ask whether interim protection of the roof can be done under an existing O&M facilities contract. Whether MND can recover excess costs from the defaulted contractor is MND's call under Korean law and its contract; my job is to give J4 everything it needs to make that case. All of this I confirm against the current LCS procedures with C&P before I brief the customer.\n\nCite: LCS program structure per the 411th question bank and 13 May 2026 study deck (MND holds funds, J4 manages, KO recommends, MND awards and pays; Korean firms, labor and materials; O&M and LCS not mixed); Special Measures Agreement and current LCS procedures (no procedure text in the sources; confirm with USFK J4 and C&P); RFO FAR 12.304 and 52.212-4; RFO FAR 49.607, 49.402 and 49.402-2; FAPIIS reporting of terminations for cause or default (legacy FAR 42.1503(h); RFO section to confirm).",
+    "key_points": [
+      "LCS: MND holds the funds, J4 manages, the 411th KO recommends award, MND awards and pays; the contract is MND's, so a 411th KO cannot issue a FAR cure notice or terminate it",
+      "Build the record (COR reports, photos, schedules, notices), notify USFK J4 in writing, and recommend the cure, show-cause or termination action MND should take",
+      "Get the current LCS procedures from C&P and follow any LCS-specific termination terms the 411th solicitation incorporated; do not assume FAR clauses apply",
+      "O&M contrast: commercial, RFO FAR 12.304 cure notice then termination for cause with final-decision language and FAPIIS; noncommercial, 49.607 cure notice (10 days), default under 49.402, excess reprocurement costs under 49.402-2; check Government-caused delay and involve legal",
+      "Reprocurement stays LCS (Korean firms) unless re-funded with O&M; never mix the two in one solicitation; new J4/MND cycle drives the schedule",
+      "Interim roof protection may be possible under an existing O&M facilities contract; MND decides recovery from the defaulted contractor"
+    ],
+    "citations": [
+      "RFO FAR 12.304",
+      "FAR 52.212-4",
+      "RFO FAR 49.607",
+      "RFO FAR 49.402",
+      "RFO FAR 49.402-2",
+      "FAR 42.1503(h) (FAPIIS termination reporting; RFO section to confirm)",
+      "Special Measures Agreement (LCS program)",
+      "USFK J4 LCS procedures (confirm with C&P)"
+    ],
+    "classes": [
+      "II",
+      "III"
+    ],
+    "topic": "LCS Procurement",
+    "domain": "Korea, LCS & SOFA",
+    "tags": [
+      "Korea",
+      "LCS Funding",
+      "Terminations",
+      "Problem solving situations"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "low",
+    "confidence_reason": "The LCS structure (MND awards and pays, KO recommends through J4, Korean firms only, no O&M/LCS mixing) is from the official 411th answers Q0254-Q0257 and the 13 May 2026 deck. The LCS SOP, the terms of MND's contract, and how non-performance is actually remedied are not in any source available here, so the remedy path is reasoned from the program structure and framed as a recommendation through J4 to confirm with C&P. FAR termination cites are from the verified crosswalk and the 13 May 2026 deck. Reviewer 14 Sep 2026: Named 'LCS SOP' removed (not in any source); FAPIIS cite narrowed to the legacy paragraph with the RFO section left to confirm. LCS mechanics re-checked against Q0254-Q0257: MND holds funds, J4 manages, KO recommends award through J4, MND approves, awards and pays; Korean firms, labor and materials; O&M and LCS not mixed. All consistent.",
+    "sources_used": [
+      "src/data/questions.json Q0254, Q0255, Q0256, Q0257, Q0276",
+      "content/sources/study_group_decks_apr-jul2026.txt (13 May 2026 deck slides 3-4 and 9-10)",
+      "src/data/regulations.json (crosswalk + thresholds, verified 13 Sep 2026)"
+    ]
+  },
+  {
+    "id": "K208",
+    "question": "A brigade S3 sends you a purchase request for $68,000 for \"a Korean interpreter and translator for one year.\" The PR names the individual the S3 wants, says she will sit in the S3 shop from 0800 to 1700, take daily taskings from the S3, use a Government computer and CAC, attend staff meetings, and be rated by the S3 at the end of the year. The S3 says the last interpreter was a contractor \"and it worked fine.\" You must decide whether and how this can be contracted.\n\n1. Is this a personal services arrangement? What tells you?\n2. What lawful options exist to meet the S3's need, and what would each require?\n3. If the requirement goes forward as a contract, what goes in the file and the PWS to keep it nonpersonal?\n4. What Korea-specific issues do you raise?",
+    "answer": "As written, this is a personal services contract, and RFO FAR 37.201-1 says agencies must not contract for personal services unless specifically authorized by statute. RFO FAR 37.201-2(a) gives the test: a personal services contract exists when the Government supervises or controls contractor employees, or appears to do so, as if they were Government employees, which circumvents the civil service laws that require the Government to competitively hire its own people. Everything in this PR points that way: a named individual rather than a service, fixed duty hours on site, daily taskings from the S3, Government equipment, staff-meeting attendance, and a Government supervisor rating her performance. 37.201-2(b) says relatively continuous Government supervision and control is the key indicator, and this is continuous supervision by design. The deck's framing is the same: personal means the appearance of an employer-employee relationship; nonpersonal means a consumer-provider relationship where the contractor directs its own employees. \"It worked fine last time\" is not an authority.\n\nLawful options, in the order I would offer them:\n- A nonpersonal services contract with a firm for interpretation and translation services. The firm hires, assigns and supervises the interpreters; the S3 orders work through the contract and the COR, not through daily supervision; deliverables and response times are in a PWS. This meets most brigade needs and is what I recommend.\n- A direct-hire Korean-national position. If the S3 truly needs a person integrated into the staff, the lawful way to get one is a USFK Korean-national direct-hire position through the civilian personnel channel (KN employment sits under the SOFA labor article and USFK personnel policy, which the civilian personnel office applies); that is a hiring action, not a contract, and I refer the S3 there.\n- A true personal services contract under 10 U.S.C. 129b(d), implemented at RFO DFARS 237.201-70(c). It allows a personal services contract for services provided by individuals outside the United States, regardless of nationality, but only with written approval from the head of the contracting activity, and the approval must determine that the services are urgent or unique, that it would not be practical to obtain them by other means, and that they are necessary and appropriate for supporting DoD activities and programs outside the United States. For a routine brigade interpreter I would not expect to meet urgent or unique, and I would not recommend sending it to the HCA. If the S3 believes it does, that is a determination package through the Chief, C&P, and 237.201-70(d) tells us 5 U.S.C. 3109 does not apply to those contracts.\n- Experts and consultants under 5 U.S.C. 3109 with a D&F under 10 U.S.C. 129b (237.201-70(a)) is for expert or consultant work, not day-to-day interpretation, and carries a GS-15 pay cap (237.201-70(f)); it does not fit.\n\nFile and PWS for the nonpersonal path. The requiring activity signs the certification of nonpersonal services under RFO DFARS 237.876 and it goes in the file; the PWS states outcomes such as interpretation for scheduled engagements, translation turnaround times and quality standards, not duty hours and seating; the contractor provides supervision and a point of contact; Government equipment access is limited to what the work requires and is documented; the COR is designated under DFARS PGI 201.404-70 and trained that tasking goes through the contract; the QASP measures outputs. Per 237.876(c), I remind the COR and the S3 of the descriptive elements in 37.201-2 so the contract does not drift into personal services after award.\n\nKorea-specific points. The interpreter will handle Korean counterparts, so I ask the S3 about security clearance and access needs early; a Korean firm's employees are governed by Korean labor law and the contract carries DFARS 252.222-7002. I understand Korean law also regulates arrangements where one company places its worker under another organization's direction; that is a legal question, not mine, so any structure that looks like the S3 directing a Korean firm's employee gets a legal review on that point as well as on 37.201-2. And a named individual in a PR is a competition problem on its own: sources are selected by the firm, not the customer. I confirm the 411th's practice for interpreter services and any existing installation-level language services vehicle with C&P before I build a new one.\n\nCite: RFO FAR 37.201-1, 37.201-2(a) and (b), 37.202-1; RFO DFARS 237.201-70(a), (c), (d), (f) and 237.876 (DFARS RFO deviation 2026-O0023 Rev 1); 10 U.S.C. 129b(d); 5 U.S.C. 3109; DFARS PGI 201.404-70 (COR); DFARS 252.222-7002; SOFA Article XVII (KN direct hire); confirm HCA personal-services approval routing and existing language-services vehicles with C&P.",
+    "key_points": [
+      "Personal services as written: named individual, fixed on-site hours, daily taskings, Government equipment, staff meetings, S3 rating; RFO FAR 37.201-2(a)/(b) continuous supervision test; prohibited absent statute (37.201-1)",
+      "Preferred option: nonpersonal services contract with a firm that hires and supervises interpreters, ordered through a PWS and COR",
+      "Staff-integrated need is a hiring action: direct-hire KN position under SOFA Article XVII, not a contract",
+      "10 U.S.C. 129b(d) / RFO DFARS 237.201-70(c) allows personal services by individuals outside the U.S. regardless of nationality only with HCA written approval finding urgent or unique, not practical otherwise, and necessary and appropriate for DoD activities abroad; routine interpretation is unlikely to qualify",
+      "File: 237.876 certification of nonpersonal services, outcome-based PWS, QASP, COR designation and training, limited and documented Government equipment access",
+      "Korea: clearance and access, Korean labor law and 252.222-7002, legal review of any worker-placement structure, no named individuals in the PR"
+    ],
+    "citations": [
+      "RFO FAR 37.201-1",
+      "RFO FAR 37.201-2",
+      "RFO FAR 37.202-1",
+      "RFO DFARS 237.201-70",
+      "RFO DFARS 237.876",
+      "10 U.S.C. 129b(d)",
+      "5 U.S.C. 3109",
+      "DFARS PGI 201.404-70",
+      "DFARS 252.222-7002",
+      "SOFA Article XVII"
+    ],
+    "classes": [
+      "I",
+      "II"
+    ],
+    "topic": "Personal Services",
+    "domain": "Acquisition Planning & Contract Types",
+    "tags": [
+      "Korea",
+      "Services",
+      "Personal Services",
+      "Problem solving situations"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "RFO FAR 37.201-1/37.201-2/37.202-1 read on the RFO Part 37 page (28 Jul 2026) and quoted in the 2 Jun 2026 deck; DFARS 237.201-70 and 237.876 text extracted directly from deviation 2026-O0023 Rev 1. The statement that Korean law regulates worker-placement arrangements is general and flagged for legal review; 411th language-services vehicles and HCA routing are local. Reviewer 14 Sep 2026: KN direct-hire path and the Korean worker-placement point softened to readings for the personnel office and legal; RFO 37.201-1, 37.201-2 and 37.202-1 headings confirmed on the RFO Part 37 page (28 Jul 2026).",
+    "sources_used": [
+      "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-37",
+      "DFARS RFO Class Deviation 2026-O0023 Rev 1 (Part 237) PDF, 237.201-70 and 237.876",
+      "content/sources/study_group_decks_apr-jul2026.txt (2 Jun 2026 deck slides 10-11)",
+      "DFARS RFO Class Deviation 2026-O0040 Rev 1 (Part 222) PDF, 222.7201(a)",
+      "src/data/regulations.json (crosswalk + thresholds, verified 13 Sep 2026)",
+      "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-37 (section headings re-confirmed 14 Sep 2026)"
+    ]
+  },
+  {
+    "id": "K209",
+    "question": "You hold a Class II $5 million warrant issued by the 411th CSB SCO. Under the PAE restructure you are placed under the operational control of a different ACC Senior Contracting Official supporting Korea for the next eight months while your administrative control stays with the 411th. On day one the gaining office asks you to sign a $7 million commercial services award under simplified procedures and tells you to \"apply for a new warrant with us first so the system lets you sign.\" An Air Force KO from Osan is detailed to the same office and asks whether her warrant transfers too. You must decide what you can sign and what paperwork, if any, is required.\n\n1. Do you need a new warrant to act under the other SCO? What does ACC Contracting Note 26-03 require?\n2. Can you sign the $7 million award? If not, who processes an increase and how?\n3. What system steps actually let you execute actions for the gaining organization?\n4. What is the answer for the Air Force KO, and what would change if you were permanently reassigned?",
+    "answer": "No new warrant. ACC Contracting Note 26-03, issued 12 May 2026 to implement the ACC Command Policy Memorandum on warrant reciprocity of 30 March 2026, exists for exactly this situation: the PAE restructure put warranted people under the OPCON of SCOs outside their permanent organization, and the old practice of re-boarding and re-issuing was burdensome. Effective immediately, all SCOs are required to honor all active and future warrants issued within ACC, and personnel operating under reciprocity do not require a new warrant. The note distinguishes recognition, the gaining SCO formally accepting my existing warrant type and value so I execute under that SCO's authority while the warrant stays issued by the 411th, from transfer, which is a permanent move that requires terminating the original warrant and issuing a new one in VCE-Warrants because the system cannot transfer. Paragraph 6.a.iii says reciprocity applies to personnel operating under the OPCON of an SCO other than the one who issued the warrant. So I tell the gaining office, politely and with the note attached, that my 411th warrant is recognized, not re-issued, and that issuing me a second warrant is the duplication the policy is meant to prevent.\n\nThe $7 million award. No. Warrants are recognized or transferred at their existing dollar value. Mine is $5 million; the Army policy requires the warrant to be greater than or equal to the cumulative instrument value, base plus options plus any ceiling, and $7 million exceeds it. A Class II SaP warrant, which tracks the RFO FAR 12.201-1 simplified-procedures ceiling of $9 million, would cover it, but I do not have one today. Under the note, the responsible SCO must follow standard procedures for warrant increases, which may include a new review board, and the individual's ADCON organization processes the increase unless the person has permanently transferred. My ADCON is the 411th, so the request goes through the 411th workflow in VCE-Warrants: my supervisor as requesting official, the 906th or TCC group, CONOPS, the Chief, C&P, and the 411th SCO. Policy v12 requires a new test or board to move to a higher class in Table 1, and $5 million to SaP stays inside Class II, but CN 26-03 says an increase may include a new review board, so whether the 411th boards it is the SCO's call and I confirm with C&P. Until that is done, another KO in the gaining office with adequate authority signs the $7 million action, or the action waits. I do not sign above my warrant because someone else's system profile would let me.\n\nSystem steps. Reciprocity is a policy fact; access is a systems task. Per the note: in ACWS I am granted the KO role for the gaining organization's DoDAACs in PIEE; in PADDS the additional DoDAACs are added to my profile; in PCF I need access to the gaining organization's cabinets for actions not executed under my home organization. My warrant record itself stays in the 411th's VCE-Warrants space, and I carry a copy of my Certificate of Appointment and the recognition for the file.\n\nThe Air Force KO, and permanent moves. A DAF warrant is external to ACC. SCOs retain full discretion whether to formally recognize a warrant issued outside ACC, and regardless of recognition a new ACC warrant must still be issued in VCE-Warrants; for DAF personnel the Army-DAF Warrant Reciprocity Memorandum of Agreement of 1 December 2023 governs the terms, so her path is through the gaining SCO and that MOA, not through the ACC reciprocity note. If I were permanently reassigned to another ACC organization, the answer flips to transfer: I download my complete supporting record from VCE-Warrants (training certificates, experience logs, board results, waivers), the gaining SCO issues a new warrant only after the 411th terminates the old one, all documentation is uploaded into the new record, and that record must stand on its own because terminated warrants fall under records retention and cannot be referenced. And if I arrived somewhere without an active warrant but with one terminated in good standing, the SCO could recognize it and issue a new one of the same type and value at its discretion.\n\nCite: ACC Contracting Note 26-03, Warrant Reciprocity Guidance (12 May 2026), paragraphs 5, 6.a.iii, 6.b, 6.c, 6.d and 7; ACC Command Policy Memorandum, Warrant Reciprocity Policy (30 Mar 2026); Army-DAF Warrant Reciprocity MOA (1 Dec 2023); Army Warranting Program Policy v12 (MAR 2026) Table 1 and instrument-value rule; RFO FAR 12.201-1 ($9 million SaP ceiling); 411th CSB Warrant Process Workflow block 8; RFO FAR 1.402-1 (was 1.602-1) on acting within the limits of authority.",
+    "key_points": [
+      "CN 26-03: all ACC SCOs must honor active ACC warrants; OPCON to another SCO means recognition, not a new warrant; transfer is only for permanent reassignment",
+      "Warrants are recognized at existing value; a $5M warrant cannot sign a $7M action; the warrant must cover the cumulative instrument value (Policy v12)",
+      "Increase is processed by the ADCON organization (411th) through its VCE-Warrants workflow and SCO; Policy v12 requires a board only to change class, so within Class II a board is the SCO's call (CN 26-03: may include a new board); a Class II SaP warrant ($9M ceiling) would cover it",
+      "Systems: ACWS role for the gaining DoDAACs via PIEE, PADDS DoDAAC profile update, PCF cabinet access; warrant record stays with the 411th",
+      "External (DAF) warrants: SCO discretion to recognize, a new ACC warrant must still be issued in VCE-Warrants, governed by the Army-DAF MOA of 1 Dec 2023",
+      "Permanent transfer: download full record, gaining SCO issues new warrant only after the old one is terminated, standalone record; terminated-in-good-standing warrants may be reinstated at SCO discretion"
+    ],
+    "citations": [
+      "ACC Contracting Note 26-03",
+      "ACC Command Policy Memorandum - Warrant Reciprocity Policy (30 Mar 2026)",
+      "Army-DAF Warrant Reciprocity MOA (1 Dec 2023)",
+      "Army Warranting Program Policy v12 (MAR 2026)",
+      "RFO FAR 12.201-1",
+      "411th CSB Warrant Process Workflow (Jul 2026)",
+      "RFO FAR 1.402-1"
+    ],
+    "classes": [
+      "II",
+      "III"
+    ],
+    "topic": "Warrant Reciprocity",
+    "domain": "Authority, Ethics & Leadership",
+    "tags": [
+      "Korea",
+      "Warrant Program",
+      "Reciprocity",
+      "Problem solving situations"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "high",
+    "confidence_reason": "Every reciprocity statement is read directly from ACC Contracting Note 26-03 and the 411th workflow block 8 in content/sources; warrant class values and the cumulative-value rule from Policy v12 and regulations.json; SaP $9M ceiling verified on the RFO Part 12 page. Whether the 411th SCO requires a board for a $5M-to-SaP increase within Class II is a local decision and is stated as such. Reviewer 14 Sep 2026: CN 26-03 paragraphs 5, 6.a.iii, 6.b-d and 7 re-read; all statements match. Added the Policy v12 rule that a new board is required only to move up a class, so the within-Class-II increase is framed correctly.",
+    "sources_used": [
+      "content/sources/acc_contracting_note_26-03_reciprocity.txt",
+      "content/sources/411th_warrant_process_workflow_jul2026.txt",
+      "content/sources/army_warranting_policy_v12_mar2026.txt",
+      "src/data/regulations.json (crosswalk + thresholds, verified 13 Sep 2026)"
+    ]
+  },
+  {
+    "id": "K210",
+    "question": "The garrison transportation office at Camp Humphreys sends two O&M-funded purchase requests: $780,000 for three Korean-made 45-passenger shuttle buses to replace a worn fleet permanently, and $420,000 for ten Korean-made pickup trucks for DPW. The requiring activity writes: \"Korean vehicles are cheaper and parts are local. Does the Berry Amendment or Buy American stop us? We heard the SOFA lets us buy anything locally.\" You must decide what domestic-source rules apply to each request and what path you recommend.\n\n1. Does the Berry Amendment apply? Does the Buy American statute apply to vehicles bought and used in Korea?\n2. What rule actually governs supplies for use outside the United States, and which exceptions could apply to the trucks?\n3. Is there a separate restriction on buses, and does it block the Korean buses? What alternatives exist?\n4. What do SOFA Article XVI, mandatory sources and LCS have to do with it?",
+    "answer": "Berry and Buy American. The Berry Amendment does not apply. 10 U.S.C. 4862, implemented at DFARS 225.7002-1, restricts food, clothing and its materials, tents and tarpaulins, cotton and other natural fiber products, silk, synthetic fabrics, canvas, wool, individual equipment made of those materials, hand or measuring tools, and U.S. flags. Vehicles are not on the list. The Buy American statute does not apply either: RFO FAR 25.102 says acquire only domestic end products for public use inside the United States, and RFO FAR 25.601(a)(1)(i)(C) tells me not to use the Buy American clause when the acquisition is for supplies for use outside the United States. So the customer's two named worries are the wrong ones; the real ones are the Balance of Payments Program and a bus-specific statute.\n\nBalance of Payments Program. DFARS 225.7500 and 225.7501 apply to supplies for use outside the United States: acquire only domestic end products unless an exception applies. For the $420,000 trucks the exceptions I would examine are, first, whether the acquisition is covered by the World Trade Organization Government Procurement Agreement (225.7501(a)(3)); Korea is a GPA party, and above the current WTO GPA supply threshold in RFO FAR Part 25 a Korean end product is an eligible product, so the evaluated low offer of an eligible product takes award without a Balance of Payments evaluation factor (225.7501(b)(1)(ii)) and the solicitation carries the Trade Agreements clause 252.225-7021 instead of 252.225-7001. Second, the contracting officer's determination under 225.7501(a)(7) that the requirement can best be filled by a foreign end product; local parts and service support for a fleet that will live in Korea for a decade is the kind of fact that determination is built on, and I write it before the solicitation. Note that if the trucks were at or below the SAT the program would not apply at all (225.7501(a)(1)), and spare parts for foreign-made vehicles restricted to the original manufacturer are exempt (225.7501(a)(2)(iii)). Korea is a WTO and free-trade-agreement country but it is not a DFARS qualifying country, so I do not use the qualifying-country path. I check the current threshold figure on the RFO Part 25 page rather than quote one.\n\nBuses. Yes, and this one bites. 10 U.S.C. 4864, formerly 2534, and DFARS 225.7004-2(a) say do not acquire multipassenger motor vehicles, buses, whether purchased, leased, rented or made available under contracts for transportation services, unless the manufacturer is part of the national technology and industrial base, which 225.7004-1 and 10 U.S.C. 4801 define as the United States, the United Kingdom, Australia, New Zealand and Canada. Korea is not in it. The exceptions in 225.7004-3 are narrow: contracts at or below the SAT; temporary use because NTIB buses are not available in time, limited to the NTIB lead time; a temporary or sporadic requirement; or buses available at no cost. A permanent replacement of the shuttle fleet at $780,000 fits none of them, and the Balance of Payments exceptions do not override a separate statutory restriction. So I tell the customer that Korean-made buses on O&M funds are not an option as requested. Alternatives: buy NTIB-manufactured buses and price the parts-support problem honestly; a leasing or transportation-services approach does not escape the restriction because the statute covers leased and contracted buses too; or pursue a waiver under 225.7004-6, which is a very high-level determination I would not promise. And since the LCS program specifically covers the purchase of non-tactical vehicles for USFK, the practical answer may be an LCS requirement through USFK J4, where Korean manufacture is the rule and MND awards; whether the U.S. statute reaches an MND-funded, MND-awarded purchase is a question I put to legal and C&P, not one I answer on my own.\n\nSOFA, mandatory sources and LCS. As I understand SOFA Article XVI, and I would confirm the wording with legal rather than quote it, it lets the United States procure materials, supplies, equipment and services in Korea without restriction as to choice of contractor or supplier, and it carries the tax provisions behind our official-procurement tax exemptions. That is freedom from Korean-imposed restrictions on whom we deal with, not a waiver of U.S. domestic-source statutes, and I apply the tax exemption through the DFARS Part 229 clauses with C&P's guidance. On mandatory sources, 41 CFR 101-26.501-1 requires DoD to submit orders for purchase in the United States of non-tactical vehicles to GSA; for a purchase made overseas I confirm with C&P and the garrison transportation office how the Army motor vehicle regulation and USFK non-tactical vehicle policy treat a local buy, and whether a GSA overseas program or a waiver is required, before I solicit. Finally, funding discipline: if the customer moves the buses to LCS, the trucks stay O&M and the two cannot share a solicitation.\n\nCite: 10 U.S.C. 4862 and DFARS 225.7002-1 (Berry Amendment scope); RFO FAR 25.102 and 25.601(a)(1)(i)(C) (Buy American inside the U.S. only); DFARS 225.7500, 225.7501(a)(1), (a)(2)(iii), (a)(3), (a)(7) and (b)(1)(ii) (Balance of Payments Program); DFARS 252.225-7021 and 252.225-7001; RFO FAR Part 25 trade agreements thresholds; 10 U.S.C. 4864 (was 2534) and 10 U.S.C. 4801 (NTIB definition) and DFARS 225.7004-1 through 225.7004-3 and 225.7004-6 (buses, NTIB, exceptions, waiver); SOFA Article XVI (reading to confirm with legal; text not verified here); 41 CFR 101-26.501-1; DFARS Part 229 (foreign tax relief); LCS program scope per the 411th question bank (confirm LCS applicability and current NTV policy with USFK J4 and C&P).",
+    "key_points": [
+      "Berry (10 U.S.C. 4862 / DFARS 225.7002-1) covers food, clothing, fabrics, tents, hand and measuring tools, flags; not vehicles. Buy American applies to use inside the U.S. (RFO FAR 25.102); the clause is not used for supplies for use outside the U.S. (25.601(a)(1)(i)(C))",
+      "Balance of Payments Program (DFARS 225.7501) is the OCONUS rule: domestic end products unless an exception; trucks can qualify via WTO GPA coverage (Korean product is an eligible product, Trade Agreements clause) or a KO best-filled determination under (a)(7); at or below the SAT the program does not apply",
+      "Korea is a WTO GPA and FTA country but not a DFARS qualifying country",
+      "Buses: 10 U.S.C. 4864 / DFARS 225.7004-2(a) require NTIB manufacture (U.S., Australia, Canada, NZ, UK) for purchased, leased, rented or contracted buses; exceptions only for below-SAT, temporary or no-cost cases; permanent Korean buses on O&M are blocked absent a 225.7004-6 waiver",
+      "LCS covers NTV purchases for USFK with Korean manufacture as the rule and MND awarding; whether the U.S. bus statute reaches an MND purchase is a legal/C&P question",
+      "SOFA Article XVI (as understood; confirm text with legal) frees choice of contractor from Korean restrictions and supports tax exemption; it does not waive U.S. domestic-source law; check GSA/Army NTV mandatory-source rules for an overseas buy; never mix LCS and O&M in one solicitation"
+    ],
+    "citations": [
+      "10 U.S.C. 4862",
+      "DFARS 225.7002-1",
+      "RFO FAR 25.102",
+      "RFO FAR 25.601(a)(1)(i)(C)",
+      "DFARS 225.7500",
+      "DFARS 225.7501",
+      "DFARS 252.225-7021",
+      "DFARS 252.225-7001",
+      "10 U.S.C. 4864",
+      "10 U.S.C. 4801",
+      "DFARS 225.7004-1",
+      "DFARS 225.7004-2",
+      "DFARS 225.7004-3",
+      "DFARS 225.7004-6",
+      "SOFA Article XVI",
+      "41 CFR 101-26.501-1",
+      "DFARS Part 229"
+    ],
+    "classes": [
+      "II",
+      "III"
+    ],
+    "topic": "Domestic Source Restrictions OCONUS",
+    "domain": "Korea, LCS & SOFA",
+    "tags": [
+      "Korea",
+      "Buy American",
+      "Berry Amendment",
+      "Balance of Payments",
+      "LCS Funding",
+      "Problem solving situations"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "Berry list, Balance of Payments policy and exceptions, and bus restriction/exceptions/NTIB definition extracted verbatim from DFARS RFO deviation 2026-O0041 Rev 1 (Part 225) and the codified DFARS pages; RFO FAR 25.102 and 25.601(a)(1)(i)(C) read on the RFO Part 25 page; 10 U.S.C. 4864 read at LII; 41 CFR 101-26.501-1 read at LII. Not verified: the current WTO GPA supply threshold figure (deliberately not quoted), whether the bus statute reaches an MND-funded LCS purchase, Army/USFK NTV mandatory-source practice for overseas buys, and the SOFA Article XVI tax paragraph wording (usfk.mil/state.gov returned 403). Reviewer 14 Sep 2026: 10 U.S.C. 4801 read at LII: NTIB is the United States, United Kingdom, Australia, New Zealand (added 2022, Pub. L. 117-263) and Canada, confirming the draft's country list; cite added. SOFA Article XVI wording softened because the SOFA text could not be fetched (usfk.mil/loc.gov 403). DFARS 225.7004-1 page returned 404 on acquisition.gov; the statute is the cite that was verified.",
+    "sources_used": [
+      "DFARS RFO Class Deviation 2026-O0041 Rev 1 (Part 225) PDF: 225.7002-1/-2, 225.7004-1/-2/-3, 225.7500/225.7501, 225.1101",
+      "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-25",
+      "https://www.law.cornell.edu/uscode/text/10/4864",
+      "https://www.acquisition.gov/dfars/225.7004-3-exceptions.",
+      "https://www.acquisition.gov/dfars/225.7002-1-restrictions.",
+      "https://www.law.cornell.edu/cfr/text/41/101-26.501-1",
+      "US-ROK SOFA Article XVI paragraph 1 (search-confirmed wording)",
+      "src/data/questions.json Q0255, Q0256",
+      "src/data/regulations.json (crosswalk + thresholds, verified 13 Sep 2026)",
+      "https://www.law.cornell.edu/uscode/text/10/4801 (NTIB definition, read 14 Sep 2026)"
+    ]
+  }
+]

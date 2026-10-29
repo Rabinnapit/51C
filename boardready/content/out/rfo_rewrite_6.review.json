@@ -1,0 +1,168 @@
+{
+ "reviewed_on": "2026-09-14",
+ "reviewer": "rfo_rewrite_6 reviewer subagent",
+ "source_file": "C:\\Users\\rabin\\Documents\\Army\\CORB\\app\\content\\out\\rfo_rewrite_6.json",
+ "summary": {
+  "items_in_file": 86,
+  "changed_after_review": 17,
+  "checked": 16,
+  "corrected": 5,
+  "reverted": 0,
+  "rfo_status_counts": {
+   "n/a": 77,
+   "updated": 8,
+   "unverifiable": 1
+  }
+ },
+ "method": [
+  "For each changed item, stripped the trailing Cite: line and compared the body to questions.json with the item's crosswalk substitutions applied (longest cite first); only cite tokens, the Cite: line and the one reviewer-added removed-section parenthetical (Q0171) may differ.",
+  "Checked every citations_rfo string is a literal substring of the answer.",
+  "Verified crosswalk pairs against regulations.json (FAR 1.602-3(c)->1.405(c) verified; 10 U.S.C. 2371->4021 and 2371b->4022 verified; 4003b->4022 probable) and re-checked the title 10 pairs on law.cornell.edu (chapter 301 subchapter I and II listings; section 4022 page).",
+  "Verified AFARS 5133.9001 against the RFO edition of AFARS (Army combined PDF 30 Jun 2026, Part 5133 rev. 1 Feb 2026) rather than the pre-RFO acquisition.gov copy.",
+  "Scanned the 70 unchanged items for cite-like patterns; one missed cite (Q0172)."
+ ],
+ "sources": [
+  "https://www.law.cornell.edu/uscode/text/10/subtitle-A/part-V/subpart-E/chapter-301/subchapter-I",
+  "https://www.law.cornell.edu/uscode/text/10/subtitle-A/part-V/subpart-E/chapter-301/subchapter-II",
+  "https://www.law.cornell.edu/uscode/text/10/4022",
+  "https://www.acquisition.gov/afars/part-5133-protests-disputes-and-appeals (pre-RFO, Change 2025-0711)",
+  "https://api.army.mil/e2/c/downloads/2026/07/07/995d7218/afars-combined-30jun2026.pdf"
+ ],
+ "changes": [
+  {
+   "id": "Q0228",
+   "action": "corrected",
+   "reason": "Crosswalk pair 10 U.S.C. 4003b -> 4022 is correct (4003b does not exist in title 10; confirmed on law.cornell.edu chapter 301 listings and the 4022 section page). Applied it, set rfo_status updated, aligned citations_rfo and crosswalk; Q0229 also 4003b(f) -> 4022(f).",
+   "before": "10 USC 4003b (previously 10 USC 2371b)\n\nCite: 10 U.S.C. 4003b (previously 10 U.S.C. 2371b).",
+   "after": "10 USC 4022 (previously 10 USC 2371b)\n\nCite: 10 U.S.C. 4022 (previously 10 U.S.C. 2371b; the deck cite \"4003b\" is not a section of title 10)."
+  },
+  {
+   "id": "Q0229",
+   "action": "corrected",
+   "reason": "Crosswalk pair 10 U.S.C. 4003b -> 4022 is correct (4003b does not exist in title 10; confirmed on law.cornell.edu chapter 301 listings and the 4022 section page). Applied it, set rfo_status updated, aligned citations_rfo and crosswalk; Q0229 also 4003b(f) -> 4022(f).",
+   "before": "10 USC 4003b(f) (previously 10 USC 2371b(f)) provides the authority to enter into a follow-on production contract or transaction with the participants of a prototype transaction awarded under the authority of 10 USC 4003b (previously 10 USC 2371b) without the use of competitive procedures, as long as competitive procedures were used for the prototype selection.\n\nCite: 10 U.S.C. 4003b; 10 U.S.C. 4003b(f) (previously 10 U.S.C. 2371b and 2371b(f)).",
+   "after": "10 USC 4022(f) (previously 10 USC 2371b(f)) provides the authority to enter into a follow-on production contract or transaction with the participants of a prototype transaction awarded under the authority of 10 USC 4022 (previously 10 USC 2371b) without the use of competitive procedures, as long as competitive procedures were used for the prototype selection.\n\nCite: 10 U.S.C. 4022; 10 U.S.C. 4022(f) (previously 10 U.S.C. 2371b and 2371b(f); the deck cite \"4003b\" is not a section of title 10)."
+  },
+  {
+   "id": "Q0180",
+   "action": "corrected",
+   "reason": "citations_rfo contained \"10 U.S.C. 4022(a)(8)\", which is not a literal substring of the answer and is not a paragraph that exists in 4022(a). Removed from citations_rfo; text unchanged; noted for content pass.",
+   "before": [
+    "10 U.S.C. 4022(a)(2)(A)",
+    "10 U.S.C. 4022(a)(8)"
+   ],
+   "after": [
+    "10 U.S.C. 4022(a)(2)(A)"
+   ]
+  },
+  {
+   "id": "Q0175",
+   "action": "verified",
+   "reason": "Diff against questions.json: only 2371->4021 / 2371b->4022 / 2371b(f)->4022(f) tokens and the trailing Cite: line differ. Crosswalk pairs are \"verified\" in regulations.json and re-checked on law.cornell.edu. Notes updated to record that the 4003b conflict is resolved.",
+   "before": null,
+   "after": null
+  },
+  {
+   "id": "Q0183",
+   "action": "verified",
+   "reason": "Diff against questions.json: only 2371->4021 / 2371b->4022 / 2371b(f)->4022(f) tokens and the trailing Cite: line differ. Crosswalk pairs are \"verified\" in regulations.json and re-checked on law.cornell.edu. Notes updated to record that the 4003b conflict is resolved.",
+   "before": null,
+   "after": null
+  },
+  {
+   "id": "Q0189",
+   "action": "verified",
+   "reason": "Diff against questions.json: only 2371->4021 / 2371b->4022 / 2371b(f)->4022(f) tokens and the trailing Cite: line differ. Crosswalk pairs are \"verified\" in regulations.json and re-checked on law.cornell.edu. Notes updated to record that the 4003b conflict is resolved.",
+   "before": null,
+   "after": null
+  },
+  {
+   "id": "Q0190",
+   "action": "verified",
+   "reason": "Diff against questions.json: only 2371->4021 / 2371b->4022 / 2371b(f)->4022(f) tokens and the trailing Cite: line differ. Crosswalk pairs are \"verified\" in regulations.json and re-checked on law.cornell.edu. Notes updated to record that the 4003b conflict is resolved.",
+   "before": null,
+   "after": null
+  },
+  {
+   "id": "Q0171",
+   "action": "corrected",
+   "reason": "Author marked AFARS 5133.9001 as current based on the pre-RFO acquisition.gov copy. The RFO AFARS Part 5133 (rev. 1 Feb 2026, in the 30 Jun 2026 combined PDF) has no Subpart 5133.90 / 5133.9001. Old cite kept, rfo_status set to unverifiable, removed-section parenthetical added.",
+   "before": "The Grants Officer must prepare a written decision within 60 calendar days of receipt of the claim (or identify to the Recipient the specific date the decision will be issued), identify the relevant data on which the decision is based, and identify the Grant Appeal Authority. Unless a Recipient appeals the Grants Officer decision, the decision is final. If the decision is appealed, the USACE Grant Appeal Authority is the Head of the Contracting Activity (HCA) in accordance with AFARS 5133.9001.\n\nCite: AFARS 5133.9001.",
+   "after": "The Grants Officer must prepare a written decision within 60 calendar days of receipt of the claim (or identify to the Recipient the specific date the decision will be issued), identify the relevant data on which the decision is based, and identify the Grant Appeal Authority. Unless a Recipient appeals the Grants Officer decision, the decision is final. If the decision is appealed, the USACE Grant Appeal Authority is the Head of the Contracting Activity (HCA) in accordance with AFARS 5133.9001 (pre-RFO AFARS; Subpart 5133.90 does not appear in the RFO edition of AFARS Part 5133, revised 1 Feb 2026 - confirm the current location).\n\nCite: AFARS 5133.9001 (pre-RFO numbering; not found in RFO AFARS Part 5133 rev. 1 Feb 2026)."
+  },
+  {
+   "id": "Q0172",
+   "action": "corrected",
+   "reason": "Answer contains \"§22.420(c)\" (32 CFR 22.420(c), DoDGARs) but was classed as uncited. Set changed=true and added a Cite: line; body unchanged; rfo_status n/a.",
+   "before": "(a) Have the management capability and adequate financial and technical resources, given those that would be made available through the grant or cooperative agreement, to execute the program of activities envisioned under the grant or cooperative agreement.\n(b) Have a satisfactory record of executing such programs or activities (if a prior recipient of an award).\n(c) Have a satisfactory record of integrity and business ethics.\n(d) Be otherwise qualified and eligible to receive a grant or cooperative agreement under applicable laws and regulations (see §22.420(c)).",
+   "after": "(a) Have the management capability and adequate financial and technical resources, given those that would be made available through the grant or cooperative agreement, to execute the program of activities envisioned under the grant or cooperative agreement.\n(b) Have a satisfactory record of executing such programs or activities (if a prior recipient of an award).\n(c) Have a satisfactory record of integrity and business ethics.\n(d) Be otherwise qualified and eligible to receive a grant or cooperative agreement under applicable laws and regulations (see §22.420(c)).\n\nCite: 32 CFR 22.420(c) (DoDGARs)."
+  },
+  {
+   "id": "Q0009",
+   "action": "verified",
+   "reason": "Only FAR 1.602-3(c) -> 1.405(c) and the Cite: line differ; pair is verified in regulations.json. Added a content flag about eight listed conditions vs six criteria in 1.405(c).",
+   "before": null,
+   "after": null
+  },
+  {
+   "id": "Q0165",
+   "action": "verified",
+   "reason": "Body byte-identical to questions.json; only a trailing Cite: line built from cites already in the text was added; every citations_rfo entry appears in the answer; CFR / U.S.C. cites are unchanged by the RFO (regulations.json \"unchanged\" list).",
+   "before": null,
+   "after": null
+  },
+  {
+   "id": "Q0185",
+   "action": "verified",
+   "reason": "Body byte-identical to questions.json; only a trailing Cite: line built from cites already in the text was added; every citations_rfo entry appears in the answer; CFR / U.S.C. cites are unchanged by the RFO (regulations.json \"unchanged\" list).",
+   "before": null,
+   "after": null
+  },
+  {
+   "id": "Q0204",
+   "action": "verified",
+   "reason": "Body byte-identical to questions.json; only a trailing Cite: line built from cites already in the text was added; every citations_rfo entry appears in the answer; CFR / U.S.C. cites are unchanged by the RFO (regulations.json \"unchanged\" list).",
+   "before": null,
+   "after": null
+  },
+  {
+   "id": "Q0206",
+   "action": "verified",
+   "reason": "Body byte-identical to questions.json; only a trailing Cite: line built from cites already in the text was added; every citations_rfo entry appears in the answer; CFR / U.S.C. cites are unchanged by the RFO (regulations.json \"unchanged\" list).",
+   "before": null,
+   "after": null
+  },
+  {
+   "id": "Q0207",
+   "action": "verified",
+   "reason": "Body byte-identical to questions.json; only a trailing Cite: line built from cites already in the text was added; every citations_rfo entry appears in the answer; CFR / U.S.C. cites are unchanged by the RFO (regulations.json \"unchanged\" list).",
+   "before": null,
+   "after": null
+  },
+  {
+   "id": "Q0211",
+   "action": "verified",
+   "reason": "Body byte-identical to questions.json; only a trailing Cite: line built from cites already in the text was added; every citations_rfo entry appears in the answer; CFR / U.S.C. cites are unchanged by the RFO (regulations.json \"unchanged\" list).",
+   "before": null,
+   "after": null
+  },
+  {
+   "id": "Q0234",
+   "action": "verified",
+   "reason": "Body byte-identical to questions.json; only a trailing Cite: line built from cites already in the text was added; every citations_rfo entry appears in the answer; CFR / U.S.C. cites are unchanged by the RFO (regulations.json \"unchanged\" list).",
+   "before": null,
+   "after": null
+  }
+ ],
+ "findings": [
+  "Q0228/Q0229: the 4003b -> 4022 crosswalk pair is correct, not backwards - 10 U.S.C. 4003b does not exist; both items moved to 4022 and the OT cluster is now consistent.",
+  "Q0171: AFARS 5133.9001 is absent from the RFO edition of AFARS Part 5133 (rev. 1 Feb 2026); the author verified it on the stale pre-RFO acquisition.gov copy. Set unverifiable with a removed-section parenthetical.",
+  "Q0180: citations_rfo listed 10 U.S.C. 4022(a)(8), which neither appears in the text nor exists in 4022(a); removed. Source text \"(a)(2)(A) and (8)\" flagged for a content pass.",
+  "Q0172: \"(see §22.420(c))\" is a DoDGARs cite (32 CFR 22.420(c)) missed by the author; Cite: line added.",
+  "Q0009: eight listed ratification conditions vs six criteria in RFO FAR 1.405(c) - content flag, not a cite issue.",
+  "regulations.json \"unchanged\" list still contains 10 U.S.C. 2304, 2304C, 2371, 2371b, 4003b and 41 U.S.C. 251, all of which also have crosswalk entries; the crosswalk is right for the title 10 / title 41 recodifications and the \"unchanged\" list should drop them (not edited - outside this task).",
+  "regulations.json crosswalk has no AFARS 5133.9001 entry; recommend adding one marked removed/unverifiable per the RFO AFARS Part 5133 finding.",
+  "Q0185 (Army Warranting Program v7 para 4.2 vs current v12) and Q0184/Q0192 (conflicting uncited OT approval tiers) remain open for a policy-currency pass; not cite-currency defects.",
+  "rfo_status \"n/a\" is a contract-listed value (CONTRACT.md section 3: pending|updated|unverifiable|n/a), so the author's concern about using it for cite-bearing-but-unchanged items is moot."
+ ]
+}

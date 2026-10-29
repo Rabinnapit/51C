@@ -1,6 +1,8 @@
-# Builds B2B Guide and publishes it to GitHub Pages on every push to main.
+# Builds B2B Exam Prep and Board Ready and publishes both to GitHub Pages on every push to main:
+#   https://<owner>.github.io/51C/            B2B Exam Prep (docs/)
+#   https://<owner>.github.io/51C/boardready/ Board Ready (docs/boardready/, from boardready/tools/publish_site.py)
 # One-time setup: repository Settings -> Pages -> Build and deployment -> Source: "GitHub Actions".
-name: Build and publish B2B Guide
+name: Build and publish B2B Exam Prep and Board Ready
 
 on:
   push:
@@ -32,6 +34,12 @@ jobs:
         run: |
           pip install python-docx==1.1.2
           python tools/make_docx.py
+      - name: Check, build and package Board Ready
+        run: |
+          python boardready/tools/check_content.py
+          python boardready/tools/build.py
+          python boardready/tools/make_docx.py
+          python boardready/tools/publish_site.py docs/boardready
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

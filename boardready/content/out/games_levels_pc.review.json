@@ -1,0 +1,401 @@
+{
+  "reviewed_on": "2026-09-14",
+  "reviewer_model": "claude-opus-5",
+  "scope": "PC25-PC77",
+  "items": [
+    {
+      "id": "PC25",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "30 calendar days confirmed. 52.232-25(a)(1)(i)(A)-(B): due date is the later of the 30th day after the designated billing office receives a proper invoice or the 30th day after Government acceptance, except as in (a)(2) and (c); the clause preamble makes all days calendar days. RFO Part 52 text (Jan 2017) matches the clause page. RFO 32.908(c) prescribes the clause with no dollar limit, so no class tag. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 ; https://www.acquisition.gov/far/52.232-25 ; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32 (32.908(c))"
+    },
+    {
+      "id": "PC26",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "rule",
+          "before": "although the contracting officer may act on a claim submitted any time before final payment if the facts justify it.",
+          "after": "although the contracting officer may act on a proposal submitted any time before final payment if the facts justify it.",
+          "source": "FAR 52.242-15(b)(2) as printed in RFO Part 52 (Aug 1989): 'may receive and act upon a proposal submitted at any time before final payment' - https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52"
+        }
+      ],
+      "notes": "90 days and 30 days confirmed. 'Claim' is a Contract Disputes Act term; the clause says proposal. RFO 42.1005(b)(1) prescribes the clause for negotiated supply, service and R&D contracts with no dollar limit (no class tag is right) and lets contracting officers reduce the 90-day period. Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-42"
+    },
+    {
+      "id": "PC27",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "52.217-9(a) (Mar 2000) in RFO Part 52: preliminary written notice at least 60 days before the contract expires unless a different number is inserted; the notice does not commit the Government. RFO Part 2 defines day as a calendar day unless otherwise specified. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 ; https://www.acquisition.gov/far/52.217-9 ; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-2"
+    },
+    {
+      "id": "PC28",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "4 CFR 21.10(b) express option only for cases suitable for resolution within 65 days; 21.10(c) request not later than 5 days after the protest or supplemental/amended protest is filed; 21.10(d) shorter report and comment schedule. 31 U.S.C. 3554(a)(1) 100 days; 3554(a)(2) express option for protests suitable for resolution within 65 days after the protest is submitted. Sources: https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-4.xml?part=21 ; https://www.law.cornell.edu/uscode/text/31/3554"
+    },
+    {
+      "id": "PC29",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 15.301-1(a)(1)-(3) matches: request within 3 days after receipt of the award notice; debriefing should occur within 5 days after receipt of the written request to the maximum extent practicable; untimely requests may be accommodated. 15.301 defines day by reference to part 33, and RFO 33.102(a) makes it a calendar day. Class tag consistent with PC17. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15 ; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33"
+    },
+    {
+      "id": "PC30",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 15.207-2(b): within 3 days after the date of contract award, written notice to each offeror whose proposal was in the competitive range but not selected; content includes each awardee's name and address and, in general terms, the reasons the proposal was not accepted. 15.207-2(a) uses the part 33 definition of day (calendar). Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15"
+    },
+    {
+      "id": "PC31",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "4 CFR 21.14(b): not later than 10 days after the basis is known or should have been known, whichever is earlier; 21.0(d): calendar days, and a period rolls past a Saturday, Sunday or Federal holiday (and days GAO is closed). Source: https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-4.xml?part=21"
+    },
+    {
+      "id": "PC32",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "52.243-1(c) in RFO Part 52 (Deviation Date) and the clause page (Aug 1987) both say 30 days from receipt of the written order, and the CO may act on a proposal before final payment. RFO 43.305(a)(1) prescribes the clause for fixed-price supply contracts with no dollar limit. The RFO prescription line adds that agency procedures may vary the 30-day period. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 ; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-43 ; https://www.acquisition.gov/far/52.243-1"
+    },
+    {
+      "id": "PC33",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "rule",
+          "before": "Comments on the agency report must be filed within 10 days after the agency files the report, unless GAO has granted an extension.",
+          "after": "Comments on the agency report must be filed within 10 days after the agency files the report, unless GAO has granted an extension or set a shorter period.",
+          "source": "4 CFR 21.3(i)(1): 'except where GAO has granted an extension of time, or where GAO has established a shorter period for filing of comments' - https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-4.xml?part=21"
+        }
+      ],
+      "notes": "10 days and dismissal under 21.3(i)(2) confirmed; the card implied an extension was the only exception."
+    },
+    {
+      "id": "PC34",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "4 CFR 21.10(d)(1)-(3): report within 20 days after notice that the express option will be used; comments within 5 days after receipt of the report; GAO sets a new schedule if the case becomes unsuitable. Source: https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-4.xml?part=21"
+    },
+    {
+      "id": "PC35",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "4 CFR 21.1(e): the designated individual or location (or the CO) must receive a complete copy of the protest and attachments not later than 1 day after the protest is filed with GAO. Source: https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-4.xml?part=21"
+    },
+    {
+      "id": "PC36",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "4 CFR 21.8(f)(1): claim for costs, detailed and certified, filed with the agency within 60 days after receipt of GAO's recommendation; late filing may forfeit recovery. Source: https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-4.xml?part=21"
+    },
+    {
+      "id": "PC37",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 49.206-3: inventory schedules within 120 days of the effective date of termination unless extended by the TCO; RFO 49.206-1(a): final settlement proposal within one year unless the TCO allows more time; 52.249-2(c), (e) in RFO Part 52 agree. Classes II-IV fit: RFO 49.502(b)(1)(i) prescribes 52.249-2 only when the contract is expected to exceed the SAT (short form 52.249-1 below it). Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49 ; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 ; https://www.acquisition.gov/far/52.249-2"
+    },
+    {
+      "id": "PC38",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "52.249-2(l): partial termination equitable adjustment proposal within 90 days from the effective date of termination unless extended in writing by the CO; same text in RFO Part 52 and the clause page. Class tag as PC37. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 ; https://www.acquisition.gov/far/52.249-2"
+    },
+    {
+      "id": "PC39",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "52.232-25(a)(3): return within 7 days after receipt (3 days for meat, meat food products or fish; 5 days for perishable agricultural commodities, dairy products, edible fats or oils and food products prepared from them). Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 ; https://www.acquisition.gov/far/52.232-25"
+    },
+    {
+      "id": "PC40",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 33.103(c)(1)-(2): funds that would otherwise lapse remain available for 100 days following the final ruling. 31 U.S.C. 1558(a) agrees (100 days after the final ruling); 1558(b)(2) also reaches other administrative or judicial challenges that delay award. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33 ; https://www.law.cornell.edu/uscode/text/31/1558"
+    },
+    {
+      "id": "PC41",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 19.201-2(d)(1), (4), (6) match; 13 CFR 121.1004(a)(1)-(2), (b), (e): 5th day exclusive of Saturdays, Sundays and legal holidays; CO and SBA protests not time-limited; premature protests dismissed. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19 ; https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-13.xml?part=121&section=121.1004"
+    },
+    {
+      "id": "PC42",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 19.201-2(f)(1), (g)(1)-(2) match. 13 CFR 121.1009(a)(1) says 15 business days 'if possible' when no FAR subpart 33.1 protest is pending. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19 ; https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-13.xml?part=121&section=121.1009"
+    },
+    {
+      "id": "PC43",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "13 CFR 134.304(a) size appeals within 15 calendar days after receipt of the formal size determination; (b) NAICS appeals within 10 calendar days; (c) untimely appeals dismissed. Source: https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-13.xml?part=134&section=134.304"
+    },
+    {
+      "id": "PC44",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 19.103(b)(3), (d)(1) and 13 CFR 121.1103(b)(1) match: 10 calendar days after issuance of the solicitation or amendment affecting the NAICS code or size standard; SBA may appeal any time before offers are due; OHA summarily dismisses untimely appeals. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19 ; https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-13.xml?part=121&section=121.1103"
+    },
+    {
+      "id": "PC45",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 19.204(b), (d), (f), (j): withhold award 15 business days after the Area Office receives a complete referral; award to another offeror if no COC within 15 business days; the COC program applies to all acquisitions except 8(a) sole-source awards. 13 CFR 125.5(c)(2) says 15 working days, or longer if SBA and the CO agree. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19 ; https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-13.xml?part=125&section=125.5"
+    },
+    {
+      "id": "PC46",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 19.108-4(c)(1): decision within two working days at or below the SAT and 10 working days above it, extendable at SBA's request; (c)(1)(ii): at or below the SAT, offer on behalf of a specific participant, no reply within two working days, the contracting office may assume acceptance. 13 CFR 124.503(a) says two business days; 124.503(a)(4)(i) says 'within two days' for the assumption. No class tag is right because every warrant class covers at-or-below-SAT actions. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19 ; https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-13.xml?part=124&section=124.503"
+    },
+    {
+      "id": "PC47",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 19.301(a)(1)-(3) and 52.219-28(b)(1)-(3) (RFO Part 52, Deviation Date; clause page identical): 30 days after a novation or after a merger or acquisition not requiring novation; 60 to 120 days before the end of year five and before each later option. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19 ; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 ; https://www.acquisition.gov/far/52.219-28"
+    },
+    {
+      "id": "PC48",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 9.406-3(c)(3)(iv) and (viii)(A) match; RFO Part 2 defines day as a calendar day. Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9"
+    },
+    {
+      "id": "PC49",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 9.407-3(c) (immediate notice), (c)(2) (temporary period) and (c)(5) (30 days after receipt) match. Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9"
+    },
+    {
+      "id": "PC50",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 9.406-3(d)(1) matches: actions based on a conviction or civil judgment or with no genuine dispute over material facts; if no suspension is in effect, decision within 45 days from the date the official administrative record closes, extendable for good cause; the record closes when the contractor's time to submit opposition, including extensions, expires. Calendar days (RFO Part 2). Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9"
+    },
+    {
+      "id": "PC51",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "anchor",
+          "before": "after receipt of accelerated payments from the Government",
+          "after": "after receipt of accelerated payments from the Government, to the maximum extent practicable",
+          "source": "FAR 52.232-40(a)(1) (Mar 2023), same text on https://www.acquisition.gov/far/52.232-40 and in RFO Part 52: 'within 15 days after receipt of accelerated payments from the Government, the Contractor shall make accelerated payments to its small business subcontractors under this contract, to the maximum extent practicable and prior to when such payment is otherwise required'"
+        },
+        {
+          "field": "rule",
+          "before": "Within 15 days after receiving accelerated payments from the Government, the prime contractor makes accelerated payments to its small business subcontractors, to the maximum extent practicable and before payment is otherwise required, after receipt of a proper invoice and all other required documentation, and without any further consideration from or fees charged to the subcontractor. The clause goes in all solicitations and contracts and gives no new rights under the Prompt Payment Act.",
+          "after": "To the maximum extent practicable, and before payment is otherwise required, the prime contractor makes accelerated payments to its small business subcontractors within 15 days after receiving accelerated payments from the Government, after receipt of a proper invoice and all other required documentation, and without any further consideration from or fees charged to the subcontractor. The 15 days is therefore a target rather than a hard deadline. The clause goes in all solicitations and contracts and gives no new rights under the Prompt Payment Act.",
+          "source": "FAR 52.232-40(a)-(b); RFO 32.009-1(a)(1)(ii) and (a)(2)(ii) (prime 'agrees to make payments to the small business subcontractor within 15 days ... to the maximum extent practicable'; the Government's own acceleration is 'with a goal of 15 days'); RFO 32.009-2 (all solicitations and contracts) - https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32"
+        }
+      ],
+      "notes": "The 15 days is qualified by 'to the maximum extent practicable', so it is a best-efforts target, not a hard deadline; the old wording could be read either way. Day count, day type and cite are correct; no class tag is right (all solicitations and contracts)."
+    },
+    {
+      "id": "PC52",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 32.904(d)(1)(i): progress payments due 14 days after the designated billing office receives a proper payment request; (d)(1)(i)(B) longer period with documented justification; (d)(1)(ii) retainage 30 days after CO approval of release if not specified. 52.232-27(a)(1)(i)(A)-(B) in RFO Part 52 (Jan 2017) agrees. RFO 32.908(b) prescribes 52.232-27 for all construction contracts, so no class tag. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32 ; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 ; https://www.acquisition.gov/far/52.232-27"
+    },
+    {
+      "id": "PC53",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "52.232-27(c)(1)-(3) in RFO Part 52 (Jan 2017) matches: payment clause obligating payment not later than 7 days from receipt of payment; interest penalty clause; flowdown requiring each subcontractor to include both clauses in its subcontracts and require the same of lower-tier subcontractors and suppliers. RFO 32.908(b) applies 52.232-27 to all construction contracts, so no class tag. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 ; https://www.acquisition.gov/far/52.232-27"
+    },
+    {
+      "id": "PC54",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 32.904(b)(1)(ii)(B)(1)-(4) and 52.232-25(a)(5)(i) match: constructive acceptance on the 7th day for interest penalty purposes only; actual acceptance date used if earlier; a longer period is allowed with documented justification except for commercial products or services. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32 ; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 ; https://www.acquisition.gov/far/52.232-25"
+    },
+    {
+      "id": "PC55",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "40 U.S.C. 3133(b)(2): written notice to the prime within 90 days from the last labor or material; (b)(4): suit no later than one year after that day. RFO 28.102-1(a): performance and payment bonds for construction contracts exceeding $150,000, subject to waiver. No class tag is right because $150,000 is below the $350,000 SAT. Sources: https://www.law.cornell.edu/uscode/text/40/3133 ; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-28"
+    },
+    {
+      "id": "PC56",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "41 U.S.C. 7106(b)(1)-(5) match: $50,000 or less, or $150,000 or less for a small business; contractor's sole election; resolved whenever possible within 120 days of the election; a single member may decide; final except for fraud; no precedent. Source: https://www.law.cornell.edu/uscode/text/41/7106"
+    },
+    {
+      "id": "PC57",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "41 U.S.C. 7106(a) matches: $100,000 or less; contractor's sole election; resolved whenever possible within 180 days of the election. Source: https://www.law.cornell.edu/uscode/text/41/7106"
+    },
+    {
+      "id": "PC58",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "rule",
+          "before": "If the agency head decides an appeal should be taken, the agency, with the prior approval of the Attorney General, has 120 days from the date the agency receives its copy. On appeal the board's decisions on questions of law are not final, while its findings of fact are final and conclusive except in the limited cases the statute lists, such as a fraudulent, arbitrary or capricious decision.",
+          "after": "If the agency head decides an appeal should be taken, the agency head, with the prior approval of the Attorney General, has 120 days from the date the agency receives its copy. On appeal the board's decision on a question of law is not final or conclusive, while its decision on a question of fact is final and conclusive and may not be set aside unless it is fraudulent, arbitrary or capricious, so grossly erroneous as to necessarily imply bad faith, or not supported by substantial evidence.",
+          "source": "41 U.S.C. 7107(a)(1)(B) (the agency head transmits the decision) and 7107(b)(1)-(2)(A)-(C) (full list of exceptions) - https://www.law.cornell.edu/uscode/text/41/7107 (full section read, including subsections (c)-(f))"
+        }
+      ],
+      "notes": "120 days for both contractor and agency confirmed in 41 U.S.C. 7107(a)(1)(A)-(B). The author's paraphrase gave one of three statutory exceptions; the rule now lists all three verbatim in substance. 7107(a)(2) sends TVA board decisions to district court, which is not relevant to Army boards. uscode.house.gov could not be reached from this environment, so Cornell LII was the only copy read."
+    },
+    {
+      "id": "PC59",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "4 CFR 21.7(g)-(h) match. Source: https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-4.xml?part=21"
+    },
+    {
+      "id": "PC60",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "4 CFR 21.3(c) matches: response at least 5 days before the report, last-business-day rule, required content, objections within 2 days, report within 30 days after GAO's notice. Source: https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-4.xml?part=21"
+    },
+    {
+      "id": "PC61",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "4 CFR 21.8(e) matches: request within 15 days, agency response within 15 days, comments within 10 days or dismissal. Source: https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-4.xml?part=21"
+    },
+    {
+      "id": "PC62",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "41 U.S.C. 2106 text matches the rule (no protest alleging a 2102, 2103 or 2104 violation unless reported to the agency no later than 14 days after first discovering the possible violation); 4 CFR 21.5(d) says within 14 days; 4 CFR 21.0(d) makes them calendar days. Sources: https://www.law.cornell.edu/uscode/text/41/2106 ; https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-4.xml?part=21"
+    },
+    {
+      "id": "PC63",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 33.105-4(b) matches: if GAO recommendations are not fully implemented within 60 days of receipt, the HCA reports the failure to GAO 5 days later, explaining why the recommendation, exclusive of costs, was not followed. 31 U.S.C. 3554(b)(3) agrees (report not later than 5 days after the end of the 60-day period; the statute says head of the procuring activity). Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33 ; https://www.law.cornell.edu/uscode/text/31/3554"
+    },
+    {
+      "id": "PC64",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 5.101(a) (over $20,000), (b)(1)(i) exemption, (d) Table 5-2: over $25K to SAT for any acquisition, and above SAT for noncommercial, 15 days before solicitation issuance; above SAT commercial, combined with the solicitation. Table 5-2 also sets a separate 10-day posting period for over $20,000 to $25,000, which this card does not cover. Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5"
+    },
+    {
+      "id": "PC65",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "rule",
+          "before": "The contracting officer who awards the contract action is responsible for completing its contract action report (CAR) in FPDS within three business days after contract award, and an unpublished CAR is not considered complete. A CAR for an action awarded without full and open competition due to unusual or compelling urgency, or under the emergency acquisition flexibilities in part 18, is due within 30 days after award.",
+          "after": "The contracting officer who awards the contract action is responsible for completing its contract action report (CAR) in FPDS within three business days after contract award, and an unpublished CAR is not considered complete. A CAR for an action awarded without full and open competition due to unusual or compelling urgency, or under the emergency acquisition flexibilities in part 18, is due within 30 days after award. RFO 4.301 still names FPDS and the reporting duty is unchanged, but the system now sits inside SAM.gov: FPDS.gov redirects there, GSA decommissioned ezSearch on 24 Feb 2026, and CAR data is entered and managed through the SAM.gov Contract Awards Management portal, which GSA calls the former FPDS database.",
+          "source": "https://sam.gov/fpds (read 14 Sep 2026): 'All public-facing functionality of FPDS has been fully transitioned to Sam.gov', 'Users attempting to access FPDS.gov will be redirected to SAM.gov', ezSearch 'decommissioned ... on February 24, 2026', and 'Agencies' Contract Writing Systems (CWS) will continue to provide data through the SAM Contract Awards Management web portal (Former FPDS database)'; RFO FAR 4.301(a) and (f)(2)(i)-(iii) - https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4"
+        },
+        {
+          "field": "note",
+          "before": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4 (4.301(f)(2))",
+          "after": "Read 14 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4 (4.301(a), (f)(2); page last updated 28 Jul 2026); https://sam.gov/fpds (GSA FPDS transition page); https://sam.gov/announcements/contract-awards-data-and-searching-now-samgov (last updated 18 Aug 2026); https://content.govdelivery.com/accounts/USGSA/bulletins/408f942 (GSA bulletin, 9 Feb 2026)",
+          "source": "Sources read for the FPDS finding"
+        }
+      ],
+      "notes": "3 business days, the 30-day urgency and emergency exception, and 'unpublished CARs in FPDS are not considered complete' all confirmed in RFO 4.301(f)(2)(i)-(iii). The rule was accurate to the regulation but silent on where CARs are now entered; added the SAM.gov fact from GSA's pages. Event text left unchanged (still unique). www.fpds.gov and its login page both redirect to sam.gov/contracting when fetched on 14 Sep 2026. See findings.fpds."
+    },
+    {
+      "id": "PC66",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "52.242-17(b)(1)-(2) (Apr 1984) in RFO Part 52 and the clause page match: no costs more than 20 days before written notice; claim in a stated amount as soon as practicable after the delay ends, not later than final payment. RFO 42.1005(c) prescription matches. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 ; https://www.acquisition.gov/far/52.242-17 ; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-42"
+    },
+    {
+      "id": "PC67",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 42.1201 matches: every reasonable effort to respond in writing within 30 days; otherwise written notice within the period of the date a response is expected; does not apply to requests for a CDA decision. Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-42"
+    },
+    {
+      "id": "PC68",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 42.505(b) and 52.216-7(d)(5) (RFO Part 52 Deviation Date; clause page Aug 2018, same text): completion invoice or voucher within 120 days after settlement of final indirect cost rates for all years of a physically complete contract, or a longer period the CO approves in writing. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-42 ; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 ; https://www.acquisition.gov/far/52.216-7"
+    },
+    {
+      "id": "PC69",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "52.222-54(b)(1)(i)-(ii) in RFO Part 52 (Deviation Date) and the clause page (Jan 2025): enroll within 30 calendar days of award; within 90 calendar days of enrollment begin verifying new hires working in the United States within 3 business days after hire. RFO 22.1802-2 prescribes the clause for solicitations and contracts that exceed $150,000 with the listed exceptions, and current FAR 22.1803 also says $150,000, so the author read it correctly. The RFO SAT is $350,000 (RFO Part 2), so the clause reaches some Class I actions and leaving the card untagged is right. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22 ; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 ; https://www.acquisition.gov/far/52.222-54 ; https://www.acquisition.gov/far/22.1803 ; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-2"
+    },
+    {
+      "id": "PC70",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 6.301(b)-(d) and 6.001(a) match: 14 days after award (6.103-2 urgency 30 days; 6.103-1(d) brand name with the solicitation), GPE and agency website, minimum 30 days, screen proprietary data; part 6 does not apply to part 13 SAP awards. Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6"
+    },
+    {
+      "id": "PC71",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 6.301(b)(1), (c), (e) match. Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6"
+    },
+    {
+      "id": "PC72",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 5.201(d) Table 5-3, above SAT, all other non-commercial acquisitions: 30 days from solicitation in every trade agreement column, reducible to 10 days if warranted only when subject to the WTO GPA or an FTA and included in the annual forecast. Commercial above SAT and anything at or below SAT with no trade agreement: reasonable opportunity to respond (10 or 40 days when a trade agreement applies). Source: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5"
+    },
+    {
+      "id": "PC73",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "rule",
+          "before": "Other noncommercial acquisitions above the threshold get at least 30 days from the solicitation, and orders under a basic ordering agreement get 30 days from the presolicitation notice.",
+          "after": "By comparison, other noncommercial acquisitions above the threshold get 30 days from the solicitation and orders under a basic ordering agreement get 30 days from the presolicitation notice, subject to the trade agreement adjustments in Table 5-3.",
+          "source": "RFO FAR 5.201(d) Table 5-3: BOA orders 30 days from the presolicitation notice, but 30 reducible to 10 when subject to the WTO GPA or an FTA and in the annual forecast, and 40 days when subject to one and not in the forecast; all other non-commercial 30 days from solicitation, reducible to 10 when in the forecast - https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5"
+        }
+      ],
+      "notes": "The headline number is right: R&D above the SAT, 45 days from the presolicitation notice, with trade agreement columns N/A. The secondary sentence stated the BOA figure as fixed at 30 days although Table 5-3 gives 40 days for trade-agreement acquisitions not in the annual forecast, and 'at least 30 days' for other noncommercial acquisitions ignores the reduction to 10 days. Classes II-IV and difficulty 3 fit."
+    },
+    {
+      "id": "PC74",
+      "verdict": "fixed",
+      "changes": [
+        {
+          "field": "rule",
+          "before": "Evaluations are required for each contract and order that exceeds the simplified acquisition threshold.",
+          "after": "Evaluations are generally required for each contract and order that exceeds the simplified acquisition threshold; construction and architect-engineer contracts have their own thresholds.",
+          "source": "RFO FAR 42.1102(b)(1) ('Except as provided in paragraphs (e), (f), and (h)'), (e) construction contracts of $900,000 or more and any construction contract terminated for default, (f) architect-engineer contracts of $45,000 or more and any terminated for default - https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-42"
+        },
+        {
+          "field": "cite",
+          "before": "RFO FAR 42.1103(d)(2), (e)(2)-(3); RFO FAR 42.1102(b)(1)",
+          "after": "RFO FAR 42.1103(d)(2), (e)(2)-(3); RFO FAR 42.1102(b)(1), (e)-(f)",
+          "source": "Cite now covers the construction and architect-engineer thresholds the rule mentions"
+        }
+      ],
+      "notes": "14 calendar days to comment (42.1103(d)(2), (e)(3)) and availability to source selection officials within 14 days (42.1103(e)(2)) confirmed. The card said evaluations are required above the SAT without exception; construction contracts under $900,000 are not required. Classes II-IV kept to match the general rule, even though architect-engineer evaluations start at $45,000."
+    },
+    {
+      "id": "PC75",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "52.243-4(b), (d), (e)(1) in RFO Part 52 (Deviation Date) and the clause page (June 2007) match: a constructive change needs written notice; no costs more than 20 days before the notice except defective specifications; assert within 30 days unless extended. RFO 43.305(d) prescription matches. Class tag kept on the same convention as PC22 and PC76 (prescribed above the SAT; the rule itself notes the dismantling and demolition use). Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 ; https://www.acquisition.gov/far/52.243-4 ; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-43"
+    },
+    {
+      "id": "PC76",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "52.249-10(b)(2) (Apr 1984) in RFO Part 52 and the clause page: written notice of the causes within 10 days from the beginning of any delay unless extended by the CO. RFO 49.504(c)(1) prescription matches. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52 ; https://www.acquisition.gov/far/52.249-10 ; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49"
+    },
+    {
+      "id": "PC77",
+      "verdict": "ok",
+      "changes": [],
+      "notes": "RFO 19.108-4(c)(1) and (c)(1)(i): 10 working days above the SAT; with no response the contracting office may go to the Associate Administrator for Business Development and assume acceptance if no reply arrives 'within five calendar days of receipt of the contracting office's request'. 13 CFR 124.503(a) says 10 business days and 124.503(a)(5) says 'within 5 business days' of the AA/BD's receipt. The conflict is real; the card states the RFO count and flags SBA's rule, which is accurate. Sources: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19 ; https://www.ecfr.gov/api/versioner/v1/full/2026-09-10/title-13.xml?part=124&section=124.503"
+    }
+  ],
+  "findings": {
+    "fpds": "The app's other note (FPDS retired on 24 Feb 2026 and contract data moved to SAM.gov) overstates what happened. What GSA says: (1) GSA bulletin 'FPDS.gov Decommissions on February 24, 2026' (9 Feb 2026) says GSA decommissioned the ezSearch function within FPDS.gov on 24 Feb 2026 and that all FPDS.gov data is available in SAM.gov (https://content.govdelivery.com/accounts/USGSA/bulletins/408f942). (2) GSA's transition page https://sam.gov/fpds: all public-facing functionality of FPDS has moved to SAM.gov, all FPDS.gov contract award data is in SAM.gov, and FPDS.gov redirects to SAM.gov (confirmed 14 Sep 2026: www.fpds.gov and its login page redirect to sam.gov/contracting). (3) Same page, 'Manage Contract Award Data': agencies' contract writing systems continue to provide data through the SAM Contract Awards Management web portal (the former FPDS database), and starting 24 Feb 2026 federal users reach it at sam.gov/contracting through the 'Manage Contract Awards' card; data management requests still go through the Federal Service Desk. (4) The FPDS ATOM feed is being replaced by the SAM.gov Contract Awards API on open.gsa.gov and retires later in FY 2026 (https://sam.gov/announcements/contract-awards-data-and-searching-now-samgov, last updated 18 Aug 2026). (5) The regulation did not change: RFO FAR 4.301(a) (acquisition.gov deviation guide, last updated 28 Jul 2026) still names the Federal Procurement Data System at https://www.fpds.gov, and 4.301(f)(2)(ii) still requires the CAR within three business days after award, 30 days for urgency or emergency actions under (f)(2)(iii). Suggested wording for the other note: 'On 24 Feb 2026 GSA decommissioned FPDS.gov ezSearch and moved FPDS public access and award search into SAM.gov (FPDS.gov now redirects there). Contract action reporting continues in the former FPDS database, now SAM.gov Contract Awards Management, and RFO FAR 4.301 still calls the system FPDS.' Secondary sources (usfcr.com blog) say the FPDS.gov public website and login shut down on 24 Feb 2026; GSA's own page does not give a separate date for the redirect."
+  },
+  "summary": {
+    "checked": 53,
+    "fixed": 7,
+    "removed": 0,
+    "unverifiable": []
+  }
+}

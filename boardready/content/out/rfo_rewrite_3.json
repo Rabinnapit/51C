@@ -1,0 +1,351 @@
+[
+  {
+    "id": "Q0001",
+    "changed": true,
+    "answer": "You need to issue an amendment to all the offerors in the competitive range and provide them an opportunity to revise their pricing. Wage rates need to be up-to-date as of Day of Contract award for construction RFPs (FAR 22.403 — the RFO deleted 22.404-6, so this rule now sits at 22.403).\n\nCite: FAR 22.403.",
+    "crosswalk": [
+      {
+        "old": "FAR 22.404-6(c)",
+        "new": "FAR 22.403"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 22.403"
+    ],
+    "rfo_status": "updated",
+    "notes": "Old 22.404-6 'Modifications of wage determinations' no longer exists in the RFO; 22.404 now has only 22.404-1 Administration and 22.404-2 Enforcement, and the negotiated-acquisition rule (amend the solicitation, furnish the new rates to all offerors, allow proposal revision) is 22.403. The deletion is flagged in a short parenthetical per the task rule. Crosswalk entry verified against the acquisition.gov Part 22 deviation guide."
+  },
+  {
+    "id": "Q0004",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only."
+  },
+  {
+    "id": "Q0019",
+    "changed": true,
+    "answer": "For actions, which don't require submission of cost and pricing data, prepare price analyses. \nA price analysis is the process of evaluating a proposed price without evaluating its separate cost elements or profit. \nFor non-commercial procurements over $700k (threshold updated — see Thresholds), certified cost or pricing data is required. \nA cost analysis should be prepared. \nA cost analysis is the review and evaluation of the separate cost elements, including profit, of an offeror's proposal. \nThe following information can be used to determine a price fair and reasonable: \n(i) Market research;\n(ii) Comparison of the proposed price with prices found reasonable on previous purchases;\n(iii) Current price lists, catalogs, or advertisements. However, inclusion of a price in a price list, catalog, or\nadvertisement does not, in and of itself, establish fairness and reasonableness of the price;\n(iv) A comparison with similar items in a related industry;\n(v) The contracting officer’s personal knowledge of the item being purchased;\n(vi) Comparison to an independent Government estimate; or\n(vii) Any other reasonable basis. (FAR 15.404)\n\nCite: FAR 15.404.",
+    "crosswalk": [
+      {
+        "old": "FAR 15.404-1",
+        "new": "FAR 15.404"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 15.404"
+    ],
+    "rfo_status": "updated",
+    "notes": "Old 15.404-1 'Proposal analysis techniques' was split; the general price/cost analysis rules this answer describes are RFO 15.404 (price analysis alone is 15.404-1). THRESHOLD: the $700k figure is stale — the thresholds table gives $10,000,000 for DoD prime contracts awarded after 30 Jun 2026 (DFARS 215.403-3(a), DoD Class Deviation 2026-O0048 Rev. 1) and $2,500,000 for civilian agencies and DoD awards on or before 30 Jun 2026 (RFO FAR 15.403-3(a)). The original number was kept in the text with the marker appended, per the task rule."
+  },
+  {
+    "id": "Q0028",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only."
+  },
+  {
+    "id": "Q0063",
+    "changed": true,
+    "answer": "The definition is as follows: A Certificate of Current Cost or Pricing Data certifies that to the best of the company's knowledge, the cost or pricing data submitted were accurate, complete, and current as of the date of agreement on price or, if applicable, an earlier date agreed upon between the parties that is as close as practicable to the date of agreement on price. The purpose is to have the company commit as to the accuracy, completeness, and currency of submitted data. If the data is later found to be incorrect or appropriate data was not submitted, the government reserves the right to a downward contract price adjustment for any monetary damages incurred.\n Key things we would expect to see or review in a Certificate are:\n- The certificate is in the format shown in FAR 15.403-4\n- Current as of the date of agreement on price or an earlier agreed upon date\n- Signed by an authorized representative of the company and dated as close as practicable to the date when price negotiations were concluded\n-Check for qualifications or new information disclosed by the sweep and evaluate its impact on the negotiated price\n\nExceptions (FAR 15.403-2(b)):\nAdequate Price Competition\n Prices set by law or regulation\n Commercial Item\n Waiver has been granted\nModifying contract/subcontract for commercial items\n\nOther Exceptions (FAR 15.403-3(b)(3)(iii) — the RFO reuses the number 15.403-2 for a different section, Prohibitions)\nExercise of pre-priced option \nCertified cost or pricing data are not required for proposals used solely for overrun funding or interim billing price adjustments.\n\nCite: FAR 15.403-2(b); FAR 15.403-3(b)(3)(iii); FAR 15.403-4.",
+    "crosswalk": [
+      {
+        "old": "FAR 15.406-2",
+        "new": "FAR 15.403-4"
+      },
+      {
+        "old": "FAR 15.403-1(b)",
+        "new": "FAR 15.403-2(b)"
+      },
+      {
+        "old": "FAR 15.403-2",
+        "new": "FAR 15.403-3(b)(3)(iii)"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 15.403-2(b)",
+      "FAR 15.403-3(b)(3)(iii)",
+      "FAR 15.403-4"
+    ],
+    "rfo_status": "updated",
+    "notes": "Certificate format moved 15.406-2 -> 15.403-4 (format retained). The five exceptions moved 15.403-1(b) -> 15.403-2(b)(1)-(5). The 'other circumstances' exceptions (overrun funding or interim billing adjustments, pre-priced option) moved 15.403-2 -> 15.403-3(b)(3)(iii)(A)-(B); because the RFO reuses the number 15.403-2 for 'Prohibitions', a one-clause parenthetical flags that trap. Substance and wording otherwise untouched."
+  },
+  {
+    "id": "Q0064",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. Answer discusses the GAO 'undisclosed evaluation criterion' problem but cites no regulation."
+  },
+  {
+    "id": "Q0065",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only."
+  },
+  {
+    "id": "Q0066",
+    "changed": true,
+    "answer": "The LPTA process is appropriate when best value is expected to result from selection of the technically acceptable proposal with the lowest evaluated price. LPTAs may be used in situations where the Government would not realize any value from a proposal exceeding the Government's minimum technical or performance requirements, often for acquisitions of commercial or non-complex services or supplies which are clearly defined and expected to be low risk. The LPTA process does not permit tradeoffs between price and non- price factors. See FAR 15.103-2.\n\n• Tradeoff Source Selection Process (see FAR 15.103-1). This process allows for a tradeoff between non-cost factors and cost/price and allows the Government to accept other than the lowest priced proposal or other than the highest technically rated proposal to achieve a best-value contract award. Further, it describes various rating approaches to evaluating proposals when using a tradeoff process. The application of this process, as well as general source selection principles, is discussed in the body of this document.\n\nCite: FAR 15.103-1; FAR 15.103-2.",
+    "crosswalk": [
+      {
+        "old": "FAR 15.101-2",
+        "new": "FAR 15.103-2"
+      },
+      {
+        "old": "FAR 15.101-1",
+        "new": "FAR 15.103-1"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 15.103-1",
+      "FAR 15.103-2"
+    ],
+    "rfo_status": "updated",
+    "notes": "Straight renumbering: tradeoff 15.101-1 -> 15.103-1, LPTA 15.101-2 -> 15.103-2 (RFO heading is 'Lowest price technically acceptable approach'). Both verified in the crosswalk against the Part 15 deviation guide. Flagged for a later content pass, not applied here: the RFO adds a third approach at 15.103-3, highest technically rated with a fair and reasonable price, which this answer does not mention."
+  },
+  {
+    "id": "Q0068",
+    "changed": true,
+    "answer": "Delay award until the pricing and other pre-award issues were resolved. IAW UAI 36.205-100 Statutory Cost Limitations – Civil Works Contracts, IAW 33 U.S.C. 622 and 624, no civil works construction contract shall be awarded if the contract price exceeds the Government estimate by more than 25 percent.\n\nCite: 33 U.S.C. 622; 33 U.S.C. 624; UAI 36.205-100.",
+    "crosswalk": [],
+    "citations_rfo": [
+      "33 U.S.C. 622",
+      "33 U.S.C. 624",
+      "UAI 36.205-100"
+    ],
+    "rfo_status": "n/a",
+    "notes": "No FAR cite to convert. 33 U.S.C. 622 and 624 are statutes and are unchanged by the RFO (33 U.S.C. 622 is on the regulations 'unchanged' list). UAI 36.205-100 is the USACE Acquisition Instruction, outside the FAR/DFARS/AFARS structure the RFO renumbered, so it is left as written. Only the Cite: line was added."
+  },
+  {
+    "id": "Q0104",
+    "changed": true,
+    "answer": "An organizational conflict of interest may result when factors create an actual or potential conflict of interest on an instant contract, or when the nature of the work to be performed on the instant contract creates an actual or potential conflict of interest on a future acquisition.\" In this latter case, some restrictions on future activities of the contractor may be required.\n\nIn these cases, under FAR 9.504, the KO shall analyze planned acquisitions in order to identify and evaluate potential conflicts of interests as early in the acquisition process as possible to avoid, neutralize, or mitigate significant potential conflicts before contract award. Obtain the advice of counsel and the assistance of appropriate technical specialists in evaluating potential conflicts and in developing any necessary solicitation provisions and contract clauses. \n\nBefore issuing the solicitation, recommend to the head of the contracting activity a course of action for resolving the conflict to avoid creating unnecessary delays, burdensome information requirements, and excessive documentation.\n(FAR 9.502)\n\nCite: FAR 9.502; FAR 9.504.",
+    "crosswalk": [],
+    "citations_rfo": [
+      "FAR 9.502",
+      "FAR 9.504"
+    ],
+    "rfo_status": "n/a",
+    "notes": "Both cites survive the RFO at the same numbers with the same headings (9.502 applicability; 9.504 contracting officer responsibilities for identifying, evaluating and resolving OCIs), verified in the crosswalk against the Part 9 deviation guide. Nothing renumbered; only the Cite: line was added."
+  },
+  {
+    "id": "Q0112",
+    "changed": true,
+    "answer": "The Government evaluated proposals and determined which were the most highly rated and eligible for inclusion in the competitive range relying on the merits of each offer. The merits of each offer were determined on the basis of: (1) The quality of the technical proposal based on the ratings of each proposal against all evaluation criteria. (2) The proposed cost/prices. Those proposals not included in the competitive range will receive no further consideration and will be notified of this in accordance with FAR 15.206-1.\n\nCite: FAR 15.206-1.",
+    "crosswalk": [
+      {
+        "old": "FAR 15.503",
+        "new": "FAR 15.206-1"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 15.206-1"
+    ],
+    "rfo_status": "updated",
+    "notes": "Old 15.503 'Notifications to unsuccessful offerors' was split. The notice this answer describes — telling offerors excluded from the competitive range that they will receive no further consideration — is the preaward notice, now 15.206-1. (The postaward award notice is 15.207-2; not cited, because the answer does not discuss it.) 'FAR Part 15.503' was also a malformed reference and now reads as a section cite."
+  },
+  {
+    "id": "Q0114",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. CAUTION for the merge: the answer's only regulatory anchor is DoD Class Deviation 2018-O0015 and both dollar figures ($750K / $2M) are stale. Per the thresholds table the certified cost or pricing data threshold is now $10,000,000 for DoD prime contracts awarded after 30 Jun 2026 (DFARS 215.403-3(a), DoD Class Deviation 2026-O0048 Rev. 1) and $2,500,000 otherwise (RFO FAR 15.403-3(a)). This item needs a content rewrite, not a citation pass."
+  },
+  {
+    "id": "Q0115",
+    "changed": true,
+    "answer": "1. : FAR Part 31 and Appendix 1 cover CAS. CAS represents a consistent way to handle costs in accordance with Public Las 100-679. CAS applies to larger negotiated contracts awarded to large businesses. [FAR AP-1, 9901.306, Standards Applicability: Cost Accounting Standards promulgated by the Board shall be mandatory for use by all executive agencies and by contractors and subcontractors in estimating, accumulating, and reporting costs in connection with pricing and administration of, and settlement of disputes concerning, all negotiated prime contract and subcontract procurements with the United States Government in excess of the Truth in Negotiations Act (TINA) threshold, as adjusted for inflation (41 U.S.C. 1908 and 41 U.S.C. 1502(b)(1)(B)), other than contracts or subcontracts that have been exempted by the Board's regulations.]., CAS applies to larger negotiated acquisitions awarded to large businesses.]\n\nCite: FAR 31; FAR Appendix, 48 CFR 9901.306; 41 U.S.C. 1908; 41 U.S.C. 1502(b)(1)(B).",
+    "crosswalk": [],
+    "citations_rfo": [
+      "FAR 31",
+      "48 CFR 9901.306",
+      "41 U.S.C. 1908",
+      "41 U.S.C. 1502"
+    ],
+    "rfo_status": "n/a",
+    "notes": "FAR Part 31 is retained by the RFO at the same number (31.000-31.004, Subparts 31.1, 31.2 with 31.205 selected costs, 31.3, 31.6, 31.7). The CAS text the answer quotes is the FAR Appendix / 48 CFR chapter 99 (9901.306), a CFR reference the RFO does not renumber, and 41 U.S.C. 1908 and 1502 are statutes on the 'unchanged' list. Nothing to convert; only the Cite: line was added. TWO CONTENT ISSUES for a later substantive pass, deliberately not fixed here because they would change substance: (a) CAS itself is FAR Part 30 and 48 CFR chapter 99, not Part 31, which covers allowability; (b) the quoted 'in excess of the TINA threshold' applicability test is being superseded — the thresholds table shows CAS contract-level applicability decoupled from TINA and set at $35,000,000 effective 1 Oct 2026 (41 U.S.C. 1502(b)(1)(B) as amended by FY2026 NDAA sec. 1806; 48 CFR 9903.201-1(b)(2) per 91 FR 56056). No in-text threshold marker was added because the answer states no dollar figure."
+  },
+  {
+    "id": "Q0118",
+    "changed": true,
+    "answer": "Performance Based Payments are financing payments based upon the achievement of specific, measurable events or accomplishments that are defined and valued in advance by the parties to the contract. Payments under performance based payments are made on the basis of performance measured by objective quantifiable methods, accomplishment of defined events or other quantifiable measures of results. Customary contract financing to large businesses may be provided on contracts valued at $2.5 million or more where deliveries will not begin until six months after contract award. In determining whether or not PBPs are practical for use on a contract, the contracting officer should first consider whether the benefits associated with PBPs outweigh the time and effort required to establish and administer them. Therefore smaller contracts are generally not good PBP candidates as the administrative effort can easily exceed any financial benefits attained.\nProgress payments can be made on the basis of costs incurred, or on the basis of completed work. Progress Payments Based on Costs Incurred are made on the basis of costs incurred by the contractor as work progresses under the contract. This form of contract financing does not include: payments based on the percentage or stage of completion accomplished; payments for partial deliveries accepted by the Government; partial payments for a contract termination proposal; or performance-based payments. (FAR 32.102(b)). Progress Payments Based on a Percentage or Stage of Completion. For DoD, progress payments based on percentage or stage of completion are authorized only for contracts for construction (as defined in FAR 2.101 — the RFO moved the definition of 'construction' out of 36.102, which is now Architect-Engineer Services), shipbuilding, and ship conversion, alteration, or repair. Payments must be commensurate with work accomplished, and meet quality standards established under the contract. If the contractor’s performance is not satisfactory, the Contracting Officer may suspend or withhold up to 10% of the progress payment until corrective action is implemented (FAR 32.103).\nReference/s: Performance Based Payments Guide The Better Buying Power Initiative Performance Based Payments Guide (osd.mil)\n\nCite: FAR 32.102(b); FAR 32.103; FAR 2.101.",
+    "crosswalk": [
+      {
+        "old": "FAR 36.102",
+        "new": "FAR 2.101 (definition of 'Construction')"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 32.102(b)",
+      "FAR 32.103",
+      "FAR 2.101"
+    ],
+    "rfo_status": "updated",
+    "notes": "32.102(b) and 32.103 are retained at the same numbers. The definition of 'construction' moved: RFO 36.102 is 'Architect-Engineer Services' and 36.001 defines only 'Firm', so the definition now lives in RFO 2.101 — flagged in a short parenthetical per the task rule. Board caution worth knowing: the RFO DFARS Part 232 deviation (2026-O0022) at 232.102(e)(2) still carries the stale 'as defined in FAR 36.102' cross-reference. The $2.5 million customary-financing figure was left untouched: it is not an entry in the thresholds table, so this pass has no verified basis for saying it changed."
+  },
+  {
+    "id": "Q0123",
+    "changed": true,
+    "answer": "Progress Payments and Performance Based Payments are both forms of customary financing. They may be used in any procurement that meets the requirements of FAR 32.104. Progress based on cost incurred, evidence of some progress, 80% of costs covered, and contractor must have approved accounting system. PBP based on value of events, evidence of specific progress, provides for tailoring, accounting system to support incurred costs. Commercial financing, FAR 32.2, is more flexible and allows advanced and installment payments. If a general practice of the commercial market. Commercial financing only applies to purchases under FAR Part 12.\n\nCite: FAR 32.104; FAR 32.2; FAR 12.",
+    "crosswalk": [],
+    "citations_rfo": [
+      "FAR 32.104",
+      "FAR 32.2",
+      "FAR 12"
+    ],
+    "rfo_status": "n/a",
+    "notes": "FAR 32.104 is retained at the same number and Subpart 32.2 is still 'Commercial Product and Commercial Service Purchase Financing', so the answer's cites remain correct under the RFO. Part 12 is retained (restructured internally into 12.1 presolicitation, 12.2 solicitation/evaluation/award, 12.3 postaward, 12.4 micro-purchases), but the answer cites the part as a whole, so no conversion is needed. Only the Cite: line was added."
+  },
+  {
+    "id": "Q0128",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only."
+  },
+  {
+    "id": "Q0130",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. 'CAS and FAR' is a generic reference, not a named part or subpart."
+  },
+  {
+    "id": "Q0133",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. 'FAR policy states' names no part or subpart."
+  },
+  {
+    "id": "Q0135",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. The question stem says 'FAR 15', but the skip rule is applied to the answer text, which carries no cite."
+  },
+  {
+    "id": "Q0136",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only."
+  },
+  {
+    "id": "Q0142",
+    "changed": true,
+    "answer": "A tradeoff process is appropriate when it may be in the best interest of the Government to consider award to other than the lowest priced offeror or other than the highest technically rated offeror. This process permits tradeoffs among cost or price and non-cost factors and allows the Government to accept other than the lowest priced proposal. The perceived benefits of the higher priced proposal shall merit the additional cost, and the rationale for tradeoffs must be documented in the file in accordance with 15.408 (the RFO moved documentation from 15.406 to 15.408; 15.406 is now 'Data to support proposal analysis').\nReference/s: FAR 15.103-1\n\nCite: FAR 15.103-1; FAR 15.408.",
+    "crosswalk": [
+      {
+        "old": "FAR 15.101-1",
+        "new": "FAR 15.103-1"
+      },
+      {
+        "old": "FAR 15.406",
+        "new": "FAR 15.408"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 15.103-1",
+      "FAR 15.408"
+    ],
+    "rfo_status": "updated",
+    "notes": "Tradeoff process 15.101-1 -> 15.103-1 (RFO heading 'Tradeoff approach') from the verified crosswalk. '15.406' was NOT in the crosswalk, so it was resolved directly on the acquisition.gov Part 15 deviation guide (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15, fetched 14 Sep 2026): RFO 15.408 is 'Documentation', with 15.408-1 'Prenegotiation objectives' and 15.408-2 'Documenting the negotiation', while RFO 15.406 exists as a different section, 'Data to support proposal analysis'. Citing 15.406 for documentation would now be wrong, hence the short parenthetical. REVIEWER 14 Sep 2026: 15.406 -> 15.408 re-verified on https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15 (RFO 15.406 \"Data to support proposal analysis\"; 15.407 \"Price negotiation\"; 15.408 \"Documentation\" with 15.408-1 \"Prenegotiation objectives\" and 15.408-2 \"Documenting the negotiation\"); also consistent with the regulations.json note on FAR 15.405 -> 15.407. Recommend adding FAR 15.406 -> FAR 15.408 to the crosswalk."
+  },
+  {
+    "id": "Q0213",
+    "changed": true,
+    "answer": "The Contracting Officer should consider the data source for direct labor costs in the pricing report before making a decision concerning the objective position. The Contracting Officer may want to check other data sources (Bureau of Labor Statistics, Global Insight, etc..) for direct labor costs. Ideally, the Contracting Officer required the company to submit a spreadsheet and cost narrative for the Government to analyze/validate during proposal evaluation. If these documents weren't required as a proposal submission, the Contracting Officer should consider requesting these during negotiations. (FAR 15.407 & 15.408)\n\nCite: FAR 15.407; FAR 15.408.",
+    "crosswalk": [
+      {
+        "old": "FAR 15.405",
+        "new": "FAR 15.407"
+      },
+      {
+        "old": "FAR 15.406",
+        "new": "FAR 15.408"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 15.407",
+      "FAR 15.408"
+    ],
+    "rfo_status": "updated",
+    "notes": "Price negotiation 15.405 -> 15.407 (verified crosswalk). '15.406' was not in the crosswalk and was resolved on the acquisition.gov Part 15 deviation guide (fetched 14 Sep 2026): documentation is RFO 15.408, with prenegotiation objectives at 15.408-1 and the price negotiation memorandum at 15.408-2 (old 15.406-1 and 15.406-3). RFO 15.406 is a different section, 'Data to support proposal analysis'. No parenthetical was added here because the cite sits in a bare reference parenthetical at the end, not in a claim in the prose. REVIEWER 14 Sep 2026: 15.406 -> 15.408 re-verified on https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15 (RFO 15.406 \"Data to support proposal analysis\"; 15.407 \"Price negotiation\"; 15.408 \"Documentation\" with 15.408-1 \"Prenegotiation objectives\" and 15.408-2 \"Documenting the negotiation\"); also consistent with the regulations.json note on FAR 15.405 -> 15.407. Recommend adding FAR 15.406 -> FAR 15.408 to the crosswalk."
+  },
+  {
+    "id": "Q0214",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. Quotes the DoD Source Selection Procedures guide, which is non-regulatory."
+  },
+  {
+    "id": "Q0217",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. Paraphrases debriefing rules (RFO FAR 15.301) but names no section, so it is left alone per the skip rule."
+  },
+  {
+    "id": "Q0250",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. Paraphrases unbalanced pricing (RFO FAR 15.404-6) but names no section, so it is left alone per the skip rule."
+  },
+  {
+    "id": "Q0251",
+    "changed": true,
+    "answer": "▪ What to do? Either use the paper copy only or ask the offeror to submit another electronic version. Make sure resubmitted electronic copy is the same as the paper version.\n▪ Why? No one has been harmed or disadvantaged by this action.\n▪ FAR 15.108(c) If any portion of a proposal received by the Contracting Officer electronically or by facsimile is unreadable, the Contracting Officer shall immediately notify the offeror and permit the offeror to resubmit the unreadable portion of the proposal. The method and time for resubmission shall be prescribed by the Contracting Officer after consultation with the offeror and documented in the file. The resubmission shall be considered as if it were received at the date and time of the original unreadable submission provided the offeror complies with the time and format requirements for resubmission prescribed by the Contracting Officer.\n\nCite: FAR 15.108(c).",
+    "crosswalk": [
+      {
+        "old": "FAR 15.207(c)",
+        "new": "FAR 15.108(c)"
+      }
+    ],
+    "citations_rfo": [
+      "FAR 15.108(c)"
+    ],
+    "rfo_status": "updated",
+    "notes": "Old 15.207 'Handling proposals and information' -> RFO 15.108 'Receiving proposals'; the unreadable electronic/facsimile proposal rule the answer quotes verbatim is 15.108(c) 'Unreadable proposals' (marking is 15.108(a), safeguarding 15.108(b)). Only the section number changed; the quoted regulatory text was left word for word."
+  },
+  {
+    "id": "Q0262",
+    "changed": false,
+    "answer": null,
+    "crosswalk": [],
+    "citations_rfo": [],
+    "rfo_status": "n/a",
+    "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. 'ABG5' is a German ABG-75 form reference, not a FAR/DFARS cite."
+  }
+]

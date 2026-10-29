@@ -1,0 +1,243 @@
+/* ===== v-jeopardy: Board Jeopardy, the study-group team review for the projector =====
+   Tokens only. Every selector prefixed .v-jeopardy. Single column under 760px (the board scrolls sideways).
+   The clue overlay mounts in a body-level layer that also carries .v-jeopardy, so these rules reach it.
+   Team accents t0..t3 map to four role colors so a projector keeps the teams apart. */
+.v-jeopardy {
+  --jp-t0: var(--accent);
+  --jp-t1: var(--accent-2);
+  --jp-t2: var(--ok);
+  --jp-t3: var(--info);
+  --tc: var(--jp-t0);
+}
+.v-jeopardy .t0 { --tc: var(--jp-t0); }
+.v-jeopardy .t1 { --tc: var(--jp-t1); }
+.v-jeopardy .t2 { --tc: var(--jp-t2); }
+.v-jeopardy .t3 { --tc: var(--jp-t3); }
+
+/* ---------------------------------------------------------------- page head */
+.v-jeopardy .jp-head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-5); flex-wrap: wrap; margin-bottom: var(--space-5); }
+.v-jeopardy .jp-head-copy { flex: 1 1 460px; min-width: 0; }
+.v-jeopardy .jp-head-actions { display: flex; flex-wrap: wrap; gap: 8px; flex: none; }
+
+/* -------------------------------------------------------------- empty state */
+.v-jeopardy .jp-empty { background: var(--panel); }
+.v-jeopardy .jp-empty-icon {
+  width: 56px; height: 56px; margin: 0 auto var(--space-4); border-radius: var(--r-lg);
+  display: grid; place-items: center; background: var(--bg-2); color: var(--accent-2);
+}
+.v-jeopardy .jp-empty-icon svg { width: 26px; height: 26px; }
+.v-jeopardy .jp-empty p { max-width: 54ch; margin: 0 auto; }
+.v-jeopardy .jp-empty-actions { justify-content: center; margin-top: var(--space-5); }
+
+/* ------------------------------------------------------------------- teams */
+.v-jeopardy .jp-game { display: flex; flex-direction: column; gap: var(--space-4); }
+
+.v-jeopardy .jp-teams { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+.v-jeopardy .jp-team {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px 8px 14px; border-radius: var(--r-lg);
+  background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--tc);
+}
+.v-jeopardy .jp-team-name {
+  flex: 1 1 auto; min-width: 0; width: 100%; padding: 4px 6px;
+  border: 1px solid transparent; border-radius: var(--r-sm); background: transparent;
+  font-size: var(--fs-sm); font-weight: 800; color: var(--ink);
+  transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease);
+}
+.v-jeopardy .jp-team-name:hover { border-color: var(--line); }
+.v-jeopardy .jp-team-name:focus { outline: none; border-color: var(--tc); background: var(--panel-2); }
+.v-jeopardy .jp-team-score {
+  flex: none; min-width: 68px; padding: 4px 10px; border-radius: var(--r-md);
+  background: color-mix(in srgb, var(--tc) 14%, transparent); color: var(--tc);
+  font-size: 1.25rem; font-weight: 700; line-height: 1.2; text-align: right;
+  transition: background var(--dur) var(--ease);
+}
+.v-jeopardy .jp-team-score:hover { background: color-mix(in srgb, var(--tc) 26%, transparent); }
+
+/* ------------------------------------------------------------- control bar */
+.v-jeopardy .jp-bar {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  padding: 10px 12px; border-radius: var(--r-lg);
+  background: var(--panel); border: 1px solid var(--line);
+}
+.v-jeopardy .jp-bar-group { display: flex; align-items: center; gap: 8px; }
+.v-jeopardy .jp-label { font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.v-jeopardy .jp-teamcount button { min-width: 34px; font-family: var(--font-mono); }
+
+/* ------------------------------------------------------------------- board */
+.v-jeopardy .jp-board {
+  display: grid; gap: 6px;
+  grid-template-columns: repeat(var(--cols, 6), minmax(0, 1fr));
+}
+.v-jeopardy .jp-cat {
+  display: grid; place-items: center; min-height: 70px; padding: 10px 8px;
+  border-radius: var(--r-md); text-align: center;
+  background: var(--accent); color: var(--accent-ink);
+  font-size: var(--fs-sm); font-weight: 800; letter-spacing: .03em; text-transform: uppercase; line-height: 1.25;
+  hyphens: auto;
+}
+.v-jeopardy .jp-cell {
+  display: grid; place-items: center; min-height: 74px; border-radius: var(--r-md);
+  background: var(--panel); border: 1px solid var(--line-2);
+  color: var(--accent-2); font-size: clamp(1.3rem, 2.2vw, 1.9rem); font-weight: 700; letter-spacing: -.02em;
+  transition: transform var(--dur) var(--ease), background var(--dur) var(--ease), color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.v-jeopardy .jp-cell:hover:not(.is-used) { transform: scale(1.03); background: var(--accent-2-soft); box-shadow: var(--shadow-md); z-index: 2; }
+.v-jeopardy .jp-cell.is-used { color: var(--muted-2); background: var(--bg-2); border-style: dashed; opacity: .5; cursor: default; }
+.v-jeopardy .jp-cell.is-blank { background: var(--bg-2); border: 1px dashed var(--line); opacity: .35; }
+
+.v-jeopardy .jp-foot {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: var(--space-4); border-radius: var(--r-lg);
+  background: var(--panel-2); border: 1px solid var(--line);
+  font-size: var(--fs-sm); color: var(--muted);
+}
+.v-jeopardy .jp-foot > svg { width: 17px; height: 17px; flex: none; margin-top: 3px; color: var(--info); }
+.v-jeopardy .jp-foot b { color: var(--ink); }
+
+/* ------------------------------------------------- overlay (clue and final) */
+.v-jeopardy .jp-scrim {
+  position: fixed; inset: 0; z-index: 90; display: grid; place-items: center; padding: var(--space-4);
+  background: color-mix(in srgb, var(--l-bg) 72%, transparent);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  animation: fade var(--dur) var(--ease);
+}
+.v-jeopardy .jp-modal {
+  position: relative; width: min(880px, 100%); max-height: 92vh; overflow: auto;
+  padding: var(--space-6); border-radius: var(--r-xl);
+  background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow-lg);
+  animation: pop var(--dur) var(--ease-spring);
+}
+.v-jeopardy .jp-modal-x {
+  position: absolute; top: 12px; right: 12px; width: 34px; height: 34px; border-radius: var(--r-md);
+  display: grid; place-items: center; color: var(--muted);
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.v-jeopardy .jp-modal-x:hover { background: var(--bg-2); color: var(--ink); }
+.v-jeopardy .jp-modal-x svg { width: 17px; height: 17px; }
+
+.v-jeopardy .jp-clue-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-right: 40px; margin-bottom: var(--space-4); }
+.v-jeopardy .jp-clue-cat { font-size: var(--fs-xs); font-weight: 800; letter-spacing: var(--track-caps); text-transform: uppercase; color: var(--accent); }
+.v-jeopardy .jp-clue-val { font-size: 1.5rem; font-weight: 700; color: var(--accent-2); letter-spacing: -.02em; }
+.v-jeopardy .jp-clue-text {
+  margin: 0; font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(1.6rem, 3.4vw, 2.6rem); line-height: 1.18; letter-spacing: -.02em; color: var(--ink);
+}
+.v-jeopardy .jp-clue-text.is-final { font-size: clamp(1.7rem, 3.8vw, 2.9rem); }
+.v-jeopardy .jp-clue-answer {
+  margin-top: var(--space-5); padding: var(--space-4) var(--space-5);
+  border-radius: var(--r-lg); background: var(--ok-soft);
+  border: 1px solid color-mix(in srgb, var(--ok) 32%, transparent);
+  animation: rise var(--dur) var(--ease) both;
+}
+.v-jeopardy .jp-clue-response { margin: 6px 0 0; font-size: clamp(1.2rem, 2.2vw, 1.7rem); font-weight: 800; line-height: 1.25; color: var(--ink); }
+.v-jeopardy .jp-accepted, .v-jeopardy .jp-cites { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: var(--space-3); }
+.v-jeopardy .jp-accepted-label, .v-jeopardy .jp-cites-label { font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.v-jeopardy .jp-clue-foot { display: flex; justify-content: center; margin-top: var(--space-5); }
+
+/* ---- award ---- */
+.v-jeopardy .jp-award { margin-top: var(--space-5); padding-top: var(--space-4); border-top: 1px solid var(--line); }
+.v-jeopardy .jp-award-head { display: flex; align-items: center; gap: 10px; margin-bottom: var(--space-3); }
+.v-jeopardy .jp-award-mode button { font-family: var(--font-mono); min-width: 62px; }
+.v-jeopardy .jp-award-teams { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.v-jeopardy .jp-award-btn {
+  display: flex; flex-direction: column; gap: 2px; align-items: flex-start;
+  padding: 12px 16px; border-radius: var(--r-md);
+  background: var(--panel); border: 1px solid var(--tc); border-left-width: 4px;
+  transition: transform var(--dur) var(--ease), background var(--dur) var(--ease);
+}
+.v-jeopardy .jp-award-btn:hover { background: color-mix(in srgb, var(--tc) 12%, transparent); transform: translateY(-2px); }
+.v-jeopardy .jp-award-name { font-size: var(--fs-sm); font-weight: 800; color: var(--ink); }
+.v-jeopardy .jp-award-delta { font-size: 1.15rem; font-weight: 700; color: var(--tc); }
+.v-jeopardy .jp-award-none { width: 100%; margin-top: 10px; }
+
+/* ---- final clue: wagers and grading ---- */
+.v-jeopardy .jp-final-intro { margin: 0 0 var(--space-4); color: var(--muted); font-size: var(--fs-md); max-width: 60ch; }
+.v-jeopardy .jp-wagers { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.v-jeopardy .jp-wager {
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 12px 14px; border-radius: var(--r-md);
+  background: var(--panel-2); border: 1px solid var(--line); border-left: 4px solid var(--tc);
+}
+.v-jeopardy .jp-wager-name { font-size: var(--fs-sm); font-weight: 800; color: var(--ink); }
+.v-jeopardy .jp-wager-score { font-size: var(--fs-xs); color: var(--muted); }
+.v-jeopardy .jp-wager .input { margin-top: 4px; }
+
+.v-jeopardy .jp-final-grade { display: flex; flex-direction: column; gap: 8px; margin-top: var(--space-5); }
+.v-jeopardy .jp-grade-row {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  padding: 10px 14px; border-radius: var(--r-md);
+  background: var(--panel-2); border: 1px solid var(--line); border-left: 4px solid var(--tc);
+}
+.v-jeopardy .jp-grade-name { font-weight: 800; font-size: var(--fs-sm); color: var(--ink); }
+.v-jeopardy .jp-grade-wager { font-size: var(--fs-xs); color: var(--muted); }
+.v-jeopardy .jp-grade-row .seg { margin-left: auto; }
+
+/* ------------------------------------------------------------ final result */
+.v-jeopardy .jp-final-card {
+  padding: var(--space-5); border-radius: var(--r-xl);
+  background: var(--panel); border: 1px solid var(--accent-2); box-shadow: var(--shadow-md);
+  animation: rise var(--dur-slow) var(--ease) both;
+}
+.v-jeopardy .jp-final-head { display: flex; gap: 14px; align-items: center; margin-bottom: var(--space-4); }
+.v-jeopardy .jp-final-head > svg { width: 30px; height: 30px; flex: none; color: var(--accent-2); }
+.v-jeopardy .jp-final-rows { display: flex; flex-direction: column; gap: 6px; }
+.v-jeopardy .jp-final-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 14px; border-radius: var(--r-md);
+  background: var(--panel-2); border: 1px solid var(--line); border-left: 4px solid var(--tc);
+}
+.v-jeopardy .jp-final-name { flex: 1 1 auto; min-width: 0; font-weight: 800; font-size: var(--fs-sm); color: var(--ink); }
+.v-jeopardy .jp-final-wager { flex: none; font-size: var(--fs-sm); color: var(--muted); }
+.v-jeopardy .jp-final-row.is-ok .jp-final-wager { color: var(--ok); }
+.v-jeopardy .jp-final-row.is-no .jp-final-wager { color: var(--danger); }
+.v-jeopardy .jp-final-score { flex: none; min-width: 70px; text-align: right; font-size: 1.2rem; font-weight: 700; color: var(--ink); }
+.v-jeopardy .jp-final-actions { margin-top: var(--space-4); }
+
+/* --------------------------------------------------------------- projector */
+body[data-projector] .v-jeopardy .jp-cat { min-height: 92px; font-size: 1.05rem; }
+body[data-projector] .v-jeopardy .jp-cell { min-height: 104px; font-size: clamp(1.8rem, 3vw, 2.8rem); }
+body[data-projector] .v-jeopardy .jp-team-score { font-size: 1.7rem; min-width: 92px; }
+body[data-projector] .v-jeopardy .jp-team-name { font-size: 1.05rem; }
+body[data-projector] .v-jeopardy .jp-modal { width: min(1080px, 100%); }
+body[data-projector] .v-jeopardy .jp-clue-text { font-size: clamp(2.1rem, 4.4vw, 3.6rem); }
+body[data-projector] .v-jeopardy .jp-clue-response { font-size: clamp(1.6rem, 3vw, 2.4rem); }
+
+/* -------------------------------------------------------------- responsive */
+@media (max-width: 1000px) {
+  .v-jeopardy .jp-board { gap: 4px; }
+  .v-jeopardy .jp-cat { min-height: 58px; font-size: var(--fs-xs); }
+  .v-jeopardy .jp-cell { min-height: 60px; }
+}
+@media (max-width: 760px) {
+  .v-jeopardy .jp-head { gap: var(--space-4); }
+  .v-jeopardy .jp-head-actions, .v-jeopardy .jp-head-actions .btn { width: 100%; }
+  .v-jeopardy .jp-teams { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* the board scrolls sideways rather than shrinking below the readable size */
+  .v-jeopardy .jp-board {
+    grid-template-columns: repeat(var(--cols, 6), minmax(84px, 1fr));
+    overflow-x: auto; overscroll-behavior-x: contain; padding-bottom: 4px;
+  }
+  .v-jeopardy .jp-cell { font-size: 1.1rem; min-height: 54px; }
+  .v-jeopardy .jp-cat { min-height: 52px; font-size: 10px; letter-spacing: .02em; }
+  .v-jeopardy .jp-modal { padding: var(--space-5) var(--space-4); max-height: 94vh; }
+  .v-jeopardy .jp-scrim { padding: var(--space-2); align-items: flex-start; }
+  .v-jeopardy .jp-award-teams, .v-jeopardy .jp-wagers { grid-template-columns: 1fr; }
+  .v-jeopardy .jp-grade-row .seg { margin-left: 0; width: 100%; }
+  .v-jeopardy .jp-grade-row .seg button { flex: 1 1 0; }
+  .v-jeopardy .jp-bar { gap: 6px; }
+  .v-jeopardy .jp-bar .btn { flex: 1 1 auto; }
+}
+@media (max-width: 430px) {
+  .v-jeopardy .jp-teams { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .v-jeopardy .jp-final-card, .v-jeopardy .jp-modal, .v-jeopardy .jp-scrim, .v-jeopardy .jp-clue-answer { animation: none !important; }
+  .v-jeopardy .jp-cell:hover:not(.is-used), .v-jeopardy .jp-award-btn:hover { transform: none; }
+}
+
+/* ------------------------------------------------------------------- print */
+@media print {
+  .v-jeopardy .jp-scrim, .v-jeopardy .jp-bar, .v-jeopardy .jp-head-actions, .v-jeopardy .jp-final-actions { display: none !important; }
+  .v-jeopardy .jp-final-card { box-shadow: none; break-inside: avoid; }
+}

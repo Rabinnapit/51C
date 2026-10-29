@@ -1,0 +1,986 @@
+{
+  "jeopardy": {
+    "categories": [
+      {
+        "name": "Fiscal Law",
+        "clues": [
+          {
+            "value": 100,
+            "clue": "This rule says an appropriation may be obligated only for a requirement that genuinely arises during its period of availability.",
+            "response": "The bona fide need rule",
+            "accepted": [
+              "bona fide need",
+              "bona fide needs rule",
+              "BFN rule",
+              "31 U.S.C. 1502"
+            ],
+            "cite": "31 U.S.C. 1502(a)"
+          },
+          {
+            "value": 200,
+            "clue": "Purpose and time are two legs of the fiscal law stool. Name the third leg, the one the Antideficiency Act protects when you obligate more than Congress made available.",
+            "response": "Amount",
+            "accepted": [
+              "amount",
+              "amount (the third leg)",
+              "the amount test"
+            ],
+            "cite": "31 U.S.C. 1301(a); 31 U.S.C. 1502(a); 31 U.S.C. 1341(a)"
+          },
+          {
+            "value": 300,
+            "clue": "Obligating or spending in excess of, or in advance of, an available appropriation violates this statute and can end in administrative discipline and a report through command channels to the President and Congress.",
+            "response": "The Antideficiency Act",
+            "accepted": [
+              "Antideficiency Act",
+              "ADA",
+              "31 U.S.C. 1341"
+            ],
+            "cite": "31 U.S.C. 1341; 31 U.S.C. 1517"
+          },
+          {
+            "value": 400,
+            "clue": "On an incrementally funded cost-reimbursement contract, this clause caps the Government's obligation at the funds allotted and requires the contractor to notify the KO before costs run past that allotment.",
+            "response": "Limitation of Funds, FAR 52.232-22",
+            "accepted": [
+              "Limitation of Funds",
+              "52.232-22",
+              "FAR 52.232-22"
+            ],
+            "cite": "FAR 52.232-22 (unchanged under RFO numbering)"
+          },
+          {
+            "value": 500,
+            "clue": "This DoD authority lets you fund a severable services contract with one fiscal year's appropriation even though performance crosses into the next year, so long as the total period does not exceed twelve months.",
+            "response": "The severable services crossing fiscal years authority, 10 U.S.C. 3133",
+            "accepted": [
+              "10 U.S.C. 3133",
+              "severable services authority",
+              "crossing fiscal years authority",
+              "formerly 10 U.S.C. 2410a",
+              "41 U.S.C. 3902 for civilian agencies"
+            ],
+            "cite": "10 U.S.C. 3133 (recodified from 10 U.S.C. 2410a); 41 U.S.C. 3902 for civilian agencies"
+          }
+        ]
+      },
+      {
+        "name": "Competition",
+        "clues": [
+          {
+            "value": 100,
+            "clue": "Under RFO numbering this is the limited-competition exception you use when the Government would be seriously injured by taking the time to compete, and it is the one exception that lets you award before the justification is approved.",
+            "response": "Unusual and compelling urgency, RFO FAR 6.103-2",
+            "accepted": [
+              "unusual and compelling urgency",
+              "FAR 6.103-2",
+              "6.103-2",
+              "urgency exception",
+              "formerly 6.302-2"
+            ],
+            "cite": "RFO FAR 6.103-2 (was FAR 6.302-2); after-award justification authorized at RFO FAR 6.103-2(d); RFO FAR 6.104"
+          },
+          {
+            "value": 200,
+            "clue": "This is the written document, approved at a level that rises with dollar value, that supports using other than full and open competition. Under RFO numbering it moved from Part 6.303 to this section.",
+            "response": "The justification and approval, RFO FAR 6.104",
+            "accepted": [
+              "justification and approval",
+              "J&A",
+              "FAR 6.104",
+              "6.104",
+              "formerly 6.303"
+            ],
+            "cite": "RFO FAR 6.104 (consolidates old FAR 6.303 justifications and old FAR 6.304 approval); 6.104-1 content, 6.104-2 approval; 10 U.S.C. 3204(e)"
+          },
+          {
+            "value": 300,
+            "clue": "Per the DoD justification approval table under the current class deviation, this official approves a justification valued at ten million dollars or below.",
+            "response": "The contracting officer",
+            "accepted": [
+              "contracting officer",
+              "the KO",
+              "KO",
+              "contracting officer with the 6.104-1(a)(12) certification"
+            ],
+            "cite": "DFARS 206.104-71 Table 206-1 per DoD Class Deviation 2026-O0017 Rev. 2 (5 Aug 2026); RFO FAR 6.104-1(a)(12)"
+          },
+          {
+            "value": 400,
+            "clue": "When the requiring activity's description is written around a single manufacturer's product, this RFO section governs items peculiar to one manufacturer, and DFARS 211.204 tells you what the justification must show.",
+            "response": "RFO FAR 11.204, items peculiar to one manufacturer",
+            "accepted": [
+              "FAR 11.204",
+              "11.204",
+              "items peculiar to one manufacturer",
+              "brand name or equal justification",
+              "formerly 11.105 (old 11.104 was deleted)"
+            ],
+            "cite": "RFO FAR 11.204 (was FAR 11.105; old FAR 11.104 brand-name-or-equal was deleted and survives only as FAR Companion guidance at FC 11.204); DFARS 211.204 (was DFARS 211.104), which carries the FY17 NDAA sec. 888 requirement for a brand-name-or-equal justification; RFO FAR 6.103-1(d)"
+          },
+          {
+            "value": 500,
+            "clue": "For a commercial product or service, this is the section that governs restricting competition, and it is why a brand-name-only commercial buy still needs a justification rather than a shrug.",
+            "response": "RFO FAR 12.102, restricting competition",
+            "accepted": [
+              "FAR 12.102",
+              "12.102",
+              "restricting competition"
+            ],
+            "cite": "RFO FAR 12.102 (number unchanged); RFO FAR 6.104"
+          }
+        ]
+      },
+      {
+        "name": "Source Selection",
+        "clues": [
+          {
+            "value": 100,
+            "clue": "This source selection approach lets the Government accept other than the lowest price to get greater non-price value, and it must say so in the solicitation.",
+            "response": "Tradeoff, RFO FAR 15.103-1",
+            "accepted": [
+              "tradeoff",
+              "best value tradeoff",
+              "FAR 15.103-1",
+              "15.103-1",
+              "formerly 15.101-1"
+            ],
+            "cite": "RFO FAR 15.103-1 (was FAR 15.101-1); RFO FAR 15.103 (was 15.101)"
+          },
+          {
+            "value": 200,
+            "clue": "This approach awards to the cheapest offeror who clears a pass-fail technical bar, and it is the wrong tool when technical differences actually buy the mission something.",
+            "response": "Lowest price technically acceptable, RFO FAR 15.103-2",
+            "accepted": [
+              "LPTA",
+              "lowest price technically acceptable",
+              "FAR 15.103-2",
+              "15.103-2",
+              "formerly 15.101-2"
+            ],
+            "cite": "RFO FAR 15.103-2 (was FAR 15.101-2)"
+          },
+          {
+            "value": 300,
+            "clue": "This official's independent judgment is documented in a decision that shows the rationale for any tradeoffs, and it is not just a rubber stamp on the evaluation board's ratings.",
+            "response": "The source selection authority, whose source selection decision document is required by RFO FAR 15.205",
+            "accepted": [
+              "source selection authority",
+              "SSA",
+              "source selection decision",
+              "SSDD",
+              "FAR 15.205",
+              "formerly 15.308"
+            ],
+            "cite": "RFO FAR 15.205 (was FAR 15.308); RFO FAR 15.201 (was 15.303)"
+          },
+          {
+            "value": 400,
+            "clue": "Once you establish this group and open negotiations, the exchanges must be meaningful: you point each offeror at its own deficiencies and significant weaknesses.",
+            "response": "The competitive range, established under RFO FAR 15.204-1",
+            "accepted": [
+              "competitive range",
+              "discussions",
+              "negotiations",
+              "FAR 15.204-1",
+              "formerly 15.306",
+              "FAR 15.204-2 (competitive negotiations)"
+            ],
+            "cite": "RFO FAR 15.204-1 competitive range and 15.204-2 competitive negotiations (was FAR 15.306); RFO FAR 15.202 (was 15.305)"
+          },
+          {
+            "value": 500,
+            "clue": "Requested in writing within three days of the notice of award, this exchange under RFO FAR 15.301 gives a losing offeror the agency's evaluation of its own proposal, and for DoD it starts the clock that can extend the protest stay.",
+            "response": "A postaward debriefing",
+            "accepted": [
+              "postaward debriefing",
+              "post-award debriefing",
+              "debriefing",
+              "FAR 15.301",
+              "formerly 15.506"
+            ],
+            "cite": "RFO FAR 15.301 (was FAR 15.506); RFO DFARS 215.301 (was DFARS 215.506-70/-71), DoD enhanced postaward debriefings; RFO FAR 15.206-2 (was 15.505) for preaward debriefings"
+          }
+        ]
+      },
+      {
+        "name": "Contract Admin",
+        "clues": [
+          {
+            "value": 100,
+            "clue": "This individual is designated in writing by the KO, cannot change price, scope or terms, and is the eyes on the ground for surveillance. DFARS 201.404-70 and its PGI govern the designation.",
+            "response": "The contracting officer's representative",
+            "accepted": [
+              "COR",
+              "contracting officer's representative",
+              "DFARS 201.404-70",
+              "PGI 201.404-70"
+            ],
+            "cite": "DFARS 201.404-70 (was DFARS 201.602-2); DFARS PGI 201.404-70(e)"
+          },
+          {
+            "value": 200,
+            "clue": "Under the changes clause the contractor must keep doing this even while you and the contractor argue about an equitable adjustment, so long as the change is within the general scope.",
+            "response": "Continue performance",
+            "accepted": [
+              "continue performance",
+              "keep performing",
+              "proceed with the work",
+              "FAR 43.301(b)",
+              "52.243-1"
+            ],
+            "cite": "RFO FAR 43.301(b) (was FAR 43.201(b)); FAR 52.243-1, Changes-Fixed-Price"
+          },
+          {
+            "value": 300,
+            "clue": "When a contractor is late or has failed to perform, RFO FAR 49.607 gives you these two delinquency notices, one demanding correction within ten days and one demanding an explanation of why the contract should not be terminated for default.",
+            "response": "The cure notice and the show cause notice",
+            "accepted": [
+              "cure notice and show cause notice",
+              "cure notice / show cause notice",
+              "FAR 49.607",
+              "delinquency notices"
+            ],
+            "cite": "RFO FAR 49.607 (number unchanged); RFO FAR 49.402-3(d) (10-day cure notice) and 49.402-3(e) (cross-reference to the 49.607 sample formats)"
+          },
+          {
+            "value": 400,
+            "clue": "Before you exercise one of these, RFO FAR 17.204-1 makes you determine that funds are available, the need still exists, and exercise is the most advantageous method of fulfilling that need, price and other factors considered.",
+            "response": "An option",
+            "accepted": [
+              "option",
+              "exercise of an option",
+              "FAR 17.204-1",
+              "17.204-1",
+              "formerly 17.207"
+            ],
+            "cite": "RFO FAR 17.204-1 (was FAR 17.207); DFARS 217.204-170 and PGI 217.204-170"
+          },
+          {
+            "value": 500,
+            "clue": "This paragraph of the Government Property clause sets out when the contractor is and is not liable for loss of Government property, the answer to which is usually not the one the requiring activity expects.",
+            "response": "Paragraph (h) of FAR 52.245-1",
+            "accepted": [
+              "52.245-1(h)",
+              "FAR 52.245-1(h)",
+              "contractor liability for Government property"
+            ],
+            "cite": "FAR 52.245-1(h); RFO FAR Part 45"
+          }
+        ]
+      },
+      {
+        "name": "Protests & Claims",
+        "clues": [
+          {
+            "value": 100,
+            "clue": "Under RFO numbering, protests to the Government Accountability Office are covered by this section, which moved from FAR 33.104.",
+            "response": "RFO FAR 33.105",
+            "accepted": [
+              "FAR 33.105",
+              "33.105",
+              "protests to GAO",
+              "formerly 33.104"
+            ],
+            "cite": "RFO FAR 33.105 (was FAR 33.104); RFO FAR 33.104-3 for postaward agency protests"
+          },
+          {
+            "value": 200,
+            "clue": "This is the statutory suspension of contract performance that attaches when GAO notifies the agency within ten days of award, or within five days after a required debriefing date offered, whichever is later.",
+            "response": "The CICA stay",
+            "accepted": [
+              "CICA stay",
+              "automatic stay",
+              "31 U.S.C. 3553(d)",
+              "suspension of performance",
+              "FAR 33.105-3"
+            ],
+            "cite": "31 U.S.C. 3553(d); RFO FAR 33.105-3(b)(1); RFO DFARS 233.105-70"
+          },
+          {
+            "value": 300,
+            "clue": "A contractor claim above this dollar figure must carry the Contract Disputes Act certification signed by someone able to bind the contractor.",
+            "response": "One hundred thousand dollars",
+            "accepted": [
+              "$100,000",
+              "100000",
+              "over $100,000",
+              "claims exceeding $100,000"
+            ],
+            "cite": "41 U.S.C. 7103(b); RFO FAR 33.205-2 (was FAR 33.207); FAR 52.233-1(d)"
+          },
+          {
+            "value": 400,
+            "clue": "Thirty days after GAO's notice this document is due from the agency, and one hundred days after the protest is filed GAO owes its decision, sixty-five under the express option.",
+            "response": "The agency report",
+            "accepted": [
+              "agency report",
+              "AR",
+              "4 CFR 21.3(c)",
+              "agency report in 30 days"
+            ],
+            "cite": "4 CFR 21.3(c); 4 CFR 21.9; 31 U.S.C. 3554(a)"
+          },
+          {
+            "value": 500,
+            "clue": "For DoD, NASA and the Coast Guard, a task or delivery order under a multiple-award contract can only be protested to GAO if it exceeds this value, raised by the FY2025 NDAA.",
+            "response": "Thirty-five million dollars",
+            "accepted": [
+              "$35 million",
+              "$35,000,000",
+              "35 million",
+              "over $35M"
+            ],
+            "cite": "10 U.S.C. 3406(f)(1)(B) as amended by FY2025 NDAA sec. 885(f); DFARS 252.216-7010(b)(1) per DoD Class Deviation 2026-O0045 Rev. 1; RFO FAR 16.508"
+          }
+        ]
+      },
+      {
+        "name": "Korea & Warrant Program",
+        "clues": [
+          {
+            "value": 100,
+            "clue": "The Logistics Cost Sharing program is one portion of this larger burden-sharing arrangement, under which the Republic of Korea helps offset the cost of stationing United States Forces Korea on the peninsula.",
+            "response": "The Special Measures Agreement",
+            "accepted": [
+              "Special Measures Agreement",
+              "SMA",
+              "the SMA"
+            ],
+            "cite": "411th CSB study material, Q0256; confirm current SMA cycle with C&P"
+          },
+          {
+            "value": 200,
+            "clue": "On a Logistics Cost Sharing requirement the 411th contracting officer does not sign the award. Instead the KO makes this, routed through USFK J4, and the Republic of Korea Ministry of National Defense approves and awards.",
+            "response": "A recommendation for award",
+            "accepted": [
+              "recommendation for award",
+              "recommend award",
+              "recommendation for award through USFK J4"
+            ],
+            "cite": "411th CSB study material, Q0257; USFK J4 manages the LCS program; ROK MND approves, awards and pays"
+          },
+          {
+            "value": 300,
+            "clue": "O&M dollars generally require full and open competition; LCS dollars require competition limited to Korean contractors. That contradiction is why you can never do this with the two funding sources.",
+            "response": "Put both in a single solicitation",
+            "accepted": [
+              "mix O&M and LCS in one solicitation",
+              "combine them in one solicitation",
+              "fund one contract with both",
+              "mix the two funds"
+            ],
+            "cite": "411th CSB study material, Q0255; RFO FAR Part 6 competition requirements"
+          },
+          {
+            "value": 400,
+            "clue": "Under Article XV of the SOFA and USFK Instruction 4901.01, a United States contractor needs this status, requested from USFK FKAQ by the KO for the contract and by the responsible activity for the individuals.",
+            "response": "Invited Contractor status",
+            "accepted": [
+              "Invited Contractor",
+              "IC status",
+              "SOFA IC designation",
+              "invited contractor designation"
+            ],
+            "cite": "SOFA Article XV; USFKI 4901.01; 411th CSB study material, Q0258"
+          },
+          {
+            "value": 500,
+            "clue": "Under Table 1 of the Army Warranting Program Policy, a warrant at ten million, twenty-five million, fifty million or one hundred million dollars sits in this class.",
+            "response": "Class III",
+            "accepted": [
+              "Class III",
+              "class 3",
+              "III"
+            ],
+            "cite": "Army Warranting Program Policy v12 (MAR 2026) Table 1; RFO FAR 1.403 (was FAR 1.603)"
+          }
+        ]
+      }
+    ],
+    "final": {
+      "category": "Authority & Ratification",
+      "value": 0,
+      "clue": "A unit representative with no warrant orders work from a local vendor and the Government accepts the benefit. Name the process that can make that agreement binding on the Government, the RFO section that governs it, and the lowest level to which the head of the contracting activity may delegate the authority to do it.",
+      "response": "Ratification of an unauthorized commitment, under RFO FAR 1.405, delegable by the HCA no lower than the chief of the contracting office",
+      "accepted": [
+        "ratification",
+        "ratification of an unauthorized commitment",
+        "FAR 1.405",
+        "RFO FAR 1.405",
+        "ratification; FAR 1.405; no lower than the chief of the contracting office",
+        "formerly FAR 1.602-3"
+      ],
+      "cite": "RFO FAR 1.405 (was FAR 1.602-3); RFO FAR 1.405(b)(2) and 1.405(c); AFARS 5101.602-3-90; AFARS Appendix GG"
+    }
+  },
+  "branching": {
+    "cases": [
+      {
+        "id": "case-osan-unauthorized-commitment",
+        "title": "The Saturday Night Water Line",
+        "unit": "411th CSB",
+        "classes": [
+          "I",
+          "II"
+        ],
+        "setup": "Late Saturday evening at Osan Air Base a major water line bursts in a motor pool. The facility manager, who holds no warrant, calls an off-base Korean plumbing company directly and tells them to fix the pipe before the bay floods. The work is done that night. Monday morning the facility manager walks into your office with an invoice for the KRW equivalent of $18,000 and asks you to just pay it.\n\nYou are the contracting officer. The water line did need fixing. Nothing about that changes who may bind the United States.",
+        "start": "n1",
+        "nodes": {
+          "n1": {
+            "text": "The facility manager is standing at your desk with the invoice. What is your first move?",
+            "choices": [
+              {
+                "label": "Process the invoice for payment; the Government got the benefit and the amount is small.",
+                "next": "n3",
+                "score": -2,
+                "feedback": "No. There is no contract to pay against. An agreement made by someone without authority is not binding on the Government until it is ratified, and paying it as though it were a contract compounds the problem."
+              },
+              {
+                "label": "Put it on a Government purchase card since it was an emergency repair.",
+                "next": "n3",
+                "score": -2,
+                "feedback": "The purchase card does not launder an unauthorized commitment, and $18,000 is above the $15,000 micro-purchase threshold anyway. Wrong tool and wrong authority."
+              },
+              {
+                "label": "Tell the facility manager the vendor will simply have to absorb the cost.",
+                "next": "n3",
+                "score": -2,
+                "feedback": "A Korean firm that fixed a burst line on a Saturday night is not the villain here. Walking away damages the local vendor base and ignores the remedy the FAR actually provides."
+              },
+              {
+                "label": "Stop, call it what it is - an unauthorized commitment - and start building a ratification package.",
+                "next": "n2",
+                "score": 3,
+                "feedback": "Correct. RFO FAR 1.405 (formerly 1.602-3) is the path. Name the problem out loud, then run the process."
+              }
+            ]
+          },
+          "n2": {
+            "text": "You have the invoice and a rough verbal account. The ratification package has to be built on facts, not on what everyone remembers by Wednesday. How do you assemble it?",
+            "choices": [
+              {
+                "label": "Have the individual who made the commitment write and sign a statement of the circumstances, then get the commander's endorsement with the measures taken to prevent recurrence.",
+                "next": "n4",
+                "score": 3,
+                "feedback": "That is the package AFARS 5101.602-3-90 expects: the individual's signed statement of what was ordered and why normal procedures were not followed, all orders and invoices, and a command endorsement including prevention measures."
+              },
+              {
+                "label": "Write the summary yourself from what the facility manager told you and move on.",
+                "next": "n4",
+                "score": -1,
+                "feedback": "Faster, but the file now rests on your recollection of his recollection. The signed statement and command endorsement are what make the ratification defensible and what drive the unit to fix the root cause."
+              },
+              {
+                "label": "Ask the vendor to withdraw the invoice and re-quote so you can award it as a clean new purchase order.",
+                "next": "n3",
+                "score": -2,
+                "feedback": "That is papering over a completed action. The work is already performed; a new award dated after performance misrepresents the file and is the kind of thing an IG inspection finds."
+              }
+            ]
+          },
+          "n3": {
+            "text": "",
+            "choices": [],
+            "debrief": "This ends badly for you and for the file.\n\nAn unauthorized commitment does not become a contract because the mission needed the work, because the amount was modest, or because the vendor behaved well. Until an official with authority ratifies it under RFO FAR 1.405, there is nothing to pay against. Paying it anyway, forcing it onto a purchase card above the micro-purchase threshold, or backdating a new award all put the contracting officer personally in the wrong.\n\nWhat you should have done: treat it as an unauthorized commitment, build the AFARS 5101.602-3-90 package, determine price reasonableness, verify funds, and route it to the official authorized to ratify. If the action turns out not to be ratifiable, the vendor is not without remedy - it may pursue a claim under 31 U.S.C. 3702.\n\nCite: RFO FAR 1.405 (was FAR 1.602-3); AFARS 5101.602-3-90; 31 U.S.C. 3702."
+          },
+          "n4": {
+            "text": "One of the six criteria for ratification is that the price is fair and reasonable. You have a single invoice covering weekend emergency labor, hours and materials, in KRW. How do you establish price reasonableness?",
+            "choices": [
+              {
+                "label": "Compare the line items to emergency repair rates under the existing base operations support or DPW vehicle, and build a quick independent estimate.",
+                "next": "n5",
+                "score": 3,
+                "feedback": "Right. You already have rate history on the installation for exactly this kind of work. Price analysis against established rates plus an estimate is proportionate to an $18,000 action."
+              },
+              {
+                "label": "Ask a second Korean firm to quote the same repair after the fact so you have a comparison.",
+                "next": "n5",
+                "score": 1,
+                "feedback": "Workable as a supporting data point, and honest if you document that it is an after-the-fact comparison. Just do not waste another firm's time if the BOS rate schedule already answers the question."
+              },
+              {
+                "label": "Accept the invoice at face value; emergency work costs what it costs.",
+                "next": "n5",
+                "score": -1,
+                "feedback": "You just skipped a required criterion. RFO FAR 1.405(c) makes fair and reasonable price a condition of ratification, and the reviewing official will send it back."
+              }
+            ]
+          },
+          "n5": {
+            "text": "Price holds up. Now the money. The resource manager asks which fiscal year you want to cite.",
+            "choices": [
+              {
+                "label": "Confirm with the resource manager that funds are available now and were available at the time the commitment was made, and say so plainly if they were not.",
+                "next": "n6",
+                "score": 3,
+                "feedback": "Correct on both halves. RFO FAR 1.405(c) requires funds available at the time of the commitment and currently available. If they were not available then, you may be looking at an Anti-Deficiency Act issue under 31 U.S.C. 1341 and that goes up the chain, not into a drawer."
+              },
+              {
+                "label": "Cite current-year funds and move the package along; the availability question at the time is academic.",
+                "next": "n6",
+                "score": -2,
+                "feedback": "It is not academic. That test exists precisely to surface potential Anti-Deficiency Act violations. Skipping it means the ratification rests on an unverified criterion."
+              }
+            ]
+          },
+          "n6": {
+            "text": "The package is complete and legal counsel has reviewed it. Who signs the ratification?",
+            "choices": [
+              {
+                "label": "You do. You are the warranted contracting officer on the action.",
+                "next": "n8",
+                "score": -2,
+                "feedback": "No. Your warrant does not carry ratification authority, and you are the one who prepared the recommendation. Ratifying your own package defeats the separation the rule is built on."
+              },
+              {
+                "label": "Route it to the head of the contracting activity or the official to whom that authority is delegated, which may be no lower than the chief of the contracting office.",
+                "next": "n7",
+                "score": 3,
+                "feedback": "Correct. RFO FAR 1.405(b)(2) sets the HCA as the ratifying official with delegation no lower than the chief of the contracting office; Army delegation levels are in AFARS Appendix GG."
+              },
+              {
+                "label": "Ask the Chief, Contracting and Policy for the current delegation level for an action of this size before you route it.",
+                "next": "n7",
+                "score": 2,
+                "feedback": "Sound instinct. Never quote a local approval level from memory in a board or in a file - confirm the current delegation, then route."
+              }
+            ]
+          },
+          "n7": {
+            "text": "",
+            "choices": [],
+            "debrief": "That is the ratification handled the way a board wants to hear it.\n\nYou identified the unauthorized commitment instead of paying around it, built the AFARS package on a signed statement and a command endorsement, established a fair and reasonable price against rates you already had, verified funds availability at both points in time, and routed the action to an official actually authorized to ratify. After ratification you issue the order to document the obligation, then the invoice is paid.\n\nTwo things a strong candidate adds without being asked. First, the root cause: the installation needs an after-hours emergency service order channel and the unit needs training, so the next burst pipe goes through a contract instead of a phone call. Second, the honest caveat: confirm current ratification delegation levels and installation contracting cognizance at Osan with the Chief, C&P rather than asserting a local threshold.\n\nCite: RFO FAR 1.405, especially 1.405(b)(2) and the six criteria at 1.405(c); AFARS 5101.602-3-90; AFARS Appendix GG; 31 U.S.C. 1341; 31 U.S.C. 3702."
+          },
+          "n8": {
+            "text": "",
+            "choices": [],
+            "debrief": "You did the hard analytical work and then gave it away at the signature block.\n\nRatification authority is not part of a contracting officer's warrant. Under RFO FAR 1.405(b)(2) it rests with the head of the contracting activity and may be delegated no lower than the chief of the contracting office; the Army's delegation levels are in AFARS Appendix GG. The contracting officer's role is to develop the facts, determine price reasonableness, confirm funds, obtain legal review, and recommend - not to approve their own recommendation.\n\nEverything before this step was right. Take the package to the ratifying official, confirm the current delegation level with the Chief, C&P, and then issue the order to document the obligation.\n\nCite: RFO FAR 1.405(b)(2) and 1.405(c); AFARS 5101.602-3-90; AFARS Appendix GG."
+          }
+        },
+        "learning_points": [
+          "An unauthorized commitment is not binding on the Government until ratified; do not pay it as if it were a contract and do not force it onto a purchase card, especially above the $15,000 micro-purchase threshold.",
+          "The Army package under AFARS 5101.602-3-90 is the individual's signed statement, all orders and invoices, a commander's endorsement describing prevention measures, and the KO's summary and recommendation with legal review.",
+          "All six criteria at RFO FAR 1.405(c) must be met, including a fair and reasonable price and funds available both at the time of the commitment and currently.",
+          "Ratification authority is the HCA's, delegable no lower than the chief of the contracting office; confirm the current 411th delegation level with the Chief, C&P rather than quoting one from memory.",
+          "After ratification, issue the order or contract to document the obligation, then pay. If the action is not ratifiable, the vendor's remedy is a claim under 31 U.S.C. 3702.",
+          "Close the loop on root cause: an after-hours emergency service channel, use of the existing DPW or BOS vehicle, and unit training."
+        ],
+        "citations": [
+          "RFO FAR 1.405 (was FAR 1.602-3)",
+          "RFO FAR 1.405(b)(2)",
+          "RFO FAR 1.405(c)",
+          "RFO FAR 1.402-1 (was FAR 1.602-1)",
+          "AFARS 5101.602-3-90",
+          "AFARS Appendix GG",
+          "RFO FAR 2.101 (micro-purchase threshold, $15,000)",
+          "31 U.S.C. 1341",
+          "31 U.S.C. 3702"
+        ],
+        "flags": [
+          "ai-drafted",
+          "korea-verify-cp"
+        ]
+      },
+      {
+        "id": "case-lcs-grounds-maintenance-11m",
+        "title": "An $11 Million LCS Grounds Maintenance Requirement",
+        "unit": "411th CSB",
+        "classes": [
+          "II",
+          "III"
+        ],
+        "setup": "A new purchase request lands on your desk: grounds maintenance services across several camps, independent Government estimate $11 million, funded with Logistics Cost Sharing dollars under the Special Measures Agreement. The requiring activity wants it on contract fast and has already asked whether you can add a small amount of O&M to cover a piece of work at a location they say is not LCS-eligible.\n\nYou are the contracting officer. Before you touch a strategy, you need to know whose money this is and who actually awards.",
+        "start": "n1",
+        "nodes": {
+          "n1": {
+            "text": "First question out of the gate: what kind of acquisition is this, and where does it sit procedurally?",
+            "choices": [
+              {
+                "label": "Run it under simplified acquisition procedures to save time; the requirement is straightforward services.",
+                "next": "n5",
+                "score": -2,
+                "feedback": "Eleven million dollars is far above the $350,000 simplified acquisition threshold, and grounds maintenance is not a commercial buy you can push through the $9 million simplified commercial procedures ceiling either. This is a negotiated source selection."
+              },
+              {
+                "label": "Treat it as a negotiated acquisition requiring a written acquisition plan and a source selection plan, then confirm the LCS routing before building the strategy.",
+                "next": "n2",
+                "score": 3,
+                "feedback": "Right on both counts. At this dollar value you need acquisition planning and a formal source selection approach, and the LCS overlay changes who competes and who awards."
+              },
+              {
+                "label": "Add the O&M piece the customer asked about so the whole requirement rides on one solicitation.",
+                "next": "n5",
+                "score": -2,
+                "feedback": "This is the trap in the scenario. O&M and LCS carry contradictory competition requirements and cannot be solicited together."
+              },
+              {
+                "label": "Before anything else, get with USFK J4 on the LCS process and timeline for a requirement this size.",
+                "next": "n2",
+                "score": 2,
+                "feedback": "Good sequencing instinct. J4 manages the LCS program and the ROK MND approval timeline drives your schedule more than your internal milestones do."
+              }
+            ]
+          },
+          "n2": {
+            "text": "Now competition. The requiring activity points out that a large United States facilities firm already performs similar work elsewhere in the theater and asks why you would not let them compete.",
+            "choices": [
+              {
+                "label": "Solicit under competitive procedures limited to Korean firms, using Korean labor and materials, consistent with the LCS program.",
+                "next": "n3",
+                "score": 3,
+                "feedback": "Correct. LCS is a Republic of Korea funded program limited to local Korean business, with Korean material and labor. That limitation is a feature of the funding source, not a competition problem you need to justify away."
+              },
+              {
+                "label": "Compete it full and open so United States firms can bid; restricting competition needs a justification.",
+                "next": "n5",
+                "score": -2,
+                "feedback": "You are applying O&M competition rules to ROK money. LCS requirements are competed among Korean contractors; a full and open LCS solicitation misstates the program to industry and to MND."
+              },
+              {
+                "label": "Split the difference: solicit full and open but evaluate Korean firms more favorably.",
+                "next": "n5",
+                "score": -2,
+                "feedback": "That is an unstated evaluation preference, which is both a protest magnet and a misapplication of the program. Set the competition correctly in the solicitation instead of hiding it in the evaluation."
+              }
+            ]
+          },
+          "n3": {
+            "text": "Competition scope is set. You are building the strategy for an $11 million services source selection with an ROK approval chain sitting on top of your schedule.",
+            "choices": [
+              {
+                "label": "Build a source selection plan with a designated source selection authority and evaluation board, pick tradeoff or LPTA deliberately, and lay the ROK MND approval time into the schedule from day one.",
+                "next": "n4",
+                "score": 3,
+                "feedback": "That is the answer. Grounds maintenance across multiple camps has real performance risk, so justify your approach rather than defaulting. And LCS actions take longer because of the MND approval step - plan backwards from that, and account for the memo documenting offshore or local materials that accompanies LCS packages to J4."
+              },
+              {
+                "label": "Skip the formal source selection plan and award to the lowest price to make the schedule.",
+                "next": "n6",
+                "score": -1,
+                "feedback": "At this value you owe a documented source selection approach. Even if lowest price technically acceptable is ultimately the right call, it has to be a reasoned choice recorded in the plan and stated in the solicitation."
+              }
+            ]
+          },
+          "n4": {
+            "text": "Evaluations are complete and you have a recommended awardee. The requiring activity asks when you will sign the contract.",
+            "choices": [
+              {
+                "label": "Explain that you do not sign it. You make a recommendation for award through USFK J4; ROK MND approves and awards, and invoices and payment run through MND.",
+                "next": "n7",
+                "score": 3,
+                "feedback": "Exactly right, and this is the point most candidates miss. The 411th uses its contract vehicles and expertise, but funds are held by the ROK Ministry of National Defense and MND approves and awards the LCS contract."
+              },
+              {
+                "label": "Sign the award as the 411th contracting officer; you are the warranted KO on the action.",
+                "next": "n6",
+                "score": -2,
+                "feedback": "Your warrant is real but it does not reach ROK funds. LCS contracts are awarded by ROK MND on the KO's recommendation through USFK J4."
+              }
+            ]
+          },
+          "n5": {
+            "text": "",
+            "choices": [],
+            "debrief": "This strategy does not survive contact with the LCS program.\n\nThree things went wrong in the branch you took. An $11 million grounds maintenance requirement is nowhere near simplified acquisition territory - the simplified acquisition threshold is $350,000 and the simplified commercial procedures ceiling is $9 million. LCS competition is limited to Korean firms using Korean labor and materials, so a full and open solicitation or a hidden evaluation preference both misstate the program. And O&M and LCS cannot ride in one solicitation at all, because United States appropriated funds generally require full and open competition while LCS requires competition limited to Korean contractors. You cannot solicit under contradictory competition requirements.\n\nThe right path: negotiated source selection with an acquisition plan and source selection plan, competition limited to Korean firms, a separate action for any O&M-funded work, recommendation for award through USFK J4, award and payment by ROK MND.\n\nCite: RFO FAR 2.101 (SAT $350,000); RFO FAR 12.201-1 ($9 million ceiling); RFO FAR Part 6; 411th CSB study material Q0254-Q0257. Confirm current LCS routing and any local approval levels with the Chief, C&P."
+          },
+          "n6": {
+            "text": "",
+            "choices": [],
+            "debrief": "You got the competition scope right and then stumbled on process discipline or on award authority.\n\nAt $11 million the file owes a documented acquisition plan and source selection plan naming the source selection authority and the evaluation approach; lowest price technically acceptable can be defensible but only as a documented choice. More importantly, the 411th contracting officer does not award an LCS contract. Funds are held by the ROK Ministry of National Defense, USFK J4 manages the program, the KO recommends award through J4, and MND approves, awards, and pays the invoices.\n\nFix both and this is a clean action.\n\nCite: RFO FAR 15.103 and 15.201; 411th CSB study material Q0256-Q0257. Confirm current LCS routing with the Chief, C&P."
+          },
+          "n7": {
+            "text": "",
+            "choices": [],
+            "debrief": "That is the LCS answer a board is listening for.\n\nYou sized the acquisition correctly - well above the simplified acquisition threshold, so a negotiated source selection with an acquisition plan, a source selection plan, a named source selection authority and a deliberate tradeoff or LPTA decision. You applied the funding source's competition rule, limiting the competition to Korean firms with Korean labor and materials, and you refused to mix O&M with LCS in one solicitation because the two carry contradictory competition requirements. You planned the schedule around ROK MND approval rather than around your own milestones, and you were clear that the KO recommends award through USFK J4 while ROK MND approves, awards and pays.\n\nOn timeline, say the honest thing out loud: LCS actions take longer than a comparable O&M action because of the MND approval step, and the package to J4 includes the memo documenting whether offshore or local materials are used. Any specific local milestone or approval level should be confirmed with the Chief, C&P rather than quoted from memory.\n\nCite: 411th CSB study material Q0254-Q0257 (SMA and LCS program, funding limitations, no mixing with O&M, award authority); RFO FAR 2.101; RFO FAR Part 6; RFO FAR 15.103."
+          }
+        },
+        "learning_points": [
+          "LCS is a portion of the Special Measures Agreement; ROK MND holds the funds, USFK J4 manages the program, the 411th KO recommends award through J4, and MND approves, awards and pays.",
+          "LCS competition is limited to local Korean business using Korean labor and materials, which is why LCS and O&M cannot be combined in a single solicitation - their competition requirements contradict each other.",
+          "At an $11 million IGE you are past simplified acquisition ($350,000 SAT, $9 million simplified commercial ceiling) and into a negotiated source selection with an acquisition plan and a source selection plan.",
+          "Choose tradeoff or LPTA deliberately and state it in the solicitation; do not bury a preference in the evaluation.",
+          "Plan the schedule backwards from ROK MND approval, and include the memo documenting offshore or local materials with the LCS package to J4.",
+          "Never quote a local 411th approval level or milestone from memory; confirm current routing and thresholds with the Chief, C&P."
+        ],
+        "citations": [
+          "RFO FAR 2.101 (simplified acquisition threshold, $350,000)",
+          "RFO FAR 12.201-1 (simplified procedures for commercial products and services, $9 million ceiling)",
+          "RFO FAR Part 6 (competition requirements)",
+          "RFO FAR 15.103 (was FAR 15.101) and 15.103-1 / 15.103-2",
+          "RFO FAR 15.201 (was FAR 15.303) source selection responsibilities",
+          "RFO FAR 7.102 (acquisition plans)",
+          "Special Measures Agreement; USFK J4 LCS program; 411th CSB study material Q0254-Q0257"
+        ],
+        "flags": [
+          "ai-drafted",
+          "korea-verify-cp"
+        ]
+      },
+      {
+        "id": "case-gao-protest-150k-it",
+        "title": "Day Three: A GAO Protest on a $150K IT Award",
+        "unit": "411th CSB",
+        "classes": [
+          "II"
+        ],
+        "setup": "You awarded a $150,000 contract for IT network equipment to Company A and notified the unsuccessful offeror, Company B. Three days after that notice, Company B files a protest with the Government Accountability Office alleging your technical evaluation was unfair and that Company A does not meet the requirement. GAO telephones your agency with notice of the filing.\n\nYou are the contracting officer. The requiring activity is already asking whether the equipment still arrives on schedule.",
+        "start": "n1",
+        "nodes": {
+          "n1": {
+            "text": "GAO's notice just came in. What do you do first?",
+            "choices": [
+              {
+                "label": "Notify legal counsel and your chief of contracting the same day, give notice of the protest to Company A, and put a litigation hold on the file and the evaluators' notes.",
+                "next": "n2",
+                "score": 3,
+                "feedback": "That is the right opening. RFO FAR 33.105-4 puts notifying legal counsel first, 4 CFR 21.3(a) requires notice to the awardee, and the litigation hold preserves exactly the records the agency report will be built from."
+              },
+              {
+                "label": "Call Company B and walk them through the evaluation to talk them out of it.",
+                "next": "n5",
+                "score": -2,
+                "feedback": "Do not have that conversation unilaterally. Once a protest is filed, communications run through counsel, and an unguarded explanation of the evaluation can hand the protester its next ground."
+              },
+              {
+                "label": "Wait for the written protest and GAO's development letter before doing anything.",
+                "next": "n2",
+                "score": -1,
+                "feedback": "You just burned days you do not have. The stay clock and the 30-day agency report clock are already running from GAO's notice, and evaluator notes get lost while you wait."
+              }
+            ]
+          },
+          "n2": {
+            "text": "Company B filed three days after your notice of award. The requiring activity wants Company A to keep shipping. Does performance continue?",
+            "choices": [
+              {
+                "label": "No. You are inside the statutory window, so immediately suspend performance or terminate the award, and issue a stop-work order to Company A.",
+                "next": "n3",
+                "score": 3,
+                "feedback": "Correct. Under 31 U.S.C. 3553(d) and RFO FAR 33.105-3(b)(1), GAO notice received within 10 days after award, or within 5 days after a required debriefing date offered, whichever is later, requires immediate suspension or termination. Three days is comfortably inside it."
+              },
+              {
+                "label": "Yes. At $150,000 this was below the simplified acquisition threshold, so the CICA stay does not apply.",
+                "next": "n5",
+                "score": -2,
+                "feedback": "The stay is not keyed to dollar value. Being below the $350,000 SAT only means a formal Part 15 debriefing was probably not required, which is why the 10-days-after-award clock governs rather than the debriefing clock."
+              },
+              {
+                "label": "Yes. Sign an override yourself so the requiring activity gets its equipment.",
+                "next": "n3",
+                "score": -1,
+                "feedback": "You cannot sign it. An override requires a written finding by the head of the contracting activity and the authority is not delegable."
+              }
+            ]
+          },
+          "n3": {
+            "text": "The requiring activity escalates: the network refresh is tied to a scheduled cutover. They want the stay overridden.",
+            "choices": [
+              {
+                "label": "Explain that only the HCA may override, on a nondelegable written finding that performance is in the best interests of the United States or that urgent and compelling circumstances will not permit waiting for GAO, and that GAO must be notified - and advise whether the facts actually support it.",
+                "next": "n4",
+                "score": 3,
+                "feedback": "Right answer and right posture. State the standard, state who signs it, and give an honest recommendation. Network equipment for a scheduled cutover rarely meets urgent and compelling; a hospital or force protection outage might."
+              },
+              {
+                "label": "Ask the chief of the contracting office to sign the override so it moves faster.",
+                "next": "n5",
+                "score": -2,
+                "feedback": "The override authority sits with the head of the contracting activity and is nondelegable. A signature at the wrong level is no override at all, and GAO will say so."
+              }
+            ]
+          },
+          "n4": {
+            "text": "No override. The agency report is due. How do you build it?",
+            "choices": [
+              {
+                "label": "Assemble the report with counsel inside the 30 days, and while doing so take an honest look at whether Company B has a point - if the evaluation record will not stand up, recommend corrective action now.",
+                "next": "n6",
+                "score": 3,
+                "feedback": "This is what separates a warranted KO from a file clerk. Corrective action on day ten costs a re-evaluation; a sustained protest on day ninety costs the schedule, the file, and credibility."
+              },
+              {
+                "label": "Submit the agency report defending the award as made, without revisiting the evaluation record.",
+                "next": "n7",
+                "score": 0,
+                "feedback": "Defensible if the record is genuinely sound, but you did not check. If the technical evaluation is thin, you have now committed the agency to defending it for another ninety days."
+              }
+            ]
+          },
+          "n5": {
+            "text": "",
+            "choices": [],
+            "debrief": "This is where protests go wrong for contracting officers.\n\nThree errors live in this branch. First, communications: once a protest is filed, you work through legal counsel; you do not negotiate with the protester or explain the evaluation on your own. Second, the stay: it is statutory and is not waived by dollar value. Company B filed three days after your notice of award, well inside the window of 10 days after award or 5 days after an offered required debriefing date, whichever is later, so performance must be suspended or the award terminated. Third, the override: only the head of the contracting activity may override, on a written best-interests or urgent-and-compelling finding, and that authority is not delegable; GAO must be notified.\n\nCite: 31 U.S.C. 3553(d); RFO FAR 33.105-3(b)(1) (was FAR 33.104(c)); RFO FAR 33.105-4; 4 CFR 21.3(a); FAR 52.242-15."
+          },
+          "n6": {
+            "text": "",
+            "choices": [],
+            "debrief": "That is the full protest answer, in order.\n\nDay one: notify legal counsel, notify the awardee, litigation hold, check timeliness. Stay: Company B filed three days after your notice, inside the 10-day window, so you suspend performance and issue a stop-work order under FAR 52.242-15. Because the award was below the $350,000 simplified acquisition threshold, a formal Part 15 debriefing was likely not required, which is why the 10-days-after-award clock governs rather than the debriefing clock. For DoD actions where an enhanced postaward debriefing is in play, the 5 days run from conclusion of that debriefing including the answers to follow-up questions. Override: HCA only, nondelegable, written finding, GAO notified. Agency report: due 30 days after GAO's notice, with GAO's decision within 100 days, or 65 under the express option.\n\nThe extra point you earned was judgment: looking hard at your own evaluation record early and being willing to take corrective action rather than defending a weak file for ninety days.\n\nCite: RFO FAR 33.105-4; RFO FAR 33.105-3(b)(1); RFO DFARS 233.105-370 (was DFARS 233.104); 31 U.S.C. 3553(d); 4 CFR 21.3(a) and (c); 4 CFR 21.9; FAR 52.242-15; RFO FAR 2.101 (SAT). Confirm 411th and ACC legal routing with the Chief, C&P."
+          },
+          "n7": {
+            "text": "",
+            "choices": [],
+            "debrief": "Procedurally clean, analytically incomplete.\n\nYou handled every mechanical step right: counsel notified, awardee notified, stay recognized and stop-work issued, override standard correctly stated and correctly refused, agency report submitted inside 30 days. What you skipped is the judgment step. A protest is free information about your own file. Before committing the agency to defend the award for the next ninety days, read the technical evaluation the way the protester will read it and ask whether the ratings are actually traceable to the stated evaluation factors. If they are not, corrective action now is cheaper than a sustained decision later.\n\nCite: RFO FAR 33.105-3; RFO FAR 33.105-4; 4 CFR 21.3(c); 4 CFR 21.9; RFO FAR 15.202 (was FAR 15.305) evaluation of competitive proposals."
+          }
+        },
+        "learning_points": [
+          "First actions on a GAO protest: notify legal counsel (RFO FAR 33.105-4), notify the awardee (4 CFR 21.3(a)), impose a litigation hold, and assess timeliness.",
+          "The CICA stay attaches when GAO notice reaches the agency within 10 days after award or within 5 days after a required debriefing date offered, whichever is later; it is not keyed to dollar value.",
+          "For DoD, the 5-day clock runs from conclusion of an enhanced postaward debriefing including answers to the offeror's follow-up questions.",
+          "Only the head of the contracting activity may override the stay, on a nondelegable written best-interests or urgent-and-compelling finding, with notice to GAO.",
+          "Agency report is due 30 days after GAO's notice; GAO decides within 100 days, or 65 days under the express option.",
+          "Early, honest re-examination of the evaluation record - and corrective action when it is warranted - is cheaper than defending a weak file for ninety days."
+        ],
+        "citations": [
+          "RFO FAR 33.105 (was FAR 33.104)",
+          "RFO FAR 33.105-3(b)(1)",
+          "RFO FAR 33.105-4",
+          "RFO DFARS 233.105-370 (was DFARS 233.104), postaward suspension of performance and HCA override",
+          "RFO DFARS 215.301 (was DFARS 215.506-70/-71), DoD enhanced postaward debriefings",
+          "31 U.S.C. 3553(d)",
+          "4 CFR 21.3(a)",
+          "4 CFR 21.3(c)",
+          "4 CFR 21.9",
+          "FAR 52.242-15 (Stop-Work Order)",
+          "RFO FAR 2.101 (simplified acquisition threshold, $350,000)",
+          "RFO FAR 15.301 (was FAR 15.506) postaward debriefing"
+        ],
+        "flags": [
+          "ai-drafted",
+          "korea-verify-cp"
+        ]
+      },
+      {
+        "id": "case-bona-fide-need-janitorial",
+        "title": "Year-End Money, Next-Year Need",
+        "unit": "411th CSB",
+        "classes": [
+          "I",
+          "II"
+        ],
+        "setup": "It is mid-September 2026. The requiring activity for a base operations support mission submits a purchase request for a one-year janitorial services contract with a period of performance from 1 July 2027 to 30 June 2028. They want to fund it with FY26 Operations and Maintenance dollars, because they expect the FY27 budget to be cut and there is money on the table right now.\n\nYou are the contracting officer. The purchase request is signed, the funds are certified, and the fiscal year ends in sixteen days.",
+        "start": "n1",
+        "nodes": {
+          "n1": {
+            "text": "The purchase request is in front of you. How do you handle it?",
+            "choices": [
+              {
+                "label": "Accept it and obligate the FY26 funds before year end; the money is certified and available.",
+                "next": "n5",
+                "score": -2,
+                "feedback": "Certified and available is not the test. The test is whether the need arises in the period of availability of the appropriation, and a period of performance beginning 1 July 2027 is an FY27 need."
+              },
+              {
+                "label": "Identify janitorial services as severable, recognize that the bona fide need arises when the services are performed, and conclude FY26 funds cannot cover an FY27-FY28 period of performance.",
+                "next": "n2",
+                "score": 3,
+                "feedback": "That is the analysis. Severable services are consumed as rendered, so the need arises in the year of performance, not in the year you happen to award or the year the money expires."
+              },
+              {
+                "label": "Characterize the requirement as nonseverable so the whole effort can be funded at award with FY26 money.",
+                "next": "n5",
+                "score": -2,
+                "feedback": "You cannot label your way out of fiscal law. Recurring janitorial services produce no single end product; they are the textbook severable service. Mischaracterizing them to reach a funding answer is worse than the original request."
+              },
+              {
+                "label": "Get a fiscal law opinion from the supporting legal office and the resource manager before returning the package.",
+                "next": "n2",
+                "score": 2,
+                "feedback": "Reasonable and it builds the record, though on facts this clean a contracting officer should be able to state the rule. Bring counsel the answer, not just the question."
+              }
+            ]
+          },
+          "n2": {
+            "text": "The requiring activity's action officer pushes back: they have heard that services contracts can cross fiscal years on one year's money.",
+            "choices": [
+              {
+                "label": "Explain that the crossing-fiscal-years authority allows a severable services contract of up to twelve months funded with one year's appropriation, but the period of performance must begin in the fiscal year of that appropriation - it does not reach a period starting nine months after the funds expire.",
+                "next": "n3",
+                "score": 3,
+                "feedback": "Exactly the right correction. The authority bridges a year boundary for a contract that starts in the funding year. It does not let FY26 money buy an FY27-FY28 period of performance."
+              },
+              {
+                "label": "Award now with FY26 funds and add a subject-to-availability-of-funds clause to cover the gap.",
+                "next": "n5",
+                "score": -1,
+                "feedback": "Availability of funds provisions address a contract awarded before funds are available for the current period; they do not convert an FY27 need into an FY26 one. This still violates the bona fide need rule."
+              }
+            ]
+          },
+          "n3": {
+            "text": "The analysis holds. What do you actually do with the purchase request?",
+            "choices": [
+              {
+                "label": "Return the purchase request as funded, explain the bona fide need rule and the severable versus nonseverable distinction to the requiring activity, ask for a properly funded FY27 request, and document the exchange in the file.",
+                "next": "n4",
+                "score": 3,
+                "feedback": "Return it, teach it, document it. The documentation is not bureaucratic - it is what protects you and the requiring activity if anyone asks later why a year-end obligation did not happen."
+              },
+              {
+                "label": "Hold the purchase request quietly until October and swap the funding line to FY27 without telling anyone.",
+                "next": "n4",
+                "score": 1,
+                "feedback": "You reach the right funding answer but leave no record of why, and the requiring activity learns nothing. Next September they will send you the same package."
+              },
+              {
+                "label": "Split the award so FY26 funds cover part of the performance period and FY27 funds cover the rest.",
+                "next": "n5",
+                "score": -2,
+                "feedback": "Splitting does not help. The FY26 portion would still buy services performed in FY27 and beyond. The defect is the period of performance, not the size of the obligation."
+              }
+            ]
+          },
+          "n4": {
+            "text": "The requiring activity's leadership escalates to your chief, arguing that losing the FY26 money puts the janitorial requirement at risk. Your chief asks for your recommendation.",
+            "choices": [
+              {
+                "label": "Hold the line, document the analysis and the consequences, and offer a real plan: an FY27-funded award timed to the period of performance, with options or incremental strategy if continuity is the concern.",
+                "next": "n6",
+                "score": 3,
+                "feedback": "This is what a warrant is for. You do not just say no; you say no and then solve the requiring activity's actual problem, which is continuity of service, not preservation of expiring dollars."
+              },
+              {
+                "label": "Award with FY26 funds since leadership has weighed in and accepted the risk.",
+                "next": "n5",
+                "score": -2,
+                "feedback": "Leadership cannot accept this risk on your behalf. The obligation is made under your warrant, and a purpose or time violation can lead to an Anti-Deficiency Act reporting requirement and personal accountability."
+              }
+            ]
+          },
+          "n5": {
+            "text": "",
+            "choices": [],
+            "debrief": "This is a bona fide need violation, and it is the kind auditors find easily.\n\nUnder 31 U.S.C. 1502(a), an appropriation is available only for the bona fide need arising during its period of availability. Janitorial services are severable - consumed as they are performed - so the need arises in the year of performance. A period of performance running 1 July 2027 to 30 June 2028 is an FY27 and FY28 need, and FY26 O&M cannot fund it. The crossing-fiscal-years authority does not save it, because that authority covers a severable services contract of up to twelve months that begins in the year of the appropriation. A subject-to-availability clause, splitting the award, or relabeling the services as nonseverable do not fix the defect either.\n\nConsequences to be able to state out loud: a potential Anti-Deficiency Act violation with reporting through command channels, audit and IG findings, deobligation and refunding with the correct appropriation - which delays the very service the requiring activity was trying to protect - and in serious cases personal accountability for the individual who made the obligation.\n\nCite: 31 U.S.C. 1502(a); 31 U.S.C. 1301(a); 31 U.S.C. 1341; 10 U.S.C. 3133 (severable services crossing fiscal years)."
+          },
+          "n6": {
+            "text": "",
+            "choices": [],
+            "debrief": "That is the fiscal law answer plus the leadership answer, which is what the board is actually testing.\n\nThe analysis: janitorial services are severable, so the bona fide need arises in the year of performance. A 1 July 2027 start is an FY27 need and FY26 O&M cannot fund it. The crossing-fiscal-years authority permits a severable services contract of up to twelve months on one year's appropriation, but the performance period has to begin in that fiscal year, so it does not reach this requirement. Neither does a subject-to-availability clause, a split award, or relabeling the work as nonseverable.\n\nThe actions: return the purchase request as funded, explain the rule and the severable-nonseverable distinction, ask for an FY27-funded request timed to the period of performance, document it, and then solve the continuity problem with an award schedule and option structure that does not depend on expiring money.\n\nThe consequences you should be ready to name: potential Anti-Deficiency Act violation and reporting, audit and IG findings, deobligation and refunding with the correct fiscal year, service disruption, and possible personal accountability.\n\nCite: 31 U.S.C. 1502(a); 31 U.S.C. 1301(a); 31 U.S.C. 1341; 10 U.S.C. 3133; RFO FAR 17.204-1 (was FAR 17.207) for option planning."
+          }
+        },
+        "learning_points": [
+          "The bona fide need rule (31 U.S.C. 1502(a)) ties an appropriation to a need arising in its period of availability; certified, available funds are not the test.",
+          "Janitorial services are severable - consumed as performed - so the need arises in the year of performance, not the year of award.",
+          "The severable services crossing-fiscal-years authority allows up to twelve months on one appropriation, but the period of performance must begin in that fiscal year; it cannot reach a period starting nine months after the funds expire.",
+          "A subject-to-availability-of-funds provision, a split award, or relabeling the work as nonseverable do not cure a bona fide need defect.",
+          "KO actions: return the purchase request as funded, educate the requiring activity, request correctly funded FY27 dollars, and document the exchange.",
+          "Consequences to state plainly: potential Anti-Deficiency Act violation and reporting, audit and IG findings, deobligation and refunding, service disruption, and possible personal accountability.",
+          "Answer the requiring activity's real problem - continuity of service - with an award schedule and option structure, not with expiring money."
+        ],
+        "citations": [
+          "31 U.S.C. 1502(a)",
+          "31 U.S.C. 1301(a)",
+          "31 U.S.C. 1341",
+          "31 U.S.C. 1517",
+          "10 U.S.C. 3133 (severable services crossing fiscal years; recodified from 10 U.S.C. 2410a)",
+          "RFO FAR 17.204-1 (was FAR 17.207) exercise of options",
+          "FAR 52.232-18, Availability of Funds, and 52.232-19, Availability of Funds for the Next Fiscal Year (clause numbers unchanged under the RFO)"
+        ],
+        "flags": [
+          "ai-drafted",
+          "korea-verify-cp"
+        ]
+      }
+    ]
+  }
+}

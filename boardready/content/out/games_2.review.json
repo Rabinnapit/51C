@@ -1,0 +1,213 @@
+{
+  "file": "content/out/games_2.json",
+  "reviewer": "independent reviewer (ai-drafted review)",
+  "reviewed_on": "2026-09-14",
+  "scope": {
+    "items_reviewed": 64,
+    "protest_clock": 24,
+    "clause_match": 40,
+    "threshold_ladder": 0,
+    "node_graphs": 0,
+    "note": "This file contains only protest_clock and clause_match. There is no threshold_ladder array and no branching node graph in it, so the ladder recomputation and start-node / next-resolution / terminal-reachability checks did not apply here. Those arrays live in the other games_*.json shards.",
+    "method": "Every day count, dollar figure and clause/section number checked against src/data/regulations.json (crosswalk + thresholds) first, then against the RFO FAR Part 33, Part 52 and Part 15 deviation guides on acquisition.gov and the DoD RFO DFARS class deviations (Parts 203, 204, 215, 222, 225) at acq.osd.mil. eCFR (4 CFR part 21) could not be fetched - the request was redirected off-site and the redirect was not followed - so the GAO day counts were checked against 31 U.S.C. 3553/3554 and the regulations.json note on 4 CFR 21.9 instead."
+  },
+  "counts": { "checked": 64, "corrected": 20, "removed": 0 },
+  "changes": [
+    {
+      "id": "PC01",
+      "severity": "substantive",
+      "was": "rule ended '...or within 10 days of when the impropriety was known or should have been known'; cite 'RFO FAR 33.104-2'",
+      "now": "Rule is the bare before-bid-opening / before-closing rule; cite RFO FAR 33.104-2(a).",
+      "why": "RFO FAR 33.104-2(a) states the 10-day alternative only for the case where no closing time has been established or no further submissions are anticipated. Presenting it as a free alternative would teach a candidate to miss a waived ground.",
+      "source": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33"
+    },
+    {
+      "id": "PC02",
+      "severity": "substantive",
+      "was": "'Agency protest on any other preaward ground' - 10 calendar days from when the basis was known, cite RFO FAR 33.104-2",
+      "now": "Repurposed to the rule the RFO text actually carries: 10 days from knowledge where no closing time has been established or no further submissions are anticipated, with a pointer to 4 CFR 21.2 for other grounds.",
+      "why": "The legacy general 10-day agency rule (old FAR 33.103(e), 'in all other cases') does not appear in RFO FAR 33.104. The only 10-day filing sentence in RFO Part 33 is the no-closing-time sentence at 33.104-2(a).",
+      "source": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33"
+    },
+    {
+      "id": "PC12",
+      "severity": "incomplete",
+      "was": "Stay window = 10 days after award or 5 days after the offered debriefing date, whichever is later.",
+      "now": "Added the DoD third prong - 5 days after a required postaward debriefing is concluded - and that the debriefing is not concluded until the agency delivers written answers to timely follow-up questions.",
+      "why": "Provision 252.215-7996(c)(1)-(3) in Class Deviation 2026-O0048 Rev 1 lists three windows, whichever is later. A KO using only two would release performance early on a DoD enhanced debriefing.",
+      "source": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-215/2026-O0048_Rev_1_TAB_A_Deviation_Memo_Part_215.pdf"
+    },
+    {
+      "id": "PC13",
+      "severity": "minor",
+      "was": "cite 'RFO FAR 33.105-2(b)'",
+      "now": "cite 'RFO FAR 33.105-2' - paragraph letter dropped.",
+      "why": "The 30-day / urgent-and-compelling HCA finding is confirmed in RFO 33.105-2, but the paragraph designation could not be confirmed from the deviation guide page.",
+      "source": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33"
+    },
+    {
+      "id": "PC15",
+      "severity": "minor",
+      "was": "cite '4 CFR 21.9(a); 31 U.S.C. 3554(a)(1)' while the rule also states the 65-day express option",
+      "now": "Added 31 U.S.C. 3554(a)(2) for the express option.",
+      "why": "The 65-day figure in the rule had no supporting cite. 100 days and 65 days both confirmed correct.",
+      "source": "31 U.S.C. 3554(a); regulations.json crosswalk note on FAR 33.104/33.105"
+    },
+    {
+      "id": "PC18",
+      "severity": "substantive",
+      "was": "cite 'DFARS 215.506-70'",
+      "now": "cite 'RFO DFARS 215.301-71 (Class Deviation 2026-O0048 Rev 1, 22 Jul 2026; was DFARS 215.506-70)'",
+      "why": "DFARS Part 215 followed FAR 15.506 -> 15.301. In the RFO deviation, postaward debriefing is Subpart 215.3, 215.301-70 is the debriefing process and 215.301-71 'Opportunity for follow-up questions' carries the 2-business-day / 5-business-day rule. The day counts in the item were correct and are unchanged; only the section number was stale.",
+      "source": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-215/2026-O0048_Rev_1_TAB_A_Deviation_Memo_Part_215.pdf"
+    },
+    {
+      "id": "CM01",
+      "severity": "flag only",
+      "was": "'contracts over the threshold with a performance period over 120 days', status verified",
+      "now": "Text unchanged; status set to 'verify' with a note that the dollar figure is deliberately not stated.",
+      "why": "The 120-day element is right, but the dollar threshold for 52.203-13 was not verifiable in the RFO and no figure should be invented.",
+      "source": "n/a"
+    },
+    {
+      "id": "CM02",
+      "severity": "substantive",
+      "was": "'FAR 52.204-25 ... goes in every solicitation and contract', status verified",
+      "now": "Stated as [Reserved] under RFO FAR Part 52, with the statutory Section 889 prohibition noted as still in force; status 'verify'.",
+      "why": "The RFO Part 52 index shows 52.204-24 through 52.204-27 all as [Reserved]. Teaching it as a live clause number would be wrong under RFO numbering.",
+      "source": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52"
+    },
+    {
+      "id": "CM06",
+      "severity": "substantive",
+      "was": "'FAR 52.212-3 ... goes in commercial solicitations', status verified",
+      "now": "Stated as [Reserved] under RFO FAR Part 52; SAM registration point kept; status 'verify'.",
+      "why": "RFO Part 52 index shows 52.212-3 [Reserved].",
+      "source": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52"
+    },
+    {
+      "id": "CM07",
+      "severity": "minor",
+      "was": "title 'Contract Terms and Conditions-Commercial Products and Commercial Services'",
+      "now": "title 'Terms and Conditions-Commercial Products and Commercial Services', with the retitle called out in the body.",
+      "why": "The RFO Part 52 index lists 52.212-4 as 'Terms and Conditions-Commercial Products and Commercial Services'.",
+      "source": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52"
+    },
+    {
+      "id": "CM08",
+      "severity": "substantive",
+      "was": "'FAR 52.212-5 ... goes in every commercial contract', status verified",
+      "now": "Stated as [Reserved] under RFO FAR Part 52; status 'verify'.",
+      "why": "RFO Part 52 index shows 52.212-5 [Reserved].",
+      "source": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52"
+    },
+    {
+      "id": "CM16",
+      "severity": "minor",
+      "was": "'before the fifth year and before each later option'",
+      "now": "'within 60 to 120 days before the end of the fifth year and before exercising each option after that'",
+      "why": "The clause states a 60-to-120-day window; the vaguer phrasing loses the testable detail.",
+      "source": "FAR 52.219-28 clause text"
+    },
+    {
+      "id": "CM27",
+      "severity": "substantive",
+      "was": "'DoD solicitations and contracts over the simplified acquisition threshold'",
+      "now": "'all DoD solicitations and contracts, including commercial buys under FAR part 12 - there is no dollar threshold', plus the 2-year / ethics-opinion substance.",
+      "why": "RFO DFARS 203.171-4(a) prescribes 252.203-7000 in all solicitations and contracts with no threshold. The invented SAT threshold would let a KO omit the clause on small buys.",
+      "source": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-203/2026-O0031_TAB_A_Deviation_Memo_DFARS_203.pdf"
+    },
+    {
+      "id": "CM28",
+      "severity": "substantive",
+      "was": "'DoD solicitations and contracts above the micro-purchase threshold'",
+      "now": "'all DoD solicitations and contracts, including commercial buys under FAR part 12 - there is no dollar threshold', plus the predominant-native-language requirement.",
+      "why": "RFO DFARS 203.970 prescribes 252.203-7002 in all solicitations and contracts with no threshold.",
+      "source": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-203/2026-O0031_TAB_A_Deviation_Memo_DFARS_203.pdf"
+    },
+    {
+      "id": "CM29",
+      "severity": "flag only",
+      "was": "status verified",
+      "now": "status 'verify' with a note.",
+      "why": "The RFO DFARS Part 204 class deviation (2026-O0043) does not reissue 252.204-7012; the description matches the codified clause but its RFO standing was not confirmable.",
+      "source": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-204/2026-O0043_TAB_A_Deviation_Memo_Part_204.pdf"
+    },
+    {
+      "id": "CM30",
+      "severity": "flag only",
+      "was": "status verified",
+      "now": "status 'verify' with a note.",
+      "why": "Same as CM29 for 252.204-7020.",
+      "source": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-204/2026-O0043_TAB_A_Deviation_Memo_Part_204.pdf"
+    },
+    {
+      "id": "CM31",
+      "severity": "substantive",
+      "was": "'DFARS 252.215-7008 Only One Offer ... competitive DoD negotiated solicitations'",
+      "now": "'DFARS 252.215-7992 (DEVIATION 2026-O0048) Only One Offer ... competitive solicitations that exceed the simplified acquisition threshold, including FAR part 12', with a note that 252.215-7008 is Reserved.",
+      "why": "In Class Deviation 2026-O0048 Rev 1, 252.215-7008 reads 'Reserved' and the provision is reissued as 252.215-7992, prescribed at DFARS 215.110-70(c). The prescription is also broader than 'negotiated' - it reaches commercial solicitations.",
+      "source": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-215/2026-O0048_Rev_1_TAB_A_Deviation_Memo_Part_215.pdf"
+    },
+    {
+      "id": "CM32",
+      "severity": "minor",
+      "was": "'at or above the DoD order debriefing threshold'",
+      "now": "'when orders may be valued at $15 million or more'",
+      "why": "The figure is verified in regulations.json (dod_order_debriefing_15m) and in the prescription at DFARS 216.505-70(b); naming it makes the card usable on its own.",
+      "source": "src/data/regulations.json thresholds.dod_order_debriefing_15m"
+    },
+    {
+      "id": "CM33",
+      "severity": "substantive",
+      "was": "'DoD solicitations and contracts performed outside the United States'",
+      "now": "'for services or construction to be performed outside the United States and its outlying areas', with the work-hours / union-agreement substance.",
+      "why": "RFO DFARS 222.7201(a) limits the clause to services or construction. As written the card overstated its reach - a Korea supply buy would be flagged for a clause it does not take.",
+      "source": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-222/Class_Deviation_2026-O0040_Revision_1_DFARS_222.pdf"
+    },
+    {
+      "id": "CM34",
+      "severity": "substantive",
+      "was": "'for supplies above the micro-purchase threshold'",
+      "now": "'for supplies, in place of FAR 52.225-1, including commercial buys under FAR part 12, unless one of the exceptions at DFARS 225.1101 applies'",
+      "why": "The RFO prescription carries exceptions, not a micro-purchase floor. The MPT figure was not supported.",
+      "source": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-225/2026-O0041_Rev_1_TAB_A_Deviation_Memo_Part_225.pdf"
+    },
+    {
+      "id": "CM35",
+      "severity": "substantive",
+      "was": "'above the simplified acquisition threshold' (i.e. $350,000)",
+      "now": "'unless an exception applies ... the restrictions do not reach acquisitions not exceeding $200,000, except initial-entry athletic footwear'",
+      "why": "RFO DFARS 225.7002-3 prescribes the clause in solicitations and contracts with no threshold, and the Berry exception at 225.7002-2(a) is $200,000, not the SAT. The old text would wave Berry off on a $300,000 buy that it actually reaches.",
+      "source": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-225/2026-O0041_Rev_1_TAB_A_Deviation_Memo_Part_225.pdf"
+    },
+    {
+      "id": "CM37",
+      "severity": "substantive",
+      "was": "'DFARS 252.225-7043 Antiterrorism/Force Protection for Defense Contractors Outside the United States'",
+      "now": "'DFARS 252.225-7963 (DEVIATION 2026-O0041) Antiterrorism/Force Protection Policy for Defense Contractors Outside the United States', prescribed at DFARS 225.772-2, with the three foreign-government exceptions.",
+      "why": "252.225-7043 does not appear anywhere in the RFO DFARS Part 225 class deviation; the clause is reissued as 252.225-7963 (FEB 2026). Directly relevant to 411th CSB work in Korea.",
+      "source": "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-225/2026-O0041_Rev_1_TAB_A_Deviation_Memo_Part_225.pdf"
+    }
+  ],
+  "verified_unchanged": [
+    "PC03, PC04 - 10 days after award / 5 days after the offered debriefing date, cite RFO FAR 33.104-3(a): confirmed in the RFO Part 33 text.",
+    "PC05 - 35-day best-effort agency resolution at RFO FAR 33.104-4(c)(1): confirmed in regulations.json crosswalk and in 33.104-4(c).",
+    "PC06 through PC09 - GAO 10-day rules and the pre-closing waiver at 4 CFR 21.2: day counts unchanged (eCFR not reachable; no contradiction found).",
+    "PC10, PC11 - CICA stay cites RFO FAR 33.105-2 / 33.105-3 match the confirmed RFO Part 33 section structure.",
+    "PC14 - 30-day agency report to GAO, 4 CFR 21.3(c).",
+    "PC16 - COFC: no filing deadline, no automatic stay, Blue & Gold waiver; RFO FAR 33.106 confirmed as 'Protests at the U.S. Court of Federal Claims'.",
+    "PC17 - 3-day debriefing request; RFO FAR 15.206-2 (preaward) and 15.301 (postaward) confirmed in regulations.json crosswalk.",
+    "PC19 through PC21 - CDA: 6 years, $100,000 certification, 60-day decision rules, 90 days to the board / 12 months to COFC. RFO section titles confirmed: 33.205-1 Contractor claim, 33.205-2 Contractor certification, 33.205-6 Contracting officer's decision.",
+    "PC22, PC23 - 10-day cure period and the show cause alternative; RFO FAR 49.607 retained per regulations.json.",
+    "PC24 - 52.217-9 preliminary notice fill-in, commonly 60 days; RFO FAR 17.204-1(b) confirmed in regulations.json.",
+    "CM03 through CM05, CM09 through CM15, CM17 through CM26 - FAR clause numbers and titles all present in the RFO Part 52 index with the titles given; day/dollar figures checked (6-month indirect rate proposal, 6-month 52.217-8 cap, $2,500 SCA, 30-day 52.243-1 notice, 1-year 52.249-2 settlement proposal, $100,000 Disputes certification).",
+    "CM36, CM38, CM39, CM40 - DFARS 252.225-7040, 252.232-7003, 252.232-7007 and 252.243-7002 confirmed retained (the last two also in regulations.json)."
+  ],
+  "open_questions": [
+    "4 CFR part 21 could not be fetched from ecfr.gov - the request was redirected to an unrelated host and the redirect was not followed. The GAO day counts (10 / 30 / 100 / 65) were left as written because 31 U.S.C. 3553-3554 and the regulations.json note agree with them, but a facilitator should re-read 4 CFR 21.2, 21.3 and 21.9 before a board.",
+    "52.204-25, 52.212-3 and 52.212-5 are [Reserved] under the RFO. Where the Section 889 prohibition, the commercial reps and certs, and the statutory-clause checklist now live was not determinable from the Part 52 index; those three cards now say so rather than guessing.",
+    "52.203-13 dollar threshold (legacy $6 million) not verified under RFO numbering - left unstated.",
+    "This shard has no threshold_ladder and no scenario node graph, so the ladder/class recomputation and graph-reachability checks in the task did not apply. If those were expected here, the content is in another shard and this file should not be treated as covering them."
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "file": "content/out/korea_scenarios_1.json",
+  "reviewed_on": "2026-09-14",
+  "reviewer": "independent reviewer (AI)",
+  "checked": 10,
+  "corrected": 10,
+  "removed": 0,
+  "scope": "Korea/LCS/SOFA specifics checked against src/data/questions.json Q0254-Q0258 and Q0274-Q0278, content/sources/study_group_decks_apr-jul2026.txt (13 May 2026 slides 3-4, 29 Apr 2026 slides 8-9), src/data/glossary.json Korea entries, src/data/regulations.json crosswalk/thresholds (13 Sep 2026), and public sources fetched 14 Sep 2026. Anything beyond those was softened to 'confirm with C&P' or removed. No local approval levels, form numbers or names were added; one unverified local clause number already present in sources_used was kept out of the answer and labeled.",
+  "sources_used": [
+    "src/data/questions.json Q0254-Q0258, Q0274-Q0278 (official 411th answers on LCS and the IC program)",
+    "content/sources/study_group_decks_apr-jul2026.txt (13 May 2026 LCS scenario; 29 Apr 2026 IC program)",
+    "src/data/regulations.json verified crosswalk and thresholds (13 Sep 2026): SAT $350,000; commercial simplified ceiling $9M; DoD TINA $10M after 30 Jun 2026; DFARS 206.104-71 Table 206-1 KO tier at or below $10M; Army warrant Class III $10M/$25M/$50M/$100M; FAR 5.202 -> 5.101(b) note on the missing OCONUS exemption and the DFARS 205 deviation",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-6 (6.103-4(a)-(c): DoD/NASA/Coast Guard contracts under the international agreement authority do not require 6.104 J&A; 6.104(a))",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5 (5.101 presolicitation notice over $20,000; 5.101(b)(1)-(3) exemptions contain no overseas-local-sources exemption)",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4 (4.203-1(b)(7): foreign vendors, work outside the U.S., at or below $40,000)",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-25 (25.100(b) Buy American applies to supplies for use in the U.S.; 25.801/25.802 follow agency procedures when SOFAs apply; 25.1002-1/25.1002-2 and 52.225-17)",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-28 (28.305 retained; 28.309 prescribes 52.228-3)",
+    "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-44 (44.201-1 consent; 44.201-5 prescribes 52.244-2 for cost-reimbursement, LH/T&M/letter over SAT, FP over SAT with unpriced actions; 44.402 limits commercial-subcontract flow-down to 52.244-6)",
+    "https://www.acquisition.gov/dfars/subpart-229.4-contract-clauses (DFARS Change 5/7/2026: 229.402-70(a) prescribes 252.229-7001 Tax Relief when a contract will be awarded to a foreign concern for performance in a foreign country)",
+    "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-225/2026-O0041_Rev_1_TAB_A_Deviation_Memo_Part_225.pdf (text extracted: 225.770(c) Japan/Korea -> PGI 225.770(c); PGI 225.770(c)(ii) U.S.-Korea bilateral agreements govern contractor status, jurisdiction, taxation, Commander USFK interprets the SOFA, review USFK SOFA material; 225.772-2 prescribes 252.225-7963 (DEVIATION 2026-O0041)(FEB 2026); clause (b) reaches subcontractors, (b)(2) U.S. nationals register with the Embassy, TCNs follow their own embassy's security requirements; 225.802-70 retained; 252.225-7043 not mentioned)",
+    "https://www.acq.osd.mil/dpap/dars/classdev/DFARS_RFO/Part-215/2026-O0048_Rev_1_TAB_A_Deviation_Memo_Part_215.pdf (text extracted: 215.201(b)(2) SSA approves the source selection plan before solicitation, PGI 215.201(b)(2); 215.202-70 past performance evaluation tied to FAR 15.104)",
+    "USFK Reg 37-5 Special Measures Agreement Process: confirmed to exist at usfk.mil (dated 26 Sep 2007 per mirror listing) but usfk.mil returned 403 and the fliphtml5/yumpu mirrors show previews only; body text not read, so every use is labeled '(2007; confirm currency with C&P)'",
+    "Not verifiable this session: USFKI 4901.01 text and the FKAQ request format; the USFK IC/TR SOFA clause current text; the DoD Source Selection Procedures PDF (author's read accepted, applicability > $10M is consistent with the 2022 memo); DoD FMR Vol 5 Ch 13 (author's read accepted); the 411th LCS SOP, any local Korea tax exemption clause, and the Korea DBA waiver status (all left as C&P questions)"
+  ],
+  "global_changes": [
+    "Every 'USFK Reg 37-5' cite labeled as the 2007 regulation with 'confirm currency with C&P'; sources_used entries state that the body could not be read",
+    "DFARS 225 deviation cites updated from '2026-O0041 (3 Feb 2026)' to '2026-O0041 Rev 1'; 'replaces 252.225-7043' wording removed because the deviation does not say so (it is the RFO successor clause by content and prescription)",
+    "Added rfo_status and crosswalk fields to every item (shape used by the other content/out drafts) recording the old-to-new cites the answers rely on",
+    "Reviewer verification notes appended to each confidence_reason"
+  ],
+  "items": [
+    {
+      "id": "K101",
+      "changes": [
+        "Softened the RFO FAR 6.103-4 mapping to 'closest fit if a FAR cite is needed; confirm with C&P' (not stated in Q0254-Q0258 or the decks; MND awards)",
+        "SAM.gov posting rewritten: advertising channel is an LCS SOP question; Part 5 facts kept as conditional; added DFARS 205 deviation check per crosswalk note",
+        "SAM/NCAGE registration for LCS offerors softened to 'do not assume the U.S. SAM rule applies' (not in sources); $40,000 exception kept as verified",
+        "Buy American cite corrected from 'subpart 25.1 exception' to RFO FAR 25.100(b) scope (applies to supplies for use in the U.S.)",
+        "Added 'confirm which U.S. procedures the 411th applies to LCS packages' to the 12.201-1 / Part 15 statement"
+      ],
+      "removed": []
+    },
+    {
+      "id": "K102",
+      "changes": [
+        "DFAS/WAWF statement softened from assertion to expectation with C&P/J4 confirmation",
+        "Post-award delivery coordination softened: role per LCS SOP (source was an unreadable 2007 USFK Reg 37-5 snippet)"
+      ],
+      "removed": []
+    },
+    {
+      "id": "K103",
+      "changes": [
+        "Memo authorship: sources do not say the KO writes the offshore/local memo; reworded so preparer is per LCS SOP"
+      ],
+      "removed": []
+    },
+    {
+      "id": "K104",
+      "changes": [
+        "6.103-4 cite qualified as 'closest FAR authority if one is needed; confirm with C&P'; no other change"
+      ],
+      "removed": []
+    },
+    {
+      "id": "K105",
+      "changes": [
+        "Warrant claim ('needs a Class III $25M warrant') softened to a 411th policy question; Table 1 values kept as conditional",
+        "6.103-4 'no J&A' statement qualified as closest fit / LCS SOP question"
+      ],
+      "removed": []
+    },
+    {
+      "id": "K106",
+      "changes": [
+        "Removed invented 'spring' submission timing; annual-cycle claim softened and attributed"
+      ],
+      "removed": []
+    },
+    {
+      "id": "K107",
+      "changes": [
+        "Clause description reframed as 'the version I have seen'; Responsible Officer term flagged for C&P",
+        "'issued in place of 252.225-7043' corrected (deviation does not say so); prescription 225.772-2 and subcontractor reach added; deviation cite updated to Rev 1",
+        "25.802 wording aligned to RFO text ('follow agency procedures when SOFAs apply'); PGI 225.770(c)(ii) USFK website review added",
+        "Sequencing of contract vs individual designation qualified as understanding; confidence high -> medium"
+      ],
+      "removed": []
+    },
+    {
+      "id": "K108",
+      "changes": [
+        "Third-country-national scope softened: no source places TCNs within FKAQ's program; left as FKAQ's determination"
+      ],
+      "removed": []
+    },
+    {
+      "id": "K109",
+      "changes": [
+        "Local VAT exemption clause assertion softened; unverified local clause number kept out of the answer and labeled in sources"
+      ],
+      "removed": []
+    },
+    {
+      "id": "K110",
+      "changes": [
+        "SAM exclusion statement corrected: prime must notify KO before subcontracting with an excluded party (52.209-6), not 'not allowed'; 9.104 cite replaced with subpart 9.4 / 52.209-6",
+        "44.402(b) cited at section level (paragraph not verifiable); deviation cite updated to Rev 1; local VAT clause assertion softened"
+      ],
+      "removed": []
+    }
+  ],
+  "left_as_is": [
+    "K104 confidence stays high: the O&M/LCS split is the official Q0255 answer verbatim",
+    "K105/K106 O&M fiscal analysis (31 U.S.C. 1502, 10 U.S.C. 3133) mirrors the official Q0277 answer and is unchanged",
+    "K107/K108 two-step IC process, KO/RA split, FKAQ role and the four Article XV exceptions match Q0258 and the 29 Apr 2026 deck exactly",
+    "K109 currency mechanics (25.1002-1/-2, 52.225-17, ADA funding sentence, FP-EPA 16.203, SCLS scope 22.1000) are generic FAR and were left as drafted"
+  ]
+}

@@ -1,0 +1,732 @@
+{
+ "threshold_ladder": [
+  {
+   "id": "TL01",
+   "label": "Open-market buy of office supplies",
+   "facts": [
+    "New purchase for consumable office supplies.",
+    "Total price $9,850. No options, no ceiling, not a modification.",
+    "Commercial products, open market, paid by purchase card."
+   ],
+   "value_number": 9850,
+   "correct_class": "I",
+   "explanation": "Cumulative instrument value is $9,850 - base only, nothing else to add.\n\nThat is below the micro-purchase threshold of $15,000 and far below the SAT of $350,000, so the lowest warrant tier in Table 1 covers it. Class I is a SAT warrant.\n\nBoard point: a purchase card cardholder is not a warranted contracting officer. The card gives purchase authority under the micro-purchase rules; a warrant gives authority to sign contracts and obligate the Government generally.\n\nCite: Army Warranting Program Policy v12 (MAR 2026) Table 1 and para 4.2; RFO FAR 2.101 (micro-purchase threshold $15,000; SAT $350,000)."
+  },
+  {
+   "id": "TL02",
+   "label": "Simplified acquisition purchase order",
+   "facts": [
+    "Firm-fixed-price purchase order for commercial repair parts.",
+    "Award amount $310,000. No options. No ceiling.",
+    "Awarded under simplified acquisition procedures."
+   ],
+   "value_number": 310000,
+   "correct_class": "I",
+   "explanation": "Cumulative instrument value is $310,000, which is under the SAT of $350,000.\n\nA Class I warrant is written as \"SAT\" rather than a dollar figure, so it moves with the threshold and does not have to be reissued when the SAT is adjusted for inflation.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 2.101 (SAT); 41 U.S.C. 134."
+  },
+  {
+   "id": "TL03",
+   "label": "Award exactly at the simplified acquisition threshold",
+   "facts": [
+    "Firm-fixed-price supply contract.",
+    "Award amount exactly $350,000. No options, no ceiling.",
+    "Not a contingency or emergency acquisition."
+   ],
+   "value_number": 350000,
+   "correct_class": "I",
+   "explanation": "The rule is that the warrant must be greater than or equal to the cumulative instrument value. At exactly $350,000 a SAT warrant covers the action, so this is still Class I.\n\nOne dollar more and it is Class II. Know which side of the line \"equal to\" falls on before you sign.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 2.101 (SAT $350,000)."
+  },
+  {
+   "id": "TL04",
+   "label": "Award just over the SAT",
+   "facts": [
+    "Firm-fixed-price services contract, non-commercial.",
+    "Award amount $352,400. No options, no ceiling.",
+    "Twelve-month period of performance."
+   ],
+   "value_number": 352400,
+   "correct_class": "II",
+   "explanation": "Cumulative instrument value is $352,400, which exceeds the SAT. A Class I warrant no longer reaches it.\n\nThe lowest Class II tier is $500,000, and that tier covers this action. Class II tiers are $500K, $1M, $5M and SaP.\n\nCite: Army Warranting Program Policy v12 Table 1 and para 4.2."
+  },
+  {
+   "id": "TL05",
+   "label": "Base under the SAT with four option years",
+   "facts": [
+    "Base year $250,000 for grounds maintenance.",
+    "Four one-year options priced at $250,000 each.",
+    "Options are priced and evaluated in the solicitation; none exercised at award."
+   ],
+   "value_number": 1250000,
+   "correct_class": "II",
+   "explanation": "This is the classic trap. The base is under the SAT, but para 4.2 counts base plus all options regardless of when funds are obligated: $250,000 plus four times $250,000 equals $1,250,000.\n\nA Class I warrant cannot sign this award. You need Class II at the $5M tier - the $500K and $1M tiers are both below $1.25M.\n\nBoard point: you count option value at award even though no option has been exercised and no option money has been obligated.\n\nCite: Army Warranting Program Policy v12 para 4.2 (base plus all options) and Table 1; RFO FAR 17.204-1 (exercise of options)."
+  },
+  {
+   "id": "TL06",
+   "label": "Two-hundred-dollar deductive modification on a $4.9M contract",
+   "facts": [
+    "Existing firm-fixed-price contract with a total value of $4,900,000.",
+    "Bilateral modification deletes one minor CLIN item and deobligates $200.",
+    "The modification is the only action being signed; no other change to scope or period."
+   ],
+   "value_number": 200,
+   "correct_class": "I",
+   "explanation": "Para 4.2 values a modification at the absolute value of the modification. A deductive mod is not zero and it is not negative for this purpose - the absolute value of minus $200 is $200.\n\nSo the instrument value of this action is $200, and a Class I warrant covers it. The $4.9 million underlying contract is not what you are signing today.\n\nTwo cautions for the board. First, the absolute-value rule cuts the other way on a large deductive: a modification deobligating $12 million is a $12 million action. Second, the warrant policy sets the floor, not the local business rule - some offices direct that modifications be signed by a contracting officer warranted at the contract value. Confirm the current local practice with the Chief, C&P; do not assume it.\n\nCite: Army Warranting Program Policy v12 para 4.2 (absolute value of a modification); RFO FAR 43.301 (change orders / modifications)."
+  },
+  {
+   "id": "TL07",
+   "label": "Option exercise that carries the contract across SaP",
+   "facts": [
+    "Commercial services contract awarded using simplified procedures for commercial products and commercial services.",
+    "Base year $4,200,000. Three priced option years totaling $5,300,000.",
+    "Cumulative base plus all options is $9,500,000.",
+    "The contracting officer holds a Class II warrant at the SaP tier and is about to exercise option year one."
+   ],
+   "value_number": 9500000,
+   "correct_class": "III",
+   "explanation": "Cumulative instrument value is $4,200,000 plus $5,300,000, which is $9,500,000. That is above the SaP ceiling of $9,000,000, so the SaP tier of a Class II warrant never reached this instrument - not at award and not at option exercise.\n\nThe lowest tier that covers $9.5M is the $10M tier, which is Class III.\n\nBoard point: this acquisition should not have been placed under the commercial simplified procedures at all, because those procedures are capped at $9 million. A warrant problem and a procedures problem usually travel together. Stop, get the file reviewed, and consider whether a ratification is in play.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 12.201-1 and 12.001(c) (SaP ceiling $9,000,000, $15,000,000 for contingency); RFO FAR 17.204-1; RFO FAR 1.405 (ratification of unauthorized commitments)."
+  },
+  {
+   "id": "TL08",
+   "label": "Award of a single-award IDIQ with a $600M ceiling",
+   "facts": [
+    "Single-award indefinite-delivery indefinite-quantity contract for base operations support.",
+    "Guaranteed minimum $1,000. Maximum ceiling $600,000,000.",
+    "Five-year ordering period. No orders issued at award."
+   ],
+   "value_number": 600000000,
+   "correct_class": "IV",
+   "explanation": "Para 4.2 counts the anticipated or actual ceiling, not the guaranteed minimum and not what you expect to order. The instrument value is $600,000,000.\n\nThat is above $250 million, so you need Class IV. The $500M tier covers it.\n\nBoard point: do not let anyone argue the value is $1,000 because that is all the Government is obligated to buy. The ceiling is the authority you are signing away.\n\nCite: Army Warranting Program Policy v12 para 4.2 (anticipated or actual ceiling) and Table 1."
+  },
+  {
+   "id": "TL09",
+   "label": "Delivery order under the $600M IDIQ",
+   "facts": [
+    "Delivery order placed against the single-award IDIQ with the $600,000,000 ceiling.",
+    "Order value $3,800,000 firm-fixed-price. No options on the order.",
+    "Ordering period has four years remaining."
+   ],
+   "value_number": 3800000,
+   "correct_class": "II",
+   "explanation": "The order is its own instrument. Its cumulative value is $3,800,000 - base plus options on the order - so the warrant requirement keys on $3.8M, not on the parent contract's $600M ceiling.\n\nThe $5M tier of a Class II warrant covers it.\n\nBoard point: the $600M ceiling drove the warrant class of the person who signed the IDIQ. It does not follow every order. But if the order itself carried priced options, you would add those in before picking your tier.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 16.506 (ordering - general order rules; 16.507 is the fair-opportunity procedure for multiple-award contracts and does not apply to a single-award IDIQ)."
+  },
+  {
+   "id": "TL10",
+   "label": "Task order against a multiple-award contract",
+   "facts": [
+    "Cost-plus-fixed-fee task order for engineering support under a DoD multiple-award contract.",
+    "Order base $8,900,000 plus one priced option period of $3,500,000.",
+    "Total order value $12,400,000."
+   ],
+   "value_number": 12400000,
+   "correct_class": "III",
+   "explanation": "Base plus the priced option equals $12,400,000. Above the $9 million SaP ceiling, so no Class II tier reaches it.\n\nThe $25M tier of a Class III warrant covers it.\n\nBoard point at this dollar level: orders above $7.5 million under a multiple-award contract get enhanced fair opportunity procedures, and a DoD order of $35 million or more is within GAO's task-order protest jurisdiction.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 16.507-5 (orders above $7.5 million); 10 U.S.C. 3406(f)(1)(B) (DoD task-order protest floor, $35 million)."
+  },
+  {
+   "id": "TL11",
+   "label": "Call against an established BPA",
+   "facts": [
+    "Call placed against an existing blanket purchase agreement for janitorial supplies.",
+    "Call amount $88,000.",
+    "The BPA itself carries an estimated five-year value of $22,000,000."
+   ],
+   "value_number": 88000,
+   "correct_class": "I",
+   "explanation": "The call is the instrument being signed and it is worth $88,000, which is under the SAT. Class I covers the call.\n\nBoard point: the BPA's estimated value governs the warrant needed to establish the BPA, not the warrant needed for each call. Keep the two decisions separate and be ready to say why.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 13.201 (simplified procedures - BPAs; no individual purchase under a BPA may exceed the SAT). Note RFO Part 13 covers noncommercial acquisitions at or below the SAT; a commercial BPA runs under Part 12 procedures."
+  },
+  {
+   "id": "TL12",
+   "label": "Establishing the BPA itself",
+   "facts": [
+    "Establishing a blanket purchase agreement for recurring janitorial supplies.",
+    "Anticipated value $22,000,000 over five years.",
+    "No funds obligated at establishment; calls will be funded individually."
+   ],
+   "value_number": 22000000,
+   "correct_class": "III",
+   "explanation": "Para 4.2 counts the anticipated ceiling regardless of when funds are obligated. The anticipated value is $22,000,000.\n\nAbove SaP, so Class II is out. The $25M tier of a Class III warrant covers it.\n\nBoard point: \"no money is obligated today\" is never the answer to a warrant question. The policy says the calculation is made without regard to when funds are obligated.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1."
+  },
+  {
+   "id": "TL13",
+   "label": "Firm-fixed-price construction award",
+   "facts": [
+    "Construction contract for a vehicle maintenance facility.",
+    "Award amount $18,500,000. No options, no ceiling.",
+    "Davis-Bacon wage rates apply."
+   ],
+   "value_number": 18500000,
+   "correct_class": "III",
+   "explanation": "Cumulative instrument value is $18,500,000. Above the $9 million SaP ceiling, so no Class II tier reaches it; the $25M tier of a Class III warrant does.\n\nBoard point: the SaP tier is a commercial-procedures authority. Construction is not a commercial product or commercial service under those procedures, so do not reach for SaP to cover a construction award.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 2.101 (definition of construction); RFO FAR 12.201-1."
+  },
+  {
+   "id": "TL14",
+   "label": "Large services award with option years",
+   "facts": [
+    "Base year $95,000,000 for logistics support services.",
+    "Four option years priced at $10,000,000 each, totaling $40,000,000.",
+    "Cumulative base plus all options is $135,000,000."
+   ],
+   "value_number": 135000000,
+   "correct_class": "IV",
+   "explanation": "Base plus all options is $135,000,000. The base alone would have fit inside the $100M Class III tier; the options push it past.\n\nAbove $100 million, so you need Class IV. The $250M tier covers it.\n\nBoard point: this is the same trap as the small base with four options, just with more zeros. Add the options before you pick the tier.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1."
+  },
+  {
+   "id": "TL15",
+   "label": "Award at exactly $100 million",
+   "facts": [
+    "Firm-fixed-price award for a materiel buy.",
+    "Award amount exactly $100,000,000. No options, no ceiling.",
+    "Single instrument, no follow-on ordering vehicle."
+   ],
+   "value_number": 100000000,
+   "correct_class": "III",
+   "explanation": "The warrant must be greater than or equal to the instrument value. At exactly $100,000,000 the $100M tier covers the action, and that tier is the top of Class III.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1.\n\nBoard point at this dollar level: $100 million is also the DFARS threshold for CAS full coverage and Disclosure Statement, and the point at which DoD justification approval moves above the competition advocate."
+  },
+  {
+   "id": "TL16",
+   "label": "Award just above the top Class III tier",
+   "facts": [
+    "Firm-fixed-price award for a materiel buy.",
+    "Award amount $104,000,000. No options, no ceiling."
+   ],
+   "value_number": 104000000,
+   "correct_class": "IV",
+   "explanation": "At $104,000,000 the top Class III tier of $100M no longer reaches the instrument. The next tier up is $250M, which is Class IV.\n\nBoard point: there is no tier between $100M and $250M. A requirement that lands in that gap jumps a whole warrant class, which is a real staffing consideration for the office.\n\nCite: Army Warranting Program Policy v12 Table 1."
+  },
+  {
+   "id": "TL17",
+   "label": "Bilateral modification adding scope to a $30M contract",
+   "facts": [
+    "Existing non-commercial services contract with a total value of $30,000,000.",
+    "Bilateral modification adds in-scope work worth $6,200,000.",
+    "The modification is the action being signed."
+   ],
+   "value_number": 6200000,
+   "correct_class": "III",
+   "explanation": "The instrument value of a modification is its absolute value: $6,200,000.\n\nThat exceeds the $5M Class II tier. The only Class II tier above $5M is SaP, and SaP is a simplified-procedures authority for commercial products and commercial services - this is a non-commercial services contract, so SaP does not apply. The lowest tier that covers the action is $10M, which is Class III.\n\nBoard point: know that the SaP rung on the Class II ladder is conditional, not just a dollar figure. Between $5 million and $9 million, whether you need Class III depends on whether the action is genuinely a commercial acquisition under simplified procedures.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 12.201-1 and 12.001(c) (SaP, commercial only, $9,000,000)."
+  },
+  {
+   "id": "TL18",
+   "label": "Commercial services at $8.4M under simplified procedures",
+   "facts": [
+    "Commercial services acquisition for facility maintenance.",
+    "Award amount $8,400,000 firm-fixed-price, no options.",
+    "Acquired using simplified procedures for commercial products and commercial services; the items meet the commercial definition and market research supports it."
+   ],
+   "value_number": 8400000,
+   "correct_class": "II",
+   "explanation": "Cumulative instrument value is $8,400,000. That is above $5 million but at or below the $9,000,000 SaP ceiling, and this is a genuine commercial acquisition under the simplified procedures.\n\nSo the SaP rung of Class II covers it. A contracting officer with a Class II SaP warrant can sign; you do not need Class III.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 12.201-1 and 12.001(c); RFO FAR 12.102 (restricting competition for commercial)."
+  },
+  {
+   "id": "TL19",
+   "label": "Non-commercial services at the same $8.4M",
+   "facts": [
+    "Non-commercial services acquisition, negotiated under RFO FAR Part 15.",
+    "Award amount $8,400,000 firm-fixed-price, no options.",
+    "Market research did not support a commercial determination."
+   ],
+   "value_number": 8400000,
+   "correct_class": "III",
+   "explanation": "Same dollar figure as the commercial item, different answer. Because this is not a commercial acquisition under the simplified procedures, the SaP rung of Class II is not available. The highest Class II tier you can use is $5 million, and $8.4M exceeds it.\n\nThe lowest tier that covers the action is $10M, which is Class III.\n\nBoard point: this pair is the cleanest demonstration that Table 1's SaP entry is an authority, not just a dollar amount. Be able to say it out loud.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 12.201-1 (SaP applies to commercial products and commercial services)."
+  },
+  {
+   "id": "TL20",
+   "label": "Termination for convenience settlement modification",
+   "facts": [
+    "Contract with a total value of $40,000,000 terminated for the convenience of the Government.",
+    "Negotiated settlement agreement modification pays the contractor $2,300,000.",
+    "The settlement modification is the instrument being signed."
+   ],
+   "value_number": 2300000,
+   "correct_class": "II",
+   "explanation": "The settlement is executed by modification, and a modification is valued at its absolute value: $2,300,000. The $5M tier of a Class II warrant covers it.\n\nTwo cautions. First, settlement authority is not the same thing as warrant authority - termination contracting officer authority and settlement approval levels are set separately, and a settlement above the approval level needs review regardless of your warrant. Second, confirm the current local settlement review levels with the Chief, C&P; do not state a number from memory at the board.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 49 (termination of contracts); RFO FAR 12.304 (commercial terminations)."
+  },
+  {
+   "id": "TL21",
+   "label": "Closeout modification deobligating excess funds",
+   "facts": [
+    "Completed cost-reimbursement contract in closeout.",
+    "Modification deobligates $1,400,000 of unexpended funds back to the requiring activity.",
+    "No change to scope, price of completed work, or period."
+   ],
+   "value_number": 1400000,
+   "correct_class": "II",
+   "explanation": "Absolute value of the modification is $1,400,000, so that is the instrument value. Above the SAT, so Class I does not reach it; the $5M tier of Class II does.\n\nBoard point: this is the companion to the $200 deductive. Sign is irrelevant; size is not. A deobligation big enough to cross a tier requires the warrant for that tier.\n\nCite: Army Warranting Program Policy v12 para 4.2 (absolute value of a modification)."
+  },
+  {
+   "id": "TL22",
+   "label": "Undefinitized contract action with a not-to-exceed ceiling",
+   "facts": [
+    "Letter contract issued for urgent depot-level repairs.",
+    "Not-to-exceed ceiling $48,000,000.",
+    "Initial obligation limited to $14,000,000 pending definitization."
+   ],
+   "value_number": 48000000,
+   "correct_class": "III",
+   "explanation": "Para 4.2 counts the anticipated or actual ceiling regardless of when funds are obligated. The instrument value is the $48,000,000 not-to-exceed ceiling, not the $14 million obligated today.\n\nThe $50M tier of a Class III warrant covers it.\n\nBoard point: the ceiling is the exposure. That is exactly why the policy writes \"anticipated or actual ceiling\" into the calculation.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1."
+  },
+  {
+   "id": "TL23",
+   "label": "Order against a Federal Supply Schedule contract",
+   "facts": [
+    "Firm-fixed-price order for commercial IT hardware against a GSA Federal Supply Schedule contract.",
+    "Order value $260,000. No options.",
+    "Ordering under required-sources procedures."
+   ],
+   "value_number": 260000,
+   "correct_class": "I",
+   "explanation": "The order is the instrument and it is worth $260,000, under the SAT. Class I covers it.\n\nBoard point: placing an order under a schedule contract is still an exercise of contracting officer authority. The schedule contract was awarded by GSA; your order obligates the Army, and you need a warrant that reaches the order value.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 8 (required sources of supplies and services)."
+  },
+  {
+   "id": "TL24",
+   "label": "Overseas purchase card buy above the micro-purchase threshold",
+   "facts": [
+    "Commercial supplies purchased overseas using the Governmentwide commercial purchase card.",
+    "Purchase amount $22,000.",
+    "Above the $15,000 micro-purchase threshold but within the DFARS overseas commercial purchase limit of $25,000."
+   ],
+   "value_number": 22000,
+   "correct_class": "I",
+   "explanation": "Instrument value is $22,000, well under the SAT, so Class I is the warrant class.\n\nBoard point: the DFARS overseas $25,000 limit raises the purchase card's usable limit for commercial purchases overseas; it does not raise the micro-purchase threshold and it does not create warrant authority. The cardholder still needs the appropriate delegation, and above the micro-purchase threshold the normal competition and documentation rules apply.\n\nCite: Army Warranting Program Policy v12 Table 1; DFARS 213.301 (overseas commercial purchase limit $25,000); RFO FAR 2.101 (micro-purchase threshold $15,000)."
+  },
+  {
+   "id": "TL25",
+   "label": "Contingency buy under the raised OCONUS SAT",
+   "facts": [
+    "Acquisition supporting a contingency operation as determined by the head of the agency, performed and awarded outside the United States.",
+    "The simplified acquisition threshold for this acquisition is $2,000,000.",
+    "Award amount $1,600,000. No options."
+   ],
+   "value_number": 1600000,
+   "correct_class": "II",
+   "explanation": "The buy is inside the raised contingency SAT, so you may use simplified acquisition procedures. That is a procedures question, not a warrant question.\n\nFor the warrant, Table 1 lists Class I as \"SAT\" without qualifying it. The conservative reading - and the one to give at a board - is that a Class I warrant carries the standard SAT of $350,000 unless the appointing authority has said otherwise in writing on the warrant itself. At $1,600,000 you therefore need Class II; the $5M tier covers it.\n\nBoard point: say plainly that the policy is silent on whether a Class I warrant floats up with a contingency SAT, and that you would read your own warrant and confirm with the Chief, C&P rather than assume.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 2.101 and 41 U.S.C. 1903 (contingency SAT, $2,000,000 outside the United States)."
+  },
+  {
+   "id": "TL26",
+   "label": "Supply award just under the first Class II tier",
+   "facts": [
+    "Firm-fixed-price supply contract for generator sets.",
+    "Award amount $475,000. No options, no ceiling."
+   ],
+   "value_number": 475000,
+   "correct_class": "II",
+   "explanation": "Above the SAT so Class I is out. $475,000 fits inside the $500,000 tier, which is the lowest rung of Class II.\n\nCite: Army Warranting Program Policy v12 Table 1."
+  },
+  {
+   "id": "TL27",
+   "label": "Award at exactly $500,000",
+   "facts": [
+    "Firm-fixed-price services contract.",
+    "Award amount exactly $500,000. No options, no ceiling."
+   ],
+   "value_number": 500000,
+   "correct_class": "II",
+   "explanation": "The warrant must be greater than or equal to the instrument value, so a $500,000 Class II warrant exactly covers a $500,000 action.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1."
+  },
+  {
+   "id": "TL28",
+   "label": "Award just above the $500K tier",
+   "facts": [
+    "Firm-fixed-price services contract.",
+    "Award amount $525,000. No options, no ceiling."
+   ],
+   "value_number": 525000,
+   "correct_class": "II",
+   "explanation": "Still Class II - the class does not change, the tier within it does. A $500,000 warrant no longer covers the action; a $1M warrant does.\n\nBoard point: be precise about the difference between the warrant class and the dollar tier inside it. A board member who asks \"what warrant do you need\" wants the tier, not just the Roman numeral.\n\nCite: Army Warranting Program Policy v12 Table 1."
+  },
+  {
+   "id": "TL29",
+   "label": "Non-commercial award at exactly $5 million",
+   "facts": [
+    "Non-commercial firm-fixed-price supply contract.",
+    "Award amount exactly $5,000,000. No options, no ceiling."
+   ],
+   "value_number": 5000000,
+   "correct_class": "II",
+   "explanation": "Exactly $5,000,000 is covered by the $5M tier, the highest dollar-denominated rung of Class II.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1."
+  },
+  {
+   "id": "TL30",
+   "label": "Non-commercial award just above $5 million",
+   "facts": [
+    "Non-commercial firm-fixed-price supply contract, negotiated under RFO FAR Part 15.",
+    "Award amount $5,200,000. No options, no ceiling.",
+    "The requirement did not meet the commercial definition."
+   ],
+   "value_number": 5200000,
+   "correct_class": "III",
+   "explanation": "At $5,200,000 the $5M Class II tier no longer covers the action. The only Class II rung above it is SaP, and SaP is limited to commercial products and commercial services acquired under simplified procedures - this requirement is not commercial.\n\nSo the lowest tier that reaches the action is $10M, which is Class III. This is the gap that catches people: the Class II ladder effectively stops at $5 million for non-commercial work.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 12.201-1 and 12.001(c)."
+  },
+  {
+   "id": "TL31",
+   "label": "IDIQ with option ordering periods that raise the ceiling",
+   "facts": [
+    "Multiple-award IDIQ, base ordering period of three years with a $9,000,000 ceiling.",
+    "Two option ordering periods that, if exercised, raise the total ceiling to $24,000,000.",
+    "Award of the IDIQ is the action being signed."
+   ],
+   "value_number": 24000000,
+   "correct_class": "III",
+   "explanation": "Para 4.2 adds base plus all options plus the anticipated or actual ceiling. The instrument you are signing carries an anticipated ceiling of $24,000,000 once the option ordering periods are counted.\n\nAbove SaP, so the $25M tier of a Class III warrant is what you need. The base ordering period's $9,000,000 ceiling, standing alone, is not the measure.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 17.204-1."
+  },
+  {
+   "id": "TL32",
+   "label": "Sole-source bridge contract",
+   "facts": [
+    "Six-month sole-source bridge contract to continue base operations services while a follow-on competition is resolved.",
+    "Award amount $2,900,000. No options.",
+    "Justification and approval executed under unusual and compelling urgency."
+   ],
+   "value_number": 2900000,
+   "correct_class": "II",
+   "explanation": "Instrument value is $2,900,000, covered by the $5M tier of a Class II warrant.\n\nBoard point: the warrant question and the justification question are separate approvals and both have to be satisfied. At $2.9 million the justification for other than full and open competition is approved by the contracting officer under the DoD table, which runs the contracting officer's tier up to $10,000,000 - but it is above the $900,000 contracting officer certification tier in the governmentwide FAR table, where it would sit with the advocate for competition. Army follows the DoD table. Know which table you are on, and do not let urgency excuse either the warrant or the justification.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 6.103-2 (unusual and compelling urgency); RFO FAR 6.104-2(b) Table 6-1 (KO certification to $900,000); DFARS 206.104-71 Table 206-1 per DoD Class Deviation 2026-O0017 Rev. 2 (KO to $10,000,000)."
+  },
+  {
+   "id": "TL33",
+   "label": "No-cost administrative change on a $250M contract",
+   "facts": [
+    "Existing contract with a total value of $250,000,000.",
+    "Unilateral administrative modification changes the payment office and the DoDAAC.",
+    "No change to price, scope, delivery, or period. Modification value is $0."
+   ],
+   "value_number": 0,
+   "correct_class": "I",
+   "explanation": "The instrument value of a modification is its absolute value, and a true no-cost administrative change has a value of $0. On the dollar rule alone, the lowest warrant class covers it.\n\nSay the caveats out loud at the board. An administrative change must be one the Government can make unilaterally and must not affect the rights of the parties - if it changes anything substantive it is not administrative and the dollars of the change come back into the calculation. Administrative contracting officer functions are also assigned by delegation, not by warrant size. And local policy may direct who signs modifications on a contract of this size; confirm that with the Chief, C&P rather than assuming your Class I warrant is the whole answer.\n\nCite: Army Warranting Program Policy v12 para 4.2 (absolute value of a modification); RFO FAR 43 (contract modifications); RFO FAR 42 (contract administration)."
+  },
+  {
+   "id": "TL34",
+   "label": "Commercial award at exactly the SaP ceiling",
+   "facts": [
+    "Commercial products acquisition using simplified procedures for commercial products and commercial services.",
+    "Award amount exactly $9,000,000. No options, no ceiling.",
+    "Not a contingency or emergency acquisition."
+   ],
+   "value_number": 9000000,
+   "correct_class": "II",
+   "explanation": "The SaP ceiling is $9,000,000, and the warrant must be greater than or equal to the instrument value. At exactly $9,000,000 the SaP rung of a Class II warrant covers the award.\n\nBoard point: the SaP figure is not fixed in Table 1 - the policy writes \"SaP\" so the warrant tracks the regulation. If the ceiling moves, the warrant moves with it. The contingency version of the ceiling is $15,000,000.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 12.201-1 and 12.001(c); 41 U.S.C. 1901."
+  },
+  {
+   "id": "TL35",
+   "label": "Commercial award just above the SaP ceiling",
+   "facts": [
+    "Commercial products acquisition, not a contingency or emergency.",
+    "Award amount $9,050,000. No options, no ceiling."
+   ],
+   "value_number": 9050000,
+   "correct_class": "III",
+   "explanation": "At $9,050,000 the acquisition is over the $9,000,000 SaP ceiling. The commercial simplified procedures are not available, and neither is the SaP rung of the Class II warrant.\n\nThe lowest tier that covers the action is $10M, which is Class III. Being commercial does not help you here - Part 12 still applies to the acquisition, but the simplified procedures and the SaP warrant rung do not.\n\nCite: Army Warranting Program Policy v12 Table 1; RFO FAR 12.201-1 and 12.001(c)."
+  },
+  {
+   "id": "TL36",
+   "label": "Non-commercial services totaling exactly $9 million with options",
+   "facts": [
+    "Non-commercial services contract supporting installation operations.",
+    "Base year $1,800,000 plus four priced option years at $1,800,000 each.",
+    "Cumulative base plus all options is exactly $9,000,000."
+   ],
+   "value_number": 9000000,
+   "correct_class": "III",
+   "explanation": "Same $9,000,000 as the commercial item, opposite answer. Cumulative value is base plus all options, which is exactly $9,000,000 - but this is non-commercial work, so the SaP rung is unavailable and the highest Class II tier you can reach is $5 million.\n\nThe lowest tier that covers the action is $10M, which is Class III.\n\nBoard point: two facts change the answer - the option total and the commercial determination. Miss either one and you sign without authority.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 12.201-1."
+  },
+  {
+   "id": "TL37",
+   "label": "Award at exactly $250 million",
+   "facts": [
+    "Firm-fixed-price production contract.",
+    "Award amount exactly $250,000,000. No options, no ceiling."
+   ],
+   "value_number": 250000000,
+   "correct_class": "IV",
+   "explanation": "Exactly $250,000,000 is covered by the $250M tier, which is the lowest rung of Class IV.\n\nBoard point: the Class III ladder tops out at $100 million, so anything above that figure is Class IV territory even when it is well short of $500 million.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1."
+  },
+  {
+   "id": "TL38",
+   "label": "Requirements contract with an estimated quantity",
+   "facts": [
+    "Requirements contract for vehicle maintenance and repair.",
+    "Estimated total value over the five-year period is $75,000,000.",
+    "No stated maximum ceiling other than the estimate; actual orders will depend on demand."
+   ],
+   "value_number": 75000000,
+   "correct_class": "III",
+   "explanation": "Para 4.2 counts the anticipated ceiling. With no stated maximum, the $75,000,000 estimate is the anticipated value of the instrument.\n\nThe $100M tier of a Class III warrant covers it.\n\nBoard point: if the estimate later proves low and the instrument grows past $100 million, the warrant question is asked again on the action that takes it there. Do not treat the award-day calculation as permanent.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 16 (types of contracts)."
+  },
+  {
+   "id": "TL39",
+   "label": "Option exercise that carries the contract across the SAT",
+   "facts": [
+    "Contract awarded with a base year of $300,000 for recurring maintenance.",
+    "One priced option year of $410,000, evaluated at award.",
+    "Cumulative base plus the option is $710,000. The contracting officer is exercising the option now."
+   ],
+   "value_number": 710000,
+   "correct_class": "II",
+   "explanation": "Cumulative instrument value is $300,000 plus $410,000, which is $710,000. That was the figure at award, before any option money was obligated.\n\n$710,000 is above the SAT, so a Class I warrant never covered this instrument - and it does not cover the option exercise today. You need Class II at the $1M tier.\n\nBoard point: if a Class I contracting officer signed the original award, you have a potential unauthorized commitment on the base contract, not just an option problem. Raise it, document it, and route it for ratification consideration rather than quietly exercising the option.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1; RFO FAR 17.204-1 (exercise of options); RFO FAR 1.405 (ratification of unauthorized commitments)."
+  },
+  {
+   "id": "TL40",
+   "label": "Multi-billion-dollar services vehicle",
+   "facts": [
+    "Single-award indefinite-delivery contract for worldwide sustainment services.",
+    "Maximum ceiling $1,200,000,000 over a ten-year ordering period.",
+    "Guaranteed minimum $100,000."
+   ],
+   "value_number": 1200000000,
+   "correct_class": "IV",
+   "explanation": "Anticipated ceiling is $1,200,000,000, which is above the $500M tier. The only warrant that covers it is the Unlimited tier, and Unlimited sits in Class IV.\n\nBoard point: Class IV runs $250M, $500M and Unlimited. \"Unlimited\" is a specific tier a warrant has to say, not a default that comes with Class IV.\n\nCite: Army Warranting Program Policy v12 para 4.2 and Table 1."
+  }
+ ],
+ "fiscal_sort": [
+  {
+   "id": "FS01",
+   "statement": "A requiring activity asks you to use FY26 annual O&M funds to build a permanent 4,000 square foot addition to a maintenance building at a cost of $6 million.",
+   "bucket": "Purpose",
+   "explanation": "This is a purpose problem. O&M is available for operating and maintaining what the Army already has; erecting a permanent facility of this size and cost is military construction and has to be funded with the construction appropriation Congress provided for that purpose.\n\nThe test is the necessary expense rule: the expenditure must bear a logical relationship to the appropriation charged, must not be prohibited by law, and must not fall within the scope of some other appropriation. This one fails the third prong - MILCON money exists for exactly this.\n\nAs the contracting officer, return the purchase request and tell the requiring activity what color of money the project needs. Do not let \"the money expires in three weeks\" decide the appropriation.",
+   "cite": "31 U.S.C. 1301(a); 10 U.S.C. 2801-2805 (military construction; unspecified minor military construction); GAO Principles of Federal Appropriations Law (Red Book), purpose availability."
+  },
+  {
+   "id": "FS02",
+   "statement": "In August of FY26 a requiring activity submits a purchase request funded with FY26 O&M for a one-year janitorial services contract with a period of performance of 1 July 2027 through 30 June 2028.",
+   "bucket": "Time",
+   "explanation": "This is a bona fide need problem. Janitorial work is severable services, so the need arises as the work is performed - all of it in FY27 and FY28. FY26 funds cannot buy an FY27 need.\n\nThe cross-fiscal-year authority does not save it either, because that authority requires the period to begin in the fiscal year of the appropriation. This period does not begin until nine months into the next fiscal year.\n\nReject the purchase request as funded, explain severable versus non-severable to the requiring activity, and ask for FY27 funds. Document the exchange.",
+   "cite": "31 U.S.C. 1502(a) (bona fide needs rule); 10 U.S.C. 3133 and RFO FAR 32.703-3 (contracts crossing fiscal years, severable services)."
+  },
+  {
+   "id": "FS03",
+   "statement": "A contracting officer signs a modification adding $400,000 of in-scope work when only $150,000 remains available on the funding line, intending to have the requiring activity add money next month.",
+   "bucket": "Amount",
+   "explanation": "This is an Antideficiency Act problem. You may not create or authorize an obligation in excess of the funds available. The moment the modification is signed the Government is on the hook for $400,000 against $150,000 of availability.\n\nThe fix is simple and it comes first: get the funding document before you sign, or make the action expressly contingent on the availability of funds where that is authorized. A promise that money is coming is not an obligation authority.\n\nA violation here is reportable. It is investigated and reported through command channels to the President and Congress, and penalties can include adverse personnel action and criminal sanction for a knowing and willful violation.",
+   "cite": "31 U.S.C. 1341(a)(1) (Antideficiency Act); 31 U.S.C. 1351 (reporting); RFO FAR 32.702 (no contract before funds are available)."
+  },
+  {
+   "id": "FS04",
+   "statement": "On 20 September of FY26 you award a supply contract with FY26 O&M for equipment the unit needs now; the manufacturer's normal production and delivery lead time puts delivery in January of FY27.",
+   "bucket": "No violation",
+   "explanation": "This is the lead-time exception and it is legitimate. The bona fide need arose in FY26, and a delivery date driven by the normal production and delivery lead time for that item does not move the need into the next fiscal year.\n\nWhat makes it work is that the delay is the market's, not the Government's. Document the lead time in the file - a market research note or the contractor's standard delivery schedule - so a later reviewer can see why FY26 money was correct.",
+   "cite": "31 U.S.C. 1502(a); GAO Principles of Federal Appropriations Law (Red Book), time availability - delivery within normal production lead time."
+  },
+  {
+   "id": "FS05",
+   "statement": "The office accepts a contractor's offer to pay the travel costs for two Government employees to attend a design review at the contractor's plant, and keeps the money it would otherwise have spent for other requirements.",
+   "bucket": "Purpose",
+   "explanation": "This is augmentation of an appropriation. Accepting something of value that relieves the appropriation of a cost it would otherwise bear effectively increases the funds Congress made available, which the office has no authority to do.\n\nMoney received by the Government generally has to go to the Treasury as miscellaneous receipts unless a statute says otherwise. There is a separate and equally serious problem: accepting a gratuity from a contractor during an active procurement relationship is an ethics and procurement integrity matter.\n\nDecline, fund the travel with your own appropriation, and talk to your ethics counselor.",
+   "cite": "31 U.S.C. 3302(b) (miscellaneous receipts); 31 U.S.C. 1301(a); RFO FAR 3.104 (procurement integrity)."
+  },
+  {
+   "id": "FS06",
+   "statement": "You use expired FY24 O&M funds to pay a within-scope price adjustment on a contract that was properly awarded with FY24 funds in FY24.",
+   "bucket": "No violation",
+   "explanation": "This is correct. An expired appropriation is no longer available for new obligations, but it stays available for five years to record and pay adjustments to obligations that were properly incurred while it was current.\n\nThe two questions to answer before you do it are whether the original obligation was proper and whether the adjustment is within the scope of that obligation. If the adjustment is really new work, it is a new obligation and needs current funds.",
+   "cite": "31 U.S.C. 1553(a) (expired accounts available for adjustments to prior obligations); 31 U.S.C. 1502(a)."
+  },
+  {
+   "id": "FS07",
+   "statement": "It is 28 September. A requiring activity asks you to award a contract for repair parts it acknowledges it will not need until FY28, because this year's money is about to expire.",
+   "bucket": "Time",
+   "explanation": "This is a bona fide need violation and the requiring activity has said so out loud. Current-year funds may only be obligated for a need that arises in the year of the appropriation. A need the activity admits is two years away is not a current need.\n\nThe reasonable-inventory principle does not cover it either. You may buy enough to meet a current need plus a reasonable stock level; you may not stockpile to burn expiring money.\n\nReturn the request. If you are pressed, put the fiscal law concern in writing and route it to your legal advisor.",
+   "cite": "31 U.S.C. 1502(a) (bona fide needs rule); GAO Principles of Federal Appropriations Law (Red Book), stockpiling and reasonable inventory."
+  },
+  {
+   "id": "FS08",
+   "statement": "A contractor on a cost-reimbursement contract notifies you it will exhaust the funded amount in thirty days; you tell it to keep working and that more money will be added when it comes in.",
+   "bucket": "Amount",
+   "explanation": "This is an Antideficiency Act problem. Directing continued performance beyond the funded amount authorizes an obligation the Government does not have money for.\n\nUnder the Limitation of Funds clause the contractor is not obligated to continue beyond the funded amount, and the Government is not obligated to reimburse costs above it, unless and until the contracting officer increases the funded amount by modification. The clause protects both parties - do not talk the contractor out of it.\n\nThe correct action is to get the funding modification signed before the funded amount is reached, or to let performance stop.",
+   "cite": "31 U.S.C. 1341(a)(1); RFO FAR 52.232-22 (Limitation of Funds); RFO FAR 32.702."
+  },
+  {
+   "id": "FS09",
+   "statement": "You award a twelve-month severable services contract for grounds maintenance with a period of performance of 1 April 2026 through 31 March 2027, funded entirely with FY26 O&M.",
+   "bucket": "No violation",
+   "explanation": "This is the severable services cross-fiscal-year authority and it fits. The contract is for severable services, the period begins in the fiscal year of the appropriation, and the period does not exceed one year, so one year's funds may fund the whole thing.\n\nWatch the two limits. The twelve months is measured without regard to options, and the period has to begin in the year of the appropriation - a period that starts wholly in the next fiscal year does not qualify.",
+   "cite": "10 U.S.C. 3133 (contracts for periods crossing fiscal years: severable service contracts); RFO FAR 32.703-3; 31 U.S.C. 1502(a)."
+  },
+  {
+   "id": "FS10",
+   "statement": "An office uses FY26 Research, Development, Test and Evaluation funds to pay for routine custodial and grounds services at its headquarters building.",
+   "bucket": "Purpose",
+   "explanation": "This is a purpose problem. RDT&E is appropriated for research and development effort; routine installation support services are an operating expense funded with O&M.\n\nApply the necessary expense test. Custodial work at a headquarters building does not bear a logical relationship to the RDT&E appropriation, and there is a more specific appropriation that covers it.\n\nAs the contracting officer, the question to ask before you obligate is always the same one: what color of money, what fiscal year, and does it match what I am buying.",
+   "cite": "31 U.S.C. 1301(a) (purpose statute); GAO Principles of Federal Appropriations Law (Red Book), necessary expense doctrine."
+  },
+  {
+   "id": "FS11",
+   "statement": "A modification obligates funds from an FY20 appropriation to pay an upward price adjustment on an FY20 contract, six years after that appropriation was current.",
+   "bucket": "Time",
+   "explanation": "This is a closed account problem. An annual appropriation is current for one year, expired for five more, and then the account closes - the balance is cancelled and is no longer available for any purpose.\n\nSix years out, the FY20 account is closed. You cannot charge it. A payment that is still legitimately owed on that old contract is charged to a current appropriation available for the same purpose, subject to the statutory limit tied to the original appropriation.\n\nThis one hurts the current-year program, which is exactly why closeout discipline matters.",
+   "cite": "31 U.S.C. 1552(a) (closing of accounts); 31 U.S.C. 1553(b) (obligations chargeable to current appropriations after closing, subject to the one percent limitation)."
+  },
+  {
+   "id": "FS12",
+   "statement": "A contracting office receives a $50,000 refund from a contractor for an overpayment and, rather than returning it, spends it on new office furniture.",
+   "bucket": "Purpose",
+   "explanation": "This is augmentation. Money coming back to the Government has to be credited to the appropriation originally charged, if the law allows, or otherwise deposited in the Treasury as miscellaneous receipts. Treating it as found money for the office spends funds Congress never made available for that purpose.\n\nRoute the refund to the resource manager and let the accounting rules place it. The contracting officer's job is to flag it, not to decide where it lands.",
+   "cite": "31 U.S.C. 3302(b) (miscellaneous receipts statute); 31 U.S.C. 1301(a)."
+  },
+  {
+   "id": "FS13",
+   "statement": "An installation obligates more than the amount formally allotted to its account, although the parent appropriation as a whole has not been exhausted.",
+   "bucket": "Amount",
+   "explanation": "This is still an Antideficiency Act violation. The Act reaches obligations in excess of an apportionment or of a formal administrative subdivision of funds, not only obligations in excess of the appropriation itself.\n\nThe practical point for a contracting officer: \"the Army has plenty of O&M\" is never a defense. The certified funding document you are handed represents an administrative subdivision, and exceeding it is reportable.\n\nIf you suspect it has happened, say so to your resource manager and legal advisor immediately. Preliminary reviews and formal investigations have their own timelines.",
+   "cite": "31 U.S.C. 1517(a) (obligations exceeding apportionment or administrative subdivision); 31 U.S.C. 1517(b) (reporting of a 1517 violation; 31 U.S.C. 1351 is the reporting provision for 1341/1342 violations); DoD FMR Volume 14 (Antideficiency Act violation procedures)."
+  },
+  {
+   "id": "FS14",
+   "statement": "You award a twenty-four month research study that produces a single final report, fully funding it with FY26 funds obligated at award.",
+   "bucket": "No violation",
+   "explanation": "This is non-severable work and full funding at award is correct. A study that yields one end product is not useful in pieces; the bona fide need for the whole undertaking arises when the work is ordered, so it is funded with the money current at award even though performance runs into later fiscal years.\n\nThe severable versus non-severable call is the one to get right, and it is a factual call about the nature of the work, not the contract type or the length of the period. If each month of effort would have independent value to the Government, it is severable.",
+   "cite": "31 U.S.C. 1502(a) (bona fide needs rule); GAO Principles of Federal Appropriations Law (Red Book), severable and non-severable services."
+  },
+  {
+   "id": "FS15",
+   "statement": "On 3 September of FY26 you award a contract with FY26 O&M for computers to be delivered when a new building is finished in the spring of FY27; the contractor could deliver immediately.",
+   "bucket": "Time",
+   "explanation": "This is a bona fide need violation. The lead-time exception applies when delivery is delayed by the realities of production and shipping, not when the Government chooses to take delivery later.\n\nHere the contractor is ready now and the Government is the one deferring. That tells you the need is an FY27 need and FY26 money is the wrong year.\n\nIf the unit genuinely has a current need, take delivery and store the items. If it does not, use FY27 funds.",
+   "cite": "31 U.S.C. 1502(a); GAO Principles of Federal Appropriations Law (Red Book), time availability - Government-caused delivery delay."
+  },
+  {
+   "id": "FS16",
+   "statement": "A contracting officer awards a contract on the strength of a resource manager's email saying the funding document will be issued next week, with no certified funds in hand.",
+   "bucket": "Amount",
+   "explanation": "This is an Antideficiency Act problem. You may not obligate the Government before funds are available. An email promising money is not an appropriation and not a commitment document.\n\nThe FAR gives you the two legitimate paths: obtain written assurance from a responsible official that adequate funds are available, or make the contract expressly subject to the availability of funds where that authority applies. Anything else puts your signature ahead of the money.\n\nThis is also a personal exposure question, which is worth saying plainly at a board. Warrant authority is not a shield for an obligation Congress did not authorize.",
+   "cite": "31 U.S.C. 1341(a)(1); RFO FAR 32.702 (policy - no contract before funds are available); RFO FAR 32.703-2 (subject to availability of funds)."
+  },
+  {
+   "id": "FS17",
+   "statement": "In the fourth quarter, an office uses expiring FY26 O&M to buy repair parts sufficient for the unit's current requirement plus its normal stock level, with delivery expected in FY27.",
+   "bucket": "No violation",
+   "explanation": "This is acceptable. Current-year funds may be used for a current need, and a current need includes maintaining a reasonable inventory level - what the activity actually consumes and normally keeps on hand.\n\nThe line is stockpiling. If the quantity goes past a reasonable stock level and starts building a reserve for future years, the buy fails the bona fide needs rule no matter how the requirement is described.\n\nAs the contracting officer, ask the requiring activity what the normal consumption rate and stock level are, and put the answer in the file. That single question is what separates this from FS07.",
+   "cite": "31 U.S.C. 1502(a); GAO Principles of Federal Appropriations Law (Red Book), current need and reasonable inventory."
+  },
+  {
+   "id": "FS18",
+   "statement": "A requiring activity wants to use appropriated funds to buy refreshments and a catered lunch for the office holiday gathering.",
+   "bucket": "Purpose",
+   "explanation": "This is a purpose problem. Food for Government employees is a personal expense and appropriated funds are generally not available for it, because it does not bear the necessary relationship to the appropriation charged.\n\nThere are narrow statutory and regulatory exceptions - certain formal conferences, award ceremonies, and official representation funds - but they are specific, they are documented, and a holiday party is not one of them.\n\nThe answer at the board is to say no, explain the necessary expense test, and point the activity to the unit's private organization if one exists.",
+   "cite": "31 U.S.C. 1301(a); GAO Principles of Federal Appropriations Law (Red Book), food and refreshments for Government employees."
+  },
+  {
+   "id": "FS19",
+   "statement": "After the Government terminates a contract for default, the contracting officer awards a replacement contract for the same requirement using the same expired funds that funded the original contract.",
+   "bucket": "No violation",
+   "explanation": "This is the replacement contract rule and it works when the conditions are met. If the original contract was properly funded, the Government's need has not changed, the replacement is awarded without undue delay, and the scope is essentially the same, the replacement may be charged to the funds that supported the original obligation even though they have expired.\n\nThe conditions are what get tested. A scope increase, a changed requirement, or a long gap breaks the chain and the replacement becomes a new obligation requiring current funds.\n\nDocument the continuity of the need and the timeline in the file before you charge expired money.",
+   "cite": "31 U.S.C. 1502(a); 31 U.S.C. 1553(a); GAO Principles of Federal Appropriations Law (Red Book), replacement contracts."
+  },
+  {
+   "id": "FS20",
+   "statement": "A contractor's employee continues working after the funded amount runs out, and the contracting officer's representative encourages her to keep going so the schedule does not slip.",
+   "bucket": "Amount",
+   "explanation": "This is the voluntary services prohibition. An officer or employee may not accept voluntary services for the United States or employ personal services exceeding what the law authorizes, except for emergencies involving the safety of human life or the protection of property.\n\nAccepting work the Government cannot pay for creates exactly the liability the Antideficiency Act exists to prevent, and it sets up an unauthorized commitment that will have to be ratified later if it can be ratified at all.\n\nTwo actions: stop the work in writing, and counsel the contracting officer's representative. A representative has no authority to direct work, change scope, or obligate funds, and this is why that limit matters.",
+   "cite": "31 U.S.C. 1342 (voluntary services prohibition); 31 U.S.C. 1341; RFO FAR 1.405 (ratification of unauthorized commitments); DFARS 201.404-70 (contracting officer's representative)."
+  },
+  {
+   "id": "FS21",
+   "statement": "A solicitation for base support services in Korea is structured to be funded partly with U.S. Operations and Maintenance appropriations and partly with Logistics Cost Sharing funds under the Special Measures Agreement.",
+   "bucket": "Purpose",
+   "explanation": "This will not work. The source material for the 411th is explicit that O&M and Logistics Cost Sharing funds are not mixed in a single solicitation. They are different sources with different authorities, different approval and award chains, and different competition rules - LCS contracts are approved and awarded by the ROK Ministry of National Defense, managed by USFK J4, with the 411th recommending award, and LCS competition is limited to Korean firms.\n\nThe fix is to separate the requirement into the correct funding lanes before solicitation, not to reconcile it after award.\n\nFlag: korea-verify-cp. Confirm the current LCS and SMA procedures and any local implementation with the Chief, C&P before relying on this at a board - do not state local approval levels or points of contact from memory.",
+   "cite": "31 U.S.C. 1301(a) (purpose statute); 411th CSB source material on Logistics Cost Sharing under the Special Measures Agreement; USFK J4 / ROK MND LCS procedures (korea-verify-cp)."
+  },
+  {
+   "id": "FS22",
+   "statement": "A contracting officer exercises an option in September of FY26, using FY26 O&M, for a severable services option period that runs entirely from 1 October 2026 through 30 September 2027.",
+   "bucket": "Time",
+   "explanation": "This is a bona fide need violation. Exercising the option creates a new obligation for services performed entirely in FY27. Severable services are a need of the year in which the work is performed, so FY27 money is required.\n\nThe cross-fiscal-year authority does not help because the option period does not begin in FY26 at all.\n\nThe mechanics are worth stating: an option exercise is a new obligation, priced and funded in the year the performance falls. Confirm funds availability for the option period before you send the notice, and make sure the option is exercised within the time the contract allows.",
+   "cite": "31 U.S.C. 1502(a); RFO FAR 17.204-1 (exercise of options); 10 U.S.C. 3133; RFO FAR 32.703-3."
+  },
+  {
+   "id": "FS23",
+   "statement": "An office uses expiring FY26 O&M to buy a single end item costing $900,000 that exceeds the Department's expense and investment threshold and should be funded with procurement appropriations.",
+   "bucket": "Purpose",
+   "explanation": "This is a purpose problem driven by the expense and investment rules. Centrally managed and high-cost end items above the Department's expense and investment threshold are investment items funded with procurement money, not O&M.\n\nThe necessary expense test again resolves it: there is a more specific appropriation Congress provided for this category of purchase.\n\nAs the contracting officer, ask the resource manager for the current expense and investment threshold rather than quoting a figure from memory, and put the determination in the file before award.",
+   "cite": "31 U.S.C. 1301(a); DoD Financial Management Regulation Volume 2A, Chapter 1 (expense and investment criteria)."
+  },
+  {
+   "id": "FS24",
+   "statement": "A contracting officer records a $1 obligation for the guaranteed minimum on an IDIQ contract at award, and continues to carry $1 on the books after issuing delivery orders totaling $2 million.",
+   "bucket": "Amount",
+   "explanation": "The $1 obligation at award is correct - the guaranteed minimum is what the Government is bound to buy. The problem is what happens next.\n\nThe recording statute requires an obligation to be recorded when it is incurred, supported by documentary evidence of a binding agreement. Each delivery order is a binding order and must be recorded at its value. Carrying $1 on the books while $2 million of orders are outstanding understates the obligation and can mask an over-obligation of the account.\n\nRaise it with the resource manager and get the records corrected. Accurate obligation records are how Antideficiency Act violations get caught early instead of late.",
+   "cite": "31 U.S.C. 1501(a) (documentary evidence requirement for recording obligations); 31 U.S.C. 1341; 31 U.S.C. 1517."
+  },
+  {
+   "id": "FS25",
+   "statement": "You award a fifteen-month severable services contract that begins in June of FY26 and ends in August of FY27, funding the entire period with FY26 O&M.",
+   "bucket": "Time",
+   "explanation": "The period is the problem. The cross-fiscal-year authority for severable services permits a period that begins in one fiscal year and ends in the next, but only if the period does not exceed one year, measured without regard to options.\n\nFifteen months exceeds that. So the authority is unavailable and the bona fide needs rule controls: the FY27 portion is an FY27 need requiring FY27 funds.\n\nRestructure the period to twelve months or less, or fund the FY27 portion separately.",
+   "cite": "10 U.S.C. 3133 (period may not exceed one year); RFO FAR 32.703-3; 31 U.S.C. 1502(a)."
+  },
+  {
+   "id": "FS26",
+   "statement": "An office places an order with another agency under the Economy Act, after executing a determination and findings that the interagency acquisition is in the Government's best interest and the supplies cannot be obtained as conveniently or economically by contracting directly with a private source.",
+   "bucket": "No violation",
+   "explanation": "This is the Economy Act done correctly. The Act authorizes one agency to order goods or services from another, and the FAR requires the determination and findings before the order is placed.\n\nThe fiscal discipline is in what happens after. The ordering agency's funds are obligated when the order is accepted, and the amount must be deobligated to the extent the servicing agency has not incurred obligations before the appropriation expires. An Economy Act order is not a way to park expiring money with another agency.\n\nPay the servicing agency's actual cost - the Economy Act does not authorize a fee beyond that.",
+   "cite": "31 U.S.C. 1535 (Economy Act); RFO FAR 17.502-2 (the Economy Act); 31 U.S.C. 1502(a)."
+  },
+  {
+   "id": "FS27",
+   "statement": "The Government pays an invoice in November of FY27 for services properly performed and accepted in August of FY26, charging the FY26 appropriation.",
+   "bucket": "No violation",
+   "explanation": "This is routine and correct. The obligation was properly incurred in FY26 while the appropriation was current. An expired appropriation remains available for five years to liquidate obligations properly incurred while it was current.\n\nThe test is not when the check is written. It is when the obligation arose and whether it was proper at that time.",
+   "cite": "31 U.S.C. 1553(a); 31 U.S.C. 1502(a); RFO FAR 32.907 and 5 CFR 1315 (Prompt Payment)."
+  },
+  {
+   "id": "FS28",
+   "statement": "A requiring activity wants to pay a settlement of a contractor claim, which the Department has determined must be paid from the Judgment Fund, using the office's FY26 O&M.",
+   "bucket": "Purpose",
+   "explanation": "This is a purpose problem. Where a payment is one the Judgment Fund is established to make, the agency's operating appropriation is not the right source; using it charges an appropriation Congress did not make available for that payment.\n\nThe reverse case matters too. Contract Disputes Act payments made from the Judgment Fund are reimbursed by the agency from appropriations current at the time of the judgment or award, so the money does come back out of the agency's hide - it just comes out through the right door.\n\nGet the finance and legal determination on the source before you sign anything that commits an appropriation.",
+   "cite": "31 U.S.C. 1304 (judgments, awards and compromise settlements); 41 U.S.C. 7108(c) (agency reimbursement of the Judgment Fund for CDA payments); 31 U.S.C. 1301(a)."
+  },
+  {
+   "id": "FS29",
+   "statement": "A contracting officer issues a change order under the Changes clause directing additional work, knowing the equitable adjustment will exceed the funds available on the contract, and plans to obtain funds when the adjustment is negotiated.",
+   "bucket": "Amount",
+   "explanation": "This is an Antideficiency Act problem in slow motion. A change order within the general scope of the contract is a unilateral direction the contractor must perform, and it creates a Government liability for the equitable adjustment the moment it is issued - not when the adjustment is later negotiated.\n\nSo the obligation is incurred with funds unavailable to cover it. Confirm funds before you issue the change, or do not issue it.\n\nThis is also why undefinitized work and constructive changes are a fiscal risk and not just an administrative one.",
+   "cite": "31 U.S.C. 1341(a)(1); RFO FAR 43.301 (change orders - general); RFO FAR 52.243-1 (Changes - Fixed-Price); RFO FAR 32.702."
+  },
+  {
+   "id": "FS30",
+   "statement": "A contracting officer returns an unfunded purchase request to the requiring activity in writing, explaining that no award will be made until a certified funding document is received.",
+   "bucket": "No violation",
+   "explanation": "This is the right answer and it is worth being able to state affirmatively at a board, not just to spot what is wrong.\n\nThe contracting officer is the one official who can bind the Government, and part of that responsibility is refusing to obligate funds that do not exist. Documenting the refusal protects the Government, the requiring activity, and the contracting officer personally.\n\nSay the follow-through as well: tell the requiring activity what you need, offer a realistic timeline once funds arrive, and keep the exchange in the file.",
+   "cite": "31 U.S.C. 1341(a)(1); RFO FAR 1.402-1 (contracting officers - authority); RFO FAR 1.402-2 (responsibilities); RFO FAR 32.702."
+  },
+  {
+   "id": "FS31",
+   "statement": "An office uses FY26 O&M to buy a plaque and an engraved gift for a departing contractor employee as a thank-you for her support to the unit.",
+   "bucket": "Purpose",
+   "explanation": "This is a purpose problem. Appropriated funds are available for awards to Government employees under specific awards authority; they are not available to buy gifts for a contractor's employee, who is paid by her employer under a contract the Government already funded.\n\nThere is an ethics dimension too. Gifts flowing to contractor personnel during performance raise the same integrity questions as gifts flowing the other way.\n\nThe necessary expense test gives you the short answer: no logical relationship to the appropriation charged, and no statute authorizing it.",
+   "cite": "31 U.S.C. 1301(a); GAO Principles of Federal Appropriations Law (Red Book), awards and gifts; 5 U.S.C. 4503 (awards to Government employees, by contrast)."
+  },
+  {
+   "id": "FS32",
+   "statement": "A contracting officer signs an award that exceeds a dollar ceiling Congress placed on a specific line in the appropriations act, although the appropriation as a whole has money remaining.",
+   "bucket": "Amount",
+   "explanation": "This is an amount problem. A statutory ceiling on a line or program is a limitation on the amount available for that purpose, and obligating past it is obligating in excess of the amount available regardless of what the rest of the appropriation holds.\n\nRead the appropriations act language and any general provisions, and ask the resource manager whether the funding line carries a statutory limitation. Not every limit shows up on the funding document.\n\nIf it has already happened, report it. Antideficiency Act violations are reported through command channels to the President and Congress, and the reporting obligation does not depend on intent.",
+   "cite": "31 U.S.C. 1341(a)(1); 31 U.S.C. 1517(a); 31 U.S.C. 1351; the annual defense appropriations act limitation at issue."
+  },
+  {
+   "id": "FS33",
+   "statement": "On 30 September of FY26 the office issues an undefinitized contract action for a requirement the requiring activity has not yet defined, solely to keep FY26 funds from expiring; the scope is to be worked out in November.",
+   "bucket": "Time",
+   "explanation": "This is banking expiring money and it fails on two fronts. A bona fide need has to exist in the year of the appropriation, and a requirement nobody has defined yet is not a demonstrated current need.\n\nThe recording statute is the second problem. An obligation must be supported by documentary evidence of a binding agreement for specific goods or services. An action with no defined scope does not support a recordable obligation, so the money was not validly obligated in FY26 at all.\n\nUndefinitized contract actions are legitimate when there is a genuine urgent need and the Government cannot wait to negotiate. Preserving funds is not that reason. Push back and put the reason in writing.",
+   "cite": "31 U.S.C. 1502(a) (bona fide needs rule); 31 U.S.C. 1501(a) (documentary evidence of a binding agreement); GAO Principles of Federal Appropriations Law (Red Book), time availability."
+  },
+  {
+   "id": "FS34",
+   "statement": "A contracting office directs a contractor performing a services contract to also mow the lawn at an adjacent tenant activity, whose own appropriation would otherwise pay for that work.",
+   "bucket": "Purpose",
+   "explanation": "This is an augmentation problem in the field. Using your appropriation to perform work another activity's appropriation is meant to fund relieves that appropriation of a cost Congress placed on it and effectively augments it.\n\nIt is also very likely outside the scope of the contract, which makes it an unauthorized commitment and a competition problem on top of the fiscal one.\n\nThe clean route is a funded support agreement or a reimbursable arrangement - an inter-service support agreement or an Economy Act order - so that the correct appropriation bears the cost.",
+   "cite": "31 U.S.C. 1301(a); 31 U.S.C. 3302(b); 31 U.S.C. 1535 (Economy Act); RFO FAR 1.405 (ratification of unauthorized commitments)."
+  },
+  {
+   "id": "FS35",
+   "statement": "On 25 September of FY26 you award a twelve-month severable services contract funded with FY26 O&M, with a period of performance of 1 November 2026 through 31 October 2027.",
+   "bucket": "Time",
+   "explanation": "The trap is that the contract is signed in FY26, so it looks like an FY26 action. It is not. The cross-fiscal-year authority requires the period of performance to begin in the fiscal year of the appropriation, and this period begins on 1 November 2026, which is FY27.\n\nSo no part of this severable performance is an FY26 need, and FY26 funds cannot fund any of it.\n\nCompare it to the 1 April 2026 start, which is fine. Award date does not decide the question; the start of performance does.",
+   "cite": "10 U.S.C. 3133; RFO FAR 32.703-3; 31 U.S.C. 1502(a)."
+  },
+  {
+   "id": "FS36",
+   "statement": "A new requirement arises in FY26 and the office funds it with FY25 O&M that expired on 30 September 2025, on the reasoning that the money is still carried on the books.",
+   "bucket": "Time",
+   "explanation": "An expired appropriation is not available for new obligations. It stays on the books for five years, but only so the Government can record and pay adjustments to obligations that were properly incurred while it was current.\n\nA requirement that first arose in FY26 is a new obligation, so it needs FY26 funds. The fact that an expired balance is visible in the accounting system tells you nothing about whether it is available.\n\nThe short version for the board: current funds for new obligations, expired funds for adjustments to old ones, closed accounts for nothing at all.",
+   "cite": "31 U.S.C. 1502(a) (bona fide needs rule); 31 U.S.C. 1553(a) (expired accounts available only for adjustments to prior obligations); 31 U.S.C. 1552(a)."
+  }
+ ]
+}

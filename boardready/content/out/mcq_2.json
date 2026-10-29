@@ -1,0 +1,587 @@
+[
+ {
+  "qid": "Q0001",
+  "stem": "The Source Selection Decision Document on a construction RFP is signed, but before the contracting officer signs the award you learn the Davis-Bacon wage determination has been modified. What must you do?",
+  "options": [
+   {"text": "Amend the solicitation for all offerors in the competitive range with the new wage determination and let them revise their prices.", "correct": true, "why": "Wage rates must be current as of the day of contract award on a construction RFP, so the modification goes out by amendment and offerors get to reprice."},
+   {"text": "Award as evaluated and incorporate the modified wage determination by a unilateral administrative modification after award.", "correct": false, "why": "A wage determination change affects price, so it cannot be swept in as an administrative change after award without giving offerors the chance to reprice."},
+   {"text": "Ignore the modification because the wage determination locked in on the date the SSDD was signed.", "correct": false, "why": "The lock-in date for a construction RFP is the date of contract award, not the date the source selection decision was signed."},
+   {"text": "Cancel the solicitation and resolicit with the new wage determination.", "correct": false, "why": "Cancellation is a far more drastic step than the FAR requires; an amendment to the competitive range solves the problem."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 22.403 (was FAR 22.404-6(c))",
+  "domain": "Source Selection & Evaluation"
+ },
+ {
+  "qid": "Q0004",
+  "stem": "A board member asks you to distinguish an offeror's experience from its past performance. Which statement is correct?",
+  "options": [
+   {"text": "Experience is what the offeror has done, like a resume; past performance is how well it did it, like an appraisal.", "correct": true, "why": "This is the standard distinction: experience is the record of work performed, past performance is the quality of that performance."},
+   {"text": "Experience is how well the offeror performed, like an appraisal; past performance is the list of contracts it has held.", "correct": false, "why": "This reverses the two terms."},
+   {"text": "They are the same thing and are always evaluated as a single factor.", "correct": false, "why": "They are distinct concepts and may be evaluated as separate factors or subfactors."},
+   {"text": "Experience applies only to the prime contractor; past performance applies only to the subcontractors it proposes to use.", "correct": false, "why": "Both concepts can apply to the prime and to major subcontractors when the solicitation says so."}
+  ],
+  "difficulty": 1,
+  "cite": "Official CORB board answer, question bank Q0004 (no regulatory cite in the source)",
+  "domain": "Source Selection & Evaluation"
+ },
+ {
+  "qid": "Q0020",
+  "stem": "You have adequate price competition on a lowest price technically acceptable source selection. What does that mean for certified cost or pricing data?",
+  "options": [
+   {"text": "You must not obtain certified cost or pricing data; comparing the competing prices shows reasonableness.", "correct": true, "why": "Once prices are based on adequate price competition the FAR prohibits obtaining certified cost or pricing data."},
+   {"text": "You must obtain certified cost or pricing data from the apparent awardee before award, as with any action over the threshold.", "correct": false, "why": "Adequate price competition is an exception to the requirement, not a trigger for it, whatever the dollar value."},
+   {"text": "You may obtain certified cost or pricing data at your discretion from any offeror you choose, if you document why.", "correct": false, "why": "The rule is a prohibition, not a matter of contracting officer discretion, once the exception applies; documenting a reason does not change that."},
+   {"text": "You must obtain certified cost or pricing data only from those offerors found technically unacceptable in the evaluation.", "correct": false, "why": "Certified data is never obtained on that basis, and unacceptable offerors are not in line for award."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 15.403-2 (was FAR 15.403-1(b) and (c))",
+  "domain": "Source Selection & Evaluation"
+ },
+ {
+  "qid": "Q0021",
+  "stem": "In a competitive tradeoff, your cost realism analysis shows an offeror's proposed cost is understated. How does the result get used, depending on contract type?",
+  "options": [
+   {"text": "On cost-type work you adjust to a most probable cost for the tradeoff; on fixed-price work the price stays, and the unrealism goes to risk or responsibility.", "correct": true, "why": "Realism adjustments produce a most probable cost only on cost-type work; a fixed-price offer stays at the offered price and the risk is reflected in the evaluation."},
+   {"text": "You adjust the evaluated price upward to the most probable cost on both cost-reimbursement and fixed-price contracts, and the SSA uses that figure.", "correct": false, "why": "The Government does not adjust a fixed-price offeror's price; the contractor bears that risk, so a most probable cost is used only on cost-type work."},
+   {"text": "You reject any offeror whose proposed cost is found unrealistic, regardless of contract type, because it shows that the offeror does not fully understand the work.", "correct": false, "why": "Unrealism is evaluated, not automatically disqualifying; rejection requires a basis stated in the solicitation, even when the cost suggests a weak understanding of the work."},
+   {"text": "Cost realism is the same analysis as price reasonableness, so one conclusion covers both.", "correct": false, "why": "Reasonableness asks whether the price is too high; realism asks whether the cost is too low for the offeror's own approach."}
+  ],
+  "difficulty": 3,
+  "cite": "RFO FAR 15.404-3 (cost realism), 15.404-1 (price analysis)",
+  "domain": "Source Selection & Evaluation"
+ },
+ {
+  "qid": "Q0063",
+  "stem": "A contractor submits a Certificate of Current Cost or Pricing Data. As of what date must the data be certified accurate, complete and current?",
+  "options": [
+   {"text": "As of the date of price agreement, or an earlier agreed date as close as practicable to it.", "correct": true, "why": "That is the certification date the FAR certificate format requires, which is why a sweep is done before signature."},
+   {"text": "As of the date the final proposal revision was submitted to the Government for its evaluation.", "correct": false, "why": "Proposal submission, even of the final revision, usually comes before agreement on price, which is exactly why the sweep exists."},
+   {"text": "As of the date the contract is signed by both parties and distributed to the finance office.", "correct": false, "why": "Contract signature can follow agreement on price by weeks; the certificate is tied to agreement on price."},
+   {"text": "As of the end of the contractor's most recent fiscal year.", "correct": false, "why": "The certificate is event-driven, not tied to the contractor's accounting calendar."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 15.403-4 (was FAR 15.406-2)",
+  "domain": "Source Selection & Evaluation"
+ },
+ {
+  "qid": "Q0064",
+  "stem": "Your project manager wants to add an information request to Section L that has no matching evaluation criterion in Section M. What is the right answer, and why?",
+  "options": [
+   {"text": "Do not add it; each Section L request must match a Section M criterion, or using the information becomes an undisclosed criterion that loses protests.", "correct": true, "why": "GAO calls the use of an unstated criterion an undisclosed evaluation criterion, which is one of the most reliable ways to lose a protest."},
+   {"text": "Add it to Section L only; as long as the evaluators do not score it, no protest risk exists, and the project manager still gets the information it wants.", "correct": false, "why": "Once the information is in the proposal the risk is that it influences the decision, scored or not, and needless Section L content also burdens offerors."},
+   {"text": "Add it to Section M only and let offerors infer what to submit.", "correct": false, "why": "An evaluation factor with no corresponding instruction leaves offerors guessing and is equally defective."},
+   {"text": "Add it to Section L and collect it, then let the evaluation team decide after the proposals arrive whether it should count.", "correct": false, "why": "Deciding what matters after proposals arrive is the definition of an unstated criterion."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 15.104 (evaluation factors and significant subfactors); official CORB board answer Q0064",
+  "domain": "Source Selection & Evaluation"
+ },
+ {
+  "qid": "Q0066",
+  "stem": "Which statement correctly describes the lowest price technically acceptable source selection process?",
+  "options": [
+   {"text": "Award goes to the lowest evaluated price among the technically acceptable proposals, with no tradeoffs.", "correct": true, "why": "LPTA is used when the Government realizes no value from exceeding its minimum requirements, so there is nothing to trade."},
+   {"text": "Award goes to the lowest priced proposal, and technical acceptability is established after award during post-award orientation.", "correct": false, "why": "Technical acceptability is determined during evaluation; an unacceptable proposal is not eligible for award."},
+   {"text": "LPTA permits limited tradeoffs when a higher priced proposal is significantly better technically and the SSA documents why.", "correct": false, "why": "Permitting that tradeoff, documented or not, is the definition of the tradeoff process, not LPTA."},
+   {"text": "LPTA may be used only for construction and architect-engineer services, where the design sets the technical standard.", "correct": false, "why": "LPTA is typically used for clearly defined, low risk commercial or non-complex supplies and services, and A-E selection follows a different statutory process."}
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR 15.103-2 (was FAR 15.101-2)",
+  "domain": "Source Selection & Evaluation"
+ },
+ {
+  "qid": "Q0068",
+  "stem": "On a civil works construction project the proposals come in at double the independent Government estimate and the cost estimator stands by the IGE. What statutory limit is in play?",
+  "options": [
+   {"text": "No civil works construction contract may be awarded at a price more than 25 percent above the Government estimate.", "correct": true, "why": "That statutory cost limitation for civil works contracts means award must be delayed until the pricing issue is resolved."},
+   {"text": "No construction contract of any kind may be awarded if the price exceeds the Government estimate by more than 10 percent.", "correct": false, "why": "Ten percent is not the civil works statutory limit, and the limit is not written for every kind of construction."},
+   {"text": "The contracting officer may award at any price once the SSA discounts the IGE in the decision document.", "correct": false, "why": "An SSA decision cannot waive a statutory cost limitation."},
+   {"text": "There is no statutory limit; the IGE is only an internal planning tool.", "correct": false, "why": "For civil works construction there is a statutory ceiling tied to the Government estimate."}
+  ],
+  "difficulty": 3,
+  "cite": "33 U.S.C. 622 and 624; USACE UAI 36.205-100 (statutory cost limitations, civil works)",
+  "domain": "Source Selection & Evaluation"
+ },
+ {
+  "qid": "Q0083",
+  "stem": "You used competitive procedures, allowed 21 days for proposals, and received only one offer on a DoD requirement above the simplified acquisition threshold. What does the DoD one-offer rule require?",
+  "options": [
+   {"text": "Consult the requiring activity on revising the requirement, then resolicit for at least 30 more days unless the HCA waives it.", "correct": true, "why": "Because the solicitation was open fewer than 30 days, the resolicitation requirement applies, and the waiver authority is the HCA and may not go below one level above the contracting officer."},
+   {"text": "Treat the single offer as adequate price competition, since the procedures were competitive, and award without further analysis.", "correct": false, "why": "One offer is not adequate price competition, even under competitive procedures, so the price must be proven by other means."},
+   {"text": "Cancel the requirement and convert it to a sole source justification.", "correct": false, "why": "A single response to a competitive solicitation does not convert the action to other than full and open competition."},
+   {"text": "Immediately require certified cost or pricing data from the single offeror, regardless of the value of the action or any exception.", "correct": false, "why": "Price analysis comes first, and certified data is required only if the action exceeds the certified cost or pricing data threshold with no exception."}
+  ],
+  "difficulty": 3,
+  "cite": "RFO DFARS 215.202-71 (was DFARS 215.371); DFARS provision 252.215-7007",
+  "domain": "Source Selection & Evaluation"
+ },
+ {
+  "qid": "Q0104",
+  "stem": "A firm that performs Government testing under a current contract wants to bid as a prime on a new source selection whose awardee will submit items to that same test contractor. What does the FAR require of you?",
+  "options": [
+   {"text": "Identify and evaluate the potential organizational conflict of interest early, and avoid, neutralize or mitigate it before award, with advice from counsel and technical experts.", "correct": true, "why": "The contracting officer must address OCI early and recommend a course of action to the head of the contracting activity before the solicitation issues."},
+   {"text": "Automatically exclude the firm, because any current Government testing contract creates a disqualifying conflict.", "correct": false, "why": "A conflict must be analyzed and, where possible, avoided, neutralized or mitigated rather than assumed disqualifying."},
+   {"text": "Allow the firm to compete without further action, because organizational conflicts of interest apply only to advisory and assistance services.", "correct": false, "why": "OCI rules reach any situation where the nature of the work creates an actual or potential conflict, including testing and evaluation roles."},
+   {"text": "Refer the matter to the Small Business Administration for a certificate of competency determination.", "correct": false, "why": "A certificate of competency addresses responsibility of a small business, not an organizational conflict of interest."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 9.502, 9.504 (organizational and consultant conflicts of interest)",
+  "domain": "Source Selection & Evaluation"
+ },
+ {
+  "qid": "Q0112",
+  "stem": "You received five proposals on a full and open competitive negotiated acquisition and have decided discussions are needed. What determines who is in the competitive range?",
+  "options": [
+   {"text": "The most highly rated proposals, judged on all stated evaluation criteria, including cost or price.", "correct": true, "why": "The competitive range is built on the merits of each offer measured against the published evaluation factors, including price."},
+   {"text": "The three lowest priced proposals, since three is the standard size of a competitive range under the FAR.", "correct": false, "why": "There is no fixed number in the FAR or anywhere else; the range is determined by the merits of the proposals."},
+   {"text": "Every offeror that submitted a timely proposal, since excluding anyone before discussions is prohibited.", "correct": false, "why": "Offerors not among the most highly rated may be excluded, and they receive a preaward notice."},
+   {"text": "Only proposals that received no weaknesses or deficiencies of any kind in the initial technical evaluation.", "correct": false, "why": "Proposals with weaknesses or deficiencies can still be among the most highly rated, which is precisely why discussions are held."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 15.206-1 (preaward notices; was FAR 15.503); RFO FAR 15.204",
+  "domain": "Source Selection & Evaluation"
+ },
+ {
+  "qid": "Q0113",
+  "stem": "Under the DoD limitations on the lowest price technically acceptable process, for which category is LPTA prohibited outright rather than merely discouraged?",
+  "options": [
+   {"text": "Personal protective equipment and aviation critical safety items whose failure could cause death or injury.", "correct": true, "why": "The DFARS implementation of the statute prohibits LPTA for those items, as opposed to the avoid list."},
+   {"text": "Information technology services, cybersecurity, systems engineering and other knowledge-based professional services.", "correct": false, "why": "Those are on the avoid list, which is a strong caution rather than a prohibition."},
+   {"text": "Grounds maintenance and refuse collection services.", "correct": false, "why": "Those are classic appropriate LPTA candidates when the performance work statement is measurable."},
+   {"text": "Any acquisition of commercial products or commercial services.", "correct": false, "why": "Commercial buys to a clear specification are a common and permitted LPTA use."}
+  ],
+  "difficulty": 3,
+  "cite": "DFARS 215.103-2-70 (DoD Class Deviation 2026-O0048); 10 U.S.C. 3241; RFO FAR 15.103-2",
+  "domain": "Source Selection & Evaluation"
+ },
+ {
+  "qid": "Q0133",
+  "stem": "A commander wants a non-Government contractor employee, a unique technical expert, to chair the technical evaluation team and vote on the source selection board. Is that permissible?",
+  "options": [
+   {"text": "No. Voting on a source selection board is an inherently governmental function, so a contractor employee may not do it.", "correct": true, "why": "Contracts may not be used for inherently governmental functions, and voting membership on a source selection board is specifically on that list."},
+   {"text": "Yes, if the contractor employee first signs a non-disclosure agreement and a conflict of interest certification for this source selection.", "correct": false, "why": "A non-disclosure agreement addresses information protection; it does not make an inherently governmental function contractable."},
+   {"text": "Yes, if the head of the contracting activity approves the appointment in writing before the technical evaluation starts.", "correct": false, "why": "No approval authority can delegate an inherently governmental function to a contractor, however early it is approved."},
+   {"text": "Yes, provided the contractor employee's firm is not competing on this acquisition.", "correct": false, "why": "Absence of a conflict does not change the inherently governmental character of the role."}
+  ],
+  "difficulty": 1,
+  "cite": "Official CORB board answer Q0133 (inherently governmental functions policy; source selection board voting membership)",
+  "domain": "Source Selection & Evaluation"
+ },
+ {
+  "qid": "Q0135",
+  "stem": "Which statement correctly describes communications, as distinct from clarifications and discussions, in a competitive negotiated acquisition?",
+  "options": [
+   {"text": "Communications take place before the competitive range is set, and they may not let an offeror revise its proposal.", "correct": true, "why": "Communications exist to help decide who belongs in the competitive range, so proposal revisions are not permitted at that stage."},
+   {"text": "Communications occur after the competitive range is set and end with a final proposal revision.", "correct": false, "why": "That describes discussions, which are tailored to each offeror in the competitive range."},
+   {"text": "Communications are limited exchanges used when award without discussions is contemplated and can fix clerical errors.", "correct": false, "why": "That describes clarifications."},
+   {"text": "Communications must be conducted with every offeror that submitted a timely proposal.", "correct": false, "why": "Communications are targeted, primarily at offerors whose inclusion in or exclusion from the competitive range is uncertain or turns on past performance."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 15.204 (exchanges with offerors after receipt of proposals; was FAR 15.306)",
+  "domain": "Source Selection & Evaluation"
+ },
+ {
+  "qid": "Q0142",
+  "stem": "In a tradeoff source selection, what must be true before you award to a higher priced, higher rated offeror?",
+  "options": [
+   {"text": "The benefits of the higher priced proposal must merit the extra cost, and the tradeoff rationale must be documented.", "correct": true, "why": "That is the core tradeoff rule; an undocumented tradeoff is a protest exposure even when the decision is sound."},
+   {"text": "The higher priced proposal must be the highest technically rated proposal received.", "correct": false, "why": "A tradeoff permits award to other than the highest technically rated as well as other than the lowest priced offeror."},
+   {"text": "The price difference must be less than ten percent of the lowest evaluated price.", "correct": false, "why": "No percentage cap exists; the test is whether the benefits merit the additional cost."},
+   {"text": "The source selection authority must obtain approval from the head of the contracting activity for the price premium.", "correct": false, "why": "The SSA makes and documents the tradeoff decision; no separate HCA approval of the premium is required."}
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR 15.103-1 (tradeoff approach; was FAR 15.101-1); RFO FAR 15.205 (source selection decision)",
+  "domain": "Source Selection & Evaluation"
+ },
+ {
+  "qid": "Q0217",
+  "stem": "An unsuccessful offeror requests a postaward debriefing. Which of the following may you disclose?",
+  "options": [
+   {"text": "The winner's overall evaluated cost or price and ratings, and the overall ranking of offerors if one was made.", "correct": true, "why": "Those summary results are expressly among the things a postaward debriefing includes."},
+   {"text": "A point-by-point comparison of the debriefed offeror's proposal with each of the other proposals the Government received.", "correct": false, "why": "Point-by-point comparisons with other proposals are specifically excluded from a debriefing."},
+   {"text": "The names and evaluated prices of the other unsuccessful offerors.", "correct": false, "why": "The identities and prices of other unsuccessful offerors are not disclosed."},
+   {"text": "The successful offeror's indirect cost rates, profit and cost breakdown, so the offeror can see exactly why it lost.", "correct": false, "why": "Confidential commercial and financial information such as rates, profit and cost breakdowns is withheld."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 15.301 (postaward debriefing of offerors; was FAR 15.506)",
+  "domain": "Source Selection & Evaluation"
+ },
+ {
+  "qid": "Q0222",
+  "stem": "You are giving a required DoD postaward debriefing. What do the DFARS enhanced debriefing rules add?",
+  "options": [
+   {"text": "Two business days for written questions, written answers within five business days, and the debriefing stays open until the answers are delivered.", "correct": true, "why": "The enhanced debriefing rule keeps the debriefing open until the written answers are delivered, which is what starts the protest stay clock."},
+   {"text": "The offeror gets ten calendar days to submit written questions, the Government has thirty days to answer, and the debriefing closes on the day it is held.", "correct": false, "why": "Those are not the enhanced debriefing timelines, and the debriefing does not close until the written answers are delivered."},
+   {"text": "The Government must disclose the unredacted source selection decision document to every debriefed offeror, whatever the contract value.", "correct": false, "why": "Disclosure of the source selection decision document is redacted and applies at specified dollar levels, not universally and not unredacted."},
+   {"text": "Written questions are permitted only at preaward debriefings.", "correct": false, "why": "The enhanced written question process attaches to required postaward debriefings."}
+  ],
+  "difficulty": 3,
+  "cite": "RFO DFARS 215.301-71 (enhanced postaward debriefing, was DFARS 215.506-70) and 215.301-70 (was DFARS 215.506), DoD Class Deviation 2026-O0048 Rev 1; RFO FAR 15.206-2 (preaward debriefing), 15.301-1 (postaward debriefing)",
+  "domain": "Source Selection & Evaluation"
+ },
+ {
+  "qid": "Q0250",
+  "stem": "A board member asks you to explain unbalanced pricing. Which statement is correct?",
+  "options": [
+   {"text": "Some line item prices are significantly over or understated even though the total is acceptable; the offer may be rejected if that poses an unacceptable risk.", "correct": true, "why": "That is the definition and the remedy: unbalanced pricing raises performance risk and the risk of paying unreasonably high prices, and rejection is available."},
+   {"text": "It exists only when the total evaluated price exceeds the independent Government estimate.", "correct": false, "why": "Unbalanced pricing is about how the total is distributed across line items, and the total can look perfectly acceptable."},
+   {"text": "It exists whenever an offeror's total price differs from the other offerors' prices by more than twenty percent.", "correct": false, "why": "No percentage test defines unbalanced pricing; the analysis is line item by line item against the IGE, other offers and history."},
+   {"text": "It is a responsibility matter that must be referred to the Small Business Administration for a certificate of competency when the offeror is a small business.", "correct": false, "why": "Unbalanced pricing is a pricing and risk issue evaluated by the contracting officer, not a certificate of competency matter."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 15.404-6 (unbalanced pricing; was FAR 15.404-1(g))",
+  "domain": "Source Selection & Evaluation"
+ },
+ {
+  "qid": "Q0251",
+  "stem": "An offeror timely submitted both a paper and an electronic copy of its proposal. The next day the electronic version proves unreadable. What is the correct action?",
+  "options": [
+   {"text": "Notify the offeror at once and let it resubmit the unreadable part; it counts as received at the original time if sent as you direct.", "correct": true, "why": "The FAR expressly provides for notice and resubmission of unreadable electronic portions, and the original receipt time is preserved."},
+   {"text": "Reject the proposal as late, because a complete proposal was not received before closing.", "correct": false, "why": "The proposal was timely received; the unreadable portion has its own remedy and no offeror is harmed."},
+   {"text": "Evaluate the paper copy only and say nothing to the offeror, since silence protects the competition and keeps the original closing time firm.", "correct": false, "why": "The FAR requires that you notify the offeror; using the paper copy is permissible, but only after consultation and documentation."},
+   {"text": "Ask the offeror for a fresh electronic copy and evaluate whatever it sends, without comparing it to the paper copy that was already received.", "correct": false, "why": "You must confirm the resubmitted electronic version matches the paper version so the offeror gains no chance to revise."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 15.108(c) (unreadable proposals; was FAR 15.207(c))",
+  "domain": "Source Selection & Evaluation"
+ },
+ {
+  "qid": "Q0019",
+  "stem": "You have a sole source proposal on an action that does not require submission of certified cost or pricing data. Which is an acceptable basis for determining the price fair and reasonable?",
+  "options": [
+   {"text": "Price analysis against the Government estimate, prices paid before, market research, or published price lists.", "correct": true, "why": "These are recognized price analysis techniques and any of them, properly documented, can support a fair and reasonable determination."},
+   {"text": "The mere fact that the item appears in the offeror's published price list, which other customers also receive and use.", "correct": false, "why": "Inclusion of a price in a price list, catalog or advertisement does not, in and of itself, establish that the price is fair and reasonable, even if other customers see the same list."},
+   {"text": "The contractor's signed certification that its price is fair and reasonable and matches its best commercial price.", "correct": false, "why": "The determination is the contracting officer's, supported by analysis, not the offeror's assertion, however it is worded."},
+   {"text": "Cost analysis is always required on a sole source action regardless of dollar value, with a field pricing report.", "correct": false, "why": "Cost analysis is required when certified cost or pricing data is obtained or when price analysis will not establish reasonableness, not on every sole source action."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 15.404-1 (price analysis techniques; was FAR 15.404-1(b))",
+  "domain": "Pricing, Cost & Payment"
+ },
+ {
+  "qid": "Q0028",
+  "stem": "What distinguishes price analysis from cost analysis?",
+  "options": [
+   {"text": "Price analysis judges the total price without its cost elements or profit; cost analysis reviews each cost element, including profit or fee.", "correct": true, "why": "Price analysis looks at the bottom line against outside data; cost analysis opens up the build-up."},
+   {"text": "Price analysis reviews each cost element and the profit; cost analysis looks only at the total price against outside data.", "correct": false, "why": "This reverses the two definitions."},
+   {"text": "Price analysis is used only on commercial items and cost analysis only on construction.", "correct": false, "why": "The choice turns on whether cost or pricing data is required and whether competition establishes reasonableness, not on those categories."},
+   {"text": "Price analysis relies on the offeror's own cost data, while cost analysis relies on data from sources other than the offeror, such as audits.", "correct": false, "why": "It is the other way around: price analysis is based essentially on data obtained from sources other than the prospective contractor."}
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR 15.404-1 (price analysis) and 15.404-2 (cost analysis)",
+  "domain": "Pricing, Cost & Payment"
+ },
+ {
+  "qid": "Q0038",
+  "stem": "You are using sealed bidding and one bid shows line item prices that are materially unbalanced. What authority do you have?",
+  "options": [
+   {"text": "You may reject the bid when you determine that the lack of balance poses an unacceptable risk to the Government.", "correct": true, "why": "Part 14 carries its own unbalanced pricing rule for rejection of individual bids; the test is the risk the lack of balance poses, not the fact that the bid is mathematically unbalanced."},
+   {"text": "You must award to the low bidder regardless, because sealed bidding has no unbalanced pricing rule.", "correct": false, "why": "Part 14 contains its own unbalanced pricing provision permitting rejection."},
+   {"text": "You must open discussions with the bidder to rebalance the line items before award.", "correct": false, "why": "Discussions are not conducted in sealed bidding."},
+   {"text": "You may accept the bid but unilaterally reprice the unbalanced line items after award.", "correct": false, "why": "The Government cannot unilaterally reprice a bidder's line items; the remedy is rejection or acceptance of documented risk."}
+  ],
+  "difficulty": 3,
+  "cite": "RFO FAR 14.306-3(g) (was FAR 14.404-2(g)); RFO FAR 15.404-6",
+  "domain": "Pricing, Cost & Payment"
+ },
+ {
+  "qid": "Q0086",
+  "stem": "Who prepares and who approves the independent Government estimate on an Army procurement action?",
+  "options": [
+   {"text": "The requiring activity prepares it, the preparer's immediate supervisor signs it as approval, and the contracting officer reviews and accepts it.", "correct": true, "why": "AFARS requires the preparer and the preparer's immediate supervisor to sign and date the estimate, with the contracting officer checking it before accepting it."},
+   {"text": "The contracting officer prepares it from market research, and the head of the contracting activity approves it before the solicitation is issued to industry.", "correct": false, "why": "The contracting officer reviews and accepts the estimate but does not prepare it; that would defeat its independence. No HCA approval is required."},
+   {"text": "The incumbent contractor prepares it and the requiring activity approves it.", "correct": false, "why": "The estimate must be developed independently by the Government, never by a contractor or from a contractor quote."},
+   {"text": "The cost or price analyst prepares it from the pricing data, and the contracting officer's legal advisor approves it for the official contract file.", "correct": false, "why": "Legal counsel has no approval role for the IGE; the approval signature is the preparer's immediate supervisor."}
+  ],
+  "difficulty": 2,
+  "cite": "AFARS 5107.9001 and 5107.9002 (independent Government estimates)",
+  "domain": "Pricing, Cost & Payment"
+ },
+ {
+  "qid": "Q0087",
+  "stem": "Which statement about the independent Government estimate is correct?",
+  "options": [
+   {"text": "It is source selection information, never shared with offerors, and the Army requires one for every action above the SAT.", "correct": true, "why": "AFARS sets the above-SAT requirement and the estimate is source selection information under the procurement integrity rules."},
+   {"text": "It may be released to all offerors during discussions so they can adjust their proposals toward it and close the price gap.", "correct": false, "why": "Releasing the estimate would disclose source selection information and destroy its value as an independent check."},
+   {"text": "A bottom-line total with no supporting detail is enough for the contracting officer to accept it, if the supervisor signs it.", "correct": false, "why": "The estimate must carry enough detail and narrative basis to test offerors' proposals; a bare total goes back to the preparer, signed or not."},
+   {"text": "It is required only for construction contracts above the SAT, and it is optional for all services and supplies at any value.", "correct": false, "why": "The Army requirement is not limited to construction, though construction has its own additional FAR requirement above the SAT."}
+  ],
+  "difficulty": 2,
+  "cite": "AFARS 5107.9002; RFO FAR 3.104 (source selection information); RFO FAR 36.101-6 (construction IGE, was FAR 36.203)",
+  "domain": "Pricing, Cost & Payment"
+ },
+ {
+  "qid": "Q0118",
+  "stem": "Under the DFARS, progress payments based on a percentage or stage of completion are authorized on DoD contracts for which work?",
+  "options": [
+   {"text": "Construction, shipbuilding, and ship conversion, alteration or repair.", "correct": true, "why": "DFARS 232.102(e)(2) authorizes percentage or stage of completion progress payments only for those categories; everything else in DoD uses progress payments based on costs incurred."},
+   {"text": "All fixed-price supply contracts over the simplified acquisition threshold.", "correct": false, "why": "Fixed-price supply contracts use progress payments based on costs incurred, not stage of completion."},
+   {"text": "All cost-reimbursement service contracts.", "correct": false, "why": "Cost-reimbursement contracts are financed through cost vouchers, not progress payments."},
+   {"text": "Any contract where the contractor lacks an approved accounting system.", "correct": false, "why": "An approved accounting system is a prerequisite for cost-based progress payments, not a trigger for stage of completion payments."}
+  ],
+  "difficulty": 3,
+  "cite": "RFO DFARS 232.102(e)(2) (DoD Class Deviation 2026-O0022); RFO FAR 32.102(e), 32.103",
+  "domain": "Pricing, Cost & Payment"
+ },
+ {
+  "qid": "Q0123",
+  "stem": "How does commercial contract financing differ from customary financing such as progress payments and performance-based payments?",
+  "options": [
+   {"text": "It is more flexible, can include advance and installment payments where that is common commercial practice, and applies only to Part 12 buys.", "correct": true, "why": "Commercial financing is tied to commercial market practice and is available only for commercial products and services acquisitions."},
+   {"text": "Commercial financing is available on any contract type, commercial or not, as long as the contractor requests it and offers adequate security.", "correct": false, "why": "It is limited to Part 12 commercial acquisitions, whatever security the contractor offers."},
+   {"text": "Commercial financing prohibits any payment before delivery and acceptance.", "correct": false, "why": "It is the one method that can include advance and installment payments."},
+   {"text": "Commercial financing requires an approved contractor accounting system just as progress payments do.", "correct": false, "why": "Commercial financing rests on commercial market practice, not on a Government-approved cost accounting system."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 32.104 (providing contract financing); RFO FAR subpart 32.2 (commercial financing); FAR Part 12",
+  "domain": "Pricing, Cost & Payment"
+ },
+ {
+  "qid": "Q0128",
+  "stem": "Which of the following supports a contracting officer decision to withhold, reduce or suspend payments?",
+  "options": [
+   {"text": "Substantial evidence of failure to meet a material requirement, or of performance endangered by poor progress or an unsatisfactory financial condition.", "correct": true, "why": "Those are among the enumerated conditions, and the standard is substantial evidence, not suspicion."},
+   {"text": "The contracting officer's general dissatisfaction with the contractor's slow responses to email and to the COR's requests for meetings.", "correct": false, "why": "Withholding requires substantial evidence tied to enumerated conditions, not a communication style complaint."},
+   {"text": "A pending request for equitable adjustment that the contracting officer intends to deny, so the money is held back for the dispute.", "correct": false, "why": "An unresolved REA is handled through the claims and disputes process, not by withholding payments."},
+   {"text": "The contractor's decision to change subcontractors without asking the contracting officer for consent first.", "correct": false, "why": "Subcontractor changes are handled through consent to subcontract and the contract terms, not by payment withholding on that fact alone."}
+  ],
+  "difficulty": 2,
+  "cite": "Official CORB board answer Q0128 (withholding, reduction or suspension of payments; see the Progress Payments clause)",
+  "domain": "Pricing, Cost & Payment"
+ },
+ {
+  "qid": "Q0130",
+  "stem": "What is the difference between an allocable cost and an allowable cost?",
+  "options": [
+   {"text": "Allocable asks whether the cost is properly assigned to this contract; allowable asks whether it is allocable and also meets the cost principles and CAS.", "correct": true, "why": "Allocability is about assignment to the contract; allowability is the broader test that includes allocability plus regulatory conformity."},
+   {"text": "Allowable means the cost was incurred specifically for this contract; allocable means the cost complies with the FAR cost principles and the Cost Accounting Standards.", "correct": false, "why": "This reverses the two terms."},
+   {"text": "They are synonyms; a cost that is allocable is by definition allowable.", "correct": false, "why": "A cost can be squarely allocable to a contract and still be expressly unallowable under the cost principles."},
+   {"text": "Allocable costs are direct costs and allowable costs are indirect costs.", "correct": false, "why": "Both direct and indirect costs are tested for allocability and allowability; the distinction is not direct versus indirect."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR Part 31 (contract cost principles and procedures)",
+  "domain": "Pricing, Cost & Payment"
+ },
+ {
+  "qid": "Q0007",
+  "stem": "Why is contract closeout important to the Government and to the contractor?",
+  "options": [
+   {"text": "Excess funds may need to be deobligated, and many contracts hold back final payments that matter to the contractor's cash flow.", "correct": true, "why": "Closeout returns unneeded funds to the Government and releases withheld amounts to the contractor."},
+   {"text": "Closeout is the last opportunity to change the contract scope and add work the customer still needs, using the funds that remain.", "correct": false, "why": "Closeout follows completion of performance; new scope is a new procurement or a modification before completion."},
+   {"text": "Closeout is a records management formality with no financial effect, done mainly to clear the office's open-contract workload report.", "correct": false, "why": "Deobligation of excess funds and release of withholdings are substantial financial effects."},
+   {"text": "Closeout is required in order to file the contract action report in FPDS.", "correct": false, "why": "Contract action reports are filed at award and modification, not at closeout."}
+  ],
+  "difficulty": 1,
+  "cite": "Official CORB board answer Q0007 (contract closeout)",
+  "domain": "Contract Administration"
+ },
+ {
+  "qid": "Q0010",
+  "stem": "Which action is outside the authority of a contracting officer's representative?",
+  "options": [
+   {"text": "Directing the contractor in a way that changes the price, quantity, quality, schedule or other contract terms.", "correct": true, "why": "Only the contracting officer may make those changes; a COR who does it creates an unauthorized commitment or a constructive change."},
+   {"text": "Performing technical monitoring and surveillance of contractor performance against the requirement in the performance work statement.", "correct": false, "why": "That is the core function the COR is designated to perform."},
+   {"text": "Documenting surveillance results and forwarding contractor correspondence and invoices to the contracting officer.", "correct": false, "why": "Documenting surveillance and forwarding correspondence are proper COR duties."},
+   {"text": "Serving as the technical subject matter expert for the requirement and advising the contracting officer on technical issues.", "correct": false, "why": "CORs commonly serve as subject matter experts on the requirement."}
+  ],
+  "difficulty": 1,
+  "cite": "RFO DFARS PGI 201.404-70(e); DFARS 201.404-70 (COR designation and limitations)",
+  "domain": "Contract Administration"
+ },
+ {
+  "qid": "Q0017",
+  "stem": "Which termination action applies only to acquisitions made under FAR Part 12?",
+  "options": [
+   {"text": "Termination for cause, the commercial counterpart of termination for default.", "correct": true, "why": "Termination for cause is the Part 12 remedy for contractor default or failure to give adequate assurances of future performance."},
+   {"text": "Termination for default, used when a commercial contractor fails to deliver on time.", "correct": false, "why": "Termination for default is the non-commercial remedy under Part 49; a commercial contractor's failure is handled by termination for cause."},
+   {"text": "Termination for convenience.", "correct": false, "why": "Termination for convenience exists in both commercial and non-commercial contracts."},
+   {"text": "No-cost cancellation, agreed with the contractor in writing.", "correct": false, "why": "A no-cost cancellation is a mutual agreement available as an alternative to termination in either setting."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 12.304 (commercial terminations); FAR Part 49",
+  "domain": "Contract Administration"
+ },
+ {
+  "qid": "Q0032",
+  "stem": "Your COR reports that the contractor failed to deliver a required service. If you decide to issue a cure notice, what is the key timing rule?",
+  "options": [
+   {"text": "It gives the contractor a set period, normally ten days, to cure, and at least ten days of performance must remain.", "correct": true, "why": "The cure notice is only usable when enough performance time remains for the contractor to cure; otherwise a show cause notice is the tool."},
+   {"text": "A cure notice may be issued at any time, including after the period of performance has ended and delivery is late.", "correct": false, "why": "Once performance time has run out the cure notice has no function; a show cause notice is used instead."},
+   {"text": "A cure notice gives the contractor thirty days to cure regardless of the time remaining.", "correct": false, "why": "The customary period is ten days, and it must fit inside the remaining performance period."},
+   {"text": "A cure notice automatically terminates the contract for default if the contractor does not respond.", "correct": false, "why": "Failure to cure permits, but does not automatically effect, a termination for default; that is a separate contracting officer decision."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 49.607 (delinquency notices: cure notice and show cause notice)",
+  "domain": "Contract Administration"
+ },
+ {
+  "qid": "Q0036",
+  "stem": "Which statement about the Quality Assurance Surveillance Plan is correct?",
+  "options": [
+   {"text": "A Government plan, written with the statement of work, that names the work needing surveillance and how it is surveilled.", "correct": true, "why": "The QASP belongs to the Government and is built alongside the SOW or PWS, not submitted by the contractor."},
+   {"text": "It is the contractor's quality control plan, submitted with its proposal and approved by the contracting officer at award.", "correct": false, "why": "The contractor's quality control plan is a separate contractor document, even when the Government approves it; the QASP is the Government's surveillance plan."},
+   {"text": "It is prepared after award once the COR has observed several months of performance and knows where the problems tend to arise.", "correct": false, "why": "It is prepared with the statement of work so surveillance standards are known before performance begins."},
+   {"text": "It is required only on cost-reimbursement service contracts.", "correct": false, "why": "For DoD the need for a QASP must be addressed and documented in the file for every contract except those using simplified acquisition procedures."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 46.401 and 46.103; DFARS 246.401; DFARS 237.172",
+  "domain": "Contract Administration"
+ },
+ {
+  "qid": "Q0044",
+  "stem": "Which action may properly be accomplished by a unilateral modification?",
+  "options": [
+   {"text": "Exercising a priced option that the contract already contains an option clause for.", "correct": true, "why": "An option supported by an option clause is exercised unilaterally by the Government, along with administrative changes, in-scope change orders and termination notices."},
+   {"text": "A negotiated change to the delivery schedule agreed with the contractor.", "correct": false, "why": "A negotiated schedule change is a bilateral supplemental agreement."},
+   {"text": "A negotiated equitable adjustment settling the price of a change.", "correct": false, "why": "Settling price by agreement is bilateral by definition."},
+   {"text": "A significant negotiated revision to the statement of work.", "correct": false, "why": "A negotiated scope revision is agreed by both parties and executed bilaterally."}
+  ],
+  "difficulty": 2,
+  "cite": "FAR 52.243-1 through 52.243-7 (Changes clauses); RFO FAR 43.203 (types of contract modifications)",
+  "domain": "Contract Administration"
+ },
+ {
+  "qid": "Q0048",
+  "stem": "Why must FPDS-NG Contract Action Reports be complete and accurate?",
+  "options": [
+   {"text": "Its data feeds reports to the President, Congress, GAO, agencies and the public, and measures small business and other policy goals.", "correct": true, "why": "FPDS is the Government-wide reporting system whose data drives external reporting and policy measurement, so errors propagate widely."},
+   {"text": "The report is the legal instrument that obligates funds on the contract once it is approved.", "correct": false, "why": "Funds are obligated by the signed contract action, not by the FPDS report."},
+   {"text": "The report substitutes for the contract file documentation required by the FAR, so a separate contract file is not needed for small actions.", "correct": false, "why": "FPDS reporting is in addition to, not a substitute for, the contract file, whatever the size of the action."},
+   {"text": "The report determines whether the contractor is responsible for award.", "correct": false, "why": "Responsibility is a separate determination based on the standards in FAR Part 9 and information in SAM."}
+  ],
+  "difficulty": 1,
+  "cite": "Official CORB board answer Q0048 (FPDS-NG contract action reporting)",
+  "domain": "Contract Administration"
+ },
+ {
+  "qid": "Q0075",
+  "stem": "How may a contractor indicate acceptance of a purchase order?",
+  "options": [
+   {"text": "By notifying the Government, preferably in writing, or by delivering what was ordered or substantially performing.", "correct": true, "why": "Acceptance can be by written notice or by performance, which is why an unaccepted purchase order can still become binding through the contractor's conduct."},
+   {"text": "Only by returning a signed copy of the purchase order to the contracting officer before delivery.", "correct": false, "why": "A signed copy is one way, but performance also constitutes acceptance."},
+   {"text": "Only by submitting an invoice after complete delivery.", "correct": false, "why": "Acceptance can occur well before invoicing, including by beginning performance."},
+   {"text": "Acceptance is not required; a purchase order binds the contractor once the contracting officer signs and sends it out.", "correct": false, "why": "A purchase order is an offer by the Government that requires the contractor's acceptance."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 12.201-1(b) (legal effect of quotations; was FAR 13.004(a)-(b)); official CORB board answer Q0075",
+  "domain": "Contract Administration"
+ },
+ {
+  "qid": "Q0081",
+  "stem": "A customer emails you an urgent change to the statement of work on a current contract. Who may actually change the contract, and what is the limit on that authority?",
+  "options": [
+   {"text": "Only a contracting officer acting within their authority, and a change order must stay within the general scope of the contract.", "correct": true, "why": "A customer email is a request, not a change, and an out-of-scope change is a new procurement requiring competition or a justification."},
+   {"text": "The COR may direct the change immediately and the contracting officer documents it later.", "correct": false, "why": "A COR has no authority to direct a change; doing so creates a constructive change or unauthorized commitment."},
+   {"text": "The contracting officer may issue a unilateral change order of any size or kind, as long as the funds needed to cover it are available.", "correct": false, "why": "Availability of funds does not cure an out-of-scope change; the change must stay within the general scope."},
+   {"text": "On a commercial contract the contracting officer may issue the change unilaterally under the commercial contract terms and conditions clause.", "correct": false, "why": "Under the commercial contract terms clause, changes may be made only by written agreement of the parties."}
+  ],
+  "difficulty": 3,
+  "cite": "RFO FAR 43.202 (authority to modify), 43.301 (change orders); FAR 52.243-1, 52.212-4(c)",
+  "domain": "Contract Administration"
+ },
+ {
+  "qid": "Q0106",
+  "stem": "What is the main purpose of a post-award conference, and what is it not for?",
+  "options": [
+   {"text": "It builds a shared understanding of the requirements and heads off problems; it is not for changing the negotiated deal.", "correct": true, "why": "The conference builds shared understanding of what was already agreed; it cannot renegotiate the deal or substitute for the contractor's understanding at the time of offer."},
+   {"text": "It is the forum for negotiating the terms the parties could not settle before award, such as the final delivery schedule and reports.", "correct": false, "why": "Unsettled terms must be resolved before award, not at the post-award conference."},
+   {"text": "It is where the contracting officer delegates unlimited administration authority to the COR in front of the contractor's staff.", "correct": false, "why": "COR authority is set by the written designation letter and is limited; the conference does not expand it."},
+   {"text": "It is a contractually required event on every contract above the micro-purchase threshold, held within 30 days after award.", "correct": false, "why": "A post-award conference is used when the complexity or risk of the contract warrants it, not automatically at that dollar level or on a fixed schedule."}
+  ],
+  "difficulty": 1,
+  "cite": "RFO FAR Part 42 (contract administration; post-award orientation)",
+  "domain": "Contract Administration"
+ },
+ {
+  "qid": "Q0111",
+  "stem": "The specifications call for a different item than the Schedule in Section B. Under the standard Order of Precedence clause, which controls?",
+  "options": [
+   {"text": "The Schedule controls; it comes first in the order of precedence, and the specifications come last.", "correct": true, "why": "The order runs Schedule, representations and certifications, contract clauses, other documents and attachments, then the specifications."},
+   {"text": "The specifications control, because they contain the detailed technical requirement for the item.", "correct": false, "why": "Detail does not confer precedence; the specifications are last in the clause's order."},
+   {"text": "The contract clauses control over both the Schedule and the specifications.", "correct": false, "why": "Contract clauses sit third, after the Schedule and the representations and certifications."},
+   {"text": "Whichever document was most recently modified controls.", "correct": false, "why": "The clause sets a fixed order of precedence; recency of modification is not the test."}
+  ],
+  "difficulty": 2,
+  "cite": "FAR 52.215-8, Order of Precedence - Uniform Contract Format",
+  "domain": "Contract Administration"
+ },
+ {
+  "qid": "Q0117",
+  "stem": "A prime contractor has an approved purchasing system. When is your written consent to subcontract required?",
+  "options": [
+   {"text": "Only for the subcontracts the contracting officer names in the consent clause because of their type, complexity, value or surveillance needs.", "correct": true, "why": "An approved purchasing system narrows consent to the subcontracts the contracting officer names in paragraph (d) of the clause."},
+   {"text": "For every subcontract exceeding the simplified acquisition threshold.", "correct": false, "why": "That approximates the rule when the contractor does not have an approved purchasing system, not when it does."},
+   {"text": "For every cost-reimbursement, time-and-materials and labor-hour subcontract, without exception and whatever the status of the purchasing system.", "correct": false, "why": "That is the no-approved-system rule; with an approved system consent is limited to identified subcontracts."},
+   {"text": "Consent is never required once the purchasing system is approved.", "correct": false, "why": "The contracting officer retains the ability to require consent for specifically identified subcontracts."}
+  ],
+  "difficulty": 3,
+  "cite": "RFO FAR 44.201-1, 44.201-2, 44.201-3; FAR 52.244-2",
+  "domain": "Contract Administration"
+ },
+ {
+  "qid": "Q0120",
+  "stem": "How do you determine whether a proposed change is within the scope of the existing contract?",
+  "options": [
+   {"text": "Test for a material difference from the awarded contract in type of work, period and cost, and in what the original competition would have been.", "correct": true, "why": "The scope test is the material difference test, measured against what the parties contemplated at award and what would have changed the field of competitors."},
+   {"text": "Any change under ten percent of the contract value is automatically within scope, because the Changes clause allows up to that much price growth without a new competition.", "correct": false, "why": "Neither dollar amount nor quantity of changes is by itself determinative of scope, and the Changes clause sets no percentage."},
+   {"text": "Any change the contractor is willing to accept bilaterally is within scope, since a signed supplemental agreement binds both parties to the new terms.", "correct": false, "why": "Contractor agreement, even in a signed supplemental agreement, does not cure an out-of-scope change; the other offerors' competitive interests are what is at stake."},
+   {"text": "Any change the requiring activity certifies as urgent is within scope.", "correct": false, "why": "Urgency may justify a separate procurement authority, but it does not make an out-of-scope change in scope."}
+  ],
+  "difficulty": 2,
+  "cite": "Official CORB board answer Q0120 (scope of the contract; material difference test)",
+  "domain": "Contract Administration"
+ },
+ {
+  "qid": "Q0124",
+  "stem": "You are reviewing a CPARS performance assessment as the assessing official. What are you checking for?",
+  "options": [
+   {"text": "Correct contract data, a meaningful narrative for each area, specific events behind any rating above or below satisfactory, and objective, verifiable statements.", "correct": true, "why": "Other contracting officers rely on this data to evaluate past performance, and contractors may challenge unsubstantiated feedback."},
+   {"text": "That every rating is satisfactory, so the contractor is not disadvantaged in future source selections or pushed into filing a rebuttal.", "correct": false, "why": "Ratings must reflect actual performance; steering toward satisfactory defeats the purpose of the system."},
+   {"text": "That the narrative is brief enough to avoid disclosing source selection information or the contractor's proprietary data.", "correct": false, "why": "CPARS narratives must be meaningful and event-specific; brevity that removes substance is the defect being guarded against."},
+   {"text": "That the assessment is completed only after contract closeout.", "correct": false, "why": "Interim assessments are prepared during performance as well as a final assessment."}
+  ],
+  "difficulty": 2,
+  "cite": "Official CORB board answer Q0124 (CPARS assessment review)",
+  "domain": "Contract Administration"
+ },
+ {
+  "qid": "Q0144",
+  "stem": "Within what period must a DoD contracting officer designate a COR for a service contract, and what allows an exemption?",
+  "options": [
+   {"text": "Within three business days of award, unless the buy used simplified procedures, is not complex, and the file explains why no COR is needed.", "correct": true, "why": "All three exemption conditions must be met together, and the file documentation is part of the test, not optional."},
+   {"text": "Within thirty calendar days of contract award, with no exemption available.", "correct": false, "why": "The window is three business days and an exemption does exist for simple simplified acquisition procedure buys."},
+   {"text": "Before issuing the solicitation, with an exemption whenever the contract is firm-fixed-price and the work is routine.", "correct": false, "why": "Designation follows award, and firm-fixed-price service contracts still require a COR, routine or not."},
+   {"text": "Within three business days of the first invoice, with an exemption whenever a DCMA delegation exists and DCMA agrees to perform surveillance.", "correct": false, "why": "The clock runs from award, and a DCMA delegation of surveillance does not by itself remove the COR designation requirement for services."}
+  ],
+  "difficulty": 3,
+  "cite": "RFO DFARS PGI 201.404-70(e) (was PGI 201.602-2)",
+  "domain": "Contract Administration"
+ },
+ {
+  "qid": "Q0150",
+  "stem": "You properly issue a unilateral change order under the Changes clause and the contractor disagrees with it. What must the contractor do?",
+  "options": [
+   {"text": "Keep performing as changed, within any Limitation of Cost or Limitation of Funds clause, and pursue its disagreement under the Disputes clause.", "correct": true, "why": "The duty to proceed is the point of a unilateral change order; disagreement over the adjustment goes to the Disputes clause, not to a work stoppage."},
+   {"text": "Stop work and notify the contracting officer, then resume only after the parties sign a bilateral modification agreeing on the equitable adjustment.", "correct": false, "why": "Stopping work on a change order would put the contractor in default, even with notice; the remedy is the Disputes clause."},
+   {"text": "Continue performance without any limit, even beyond the funds obligated on a cost-reimbursement contract, and recover the extra cost later through a claim under the Disputes clause.", "correct": false, "why": "The Limitation of Cost and Limitation of Funds clauses cap the contractor's obligation on those contract types; costs beyond them are at the contractor's risk."},
+   {"text": "File a protest with GAO within ten days of receiving the change order.", "correct": false, "why": "A dispute over a change order is a contract claim under the Disputes clause, not a bid protest."}
+  ],
+  "difficulty": 2,
+  "cite": "RFO FAR 43.301(b) (was FAR 43.201(b))",
+  "domain": "Contract Administration"
+ },
+ {
+  "qid": "Q0224",
+  "stem": "A contractor requests a no-cost time extension because its subcontractor is behind schedule, and the requiring activity wants it processed as an excusable delay. How do you respond?",
+  "options": [
+   {"text": "A subcontractor falling behind is not excusable delay; an extension can still be granted, but not on that basis.", "correct": true, "why": "Excusable delay means something beyond the reasonable control of the contractor and without its fault or negligence, which does not describe a sub the prime chose and manages."},
+   {"text": "It is an excusable delay, because the delay was not the fault of the prime contractor and the subcontractor was approved.", "correct": false, "why": "Excusable delay is defined by causes beyond the contractor's reasonable control such as acts of God, acts of the Government, fires, floods, epidemics, strikes, unusually severe weather and common carrier delays, not by absence of prime fault or by consent to the subcontract."},
+   {"text": "The request must be denied outright and the contract terminated for default as soon as the delivery date has passed.", "correct": false, "why": "Termination is a discretionary remedy, and an extension for appropriate consideration may serve the Government better."},
+   {"text": "Any delay traceable to a lower tier supplier is excusable so long as the prime gave prompt written notice of the problem.", "correct": false, "why": "Notice does not convert an inexcusable delay into an excusable one; the cause must be beyond the contractor's reasonable control and without its fault."}
+  ],
+  "difficulty": 2,
+  "cite": "FAR 52.249-14, Excusable Delays",
+  "domain": "Contract Administration"
+ }
+]

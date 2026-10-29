@@ -1,0 +1,52 @@
+# Merge report 2026-09-17
+
+- == source lists: split folded questions ==
+-   Q0279 <- pam-xlsx-2026-01 row 283, pam-csv-legacy row 281 (unit 409th CSB; similar to Q0008)
+-   Q0280 <- pam-xlsx-2026-01 row 285, pam-csv-legacy row 283 (unit 409th CSB; similar to Q0016)
+-   Q0281 <- pam-xlsx-2026-01 row 292, pam-csv-legacy row 290 (unit 409th CSB; similar to Q0109)
+-   split out 3 questions
+- == open-answer drafts ==
+-   applied 51 drafted answers
+- == RFO citation rewrites of official answers ==
+-   rewrite records: 227, answers changed: 74
+- == Korea scenarios ==
+-   added 20 Korea scenarios
+- == warrant-class questions (N ids) ==
+-   added 55 warrant-class questions and 55 quiz items
+- == regulations ==
+-   frameworks=8 crosswalk=143 unchanged=24 thresholds=33
+-   questions with crosswalk pairs: 152 (unverifiable: 0)
+- == other modules ==
+-   primers=27
+-   mcq=317 (including 55 from warrant-class questions)
+-   games_add_protest_clock.json: added 28 to protest_clock (now 105)
+-   games_add_threshold_ladder.json: added 30 to threshold_ladder (now 104)
+-   games keys=['threshold_ladder', 'fiscal_sort', 'protest_clock', 'clause_match', 'jeopardy', 'branching']
+-   glossary=221
+-   process steps=10
+-   resources=45
+-   citation cosmetics: adjusted crosswalk lists on 17 questions
+-   PII scan: no email addresses in content
+- == source-list coverage ==
+-   Legacy WarrantQA CSV: No answer in the list; Board Ready shows a reviewed AI draft: 48
+-   Legacy WarrantQA CSV: No answer in the list; Board Ready shows an answer from the other list: 24
+-   Legacy WarrantQA CSV: Shown as the answer: 187
+-   Legacy WarrantQA CSV: Shown as the answer, citations updated to the FAR Overhaul: 8
+-   Legacy WarrantQA CSV: Shown under Other answers in the source lists: 26
+-   PAM Q&A workbook: No answer in the list; Board Ready shows a reviewed AI draft: 48
+-   PAM Q&A workbook: No answer in the list; Board Ready shows an answer from the other list: 25
+-   PAM Q&A workbook: Shown as the answer: 211
+-   PAM Q&A workbook: Shown as the answer, citations updated to the FAR Overhaul: 9
+-   PAM Q&A workbook: Shown under Other answers in the source lists: 2
+-   coverage: 588 rows checked, missing 0, answers that differ 0
+-   wrote questions.json (1338 KB)
+-   wrote primers.json (341 KB)
+-   wrote mcq.json (467 KB)
+-   wrote games.json (339 KB)
+-   wrote glossary.json (109 KB)
+-   wrote process.json (67 KB)
+-   wrote regulations.json (382 KB)
+-   wrote rubric_board.json (49 KB)
+-   wrote resources.json (21 KB)
+-   wrote korea_scenarios.json (0 KB)
+- == bank now: 356 questions, status {'official': 230, 'ai-draft': 126}

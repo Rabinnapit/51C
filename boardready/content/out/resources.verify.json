@@ -1,0 +1,36 @@
+[
+  {
+    "pass": "source-fidelity",
+    "checked": 45,
+    "refuted": 16,
+    "checked_on": "2026-09-13",
+    "method": "Every entry's URL was fetched (WebFetch) or curled with a browser user agent; acquisition.gov RFO part pages 1, 6, 8, 28, 33, 42, the codified FAR part 6, DFARS PGI 201, AFARS part 5101 and appendices EE/FF/GG, the DPC deviation pages, SAM.gov, GAO, eCFR, law.cornell.edu and waru.edu were read for the specific claims in each note; USFK, WARU and SOFA claims were checked against content/sources/ and search-engine indexes because usfk.mil returns 403.",
+    "changes": [
+      "RFO Policy and Guidance: note said 'OMB and OFPP memos'; page actually links EO 14275, OMB M-25-26 and three FAR Council guidance documents (RFO deviations, EO 14398, EO 14402); rewritten to match the page.",
+      "RFO FAQs: claim that the FAQs explain 'how to cite overhauled parts' is not on the page; replaced with the actual FAQ topics (deviation process, model deviation text, non-regulatory guidance, transition timing).",
+      "FAR legacy browse: note called it 'the pre-overhaul FAR text'; acquisition.gov posts it as the current codified FAR, FAC 2026-01 effective 13 Mar 2026 (6.302-1 present, 6.103-1 absent). Rewritten so readers do not treat it as an archive.",
+      "DFARS: 'DFARS 225 Korea provisions' could not be substantiated (Korea is not a DFARS 225.872 qualifying country and no Korea-specific 225 subpart was found); changed to 'DFARS 225 foreign acquisition rules'.",
+      "DFARS PGI: note asserted COR designation 'sits in PGI 201.404-70'. The posted PGI (change 7 May 2026) has it at 201.602-2 and 201.404-70 does not exist there; the deck cite could only live in the RFO-deviation PGI 201 (Class Deviation 2026-O0002 Rev 1, 5 Aug 2026), which was not opened. Marked unverified.",
+      "AFARS: 'Appendix GG/EE for warrants, CORs and the Army ordering officer program' refuted. Appendix EE is the Army GPC operating procedures, Appendix FF the nonstandard-clause plan, Appendix GG the approval-authority matrix; warrant rules are in subpart 5101.6 (5101.603, 5101.602-3). Rewritten.",
+      "FAR Council: page does not discuss 'why RFO deviations are being used ahead of rulemaking'; replaced with the membership and role the page actually states.",
+      "PAM Warrant page: 'templates and SF 1402 guidance' appears nowhere in Army Warranting Policy v12 (no hit for 1402 or template); replaced with what the policy says the page holds (board Q&A repository, reciprocity MOAs, section 3.4.2 and 8.0 letters).",
+      "4 CFR 21: 'pair with RFO FAR 33.104-3 and 33.105' corrected - 33.104-3 is 'Postaward' under 33.104 Protests to the agency; GAO protests are 33.105 (33.105-1 points to 4 CFR 21; stay/suspension at 33.105-2 and 33.105-3). Also clarified that the CICA stay is not in 4 CFR 21 itself.",
+      "Court of Federal Claims: 'claim appeals beyond the ASBCA' was wrong; COFC is the alternative CDA forum to the ASBCA, not a level above it. Rewritten.",
+      "DAU (WARU) home: note said the waru.edu root 'returned 403 to automated fetches'; a direct browser-agent curl returned HTTP 200 (title 'Home | www.waru.edu'); only the fetch proxy was refused. Rename memo details kept but labelled as from search results, not fetched.",
+      "USFK Regulations: URL /Resources/Regulations/ could not be confirmed (403 and absent from search indexes); replaced with the search-indexed https://www.usfk.mil/Resources/USFK-Publications/. 'USFK Reg 700-19, 550-51, SOFA guidance' relabelled with the regulations' real subjects (700-19 = IC/TR program, older; 550-51 = International Agreements); neither appears in content/sources/, so flagged korea-verify-cp.",
+      "USFKI 4901.01: 'The FKAQ instruction' softened to 'USFK instruction (OPR FKAQ)' and tied to what the study deck actually says (KO submits the SOFA-designation request to USFK/FKAQ and reviews SOFA Art. XV and USFKI 4901.01).",
+      "Defense Base Act: 'RFO FAR 28.3 / DBA clause' made precise - RFO 28.305 Overseas workers' compensation and war-hazard insurance under subpart 28.3 Insurance (confirmed on the Part 28 page).",
+      "GSA MAS: 'fair opportunity' is a 16.505 multiple-award IDIQ term and does not appear in RFO subpart 8.4; RFO subpart 8.4 now contains only 8.401 General. Rewritten; 'limited OCONUS availability' softened to checking each SIN's geographic scope.",
+      "GSA eBuy: 'satisfy FAR 8.405 competition' refuted - 8.405 does not exist in RFO Part 8 (subpart 8.4 = 8.401 only). Rewritten to cite 8.401 and note the legacy procedures are gone from the FAR text."
+    ],
+    "confirmed_without_change": [
+      "RFO hub, Parts and Deviations index (parts 1-19 and 22-53 listed), Part 1 (1.405 Ratification of unauthorized commitments), Part 6 (6.103, 6.103-1, 6.104 headings), Practitioner Albums, DFARS change 7 May 2026, DFARS PGI change 7 May 2026, AFARS change 2025-0711, DPC class deviations (2026-O0051, 11 Jun 2026), DFARS RFO class deviations page (updated 9 Sep 2026), GAO Red Book, GAO Bid Protests, EPDS (200), COFC, SAM.gov (FPDS ezSearch retirement notice), SAM entity/exclusions/contract-data/wage-determination pages (200), PIEE (200), WAWF 302 to PIEE login, CPARS (200; 14-calendar-day comment period confirmed in RFO 42.1503), SPRS (200, v4.2), dau.edu 301 to waru.edu, waru.edu/acquipedia (200), eCFR titles for 4 CFR 21, 2 CFR 200 and 32 CFR Subch. C (200 direct), 10 U.S.C. 4021/4022 titles via law.cornell.edu, SOFA PDF and USFKI 4901.01 URLs in search indexes, ACC and uscode.house.gov connection refusals reproduced, VCE and PAM URLs match the policy and workflow sources, Section508.gov, DOL DBA page."
+    ],
+    "not_verifiable": [
+      "usfk.mil content (403 to all automated requests): SOFA PDF, USFK publications index, USFKI 4901.01 - existence confirmed only by search-engine index entries.",
+      "PGI 201.404-70(e) in the RFO-deviation PGI 201 (docx on the DPC page, not opened).",
+      "CAC-only pages (PAM Warrant page, VCE Portal, VCE-Warrants).",
+      "7 Nov 2025 SECWAR rename memo (search-result summary only)."
+    ]
+  }
+]

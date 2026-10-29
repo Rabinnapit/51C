@@ -1,0 +1,490 @@
+[
+ {
+  "id": "Q0003",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only."
+ },
+ {
+  "id": "Q0007",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only."
+ },
+ {
+  "id": "Q0010",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. The item's citations metadata carries DFARS/PGI 201.404-70 (COR designation), but the answer prose itself states no cite, so no text edit was made."
+ },
+ {
+  "id": "Q0011",
+  "changed": true,
+  "answer": "First you should notify your attorney that you have received an Request for Equitable Adjustment (REA). Then, you will need to determine whether the contractor's request has any merit. If you determine that the request has merit, you may attempt to negotiate a settlement with the contractor, involving your attorney as you deem necessary. If negotiating with the contractor is difficult, and the involvement of your program counsel has not helped, you may refer the case to legal for formal Alternative Dispute Resolution (ADR). Formal ADR can be accomplished either before or after the issuance of a final decision. If you determine that the REA is without merit, you may still attempt to discuss the issues with the contractor prior to issuing the PCO's final decision. Once a stalemate has occurred and the claim can't be resolved at the PCO level, a final decision is issued and an appeal is processed. (FAR 52.243-1, 52.243-2 and 52.243-4 (Changes), DFARS 252.243-7002)\n\nCite: FAR 52.243-1; FAR 52.243-2; FAR 52.243-4; DFARS 252.243-7002.",
+  "crosswalk": [
+   {
+    "old": "FAR 52.243-1",
+    "new": "FAR 52.243-1"
+   },
+   {
+    "old": "FAR 52.243-2",
+    "new": "FAR 52.243-2"
+   },
+   {
+    "old": "FAR 52.243-4",
+    "new": "FAR 52.243-4"
+   },
+   {
+    "old": "DFARS 252.243-7002",
+    "new": "DFARS 252.243-7002"
+   }
+  ],
+  "citations_rfo": [
+   "FAR 52.243-1",
+   "FAR 52.243-2",
+   "FAR 52.243-4",
+   "DFARS 252.243-7002"
+  ],
+  "rfo_status": "updated",
+  "notes": "No renumbering required: all seven Changes clauses (52.243-1 through 52.243-7) are confirmed on the RFO Part 52 index, and DFARS 252.243-7002 Requests for Equitable Adjustment is retained under Class Deviation 2026-O0034 Rev 1. Text change is citation formatting only ('52.243-1, 2, and 4' spelled out) plus the added Cite line. Substance untouched; no thresholds stated."
+ },
+ {
+  "id": "Q0016",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. ABG-75 (German indirect construction) item; ABG form numbers are host-nation forms, not FAR cites."
+ },
+ {
+  "id": "Q0017",
+  "changed": true,
+  "answer": "Termination for Default - The Government’s contractual right to completely or partially terminate a contract because of the contractor’s actual or anticipated failure to perform its contractual obligations. Termination for Convenience - The Government’s right to unilaterally terminate performance of work under a contract in whole or, from time to time, in part if the Contracting Officer determines that a termination is in the Government's interest.\nTermination for Cause - This is an action that is only applicable to procurements accomplished under FAR Part 12 (under the RFO, commercial terminations are at FAR 12.304, formerly 12.403). It is essentially the commercial equivalent of a termination for default.\nThe Government may terminate a commercial contract, or any part thereof, for cause in the event of:\n(i) any default by the Contractor, or\n(ii) if the Contractor fails to comply with any contract terms and conditions, or\n(iii) fails to provide the Government, upon request, with adequate assurances of future performance.\n\nNo-Cost Cancellation- This is an alternative to a Termination (Default/Cause/Convenience) for Contracts/Purchase Orders. This is essentially when the contractor and the Government agree to cancel or partially cancel a requirement without cost to either party.\nRemedies: Cure Notice and Show Cause Notice. \nCure Notice advises the Contractor of a problem and provides an opportunity to correct within a specified time limit. Must be at least 10 days remaining in the performance period to issue a Cure Notice. May be followed by a Show Cause. Show Cause directs the Contractor to show why he should not be terminated for default\n\nCite: FAR part 12 (commercial terminations at FAR 12.304); FAR part 49.",
+  "crosswalk": [
+   {
+    "old": "FAR Part 12",
+    "new": "FAR part 12 (commercial terminations at FAR 12.304)"
+   }
+  ],
+  "citations_rfo": [
+   "FAR 12.304",
+   "FAR part 12",
+   "FAR part 49"
+  ],
+  "rfo_status": "updated",
+  "notes": "FAR part 12 is retained but restructured; commercial terminations now sit at RFO 12.304 (pre-RFO 12.403) - noted in one short moved-section parenthetical. FAR part 49 is retained (49.402-2, 49.402-3, 49.607) and is carried in the Cite line because the answer's T4D/T4C content and the question stem rest on it. Reviewer removed the author's added statement that 12.304(a) bars use of part 49: it is true per the verified crosswalk but it is a substantive claim not present in the official answer. No thresholds stated."
+ },
+ {
+  "id": "Q0026",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. The D&F definition is quoted from FAR 2.101 but the answer never names it; no cite present to convert."
+ },
+ {
+  "id": "Q0032",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. The answer discusses a cure notice and termination for default without citing FAR 49.402-3 / 49.607."
+ },
+ {
+  "id": "Q0043",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. The answer refers to 'the Default clause' by name only, which is not a FAR/DFARS section or part cite. Item metadata already carries FAR 49.607 and FAR 12.304, both of which are RFO-current."
+ },
+ {
+  "id": "Q0044",
+  "changed": true,
+  "answer": "Bilateral modifications are negotiated changes such as delivery schedule change, funding change, significant change to the SOW, etc. A unilateral modification can be issued for administrative changes, change orders within the general scope of the contract, termination notices, etc. If the contract has an option (to extend the contract, to purchase additional supplies or services, etc.) the contract should have an option clause in it and then the option can be exercised unilaterally. Numerous modification authorities (and associated clauses) exist for modifications such as Engineering changes, changes to usage of government property, funding changes, etc. The Changes Clauses (FAR 52.243-1 through 52.243-7) allow for unilateral modifications.\n\nCite: FAR 52.243-1 through FAR 52.243-7.",
+  "crosswalk": [
+   {
+    "old": "FAR 52.243-X",
+    "new": "FAR 52.243-1 through 52.243-7"
+   }
+  ],
+  "citations_rfo": [
+   "FAR 52.243-1 through FAR 52.243-7"
+  ],
+  "rfo_status": "updated",
+  "notes": "The shorthand '52.243-X' was resolved to the seven Changes clauses confirmed on the RFO Part 52 index (52.243-1 through 52.243-7); no clause was renumbered or removed. Wording otherwise untouched; no thresholds stated."
+ },
+ {
+  "id": "Q0045",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. Berry Amendment answer states no cite in prose; item metadata carries 10 U.S.C. 4862 and DFARS 225.7002 (statute unchanged by the RFO)."
+ },
+ {
+  "id": "Q0048",
+  "changed": true,
+  "answer": "Transparency, collects data formulated for higher level reporting, etc. The FPDS provides a comprehenisve web-based tool for agencies to report contract actions. The resulting data provides - (1) A basis for recurring and special reports to the President, the Congress, the Government Accountability Office, Federal executive agencies, and the general public. (2) A means of measuring and assessing the effect of Federal contracting on the Nation's economy and the extent to which small, veteran-owned small, service-disabled veteran-owned small, HUBZone small, small disadvantaged, women-owned small business concerns, and AbilityOne nonprofit agencies operating under 41 U.S.C. chapter 85, Committee for Purchase from People Who Are Blind or Severely Disabled, are sharing in Federal contracts. (3) A means of measuring and assessing the effect of Federal contracting for promoting sustainable technologies, materials, products, and high-performance sustainable buildings. This is accomplished by collecting and reporting agency data on sustainable acquisition, including types of products purchased, the purchase costs, and the exceptions used for other than sustainable acquisition; and (4) A means of measuring and assessing the effect of other policy and management initiatives (e.g., performance based acquisitions and competition).\n\nCite: 41 U.S.C. chapter 85.",
+  "crosswalk": [
+   {
+    "old": "41 U.S.C chapter 85",
+    "new": "41 U.S.C. chapter 85"
+   }
+  ],
+  "citations_rfo": [
+   "41 U.S.C. chapter 85"
+  ],
+  "rfo_status": "updated",
+  "notes": "The only regulatory reference in the answer is the AbilityOne statute, 41 U.S.C. chapter 85. Statutes are unchanged by the RFO, so the edit is punctuation of the cite ('41 U.S.C' -> '41 U.S.C.') plus the added Cite line. No FAR section is cited in the answer, so no FAR renumbering was applied and no new FAR cite was introduced. No thresholds stated."
+ },
+ {
+  "id": "Q0075",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only."
+ },
+ {
+  "id": "Q0077",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. Same excusable-delay definition as Q0224, but here with no clause cite in the text."
+ },
+ {
+  "id": "Q0106",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. Worth a later content pass: the RFO removed old Subpart 42.5 (Postaward Orientation); only FAR 42.302(a)(3) still lists post-award orientation conferences. No cite in the answer text, so no edit made here."
+ },
+ {
+  "id": "Q0107",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. Threshold rule not applied because the item is skipped: the answer states $2,500 (services) / $2,000 (construction) with no cite, and neither value appears in the regulations.json thresholds table (both are statutory SCLS/DBRA figures the RFO does not change)."
+ },
+ {
+  "id": "Q0111",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. The question stem names FAR 52.215-8 but the answer text does not; only answers are in scope."
+ },
+ {
+  "id": "Q0120",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. 'J&A' is named as a document type, not as a FAR cite."
+ },
+ {
+  "id": "Q0124",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. CPARS answer; RFO moved contractor performance information to FAR Subpart 42.11, but the answer cites nothing, so no edit made."
+ },
+ {
+  "id": "Q0126",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only."
+ },
+ {
+  "id": "Q0127",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. Stop-work answer cites no clause (52.242-15) or section."
+ },
+ {
+  "id": "Q0132",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only."
+ },
+ {
+  "id": "Q0134",
+  "changed": true,
+  "answer": "Unless otherwise provided for in the contract, the Contractor shall not be liable for loss of Government property furnished or acquired under this contract, except when any one of the following applies: 1) The risk is covered by insurance or the Contractor is otherwise reimbursed. 2) Loss of Government property that is the result of willful misconduct or lack of good faith on the part of the Contractor's managerial personnel. 3) The Contracting Officer has, in writing, revoked the Government's assumption of risk for loss of Government property due to a determination that the Contractor's property management practices are inadequate, and/or present an undue risk to the Government, and the Contractor failed to take timely corrective action. (FAR 52.245-1(h))\n\nCite: FAR 52.245-1(h).",
+  "crosswalk": [
+   {
+    "old": "FAR 52-245-1",
+    "new": "FAR 52.245-1(h)"
+   }
+  ],
+  "citations_rfo": [
+   "FAR 52.245-1(h)"
+  ],
+  "rfo_status": "updated",
+  "notes": "Source text carried the typo '52-245-1'. Clause 52.245-1 Government Property is retained under the RFO (Part 45 still prescribes it) and the contractor-liability rules quoted here are paragraph (h), so the inline cite was corrected to FAR 52.245-1(h). Substance unchanged; no thresholds stated."
+ },
+ {
+  "id": "Q0138",
+  "changed": true,
+  "answer": "FAR Part 22 (under the RFO, Service Contract Labor Standards remain Subpart 22.10; wage determinations are now at FAR 22.1002-3 and revisions to wage determinations at FAR 22.1004-1).\n\nCite: FAR part 22; FAR 22.1002-3; FAR 22.1004-1.",
+  "crosswalk": [
+   {
+    "old": "FAR Part 22",
+    "new": "FAR part 22 (Service Contract Labor Standards Subpart 22.10; wage determinations 22.1002-3, revisions 22.1004-1)"
+   }
+  ],
+  "citations_rfo": [
+   "FAR part 22",
+   "FAR 22.1002-3",
+   "FAR 22.1004-1"
+  ],
+  "rfo_status": "updated",
+  "notes": "The official answer is only the bare cite 'FAR Part 22'. RFO Part 22 keeps Service Contract Labor Standards at Subpart 22.10 (it was 22.10 before the RFO as well) and restructures it: 22.1002-3 'Wage determinations' and 22.1004-1 'Revisions to wage determinations' (reviewer re-verified on the acquisition.gov RFO Part 22 deviation guide, 14 Sep 2026). Reviewer trimmed the parenthetical to that moved-section note and removed the construction-labor (Subpart 22.4) aside, which the question does not ask about. No substantive answer content added - this item still needs a real drafted answer in a separate content pass. No thresholds stated."
+ },
+ {
+  "id": "Q0144",
+  "changed": true,
+  "answer": "Contracting Officers shall designate a COR for all service contracts, and supply contracts with cost-reimbursable line items including both firm-fixed-price and other than firm-fixed-price contracts, awarded by a DoD component or by any other Federal agency on behalf of DoD within 3 business days of contract award. The surveillance activities performed by CORs should be tailored to the dollar value/complexity of the specific contract for which they are designated. Contracting officers may exempt service contracts from this requirement when the following three conditions are met:\nAwarded using SAP procedures;\nRequirement is not complex; and\nContracting Officer documents the file reasons why the appointment of COR is unnecessary.\n\nFollow the guidance of DoDI 5000.72 for general COR appointment and training requirements. (DFARS PGI 201.602-2 no longer exists under the RFO DFARS; COR designation guidance is now at DFARS PGI 201.404-70, with the DFARS rule at 201.404-70.)\n\nCite: DFARS PGI 201.404-70(e); DFARS 201.404-70; DoDI 5000.72.",
+  "crosswalk": [
+   {
+    "old": "DFARS PGI 201.602-2",
+    "new": "DFARS PGI 201.404-70(e)"
+   },
+   {
+    "old": "DFARS 201.602-2",
+    "new": "DFARS 201.404-70"
+   }
+  ],
+  "citations_rfo": [
+   "DFARS PGI 201.404-70(e)",
+   "DFARS 201.404-70",
+   "DoDI 5000.72"
+  ],
+  "rfo_status": "updated",
+  "notes": "RFO DFARS Part 201 (Class Deviation 2026-O0002 Rev 1, 5 Aug 2026) has no 201.602-2; COR designation and eligibility sit at 201.404-70(a)-(b), and all PGI COR guidance is PGI 201.404-70, paragraph (e) covering the COR's technical monitoring role. The removal is flagged in one short parenthetical per the task rule. DoDI 5000.72 is a DoD instruction, not FAR/DFARS, and is unaffected. No thresholds stated."
+ },
+ {
+  "id": "Q0150",
+  "changed": true,
+  "answer": "The contractor must continue performance of the contract as changed, except that in cost reimbursement or incrementally funded contracts the contractor is not obligated to continue performance or incur costs beyond the limits established in the Limitation of Cost or Limitation of Funds clause. In the case contractor and Contracting Officer cannot agree to the terms of the change order, the contractor is permitted to submit a dispute under the disputes clause. (The RFO renumbered old FAR 43.201 'General' to 43.301; new 43.201 is 'Definitions', so the duty to continue performance is now 43.301(b).)\n\nCite: FAR 43.301(b).",
+  "crosswalk": [
+   {
+    "old": "FAR 43.201(b)",
+    "new": "FAR 43.301(b)"
+   }
+  ],
+  "citations_rfo": [
+   "FAR 43.301(b)"
+  ],
+  "rfo_status": "updated",
+  "notes": "Verified crosswalk: RFO Part 43 keeps 43.2 General (43.201 Definitions, 43.202 Policy, 43.203 Types...) and puts change orders at 43.3 (43.301-43.305). The continue-performance rule the answer states is 43.301(b). Moved-section parenthetical added per the task rule; wording otherwise intact. No thresholds stated."
+ },
+ {
+  "id": "Q0155",
+  "changed": true,
+  "answer": "FAR Part 45 - and all supplemental rules and guidance\n\nCite: FAR part 45.",
+  "crosswalk": [
+   {
+    "old": "FAR Part 45",
+    "new": "FAR part 45"
+   }
+  ],
+  "citations_rfo": [
+   "FAR part 45"
+  ],
+  "rfo_status": "updated",
+  "notes": "No renumbering: FAR part 45 Government Property is retained under the RFO (RFO Part 45 still prescribes 52.245-1 per the verified crosswalk). Only the Cite line was added. Reviewer reverted the author's parenthetical listing Part 45 subparts and 45.101-45.107: it was not a removed/moved-section note but new outline content, and the section-level structure was not verified against the RFO Part 45 page. The official answer is only a bare part cite; the item still needs a drafted answer in a content pass. No thresholds stated."
+ },
+ {
+  "id": "Q0161",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. The phrase 'In accordance with the FAR' names no part or subpart."
+ },
+ {
+  "id": "Q0223",
+  "changed": true,
+  "answer": "▪ The Government is not liable for the contractor’s costs on undelivered work and is entitled to the repayment of any advance and progress payments applicable to that work.\n▪ The contractor is liable to the Government for any excess costs incurred in acquiring supplies and services similar to those terminated for default. (FAR 49.402-2)\n\nCite: FAR 49.402-2.",
+  "crosswalk": [
+   {
+    "old": "FAR 49.402-2",
+    "new": "FAR 49.402-2"
+   }
+  ],
+  "citations_rfo": [
+   "FAR 49.402-2"
+  ],
+  "rfo_status": "updated",
+  "notes": "No renumbering: RFO Part 49 retains 49.402-2 'Effect of termination for default' (excess reprocurement costs, unliquidated progress payments). Only the trailing bare cite was parenthesized and the Cite line added. No thresholds stated."
+ },
+ {
+  "id": "Q0224",
+  "changed": true,
+  "answer": "▪ A subcontractor’s slow progress is not an excusable delay.\n▪ “Excusable Delay” is defined as something beyond the reasonable control of the contractor, and without its fault or negligence, such as, acts of God or the public enemy, acts of the Government, fires, floods, epidemics, quarantine restrictions, strikes, unusually severe weather, and delays of common carriers. (FAR 52.249-14)\n▪ Response to contractor: An extension may be granted; however, not because of a subcontractor's slow progress.\n\nCite: FAR 52.249-14.",
+  "crosswalk": [
+   {
+    "old": "FAR 52.249-14",
+    "new": "FAR 52.249-14"
+   }
+  ],
+  "citations_rfo": [
+   "FAR 52.249-14"
+  ],
+  "rfo_status": "updated",
+  "notes": "No renumbering: clause 52.249-14 Excusable Delays is confirmed retained on the RFO Part 52 index. Only the Cite line was added. No thresholds stated."
+ },
+ {
+  "id": "Q0252",
+  "changed": true,
+  "answer": "Profit is allowed on preparations made and work done by the contractor for the terminated portion of the contract but not on the settlement expenses. Anticipatory profits and consequential damages are not allowed. Profit is not allowed for material or services that, as of the effective date of termination, have not been delivered by a subcontractor, regardless of the percentage of completion. (FAR 49.202)\n\nCite: FAR 49.202.",
+  "crosswalk": [
+   {
+    "old": "FAR 49.202",
+    "new": "FAR 49.202"
+   }
+  ],
+  "citations_rfo": [
+   "FAR 49.202"
+  ],
+  "rfo_status": "updated",
+  "notes": "No renumbering: RFO Part 49 retains 49.202 'Profit' at the same number. Only cite formatting and the Cite line changed. No thresholds stated."
+ },
+ {
+  "id": "Q0253",
+  "changed": true,
+  "answer": "The Defense Base Act provides workers' compensation protection to civilian employees working outside the United States on U.S. military bases or under a contract with the U.S. government for public works or for national defense. Federal law requires all U.S. government contractors and subcontractors to secure workers' compensation insurance for their employees working overseas. The Federal Acquisition Regulation (FAR) also sets out the workers' compensation insurance requirements for all overseas contracts at 48 CFR 28.305 (FAR 28.305), and at FAR 52.228-3 and FAR 52.228-4. Companies are required to purchase insurance to cover worker’s compensation benefits, disability, medical and death benefits before commencing performance. If an employer who fails to secure the payment of compensation when required shall be guilty of a misdemeanor and, upon conviction thereof, shall be punished by a fine of not more than $10,000 or by imprisonment for not more than one year, or both. And if the employer is a corporation, the president, secretary, and treasurer shall be also severally liable for such fine and imprisonment. Wavers must be approved by the Department of Labor. Waivers may be approved for a contract, subcontract, subordinate contract, work location, or classification of employee. Waivers do not apply to U.S. citizens, workers hired in the U.S., or legal residents of the U.S. A Geographic waiver may be granted based on the host country having an adequate workers’ compensation system which provides coverage for the local national employees or foreign workers performing work on an applicable contract in that country. The request for new waivers must be made in writing on Form BEC 565, Request for Waiver - Defense Base Act, and signed by the head of a department or agency of the United States government. A list of currently approved country waivers is available at https://www.dol.gov/agencies/owcp/dlhwc/dbawaivers/dbawaivers.\nReference/s: Defense Base Act | U.S. Department of Labor (dol.gov)\nDBA Information | U.S. Department of Labor (dol.gov)\nPart 28 - Bonds and Insurance | Acquisition.GOV\nhttps://www.dol.gov/agencies/owcp/dlhwc/dbawaivers/dbawaivers\nhttps://www.acq.osd.mil/dpap/cpic/cp/waivers_for_defense_base_act_insurance.html#:~:text=DBA%20waivers%2C%20for%20the%20contracts%20with%20performance%20in,52.228-4%20--%20Workers%20Compensation%20and%20War-Hazard%20Insurance%20Overseas.\n\nCite: FAR 28.305 (48 CFR 28.305); FAR 52.228-3; FAR 52.228-4 (prescribed at FAR 28.309(a) and FAR 28.309(b)).",
+  "crosswalk": [
+   {
+    "old": "48 C.F.R. 28.305",
+    "new": "FAR 28.305 (48 CFR 28.305)"
+   },
+   {
+    "old": "52-228-3",
+    "new": "FAR 52.228-3"
+   },
+   {
+    "old": "52-228-4",
+    "new": "FAR 52.228-4"
+   }
+  ],
+  "citations_rfo": [
+   "FAR 28.305",
+   "FAR 52.228-3",
+   "FAR 52.228-4",
+   "FAR 28.309(a)",
+   "FAR 28.309(b)"
+  ],
+  "rfo_status": "updated",
+  "notes": "Not covered by regulations.json; resolved on the acquisition.gov RFO Part 28 deviation guide (https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-28), re-fetched by the reviewer 14 Sep 2026: 28.305 'Overseas workers' compensation and war-hazard insurance' is retained at the same number, and 28.309(a)/(b) prescribe 52.228-3 / 52.228-4. Body edits are cite formatting only ('48 C.F.R., 28.305' -> '48 CFR 28.305 (FAR 28.305)'; hyphenated '52-228-3/-4' -> 'FAR 52.228-3 / FAR 52.228-4'). The 28.309 prescription note lives in the Cite line only. Reviewer restored the original trailing Reference/s block (DOL DBA pages, acquisition.gov Part 28, DOL waiver list, DPC DBA-waiver page), which the author had dropped; the Cite line follows it. The $10,000 figure is the Defense Base Act criminal penalty (33 U.S.C. 938), not an acquisition threshold, and is not in the thresholds table; no threshold note needed."
+ },
+ {
+  "id": "Q0261",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. ABG-75 closeout item; German host-nation forms only."
+ },
+ {
+  "id": "Q0263",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. ABG-75 item."
+ },
+ {
+  "id": "Q0264",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. ABG-75 item."
+ },
+ {
+  "id": "Q0265",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. ABG-75 item."
+ },
+ {
+  "id": "Q0266",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. ABG-75 item."
+ },
+ {
+  "id": "Q0267",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. ABG-75 item."
+ },
+ {
+  "id": "Q0268",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. ABG-75 item."
+ },
+ {
+  "id": "Q0270",
+  "changed": false,
+  "answer": null,
+  "crosswalk": [],
+  "citations_rfo": [],
+  "rfo_status": "n/a",
+  "notes": "No FAR/DFARS/AFARS/PGI/U.S.C./CFR citation and no FAR part or subpart named in words in the answer text; nothing to renumber. Included for coverage audit only. ABG-75 order of precedence is the host-nation contract order, not FAR 52.215-8."
+ }
+]

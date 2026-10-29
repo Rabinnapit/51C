@@ -1,0 +1,554 @@
+{
+  "protest_clock": [
+    {
+      "id": "PC78",
+      "event": "Contractor registration in SAM when registration was not required before award",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "after contract award",
+      "rule": "When a contract is awarded without providing full and open competition because of unusual or compelling urgency, the contractor does not have to be registered in SAM at award, but it must register within 30 days after contract award or at least three days before submitting the first invoice, whichever occurs first. The contracting officer validates the registration at that same point.",
+      "cite": "RFO FAR 4.203-1(c); RFO FAR 4.304(b)(1); FAR 52.204-13(b)",
+      "difficulty": 2,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4 (4.203-1(c), 4.304(b)(1)); https://www.acquisition.gov/far/52.204-13 (paragraph (b)). The clause and the RFO text use the same words, 'within 30 days after award or before three days prior to submission of the first invoice, whichever occurs first'."
+    },
+    {
+      "id": "PC79",
+      "event": "Contractor notice of a change to its unique entity identifier or CAGE code",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "after the change",
+      "rule": "The contractor must tell the contracting officer about any change to its unique entity identifier or CAGE code within 30 days after the change, so the contracting officer can issue a modification updating the contract. A change in the unique entity identifier does not by itself require a novation.",
+      "cite": "RFO FAR 4.305(b); FAR 52.204-13(d)(3)",
+      "difficulty": 3,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4 (4.305(b)); https://www.acquisition.gov/far/52.204-13 (paragraph (d)(3)). The clause carries the same 30 days for the unique entity identifier."
+    },
+    {
+      "id": "PC80",
+      "event": "Award notice posted to the Governmentwide point of entry",
+      "days": 60,
+      "day_type": "calendar",
+      "anchor": "from award",
+      "rule": "Post an award notice to the GPE for contract actions greater than $25,000 that are covered by the WTO GPA or a free trade agreement, or that are likely to result in subcontract awards. An action likely to result in subcontracting opportunities is posted as soon as possible after award; an action not likely to result in subcontracting opportunities but subject to the WTO GPA or an FTA is posted within 60 days of award.",
+      "cite": "RFO FAR 5.301(a), (d) (Table 5-4)",
+      "difficulty": 2,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5 (5.301(a) requirement, Table 5-4 'Minimum Timeframes for Posting Award Notices'). Table 5-4 states 'Within 60 days of award' for the >$25K row that is not likely to result in subcontracting opportunities but is subject to the WTO GPA or FTA."
+    },
+    {
+      "id": "PC81",
+      "event": "Posting period for a presolicitation notice on an acquisition over $20,000 up to $25,000",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "as the minimum period the presolicitation notice stays posted",
+      "rule": "Table 5-2 sets the minimum posting timeframes for presolicitation notices. For an acquisition over $20,000 up to $25,000 the notice must be posted for 10 days; from over $25,000 up to the simplified acquisition threshold, and for noncommercial acquisitions above the threshold, the notice goes up 15 days before solicitation issuance. Above the threshold a commercial acquisition's notice is combined with the solicitation.",
+      "cite": "RFO FAR 5.101(d) (Table 5-2)",
+      "difficulty": 3,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5 (5.101(d), Table 5-2 'Minimum Timeframes for Posting Presolicitation Notices'). The table footnote adds that no presolicitation notice is required under 5.101(b)(1)(i) if the solicitation will be posted in the GPE and allow electronic submission of offers."
+    },
+    {
+      "id": "PC82",
+      "event": "Minimum response time for an acquisition subject to a trade agreement but left out of the annual forecast",
+      "days": 40,
+      "day_type": "calendar",
+      "anchor": "from the presolicitation notice or the solicitation, as applicable",
+      "rule": "Table 5-3 sets the minimum time for receipt of quotations or offers. For an acquisition from $15,000 up to the simplified acquisition threshold that is subject to the WTO GPA or a free trade agreement but was not included in the agency's annual forecast, allow 40 days from the presolicitation notice or the solicitation, as applicable. The same 40 days applies to a commercial acquisition above the threshold using a combined synopsis and solicitation and to orders under a basic ordering agreement; other noncommercial acquisitions above the threshold stay at 30 days from the solicitation.",
+      "cite": "RFO FAR 5.201(d) (Table 5-3)",
+      "difficulty": 2,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5 (5.201(d), Table 5-3 'Minimum Timeframes for Receipt of Quotations or Offers'). The third column of the table is headed 'Subject to WTO GPA or FTA, but not included in annual forecast'; the 40 days appears in the >=$15K to <=SAT row, the commercial >SAT row and the BOA row. The 'all other non-commercial acquisitions' row stays at 30 days in that column."
+    },
+    {
+      "id": "PC83",
+      "event": "Waiting period before FAPIIS information becomes publicly available",
+      "days": 14,
+      "day_type": "calendar",
+      "anchor": "after the information is posted to the non-public segment of FAPIIS",
+      "rule": "FAPIIS has two segments. All data in the non-public segment is automatically transferred to the publicly available segment after a waiting period of 14 calendar days, except past performance reviews, information entered before 15 April 2011, and information the posting Government official withdraws during that 14-calendar-day waiting period.",
+      "cite": "RFO FAR 9.105-2(b)(2)(iii)(B)",
+      "difficulty": 3,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9 (9.105-2(b)(2)(iii)). The text says 'automatically transferred after a waiting period of 14 calendar days'."
+    },
+    {
+      "id": "PC89",
+      "event": "Successful bidder's execution of contract documents and bonds under the Bid Guarantee provision",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "after the bidder receives the forms",
+      "rule": "If the successful bidder, on acceptance of its bid within the period specified for acceptance, fails to execute all contractual documents or furnish executed bonds within 10 days after receiving the forms, the contracting officer may terminate the contract for default. The contracting officer may modify the provision to set a period other than 10 days for the return of executed bonds.",
+      "cite": "RFO FAR 28.101-2(a)(1); FAR 52.228-1(d)",
+      "difficulty": 1,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-28 (28.101-2(a)(1), and 28.103-4 which says the contracting officer sets a period 'normally 10 days' for return of executed bonds under 52.228-16); https://www.acquisition.gov/far/52.228-1 (paragraph (d))."
+    },
+    {
+      "id": "PC90",
+      "event": "Replacement of an irrevocable letter of credit before it expires",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "before an irrevocable letter of credit's scheduled expiration",
+      "rule": "An irrevocable letter of credit may be used instead of a bond. If the contractor does not furnish an acceptable replacement letter of credit, or another acceptable substitute, at least 30 days before the letter of credit's scheduled expiration, the contracting officer must immediately draw on it using the sight draft in 52.228-14.",
+      "cite": "RFO FAR 28.204-3(d)",
+      "difficulty": 2,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-28 (28.204-3(d)). The same section adds that if the issuing institution's credit rating drops below investment grade the contracting officer must give the contractor 30 days to substitute an acceptable letter of credit or draw on it."
+    },
+    {
+      "id": "PC91",
+      "event": "Expiration date of an irrevocable letter of credit used as a bid guarantee",
+      "days": 60,
+      "day_type": "calendar",
+      "anchor": "after the close of the bid acceptance period",
+      "rule": "When an irrevocable letter of credit is used as a bid guarantee, it should expire no earlier than 60 days after the close of the bid acceptance period. When it secures a performance or payment bond instead, it must carry an initial expiration at least one year out and renew automatically unless the issuer gives the beneficiary at least 60 days' written notice of non-renewal.",
+      "cite": "RFO FAR 28.204-3(f)(1), (f)(2)",
+      "difficulty": 3,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-28 (28.204-3(f)(1) and (f)(2)). The one-year renewal and coverage periods are stated in years, so only the 60 days is scored."
+    },
+    {
+      "id": "PC92",
+      "event": "Individual Subcontracting Report under a small business subcontracting plan",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "after the close of each reporting period",
+      "rule": "A contract with an individual subcontracting plan requires an Individual Subcontracting Report, submitted in eSRS semiannually for the periods ending 31 March and 30 September. Reports are due 30 days after the close of each reporting period unless the contracting officer directs otherwise, and a report is also required for each contract within 30 days of contract completion. Reports are due whether or not there has been any subcontracting activity, and if the contracting officer rejects an ISR the contractor must submit a corrected report within 30 days of the rejection notice.",
+      "cite": "FAR 52.219-9(l)(1)(i); RFO FAR 19.109(e)(2)(i)",
+      "difficulty": 2,
+      "classes": [
+        "II",
+        "III",
+        "IV"
+      ],
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far/52.219-9 (paragraph (l)(1)(i)); https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19 (19.109(e)(2)(i) prescribes the clause for solicitations and contracts that offer subcontracting possibilities and are expected to exceed $900,000, or $2 million for construction of any public facility). Candidate 23 asked whether the clause states dates rather than days: it states both - fixed period-end dates of 31 March and 30 September, and a 30-day due date after each of them."
+    },
+    {
+      "id": "PC93",
+      "event": "Effectiveness of a construction wage determination modification in sealed bidding",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "before the date of bid opening",
+      "rule": "In sealed bidding, a written action modifying a Construction Wage Rate Requirements (Davis-Bacon) wage determination is effective if the contracting agency receives it, or it is published on Wage Determinations at SAM.gov, 10 or more calendar days before bid opening. A modification received less than 10 calendar days before bid opening is still effective unless the contracting officer finds there is not reasonable time to notify prospective bidders, and that finding must be in writing in the contract file and available to the Department of Labor on request.",
+      "cite": "RFO FAR 22.403(b)(1)(i)-(ii)",
+      "difficulty": 1,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22 (22.403(b)(1)). This is the RFO home of the old 22.404-6 rule; 22.403(b)(2) adds that modifications received after bid opening are not effective."
+    },
+    {
+      "id": "PC94",
+      "event": "Construction wage determination modifications when award is slow after bid opening",
+      "days": 90,
+      "day_type": "calendar",
+      "anchor": "after bid opening",
+      "rule": "If award is not made within 90 days after bid opening, any modification to a general wage determination published on Wage Determinations at SAM.gov before award is effective for the resulting contract, unless the agency head obtains an extension of the 90-day period from the Wage and Hour Division Administrator. The extension request must be supported by a written finding that it is necessary and proper in the public interest to prevent injustice or undue hardship or to avoid serious impairment of Government business.",
+      "cite": "RFO FAR 22.403(b)(6)",
+      "difficulty": 2,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22 (22.403(b)(6))."
+    },
+    {
+      "id": "PC95",
+      "event": "Notice to a collective bargaining agent before a successor service contract action",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "before the earliest applicable acquisition date or anniversary date",
+      "rule": "When the incumbent contractor's service employees are represented by a collective bargaining agent, the contracting officer notifies the agent and the incumbent of the forthcoming successor contract, contract modification or multiple-year anniversary date and the applicable acquisition dates. That written notice must be given at least 30 days in advance of the earliest applicable acquisition date or the annual or biennial anniversary date for the time-of-receipt limits in 22.1003(b)(1) and (2) to apply.",
+      "cite": "RFO FAR 22.1004-6(a)-(b)",
+      "difficulty": 2,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22 (22.1004-6 Notification to interested parties under collective bargaining agreements, paragraphs (a) and (b))."
+    },
+    {
+      "id": "PC96",
+      "event": "Incumbent prime contractor's certified seniority list of service employees",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "before contract completion",
+      "rule": "Where a contract is performed at a Federal facility and service employees may be hired or retained by a succeeding contractor, the incumbent prime contractor must furnish the contracting officer a certified list of all service employees on its own or its subcontractors' payroll during the last month of the contract, with their anniversary dates of employment, no later than 10 days before contract completion. The contracting officer gives the list to the successor contractor so length-of-service benefits can be worked out.",
+      "cite": "RFO FAR 22.1004-7; FAR 52.222-41(n)",
+      "difficulty": 2,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22 (22.1004-7 Seniority lists); https://www.acquisition.gov/far/52.222-41 (paragraph (n) Seniority list, 'Not less than 10 days prior to completion of any contract')."
+    },
+    {
+      "id": "PC97",
+      "event": "Due date for an interim payment on a cost-reimbursement contract for services",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "after the date of receipt of a proper invoice",
+      "rule": "For computing any late payment interest penalty, the due date for making interim payments on a cost-reimbursement contract for services is 30 days after the date of receipt of a proper invoice. An interim payment request under such a contract is a proper invoice if it includes everything the contract requires, and the interest penalty runs automatically when payment is made more than 30 days after the designated billing office receives it.",
+      "cite": "RFO FAR 32.904(e); RFO FAR 32.907(a)(5); RFO FAR 32.905(b)(2)",
+      "difficulty": 1,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32 (32.904(e), 32.907(a)(5) and 32.905(b)(2))."
+    },
+    {
+      "id": "PC98",
+      "event": "Payment due date for meat, meat food products or fish",
+      "days": 7,
+      "day_type": "calendar",
+      "anchor": "after product delivery",
+      "rule": "Certain food products have their own Prompt Payment due dates, which are shorter than the ordinary 30 days. Payment for meat or meat food products, including edible fresh or frozen poultry meat, perishable poultry meat food products, fresh eggs and perishable egg products, and payment for fresh or frozen fish, must be made as close as possible to but not later than the 7th day after product delivery.",
+      "cite": "RFO FAR 32.904(f); FAR 52.232-25(a)(2)(i)(A)-(B)",
+      "difficulty": 1,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32 (32.904(f) table rows 1 and 2); https://www.acquisition.gov/far/52.232-25 (paragraph (a)(2)(i)(A) and (B)). Separate from the 3-day return of an improper invoice for the same products in PC39."
+    },
+    {
+      "id": "PC99",
+      "event": "Payment due date for perishable agricultural commodities and dairy products",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "after product delivery",
+      "rule": "Payment for perishable agricultural commodities must be made as close as possible to but not later than the 10th day after product delivery, unless another date is specified in the contract. Dairy products, edible fats or oils, and food products prepared from edible fats or oils run on a different trigger: the 10th day after a proper invoice has been received.",
+      "cite": "RFO FAR 32.904(f); FAR 52.232-25(a)(2)(i)(C)-(D)",
+      "difficulty": 2,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32 (32.904(f) table rows 3 and 4); https://www.acquisition.gov/far/52.232-25 (paragraph (a)(2)(i)(C) and (D)). The two rows share the 10 days but not the anchor: delivery for produce, receipt of a proper invoice for dairy."
+    },
+    {
+      "id": "PC100",
+      "event": "Contractor demand for the additional Prompt Payment penalty",
+      "days": 40,
+      "day_type": "calendar",
+      "anchor": "after the date the invoice amount is paid",
+      "rule": "An additional penalty on top of the late payment interest is owed only if the Government owes an interest penalty of $1 or more, the designated payment office does not pay that interest penalty within 10 days after the invoice amount is paid, and the contractor makes a written demand for the additional penalty, postmarked not later than 40 days after the date the invoice amount is paid.",
+      "cite": "RFO FAR 32.907(c)(1); FAR 52.232-25(a)(7)(i)",
+      "difficulty": 3,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32 (32.907(c)(1)(i)-(iii)); https://www.acquisition.gov/far/52.232-25 (paragraph (a)(7)(i)(A)-(C)). All three conditions must be met; the 40 days is the contractor's own deadline."
+    },
+    {
+      "id": "PC101",
+      "event": "End of the plant clearance period after a completed or terminated contract",
+      "days": 90,
+      "day_type": "calendar",
+      "anchor": "after the contracting officer receives acceptable inventory schedules",
+      "rule": "The plant clearance period starts when the contract is completed or terminated and ends 90 days after the contracting officer receives acceptable inventory schedules for each property classification. The parties may agree to make the period longer if needed.",
+      "cite": "RFO FAR 49.001",
+      "difficulty": 2,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49 (49.001, definition of 'Plant clearance period')."
+    },
+    {
+      "id": "PC102",
+      "event": "Termination contracting officer's recommendation to release excess funds",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "from receiving the termination notice",
+      "rule": "The termination contracting officer must estimate the funds needed for settlement and, within 30 days of receiving the termination notice, recommend that the contracting officer release the excess funds. The TCO must not recommend releasing amounts under $1,000 unless the contracting officer asks. If earlier releases later leave a shortage, the contracting officer must restore the funds within 30 days.",
+      "cite": "RFO FAR 49.105-1(a)-(b)",
+      "difficulty": 2,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49 (49.105-1(a) and (b)). Both the release recommendation and the restoration carry 30 days."
+    },
+    {
+      "id": "PC103",
+      "event": "Notice to the contractor before a termination settlement by determination",
+      "days": 15,
+      "day_type": "calendar",
+      "anchor": "before the termination contracting officer issues the determination",
+      "rule": "Before issuing a determination of the amount due the contractor, the termination contracting officer must give the contractor at least 15 days' notice by certified mail, return receipt requested, to submit written evidence supporting the amount previously proposed. The evidence must reach the TCO on or before a stated date.",
+      "cite": "RFO FAR 49.109-7(b)",
+      "difficulty": 2,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49 (49.109-7(b) Notice to contractor)."
+    },
+    {
+      "id": "PC104",
+      "event": "Contractor's payment to its immediate subcontractors after a termination settlement",
+      "days": 10,
+      "day_type": "calendar",
+      "anchor": "after receipt of the payment specified in the settlement agreement",
+      "rule": "The standard termination settlement agreement formats require the contractor, within 10 days after receiving the payment specified in the agreement, to pay each of its immediate subcontractors or their assignees the amounts they are entitled to, less any prior payments and, at the contractor's election, any amounts those subcontractors owe the contractor.",
+      "cite": "RFO FAR 49.603-1; RFO FAR 49.603-2; RFO FAR 49.603-3; RFO FAR 49.603-8",
+      "difficulty": 3,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49 (the same 10-day sentence appears in the settlement agreement formats at 49.603-1, 49.603-2, 49.603-3 and 49.603-8)."
+    },
+    {
+      "id": "PC106",
+      "event": "Disposition instructions for property on an acceptable inventory disposal schedule",
+      "days": 120,
+      "day_type": "calendar",
+      "anchor": "following acceptance of an inventory disposal schedule",
+      "rule": "The plant clearance officer must give the contractor disposition instructions for property identified on an acceptable inventory disposal schedule within 120 days. A failure to give timely disposition instructions may entitle the contractor to an equitable adjustment; the clause makes that concrete, allowing the contractor its storage costs incurred on or after the 121st day.",
+      "cite": "RFO FAR 45.602-1(b)(4); FAR 52.245-1(j)(6)(i)",
+      "difficulty": 2,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-45 (45.602-1(b)(4)); https://www.acquisition.gov/far/52.245-1 (paragraph (j)(6)(i) Storage, 'within 120 days following acceptance of an inventory disposal schedule ... costs incurred to store such property on or after the 121st day')."
+    },
+    {
+      "id": "PC108",
+      "event": "Contractor's inventory disposal schedule after deliveries or performance are complete",
+      "days": 60,
+      "day_type": "calendar",
+      "anchor": "following completion of contract deliveries or performance",
+      "rule": "The contractor must submit inventory disposal schedules to the plant clearance officer no later than 60 days following completion of contract deliveries or performance, or such longer period as the plant clearance officer approves. After a termination in whole or in part the deadline is 120 days, extendable by the termination contracting officer, and for an item the contractor decides during performance it no longer needs, the schedule is due 30 days after that determination.",
+      "cite": "FAR 52.245-1(j)(3)(i)(A)-(C)",
+      "difficulty": 2,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far/52.245-1 (paragraph (j) Contractor inventory disposal, (j)(3) Submission requirements, (j)(3)(i)(A) through (C)). Reviewer 17 Sep 2026: the 30-day trigger in (j)(3)(i)(A) was folded in from removed card PC109."
+    },
+    {
+      "id": "PC110",
+      "event": "Contractor notice under the Limitation of Cost clause on a fully funded cost-reimbursement contract",
+      "days": 60,
+      "day_type": "calendar",
+      "anchor": "of expected costs ahead, the look-ahead window for the 75 percent notice",
+      "rule": "Under the Limitation of Cost clause the contractor must notify the contracting officer in writing whenever it has reason to believe that the costs it expects to incur in the next 60 days, added to all costs already incurred, will exceed 75 percent of the estimated cost in the Schedule, or that the total cost will be greater or substantially less than previously estimated. The notice must include a revised estimate of the total cost of performance.",
+      "cite": "FAR 52.232-20(b)-(c); RFO FAR 32.706-2(a)",
+      "difficulty": 2,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far/52.232-20 (paragraphs (b) and (c)); https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32 (32.706-2(a)). Both say the 60-day period may be varied from 30 to 90 days and the 75 percent from 75 to 85 percent, so 60 days is the clause default, not a fixed statutory figure."
+    },
+    {
+      "id": "PC111",
+      "event": "Contractor's written notice to preserve a Suspension of Work claim on a construction or architect-engineer contract",
+      "days": 20,
+      "day_type": "calendar",
+      "anchor": "before the contractor notifies the contracting officer in writing of the act or failure to act",
+      "rule": "Under the Suspension of Work clause no claim is allowed for any costs incurred more than 20 days before the contractor notified the contracting officer in writing of the act or failure to act involved, although that limit does not apply to a claim resulting from a suspension order itself. The claim must also be asserted in writing, in a stated amount, as soon as practicable after the suspension, delay or interruption ends, and no later than the date of final payment.",
+      "cite": "FAR 52.242-14(c)(1)-(2); RFO FAR 42.1005(a)",
+      "difficulty": 3,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far/52.242-14 (paragraph (c)(1) and (c)(2)); https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-42 (42.1005(a) prescribes the clause for fixed-price construction and architect-engineer contracts; the clause page itself still prints the pre-RFO prescription '42.1305(a)'). The 20 days is a look-back limit on recoverable costs, not a deadline to assert the claim; the assertion deadline is the date of final payment. Left untagged by warrant class: 42.1005(a) prescribes the clause whenever a fixed-price construction or architect-engineer contract is contemplated, with no simplified acquisition threshold gate."
+    },
+    {
+      "id": "PC112",
+      "event": "Notice to unsuccessful bidders after a sealed bid award",
+      "days": 3,
+      "day_type": "calendar",
+      "anchor": "after contract award",
+      "rule": "In sealed bidding the contracting officer must, as a minimum, notify each unsuccessful bidder in writing or electronically within three days after contract award that its bid was not accepted. For this notification, day means calendar day, except that the period runs until a day that is not a Saturday, Sunday or legal holiday. When award goes to other than a low bidder, the notice to each unsuccessful low bidder must state the reason for rejection.",
+      "cite": "RFO FAR 14.309-1(a)(1)-(2)",
+      "difficulty": 1,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-14 (14.309-1 Award of unclassified contracts). This is the sealed-bidding notice; PC30 carries the separate negotiated-acquisition notice at RFO 15.207-2."
+    },
+    {
+      "id": "PC113",
+      "event": "Bidding time allowed on an invitation for bids when a synopsis is required",
+      "days": 30,
+      "day_type": "calendar",
+      "anchor": "from issuance of the invitation for bids",
+      "rule": "Bidders must be allowed a reasonable time to prepare and submit bids, consistent with the needs of the Government. When a synopsis is required under subpart 5.1, provide at least 30 calendar days. Bids are then submitted sealed and opened publicly at the time and place stated in the invitation for bids.",
+      "cite": "RFO FAR 14.210(a)-(c)",
+      "difficulty": 1,
+      "note": "Read 17 Sep 2026: https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-14 (14.210 Submission of Bids, paragraph (b) 'Provide at least 30 calendar days when a synopsis is required'). This is Part 14's own bidding time; PC72 carries the separate minimum response times in Table 5-3 at RFO 5.201(d), which also reach 30 days for noncommercial acquisitions above the simplified acquisition threshold."
+    }
+  ],
+  "verification_log": [
+    {
+      "id": "PC78",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4",
+        "https://www.acquisition.gov/far/52.204-13"
+      ],
+      "note": "4.203-1(c) and 4.304(b)(1) both state 30 days; clause 52.204-13(b) matches."
+    },
+    {
+      "id": "PC79",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-4",
+        "https://www.acquisition.gov/far/52.204-13"
+      ],
+      "note": "4.305(b) covers UEI and CAGE; the clause paragraph (d)(3) covers the UEI."
+    },
+    {
+      "id": "PC80",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5"
+      ],
+      "note": "Table 5-4 is the only place the 60 days appears; 5.301(b) exempts actions exempt from the presolicitation notice."
+    },
+    {
+      "id": "PC81",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5"
+      ],
+      "note": "Distinct from PC64, which carries the 15 days before solicitation issuance."
+    },
+    {
+      "id": "PC82",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5"
+      ],
+      "note": "PC72 and PC73 already carry the 30-day and 45-day rows; the 40-day trade agreement column was not covered."
+    },
+    {
+      "id": "PC83",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9"
+      ],
+      "note": "Explicit 'calendar days' in the source."
+    },
+    {
+      "id": "PC89",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-28",
+        "https://www.acquisition.gov/far/52.228-1"
+      ],
+      "note": "10 days is the clause default; 28.101-2(a)(1) expressly allows a different period."
+    },
+    {
+      "id": "PC90",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-28"
+      ],
+      "note": "28.204-3(d) plus the parallel 30 days in 28.204-3(g)(3) for a rating drop below investment grade."
+    },
+    {
+      "id": "PC91",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-28"
+      ],
+      "note": "Both 60-day figures in 28.204-3(f) read together; the coverage periods themselves are in years."
+    },
+    {
+      "id": "PC92",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far/52.219-9",
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-19"
+      ],
+      "note": "Class II to IV because the clause prescription threshold ($900,000, or $2 million for public facility construction) is above the simplified acquisition threshold."
+    },
+    {
+      "id": "PC93",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22"
+      ],
+      "note": "Candidate 10 confirmed, but the RFO number is 22.403(b)(1), not 22.404-6."
+    },
+    {
+      "id": "PC94",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22"
+      ],
+      "note": "Found while reading Part 22 for the wage determination candidates; not on the candidate list."
+    },
+    {
+      "id": "PC95",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22"
+      ],
+      "note": "The 30 days is what preserves the agency's ability to refuse a late collective bargaining agreement under 22.1003(b)."
+    },
+    {
+      "id": "PC96",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-22",
+        "https://www.acquisition.gov/far/52.222-41"
+      ],
+      "note": "RFO text and clause paragraph (n) agree on 10 days."
+    },
+    {
+      "id": "PC97",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32"
+      ],
+      "note": "Distinct from PC25, which is the 30-day invoice payment due date under the Prompt Payment clause."
+    },
+    {
+      "id": "PC98",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32",
+        "https://www.acquisition.gov/far/52.232-25"
+      ],
+      "note": "Candidate 15 confirmed: meat and fish are 7 days, not 10."
+    },
+    {
+      "id": "PC99",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32",
+        "https://www.acquisition.gov/far/52.232-25"
+      ],
+      "note": "Candidate 15 confirmed: perishable agricultural commodities 10 days after delivery; dairy 10 days after a proper invoice."
+    },
+    {
+      "id": "PC100",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32",
+        "https://www.acquisition.gov/far/52.232-25"
+      ],
+      "note": "Both the 10-day and 40-day figures read in the RFO text and the clause."
+    },
+    {
+      "id": "PC101",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49"
+      ],
+      "note": "Definition section, so easy to miss; it is a real fixed 90-day period."
+    },
+    {
+      "id": "PC102",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49"
+      ],
+      "note": "Two 30-day clocks in 49.105-1; found while reading Part 49 for the settlement proposal candidate."
+    },
+    {
+      "id": "PC103",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49"
+      ],
+      "note": "Settlement by determination is what happens when no settlement agreement is reached."
+    },
+    {
+      "id": "PC104",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-49"
+      ],
+      "note": "Wording is identical across the four settlement agreement formats read."
+    },
+    {
+      "id": "PC106",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-45",
+        "https://www.acquisition.gov/far/52.245-1"
+      ],
+      "note": "The RFO text and the GFP clause agree; the clause supplies the 121st-day consequence."
+    },
+    {
+      "id": "PC108",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far/52.245-1"
+      ],
+      "note": "Clause paragraph (j)(3)(i) carries three different triggers: 30, 60 and 120 days."
+    },
+    {
+      "id": "PC110",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far/52.232-20",
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-32"
+      ],
+      "note": "Fill-in default: 60 days, variable 30 to 90 under 32.706-2(a)."
+    },
+    {
+      "id": "PC111",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far/52.242-14",
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-42"
+      ],
+      "note": "The candidate list described this as 'claim asserted within 20 days after the suspension ends'; the clause does not say that. The 20 days limits costs incurred before written notice, and the assertion deadline is final payment. Also noted: RFO 42.1005(a) tells contracting officers they may reduce 'the 90-day period in the clause' for 52.242-14, but 52.242-14 has no 90-day period; that sentence belongs to the Stop-Work Order clause in 42.1005(b)(1)."
+    },
+    {
+      "id": "PC112",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-14"
+      ],
+      "note": "The source defines 'day' as calendar day with a roll forward past weekends and legal holidays."
+    },
+    {
+      "id": "PC113",
+      "read_on": "2026-09-17",
+      "sources": [
+        "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-14"
+      ],
+      "note": "Same number as PC72 but a different rule and a different source paragraph; both were read today."
+    }
+  ]
+}

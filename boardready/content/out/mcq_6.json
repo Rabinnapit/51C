@@ -1,0 +1,1104 @@
+[
+  {
+    "qid": "Q0065",
+    "stem": "A firm-fixed-price negotiation is proposed at $120 million and the two sides are $15 million apart. Your maximum position allows only $8 million of movement. The project manager asks you to offer the contractor a 50/50 split of the current positions to speed things up. What do you tell the project manager?",
+    "options": [
+      {
+        "text": "We do not split a gap this large: a $7.5 million move leaves only $500,000 of room, and if the contractor refuses, our credibility is gone.",
+        "correct": true,
+        "why": "Those are the three reasons the Government does not split at this magnitude: no room left to move, no credibility left, and nothing for management to adjust."
+      },
+      {
+        "text": "Offer the split, but tell the contractor we reserve the right to return to our previous position if it does not accept within the coming week.",
+        "correct": false,
+        "why": "Reserving that right is like telling a jury to ignore a statement; the contractor now knows we can reach the split figure and will negotiate from there."
+      },
+      {
+        "text": "Offer the split, because it is defensible as long as it stays inside the $8 million that the approved maximum position still allows us to move.",
+        "correct": false,
+        "why": "Fitting inside the maximum is not the test; a $7.5 million jump spends nearly all of the authorized movement in one step."
+      },
+      {
+        "text": "Tell the project manager the pace of the negotiation is his call, and make the offer this week to close it out.",
+        "correct": false,
+        "why": "Customer schedule pressure does not justify a bargaining move that surrenders the Government's position and the negotiating team's credibility."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "Official CORB board answer Q0065 (negotiation objective and Government maximum position; no regulatory cite in the source)",
+    "domain": "Source Selection & Evaluation"
+  },
+  {
+    "qid": "Q0092",
+    "stem": "After a claim accrues, how long does a contractor have to submit that claim in writing to the contracting officer for a decision?",
+    "options": [
+      {
+        "text": "Six years from accrual, unless the contract sets a shorter period, and the same limit applies to Government claims.",
+        "correct": true,
+        "why": "The Contract Disputes Act sets a six-year limit running from accrual, and it runs both ways."
+      },
+      {
+        "text": "Ninety days, the same period the contractor has to file an appeal with the Armed Services Board of Contract Appeals.",
+        "correct": false,
+        "why": "Ninety days is the window to appeal a contracting officer's final decision to the board, not the time to submit the claim."
+      },
+      {
+        "text": "Twelve months, matching the period for bringing an action at the Court of Federal Claims.",
+        "correct": false,
+        "why": "Twelve months is the period to go to the Court of Federal Claims after a final decision, not the submission limit."
+      },
+      {
+        "text": "Sixty days, the period in which the contracting officer must issue a decision on a certified claim.",
+        "correct": false,
+        "why": "Sixty days is the contracting officer's decision clock, not the contractor's filing limit."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 33.205-1; RFO FAR 33.205-6; 41 U.S.C. 7103",
+    "domain": "Protests, Claims & Disputes"
+  },
+  {
+    "qid": "Q0100",
+    "stem": "You are a contingency contracting officer. Units keep giving local vendors verbal direction before requirements reach you, and the commander wants everything immediately. How do you balance speed against discipline?",
+    "options": [
+      {
+        "text": "Use contingency thresholds and faster methods, but document every action and price, meet weekly with the J4 and S4s on requirements, and process the commitments for ratification.",
+        "correct": true,
+        "why": "The flexibilities speed up the method, not the record, and the weekly requirements sync is what gets the requirement to the KO before the vendor gets it."
+      },
+      {
+        "text": "Ratify the verbal orders after the fact but skip the written price determinations, since contingency flexibilities suspend the documentation requirements for the length of the deployment.",
+        "correct": false,
+        "why": "The contingency flexibilities raise thresholds and allow quicker methods; they do not remove the written determination or the price memo."
+      },
+      {
+        "text": "Let the units keep placing verbal orders and paper the files later at redeployment, when there is time to do it properly.",
+        "correct": false,
+        "why": "The protests and claims that follow a contingency come out of the files that were never built at the time."
+      },
+      {
+        "text": "Write one urgency justification broad enough to cover the whole deployment so individual actions need no separate support.",
+        "correct": false,
+        "why": "An urgency justification still has to be true for the action it supports; a blanket justification is not."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 18.001; DFARS 218.7001-2; RFO FAR 1.405; RFO FAR 6.103-2; RFO FAR 9.104-1",
+    "domain": "Protests, Claims & Disputes"
+  },
+  {
+    "qid": "Q0136",
+    "stem": "On a larger source selection, how does the Government develop its negotiation objective?",
+    "options": [
+      {
+        "text": "A team evaluates the proposal, technical evaluators on performance and cost/price evaluators on pricing, and both go into the approved prenegotiation memorandum.",
+        "correct": true,
+        "why": "That is the process: a team of evaluators, split technical and cost/price, whose results are captured in the prenegotiation memorandum and approved."
+      },
+      {
+        "text": "The contracting officer sets the objective alone from the independent government estimate, then briefs the entire evaluation team once that objective is approved.",
+        "correct": false,
+        "why": "The objective is built by the evaluation team, not by the contracting officer working from the estimate alone."
+      },
+      {
+        "text": "The technical evaluators price the proposal and the cost and price analysts judge whether the offeror can meet the requirement.",
+        "correct": false,
+        "why": "The roles are reversed: technical evaluators assess likelihood of performance, cost/price evaluators evaluate the pricing information."
+      },
+      {
+        "text": "The objective forms during negotiations out of the contractor's responses and is written up afterward in the price negotiation memorandum for the official contract file.",
+        "correct": false,
+        "why": "The objective is set and approved before negotiating; the record made afterward is a different document."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "Official CORB board answer Q0136 (Ch. 3, Negotiation Preparation, osd.mil)",
+    "domain": "Source Selection & Evaluation"
+  },
+  {
+    "qid": "Q0141",
+    "stem": "During evaluations on a services recompete, a technical evaluator wants to credit an offeror with a strength for a capability the RFP never asked for. What protects the integrity of the source selection?",
+    "options": [
+      {
+        "text": "Stop it: we evaluate only on the published factors, and if it matters we amend the RFP so all offerors can respond.",
+        "correct": true,
+        "why": "Crediting something never published is an unstated criterion and a sustainable protest; the cure is an amendment that lets everyone respond."
+      },
+      {
+        "text": "Allow the strength as long as the evaluation record explains in detail why the capability benefits the Government's mission.",
+        "correct": false,
+        "why": "Documenting an unstated criterion does not cure it; the criterion still was never published to the other offerors."
+      },
+      {
+        "text": "Carry it forward and let the source selection authority decide at the decision briefing whether it should count at all.",
+        "correct": false,
+        "why": "The SSA's comparative assessment rests on the stated criteria too, so passing the problem up does not fix it."
+      },
+      {
+        "text": "Raise it with that offeror in discussions so the capability is formally proposed in writing, then evaluate it as a strength.",
+        "correct": false,
+        "why": "Discussions cannot import a criterion the solicitation never stated, and raising it with one offeror is unequal treatment."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 15.104; RFO FAR 15.202; RFO FAR 15.204; RFO FAR 15.205",
+    "domain": "Source Selection & Evaluation"
+  },
+  {
+    "qid": "Q0154",
+    "stem": "GAO's jurisdiction over protests of task and delivery orders is limited. Apart from the dollar threshold for Department of Defense orders, on what other basis may GAO hear an order protest?",
+    "options": [
+      {
+        "text": "That the contract action increases the scope, period, or maximum value of the contract under which the order is issued.",
+        "correct": true,
+        "why": "A protest that the action increases the scope, period or maximum value of the underlying contract may be heard regardless of the order's value."
+      },
+      {
+        "text": "That the order was placed without giving the multiple-award holders a fair opportunity to be considered.",
+        "correct": false,
+        "why": "A fair opportunity complaint is not by itself a jurisdictional basis; it still has to clear the order value threshold."
+      },
+      {
+        "text": "That the agency failed to give the postaward debriefing required on the order.",
+        "correct": false,
+        "why": "A debriefing failure is a procedural complaint, not an independent basis for jurisdiction over an order protest."
+      },
+      {
+        "text": "That the order was charged to the wrong appropriation or the wrong contract line item.",
+        "correct": false,
+        "why": "A fiscal or administrative error is not one of the grounds that opens GAO's door on an order."
+      }
+    ],
+    "difficulty": 3,
+    "cite": "RFO FAR 16.508 (protests of orders; legacy FAR 16.505(a)(10))",
+    "domain": "Protests, Claims & Disputes"
+  },
+  {
+    "qid": "Q0162",
+    "stem": "How does an Other Transaction differ from a FAR-based contract?",
+    "options": [
+      {
+        "text": "An OT is binding but is not a procurement contract, grant or cooperative agreement, so the FAR and procurement statutes apply only if written in.",
+        "correct": true,
+        "why": "That is the defining difference: the instrument sits outside the procurement framework, so CICA, the FAR, the Contract Disputes Act and the standard clause set reach it only by agreement."
+      },
+      {
+        "text": "An OT is a FAR contract issued under a class deviation that waives the clauses the agency chooses not to use.",
+        "correct": false,
+        "why": "An OT is not a procurement contract at all; it does not begin from the FAR and is not created by deviation."
+      },
+      {
+        "text": "An OT is a procurement contract awarded without competition, which is why only an agreements officer holding a special OT warrant may sign one for the Army.",
+        "correct": false,
+        "why": "Prototype OTs require competitive procedures to the maximum extent practicable, and the agreements officer signs because of the instrument, not a lack of competition."
+      },
+      {
+        "text": "Because the FAR does not apply, fiscal law and the procurement integrity rules do not reach an OT either.",
+        "correct": false,
+        "why": "Fiscal law, the bona fide need rule, ethics, procurement integrity and Army warrant limits all still apply to OTs."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "10 U.S.C. 4021; 10 U.S.C. 4022; 31 U.S.C. 6303; DoD Other Transactions Guide (2023)",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0168",
+    "stem": "What are a grants officer's responsibilities?",
+    "options": [
+      {
+        "text": "Effective use of awards made and run under law, Executive orders, regulation and DoD policy; funds available for obligation; and fair, impartial treatment of recipients.",
+        "correct": true,
+        "why": "Those are the three responsibilities the grants officer exercises wide latitude and judgment to carry out."
+      },
+      {
+        "text": "Ensuring every award is competed, priced with certified cost or pricing data, and administered under the standard FAR clause set.",
+        "correct": false,
+        "why": "Assistance awards are not FAR procurements, so certified cost or pricing data and the FAR clause set do not govern them."
+      },
+      {
+        "text": "Ensuring the recipient's technical performance meets the statement of work, and accepting or rejecting each deliverable for the Government as it arrives at the program office.",
+        "correct": false,
+        "why": "That is a procurement acceptance role; an assistance award supports a public purpose rather than delivering goods and services to the Government."
+      },
+      {
+        "text": "Ensuring funds are available for obligation, and leaving legal and policy compliance to the program office that requested the award.",
+        "correct": false,
+        "why": "Availability of funds is only one of the three; compliance with law, Executive orders, regulation and DoD policy is the grants officer's own responsibility."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "DoDGARs (32 CFR chapter I subchapter C); official CORB board answer Q0168",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0176",
+    "stem": "How would you describe the purpose of the Other Transaction authorities?",
+    "options": [
+      {
+        "text": "Flexibility to use commercial business practices and reach state-of-the-art solutions from traditional and nontraditional firms through tailored teaming.",
+        "correct": true,
+        "why": "That is the stated purpose: flexibility to incorporate commercial standards and best practices, and access to current technology through tailored arrangements."
+      },
+      {
+        "text": "They let the Government buy commercial supplies and services faster by applying a much higher simplified acquisition threshold to research and prototype work.",
+        "correct": false,
+        "why": "OT authority is a different instrument, not a higher threshold inside the simplified acquisition rules."
+      },
+      {
+        "text": "They exist so the Government can award to nontraditional defense contractors without competing the requirement at all.",
+        "correct": false,
+        "why": "Broadening the industrial base is a benefit, but it is reached through competition to the maximum extent practicable, not by skipping competition."
+      },
+      {
+        "text": "They give the Government a way to fund university research in place of grants and cooperative agreements when the assistance paperwork is far too burdensome.",
+        "correct": false,
+        "why": "Assistance for a public purpose runs through grants and cooperative agreements; the OT is not a substitute assistance instrument."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "DoD Other Transactions Guide; official CORB board answer Q0176",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0178",
+    "stem": "What business acumen does an agreements officer need to negotiate, award and administer Other Transactions?",
+    "options": [
+      {
+        "text": "Judgment in an unstructured setting: weigh every business option, Government and commercial, and negotiate terms that balance risk while protecting the Government's rights and the law.",
+        "correct": true,
+        "why": "The agreements officer is expected to exercise that level of responsibility and judgment and is ultimately responsible for the terms that allocate risk."
+      },
+      {
+        "text": "Command of the FAR clause matrix, so the mandatory clauses are carried correctly into each agreement.",
+        "correct": false,
+        "why": "OT terms are negotiated rather than prescribed, so there is no mandatory clause set to carry across."
+      },
+      {
+        "text": "A working library of previously issued OTs and approved models, so each new agreement follows one that already worked and passed legal and policy review.",
+        "correct": false,
+        "why": "The guidance says specifically not to merely copy prior agreements, templates or models but to consider all possible business options."
+      },
+      {
+        "text": "Enough technical depth to write the prototype's performance requirements without relying on the program office's engineers and testers.",
+        "correct": false,
+        "why": "The agreements officer's contribution is business judgment and risk allocation, not replacing the program office's technical work."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "DoD Other Transactions Guide; official CORB board answer Q0178",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0179",
+    "stem": "What does the Government normally provide in a solicitation for a prototype Other Transaction?",
+    "options": [
+      {
+        "text": "A clear problem statement, area of need or capability gap, so industry can propose very different solutions.",
+        "correct": true,
+        "why": "The Government states the problem or gap and leaves trade space for a wide range of industry solutions."
+      },
+      {
+        "text": "A performance work statement with measurable standards and a quality assurance surveillance plan for the prototype.",
+        "correct": false,
+        "why": "That is the FAR services construct; a prototype OT solicitation states the problem and leaves the solution to industry."
+      },
+      {
+        "text": "Detailed design specifications, so the proposals that come back can be compared directly on price and schedule alone.",
+        "correct": false,
+        "why": "Design specifications close the innovative trade space the solicitation is meant to open, and proposals are expected to differ in approach, schedule and cost."
+      },
+      {
+        "text": "A Government estimate and a list of approved partners the awardee is required to team with throughout the project.",
+        "correct": false,
+        "why": "Teaming arrangements are proposed by industry and tailored to the project and participants, not dictated in the solicitation."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "DoD Other Transactions Guide; official CORB board answer Q0179",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0180",
+    "stem": "Before staffing an Other Transaction determination and findings through ODASA(P), with whom does the agreements officer coordinate?",
+    "options": [
+      {
+        "text": "The program office or other requiring activity representatives, the SCO or HCA, and local legal counsel.",
+        "correct": true,
+        "why": "Those three coordinations happen before the D&F is staffed through ODASA(P)."
+      },
+      {
+        "text": "The program office only; legal review follows after ODASA(P) returns the approved determination.",
+        "correct": false,
+        "why": "Local legal counsel is part of the coordination before staffing, not a step after approval."
+      },
+      {
+        "text": "The senior procurement executive directly, since the determination is prepared under 10 U.S.C. 4022.",
+        "correct": false,
+        "why": "Approval may run to that level, but the agreements officer coordinates locally first and staffs the document through ODASA(P)."
+      },
+      {
+        "text": "The prospective OT recipient, so the findings match the terms the parties have already discussed.",
+        "correct": false,
+        "why": "The determination is the Government's own analysis; coordinating it with the recipient puts that analysis in the wrong hands."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "10 U.S.C. 4022(a)(2)(A) and (8); official CORB board answer Q0180",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0182",
+    "stem": "What risks must the agreements officer assess in the determination and findings supporting an OTA, and how are they stated?",
+    "options": [
+      {
+        "text": "Cost, technical and schedule risk, each rated low, moderate or high, with the action-specific risks, why they earn that level, and the planned mitigation.",
+        "correct": true,
+        "why": "The D&F addresses all three risk types with a stated level, action-specific findings and mitigation plans."
+      },
+      {
+        "text": "Cost, technical, schedule and past performance risk, each scored against the participant's CPARS record and its prior OT experience with the Army and the rest of DoD.",
+        "correct": false,
+        "why": "The determination covers cost, technical and schedule risk; CPARS is a FAR past-performance tool and is not the measure here."
+      },
+      {
+        "text": "One overall risk rating for the project, supported by the program office's independent cost and schedule estimate.",
+        "correct": false,
+        "why": "Each of the three risk types carries its own level and its own mitigation; a single rating does not meet the requirement."
+      },
+      {
+        "text": "Only the risks the Government bears, since the other party's risk is its own business under a negotiated agreement.",
+        "correct": false,
+        "why": "The risk inherent in the prototype project and the capability of the expected sources shape the terms, so the assessment is not limited that way."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "DoD Other Transactions Guide; official CORB board answer Q0182 (D&F in support of an OTA: cost, technical and schedule risk)",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0183",
+    "stem": "A board member asks you to describe an Other Transaction. What is the correct description?",
+    "options": [
+      {
+        "text": "A flexible, legally binding instrument of three types: research (10 U.S.C. 4021), prototype (4022) and follow-on production (4022(f)).",
+        "correct": true,
+        "why": "Flexible, legally binding, and three types is exactly how the authority is organized."
+      },
+      {
+        "text": "A nonbinding agreement to collaborate on research that becomes binding only when a production contract or a follow-on order follows it.",
+        "correct": false,
+        "why": "An OT is legally binding from the start; follow-on production is a separate type, not what creates the obligation."
+      },
+      {
+        "text": "A flexible instrument with two types, research and prototype, with any production work always requiring a separate FAR-based production contract.",
+        "correct": false,
+        "why": "Follow-on production under 4022(f) is the third type of Other Transaction."
+      },
+      {
+        "text": "An assistance instrument used when the principal purpose is to support a public purpose rather than acquire.",
+        "correct": false,
+        "why": "That describes grants and cooperative agreements; an Other Transaction is neither."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "10 U.S.C. 4021; 10 U.S.C. 4022; 10 U.S.C. 4022(f)",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0184",
+    "stem": "Under the Army's delegation of approval authority for Other Transactions, who approves an OT valued at $75 million?",
+    "options": [
+      {
+        "text": "The head of the contracting activity, who holds approval for actions greater than $50 million up to $100 million.",
+        "correct": true,
+        "why": "The $75 million action falls in the HCA's band, above the SCO's $50 million ceiling and below the $100 million line."
+      },
+      {
+        "text": "The senior contracting official, whose approval authority runs up to $50 million.",
+        "correct": false,
+        "why": "The SCO's delegation stops at $50 million, so it does not reach a $75 million action."
+      },
+      {
+        "text": "The senior procurement executive, ASA(ALT), who approves actions greater than $100 million up to $500 million.",
+        "correct": false,
+        "why": "The senior procurement executive's band begins above $100 million."
+      },
+      {
+        "text": "The Under Secretary of Defense for Acquisition and Sustainment or for Research and Engineering.",
+        "correct": false,
+        "why": "That level is reserved for actions greater than $500 million."
+      }
+    ],
+    "difficulty": 3,
+    "cite": "Official CORB board answer Q0184 (Army OT approval thresholds by dollar value; no regulatory cite in the source)",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0185",
+    "stem": "A board asks how your experience, training and business acumen prepare you for the latitude a grants officer has. What standard is the board measuring you against?",
+    "options": [
+      {
+        "text": "The DoDGARs standard: the appointing official's judgment of your experience, training, education, acumen and knowledge, which also sets the work you are given.",
+        "correct": true,
+        "why": "DoDGARs 21.440 makes those attributes the selection standard and ties the level of work assigned to them."
+      },
+      {
+        "text": "A fixed number of courses and years served in a grants office, after which the appointment follows automatically.",
+        "correct": false,
+        "why": "The standard is the appointing official's judgment about the candidate's attributes, not a course count or time in the seat."
+      },
+      {
+        "text": "The same warrant criteria used for contracting officers, because a grants officer appointment is just a contracting officer warrant issued through VCE-Warrants.",
+        "correct": false,
+        "why": "Grants officer selection runs on the DoDGARs standard for assistance instruments, a separate appointment from a KO warrant, however it is recorded."
+      },
+      {
+        "text": "Whether you can recite the cost principles, since the allowability of recipient costs is what a grants officer decides.",
+        "correct": false,
+        "why": "Knowledge of assistance instruments is one attribute among several; the standard is broader than the cost principles."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "DoDGARs 21.440; Army Warranting Program v7 para 4.2",
+    "domain": "Grants & Agreements"
+  },
+  {
+    "qid": "Q0213",
+    "stem": "A pricing report that includes the technical evaluation recommends a Government position on direct labor well below the proposed amount. What do you rely on in developing your objective, and what do you seek in negotiations?",
+    "options": [
+      {
+        "text": "Check the data behind the report and other sources such as BLS or Global Insight, and ask for the offeror's labor spreadsheet and cost narrative.",
+        "correct": true,
+        "why": "The objective rests on data you have examined, and the spreadsheet and cost narrative are what let the Government validate the labor figures."
+      },
+      {
+        "text": "Adopt the report's figure as the objective, since it is the Government's independent position and the offeror can rebut it at the negotiating table.",
+        "correct": false,
+        "why": "The data source behind the recommendation has to be considered first; an unexamined figure will not hold up in negotiations."
+      },
+      {
+        "text": "Require the offeror to submit certified cost or pricing data on direct labor before you open negotiations.",
+        "correct": false,
+        "why": "The gap is closed with the supporting spreadsheet, cost narrative and other labor data sources, not by demanding certified data the action may not require."
+      },
+      {
+        "text": "Set the objective midway between the proposed labor cost and the report's recommended figure, so that both of the positions are fairly represented in it.",
+        "correct": false,
+        "why": "An objective has to rest on analyzed data, not on a mechanical midpoint between two numbers."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "FAR 15.407; FAR 15.408",
+    "domain": "Source Selection & Evaluation"
+  },
+  {
+    "qid": "Q0214",
+    "stem": "In a formal source selection, what is the contracting officer's role in relation to the SSEB, the source selection advisory council and the source selection authority?",
+    "options": [
+      {
+        "text": "The PCO is the main business advisor and guidance source for the source selection and the focal point for all contact with companies.",
+        "correct": true,
+        "why": "That is how the DoD source selection guidance frames the PCO's role, and it is why the PCO should have prior source selection experience."
+      },
+      {
+        "text": "The contracting officer chairs the evaluation board and consolidates the consensus ratings into one report for the source selection authority.",
+        "correct": false,
+        "why": "The contracting officer ensures the evaluation chair evaluates against the stated criteria; the KO's own role is business advisor and guidance source."
+      },
+      {
+        "text": "The contracting officer makes the selection decision whenever the advisory council and the evaluation board disagree on the final ranking.",
+        "correct": false,
+        "why": "The source selection decision belongs to the source selection authority; the contracting officer advises and documents."
+      },
+      {
+        "text": "The contracting officer stays out of all exchanges with offerors so that the evaluation team's independence is preserved until the award.",
+        "correct": false,
+        "why": "The opposite: the KO is the focal point for all communications with companies, conducts discussions and gives debriefings."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "DoD Source Selection Procedures; official CORB board answer Q0214",
+    "domain": "Source Selection & Evaluation"
+  },
+  {
+    "qid": "Q0220",
+    "stem": "GAO notifies your agency that a protest has been filed before you have made award, and the requiring activity presses you to award anyway. What allows award to proceed?",
+    "options": [
+      {
+        "text": "A written, nondelegable HCA finding that urgent and compelling circumstances will not permit waiting for GAO, with award likely within 30 days.",
+        "correct": true,
+        "why": "That is the only preaward exception; both elements must be met and the agency notifies GAO of the finding before award."
+      },
+      {
+        "text": "A written head of the contracting activity finding that proceeding with award is in the best interests of the Government, with notice sent to GAO.",
+        "correct": false,
+        "why": "Best interests is a postaward override ground, notice or not; before award the finding must be urgent and compelling circumstances plus award likely within 30 days."
+      },
+      {
+        "text": "The contracting officer's own determination, documented in the file, that the protest grounds have no merit.",
+        "correct": false,
+        "why": "The contracting officer cannot override the bar on award; the finding belongs to the head of the contracting activity and cannot be delegated."
+      },
+      {
+        "text": "Permission from GAO to proceed with award, which the agency requests when it files the agency report.",
+        "correct": false,
+        "why": "GAO does not authorize award; the agency proceeds on the HCA's finding and notifies GAO of it before award."
+      }
+    ],
+    "difficulty": 3,
+    "cite": "RFO FAR 33.105-2; 31 U.S.C. 3553",
+    "domain": "Protests, Claims & Disputes"
+  },
+  {
+    "qid": "Q0276",
+    "stem": "A new LCS purchase request for grounds maintenance services arrives with an independent government estimate of $11 million. What does that dollar value mean for the way you run the procurement?",
+    "options": [
+      {
+        "text": "Simplified acquisition is not available at this value, so run a source selection with a plan, and build the approvals into the schedule; confirm the levels with C&P.",
+        "correct": true,
+        "why": "At $11 million simplified acquisition is off the table and a source selection plan is required, with the approval requirements for that dollar value built into the schedule."
+      },
+      {
+        "text": "Simplified acquisition procedures still apply, because grounds maintenance is a commercial service and the work is recurring each year.",
+        "correct": false,
+        "why": "Commercial or not, simplified procedures cannot be used at this dollar value."
+      },
+      {
+        "text": "No source selection plan is needed, because the field of eligible firms is small and the award decision will be price-driven.",
+        "correct": false,
+        "why": "A small field does not remove the source selection plan; an action of this size requires one."
+      },
+      {
+        "text": "Break the requirement into smaller annual actions so each one falls below the simplified acquisition threshold.",
+        "correct": false,
+        "why": "Dividing a requirement to avoid a threshold is improper; the approved requirement is an $11 million action."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "Official CORB board answer Q0276; USFK LCS Program under the Special Measures Agreement (confirm approval levels and current procedures with C&P)",
+    "domain": "Korea, LCS & SOFA"
+  },
+  {
+    "qid": "Q0279",
+    "stem": "A contract specialist new to ABG-75 joins your team. How do you bring them up to speed and what tools do you put in their hands?",
+    "options": [
+      {
+        "text": "Teach the procedures with the ABG-75 guidance book and hands-on work, and send their questions to the IMCOM-E ABG-75 representative and the division chief.",
+        "correct": true,
+        "why": "The guidance book plus hands-on training is the tool set, and the IMCOM-E ABG-75 representative and the division chief are where the questions go."
+      },
+      {
+        "text": "Keep them on FAR-based actions for the first year, since ABG-75 work follows the same rules once the FAR is second nature and the ABG forms have been learned.",
+        "correct": false,
+        "why": "ABG-75 has its own procedures and its own guidance book; FAR fluency does not substitute for learning them."
+      },
+      {
+        "text": "Give them the regulation and guidance book to work through on their own, and check their progress with a short written quiz at the end of each training quarter.",
+        "correct": false,
+        "why": "The book alone is not the training; hands-on work and access to the ABG-75 representative are what build competence."
+      },
+      {
+        "text": "Enroll them in the DAU (WARU) contracting courses and hold their file assignments until the certificates are complete.",
+        "correct": false,
+        "why": "Those courses do not teach ABG-75; the procedures come from the guidance book, hands-on training and the IMCOM-E representative."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "ABG 75 procedures (Germany); official CORB board answer Q0279 (confirm current local procedures with the IMCOM-E ABG-75 representative)",
+    "domain": "Germany ABG-75"
+  },
+  {
+    "qid": "Q0280",
+    "stem": "An ABG-75 contract requires a modification. Which change order documents are used, and who initiates each?",
+    "options": [
+      {
+        "text": "ABG5a: the Government tells the Bauamt of a requirement or administrative change. ABG5: the Bauamt sends changes with a justification, which DPW reviews.",
+        "correct": true,
+        "why": "Those are the two change order documents and the direction each one travels."
+      },
+      {
+        "text": "The ABG5, which the Government issues unilaterally, and the ABG5a, which the contractor submits as a claim for additional work.",
+        "correct": false,
+        "why": "It is the reverse: the Government initiates the ABG5a, and the ABG5 comes to us from the Bauamt with its justification."
+      },
+      {
+        "text": "An SF 30 for administrative changes such as a new line of accounting, and an ABG5 for any change in the requirement.",
+        "correct": false,
+        "why": "ABG-75 changes run on the ABG5a and ABG5 documents, and an administrative change such as a line of accounting is made by ABG5a."
+      },
+      {
+        "text": "Only the ABG5, which covers every kind of change, with an administrative change such as a new line of accounting needing no document at all, only a note in the file.",
+        "correct": false,
+        "why": "There are two documents, and an administrative change is documented by ABG5a rather than going unrecorded or into a note in the file."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "ABG 75 procedures (Germany); official CORB board answer Q0280 (ABG5 and ABG5a change order documents; confirm current local requirements with the 409th CSB)",
+    "domain": "Germany ABG-75"
+  },
+  {
+    "qid": "Q0281",
+    "stem": "Why is it important to fully document the contract file?",
+    "options": [
+      {
+        "text": "For continuity, compliance, defending your decisions to the Army or German government, and protecting the Army in litigation.",
+        "correct": true,
+        "why": "Continuity, compliance, defensibility and litigation protection are the four reasons the file has to be complete."
+      },
+      {
+        "text": "So the file can be assembled and reviewed at closeout, which is the point when the complete record is first required by regulation.",
+        "correct": false,
+        "why": "The record is built as the action proceeds; a file assembled at closeout cannot tell a successor where the action stands today."
+      },
+      {
+        "text": "Because a complete file is what authorizes the contracting officer to take any further action on the contract with the Bauamt.",
+        "correct": false,
+        "why": "Authority comes from the warrant; the file records and defends the decisions that authority supports."
+      },
+      {
+        "text": "So that the contractor has a full record of the Government's internal deliberations if a dispute with the Bauamt arises later on.",
+        "correct": false,
+        "why": "The file exists to protect the Army's interests; it is not compiled for the contractor's benefit."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "ABG 75 procedures (Germany); official CORB board answer Q0281 (contract file documentation)",
+    "domain": "Germany ABG-75"
+  },
+  {
+    "qid": "K101",
+    "stem": "USFK J4 sends you an approved LCS requirement to replace rooftop HVAC units on three barracks at Camp Humphreys, IGE $1.8 million. A U.S. HVAC company with a Pyeongtaek office asks to be added to the bidders list, and the DPW engineer would prefer it because it installed the original units. What do you do?",
+    "options": [
+      {
+        "text": "Tell the firm plainly that this LCS-funded action is limited to Korean firms by program rule, and keep its capability statement for O&M work.",
+        "correct": true,
+        "why": "LCS is ROK money under the Special Measures Agreement and the program is limited to Korean businesses, so the honest answer to the firm is that it cannot compete on this one."
+      },
+      {
+        "text": "Add the firm to the list, since excluding a capable local offeror without a written justification and approval would improperly restrict competition.",
+        "correct": false,
+        "why": "The Korean-firm limitation is a rule of the LCS program under the international agreement, not a restriction the contracting officer imposes or may waive."
+      },
+      {
+        "text": "Add the firm as a proposed subcontractor to the eventual Korean awardee so the original installer's knowledge is not lost.",
+        "correct": false,
+        "why": "The program expects Korean material and labor; routing the U.S. firm in through a side channel is not a call the KO makes on an MND-awarded action."
+      },
+      {
+        "text": "Tell the engineer you can limit the competition to that firm because it installed the original units and knows the system.",
+        "correct": false,
+        "why": "A limited-competition justification is a FAR tool for U.S. actions; it cannot override the LCS program limitation, and the competition here is already limited to Korean firms."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "U.S.-ROK Special Measures Agreement (LCS); RFO FAR 6.103-4 (international agreement); 411th CSB LCS SOP (confirm current documentation and publicizing procedure with C&P)",
+    "domain": "Korea, LCS & SOFA"
+  },
+  {
+    "qid": "K102",
+    "stem": "Evaluation is complete on an LCS-funded purchase of twelve non-tactical vehicles, about $2.4 million, and the apparent successful offeror is a Korean dealer. The transportation officer asks you to sign the award tomorrow so the vehicles arrive before the first snow. What can you sign?",
+    "options": [
+      {
+        "text": "Only the recommendation for award, routed through J4; you prepare the contract for the USFK LCS program manager and ROK MND to approve and sign.",
+        "correct": true,
+        "why": "The funds are ROK funds held by MND, so the KO's product is a recommendation for award and MND approves and awards."
+      },
+      {
+        "text": "Sign the award now and route the package to J4 and MND afterward so they can ratify the action.",
+        "correct": false,
+        "why": "The KO has no award authority on an LCS action, so there is no Government award for MND to ratify."
+      },
+      {
+        "text": "Sign the award and record the obligation in the U.S. accounting system so the Korean dealer can invoice through WAWF like any other U.S. vendor would.",
+        "correct": false,
+        "why": "No U.S. funds are involved; invoices go to ROK MND and MND pays, so there is no U.S. obligation to record."
+      },
+      {
+        "text": "Tell the transportation officer to have the dealer start delivery on a verbal go-ahead while the whole package routes through J4 and MND for approval.",
+        "correct": false,
+        "why": "A vendor that starts on a verbal from the customer has no contract with anyone, which is the same unauthorized commitment problem as on the O&M side."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "U.S.-ROK Special Measures Agreement (LCS); RFO FAR 1.405 (unauthorized commitments); 411th CSB LCS SOP (confirm current procedure and invoice mechanics with C&P and J4)",
+    "domain": "Korea, LCS & SOFA"
+  },
+  {
+    "qid": "K103",
+    "stem": "On an LCS package for dining facility refrigeration repair, the winning Korean offeror's replacement compressors are made in Japan; all other parts and all labor are Korean. The DPW engineer tells you to write \"local materials\" on the memo going to J4 because MND never checks. What do you do?",
+    "options": [
+      {
+        "text": "Write the memo truthfully: name the Japanese compressors as offshore, note the rest is Korean and your search for Korean alternatives, and ask J4 how MND treats offshore parts this year.",
+        "correct": true,
+        "why": "The memo is a written representation to J4 and to the government paying the bill, so it states the facts and gives MND what it needs to decide."
+      },
+      {
+        "text": "Write \"local materials,\" since the labor and nearly all of the parts are Korean and the memo is only a summary characterization.",
+        "correct": false,
+        "why": "A knowingly false representation is an integrity problem whatever the size of the offshore portion, and whether MND checks is not the standard."
+      },
+      {
+        "text": "Reject the offer yourself as ineligible, since an offshore component does not meet the LCS expectation of Korean material and labor on every single part it supplies.",
+        "correct": false,
+        "why": "Whether an offshore component is acceptable inside an LCS award is an MND and LCS program decision, not one the contracting officer makes alone."
+      },
+      {
+        "text": "Leave the memo out of this package, because since January 2022 MND no longer requires an offshore waiver before submission.",
+        "correct": false,
+        "why": "The 2022 change removed the pre-approved waiver, not the requirement that a memo documenting offshore or local materials accompany every LCS package to J4."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "U.S.-ROK Special Measures Agreement (LCS); RFO FAR 1.402-2; DoD 5500.07-R (Joint Ethics Regulation); 411th CSB LCS SOP (offshore/local materials memo; confirm current format and MND practice with C&P)",
+    "domain": "Korea, LCS & SOFA"
+  },
+  {
+    "qid": "K104",
+    "stem": "One week before releasing a $3.2 million LCS grounds maintenance solicitation, the DPW chief asks you to add about $400,000 of FY27 O&M-funded tree removal line items so there is one competition and one contractor. What do you tell him?",
+    "options": [
+      {
+        "text": "They cannot share one solicitation: O&M needs full and open competition and LCS is limited to Korean firms, and one document cannot carry both rules.",
+        "correct": true,
+        "why": "Combining them would either restrict the O&M work to Korean firms unlawfully or open LCS work to non-Korean firms against the program rule."
+      },
+      {
+        "text": "It can be done if the solicitation restricts only the LCS line items to Korean firms and leaves the O&M line items open to every interested U.S. and Korean firm.",
+        "correct": false,
+        "why": "Splitting the restriction inside one solicitation does not cure it; the O&M work would still be solicited under a document that limits the competition."
+      },
+      {
+        "text": "It can be done because the combined value stays within one competitive action and the resource manager has already certified the FY27 O&M funds in writing.",
+        "correct": false,
+        "why": "Certified funds and total value are not the obstacle; the competition rules and the separate award and payment paths are."
+      },
+      {
+        "text": "Add the line items and obligate the O&M funds at award, since MND will award the whole contract and the U.S. share is reimbursed to ROK MND afterward.",
+        "correct": false,
+        "why": "MND approves, awards and pays the LCS portion, while a U.S. O&M action carries the KO's own award signature and is paid through DFAS."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 6.101; RFO FAR 6.103; RFO FAR 6.103-4; U.S.-ROK Special Measures Agreement (LCS); 411th CSB study material (O&M and LCS cannot be combined in one solicitation)",
+    "domain": "Korea, LCS & SOFA"
+  },
+  {
+    "qid": "K105",
+    "stem": "An approved LCS requirement for custodial and grounds maintenance across Area III arrives with an IGE of $14 million, a base period plus four options. Your last three LCS actions were under $2 million using simplified procedures. What governs your approach at this value?",
+    "options": [
+      {
+        "text": "Part 15 negotiation: the commercial simplified ceiling is $9 million, and above $10 million DoD procedures require an SSA-approved source selection plan before release; confirm the SSA with C&P.",
+        "correct": true,
+        "why": "Neither the SAT nor the $9 million commercial ceiling reaches $14 million, and the DoD procedures above $10 million call for an SSA-approved plan before release."
+      },
+      {
+        "text": "Commercial simplified procedures, because custodial and grounds maintenance are commercial services and the competition is limited to Korean firms in any case, so the dollar value does not matter.",
+        "correct": false,
+        "why": "The commercial simplified procedures stop at $9 million, so at $14 million they are unavailable however commercial the services are or however the competition is limited."
+      },
+      {
+        "text": "Part 15 procedures, but no source selection plan is required, because MND rather than the Army makes the award decision on an LCS action.",
+        "correct": false,
+        "why": "The package is still built under U.S. procedures, and the source selection planning requirement attaches to how you run the competition."
+      },
+      {
+        "text": "Simplified procedures for the base period alone, with each option evaluated separately as MND approves it in its own program year.",
+        "correct": false,
+        "why": "The acquisition is valued at $14 million including options; the base period cannot be carved out to bring it under a threshold."
+      }
+    ],
+    "difficulty": 3,
+    "cite": "RFO FAR 12.201-1; RFO FAR 2.101; RFO FAR 15.103; RFO DFARS 215.201(b)(2); DoD Source Selection Procedures (20 Aug 2022); 411th CSB LCS SOP (confirm SSA level and templates with C&P)",
+    "domain": "Korea, LCS & SOFA"
+  },
+  {
+    "qid": "K106",
+    "stem": "On 14 September an Area I DPW sends you an LCS purchase request for snow and ice removal, 1 November through 31 March, asking you to award before 30 September \"so we do not lose the FY26 money.\" What do you tell them?",
+    "options": [
+      {
+        "text": "There is no FY26 money to lose: LCS funds are ROK money held by MND, so the ROK program year and MND approval set the dates; confirm them with J4.",
+        "correct": true,
+        "why": "The U.S. fiscal year does not govern ROK funds; what governs is whether the requirement is on the approved program-year list and how long MND approval takes."
+      },
+      {
+        "text": "Award before 30 September, because the requirement was submitted in FY26 and the funds supporting it expire at the end of the U.S. fiscal year on 30 September.",
+        "correct": false,
+        "why": "LCS funds are not a U.S. appropriation, so U.S. fiscal-year expiration does not reach them."
+      },
+      {
+        "text": "Award before 30 September and rely on the 12-month severable services authority to carry the snow season's performance period into the next fiscal year.",
+        "correct": false,
+        "why": "That authority is a U.S. fiscal law tool for appropriated funds; it has nothing to do with ROK money held by MND."
+      },
+      {
+        "text": "Split the requirement into two actions before sending it to J4, because the period of performance crosses 31 December.",
+        "correct": false,
+        "why": "How MND treats a period that straddles its program years is a question for J4 and MND, not an assumption the contracting officer acts on."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "U.S.-ROK Special Measures Agreement (LCS); USFK Reg 37-5 (2007); 31 U.S.C. 1502; 10 U.S.C. 3133; 411th CSB LCS SOP (confirm the current program-year calendar with J4 and C&P)",
+    "domain": "Korea, LCS & SOFA"
+  },
+  {
+    "qid": "K107",
+    "stem": "You are awarding a $4.6 million O&M contract for simulator maintenance at Osan, and the U.S. manufacturer will send six U.S. technicians to Korea for 18 months. The project officer asks whether SOFA status is the contractor's problem. What is your part before award?",
+    "options": [
+      {
+        "text": "You request the contract's SOFA designation from USFK/FKAQ under Article XV and USFKI 4901.01; the requiring activity requests the individuals'.",
+        "correct": true,
+        "why": "Invited contractor designation is a two-step process, and the contract-level request is the contracting officer's responsibility."
+      },
+      {
+        "text": "None of it: once it is on contract, the contractor applies to FKAQ for invited contractor status for itself and for each one of its six technicians.",
+        "correct": false,
+        "why": "The contract-level designation is requested by the contracting officer, and the individual designations come through the requiring activity as sponsor."
+      },
+      {
+        "text": "Both steps are yours: request the contract designation and the individual designations for all six technicians at the same time, well before award.",
+        "correct": false,
+        "why": "Designation of individual contractor employees belongs to the requiring activity, not the contracting officer."
+      },
+      {
+        "text": "Determine the technicians' SOFA status yourself and state it in the contract so the contractor can plan their travel, housing and installation access.",
+        "correct": false,
+        "why": "FKAQ determines status and notifies the contracting officer; a KO cannot confer it by writing it into the contract."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "U.S.-ROK SOFA Article XV; USFKI 4901.01 (USFK/FKAQ Invited Contractor and Technical Representative Program); RFO FAR 25.802; RFO DFARS 225.770(c) (confirm current FKAQ procedure with C&P)",
+    "domain": "Korea, LCS & SOFA"
+  },
+  {
+    "qid": "K108",
+    "stem": "On a SOFA-designated services contract at Camp Humphreys, the U.S. contractor wants to hire a Korean national engineer locally and asks the COR whether she will receive SOFA status. What is the answer?",
+    "options": [
+      {
+        "text": "No. Article XV covers people ordinarily resident in the United States who are in Korea only to perform U.S. contracts; Korean hires fall under ROK labor law.",
+        "correct": true,
+        "why": "A Korean national hired in Korea is not ordinarily resident in the United States and does not become an invited contractor by working for one."
+      },
+      {
+        "text": "She receives status as soon as the contractor adds her to its employee roster, because the contract itself is already SOFA designated by FKAQ for all of its staff.",
+        "correct": false,
+        "why": "Designation attaches to the contract and to named individuals; it does not extend automatically to everyone the contractor hires."
+      },
+      {
+        "text": "The COR can approve it, since the COR administers daily performance and maintains the contractor's staffing roster.",
+        "correct": false,
+        "why": "CORs make no SOFA determinations; individual requests go through the requiring activity and FKAQ decides."
+      },
+      {
+        "text": "She receives status if the contracting officer adds her name to the FKAQ request covering this contract.",
+        "correct": false,
+        "why": "No request by the contracting officer can make a locally hired Korean national ordinarily resident in the United States, which is what Article XV requires."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "U.S.-ROK SOFA Article XV; USFKI 4901.01; USFK SOFA contract clause (IC/TR status; Korean national labor under ROK labor law); confirm current FKAQ procedure with C&P",
+    "domain": "Korea, LCS & SOFA"
+  },
+  {
+    "qid": "K109",
+    "stem": "Two Korean bus companies ask to price a Camp Humphreys shuttle service in won because all of their costs are in won, and the customer asks whether the Government or the contractor \"eats the exchange rate.\" What governs the currency decision and its funding?",
+    "options": [
+      {
+        "text": "The contracting officer picks the currency before release; if it is won, the agency must hold enough funds to cover rate swings so no Anti-Deficiency Act violation occurs.",
+        "correct": true,
+        "why": "Currency is the KO's determination for performance outside the United States, and foreign-currency pricing carries an explicit funding obligation to cover fluctuation."
+      },
+      {
+        "text": "Offerors choose the currency they prefer, and the Government converts each offer at the exchange rate in effect on the date of award to compare them on a fully equal basis.",
+        "correct": false,
+        "why": "The KO decides, and where more than one currency is permitted the conversion uses the rate source and date named in the solicitation provision, not the award date."
+      },
+      {
+        "text": "Pricing must be in U.S. dollars on a U.S.-funded contract, so the contractor carries the exchange risk as a cost of doing business.",
+        "correct": false,
+        "why": "For performance outside the United States the contracting officer may require a specified foreign currency; dollar pricing is a choice, not a rule."
+      },
+      {
+        "text": "Pricing in won is permitted only if the contract carries an economic price adjustment clause tied to a published daily exchange rate index from the Bank of Korea.",
+        "correct": false,
+        "why": "A fixed-price contract with economic price adjustment is the alternative when dollar pricing is kept, not a condition on pricing in won, whatever index is used."
+      }
+    ],
+    "difficulty": 3,
+    "cite": "RFO FAR 25.1002-1; RFO FAR 25.1002-2; FAR 52.225-17; 31 U.S.C. 1341; DoD FMR 7000.14-R Volume 5, Chapter 13; RFO FAR 16.203",
+    "domain": "Korea, LCS & SOFA"
+  },
+  {
+    "qid": "K110",
+    "stem": "Your U.S. prime, designated for SOFA invited contractor status, will subcontract trenching and cabling to a Korean construction firm, and asks whether the subcontractor gets SOFA status and can invoice the prime without Korean value-added tax. What do you tell the prime?",
+    "options": [
+      {
+        "text": "The prime's status does not reach a Korean subcontractor, which needs no designation, and you promise no tax result; the SOFA exemption covers the Government's own buys, so refer tax questions to C&P's procedure.",
+        "correct": true,
+        "why": "Article XV reaches persons ordinarily resident in the United States, and the tax exemption belongs to the Government's contract, not to a private sale between the subcontractor and the prime."
+      },
+      {
+        "text": "The subcontractor takes the prime's invited contractor status for work under a SOFA-designated contract, so its invoices to the prime are tax exempt as well, with no VAT added.",
+        "correct": false,
+        "why": "Designation is made by FKAQ for the contract and for named individuals; it does not pass through to a Korean subcontractor, and no tax result follows from it."
+      },
+      {
+        "text": "You must request FKAQ designation for the Korean subcontractor before any of its crews may work on the installation.",
+        "correct": false,
+        "why": "A Korean firm needs no SOFA designation; getting its crews onto the installation is a garrison access control matter, not a SOFA question."
+      },
+      {
+        "text": "Since there is no privity with the subcontractor, you take no position and leave all three questions to the prime to resolve.",
+        "correct": false,
+        "why": "The prime is owed a written answer, and where the contract requires consent to subcontract the contracting officer has a decision to make."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "U.S.-ROK SOFA Article XV (invited contractors; tax exemption for official U.S. forces procurement); USFKI 4901.01; USFK SOFA contract clause (Korean national labor; FKAQ approval); RFO FAR 44.201-1; FAR 52.244-2 (confirm the current Korea tax exemption clause and procedure with C&P)",
+    "domain": "Korea, LCS & SOFA"
+  },
+  {
+    "qid": "K201",
+    "stem": "An exercise support cell wants a $32,000 card buy and a $1.6 million tent-city life support award, citing overseas contingency thresholds of $40,000 and $2 million because its memo says USFK is \"in a contingency posture.\" What actually governs?",
+    "options": [
+      {
+        "text": "Only a head-of-agency determination that the buy supports a contingency or listed event raises them. Without one in the file, $15,000 and $350,000 apply; ask C&P.",
+        "correct": true,
+        "why": "The higher overseas figures are conditional on that determination, and a scheduled exercise is not a contingency operation by itself."
+      },
+      {
+        "text": "They apply because both acquisitions are awarded and performed outside the United States, which is the only condition the FAR sets for the higher figures, with no other step needed.",
+        "correct": false,
+        "why": "Overseas performance is only half of the rule; the determination that the acquisition supports a contingency or similar event is what raises the thresholds."
+      },
+      {
+        "text": "They apply because the customer's memo states that USFK is in a contingency posture, which is the determination the FAR contemplates.",
+        "correct": false,
+        "why": "A customer memo is not a head-of-agency determination or a combatant commander authorization, and a posture is not a threshold."
+      },
+      {
+        "text": "They do not apply, so the $1.6 million life support package has to run as a Part 15 negotiated source selection.",
+        "correct": false,
+        "why": "Even at standard thresholds, commercial services may use simplified procedures well above this value, so a Part 15 source selection is not forced."
+      }
+    ],
+    "difficulty": 3,
+    "cite": "RFO FAR 2.101; RFO FAR 18.001; 10 U.S.C. 101(a)(13); DoD Class Deviation 2024-O0011; RFO FAR 12.201-1 (confirm any exercise-specific authorization with the Chief, C&P)",
+    "domain": "Korea, LCS & SOFA"
+  },
+  {
+    "qid": "K204",
+    "stem": "On a grounds maintenance and custodial services contract at Camp Walker staffed by about 40 Korean nationals, the requiring activity wants a Service Contract Labor Standards wage determination attached and an offeror asks whether it must pay the U.S. federal minimum wage. What is correct?",
+    "options": [
+      {
+        "text": "Neither applies: the statute covers only services in the United States, which excludes a U.S. base abroad, so Korean labor law governs under the local labor law clause.",
+        "correct": true,
+        "why": "Coverage turns on where the services are furnished, and a U.S. base within a foreign country is expressly outside the definition."
+      },
+      {
+        "text": "The wage determination applies, because work performed on a U.S. installation is treated as performance inside the United States for all labor standards purposes, even overseas.",
+        "correct": false,
+        "why": "A U.S. base within a foreign country is specifically excluded from the definition of the United States for this statute."
+      },
+      {
+        "text": "The wage determination does not apply, but the U.S. federal minimum wage still sets the floor for the contractor's employees on any U.S.-funded installation contract abroad.",
+        "correct": false,
+        "why": "The federal minimum wage is U.S. labor law with a U.S. geographic scope; it does not govern a Korean company's employees working in Korea."
+      },
+      {
+        "text": "Both apply, because the contract is funded with U.S. appropriations and is awarded and administered by a U.S. contracting officer under the FAR, the DFARS and other U.S. law.",
+        "correct": false,
+        "why": "Neither the funding source nor the identity of the awarding official extends the statute beyond services furnished in the United States."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 22.001; RFO FAR Subpart 22.10; FAR 22.1001 (legacy definition of United States); 29 CFR 4.112; 41 U.S.C. chapter 67; RFO DFARS 222.7201(a); DFARS 252.222-7002",
+    "domain": "Korea, LCS & SOFA"
+  },
+  {
+    "qid": "K205",
+    "stem": "An unsuccessful Korean offeror asks whether it can take your $2.4 million award to GAO, and a different Korean vendor asks about protesting to GAO an LCS award that ROK MND made on the 411th's recommendation. What is correct?",
+    "options": [
+      {
+        "text": "Yes for your award: interested party status rests on economic interest, not nationality. No for the LCS award: MND awarded and pays it, so the remedy runs through J4 to MND; confirm with legal.",
+        "correct": true,
+        "why": "A 411th award is a Federal procurement wherever it is performed, while the LCS award belongs to MND, which is not a Federal agency."
+      },
+      {
+        "text": "Neither may protest to GAO, because a foreign company is not an interested party under the GAO bid protest regulations.",
+        "correct": false,
+        "why": "Nationality is irrelevant: an interested party is an actual or prospective offeror whose direct economic interest would be affected by the award."
+      },
+      {
+        "text": "Both may protest to GAO, because the 411th ran the competition and made the award recommendation in each case.",
+        "correct": false,
+        "why": "Running the competition does not make the LCS action a Federal procurement; MND signs the contract and pays the invoices."
+      },
+      {
+        "text": "The unsuccessful offeror must exhaust the agency protest process before going to GAO, and the LCS vendor follows that same path through the 411th's agency protest first.",
+        "correct": false,
+        "why": "An agency protest is optional and does not extend the time for obtaining a stay at GAO, and the LCS vendor's remedy lies with MND, not with a 411th agency protest."
+      }
+    ],
+    "difficulty": 3,
+    "cite": "4 CFR 21.0; 4 CFR 21.1; 4 CFR 21.2; 31 U.S.C. 3551; RFO FAR 33.104-3; U.S.-ROK Special Measures Agreement (LCS; confirm current MND dispute procedures with USFK J4 and C&P)",
+    "domain": "Protests, Claims & Disputes"
+  },
+  {
+    "qid": "K207",
+    "stem": "On an LCS-funded repair project that ROK MND awarded on the 411th's recommendation, the contractor is behind schedule and has pulled its crew to another job. The COR asks you to issue a cure notice and terminate for cause. What can you do?",
+    "options": [
+      {
+        "text": "Neither: MND holds the contract, so a 411th notice has no effect. Document the facts, recommend MND action to USFK J4 in writing, and confirm LCS procedures with C&P.",
+        "correct": true,
+        "why": "The funds are held and the contract signed by MND, so the remedy has to be driven through J4 to the party that holds privity."
+      },
+      {
+        "text": "Issue the cure notice under RFO FAR 49.607 and, if the response is inadequate, terminate for default and charge the excess reprocurement costs to the contractor under the Default clause.",
+        "correct": false,
+        "why": "Those are FAR remedies on a U.S. contract; this instrument was signed by MND, which holds privity with the contractor."
+      },
+      {
+        "text": "Direct the COR to issue the cure notice, since the COR observes performance every day and the 411th administers the project on the ground on behalf of USFK J4 and ROK MND.",
+        "correct": false,
+        "why": "CORs do not issue cure notices at all, and no one at the 411th can take a contractual remedy on MND's contract."
+      },
+      {
+        "text": "Terminate the work and reprocure it immediately as an O&M action so the roof is closed before the monsoon.",
+        "correct": false,
+        "why": "Replacement work stays LCS unless the customer re-funds it, and the two kinds of money cannot share a solicitation."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "U.S.-ROK Special Measures Agreement (LCS: MND holds the funds, USFK J4 manages, the KO recommends award, MND awards and pays); RFO FAR 49.607; RFO FAR 12.304 (the O&M contrast); current LCS procedures (confirm with USFK J4 and C&P)",
+    "domain": "Korea, LCS & SOFA"
+  },
+  {
+    "qid": "K210",
+    "stem": "The garrison sends two O&M-funded purchase requests: $780,000 for Korean-made 45-passenger shuttle buses to replace a fleet permanently, and $420,000 for Korean-made pickup trucks. It asks whether the Berry Amendment or Buy American stops the purchases. What governs?",
+    "options": [
+      {
+        "text": "Neither: Berry does not list vehicles and Buy American covers use inside the U.S.; the Balance of Payments Program governs the trucks, and another statute requires buses made in the NTIB, which excludes Korea.",
+        "correct": true,
+        "why": "The customer named the wrong two rules; the real constraints are the Balance of Payments Program and the multipassenger vehicle restriction that blocks Korean-made buses."
+      },
+      {
+        "text": "Buy American applies to both, because these are U.S.-funded purchases made by a U.S. contracting officer, so each one needs a nonavailability determination before award.",
+        "correct": false,
+        "why": "Buy American is about supplies acquired for public use inside the United States, and its clause is not used for supplies for use outside it."
+      },
+      {
+        "text": "The SOFA permits local procurement without restriction as to choice of supplier, so both purchases may proceed as requested.",
+        "correct": false,
+        "why": "That freedom runs against Korean-imposed restrictions on whom the United States may deal with; it does not waive U.S. domestic source statutes."
+      },
+      {
+        "text": "The Berry Amendment blocks both, because it restricts end items procured for the use of the armed forces overseas.",
+        "correct": false,
+        "why": "Berry covers food, clothing and fabrics, tents, hand and measuring tools and flags; vehicles are not on its list."
+      }
+    ],
+    "difficulty": 3,
+    "cite": "10 U.S.C. 4862; DFARS 225.7002-1; RFO FAR 25.102; RFO FAR 25.601(a)(1)(i)(C); DFARS 225.7500 and 225.7501; 10 U.S.C. 4864; DFARS 225.7004-1 through 225.7004-3 (confirm current non-tactical vehicle policy with USFK J4 and C&P)",
+    "domain": "Korea, LCS & SOFA"
+  }
+]

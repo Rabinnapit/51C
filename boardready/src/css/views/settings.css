@@ -1,0 +1,141 @@
+/* ===== v-settings: profile, appearance, voice, connector, board room, data ===== */
+.v-settings { --set-nav-w: 212px; }
+.v-settings .set-app { display: flex; flex-direction: column; gap: var(--space-5); }
+
+/* ---- page head ---- */
+.v-settings .set-head { margin-bottom: 0; }
+.v-settings .set-banner { margin-top: calc(-1 * var(--space-2)); }
+
+/* ---- layout: sticky section index + card stack ---- */
+.v-settings .set-head-links { margin-top: var(--space-2); }
+.v-settings .set-grid { display: grid; grid-template-columns: var(--set-nav-w) minmax(0, 1fr); gap: var(--space-6); align-items: start; }
+.v-settings .set-nav { position: sticky; top: calc(var(--top-h) + var(--space-4)); }
+.v-settings .set-nav-inner { display: flex; flex-direction: column; gap: 2px; padding: 6px; border-radius: var(--r-lg); background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow-sm); }
+.v-settings .set-nav-item { display: flex; align-items: center; gap: 10px; width: 100%; padding: 9px 10px; border-radius: var(--r-md); font-size: var(--fs-sm); font-weight: 650; color: var(--ink-2); text-align: left; transition: background var(--dur) var(--ease), color var(--dur) var(--ease); }
+.v-settings .set-nav-item svg { width: 17px; height: 17px; flex: none; opacity: .7; }
+.v-settings .set-nav-item:hover { background: var(--bg-2); color: var(--ink); }
+.v-settings .set-nav-item:hover svg { opacity: 1; color: var(--accent); }
+
+.v-settings .set-main { display: flex; flex-direction: column; gap: var(--space-5); min-width: 0; }
+
+/* ---- card ---- */
+.v-settings .set-card { padding: 0; overflow: hidden; scroll-margin-top: calc(var(--top-h) + var(--space-4)); animation: rise var(--dur-slow) var(--ease) both; }
+.v-settings .set-card:focus { outline: none; }
+.v-settings .set-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.v-settings .set-card-head { display: flex; gap: var(--space-3); align-items: flex-start; padding: var(--space-5) var(--space-5) var(--space-4); border-bottom: 1px solid var(--line); background: var(--panel-2); }
+.v-settings .set-card-icon { width: 36px; height: 36px; flex: none; border-radius: 11px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); }
+.v-settings .set-card-icon svg { width: 18px; height: 18px; }
+.v-settings .set-card-title h2 { margin: 0; font-size: var(--fs-xl); letter-spacing: -.01em; }
+.v-settings .set-card-title p { margin: 2px 0 0; font-size: var(--fs-sm); color: var(--muted); }
+.v-settings .set-card-body { display: flex; flex-direction: column; gap: var(--space-5); padding: var(--space-5); }
+
+/* ---- fields ---- */
+.v-settings .set-field { max-width: 620px; }
+.v-settings .set-field .hint { max-width: 68ch; line-height: 1.5; }
+.v-settings .set-field .hint.bad { color: var(--danger); }
+.v-settings .set-seg { align-self: flex-start; }
+.v-settings .set-seg button { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; }
+.v-settings .set-seg button svg { width: 15px; height: 15px; }
+
+/* ---- role row ---- */
+.v-settings .set-role { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+.v-settings .set-role-now { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: var(--r-pill); background: var(--accent-soft); color: var(--accent); font-size: var(--fs-sm); }
+.v-settings .set-role-now svg { width: 16px; height: 16px; }
+.v-settings .set-role .btn svg { transition: transform var(--dur) var(--ease); }
+.v-settings .set-role .btn:hover svg { transform: translateX(2px); }
+
+/* ---- toggle rows ---- */
+.v-settings .set-toggles { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; }
+.v-settings .set-toggle { display: flex; align-items: center; gap: var(--space-4); padding: 14px var(--space-4); cursor: pointer; background: var(--panel); transition: background var(--dur) var(--ease); }
+.v-settings .set-toggle + .set-toggle { border-top: 1px solid var(--line); }
+.v-settings .set-toggle:hover { background: var(--panel-2); }
+.v-settings .set-toggle-copy { display: flex; flex-direction: column; gap: 3px; flex: 1 1 auto; min-width: 0; }
+.v-settings .set-toggle-name { font-size: var(--fs-md); font-weight: 700; color: var(--ink); }
+.v-settings .set-toggle-note { font-size: var(--fs-sm); color: var(--muted); line-height: 1.5; max-width: 68ch; }
+.v-settings .set-toggle input { appearance: none; -webkit-appearance: none; flex: none; width: 40px; height: 23px; margin: 0; border-radius: var(--r-pill); background: var(--line-2); position: relative; cursor: pointer; transition: background var(--dur) var(--ease); }
+.v-settings .set-toggle input::after { content: ""; position: absolute; top: 3px; left: 3px; width: 17px; height: 17px; border-radius: 50%; background: var(--panel); box-shadow: var(--shadow-sm); transition: transform var(--dur) var(--ease-spring); }
+.v-settings .set-toggle input:checked { background: var(--accent); }
+.v-settings .set-toggle input:checked::after { transform: translateX(17px); }
+.v-settings .set-toggle input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* ---- action rows ---- */
+.v-settings .set-actions { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+.v-settings .set-actions .muted { max-width: 52ch; }
+.v-settings .set-foot-note { max-width: 78ch; line-height: 1.6; }
+
+/* ---- voice ---- */
+.v-settings .set-rate { display: flex; align-items: center; gap: var(--space-3); max-width: 520px; }
+.v-settings .set-rate-end { font-size: var(--fs-xs); color: var(--muted-2); white-space: nowrap; }
+.v-settings .set-rate-val { min-width: 56px; text-align: right; font-size: var(--fs-sm); font-weight: 700; color: var(--accent); }
+.v-settings .set-range { flex: 1 1 auto; appearance: none; -webkit-appearance: none; height: 6px; border-radius: var(--r-pill); background: var(--line); }
+.v-settings .set-range::-webkit-slider-thumb { appearance: none; -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); border: 3px solid var(--panel); box-shadow: var(--shadow-sm); cursor: pointer; }
+.v-settings .set-range::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--accent); border: 3px solid var(--panel); box-shadow: var(--shadow-sm); cursor: pointer; }
+.v-settings .set-range:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+/* ---- connector ---- */
+.v-settings .set-key-note { max-width: 90ch; }
+.v-settings .set-preset-row { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; padding: var(--space-3) var(--space-4); border-radius: var(--r-lg); background: var(--accent-2-soft); border: 1px solid color-mix(in srgb, var(--accent-2) 32%, transparent); }
+.v-settings .set-preset { flex: none; }
+.v-settings .set-preset-row .muted { flex: 1 1 300px; }
+.v-settings .set-key-row { display: flex; gap: 8px; align-items: center; }
+.v-settings .set-key-input { flex: 1 1 auto; font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: .04em; }
+.v-settings .set-key-eye { flex: none; }
+.v-settings .set-headers { font-family: var(--font-mono); font-size: var(--fs-xs); min-height: 76px; }
+.v-settings .set-headers.invalid { border-color: var(--danger); }
+.v-settings .set-conn-status { display: inline-flex; align-items: center; gap: 8px; font-size: var(--fs-sm); color: var(--muted); }
+.v-settings .set-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; background: var(--muted-2); box-shadow: 0 0 0 3px color-mix(in srgb, var(--muted-2) 20%, transparent); }
+.v-settings .set-dot.ok { background: var(--ok); box-shadow: 0 0 0 3px color-mix(in srgb, var(--ok) 22%, transparent); }
+.v-settings .set-conn-result:empty { display: none; }
+
+/* ---- board room ---- */
+.v-settings .set-pass-state { display: inline-flex; align-items: center; gap: 8px; font-size: var(--fs-sm); color: var(--ink-2); }
+
+/* ---- data ---- */
+
+.v-settings .set-data-grid { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; }
+.v-settings .set-data-item { display: flex; align-items: flex-start; gap: var(--space-4); padding: var(--space-4); background: var(--panel); }
+.v-settings .set-data-item + .set-data-item { border-top: 1px solid var(--line); }
+.v-settings .set-data-icon { width: 32px; height: 32px; flex: none; border-radius: 9px; display: grid; place-items: center; background: var(--bg-2); color: var(--muted); }
+.v-settings .set-data-icon svg { width: 16px; height: 16px; }
+.v-settings .set-data-copy { flex: 1 1 auto; min-width: 0; }
+.v-settings .set-data-copy h3 { margin: 0 0 3px; font-size: var(--fs-md); }
+.v-settings .set-data-copy p { margin: 0; font-size: var(--fs-sm); color: var(--muted); line-height: 1.55; max-width: 64ch; }
+.v-settings .set-data-btn { flex: none; padding-top: 2px; }
+.v-settings .set-file { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+
+/* ---- about summary ---- */
+
+/* ---- responsive ---- */
+@media (max-width: 1020px) {
+  .v-settings .set-grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
+  .v-settings .set-nav { position: sticky; top: var(--top-h); z-index: 5; margin: 0 calc(-1 * var(--space-1)); }
+  .v-settings .set-nav-inner { flex-direction: row; overflow-x: auto; gap: 4px; -webkit-overflow-scrolling: touch; }
+  .v-settings .set-nav-item { width: auto; white-space: nowrap; padding: 8px 12px; }
+}
+@media (max-width: 760px) {
+  .v-settings .set-card-head { padding: var(--space-4); }
+  .v-settings .set-card-body { padding: var(--space-4); gap: var(--space-4); }
+  .v-settings .set-toggle { flex-wrap: wrap; }
+  .v-settings .set-data-item { flex-wrap: wrap; }
+  .v-settings .set-data-btn { width: 100%; }
+  .v-settings .set-data-btn .btn { width: 100%; justify-content: center; }
+  .v-settings .set-actions .btn { flex: 1 1 auto; justify-content: center; }
+  .v-settings .set-rate-end { display: none; }
+}
+
+/* ---- projector mode: the index is noise on a big screen ---- */
+body[data-projector] .v-settings .set-nav { display: none; }
+body[data-projector] .v-settings .set-grid { grid-template-columns: minmax(0, 1fr); }
+
+@media print {
+  .v-settings .set-nav, .v-settings .set-actions, .v-settings .set-data-btn { display: none; }
+  .v-settings .set-card { break-inside: avoid; box-shadow: none; }
+}
+
+/* 1.2.0: Get the app, voice tips */
+.v-settings .set-sub { margin: var(--space-5) 0 var(--space-3); font-size: var(--fs-lg); font-family: var(--font-body); font-weight: 800; }
+.v-settings .set-tips { margin: var(--space-3) 0 0; padding-left: 1.2em; color: var(--ink-2); font-size: var(--fs-sm); }
+.v-settings .set-tips li { margin: .3em 0; }
+.v-settings .set-more { margin-top: var(--space-3); font-size: var(--fs-sm); }
+.v-settings .set-more summary { cursor: pointer; font-weight: 700; color: var(--accent); }
+.v-settings .set-actions { display: flex; flex-wrap: wrap; gap: 8px; }

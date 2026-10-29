@@ -1,0 +1,123 @@
+{
+ "file": "content/out/open_drafts_3.json",
+ "reviewed_on": "2026-09-14",
+ "reviewer": "independent reviewer (ai)",
+ "checked": 12,
+ "corrected": [
+  "Q0021",
+  "Q0037",
+  "Q0082",
+  "Q0087",
+  "Q0095",
+  "Q0113",
+  "Q0141",
+  "Q0147",
+  "Q0274"
+ ],
+ "removed": [],
+ "verification_sources": [
+  "src/data/regulations.json crosswalk and thresholds (verified_on 2026-09-13)",
+  "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-15",
+  "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-52",
+  "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-9",
+  "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-10",
+  "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-11",
+  "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33",
+  "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-36",
+  "https://www.acquisition.gov/far/15.404-1 (legacy text, FAC 2026-01)",
+  "https://www.acquisition.gov/afars/subpart-5107.90-independent-government-estimates",
+  "https://www.acquisition.gov/afars/subpart-5107.91-integrating-antiterrorism-and-operations-security",
+  "https://www.acquisition.gov/afars/5101.602-3-90-ratification-procedures.",
+  "https://www.law.cornell.edu/uscode/text/10/4022",
+  "content/sources/army_warranting_policy_v12_mar2026.txt"
+ ],
+ "changes": [
+  {
+   "id": "Q0021",
+   "field": "answer",
+   "change": "Fixed-price realism conditions aligned to the actual 15.404-1(d)(3) text (new requirement not fully understood, quality concerns, past shortfalls); dropped 'buy-in' wording not in the regulation"
+  },
+  {
+   "id": "Q0021",
+   "field": "answer",
+   "change": "Removed unverified paragraph pinpoint 15.104(b)(1); only the section title was verified"
+  },
+  {
+   "id": "Q0037",
+   "field": "answer",
+   "change": "Re-attributed the 'read the prescription' step: 52.101(e) describes the matrix; the return to prescribing text is how the required-when-applicable column is applied, not a statement in 52.101(e)"
+  },
+  {
+   "id": "Q0082",
+   "field": "answer",
+   "change": "Clarified that 6.103-1(d) is the justification rule for brand-name-only descriptions, not an authority stating brand-name-or-equal needs no justification"
+  },
+  {
+   "id": "Q0087",
+   "field": "answer",
+   "change": "Added rank/grade to the supervisor signature block per AFARS 5107.9002"
+  },
+  {
+   "id": "Q0087",
+   "field": "answer",
+   "change": "Added the construction/A-E certification timing caveat and noted AFARS still cites legacy 36.203"
+  },
+  {
+   "id": "Q0095",
+   "field": "flags",
+   "change": "Added verify-locally: the standard AT/OPSEC contract-language list comes from the Desk Reference as locally implemented, not from AFARS text"
+  },
+  {
+   "id": "Q0095",
+   "field": "flags",
+   "change": "Added korea-verify-cp: answer contains a Korea-specific paragraph on installation access for contractor and Korean national employees that goes beyond the sources"
+  },
+  {
+   "id": "Q0113",
+   "field": "answer",
+   "change": "Noted the Part 15 deviation has since been revised (Rev. 1, 22 Jul 2026, per the project thresholds file) so the reader checks the current revision"
+  },
+  {
+   "id": "Q0141",
+   "field": "answer",
+   "change": "Pinned debriefing cites: 15.206 is preaward notices and debriefings; postaward debriefing is RFO 15.301"
+  },
+  {
+   "id": "Q0141",
+   "field": "answer",
+   "change": "Cite line: 15.206 replaced with 15.206-2 (preaward debriefing) and 15.301 (postaward debriefing)"
+  },
+  {
+   "id": "Q0141",
+   "field": "crosswalk",
+   "change": "Added FAR 15.506 -> FAR 15.301 (postaward debriefing), verified on the RFO Part 15 page and in the project crosswalk"
+  },
+  {
+   "id": "Q0147",
+   "field": "flags",
+   "change": "Added verify-locally: the agency-protest urgent-and-compelling / best-interest approval official is set by agency procedure and must be confirmed locally, as the answer itself says"
+  },
+  {
+   "id": "Q0274",
+   "field": "answer",
+   "change": "Corrected the GPC statement: DFARS 213.301 permits GPC use above the MPT overseas in limited cases, so the operative point is that the GPC cannot cure an unauthorized commitment, not the dollar value alone"
+  },
+  {
+   "id": "Q0274",
+   "field": "answer",
+   "change": "Added the 1.405(d) nonratifiable-commitment hook and routed the 31 U.S.C. 3702 claim through legal"
+  }
+ ],
+ "items_unchanged_substantively": [
+  "Q0041",
+  "Q0162",
+  "Q0218"
+ ],
+ "notes": [
+  "No hallucinated program names or dollar thresholds found; no item removed. All 12 items cite RFO numbering that checks against the crosswalk or the live RFO part pages.",
+  "Project crosswalk (src/data/regulations.json) maps FAR 11.104 -> 11.204 with title Items peculiar to one manufacturer; the legacy section with that title was 11.105 (11.104 was Use of brand name or equal purchase descriptions). Not changed here - owner of regulations.json should confirm.",
+  "Q0021: RFO text of 15.404-3 remains unretrieved; substantive realism rules verified against legacy 15.404-1(d) instead. Confidence stays medium.",
+  "Q0113: DoD Part 15 deviation 2026-O0048 has a Rev. 1 (22 Jul 2026) per the thresholds file; LPTA text not re-read in Rev. 1.",
+  "Q0162: 10 U.S.C. 4022(a)(2) as currently codified names the HCA (over $100M) and the SPE (over $500M, with 30-day congressional notice); the draft was correct and was left as written."
+ ]
+}

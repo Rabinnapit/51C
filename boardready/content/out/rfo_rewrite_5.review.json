@@ -1,0 +1,92 @@
+{
+  "reviewed_file": "C:\\Users\\rabin\\Documents\\Army\\CORB\\app\\content\\out\\rfo_rewrite_5.json",
+  "reviewed_on": "2026-09-14",
+  "reviewer": "rfo_rewrite_5 review pass (Claude)",
+  "method": "Every changed=true answer was character-diffed (difflib opcodes) against src/data/questions.json (same id). Permitted residuals: citation numbers, the trailing Cite line, short parentheticals about removed/moved sections or updated thresholds. Every crosswalk pair was checked against regulations.json crosswalk/unchanged/thresholds; the three points the crosswalk does not cover were checked on the acquisition.gov RFO Part 33 deviation guide (fetched 14 Sep 2026, page last updated 07/28/2026). Every citations_rfo entry was required to appear literally in the answer text. The 14 changed=false items were accepted as documented skips (no cite tokens to convert). File encoding, U+FFFD count, item count and bank order were checked.",
+  "sources_fetched": [
+    {
+      "url": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-33",
+      "used_for": "33.104-3(a) and 33.105-3(b)(1) still read '15.505 or 15.506'; Subpart 33.2 section list (33.205-1 Contractor claim, 33.205-2 Contractor certification, no 33.206/33.207); 33.201 defined terms exclude 'claim'; 33.205-1(a)(1) and 33.205-2(a) text."
+    }
+  ],
+  "checked": 21,
+  "changed_items_diffed": 7,
+  "substantive_changes_found": 0,
+  "corrected": 2,
+  "reverted": 0,
+  "changes": [
+    {
+      "id": "Q0015",
+      "action": "cite-line-fix + status/crosswalk carry-forward",
+      "before": "Cite: FAR 9.104 (general standards at 9.104-1); FAR 9.104-3; FAR 9.105-2; FAR 9.108; FAR part 42; AFARS PGI 5109.103(b)",
+      "after": "Cite: FAR 9.104 (general standards at FAR 9.104-1); FAR 9.104-3; FAR 9.105-2; FAR 9.108; FAR part 42; AFARS PGI 5109.103(b)",
+      "why": "'FAR 9.104-1' was not a literal substring of the answer; stored rfo.status 'updated' with pair AFARS PGI 51 -> 5109.103(b) would have been regressed to 'n/a' / [] on merge."
+    },
+    {
+      "id": "Q0042",
+      "action": "cite-line-fix",
+      "before": "Cite: FAR 33.104 (protests to the agency; postaward stay at 33.104-3); FAR 33.105 (protests to GAO; preaward 33.105-2, postaward 33.105-3); FAR 15.206-2 and FAR 15.301 (debriefings)",
+      "after": "Cite: FAR 33.104 (protests to the agency); FAR 33.104-3 (postaward stay); FAR 33.105 (protests to GAO); FAR 33.105-2 (preaward); FAR 33.105-3 (postaward); FAR 15.206-2 and FAR 15.301 (debriefings)",
+      "why": "citations_rfo entries 'FAR 33.104-3', 'FAR 33.105-2', 'FAR 33.105-3' were not literal substrings of the answer."
+    }
+  ],
+  "per_item": [
+    {
+      "id": "Q0015",
+      "verdict": "pass-with-fix",
+      "diff": "Cite line appended only; body byte-identical.",
+      "pairs": "9.104, 9.104-1, 9.405 rows and 'FAR 42' row verified; 9.104-3/9.105-2/9.108 covered by the verified FAR 9.104 entry note; AFARS PGI 51 -> 5109.103(b) probable (regulations.json)."
+    },
+    {
+      "id": "Q0027",
+      "verdict": "pass",
+      "diff": "Cite line appended only.",
+      "pairs": "FAR 9.405, FAR 9.405-1 retained (verified)."
+    },
+    {
+      "id": "Q0042",
+      "verdict": "pass-with-fix",
+      "diff": "Citation-note parenthetical and Cite line appended; body byte-identical.",
+      "pairs": "15.505 -> 15.206-2, 15.506 -> 15.301 verified (regulations.json); 33.104/33.105 subsections confirmed on Part 33 page."
+    },
+    {
+      "id": "Q0090",
+      "verdict": "pass",
+      "diff": "Citation-note parenthetical and Cite line appended.",
+      "pairs": "as Q0042; 33.104-3 retained (verified)."
+    },
+    {
+      "id": "Q0091",
+      "verdict": "pass",
+      "diff": "'33.206(a)' -> '33.205-1'; citation-note parenthetical and Cite line appended.",
+      "pairs": "33.206(a) -> 33.205-1 confirmed on Part 33 page (not a crosswalk row); 33.207 -> 33.205-2(a) matches thresholds entry cda_claim_certification."
+    },
+    {
+      "id": "Q0093",
+      "verdict": "pass",
+      "diff": "as Q0090.",
+      "pairs": "as Q0090.",
+      "carry_forward": "Content defect noted by author: question asks the post-debriefing GAO filing window but the answer quotes the agency-protest stay at 33.104-3, not 33.105-3."
+    },
+    {
+      "id": "Q0154",
+      "verdict": "pass",
+      "diff": "'(threshold updated — see Thresholds)' marker; 'FAR 16.505 (a) (10)' -> 'RFO FAR 16.508 (protests of orders; legacy FAR 16.505(a)(10))'; Cite line appended.",
+      "pairs": "16.505(a)(10) -> 16.508 verified via FAR 16.505 crosswalk note and thresholds task_order_protest_dod.",
+      "carry_forward": "On merge, replace the stored rfo.crosswalk pair 16.505 -> 16.507 with the output pair; $25M text is stale ($35M since FY2025 NDAA sec. 885(f))."
+    }
+  ],
+  "carry_forward": [
+    "Q0093: content defect (agency stay window quoted for a GAO-window question) - content pass.",
+    "Q0276: fragment answer with no cite - content pass.",
+    "Q0121: bare media.waru.edu link should read 'DAU (WARU) Acquipedia' - content pass.",
+    "Q0254-Q0258, Q0276: add flag korea-verify-cp on merge per AGENT_BRIEF.",
+    "Q0042/Q0090/Q0093: RFO Part 33 text itself still cross-references legacy 15.505/15.506 - facilitator note, not a bank error.",
+    "General Contracting domain had zero 'official' items in scope - nothing processed."
+  ],
+  "encoding": {
+    "utf8_valid": true,
+    "replacement_chars": 0,
+    "bank_order_preserved": true
+  }
+}

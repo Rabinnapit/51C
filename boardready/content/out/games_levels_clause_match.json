@@ -1,0 +1,705 @@
+{
+ "clause_match": [
+  {
+   "id": "CM01",
+   "clause": "FAR 52.203-13",
+   "title": "Contractor Code of Business Ethics and Conduct",
+   "applies": "Goes in contracts over the threshold with a performance period over 120 days; requires a written code, an ethics program, and disclosure of credible evidence of fraud to the agency Inspector General.",
+   "status": "verify",
+   "note": "Dollar threshold deliberately not stated; confirm the current figure and its RFO location before quoting it at a board.",
+   "difficulty": 2,
+   "classes": [
+    "II",
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "id": "CM02",
+   "clause": "FAR 52.204-25",
+   "title": "Prohibition on Contracting for Certain Telecommunications and Video Surveillance Services or Equipment",
+   "applies": "Reserved under the RFO. 52.204-25 is listed as [Reserved] in RFO FAR Part 52, so do not cite it as a current clause; the Section 889 prohibition itself is statutory (Pub. L. 115-232 sec. 889) and is still in force. Confirm with counsel or C&P which provision now carries it in your solicitation.",
+   "status": "verify",
+   "note": "RFO FAR Part 52 index read 14 Sep 2026: 52.204-24 through 52.204-27 all show [Reserved].",
+   "difficulty": 3,
+   "reserved": true
+  },
+  {
+   "id": "CM03",
+   "clause": "FAR 52.209-5",
+   "title": "Certification Regarding Responsibility Matters",
+   "applies": "Goes in solicitations above the simplified acquisition threshold; the offeror certifies on debarment, convictions, tax delinquency, and prior terminations for default.",
+   "status": "verified",
+   "difficulty": 2,
+   "classes": [
+    "II",
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "id": "CM04",
+   "clause": "FAR 52.212-1",
+   "title": "Instructions to Offerors-Commercial Products and Commercial Services",
+   "applies": "Goes in commercial solicitations; it is the instructions to offerors and takes the place of separate proposal preparation instructions.",
+   "status": "verified",
+   "difficulty": 1
+  },
+  {
+   "id": "CM05",
+   "clause": "FAR 52.212-2",
+   "title": "Evaluation-Commercial Products and Commercial Services",
+   "applies": "Goes in a commercial solicitation when the contracting officer states the evaluation factors in the solicitation itself.",
+   "status": "verified",
+   "difficulty": 1
+  },
+  {
+   "id": "CM06",
+   "clause": "FAR 52.212-3",
+   "title": "Offeror Representations and Certifications-Commercial Products and Commercial Services",
+   "applies": "Reserved under the RFO. 52.212-3 is listed as [Reserved] in RFO FAR Part 52. Commercial reps and certs are still normally satisfied by the annual registration in SAM; confirm the current vehicle before citing a clause number.",
+   "status": "verify",
+   "note": "RFO FAR Part 52 index read 14 Sep 2026: 52.212-3 shows [Reserved].",
+   "difficulty": 3,
+   "reserved": true
+  },
+  {
+   "id": "CM07",
+   "clause": "FAR 52.212-4",
+   "title": "Terms and Conditions-Commercial Products and Commercial Services",
+   "applies": "Goes in every commercial contract; the commercial terms, including inspection, changes by bilateral modification only, termination, and the disputes reference. The RFO retitled it from 'Contract Terms and Conditions' to 'Terms and Conditions'.",
+   "status": "verified",
+   "difficulty": 1
+  },
+  {
+   "id": "CM08",
+   "clause": "FAR 52.212-5",
+   "title": "Contract Terms and Conditions Required To Implement Statutes or Executive Orders-Commercial Products and Commercial Services",
+   "applies": "Reserved under the RFO. 52.212-5 is listed as [Reserved] in RFO FAR Part 52, so the legacy checklist clause should not be cited as current. Statutory and executive order clauses still apply to commercial buys; confirm how your office is flowing them down.",
+   "status": "verify",
+   "note": "RFO FAR Part 52 index read 14 Sep 2026: 52.212-5 shows [Reserved].",
+   "difficulty": 3,
+   "reserved": true
+  },
+  {
+   "id": "CM09",
+   "clause": "FAR 52.215-20",
+   "title": "Requirements for Certified Cost or Pricing Data and Data Other Than Certified Cost or Pricing Data",
+   "applies": "Goes in a negotiated solicitation when certified cost or pricing data may be required, or when data other than certified data is needed to establish a fair and reasonable price.",
+   "status": "verified",
+   "difficulty": 2,
+   "classes": [
+    "II",
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "id": "CM10",
+   "clause": "FAR 52.216-7",
+   "title": "Allowable Cost and Payment",
+   "applies": "Goes in cost-reimbursement contracts; it is the payment clause and it drives the final indirect cost rate proposal due six months after the contractor's fiscal year ends.",
+   "status": "verified",
+   "difficulty": 2,
+   "classes": [
+    "II",
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "id": "CM11",
+   "clause": "FAR 52.216-18",
+   "title": "Ordering",
+   "applies": "Goes in indefinite-delivery contracts; it states the period during which orders may be issued and that the contract controls over any conflicting order.",
+   "status": "verified",
+   "difficulty": 2
+  },
+  {
+   "id": "CM12",
+   "clause": "FAR 52.216-22",
+   "title": "Indefinite Quantity",
+   "applies": "Goes in indefinite-quantity contracts; it fixes the guaranteed minimum and the maximum, which is what makes an IDIQ a binding contract.",
+   "status": "verified",
+   "difficulty": 2
+  },
+  {
+   "id": "CM13",
+   "clause": "FAR 52.217-8",
+   "title": "Option to Extend Services",
+   "applies": "Goes in service solicitations and contracts when a short extension at the same rates may be needed; the total extension may not exceed 6 months.",
+   "status": "verified",
+   "difficulty": 2
+  },
+  {
+   "id": "CM14",
+   "clause": "FAR 52.217-9",
+   "title": "Option to Extend the Term of the Contract",
+   "applies": "Goes in contracts with priced option periods; it sets the preliminary notice period and the overall contract duration limit, and it governs a timely option exercise.",
+   "status": "verified",
+   "difficulty": 2
+  },
+  {
+   "id": "CM15",
+   "clause": "FAR 52.219-6",
+   "title": "Notice of Total Small Business Set-Aside",
+   "applies": "Goes in a solicitation and contract totally set aside for small business; offers from other than small business concerns are rejected.",
+   "status": "verified",
+   "difficulty": 2
+  },
+  {
+   "id": "CM16",
+   "clause": "FAR 52.219-28",
+   "title": "Postaward Small Business Program Rerepresentation",
+   "applies": "Goes in contracts awarded to a small business; the contractor rerepresents its size and socioeconomic status after a novation or merger, and on long-term contracts within 60 to 120 days before the end of the fifth year and before exercising each option after that.",
+   "status": "verified",
+   "difficulty": 3
+  },
+  {
+   "id": "CM17",
+   "clause": "FAR 52.222-41",
+   "title": "Service Contract Labor Standards",
+   "applies": "Goes in service contracts over $2,500 performed in the United States; it applies the Department of Labor wage determination to service employees.",
+   "status": "verified",
+   "difficulty": 2
+  },
+  {
+   "id": "CM18",
+   "clause": "FAR 52.232-22",
+   "title": "Limitation of Funds",
+   "applies": "Goes in incrementally funded cost-reimbursement contracts; the contractor must give notice as the allotment is drawn down and the Government is not obligated beyond the amount allotted.",
+   "status": "verified",
+   "difficulty": 2,
+   "classes": [
+    "II",
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "id": "CM19",
+   "clause": "FAR 52.233-1",
+   "title": "Disputes",
+   "applies": "Goes in every solicitation and contract; the Contract Disputes Act clause covering claim submission, the $100,000 certification, the final decision, and the duty to proceed.",
+   "status": "verified",
+   "difficulty": 1
+  },
+  {
+   "id": "CM20",
+   "clause": "FAR 52.233-2",
+   "title": "Service of Protest",
+   "applies": "Goes in every solicitation; it tells a protester where and how to serve a copy of an agency or GAO protest on the contracting officer.",
+   "status": "verified",
+   "difficulty": 1
+  },
+  {
+   "id": "CM21",
+   "clause": "FAR 52.233-3",
+   "title": "Protest after Award",
+   "applies": "Goes in every solicitation and contract; it gives the contracting officer authority to issue a stop-work order when a protest is filed after award and sets how an adjustment is made.",
+   "status": "verified",
+   "difficulty": 2
+  },
+  {
+   "id": "CM22",
+   "clause": "FAR 52.233-4",
+   "title": "Applicable Law for Breach of Contract Claim",
+   "applies": "Goes in every solicitation and contract; it states that United States law governs any breach of contract claim.",
+   "status": "verified",
+   "difficulty": 2
+  },
+  {
+   "id": "CM23",
+   "clause": "FAR 52.243-1",
+   "title": "Changes-Fixed-Price",
+   "applies": "Goes in fixed-price supply and service contracts; it gives unilateral change order authority within the general scope and requires the contractor to assert its right to an equitable adjustment within 30 days.",
+   "status": "verified",
+   "difficulty": 2
+  },
+  {
+   "id": "CM24",
+   "clause": "FAR 52.245-1",
+   "title": "Government Property",
+   "applies": "Goes in contracts where the Government provides property or the contractor acquires property for the Government; it sets the property management system requirement and the contractor's liability rules.",
+   "status": "verified",
+   "difficulty": 2
+  },
+  {
+   "id": "CM25",
+   "clause": "FAR 52.249-2",
+   "title": "Termination for Convenience of the Government (Fixed-Price)",
+   "applies": "Goes in fixed-price contracts above the simplified acquisition threshold; the settlement proposal is due no later than one year from the effective date of termination.",
+   "status": "verified",
+   "difficulty": 2,
+   "classes": [
+    "II",
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "id": "CM26",
+   "clause": "FAR 52.249-8",
+   "title": "Default (Fixed-Price Supply and Service)",
+   "applies": "Goes in fixed-price supply and service contracts above the simplified acquisition threshold; it is the authority for a termination for default and the source of the 10-day cure period.",
+   "status": "verified",
+   "difficulty": 2,
+   "classes": [
+    "II",
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "id": "CM27",
+   "clause": "DFARS 252.203-7000",
+   "title": "Requirements Relating to Compensation of Former DoD Officials",
+   "applies": "Goes in all DoD solicitations and contracts, including commercial buys under FAR part 12 - there is no dollar threshold; the contractor must not compensate a covered former DoD official within 2 years of separation unless that official has the required post-employment ethics opinion.",
+   "status": "verified",
+   "note": "Prescription read at RFO DFARS 203.171-4(a) (Class Deviation 2026-O0031) 14 Sep 2026 - no SAT threshold.",
+   "difficulty": 1
+  },
+  {
+   "id": "CM28",
+   "clause": "DFARS 252.203-7002",
+   "title": "Requirement to Inform Employees of Whistleblower Rights",
+   "applies": "Goes in all DoD solicitations and contracts, including commercial buys under FAR part 12 - there is no dollar threshold; the contractor must inform employees in writing, in their predominant native language, of their whistleblower rights.",
+   "status": "verified",
+   "note": "Prescription read at RFO DFARS 203.970 (Class Deviation 2026-O0031) 14 Sep 2026 - no micro-purchase threshold.",
+   "difficulty": 1
+  },
+  {
+   "id": "CM29",
+   "clause": "DFARS 252.204-7012",
+   "title": "Safeguarding Covered Defense Information and Cyber Incident Reporting",
+   "applies": "Goes in DoD solicitations and contracts except acquisitions solely of commercially available off-the-shelf items; it requires NIST SP 800-171 security and rapid cyber incident reporting.",
+   "status": "verify",
+   "note": "Clause text is codified DFARS; the RFO DFARS Part 204 deviation (2026-O0043) does not reissue 252.204-7012, so confirm the current version before citing it.",
+   "difficulty": 1
+  },
+  {
+   "id": "CM30",
+   "clause": "DFARS 252.204-7020",
+   "title": "NIST SP 800-171 DoD Assessment Requirements",
+   "applies": "Goes in DoD solicitations and contracts that include 252.204-7012; the contractor must have a current assessment posted before award.",
+   "status": "verify",
+   "note": "Clause text is codified DFARS; the RFO DFARS Part 204 deviation (2026-O0043) does not reissue 252.204-7020, so confirm the current version before citing it.",
+   "difficulty": 3
+  },
+  {
+   "id": "CM31",
+   "clause": "DFARS 252.215-7992 (DEVIATION 2026-O0048)",
+   "title": "Only One Offer",
+   "applies": "Goes in competitive solicitations that exceed the simplified acquisition threshold, including solicitations using FAR part 12 procedures; it puts offerors on notice that if only one offer is received the contracting officer may require cost or pricing data to establish a fair and reasonable price. Under the RFO the legacy number 252.215-7008 is Reserved.",
+   "status": "verified",
+   "note": "Read in Class Deviation 2026-O0048 Rev 1 (22 Jul 2026) 14 Sep 2026: 252.215-7008 shows 'Reserved'; the provision is 252.215-7992, prescribed at DFARS 215.110-70(c). Policy sits at DFARS 215.202-71.",
+   "difficulty": 3,
+   "classes": [
+    "II",
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "id": "CM32",
+   "clause": "DFARS 252.216-7010",
+   "title": "Postaward Debriefings for Task Orders and Delivery Orders",
+   "applies": "Goes in DoD multiple-award solicitations and contracts when orders may be valued at $15 million or more; it gives the enhanced postaward debriefing rights on those orders.",
+   "status": "verified",
+   "note": "Prescribed at DFARS 216.505-70(b) per Class Deviation 2026-O0045 Rev 1; the $15M figure matches regulations.json threshold dod_order_debriefing_15m.",
+   "difficulty": 3,
+   "classes": [
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "id": "CM33",
+   "clause": "DFARS 252.222-7002",
+   "title": "Compliance with Local Labor Laws (Overseas)",
+   "applies": "Goes in DoD solicitations and contracts for services or construction to be performed outside the United States and its outlying areas; the contractor complies with local work-hour laws, labor union agreements and labor regulations - a standing issue for contracts performed in Korea.",
+   "status": "verified",
+   "note": "Prescription read at RFO DFARS 222.7201(a) (Class Deviation 2026-O0040 Rev 1) 14 Sep 2026.",
+   "difficulty": 2
+  },
+  {
+   "id": "CM34",
+   "clause": "DFARS 252.225-7001",
+   "title": "Buy American and Balance of Payments Program",
+   "applies": "Goes in DoD solicitations and contracts for supplies, in place of FAR 52.225-1, including commercial buys under FAR part 12, unless one of the exceptions at DFARS 225.1101 applies; it applies the Buy American statute and the Balance of Payments Program to end products.",
+   "status": "verified",
+   "note": "Prescription read in Class Deviation 2026-O0041 Rev 1 14 Sep 2026 - no micro-purchase threshold in the prescription.",
+   "difficulty": 2
+  },
+  {
+   "id": "CM35",
+   "clause": "DFARS 252.225-7012",
+   "title": "Preference for Certain Domestic Commodities",
+   "applies": "Goes in DoD solicitations and contracts, including commercial buys under FAR part 12, unless an exception applies; it implements the Berry Amendment preference for domestic food, clothing, fabrics, hand or measuring tools, and flags. The restrictions do not reach acquisitions not exceeding $200,000, except initial-entry athletic footwear.",
+   "status": "verified",
+   "note": "Prescription at RFO DFARS 225.7002-3 and exception at 225.7002-2(a) read 14 Sep 2026 - the cutoff is $200,000, not the SAT.",
+   "difficulty": 2,
+   "classes": [
+    "II",
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "id": "CM36",
+   "clause": "DFARS 252.225-7040",
+   "title": "Contractor Personnel Supporting U.S. Armed Forces Deployed Outside the United States",
+   "applies": "Goes in DoD contracts whose personnel will support U.S. forces deployed outside the United States; it covers accountability, medical and security support, and compliance with the applicable status agreement.",
+   "status": "verified",
+   "difficulty": 3
+  },
+  {
+   "id": "CM37",
+   "clause": "DFARS 252.225-7963 (DEVIATION 2026-O0041)",
+   "title": "Antiterrorism/Force Protection Policy for Defense Contractors Outside the United States",
+   "applies": "Goes in DoD solicitations and contracts, including commercial buys under FAR part 12, that require performance or travel outside the United States, except contracts with foreign governments, their representatives, or foreign corporations wholly owned by foreign governments; contractor personnel must comply with theater antiterrorism and force protection requirements. Under the RFO the legacy number 252.225-7043 is gone.",
+   "status": "verified",
+   "note": "Read in Class Deviation 2026-O0041 Rev 1 14 Sep 2026: clause 252.225-7963 (FEB 2026), prescribed at DFARS 225.772-2; no 252.225-7043 appears in the deviation.",
+   "difficulty": 3
+  },
+  {
+   "id": "CM38",
+   "clause": "DFARS 252.232-7003",
+   "title": "Electronic Submission of Payment Requests and Receiving Reports",
+   "applies": "Goes in DoD solicitations and contracts; payment requests and receiving reports must be submitted electronically, normally through Wide Area Workflow.",
+   "status": "verified",
+   "difficulty": 1
+  },
+  {
+   "id": "CM39",
+   "clause": "DFARS 252.232-7007",
+   "title": "Limitation of Government's Obligation",
+   "applies": "Goes in incrementally funded DoD fixed-price contracts; it caps the Government's obligation at the amount currently allotted and requires the contractor to give notice before that amount is exhausted.",
+   "status": "verified",
+   "difficulty": 3,
+   "classes": [
+    "II",
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "id": "CM40",
+   "clause": "DFARS 252.243-7002",
+   "title": "Requests for Equitable Adjustment",
+   "applies": "Goes in DoD solicitations and contracts above the simplified acquisition threshold; a request for equitable adjustment over the certification threshold must be certified, and that certificate is not the same as a Contract Disputes Act claim certificate.",
+   "status": "verified",
+   "difficulty": 2,
+   "classes": [
+    "II",
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "id": "CM41",
+   "clause": "FAR 52.204-7",
+   "title": "System for Award Management-Registration",
+   "applies": "Goes in the solicitation as a provision under RFO 4.208(b)(1) when offerors are required to be registered in the System for Award Management; it sets that registration requirement for offerors.",
+   "status": "verified",
+   "difficulty": 1,
+   "note": "Number and title on the RFO FAR Part 52 index (acquisition.gov far-overhaul-part-52) read 14 Sep 2026; prescription read at RFO 4.208(b)(1) on far-overhaul-part-4. The RFO retitled it from 'System for Award Management'."
+  },
+  {
+   "id": "CM42",
+   "clause": "FAR 52.204-13",
+   "title": "System for Award Management-Maintenance",
+   "applies": "Goes in solicitations and contracts under RFO 4.208(b)(2) when offerors are required to be registered in the System for Award Management; the contractor must keep that registration current.",
+   "status": "verified",
+   "difficulty": 1,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026; prescription read at RFO 4.208(b)(2) on far-overhaul-part-4."
+  },
+  {
+   "id": "CM43",
+   "clause": "FAR 52.204-19",
+   "title": "Incorporation by Reference of Representations and Certifications",
+   "applies": "Goes in all solicitations and contracts under RFO 4.208(g); it makes the offeror's representations and certifications part of the resulting contract by reference.",
+   "status": "verified",
+   "difficulty": 1,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026; prescription read at RFO 4.208(g) on far-overhaul-part-4."
+  },
+  {
+   "id": "CM44",
+   "clause": "FAR 52.232-33",
+   "title": "Payment by Electronic Funds Transfer-System for Award Management",
+   "applies": "Goes in solicitations and contracts under RFO 32.1110(a)(1) that include the provision at 52.204-7 or an agency clause requiring the contractor to stay registered in the System for Award Management until final payment, unless payment will be made through a third-party arrangement or an exception in RFO 32.1103(a) through (i) applies; the Government pays by electronic funds transfer using the banking information the contractor keeps in that registration.",
+   "status": "verified",
+   "difficulty": 1,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026. Verifier 14 Sep 2026: prescription read at RFO 32.1110(a)(1) on far-overhaul-part-32 (Last Updated 07/28/2026; the full page was retrieved and Subpart 32.11 is present); clause paragraph (b) confirms payment uses the EFT information in SAM."
+  },
+  {
+   "id": "CM45",
+   "clause": "FAR 52.232-1",
+   "title": "Payments",
+   "applies": "Goes in solicitations and contracts under RFO 32.111(a)(1) when a fixed-price supply contract, a fixed-price service contract, or a contract for nonregulated communication services is contemplated.",
+   "status": "verified",
+   "difficulty": 1,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026; prescription read at RFO 32.111(a)(1) on far-overhaul-part-32."
+  },
+  {
+   "id": "CM46",
+   "clause": "FAR 52.215-1",
+   "title": "Instructions to Offerors-Competitive Acquisition",
+   "applies": "Goes in all competitive requests for proposals under RFO 15.110(a) - basic when the Government intends to award without negotiations, with Alternate I when award will follow negotiations within the competitive range; it is the standard set of proposal instructions.",
+   "status": "verified",
+   "difficulty": 1,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026; prescription read at RFO 15.110(a) on far-overhaul-part-15.",
+   "classes": [
+    "II",
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "id": "CM47",
+   "clause": "FAR 52.204-10",
+   "title": "Reporting Executive Compensation and First-Tier Subcontract Awards",
+   "applies": "Goes in solicitations and contracts valued over $40,000 under RFO 4.208(e) that are not for commercial products or commercial services and whose award must be reported in the Federal Procurement Data System; it is the Federal Funding Accountability and Transparency Act reporting clause for first-tier subcontract awards and executive compensation.",
+   "status": "verified",
+   "difficulty": 1,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026. Verifier 14 Sep 2026: RFO 4.208(e) on far-overhaul-part-4 (Last Updated 07/28/2026) reads 'valued over $40,000' for acquisitions not for commercial products or commercial services when the award is required to be reported in FPDS; legacy FAR 4.1403(a) (FAC 2026-01) also says $40,000 ('or more'), so the figure is confirmed."
+  },
+  {
+   "id": "CM48",
+   "clause": "DFARS 252.232-7006",
+   "title": "Wide Area WorkFlow Payment Instructions",
+   "applies": "Goes in DoD solicitations, contracts, task orders and delivery orders, including FAR part 12 buys, when 252.232-7003 is used and no exception at DFARS 232.7002(b)(1) applies; it gives the WAWF routing instructions.",
+   "status": "verified",
+   "difficulty": 1,
+   "note": "Title on acquisition.gov DFARS Part 252 (Change 5/7/2026) read 14 Sep 2026; clause and prescription at DFARS 232.7004(b) read in RFO Class Deviation 2026-O0022 (DFARS Part 232, acq.osd.mil) 14 Sep 2026."
+  },
+  {
+   "id": "CM49",
+   "clause": "DFARS 252.225-7048",
+   "title": "Export-Controlled Items",
+   "applies": "Goes in all DoD solicitations and contracts under DFARS 225.7901-4; the contractor is responsible for complying with the laws and regulations on export-controlled items.",
+   "status": "verified",
+   "difficulty": 1,
+   "note": "Title on acquisition.gov DFARS Part 252 (Change 5/7/2026) read 14 Sep 2026; clause and prescription at DFARS 225.7901-4 read in RFO Class Deviation 2026-O0041 Rev 1 (DFARS Part 225, acq.osd.mil) 14 Sep 2026."
+  },
+  {
+   "id": "CM50",
+   "clause": "DFARS 252.232-7010",
+   "title": "Levies on Contract Payments",
+   "applies": "Goes in all DoD solicitations and contracts, including FAR part 12 buys, under DFARS 232.7102; it covers IRS levies on contract payments and the contractor's notice when a levy would put performance at risk.",
+   "status": "verified",
+   "difficulty": 1,
+   "note": "Title on acquisition.gov DFARS Part 252 (Change 5/7/2026) read 14 Sep 2026; clause and prescription at DFARS 232.7102 read in RFO Class Deviation 2026-O0022 (DFARS Part 232, acq.osd.mil) 14 Sep 2026."
+  },
+  {
+   "id": "CM51",
+   "clause": "FAR 52.217-5",
+   "title": "Evaluation of Options",
+   "applies": "Goes in solicitations under RFO 17.203(c) when the solicitation has an option clause, exercise is reasonably likely, and the option will not be exercised at award, so option prices are evaluated with the basic requirement.",
+   "status": "verified",
+   "difficulty": 2,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026; prescription read at RFO 17.203(c) on far-overhaul-part-17."
+  },
+  {
+   "id": "CM52",
+   "clause": "FAR 52.217-7",
+   "title": "Option for Increased Quantity-Separately Priced Line Item",
+   "applies": "Goes in solicitations and contracts, except those for services, under RFO 17.203(e) when the option quantity is a separate line item with the same name as the matching basic line item.",
+   "status": "verified",
+   "difficulty": 2,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026; prescription read at RFO 17.203(e) on far-overhaul-part-17."
+  },
+  {
+   "id": "CM53",
+   "clause": "FAR 52.216-19",
+   "title": "Order Limitations",
+   "applies": "Goes in definite-quantity, requirements, and indefinite-quantity solicitations and contracts under RFO 16.505(b); it sets the minimum and maximum orders the contractor must accept.",
+   "status": "verified",
+   "difficulty": 2,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026; prescription read at RFO 16.505(b) on far-overhaul-part-16."
+  },
+  {
+   "id": "CM54",
+   "clause": "FAR 52.243-2",
+   "title": "Changes-Cost-Reimbursement",
+   "applies": "Goes in cost-reimbursement contracts for supplies under RFO 43.305(b), with Alternate I for services only, Alternate II for services with supplies, and Alternate III for construction.",
+   "status": "verified",
+   "difficulty": 2,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026; prescription read at RFO 43.305(b) on far-overhaul-part-43.",
+   "classes": [
+    "II",
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "id": "CM55",
+   "clause": "FAR 52.237-3",
+   "title": "Continuity of Services",
+   "applies": "Goes in service solicitations and contracts under RFO 37.802-5(c) when the services are vital to the Government and must continue without interruption as a successor (the Government or another contractor) takes over, and the Government anticipates difficulties during that transition.",
+   "status": "verified",
+   "difficulty": 2,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026; prescription read at RFO 37.802-5(c) on far-overhaul-part-37."
+  },
+  {
+   "id": "CM56",
+   "clause": "FAR 52.237-2",
+   "title": "Protection of Government Buildings, Equipment, and Vegetation",
+   "applies": "Goes in solicitations and contracts for services performed on Government installations, unless a construction contract is contemplated, under RFO 37.802-5(b).",
+   "status": "verified",
+   "difficulty": 2,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026; prescription read at RFO 37.802-5(b) on far-overhaul-part-37."
+  },
+  {
+   "id": "CM57",
+   "clause": "FAR 52.246-4",
+   "title": "Inspection of Services-Fixed-Price",
+   "applies": "Goes in fixed-price solicitations and contracts for services, or supplies that involve furnishing services, expected to exceed the simplified acquisition threshold under RFO 46.304.",
+   "status": "verified",
+   "difficulty": 2,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026; prescription read at RFO 46.304 on far-overhaul-part-46.",
+   "classes": [
+    "II",
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "id": "CM58",
+   "clause": "FAR 52.236-2",
+   "title": "Differing Site Conditions",
+   "applies": "Goes in fixed-price construction and dismantling, demolition, or removal contracts expected to exceed the simplified acquisition threshold (RFO 36.101-7(a), Table 1); it is the basis for an equitable adjustment when site conditions differ.",
+   "status": "verified",
+   "difficulty": 2,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026; prescription read at RFO 36.101-7(a) Table 1 on far-overhaul-part-36.",
+   "classes": [
+    "II",
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "id": "CM59",
+   "clause": "FAR 52.204-9",
+   "title": "Personal Identity Verification of Contractor Personnel",
+   "applies": "Goes in solicitations and contracts under RFO 4.208(d) when performance requires routine physical access to a Federally-controlled facility and/or routine access to a Federally-controlled information system.",
+   "status": "verified",
+   "difficulty": 2,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026; prescription read at RFO 4.208(d) on far-overhaul-part-4."
+  },
+  {
+   "id": "CM60",
+   "clause": "FAR 52.229-6",
+   "title": "Taxes-Foreign Fixed-Price Contracts",
+   "applies": "Goes in fixed-price solicitations and contracts expected to exceed the simplified acquisition threshold that will be performed wholly or partly in a foreign country, unless the contract is with a foreign government (RFO 29.402-1(a)).",
+   "status": "verified",
+   "difficulty": 2,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026; prescription read at RFO 29.402-1(a) on far-overhaul-part-29.",
+   "classes": [
+    "II",
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "id": "CM61",
+   "clause": "FAR 52.240-91",
+   "title": "Security Prohibitions and Exclusions",
+   "applies": "Goes in all solicitations and contracts under RFO 40.205(b); it gathers security prohibitions such as covered telecommunications and video surveillance equipment, Kaspersky, ByteDance and FASCSA orders that legacy 52.204 clauses carried.",
+   "status": "verified",
+   "difficulty": 3,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026 (52.204-20 through 52.204-30 show Reserved); prescription at RFO 40.205(b) and the list of covered prohibitions read on far-overhaul-part-40. Alternate I per RFO 40.205(c)."
+  },
+  {
+   "id": "CM62",
+   "clause": "FAR 52.240-93",
+   "title": "Basic Safeguarding of Covered Contractor Information Systems",
+   "applies": "Goes in solicitations and contracts under RFO 40.303-2 when the contractor or a subcontractor may have Federal contract information in its information system; the legacy number 52.204-21 shows Reserved.",
+   "status": "verified",
+   "difficulty": 3,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026 (52.204-21 shows Reserved); prescription read at RFO 40.303-2 on far-overhaul-part-40."
+  },
+  {
+   "id": "CM63",
+   "clause": "FAR 52.226-7",
+   "title": "Drug-Free Workplace",
+   "applies": "Goes in solicitations and contracts under RFO 26.503-1 except as provided in RFO 26.501; the legacy number 52.223-6 shows Reserved in RFO Part 52.",
+   "status": "verified",
+   "difficulty": 3,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026 (52.223-6 shows Reserved); prescription read at RFO 26.503-1 on far-overhaul-part-26."
+  },
+  {
+   "id": "CM64",
+   "clause": "FAR 52.215-21",
+   "title": "Requirements for Certified Cost or Pricing Data and Data Other Than Certified Cost or Pricing Data-Modifications",
+   "applies": "Goes in requests for proposals and contracts under RFO 15.110(u) when it is reasonably certain that certified cost or pricing data or other data will be required to price modifications, not the initial award.",
+   "status": "verified",
+   "difficulty": 3,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026; prescription read in RFO 15.110 on far-overhaul-part-15. Look-alike of 52.215-20.",
+   "classes": [
+    "II",
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "id": "CM65",
+   "clause": "FAR 52.216-21",
+   "title": "Requirements",
+   "applies": "Goes in solicitations and contracts under RFO 16.505(d)(1) when a requirements contract is contemplated; do not confuse it with 52.216-22, Indefinite Quantity.",
+   "status": "verified",
+   "difficulty": 3,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026; prescription read at RFO 16.505(d)(1) on far-overhaul-part-16."
+  },
+  {
+   "id": "CM66",
+   "clause": "FAR 52.246-2",
+   "title": "Inspection of Supplies-Fixed-Price",
+   "applies": "Goes in fixed-price solicitations and contracts for supplies, or services that involve furnishing supplies, expected to exceed the simplified acquisition threshold under RFO 46.302; its services counterpart is 52.246-4.",
+   "status": "verified",
+   "difficulty": 3,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026; prescription read at RFO 46.302 on far-overhaul-part-46.",
+   "classes": [
+    "II",
+    "III",
+    "IV"
+   ]
+  },
+  {
+   "id": "CM67",
+   "clause": "FAR 52.225-14",
+   "title": "Inconsistency between English Version and Translation of Contract",
+   "applies": "Goes in solicitations and contracts under RFO 25.603 when translation of the contract into another language is anticipated; the English version controls if the two conflict.",
+   "status": "verified",
+   "difficulty": 3,
+   "note": "Number and title on the RFO FAR Part 52 index read 14 Sep 2026; prescription read at RFO 25.603 on far-overhaul-part-25."
+  },
+  {
+   "id": "CM68",
+   "clause": "DFARS 252.243-7001",
+   "title": "Pricing of Contract Modifications",
+   "applies": "Goes in DoD solicitations and contracts under DFARS 243.305-70 when a fixed-price type contract is anticipated and used; its neighbor 252.243-7002 is Requests for Equitable Adjustment.",
+   "status": "verified",
+   "difficulty": 3,
+   "note": "Title on acquisition.gov DFARS Part 252 (Change 5/7/2026) read 14 Sep 2026; clause and prescription at DFARS 243.305-70 read in RFO Class Deviation 2026-O0034 Rev 1 (DFARS Part 243, acq.osd.mil) 14 Sep 2026."
+  },
+  {
+   "id": "CM69",
+   "clause": "DFARS 252.203-7005",
+   "title": "Representation Relating to Compensation of Former DoD Officials",
+   "applies": "Goes in all DoD solicitations as a provision, including FAR part 12 buys and task or delivery order solicitations, under DFARS 203.171-4(b); the matching contract clause is 252.203-7000.",
+   "status": "verified",
+   "difficulty": 3,
+   "note": "Title on acquisition.gov DFARS Part 252 (Change 5/7/2026) read 14 Sep 2026; provision and prescription at DFARS 203.171-4(b) read in RFO Class Deviation 2026-O0031 (DFARS Part 203, acq.osd.mil) 14 Sep 2026."
+  },
+  {
+   "id": "CM70",
+   "clause": "DFARS 252.244-7999 (DEVIATION 2026-O0015)",
+   "title": "Subcontracts for Commercial Products or Commercial Services",
+   "applies": "Goes in DoD solicitations and contracts, including FAR part 12 buys, under DFARS 244.070(b); the codified number 252.244-7000 does not appear in the RFO Part 244 deviation.",
+   "status": "verified",
+   "difficulty": 3,
+   "note": "Read in RFO Class Deviation 2026-O0015 Rev 1 (DFARS Part 244, acq.osd.mil) 14 Sep 2026: '252.244-7999 Subcontracts for Commercial Products or Commercial Services. (DEVIATION 2026-O0015)', prescribed at 244.070(b). acquisition.gov codified DFARS Part 252 (Change 5/7/2026) still lists 252.244-7000."
+  }
+ ]
+}

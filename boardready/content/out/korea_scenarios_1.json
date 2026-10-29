@@ -1,0 +1,684 @@
+[
+  {
+    "id": "K101",
+    "question": "You are a 411th CSB contracting officer at Camp Humphreys. USFK J4 sends you an approved Logistics Cost Sharing (LCS) requirement from the garrison DPW to replace rooftop HVAC units on three barracks, IGE $1.8 million, funded from the current ROK program year. Before you post anything, a U.S. HVAC company with an office in Pyeongtaek calls and asks to be put on the bidders list, and the DPW engineer says he would prefer the U.S. firm because it installed the original units. You must decide how to set up this competition.\n\n1. What authority lets you restrict this competition to Korean firms, and what do you document?\n2. How does the Korean-firm restriction change your market research?\n3. What do you publicize, where, and what do you tell the U.S. firm?\n4. What changes in your evaluation and award process compared with an O&M action of the same size?",
+    "answer": "This is ROK money, not a U.S. appropriation. LCS is the logistics portion of the Special Measures Agreement; the funds are held by ROK MND, USFK J4 manages the program, and the program is limited to Korean businesses using Korean material and labor. That is the rule I start from.\n\nAuthority and documentation. The Korean-firm limitation is a rule of the LCS program under the SMA, not a FAR set-aside, and the contract is awarded by MND, not by me. If a FAR competition cite is needed in my file, the closest fit is RFO FAR 6.103-4, international agreement: full and open competition is not required when precluded by the terms of an international agreement or the written directions of a foreign government reimbursing the agency, and under 6.103-4(c) a DoD contract under that authority does not need the written justification and approval of 6.104. That mapping is my analysis, though. Whether the 411th documents LCS actions under 6.103-4 or treats them as outside FAR Part 6 altogether is set by the 411th LCS SOP, and I confirm it with C&P before I write anything. Either way I put a short determination in the file that names the SMA/LCS authority, the J4-approved requirement and the Korean-firm limitation, in whatever format the LCS SOP prescribes. I do not invent one.\n\nMarket research. RFO FAR 10.001 still applies, but the universe is Korean industry. I look at prior LCS awards for like work, J4 and DPW vendor knowledge, Korean vendor registrations and vendor-day contacts, and I issue a sources-sought aimed at Korean HVAC installers. Two things I settle early: whether Korean-manufactured units meet the spec, because the offshore-versus-local materials memo has to go with the package to J4, and what vendor registration MND and the LCS SOP require of offerors. Because MND, not the United States, awards and pays, I do not assume the U.S. SAM rule applies; if the 411th does require SAM registration for LCS offerors, the foreign-vendor exception in RFO FAR 4.203-1(b)(7) only reaches actions at or below $40,000, so at $1.8 million it would not help. I confirm the registration rule with C&P.\n\nPublicizing. Where and how LCS actions are advertised is an LCS SOP question that I confirm with C&P, because the award is MND's and the U.S. publicizing rules were written for U.S. awards. What I know from the FAR side: RFO Part 5 requires GPE notices for actions over $20,000, and the RFO 5.101(b) exemption list no longer carries the old overseas-only-local-sources exemption, so if the 411th posts LCS actions on SAM.gov I post the presolicitation and solicitation notices and state plainly that competition is limited to Korean firms under the LCS program; I also ask C&P whether the DFARS Part 205 deviation restores an OCONUS exemption. Whatever channel the SOP names, including any Korean-language channel, I use it. I tell the U.S. firm the truth: this action is LCS-funded and by program rule limited to Korean firms, it is not eligible here, and I keep its capability statement on file for O&M requirements.\n\nEvaluation and award. The mechanics stay FAR-based: LCS contracts are prepared under standard U.S. contracting procedures for MND and the USFK LCS program manager to approve and sign. What changes:\n- Eligibility becomes a gate: I verify each offeror is a Korean firm using the method the LCS SOP prescribes, and I document it.\n- At $1.8 million I am above the SAT ($350,000) but below the $9 million commercial ceiling, so if the work is commercial I can use RFO FAR 12.201-1 simplified procedures; otherwise Part 15. I confirm with C&P which of those U.S. procedures the 411th applies to LCS packages at this value. Price reasonableness rests on adequate price competition among Korean firms plus the IGE (AFARS 5107.90).\n- Buy American does not bite: RFO FAR 25.100(b) applies the subpart to supplies acquired for use in the United States, and here the buyer is MND in any case.\n- The SOFA invited contractor program is irrelevant to Korean firms; it is for U.S. contractors.\n- Pricing is likely in won because MND pays; I confirm the currency convention with C&P.\n- I do not award. I make the recommendation for award through USFK J4, MND approves and awards, and the vendor invoices MND. MND approval adds time, so I build that into the schedule and tell DPW now.\n\nCite: RFO FAR 6.103-4 and 6.104(a); RFO FAR 10.001; RFO FAR 5.101, 5.101(b), 5.201; RFO FAR 4.203-1(b)(7); RFO FAR 12.201-1; RFO FAR 25.100(b); AFARS 5107.90; U.S.-ROK Special Measures Agreement (LCS); USFK Reg 37-5 (2007; confirm currency with C&P); 411th CSB LCS SOP (confirm current procedure with C&P).",
+    "key_points": [
+      "LCS is ROK MND money under the SMA; program rule limits award to Korean firms with Korean material and labor; KOs recommend award through USFK J4 and MND awards and pays",
+      "The limitation is an LCS program rule and MND awards; if a FAR cite is needed the closest fit is RFO FAR 6.103-4 (international agreement), which under 6.103-4(c) needs no 6.104 J&A for DoD, but whether the 411th documents LCS actions that way is an LCS SOP question; write the file determination in the SOP format (confirm with C&P)",
+      "Market research (RFO FAR 10.001) targets Korean industry; settle the offshore-versus-local materials question and the vendor registration MND/the LCS SOP require early (do not assume the U.S. SAM rule applies; if it does, the foreign-vendor exception stops at $40,000)",
+      "Where LCS actions are advertised is an LCS SOP question (confirm with C&P); if SAM.gov is used, RFO Part 5 applies over $20,000 and the old overseas local-sources exemption is not in RFO 5.101(b) (check the DFARS 205 deviation); tell the U.S. firm it is ineligible for this LCS action",
+      "Evaluation stays FAR-based (12.201-1 if commercial and under $9M, else Part 15); Korean-firm eligibility is a gate; Buy American reaches only supplies for use in the U.S. (25.100(b)); no IC program for Korean firms",
+      "Build MND approval time into the schedule and tell the customer up front"
+    ],
+    "citations": [
+      "RFO FAR 6.103-4",
+      "RFO FAR 6.104(a)",
+      "RFO FAR 10.001",
+      "RFO FAR 5.101",
+      "RFO FAR 5.101(b)",
+      "RFO FAR 5.201",
+      "RFO FAR 4.203-1(b)(7)",
+      "RFO FAR 12.201-1",
+      "RFO FAR 25.100(b)",
+      "AFARS 5107.90",
+      "U.S.-ROK Special Measures Agreement",
+      "USFK Reg 37-5 (2007)"
+    ],
+    "classes": [
+      "II",
+      "III"
+    ],
+    "topic": "LCS Procurement",
+    "domain": "Korea, LCS & SOFA",
+    "tags": [
+      "Korea",
+      "LCS Funding",
+      "Limited Competition",
+      "Problem solving situations",
+      "OCONUS"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "Korean-firm limitation, J4/MND roles and the materials memo come straight from the 13 May 2026 deck and Q0254-Q0257. Mapping the limitation to RFO FAR 6.103-4 is my analysis, not stated in the sources. RFO Part 5 exemption list read on acquisition.gov; whether the 411th posts LCS actions on SAM.gov or a local channel, the Korean-firm verification method, SAM practice for LCS vendors and the currency convention are local SOP matters not in the sources. Reviewer 14 Sep 2026: 6.103-4(c) DoD exemption, 4.203-1(b)(7) $40,000, absence of an OCONUS exemption in RFO 5.101(b) and 25.100(b) scope re-verified on acquisition.gov; the 6.103-4 mapping, SAM.gov posting and SAM registration were softened to LCS SOP / C&P questions because MND, not the U.S., awards; USFK Reg 37-5 is dated 2007 and its body could not be read.",
+    "sources_used": [
+      "content/sources/study_group_decks_apr-jul2026.txt (411th study deck 13 May 2026, LCS scenario slides 3-4; 29 Apr 2026 slides 8-9, IC program)",
+      "src/data/questions.json Q0254-Q0258, Q0274-Q0278",
+      "src/data/regulations.json crosswalk and thresholds (verified 13 Sep 2026)",
+      "acquisition.gov RFO Part 5 deviation guide (fetched 14 Sep 2026): 5.101 presolicitation notice, 5.201 solicitation notice, $20,000 GPE threshold, 5.101(b) exemptions",
+      "acquisition.gov RFO Part 6 deviation guide (fetched 14 Sep 2026): 6.103-4 International agreement, 6.104(a)",
+      "acquisition.gov RFO Part 25 deviation guide (fetched 14 Sep 2026): subpart 25.1 exceptions, 25.7, 25.8 (25.801/25.802 follow SOFAs), 25.1002-1/-2",
+      "acquisition.gov RFO Part 4 deviation guide (fetched 14 Sep 2026): 4.203-1(b)(7) foreign vendor SAM exception at or below $40,000; 4.301(e); 4.305(a)",
+      "USFK Reg 37-5 Special Measures Agreement Process, dated 26 Sep 2007 per mirror listing (usfk.mil returned 403 to author and reviewer; mirrors show preview only; body text known only from a search-index snippet: 411th CSB solicits, prepares LCS contracts under standard U.S. contracting procedures for MND and USFK LCS PM approval/signature, coordinates delivery after MND approval; LCS only to Korean-owned contractors using local materials)",
+      "src/data/glossary.json Korea entries (FKAQ, IC/ICP, LCS, MND, SMA, SOFA Article XV, USFK J4, Defense Base Act)"
+    ],
+    "rfo_status": "updated",
+    "crosswalk": [
+      {
+        "old": "FAR 6.302-4",
+        "new": "FAR 6.103-4"
+      },
+      {
+        "old": "FAR 6.303 / 6.304",
+        "new": "FAR 6.104"
+      },
+      {
+        "old": "FAR 5.202",
+        "new": "FAR 5.101(b)"
+      },
+      {
+        "old": "FAR 4.1102",
+        "new": "FAR 4.203-1(b)"
+      },
+      {
+        "old": "FAR 13.5",
+        "new": "FAR 12.201-1"
+      }
+    ]
+  },
+  {
+    "id": "K102",
+    "question": "You are the KO for an LCS-funded purchase of twelve non-tactical vehicles for a transportation motor pool in Area II, evaluated price 3.1 billion won (about $2.4 million at the rate you used for evaluation). Evaluation is complete, the apparent successful offeror is a Korean dealer, and the winter driving season starts in six weeks. The transportation officer walks in and asks you to sign the award tomorrow so the vehicles can be delivered before the first snow. You have to decide what you can sign, what goes where, and what to promise.\n\n1. Who awards this contract, and what exactly is your signature on?\n2. What is in the package you route, and through whom?\n3. How does the dealer get paid, and what do you tell it about invoicing?\n4. What do you tell the transportation officer about the timeline and your role after award?",
+    "answer": "I cannot award this tomorrow, and I would not sign it as an award at all. 411th CSB KOs do not award LCS contracts. The procurement runs through 411th contract vehicles and procedures, but the funds are ROK funds held by MND, so my product is a recommendation for award that goes through USFK J4, the LCS program manager, and ROK MND approves and awards. So I tell the transportation officer that today, before he leaves my office, so nobody calls the dealer and tells it to start delivering. An LCS vendor that starts on a verbal from the customer has no contract with anyone, and that is the same unauthorized commitment problem we have on the O&M side.\n\nWhat I sign and route. I prepare the contract document under standard U.S. contracting procedures for MND and the USFK LCS program manager to approve and sign, and I sign the recommendation for award. The package that goes to J4 includes, at minimum:\n- The recommendation for award with the evaluation record, the eligibility check showing the dealer is a Korean firm, and my price reasonableness determination (competition among Korean dealers plus the IGE).\n- The memo documenting offshore or local materials. Since January 2022 MND does not require an offshore waiver before submission, but the memo must accompany every LCS package to J4. For vehicles, that memo has to say honestly where the vehicles are built.\n- The J4 requirement approval showing this is on the current program-year LCS list, and whatever routing sheet the 411th LCS SOP requires.\nI confirm the current checklist with C&P rather than guess at forms.\n\nPayment. Invoices go to ROK MND and MND pays. Because no U.S. funds are involved I do not expect a U.S. obligation, a DFAS payment or a WAWF invoice on this action, and I confirm the actual invoice mechanics with C&P and J4. I tell the dealer that in the solicitation and again at award so it does not send invoices to me or to the customer. I make sure the contract states the currency and the invoice address and acceptance documentation MND expects, and I confirm that language with C&P and J4.\n\nTimeline and my role afterward. MND approval takes more time than a U.S. award; I give the transportation officer the realistic window J4 and C&P give me, not the window he wants. If the mission truly cannot wait, the honest alternatives are a smaller interim O&M action on a separate solicitation, because O&M and LCS cannot be mixed, or accepting the LCS timeline. After MND approves, the 411th's role in coordinating delivery and administering the contract is whatever the LCS SOP assigns it; I expect to stay the contracting point of contact for questions of scope and performance, and I confirm that with C&P, but the award and the money are MND's. I document every conversation with the customer in the file.\n\nCite: U.S.-ROK Special Measures Agreement (LCS); USFK Reg 37-5 (2007; confirm currency with C&P); 411th CSB LCS SOP (confirm current procedure with C&P); RFO FAR 1.405 (unauthorized commitments, for the warning); RFO FAR 6.103-4.",
+    "key_points": [
+      "411th KOs do not award LCS contracts: the KO signs a recommendation for award, routes it through USFK J4 (LCS program manager), and ROK MND approves and awards",
+      "Package: recommendation for award, evaluation and Korean-firm eligibility record, price reasonableness, the offshore/local materials memo (required with every LCS package since Jan 2022), J4 requirement approval; confirm the checklist with C&P",
+      "Invoices go to ROK MND and MND pays; no U.S. obligation is expected (confirm the invoice mechanics with C&P and J4); say so in the solicitation and at award",
+      "MND approval adds time; do not promise delivery dates the ROK approval cycle cannot support; no verbal starts by the customer (unauthorized commitment risk)",
+      "O&M cannot be added to the LCS action; an urgent interim buy would be a separate O&M solicitation",
+      "After MND approval the 411th's post-award role is set by the LCS SOP; expect to remain the contracting point of contact (confirm with C&P)"
+    ],
+    "citations": [
+      "U.S.-ROK Special Measures Agreement",
+      "USFK Reg 37-5 (2007)",
+      "RFO FAR 1.405",
+      "RFO FAR 6.103-4"
+    ],
+    "classes": [
+      "II",
+      "III"
+    ],
+    "topic": "LCS Procurement",
+    "domain": "Korea, LCS & SOFA",
+    "tags": [
+      "Korea",
+      "LCS Funding",
+      "Problem solving situations",
+      "OCONUS"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "Routing (KO recommendation through J4, MND approval/award, MND payment) and the materials memo rule are stated verbatim in Q0254/Q0257 and the 13 May 2026 deck; USFK Reg 37-5 snippet corroborates that the 411th prepares LCS contracts for MND and USFK LCS PM signature and coordinates delivery after MND approval. Package contents, invoice format, currency and the approval timeline are local SOP details not in the sources. Reviewer 14 Sep 2026: DFAS/WAWF and post-award coordination statements softened (inferences from Q0257 and a 2007 USFK Reg 37-5 snippet, not stated in the decks).",
+    "sources_used": [
+      "content/sources/study_group_decks_apr-jul2026.txt (411th study deck 13 May 2026, LCS scenario slides 3-4; 29 Apr 2026 slides 8-9, IC program)",
+      "src/data/questions.json Q0254-Q0258, Q0274-Q0278",
+      "USFK Reg 37-5 Special Measures Agreement Process, dated 26 Sep 2007 per mirror listing (usfk.mil returned 403 to author and reviewer; mirrors show preview only; body text known only from a search-index snippet: 411th CSB solicits, prepares LCS contracts under standard U.S. contracting procedures for MND and USFK LCS PM approval/signature, coordinates delivery after MND approval; LCS only to Korean-owned contractors using local materials)",
+      "src/data/glossary.json Korea entries (FKAQ, IC/ICP, LCS, MND, SMA, SOFA Article XV, USFK J4, Defense Base Act)",
+      "src/data/regulations.json crosswalk and thresholds (verified 13 Sep 2026)"
+    ],
+    "rfo_status": "updated",
+    "crosswalk": [
+      {
+        "old": "FAR 1.602-3",
+        "new": "FAR 1.405"
+      },
+      {
+        "old": "FAR 6.302-4",
+        "new": "FAR 6.103-4"
+      }
+    ]
+  },
+  {
+    "id": "K103",
+    "question": "You are assembling an LCS package for repair of the walk-in refrigeration at a Camp Casey dining facility, evaluated price about 850 million won (roughly $650,000). The successful Korean offeror's technical proposal shows the replacement compressors are manufactured in Japan; the rest of the parts and all labor are Korean. The DPW engineer tells you to write 'local materials' on the memo that goes to J4 because 'MND never checks and the offshore question just slows things down.' The package is due to J4 on Friday. You must decide what the memo says and what else you do.\n\n1. What is the memo, and what changed in January 2022?\n2. What do you write, and how do you answer the engineer?\n3. Does the offshore compressor make the offer ineligible, and who decides?\n4. What do you put in the file?",
+    "answer": "The memo is the offshore-versus-local materials memo that must accompany every LCS package to USFK J4. The LCS program expects Korean material and labor. Before January 2022 an offshore waiver had to be approved by ROK MND before the package could be submitted; since January 2022 MND no longer requires the waiver up front. Instead a memo documenting whether the materials are offshore or local goes with every LCS package to J4; who prepares and signs it is set by the LCS SOP, and in this scenario it is coming to me. So the memo replaced a pre-approval, it did not remove the requirement to disclose.\n\nWhat I write. The compressors are made in Japan, so the memo says offshore materials, identifies the compressors, and states that the balance of materials and all labor are Korean, with the reason the offeror gave for the offshore component and what my market research showed about Korean-made alternatives that meet the spec. I say that to the engineer plainly: the memo is a written representation from the 411th, over my signature or my office's, to J4 and to a partner government that is paying the bill, I will not put a false statement in it, and neither will anyone else on this package. Whether MND checks is not the standard; my integrity and the Government's credibility with MND are. RFO FAR 1.402-2 puts safeguarding the interests of the United States on me, and the Joint Ethics Regulation does not have a 'nobody checks' exception. If a false memo were discovered, the likely results are MND rejecting the package, the 411th losing credibility on every LCS package after it, and a personal integrity problem for me and the engineer.\n\nEligibility. The Korean-firm and Korean-labor rules are met. Whether an offshore component is acceptable inside an LCS award is an MND and LCS program decision, not mine. I do not reject the offer on my own, and I do not assume MND will accept it. I ask J4 now, before Friday, how MND is treating offshore components in the current program year, and I put the market-research evidence in the memo so MND can approve it on the facts if no Korean compressor meets the requirement. If MND requires a Korean-made compressor, the path is a proposal revision or resolicitation, not a mislabeled memo.\n\nFile. The memo, the market research on Korean-made compressors, the offeror's statement of origin, my note of the conversation with the engineer and what I told him, and the J4 response. If the engineer escalates, I brief my Chief of Contracting the same day. I confirm the current memo format and MND's current position with C&P and J4; I do not rely on my memory of the 2022 change.\n\nCite: 411th CSB study material on LCS limitations (offshore/local materials memo, January 2022 change); U.S.-ROK Special Measures Agreement (LCS); USFK Reg 37-5 (2007; confirm currency with C&P); RFO FAR 1.402-2; DoD 5500.07-R Joint Ethics Regulation; 411th CSB LCS SOP (confirm current procedure with C&P).",
+    "key_points": [
+      "Every LCS package to USFK J4 carries a memo documenting offshore or local materials; since January 2022 MND no longer requires a pre-approved offshore waiver before submission",
+      "The memo must be truthful: the compressors are offshore, and the memo says so with the market-research basis; a false representation to MND is an integrity violation and damages the 411th's standing on every later package",
+      "Whether an offshore component is acceptable in an LCS award is an MND/LCS program call; ask J4 before submission rather than assuming",
+      "If MND requires Korean-made, the remedy is proposal revision or resolicitation, not relabeling",
+      "Document the conversation with the engineer, the market research and the J4 response; brief the Chief of Contracting if pressure continues",
+      "Confirm current memo format and MND practice with C&P"
+    ],
+    "citations": [
+      "U.S.-ROK Special Measures Agreement",
+      "USFK Reg 37-5 (2007)",
+      "RFO FAR 1.402-2",
+      "DoD 5500.07-R"
+    ],
+    "classes": [
+      "II",
+      "III"
+    ],
+    "topic": "LCS Funding",
+    "domain": "Korea, LCS & SOFA",
+    "tags": [
+      "Korea",
+      "LCS Funding",
+      "Ethics",
+      "Problem solving situations",
+      "OCONUS"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "The memo requirement and the January 2022 change are quoted from Q0254 and the 13 May 2026 deck. How MND currently treats offshore components, whether an offshore compressor makes an offer ineligible, and the memo format are not in the sources and are flagged for C&P and J4. RFO FAR 1.402-2 number verified in the crosswalk. Reviewer 14 Sep 2026: the sources say the memo accompanies every LCS package to J4 but not who prepares it; wording adjusted so the KO-author premise is the scenario's, not a rule.",
+    "sources_used": [
+      "content/sources/study_group_decks_apr-jul2026.txt (411th study deck 13 May 2026, LCS scenario slides 3-4; 29 Apr 2026 slides 8-9, IC program)",
+      "src/data/questions.json Q0254-Q0258, Q0274-Q0278",
+      "src/data/regulations.json crosswalk and thresholds (verified 13 Sep 2026)",
+      "USFK Reg 37-5 Special Measures Agreement Process, dated 26 Sep 2007 per mirror listing (usfk.mil returned 403 to author and reviewer; mirrors show preview only; body text known only from a search-index snippet: 411th CSB solicits, prepares LCS contracts under standard U.S. contracting procedures for MND and USFK LCS PM approval/signature, coordinates delivery after MND approval; LCS only to Korean-owned contractors using local materials)",
+      "src/data/glossary.json Korea entries (FKAQ, IC/ICP, LCS, MND, SMA, SOFA Article XV, USFK J4, Defense Base Act)"
+    ],
+    "rfo_status": "updated",
+    "crosswalk": [
+      {
+        "old": "FAR 1.602-2",
+        "new": "FAR 1.402-2"
+      }
+    ]
+  },
+  {
+    "id": "K104",
+    "question": "You are one week from releasing an LCS-funded solicitation for grounds maintenance across Camp Casey and Camp Hovey, IGE about $3.2 million for the program year. The DPW chief asks you to add three line items for hazardous tree removal and stump grinding, about $400,000, funded with FY27 O&M, 'so we only run one competition and the same contractor does everything.' The RM has already certified the O&M funds. You must decide whether to add the line items.\n\n1. Can O&M and LCS line items go in one solicitation? Why or why not?\n2. What are the practical differences that would break even if the competition rules allowed it?\n3. What alternatives do you offer the customer?\n4. How do you handle the already-certified O&M funds?",
+    "answer": "No, and this one I can answer without checking a local SOP. U.S. O&M actions must be solicited using full and open competition unless a FAR exception applies, while ROK LCS actions must be solicited under competitive procedures limited to Korean contractors. One solicitation cannot carry two contradictory competition requirements, so O&M and LCS funds cannot be combined in a single solicitation. I would be either illegally restricting the O&M work to Korean firms or opening LCS work to non-Korean firms in violation of the program rule.\n\nEven if the competition rules lined up, the two actions would still break apart:\n- Different awarding official and payer. I recommend award on the LCS portion, MND approves, awards and pays; on the O&M portion I award and DFAS pays. Two award signatures and two invoice paths in one document is not a contract anyone can administer.\n- Different fiscal rules. The O&M line items carry the bona fide need rule, the one-year availability of O&M and the 12-month severable-services authority; LCS follows the ROK program year and MND approval. A single period of performance cannot serve both.\n- Different clauses and pricing. The O&M portion needs the full U.S. clause set and dollar pricing; the LCS portion follows the LCS package rules and, in practice, won pricing.\n\nAlternatives. First, I ask whether tree removal is actually an LCS-eligible logistics requirement; repair and maintenance services are within LCS scope, so if J4 will approve it as an LCS requirement in the program year, it can ride in the LCS solicitation with LCS money and the O&M funds go back. Second, if it stays O&M, it is a separate action: $400,000 is above the SAT ($350,000), so it is a full and open competitive acquisition on its own solicitation, or an order under an existing base operations or DPW services contract if in scope. Part 19 set-aside rules do not reach performance outside the United States, so I do not run a small-business analysis for it. Third, if the customer's real goal is one contractor on the ground, the honest answer is that we cannot buy that with mixed money; the LCS awardee can compete for the O&M work if it is otherwise eligible.\n\nThe certified funds. The O&M certification stays with the RM until I have an O&M action to obligate against. I do not park it on the LCS solicitation, and if the requirement moves to LCS, the RM withdraws the certification. I document the customer's request and my answer, offer the two options in writing, and keep the LCS release date.\n\nCite: 411th CSB study material (O&M and LCS cannot be combined in one solicitation); RFO FAR 6.101 and 6.103; RFO FAR 6.103-4 (closest FAR authority for the LCS limitation, if one is needed; confirm with C&P); 31 U.S.C. 1502; 10 U.S.C. 3133; RFO FAR 2.101 (SAT); FAR 19.000(b); U.S.-ROK Special Measures Agreement (LCS); 411th CSB LCS SOP (confirm current procedure with C&P).",
+    "key_points": [
+      "O&M requires full and open competition (or a FAR exception); LCS must be limited to Korean contractors; contradictory competition requirements cannot share one solicitation",
+      "Even apart from competition: different awarding official and payer (KO/DFAS vs MND), different fiscal rules (bona fide need and 12-month severable authority vs ROK program year), different clauses and currency",
+      "Option 1: ask J4 whether the tree work is LCS-eligible and fund it as LCS; Option 2: separate O&M action, full and open at $400,000 (above the $350,000 SAT), or an order under an existing in-scope services contract",
+      "Part 19 set-asides do not apply to performance outside the U.S. (FAR 19.000(b))",
+      "Do not hold certified O&M funds against an LCS solicitation; RM withdraws or re-certifies as the path is chosen",
+      "Document the request and the answer; keep the LCS release date"
+    ],
+    "citations": [
+      "RFO FAR 6.101",
+      "RFO FAR 6.103",
+      "RFO FAR 6.103-4",
+      "31 U.S.C. 1502",
+      "10 U.S.C. 3133",
+      "RFO FAR 2.101",
+      "FAR 19.000(b)",
+      "U.S.-ROK Special Measures Agreement"
+    ],
+    "classes": [
+      "II",
+      "III"
+    ],
+    "topic": "LCS Funding",
+    "domain": "Korea, LCS & SOFA",
+    "tags": [
+      "Korea",
+      "LCS Funding",
+      "Fiscal Law / Funding",
+      "Problem solving situations",
+      "OCONUS"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "high",
+    "confidence_reason": "The core rule is the official answer to Q0255 and the 13 May 2026 deck, quoted nearly verbatim. SAT value and RFO Part 6 numbering verified in the crosswalk/thresholds. FAR 19.000(b) geographic limit is cited from the crosswalk note, not re-fetched. Whether tree removal is LCS-eligible is for J4 to decide; flagged. Reviewer 14 Sep 2026: core rule confirmed verbatim against Q0255 / 13 May 2026 deck; 6.103-4 cite qualified as analysis.",
+    "sources_used": [
+      "content/sources/study_group_decks_apr-jul2026.txt (411th study deck 13 May 2026, LCS scenario slides 3-4; 29 Apr 2026 slides 8-9, IC program)",
+      "src/data/questions.json Q0254-Q0258, Q0274-Q0278",
+      "src/data/regulations.json crosswalk and thresholds (verified 13 Sep 2026)",
+      "src/data/glossary.json Korea entries (FKAQ, IC/ICP, LCS, MND, SMA, SOFA Article XV, USFK J4, Defense Base Act)"
+    ],
+    "rfo_status": "updated",
+    "crosswalk": [
+      {
+        "old": "FAR 6.302-4",
+        "new": "FAR 6.103-4"
+      }
+    ]
+  },
+  {
+    "id": "K105",
+    "question": "USFK J4 sends you an approved LCS requirement for custodial and grounds maintenance services across Area III installations, IGE $14 million for a base period plus four option periods, each option subject to MND approval in its program year. The last three LCS actions you worked were all under $2 million using simplified procedures. Your Chief of Contracting asks for your acquisition approach by Monday. You must decide the procedures, the source selection structure and the schedule.\n\n1. Which acquisition procedures apply at $14 million, and why can you not use what you used at $2 million?\n2. What source selection planning is required, and who approves it?\n3. What Korea-specific limits and package items still apply at this size?\n4. What does your schedule look like, and what do you tell J4 about timing?",
+    "answer": "At $14 million this is a formal source selection, not a simplified buy. The commercial simplified procedures in RFO FAR 12.201-1 stop at $9 million, and the SAT is $350,000, so neither route I used on the $2 million actions is available. I use RFO FAR Part 15 procedures, with Part 12 commercial terms if the services are commercial, and I plan it as a competitive negotiated acquisition.\n\nSource selection planning. Two things drive this. First, the DoD Source Selection Procedures apply to competitively negotiated Part 15 acquisitions with an estimated value greater than $10 million, and they require a written source selection plan. Second, RFO DFARS 215.201(b)(2) says that for high-dollar acquisitions, as prescribed by agency procedures, the source selection authority must approve the source selection plan before the solicitation is issued. So my sequence is: appoint the SSA at the level Army and 411th procedures require, and I confirm that level with C&P rather than guess; write the SSP with the evaluation approach, factors, rating method and team; get SSA approval; then release the RFP. Evaluation approach under RFO FAR 15.103: for custodial and grounds work I would lean to lowest price technically acceptable or the highest-technically-rated-with-fair-and-reasonable-price approach if the requirement is well defined, with past performance evaluated as RFO FAR 15.104 and DFARS 215.202-70 require. I also need a written acquisition plan under RFO FAR 7.102 and the Army services acquisition strategy review at the AFARS threshold, an IGE under AFARS 5107.90, and a performance work statement with a quality assurance surveillance plan under RFO FAR Part 37. Certified cost or pricing data: the DoD threshold is $10 million for prime contracts awarded after 30 June 2026, but adequate price competition is an exception under RFO FAR 15.403-2, so I plan for competition and price analysis under 15.404-1.\n\nKorea-specific items that do not go away at $14 million:\n- Competition is still limited to Korean firms under the LCS program; if the file needs a FAR cite, RFO FAR 6.103-4 is the closest fit and under 6.103-4(c) needs no 6.104 J&A for DoD, but how the 411th documents it is an LCS SOP question I confirm with C&P.\n- The offshore-versus-local materials memo still goes with the package to J4.\n- I still recommend award through J4; MND approves and awards, and MND pays. That includes each option period in its ROK program year, so I write the option structure the way J4 and C&P tell me MND will accept, and I do not assume U.S. option rules alone control.\n- Protests and debriefings: I offer debriefings under RFO FAR 15.301, and I ask legal before release how protest procedures apply to an MND-awarded action so I am not surprised later.\n- My warrant: whether a warrant is required to sign an LCS recommendation for award, and at what level, is 411th policy that I confirm with C&P; if the action value governs, $14 million is above the $10 million Class III level, so a KO holding a $25 million or higher Class III warrant would sign.\n\nSchedule. Acquisition plan and SSP approval, sources-sought and industry engagement with Korean firms, RFP with at least 30 days for proposals, evaluation with an SSEB, clarifications or negotiations, SSA decision, then the package to J4 and MND approval, which is the step I cannot compress. I give J4 a schedule that starts from when MND needs services to begin and works backward, and I tell them now that MND approval time is the long pole and that the requirement has to be in the approved program year before I release.\n\nCite: RFO FAR 12.201-1 and 2.101 (SAT $350,000; commercial ceiling $9 million); RFO FAR 15.103, 15.104, 15.201, 15.301, 15.403-2, 15.404-1; RFO DFARS 215.201(b)(2) and 215.202-70 (Class Deviation 2026-O0048 Rev 1); DoD Source Selection Procedures (20 Aug 2022) paras 1.2 and 2.2; RFO FAR 7.102; AFARS 5107.90; RFO FAR Part 37; RFO FAR 6.103-4; Army Warranting Program Policy v12 Table 1; 411th CSB LCS SOP and Army source selection supplement (confirm SSA level and templates with C&P).",
+    "key_points": [
+      "$14M is above the $9M commercial simplified ceiling (RFO FAR 12.201-1) and far above the $350K SAT, so RFO FAR Part 15 competitive negotiation applies",
+      "DoD Source Selection Procedures apply above $10M and require a written SSP; RFO DFARS 215.201(b)(2): SSA approves the SSP before the solicitation is issued; confirm SSA level with C&P",
+      "Pick the approach under RFO FAR 15.103 (LPTA / tradeoff / HTRFRP), evaluate past performance (15.104, DFARS 215.202-70); AP under 7.102, IGE under AFARS 5107.90, PWS/QASP under Part 37",
+      "Certified data threshold is $10M (DoD, after 30 Jun 2026) but adequate price competition is an exception (15.403-2)",
+      "Korea rules survive: Korean firms only (6.103-4 if a FAR cite is needed; confirm with C&P), materials memo, recommendation through J4, MND awards and pays each program year; ask legal about protest procedure on an MND award",
+      "Warrant level for an LCS recommendation for award is a 411th policy question (confirm with C&P); if action value governs, $14M is above the $10M Class III level; MND approval is the schedule long pole"
+    ],
+    "citations": [
+      "RFO FAR 12.201-1",
+      "RFO FAR 2.101",
+      "RFO FAR 15.103",
+      "RFO FAR 15.104",
+      "RFO FAR 15.201",
+      "RFO FAR 15.301",
+      "RFO FAR 15.403-2",
+      "RFO FAR 15.404-1",
+      "RFO DFARS 215.201(b)(2)",
+      "RFO DFARS 215.202-70",
+      "DoD Source Selection Procedures (20 Aug 2022)",
+      "RFO FAR 7.102",
+      "AFARS 5107.90",
+      "RFO FAR Part 37",
+      "RFO FAR 6.103-4",
+      "Army Warranting Program Policy v12 Table 1"
+    ],
+    "classes": [
+      "II",
+      "III"
+    ],
+    "topic": "LCS Procurement",
+    "domain": "Korea, LCS & SOFA",
+    "tags": [
+      "Korea",
+      "LCS Funding",
+      "Source Selection",
+      "Problem solving situations",
+      "OCONUS"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "Builds on Q0276 (deck: at $11M cannot use simplified acquisition, must create an SSP). DoD SSP applicability (> $10M) and RFO DFARS 215.201(b)(2) read from the source PDFs on 14 Sep 2026; thresholds from regulations.json. SSA appointment level, Army AS3 details, how MND handles option periods and protest procedure on MND awards are not in the sources and are flagged for C&P and legal. Reviewer 14 Sep 2026: RFO DFARS 215.201(b)(2) and 215.202-70 re-read from the 2026-O0048 Rev 1 PDF text and confirmed; warrant-level statement softened because whether a warrant governs an MND-awarded recommendation is not in the sources.",
+    "sources_used": [
+      "content/sources/study_group_decks_apr-jul2026.txt (411th study deck 13 May 2026, LCS scenario slides 3-4; 29 Apr 2026 slides 8-9, IC program)",
+      "src/data/questions.json Q0254-Q0258, Q0274-Q0278",
+      "src/data/regulations.json crosswalk and thresholds (verified 13 Sep 2026)",
+      "DoD Class Deviation 2026-O0048 Rev 1, RFO DFARS Part 215 and PGI 215 (PDF read 14 Sep 2026): 215.201(b)(2) SSA approves SSP before solicitation; 215.202-70; PGI 215.201(b)(2)",
+      "DoD Source Selection Procedures memo, 20 Aug 2022 (PDF read 14 Sep 2026): para 1.2 applicability > $10 million; para 2.2 written SSP required",
+      "src/data/glossary.json Korea entries (FKAQ, IC/ICP, LCS, MND, SMA, SOFA Article XV, USFK J4, Defense Base Act)"
+    ],
+    "rfo_status": "updated",
+    "crosswalk": [
+      {
+        "old": "FAR 13.5",
+        "new": "FAR 12.201-1"
+      },
+      {
+        "old": "FAR 15.101",
+        "new": "FAR 15.103"
+      },
+      {
+        "old": "FAR 15.304",
+        "new": "FAR 15.104"
+      },
+      {
+        "old": "FAR 15.303",
+        "new": "FAR 15.201"
+      },
+      {
+        "old": "FAR 15.506",
+        "new": "FAR 15.301"
+      },
+      {
+        "old": "FAR 15.403-1(b)",
+        "new": "FAR 15.403-2(b)"
+      },
+      {
+        "old": "FAR 15.404-1(b)",
+        "new": "FAR 15.404-1"
+      },
+      {
+        "old": "DFARS 215.303(b)(2)",
+        "new": "DFARS 215.201(b)(2)"
+      },
+      {
+        "old": "FAR 6.302-4",
+        "new": "FAR 6.103-4"
+      }
+    ]
+  },
+  {
+    "id": "K106",
+    "question": "It is 14 September 2026. The Area I DPW submits an LCS purchase request for snow and ice removal services, estimated 1.2 billion won (about $900,000), with a requested period of performance of 1 November 2026 through 31 March 2027. The cover email says 'please award before 30 September so we do not lose the FY26 money.' J4 has not yet confirmed whether the requirement is on this program year's approved LCS list. You must decide how to advise the customer and how to plan the action.\n\n1. Does the U.S. fiscal year end drive this LCS action? Why or why not?\n2. Which calendar does drive LCS timing, and what do you need from J4?\n3. The performance period crosses 31 December. What does that mean for LCS, and what would it mean if the requirement were O&M instead?\n4. What do you tell the customer, in writing?",
+    "answer": "The 30 September deadline does not exist for this action. LCS money is not a U.S. appropriation; it is ROK cost-sharing money held by ROK MND under the Special Measures Agreement. It never transfers to the U.S., so U.S. fiscal-year end, the one-year availability of O&M and the year-end obligation push have nothing to do with it. The customer is applying O&M instincts to ROK money.\n\nWhat does drive it. The ROK Government's fiscal year is the calendar year, 1 January through 31 December, and the National Assembly passes the budget in early December. LCS is planned on an annual cycle that J4 runs (USFK material refers to annual LCS submissions; I say 'program year' here and J4 and C&P will confirm the current term and calendar), and MND approves and awards each action. So my two questions to J4 are: is this requirement on the approved LCS list for the current program year, and if not, is there a supplemental path or does it wait for the next program year. Until J4 confirms, I do not have an LCS requirement, only a request.\n\nCrossing 31 December. For LCS, a 1 November to 31 March period crosses the ROK fiscal year, and how MND treats performance that straddles its program years is an MND and J4 question; I ask J4 whether MND will approve the full period on the current program year's funds or expects a split. I confirm the current practice with C&P and I do not assume the U.S. cross-year rules apply to ROK money. If instead this were O&M, the analysis flips to U.S. fiscal law: snow removal is a severable service, the bona fide need arises when the service is performed, and FY26 O&M cannot fund services that begin in November of FY27. An FY26 award for a November start would be the same violation as the janitorial case we all know. The 12-month severable-services authority in 10 U.S.C. 3133 lets a contract cross fiscal years, but only from funds current when the period starts, so an O&M version would be awarded with FY27 money on or after 1 October.\n\nWhat I tell the customer, in writing:\n- This is an LCS request; there is no 30 September deadline and no FY26 money to lose.\n- The controlling dates are the ROK program year and MND approval; I have asked J4 to confirm program-year approval and how MND handles the December crossing.\n- MND approval takes time, so a 1 November start is at risk; I give the realistic date once J4 answers, and if the mission cannot wait I discuss an O&M interim buy with FY27 funds, on its own solicitation, because O&M and LCS cannot be mixed.\n- Competition will be limited to Korean firms, the materials memo goes with the package, and I recommend award while MND awards and pays.\nAnd I tell the DPW that the fastest way to have snow removal in November is to get LCS requirements to J4 early in its annual cycle, by whatever cutoff J4 sets, not in September.\n\nCite: U.S.-ROK Special Measures Agreement (LCS); USFK Reg 37-5 (2007; annual LCS submission; confirm currency with C&P); ROK fiscal year 1 Jan-31 Dec; 31 U.S.C. 1502 (bona fide need); 10 U.S.C. 3133 (12-month severable services); 411th CSB study material on LCS (Q0254-Q0257, Q0277); 411th CSB LCS SOP (confirm current procedure with C&P).",
+    "key_points": [
+      "LCS funds are ROK funds held by MND, never transferred to the U.S.; U.S. fiscal-year end and O&M availability rules do not apply",
+      "ROK fiscal year is the calendar year; LCS runs on an annual J4 cycle (confirm the current calendar with J4/C&P) and is awarded by MND; first question is whether the requirement is on the approved program-year list",
+      "A period crossing 31 December is an MND/J4 question (full period vs split); confirm with C&P, do not import U.S. cross-year rules",
+      "If it were O&M: severable service, bona fide need when performed, FY26 cannot fund a November FY27 start; 10 U.S.C. 3133 allows a 12-month cross-year period only from funds current at the start",
+      "Written advice to the customer: no 30 Sep deadline, MND approval is the long pole, O&M interim buy would be a separate solicitation, submit LCS requirements early in the cycle",
+      "Korean-firm limitation, materials memo, KO recommends and MND awards and pays still apply"
+    ],
+    "citations": [
+      "U.S.-ROK Special Measures Agreement",
+      "USFK Reg 37-5 (2007)",
+      "31 U.S.C. 1502",
+      "10 U.S.C. 3133"
+    ],
+    "classes": [
+      "II",
+      "III"
+    ],
+    "topic": "LCS Funding",
+    "domain": "Korea, LCS & SOFA",
+    "tags": [
+      "Korea",
+      "LCS Funding",
+      "Fiscal Law / Funding",
+      "Problem solving situations",
+      "OCONUS"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "That LCS funds are held by MND and not transferred to the U.S. is the official Q0257 answer; the O&M bona fide need analysis mirrors the official Q0277 answer. The ROK calendar fiscal year is public and verified by search; the LCS program-year mechanics, MND's treatment of periods crossing 31 December and any supplemental path are not in the sources and are flagged. Reviewer 14 Sep 2026: 'spring' submission timing removed (not in any source); annual-cycle wording tied to the USFK Reg 37-5 (2007) snippet and flagged.",
+    "sources_used": [
+      "content/sources/study_group_decks_apr-jul2026.txt (411th study deck 13 May 2026, LCS scenario slides 3-4; 29 Apr 2026 slides 8-9, IC program)",
+      "src/data/questions.json Q0254-Q0258, Q0274-Q0278",
+      "Republic of Korea fiscal year = calendar year (1 Jan-31 Dec); National Assembly passes the budget by early December (MOEF press releases; fiscaldates.com; search 14 Sep 2026)",
+      "USFK Reg 37-5 Special Measures Agreement Process, dated 26 Sep 2007 per mirror listing (usfk.mil returned 403 to author and reviewer; mirrors show preview only; body text known only from a search-index snippet: 411th CSB solicits, prepares LCS contracts under standard U.S. contracting procedures for MND and USFK LCS PM approval/signature, coordinates delivery after MND approval; LCS only to Korean-owned contractors using local materials)",
+      "src/data/glossary.json Korea entries (FKAQ, IC/ICP, LCS, MND, SMA, SOFA Article XV, USFK J4, Defense Base Act)",
+      "src/data/regulations.json crosswalk and thresholds (verified 13 Sep 2026)"
+    ],
+    "rfo_status": "n/a",
+    "crosswalk": []
+  },
+  {
+    "id": "K107",
+    "question": "You are awarding a $4.6 million O&M-funded contract for maintenance and software sustainment of a U.S.-built air defense training simulator at Osan Air Base. The requiring activity says only the U.S. original equipment manufacturer can do the work because of proprietary software and controlled parts, and the OEM plans to send six U.S. technicians to Korea for 18 months. The requiring activity's project officer asks, 'Do we need to do anything about SOFA status for these people, or is that the contractor's problem?' You must decide what you owe this action before award.\n\n1. What is the SOFA Invited Contractor designation, and which part of it is the contracting officer's responsibility?\n2. Which of the four unique-requirement exceptions fits, and how do you align it with your competition justification?\n3. What goes in the solicitation and contract because performance is in Korea?\n4. What is the requiring activity's part, and what do you tell the project officer about timing?",
+    "answer": "It is not just the contractor's problem; the first step is mine. U.S. contractors supporting USFK contracts have to obtain SOFA designation through the USFK/FKAQ Invited Contractor program, and it is a two-step process. Step one, contract-level designation, is the contracting officer's responsibility: I submit a request for SOFA designation of the contract or order to USFK/FKAQ, and before I do I review Article XV of the SOFA and USFKI 4901.01 for the unique requirements for contract performance in the ROK. Step two, designation of the individual contractor employees, is the requiring activity's responsibility. FKAQ, not the KO and not the requiring activity, determines the contractor's status under the SOFA and notifies me.\n\nThe exception. Article XV designation is restricted to cases where open competitive bidding is not practicable for one of four reasons: security considerations, the technical qualifications of the contractor, the unavailability of materials or services required by U.S. standards, or limitations of U.S. law. This is technical qualifications, and probably U.S.-law limitations too if the software is export-controlled. The important thing is consistency: my competition document is a justification under RFO FAR 6.103-1, only one responsible source, approved under 6.104 with the DoD approval tiers, which at $4.6 million is the contracting officer's certification level under DFARS 206.104-71 Table 206-1, and the same facts, that no Korean firm can perform because the OEM holds the proprietary software and parts, are what I give FKAQ. I confirm the current FKAQ request format with C&P; I do not invent a form number.\n\nWhat goes in the solicitation and contract:\n- The USFK SOFA clause on invited contractor or technical representative status, in the current version C&P holds. The version I have seen, which still cites the predecessor USFK regulation, tells the contractor that IC status is subject to FKAQ's written approval, that the contractor and its employees may not do other business in Korea, that direct hire of Korean nationals is governed by ROK labor law, that ROK authorities have jurisdiction subject to the SOFA, and that withdrawal of SOFA status is not an excusable delay or a basis for a claim.\n- RFO DFARS 252.225-7963, the antiterrorism/force protection clause for defense contractors outside the United States, prescribed at 225.772-2 for performance or travel outside the United States; it carries the content of the old 252.225-7043 and reaches subcontractors too.\n- RFO FAR 25.802 tells me to follow agency procedures when international agreements or status of forces agreements apply, and RFO DFARS 225.770(c) and PGI 225.770(c)(ii) say U.S.-Korea bilateral agreements govern the status of contractors and employees, criminal jurisdiction and taxation, that the Commander, USFK, interprets the SOFA for us, and that I should review the SOFA material on the USFK website so the solicitation describes logistics support accurately.\n- Defense Base Act coverage under FAR 28.305 and 52.228-3 for the U.S. employees, and any theater training, NEO and personnel recovery requirements the current USFK clause carries.\n- A clear statement of what logistics support the Government will and will not provide, because the SOFA clause makes privileges as-available.\n\nThe requiring activity's part and timing. The project officer's organization is the sponsoring agency: it requests the individual designations for the six technicians, names the sponsoring official the USFK program requires (the clause I have seen calls this a Responsible Officer; I confirm the current term and duties with C&P), and reports employee status changes. I tell the project officer that, as I understand the two-step process, FKAQ designation of the contract has to be in hand before the individual designations can be requested and before those technicians can work under SOFA status, so the request goes to FKAQ as soon as I have a definitized requirement and a named contractor, and that the 18-month schedule must include that lead time. None of this changes my price analysis or my J&A, but a contract with no SOFA designation and six Americans working on it is a problem for everyone, so I do step one myself and I document it.\n\nCite: U.S.-ROK SOFA Article XV; USFKI 4901.01 (Invited Contractor and Technical Representative Program, USFK/FKAQ); USFK SOFA contract clause (IC/TR status); RFO FAR 6.103-1 and 6.104; RFO DFARS 206.104-71 Table 206-1 (Class Deviation 2026-O0017 Rev 2); RFO FAR 25.802; RFO DFARS 225.770(c), PGI 225.770(c)(ii), 225.772-2 and 252.225-7963 (Class Deviation 2026-O0041 Rev 1); FAR 28.305 and 52.228-3; 411th CSB study material (Q0258); confirm current FKAQ procedure with C&P.",
+    "key_points": [
+      "Two-step IC designation: step one (contract/order SOFA designation) is the KO's job, requested from USFK/FKAQ after reviewing SOFA Article XV and USFKI 4901.01; step two (individual employees) belongs to the requiring activity; FKAQ decides status",
+      "Four unique-requirement exceptions: security considerations, technical qualifications, unavailability of materials/services meeting U.S. standards, limitations of U.S. law; here technical qualifications (and possibly U.S. law) and the facts must match the 6.103-1 J&A",
+      "J&A at $4.6M is approved at the KO certification tier under DFARS 206.104-71 Table 206-1 (at or below $10M)",
+      "Solicitation/contract: USFK IC/TR SOFA clause (current version from C&P), RFO DFARS 252.225-7963 AT/FP clause (RFO successor to 252.225-7043; prescribed at 225.772-2), DBA (FAR 28.305/52.228-3), statement of Government support; RFO FAR 25.802 and DFARS/PGI 225.770(c) point to the SOFA",
+      "Requiring activity is the sponsoring agency: individual designation requests, sponsoring official (called Responsible Officer in the clause seen; confirm term with C&P), status-change reporting",
+      "FKAQ contract designation must precede performance; build the lead time into the schedule"
+    ],
+    "citations": [
+      "U.S.-ROK SOFA Article XV",
+      "USFKI 4901.01",
+      "RFO FAR 6.103-1",
+      "RFO FAR 6.104",
+      "RFO DFARS 206.104-71",
+      "RFO FAR 25.802",
+      "RFO DFARS 225.770(c)",
+      "DFARS PGI 225.770(c)(ii)",
+      "RFO DFARS 225.772-2",
+      "RFO DFARS 252.225-7963",
+      "FAR 28.305",
+      "FAR 52.228-3"
+    ],
+    "classes": [
+      "II",
+      "III"
+    ],
+    "topic": "SOFA Invited Contractor Program",
+    "domain": "Korea, LCS & SOFA",
+    "tags": [
+      "Korea",
+      "Status of Forces Agreement (SOFA)",
+      "Sole Source",
+      "Problem solving situations",
+      "OCONUS"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "The two-step process, KO/RA split, FKAQ role and the four exceptions are the official Q0258 answer and the 29 Apr 2026 deck; the USFK IC/TR clause text was read from a public solicitation mirror; RFO DFARS 225.770(c)/PGI 225.770(c)(ii)/225.772-2/252.225-7963 read from the 2026-O0041 deviation PDF; J&A tier from regulations.json. usfk.mil blocked direct reads of USFKI 4901.01 and the FKAQ Step 1 guidance, so the request format and any current form are flagged for C&P. Reviewer 14 Sep 2026: confidence lowered to medium because the clause paragraphs and the Responsible Officer role come from a public solicitation mirror citing the predecessor regulation, not from current USFK text; DFARS 225.770(c)/PGI 225.770(c)(ii)/225.772-2/252.225-7963 re-verified from the 2026-O0041 Rev 1 PDF text (the deviation does not name 252.225-7043 as replaced, so that wording was removed); 206.104-71 tier from regulations.json.",
+    "sources_used": [
+      "content/sources/study_group_decks_apr-jul2026.txt (411th study deck 13 May 2026, LCS scenario slides 3-4; 29 Apr 2026 slides 8-9, IC program)",
+      "src/data/questions.json Q0254-Q0258, Q0274-Q0278",
+      "src/data/regulations.json crosswalk and thresholds (verified 13 Sep 2026)",
+      "USFK SOFA contract clause 'Invited Contractor or Technical Representative Status under U.S.-ROK SOFA' as incorporated in solicitation HQ0858-20-R-0001 Section J Att 15 (mirror read 14 Sep 2026; text cites predecessor USFK Reg 700-19)",
+      "USFKI 4901.01 / FKAQ Step 1 guidance (usfk.mil returned HTTP 403; content known only from search-index snippets: IC definition, 'restricted to cases where performance by a Korean firm is not practical', two-step process)",
+      "DoD Class Deviation 2026-O0041 Rev 1, RFO DFARS Part 225 and PGI 225 (PDF text extracted and re-read by reviewer 14 Sep 2026): 225.770(c) points to PGI 225.770(c) for Korea; PGI 225.770(c)(ii) U.S.-Korea bilateral agreements govern contractor status, criminal jurisdiction and taxation, Commander USFK interprets the SOFA; 225.772-2 prescribes 252.225-7963 (DEVIATION 2026-O0041)(FEB 2026), (b) applies to subcontractors, (b)(2) U.S. nationals register with the Embassy and third-country nationals follow their own embassy's security requirements; 225.802-70 retained; the deviation does not mention 252.225-7043 by number",
+      "acquisition.gov RFO Part 25 deviation guide (fetched 14 Sep 2026): subpart 25.1 exceptions, 25.7, 25.8 (25.801/25.802 follow SOFAs), 25.1002-1/-2",
+      "src/data/glossary.json Korea entries (FKAQ, IC/ICP, LCS, MND, SMA, SOFA Article XV, USFK J4, Defense Base Act)"
+    ],
+    "rfo_status": "updated",
+    "crosswalk": [
+      {
+        "old": "FAR 6.302-1",
+        "new": "FAR 6.103-1"
+      },
+      {
+        "old": "FAR 6.303 / 6.304",
+        "new": "FAR 6.104"
+      },
+      {
+        "old": "DFARS 206.304",
+        "new": "DFARS 206.104-71"
+      },
+      {
+        "old": "DFARS 252.225-7043",
+        "new": "DFARS 252.225-7963"
+      },
+      {
+        "old": "DFARS 225.7401 / PGI 225.7401",
+        "new": "DFARS 225.770(c) / PGI 225.770(c)(ii)"
+      }
+    ]
+  },
+  {
+    "id": "K108",
+    "question": "You administer a $2.1 million O&M services contract at Camp Humphreys that FKAQ designated for SOFA invited contractor status at award; the contractor is a U.S. firm with four U.S. employees in Korea. The COR forwards three questions from the contractor and asks you to 'just tell them yes or no': (a) the contractor wants to hire a Korean national engineer locally and asks whether she will get SOFA status; (b) it wants to bring a Philippine-national technician from its Manila office; (c) the spouse of one U.S. employee, who holds a SOFA dependent stamp, has been offered part-time work with a Korean company off post. The contractor also says it does not need to report any of this because 'the contract is already SOFA designated.' You must decide what to answer and who decides.\n\n1. Which of these questions are yours to answer, and which belong to FKAQ or the requiring activity?\n2. What does SOFA Article XV say about who can be an invited contractor, and how does that resolve (a)?\n3. How do (b) and (c) get resolved, and what contract terms are in play?\n4. What do you require of the contractor and the COR going forward?",
+    "answer": "None of these are yes-or-no answers from me or the COR. Contract-level SOFA designation was my step; designation of individual people is requested by the requiring activity and decided by USFK/FKAQ, which administers the invited contractor program. What I own is the contract: telling the contractor and the COR what the contract requires, routing the questions to the right office, and making sure nobody on the Government side promises privileges we cannot deliver.\n\n(a) The Korean national engineer. Article XV covers persons, including U.S. corporations and their employees, who are ordinarily resident in the United States and are present in Korea solely to execute contracts for the U.S. armed forces. A Korean national hired in Korea is not ordinarily resident in the United States and does not become an invited contractor by working for one. The USFK SOFA clause in the contract says the contractor's direct employment of Korean national labor is governed by ROK labor law and USFK regulations on Korean national personnel. So she is a Korean employee of the contractor under Korean law, with no SOFA privileges. The contractor can hire her; it just cannot expect a SOFA stamp for her. If the contract has a clause or PWS requirement about qualifications or citizenship for that position, I check it before anyone hires.\n\n(b) The Philippine national. Whether a third-country national can be designated under the invited contractor program at all, and on what terms, is FKAQ's determination, requested through the requiring activity as sponsor. I do not guess. What I do check is the contract: the antiterrorism/force protection clause requires third-country-national personnel to comply with the security requirements of their own embassy, the SOFA clause requires the contractor to report changes in employee status to the sponsoring agency, and the requiring activity's Responsible Officer has to fit him into logistics support and theater training.\n\n(c) The spouse. The SOFA clause contains the contractor's warranty that its officials and employees will not perform any contract, service or other business activity in the ROK except under U.S. Government contracts, and FKAQ may withdraw invited contractor status upon a determination that the contractor or its employees are engaged in business activities in the ROK other than those pertaining to U.S. armed forces. A dependent's status derives from the employee's. Whether a dependent may take off-post employment with a Korean company under the SOFA and Korean immigration law is a question for FKAQ and the USFK SOFA office, not for me, and I tell the contractor to ask before she accepts, because the contract also says withdrawal of SOFA status is not an excusable delay and not a basis for a claim. The contractor bears that risk.\n\nGoing forward. The 'already designated' argument is wrong: designation attaches to the contract and to named individuals, and the clause requires prompt and accurate reports of changes in employee status. I send the contractor a letter that answers the three questions as above, directs the status reporting to the sponsoring agency and FKAQ, and reminds it of the warranty and withdrawal terms. I tell the COR in writing that CORs do not make SOFA determinations or promise privileges, and I record the exchange in the file. If the hires change the staffing plan the contract relies on, I look at whether a modification is needed. I confirm the current version of USFKI 4901.01 and the current FKAQ process with C&P, because the clause language I have seen still refers to the earlier USFK regulation.\n\nCite: U.S.-ROK SOFA Article XV; USFKI 4901.01 (USFK/FKAQ Invited Contractor and Technical Representative Program); USFK SOFA contract clause on IC/TR status (paragraphs on FKAQ approval, other business activity, Korean national labor, status reporting, withdrawal and no excusable delay); RFO DFARS 252.225-7963(b)(2); RFO DFARS 225.770(c) and PGI 225.770(c)(ii); RFO FAR 1.402-2; 411th CSB study material (Q0258); confirm current FKAQ procedure with C&P.",
+    "key_points": [
+      "KO owns contract-level designation and the contract terms; individual designations are requested by the requiring activity (sponsoring agency) and decided by USFK/FKAQ; the COR decides nothing about SOFA status",
+      "Article XV reaches persons ordinarily resident in the U.S. present solely to perform U.S. forces contracts; a locally hired Korean national is a Korean employee under ROK labor law with no SOFA privileges (USFK SOFA clause)",
+      "Whether a third-country national can be designated is FKAQ's call; AT/FP clause 252.225-7963 requires TCNs to follow their own embassy's security rules; status changes must be reported",
+      "Dependent off-post employment implicates the contractor's warranty against other business activity in the ROK and FKAQ's withdrawal authority; contractor bears the risk (no excusable delay, no claim)",
+      "'Already designated' does not excuse reporting; write to the contractor, instruct the COR, document, consider a modification if staffing changes",
+      "Confirm current USFKI 4901.01 and FKAQ process with C&P"
+    ],
+    "citations": [
+      "U.S.-ROK SOFA Article XV",
+      "USFKI 4901.01",
+      "USFK SOFA contract clause (IC/TR status)",
+      "RFO DFARS 252.225-7963",
+      "RFO DFARS 225.770(c)",
+      "DFARS PGI 225.770(c)(ii)",
+      "RFO FAR 1.402-2"
+    ],
+    "classes": [
+      "II",
+      "III"
+    ],
+    "topic": "SOFA Invited Contractor Program",
+    "domain": "Korea, LCS & SOFA",
+    "tags": [
+      "Korea",
+      "Status of Forces Agreement (SOFA)",
+      "Contract Administration",
+      "Problem solving situations",
+      "OCONUS"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "KO/RA/FKAQ roles from Q0258 and the deck; the clause paragraphs on Korean national labor, other business activity, status reporting and withdrawal were read from the USFK SOFA clause in a public solicitation mirror (which cites predecessor USFK Reg 700-19); the Article XV 'ordinarily resident' definition comes from a search-index snippet of USFKI 4901.01, not the treaty text itself. Third-country-national and dependent-employment rules are FKAQ/SOFA-office determinations not in the sources. Reviewer 14 Sep 2026: third-country-national coverage softened to an FKAQ determination (no source says TCNs are within the program); 252.225-7963(b)(2) embassy/TCN language re-verified from the deviation text.",
+    "sources_used": [
+      "content/sources/study_group_decks_apr-jul2026.txt (411th study deck 13 May 2026, LCS scenario slides 3-4; 29 Apr 2026 slides 8-9, IC program)",
+      "src/data/questions.json Q0254-Q0258, Q0274-Q0278",
+      "USFK SOFA contract clause 'Invited Contractor or Technical Representative Status under U.S.-ROK SOFA' as incorporated in solicitation HQ0858-20-R-0001 Section J Att 15 (mirror read 14 Sep 2026; text cites predecessor USFK Reg 700-19)",
+      "USFKI 4901.01 / FKAQ Step 1 guidance (usfk.mil returned HTTP 403; content known only from search-index snippets: IC definition, 'restricted to cases where performance by a Korean firm is not practical', two-step process)",
+      "DoD Class Deviation 2026-O0041 Rev 1, RFO DFARS Part 225 and PGI 225 (PDF text extracted and re-read by reviewer 14 Sep 2026): 225.770(c) points to PGI 225.770(c) for Korea; PGI 225.770(c)(ii) U.S.-Korea bilateral agreements govern contractor status, criminal jurisdiction and taxation, Commander USFK interprets the SOFA; 225.772-2 prescribes 252.225-7963 (DEVIATION 2026-O0041)(FEB 2026), (b) applies to subcontractors, (b)(2) U.S. nationals register with the Embassy and third-country nationals follow their own embassy's security requirements; 225.802-70 retained; the deviation does not mention 252.225-7043 by number",
+      "src/data/regulations.json crosswalk and thresholds (verified 13 Sep 2026)",
+      "src/data/glossary.json Korea entries (FKAQ, IC/ICP, LCS, MND, SMA, SOFA Article XV, USFK J4, Defense Base Act)"
+    ],
+    "rfo_status": "updated",
+    "crosswalk": [
+      {
+        "old": "DFARS 252.225-7043",
+        "new": "DFARS 252.225-7963"
+      },
+      {
+        "old": "FAR 1.602-2",
+        "new": "FAR 1.402-2"
+      }
+    ]
+  },
+  {
+    "id": "K109",
+    "question": "You are soliciting a one-year O&M-funded shuttle bus service for Camp Humphreys with four one-year options, IGE about $1.1 million per year. Two Korean bus companies ask to submit prices in Korean won because their drivers, fuel and maintenance are all paid in won, and the won has moved about 8 percent against the dollar in the past year. The RM asks how much to certify, and the customer asks whether the Government or the contractor 'eats the exchange rate.' You must decide the currency of offers and payment and how the risk is handled.\n\n1. What does the FAR require you to decide about currency, and how do you evaluate offers if more than one currency is allowed?\n2. If the contract is priced in won, what is the fiscal-law risk and how is it managed?\n3. How is a won-denominated contract paid, and what tax and labor terms apply to a Korean firm performing in Korea?\n4. What alternative structure could you use if you keep dollar pricing, and when is it appropriate?",
+    "answer": "Currency is my decision and I make it before the solicitation goes out. RFO FAR 25.1002-1 says that unless an international agreement or the WTO GPA requires a specific currency, the contracting officer determines whether solicitations for contracts to be performed outside the United States will require offers in U.S. currency or a specified foreign currency, and generally all offers should be in the same currency so the evaluation is fair. If I permit more than one, I convert to dollars for evaluation using the exchange rate source and date named in provision 52.225-17, which RFO FAR 25.1002-2 prescribes: the date set for receipt of offers if award is on initial offers, otherwise the date for receipt of proposal revisions. My instinct here is to specify won. The offerors' costs are in won, so dollar pricing just makes them add a currency cushion I pay whether or not the won moves, and it puts an exchange risk on a small local company that it cannot manage.\n\nThe fiscal risk. RFO FAR 25.1002-1(c) is explicit: if a contract is priced in foreign currency, the agency must ensure adequate funds are available to cover currency fluctuations to avoid an Anti-Deficiency Act violation. The obligation is recorded in dollars, so the RM certifies the won price converted at a budget rate plus a cushion for movement; how much cushion is the RM's and the command's call under the DoD FMR, and I put the RM's figure, not mine, on the PR. The Foreign Currency Fluctuations, Defense account exists for differences between budgeted rates at which O&M obligations are recorded and the rates at which they are liquidated, and DFAS handles that side; I make sure the RM knows the contract is in won so it is set up that way. Options are priced in won too, and at each exercise the RM re-certifies at the current rate. That is the honest answer to 'who eats the exchange rate': with won pricing the Government carries it, through the budget rate and the fluctuation account, and the contractor gets a stable price in its own currency.\n\nPayment and terms. The contract states that payment is in won; DFAS pays foreign-currency vouchers electronically through International Treasury Services under DoD FMR Volume 5, Chapter 13, and the Prompt Payment rules still run 30 days from a proper invoice under RFO FAR 32.907. For a Korean firm performing in Korea I use DFARS 252.229-7001, Tax Relief, which 229.402-70(a) prescribes for foreign concerns performing in a foreign country: prices are exclusive of taxes and duties from which the United States is exempt, invoices are exclusive of taxes for which relief is available, and the contractor cooperates with the relief procedures. The exemptions themselves come from the SOFA; how the 411th implements them in the contract, including any local Korea value-added-tax exemption clause and procedure, I get from C&P rather than quote from memory. Labor: the Service Contract Labor Standards statute applies only to contracts to furnish services in the United States, so 52.222-41 and a wage determination do not apply here; the drivers are covered by Korean labor law, and the contract says so. Defense Base Act coverage under FAR 28.305 applies unless a Department of Labor waiver covers Korean nationals; I check the Korea waiver status with C&P. No SOFA invited contractor status is involved; this is a Korean firm.\n\nThe alternative. If policy or the customer requires dollar pricing, the tool is a fixed-price contract with economic price adjustment under RFO FAR 16.203, with an adjustment tied to a published exchange-rate index, which is only appropriate when I determine it is necessary to protect both the contractor and the Government against significant fluctuations. That keeps the obligation in dollars but adds administration at every adjustment. For a local bus service where every cost is in won, specifying won with the RM's cushion is simpler and cheaper; an EPA clause is my fallback, not my first choice. Either way I write the currency decision and its reasoning into the file, and I put the same currency in the solicitation, the evaluation, the contract and the funding document so they match.\n\nCite: RFO FAR 25.1002-1 and 25.1002-2; FAR 52.225-17; 31 U.S.C. 1341 (Anti-Deficiency Act); DoD FMR 7000.14-R Volume 5, Chapter 13 (foreign disbursing, prevailing rate, foreign currency fluctuation accounts); RFO FAR 32.907; DFARS 229.402-70(a) and 252.229-7001; U.S.-ROK SOFA (tax exemptions for official procurement); RFO FAR 22.1000 (SCLS scope, services in the United States); FAR 28.305 and 52.228-3; RFO FAR 16.203; 411th CSB local Korea tax exemption clause, if any, and Korea DBA waiver status (confirm with C&P).",
+    "key_points": [
+      "KO decides the currency before solicitation (RFO FAR 25.1002-1); keep all offers in one currency; if mixed, evaluate by converting at the 52.225-17 rate source and date (25.1002-2)",
+      "Won pricing shifts exchange risk to the Government: 25.1002-1(c) requires adequate funds for fluctuations to avoid an ADA violation; RM certifies dollars at a budget rate plus cushion; FCFD account absorbs rate differences for O&M; options re-certified at exercise",
+      "Payment in won via DFAS/ITS.gov (DoD FMR Vol 5 Ch 13); Prompt Payment 30 days (RFO FAR 32.907)",
+      "Korean firm in Korea: DFARS 252.229-7001 Tax Relief (229.402-70(a)); SOFA tax exemptions implemented through whatever local Korea tax clause and procedure C&P prescribes (confirm); SCLS does not apply outside the U.S. (RFO FAR 22.1000); ROK labor law governs; DBA under FAR 28.305 unless a Korea waiver applies",
+      "Dollar-priced alternative: FP-EPA under RFO FAR 16.203 tied to an exchange index, only when necessary to protect both parties against significant fluctuation",
+      "Write the currency decision into the file and keep solicitation, evaluation, contract and funding document in the same currency"
+    ],
+    "citations": [
+      "RFO FAR 25.1002-1",
+      "RFO FAR 25.1002-2",
+      "FAR 52.225-17",
+      "31 U.S.C. 1341",
+      "DoD FMR 7000.14-R Vol 5 Ch 13",
+      "RFO FAR 32.907",
+      "DFARS 229.402-70(a)",
+      "DFARS 252.229-7001",
+      "U.S.-ROK SOFA",
+      "RFO FAR 22.1000",
+      "FAR 28.305",
+      "FAR 52.228-3",
+      "RFO FAR 16.203"
+    ],
+    "classes": [
+      "II"
+    ],
+    "topic": "Foreign Currency and Payment",
+    "domain": "Korea, LCS & SOFA",
+    "tags": [
+      "Korea",
+      "Pricing",
+      "Contract Financing / Payment",
+      "Problem solving situations",
+      "OCONUS"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "FAR 25.1002 (a)-(c) and 52.225-17 read on acquisition.gov (FAC 2026-01) and the RFO Part 25 page confirms 25.1002-1/-2 numbering; DoD FMR Vol 5 Ch 13 (Mar 2025) read from the PDF (ITS.gov, prevailing rate, FCFD/FCFCD accounts); DFARS 229.402-70(a) and 252.229-7001 read on acquisition.gov; RFO 22.1000 and 16.203 read on the deviation guides. The 411th's budget-rate/cushion practice, the local VAT exemption clause text (5152.229-4014 title seen only in a clause index) and Korea's DBA waiver status are not in the sources. Reviewer 14 Sep 2026: DFARS 229.402-70(a) prescription (foreign concern performing in a foreign country) and RFO FAR 28.305/28.309 re-verified on acquisition.gov; the 'local VAT clause' assertion softened to 'whatever C&P prescribes'.",
+    "sources_used": [
+      "acquisition.gov FAR 25.1002 and 52.225-17 (FAC 2026-01, fetched 14 Sep 2026)",
+      "acquisition.gov RFO Part 25 deviation guide (fetched 14 Sep 2026): subpart 25.1 exceptions, 25.7, 25.8 (25.801/25.802 follow SOFAs), 25.1002-1/-2",
+      "DoD FMR 7000.14-R Vol 5 Ch 13 Foreign Disbursing Operations, Mar 2025 (PDF read 14 Sep 2026): para 1.1.4 ITS.gov, 4.1 prevailing rate, 4.2.7 FCFD account",
+      "acquisition.gov DFARS Part 229 and subpart 229.4 (DFARS Change 5/7/2026, fetched 14 Sep 2026): 229.402-70(a) prescribes 252.229-7001 Tax Relief for foreign concerns performing in a foreign country; 229.70 PGI tax relief",
+      "acquisition.gov RFO Part 22 deviation guide (fetched 14 Sep 2026): 22.1000 service contract 'in the United States'; 22.402-3(a) construction 'within the United States'",
+      "acquisition.gov RFO Part 16 deviation guide (fetched 14 Sep 2026): 16.203 FP-EPA",
+      "src/data/regulations.json crosswalk and thresholds (verified 13 Sep 2026)",
+      "Army/411th local clause 5152.229-4014 Tax Exemption, Value Added Tax, Republic of Korea (title seen in a public clause index only; number and current text not verified; deliberately not cited in the answer)",
+      "src/data/glossary.json Korea entries (FKAQ, IC/ICP, LCS, MND, SMA, SOFA Article XV, USFK J4, Defense Base Act)"
+    ],
+    "rfo_status": "updated",
+    "crosswalk": [
+      {
+        "old": "FAR 25.1002",
+        "new": "FAR 25.1002-1 / 25.1002-2"
+      }
+    ]
+  },
+  {
+    "id": "K110",
+    "question": "You are the KO on a $7.8 million O&M-funded firm-fixed-price contract with a U.S. prime, designated for SOFA invited contractor status, to install a secure communications system at Camp Walker. The prime notifies you that it will subcontract about $2.5 million of trenching, conduit and cabling to a Korean construction firm. The COR sends you three questions from the prime: does the Korean subcontractor get SOFA status like the prime; can the subcontractor invoice the prime without Korean value-added tax since 'the U.S. Government is tax exempt'; and which contract clauses must flow down. You must decide whether and how you act on the subcontract and what you tell the prime.\n\n1. Do you have to consent to this subcontract, and what is your responsibility regardless?\n2. What is the Korean subcontractor's status under the SOFA, and how does the prime's invited contractor status affect it?\n3. How do you answer the tax question?\n4. Which clauses flow down, and what Korea-specific terms do you check?",
+    "answer": "Consent. On a firm-fixed-price contract, consent to subcontract under RFO FAR 44.201-1 is required only if 52.244-2 is in the contract and the subcontract is one the clause identifies; 44.201-5 prescribes 52.244-2 for cost-reimbursement contracts, for labor-hour and time-and-materials over the SAT, and for fixed-price contracts over the SAT under which unpriced actions are anticipated. If my contract has 52.244-2 and this subcontract is identified, I review it for price reasonableness, the subcontractor's responsibility and the flow-downs, and I consent or not in writing. If the clause is not there, I have no consent action, but the prime remains fully responsible for performance, I still have privity only with the prime, and I still check the subcontractor against the exclusions in SAM, because under 52.209-6 the prime may not subcontract above the clause threshold with an excluded party without notifying me, and I want to know before it happens.\n\nSOFA status. The prime's invited contractor status does not extend to a Korean subcontractor. Article XV covers persons ordinarily resident in the United States present in Korea solely to execute contracts for the U.S. armed forces, and designation is made by USFK/FKAQ for the contract and for named individuals. A Korean construction company is a Korean company operating under Korean law; it needs no SOFA status, it gets none, and its employees are subject to Korean law and Korean labor law in full. The USFK SOFA clause in the prime's contract also says the direct employment of Korean national labor is governed by ROK labor law and USFK regulations, so the prime cannot bring Korean workers under its own SOFA umbrella either. If the prime later proposes a U.S. or third-country subcontractor with people in Korea, that is a different question and goes to FKAQ through the requiring activity as sponsor.\n\nTaxes. I do not tell the prime its subcontractor can invoice tax-free. The SOFA exempts official procurement by and for the U.S. armed forces from specified Korean taxes, and the 411th implements that in its contracts through whatever tax exemption clause and procedure C&P prescribes, but that exemption runs to the U.S. Government's own contract with the prime, not automatically to a private sale between a Korean subcontractor and a U.S. company. Whether the subcontractor's supply to the prime can be zero-rated under Korean tax law and the SOFA procedures is a question for the 411th's tax relief guidance and, if needed, USFK; I send the prime there and I put nothing in writing that promises a Korean tax result. What the contract does say is that the prime's prices to the Government are exclusive of taxes from which the United States is exempt, and the prime is expected to cooperate with the relief procedures. I confirm the current VAT exemption clause and procedure with C&P.\n\nFlow-down. Clauses flow down by their own terms, and for a commercial subcontract only the clauses listed in 52.244-6 may be required, per RFO FAR 44.402. The ones I check here:\n- RFO DFARS 252.225-7963, antiterrorism/force protection, which applies to the contractor and its subcontractors performing outside the United States and requires U.S.-national personnel to register with the Embassy and third-country nationals to follow their own embassy's security rules.\n- Cybersecurity and controlled information clauses if the subcontractor will touch covered defense information on a secure communications job, including 252.204-7012, and the security requirements the requiring activity attached; installation access for the Korean crews is an installation access-control matter under USFK and garrison policy, not a SOFA designation; I confirm the process with the garrison.\n- 52.222-50 combating trafficking in persons, which flows to every subcontract.\n- Defense Base Act coverage under FAR 28.305 and 52.228-3 for the subcontractor's employees unless a Department of Labor waiver covers Korean nationals; I check the Korea waiver status with C&P.\n- Construction wage-rate requirements do not apply; those attach only to public works within the United States, and Korean labor law covers the crews.\n\nI answer the prime's three questions in writing through the COR, with the consent decision if one is required, and I keep the file straight: the prime is responsible for its subcontractor's performance and compliance, and the subcontractor's Korean status, taxes and workers are matters of Korean law that the prime priced and accepted.\n\nCite: RFO FAR 44.201-1, 44.201-5, 44.402; FAR 52.244-2 and 52.244-6; RFO FAR subpart 9.4 and FAR 52.209-6; U.S.-ROK SOFA Article XV (invited contractors) and the SOFA tax exemption for official U.S. forces procurement; USFKI 4901.01; USFK SOFA contract clause (Korean national labor, FKAQ approval); RFO DFARS 252.225-7963 (Class Deviation 2026-O0041 Rev 1); DFARS 252.204-7012; FAR 52.222-50; FAR 28.305 and 52.228-3; RFO FAR 22.402-3(a); 411th CSB Korea tax exemption clause, if any, and DBA waiver status (confirm with C&P).",
+    "key_points": [
+      "Consent under RFO FAR 44.201-1 only if 52.244-2 is in the contract and identifies the subcontract (44.201-5: cost-type, T&M/LH over SAT, FP over SAT with unpriced actions); otherwise no consent, but privity stays with the prime and the KO checks SAM exclusions (52.209-6 notice rule)",
+      "A Korean subcontractor gets no SOFA status; Article XV reaches persons ordinarily resident in the U.S. and FKAQ designates per contract and individual; Korean workers are under Korean law and ROK labor law (USFK SOFA clause)",
+      "SOFA tax exemptions run to the U.S. Government's own procurement; do not promise the subcontractor a tax-free sale to the prime; route to the tax exemption procedure C&P prescribes and to USFK; prime's prices are exclusive of taxes from which the U.S. is exempt",
+      "Flow-downs by their terms; commercial subs limited to the 52.244-6 list (RFO FAR 44.402); check 252.225-7963 AT/FP (applies to subcontractors), 252.204-7012 if CDI, 52.222-50, DBA under FAR 28.305 unless Korea waiver",
+      "Construction wage-rate requirements apply only within the United States (RFO FAR 22.402-3(a)); installation access is a USFK/garrison access-control process, not SOFA",
+      "Answer the prime in writing through the COR; the prime owns its subcontractor's performance and compliance"
+    ],
+    "citations": [
+      "RFO FAR 44.201-1",
+      "RFO FAR 44.201-5",
+      "RFO FAR 44.402",
+      "FAR 52.244-2",
+      "FAR 52.244-6",
+      "RFO FAR subpart 9.4",
+      "FAR 52.209-6",
+      "U.S.-ROK SOFA Article XV",
+      "USFKI 4901.01",
+      "RFO DFARS 252.225-7963",
+      "DFARS 252.204-7012",
+      "FAR 52.222-50",
+      "FAR 28.305",
+      "FAR 52.228-3",
+      "RFO FAR 22.402-3(a)"
+    ],
+    "classes": [
+      "II",
+      "III"
+    ],
+    "topic": "SOFA Invited Contractor Program",
+    "domain": "Korea, LCS & SOFA",
+    "tags": [
+      "Korea",
+      "Status of Forces Agreement (SOFA)",
+      "Subcontracting",
+      "Problem solving situations",
+      "OCONUS"
+    ],
+    "kind": "scenario",
+    "unit": "411th CSB",
+    "flags": [
+      "ai-drafted",
+      "korea-verify-cp"
+    ],
+    "confidence": "medium",
+    "confidence_reason": "RFO Part 44 numbering read on the deviation guide; RFO DFARS 252.225-7963 subcontractor language read from the 2026-O0041 deviation PDF; the USFK SOFA clause's Korean-national-labor paragraph read from a public mirror; Article XV scope from Q0258, the glossary and a USFKI 4901.01 snippet (treaty text itself was unreachable). The SOFA Article XVI tax list, the 411th's VAT exemption procedure, Korean zero-rating of subcontractor sales and the Korea DBA waiver are not verified and are flagged for C&P. Reviewer 14 Sep 2026: RFO 44.201-1 / 44.201-5 / 44.402 text re-verified on acquisition.gov (paragraph letter of 44.402 not shown, so cited at section level); 252.225-7963(b) subcontractor reach re-verified from the deviation text; SAM-exclusion statement corrected to the 52.209-6 notice rule; local VAT clause assertion softened.",
+    "sources_used": [
+      "acquisition.gov RFO Part 44 deviation guide (fetched 14 Sep 2026): 44.201-1, 44.201-5, 44.402",
+      "DoD Class Deviation 2026-O0041 Rev 1, RFO DFARS Part 225 and PGI 225 (PDF text extracted and re-read by reviewer 14 Sep 2026): 225.770(c) points to PGI 225.770(c) for Korea; PGI 225.770(c)(ii) U.S.-Korea bilateral agreements govern contractor status, criminal jurisdiction and taxation, Commander USFK interprets the SOFA; 225.772-2 prescribes 252.225-7963 (DEVIATION 2026-O0041)(FEB 2026), (b) applies to subcontractors, (b)(2) U.S. nationals register with the Embassy and third-country nationals follow their own embassy's security requirements; 225.802-70 retained; the deviation does not mention 252.225-7043 by number",
+      "USFK SOFA contract clause 'Invited Contractor or Technical Representative Status under U.S.-ROK SOFA' as incorporated in solicitation HQ0858-20-R-0001 Section J Att 15 (mirror read 14 Sep 2026; text cites predecessor USFK Reg 700-19)",
+      "USFKI 4901.01 / FKAQ Step 1 guidance (usfk.mil returned HTTP 403; content known only from search-index snippets: IC definition, 'restricted to cases where performance by a Korean firm is not practical', two-step process)",
+      "src/data/questions.json Q0254-Q0258, Q0274-Q0278",
+      "acquisition.gov RFO Part 22 deviation guide (fetched 14 Sep 2026): 22.1000 service contract 'in the United States'; 22.402-3(a) construction 'within the United States'",
+      "Army/411th local clause 5152.229-4014 Tax Exemption, Value Added Tax, Republic of Korea (title seen in a public clause index only; current text not verified)",
+      "src/data/glossary.json Korea entries (FKAQ, IC/ICP, LCS, MND, SMA, SOFA Article XV, USFK J4, Defense Base Act)",
+      "src/data/regulations.json crosswalk and thresholds (verified 13 Sep 2026)"
+    ],
+    "rfo_status": "updated",
+    "crosswalk": [
+      {
+        "old": "FAR 44.201-1 / 44.204",
+        "new": "FAR 44.201-1 / 44.201-5"
+      },
+      {
+        "old": "DFARS 252.225-7043",
+        "new": "DFARS 252.225-7963"
+      }
+    ]
+  }
+]

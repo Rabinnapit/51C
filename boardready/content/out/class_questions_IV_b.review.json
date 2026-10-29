@@ -1,0 +1,471 @@
+{
+ "reviewed_on": "2026-09-14",
+ "reviewer_model": "claude-opus-5",
+ "items": [
+  {
+   "id": "N419",
+   "verdict": "ok",
+   "changes": [],
+   "notes": "All facts confirmed. Policy v12 Unlimited Warrants (4.3), Waivers (3.3), Legacy Warrants (4.5), Certificate of Appointment and Letter (2.3) and Termination (7.2) read in content/sources/army_warranting_policy_v12_mar2026.txt; section numbers inferred from heading order agree with the change log. RFO FAR 1.402-1(a) and 1.402-2(a)(1)-(2) read on acquisition.gov RFO Part 1 (last updated 07/28/2026). MCQ has exactly one correct option and every why is accurate. 289 words; Cite line present; classes IV; verify-locally present. The 4.3 versus 4.5 point is handled conservatively (expect to board, confirm locally); see claims."
+  },
+  {
+   "id": "N420",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "314 words; opened 'I would tell the General respectfully and plainly: I want this award as much as you do. But I cannot sign it on the 30th unless the approvals are in hand, ...' and 'removes my dollar ceiling. It does not give me approvals that belong to someone else.'",
+     "after": "300 words; 'I would tell the General plainly: I want this award too, but I cannot sign on the 30th without the approvals, ...' and 'removes my dollar ceiling, not approvals that belong to someone else.'",
+     "source": "300-word limit (task instructions); wording only, no substantive change"
+    }
+   ],
+   "notes": "Verified: RFO FAR 1.402-2(a)(1)-(2); AFARS 5107.103-90(a)(2) and Appendix GG Rev. 30 (non-PAE/DRPM plans of $1B or more: ASA(ALT), not delegable); RFO FAR 16.104 (DoD threshold $100M; CPIF is other than fixed-price); DFARS PGI 216.104-70(c) and AFARS PGI 5116.104-7090(c) (solicitation before 15 Jul 2026 with award after: approved justification before award; ASA(ALT) approver); AFARS PGI 5105.302(a)(1) (noon ET three business days before award). MCQ has one correct option and accurate whys (24 to 30 Sep is six days). Classes IV and verify-locally appropriate."
+  },
+  {
+   "id": "N421",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "mcq.cite",
+     "before": "DFARS PGI 201.170(a)(1)(ii)",
+     "after": "DPCAP memo USA001395-26 (implementing the 4 May 2026 USW(A&S) memo); DFARS PGI 201.170(a)(1)(ii)",
+     "source": "The correct option (streamlined review at $420M) rests on USA001395-26; PGI 201.170(a)(1)(ii) in Class Deviation 2026-O0002 Rev. 1 still prints $1 billion, so citing it alone pointed the learner to the wrong rule."
+    },
+    {
+     "field": "answer",
+     "before": "329 words; 'The printed text of DFARS PGI 201.170(a)(1)(ii), under Class Deviation 2026-O0002, still says DPCAP conducts noncompetitive preaward peer reviews at $1 billion.' ... 'The standard process for noncompetitive actions also reviews before award (PGI 201.170-2(b)), and the DPCAP website sets the streamlined steps.'",
+     "after": "295 words; same rule, tiers, application, Army routing and confirm-locally close; body now names DPCAP memo USA001395-26; dropped the standard-process sentence that does not govern the $420M streamlined review and removed 201.170-2(b) from the Cite line.",
+     "source": "300-word limit (task instructions); USA001395-26"
+    },
+    {
+     "field": "confidence_reason",
+     "before": "... Medium because the DFARS text has not caught up and the streamlined steps sit on a DPCAP website that was not read.",
+     "after": "... Reviewer 14 Sep 2026: tiers re-read in USA001395-26 and the attached memo; DPCAP web page shows the same streamlined and scheduled paths; 2026-O0002 Rev. 1 (5 Aug 2026) is still current and still prints $1 billion. Medium kept because regulation and memos disagree until the DFARS change issues, and the streamlined steps were not read in full.",
+     "source": "https://www.acq.osd.mil/asda/dpc/pcf/ss-peer-reviews.html; https://www.acq.osd.mil/dpap/dars/dfars_far_overhaul_class_deviations.html (last updated 9 Sep 2026)"
+    }
+   ],
+   "notes": "Confirmed: USA001395-26 tiers (greater than $50M and less than $500M streamlined; $500M to under $1B standard PGI 201.170; $1B and up unchanged) and the 4 May 2026 memo ('$50 million or greater'; DFARS change to follow); PGI 201.170(a)(1)(ii)-(iii) ($1B; greater of Government objective or proposal; UCA at NTE; IDIQ with pricing terms at maximum value) and (a)(2) quarterly forecast in 2026-O0002 Rev. 1 Attachment 2; AFARS PGI 5101.170-9001(a) (package at least one week before the review) and (c) (SCO sends prenegotiation objective documentation no later than 2 weeks before DPCAP submission to PGI 5101.290(b)(1), an ODASA(P) directorate); Appendix GG Rev. 30 'above $50M' row. MCQ has one correct option; all whys accurate. Confidence stays medium."
+  },
+  {
+   "id": "N422",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "crosswalk",
+     "before": "{old: DFARS 233.170, new: DFARS PGI 233.170(b)}",
+     "after": "{old: DFARS 233.170, new: DFARS 233.170(b)}",
+     "source": "Legacy DFARS 233.170 (briefing requirement for protested acquisitions of $1 billion or more, acquisition.gov DFARS Part 233, Change 5/7/2026) is DFARS 233.170(b) in Class Deviation 2026-O0026 Rev. 1 Attachment 1, which then points to PGI 233.170(b); mapping a DFARS section to a PGI paragraph misstated where the rule sits."
+    },
+    {
+     "field": "answer",
+     "before": "315 words; 'These reviews are required, not optional checkpoints, and the acquisition plan should have scheduled them (DFARS 207.104-70(a)). So I tell the program manager the award review stays. What I can do is book it early and deliver a clean package so it costs as little time as possible.'",
+     "after": "298 words; 'These reviews are required, and the acquisition plan should have scheduled them (DFARS 207.104-70(a)). So the award review stays; I book it early and deliver a clean package to save time.'",
+     "source": "300-word limit (task instructions)"
+    }
+   ],
+   "notes": "Confirmed: PGI 201.170(a)(1)(i) ($1B competitive MDAPs with USD(A&S) as MDA), 201.170-2(a) (solicitation, final proposal revisions, award) and 201.170-3(a) (advisory; senior procurement official of the contracting activity made aware before acting contrary to a significant recommendation; 201.170-3(f) also requires a signed disposition memo) in 2026-O0002 Rev. 1; DFARS 207.104-70(a) in 2026-O0020 Rev. 1; PGI 233.170(b) (brief the Principal Director, DPCAP within 10 days of filing) in 2026-O0026 Rev. 1; AFARS PGI 5133.170(a) (notice and briefing to ODASA(P) within 5 days of receipt). MCQ has one correct option; whys accurate."
+  },
+  {
+   "id": "N423",
+   "verdict": "ok",
+   "changes": [],
+   "notes": "Confirmed verbatim: DFARS 207.103-70(a)(1)-(3) and (c) (Class Deviation 2026-O0020 Rev. 1, current as of the 9 Sep 2026 index); RFO FAR 7.102(d) and 7.104(b)(3); AFARS 5107.103-90(a)(1)-(2) and (c) ('Only the acquisition plan approval authority may waive requirements of detail and formality'); Appendix GG Rev. 30 plan tiers (below $500M ASA(ALT) delegated to the HCA, no lower than SCO; $500M to under $1B DASA(P) without power to further delegate; $1B or more or special interest ASA(ALT), not delegable). Application correct: $60M over five years meets the $50M all-years test; $700M services plan goes to DASA(P). MCQ has one correct option; whys accurate. 292 words; Cite line present; classes III and IV reasonable; verify-locally present. Minor external inconsistency: AFARS 5107.103-90(a)(4) lets ASA(ALT) or DASA(P) approve AAE-designated special interest plans while GG says ASA(ALT) not delegable; it does not affect either action in the question."
+  },
+  {
+   "id": "N424",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "307 words; 'Many offices staff a combined strategy and plan, and I confirm the format with my contracting policy office.' and 'The justification timeline alone makes 60 days unrealistic, and I would tell the requiring activity that now.'",
+     "after": "300 words; 'I confirm with my contracting policy office whether to staff a combined strategy and plan.' and 'That timeline alone makes 60 days unrealistic, and I would say so now.'",
+     "source": "300-word limit (task instructions); wording only"
+    }
+   ],
+   "notes": "Confirmed: Appendix GG Rev. 30 services strategy rows (Category I $1B or more or more than $300M in any one year, and Category II $250M to under $1B: AAE, delegable to DASA(P) or SSM; Category III $100M to under $250M: HCA, no lower than SCO; Category IV $10M to under $100M: HCA, no lower than CoCO); AFARS 5137.890-2(a)-(b); GG plan row ($1B or more: ASA(ALT), not delegable); RFO FAR 16.104 and 16.301-3(a); AFARS PGI 5116.104-7090(b)(2) (submit no less than 60 days before an issuance on or after 1 Oct 2026, so a solicitation 60 days from 14 Sep 2026 is not realistic); AFARS PGI 5101.170(b)(ii)(A) (ODASA(P) IMR for services of $1B or more; before end of year two when the base period exceeds one year; GG lists DASA(P) or SSM). MCQ has one correct option; whys accurate (AFARS 5137.890-2(a): special interest is a separate designation)."
+  },
+  {
+   "id": "N425",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "'FPDS.gov was retired on 24 February 2026, so I use my office's current SAM.gov procedure and confirm it with my contracting policy office.'",
+     "after": "'After award, I report the contract action in FPDS within three business days (FAR 4.301). GSA's 24 February 2026 change moved only FPDS public search from FPDS.gov into SAM.gov; reporting still goes through our contract writing system.'",
+     "source": "GSA bulletin 'FPDS.gov Decommissions on February 24, 2026' (https://content.govdelivery.com/accounts/USGSA/bulletins/408f942): ezSearch moved to SAM.gov; https://sam.gov/fpds: ezSearch decommissioned 24 Feb 2026 and 'Agencies' Contract Writing Systems (CWS) will continue to provide data through the SAM Contract Awards Management web portal (Former FPDS database)'; RFO FAR 4.301: complete the CAR in FPDS within three business days after award. Coordinator correction of 14 Sep 2026 applied."
+    },
+    {
+     "field": "key_points[4]",
+     "before": "Contract action report within three business days (FAR 4.301); FPDS.gov was retired 24 Feb 2026, so follow the current SAM.gov procedure",
+     "after": "Report the contract action in FPDS within three business days (FAR 4.301); GSA's 24 Feb 2026 change moved only FPDS public search from FPDS.gov into SAM.gov",
+     "source": "Same as above"
+    },
+    {
+     "field": "confidence_reason",
+     "before": "'FPDS.gov retirement confirmed in the GSA bulletin (content.govdelivery.com USGSA bulletin 408f942). RFO FAR 4.301 still names FPDS, so the reporting path is flagged verify-locally.'",
+     "after": "'GSA bulletin 408f942 (9 Feb 2026, content.govdelivery.com) says FPDS.gov and its ezSearch were decommissioned on 24 Feb 2026 with public search moved to SAM.gov; it does not retire FPDS reporting, and RFO FAR 4.301 still requires the report in FPDS within three business days (reviewer correction 14 Sep 2026; sam.gov/fpds ...)'",
+     "source": "Same as above"
+    },
+    {
+     "field": "answer",
+     "before": "335 words",
+     "after": "294 words; merged the $5.5 million floor into the FAR bullet and condensed the DoD, Army and scheduling text; thresholds, times, approvers and citations unchanged; dropped the unsourced aside about unsuccessful offeror notices",
+     "source": "300-word limit (task instructions)"
+    }
+   ],
+   "notes": "Confirmed: RFO FAR 5.302(a) ($5.5M; 5 p.m. ET; no earlier release); DFARS 205.302(a)(i) ($9M face value excluding unexercised options; UCA at NTE; IDIQ initial award) and PGI 205.302(a)(ii) (report to Public Affairs by close of business the day before award) in 2026-O0003 Rev. 1; AFARS 5105.302(a)(i)(2)-(3) (urgency award only on SCO request and DASA(P) written approval; the only Army-level exception; no contracting-activity deviation) and (a)(ii) (ODASA(P) coordinates congressional notification); AFARS PGI 5105.302(a)(1)-(2) (noon ET three business days before award via VCE; no award without formal ODASA(P) approval; confirm by 8 p.m. ET the day before); RFO FAR 3.104 procurement integrity; RFO FAR 4.301 three business days in FPDS. Friday is the earliest award for a submission after noon Monday. Crosswalk pairs FAR 5.303(a)->5.302(a) and DFARS 205.303->205.302 confirmed. MCQ has one correct option; whys accurate."
+  },
+  {
+   "id": "N426",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "314 words; 'Contractor business systems are governed by DFARS subpart 242.70. ... It applies only to covered contracts ...'; 'The contracting officer who made the determination chooses the covered contracts in its sole discretion. It sends the determination ...'; 'My role as PCO is to coordinate with the ACO, not override the ACO. I keep payments accurate and weigh the estimating weakness when I price my next action.'",
+     "after": "300 words; same clauses, percentages, time limits and citations with sentences merged: 'DFARS subpart 242.70 governs. ...'; 'picks the covered contracts in sole discretion and sends the determination ...'; 'As PCO I coordinate with the ACO rather than override, keep payments accurate, and weigh the estimating weakness in my next pricing action.'",
+     "source": "300-word limit (task instructions); wording only"
+    }
+   ],
+   "notes": "Confirmed verbatim in Class Deviation 2026-O0050 Attachment A1: 242.302-70(a)(12); 242.7000(a) definitions (six systems and clause numbers; covered contract means CAS-covered), (b)(1) 5 and 10 percent caps and sole discretion, (b)(3) copies to contracting officers, auditor and payment office, (d)(1)-(3) verification and 90-day decision or at least 50 percent reduction; 242.7001; clause 252.242-7998 (a) CAS-covered only, (d)(1)-(2) 30-day response and final determination with notice to withhold, (e)(1) 5 percent and 45 days, (e)(2) 2 percent, (e)(3)(i) caps, (e)(5) completed and accepted fixed-price line items, (e)(6) no waiver, (e)(8) no Prompt Payment Act interest. EVMS 252.234-7999 (2026-O0011 Rev. 1) and purchasing 252.244-7998 (2026-O0015 Rev. 1) clause titles confirmed. All five crosswalk pairs confirmed by clause title. MCQ has one correct option; whys accurate."
+  },
+  {
+   "id": "N427",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "311 words; 'These are two separate decisions, and I keep them separate.'; 'I would explain that path to both of them.'; 'a pricing risk I must manage, not ignore.'",
+     "after": "300 words; 'These are two separate decisions.'; 'I would explain that path.'; 'a pricing risk I must manage.'",
+     "source": "300-word limit (task instructions); wording only"
+    }
+   ],
+   "notes": "Confirmed: DFARS 242.7000(b)-(d) and clause 252.242-7998(e)-(f) (2026-O0050): the determining contracting officer selects covered contracts and controls the withhold; an acceptable corrective action plan within 45 days, effectively implemented, reduces it to 2 percent; 90-day decision or at least 50 percent reduction; 242.7000(d)(2) early release on a reasonable expectation that corrective actions are implemented and will correct the weaknesses. PGI 215.406(a)(1)(i) field pricing for fixed-price proposals above the certified data threshold and (b)(1)(i) DCAA audit for fixed-price proposals over $10M (2026-O0048 Rev. 1). $10M DoD certified cost or pricing data threshold per regulations.json tina_dod (DFARS 215.403-3(a); 10 U.S.C. 3702; awards after 30 Jun 2026). USA001395-26: sole-source $500M to under $1B follows the standard PGI 201.170 process. Crosswalk FAR 15.404-2 -> 15.406 and DFARS PGI 215.404-2 -> PGI 215.406 confirmed by text (RFO 15.404-2 is now Cost analysis). MCQ has one correct option; whys accurate."
+  },
+  {
+   "id": "N428",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "'The fee-determining official approves it, and in the Army that approval is delegable no lower than the chief of the contracting office.'",
+     "after": "'The fee-determining official approves it unless agency procedures say otherwise; Army Appendix GG gives that approval to the HCA, delegable no lower than the chief of the contracting office.'",
+     "source": "RFO FAR 16.402-2(d)(1) ('Be approved by the Fee-Determining Official unless otherwise authorized by agency procedures'); AFARS Appendix GG Rev. 30, Part 16 'Incentive Contracts - Award-fee plan' row, Army column: AFARS 5116.402-2(c)(1), HCA, delegable, no lower than CoCO; AFARS 5116.402-2 '(c)(1) See Appendix GG for further delegation'"
+    },
+    {
+     "field": "answer",
+     "before": "'At least 40 percent of the award fee must remain available for the final evaluation, unless the HCA approves less.'",
+     "after": "'At least 40 percent of the award fee stays available for the final evaluation unless the contracting officer determines a lower share is appropriate and the HCA approves, which is not delegable.'",
+     "source": "DFARS 216.402-470(a) (Class Deviation 2026-O0045 Rev. 1) requires both the contracting officer determination and non-delegable HCA approval"
+    },
+    {
+     "field": "answer",
+     "before": "333 words",
+     "after": "300 words; suitability items and D&F signature text condensed (incentive-fee signature level dropped as not asked), headings merged; approvers, thresholds and citations kept",
+     "source": "300-word limit (task instructions)"
+    },
+    {
+     "field": "key_points[2]",
+     "before": "The award-fee plan is approved by the fee-determining official (Army: delegable no lower than the chief of the contracting office), uses Table 16-1, pays no fee below satisfactory, and bars rollover",
+     "after": "The award-fee plan is approved by the fee-determining official unless agency procedures say otherwise (Army Appendix GG: the HCA, delegable no lower than the chief of the contracting office); it uses Table 16-1, pays no fee below satisfactory, and bars rollover",
+     "source": "AFARS Appendix GG Rev. 30 award-fee plan row"
+    },
+    {
+     "field": "mcq.options[1].why",
+     "before": "The fee-determining official approves the plan, but going below 40 percent for the final evaluation needs HCA approval.",
+     "after": "Approving the plan does not reach the 40 percent floor; going below it needs a contracting officer determination and HCA approval that cannot be delegated.",
+     "source": "DFARS 216.402-470(a); Appendix GG award-fee plan row"
+    },
+    {
+     "field": "crosswalk",
+     "before": "{old: FAR 16.401, new: FAR 16.401-2}",
+     "after": "{old: FAR 16.401(d), new: FAR 16.401-2(a)}",
+     "source": "Legacy FAR 16.401(d) (HCA-signed D&F for incentive- and award-fee contracts; acquisition.gov FAC 2026-01) is RFO FAR 16.401-2(a); the rest of legacy 16.401 maps to 16.401-1, 16.402-1 and 16.402-2, so the whole-section pair was misleading"
+    },
+    {
+     "field": "flags",
+     "before": "[ai-drafted]",
+     "after": "[ai-drafted, verify-locally]",
+     "source": "The question asks who signs each approval in the Army; those levels (D&F no lower than SCO, award-fee plan HCA to CoCO, ASA(ALT) justification approver) come from Appendix GG and AFARS PGI"
+    },
+    {
+     "field": "confidence_reason",
+     "before": "ended '... AFARS PGI 5116.104-7090 read in the PGI combined PDF of 31 Aug 2026.'",
+     "after": "adds 'Reviewer 14 Sep 2026: ...' note on the corrected award-fee plan approver, the 40 percent determination and the verify-locally flag",
+     "source": "AFARS Appendix GG Rev. 30; DFARS 216.402-470(a)"
+    }
+   ],
+   "notes": "Confirmed: RFO FAR 16.401-2(a) (HCA-signed D&F; award-fee D&F addresses 16.402-1 items), 16.402-1(a)-(c), 16.402-2(a)-(e) and Table 16-1, 16.104, 16.301-3(a); DFARS 216.401-70(a)-(b), 216.401-71(a), 216.402-2(c), 216.402-470(a)-(b) (2026-O0045 Rev. 1); Appendix GG Rev. 30 rows: award-fee D&F Army 'No Lower than SCO'; award-fee plan HCA, delegable no lower than CoCO; remaining pool under 40 percent HCA, not delegable; AFARS PGI 5116.104-7090 (ASA(ALT), approval before solicitation issuance). Crosswalk FAR 16.401(e) -> 16.402-2 kept (legacy (e)(2)-(3) map there; (e)(1) maps to 16.402-1). DFARS 216.401(d) -> 216.401-70 and 216.405-2 -> 216.402-470 confirmed by text. MCQ has one correct option."
+  },
+  {
+   "id": "N429",
+   "verdict": "ok",
+   "changes": [],
+   "notes": "Confirmed: RFO FAR 16.402-2(c) (no award fee when overall performance in the aggregate is below satisfactory; document the determination; unilateral Government decision), (d)(5), (e) (rollover prohibited) and Table 16-1 (Good 51%-75% requires exceeding some significant criteria and meeting overall requirements in the aggregate; Satisfactory no greater than 50%; Unsatisfactory 0%); DFARS 216.402-470(a) (at least 40 percent for the final evaluation) and (b) (rating within 45 calendar days) in 2026-O0045 Rev. 1; AFARS PGI 5116.402-4(A) (each period starts at zero; no award fee above base fee for simply meeting requirements). MCQ has one correct option; whys accurate. 288 words; Cite line present; classes IV. No Army delegation decides the answer, so verify-locally is not needed. Crosswalk FAR 16.401(e) -> 16.402-2 and DFARS 216.405-2 -> 216.402-470 confirmed."
+  },
+  {
+   "id": "N430",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "question",
+     "before": "On 12 September that company files at GAO",
+     "after": "On 10 September that company files at GAO",
+     "source": "12 September 2026 is a Saturday, and the stay turns on the agency's receipt of GAO's notice (31 U.S.C. 3553(d)(3)-(4); DFARS 233.105-70), not the filing date. With the order issued Wednesday 2 September, the 10-day window ends 12 September, so a Thursday 10 September filing with GAO notice within one day falls clearly inside both windows."
+    },
+    {
+     "field": "answer",
+     "before": "'- A 12 September filing is inside both windows. When GAO notifies us, I direct the contractor ...'",
+     "after": "'- GAO notifies the agency within one day of a filing (31 U.S.C. 3553(b)(1)), so notice of a 10 September filing arrives inside both windows. On that notice, I direct the contractor ...'",
+     "source": "31 U.S.C. 3553(b)(1) ('Within one day after the receipt of a protest, the Comptroller General shall notify the Federal agency involved'), law.cornell.edu; DFARS 233.105-70 (2026-O0026 Rev. 1)"
+    },
+    {
+     "field": "answer (Cite line)",
+     "before": "31 U.S.C. 3553(d)",
+     "after": "31 U.S.C. 3553(b)(1) and (d)",
+     "source": "Same as above"
+    }
+   ],
+   "notes": "Confirmed: RFO FAR 16.508(a)(1)-(2)(ii) and (b) (DoD order protests over $35M, GAO only); 10 U.S.C. 3406(f)(2) exclusive GAO jurisdiction (regulations.json task_order_protest_dod); DFARS 233.105-70(a)-(d) later-of stay periods with (b) orders over $35M (2026-O0026 Rev. 1, 24 Aug 2026); RFO FAR 16.507-5(c) sends order debriefings to Part 15, so the debriefing prong applies; RFO FAR 33.105-3(b)(2), (c), (d) and 33.105-4(a); 31 U.S.C. 3553(d)(3)(C) (HPA written finding, performance only after GAO is notified) and (e) (not delegable); AFARS 5133.103(a). Crosswalk pairs FAR 16.505(a)(10)->16.508, FAR 33.104(c)->33.105-3, DFARS 233.104(c)(1)->233.105-70 (legacy $25M) and 10 U.S.C. 2304c->3406 confirmed. MCQ has one correct option; whys accurate."
+  },
+  {
+   "id": "N431",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "'- The basis we rely on. Best interests is broader but still must be reasoned. Urgent and compelling needs a stronger showing.'",
+     "after": "'- The basis relied on: best interests still must be reasoned, and urgent and compelling needs a stronger showing.'",
+     "source": "31 U.S.C. 3553(d)(3)(C) and RFO FAR 33.105-3(b)(2) state the two bases without ranking their breadth; the unsourced 'broader' characterization was dropped"
+    },
+    {
+     "field": "answer",
+     "before": "323 words",
+     "after": "299 words; opening sentence merged into the rule statement ('only the HCA, on a nondelegable basis'), list items and routing sentence condensed; citations, approver, reporting and timelines unchanged",
+     "source": "300-word limit (task instructions)"
+    },
+    {
+     "field": "confidence_reason",
+     "before": "The 100-day decision rule at 31 U.S.C. 3554(a)(1) comes from reviewed bank item Q0218 and was not re-read here.",
+     "after": "The 100-day decision rule was re-read at law.cornell.edu (31 U.S.C. 3554(a)(1)) by the reviewer on 14 Sep 2026.",
+     "source": "https://www.law.cornell.edu/uscode/text/31/3554"
+    }
+   ],
+   "notes": "Confirmed: RFO FAR 33.105-3(b)(2) and (c); 31 U.S.C. 3553(d)(3)(C)(i)-(ii) (written finding; performance only after GAO is notified) and (e) (not delegable); 31 U.S.C. 3554(a)(1) (100 days); DFARS 233.105-70(b) (orders over $35M); AFARS 5133.105-3(b) (HCA findings to ODASA(P) as soon as practicable) and 5133.103-90 (notify ODASA(P) of protests of awards over $100M); Appendix GG Rev. 30 row 33.105-3(b)(2): HCA, not delegable. MCQ has one correct option; whys accurate. Routing below the HCA stays verify-locally."
+  },
+  {
+   "id": "N432",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "'If DCAA or DCMA has found material weaknesses in the accounting system, that stops a cost-type award.'",
+     "after": "'If the ACO finds the accounting system cannot adequately segregate, accumulate and allocate costs (FAR 42.302(a)(12)), condition (3) fails and a cost-type award is off the table.'",
+     "source": "RFO FAR 16.301-3(a)(3) sets the test (the accounting system 'can adequately segregate, accumulate and allocate costs specifically attributed to the contract'); RFO FAR 42.302(a)(12) makes accounting system adequacy a cognizant Federal agency determination. A DFARS business-system material weakness is not by itself a bar to a cost-type award, so the categorical statement was overstated."
+    },
+    {
+     "field": "answer",
+     "before": "'Because it is noncommercial, the four conditions govern, and I document the contract-type rationale. The FAR 16.104 justification applies to DoD covered contracts of $100 million or more, so it is not triggered at $40 million. It would be if the value grew past $100 million.'",
+     "after": "'It is noncommercial, so the four conditions govern and I document the contract-type rationale. The FAR 16.104 justification starts at $100 million for DoD, so it is not triggered unless the value reaches $100 million.'",
+     "source": "RFO FAR 16.104(c)(1)(i) 'at or above $100 million, for DoD' ('grew past' misstated the at-or-above test); also keeps the answer under 300 words"
+    },
+    {
+     "field": "answer (Cite line) and citations",
+     "before": "no FAR 42.302 cite",
+     "after": "FAR 42.302(a)(12) added to the Cite line; FAR 42.302 added to citations",
+     "source": "RFO FAR Part 42"
+    },
+    {
+     "field": "confidence_reason",
+     "before": "10 U.S.C. 3323 is cited as quoted in the deviation; the statute page itself was not read.",
+     "after": "Reviewer 14 Sep 2026 note: 10 U.S.C. 3323 read at law.cornell.edu; accounting-system sentence corrected",
+     "source": "https://www.law.cornell.edu/uscode/text/10/3323"
+    }
+   ],
+   "notes": "Confirmed: RFO FAR 16.301-3(a)(1)-(4) and (b); RFO FAR 7.102(d); RFO FAR 16.104(c)(1)(i); DFARS 216.301-370 (2026-O0045 Rev. 1: no CPFF, CPAF or CPIF for military construction or military family housing projects, notwithstanding a declaration of war or presidential national emergency); 10 U.S.C. 3323(a)-(b) at law.cornell.edu (bars any form of cost-plus contracting for those projects); DFARS 234.7202(b)(1)-(2) (2026-O0011 Rev. 1: no cost-reimbursement line items for MDAP production unless USD(A&S), or the MDA when it is the service acquisition executive, certifies to the congressional defense committees). MCQ has one correct option; whys accurate."
+  },
+  {
+   "id": "N433",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "'This order needs its own approved justification before I issue the order request. The PGI timelines are written for solicitations, so I confirm the order timing with my contracting policy office.'",
+     "after": "'... so this order needs its own approval before it is placed. The PGI timelines cover only solicitations and existing contracts, so I would get approval before releasing the order request and confirm timing with my contracting policy office.'",
+     "source": "RFO FAR 16.104(b) requires approval 'prior to using a covered contract or order' and (e)(1) applies to orders under multiple-award contracts; DFARS PGI 216.104-70 and AFARS PGI 5116.104-7090 give timelines only for solicitations and existing contracts; E.O. 14402 addresses contracts only. Approval before the order request is not stated in any source, so it is now presented as conservative practice."
+    },
+    {
+     "field": "answer",
+     "before": "'Once approved, a justification lasts for the life of the contract or order. The exceptions are emergencies, major disasters and contingencies; research and development; and pre-production development for major systems.'",
+     "after": "'An approval lasts for the life of the contract or order. The requirement does not apply to emergency, major disaster or contingency support, research and development, or pre-production development for major systems.'",
+     "source": "RFO FAR 16.104(c)(5) (duration) and (e)(2)-(4) (exceptions to the justification requirement); the old wording read as exceptions to the duration rule"
+    },
+    {
+     "field": "answer",
+     "before": "315 words; 'It had at least 18 months left as of 15 July 2026'",
+     "after": "298 words; rule paragraph and applications condensed; added 'including options' to the 18-month test; dates (2 Oct 2026, 15 Jul 2027, 31 Jan 2027), ASA(ALT) approver and citations unchanged",
+     "source": "300-word limit (task instructions); DFARS PGI 216.104-70(d) and AFARS PGI 5116.104-7090(d) ('at least 18 months remaining in the period of performance (including all options)')"
+    },
+    {
+     "field": "confidence_reason",
+     "before": "ended '... flagged verify-locally. Submission dates were computed from the stated rules.'",
+     "after": "adds 'Reviewer 14 Sep 2026: ...' note on the E.O. text, the order-timing wording and the exceptions sentence",
+     "source": "federalregister.gov document 2026-08900"
+    }
+   ],
+   "notes": "Confirmed: E.O. 14402 (signed 30 Apr 2026, published 5 May 2026, 91 FR 24325, sec. 2(b)); RFO FAR 16.104(a)-(e); DFARS PGI 216.104-70(b)-(d) and AFARS PGI 5116.104-7090 (ASA(ALT) under HQDA GO 2025-01; submit through DASA(P); 60 days before an issuance on or after 1 Oct 2026; existing contracts with 18 months or more remaining including options on 15 Jul 2026 approved by 15 Jul 2027, submitted 120 days before a current period ending on or after 1 Mar 2027). Dates computed: 60 days before 1 Dec 2026 is 2 Oct 2026; 120 days before 31 May 2027 is 31 Jan 2027 (a Sunday). MCQ has one correct option; whys accurate (16.104(e)(2) contingency exception)."
+  },
+  {
+   "id": "N434",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "327 words; 'Negotiating FPRAs is a function the cognizant Federal agency must perform. A buying office cannot keep it'; 'Certification: nobody certifies when the FPRA is agreed. The certificate ... because FPRA data are part of what the contractor certifies at price agreement'",
+     "after": "296 words; 'FPRA negotiation is a cognizant Federal agency function that a buying office cannot retain'; 'Certification: none is required when the FPRA is agreed, but the certificate for my modification covers the FPRA data along with all other supporting data'",
+     "source": "300-word limit (task instructions); RFO FAR 15.405-3(a), (c) and 42.302(a)"
+    },
+    {
+     "field": "flags",
+     "before": "[ai-drafted]",
+     "after": "[ai-drafted, verify-locally]",
+     "source": "The Army FPRA waiver level (Appendix GG Rev. 30: HCA, delegable to one level above the KO) is part of the answer and the correct MCQ option; local procedures may set it higher"
+    },
+    {
+     "field": "confidence_reason",
+     "before": "ended '... The one-sentence FPRA description is a paraphrase, not a quoted RFO definition.'",
+     "after": "adds reviewer note on the Army waiver delegation and verify-locally",
+     "source": "AFARS Appendix GG Rev. 30; AFARS 5115.405-3(b)(1)"
+    }
+   ],
+   "notes": "Confirmed: RFO FAR 42.1301(a), (b), (d) (FPRA procedures; ACO; rate proposal data not certified; FPRR when invalid); RFO FAR 42.302(a)(5) (cognizant Federal agency function the contracting officer may not retain); RFO FAR 15.405-3(a)-(c); DFARS 215.405-3(b)(1)-(3) (2026-O0048 Rev. 1: use FPRA rates unless the HCA waives case by case; advise the ACO); AFARS 5115.405-3(b)(1) and Appendix GG row (HCA, delegable to 1 level above KO). Crosswalk FAR 15.407-3->15.405-3, FAR 42.1701->42.1301 and DFARS 215.407-3->215.405-3 confirmed by text. MCQ has one correct option; whys accurate."
+  },
+  {
+   "id": "N435",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "'If DCAA lacks resources, it must decline in writing (42.102).'",
+     "after": "'DCAA may decline for lack of resources, but only in writing (42.102).'",
+     "source": "RFO FAR 42.102(b): 'The responsible audit agency may decline requests for services on a case-by-case basis if they lack adequate resources. Declinations must be in writing.' Declining is discretionary, not required."
+    },
+    {
+     "field": "answer",
+     "before": "321 words",
+     "after": "297 words; DCAA bullets and closing rules condensed; thresholds, citations and the facilitization-cost point kept",
+     "source": "300-word limit (task instructions)"
+    }
+   ],
+   "notes": "Confirmed: PGI 215.406(a)(1) and (b)(1)-(2) (2026-O0048 Rev. 1: $10M fixed-price and $100M cost-type audit thresholds; no DCAA request below them absent exceptional circumstances; field pricing thresholds tied to material weaknesses); RFO FAR 42.101(b), 42.102(a)-(b), 15.406(b)(2), (c)(1)(i), (c)(2) (12 months; 41 U.S.C. 4706 and 10 U.S.C. 3841), (c)(3)-(4) and 42.1301(d); $10M DoD certified data threshold per regulations.json tina_dod; USA001395-26 (standard PGI 201.170 review at $500M to under $1B) and the 4 May 2026 memo (facilitization costs; rely on DCAA and DCMA). Crosswalk pairs confirmed (RFO 15.404-2 is now Cost analysis). MCQ has one correct option; whys accurate."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "A USW(A&S) memo of 4 May 2026 lowered the DoD sole-source peer review trigger from $1B to $50M (streamlined over $50M, standard at $500M), while PGI 201.170 still prints $1B; DPCAP implementing memo USA001395-26.",
+   "finding": "Confirmed, with nuance. The 4 May 2026 USW(A&S) memo (attached to USA001395-26) directs that for all prospective sole-source defense acquisitions valued at $50 million or greater, contracting officers present prenegotiation objective positions for peer review to decide which facilitization costs to recognize, and says a DFARS change will revise the $1 billion threshold to $50 million, so it did not itself amend the DFARS. USA001395-26 sets the tiers: greater than $50M and less than $500M streamlined (facilitization costs, prime and major supplier historical costs, realized profits); $500M to under $1B the existing PGI 201.170 process; $1B and up unchanged under Class Deviation 2026-O0002. PGI 201.170(a)(1)(ii) in 2026-O0002 Rev. 1 (current revision, dated 5 Aug 2026 on the DFARS RFO deviation index last updated 9 Sep 2026) still says $1 billion. The DPCAP sole source peer review web page repeats the streamlined (over $50M to under $500M) and scheduled ($500M and up) paths. Appendix GG Rev. 30 shows 'above $50M' citing the 4 May memo. Minor gap: the USW memo says '$50 million or greater', DPCAP says 'greater than $50 million'.",
+   "source": "https://www.acq.osd.mil/dpap/policy/policyvault/USA001395-26-DPCAP.pdf; DFARS Class Deviation 2026-O0002 Rev. 1 Attachment 2; https://www.acq.osd.mil/asda/dpc/pcf/ss-peer-reviews.html; https://www.acq.osd.mil/dpap/dars/dfars_far_overhaul_class_deviations.html; AFARS Appendix GG Rev. 30"
+  },
+  {
+   "claim": "RFO FAR 16.104 implements Executive Order 14402, requiring an approved justification for non-fixed-price DoD contracts and orders of $100M or more, with ASA(ALT) as the Army approver.",
+   "finding": "Confirmed. E.O. 14402, Promoting Efficiency, Accountability, and Performance in Federal Contracting, signed 30 Apr 2026, published 5 May 2026 at 91 FR 24325 (FR doc 2026-08900); sec. 2(b)(ii)(A) requires agency-head approval above $100 million for Department of War non-fixed-price contracts. RFO FAR 16.104(b) states it implements the E.O.; covered means other than fixed-price, FFP level-of-effort term, or a hybrid; (c)(1)(i) 'at or above $100 million, for DoD'; (e)(1) exempts multiple-award contracts but not orders under them; (d)(2) delegation only to the CAO or another non-career SES. AFARS PGI 5116.104-7090 (PGI effective 31 Aug 2026): under HQDA General Order 2025-01 the Army approval authority is ASA(ALT), submitted through DASA(P). Nuance: the E.O. says 'exceeds' and covers contracts; FAR 16.104 says 'at or above' and extends to orders and FFP-LOE term.",
+   "source": "https://www.federalregister.gov/api/v1/documents/2026-08900.json and its full text; https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-16; DFARS Class Deviation 2026-O0045 Rev. 1 Attachment 2 (PGI 216.104-70); AFARS PGI 5116.104-7090"
+  },
+  {
+   "claim": "DoD deviation 2026-O0050 renumbered the business system clauses (252.242-7005 to 252.242-7998; accounting, EVMS, material management and purchasing to -7999, 234-7999, -7997 and 244-7998) and sets 5%, 10% and 2% withholds.",
+   "finding": "Confirmed, with an attribution nuance. 2026-O0050 (DFARS Part 242, dated 6 Mar 2026, effective 16 Mar 2026, no later revision on the 9 Sep 2026 index) contains 252.242-7998 Contractor Business Systems (DEVIATION 2026-O0050) (MAR 2026), 252.242-7997 MMAS and 252.242-7999 Accounting System Administration, and its 242.7000(a) definition names EVMS 252.234-7999, estimating 252.215-7002, property 252.245-7003 and purchasing 252.244-7998. The EVMS and purchasing deviation clauses themselves are issued by 2026-O0011 Rev. 1 (Part 234) and 2026-O0015 Rev. 1 (Part 244). Clause (e)(1) 5 percent; (e)(2) 2 percent with an acceptable corrective action plan being effectively implemented; (e)(3)(i) caps 5 percent for one system and 10 percent for multiple systems; 242.7000(d)(3) 90-day decision or at least 50 percent reduction.",
+   "source": "DFARS Class Deviations 2026-O0050 (Attachment A1), 2026-O0011 Rev. 1, 2026-O0015 Rev. 1"
+  },
+  {
+   "claim": "AFARS and AFARS PGI dated 31 Aug 2026 replace the June 2026 reissue, with Appendix GG Revision 30: Army acquisition plan approval under $500M by the HCA (no lower than the SCO), $500M to under $1B DASA(P), $1B and up ASA(ALT); services strategy categories $1B or more than $300M a year, $250M and $100M; postaward services reviews by ODASA(P) at $1B and the HCA at $100M.",
+   "finding": "Confirmed. army.mil/armycontracting links AFARS_Combined_31AUG2026.pdf and PGI_Combined_31AUG2026.pdf, each noted 'Effective as of 31 August 2026', and Appendix GG 'as of 30JUN2026' (Revision 30, revised 1 July 2026). Part headers inside the combined PDFs carry their own revision dates (latest 6 Aug 2026). GG: non-PAE/DRPM plans below $500M ASA(ALT) delegated to the HCA, no lower than SCO; $500M to under $1B DASA(P) without power to delegate; $1B and up or special interest ASA(ALT), not delegable; PAE/DRPM plans by the MDA, nondelegable (AFARS 5107.103-90(a)(1)). Services strategy: Category I $1B or more or more than $300M in any one year, and Category II $250M to under $1B, AAE delegable to DASA(P) or SSM; Category III $100M to under $250M HCA no lower than SCO; Category IV $10M to under $100M HCA no lower than CoCO. AFARS PGI 5101.170(b)(ii): ODASA(P) conducts IMRs for services of $1B or more and the HCA for $100M to under $1B (GG lists 'DASA(P) or SSM' for the $1B row). AFARS 5107.103-90(a)(4) names 'ASA(ALT) or DASA(P)' for AAE-designated special interest plans, while GG says ASA(ALT) not delegable.",
+   "source": "https://www.army.mil/armycontracting; AFARS and PGI combined PDFs effective 31 Aug 2026 (api.army.mil downloads dated 2026/09/08); AFARS Appendix GG Rev. 30"
+  },
+  {
+   "claim": "Written acquisition plans at $10M for development, or $50M total or $25M in any year for production or services (DFARS 207.103-70(a), deviation 2026-O0020 Rev 1).",
+   "finding": "Confirmed verbatim at 207.103-70(a)(1)-(3); program-basis rule at (c); 207.104-70(a) requires planning for peer review. 2026-O0020 Rev. 1 is current (2 Sep 2026 on the index).",
+   "source": "DFARS Class Deviation 2026-O0020 Rev. 1 Attachment 1"
+  },
+  {
+   "claim": "Public announcement at $5.5M governmentwide (RFO FAR 5.302) and $9M for DoD (DFARS 205.302, deviation 2026-O0003 Rev 1).",
+   "finding": "Confirmed. RFO FAR 5.302(a): awards over $5.5 million, announce by 5 p.m. ET, no release before 5 p.m. ET. DFARS 205.302(a)(i) in 2026-O0003 Rev. 1 (24 Aug 2026): $9 million face value excluding unexercised options; PGI 205.302(a)(ii): report to Public Affairs by close of business the day before award. Legacy FAR 5.303(a) ($5.5M) and DFARS 205.303(a) ($9M) match. Army: noon ET three business days before award to ODASA(P) (AFARS PGI 5105.302(a)(1)).",
+   "source": "https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-5; DFARS Class Deviation 2026-O0003 Rev. 1; acquisition.gov legacy FAR 5.303 and DFARS 205.303; AFARS PGI 5105.302"
+  },
+  {
+   "claim": "DoD task-order protest floor of $35M (RFO FAR 16.508, DFARS 233.105-70); AFARS 5133.103-90 notice for protests over $100M; PGI 233.170 and AFARS PGI 5133.170 briefing timelines for protests of $1B awards.",
+   "finding": "Confirmed. RFO FAR 16.508(a)(2)(ii) 'in excess of $35 million (10 U.S.C. 3406(f))' and (b) GAO only; DFARS 233.105-70(b) in 2026-O0026 Rev. 1 (24 Aug 2026) sets the stay window for orders over $35 million. AFARS 5133.103-90: notify ODASA(P) of a protest of a planned or actual award in excess of $100M. DFARS PGI 233.170(b): brief the Principal Director, DPCAP within 10 days of filing for protests of competitively awarded MDAPs or services acquisitions valued at $1 billion or more; AFARS PGI 5133.170(a): protest notice and that briefing to ODASA(P) within 5 days of receipt.",
+   "source": "acquisition.gov RFO Part 16; DFARS Class Deviation 2026-O0026 Rev. 1; AFARS 5133.103-90 and AFARS PGI 5133.170 (effective 31 Aug 2026)"
+  },
+  {
+   "claim": "DCAA audit thresholds of $10M fixed-price and $100M cost-type (PGI 215.406); at least 40% of award fee held for the final evaluation (DFARS 216.402-470).",
+   "finding": "Confirmed. PGI 215.406(b)(1) in 2026-O0048 Rev. 1 Attachment A2: consider DCAA audit assistance for fixed-price proposals exceeding $10 million and cost-type proposals exceeding $100 million. DFARS 216.402-470(a) in 2026-O0045 Rev. 1: at least 40 percent available for the final evaluation; lower only on a contracting officer determination with HCA approval, not delegable.",
+   "source": "DFARS Class Deviations 2026-O0048 Rev. 1 and 2026-O0045 Rev. 1"
+  },
+  {
+   "claim": "Crosswalk pairs the author added: FAR 5.303(a) to 5.302(a); DFARS 205.303 to 205.302; FAR 15.407-3 to 15.405-3; FAR 42.1701 to 42.1301; FAR 15.404-2 to 15.406; DFARS 215.407-3 to 215.405-3; DFARS 216.401(d) to 216.401-70; DFARS 216.405-2 to 216.402-470; DFARS 233.104(c)(1) to 233.105-70.",
+   "finding": "All nine confirmed by matching legacy text to RFO or deviation text. Traps worth a note in regulations.json: RFO FAR 5.303 now covers subcontracting-opportunity notices, and RFO FAR 15.404-2 is now 'Cost analysis', so the legacy numbers point to different RFO content. Legacy DFARS 205.303(a)(ii) submission details moved to PGI 205.302(a)(ii). Legacy DFARS 233.104(c)(1) carried $25 million for orders; 233.105-70(b) now says $35 million.",
+   "source": "acquisition.gov legacy FAR 5.303, 15.404-2, 15.407-3, 42.1701 (FAC 2026-01) and DFARS Parts 205, 215, 216, 233 (Change 5/7/2026); RFO FAR Parts 5, 15, 42; DFARS deviations 2026-O0003 Rev. 1, 2026-O0048 Rev. 1, 2026-O0045 Rev. 1, 2026-O0026 Rev. 1"
+  },
+  {
+   "claim": "10 U.S.C. 3323 (N432).",
+   "finding": "Confirmed. Heading 'Cost-plus contracting prohibited for military construction and military family housing projects'; (a) no form of cost-plus contracting; (b)(2) applies notwithstanding a declaration of war or a presidential national emergency declaration under 50 U.S.C. 1621 that includes use of the armed forces. DFARS 216.301-370 (2026-O0045 Rev. 1) implements it for CPFF, CPAF and CPIF.",
+   "source": "https://www.law.cornell.edu/uscode/text/10/3323; DFARS Class Deviation 2026-O0045 Rev. 1"
+  },
+  {
+   "claim": "31 U.S.C. 3554(a)(1) (N431).",
+   "finding": "Confirmed: GAO issues a final decision within 100 days after the protest is submitted; 65-day express option at (a)(2).",
+   "source": "https://www.law.cornell.edu/uscode/text/31/3554"
+  },
+  {
+   "claim": "Order timing under the executive order (N433).",
+   "finding": "Not specified in any primary source. E.O. 14402 addresses contracts only. FAR 16.104(b) requires approval 'prior to using a covered contract or order', and (e)(1) applies the requirement to task orders, delivery orders and BPAs under multiple-award contracts. DFARS PGI 216.104-70 and AFARS PGI 5116.104-7090 give timelines only for solicitations (issued on or after, or before, 15 Jul 2026) and existing contracts. N433 now states approval before the order is placed, treats approval before releasing the order request as conservative practice, and keeps verify-locally.",
+   "source": "E.O. 14402 (91 FR 24325); RFO FAR 16.104; DFARS PGI 216.104-70; AFARS PGI 5116.104-7090"
+  },
+  {
+   "claim": "Whether Policy v12 sections 4.3 and 4.5 conflict for a legacy $500M warrant holder going unlimited (N419).",
+   "finding": "The tension is real and the policy does not resolve it. 4.5 exempts legacy holders from testing, re-boarding or reappointment for increases within the same Table 1 class, and $500M and Unlimited are both Class IV; 4.3 says passing the appropriate board is mandatory for an unlimited warrant and cannot be waived. Section 5 also lets an organization recognize a previously passed board for the same warrant type. The specific unlimited-warrant rule in 4.3 is the more defensible reading (board required), which is how N419 answers, flagged verify-locally. Section numbers are inferred from heading order and agree with the change log (4.2, 6.1, 6.4, 6.5, 7.0).",
+   "source": "content/sources/army_warranting_policy_v12_mar2026.txt"
+  },
+  {
+   "claim": "Coordinator correction (14 Sep 2026): FPDS was not retired as a reporting system; the writer's brief said 'FPDS was retired 24 Feb 2026 (use SAM.gov contract data)'.",
+   "finding": "Confirmed and applied. GSA's 9 Feb 2026 bulletin and the sam.gov/fpds page: FPDS.gov ezSearch was decommissioned on 24 Feb 2026 and all public-facing FPDS functions moved to SAM.gov; agencies' contract writing systems continue to provide data through the SAM Contract Awards Management portal (former FPDS database). RFO FAR 4.301 still requires the contract action report in FPDS within three business days. N425 (the only item in this file that mentioned FPDS) was corrected in its answer, key point and confidence reason.",
+   "source": "https://content.govdelivery.com/accounts/USGSA/bulletins/408f942; https://sam.gov/fpds; RFO FAR Part 4 (4.301)"
+  }
+ ],
+ "other_files": [
+  {
+   "file": "src/data/rubric_board.json",
+   "location": "board_guide.class_focus.IV",
+   "problem": "States DoD J&A routing as 'Table 6-1: for DoD, above $20M to $150M is the head of the procuring activity and above $150M is the senior procurement executive, not delegable'. For DoD, DFARS 206.104-71 Table 206-1 (Class Deviation 2026-O0017 Rev. 2, 5 Aug 2026) replaces Table 6-1: $10M or below contracting officer; over $10M to $100M competition advocate (not delegable); over $100M to $500M HCA; over $500M SPE (delegable per 206.104-71(a)). regulations.json ja_dod_tier1-3 already record this as verified. Not edited here (owned by another reviewer)."
+  },
+  {
+   "file": "src/data/regulations.json",
+   "location": "thresholds[id=task_order_protest_dod].notes",
+   "problem": "Notes say the RFO FAR 16.508 body was not served. It now reads '(ii) For DoD, NASA, or the Coast Guard, a protest of an order valued in excess of $35 million (10 U.S.C. 3406(f))' with GAO-only filing at 16.508(b), and DFARS 233.105-70(b) in 2026-O0026 Rev. 1 (24 Aug 2026) uses $35 million for the stay window."
+  },
+  {
+   "file": "src/data/regulations.json",
+   "location": "crosswalk entries AFARS 5137.590, 5137.590-4, 5104.802(f)",
+   "problem": "Notes describe the 'June 2026' AFARS reissue as current. Army Connect now posts AFARS and PGI 'Effective as of 31 August 2026' (Appendix GG remains Revision 30, revised 1 Jul 2026)."
+  },
+  {
+   "file": "external: AFARS Appendix GG Rev. 30 and AFARS 5107/5137",
+   "location": "Parts 7, 16 and 37",
+   "problem": "Stale numbers: award-fee plan row cites FAR 16.402-2(c)(1) (RFO 16.402-2(d)(1)); D&F rows cite DFARS 216.401-2(1)/(2) (deviation 216.401-70(a)/(b)); 40 percent row cites 216.402-4(1) (deviation 216.402-470(a)); services Category I row labeled 5137.590-3. AFARS 5137.890-4 points to 'AFARS PGI 5101.170-3' for IMRs (now PGI 5101.170(b)(ii) and 5101.170-9003). AFARS 5107.103-90(a)(4) (special interest plans: ASA(ALT) or DASA(P)) differs from the GG row (ASA(ALT), not delegable). Informational only."
+  },
+  {
+   "file": "writer brief for class_questions_IV_b (per coordinator)",
+   "location": "FPDS statement",
+   "problem": "Said FPDS was retired 24 Feb 2026 and to use SAM.gov contract data. Only FPDS.gov public search (ezSearch) was decommissioned; contract writing systems still report through SAM Contract Awards Management (former FPDS database), and RFO FAR 4.301 still requires reports in FPDS within three business days. N425 corrected; no other item in this file mentions FPDS."
+  }
+ ],
+ "summary": {
+  "checked": 17,
+  "fixed": 14,
+  "withdrawn": 0,
+  "unverifiable": [
+   "N433: approval timing for covered orders under multiple-award contracts (no DoD or Army PGI timeline); answer states the FAR rule and a conservative practice, verify-locally",
+   "N419: how Policy v12 4.3 and 4.5 apply to a legacy $500M holder going unlimited; interpretation, verify-locally",
+   "N421: DPCAP streamlined review steps beyond the tier thresholds (web page summarized; supplemental spreadsheet and step details not read)"
+  ]
+ }
+}

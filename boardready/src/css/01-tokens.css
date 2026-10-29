@@ -1,0 +1,140 @@
+/* =====================================================================
+   01-tokens.css — design tokens for the CORB prep app
+   Two surfaces: the landing page is dark and cinematic; the workspace is
+   light and editorial (with an optional user dark mode).
+   Never hardcode colors in view CSS. Use these roles.
+   ===================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* ---- type ---- */
+  --font-display: "Instrument Serif", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-body: "Manrope", "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", "Consolas", "SFMono-Regular", monospace;
+  --fs-xs: .74rem; --fs-sm: .84rem; --fs-md: .95rem; --fs-lg: 1.08rem; --fs-xl: 1.3rem;
+  --fs-2xl: clamp(1.6rem, 2.4vw, 2.1rem); --fs-3xl: clamp(2rem, 3.4vw, 2.9rem); --fs-hero: clamp(2.6rem, 6vw, 5.2rem);
+  --lh-tight: 1.12; --lh-body: 1.58;
+  --track-caps: .12em;
+
+  /* ---- workspace palette (light editorial, warm paper) ---- */
+  --bg: #f6f4ee;
+  --bg-2: #efece4;
+  --panel: #ffffff;
+  --panel-2: #fbfaf6;
+  --ink: #14181f;
+  --ink-2: #2b323d;
+  --muted: #5f6774;
+  --muted-2: #8a919c;
+  --line: #e3dfd4;
+  --line-2: #cfc9bb;
+  --accent: #173a6b;          /* deep navy: primary actions, links */
+  --accent-ink: #ffffff;
+  --accent-soft: #e6edf8;
+  --accent-2: #b8862b;        /* aged gold: emphasis, ratings, Korea flag */
+  --accent-2-soft: #f6ecd4;
+  --ok: #1f7a4d; --ok-soft: #e2f3e9;
+  --warn: #a8620a; --warn-soft: #fbeeda;
+  --danger: #b4322f; --danger-soft: #fbe5e3;
+  --info: #2b5ea8; --info-soft: #e4ecf9;
+  --selection: #ffe9b3;
+
+  /* ---- elevation, radius, spacing, motion ---- */
+  --shadow-sm: 0 1px 2px rgba(20, 24, 31, .06), 0 1px 1px rgba(20, 24, 31, .04);
+  --shadow-md: 0 8px 24px -12px rgba(20, 24, 31, .22), 0 2px 6px rgba(20, 24, 31, .05);
+  --shadow-lg: 0 24px 60px -24px rgba(20, 24, 31, .35), 0 6px 18px -8px rgba(20, 24, 31, .12);
+  --r-sm: 6px; --r-md: 10px; --r-lg: 16px; --r-xl: 24px; --r-pill: 999px;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 72px;
+  --ease: cubic-bezier(.22, .61, .36, 1);
+  --ease-spring: cubic-bezier(.34, 1.4, .64, 1);
+  --dur: 220ms; --dur-slow: 480ms;
+  --side-w: 256px; --top-h: 60px;
+  --content-max: 1180px;
+
+  /* ---- landing palette (dark cinematic) ---- */
+  --l-bg: #070b13;
+  --l-bg-2: #0c1322;
+  --l-panel: rgba(255, 255, 255, .045);
+  --l-panel-line: rgba(255, 255, 255, .09);
+  --l-ink: #f2f4f8;
+  --l-ink-2: #c3cad6;
+  --l-muted: #7f8898;
+  --l-gold: #e2b657;
+  --l-gold-2: #f3d58c;
+  --l-sky: #8fc6ff;
+  --l-glow-1: rgba(31, 84, 160, .55);
+  --l-glow-2: rgba(226, 182, 87, .28);
+  --l-glow-3: rgba(46, 160, 140, .22);
+}
+
+/* ---- workspace dark mode (user toggle) ---- */
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0e121a;
+  --bg-2: #0a0e15;
+  --panel: #151b26;
+  --panel-2: #1a2130;
+  --ink: #e9edf3;
+  --ink-2: #cfd6e0;
+  --muted: #98a2b3;
+  --muted-2: #6f7a8b;
+  --line: #27303f;
+  --line-2: #37425a;
+  --accent: #8fb8ff;
+  --accent-ink: #0b1220;
+  --accent-soft: #1a2a45;
+  --accent-2: #e2b657;
+  --accent-2-soft: #3a2f16;
+  --ok: #5fd39a; --ok-soft: #12301f;
+  --warn: #f0b35a; --warn-soft: #3a2a12;
+  --danger: #ff8a86; --danger-soft: #3d1a19;
+  --info: #7fb0ff; --info-soft: #172a47;
+  --selection: #3a2f16;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4);
+  --shadow-md: 0 8px 24px -12px rgba(0, 0, 0, .7), 0 2px 6px rgba(0, 0, 0, .3);
+  --shadow-lg: 0 24px 60px -24px rgba(0, 0, 0, .8), 0 6px 18px -8px rgba(0, 0, 0, .4);
+}
+
+
+/* ---- 'system' theme: no data-theme attribute, so the device decides (the pre-paint script in index.html) ---- */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0e121a;
+    --bg-2: #0a0e15;
+    --panel: #151b26;
+    --panel-2: #1a2130;
+    --ink: #e9edf3;
+    --ink-2: #cfd6e0;
+    --muted: #98a2b3;
+    --muted-2: #6f7a8b;
+    --line: #27303f;
+    --line-2: #37425a;
+    --accent: #8fb8ff;
+    --accent-ink: #0b1220;
+    --accent-soft: #1a2a45;
+    --accent-2: #e2b657;
+    --accent-2-soft: #3a2f16;
+    --ok: #5fd39a; --ok-soft: #12301f;
+    --warn: #f0b35a; --warn-soft: #3a2a12;
+    --danger: #ff8a86; --danger-soft: #3d1a19;
+    --info: #7fb0ff; --info-soft: #172a47;
+    --selection: #3a2f16;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4);
+    --shadow-md: 0 8px 24px -12px rgba(0, 0, 0, .7), 0 2px 6px rgba(0, 0, 0, .3);
+    --shadow-lg: 0 24px 60px -24px rgba(0, 0, 0, .8), 0 6px 18px -8px rgba(0, 0, 0, .4);
+  }
+}
+
+/* ---- text size (Settings → Appearance, or the Text size button) ---- */
+html[data-text="1"] { font-size: 112.5%; }
+html[data-text="2"] { font-size: 125%; }
+html[data-text="3"] { font-size: 140%; }
+
+/* ---- projector mode: bigger type, more contrast ---- */
+body[data-projector] { font-size: 1.28rem; }
+body[data-projector] :root, body[data-projector] { --lh-body: 1.5; }
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur: 0ms; --dur-slow: 0ms; }
+}

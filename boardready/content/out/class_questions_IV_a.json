@@ -1,0 +1,1495 @@
+[
+ {
+  "id": "N401",
+  "question": "You are the PCO for a competitive FAR part 15 tradeoff acquisition of Army aviation maintenance services with a total estimated value of $420 million including options. The program manager proposes that you serve as the Source Selection Authority, that the evaluation board chair write the award recommendation comparing the proposals, and that no advisory council be formed because 'it only adds a layer.' How do you set up the source selection team, and who does what?",
+  "answer": "No. At this value the DoD Source Selection Procedures set the structure.\n\nThe rule. RFO FAR 15.201(a) makes the contracting officer the SSA unless the agency head appoints someone else. DFARS and PGI 215.200 make the DoD Source Selection Procedures (20 Aug 2022) mandatory. At $100 million or more, including options and planned orders, the agency head must appoint in writing an SSA other than the PCO, and the SSA must establish a Source Selection Advisory Council unless waived. For the Army, AFARS Appendix GG delegates that appointment from $100 million to under $500 million to the HCA, no lower than the SCO.\n\nHow the roles split on this $420 million action:\n- SSA: approves the source selection plan before RFP release (DFARS 215.201(b)(2)), appoints the SSEB and SSAC chairs, approves the competitive range, and documents the best-value decision in the SSDD.\n- SSAC: gives the SSA a written comparative analysis and award recommendation, minority opinions included. Nongovernment personnel cannot be voting members.\n- SSEB: evaluates each proposal against the RFP factors. It does not compare proposals or recommend an awardee unless the SSA asks.\n- PCO (me): principal business advisor, single point of contact with offerors, controls exchanges, leads negotiations (DFARS 215.204-2 at $100 million or more), debriefs, and awards.\n\nCollapsing the roles puts the decision outside mandatory DoD procedure and gives GAO a record to take apart. SSP waivers go to the senior procurement executive, or to the Principal Director, DPC, at $1 billion or more. I route the SSA nomination under AFARS 5115.201-90 and confirm the delegation with our contracting policy office.\n\nCite: FAR 15.201 (formerly 15.303); DFARS 215.200, 215.201(b)(2) and 215.204-2 (Class Deviation 2026-O0048 Rev 1); PGI 215.200; DoD Source Selection Procedures (20 Aug 2022) paras 1.2 and 1.4; AFARS 5115.201-90 and Appendix GG.",
+  "key_points": [
+   "DoD SSP (20 Aug 2022), made mandatory through DFARS/PGI 215.200: at $100M or more including options and planned orders, the agency head appoints in writing an SSA other than the PCO",
+   "SSAC is required at $100M or more unless waived; SSP waivers go to the SPE below $1B and to the Principal Director, DPC, at $1B or more",
+   "SSAC gives the SSA a written comparative analysis and recommendation with minority opinions; the SSEB evaluates but does not compare proposals unless the SSA asks",
+   "SSA approves the source selection plan before release (DFARS 215.201(b)(2)), appoints SSEB and SSAC chairs, approves the competitive range and signs the SSDD",
+   "PCO stays the business advisor: controls exchanges, negotiates (DFARS 215.204-2 at $100M or more), debriefs and awards (FAR 15.201(c))",
+   "Army: AFARS Appendix GG (Rev 30) delegates SSA appointment for $100M to under $500M to the HCA, no lower than the SCO (AFARS 5115.201(a)(1)), and SSP waivers below $1B to the DASA(P) (AFARS 5115.200-90)"
+  ],
+  "citations": [
+   "FAR 15.201",
+   "DFARS 215.200",
+   "DFARS 215.201(b)(2)",
+   "DFARS 215.204-2",
+   "PGI 215.200",
+   "DoD Source Selection Procedures (DPC memo, 20 Aug 2022)",
+   "AFARS 5115.201-90",
+   "AFARS Appendix GG"
+  ],
+  "crosswalk": [
+   {
+    "old": "FAR 15.303",
+    "new": "FAR 15.201"
+   },
+   {
+    "old": "DFARS 215.300",
+    "new": "DFARS 215.200"
+   },
+   {
+    "old": "DFARS 215.303(b)(2)",
+    "new": "DFARS 215.201(b)(2)"
+   }
+  ],
+  "classes": [
+   "IV"
+  ],
+  "domain": "Source Selection & Evaluation",
+  "topic": "Source selection team roles above $100M",
+  "kind": "scenario",
+  "tags": [
+   "Source Selection",
+   "SSA",
+   "SSAC",
+   "SSEB",
+   "DoD Source Selection Procedures",
+   "Class IV"
+  ],
+  "unit": "ACC-All",
+  "difficulty": 1,
+  "flags": [
+   "ai-drafted",
+   "verify-locally"
+  ],
+  "confidence": "high",
+  "confidence_reason": "SSA, SSAC and SSEB rules read in the DoD SSP PDF (acq.osd.mil USA000740-22-DPC, paras 1.2, 1.2.3, 1.4.1.1, 1.4.3.1.2, 1.4.4.4.3). DFARS 215.200, 215.201(b)(2), 215.204-2 and the PGI 215.200 pointer to the 20 Aug 2022 SSP read in Class Deviation 2026-O0048 Rev 1 attachments. RFO FAR 15.201 read on the acquisition.gov Part 15 page. Codified 215.300 and 215.303(b)(2) headings confirmed on acquisition.gov DFARS subpart 215.3. Reviewer 14 Sep 2026: AFARS Appendix GG Revision 30 (revised 1 Jul 2026, army.mil) read; it delegates SSA appointment for $100M to under $500M to the HCA, no lower than the SCO, and SSP waivers below $1B to the DASA(P). AFARS PGI 5115.201-90 nomination routing was not read.",
+  "mcq": {
+   "stem": "In a DoD source selection valued at $420 million, which body gives the SSA a written comparative analysis of proposals and an award recommendation?",
+   "options": [
+    {
+     "text": "The Source Selection Evaluation Board (SSEB)",
+     "correct": false,
+     "why": "The SSEB evaluates each proposal against the RFP factors but does not compare proposals or recommend an awardee unless the SSA asks."
+    },
+    {
+     "text": "The Source Selection Advisory Council (SSAC), including any minority opinions",
+     "correct": true,
+     "why": "The SSP makes the SSAC's primary role a written comparative analysis and recommendation, and an SSAC is required at $100 million or more unless waived."
+    },
+    {
+     "text": "The PCO, because FAR 15.201(a) makes the contracting officer the SSA by default",
+     "correct": false,
+     "why": "The DoD SSP requires an SSA other than the PCO at $100 million or more, and the PCO is not the comparative-analysis body."
+    },
+    {
+     "text": "Legal counsel, as part of its legal sufficiency review",
+     "correct": false,
+     "why": "Counsel reviews for legal sufficiency and advises the team; it does not rank proposals or recommend an awardee."
+    }
+   ],
+   "difficulty": 1,
+   "cite": "DoD Source Selection Procedures (20 Aug 2022) para 1.4.3"
+  }
+ },
+ {
+  "id": "N402",
+  "question": "You hold a Class III $100 million warrant. A competitive services requirement is estimated at $98 million for the base period, and the program office has added two option periods worth $27 million, for $125 million in total. The requiring activity says the acquisition is 'under a hundred million,' so you can be the SSA and sign the award, and it asks you to skip the Source Selection Advisory Council to protect the schedule. What do you tell them, and what do you do?",
+  "answer": "The number that matters is $125 million, not $98 million, and it changes three things.\n\nMy warrant. Army Warranting Program Policy v12, section 4.2, measures the instrument by cumulative value: base, all options, any ceiling, plus the absolute value of modifications. A $125 million contract exceeds my $100 million Class III warrant, so I cannot sign it. A KO with a Class IV warrant signs; I can still work the acquisition under that KO.\n\nThe SSA. The DoD Source Selection Procedures, mandatory under DFARS and PGI 215.200, count options and planned orders. At $100 million or more the agency head must appoint in writing an SSA other than the PCO, so whoever the PCO is cannot also be the SSA without a waiver.\n\nThe SSAC. At $100 million or more the SSA must establish an SSAC unless a waiver is approved. Below $1 billion the SSP sends that waiver to the senior procurement executive, the ASA(ALT) for the Army (AFARS 5102.101), and AFARS Appendix GG delegates it to the DASA(P) (AFARS 5115.200-90). 'Schedule' alone is a weak rationale, and the council's written comparative analysis helps protect the award if protested.\n\nWhat I do: correct the estimate in the acquisition plan to include options and route the SSA nomination under AFARS 5115.201-90. Appendix GG delegates the appointment at this value to the HCA, no lower than the SCO; I confirm current routing with our contracting policy office. If the program needs speed, the levers are a lean evaluation scheme and a realistic schedule, not skipping required roles.\n\nCite: FAR 15.201 (formerly 15.303); DFARS 215.200 (Class Deviation 2026-O0048 Rev 1); PGI 215.200; DoD Source Selection Procedures (20 Aug 2022) paras 1.2.3, 1.4.1.1 and 1.4.3.1.2; Army Warranting Program Policy v12 section 4.2 and Table 1; AFARS 5102.101, 5115.200-90, 5115.201-90 and Appendix GG.",
+  "key_points": [
+   "Warrant limit uses cumulative instrument value: base, all options, ceilings and absolute value of modifications (Policy v12 section 4.2); $125M exceeds a $100M Class III warrant",
+   "DoD SSP counts options and planned orders: at $100M or more the agency head appoints in writing an SSA other than the PCO",
+   "SSAC required at $100M or more unless waived; waiver authority is the SPE below $1B (Army SPE is the ASA(ALT), AFARS 5102.101, delegated to the DASA(P) by Appendix GG under AFARS 5115.200-90) and the Principal Director, DPC, at $1B or more",
+   "Schedule pressure alone is a weak waiver rationale; the SSAC comparative analysis strengthens the record for a protest",
+   "Army SSA appointment at $100M to under $500M is delegated to the HCA, no lower than the SCO (Appendix GG, AFARS 5115.201(a)(1)); nomination routing under AFARS 5115.201-90: confirm with the contracting policy office"
+  ],
+  "citations": [
+   "FAR 15.201",
+   "DFARS 215.200",
+   "PGI 215.200",
+   "DoD Source Selection Procedures (DPC memo, 20 Aug 2022)",
+   "Army Warranting Program Policy v12 (MAR 2026) section 4.2",
+   "AFARS 5102.101",
+   "AFARS 5115.200-90",
+   "AFARS 5115.201-90",
+   "AFARS Appendix GG"
+  ],
+  "crosswalk": [
+   {
+    "old": "FAR 15.303",
+    "new": "FAR 15.201"
+   },
+   {
+    "old": "DFARS 215.300",
+    "new": "DFARS 215.200"
+   },
+   {
+    "old": "PGI 215.300",
+    "new": "PGI 215.200"
+   }
+  ],
+  "classes": [
+   "III",
+   "IV"
+  ],
+  "domain": "Source Selection & Evaluation",
+  "topic": "SSA appointment and SSAC waiver at the $100M line",
+  "kind": "scenario",
+  "tags": [
+   "Source Selection",
+   "SSA",
+   "SSAC",
+   "Warrant Limits",
+   "Options",
+   "Class III",
+   "Class IV"
+  ],
+  "unit": "ACC-All",
+  "difficulty": 2,
+  "flags": [
+   "ai-drafted",
+   "verify-locally"
+  ],
+  "confidence": "high",
+  "confidence_reason": "SSP paras 1.2.3 (waivers: SPE below $1B, Principal Director DPC at $1B or more), 1.4.1.1 and 1.4.3.1.2 read in the SSP PDF. Policy v12 section 4.2 read in content/sources/army_warranting_policy_v12_mar2026.txt. AFARS 5102.101 (SPE means the ASA(ALT)) and 5115.201-90 read in the AFARS combined PDF from army.mil. Reviewer 14 Sep 2026: AFARS Appendix GG Revision 30 (revised 1 Jul 2026, army.mil) read; SSP waivers below $1B are delegated to the DASA(P) (5115.200-90) and SSA appointment for $100M to under $500M to the HCA, no lower than the SCO (5115.201(a)(1)).",
+  "mcq": {
+   "stem": "A competitive DoD acquisition has a $98 million base period and $27 million in options. Under the DoD Source Selection Procedures, which statement is correct?",
+   "options": [
+    {
+     "text": "Options count: at $125 million the agency head appoints an SSA other than the PCO, and an SSAC is required unless waived",
+     "correct": true,
+     "why": "The SSP's $100 million trigger expressly includes options and planned orders."
+    },
+    {
+     "text": "Only the base period counts, so the PCO may act as SSA and no SSAC is needed until the first option is actually exercised",
+     "correct": false,
+     "why": "This is the common misread; the SSP threshold includes options and planned orders from the start."
+    },
+    {
+     "text": "The PCO may waive the SSAC when the schedule is critical, by signing a memorandum for record that explains the schedule urgency",
+     "correct": false,
+     "why": "SSP waivers below $1 billion are approved by the senior procurement executive, not the PCO."
+    },
+    {
+     "text": "The HCA must personally serve as SSA for any source selection over $100 million, including all options and planned orders",
+     "correct": false,
+     "why": "The SSP requires an agency-head appointment of someone other than the PCO; it does not require the HCA to be the SSA."
+    }
+   ],
+   "difficulty": 2,
+   "cite": "DoD Source Selection Procedures (20 Aug 2022) paras 1.2.3, 1.4.1.1, 1.4.3.1.2"
+  }
+ },
+ {
+  "id": "N403",
+  "question": "You are the PCO on a $310 million tradeoff source selection in which the non-price factors combined are significantly more important than price. The SSAC recommends Offeror A (Outstanding technical, $310 million). After reading the SSEB report, the SSA concludes that A's extra strengths do not justify its $38 million premium over Offeror B (Good technical, $272 million) and wants to award to B. The SSAC chair tells you the SSA 'can't overrule the council.' Can the SSA select B, and how do you help document the decision so it survives a protest?",
+  "answer": "Yes, the SSA can select B. The decision belongs to the SSA, not the council, but the SSDD has to show the SSA's own reasoning.\n\nThe rule. RFO FAR 15.205 says the source selection decision must represent the SSA's independent judgment, be based on a comparative assessment of proposals against all the RFP criteria, and document the rationale for business judgments and tradeoffs, including benefits associated with additional costs, without having to quantify them. The DoD Source Selection Procedures add that the SSA must consider the SSEB and SSAC reports and any minority opinions, is not bound by the SSAC recommendation when there is a rational basis for disagreeing, must not rely on adjectival ratings alone, and must explicitly justify a decision not to pay a premium for a technically superior proposal.\n\nHow I help the SSA build the SSDD:\n- State what A's added strengths deliver, such as lower schedule risk, and what that is worth to the Army.\n- Explain why that value does not justify $38 million when non-price factors are significantly more important; the reasoning must engage that weighting.\n- Acknowledge the SSAC recommendation and any minority views, and say why the SSA disagrees.\n- Stay inside the RFP factors: no new criteria and no counting of strengths.\n\nThe risk. A conclusory or mechanical tradeoff is a common protest ground. The SSDD is releasable to GAO under a protective order, and on a DoD award over $150 million a redacted copy goes to offerors at the debriefing under DFARS 215.301-70(b)(2). I write it assuming the losing offeror will read it, and legal counsel reviews it before the SSA signs.\n\nCite: FAR 15.205 (formerly 15.308); DoD Source Selection Procedures (20 Aug 2022) paras 3.8 to 3.10; DFARS 215.301-70(b) (Class Deviation 2026-O0048 Rev 1).",
+  "key_points": [
+   "FAR 15.205: the decision is the SSA's independent judgment, based on a comparative assessment against all RFP criteria, with documented tradeoff rationale including benefits of additional cost; no requirement to quantify",
+   "The SSA must consider SSEB and SSAC reports and minority opinions but is not bound by the SSAC recommendation if there is a rational basis (SSP 3.9.1)",
+   "Do not rely on adjectival ratings alone; explicitly justify declining to pay a premium for a technically superior proposal (SSP 3.9.3)",
+   "The rationale must engage the RFP's stated relative importance of price and non-price factors",
+   "SSDD is releasable to GAO under protective order; a redacted SSDD is disclosed at the debriefing for DoD awards over $150M (DFARS 215.301-70(b)(2))"
+  ],
+  "citations": [
+   "FAR 15.205",
+   "DoD Source Selection Procedures (DPC memo, 20 Aug 2022)",
+   "DFARS 215.301-70(b)"
+  ],
+  "crosswalk": [
+   {
+    "old": "FAR 15.308",
+    "new": "FAR 15.205"
+   },
+   {
+    "old": "DFARS 215.506",
+    "new": "DFARS 215.301-70"
+   }
+  ],
+  "classes": [
+   "IV"
+  ],
+  "domain": "Source Selection & Evaluation",
+  "topic": "SSA independent judgment and tradeoff documentation",
+  "kind": "scenario",
+  "tags": [
+   "Source Selection",
+   "SSDD",
+   "Tradeoff",
+   "Best Value",
+   "Protest Risk",
+   "Class IV"
+  ],
+  "unit": "ACC-All",
+  "difficulty": 3,
+  "flags": [
+   "ai-drafted"
+  ],
+  "confidence": "high",
+  "confidence_reason": "RFO FAR 15.205 text read on the acquisition.gov Part 15 page. SSP paras 3.8, 3.9.1, 3.9.3 and 3.10 read in the SSP PDF. DFARS 215.301-70(b)(1)-(2) ($15M-$150M on request for small business or nontraditional contractors; over $150M for all) read in Class Deviation 2026-O0048 Rev 1 attachment 1. The 2022 SSP still prints the older $10M/$100M disclosure figures.",
+  "mcq": {
+   "stem": "The SSA disagrees with the SSAC and selects a lower-priced, lower-rated proposal. Which statement about the SSDD is correct?",
+   "options": [
+    {
+     "text": "The SSA cannot depart from the SSAC recommendation without a waiver from the senior procurement executive, obtained before signing",
+     "correct": false,
+     "why": "The SSA is not bound by the SSAC recommendation when there is a rational basis for disagreeing; no such waiver exists, before or after signing."
+    },
+    {
+     "text": "Citing the Outstanding and Good adjectival ratings is sufficient support",
+     "correct": false,
+     "why": "The SSP says the SSA must not rely on adjectival ratings alone and must analyze the differences between proposals."
+    },
+    {
+     "text": "An SSDD is required only when award goes to a higher-priced offeror",
+     "correct": false,
+     "why": "The SSP requires an SSDD for every source selection, and declining a premium needs an explicit justification."
+    },
+    {
+     "text": "It must show the SSA's own comparative assessment and why the price premium was not worth paying, without having to quantify it",
+     "correct": true,
+     "why": "FAR 15.205 and SSP 3.9.3 require documented rationale for tradeoffs, including benefits associated with additional costs, without requiring quantification."
+    }
+   ],
+   "difficulty": 3,
+   "cite": "FAR 15.205"
+  }
+ },
+ {
+  "id": "N404",
+  "question": "You are the PCO on an $85 million tradeoff source selection for installation logistics services. The SSA's draft SSDD reads, in full on the tradeoff: 'Offeror A received more strengths and an Outstanding rating; its $6 million higher price is therefore justified.' The SSA asks you to finalize it for signature today. What do you tell the SSA, and what must the SSDD contain?",
+  "answer": "I tell the SSA it is not ready. As written it counts strengths and repeats a rating, and a decision cannot rest on that.\n\nThe rule. RFO FAR 15.205 requires the decision to represent the SSA's independent judgment, based on a comparative assessment against all the RFP criteria, with documented rationale for tradeoffs, including benefits associated with additional costs; it need not quantify them. The DoD Source Selection Procedures, which apply to competitive part 15 acquisitions over $10 million, say the SSA must not rely on adjectival ratings alone, and each tradeoff needs a justification stating the benefit the Government expects, its value, and why it is worth the extra money.\n\nWhat I ask the SSA to add:\n- Which of A's strengths are real discriminators, what they mean in performance terms, and how B compares on the same points.\n- How those differences relate to the RFP's stated relative importance of the factors.\n- Why the benefits are worth $6 million to the Army. A reasoned narrative is enough; a dollar value per strength is not required.\n- Any disagreement with the SSEB or SSAC findings, and why.\n\nThe SSA may use the evaluation reports, but the SSDD must state the SSA's own conclusions. Legal counsel reviews it before signature.\n\nThe risk. A mechanical SSDD invites a protest that the tradeoff was unsupported, and corrective action costs far more than one day. On a DoD award over $15 million up to $150 million, a small business or nontraditional defense contractor can also ask for the redacted SSDD at its debriefing under DFARS 215.301-70(b)(1), so I assume the losing offeror will read it.\n\nCite: FAR 15.205 (formerly 15.308); DoD Source Selection Procedures (20 Aug 2022) paras 1.2, 3.9 and 3.10; DFARS 215.301-70(b) (Class Deviation 2026-O0048 Rev 1).",
+  "key_points": [
+   "FAR 15.205: SSA's independent judgment, comparative assessment against all RFP criteria, documented tradeoff rationale including benefits of additional cost; quantification not required",
+   "DoD SSP (competitive part 15 acquisitions over $10M): no reliance on adjectival ratings alone; each tradeoff states the benefit, its value and why it is worth the added price",
+   "Identify discriminators, compare offerors on the same points, and tie the analysis to the RFP's relative importance of factors",
+   "The SSA may use SSEB and SSAC reports, but the SSDD must reflect the SSA's own conclusions and any disagreement with them",
+   "DFARS 215.301-70(b)(1): on awards over $15M to $150M, a small business or nontraditional defense contractor may request the redacted SSDD at debriefing"
+  ],
+  "citations": [
+   "FAR 15.205",
+   "DoD Source Selection Procedures (DPC memo, 20 Aug 2022)",
+   "DFARS 215.301-70(b)"
+  ],
+  "crosswalk": [
+   {
+    "old": "FAR 15.308",
+    "new": "FAR 15.205"
+   },
+   {
+    "old": "DFARS 215.506",
+    "new": "DFARS 215.301-70"
+   }
+  ],
+  "classes": [
+   "III",
+   "IV"
+  ],
+  "domain": "Source Selection & Evaluation",
+  "topic": "Documenting the tradeoff in the SSDD",
+  "kind": "scenario",
+  "tags": [
+   "Source Selection",
+   "SSDD",
+   "Tradeoff",
+   "Adjectival Ratings",
+   "Class III",
+   "Class IV"
+  ],
+  "unit": "ACC-All",
+  "difficulty": 2,
+  "flags": [
+   "ai-drafted"
+  ],
+  "confidence": "high",
+  "confidence_reason": "RFO FAR 15.205 read on the acquisition.gov Part 15 page and compared with legacy FAR 15.308 on acquisition.gov. SSP paras 1.2 (applies above $10M), 3.9.1, 3.9.3 and 3.10.1 read in the SSP PDF. DFARS 215.301-70(b)(1) read in Class Deviation 2026-O0048 Rev 1 attachment 1.",
+  "mcq": {
+   "stem": "Under RFO FAR 15.205 and the DoD Source Selection Procedures, how must an SSA document a tradeoff that pays a price premium?",
+   "options": [
+    {
+     "text": "Assign a dollar value to each strength so the premium can be compared arithmetically",
+     "correct": false,
+     "why": "Quantification is not required; a reasoned narrative tied to the RFP factors is what the rule demands."
+    },
+    {
+     "text": "Adopt the SSEB's adjectival ratings by reference in the SSDD, since the higher rating justifies the higher price",
+     "correct": false,
+     "why": "The SSP says the SSA must not rely on adjectival ratings alone and must analyze the differences between proposals."
+    },
+    {
+     "text": "Explain what the extra cost buys and why it is worth it; the tradeoff need not be quantified in dollars",
+     "correct": true,
+     "why": "FAR 15.205 requires rationale including benefits associated with additional costs and states the documentation need not quantify the tradeoffs."
+    },
+    {
+     "text": "Document it only when the SSA disagrees with the SSAC; otherwise the SSAC report serves as the decision record",
+     "correct": false,
+     "why": "An SSDD reflecting the SSA's independent judgment is required for every source selection, including when the SSA agrees with the SSAC."
+    }
+   ],
+   "difficulty": 2,
+   "cite": "FAR 15.205"
+  }
+ },
+ {
+  "id": "N405",
+  "question": "Your office is preparing a sole-source justification under the only-one-responsible-source authority for continued depot-level repair of a proprietary fire-control system. The estimated value is $340 million including options. A new specialist has routed the draft J&A to the senior procurement executive because 'FAR Table 6-1 says anything over $150 million for DoD goes to the SPE,' and the requiring activity wants to split the effort into two $170 million J&As to keep approval lower. Who approves this J&A, and what do you do about each proposal?",
+  "answer": "Neither proposal is right. For DoD the approval tiers are in the DFARS, not FAR Table 6-1.\n\nThe rule. DoD Class Deviation 2026-O0017 Rev 2 puts Table 206-1 at DFARS 206.104-71, in lieu of the FAR 6.104-2(b) Table 6-1 thresholds, under 10 U.S.C. 3204(e)(1)(B) as amended by the FY2026 NDAA. By value including options:\n- $10 million or below: the contracting officer's certification is the approval.\n- Over $10 million to $100 million: the competition advocate, not delegable.\n- Over $100 million to $500 million: the head of the contracting activity.\n- Over $500 million: the senior procurement executive.\n\nApplied here. At $340 million this J&A goes to the HCA. The HCA may delegate only to a general or flag officer, or to a civilian at a grade comparable to brigadier general or higher (DFARS 206.104-71(a)). For the Army, AFARS 5106.104-290 points to Appendix GG for further delegation, so I confirm the current approver and routing with our contracting policy office. Sending it to the SPE relies on a FAR table figure that the DoD table replaces.\n\nSplitting. AFARS 5106.104-290(b) says requirements shall not be split to avoid a higher approval level. Two $170 million J&As for one requirement would do exactly that, and each would still be at the HCA tier anyway.\n\nWhat else I watch. I certify the J&A's accuracy and completeness under FAR 6.104-1(a)(12). If the value grows past the HCA tier before award, AFARS 5106.104-90 requires an amended J&A approved at the new level. After award the justification is made publicly available under FAR 6.301.\n\nCite: FAR 6.103-1, 6.104-1, 6.104-2 and 6.301 (formerly 6.302-1, 6.303, 6.304 and 6.305); DFARS 206.104-71 Table 206-1 (Class Deviation 2026-O0017 Rev 2); 10 U.S.C. 3204(e); AFARS 5106.104-90 and 5106.104-290.",
+  "key_points": [
+   "DoD uses DFARS 206.104-71 Table 206-1 in lieu of FAR 6.104-2(b) Table 6-1 (Class Deviation 2026-O0017 Rev 2; 10 U.S.C. 3204(e)(1)(B) as amended by Pub. L. 119-60)",
+   "Tiers by value including options: KO certification at $10M or below; competition advocate over $10M to $100M (not delegable); HCA over $100M to $500M; SPE over $500M",
+   "HCA authority is delegable only to a general or flag officer or a civilian at brigadier general equivalent or higher (DFARS 206.104-71(a)); Army delegations are in AFARS Appendix GG",
+   "No splitting of requirements to avoid a higher approval level (AFARS 5106.104-290(b)); amend the J&A if value grows past the approver's tier before award (AFARS 5106.104-90)",
+   "The FAR Table 6-1 DoD figure of $150M for the SPE is not the DoD approval tier"
+  ],
+  "citations": [
+   "FAR 6.103-1",
+   "FAR 6.104-1",
+   "FAR 6.104-2",
+   "FAR 6.301",
+   "DFARS 206.104-71",
+   "10 U.S.C. 3204(e)",
+   "AFARS 5106.104-90",
+   "AFARS 5106.104-290"
+  ],
+  "crosswalk": [
+   {
+    "old": "FAR 6.302-1",
+    "new": "FAR 6.103-1"
+   },
+   {
+    "old": "FAR 6.303",
+    "new": "FAR 6.104"
+   },
+   {
+    "old": "FAR 6.304",
+    "new": "FAR 6.104-2"
+   },
+   {
+    "old": "DFARS 206.304",
+    "new": "DFARS 206.104-71"
+   }
+  ],
+  "classes": [
+   "IV"
+  ],
+  "domain": "Competition & Market Research",
+  "topic": "J&A approval at the HCA tier",
+  "kind": "scenario",
+  "tags": [
+   "J&A",
+   "Sole Source",
+   "Approval Authority",
+   "Table 206-1",
+   "Class IV"
+  ],
+  "unit": "ACC-All",
+  "difficulty": 2,
+  "flags": [
+   "ai-drafted",
+   "verify-locally"
+  ],
+  "confidence": "high",
+  "confidence_reason": "Table 206-1 and 206.104-71(a)-(b) read verbatim in the Class Deviation 2026-O0017 Rev 2 attachment (DFARS Part 206). 10 U.S.C. 3204(e)(1)(B) and (e)(6) read at law.cornell.edu with the Pub. L. 119-60 amendment note ($10M/$100M/$500M). FAR Table 6-1 figures taken from regulations.json thresholds (verified 13 Sep 2026). AFARS 5106.104-90 and 5106.104-290 read in the AFARS combined PDF (Part 5106 revised 1 Feb 2026). The 6.305 to 6.301 pairing is inferred from the deviation's reference to FAR 6.301 for public availability. Army Appendix GG was not available.",
+  "mcq": {
+   "stem": "For an Army sole-source J&A valued at $340 million including options, who is the approval authority?",
+   "options": [
+    {
+     "text": "The senior procurement executive, because FAR Table 6-1 sends DoD actions over $150 million to the SPE",
+     "correct": false,
+     "why": "DoD applies Table 206-1 in lieu of Table 6-1; the DoD SPE tier begins above $500 million."
+    },
+    {
+     "text": "The HCA, delegable only to a general or flag officer or civilian equivalent (DFARS Table 206-1)",
+     "correct": true,
+     "why": "Table 206-1 places actions over $100 million up to $500 million with the HCA, and 206.104-71(a) limits delegation."
+    },
+    {
+     "text": "The competition advocate, without power of delegation",
+     "correct": false,
+     "why": "The competition advocate tier covers actions over $10 million up to $100 million."
+    },
+    {
+     "text": "The contracting officer's certification under FAR 6.104-1(a)(12)",
+     "correct": false,
+     "why": "Certification serves as the approval only at $10 million or below."
+    }
+   ],
+   "difficulty": 2,
+   "cite": "DFARS 206.104-71"
+  }
+ },
+ {
+  "id": "N406",
+  "question": "The HCA approved a $480 million J&A for a sole-source production contract. During negotiations the program office adds priced options for spares and support, and the total value including options is now $560 million. Award is planned in five weeks. The program manager says the approved J&A still covers the award and, if it does not, the ASA(ALT) 'can just delegate the signature back to the HCA.' What do you do?",
+  "answer": "I stop the award schedule until the justification is fixed, because the approval no longer matches the action.\n\nAmendment. AFARS 5106.104-90 requires the contracting officer to amend a justification and obtain the required approvals before award when the dollar value grows beyond the authority of the previous approving official, when the competitive strategy further reduces competition, or when a change in requirements affects the basis. At $560 million the action has passed the HCA tier.\n\nApproval level. DFARS 206.104-71 Table 206-1 sends actions over $500 million, including options, to the senior procurement executive; for the Army that is the ASA(ALT) (AFARS 5102.101). The program manager's fallback does not work. 10 U.S.C. 3204(e)(1)(B)(iii) says the SPE approves 'without further delegation.' Table 206-1 marks the SPE tier delegable under paragraph (b), but paragraph (b) covers only the Under Secretary of Defense (Acquisition and Sustainment) acting as the DoD SPE, delegating to an Assistant Secretary of Defense or a senior defense agency official. It gives the ASA(ALT) no path back to the HCA.\n\nSchedule. AFARS 5106.104-190(c) asks for approximately 30 working days to staff an SPE-level justification, so five weeks is already tight. I tell the program manager that today, not in week four.\n\nThe rest of the file:\n- Prepare the amendment in the AFARS PGI 5106.104-190(b) format with the original J&A attached.\n- Update the market research, the actions to remove barriers to competition, and my certification under FAR 6.104-1(a)(12) for the added options.\n- Re-test whether the added spares could be competed separately. Late sole-source growth is what reviewers look at first.\n\nCite: FAR 6.104-1 and 6.104-2 (formerly 6.303 and 6.304); DFARS 206.104-71 Table 206-1 and paragraph (b) (Class Deviation 2026-O0017 Rev 2); 10 U.S.C. 3204(e)(1)(B)(iii); AFARS 5102.101, 5106.104-90 and 5106.104-190.",
+  "key_points": [
+   "Amend the J&A before award when value grows beyond the prior approver's authority, competition is further reduced, or requirements change (AFARS 5106.104-90)",
+   "Over $500M including options the senior procurement executive approves (DFARS 206.104-71 Table 206-1); the Army SPE is the ASA(ALT) (AFARS 5102.101)",
+   "10 U.S.C. 3204(e)(1)(B)(iii): the SPE approves without further delegation; the delegation in 206.104-71(b) applies only to USD(A&S) acting as the DoD SPE",
+   "Allow about 30 working days to staff an SPE-level justification (AFARS 5106.104-190(c)); use the amendment format and attach the original J&A",
+   "Update market research, barrier-removal actions and the KO certification; re-test whether the added scope could be competed"
+  ],
+  "citations": [
+   "FAR 6.104-1",
+   "FAR 6.104-2",
+   "DFARS 206.104-71",
+   "10 U.S.C. 3204(e)(1)(B)",
+   "AFARS 5102.101",
+   "AFARS 5106.104-90",
+   "AFARS 5106.104-190"
+  ],
+  "crosswalk": [
+   {
+    "old": "FAR 6.303",
+    "new": "FAR 6.104"
+   },
+   {
+    "old": "FAR 6.304",
+    "new": "FAR 6.104-2"
+   },
+   {
+    "old": "DFARS 206.304",
+    "new": "DFARS 206.104-71"
+   }
+  ],
+  "classes": [
+   "IV"
+  ],
+  "domain": "Competition & Market Research",
+  "topic": "Amended J&A crossing into the SPE tier",
+  "kind": "scenario",
+  "tags": [
+   "J&A",
+   "Senior Procurement Executive",
+   "Delegation",
+   "Amended Justification",
+   "Class IV"
+  ],
+  "unit": "ACC-All",
+  "difficulty": 3,
+  "flags": [
+   "ai-drafted",
+   "verify-locally"
+  ],
+  "confidence": "high",
+  "confidence_reason": "10 U.S.C. 3204(e)(1)(B)(iii) ('without further delegation') and (e)(6)(B) read at law.cornell.edu. DFARS 206.104-71 Table 206-1 and paragraphs (a)-(b) read in the Class Deviation 2026-O0017 Rev 2 attachment. AFARS 5102.101 (SPE is the ASA(ALT)), 5106.104-90 and 5106.104-190(b)-(c) read in the AFARS combined PDF from army.mil. Staffing timelines and routing vary locally, so confirm with the contracting policy office.",
+  "mcq": {
+   "stem": "Before award, an Army sole-source action grows from $480 million to $560 million including options. Which statement about the J&A is correct?",
+   "options": [
+    {
+     "text": "It must be amended and approved by the ASA(ALT) as senior procurement executive, who cannot delegate that approval",
+     "correct": true,
+     "why": "Table 206-1 puts actions over $500 million with the SPE, and 10 U.S.C. 3204(e)(1)(B)(iii) says the SPE approves without further delegation."
+    },
+    {
+     "text": "The HCA's earlier approval still covers the award because the J&A was approved before the options were added",
+     "correct": false,
+     "why": "AFARS 5106.104-90 requires an amended J&A when value grows beyond the prior approver's authority before award."
+    },
+    {
+     "text": "The ASA(ALT) may delegate the approval to the HCA because Table 206-1 marks the SPE tier delegable",
+     "correct": false,
+     "why": "The delegation in 206.104-71(b) applies only when the USD(A&S) is acting as the DoD SPE."
+    },
+    {
+     "text": "The competition advocate may approve the amendment because only the options changed",
+     "correct": false,
+     "why": "The approval level follows total value including options, and the competition advocate tier ends at $100 million."
+    }
+   ],
+   "difficulty": 3,
+   "cite": "DFARS 206.104-71"
+  }
+ },
+ {
+  "id": "N407",
+  "question": "It is October 2026. You are negotiating a sole-source, firm-fixed-price Army contract for radio repair kits with an expected price of $8.7 million. Working from the RFO FAR Part 15 text, your pricing analyst has drafted a request for certified cost or pricing data and a Certificate of Current Cost or Pricing Data because 'anything over $2.5 million needs TINA.' Is certified cost or pricing data required, and how do you establish a fair and reasonable price?",
+  "answer": "No. Certified cost or pricing data is not required for this DoD award, but I still have to show the price is fair and reasonable.\n\nThe rule. The FY2026 NDAA amended 10 U.S.C. 3702 to set the threshold at $10 million for DoD prime contracts entered into after June 30, 2026. DoD implemented it in DFARS 215.403-3(a), Class Deviation 2026-O0048 Rev 1, in lieu of RFO FAR 15.403-3(a): obtain certified cost or pricing data when a prime contract is expected to exceed $10 million and is awarded after June 30, 2026, unless an exception applies. The $2.5 million in RFO FAR 15.403-3(a) is the governmentwide figure, and DoD still uses it for prime contracts awarded on or before June 30, 2026.\n\nApplied here. An October 2026 award expected at $8.7 million is below $10 million, so I do not require certified data or a certificate.\n\nHow I price it:\n- Request only the data other than certified cost or pricing data I need, under RFO FAR 15.403-1 and DFARS 215.403-1: prices previously paid, catalog or market prices, and cost information if price analysis alone will not support the price.\n- Use price analysis under RFO FAR 15.404-1, adding cost analysis of the supporting data if needed.\n- Document the basis in the price negotiation memorandum.\n\nWatch items. If negotiations move the price above $10 million, the requirement applies unless an exception fits. Subcontract flow-down under a prime awarded after June 30, 2026 also uses $10 million (DFARS 215.403-3(a)(2)). An offeror that refuses reasonable data other than certified data is a reason to elevate the issue, not to skip the analysis.\n\nCite: 10 U.S.C. 3702(a); DFARS 215.403-3(a) and 215.403-1 (Class Deviation 2026-O0048 Rev 1); FAR 15.403-1, 15.403-3 and 15.404-1 (formerly 15.403-3, 15.403-4 and 15.404-1(b)).",
+  "key_points": [
+   "DoD prime contracts awarded after 30 Jun 2026: certified cost or pricing data threshold is $10M (10 U.S.C. 3702(a)(1)(A); DFARS 215.403-3(a), Class Deviation 2026-O0048 Rev 1)",
+   "RFO FAR 15.403-3(a) still prints $2.5M: the governmentwide figure, and the DoD figure for primes awarded on or before 30 Jun 2026",
+   "Below the threshold obtain only data other than certified cost or pricing data needed for price reasonableness (FAR 15.403-1; DFARS 215.403-1)",
+   "Price analysis (FAR 15.404-1) and documentation in the price negotiation memorandum are still required",
+   "Re-check if the negotiated price rises above $10M; subcontract flow-down under primes awarded after 30 Jun 2026 also uses $10M"
+  ],
+  "citations": [
+   "10 U.S.C. 3702(a)",
+   "DFARS 215.403-3(a)",
+   "DFARS 215.403-1",
+   "FAR 15.403-1",
+   "FAR 15.403-3",
+   "FAR 15.404-1"
+  ],
+  "crosswalk": [
+   {
+    "old": "FAR 15.403-4",
+    "new": "FAR 15.403-3"
+   },
+   {
+    "old": "FAR 15.403-3",
+    "new": "FAR 15.403-1"
+   },
+   {
+    "old": "FAR 15.404-1(b)",
+    "new": "FAR 15.404-1"
+   },
+   {
+    "old": "DFARS 215.403-3",
+    "new": "DFARS 215.403-1"
+   }
+  ],
+  "classes": [
+   "III",
+   "IV"
+  ],
+  "domain": "Pricing, Cost & Payment",
+  "topic": "DoD $10M certified cost or pricing data threshold",
+  "kind": "scenario",
+  "tags": [
+   "TINA",
+   "Certified Cost or Pricing Data",
+   "Price Analysis",
+   "Thresholds",
+   "Class III",
+   "Class IV"
+  ],
+  "unit": "ACC-All",
+  "difficulty": 1,
+  "flags": [
+   "ai-drafted"
+  ],
+  "confidence": "high",
+  "confidence_reason": "DFARS 215.403-3(a) and (a)(2) read verbatim in Class Deviation 2026-O0048 Rev 1 attachment 1. 10 U.S.C. 3702(a)(1)(A)-(B) read at law.cornell.edu with the Pub. L. 119-60 sec. 1804 amendment note. RFO FAR 15.403-3(a) ($2.5M) and the 15.403-1 heading read on the acquisition.gov Part 15 page. FAR crosswalk pairs from regulations.json (verified); the codified DFARS 215.403-3 heading ('Requiring data other than certified cost or pricing data') confirmed on acquisition.gov subpart 215.4.",
+  "mcq": {
+   "stem": "What is the certified cost or pricing data threshold for an Army prime contract awarded in October 2026?",
+   "options": [
+    {
+     "text": "$2.5 million",
+     "correct": false,
+     "why": "That is the governmentwide figure in RFO FAR 15.403-3(a); DoD uses it only for prime contracts awarded on or before June 30, 2026."
+    },
+    {
+     "text": "$35 million",
+     "correct": false,
+     "why": "$35 million is the CAS contract-level applicability threshold in 41 U.S.C. 1502(b)(1)(B), not the certified cost or pricing data threshold."
+    },
+    {
+     "text": "Any sole-source award above the simplified acquisition threshold",
+     "correct": false,
+     "why": "Sole source alone does not trigger certified data; the requirement applies above the dollar threshold unless an exception applies."
+    },
+    {
+     "text": "$10 million",
+     "correct": true,
+     "why": "10 U.S.C. 3702(a)(1)(A) and DFARS 215.403-3(a) set $10 million for DoD prime contracts awarded after June 30, 2026."
+    }
+   ],
+   "difficulty": 1,
+   "cite": "DFARS 215.403-3(a)"
+  }
+ },
+ {
+  "id": "N408",
+  "question": "You are negotiating a $260 million sole-source contract for flight-critical actuators with the only qualified manufacturer. The company refuses to submit certified cost or pricing data, saying it sells mostly to commercial aviation and will walk away rather than certify. The item has been determined not to be commercial, the program manager says aircraft will be grounded without it, and the SCO offers to 'sign a TINA waiver today.' What are your options, who can approve a waiver, and what has to happen before and after?",
+  "answer": "A waiver may be the only path, but it is not the SCO's to sign.\n\nExceptions first. None of the RFO FAR 15.403-2(b) exceptions (adequate price competition, prices set by law or regulation, commercial products or services) fits a noncompetitive, noncommercial item. If the company is a nontraditional defense contractor, DFARS 215.403-71(a)(5) says it need not submit certified data unless waived, which changes the discussion.\n\nThe waiver. Under RFO FAR 15.403-2(c)(4) and DFARS 215.403-71(b)(1), only the HCA, without power of delegation, may waive in an exceptional case when:\n- the item cannot reasonably be obtained without the waiver,\n- the price can be determined fair and reasonable without certified data, and\n- there are demonstrated benefits to granting it.\nPGI 215.403-71(b)(1)(ii) requires a waiver over $100 million to be coordinated with the senior procurement executive before it is granted; for the Army, AFARS Appendix GG routes that coordination to the DASA(P).\n\nWhat I build before the HCA signs:\n- A written determination addressing all three findings and the readiness impact.\n- Price analysis on data other than certified cost or pricing data; a waiver removes certification, not my duty to find the price fair and reasonable.\n- A plan to avoid repeating the waiver, such as a second source or an alternative product (PGI 215.403-71(b)(1)(i)).\n- A subcontract decision: lower-tier subcontracts above the threshold still need certified data unless an exception applies or the waiver specifically covers them (FAR 15.403-2(c)(4)(ii)).\n\nAfter award, the waiver goes in the annual DPCAP report due November 30 because it is $25 million or more (PGI 215.403-71(b)(2)); AFARS PGI 5115.403-270 adds Army reporting.\n\nCite: FAR 15.403-2(b) and (c)(4) (formerly 15.403-1(b) and (c)(4)); DFARS 215.403-71(a)(5) and (b), PGI 215.403-71(b) (Class Deviation 2026-O0048 Rev 1); 10 U.S.C. 3703(a); AFARS 5115.403-270 and Appendix GG.",
+  "key_points": [
+   "Test the exceptions first (FAR 15.403-2(b)); a nontraditional defense contractor is not required to submit certified data unless waived (DFARS 215.403-71(a)(5))",
+   "Exceptional-case waiver: HCA only, without power of delegation, on three findings: cannot obtain without the waiver, price can be found fair and reasonable, demonstrated benefits (FAR 15.403-2(c)(4); DFARS 215.403-71(b)(1))",
+   "Waivers over $100M must be coordinated with the SPE before they are granted (PGI 215.403-71(b)(1)(ii)); the Army SPE is the ASA(ALT) (AFARS 5102.101), and AFARS Appendix GG (Rev 30) routes the Army coordination to the DASA(P)",
+   "A waiver removes certification, not price analysis: obtain data other than certified data and plan to avoid future waivers (e.g., a second source or an alternative product)",
+   "Lower-tier subcontracts above the threshold still need certified data unless an exception applies or the waiver specifically covers them",
+   "Report waivers on actions of $25M or more to DPCAP by 30 November (PGI 215.403-71(b)(2)); AFARS PGI 5115.403-270(b)(1) also has the KO send approved waivers of $20M or more to the Army address at AFARS PGI 5101.290(b)(1)"
+  ],
+  "citations": [
+   "FAR 15.403-2",
+   "DFARS 215.403-71",
+   "PGI 215.403-71",
+   "10 U.S.C. 3703(a)",
+   "AFARS 5102.101",
+   "AFARS 5115.403-270",
+   "AFARS Appendix GG"
+  ],
+  "crosswalk": [
+   {
+    "old": "FAR 15.403-1(b)",
+    "new": "FAR 15.403-2(b)"
+   },
+   {
+    "old": "FAR 15.403-1(c)",
+    "new": "FAR 15.403-2(c)"
+   },
+   {
+    "old": "DFARS 215.403-1(c)(4)",
+    "new": "DFARS 215.403-71(b)"
+   }
+  ],
+  "classes": [
+   "III",
+   "IV"
+  ],
+  "domain": "Pricing, Cost & Payment",
+  "topic": "HCA waiver of certified cost or pricing data",
+  "kind": "scenario",
+  "tags": [
+   "TINA",
+   "Waiver",
+   "Sole Source",
+   "Head of the Contracting Activity",
+   "Class III",
+   "Class IV"
+  ],
+  "unit": "ACC-All",
+  "difficulty": 3,
+  "flags": [
+   "ai-drafted",
+   "verify-locally"
+  ],
+  "confidence": "high",
+  "confidence_reason": "RFO FAR 15.403-2(c)(4)(i)-(ii) read on the acquisition.gov Part 15 page. DFARS 215.403-71(a)(5) and (b)(1) and PGI 215.403-71(b)(1)(i)-(ii), (b)(2) and (b)(5) read in Class Deviation 2026-O0048 Rev 1 attachments. Codified DFARS 215.403-1(c)(4)(A) ('without power of delegation') read on acquisition.gov subpart 215.4. 10 U.S.C. 3703(a) read at law.cornell.edu. AFARS 5115.403-270 read in the AFARS combined PDF. Reviewer 14 Sep 2026: RFO FAR 15.403-2(c)(4)(ii)(A)-(B) read in full and matches the answer; AFARS Appendix GG Revision 30 (revised 1 Jul 2026) read: the Army row for AFARS 5115.403-270(b)(1) is HCA approval with SPE coordination, delegated so that the coordination is with the DASA(P); AFARS PGI 5115.403-270(b)(1) ($20M Army transmittal) read.",
+  "mcq": {
+   "stem": "An Army contracting activity wants to waive certified cost or pricing data on a $260 million sole-source award. Who may grant the waiver, and what coordination is required?",
+   "options": [
+    {
+     "text": "The senior contracting official, under a written delegation from the HCA for waivers of this size",
+     "correct": false,
+     "why": "The exceptional-case waiver cannot be delegated, in writing or otherwise; SCO-level delegation exists only for the separate nontraditional defense contractor waiver in PGI 215.403-71(b)(5)."
+    },
+    {
+     "text": "The contracting officer, with legal review, once price analysis shows the price is reasonable",
+     "correct": false,
+     "why": "A reasonable price is one required finding, but the contracting officer has no authority to waive the requirement."
+    },
+    {
+     "text": "The HCA, without delegation, after coordinating with the senior procurement executive",
+     "correct": true,
+     "why": "FAR 15.403-2(c)(4) and DFARS 215.403-71(b)(1) give the waiver to the HCA without delegation, and PGI 215.403-71(b)(1)(ii) requires SPE coordination above $100 million; for the Army, AFARS Appendix GG routes that coordination to the DASA(P)."
+    },
+    {
+     "text": "The senior procurement executive must personally grant every waiver over $100 million, after HCA review",
+     "correct": false,
+     "why": "The HCA grants the waiver; above $100 million the SPE is coordinated with, not the approving official."
+    }
+   ],
+   "difficulty": 3,
+   "cite": "DFARS 215.403-71(b)"
+  }
+ },
+ {
+  "id": "N409",
+  "question": "You plan to award a $140 million cost-plus-incentive-fee development contract in November 2026 to a business unit that has only DoD contracts. In its last cost accounting period the unit received $60 million in net CAS-covered awards, and it has never filed a CAS Disclosure Statement. The offeror's certification claims modified coverage 'because we were under $100 million last year.' The program office wants award before the holidays. What CAS coverage applies, what must you have before award, and who can let you award without it?",
+  "answer": "Full CAS coverage applies. I cannot award until the Disclosure Statement is in and found adequate, unless the head of the agency authorizes otherwise.\n\nThe rule. For business units with only DoD contracts, DFARS 230.201-70(a)(1) (Class Deviation 2026-O0006 Rev 1, implementing FY2026 NDAA section 1806) applies full coverage on a single CAS-covered award of $100 million or more, or $100 million or more in net CAS-covered awards in the preceding cost accounting period. Either trigger is enough. From 1 October 2026 the CAS Board rule makes $100 million the governmentwide figure and exempts negotiated contracts of $35 million or less.\n\nApplied here. The $140 million award is itself the trigger, so last year's $60 million does not matter; later CAS-covered awards to that unit in the same period also take full coverage (48 CFR 9903.201-2(b)(2)). Clauses: FAR 52.230-2 with DFARS 252.230-7995, Alternate A, and 52.230-6 with 252.230-7998, Alternate A.\n\nBefore award:\n- A Disclosure Statement: a business unit selected for a CAS-covered contract of $100 million or more submits one before award (48 CFR 9903.202-1(b)(1); DFARS 230.301).\n- The cognizant Federal agency official's written adequacy determination, normally the DCMA ACO's (RFO FAR 30.301).\n- A call to the offeror now to correct its certification, and early DCMA and DCAA engagement, because adequacy reviews take time.\n\nThe exception. Only the head of the agency, without power of delegation, may authorize award before the Disclosure Statement is submitted (RFO FAR 30.301(b)(1); 48 CFR 9903.202-2). For the Army that is the ASA(ALT), and the statement and adequacy determination must follow as soon as possible. A holiday target is a weak basis for that request.\n\nCite: 41 U.S.C. 1502; 48 CFR 9903.201-2, 9903.202-1 and 9903.202-2; FAR 30.301 (formerly 30.202-6(b)); DFARS 230.201-70, 230.205-70 and 230.301 (Class Deviation 2026-O0006 Rev 1); AFARS 5102.101.",
+  "key_points": [
+   "DoD-only business units: full CAS coverage on a single CAS-covered award of $100M or more, or $100M or more in net CAS-covered awards in the preceding cost accounting period (DFARS 230.201-70(a)(1)); either trigger suffices",
+   "From 1 Oct 2026 the CAS Board rule makes $100M the governmentwide full-coverage figure and exempts negotiated contracts of $35M or less",
+   "After a single full-coverage award, later CAS-covered contracts to that unit in the same cost accounting period are also full coverage (48 CFR 9903.201-2(b)(2))",
+   "A business unit selected for a $100M+ CAS-covered award submits a Disclosure Statement before award, and the KO needs the CFAO's written adequacy determination (48 CFR 9903.202-1(b)(1); FAR 30.301)",
+   "Only the head of the agency (Army: ASA(ALT)), without power of delegation, may authorize award before submission (FAR 30.301(b)(1); 48 CFR 9903.202-2)",
+   "Clauses: FAR 52.230-2 with DFARS 252.230-7995 Alt A, and FAR 52.230-6 with 252.230-7998 Alt A"
+  ],
+  "citations": [
+   "41 U.S.C. 1502",
+   "48 CFR 9903.201-2",
+   "48 CFR 9903.202-1",
+   "48 CFR 9903.202-2",
+   "FAR 30.301",
+   "DFARS 230.201-70",
+   "DFARS 230.205-70",
+   "DFARS 230.301",
+   "AFARS 5102.101"
+  ],
+  "crosswalk": [
+   {
+    "old": "FAR 30.202-6(b)",
+    "new": "FAR 30.301"
+   }
+  ],
+  "classes": [
+   "IV"
+  ],
+  "domain": "Pricing, Cost & Payment",
+  "topic": "CAS full coverage and Disclosure Statement",
+  "kind": "scenario",
+  "tags": [
+   "Cost Accounting Standards",
+   "Disclosure Statement",
+   "Full Coverage",
+   "DCMA",
+   "Class IV"
+  ],
+  "unit": "ACC-All",
+  "difficulty": 2,
+  "flags": [
+   "ai-drafted"
+  ],
+  "confidence": "high",
+  "confidence_reason": "DFARS 230.101(d)(1), 230.201-70, 230.205-70 and 230.301(a) read verbatim in the Class Deviation 2026-O0006 Rev 1 attachment. RFO FAR 30.301 read on the acquisition.gov Part 30 page and legacy FAR 30.202-6(b) on acquisition.gov. The structure of 48 CFR 9903.201-2 and 9903.202-1 read at law.cornell.edu (still showing the pre-rule $50M). The 1 Oct 2026 CAS Board figures ($100M full coverage and disclosure, $35M exemption) come from regulations.json thresholds verified against 91 FR 56056. AFARS 5102.101 head-of-agency definition read in the AFARS PDF. Reviewer 14 Sep 2026: 91 FR 56056 amendatory text read in the Federal Register full text (9903.201-2 and 9903.202-1 $50M to $100M; 9903.201-1(b)(2) $35M; 9903.202-1(b)(2) changed from 'Any company which, together with its segments,' to 'Any business unit or segment,'; effective 1 Oct 2026); current 9903.201-2(b)(2) and 9903.202-2 (non-delegable, 30-day report to the CAS Board) read at law.cornell.edu; RFO FAR 30.301(b)(1)-(2) read.",
+  "mcq": {
+   "stem": "A business unit with only DoD contracts is selected for a single $140 million CAS-covered award in November 2026; it had $60 million in net CAS-covered awards last period. What applies?",
+   "options": [
+    {
+     "text": "Modified coverage, because the unit's prior-period awards were under $100 million",
+     "correct": false,
+     "why": "The single-award test and the prior-period test are alternatives; the $140 million award alone triggers full coverage."
+    },
+    {
+     "text": "Full coverage, with a Disclosure Statement found adequate by the CFAO before award, unless the agency head authorizes otherwise",
+     "correct": true,
+     "why": "A single award of $100 million or more triggers full coverage and the pre-award Disclosure Statement requirement under DFARS 230.201-70(a)(1), 48 CFR 9903.202-1(b)(1) and FAR 30.301."
+    },
+    {
+     "text": "Full coverage, but the Disclosure Statement may be filed within 90 days after award, once the contract is signed",
+     "correct": false,
+     "why": "The 90-day grace in 9903.202-1(b)(2) belongs to the prior-period awards trigger (a business unit or segment test from 1 October 2026), not to a business unit selected for a $100 million award."
+    },
+    {
+     "text": "No CAS, because cost-type development contracts are exempt",
+     "correct": false,
+     "why": "Contract type does not exempt a negotiated contract above $35 million; the listed exemptions include small business and sealed bid awards."
+    }
+   ],
+   "difficulty": 2,
+   "cite": "DFARS 230.201-70(a)(1)"
+  }
+ },
+ {
+  "id": "N410",
+  "question": "In December 2026 you will award a $70 million cost-plus-fixed-fee logistics support contract to a business unit that has only DoD contracts. The unit received $40 million in net CAS-covered awards in its last cost accounting period and elects modified coverage in its certification. Your specialist has inserted the full CAS clause and asked the offeror for a Disclosure Statement, reading RFO FAR 30.205(b)(1) as allowing modified coverage 'only below $50 million.' Is the contract CAS-covered, what coverage applies, and which clauses go in?",
+  "answer": "It is CAS-covered, it qualifies for modified coverage, and the specialist has the wrong clauses for a DoD-only business unit.\n\nApplicability. FY2026 NDAA section 1806 set the contract-level threshold in 41 U.S.C. 1502(b)(1)(B) at $35 million, and DFARS 230.201-70(b) adopts it; the CAS Board rule effective 1 October 2026 exempts negotiated contracts of $35 million or less. At $70 million, with no other exemption such as a small business or sealed bid award (FAR 30.203), this contract is covered.\n\nCoverage. For DoD-only business units, DFARS 230.201-70(a)(1) requires full coverage only on a single CAS-covered award of $100 million or more, or $100 million or more in net CAS-covered awards in the preceding period. Neither applies, so modified coverage is available under 230.201-70(a)(2): the four consistency, unallowable cost and cost accounting period standards (CAS 401, 402, 405 and 406).\n\nClauses. RFO FAR 30.205(b)(1) still prints 'over $2.5 million but less than $50 million.' For this offeror DFARS 230.204 and 230.205-70 govern:\n- FAR 52.230-3 with DFARS 252.230-7996, Alternate A, because the amount is at or above the 230.201-70(b) threshold, below $100 million, and the offeror elected modified coverage.\n- FAR 52.230-6 with 252.230-7998, Alternate A.\n- In the solicitation, FAR 52.230-1 with 252.230-7993, Alternate A.\n\nDisclosure Statement. None is needed: that takes a $100 million award or, from 1 October 2026, $100 million or more in prior-period net CAS-covered awards to the business unit or segment (48 CFR 9903.202-1(b)), and this unit had $40 million. I confirm those facts in the offeror's certification before dropping the request. If the unit also has non-DoD federal contracts, FAR 30.201(b) and 48 CFR 9903.201-2 govern instead.\n\nCite: 41 U.S.C. 1502(b)(1)(B); 48 CFR 9903.201-1, 9903.201-2 and 9903.202-1; FAR 30.203 and 30.205 (formerly 30.201-4); DFARS 230.201-70, 230.204 and 230.205-70 (Class Deviation 2026-O0006 Rev 1).",
+  "key_points": [
+   "Contract-level CAS threshold is $35M (41 U.S.C. 1502(b)(1)(B) as amended; DFARS 230.201-70(b)); the CAS Board rule effective 1 Oct 2026 exempts negotiated contracts of $35M or less",
+   "DoD-only business units: full coverage at a single $100M award or $100M prior-period net CAS awards; otherwise modified coverage may apply (DFARS 230.201-70(a))",
+   "Modified coverage means CAS 9904.401, 402, 405 and 406",
+   "DoD-only units: FAR 52.230-3 with DFARS 252.230-7996 Alt A (at or above $35M, below $100M, offeror elects modified), 52.230-6 with 252.230-7998 Alt A, and provision 52.230-1 with 252.230-7993 Alt A",
+   "RFO FAR 30.205(b)(1) still prints $2.5M to $50M; units that also hold non-DoD federal contracts follow FAR 30.201(b) and 48 CFR 9903.201-2",
+   "No pre-award Disclosure Statement for this award: one takes a $100M award or, from 1 Oct 2026, $100M or more in prior-period net CAS-covered awards to the business unit or segment (48 CFR 9903.202-1(b)(2) as amended by 91 FR 56056)"
+  ],
+  "citations": [
+   "41 U.S.C. 1502(b)(1)(B)",
+   "48 CFR 9903.201-1",
+   "48 CFR 9903.201-2",
+   "48 CFR 9903.202-1",
+   "FAR 30.203",
+   "FAR 30.205",
+   "DFARS 230.201-70",
+   "DFARS 230.204",
+   "DFARS 230.205-70"
+  ],
+  "crosswalk": [
+   {
+    "old": "FAR 30.201-4",
+    "new": "FAR 30.205"
+   }
+  ],
+  "classes": [
+   "III",
+   "IV"
+  ],
+  "domain": "Pricing, Cost & Payment",
+  "topic": "CAS applicability and modified coverage",
+  "kind": "scenario",
+  "tags": [
+   "Cost Accounting Standards",
+   "Modified Coverage",
+   "CAS Clauses",
+   "Thresholds",
+   "Class III",
+   "Class IV"
+  ],
+  "unit": "ACC-All",
+  "difficulty": 2,
+  "flags": [
+   "ai-drafted"
+  ],
+  "confidence": "medium",
+  "confidence_reason": "DFARS 230.201-70(a)-(b), 230.204 and 230.205-70(b) read verbatim in the Class Deviation 2026-O0006 Rev 1 attachment. RFO FAR 30.203 and 30.205(b)(1) read on the acquisition.gov Part 30 page, and legacy FAR 30.201-4 on acquisition.gov. 48 CFR 9903.201-2 modified-coverage standards read at law.cornell.edu. The $35M exemption and the 1 Oct 2026 effective date come from regulations.json thresholds verified against 91 FR 56056 and 41 U.S.C. 1502 at Cornell. Medium rather than high because FAR Part 30 has not been updated for the new figures and the answer applies the CAS Board rule (91 FR 56056, effective 1 Oct 2026) ahead of any FAR or DFARS conforming change. Reviewer 14 Sep 2026: 91 FR 56056 amendatory text read directly; it changes the 9903.202-1(b)(2) prior-period Disclosure Statement trigger from 'Any company which, together with its segments' to 'Any business unit or segment', so the earlier company-level test was replaced.",
+  "mcq": {
+   "stem": "A DoD-only business unit with $40 million in prior-period net CAS-covered awards elects modified coverage on a $70 million negotiated cost-type award in December 2026. Which clause set is correct?",
+   "options": [
+    {
+     "text": "FAR 52.230-3 with DFARS 252.230-7996, Alternate A, plus FAR 52.230-6 with 252.230-7998, Alternate A",
+     "correct": true,
+     "why": "DFARS 230.205-70(b) prescribes 52.230-3 with Alternate A when the amount is at or above the 230.201-70(b) threshold and below $100 million and the offeror elects modified coverage."
+    },
+    {
+     "text": "FAR 52.230-2 with 252.230-7995, Alternate A, because the award exceeds $50 million",
+     "correct": false,
+     "why": "For DoD-only business units, full coverage starts at $100 million under DFARS 230.201-70(a)(1); $50 million is the superseded figure."
+    },
+    {
+     "text": "No CAS clauses, because the contract is below $100 million",
+     "correct": false,
+     "why": "$100 million is the full-coverage threshold, not the applicability threshold; contracts above $35 million are CAS-covered unless exempt."
+    },
+    {
+     "text": "FAR 52.230-3 alone, applying the $2.5 million to $50 million band printed in RFO FAR 30.205(b)(1)",
+     "correct": false,
+     "why": "For DoD-only business units the deviation's thresholds and the Alternate A clauses apply; the FAR Part 30 figures are out of date."
+    }
+   ],
+   "difficulty": 2,
+   "cite": "DFARS 230.205-70(b)"
+  }
+ },
+ {
+  "id": "N411",
+  "question": "Your office is about to release an RFP for a $180 million cost-plus-incentive-fee development contract for a ground vehicle subsystem. The program office's draft says 'EVMS compliant with EIA-748 per DFARS 234.201, validation required only if over $50 million,' and it cites FAR 52.234-4. One likely offeror has never had its earned value management system reviewed by DCMA. What earned value requirements apply, and what do you put in the solicitation?",
+  "answer": "The draft cites codified DFARS figures that the RFO class deviation replaced. At $180 million on a cost-type contract, the contractor needs an EVMS that the cognizant Federal agency has determined complies with EIA-748.\n\nThe rule. DFARS 234.201-70(a), Class Deviation 2026-O0011 Rev 1, applies earned value management to cost or incentive contracts and subcontracts as follows:\n- $50 million or more: the contractor's EVMS must comply with the EIA-748 guidelines.\n- $100 million or more: the cognizant Federal agency must have determined that the system complies. DCMA makes that determination when DoD is the cognizant agency (234.201-70(c)).\n- Below $50 million: optional, a risk-based decision documented with a cost-benefit analysis.\nThe codified $20 million and $50 million tiers no longer apply.\n\nThe solicitation. Under DFARS 234.203-70 I insert provision 252.234-7998, Notice of Earned Value Management System, and clause 252.234-7999, Earned Value Management System, instead of FAR 52.234-4.\n\nThe offeror without a reviewed system. The notice provision lets an offeror propose a plan for complying with EIA-748. PGI 234.201-70(b) requires the PCO, with the ACO's help, to review and approve that plan before award, so I bring DCMA in during evaluation, not after.\n\nAfter award. RFO FAR 34.202 requires an Integrated Baseline Review whenever EVMS is required, and 34.201(b) requires monthly EVMS reports. EVMS requirements flow to subcontractors under the same rules as the prime (34.201(c)), so a subcontract of $50 million or more carries its own requirement.\n\nTwo exemptions to check. DFARS 234.201-70(j) exempts contracts primarily for software and awards to nontraditional defense contractors. The HCA can waive the nontraditional contractor exemption by written determination, delegable no lower than the chief of the contracting office.\n\nCite: FAR 34.201, 34.202 and 34.203; DFARS 234.201-70 and 234.203-70, 252.234-7998 and 252.234-7999, PGI 234.201-70 (Class Deviation 2026-O0011 Rev 1).",
+  "key_points": [
+   "DFARS 234.201-70(a) (Class Deviation 2026-O0011 Rev 1): cost or incentive contracts $50M or more need an EIA-748 compliant EVMS; $100M or more need a system the cognizant Federal agency has determined compliant",
+   "Below $50M EVM is optional and risk-based with a documented cost-benefit analysis; codified $20M/$50M figures are superseded",
+   "Solicitation: provision 252.234-7998 and clause 252.234-7999 instead of FAR 52.234-4 (DFARS 234.203-70)",
+   "Offeror EVMS plans are reviewed and approved before award with ACO/DCMA help (PGI 234.201-70(b)); DCMA makes compliance determinations when DoD is the cognizant agency",
+   "IBR required when EVMS is required (FAR 34.202); monthly reports (34.201(b)); subcontractors follow the same rules (34.201(c))",
+   "Exemptions: contracts primarily for software and awards to nontraditional defense contractors; the HCA may waive the NDC exemption, delegable no lower than the chief of the contracting office"
+  ],
+  "citations": [
+   "FAR 34.201",
+   "FAR 34.202",
+   "FAR 34.203",
+   "DFARS 234.201-70",
+   "DFARS 234.203-70",
+   "DFARS 252.234-7998",
+   "DFARS 252.234-7999",
+   "PGI 234.201-70"
+  ],
+  "crosswalk": [
+   {
+    "old": "DFARS 234.201",
+    "new": "DFARS 234.201-70"
+   },
+   {
+    "old": "DFARS 234.203",
+    "new": "DFARS 234.203-70"
+   },
+   {
+    "old": "DFARS 252.234-7001",
+    "new": "DFARS 252.234-7998"
+   },
+   {
+    "old": "DFARS 252.234-7002",
+    "new": "DFARS 252.234-7999"
+   }
+  ],
+  "classes": [
+   "IV"
+  ],
+  "domain": "Acquisition Planning & Contract Types",
+  "topic": "EVMS thresholds and solicitation requirements",
+  "kind": "scenario",
+  "tags": [
+   "Earned Value Management",
+   "EVMS",
+   "Major Systems",
+   "DCMA",
+   "Integrated Baseline Review",
+   "Class IV"
+  ],
+  "unit": "ACC-All",
+  "difficulty": 1,
+  "flags": [
+   "ai-drafted"
+  ],
+  "confidence": "high",
+  "confidence_reason": "DFARS 234.201-70(a), (c) and (j) and 234.203-70 read verbatim in the Class Deviation 2026-O0011 Rev 1 attachment 1 (memo supersedes the 18 Dec 2025 version); PGI 234.201-70(a)(3)-(4) and (b) read in attachment 2. RFO FAR 34.201-34.203 read on the acquisition.gov Part 34 page. Codified DFARS 234.201 ($50M CFA-determined tier), 234.203 and clauses 252.234-7001/-7002 confirmed on acquisition.gov subpart 234.2; the codified $20M EIA-748 tier was not visible in the extract but is consistent with the deviation's description of the change.",
+  "mcq": {
+   "stem": "Under the DFARS RFO class deviation, what earned value requirement applies to a $180 million cost-plus-incentive-fee development contract?",
+   "options": [
+    {
+     "text": "An EIA-748 compliant EVMS, with no formal compliance determination by the cognizant Federal agency",
+     "correct": false,
+     "why": "That describes the $50 million to under $100 million tier in DFARS 234.201-70(a)(1)."
+    },
+    {
+     "text": "A validated EVMS, because the requirement starts at $50 million under DFARS 234.201",
+     "correct": false,
+     "why": "Those are the codified figures; the class deviation raised the tiers to $50 million and $100 million."
+    },
+    {
+     "text": "EVM is optional, a risk-based decision documented with a cost-benefit analysis",
+     "correct": false,
+     "why": "Optional, risk-based EVM applies only to cost or incentive contracts under $50 million."
+    },
+    {
+     "text": "An EVMS that the cognizant Federal agency has determined complies with EIA-748",
+     "correct": true,
+     "why": "DFARS 234.201-70(a)(2) applies that requirement to cost or incentive contracts of $100 million or more."
+    }
+   ],
+   "difficulty": 1,
+   "cite": "DFARS 234.201-70(a)"
+  }
+ },
+ {
+  "id": "N412",
+  "question": "A program manager brings you three earned value requests in one meeting: (1) put the EVMS clause on a $300 million firm-fixed-price production contract 'for visibility'; (2) require EVMS on a $35 million cost-plus-fixed-fee software development effort run under the software acquisition pathway; and (3) drop EVMS from a $72 million cost-plus-incentive-fee hardware integration contract 'because DCMA won't review the system anyway.' How do you answer each one?",
+  "answer": "Each request has a different answer under DFARS 234.201-70, Class Deviation 2026-O0011 Rev 1.\n\n(1) EVM on the $300 million firm-fixed-price contract. The deviation says applying earned value management to firm-fixed-price contracts of any dollar value is discouraged and requires a waiver. PGI 234.201-70(a)(4) says that in extraordinary cases where cost and schedule visibility cannot be obtained any other way, the program manager requests a waiver for the individual contract from the Milestone Decision Authority, with a business case analysis that includes why a cost or fixed-price incentive contract was not appropriate. Without that waiver I do not add the clause. I also note that fixed-price EVM reporting usually buys data the Government cannot act on, and the contractor prices in the burden.\n\n(2) EVMS on the software effort. DFARS 234.201-70(j)(1)(i) says the subpart does not apply to contracts primarily for software, including those using the software acquisition pathway under DoDI 5000.87. At $35 million it would also fall in the optional tier. I tell the program manager to get visibility through the pathway's own metrics and reporting.\n\n(3) Dropping EVMS from the $72 million incentive contract. No. For cost or incentive contracts of $50 million or more, 234.201-70(a)(1) requires an EVMS that complies with EIA-748, and 234.203-70 requires the provision 252.234-7998 and clause 252.234-7999. The program manager is right that below $100 million the cognizant Federal agency makes no formal compliance determination, but the contractor must still comply, and the integrated baseline review (RFO FAR 34.202) and monthly reports (34.201(b)) still apply. Only an exemption, such as an award to a nontraditional defense contractor, would change that.\n\nI document each decision in the contract file.\n\nCite: DFARS 234.201-70(a), (j) and 234.203-70; PGI 234.201-70(a)(3)-(4) (Class Deviation 2026-O0011 Rev 1); FAR 34.201 and 34.202; DoDI 5000.87.",
+  "key_points": [
+   "EVM on firm-fixed-price contracts of any value is discouraged; the PM must obtain a waiver from the Milestone Decision Authority with a business case analysis (DFARS 234.201-70(a)(4); PGI 234.201-70(a)(4))",
+   "Contracts primarily for software, including the software acquisition pathway (DoDI 5000.87), are exempt from the subpart (DFARS 234.201-70(j)(1)(i))",
+   "Cost or incentive contracts of $50M or more must have an EIA-748 compliant EVMS; the CFA compliance determination applies at $100M or more",
+   "Below $100M there is no formal CFA determination, but compliance, the IBR (FAR 34.202) and monthly reports (34.201(b)) still apply",
+   "Below $50M, EVM is an optional, documented risk-based decision with a cost-benefit analysis (PGI 234.201-70(a)(3))"
+  ],
+  "citations": [
+   "DFARS 234.201-70",
+   "DFARS 234.203-70",
+   "PGI 234.201-70",
+   "FAR 34.201",
+   "FAR 34.202",
+   "DoDI 5000.87"
+  ],
+  "crosswalk": [
+   {
+    "old": "DFARS 234.201",
+    "new": "DFARS 234.201-70"
+   },
+   {
+    "old": "DFARS 252.234-7002",
+    "new": "DFARS 252.234-7999"
+   }
+  ],
+  "classes": [
+   "III",
+   "IV"
+  ],
+  "domain": "Acquisition Planning & Contract Types",
+  "topic": "When EVMS applies: contract type, software and exemptions",
+  "kind": "scenario",
+  "tags": [
+   "Earned Value Management",
+   "EVMS",
+   "Firm-Fixed-Price",
+   "Software Acquisition Pathway",
+   "Waiver",
+   "Class III",
+   "Class IV"
+  ],
+  "unit": "ACC-All",
+  "difficulty": 2,
+  "flags": [
+   "ai-drafted"
+  ],
+  "confidence": "high",
+  "confidence_reason": "DFARS 234.201-70(a)(1)-(4) and (j) and 234.203-70 read verbatim in the Class Deviation 2026-O0011 Rev 1 attachment 1. PGI 234.201-70(a)(3)-(4) (MDA waiver with business case analysis; cost-benefit analysis below $50M) read in attachment 2. RFO FAR 34.201-34.202 read on acquisition.gov. The remark about the value of EVM data on fixed-price contracts is professional judgment, not regulatory text.",
+  "mcq": {
+   "stem": "A program manager wants the EVMS clause on a $300 million firm-fixed-price production contract. What does the DFARS RFO class deviation require?",
+   "options": [
+    {
+     "text": "EVM is mandatory at $100 million or more regardless of contract type",
+     "correct": false,
+     "why": "The $50 million and $100 million tiers apply to cost or incentive contracts, not firm-fixed-price contracts."
+    },
+    {
+     "text": "The contracting officer may add clause 252.234-7999 on their own judgment after documenting the decision and the program manager's written request in the contract file",
+     "correct": false,
+     "why": "For firm-fixed-price contracts the deviation requires a waiver obtained by the program manager, not a KO documentation decision, whatever the file shows."
+    },
+    {
+     "text": "It is discouraged on firm-fixed-price work; the program manager needs a waiver from the Milestone Decision Authority, backed by a business case analysis",
+     "correct": true,
+     "why": "DFARS 234.201-70(a)(4) and PGI 234.201-70(a)(4) set the waiver path for firm-fixed-price contracts."
+    },
+    {
+     "text": "The HCA must waive the exemption in writing, delegable to the chief of the contracting office",
+     "correct": false,
+     "why": "That HCA waiver covers the nontraditional defense contractor exemption, not EVM on firm-fixed-price contracts."
+    }
+   ],
+   "difficulty": 2,
+   "cite": "DFARS 234.201-70(a)(4)"
+  }
+ },
+ {
+  "id": "N413",
+  "question": "A program office asks you to award a single-award indefinite-delivery/indefinite-quantity contract for engineering and technical services with a ceiling of $450 million including options. Orders will be firm-fixed-price for defined tasks priced in the contract. The stated reason is 'continuity; we don't want to run fair opportunity for every order.' The requirement will be competed. Can you make a single award, and what approvals and documentation do you need?",
+  "answer": "Possibly, but not on 'continuity' alone, and not on my own authority.\n\nThe rule. RFO FAR 16.504-3(a)(1) requires preference, to the maximum extent practicable, for multiple awards. Under 16.504-3(a)(4)(i), a task or delivery order contract over $150 million, including all options, may go to a single source only if the head of the agency determines in writing that:\n- (A) the orders are so integrally related that only a single source can reasonably perform the work;\n- (B) the contract provides only firm-fixed-price orders at unit or task prices set in the contract;\n- (C) only one qualified, capable source can perform at a reasonable price; or\n- (D) exceptional circumstances make a single award necessary in the public interest.\n10 U.S.C. 3403(d)(3) prints $100 million; the FAR figure is inflation-adjusted.\n\nDoD specifics. DFARS 216.504-3(a)(4) (Class Deviation 2026-O0045 Rev 1) gives it to the senior procurement executive. For basis (A), DoD must find only a single source can 'efficiently' perform, not 'reasonably.' The FAR's 30-day congressional notice does not apply to DoD, and no determination is needed if a justification under FAR 6.104 and DFARS 206.104 supports the award. For the Army, AFARS Appendix GG delegates it to the HCA, redelegable no lower than the SCO (AFARS 5116.504-3(a)(4)(i)), and I confirm that with our contracting policy office.\n\nApplied here. Basis (B) may fit if every order will be firm-fixed-price at prices set in the contract. The determination adds to, not replaces, Part 6 requirements. I document the decision in the acquisition plan (16.504-3(a)(2)) and test the real concern: fair opportunity procedures can be streamlined, while a single $450 million award removes competition for years.\n\nCite: FAR 16.504-3(a)(1), (a)(2) and (a)(4) (formerly 16.504(c)(1)); DFARS 216.504-3(a)(4) (Class Deviation 2026-O0045 Rev 1); 10 U.S.C. 3403(d)(3); AFARS 5116.504-3 and Appendix GG.",
+  "key_points": [
+   "Multiple-award preference (FAR 16.504-3(a)(1)); document the decision in the acquisition plan or contract file (16.504-3(a)(2))",
+   "Single award of a task or delivery order contract over $150M including options requires a written head-of-agency determination on one of four bases (FAR 16.504-3(a)(4)(i)); the statute prints $100M, and the FAR figure is inflation-adjusted",
+   "DoD: the senior procurement executive holds the determination (DFARS 216.504-3(a)(4)(i)); for the Army, AFARS Appendix GG (Rev 30) delegates it to the HCA, redelegable no lower than the SCO; the 'integrally related' basis requires that only a single source can efficiently perform",
+   "FAR congressional notice for the public-interest basis does not apply to DoD; no determination is needed if a J&A under FAR 6.104/DFARS 206.104 supports the award",
+   "The determination is in addition to Part 6 and does not apply to architect-engineer services; Army delegation is in AFARS Appendix GG"
+  ],
+  "citations": [
+   "FAR 16.504-3",
+   "DFARS 216.504-3",
+   "10 U.S.C. 3403(d)(3)",
+   "AFARS 5102.101",
+   "AFARS 5116.504-3",
+   "AFARS Appendix GG"
+  ],
+  "crosswalk": [
+   {
+    "old": "FAR 16.504(c)(1)(ii)(D)",
+    "new": "FAR 16.504-3(a)(4)"
+   },
+   {
+    "old": "DFARS 216.504(c)(1)(ii)(D)",
+    "new": "DFARS 216.504-3(a)(4)"
+   },
+   {
+    "old": "10 U.S.C. 2304a(d)(3)",
+    "new": "10 U.S.C. 3403(d)(3)"
+   }
+  ],
+  "classes": [
+   "IV"
+  ],
+  "domain": "Acquisition Planning & Contract Types",
+  "topic": "Single-award IDIQ above $150M: determination",
+  "kind": "scenario",
+  "tags": [
+   "IDIQ",
+   "Single Award",
+   "Multiple Award Preference",
+   "Senior Procurement Executive",
+   "Class IV"
+  ],
+  "unit": "ACC-All",
+  "difficulty": 2,
+  "flags": [
+   "ai-drafted",
+   "verify-locally"
+  ],
+  "confidence": "high",
+  "confidence_reason": "RFO FAR 16.504-3(a)(1)-(4) text ($150 million) read on the acquisition.gov Part 16 page, and legacy FAR 16.504(c)(1)(ii)(D) on acquisition.gov (also $150 million). DFARS 216.504-3(a)(4)(i)-(iii) read in the Class Deviation 2026-O0045 Rev 1 attachment, and codified DFARS 216.504(c)(1)(ii)(D) on acquisition.gov. 10 U.S.C. 3403(d)(3) ($100,000,000, 'efficiently perform') and the note on renumbering from 2304a read at law.cornell.edu. AFARS 5116.504-3 and 5102.101 read in the AFARS PDF. Reviewer 14 Sep 2026: AFARS Appendix GG Revision 30 (revised 1 Jul 2026, army.mil) read; the Army row for 5116.504-3(a)(4)(i) delegates the SPE's determination to the HCA, with authority to redelegate no lower than the SCO, so the answer and MCQ now state the Army delegation.",
+  "mcq": {
+   "stem": "An Army contracting activity plans a competitive single-award IDIQ with a $450 million ceiling including options and no J&A. Under DFARS 216.504-3(a)(4), who holds the determination authority, and what standard applies to the 'integrally related' basis?",
+   "options": [
+    {
+     "text": "The HCA in its own right, without any delegation; the orders must be so integrally related that only a single source can reasonably perform the work",
+     "correct": false,
+     "why": "The DFARS vests the authority in the SPE (an Army HCA acts only by delegation under AFARS Appendix GG), and the DoD standard is 'efficiently,' not the FAR's 'reasonably.'"
+    },
+    {
+     "text": "The SPE (for the Army, delegated to the HCA and redelegable no lower than the SCO); the orders must be so integrally related that only one source can efficiently do the work",
+     "correct": true,
+     "why": "DFARS 216.504-3(a)(4)(i) gives the determination to the SPE and substitutes 'efficiently perform' under 10 U.S.C. 3403(d)(3); Appendix GG Rev 30 delegates the Army authority to the HCA, redelegable no lower than the SCO."
+    },
+    {
+     "text": "The contracting officer, by documenting in the acquisition plan why multiple awards are not in the Government's interest",
+     "correct": false,
+     "why": "KO documentation under 16.504-3(a)(2) is required for every IDIQ, but above $150 million a head-of-agency determination is also required."
+    },
+    {
+     "text": "The head of the agency, who must also notify Congress within 30 days of any determination",
+     "correct": false,
+     "why": "The 30-day notice applies only to the public-interest basis, and DFARS 216.504-3(a)(4)(ii) says it does not apply to DoD."
+    }
+   ],
+   "difficulty": 2,
+   "cite": "DFARS 216.504-3(a)(4)"
+  }
+ },
+ {
+  "id": "N414",
+  "question": "Your specialist is preparing a competitive single-award IDIQ for base operations support: a five-year ordering period valued at $120 million plus a two-year option ordering period valued at $45 million. The acquisition plan says no special approval is needed because 'the base ordering period is under the $150 million single-award threshold.' Is the specialist right?",
+  "answer": "No. The threshold is measured with all options, so this is a $165 million contract and the single-award determination is required.\n\nThe rule. RFO FAR 16.504-3(a)(4)(i) says no task or delivery order contract estimated to exceed $150 million, including all options, may be awarded to a single source without a written head-of-agency determination on one of four bases: orders so integrally related that only a single source can perform the work; firm-fixed-price orders at prices established in the contract; only one qualified and capable source at a reasonable price; or exceptional circumstances in the public interest. For DoD, DFARS 216.504-3(a)(4) gives the determination to the senior procurement executive and applies the stricter 'efficiently perform' standard for the integrally related basis. The underlying statute, 10 U.S.C. 3403(d)(3), prints $100 million, and the FAR figure reflects the inflation adjustment.\n\nWhat I tell the specialist:\n- Recompute the estimate at $165 million in the acquisition plan and fix the approval chain.\n- Pick and support one of the four bases, or change the strategy to multiple awards, which is the preference under 16.504-3(a)(1).\n- Route the determination through AFARS 5116.504-3: Appendix GG delegates the SPE's authority to the HCA, redelegable no lower than the SCO. Confirm routing with our contracting policy office.\n- Check the advisory and assistance services rule too: an IDIQ for those services over three years and $20 million must be multiple award unless a 16.504-3(b) exception applies.\n\nThe same way of counting shows up across the Class IV thresholds: J&A approval tiers, the Source Selection Procedures and the warrant limit in Army Warranting Program Policy v12 all count options.\n\nCite: FAR 16.504-3(a)(1), (a)(4) and (b) (formerly 16.504(c)(1) and (c)(2)); DFARS 216.504-3(a)(4) (Class Deviation 2026-O0045 Rev 1); 10 U.S.C. 3403(d)(3); AFARS 5116.504-3 and Appendix GG.",
+  "key_points": [
+   "The single-award threshold is $150M including all options (FAR 16.504-3(a)(4)(i)); a $120M base plus $45M option ordering period is $165M",
+   "Four bases: integrally related, firm-fixed-price orders at established prices, only one qualified source at a reasonable price, public interest",
+   "DoD determination by the SPE with the 'efficiently perform' standard (DFARS 216.504-3(a)(4)); the statute 10 U.S.C. 3403(d)(3) prints $100M",
+   "Advisory and assistance services IDIQs over three years and $20M must be multiple award unless a FAR 16.504-3(b) exception applies (written determination that the services are unique or integrally related or only one offeror is capable, or only one offer received)",
+   "Army: AFARS Appendix GG (Rev 30) delegates the SPE's determination to the HCA, redelegable no lower than the SCO (AFARS 5116.504-3(a)(4)(i)); confirm current routing with the contracting policy office"
+  ],
+  "citations": [
+   "FAR 16.504-3",
+   "DFARS 216.504-3",
+   "10 U.S.C. 3403(d)(3)",
+   "AFARS 5116.504-3",
+   "AFARS Appendix GG"
+  ],
+  "crosswalk": [
+   {
+    "old": "FAR 16.504(c)(1)(ii)(D)",
+    "new": "FAR 16.504-3(a)(4)"
+   },
+   {
+    "old": "FAR 16.504(c)(2)",
+    "new": "FAR 16.504-3(b)"
+   },
+   {
+    "old": "DFARS 216.504(c)(1)(ii)(D)",
+    "new": "DFARS 216.504-3(a)(4)"
+   }
+  ],
+  "classes": [
+   "IV"
+  ],
+  "domain": "Acquisition Planning & Contract Types",
+  "topic": "Single-award IDIQ threshold includes options",
+  "kind": "scenario",
+  "tags": [
+   "IDIQ",
+   "Single Award",
+   "Options",
+   "Thresholds",
+   "Class IV"
+  ],
+  "unit": "ACC-All",
+  "difficulty": 1,
+  "flags": [
+   "ai-drafted",
+   "verify-locally"
+  ],
+  "confidence": "high",
+  "confidence_reason": "RFO FAR 16.504-3(a)(4)(i) ($150 million including all options) and 16.504-3(b)(1) (advisory and assistance services, three years and $20 million) read on the acquisition.gov Part 16 page. Legacy FAR 16.504(c)(1)(ii)(D) and (c)(2) read on acquisition.gov. DFARS 216.504-3(a)(4) read in the Class Deviation 2026-O0045 Rev 1 attachment. 10 U.S.C. 3403(d)(3) read at law.cornell.edu. Reviewer 14 Sep 2026: AFARS Appendix GG Revision 30 (revised 1 Jul 2026, army.mil) read; the Army row for 5116.504-3(a)(4)(i) delegates the SPE's determination to the HCA, redelegable no lower than the SCO; RFO FAR 16.504-3(b)(1)-(2) exceptions read.",
+  "mcq": {
+   "stem": "Under RFO FAR 16.504-3(a)(4), above what estimated value does a single-award task or delivery order contract require a written head-of-agency determination?",
+   "options": [
+    {
+     "text": "$150 million, including all options",
+     "correct": true,
+     "why": "RFO FAR 16.504-3(a)(4)(i) sets the threshold at $150 million including all options, applied in DoD through DFARS 216.504-3(a)(4)."
+    },
+    {
+     "text": "$150 million, counting only the base ordering period",
+     "correct": false,
+     "why": "The threshold expressly includes all options."
+    },
+    {
+     "text": "$100 million, including all options",
+     "correct": false,
+     "why": "10 U.S.C. 3403(d)(3) prints $100 million, but the FAR applies the inflation-adjusted figure of $150 million."
+    },
+    {
+     "text": "$7.5 million, the enhanced fair opportunity tier",
+     "correct": false,
+     "why": "$7.5 million is the fair opportunity ordering tier in FAR 16.507-5, not the single-award contract threshold."
+    }
+   ],
+   "difficulty": 1,
+   "cite": "FAR 16.504-3(a)(4)"
+  }
+ },
+ {
+  "id": "N415",
+  "question": "The program office wants a five-year multiyear contract for munitions production valued at $1.2 billion, with a cancellation ceiling of $260 million and $45 million of economic order quantity advance procurement in the first year. The HCA has signed a determination that a multiyear contract is in the Government's interest, and the program manager says you can award next month. What else must be true before you award?",
+  "answer": "More than an HCA determination. A defense multiyear this size needs statutory authorization, Secretary-level certification and advance notice to Congress.\n\nThe conditions. RFO FAR 17.103-1(b) (10 U.S.C. 3501(a)) requires significant savings or needed industrial base stability, stable quantities and rates, expected funding that avoids cancellation, a stable design, realistic cost and savings estimates, and a national security benefit. DFARS 217.103-170 adds a present value analysis showing lower cost than annual buys.\n\nAt $1.2 billion:\n- DFARS 217.103-172(b)-(c): over $900 million it needs specific authorization in a non-appropriations act and authority in an appropriations act.\n- 217.103-172(g)(2): at least 30 days before award the Secretary of Defense certifies to Congress the 10 U.S.C. 3501(i)(3) conditions, including a cost analysis, realistic unit costs, full future-years funding and a fixed-price type contract; this cannot be delegated below USD(A&S). The Secretary also reports the contract to the defense committees, and the HCA determines the conditions will be met (217.103-172(e)).\n\nNotices:\n- Cancellation ceiling over $200 million: written notice to the House and Senate armed services and appropriations committees, and no award until 31 days after notice (RFO FAR 17.104-3(b)-(c); DFARS 217.104-370(b)(1)(iv)).\n- Economic order quantity over $20 million in any one year: 30 days' advance notice (DFARS 217.104-370(b)(1)(ii)-(iii)), and the authority requested in the budget.\n\nThe contract itself. It must be fixed-price type (RFO FAR 17.104-5(c)), include FAR 52.217-2, build cancellation ceilings from nonrecurring costs, and obligate funds for the first fiscal year plus potential cancellation and termination costs, or the full period (17.104-4). I confirm the Army staffing path under AFARS Appendix GG with our contracting policy office. Next month is not realistic.\n\nCite: 10 U.S.C. 3501; FAR 17.103-1, 17.104-2 to 17.104-5 and 17.106 (formerly 17.105-1, 17.106-3 and 17.108); DFARS 217.103-170, 217.103-172 and 217.104-370 (Class Deviation 2026-O0027); AFARS 5117.103-172 and 5117.104-370.",
+  "key_points": [
+   "RFO FAR 17.103-1(b) / 10 U.S.C. 3501(a) conditions plus a present value analysis showing lower cost than annual buys (DFARS 217.103-170)",
+   "Over $900M: specific authorization in a non-appropriations act and appropriations act authority (DFARS 217.103-172(b)-(c)); the statute prints $500M",
+   "SecDef certification of 10 U.S.C. 3501(i)(3) conditions at least 30 days before award, not delegable below USD(A&S); SecDef report to the committees; HCA determination that the conditions will be met",
+   "Cancellation ceiling over $200M: written notice to the armed services and appropriations committees, and award no earlier than 31 days after notice (FAR 17.104-3; DFARS 217.104-370(b)(1)(iv))",
+   "EOQ over $20M in any year or unfunded contingent liability over $20M: 30 days' advance notice (DFARS 217.104-370(b)(1)); request authority in the budget",
+   "Fixed-price type for property (FAR 17.104-5(c)); clause 52.217-2; Army delegations in AFARS Appendix GG"
+  ],
+  "citations": [
+   "10 U.S.C. 3501",
+   "FAR 17.103-1",
+   "FAR 17.104-2",
+   "FAR 17.104-3",
+   "FAR 17.104-4",
+   "FAR 17.104-5",
+   "FAR 17.106",
+   "DFARS 217.103-170",
+   "DFARS 217.103-172",
+   "DFARS 217.104-370",
+   "AFARS 5117.103-172",
+   "AFARS 5117.104-370"
+  ],
+  "crosswalk": [
+   {
+    "old": "FAR 17.105-1",
+    "new": "FAR 17.103-1"
+   },
+   {
+    "old": "FAR 17.108",
+    "new": "FAR 17.104-3"
+   },
+   {
+    "old": "FAR 17.106-3",
+    "new": "FAR 17.104-5"
+   },
+   {
+    "old": "DFARS 217.172",
+    "new": "DFARS 217.103-172"
+   },
+   {
+    "old": "DFARS 217.170",
+    "new": "DFARS 217.104-370"
+   },
+   {
+    "old": "10 U.S.C. 2306b",
+    "new": "10 U.S.C. 3501"
+   }
+  ],
+  "classes": [
+   "IV"
+  ],
+  "domain": "Acquisition Planning & Contract Types",
+  "topic": "Large DoD multiyear procurement approvals and notices",
+  "kind": "scenario",
+  "tags": [
+   "Multiyear Contracting",
+   "Congressional Notification",
+   "Cancellation Ceiling",
+   "Economic Order Quantity",
+   "Class IV"
+  ],
+  "unit": "ACC-All",
+  "difficulty": 3,
+  "flags": [
+   "ai-drafted",
+   "verify-locally"
+  ],
+  "confidence": "high",
+  "confidence_reason": "RFO FAR 17.103-1(b), 17.104-2 to 17.104-5 and 17.106 read on the acquisition.gov Part 17 page; legacy FAR 17.105-1, 17.106-3 and 17.108 read on acquisition.gov (17.106-3 paired by matching heading). DFARS 217.103-170, 217.103-172(b)-(g) and 217.104-370(b) read in the Class Deviation 2026-O0027 attachment, with codified 217.170-217.172 on acquisition.gov already showing $200M and $900M. 10 U.S.C. 3501(a), (g), (i) and (l) read at law.cornell.edu (the statute prints $100M and $500M). AFARS 5117 pointers to Appendix GG read in the AFARS PDF. Reviewer 14 Sep 2026: AFARS Appendix GG Revision 30 (revised 1 Jul 2026) read: the Army multiyear determinations (5117.103-1(b), 5117.103-170, 5117.103-172) and the 5117.104-3(b) congressional notification sit with the ASA(ALT), delegable to the HCA and no lower than the SCO, with notice to the DASA(P) for the notification; DFARS 217.103-172(g)(6) (no delegation below USD(A&S)) and 10 U.S.C. 3501(l)(6) (10-day termination notice) read.",
+  "mcq": {
+   "stem": "A DoD multiyear supply contract will include a $260 million cancellation ceiling. What does RFO FAR 17.104-3 require before award?",
+   "options": [
+    {
+     "text": "Written notice to the appropriations committees only, because the ceiling exceeds $20 million, with award after 31 days",
+     "correct": false,
+     "why": "The $20 million notice rule in 17.104-3(a) applies only to agencies other than DoD, NASA and the Coast Guard; for DoD the trigger is over $200 million and notice goes to the armed services and appropriations committees."
+    },
+    {
+     "text": "No notice, because the HCA's multiyear determination already covers the cancellation ceiling and the funding plan",
+     "correct": false,
+     "why": "An agency determination does not replace the statutory congressional notice for large cancellation ceilings."
+    },
+    {
+     "text": "Notice 10 days before award, as for terminations",
+     "correct": false,
+     "why": "The 10-day notice in 10 U.S.C. 3501(l)(6) concerns termination of a multiyear contract, not award with a large cancellation ceiling."
+    },
+    {
+     "text": "Written notice to the armed services and appropriations committees of both houses, then no award for 31 days",
+     "correct": true,
+     "why": "For DoD, NASA and the Coast Guard, 17.104-3(b)-(c) applies to cancellation ceilings over $200 million; DFARS 217.104-370(b)(1)(iv) mirrors it."
+    }
+   ],
+   "difficulty": 3,
+   "cite": "FAR 17.104-3"
+  }
+ },
+ {
+  "id": "N416",
+  "question": "A garrison wants a five-year contract for installation grounds maintenance, custodial and refuse collection services estimated at $84 million. The contractor will have to buy about $24 million of specialized equipment up front. The requiring activity asks for a 'multiyear contract' so the price is locked for five years without exercising options, funded each year with O&M. Can you use multiyear contracting for these services, and what determinations, contract terms and notices apply?",
+  "answer": "Yes, with the right determination and a cancellation structure. It is not a base year with options.\n\nThe difference. A multiyear contract buys more than one and up to five program years without exercising yearly options, and later years can carry a cancellation charge if funds are not appropriated (RFO FAR 17.102).\n\nAuthority. DFARS 217.103-171 (10 U.S.C. 3531) lets the head of the agency award up to five years of covered services, including facility and installation operation, maintenance and support and base services such as grounds maintenance and refuse collection, even with annual O&M funds. The head of the agency must find in writing:\n- a continuing requirement through the period,\n- a substantial initial investment in plant or equipment, or substantial contingent liabilities for a specialized workforce, and\n- effective competition and economies in operations from multiyear contracting.\nThe $24 million equipment investment supports the second finding. AFARS Appendix GG delegates this Army determination from the ASA(ALT) to the HCA, no lower than the SCO.\n\nContract terms. The solicitation states requirements by program year, explains how first-year and multiyear offers compare, and requires cancellation ceilings built from nonrecurring costs such as the equipment (RFO FAR 17.103-3, 17.104-2). Include FAR 52.217-2, and 52.222-43 if the Service Contract Labor Standards apply. Funds at award cover the first fiscal year plus potential cancellation and termination costs, or the full period (17.104-4).\n\nNotice. The ceiling is far below the $200 million trigger, but DFARS 217.104-370(b)(1)(i) requires 30 days' notice to the defense committees for an unfunded contingent liability over $20 million, so if the ceiling will not be funded I resolve that with the budget office and counsel.\n\nCite: 10 U.S.C. 3531; FAR 17.102, 17.103-3, 17.104-2, 17.104-4 and 17.106; DFARS 217.103-171 and 217.104-370 (Class Deviation 2026-O0027); AFARS 5117.103-171 and Appendix GG.",
+  "key_points": [
+   "A multiyear contract (FAR 17.102) buys more than one and up to five program years without yearly options; later years can depend on appropriations and carry a cancellation charge, unlike a multiple-year contract with options",
+   "DoD services multiyear under 10 U.S.C. 3531 and DFARS 217.103-171: covered services include installation operation, maintenance and support and base services such as grounds maintenance and refuse collection",
+   "Head-of-agency written determination: continuing requirement; substantial initial investment or contingent liabilities; promotes competition and economies (DFARS 217.103-171(c)); over $900M needs specific statutory authority",
+   "Solicitation by program year, with first-year versus multiyear evaluation and cancellation ceilings built from nonrecurring costs (FAR 17.103-3, 17.104-2); clause 52.217-2; funding at award per 17.104-4",
+   "Cancellation ceiling over $200M triggers congressional notice; an unfunded contingent liability over $20M triggers 30 days' notice (DFARS 217.104-370(b)(1))",
+   "Army: AFARS Appendix GG (Rev 30) delegates the 217.103-171 determination from the ASA(ALT) to the HCA, no lower than the SCO (AFARS 5117.103-171): confirm locally"
+  ],
+  "citations": [
+   "10 U.S.C. 3531",
+   "FAR 17.102",
+   "FAR 17.103-3",
+   "FAR 17.104-2",
+   "FAR 17.104-4",
+   "FAR 17.106",
+   "DFARS 217.103-171",
+   "DFARS 217.104-370",
+   "AFARS 5117.103-171",
+   "AFARS Appendix GG"
+  ],
+  "crosswalk": [
+   {
+    "old": "DFARS 217.171",
+    "new": "DFARS 217.103-171"
+   },
+   {
+    "old": "DFARS 217.170",
+    "new": "DFARS 217.104-370"
+   }
+  ],
+  "classes": [
+   "III",
+   "IV"
+  ],
+  "domain": "Acquisition Planning & Contract Types",
+  "topic": "Multiyear contracting for services",
+  "kind": "scenario",
+  "tags": [
+   "Multiyear Contracting",
+   "Services",
+   "Cancellation Ceiling",
+   "O&M Funding",
+   "Class III",
+   "Class IV"
+  ],
+  "unit": "ACC-All",
+  "difficulty": 2,
+  "flags": [
+   "ai-drafted",
+   "verify-locally"
+  ],
+  "confidence": "medium",
+  "confidence_reason": "DFARS 217.103-171(a)-(d) and 217.104-370(b)(1) read in the Class Deviation 2026-O0027 attachment; codified DFARS 217.171 and the 217.170 notification text confirmed on acquisition.gov subpart 217.1. RFO FAR 17.102 through 17.106 read on the acquisition.gov Part 17 page. Medium because treating an unfunded cancellation ceiling as an unfunded contingent liability for the $20M notice is an interpretation to confirm with the budget office and counsel. Reviewer 14 Sep 2026: AFARS Appendix GG Revision 30 (revised 1 Jul 2026) read; the Army row for 5117.103-171 places the determination with the ASA(ALT), delegable to the HCA and no lower than the SCO; 10 U.S.C. 3531(a)-(d) read at law.cornell.edu (the statute prints $100M for the cancellation ceiling notice and $500M for specific authorization; the DFARS carries $200M and $900M).",
+  "mcq": {
+   "stem": "Before entering into a DoD multiyear contract for covered installation services under DFARS 217.103-171, what must the head of the agency determine in writing?",
+   "options": [
+    {
+     "text": "A stable design and a Secretary of Defense certification to Congress 30 days before award",
+     "correct": false,
+     "why": "Stable design and SecDef certification belong to multiyear supply contracts under 10 U.S.C. 3501, not services under 3531."
+    },
+    {
+     "text": "That each option year will be evaluated at award and exercised only if funds are available, with the total value of the options kept under the approved cancellation ceiling",
+     "correct": false,
+     "why": "That describes a multiple-year contract with options; a multiyear contract buys the program years without options."
+    },
+    {
+     "text": "A continuing need; substantial start-up investment or contingent liabilities for a special workforce; and that multiyear contracting helps competition and economy",
+     "correct": true,
+     "why": "These are the three determinations in DFARS 217.103-171(c), implementing 10 U.S.C. 3531(a)."
+    },
+    {
+     "text": "That the contract is specifically authorized by law because it exceeds $900 million",
+     "correct": false,
+     "why": "Specific statutory authority is required only above $900 million; it is not a prerequisite for an $84 million services multiyear."
+    }
+   ],
+   "difficulty": 2,
+   "cite": "DFARS 217.103-171(c)"
+  }
+ },
+ {
+  "id": "N417",
+  "question": "An Army program office wants a consortium-based prototype Other Transaction for a counter-small-unmanned-aircraft system estimated at $720 million including options. The consortium lead is a traditional defense contractor, and two nontraditional defense contractors will do significant work. The program manager cites an old approval chart: 'over $500 million goes to USD(A&S) or USD(R&E), and the SCO can sign up to $50 million.' Who approves use of prototype authority at this value, what notice is required, and who can sign the agreement?",
+  "answer": "The chart is out of date. FY2025 NDAA section 816 changed the approval levels in 10 U.S.C. 4022(a)(2).\n\nApproval tiers for a prototype transaction, including all options:\n- Over $100 million up to $500 million: written HCA determination (or DARPA, DIU or MDA director) that the 4022(d) conditions will be met and the authority is essential to the project's success.\n- Over $500 million: written SPE determination (Army: the ASA(ALT)) that the 4022(d) conditions will be met and the authority is essential to critical national security objectives, plus written notice to the congressional defense committees at least 30 days before exercising it.\nUnder 4022(a)(3) neither determination can be delegated.\n\nApplied here. At $720 million I need the ASA(ALT)'s determination and the 30-day notice before award, so both go on the schedule now.\n\nThe 4022(d) condition. One must be true: significant participation by at least one nontraditional defense contractor or nonprofit research institution; all significant participants are small businesses or nontraditionals; one third non-Federal cost share; or the SPE finds exceptional circumstances. The two nontraditionals can satisfy this if I document the significance of their actual work.\n\nAlso: competitive procedures to the maximum extent practicable (4022(b)(2)), a Comptroller General access clause over $5 million unless the HCA waives it with prior notice to Congress and GAO (4022(c)), and procurement integrity (4022(h)).\n\nWho signs. An Agreements Officer with an Unlimited warrant: Policy v12 applies Table 1 to non-FAR instruments at cumulative value, options included. At or below $100 million the statute sets no tier, so I confirm Army levels with our contracting policy office.\n\nCite: 10 U.S.C. 4022(a), (b), (c), (d) and (h) (formerly 10 U.S.C. 2371b), as amended by Pub. L. 118-159 sec. 816; Army Warranting Program Policy v12 sections 3 and 4; AFARS 5102.101.",
+  "key_points": [
+   "10 U.S.C. 4022(a)(2) as amended by Pub. L. 118-159 sec. 816: over $100M to $500M, HCA (or DARPA/DIU/MDA director) written determination; over $500M, SPE (or director) written determination plus written notice to the congressional defense committees at least 30 days before exercise",
+   "Determinations address the 4022(d) conditions and that the authority is essential (prototype success up to $500M; critical national security objectives above $500M); not delegable (4022(a)(3))",
+   "4022(d): significant nontraditional or nonprofit participation, all small business or nontraditional participants, one-third non-Federal cost share, or SPE exceptional circumstances",
+   "Competitive procedures to the maximum extent practicable; Comptroller General access clause over $5M unless the HCA waives with prior notice to Congress and GAO; procurement integrity applies",
+   "The AO warrant must cover cumulative value including options (Policy v12 Table 1 applies to non-FAR instruments); $720M requires an Unlimited warrant",
+   "Army approval levels at or below $100M come from Army policy: confirm locally"
+  ],
+  "citations": [
+   "10 U.S.C. 4022",
+   "Pub. L. 118-159 sec. 816",
+   "Army Warranting Program Policy v12 (MAR 2026)",
+   "AFARS 5102.101"
+  ],
+  "crosswalk": [
+   {
+    "old": "10 U.S.C. 2371b",
+    "new": "10 U.S.C. 4022"
+   }
+  ],
+  "classes": [
+   "IV"
+  ],
+  "domain": "Grants & Agreements",
+  "topic": "Prototype OT approval tiers and congressional notice",
+  "kind": "scenario",
+  "tags": [
+   "Other Transactions",
+   "Prototype",
+   "10 U.S.C. 4022",
+   "Congressional Notification",
+   "Agreements Officer",
+   "Class IV"
+  ],
+  "unit": "ACC-All",
+  "difficulty": 2,
+  "flags": [
+   "ai-drafted",
+   "verify-locally"
+  ],
+  "confidence": "high",
+  "confidence_reason": "10 U.S.C. 4022(a)(2)-(3), (b)(2), (c), (d) and (h), and the 2024 amendment notes (Pub. L. 118-159 sec. 816), read at law.cornell.edu, current through Pub. L. 119-60. Policy v12 Table 1 and AO qualifications read in content/sources. AFARS 5102.101 SPE definition read in the AFARS PDF. The program manager's old chart matches the official answer in Q0184, which predates the FY2025 NDAA change.",
+  "mcq": {
+   "stem": "An Army prototype Other Transaction is expected to cost $720 million including options. What approval and notice does 10 U.S.C. 4022 require?",
+   "options": [
+    {
+     "text": "A written determination by USD(A&S) or USD(R&E), with notice to the congressional defense committees 30 days before the authority is used",
+     "correct": false,
+     "why": "That was the rule before the FY2025 NDAA; section 816 moved the over-$500 million determination to the senior procurement executive."
+    },
+    {
+     "text": "A non-delegable SPE determination in writing, and written notice to the congressional defense committees 30 days before use",
+     "correct": true,
+     "why": "4022(a)(2)(B), as amended by the FY2025 NDAA, applies this to prototype transactions over $500 million, and (a)(3) bars delegation."
+    },
+    {
+     "text": "A written determination by the head of the contracting activity",
+     "correct": false,
+     "why": "The HCA determination covers prototype transactions over $100 million up to $500 million."
+    },
+    {
+     "text": "A covered official's written determination, with notice to the congressional defense committees when the authority is exercised",
+     "correct": false,
+     "why": "That is the rule for follow-on production contracts or transactions over $100 million under 4022(a)(2)(C)."
+    }
+   ],
+   "difficulty": 2,
+   "cite": "10 U.S.C. 4022(a)(2)"
+  }
+ },
+ {
+  "id": "N418",
+  "question": "Two years ago your activity competitively awarded a prototype Other Transaction to a consortium, and one subproject has now successfully demonstrated a new air defense sensor. The program manager wants to award that performer a $1.4 billion follow-on production agreement next month without competition, saying 'the prototype OT already allowed for follow-on production, so no further approvals are needed.' What must happen before award, and what risks do you raise?",
+  "answer": "The prototype OT made a noncompetitive follow-on possible, but at $1.4 billion the statute still requires written findings and a notice, and the file must prove the conditions.\n\nNo further competition. 10 U.S.C. 4022(f)(2) allows it without competition if competitive procedures selected the prototype participants and they successfully completed the prototype. Under (f)(3)-(4), a completed consortium subproject qualifies even if other consortium work is unfinished. I document the original competition and the Department's finding that the subproject was successfully completed.\n\nAbove $100 million, 4022(a)(2)(C) requires a covered official to:\n- determine in writing that the 4022(d) conditions were met for the prototype transaction, the (f) requirements will be met, and the authority is essential to meet critical national security objectives; and\n- notify the congressional defense committees in writing of those determinations when the authority is exercised.\nFor the Army that is the service acquisition executive, the ASA(ALT) as Army Acquisition Executive (4022(e)(1); AFARS 5102.101); USD(A&S) and USD(R&E) also qualify. The (d) conditions do not apply to the follow-on itself (4022(d)(3)).\n\nRisks I raise:\n- The record: a thin file on the original competition or completion is the most exposed point in a challenge.\n- The vehicle: under 4022(f)(5) the follow-on may be an OT or a procurement contract, and in my view a FAR-based contract brings other procurement requirements, such as certified cost or pricing data.\n- Price and terms: I still need a fair and reasonable price and production-ready quantities, data rights and delivery terms.\n- Authority: the signer needs an Unlimited warrant under Policy v12, and next month is optimistic, so I confirm the Army staffing path with our contracting policy office.\n\nCite: 10 U.S.C. 4022(a)(2)(C), (d)(3), (e)(1) and (f) (formerly 10 U.S.C. 2371b); AFARS 5102.101; Army Warranting Program Policy v12 section 4 and Table 1.",
+  "key_points": [
+   "4022(f)(2): a noncompetitive follow-on is allowed only if competitive procedures selected the prototype participants and they successfully completed the prototype; a completed consortium subproject can qualify ((f)(3)-(4))",
+   "Follow-on over $100M: covered official's written determination that (d) was met for the prototype transaction, (f) will be met, and the authority is essential to critical national security objectives (4022(a)(2)(C))",
+   "Notify the congressional defense committees in writing of the determinations at the time the authority is exercised, not 30 days before",
+   "Covered officials: service acquisition executive (Army: ASA(ALT)), DARPA/DIU/MDA directors, USD(A&S), USD(R&E) (4022(e)(1)); the (d) conditions do not apply to the follow-on itself (4022(d)(3))",
+   "Document the original competition and successful completion; a FAR-based follow-on contract carries other procurement requirements",
+   "The signer needs a warrant covering $1.4B (Unlimited) under Policy v12"
+  ],
+  "citations": [
+   "10 U.S.C. 4022(a)(2)(C)",
+   "10 U.S.C. 4022(d)(3)",
+   "10 U.S.C. 4022(e)(1)",
+   "10 U.S.C. 4022(f)",
+   "AFARS 5102.101",
+   "Army Warranting Program Policy v12 (MAR 2026)"
+  ],
+  "crosswalk": [
+   {
+    "old": "10 U.S.C. 2371b",
+    "new": "10 U.S.C. 4022"
+   }
+  ],
+  "classes": [
+   "IV"
+  ],
+  "domain": "Grants & Agreements",
+  "topic": "Follow-on production OT approval and notice",
+  "kind": "scenario",
+  "tags": [
+   "Other Transactions",
+   "Follow-on Production",
+   "10 U.S.C. 4022",
+   "Congressional Notification",
+   "Covered Official",
+   "Class IV"
+  ],
+  "unit": "ACC-All",
+  "difficulty": 3,
+  "flags": [
+   "ai-drafted",
+   "verify-locally"
+  ],
+  "confidence": "medium",
+  "confidence_reason": "10 U.S.C. 4022(a)(2)(C), (d)(3), (e)(1) and (f)(1)-(5) read verbatim at law.cornell.edu, current through Pub. L. 119-60. AFARS 5102.101 (the Army Acquisition Executive is the ASA(ALT)) read in the AFARS PDF. Policy v12 Table 1 read in content/sources. Medium because two points are interpretations to confirm with counsel and the contracting policy office: that a FAR-based follow-on contract carries the other procurement statutes, and the Army staffing path. mcq.json already tests the 4022(f) competition conditions, so this item tests the approval and notice tier.",
+  "mcq": {
+   "stem": "An Army follow-on production transaction under 10 U.S.C. 4022(f) is expected to cost $1.4 billion. What approval and notice does the statute require?",
+   "options": [
+    {
+     "text": "A covered official's written determination that 4022(d) was met, 4022(f) will be met and the authority is essential to critical national security objectives, with notice to the committees when used",
+     "correct": true,
+     "why": "That is 4022(a)(2)(C) for follow-on production contracts or transactions over $100 million."
+    },
+    {
+     "text": "A senior procurement executive determination, plus notice to the congressional defense committees at least 30 days before the award is made",
+     "correct": false,
+     "why": "The 30-day advance notice applies to prototype transactions over $500 million under 4022(a)(2)(B), not to follow-on production."
+    },
+    {
+     "text": "No approval, because the prototype agreement already provided for follow-on production",
+     "correct": false,
+     "why": "Providing for follow-on production allows a noncompetitive award, but 4022(a)(2)(C) still requires the determination and notice above $100 million."
+    },
+    {
+     "text": "A new showing that a nontraditional defense contractor participates to a significant extent in the follow-on, approved by the HCA in writing, with notice to the congressional defense committees",
+     "correct": false,
+     "why": "Under 4022(d)(3) the participation conditions do not apply to the follow-on; the covered official finds they were met for the prototype transaction."
+    }
+   ],
+   "difficulty": 3,
+   "cite": "10 U.S.C. 4022(a)(2)(C)"
+  }
+ }
+]

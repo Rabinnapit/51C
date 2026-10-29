@@ -1,0 +1,193 @@
+{
+  "file": "content/out/games_3.json",
+  "reviewed_on": "2026-09-14",
+  "reviewer": "independent content review",
+  "scope": "30 Jeopardy clues plus Final Jeopardy, and 4 branching scenario cases (28 nodes, 39 choices, 11 terminal nodes). Every dollar figure, warrant class, deadline and clause number checked against src/data/regulations.json (thresholds table and crosswalk); cites not covered by the crosswalk were fetched from acquisition.gov.",
+  "graph_checks": {
+    "cases": 4,
+    "all_have_start_node": true,
+    "dangling_next_references": 0,
+    "unreachable_nodes": 0,
+    "terminal_nodes": 11,
+    "terminal_nodes_reachable": 11,
+    "terminals_missing_debrief": 0,
+    "nonterminal_nodes_with_empty_text": 0
+  },
+  "verified_no_change_needed": [
+    "Six criteria for ratification at RFO FAR 1.405(c) - correct (crosswalk: the old 1.602-3(c) limitations are now six criteria at 1.405(c)).",
+    "RFO FAR 1.405(b)(2): HCA ratifies, delegable no lower than the chief of the contracting office - correct.",
+    "AFARS 5101.602-3-90 Ratification procedures - still that number; the AFARS was not renumbered to RFO numbering (acquisition.gov AFARS page; AFARS combined 1 Feb 2026). Appendix GG holds the Army delegation levels.",
+    "Micro-purchase threshold $15,000; the $18,000 invoice is correctly stated as above it.",
+    "SAT $350,000 and the $9,000,000 simplified commercial procedures ceiling at RFO FAR 12.201-1 - match the thresholds table.",
+    "Task/delivery order GAO protest floor $35,000,000 for DoD, NASA and Coast Guard (FY2025 NDAA sec. 885) - matches the thresholds table.",
+    "DoD justification approval: contracting officer at $10,000,000 or below (DFARS 206.104-71 Table 206-1, Class Deviation 2026-O0017 Rev. 2) - matches the thresholds table.",
+    "CDA certification threshold: claims exceeding $100,000 - matches the thresholds table.",
+    "Warrant Class III = $10M, $25M, $50M, $100M - matches Army Warranting Program Policy v12 Table 1.",
+    "CICA stay trigger (GAO notice within 10 days after award, or 5 days after an offered required debriefing date, whichever is later) and the nondelegable HCA override - RFO FAR 33.105-3(b) text fetched and confirmed.",
+    "RFO FAR 33.105-4(a): the contracting officer must immediately notify legal counsel on notice of a GAO protest - exact text fetched and confirmed.",
+    "Agency report due 30 days (4 CFR 21.3(c)); GAO decision 100 days, 65 days express (4 CFR 21.9) - correct, and correctly cited to 4 CFR rather than the RFO FAR, which no longer restates them.",
+    "10 U.S.C. 3133 severable services crossing fiscal years (recodified from 2410a); 41 U.S.C. 3902 for civilian agencies - correct.",
+    "Case 4 internal date arithmetic: mid-September 2026 with sixteen days to fiscal year end is consistent with 14 Sep 2026.",
+    "Renumbering pairs confirmed against the crosswalk: 6.302-2>6.103-2, 6.303>6.104, 15.101-1>15.103-1, 15.101-2>15.103-2, 15.308>15.205, 15.305>15.202, 15.303>15.201, 15.506>15.301, 15.505>15.206-2, 33.104>33.105, 33.104-3 retained, 43.201(b)>43.301(b), 17.207>17.204-1, 1.603>1.403, 1.602-1>1.402-1, 49.607 retained, DFARS 201.602-2>201.404-70, DFARS 211.104>211.204; clause numbers 52.232-22, 52.243-1, 52.245-1(h) and 52.242-15 unchanged."
+  ],
+  "residual_risk": [
+    "RFO DFARS 215.301-x (enhanced postaward debriefings) and RFO DFARS 233.105-370: the DFARS RFO class deviations are published on acq.osd.mil, not acquisition.gov. 233.105-370 is corroborated by two independent secondary sources; the 215.301 subsection number is not, so that cite was deliberately truncated rather than guessed. Confirm both against Class Deviation 2026-O0026 Rev. 1 and the Part 215 deviation before treating them as verified.",
+    "All Korea/LCS/SOFA content rests on 411th CSB study material (Q0254-Q0258), not on a published regulation. Left as drafted with korea-verify-cp; confirm the current SMA cycle, LCS routing and Invited Contractor processing with the Chief, C&P.",
+    "Army ratification delegation for an $18,000 action is set by AFARS Appendix GG, which is more restrictive than the FAR floor quoted at case 1 node n6. The scenario states the FAR floor correctly and points to Appendix GG and the Chief, C&P; no local threshold was added."
+  ],
+  "items_checked": 35,
+  "items_corrected": 8,
+  "items_removed": 0,
+  "changes": [
+    {
+      "location": "jeopardy/Competition/100/cite",
+      "before": "RFO FAR 6.103-2 (was FAR 6.302-2); RFO FAR 6.104",
+      "after": "RFO FAR 6.103-2 (was FAR 6.302-2); after-award justification authorized at RFO FAR 6.103-2(d); RFO FAR 6.104",
+      "reason": "The rule permitting the justification to be made after award sits at RFO FAR 6.103-2(d), not in 6.104. Verified on the acquisition.gov RFO Part 6 deviation guide, 14 Sep 2026."
+    },
+    {
+      "location": "jeopardy/Competition/200/cite",
+      "before": "RFO FAR 6.104 (was FAR 6.303); 10 U.S.C. 3204(e)",
+      "after": "RFO FAR 6.104 (consolidates old FAR 6.303 justifications and old FAR 6.304 approval); 6.104-1 content, 6.104-2 approval; 10 U.S.C. 3204(e)",
+      "reason": "regulations.json crosswalk (verified): old 6.303, 6.303-1/-2 and old 6.304 were consolidated into 6.104, 6.104-1 and 6.104-2. The cite named only 6.303."
+    },
+    {
+      "location": "jeopardy/Competition/400/accepted",
+      "before": [
+        "FAR 11.204",
+        "11.204",
+        "items peculiar to one manufacturer",
+        "brand name or equal justification",
+        "formerly 11.104"
+      ],
+      "after": [
+        "FAR 11.204",
+        "11.204",
+        "items peculiar to one manufacturer",
+        "brand name or equal justification",
+        "formerly 11.105 (old 11.104 was deleted)"
+      ],
+      "reason": "RFO FAR 11.204 (Items peculiar to one manufacturer) is old FAR 11.105. Old FAR 11.104 (brand name or equal purchase descriptions) was DELETED from the regulation, so accepting 'formerly 11.104' taught a wrong crosswalk pair. Verified: RFO Part 11 contains no 11.104 (acquisition.gov Part 11 deviation guide, fetched 14 Sep 2026) and the regulations.json crosswalk note."
+    },
+    {
+      "location": "jeopardy/Competition/400/cite",
+      "before": "RFO FAR 11.204 (was FAR 11.104); DFARS 211.204 (was DFARS 211.104); RFO FAR 6.103-1(d)",
+      "after": "RFO FAR 11.204 (was FAR 11.105; old FAR 11.104 brand-name-or-equal was deleted and survives only as FAR Companion guidance at FC 11.204); DFARS 211.204 (was DFARS 211.104), which carries the FY17 NDAA sec. 888 requirement for a brand-name-or-equal justification; RFO FAR 6.103-1(d)",
+      "reason": "Same crosswalk error on the cite line, plus the DoD-specific point that DFARS 211.204 is what requires the brand-name-or-equal justification."
+    },
+    {
+      "location": "jeopardy/Source Selection/400/response",
+      "before": "The competitive range, under RFO FAR 15.204",
+      "after": "The competitive range, established under RFO FAR 15.204-1",
+      "reason": "Under the RFO split of old 15.306 the competitive range is specifically 15.204-1; competitive negotiations (old discussions) are 15.204-2. regulations.json crosswalk, confirmed 13 Sep 2026."
+    },
+    {
+      "location": "jeopardy/Source Selection/400/accepted",
+      "before": [
+        "competitive range",
+        "discussions",
+        "negotiations",
+        "FAR 15.204",
+        "formerly 15.306"
+      ],
+      "after": [
+        "competitive range",
+        "discussions",
+        "negotiations",
+        "FAR 15.204-1",
+        "formerly 15.306",
+        "FAR 15.204-2 (competitive negotiations)"
+      ],
+      "reason": "Accept the precise subsections a board would expect."
+    },
+    {
+      "location": "jeopardy/Source Selection/400/cite",
+      "before": "RFO FAR 15.204 (was FAR 15.306); RFO FAR 15.202 (was 15.305)",
+      "after": "RFO FAR 15.204-1 competitive range and 15.204-2 competitive negotiations (was FAR 15.306); RFO FAR 15.202 (was 15.305)",
+      "reason": "Same."
+    },
+    {
+      "location": "jeopardy/Source Selection/500/cite",
+      "before": "RFO FAR 15.301 (was FAR 15.506); RFO DFARS 215.301-71; RFO FAR 15.206-2 (was 15.505) for preaward debriefings",
+      "after": "RFO FAR 15.301 (was FAR 15.506); RFO DFARS 215.301 (was DFARS 215.506-70/-71), DoD enhanced postaward debriefings; RFO FAR 15.206-2 (was 15.505) for preaward debriefings",
+      "reason": "DFARS 215.301-71 could not be verified. The RFO DFARS Part 215 deviation moves the enhanced postaward debriefing rules out of 215.506-70/-71 into new 215.301-x; the exact subsection is not confirmable from public sources, so the cite now stops at the level that is."
+    },
+    {
+      "location": "jeopardy/Contract Admin/300/cite",
+      "before": "RFO FAR 49.607 (number unchanged); RFO FAR 49.402-2",
+      "after": "RFO FAR 49.607 (number unchanged); RFO FAR 49.402-3(d) (10-day cure notice) and 49.402-3(e) (cross-reference to the 49.607 sample formats)",
+      "reason": "FAR 49.402-2 is Effect of termination for default (excess reprocurement costs, unliquidated progress payments) and says nothing about cure or show-cause notices. The 10-day cure procedure is 49.402-3(d), with 49.402-3(e) pointing to the 49.607 formats. regulations.json Part 49 crosswalk, verified."
+    },
+    {
+      "location": "branching/case-gao-protest-150k-it/citations",
+      "before": [
+        "RFO FAR 33.105 (was FAR 33.104)",
+        "RFO FAR 33.105-3(b)(1)",
+        "RFO FAR 33.105-4",
+        "RFO DFARS 233.105-70",
+        "RFO DFARS 215.301-71",
+        "31 U.S.C. 3553(d)",
+        "4 CFR 21.3(a)",
+        "4 CFR 21.3(c)",
+        "4 CFR 21.9",
+        "FAR 52.242-15 (Stop-Work Order)",
+        "RFO FAR 2.101 (simplified acquisition threshold, $350,000)",
+        "RFO FAR 15.301 (was FAR 15.506) postaward debriefing"
+      ],
+      "after": [
+        "RFO FAR 33.105 (was FAR 33.104)",
+        "RFO FAR 33.105-3(b)(1)",
+        "RFO FAR 33.105-4",
+        "RFO DFARS 233.105-370 (was DFARS 233.104), postaward suspension of performance and HCA override",
+        "RFO DFARS 215.301 (was DFARS 215.506-70/-71), DoD enhanced postaward debriefings",
+        "31 U.S.C. 3553(d)",
+        "4 CFR 21.3(a)",
+        "4 CFR 21.3(c)",
+        "4 CFR 21.9",
+        "FAR 52.242-15 (Stop-Work Order)",
+        "RFO FAR 2.101 (simplified acquisition threshold, $350,000)",
+        "RFO FAR 15.301 (was FAR 15.506) postaward debriefing"
+      ],
+      "reason": "DFARS 233.105-70 does not exist. The RFO DFARS Part 233 class deviation (2026-O0026 Rev. 1, 24 Aug 2026) renumbered old 233.104 to 233.105 and placed the postaward stay/override text at 233.105-370. DFARS 215.301-71 likewise unverifiable; reduced to the confirmed level."
+    },
+    {
+      "location": "branching/case-gao-protest-150k-it/nodes/n6/debrief cite line",
+      "before": "... RFO DFARS 233.105-70 ...",
+      "after": "... RFO DFARS 233.105-370 (was DFARS 233.104) ...",
+      "reason": "Same nonexistent DFARS section number in the debrief citation line."
+    },
+    {
+      "location": "branching/case-bona-fide-need-janitorial/citations",
+      "before": [
+        "31 U.S.C. 1502(a)",
+        "31 U.S.C. 1301(a)",
+        "31 U.S.C. 1341",
+        "31 U.S.C. 1517",
+        "10 U.S.C. 3133 (severable services crossing fiscal years; recodified from 10 U.S.C. 2410a)",
+        "RFO FAR 17.204-1 (was FAR 17.207) exercise of options",
+        "RFO FAR 32.102 / Part 32 contract financing"
+      ],
+      "after": [
+        "31 U.S.C. 1502(a)",
+        "31 U.S.C. 1301(a)",
+        "31 U.S.C. 1341",
+        "31 U.S.C. 1517",
+        "10 U.S.C. 3133 (severable services crossing fiscal years; recodified from 10 U.S.C. 2410a)",
+        "RFO FAR 17.204-1 (was FAR 17.207) exercise of options",
+        "FAR 52.232-18, Availability of Funds, and 52.232-19, Availability of Funds for the Next Fiscal Year (clause numbers unchanged under the RFO)"
+      ],
+      "reason": "The only Part 32 content in the case is the subject-to-availability-of-funds distractor at n2. FAR 32.102 is Description of contract financing methods and does not support that discussion; replaced with the clauses the answer actually turns on."
+    },
+    {
+      "location": "branching/case-bona-fide-need-janitorial/flags",
+      "before": [
+        "ai-drafted"
+      ],
+      "after": [
+        "ai-drafted",
+        "korea-verify-cp"
+      ],
+      "reason": "CONTRACT.md section 8 requires korea-verify-cp on 411th items. This case carries unit 411th CSB and the other three cases in the file carry the flag; this one did not."
+    }
+  ]
+}

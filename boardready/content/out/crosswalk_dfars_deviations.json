@@ -1,0 +1,112 @@
+{
+  "entries": [
+    {
+      "old": "DFARS 215.371",
+      "new": "DFARS 215.202-71",
+      "title": "Only one offer",
+      "note": "Renumbered by DoD RFO Class Deviation 2026-O0048 Rev. 1 (DFARS Part 215). Codified DFARS on acquisition.gov still shows 215.371.",
+      "confidence": "verified",
+      "source_url": "https://www.acq.osd.mil/dpap/policy/policyvault/"
+    },
+    {
+      "old": "DFARS 215.371-3",
+      "new": "DFARS 215.202-71(c)",
+      "title": "Only one offer - fair and reasonable price",
+      "note": "Renumbered by Class Deviation 2026-O0048 Rev. 1.",
+      "confidence": "verified",
+      "source_url": "https://www.acq.osd.mil/dpap/policy/policyvault/"
+    },
+    {
+      "old": "DFARS 215.506",
+      "new": "DFARS 215.301-70",
+      "title": "Postaward debriefings of offerors (DoD)",
+      "note": "Moved by Class Deviation 2026-O0048 Rev. 1; 215.506-70 became 215.301-71 and provision 252.215-7996 sits at 215.301-72. SSDD thresholds $15M/$150M restated in the deviation.",
+      "confidence": "verified",
+      "source_url": "https://www.acq.osd.mil/dpap/policy/policyvault/"
+    },
+    {
+      "old": "DFARS 215.506-70",
+      "new": "DFARS 215.301-71",
+      "title": "Opportunity for follow-up questions (DoD enhanced postaward debriefings)",
+      "note": "Moved by Class Deviation 2026-O0048 Rev. 1. Both sections are headed 'Opportunity for follow-up questions'; the source selection decision document thresholds sit in 215.301-70 (Class III reviewer, 14 Sep 2026).",
+      "confidence": "verified",
+      "source_url": "https://www.acq.osd.mil/dpap/policy/policyvault/"
+    },
+    {
+      "old": "DFARS 237.172",
+      "new": "DFARS 237.872",
+      "title": "Service contracts surveillance (QASP)",
+      "note": "Renumbered by Class Deviation 2026-O0023 (DFARS Part 237); PGI 237.172 became PGI 237.872.",
+      "confidence": "verified",
+      "source_url": "https://www.acq.osd.mil/dpap/policy/policyvault/"
+    },
+    {
+      "old": "PGI 237.172",
+      "new": "PGI 237.872",
+      "title": "Service contracts surveillance (QASP) - PGI",
+      "note": "Renumbered with Class Deviation 2026-O0023.",
+      "confidence": "verified",
+      "source_url": "https://www.acq.osd.mil/dpap/policy/policyvault/"
+    },
+    {
+      "old": "DFARS 218.2",
+      "new": "DFARS 218.7001-2",
+      "title": "Emergency acquisition flexibilities (contingency)",
+      "note": "Subpart 218.2 no longer exists under Class Deviation 2026-O0004; contingency flexibilities are at 218.7001-2 / PGI 218.7001-2.",
+      "confidence": "verified",
+      "source_url": "https://www.acq.osd.mil/dpap/policy/policyvault/"
+    },
+    {
+      "old": "DFARS 225.74",
+      "new": "DFARS 225.770",
+      "title": "Contractor personnel supporting U.S. Armed Forces / theater business clearance",
+      "note": "Subpart 225.74 is reserved in the RFO Part 225 deviation (2026-O0041 Rev. 1); the content now lives at 225.770, 225.771 and 225.773, with 252.225-7040 retained.",
+      "confidence": "verified",
+      "source_url": "https://www.acq.osd.mil/dpap/policy/policyvault/"
+    },
+    {
+      "old": "DFARS 215.101-2-70",
+      "new": "DFARS 215.103-2-70",
+      "title": "Limitations on the use of LPTA (DoD)",
+      "note": "Renumbered by Class Deviation 2026-O0048 (effective 16 Mar 2026); the acquisition.gov DFARS HTML still shows the legacy number.",
+      "confidence": "verified",
+      "source_url": "https://www.acq.osd.mil/dpap/policy/policyvault/"
+    },
+    {
+      "old": "AFARS 5137.590",
+      "new": "AFARS 5137.890",
+      "title": "Army services acquisition oversight (RFO reissue, June 2026)",
+      "note": "AFARS was reissued for the RFO in June 2026 (combined PDF on army.mil); services-oversight text moved to 5137.890-1 through -4 with thresholds in Appendix GG and content in PGI 5137.890-4. acquisition.gov still serves the July 2025 AFARS. AFARS and AFARS PGI were updated again effective 31 Aug 2026 (Army Connect), with Appendix GG at Revision 30 (1 Jul 2026).",
+      "confidence": "verified",
+      "source_url": "https://www.army.mil/"
+    },
+    {
+      "old": "AFARS 5137.590-4",
+      "new": "AFARS 5137.890-3",
+      "title": "Services acquisition review procedures",
+      "note": "Legacy 5137.590-4 (Review procedures) became 5137.890-3 in the RFO reissue; review thresholds moved from 5137.590-3 to 5137.890-2 with the tiers in Appendix GG, and 5137.890-4 now covers Independent Management Reviews (Class III reviewer, 14 Sep 2026, against AFARS effective 31 Aug 2026 and Appendix GG Revision 30).",
+      "confidence": "verified",
+      "source_url": "https://www.army.mil/"
+    },
+    {
+      "old": "AFARS 5104.802(f)",
+      "new": "AFARS 5104.101(a)",
+      "title": "Contract files in VCE Paperless Contract File (PCF)",
+      "note": "Moved with the June 2026 AFARS reissue; procedures in PGI 5104.101. AFARS and AFARS PGI were updated again effective 31 Aug 2026 (Army Connect), with Appendix GG at Revision 30 (1 Jul 2026).",
+      "confidence": "verified",
+      "source_url": "https://www.army.mil/"
+    }
+  ],
+  "unchanged": [],
+  "method_notes": "Pairs surfaced by the independent accuracy reviewers on 14 Sep 2026 while checking drafted answers against the DoD RFO class-deviation PDFs (text extracted locally). Added so later authors stop reintroducing the codified (pre-deviation) DFARS numbers.",
+  "verification_log": [
+    {
+      "pass": "reviewer-derived",
+      "checked": 9,
+      "refuted": 0,
+      "changes": [
+        "created from review findings in open_drafts_2.review.json and open_drafts_3.review.json"
+      ]
+    }
+  ]
+}

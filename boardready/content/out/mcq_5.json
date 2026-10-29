@@ -1,0 +1,1452 @@
+[
+  {
+    "qid": "Q0002",
+    "stem": "You are the contracting officer on a source selection and higher leadership directs an approach you believe is contrary to your legal guidance. How do you handle it?",
+    "options": [
+      {
+        "text": "Talk it through with leadership and legal, document your reasoning, and if they insist, let them sign it their way rather than signing what you cannot support.",
+        "correct": true,
+        "why": "The board answer is to work the disagreement through leadership and counsel, document it, and never sign a contract you do not believe is right, because management cannot compel your signature."
+      },
+      {
+        "text": "Sign the award as leadership directs once you have documented your objection in a memo for the file, since the direction came from your rating chain of command.",
+        "correct": false,
+        "why": "Documenting an objection does not move the signature decision off the contracting officer, and no one can make a contracting officer sign an action they believe is wrong."
+      },
+      {
+        "text": "Stop discussing it and report the direction to the inspector general as a procurement integrity violation, because contrary direction on a source selection is misconduct.",
+        "correct": false,
+        "why": "A disagreement over approach is not by itself misconduct; the answer starts with a conversation with leadership and with legal, not a report to the inspector general."
+      },
+      {
+        "text": "Follow legal's guidance without telling leadership, because counsel's opinion binds the contracting officer on the question.",
+        "correct": false,
+        "why": "Legal advice informs your decision but does not bind it, and cutting leadership out skips the discussion the answer requires."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "Official CORB board answer Q0002 (no regulatory cite in the source)",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0003",
+    "stem": "Why is inspection and acceptance important to the Government?",
+    "options": [
+      {
+        "text": "It confirms the Government gets what it paid for and that the contractor performed to the requirement.",
+        "correct": true,
+        "why": "That is the whole point of inspection and acceptance: verifying delivered performance against the requirement before the Government takes it."
+      },
+      {
+        "text": "It moves responsibility for defective work onto the requiring activity once the receiving report is signed.",
+        "correct": false,
+        "why": "Inspection and acceptance verifies the contractor's performance; it is not a device for shifting responsibility to the customer."
+      },
+      {
+        "text": "It is a contractor quality function, so the Government can rely on the contractor's own inspection records.",
+        "correct": false,
+        "why": "The Government has to see for itself that performance meets the work requirement rather than take delivery on the contractor's word."
+      },
+      {
+        "text": "It is mainly an accounting step that lets the paying office close out the obligation at the end of the year.",
+        "correct": false,
+        "why": "Acceptance supports payment, but its purpose is confirming performance against the requirement, not tidying the accounting records."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "Official CORB board answer Q0003 (inspection and acceptance; no regulatory cite in the source)",
+    "domain": "Contract Administration"
+  },
+  {
+    "qid": "Q0008",
+    "stem": "A recent intern graduate is assigned to your team as a contract specialist. Which approach best covers mentoring and equipping them?",
+    "options": [
+      {
+        "text": "Mentor on the job, train them on PD2 and the PCF in VCE, show them PAM, the MAP app and where the regulations and local procedures are, and point them to DAU.",
+        "correct": true,
+        "why": "The answer pairs hands-on mentoring with the systems, navigation aids, regulatory sources and development paths a new specialist needs."
+      },
+      {
+        "text": "Enroll them in DAU coursework and let the certification standards carry their development until the required classes are complete.",
+        "correct": false,
+        "why": "Formal coursework is one piece of the answer, not the whole of it; the mentoring, systems training and regulation navigation still have to happen."
+      },
+      {
+        "text": "Give them a completed contract file to copy on their first actions so they learn the format before they learn the regulations.",
+        "correct": false,
+        "why": "Copying a file teaches formatting, not where the regulations and local procedures live or how to interpret them."
+      },
+      {
+        "text": "Have them begin by drafting determinations for your signature, since writing documents teaches faster than any system training.",
+        "correct": false,
+        "why": "Starting with documents skips the systems training and the regulatory navigation the answer builds the specialist's foundation on."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "Official CORB board answer Q0008 (no regulatory cite in the source)",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0011",
+    "stem": "A contractor submits a request for equitable adjustment on your contract. Which sequence describes the contracting officer's process?",
+    "options": [
+      {
+        "text": "Tell your attorney, decide whether it has merit, negotiate with counsel involved if it does, and issue a final decision only if it cannot be settled.",
+        "correct": true,
+        "why": "That is the order in the answer: counsel first, then a merit determination, then negotiation, with the final decision and appeal only after a stalemate."
+      },
+      {
+        "text": "Issue a contracting officer's final decision right away, then negotiate with the contractor while the appeal runs.",
+        "correct": false,
+        "why": "The final decision comes after you evaluate merit and try to resolve the request, not as the opening move."
+      },
+      {
+        "text": "Deny a request you consider meritless without further discussion, since talking about it weakens the Government's position.",
+        "correct": false,
+        "why": "Even when you find no merit you may still discuss the issues with the contractor before issuing the final decision."
+      },
+      {
+        "text": "Send the REA to legal for formal alternative dispute resolution before evaluating it, because disputes belong to counsel rather than to the contracting officer.",
+        "correct": false,
+        "why": "Formal ADR is a later step after your merit evaluation and difficult negotiations; the contracting officer evaluates the request first."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "FAR 52.243-1; FAR 52.243-2; FAR 52.243-4; DFARS 252.243-7002",
+    "domain": "Contract Administration"
+  },
+  {
+    "qid": "Q0016",
+    "stem": "Your contract requires a modification. Which statement about modification types and authority is correct?",
+    "options": [
+      {
+        "text": "Administrative changes, change orders and termination notices are unilateral; supplemental agreements are bilateral.",
+        "correct": true,
+        "why": "That is the split in the answer: unilateral actions the contracting officer signs, and supplemental agreements both parties sign."
+      },
+      {
+        "text": "A commercial contract may be changed by unilateral change order the same way a noncommercial supply contract may be changed.",
+        "correct": false,
+        "why": "A commercial contract can be changed only by bilateral agreement of the parties, which is why the Changes clause route is not available there."
+      },
+      {
+        "text": "Any modification within the contracting officer's warrant is exempt from competition, whether or not the new work is within scope.",
+        "correct": false,
+        "why": "Only in-scope changes are exempt from the competition requirements; out-of-scope work needs competition or a justification."
+      },
+      {
+        "text": "A change order may be issued without funds in place as long as it is definitized later under a written schedule with the contractor.",
+        "correct": false,
+        "why": "Certified funds must be in place before a modification adds money; a definitization schedule does not substitute for funding."
+      }
+    ],
+    "difficulty": 3,
+    "cite": "RFO FAR 43.201; RFO FAR 43.202; RFO FAR 43.203; RFO FAR 43.205; RFO FAR 43.301; RFO FAR 43.305; RFO FAR 52.212-4(d); RFO FAR 6.001(c)",
+    "domain": "Contract Administration"
+  },
+  {
+    "qid": "Q0018",
+    "stem": "When does the contracting officer check the SAM exclusions record, and what does an active exclusion mean?",
+    "options": [
+      {
+        "text": "After offers arrive and again just before award; an active exclusion is conclusive, so the firm cannot be solicited, awarded or consented to as a subcontractor.",
+        "correct": true,
+        "why": "The record can change during evaluation, so the check is made twice, and a listed exclusion decides the matter rather than informing it."
+      },
+      {
+        "text": "Check once when the solicitation is issued; an exclusion posted later does not affect an award already in evaluation.",
+        "correct": false,
+        "why": "The second check immediately before award exists precisely because the exclusions record can change while you are evaluating."
+      },
+      {
+        "text": "Weigh the exclusion as one factor in the responsibility determination, and award anyway if the price is fair and reasonable and the firm has performed well before.",
+        "correct": false,
+        "why": "An exclusion is conclusive, not a factor to be balanced against price or past performance; only a written compelling-reason determination at the agency level allows an exception."
+      },
+      {
+        "text": "If a contractor is excluded after award, immediately terminate the existing contract for the convenience of the Government.",
+        "correct": false,
+        "why": "The current contract may generally continue; what is barred without a compelling-reason determination is new work, options or extensions."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 9.404; RFO FAR 9.405; RFO FAR 9.405(e); RFO FAR 9.405-1; AFARS 5109.405(a)",
+    "domain": "Responsibility & Exclusions"
+  },
+  {
+    "qid": "Q0031",
+    "stem": "A board member asks you to name the benefits of competition. Which answer is correct?",
+    "options": [
+      {
+        "text": "Lower cost, better quality, stronger solutions and industrial base, and more efficiency and innovation.",
+        "correct": true,
+        "why": "Those are the benefits in the board answer, along with the fairness and openness that build public trust and deter waste, fraud and abuse."
+      },
+      {
+        "text": "It guarantees the Government the lowest price available in the market on every acquisition it is used on.",
+        "correct": false,
+        "why": "Competition drives cost savings, but no board answer claims it guarantees the lowest price on any particular buy."
+      },
+      {
+        "text": "It removes the need for market research, because the offers you receive already show what the market can do.",
+        "correct": false,
+        "why": "Effective competition starts with gathering information from sources inside and outside the organization before offers come in."
+      },
+      {
+        "text": "Its main value is administrative speed, since a competed action reaches award faster than a sole source does.",
+        "correct": false,
+        "why": "The benefits are price, quality, innovation, a stronger industrial base and public trust, not a shorter lead time."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "Official CORB board answer Q0031 (benefits of competition; no regulatory cite in the source)",
+    "domain": "Competition & Market Research"
+  },
+  {
+    "qid": "Q0033",
+    "stem": "A board member asks about your unique role representing the United States, and about your allegiance to the Government versus the contractor when taxpayer dollars are at stake. Which answer is correct?",
+    "options": [
+      {
+        "text": "Only you can bind the Government, and you weigh both the Government's and industry's sides and decide fairly, ethically and impartially.",
+        "correct": true,
+        "why": "The board answer pairs the contracting officer's exclusive authority to bind the Government with an obligation to be fair and impartial to both sides."
+      },
+      {
+        "text": "Your allegiance runs to the requiring activity, so close calls should be resolved in the customer's favor.",
+        "correct": false,
+        "why": "Decisions are made on a fair, ethical and impartial basis, not on the side of the customer because you work for the Government."
+      },
+      {
+        "text": "You represent the Government alone, so a contractor's position should be weighed only when legal counsel advises in writing that it must be.",
+        "correct": false,
+        "why": "The contracting officer looks at and considers both sides of every situation as a matter of course, not on counsel's prompting."
+      },
+      {
+        "text": "You act as a neutral third party with no authority to bind either side until the legal review is finished.",
+        "correct": false,
+        "why": "Impartiality does not take away the contracting officer's authority; you remain the only person who can bind the Government."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "Official CORB board answer Q0033 (no regulatory cite in the source)",
+    "domain": "Responsibility & Exclusions"
+  },
+  {
+    "qid": "Q0034",
+    "stem": "How should a contracting officer view guidance versus policy versus regulation versus law or statute?",
+    "options": [
+      {
+        "text": "Laws and statutes are upheld at any cost; how you apply regulation, policy and guidance under them is judgment you must be able to explain.",
+        "correct": true,
+        "why": "The board answer expects an unqualified commitment to law and statute, and it reads the candidate's handling of the rest as a measure of judgment."
+      },
+      {
+        "text": "All four carry the same weight, so a conflict between local guidance and a statute goes to whichever is more specific.",
+        "correct": false,
+        "why": "Statutes are upheld at any cost; no local guidance outranks one because it happens to speak to the situation in more detail."
+      },
+      {
+        "text": "Guidance binds the contracting officer the same way a statute does, because it comes down through the chain of command.",
+        "correct": false,
+        "why": "Guidance informs a judgment you have to be able to defend; a statutory obligation is absolute, and the two are not the same thing."
+      },
+      {
+        "text": "Where a regulation is silent, a contracting officer may set aside a statutory requirement if the mission demands it.",
+        "correct": false,
+        "why": "Nothing in the mission permits setting aside a statute, which is the one category the answer treats as non-negotiable."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "Official CORB board answer Q0034 (no regulatory cite in the source)",
+    "domain": "Responsibility & Exclusions"
+  },
+  {
+    "qid": "Q0035",
+    "stem": "What is the VCE PCF, and what belongs in it?",
+    "options": [
+      {
+        "text": "The Army's electronic contract file, filed to the Army Cabinet Index; classified material stays out, and records held in PIEE are referenced.",
+        "correct": true,
+        "why": "That is what the Paperless Contract File is and how it is used, including the two categories of material kept out of it."
+      },
+      {
+        "text": "It is a reporting system, so the data it carries replaces the signed instrument as the official record of the award once the reviewer approves it.",
+        "correct": false,
+        "why": "Reporting data has to be reconciled against the signed instrument; the file supports the award, it does not replace it."
+      },
+      {
+        "text": "It is a closeout repository, so documents are uploaded once the action is complete and ready for storage.",
+        "correct": false,
+        "why": "Documents are filed as the action progresses; waiting until closeout is exactly the habit the answer warns against."
+      },
+      {
+        "text": "It is an optional local tool, so a contracting officer may keep a paper file instead as long as the paper file is complete and filed in the same order.",
+        "correct": false,
+        "why": "AFARS directs contracting officers to use the VCE tools throughout the acquisition, with the PCF as the contract file."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 4.101; RFO FAR 4.308; RFO FAR 4.309; AFARS 5104.101(a); AFARS PGI 5104.101",
+    "domain": "Contract Administration"
+  },
+  {
+    "qid": "Q0039",
+    "stem": "Explain the difference between suspension and debarment. Which statement is correct?",
+    "options": [
+      {
+        "text": "Suspension is immediate and temporary, on adequate evidence and a need to protect the Government; debarment follows fact-finding on a preponderance of the evidence, for a set period.",
+        "correct": true,
+        "why": "The two differ in timing, evidentiary standard and duration, and that is the distinction the answer draws."
+      },
+      {
+        "text": "Suspension is a contractual remedy the contracting officer imposes for poor performance, while debarment belongs to the suspension and debarment official and is used only for proven fraud.",
+        "correct": false,
+        "why": "Neither action is a contractual remedy and neither belongs to the contracting officer; both are taken by the agency's debarring official, and the causes are not limited to fraud."
+      },
+      {
+        "text": "Debarment is the immediate action taken before the case is developed, while suspension follows a full fact-based proceeding.",
+        "correct": false,
+        "why": "That reverses the two: suspension is the fast protective step, and debarment is the considered action after the facts are developed."
+      },
+      {
+        "text": "A contractor proposed for debarment may still receive new awards until the debarring official signs the final decision.",
+        "correct": false,
+        "why": "The proposal notice excludes the contractor during the proceeding, so at the contracting table the effect is the same as a debarment."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 9.406; RFO FAR 9.406-3(d); RFO FAR 9.406-4; RFO FAR 9.407; RFO FAR 9.407-2(b); RFO FAR 9.407-4; RFO FAR 9.404; RFO FAR 9.405",
+    "domain": "Responsibility & Exclusions"
+  },
+  {
+    "qid": "Q0049",
+    "stem": "Which Government-side inadequacies in the specification or performance work statement cause a lack of competition?",
+    "options": [
+      {
+        "text": "A vague requirement, restrictive specifications or brand names, proprietary technology, weak market research, and loyalty to the incumbent.",
+        "correct": true,
+        "why": "Those are the Government mistakes the answer lists, and each one narrows the field before industry ever sees the solicitation."
+      },
+      {
+        "text": "Allowing a long response time and choosing a firm-fixed-price contract type, because both of them thin out the field of offerors who can bid.",
+        "correct": false,
+        "why": "A generous response time widens the field rather than narrowing it, and the contract type is not among the barriers in the answer."
+      },
+      {
+        "text": "Publicizing the requirement and holding an industry day, which show the Government's hand to the incumbent before the solicitation is released.",
+        "correct": false,
+        "why": "Publicizing the requirement and engaging industry expand competition; they are not Government errors that suppress it."
+      },
+      {
+        "text": "Writing the requirement in performance terms and evaluating past performance, which together favor the largest and the longest-serving firms.",
+        "correct": false,
+        "why": "Describing the outcome instead of the method opens the requirement to more solutions; the barriers are restrictive or undefined requirements."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "Official CORB board answer Q0049 (no regulatory cite in the source)",
+    "domain": "Competition & Market Research"
+  },
+  {
+    "qid": "Q0051",
+    "stem": "What is the legal effect of a quotation, and how does a supplier accept a purchase order?",
+    "options": [
+      {
+        "text": "A quotation is not an offer, so the order is the Government's offer; the supplier accepts by notice, by delivering, or by substantial performance.",
+        "correct": true,
+        "why": "Because a quote cannot be accepted to form a contract, the order is the Government's offer and the supplier's notice or performance is the acceptance."
+      },
+      {
+        "text": "A quotation is an offer, so issuing the order is the Government's acceptance and the contract forms the moment the order goes out.",
+        "correct": false,
+        "why": "A quotation cannot be accepted by the Government to form a binding contract, which is why issuing an order does not by itself establish one."
+      },
+      {
+        "text": "Only a signed acknowledgment copy of the order forms the contract; starting work has no legal effect until it is returned.",
+        "correct": false,
+        "why": "Furnishing the supplies or services, or proceeding to substantial performance, is acceptance even without a signed acknowledgment."
+      },
+      {
+        "text": "A quotation binds the supplier to its prices for the period stated, so the Government may accept it any time in that window.",
+        "correct": false,
+        "why": "A quotation is informational rather than an offer, so there is nothing for the Government to accept and nothing binding the supplier."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 12.201-1(b) (legal effect of quotations; was FAR 13.004(a)-(b)); official CORB board answer Q0051",
+    "domain": "Acquisition Planning & Contract Types"
+  },
+  {
+    "qid": "Q0069",
+    "stem": "It is the fourth quarter and fallout money becomes available. The design branch wants to use it to buy a plotter. What are your concerns?",
+    "options": [
+      {
+        "text": "Ask what color and year the money is instead of assuming current-year O&M, and confirm a bona fide need exists this year.",
+        "correct": true,
+        "why": "The two concerns in the answer are identifying the appropriation and its year, and confirming a genuine current-year need for what is being bought."
+      },
+      {
+        "text": "None, as long as the money is obligated before the fiscal year ends, since year-end funds carry their own authority.",
+        "correct": false,
+        "why": "Obligating in time does not cure the wrong appropriation or a need that belongs to a later year."
+      },
+      {
+        "text": "Accept the funds as current-year O&M, because fallout money is by definition expiring operations and maintenance money from this year.",
+        "correct": false,
+        "why": "The answer is explicit that you ask rather than assume; fallout money may be a different appropriation or a different year."
+      },
+      {
+        "text": "Buy enough equipment to cover the branch's anticipated needs for the next several years while the year-end money is available.",
+        "correct": false,
+        "why": "Current funds may cover a current need and a reasonable inventory, but stockpiling for a future need breaks the bona fide needs rule."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "Bona fide needs rule, 31 U.S.C. 1502(a); official CORB board answer Q0069 (the answer names the rule; the source carries no citation of its own)",
+    "domain": "Fiscal Law & Funding"
+  },
+  {
+    "qid": "Q0071",
+    "stem": "In a source selection you are following the FAR and DFARS on an issue, and higher leadership gives you direction you believe is contrary to your legal guidance. Do you comply with the legal guidance or with leadership?",
+    "options": [
+      {
+        "text": "Pin down the legal limits, then work it through your supervisor and the chain; if it stays unresolved, you may decline to sign.",
+        "correct": true,
+        "why": "The answer tells you not to go it alone, and it ends with the warrant holder's own obligation to the integrity of the procurement system."
+      },
+      {
+        "text": "Comply with leadership's direction, since the chain of command resolves differences of judgment and the direction came from above you.",
+        "correct": false,
+        "why": "The warrant and the responsibility for the procurement stay with you, so direction from above does not settle the question."
+      },
+      {
+        "text": "Work it out alone with counsel and keep your supervisor out of it, so nobody can say you escalated a disagreement.",
+        "correct": false,
+        "why": "The point of the answer is the opposite: you use your supervisor and others in the chain to help resolve it."
+      },
+      {
+        "text": "Turn in your warrant so the action can be signed by a contracting officer who agrees with leadership's approach.",
+        "correct": false,
+        "why": "The answer keeps you in the seat: resolve it through the chain, and decline to sign if it cannot be resolved."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "Official CORB board answer Q0071 (no regulatory cite in the source)",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0072",
+    "stem": "On 3 September the PCO awarded a contract for computers with that fiscal year's O&M funds. The contractor could have delivered almost immediately, but delivery was set for completion of a new building early the following calendar year. Is there a fiscal issue?",
+    "options": [
+      {
+        "text": "Yes. The delay is the Government's own choice, not lead time, so this looks like a bona fide needs violation.",
+        "correct": true,
+        "why": "The need falls in the following year, and the exception turns on when the contractor could actually deliver, not on when the Government wants the item."
+      },
+      {
+        "text": "No. The need arose in the year the funds were awarded in, so the delivery date does not affect the bona fide need.",
+        "correct": false,
+        "why": "The rule looks at the year the need belongs to, and a delivery timed to a next-year event points to a next-year need."
+      },
+      {
+        "text": "No. The lead-time exception covers it, because delivery is scheduled for the first date the Government can use the computers.",
+        "correct": false,
+        "why": "The lead-time exception rests on the contractor's actual production and delivery time, which here was immediate."
+      },
+      {
+        "text": "Yes, but only because the award was made in September; the same delivery date awarded earlier in the year would be proper.",
+        "correct": false,
+        "why": "The award date is not the defect; funding a need that belongs to the next fiscal year with one-year money is."
+      }
+    ],
+    "difficulty": 3,
+    "cite": "31 U.S.C. 1502(a)",
+    "domain": "Fiscal Law & Funding"
+  },
+  {
+    "qid": "Q0080",
+    "stem": "A board member asks you to walk the contracting process from cradle to grave. Which sequence is correct?",
+    "options": [
+      {
+        "text": "Planning (requirement, funding, market research); solicitation, evaluation and award; administration (COR, modifications, inspection, payment); then closeout.",
+        "correct": true,
+        "why": "Those are the four phases in order, with administration sitting between award and closeout where most of the money and risk are."
+      },
+      {
+        "text": "Market research, source selection, protest resolution and litigation, with administration handled by the requiring activity.",
+        "correct": false,
+        "why": "Administration is a phase the contracting officer owns, and protests and litigation are events inside the process, not phases of it."
+      },
+      {
+        "text": "Requirement, award, payment and file retirement, with modifications and options handled during the closeout phase.",
+        "correct": false,
+        "why": "Modifications, options and funding actions are administration, which happens long before the file is closed out."
+      },
+      {
+        "text": "Solicitation, award and closeout, with acquisition planning added only when the value exceeds the simplified acquisition threshold or when the customer asks for it.",
+        "correct": false,
+        "why": "Every action starts with a validated requirement, funding and market research; planning is not an extra step triggered by dollar value."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "RFO FAR 7 (acquisition planning); RFO FAR 10.001 (market research); RFO FAR 5; RFO FAR 6; RFO FAR 15; RFO FAR 42; RFO FAR 43; RFO FAR 49; RFO FAR 4.308 (closeout); RFO FAR 1.404 and DFARS 201.404-70 (COR designation)",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "Q0084",
+    "stem": "Name market research techniques used in contracting. Which set is correct?",
+    "options": [
+      {
+        "text": "Talking to experts in Government and industry, a sources sought notice or RFI, award and entity databases, catalogs and price lists, and lessons learned.",
+        "correct": true,
+        "why": "Those are the techniques in the answer, and together they tell you whether a commercial solution, an existing vehicle, and capable small businesses exist."
+      },
+      {
+        "text": "Requesting certified cost or pricing data from the likely offerors so their cost structures can be compared before the solicitation is released to industry.",
+        "correct": false,
+        "why": "Certified data belongs to pricing a proposal, and asking industry for it up front takes far more information than the research needs."
+      },
+      {
+        "text": "Issuing the solicitation first and treating the offers received as the market research that supports both the acquisition strategy and the price analysis.",
+        "correct": false,
+        "why": "Research has to happen before the requirements document and the solicitation, early enough that the results can still change the strategy."
+      },
+      {
+        "text": "Relying on the requiring activity's preferred source, on the basis that the customer knows the market for its own requirement.",
+        "correct": false,
+        "why": "That is customer loyalty rather than research; the techniques draw on sources both inside and outside the organization."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 10.001(b), (c) and (e) (market research requirements, industry exchanges, documentation); RFO FAR 3.104 (procurement integrity in exchanges with industry)",
+    "domain": "Competition & Market Research"
+  },
+  {
+    "qid": "Q0097",
+    "stem": "Which FAR part sets out the requirements for publicizing contract actions?",
+    "options": [
+      {
+        "text": "FAR Part 5, publicizing contract actions, which the overhaul rewrote and kept in Part 5 at subpart 5.1.",
+        "correct": true,
+        "why": "Part 5 carries the publicizing requirements, and the overhaul rewrote the part without moving them, so cite it in RFO numbering."
+      },
+      {
+        "text": "FAR Part 6, competition requirements, which is where the synopsis and posting rules are set out.",
+        "correct": false,
+        "why": "Part 6 governs how much competition is required, not how and where an action is publicized."
+      },
+      {
+        "text": "FAR Part 10, market research, because publicizing a requirement is a market research technique.",
+        "correct": false,
+        "why": "A sources sought notice is research; the rules for publicizing the contract action itself are a separate part."
+      },
+      {
+        "text": "FAR Part 15, contracting by negotiation, since notices are part of the solicitation process.",
+        "correct": false,
+        "why": "Part 15 covers negotiation procedures and applies to only some actions, while publicizing rules reach across methods."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "FAR 5 (RFO Part 5 deviation guide)",
+    "domain": "Competition & Market Research"
+  },
+  {
+    "qid": "Q0098",
+    "stem": "In your own words, what does it mean for a contractor to be responsible?",
+    "options": [
+      {
+        "text": "A forward-looking judgment that this offeror can and will perform, based on capability and integrity; without clear evidence of that, it is nonresponsible.",
+        "correct": true,
+        "why": "Award may go only to a responsible contractor, so the determination is affirmative and an unclear record decides against the offeror."
+      },
+      {
+        "text": "It means the offer conformed to the solicitation, so a nonconforming offer produces a nonresponsibility finding.",
+        "correct": false,
+        "why": "That describes responsiveness of a sealed bid, which is about the bid document, while responsibility is about the offeror."
+      },
+      {
+        "text": "It is fixed by the information on hand when offers are received, so later information about the offeror cannot change the determination.",
+        "correct": false,
+        "why": "Responsibility is determined at award, and information arriving right up to award should be considered."
+      },
+      {
+        "text": "If you find a small business nonresponsible, you document the basis and award to the next offeror in line.",
+        "correct": false,
+        "why": "A proposed nonresponsibility finding on a small business must be referred to SBA, whose Certificate of Competency is conclusive."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 9.103; RFO FAR 9.104-1; RFO FAR 9.104-3; RFO FAR 9.104-6; RFO FAR 9.105-1; RFO FAR 9.105-2; RFO FAR 19.204",
+    "domain": "Responsibility & Exclusions"
+  },
+  {
+    "qid": "Q0115",
+    "stem": "Which FAR coverage addresses Cost Accounting Standards, and when do the standards apply?",
+    "options": [
+      {
+        "text": "FAR Part 31 and the FAR Appendix; CAS covers negotiated contracts and subcontracts above the TINA threshold unless exempt.",
+        "correct": true,
+        "why": "That is where CAS coverage sits, and in practice it reaches the larger negotiated awards made to large businesses."
+      },
+      {
+        "text": "FAR Part 15; the standards apply whenever the contracting officer performs a cost analysis on a proposal of any size or type.",
+        "correct": false,
+        "why": "Part 15 sets out negotiation procedures, and performing cost analysis does not by itself make a contract CAS-covered, whatever its size."
+      },
+      {
+        "text": "FAR Part 16; the standards apply to any cost-reimbursement contract, whatever its dollar value or the size of the business.",
+        "correct": false,
+        "why": "Part 16 covers contract types, and CAS coverage turns on the statutory threshold and the exemptions, such as small business, rather than on the type selected."
+      },
+      {
+        "text": "FAR Part 42; the standards apply once the audit agency has approved the contractor's accounting system for its cost-type work.",
+        "correct": false,
+        "why": "Part 42 covers contract administration, and CAS applies by rule rather than on an audit agency's approval."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "FAR 31; FAR Appendix (48 CFR 9901.306); 41 U.S.C. 1908; 41 U.S.C. 1502(b)(1)(B)",
+    "domain": "Pricing, Cost & Payment"
+  },
+  {
+    "qid": "Q0137",
+    "stem": "Which FAR part sets out the required sources of supplies and services you must consider before buying on the open market?",
+    "options": [
+      {
+        "text": "FAR Part 8, required sources of supplies and services.",
+        "correct": true,
+        "why": "Part 8 is the FAR coverage for required sources of supplies and services, which you work through before buying on the open market."
+      },
+      {
+        "text": "FAR Part 7, acquisition planning and the make-or-buy decision.",
+        "correct": false,
+        "why": "Part 7 tells you how to plan the acquisition, not which sources you are required to consider first."
+      },
+      {
+        "text": "FAR Part 10, market research on available commercial sources.",
+        "correct": false,
+        "why": "Part 10 tells you how to learn what the market offers; the required sources are a separate obligation."
+      },
+      {
+        "text": "FAR Part 19, small business programs and set-aside procedures.",
+        "correct": false,
+        "why": "Part 19 governs small business preferences, which come into play after the required sources are addressed."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "FAR 8",
+    "domain": "Competition & Market Research"
+  },
+  {
+    "qid": "Q0139",
+    "stem": "You disagree with the direction your customer wants to take on a requirement. How do you reconcile it and still keep their confidence?",
+    "options": [
+      {
+        "text": "Bend on preferences but not on legal limits; go early and in person, lead with mission effect, offer a workable alternative, and confirm the plan in writing.",
+        "correct": true,
+        "why": "The answer never leaves the customer with a bare no: it bends on preference, holds on law, and always offers a lawful path to what they need."
+      },
+      {
+        "text": "Hold the line on every point of disagreement, since bending on preferences invites pressure on the legal limits next.",
+        "correct": false,
+        "why": "Preference is exactly where a contracting officer should bend; only the legal and regulatory limits are fixed."
+      },
+      {
+        "text": "Lead with the citation and let the regulation carry the conversation, because the rule is what decides the question anyway.",
+        "correct": false,
+        "why": "The mission effect comes first and the citation follows it, and a rule quoted without an alternative is still just a refusal."
+      },
+      {
+        "text": "If a compliance question stays unresolved, settle it informally with the customer's leadership so it never turns into a formal disagreement recorded in the contract file.",
+        "correct": false,
+        "why": "A question of law is documented and elevated through your chain with counsel, not negotiated in a hallway."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 1.402-1; RFO FAR 1.402-2; RFO FAR 1.102(b)(4); RFO FAR 3.104; 31 U.S.C. 1341; RFO FAR 32.703-2 with FAR 52.232-18",
+    "domain": "Responsibility & Exclusions"
+  },
+  {
+    "qid": "Q0140",
+    "stem": "During a competitive source selection an SSEB member and the legal advisor take opposite positions on an evaluation question. How do you reconcile the difference?",
+    "options": [
+      {
+        "text": "Hold everyone to the RFP's stated factors, keep each role in its lane, and give the SSA both written positions with your recommendation.",
+        "correct": true,
+        "why": "Proposals are evaluated solely on the stated factors, and the decision belongs to the source selection authority, not to the contracting officer."
+      },
+      {
+        "text": "Break the tie yourself in favor of the position carrying the least protest risk, since you own the source selection process and its file.",
+        "correct": false,
+        "why": "Owning the process does not make you a voting member; the source selection authority decides and the record must show that judgment."
+      },
+      {
+        "text": "Resolve the disagreement off the record so the file does not show an internal split a protester could exploit.",
+        "correct": false,
+        "why": "A documented disagreement the authority resolves strengthens the record; one that disappears from the file weakens it."
+      },
+      {
+        "text": "Let the board credit the strength it found, because technical evaluators own technical findings even when the RFP did not ask for that feature.",
+        "correct": false,
+        "why": "Evaluation is limited to the factors and subfactors in the solicitation, whoever identified the feature."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 15.201; RFO FAR 15.202; RFO FAR 15.204; RFO FAR 15.205; RFO FAR 1.402-2; DoD Source Selection Procedures; AFARS Appendix AA (Army Source Selection Supplement)",
+    "domain": "Responsibility & Exclusions"
+  },
+  {
+    "qid": "Q0143",
+    "stem": "Describe how you make a discretionary decision and how you prepare to defend it if it is later challenged.",
+    "options": [
+      {
+        "text": "Stay inside your authority, gather facts and rules, consult specialists, weigh options and risks, decide and explain plainly, and document it that day.",
+        "correct": true,
+        "why": "Contemporaneous documentation is what lets the earlier steps be defended, because a reviewer asks whether the decision was reasonable on the record you had."
+      },
+      {
+        "text": "Wait until the decision is challenged and then write the rationale, since a later memorandum can capture the full picture and the final outcome at once.",
+        "correct": false,
+        "why": "The file is written the day the decision is made; a rationale reconstructed after a challenge is worth much less to a reviewer."
+      },
+      {
+        "text": "Pick the course carrying the lowest protest risk every time, because a decision nobody challenges is the defensible one.",
+        "correct": false,
+        "why": "You choose the course that best serves the Government; defensibility comes from a reasonable, well-documented decision, not from avoiding challenge."
+      },
+      {
+        "text": "Treat anything the FAR does not expressly authorize as prohibited, so that every one of your decisions stays well inside the four corners of the regulation.",
+        "correct": false,
+        "why": "A strategy in the Government's interest that is not prohibited by law, regulation or executive order is permissible; inventing prohibitions is its own error."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 1.102(b)(4); RFO FAR 1.402-2; RFO FAR 4.101; RFO FAR 15.205; 31 U.S.C. 1341; 31 U.S.C. 1502",
+    "domain": "Responsibility & Exclusions"
+  },
+  {
+    "qid": "Q0145",
+    "stem": "When is a services acquisition strategy required in the Army, and when must it be approved?",
+    "options": [
+      {
+        "text": "When it meets the AFARS Appendix GG review thresholds, or at any value when designated special interest; approval comes before the final solicitation is released.",
+        "correct": true,
+        "why": "Appendix GG carries the review thresholds and delegations, special interest designation triggers a strategy at any value, and release follows approval."
+      },
+      {
+        "text": "Only when the total planned value exceeds the simplified acquisition threshold, and approval may come at any time before the contracting officer actually makes the award.",
+        "correct": false,
+        "why": "The trigger is the Army review thresholds rather than the simplified acquisition threshold, and approval precedes solicitation release, not award."
+      },
+      {
+        "text": "For every service acquisition, including each task order placed under a strategy that was already reviewed and approved.",
+        "correct": false,
+        "why": "Task orders issued consistent with the decision authority's conditions do not need a separate strategy of their own."
+      },
+      {
+        "text": "Only where a written acquisition plan is required, because the services strategy takes the place of that plan.",
+        "correct": false,
+        "why": "The written acquisition plan rules still apply on their own terms; the services strategy is a services-specific overlay, not a substitute."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "AFARS 5137.890-1; AFARS 5137.890-2; AFARS 5137.890-3; AFARS PGI 5137.890-4; AFARS Appendix GG; DoDI 5000.74; AR 70-13; RFO FAR 7.102; RFO FAR 37",
+    "domain": "Acquisition Planning & Contract Types"
+  },
+  {
+    "qid": "Q0156",
+    "stem": "Who may waive the Defense Base Act for a country, and what conditions ride with the waiver?",
+    "options": [
+      {
+        "text": "Only the Secretary of Labor, on the agency head's recommendation; it never covers U.S. citizens, residents or U.S. hires, and it holds only if waived workers get local-law benefits.",
+        "correct": true,
+        "why": "The waiver authority sits with Labor, and both conditions travel with every waiver the Department grants."
+      },
+      {
+        "text": "The contracting officer may waive it for local national employees when the host nation runs its own compensation system, after checking with the Department of Labor district office.",
+        "correct": false,
+        "why": "No contracting officer and no contracting agency can waive the Act, even after consulting Labor; that authority belongs to the Secretary of Labor alone."
+      },
+      {
+        "text": "The head of the contracting activity may waive it on the contracting officer's request, and the waiver then covers every employee performing in that country, whatever their nationality.",
+        "correct": false,
+        "why": "The agency head only recommends, and no waiver ever covers U.S. citizens, U.S. residents or employees hired in the United States."
+      },
+      {
+        "text": "A waiver ends the contractor's obligation to carry any compensation coverage at all for the employees it covers.",
+        "correct": false,
+        "why": "Waived employees still have to receive local-law benefits, and the alternate clause keeps local-law and war-hazard coverage in place."
+      }
+    ],
+    "difficulty": 3,
+    "cite": "42 U.S.C. 1651-1654; 42 U.S.C. 1701; 33 U.S.C. 901; RFO FAR 28.305; RFO FAR 28.309; FAR 52.228-3; FAR 52.228-4",
+    "domain": "Property, Security & Special Provisions"
+  },
+  {
+    "qid": "Q0212",
+    "stem": "A board member asks you to explain strategic sourcing. Which answer is correct?",
+    "options": [
+      {
+        "text": "Using spend data to combine common requirements, compete them once with full buying power, cut duplicate vehicles and track savings.",
+        "correct": true,
+        "why": "Strategic sourcing analyzes what the enterprise spends and turns that analysis into fewer, better-leveraged vehicles, which is where category management sits today."
+      },
+      {
+        "text": "It is selecting a single source for a requirement after market research shows that only one firm can meet the need at a fair and reasonable price.",
+        "correct": false,
+        "why": "That is a limited-source decision on one acquisition; strategic sourcing is an enterprise look at aggregate spend."
+      },
+      {
+        "text": "It is awarding each requirement separately to the lowest-priced offeror so that vehicles stay independent of one another and easy to replace.",
+        "correct": false,
+        "why": "Fragmenting buys is the opposite of the approach, which aggregates common requirements and cuts duplicate vehicles."
+      },
+      {
+        "text": "It is setting aside common commodity buys for small business so that the spend is spread across many more suppliers in more regions of the country.",
+        "correct": false,
+        "why": "Socioeconomic set-asides are a separate policy; strategic sourcing is about leveraging the Government's combined buying power."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "OMB M-19-13 (category management); RFO FAR 8.102, 8.103 and 8.104 (required sources and government-wide contracts); OFPP Memorandum, 29 Sep 2011 (business cases for certain interagency and agency-specific acquisitions); section 865, P.L. 110-417; RFO FAR 17.502-1(b)",
+    "domain": "Competition & Market Research"
+  },
+  {
+    "qid": "Q0215",
+    "stem": "What is consolidation, and how does it differ from bundling?",
+    "options": [
+      {
+        "text": "Consolidation joins requirements from separate smaller contracts into one solicitation; bundling is the kind a small business cannot take, and it always needs the determination.",
+        "correct": true,
+        "why": "Consolidation is defined by combining previously separate requirements, while bundling adds the finding that a small business could not take the combined work."
+      },
+      {
+        "text": "Consolidation and bundling are two names for the same action, and each one needs a written determination only when the estimated value, with all options, is above $2 million in total.",
+        "correct": false,
+        "why": "Bundling is a narrower finding about suitability for small business, and it requires the determination at any dollar value."
+      },
+      {
+        "text": "Consolidation is combining separate line items inside one existing contract, so no determination is needed for it.",
+        "correct": false,
+        "why": "The term reaches requirements previously performed under separate contracts, and above $2 million it carries a written determination."
+      },
+      {
+        "text": "Consolidation is aligning the option periods of several contracts so they can be exercised on the same date.",
+        "correct": false,
+        "why": "Aligning option periods is contract administration; consolidation puts previously separate requirements into a single solicitation."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 7.107-1; RFO FAR 7.107-2; RFO FAR 2.101; DFARS 207.107-370; 15 U.S.C. 657q; 15 U.S.C. 644(e)",
+    "domain": "Competition & Market Research"
+  },
+  {
+    "qid": "Q0216",
+    "stem": "How can consolidation benefit the Government, and what must the written determination show?",
+    "options": [
+      {
+        "text": "Savings, better quality, shorter cycle time and better terms, quantified from market research and shown to substantially exceed the alternatives.",
+        "correct": true,
+        "why": "Those are the benefits the regulation lists, and the determination stands or falls on quantified benefits measured against the alternatives."
+      },
+      {
+        "text": "Reduced administrative and personnel workload alone, which carries the determination when the office cannot run several source selections.",
+        "correct": false,
+        "why": "Administrative or personnel cost savings by themselves do not justify a consolidation unless the savings are substantial."
+      },
+      {
+        "text": "Increased small business participation, because one large contract gives small firms a larger subcontracting base to work from.",
+        "correct": false,
+        "why": "Consolidation generally narrows the field for small business, which is why the determination, the notifications and mitigation exist."
+      },
+      {
+        "text": "Benefits may be described qualitatively, because the substantial-benefit test applies only where the action is substantial bundling.",
+        "correct": false,
+        "why": "The benefits come out of market research as quantified figures, and the substantiality test applies to the consolidation determination itself."
+      }
+    ],
+    "difficulty": 3,
+    "cite": "RFO FAR 7.107-1(b); RFO FAR 7.107-2(c)(3), (c)(6) and (d); RFO FAR 7.107-3; RFO FAR 7.107-4; 15 U.S.C. 657q; 15 U.S.C. 644(e); 13 CFR 125.2(d)",
+    "domain": "Competition & Market Research"
+  },
+  {
+    "qid": "Q0261",
+    "stem": "You have received the ABG7, all work is complete without deficiencies, and the customer has verified it. What is your next step toward closeout?",
+    "options": [
+      {
+        "text": "Get the final ABG8 and ABG9, confirm by voucher that they were paid, then deobligate leftovers on an ABG5a and process the 1594 and the PD2 closeout modification.",
+        "correct": true,
+        "why": "Closeout starts with the final invoices and proof of payment, and it matters because the unused funds only come back once the file is closed out."
+      },
+      {
+        "text": "Deobligate the remaining funds with an ABG5a right away, since the ABG7 already shows that the work is complete and the customer has verified it in writing on the ABG7.",
+        "correct": false,
+        "why": "The final ABG8 and ABG9 have to be requested and verified as paid before you know what funds are actually unused."
+      },
+      {
+        "text": "Close the action in PD2 and leave the residual funds on the contract until the appropriation itself cancels.",
+        "correct": false,
+        "why": "Returning unused funds is the reason closeout matters, so the residual is deobligated rather than left to expire on the contract."
+      },
+      {
+        "text": "Request a final ABG8 only, because the ABG9 covers administrative fees that are settled outside the contract, directly between the Bauamt and the local garrison staff.",
+        "correct": false,
+        "why": "Both final invoices are requested; the ABG9 for fees is part of the same closeout, not a separate settlement with the garrison."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "ABG-75 procedures (Germany); official CORB board answer Q0261 (confirm current local closeout steps with the 409th CSB)",
+    "domain": "Contract Administration"
+  },
+  {
+    "qid": "Q0262",
+    "stem": "The Bauamt presents a request for equitable adjustment that is an interest claim for late payment. What steps do you take?",
+    "options": [
+      {
+        "text": "Find when DFAS got the invoice, count the days to payment, compute interest with the calculator, check funds on the contract, and process an ABG5.",
+        "correct": true,
+        "why": "The claim is evaluated by reconstructing the payment timeline, calculating the interest yourself, and then funding and processing it on the contract."
+      },
+      {
+        "text": "Deny the claim, since interest on a late payment is a DFAS matter that does not run against the contract.",
+        "correct": false,
+        "why": "The interest is calculated and paid on the contract through an ABG5, with additional funds requested if the contract cannot cover it."
+      },
+      {
+        "text": "Pay the figure the Bauamt calculated once counsel concurs, because the claimed amount is the amount due under the agreement's payment terms and no check is needed.",
+        "correct": false,
+        "why": "You establish the days yourself and compute the amount with the interest calculator rather than accepting the claimed figure, whatever the payment terms say."
+      },
+      {
+        "text": "Process the ABG5 for the claimed amount first and then look for funds if the contract does not cover it.",
+        "correct": false,
+        "why": "You assure the amount is available on the contract, requesting additional funds first if it is not, before processing the action."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "ABG-75 procedures (Germany); official CORB board answer Q0262 (confirm current local payment procedures with the 409th CSB)",
+    "domain": "Pricing, Cost & Payment"
+  },
+  {
+    "qid": "Q0263",
+    "stem": "In ABG-75 construction, what do the KVM Bau, HU Bau and AFU Bau represent?",
+    "options": [
+      {
+        "text": "KVM Bau is the pre-concept design (about 15 percent), HU Bau the concept design (about 35 percent), and AFU the 100 percent design.",
+        "correct": true,
+        "why": "The three are successive design submissions, and the percentages are how a board expects the stages to be distinguished."
+      },
+      {
+        "text": "KVM Bau is the 35 percent concept design, HU Bau is the 15 percent pre-concept design, and the AFU is the Bauamt's final construction invoice.",
+        "correct": false,
+        "why": "The two design stages are reversed, and the AFU is the completed design rather than an invoice."
+      },
+      {
+        "text": "All three are Bauamt invoices, submitted at 15, 35 and 100 percent of construction completion for the contracting officer to approve.",
+        "correct": false,
+        "why": "They are design documentation milestones, not invoices measured against construction progress."
+      },
+      {
+        "text": "KVM Bau is the pre-concept design, HU Bau is the 100 percent design, and the AFU is the Government's acceptance document for the finished work.",
+        "correct": false,
+        "why": "HU Bau is the concept design at about 35 percent, and the AFU is the 100 percent design rather than an acceptance."
+      }
+    ],
+    "difficulty": 3,
+    "cite": "ABG-75 procedures (Germany); official CORB board answer Q0263 (confirm current local practice with the 409th CSB)",
+    "domain": "Contract Administration"
+  },
+  {
+    "qid": "Q0264",
+    "stem": "What fees is the U.S. Government required to pay under the ABG-75 agreement?",
+    "options": [
+      {
+        "text": "5 percent of estimated construction cost for new work, 7 percent for repair work, and 0.5 percent for translation services.",
+        "correct": true,
+        "why": "Those are the VKE fees the Bauamt receives, with translation paid on top of the construction percentage."
+      },
+      {
+        "text": "7 percent of estimated construction cost for new work and 5 percent for repair work, with translation included in the fee.",
+        "correct": false,
+        "why": "The percentages are reversed, and translation services carry their own separate half-percent fee."
+      },
+      {
+        "text": "A flat 5 percent of estimated construction cost for all work, new or repair, with no separate translation fee.",
+        "correct": false,
+        "why": "Repair work is at the higher 7 percent rate, and translation is charged separately at half a percent."
+      },
+      {
+        "text": "10 percent of estimated construction cost for new work, with repair work and translation covered inside that fee.",
+        "correct": false,
+        "why": "No 10 percent fee exists here; new work is 5 percent, repair 7 percent, and translation is a separate 0.5 percent."
+      }
+    ],
+    "difficulty": 3,
+    "cite": "ABG-75 agreement fees (VKE), Germany; official CORB board answer Q0264 (confirm current rates with the 409th CSB)",
+    "domain": "Contract Administration"
+  },
+  {
+    "qid": "Q0265",
+    "stem": "What is the difference between an ABG8 and an ABG9?",
+    "options": [
+      {
+        "text": "The Bauamt invoices construction cost on an ABG8 and administrative fees on an ABG9.",
+        "correct": true,
+        "why": "Both are Bauamt invoices, separated by what they bill: the construction itself versus the fees."
+      },
+      {
+        "text": "The Bauamt invoices administrative fees on an ABG8 and construction cost on an ABG9.",
+        "correct": false,
+        "why": "That reverses the two forms; construction cost is billed on the ABG8."
+      },
+      {
+        "text": "The ABG8 is the Bauamt's design submission and the ABG9 is its final invoice.",
+        "correct": false,
+        "why": "Neither is a design submission; the design stages are the KVM, HU and AFU Bau."
+      },
+      {
+        "text": "The ABG8 obligates funds on the contract and the ABG9 deobligates whatever is unused.",
+        "correct": false,
+        "why": "Those are funding actions, and deobligation at closeout is done with an ABG5a."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "ABG-75 procedures (Germany); official CORB board answer Q0265 (confirm current local forms with the 409th CSB)",
+    "domain": "Contract Administration"
+  },
+  {
+    "qid": "Q0266",
+    "stem": "How would you describe indirect contracting procedures?",
+    "options": [
+      {
+        "text": "German authorities plan, run and administer the work for the U.S. Forces, using their own staff and contracting with civilian firms.",
+        "correct": true,
+        "why": "Indirect means the host nation authority holds and administers the contract with the firm on the Government's behalf."
+      },
+      {
+        "text": "The U.S. contracting officer awards directly to the German construction firm while the Bauamt provides technical oversight and quality assurance.",
+        "correct": false,
+        "why": "A direct award by the contracting officer is exactly what indirect procedures are not; the German authorities contract with the firm."
+      },
+      {
+        "text": "A U.S. prime contractor subcontracts the work to local German firms with the contracting officer's consent.",
+        "correct": false,
+        "why": "That is ordinary subcontracting under a U.S. prime contract, not the arrangement these procedures describe."
+      },
+      {
+        "text": "The host nation funds the construction work and the U.S. Forces reimburse an agreed share after acceptance, under the cost-sharing terms of the agreement.",
+        "correct": false,
+        "why": "The procedures describe who plans, contracts and administers the work, not a cost-sharing arrangement."
+      }
+    ],
+    "difficulty": 1,
+    "cite": "ABG-75 indirect contracting procedures (Germany); official CORB board answer Q0266",
+    "domain": "Contract Administration"
+  },
+  {
+    "qid": "Q0267",
+    "stem": "What are the advantages and disadvantages of indirect procedures under ABG-75?",
+    "options": [
+      {
+        "text": "Pros: funds obligated before design is done, lower fees, a faster process and German expertise. Cons: unit price contracts needing close invoice checks, and late notice.",
+        "correct": true,
+        "why": "Those are the advantages and disadvantages in the answer, and the oversight burden is the price of the speed and the lower fees."
+      },
+      {
+        "text": "The advantage is that the contracting officer keeps direct privity with the construction firm, and the disadvantage is higher host nation fees.",
+        "correct": false,
+        "why": "Under indirect procedures the German authorities hold the contract with the firm, and their fees run lower than contracting the same services directly."
+      },
+      {
+        "text": "The advantage is firm-fixed pricing at award, and the disadvantage is a slower, more bureaucratic process than direct contracting.",
+        "correct": false,
+        "why": "Unit price contracts are the frequent arrangement, and the process is faster and less bureaucratic rather than slower."
+      },
+      {
+        "text": "The advantage is that a complete design is required before any funds are obligated, and the disadvantage is limited German technical expertise.",
+        "correct": false,
+        "why": "Being able to obligate construction funds before the design is complete is an advantage, and the Bauamt's technical knowledge is another."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "ABG-75 indirect contracting procedures (Germany); official CORB board answer Q0267 (confirm current local practice with the 409th CSB)",
+    "domain": "Contract Administration"
+  },
+  {
+    "qid": "Q0268",
+    "stem": "What is the ABG3 form used for?",
+    "options": [
+      {
+        "text": "Ordering and approving design work step by step; the contracting officer signs it as an order under the agreement, and it can obligate design and construction funds together.",
+        "correct": true,
+        "why": "The ABG3 is the order that buys design in steps, and on an estimated basis it can obligate both design and construction funds at once."
+      },
+      {
+        "text": "Invoicing the Government for completed construction work once the customer has verified performance.",
+        "correct": false,
+        "why": "Construction cost is invoiced by the Bauamt on an ABG8, not ordered on an ABG3."
+      },
+      {
+        "text": "Deobligating the funds that remain unused at closeout, after the final ABG8 and ABG9 invoices have been received, paid and checked against the voucher record.",
+        "correct": false,
+        "why": "Deobligation at closeout is done with an ABG5a; the ABG3 puts work on order in the first place."
+      },
+      {
+        "text": "Recording the Bauamt's 100 percent design submission so the Government can accept the completed design.",
+        "correct": false,
+        "why": "The 100 percent design is the AFU; the ABG3 orders and approves the design work as it progresses."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "ABG-75 procedures (Germany); official CORB board answer Q0268 (confirm current local forms with the 409th CSB)",
+    "domain": "Contract Administration"
+  },
+  {
+    "qid": "Q0269",
+    "stem": "Under ABG-75, what are the bid opening procedures as they concern the U.S. Forces?",
+    "options": [
+      {
+        "text": "The Forces get early notice of the date and place, may send a representative, and receive the invitation to tender with the proposed tenders.",
+        "correct": true,
+        "why": "Timely notice and the right to send a representative are the point, and furnishing the invitation with the tenders is what makes the notice timely."
+      },
+      {
+        "text": "The Forces conduct the bid opening themselves and the German authorities may send an observer to attend it.",
+        "correct": false,
+        "why": "That reverses the roles: the opening is the host nation's, and the Forces are the ones who may send a representative."
+      },
+      {
+        "text": "The Forces are told the outcome only after award, because the bid opening is a host nation function that they may not attend or observe at all.",
+        "correct": false,
+        "why": "The Forces are informed in advance of the date and place and may participate in the opening itself."
+      },
+      {
+        "text": "The Forces receive the invitation to tender only after bids are opened, to protect the integrity of the competition from any early disclosure.",
+        "correct": false,
+        "why": "The invitation is furnished at the same time as the proposed tenders precisely so notification arrives in good time."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "ABG-75 bid opening procedures (Germany); official CORB board answer Q0269 (confirm current local practice with the 409th CSB)",
+    "domain": "Competition & Market Research"
+  },
+  {
+    "qid": "Q0270",
+    "stem": "What is the order of precedence in ABG-75 contracting?",
+    "options": [
+      {
+        "text": "The specifications in German, the special provisions, any supplementary technical specifications, the general technical specifications for construction contracts, then the general conditions of contract.",
+        "correct": true,
+        "why": "The German specifications govern first, and the documents descend from project-specific terms to the general conditions."
+      },
+      {
+        "text": "The general conditions of contract, the general technical specifications, any supplementary technical specifications, the special provisions, then the specifications in German.",
+        "correct": false,
+        "why": "That is the order inverted: the general conditions sit at the bottom of the order, not the top."
+      },
+      {
+        "text": "The special provisions, the specifications in German, the general technical specifications, any supplementary technical specifications, then the general conditions.",
+        "correct": false,
+        "why": "The specifications in German come ahead of the special provisions, and the supplementary specifications come ahead of the general ones."
+      },
+      {
+        "text": "The English translation of the specifications, the special provisions, the general conditions of contract, then the technical specifications.",
+        "correct": false,
+        "why": "The specifications in German are the governing document; a translation does not take their place in the order."
+      }
+    ],
+    "difficulty": 3,
+    "cite": "ABG-75 order of precedence (Germany); official CORB board answer Q0270 (confirm current local practice with the 409th CSB)",
+    "domain": "Contract Administration"
+  },
+  {
+    "qid": "Q0271",
+    "stem": "What are Project Specific Additional Services under ABG-75?",
+    "options": [
+      {
+        "text": "Project-specific studies: land, topographic, soil, hazardous material and structural surveys, an environmental compatibility survey and an energy use analysis.",
+        "correct": true,
+        "why": "These are project-specific studies of the site and the structure, ordered because that project needs them."
+      },
+      {
+        "text": "Warranty repairs the Bauamt performs on the completed facility after final acceptance of the construction work, billed to the project as additional services at cost.",
+        "correct": false,
+        "why": "The additional services are investigations that inform the project, not repair work performed after acceptance."
+      },
+      {
+        "text": "Translation of German documentation into English, which is billed to the Government at its own fee rate.",
+        "correct": false,
+        "why": "Translation is a separately priced fee item under the agreement rather than a project specific additional service."
+      },
+      {
+        "text": "Utility connection charges and forestry compensation that the Government pays as part of the project cost.",
+        "correct": false,
+        "why": "Those sit among the items the Government pays without a fee; they are not additional services ordered for the project."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "ABG-75 project specific additional services (Germany); official CORB board answer Q0271 (confirm current local practice with the 409th CSB)",
+    "domain": "Acquisition Planning & Contract Types"
+  },
+  {
+    "qid": "Q0272",
+    "stem": "For which services does the U.S. Government pay no fees under ABG-75?",
+    "options": [
+      {
+        "text": "Tree cutting or reforestation, environmental or forestry compensation, utility connections, interest, and legal proceedings in or out of court.",
+        "correct": true,
+        "why": "Those costs are borne without the percentage fee that rides on construction and translation work."
+      },
+      {
+        "text": "New construction work, because under the agreement the percentage fee is charged only on repair work, and new work is billed at its actual cost.",
+        "correct": false,
+        "why": "New work carries a fee of its own; repair work simply carries a higher percentage."
+      },
+      {
+        "text": "Translation of German documentation into English, which the Bauamt provides to the Forces at no charge as part of its standard design and construction services.",
+        "correct": false,
+        "why": "Translation services carry their own separate fee percentage rather than being provided free."
+      },
+      {
+        "text": "Design work ordered in progressive steps, on the basis that it is covered by the construction fee.",
+        "correct": false,
+        "why": "Design ordered on an ABG3 is not among the items the answer lists as carrying no fee."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "ABG-75 fees (Germany); official CORB board answer Q0272 (confirm current local practice with the 409th CSB)",
+    "domain": "Acquisition Planning & Contract Types"
+  },
+  {
+    "qid": "Q0273",
+    "stem": "A written solicitation will be issued for a commercial acquisition above the simplified acquisition threshold. Which procedure reduces the time required to solicit and award?",
+    "options": [
+      {
+        "text": "The combined synopsis/solicitation: one announcement that serves as both notice and solicitation.",
+        "correct": true,
+        "why": "One document does the work of two, and the announcement itself states that no separate written solicitation will be issued."
+      },
+      {
+        "text": "An oral solicitation confirmed in writing after award, which removes the publicizing requirement for the action.",
+        "correct": false,
+        "why": "The premise is a written solicitation, and publicizing applies regardless of how the solicitation is delivered."
+      },
+      {
+        "text": "Shortening the response time below the minimum set for acquisitions covered by a trade agreement, with a written justification.",
+        "correct": false,
+        "why": "Those minimum response periods still apply, justified or not; otherwise you set a time that gives offerors a reasonable opportunity to respond."
+      },
+      {
+        "text": "Issuing the solicitation on an SF 1449, which then serves as both the synopsis and the solicitation.",
+        "correct": false,
+        "why": "When the combined procedure is used, the SF 1449 is not the document that issues the solicitation."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 12.202; RFO FAR 12.202(b); RFO FAR 5.201(c); RFO FAR 5.201(d)",
+    "domain": "Acquisition Planning & Contract Types"
+  },
+  {
+    "qid": "Q0277",
+    "stem": "In August 2026 a requiring activity sends you a purchase request using FY26 O&M funds for a one-year janitorial contract to be performed 1 July 2027 through 30 June 2028, citing worries about next year's budget. What do you do?",
+    "options": [
+      {
+        "text": "Return it: janitorial work is severable, so the need arises when performed; explain why and ask for an FY27-funded request.",
+        "correct": true,
+        "why": "For severable services the bona fide need arises as the services are performed, not when the contract is awarded or the funds happen to be available."
+      },
+      {
+        "text": "Accept it, because the bona fide need arises when the contract is awarded and the funds were available and certified in FY26.",
+        "correct": false,
+        "why": "The award date does not fix the year of the need; for severable services the need follows performance."
+      },
+      {
+        "text": "Accept it, since a severable services contract may cross fiscal years for a period of up to twelve months.",
+        "correct": false,
+        "why": "This period of performance lies entirely in the following fiscal year, so it is an FY27 need and FY26 funds are not available for it."
+      },
+      {
+        "text": "Award with FY26 funds now and modify the contract later to replace them once the FY27 appropriation finally arrives in the fall.",
+        "correct": false,
+        "why": "The improper obligation happens at award, and planning a later swap does not make the original funding lawful."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "31 U.S.C. 1502",
+    "domain": "Fiscal Law & Funding"
+  },
+  {
+    "qid": "Q0278",
+    "stem": "A customer needs about $40,000 of maintenance on power conditioners and says only the manufacturer can do the work because of proprietary information and specialized parts. How do you proceed?",
+    "options": [
+      {
+        "text": "Use simplified procedures: get the needs in writing, still do market research, document the single-source decision, and post on SAM.gov with the redacted justification.",
+        "correct": true,
+        "why": "At $40,000 the action sits above the micro-purchase threshold and below the SAT, so the restriction is documented under the simplified procedures and still publicized."
+      },
+      {
+        "text": "Prepare a justification for other than full and open competition and route it through the approval level set for this dollar value in the approval table.",
+        "correct": false,
+        "why": "The Part 6 justification and its approval tables apply above the simplified acquisition threshold, not to a $40,000 action."
+      },
+      {
+        "text": "Skip the market research and the notice, because the customer has already established that only one source can perform.",
+        "correct": false,
+        "why": "The customer's conclusion is not market research, and a sole source at this value is not exempt from publicizing."
+      },
+      {
+        "text": "Place it on the purchase card as a single-source buy, since the capable firm has already been identified.",
+        "correct": false,
+        "why": "The value is well above the micro-purchase threshold, so the purchase card is not the instrument for this action."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 2.101 (micro-purchase threshold $15,000; SAT $350,000); RFO FAR 12.102(a); RFO FAR 13.101(b); RFO FAR 11.204 and DFARS 211.204; RFO FAR 6.001 and 6.103-1(d); RFO FAR 5.101 and 5.201(c)(3); RFO FAR 10.001",
+    "domain": "Competition & Market Research"
+  },
+  {
+    "qid": "K202",
+    "stem": "A GPC cardholder needs 60 office chairs from one Korean vendor, quoted at about $19,500 delivered. She proposes buying 30 this week and 30 next week, or putting half on a colleague's card, since the limit is $15,000 and they are overseas. What do you tell the billing official?",
+    "options": [
+      {
+        "text": "Both are split purchases, over time and across cardholders, and Korea does not raise the $15,000 limit; send it to contracting for an order.",
+        "correct": true,
+        "why": "Sixty chairs from one vendor for one customer is a single requirement above the threshold, so it is bought on a contract action rather than carved up."
+      },
+      {
+        "text": "Thirty chairs in each of two weeks is acceptable, because each of those transactions stays under the micro-purchase threshold and has its own receipt.",
+        "correct": false,
+        "why": "Splitting a requirement over time is one of the defined forms of a split purchase, whatever each transaction totals or however it is receipted."
+      },
+      {
+        "text": "Putting half on a colleague's card is acceptable, because each cardholder stays within her own single-purchase limit.",
+        "correct": false,
+        "why": "Splitting among cardholders is equally a violation; the aggregate requirement is what the threshold measures."
+      },
+      {
+        "text": "Overseas cardholders may buy up to $40,000, so the full requirement fits on one card without splitting it.",
+        "correct": false,
+        "why": "The higher overseas figure applies only under a head-of-agency contingency or emergency determination, which office chairs do not have."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 2.101; RFO FAR 12.001(d); RFO FAR 12.201-1; RFO FAR 13.001(c); AFARS 5113.270-90; AFARS Appendix EE; DoD Government Charge Card Guidebook",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "K203",
+    "stem": "A facility manager called a Korean HVAC firm directly over a weekend; it replaced two rooftop units at a child development center and invoiced about $46,000. The garrison commander offers to sign whatever is needed. What is this action, and who can ratify it?",
+    "options": [
+      {
+        "text": "An unauthorized commitment; the HCA may ratify, delegating no lower than the chief of the contracting office; confirm the official with the Chief, C&P.",
+        "correct": true,
+        "why": "The agreement is not binding only because the maker had no authority, and ratification authority runs through the contracting chain, not the garrison."
+      },
+      {
+        "text": "The garrison commander may ratify it by endorsing the invoice, since he commands the facility, controls the funds, and his staff accepted the finished work.",
+        "correct": false,
+        "why": "A commander's signature belongs on the endorsement of the facts, not on the obligation; he cannot ratify, even after his staff accepted the work."
+      },
+      {
+        "text": "It cannot be ratified at all because the vendor is not registered in SAM, so a claim is the vendor's only route.",
+        "correct": false,
+        "why": "Registration is a separate question with its own exceptions, and a claim is the path only if ratification is not granted."
+      },
+      {
+        "text": "Any contracting officer whose warrant covers the value may ratify it and issue the purchase order as a routine action, with a copy to the garrison commander.",
+        "correct": false,
+        "why": "Ratification is not a warrant function; the authority sits with the head of the contracting activity and its permitted delegation."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 1.405; AFARS 5101.602-3; AFARS 5101.602-3-90; AFARS Appendix GG; 31 U.S.C. 1341; 31 U.S.C. 3702",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "K206",
+    "stem": "A Korean-national direct-hire contract specialist with six years of experience and a bachelor's degree from a Korean university asks to be warranted. Can a foreign local national hold an Army contracting warrant, and what documents the equivalence of her education?",
+    "options": [
+      {
+        "text": "Yes. The policy covers foreign local nationals, and an OCONUS HCA may recognize equivalent education in an FLN Validation Letter in VCE-Warrants.",
+        "correct": true,
+        "why": "The policy reaches foreign local nationals who need a warrant under Army authority, and the validation letter is what documents the equivalence."
+      },
+      {
+        "text": "No. A contracting warrant may be issued only to Department of the Army civilians and to military personnel.",
+        "correct": false,
+        "why": "The warranting policy expressly covers foreign local nationals who require a warrant under Army authority."
+      },
+      {
+        "text": "Yes, but only once she earns a degree from a U.S. accredited institution, since a degree from a foreign university cannot be recognized for a warrant.",
+        "correct": false,
+        "why": "The OCONUS head of contracting activity has authority to recognize equivalent education and training, which is the point of the validation letter."
+      },
+      {
+        "text": "Yes, and no education documentation is needed, because six years of contracting experience substitutes for the degree.",
+        "correct": false,
+        "why": "Above the simplified acquisition threshold the statutory qualifications include the degree, so the education still has to be addressed."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "Army Warranting Program Policy v12 (MAR 2026); DA memorandum, Contracting Validation for Foreign Local Nationals, Policy and Procedures (18 Nov 2022); 10 U.S.C. 1724; RFO DFARS 201.403-70; 411th CSB Warrant Process Workflow (Jul 2026); confirm the current validation letter template and routing with C&P",
+    "domain": "Authority, Ethics & Leadership"
+  },
+  {
+    "qid": "K208",
+    "stem": "A brigade S3 sends a $68,000 purchase request naming an individual interpreter who would work 0800 to 1700 in the S3 shop, take daily taskings from the S3, use a Government computer, attend staff meetings, and be rated by the S3. How do you handle it?",
+    "options": [
+      {
+        "text": "It is personal services as written, since the S3 would supervise her like an employee; use a nonpersonal services contract or a direct hire.",
+        "correct": true,
+        "why": "Relatively continuous Government supervision is the key indicator, and every feature of this request builds that relationship by design."
+      },
+      {
+        "text": "It is acceptable as requested, because the last interpreter was a contractor, that arrangement worked without any problem, and the S3 is satisfied.",
+        "correct": false,
+        "why": "Prior practice and customer satisfaction are not an authority; what governs is whether the Government supervises the contractor employee as if she were its own."
+      },
+      {
+        "text": "It is acceptable if the requiring activity certifies in writing that the need for the named individual is urgent and that no other interpreter is available.",
+        "correct": false,
+        "why": "A personal services contract overseas needs written approval from the head of the contracting activity with specific determinations, not a customer certification."
+      },
+      {
+        "text": "It is nonpersonal as long as the contract is firm-fixed-price and a COR is appointed to pass the daily taskings from the S3 to the interpreter.",
+        "correct": false,
+        "why": "Contract type and a COR do not cure continuous supervision; work is ordered through the contract rather than directed day to day."
+      }
+    ],
+    "difficulty": 2,
+    "cite": "RFO FAR 37.201-1; RFO FAR 37.201-2(a) and (b); RFO FAR 37.202-1; RFO DFARS 237.201-70; RFO DFARS 237.876; 10 U.S.C. 129b(d); 5 U.S.C. 3109; DFARS PGI 201.404-70",
+    "domain": "Acquisition Planning & Contract Types"
+  },
+  {
+    "qid": "K209",
+    "stem": "You hold a Class II $5 million warrant issued by the 411th CSB SCO and are placed under the operational control of a different ACC senior contracting official. That office tells you to apply for its own warrant and to sign a $7 million commercial services award. What is correct?",
+    "options": [
+      {
+        "text": "No new warrant is needed, since ACC officials must honor active ACC warrants, but a $5 million warrant cannot sign $7 million; seek an increase through your ADCON organization.",
+        "correct": true,
+        "why": "Reciprocity recognizes the existing warrant at its existing dollar value, and the warrant still has to cover the cumulative value of anything you sign."
+      },
+      {
+        "text": "Apply for the gaining official's warrant, since a warrant is only valid for actions of the organization whose official issued it.",
+        "correct": false,
+        "why": "Issuing a second warrant is the duplication reciprocity was written to prevent; the gaining official recognizes the warrant you hold."
+      },
+      {
+        "text": "Sign the award, because recognition by the gaining official carries whatever authority that office's actions require.",
+        "correct": false,
+        "why": "Warrants are recognized at their existing type and value, so recognition does not raise a $5 million warrant to cover $7 million."
+      },
+      {
+        "text": "The Air Force contracting officer detailed to the same office has her warrant transfer automatically under the same reciprocity rule, at its full value.",
+        "correct": false,
+        "why": "A warrant issued outside ACC is recognized only at the gaining official's discretion, and a new ACC warrant must still be issued, whatever its value."
+      }
+    ],
+    "difficulty": 3,
+    "cite": "ACC Contracting Note 26-03 (Warrant Reciprocity Guidance, 12 May 2026); ACC Command Policy Memorandum, Warrant Reciprocity Policy (30 Mar 2026); Army-DAF Warrant Reciprocity MOA (1 Dec 2023); Army Warranting Program Policy v12 (MAR 2026); RFO FAR 1.402-1; 411th CSB Warrant Process Workflow (Jul 2026)",
+    "domain": "Authority, Ethics & Leadership"
+  }
+]

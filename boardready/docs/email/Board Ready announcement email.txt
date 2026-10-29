@@ -1,0 +1,25 @@
+﻿Subject: Free warrant board study app: Board Ready (version 1, feedback wanted)
+
+Team,
+
+BLUF: I built Board Ready, a free study app for anyone preparing for a warrant board or working toward a higher warrant. It is one file (attached) that opens in Edge or Chrome. No install, no account, no internet needed.
+
+Why I built it: I had a hard time studying from the Q&A spreadsheet. Hundreds of rows, no way to focus on my warrant class, and no way to see what I actually knew. I wished there were a better organized way to learn, so I built one. I designed it the way paid study web apps are built, with the kind of features they save for premium plans and add-ons, and I am giving it away free.
+
+What is inside:
+- 307 board questions in 16 topics. Set your warrant class (I to IV) once and every page follows it. Every answer is labeled official or AI draft, so you know what to double-check.
+- Flashcards that bring back what you miss, a 306-question quiz that explains every answer choice, and a timed mock board you score against the board rubric.
+- Board scenarios, including Korea LCS and SOFA situations, plus branching "You're the KO" cases.
+- The Arcade, eight games that make the material stick: Threshold Run (race your car into the lane of the warrant class that can sign the action), Deadline Dash (protest and claim clocks), Drop Zone (land on the point that belongs to the question's answer), Cite Express (switch your train to the citation the answer uses), Fiscal Asteroids, Clause Catcher, RFO Warp and Boss Board. Higher levels bring harder questions, not faster play.
+- A warrant process guide (411th steps, packet checklist, VCE-Warrants how-to), a regulation explorer with the FAR Overhaul old-to-new citation crosswalk and dollar thresholds, 27 study primers, a 221-term glossary and an offline mentor.
+- A readiness dashboard with a study plan, and notes you can save into the file itself.
+
+To start: save the attachment to Documents or OneDrive and open it from there. Take the two-minute tour, set your warrant class, then try ten flashcards and a ten-question quiz.
+
+Good to know: this is a training aid, not official guidance, so confirm citations, thresholds and local procedures with C&P. Your progress and notes stay on your computer, and this version has no AI connector.
+
+This is version 1, and there is a lot still to improve, so your feedback matters a lot. Tell me what is wrong, missing or confusing: reply to this email, or use the email link on the app's About page.
+
+V/r,
+SFC Rabin Napit
+rabin.napit.mil@army.mil

@@ -1,0 +1,132 @@
+/* ===== v-glossary: A–Z term reference with search, domain chips and a flashcard-lite deck ===== */
+.v-glossary .gl-app { display: flex; flex-direction: column; gap: var(--space-5); }
+
+/* ---- page head ---- */
+.v-glossary .gl-head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-5); flex-wrap: wrap; margin-bottom: 0; }
+.v-glossary .gl-head-copy { flex: 1 1 440px; min-width: 0; }
+.v-glossary .gl-head-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* ---- toolbar ---- */
+.v-glossary .gl-toolbar { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-4); background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow-sm); }
+.v-glossary .gl-search { position: relative; }
+.v-glossary .gl-search .search .input { min-height: 46px; padding-right: 42px; font-size: var(--fs-md); }
+.v-glossary .gl-search input[type="search"]::-webkit-search-cancel-button,
+.v-glossary .gl-search input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; appearance: none; }
+.v-glossary .gl-clear { position: absolute; right: 7px; top: 50%; transform: translateY(-50%); width: 30px; height: 30px; border-radius: var(--r-sm); display: grid; place-items: center; color: var(--muted); transition: background var(--dur) var(--ease), color var(--dur) var(--ease); }
+.v-glossary .gl-clear:hover { background: var(--bg-2); color: var(--ink); }
+.v-glossary .gl-clear svg { width: 14px; height: 14px; }
+.v-glossary .gl-domain-select { max-width: 100%; }
+
+/* ---- sticky jump bar + count ---- */
+.v-glossary .gl-sticky { position: sticky; top: var(--top-h); z-index: 6; display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; padding: 10px 0 12px; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.v-glossary .gl-jump { display: flex; flex-wrap: wrap; gap: 2px; flex: 1 1 auto; min-width: 0; padding: 4px; border-radius: var(--r-pill); background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow-sm); }
+.v-glossary .gl-jump-btn { flex: 1 1 auto; min-width: 24px; height: 28px; padding: 0 4px; border-radius: var(--r-sm); font-family: var(--font-mono); font-size: 12px; font-weight: 600; color: var(--ink-2); line-height: 1; transition: background var(--dur) var(--ease), color var(--dur) var(--ease), transform var(--dur) var(--ease); }
+.v-glossary .gl-jump-btn:hover { background: var(--accent-soft); color: var(--accent); }
+.v-glossary .gl-jump-btn:active { transform: scale(.94); }
+.v-glossary .gl-jump-btn.off { color: var(--muted-2); opacity: .42; cursor: default; }
+.v-glossary .gl-jump-btn.off:hover { background: none; color: var(--muted-2); }
+
+.v-glossary .gl-count { display: flex; align-items: baseline; gap: 8px; flex: none; font-size: var(--fs-sm); color: var(--muted); }
+.v-glossary .gl-count b { font-family: var(--font-display); font-weight: 400; font-size: 1.7rem; line-height: 1; letter-spacing: -.02em; color: var(--ink); }
+.v-glossary .gl-count-sub { color: var(--muted-2); max-width: 30ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.v-glossary .gl-clear-all { padding: 3px 9px; border-radius: var(--r-pill); font-size: var(--fs-xs); font-weight: 700; color: var(--muted); background: var(--bg-2); transition: background var(--dur) var(--ease), color var(--dur) var(--ease); }
+.v-glossary .gl-clear-all:hover { background: var(--danger-soft); color: var(--danger); }
+
+/* ---- letter sections ---- */
+.v-glossary .gl-list { display: flex; flex-direction: column; gap: var(--space-6); }
+.v-glossary .gl-letter { scroll-margin-top: calc(var(--top-h) + 60px); }
+.v-glossary .gl-letter-head { display: flex; align-items: center; gap: var(--space-3); padding-bottom: 8px; margin-bottom: var(--space-4); border-bottom: 1px solid var(--line-2); }
+.v-glossary .gl-letter-mark { font-family: var(--font-display); font-size: 2.1rem; line-height: 1; color: var(--accent-2); letter-spacing: -.02em; }
+.v-glossary .gl-letter-mark.flash { animation: gl-flash var(--dur-slow) var(--ease) 2; }
+.v-glossary .gl-letter-top { margin-left: auto; display: inline-flex; align-items: center; gap: 4px; padding: 4px 9px; border-radius: var(--r-pill); font-size: var(--fs-xs); font-weight: 700; color: var(--muted); transition: background var(--dur) var(--ease), color var(--dur) var(--ease); }
+.v-glossary .gl-letter-top svg { width: 13px; height: 13px; transform: rotate(180deg); }
+.v-glossary .gl-letter-top:hover { background: var(--accent-soft); color: var(--accent); }
+
+/* ---- two-column term grid ---- */
+.v-glossary .gl-letter-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); align-items: start; }
+.v-glossary .gl-term { position: relative; padding: var(--space-4) var(--space-4) var(--space-3); background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow-sm); animation: rise var(--dur-slow) var(--ease) both; transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease), transform var(--dur) var(--ease); }
+.v-glossary .gl-term:hover { border-color: var(--line-2); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.v-glossary .gl-term:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; }
+.v-glossary .gl-term-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap; }
+.v-glossary .gl-term-name { font-size: var(--fs-lg); font-weight: 800; letter-spacing: -.01em; color: var(--ink); }
+.v-glossary .gl-term-exp { margin-top: 3px; font-weight: 700; font-size: var(--fs-sm); color: var(--accent); }
+.v-glossary .gl-term-def { margin: 10px 0 0; font-size: var(--fs-sm); color: var(--ink-2); line-height: 1.55; }
+.v-glossary .gl-term-nodef { font-style: italic; color: var(--muted); }
+
+.v-glossary .gl-cites { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; margin-top: 10px; }
+.v-glossary .gl-cite { max-width: 100%; line-height: 1.6; }
+.v-glossary .gl-cite svg { width: 10px; height: 10px; opacity: .6; }
+.v-glossary a.gl-cite:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+.v-glossary a.gl-cite:hover svg { opacity: 1; }
+
+.v-glossary .gl-term-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; margin-top: var(--space-3); padding-top: 10px; border-top: 1px dashed var(--line); }
+.v-glossary .gl-term-foot .gl-cites { margin-top: 0; }
+.v-glossary .gl-term-foot .gl-related { margin-left: auto; }
+.v-glossary .gl-related { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; margin-left: -8px; border-radius: var(--r-sm); font-size: var(--fs-xs); font-weight: 700; color: var(--muted); transition: background var(--dur) var(--ease), color var(--dur) var(--ease); }
+.v-glossary .gl-related svg { width: 13px; height: 13px; }
+.v-glossary .gl-related svg:last-child { transition: transform var(--dur) var(--ease); }
+.v-glossary .gl-related:hover { background: var(--accent-soft); color: var(--accent); }
+.v-glossary .gl-related:hover svg:last-child { transform: translateX(3px); }
+
+/* ---- flashcard-lite deck ---- */
+.v-glossary .gl-deck { display: flex; flex-direction: column; gap: var(--space-4); animation: rise var(--dur-slow) var(--ease) both; }
+.v-glossary .gl-deck-bar { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; padding: 10px 14px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg); }
+.v-glossary .gl-deck-pos { font-size: var(--fs-sm); color: var(--muted); }
+.v-glossary .gl-deck-progress { flex: 1 1 160px; min-width: 120px; }
+.v-glossary .gl-card { position: relative; min-height: 320px; display: grid; place-items: center; padding: var(--space-7) var(--space-5); background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-xl); box-shadow: var(--shadow-md); overflow: hidden; }
+.v-glossary .gl-card::before { content: ""; position: absolute; inset: 0 0 auto; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+.v-glossary .gl-card:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; }
+.v-glossary .gl-card-face { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); max-width: 62ch; text-align: center; animation: fade var(--dur-slow) var(--ease) both; }
+.v-glossary .gl-card-term { font-family: var(--font-display); font-size: var(--fs-3xl); line-height: 1.1; letter-spacing: -.02em; color: var(--ink); }
+.v-glossary .gl-card-prompt { display: flex; flex-direction: column; align-items: center; gap: var(--space-4); margin-top: var(--space-2); }
+.v-glossary .gl-card-prompt p { max-width: 46ch; color: var(--muted); font-size: var(--fs-sm); }
+.v-glossary .gl-card-back { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: var(--space-2); animation: rise var(--dur) var(--ease) both; }
+.v-glossary .gl-card-exp { font-weight: 800; font-size: var(--fs-lg); color: var(--accent); }
+.v-glossary .gl-card-def { margin: 0; font-size: var(--fs-md); color: var(--ink-2); line-height: 1.6; }
+.v-glossary .gl-card .gl-cites { justify-content: center; }
+.v-glossary .gl-deck-nav { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+.v-glossary .gl-deck-hint { text-align: center; }
+.v-glossary .gl-deck-hint kbd { margin: 0 1px; }
+
+/* ---- empty states ---- */
+.v-glossary .gl-empty { background: var(--panel); }
+.v-glossary .gl-empty > svg { width: 36px; height: 36px; margin: 0 auto 12px; color: var(--accent-2); }
+.v-glossary .gl-empty p { max-width: 54ch; margin: 0 auto; }
+.v-glossary .gl-empty-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: var(--space-4); }
+
+@keyframes gl-flash { 0%, 100% { color: var(--accent-2); } 50% { color: var(--accent); } }
+
+/* ---- projector ---- */
+body[data-projector] .v-glossary .gl-letter-grid { grid-template-columns: 1fr; }
+body[data-projector] .v-glossary .gl-jump { display: none; }
+body[data-projector] .v-glossary .gl-card { min-height: 380px; }
+
+/* ---- responsive ---- */
+@media (max-width: 1000px) {
+  .v-glossary .gl-sticky { gap: var(--space-3); }
+  .v-glossary .gl-count b { font-size: 1.5rem; }
+}
+@media (max-width: 760px) {
+  .v-glossary .gl-letter-grid { grid-template-columns: 1fr; }
+  .v-glossary .gl-head-actions { width: 100%; }
+  .v-glossary .gl-head-actions .btn { flex: 1 1 auto; }
+  .v-glossary .gl-jump { flex-wrap: nowrap; overflow-x: auto; border-radius: var(--r-md); -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .v-glossary .gl-jump::-webkit-scrollbar { display: none; }
+  .v-glossary .gl-jump-btn { flex: 0 0 auto; min-width: 28px; }
+  .v-glossary .gl-jump-btn.off { display: none; }
+  .v-glossary .gl-card { min-height: 260px; padding: var(--space-6) var(--space-4); }
+  .v-glossary .gl-deck-nav .btn { flex: 1 1 140px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .v-glossary .gl-term, .v-glossary .gl-deck, .v-glossary .gl-card-face, .v-glossary .gl-card-back { animation: none !important; }
+  .v-glossary .gl-term:hover { transform: none; }
+  .v-glossary .gl-letter-mark.flash { animation: none !important; }
+}
+
+/* ---- print ---- */
+@media print {
+  .v-glossary .gl-toolbar, .v-glossary .gl-sticky, .v-glossary .gl-term-foot, .v-glossary .gl-head-actions { display: none !important; }
+  .v-glossary .gl-letter-grid { display: block; }
+  .v-glossary .gl-term { break-inside: avoid; page-break-inside: avoid; box-shadow: none; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: 6pt 0; animation: none; }
+  .v-glossary .gl-letter-mark { font-size: 18pt; }
+}

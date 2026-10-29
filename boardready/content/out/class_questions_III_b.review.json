@@ -1,0 +1,464 @@
+{
+ "reviewed_on": "2026-09-14",
+ "reviewer_model": "claude-opus-5",
+ "items": [
+  {
+   "id": "N311",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "Army Appendix GG (Rev. 29) lets the HCA delegate UCA approval no lower than the chief of the contracting office at $50 million or less, and no lower than the SCO above $50 million; I confirm the current delegation with my contracting policy office.",
+     "after": "Army Appendix GG (Rev. 30) lets the HCA delegate approval no lower than the chief of the contracting office below $50 million, and the SCO above, so I confirm our delegation.",
+     "source": "AFARS Appendix GG Revision 30 (Revised 01 July 2026; newest revision linked from army.mil/armycontracting on 14 Sep 2026), 5117.7404-1 rows: 'UCA less than $50M ... No lower than CoCO' and 'UCA in excess of $50M ... No Lower than SCO'; AFARS 5117.7404-1 in the combined AFARS of 31 Aug 2026 ('See Appendix GG for further delegation')."
+    },
+    {
+     "field": "answer",
+     "before": "And if the value were over $50 million and we could not agree on price, unilateral definitization would need service acquisition executive approval and a 30-day wait (10 U.S.C. 3372(b)).",
+     "after": "Removed from the answer to meet the word limit; restated in key_points[4] with both approving officials.",
+     "source": "10 U.S.C. 3372(b)(1)(A)-(C) at law.cornell.edu (UCA greater than $50,000,000: written approval by the service acquisition executive, copy to contractor, 30 calendar days); DFARS 217.7404(b)(2) in Class Deviation 2026-O0027 instead names 'the head of the contracting activity, without power of redelegation'."
+    },
+    {
+     "field": "answer",
+     "before": "Expiring funds are not an exception to those limits.",
+     "after": "Expiring funds are no exception, and a fiscal-year deadline is not a waiver basis (217.7404-5). So the answer to the PM is $24 million at most.",
+     "source": "DFARS 217.7404-4(a) and 217.7404-5 in Class Deviation 2026-O0027."
+    },
+    {
+     "field": "answer",
+     "before": "Answer of more than 300 words.",
+     "after": "Trimmed to 298 words, keeping rule, cites, application ($24 million cap before a qualifying proposal), risk and approver; profit, subcontracting plan, progress payment and report points kept as one-line mentions.",
+     "source": "300-word limit in the review task."
+    },
+    {
+     "field": "key_points[0]",
+     "before": "... Army delegation per Appendix GG (no lower than CoCO at $50M or less, SCO above).",
+     "after": "... Army delegation per Appendix GG Rev. 30 (no lower than CoCO below $50M, no lower than SCO above $50M).",
+     "source": "AFARS Appendix GG Revision 30 (01 July 2026)."
+    },
+    {
+     "field": "key_points[4]",
+     "before": "80% progress payment cap on UCAs (32.501-1(d)); UCAs over $5M reported semiannually (217.7405); unilateral definitization over $50M needs SAE approval (10 U.S.C. 3372(b)).",
+     "after": "80% progress payment cap on UCAs (32.501-1(d)); UCAs over $5M reported semiannually (217.7405); a UCA over $50M cannot be unilaterally definitized without written approval, a copy to the contractor and a 30-day wait (10 U.S.C. 3372(b) names the service acquisition executive; DFARS 217.7404(b) names the HCA without redelegation).",
+     "source": "10 U.S.C. 3372(b) (law.cornell.edu); DFARS 217.7404(b) (Class Deviation 2026-O0027)."
+    },
+    {
+     "field": "mcq.options[3].why",
+     "before": "There is no fiscal-year-end exception; only the head of the agency may waive the limits, and only for contingency, humanitarian or peacekeeping operations (217.7404-5(b)).",
+     "after": "There is no fiscal-year-end exception to the obligation limits; waivers are for specific operational needs such as contingency, humanitarian or peacekeeping operations (217.7404-5(b)).",
+     "source": "DFARS 217.7404-5(b); Appendix GG Rev. 30 delegates that waiver from ASA(ALT) to the HCA, no lower than SCO, and lists a separate waiver under DPC Class Deviation 2024-O0005 Section (D) (AFARS 5117.7404-590), so 'only the head of the agency' and 'only for' were overstated."
+    },
+    {
+     "field": "confidence_reason",
+     "before": "Cited Appendix GG Rev. 29 (1 Feb 2026) and said the 30 Jun 2026 revision was not read.",
+     "after": "Cites Class Deviation 2026-O0027 (current), 10 U.S.C. 3372/3374/3375 codification notes, RFO FAR 16.603-3, 19.206-3(f), 32.501-1(d), AFARS 5117.7404-1 (31 Aug 2026) and Appendix GG Rev. 30.",
+     "source": "Sources listed in the new confidence_reason."
+    }
+   ],
+   "notes": "Confirmed from primary text: 50 percent limit before a qualifying proposal and 75 percent after one (DFARS 217.7404-4; 10 U.S.C. 3372(a)(2)); definitization by the earlier of 180 days after a qualifying proposal or obligations over 50 percent of the NTE, with extension beyond an additional 90 days only by HCA written determination without redelegation (217.7404-3(a)); 5 percent withhold for a late qualifying proposal (217.7404-3(b)); semiannual Consolidated UCA Management Report for UCAs over $5 million (217.7405; PGI 217.7405, due 31 Oct and 30 Apr); PGI 217.7404-1 approval package; 80 percent progress payment limit on undefinitized work (RFO FAR 32.501-1(d)); preliminary subcontracting plan with final plan within 90 days or before definitization (19.206-3(f)); HCA written determination for letter contracts (16.603-3; Appendix GG: Army delegable no lower than SCO). Class Deviation 2026-O0027 has no revision on the DPCAP RFO deviation index (14 Sep 2026). Crosswalk 10 U.S.C. 2326(b) to 3372(a) and 2326(f) to 3374 confirmed by the Cornell codification notes. Note for the orchestrator: 10 U.S.C. 3374(a)(3)-(4), added by Pub. L. 119-60 sec. 814, also require profit to reflect increased cost risk for certain pre-award costs and for negotiations running past 180 days; DFARS 217.7404-6 in the deviation does not yet reflect this, and the item does not contradict it. No statement about valuing modifications. Classes III/IV kept. Final answer 298 words."
+  },
+  {
+   "id": "N312",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "The answers went out 15 September, so the window runs through 20 September, and the 18 September notice is inside it.",
+     "after": "Our answers went out 15 September; day five is Sunday the 20th, so the window runs through Monday, 21 September (4 CFR 21.0(d)), and the 18 September notice is inside it.",
+     "source": "4 CFR 21.0(d) (eCFR, current): periods under 31 U.S.C. chapter 35 subchapter V that end on a Saturday, Sunday or Federal holiday run to the next such business day; RFO FAR 33.102 'Day'. 20 September 2026 is a Sunday."
+    },
+    {
+     "field": "answer",
+     "before": "GAO must decide within 100 days, so a bridge only has to cover that period or a corrective action.",
+     "after": "GAO must decide within 100 days (31 U.S.C. 3554(a)(1)), so a bridge need only cover that.",
+     "source": "31 U.S.C. 3554(a)(1) at law.cornell.edu ('within 100 days after the date the protest is submitted'); 4 CFR 21.9(a) in the eCFR. Re-checked directly rather than relying on Q0218."
+    },
+    {
+     "field": "answer",
+     "before": "Answer of more than 300 words with a four-bullet decision package and a preaward contrast sentence.",
+     "after": "Trimmed to 287 words; decision package condensed to one sentence; preaward contrast (33.105-2(b)) left to key_points[4] and the MCQ.",
+     "source": "300-word limit in the review task."
+    },
+    {
+     "field": "key_points[0]",
+     "before": "... a DoD debriefing concludes when written answers to follow-up questions are delivered (215.301-71(c)).",
+     "after": "... a DoD debriefing concludes when written answers to follow-up questions are delivered (215.301-71(c)); a period ending on a weekend or holiday runs to the next business day (4 CFR 21.0(d)).",
+     "source": "4 CFR 21.0(d)."
+    },
+    {
+     "field": "key_points[3]",
+     "before": "Weigh alternatives such as a bridge or urgency justification; overrides can be challenged at the Court of Federal Claims.",
+     "after": "Weigh alternatives such as a bridge or urgency justification; GAO decides within 100 days (31 U.S.C. 3554(a)(1)); overrides can be challenged at the Court of Federal Claims.",
+     "source": "31 U.S.C. 3554(a)(1); RAMCOR Services Group v. United States, 185 F.3d 1286 (Fed. Cir. 1999) (COFC reviews override decisions under 28 U.S.C. 1491(b)(1))."
+    },
+    {
+     "field": "citations",
+     "before": "No CFR citation.",
+     "after": "Added \"4 CFR 21.0(d)\".",
+     "source": "4 CFR 21.0(d)."
+    },
+    {
+     "field": "confidence_reason",
+     "before": "Said the 100-day period came from Q0218 and the AFARS 5133.104(c) pair was matched from an Appendix GG Rev. 29 row.",
+     "after": "Lists the sources re-read, the Sunday roll-forward, the legacy FAR 33.104 comparison, the Appendix GG (20 Aug 2025) row showing AFARS 5133.104(c), and RAMCOR.",
+     "source": "Sources listed in the new confidence_reason."
+    }
+   ],
+   "notes": "Confirmed: DFARS 233.105-70(a), (c), (d) stay windows (Class Deviation 2026-O0026 Rev. 1, current); DFARS 215.301-71(a)-(c) (follow-up questions within 2 business days, answers within 5 business days, debriefing concluded on written response; the 10 Sep questions and 15 Sep answers were both timely); RFO FAR 33.105-2(b), 33.105-3(b)(2), (c), (d), 33.105-4(a); nondelegable HCA override (31 U.S.C. 3553(d)(3)(C), (e); Appendix GG Rev. 30 row 33.105-3(b)(2) 'HCA, No'); AFARS 5133.105-3(b) (findings to ODASA(P)); agency report 30 days (31 U.S.C. 3553(b)(2)(A); 4 CFR 21.3(c)); 6.103-2 urgency. Crosswalk: FAR 33.104(b) to 33.105-2 and 33.104(c) to 33.105-3 confirmed against legacy FAR 33.104 text (FAC 2026-01); AFARS 5133.104(c) to 5133.105-3 confirmed because Appendix GG (Revision 29, revised 20 Aug 2025, pre-RFO) lists AFARS 5133.104(c) for the FAR 33.104(c)(2) postaward override; DFARS 215.506-70 to 215.301-71 and FAR 6.302-2 to 6.103-2 are verified crosswalk entries. No Army delegation decides the answer, so no verify-locally flag. Classes III/IV kept. Final answer 287 words."
+  },
+  {
+   "id": "N313",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "A claim with no certification at all is different: that is not a defective certification, and there is nothing to decide until the contractor certifies (33.201; 41 U.S.C. 7103(b)). Here the language is missing, so the certification is defective.",
+     "after": "... is defective; no certification at all is not a defective certification (33.201).",
+     "source": "RFO FAR 33.201 'Defective certification' (failure to certify is not a defective certification). The RFO 33.201 definitions no longer carry the legacy sentence that an uncertified demand over $100,000 is not a claim, so the 'nothing to decide' clause was dropped rather than cited to 33.201."
+    },
+    {
+     "field": "answer",
+     "before": "Answer of 422 words, including the tribunal-ordered decision date (33.205-6(f)) and the small-claims and accelerated appeal options.",
+     "after": "Trimmed to 300 words; kept certification rule, 60-day clock with the 31 October date, the 33.205-6(e) defect notice, deemed denial, interest from receipt, working the claim, warrant limit, fraud referral and appeal rights (90 days ASBCA or 12 months COFC).",
+     "source": "300-word limit in the review task."
+    },
+    {
+     "field": "confidence_reason",
+     "before": "Said 33.210, 33.211 and 33.214 were matched by content.",
+     "after": "Lists RFO 33.201, 33.205-1 to -8, 52.233-1(d)-(e), (h), PGI 233.205-5, 41 U.S.C. 7103 and 7104, and the legacy FAR comparison for all five 33.2xx pairs and the 41 U.S.C. 605 pair.",
+     "source": "Sources listed in the new confidence_reason."
+    }
+   ],
+   "notes": "No substantive error found. Confirmed: certification of claims over $100,000 (RFO 33.205-2(a); 52.233-1(d)(2); 41 U.S.C. 7103(b)(1)); defective certification definition (33.201); jurisdiction survives and defect must be corrected (33.205-2(c); 7103(b)(3)); 60-day decide-or-notify rule and reasonable time (33.205-6(c)(2), (d); 7103(f)(2)-(3)); no obligation to decide a defectively certified claim only with written notice within 60 days (33.205-6(e)); deemed denial (33.205-6(g); 7103(f)(5)); interest from initial receipt on defective certifications (33.205-3(c); 52.233-1(h)(2)); PGI 233.205-5 claims history (Class Deviation 2026-O0026 Rev. 1); KO authority within warrant and no settlement of fraud (33.205-5(a)); fraud referral (33.205-4); ADR (33.205-8); final decision content, evidence-of-receipt delivery and payment without awaiting appeal (33.205-6(a)-(b), (h)); 90 days to a board and 12 months to COFC (33.205-6(a)(4)(ii); 41 U.S.C. 7104(a), (b)(3)). 1 September plus 60 days is 31 October 2026. Crosswalk: legacy FAR 33.207 (Contractor certification), 33.208 (Interest on claims), 33.210 (Contracting officer's authority), 33.211 (Contracting officer's decision) and 33.214 (ADR) match the RFO sections; 41 U.S.C. 605 to 7103 per the Historical and Revision Notes. MCQ has one correct option and all four whys are accurate. Classes III/IV kept."
+  },
+  {
+   "id": "N314",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "Severance: tested against the compensation cost principle at 31.205-6 and the contractor's established practice, with DCAA's help.",
+     "after": "Severance: allowable only if required by law, agreement, established policy or the circumstances of the employment (31.205-6(f)).",
+     "source": "RFO FAR 31.205-6(f)(2) on the acquisition.gov RFO Part 31 page (severance is paragraph (f) in the RFO; (f)(3) excludes payments where a replacement contractor keeps the worker, (f)(5) mass severance case by case)."
+    },
+    {
+     "field": "answer",
+     "before": "The total cannot exceed the contract price less payments made (49.207), and for DoD the credit for deleted work cannot exceed the amount originally placed on contract for it (PGI 249.109-70).",
+     "after": "excluding settlement costs, the total is capped at the contract price less payments (49.207).",
+     "source": "RFO FAR 49.207 ('before subtracting disposal or other credits and not counting settlement costs, must not be more than the contract price minus payments already made or to be made'). The PGI 249.109-70 credit limit (accurate) was dropped for length."
+    },
+    {
+     "field": "answer",
+     "before": "Because the proposal meets or exceeds that threshold, the TCO must send it to DCAA for audit (49.107(a)).",
+     "after": "A proposal at or above the threshold must be audited (49.107(a)), and AFARS PGI 5149.107(a) sends every settlement proposal to the audit office within five calendar days.",
+     "source": "RFO FAR 49.107(a); AFARS PGI 5149.107(a) in the combined AFARS PGI of 31 Aug 2026 (Part 5149 revised 1 Feb 2026): 'Within five calendar days after receipt from the contractor, send electronically all settlement proposals to the responsible audit office.'"
+    },
+    {
+     "field": "answer",
+     "before": "This DoD contract was awarded before 1 July 2026, and modifications use the prime contract's criteria, so the threshold is $2.5 million unless the contract says otherwise (DFARS 215.403-3(a)).",
+     "after": "$2.5 million for this DoD contract awarded before 1 July 2026 (DFARS 215.403-3(a)(1)).",
+     "source": "DFARS 215.403-3(a) and (a)(1) ('Use the same criteria for contract modifications or changes as the prime contract being modified') in Class Deviation 2026-O0048 Rev. 1."
+    },
+    {
+     "field": "answer",
+     "before": "Answer of 488 words, including 31.205-42(b) continuing costs, PGI 249.109-70 and AFARS 5149.101(a) pre-termination coordination.",
+     "after": "Trimmed to 299 words; continuing costs kept in key_points[3]; the pre-termination coordination point dropped because the termination has already issued.",
+     "source": "300-word limit in the review task."
+    },
+    {
+     "field": "key_points[1], key_points[3], key_points[4]",
+     "before": "No Army audit-referral point; no severance rule; 49.207 cap stated without the settlement-cost exclusion.",
+     "after": "Added AFARS PGI 5149.107(a) five-day referral; added 'severance only as 31.205-6(f) allows'; cap now 'Total, excluding settlement costs, capped at contract price less payments (49.207)'.",
+     "source": "AFARS PGI 5149.107(a); RFO FAR 31.205-6(f); RFO FAR 49.207."
+    },
+    {
+     "field": "citations",
+     "before": "RFO FAR 49.105; RFO FAR 31.205-6; DFARS PGI 249.109-70; AFARS 5149.101",
+     "after": "Removed 49.105, PGI 249.109-70 and AFARS 5149.101 (no longer in the answer); 31.205-6 narrowed to 31.205-6(f); added AFARS PGI 5149.107(a).",
+     "source": "Consistency with the revised answer."
+    },
+    {
+     "field": "confidence_reason",
+     "before": "Said the 31.205-6 severance paragraph was not read and review thresholds were not found.",
+     "after": "Lists 31.205-6(f), Part 49, 15.403-3(b)(3)(ii), 12.304, DFARS 215.403-3(a)(1), DFARS/PGI 249.110, AFARS 5149.101/5149.107, AFARS PGI 5149.107(a), and notes no Army-wide 49.111 review thresholds in AFARS or AFARS PGI.",
+     "source": "Sources listed in the new confidence_reason."
+    }
+   ],
+   "notes": "Confirmed: settlement by negotiation, determination only if agreement fails (49.103(b)); one-year proposal deadline (49.206-1(a)); settlements as modifications needing certified data when the partial settlement plus estimate to complete exceeds the threshold (15.403-3(b)(3)(ii)(B); also 49.105(c)(15)); mandatory audit referral at or above the threshold (49.107(a)); profit rules (49.202(a)); settlement expenses, unexpired leases, initial costs and continuing costs (31.205-42(g), (e), (c), (b)); loss adjustment (49.203); equitable adjustment for the continued portion kept separate (49.208); SF 30 settlement agreement (49.109-1); settlement negotiation memorandum (49.110; DFARS 249.110 and PGI 249.110 Table 49-1 in Class Deviation 2026-O0010); agency review procedures (49.111); commercial terminations under 12.304(a). Crosswalk 12.403 to 12.304 checked against legacy FAR 12.403 (Termination); 15.403-4 to 15.403-3 is a verified crosswalk entry. MCQ: one correct option; all whys accurate. verify-locally kept (review thresholds are local). Classes III/IV kept."
+  },
+  {
+   "id": "N315",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "Once damages are assessed, only the head of the agency, with Treasury approval, may reduce or waive them (11.401(d)).",
+     "after": "Waiving assessed damages takes the head of the agency or designee plus Treasury approval (11.401(d)).",
+     "source": "RFO FAR 11.401(d) ('The head of the agency may reduce or waive ... if the Commissioner, Financial Management Service, or designee approves'); AFARS Appendix GG Rev. 30 row 11.401(d): Army authority ASA(ALT), delegable to the HCA with authority to delegate no lower than the CoCO, so 'only the head of the agency' was overstated."
+    },
+    {
+     "field": "answer",
+     "before": "The contractor furnishes the bonds before receiving a notice to proceed (28.102-1(c)); the clause is 52.228-15.",
+     "after": "Bonds arrive before the notice to proceed (28.102-1(c)); clause 52.228-15 (28.102-3(a)).",
+     "source": "RFO FAR 28.102-3(a) prescribes 52.228-15 for construction contracts expected to exceed $150,000."
+    },
+    {
+     "field": "answer",
+     "before": "Answer of 462 words, including the foreign-country bond waiver, the 52.211-13 time-extensions clause and the separate-rates sentence.",
+     "after": "Trimmed to 299 words; the foreign-country waiver stays in key_points[2].",
+     "source": "300-word limit in the review task."
+    },
+    {
+     "field": "citations",
+     "before": "No 28.102-3 citation.",
+     "after": "Added \"RFO FAR 28.102-3\".",
+     "source": "RFO FAR 28.102-3."
+    },
+    {
+     "field": "confidence_reason",
+     "before": "Said the old-to-new pairs were matched by content.",
+     "after": "Lists the RFO Part 28, 11, 36 and 42 sections, 40 U.S.C. 3131, legacy FAR confirmation of every pair, and the Appendix GG Rev. 30 rows for 28.101-1(c) and 11.401(d).",
+     "source": "Sources listed in the new confidence_reason."
+    }
+   ],
+   "notes": "Confirmed: bonds for construction over $150,000 (RFO 28.102-1(a)); 100 percent performance and payment bonds, payment bond not below performance bond (28.102-2(b)); bonds before notice to proceed (28.102-1(c)); bid guarantee whenever these bonds are required (28.101-1(a)), at least 20 percent capped at $3 million (28.101-2(b)); only separate guarantees for construction (28.101-1(b)); CoCO case-by-case waiver (28.101-1(c); Appendix GG: CoCO retains); sealed-bid rejection with listed exceptions (28.101-4); alternative payment protections above $35,000 up to $150,000 (28.102-1(b), 28.102-2(c), 28.102-3(b)); project labor agreements at $35 million or more (RFO 36.002(a)); liquidated damages policy, construction rate content and clauses (11.401-11.403); evaluation of LD need in acquisition planning (36.101-5); IGE given to the KO before receipt of proposals (36.101-6(b)); CPARS for construction at $900,000 (42.1102(e)); $25 million minimum warrant for a $14.6 million contract under Policy v12 Table 1 and the cumulative-value rule. Crosswalk pairs 11.501, 11.502, 11.503, 36.206, 36.203 and 42.1502(e) confirmed against legacy FAR text. MCQ: one correct option; the PLA $35 million and alternative-protection whys are accurate. Classes III/IV kept."
+  },
+  {
+   "id": "N316",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "The price for producing and delivering designs, plans, drawings and specifications cannot exceed 6 percent of the estimated construction cost of the project, excluding fees (15.404-9(c)(4)(ii); 10 U.S.C. 3322(b)).",
+     "after": "For the Army, the fee for designs, plans, drawings and specifications cannot exceed 10 percent of estimated construction cost (10 U.S.C. 7540(b); DFARS 236.202-371, replacing the FAR's 6 percent at 15.404-9(c)(4)(ii)).",
+     "source": "10 U.S.C. 7540(b) at law.cornell.edu ('may not be more than 10 percent'; Pub. L. 118-31, div. B, sec. 2881(a), 22 Dec 2023, substituted '10 percent' for '6 percent'; same change to 8612 and 9540); DFARS 215.404-970(d) in Class Deviation 2026-O0048 Rev. 1 ('In lieu of the limitation at FAR 15.404-9(c)(4)(ii), see 236.202-371 for the Departments of the Army, Navy and Air Force'); DFARS 236.202-371 in Class Deviation 2026-O0019 (10 percent)."
+    },
+    {
+     "field": "answer",
+     "before": "If the design work supports military construction or family housing and exceeds $1.5 million, the congressional defense committees must be notified (DFARS 236.102-570).",
+     "after": "Removed.",
+     "source": "DFARS 236.102-570 (Class Deviation 2026-O0019) still says $1.5 million, but 10 U.S.C. 2807(b) as amended by Pub. L. 119-60, div. B, sec. 2872(b) (18 Dec 2025) now sets $5,000,000 with obligation only after a 14-day wait. The statute and regulation conflict and the point is not needed for this O&M design IDIQ."
+    },
+    {
+     "field": "answer",
+     "before": "we control cost through the independent estimate, hard negotiation and the 6 percent limit",
+     "after": "we control cost through the independent estimate (36.102-3), hard negotiation and the fee limit",
+     "source": "Same as the fee-limit change."
+    },
+    {
+     "field": "answer",
+     "before": "Answer of 423 words.",
+     "after": "Trimmed to 297 words; SF 330 detail left to key_points[0].",
+     "source": "300-word limit in the review task."
+    },
+    {
+     "field": "key_points[2]",
+     "before": "Design fee limit: 6% of estimated construction cost (15.404-9(c)(4)(ii); 10 U.S.C. 3322(b)).",
+     "after": "Army design fee limit: 10% of estimated construction cost (10 U.S.C. 7540(b); DFARS 236.202-371, used in lieu of the FAR's 6% at 15.404-9(c)(4)(ii)).",
+     "source": "10 U.S.C. 7540(b); DFARS 215.404-970(d); DFARS 236.202-371."
+    },
+    {
+     "field": "key_points[3]",
+     "before": "MILCON or family housing design over $1.5M requires congressional notification (DFARS 236.102-570); CPARS for A-E contracts of $45K or more (42.1102(f)).",
+     "after": "No award to a firm whose principals or associates sit on the evaluation board (36.202-3(e)); CPARS for A-E contracts of $45K or more (42.1102(f)).",
+     "source": "RFO FAR 36.202-3(e); 42.1102(f); 10 U.S.C. 2807(b) (see above)."
+    },
+    {
+     "field": "citations",
+     "before": "RFO FAR 36.202-5; DFARS 236.102-570; 10 U.S.C. 3322(b)",
+     "after": "Removed those three; added DFARS 215.404-970(d), DFARS 236.202-371 and 10 U.S.C. 7540(b).",
+     "source": "Consistency with the corrected answer."
+    },
+    {
+     "field": "crosswalk",
+     "before": "{\"old\": \"FAR 36.601-2\", \"new\": \"FAR 36.102-1\"}",
+     "after": "{\"old\": \"FAR 36.601-1\", \"new\": \"FAR 36.102-1\"} and {\"old\": \"FAR 36.601-2\", \"new\": \"FAR 36.102-2(b)\"}",
+     "source": "Legacy FAR on acquisition.gov (FAC 2026-01): 36.601-1 is 'Public announcement'; 36.601-2 is 'Competition' (A-E procedures are a competitive procedure), which matches RFO 36.102-2(b)."
+    },
+    {
+     "field": "confidence_reason",
+     "before": "Said the old-to-new pairs were matched by content and cited DFARS 236.102-570.",
+     "after": "Records the statutes and DFARS read, the fee-limit correction, the removal of the congressional-notice point and the crosswalk confirmation.",
+     "source": "Sources listed in the new confidence_reason."
+    }
+   ],
+   "notes": "Substantive correction: the item taught the FAR 6 percent A-E fee limit, but for the Army the limit has been 10 percent since Pub. L. 118-31 and DoD applies it in lieu of the FAR limit. Confirmed: public announcement (RFO 36.102-1); negotiation and competitive procedures (36.102-2(a)-(b)); IGE before negotiations above the SAT (36.102-3(b)); board evaluation, discussions with at least 3 firms, ranked report of at least 3 (36.202-1; 40 U.S.C. 1103(c)-(d)); selection authority cannot add firms and must explain a different top choice (36.202-2); sequential negotiation after formally ending talks (36.202-3(b); 40 U.S.C. 1104(b)); no award while principals sit on the board (36.202-3(e)); signature on the PNM documents statutory limits (15.404-9(c)(4)(iv)); CPARS for A-E at $45,000 (42.1102(f)); AFARS 5136.002-90 activities (USACE, NGB, MICC, ACC 414th CSB Vicenza for O&M and AFH(O) projects; others via USACE task orders); AFARS 5136.202-2(a) and Appendix GG Rev. 30 (ASA(ALT) to HCA, no lower than CoCO; USACE exception). Other crosswalk pairs confirmed against legacy titles: 36.601-3 (Applicable contracting procedures), 36.602-3 (Evaluation board functions), 36.602-4 (Selection authority), 36.605 (Government cost estimate for A-E work), 36.606 (Negotiations), 15.404-4(c)(4)(i)(B) and 42.1502(f) text. MCQ: one correct option; RFO 15.103-1 is the tradeoff approach, so option 2's why is accurate. verify-locally kept. Classes III/IV kept."
+  },
+  {
+   "id": "N317",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "No DoD CBAR requirement.",
+     "after": "Because this noncompetitive action exceeds $25 million, both documents go into CBAR within 30 days after award (PGI 215.408-2).",
+     "source": "DFARS PGI 215.408-2(a)(3) in Class Deviation 2026-O0048 Rev. 1: approved prenegotiation and postnegotiation noncompetitive business clearance documents for Part 15 actions over $25 million are uploaded to CBAR no later than 30 days after award."
+    },
+    {
+     "field": "answer",
+     "before": "I obtain the Certificate of Current Cost or Pricing Data, dated as close as practicable to the date of price agreement (15.403-4).",
+     "after": "At agreement the contractor certifies its data accurate, complete and current as of price agreement (15.403-4).",
+     "source": "RFO FAR 15.403-4(a): the data are certified as of the date price agreement was reached (or an agreed earlier date as close as practicable); the execution date should be as close as practicable to that date."
+    },
+    {
+     "field": "answer",
+     "before": "Answer of 464 words, including the fee-limit signature sentence and a 'why it matters' paragraph.",
+     "after": "Trimmed to about 292 words; the fee-limit signature point stays in key_points[3]; the risk sentence is kept in short form.",
+     "source": "300-word limit in the review task."
+    },
+    {
+     "field": "key_points[4]",
+     "before": "... still apply (AFARS 5115.408-290).",
+     "after": "... still apply (AFARS 5115.408-290); DoD noncompetitive actions over $25M go into CBAR within 30 days after award (PGI 215.408-2).",
+     "source": "DFARS PGI 215.408-2(a)(3)."
+    },
+    {
+     "field": "citations",
+     "before": "No PGI citation.",
+     "after": "Added \"DFARS PGI 215.408-2\".",
+     "source": "DFARS PGI 215.408-2."
+    },
+    {
+     "field": "confidence_reason",
+     "before": "Said most crosswalk pairs were matched by content.",
+     "after": "Lists RFO 15.403-4, 15.404-9, 15.407, 15.408-1/-2, DFARS 215.404-970, 215.408-1/-2 and PGI, AFARS 5115.408-190/-290 and AFARS PGI 5115.408-190, and the legacy FAR and codified DFARS checks for every pair.",
+     "source": "Sources listed in the new confidence_reason."
+    }
+   ],
+   "notes": "Confirmed: AFARS 5115.408-190 (written approval of prenegotiation objectives before negotiating any pricing action; POM/PNM may be consolidated) and 5115.408-290(a)-(b) (approval of objectives may serve for a consolidated POM/PNM if the price is within the approved range; other preaward approvals still required); RFO 15.408-1(b); 15.408-2(a)(1)-(11) and (b); 15.407(a) and (d); 15.404-9(c)(4)(iv); DFARS 215.404-970(a)-(b) (structured approach when certified data are obtained; weighted guidelines, DD Form 1547); DFARS 215.408-1 and 215.408-2 exist and point to PGI. AFARS PGI 5115.408-190 gives memorandum content only, no approval levels, so local business clearance approvers remain verify-locally and MCQ option 4's why (no HCA PNM approval in FAR or AFARS 5115.408) is accurate. Crosswalk: legacy FAR 15.405 (Price negotiation), 15.406-1 (Prenegotiation objectives), 15.406-2 (Certificate), 15.406-3 (Documenting the negotiation), 15.404-4(c)(4) (statutory limits) and codified DFARS 215.404-4 (Profit), 215.406-1 and 215.406-3 match. Classes III/IV kept."
+  },
+  {
+   "id": "N318",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "For DoD, a debriefing is required on request for orders of $15 million or more (DFARS 216.507-5(c)).",
+     "after": "DoD requires a debriefing for orders of $15 million or more (DFARS 216.507-5(c)).",
+     "source": "DFARS 216.507-5(c) in Class Deviation 2026-O0045 Rev. 1: 'a written or oral postaward debriefing of successful and unsuccessful awardees is required for task orders and delivery orders valued at $15 million or more'."
+    },
+    {
+     "field": "key_points[2]",
+     "before": "DoD requires a debriefing on request for orders of $15M or more (DFARS 216.507-5(c)).",
+     "after": "DoD requires a postaward debriefing for orders of $15M or more (DFARS 216.507-5(c)).",
+     "source": "DFARS 216.507-5(c)."
+    },
+    {
+     "field": "answer",
+     "before": "Answer of 439 words.",
+     "after": "Trimmed to 298 words.",
+     "source": "300-word limit in the review task."
+    },
+    {
+     "field": "confidence_reason",
+     "before": "Relied on a regulations.json note for 10 U.S.C. 3406(d).",
+     "after": "Lists RFO 16.507-1 to 16.508, DFARS 216.505-70, 216.507-5(c), 216.507-6(e), Table 206-1 at 206.104-71 (with the tiers), Appendix GG Rev. 30 (Army Class Deviation 2026-PG02), 10 U.S.C. 3406 read directly, and the legacy FAR 16.505 checks.",
+     "source": "Sources listed in the new confidence_reason."
+    }
+   ],
+   "notes": "Confirmed: fair opportunity above the MPT (RFO 16.507-2(a)(1)); Part 6 and subpart 15.3 inapplicable, no evaluation plan or competitive range required (16.507-2(a)(3)); no allocation, tailored procedures, price or cost always considered (16.507-2(c)(1)); ombudsman (16.507-2(b)); streamlined placement only above the MPT up to the SAT (16.507-3), fair notice above the SAT (16.507-4); fair-notice elements, documentation and Part 15 debriefings above $7.5 million (16.507-5; 10 U.S.C. 3406(d)); exceptions including the DoD 6.103 exceptions (16.507-6(b)); justification content (16.507-6(d)(2)); set-aside orders exempt from justification (16.507-6(c)); posting within 14 days, or 30 days for urgency, for 30 days (16.507-6(f)); DoD approval by the DFARS 206.104-71 Table 206-1 tiers (contracting officer certification at $10 million or below), which Appendix GG Rev. 30 repeats for the Army; order protests limited to scope/period/maximum value or orders over $35 million (DoD) / $10 million (civilian), only at GAO (16.508; 10 U.S.C. 3406(f)). Crosswalk: legacy FAR 16.505(b)(1)(iv) and (b)(8) text match 16.507-5 and 16.507-2(b); 16.505(b)(2) and 16.505(a)(10) pairs match verified crosswalk and threshold entries; 10 U.S.C. 2304c became 3406 (Cornell credits). MCQ: one correct option; all whys accurate. verify-locally kept. Classes III/IV kept."
+  },
+  {
+   "id": "N319",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "DoD requests follow PGI 228.305(d), and Appendix GG puts the Army recommendation with DASA(P).",
+     "after": "In the Army that recommendation is delegated from ASA(ALT) to the HCA, no lower than the SCO (Appendix GG).",
+     "source": "AFARS Appendix GG Revision 30 (01 July 2026), row 28.305(d) 'Waiver of applicability of the Defense Base Act': Army reference 5128.305(d), ASA(ALT), delegable, 'HCA, with authority to delegate to No Lower than SCO'; AFARS 5128.305(d) in the combined AFARS of 31 Aug 2026 ('See Appendix GG')."
+    },
+    {
+     "field": "key_points[1]",
+     "before": "... DoD requests per PGI 228.305(d); Army recommendation by DASA(P) (Appendix GG).",
+     "after": "... DoD requests per PGI 228.305(d); in the Army the recommendation is delegated from ASA(ALT) to the HCA, no lower than SCO (AFARS 5128.305(d); Appendix GG Rev. 30).",
+     "source": "AFARS Appendix GG Revision 30."
+    },
+    {
+     "field": "key_points[3]",
+     "before": "... third-country nationals fall within the waiver only if covered by Korean compulsory law.",
+     "after": "... third-country nationals fall within the waiver only if covered by Korean compulsory law with benefits that continue after repatriation.",
+     "source": "DoL DBA Waiver No. 2026-02, Section C ('If third country nationals ... are hired, the benefits must not cease if the employee is repatriated')."
+    },
+    {
+     "field": "answer",
+     "before": "Answer of 455 words.",
+     "after": "Trimmed to 300 words; the workforce application, waiver conditions, clause set and 15.202(a)(2)(iii) point are kept.",
+     "source": "300-word limit in the review task."
+    },
+    {
+     "field": "confidence_reason",
+     "before": "Cited the Appendix GG Rev. 29 waiver row.",
+     "after": "Records the DoL waiver sections read, the statute and FAR sections, the Rev. 30 correction and the two remaining inferences.",
+     "source": "Sources listed in the new confidence_reason."
+    }
+   ],
+   "notes": "DoL DBA Waiver No. 2026-02 confirmed from the dol.gov PDF (downloaded through WebFetch; PDF metadata created 26 Mar 2026) and dol.gov's DBA waiver list (South Korea, 2026-02, issued 2026-03-26, expires 2031-03-25): general waiver for all U.S. agencies and all contracts at any location in Korea; covers employees under Korea's compulsory workers' compensation laws with a fully conforming employer (C, D.2); excludes U.S. citizens, lawful U.S. residents and persons hired in the United States (D.1); third-country nationals' benefits must survive repatriation (C); employer must provide WHCA-equivalent protection for waived employees (D.4); prior Korea waivers revoked (F). Also confirmed: 42 U.S.C. 1651(a)(4), (b)(1), (e); RFO 28.305(a)-(e) (service contracts within public work; WHCA protection; Secretary of Labor waiver on agency-head recommendation; contractor liability for waived employees); 28.309(a)-(b); 15.202(a)(2)(iii) (clarifications cannot revise price); DFARS 228.305 and PGI 228.305(d) (Class Deviation 2026-O0005, current). Author inferences: (1) using both 52.228-3 and 52.228-4 on a mixed workforce is consistent with 28.309(a)-(b), since DBA applies to some employees and is waived for others, but no text addresses mixed workforces expressly; kept as an expectation to confirm locally; (2) whether Korean compulsory workers' compensation law covers technicians hired in Manila, particularly for a SOFA invited contractor, was not verified; kept conditional. korea-verify-cp kept; confidence stays medium. Classes III/IV kept."
+  },
+  {
+   "id": "N320",
+   "verdict": "fixed",
+   "changes": [
+    {
+     "field": "answer",
+     "before": "Past performance evaluations are required at least annually and when the work is completed, for each contract and order above the SAT, including work performed outside the United States; interim evaluations are allowed (RFO FAR 42.1102(a)-(b)).",
+     "after": "Evaluations are due at least annually and at completion, including overseas work (RFO FAR 42.1102(a)). DoD uses its own thresholds instead of the FAR's SAT tiers: services and IT over $1 million, systems and operations support over $5 million, ship repair over $500,000 (DFARS 242.1102-70(b); 215.104-70(g)).",
+     "source": "DFARS 242.1102-70(b) in Class Deviation 2026-O0050 ('Evaluate contractor performance for contracts, task orders, and delivery orders using the thresholds at DFARS 215.104-70(g) in lieu of the thresholds at FAR 42.1102(b) through (d)'); DFARS 215.104-70(g)(1)-(4) in Class Deviation 2026-O0048 Rev. 1."
+    },
+    {
+     "field": "key_points[0]",
+     "before": "Evaluations at least annually and at completion for contracts and orders above the SAT, including overseas work; construction at $900K or more and A-E at $45K or more (RFO FAR 42.1102).",
+     "after": "Evaluations at least annually and at completion, including overseas work; DoD thresholds replace the FAR's SAT tiers: services and IT over $1M, systems and operations support over $5M, ship repair over $500K (DFARS 242.1102-70(b); 215.104-70(g)); construction at $900K or more and A-E at $45K or more (RFO FAR 42.1102(e)-(f)).",
+     "source": "DFARS 242.1102-70(b); DFARS 215.104-70(g); RFO FAR 42.1102(e)-(f)."
+    },
+    {
+     "field": "citations",
+     "before": "No 215.104-70 citation.",
+     "after": "Added \"DFARS 215.104-70(g)\".",
+     "source": "DFARS 215.104-70(g)."
+    },
+    {
+     "field": "answer",
+     "before": "Answer of 427 words.",
+     "after": "Trimmed to 293 words.",
+     "source": "300-word limit in the review task."
+    },
+    {
+     "field": "confidence_reason",
+     "before": "Said the 42.15 to 42.11 pair was in the verified crosswalk and read only the DFARS 242.1102-70 heading.",
+     "after": "Records the DFARS 242.1102-70(b)/215.104-70(g) threshold correction and the legacy FAR confirmation of the 42.15, 42.1502 and 42.1503 pairs (the 42.15 pair is not in the regulations.json crosswalk).",
+     "source": "Sources listed in the new confidence_reason."
+    }
+   ],
+   "notes": "Substantive correction: for DoD the SAT tiers in FAR 42.1102(b)-(d) are replaced by the DFARS 215.104-70(g) thresholds. Confirmed: annual and final evaluations (RFO 42.1102(a)); construction at $900,000 and A-E at $45,000 plus default terminations (42.1102(e)-(f)); CPARS as the official source (42.1101(b)); evaluation content and five-level ratings (42.1103(b)); Table 42-1 notes for marginal and unsatisfactory ratings; 14 calendar days to comment, availability to source selection officials within 14 days, review above the KO, copy to contractor (42.1103(d)-(e)); 3-year and 6-year use (42.1103(f)); FAPIIS within 3 calendar days and public availability (42.1103(g)); neutral rating without a record (15.202(c)(1)); AFARS 5142.1103-90(a) assessing officials and (b) job order contract orders of $700,000 or more (combined AFARS, 31 Aug 2026). Crosswalk: legacy FAR 42.1502 and 42.1503 text match 42.1102 and 42.1103; 15.305 to 15.202 verified. MCQ: one correct option; all whys accurate. Classes III/IV kept."
+  }
+ ],
+ "other_files": [
+  {
+   "file": "src/data/questions.json",
+   "issue": "Already holds pre-review text for the new Class III items. Example: the N316 answer near line 20587 still states the 6 percent A-E fee limit (the Army limit is 10 percent under 10 U.S.C. 7540(b) as amended by Pub. L. 118-31, and DFARS 236.202-371) and the $1.5 million congressional notice (10 U.S.C. 2807(b) now says $5 million), and its key point cites 10 U.S.C. 3322(b). Other N311-N320 items may also be present in pre-review form. Re-merge from content/out/class_questions_III_b.json after this review; not edited here."
+  },
+  {
+   "file": "src/data/regulations.json",
+   "issue": "The crosswalk has no FAR 42.15 to 42.11 (or 42.1502/42.1503 to 42.1102/42.1103) entry, although the N320 author described the subpart pair as verified; the pairs are correct per legacy FAR text and could be added. No threshold entry covers the Army A-E fee limit (10 percent, 10 U.S.C. 7540(b); DFARS 236.202-371) or the DoD CPARS evaluation thresholds (DFARS 242.1102-70(b); 215.104-70(g)). Not edited here."
+  },
+  {
+   "file": "External: DoD Class Deviation 2026-O0045 Rev. 1 (DFARS 216.507-6(e))",
+   "issue": "Cross-references approval authorities 'at 206.104-72', but Class Deviation 2026-O0017 Rev. 2 places Table 206-1 at 206.104-71. N318 cites 206.104-71. Informational only."
+  },
+  {
+   "file": "External: DoD Class Deviation 2026-O0019 (DFARS 236.102-570)",
+   "issue": "Still states the $1.5 million congressional-notification threshold for A-E services and construction design, while 10 U.S.C. 2807(b) as amended on 18 Dec 2025 says $5,000,000 with a 14-day wait. Content that cites DFARS 236.102-570 should be checked against the statute. Informational only."
+  }
+ ],
+ "summary": {
+  "checked": 10,
+  "fixed": 10,
+  "withdrawn": 0,
+  "unverifiable": [
+   "N319: whether Korea's compulsory workers' compensation law covers third-country technicians hired in Manila by a U.S. prime (including one working as a SOFA invited contractor); the item keeps this conditional and flagged korea-verify-cp",
+   "N319: no regulation expressly addresses using both 52.228-3 and 52.228-4 on a mixed workforce; kept as an expectation to confirm with contracting policy",
+   "N314, N316, N317, N318: local review, business clearance and approval levels above the regulatory minimums (flagged verify-locally)"
+  ]
+ }
+}
