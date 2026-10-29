@@ -61,3 +61,11 @@
 .update-bar .btn { background: var(--panel); color: var(--ink); border-color: transparent; }
 .update-bar .btn.ghost { background: transparent; color: inherit; }
 @media (min-width: 861px) { .update-bar { left: calc(var(--side-w) + 24px); } }
+
+/* 44 px touch targets (1.2.3) for the shell: menu rows, the unit picker, the phone's bottom bar, the squeezed Notes button */
+@media (pointer: coarse) {
+  .side .nav, .side .side-collapse { min-height: 44px; }
+  .topbar .unit-select { min-height: 44px; }
+  .mobile-nav button { min-height: 44px; }
+}
+@media (pointer: coarse) and (max-width: 860px) { .topbar .notes-btn { width: 44px; } }

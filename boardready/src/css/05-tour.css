@@ -46,3 +46,6 @@
 .tour-actions { display: flex; gap: 6px; margin-left: auto; flex: none; }
 @media (prefers-reduced-motion: reduce) { .tour-spot, .tour-card { transition: none; } }
 @media print { .tour-layer { display: none !important; } }
+
+/* 44 px touch targets (1.2.3): the close mark stays 30 px but answers to a 44 px area */
+@media (pointer: coarse) { .tour-x { position: relative; } .tour-x::before { content: ""; position: absolute; inset: -7px; } }

@@ -146,3 +146,6 @@ body[data-projector] .v-settings .set-grid { grid-template-columns: minmax(0, 1f
 .v-settings .set-more { margin-top: var(--space-3); font-size: var(--fs-sm); }
 .v-settings .set-more summary { cursor: pointer; font-weight: 700; color: var(--accent); }
 .v-settings .set-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* 44 px touch targets (1.2.3): the controls this view sizes itself */
+@media (pointer: coarse) { .v-settings .set-nav-item { min-height: 44px; } }

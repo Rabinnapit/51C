@@ -409,3 +409,6 @@ body[data-projector] .v-process .p-calc-out, body[data-projector] .v-process .p-
   .v-process .p-rung[data-cls] .p-rung-cls { background: transparent; color: var(--ink); border: 1px solid var(--line-2); box-shadow: none; }
   .v-process .p-thr.hit { background: transparent; color: var(--ink); border: 2px solid var(--ink); }
 }
+
+/* 44 px touch targets (1.2.3): the controls this view sizes itself */
+@media (pointer: coarse) { .v-process .p-jump-btn { width: 44px; height: 44px; } }

@@ -303,3 +303,9 @@ body[data-projector] .v-board .bd-answer { font-size: var(--fs-lg); }
   .v-board .bd-print-blank { font-style: italic; opacity: .6; }
   .v-board .bd-print-foot { margin-top: 14pt; padding-top: 8pt; border-top: 1px solid var(--line-2); font-size: 8.5pt; opacity: .8; }
 }
+
+/* 44 px touch targets (1.2.3): the controls this view sizes itself */
+@media (pointer: coarse) {
+  .v-board .bd-rate button { width: 44px; height: 44px; }
+  .v-board .bd-bank-filters .select, .v-board .bd-bank-filters .input { min-height: 44px; }
+}

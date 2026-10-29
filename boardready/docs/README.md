@@ -47,6 +47,12 @@ comes back after Escape). The landing page footer names the owner and opens the 
 build when the owner notice, the terms, the QR code, a current install sheet or this version's What's new entry is
 missing, and READ ME FIRST names the owner and the website. The repository LICENSE now covers both apps.
 
+**Thumb-sized targets (v1.2.3).** On touch screens (`pointer: coarse`) every button of every size, field, chip, tab,
+switch, side-menu row, bottom-bar tab and rating key is at least 44 px tall (the top bar is 60 px, so they fit; segmented
+controls grow to 46 px with 40 px segments inside their rim), and the small × marks that clear a search or close the tour
+answer to a 44 px area around them. With a mouse nothing changes. The shared sizes live in `03-components.css` and
+`04-shell.css`; a view that sizes a control itself repeats the 44 px in a short block at the end of its own stylesheet.
+
 **On the web (v1.2.0).** The web edition is the candidate edition plus `core/09-pwa.js`: an install page on first open (one
 button for the device: Chrome's install box on Android, Safari's three taps on an iPhone, the address-bar install on a
 computer), a service worker that keeps the app working with no signal, a `version.json` check that offers a reload when a

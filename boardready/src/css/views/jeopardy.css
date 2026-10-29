@@ -241,3 +241,6 @@ body[data-projector] .v-jeopardy .jp-clue-response { font-size: clamp(1.6rem, 3v
   .v-jeopardy .jp-scrim, .v-jeopardy .jp-bar, .v-jeopardy .jp-head-actions, .v-jeopardy .jp-final-actions { display: none !important; }
   .v-jeopardy .jp-final-card { box-shadow: none; break-inside: avoid; }
 }
+
+/* 44 px touch targets (1.2.3): the controls this view sizes itself */
+@media (pointer: coarse) { .v-jeopardy .jp-teamcount button { min-width: 44px; } .v-jeopardy .jp-team-score, .v-jeopardy .jp-team-name { min-height: 44px; } }

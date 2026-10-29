@@ -210,3 +210,6 @@ body[data-surface="arcade"] { background: #070b13; color: #f2f4f8; }
   .ar-to-list .ar-long { display: none; }
   .ar-to-list .ar-short { display: inline; }
 }
+
+/* 44 px touch targets (1.2.3): the controls this view sizes itself */
+@media (pointer: coarse) { .ar-btn, .ar-btn.sm { min-height: 44px; } .ar-btn.icon { width: 44px; min-width: 44px; } }

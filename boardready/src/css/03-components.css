@@ -192,5 +192,19 @@
 .topbar [data-tip]:hover::after { top: calc(100% + 6px); bottom: auto; }
 .topbar .menu-btn[data-tip]:hover::after { left: 0; transform: none; }
 .topbar .text-btn[data-tip]:hover::after, .topbar .theme-btn[data-tip]:hover::after, .topbar .help-btn[data-tip]:hover::after, .topbar .projector-btn[data-tip]:hover::after { left: auto; right: 0; transform: none; }
-/* a thumb needs more than 32 px: small buttons grow on touch screens, and the layout wraps around them */
-@media (pointer: coarse) { .btn.sm, .btn.icon.sm { min-height: 42px; } .btn.icon.sm { min-width: 42px; } }
+/* a thumb needs 44 px (1.2.3): on touch screens every button, field, chip, tab, switch and rating key is at least
+   44 px tall and the layout wraps around them; the top bar is 60 px, so they fit. Segmented controls grow to 46 px
+   (40 px segments inside a 2 px rim and a 1 px border). Small marks that must stay small (a field's clear x, the tour's x) get a 44 px
+   hit area in their own stylesheets, and a view that sizes a control itself repeats 44 px at the end of its stylesheet. */
+@media (pointer: coarse) {
+  .btn, .btn.sm { min-height: 44px; }
+  .btn.sm { min-width: 44px; }   /* an icon-only small button is 40 px wide otherwise */
+  .btn.icon, .btn.icon.sm { width: 44px; min-width: 44px; }
+  .input, .select { min-height: 44px; }
+  .chip { min-height: 44px; }
+  .seg { padding: 2px; }
+  .seg button { min-height: 40px; }
+  .tabs button { min-height: 44px; }
+  .switch { min-height: 44px; }
+  .rate button { width: 44px; height: 44px; }
+}

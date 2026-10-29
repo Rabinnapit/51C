@@ -343,3 +343,6 @@ body[data-projector] .v-scenarios .sc-cases { grid-template-columns: 1fr; }
   .v-scenarios .sc-stage { display: block; }
   .v-scenarios .card, .v-scenarios .sc-item { box-shadow: none; break-inside: avoid; page-break-inside: avoid; }
 }
+
+/* 44 px touch targets (1.2.3): the controls this view sizes itself */
+@media (pointer: coarse) { .v-scenarios .sc-search .input, .v-scenarios .sc-domain, .v-scenarios .sc-bar .chip { min-height: 44px; } }

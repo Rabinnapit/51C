@@ -331,3 +331,6 @@ body[data-projector] .v-regulations .rg-detail { position: static; max-height: n
 .v-regulations .rg-update-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 6px; }
 .v-regulations .rg-update p { margin: 0 0 8px; font-size: var(--fs-sm); color: var(--ink-2); }
 .v-regulations .rg-update-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+
+/* 44 px touch targets (1.2.3): the controls this view sizes itself */
+@media (pointer: coarse) { .v-regulations .rg-tab { min-height: 44px; } }

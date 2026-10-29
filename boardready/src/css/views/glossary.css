@@ -130,3 +130,6 @@ body[data-projector] .v-glossary .gl-card { min-height: 380px; }
   .v-glossary .gl-term { break-inside: avoid; page-break-inside: avoid; box-shadow: none; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: 6pt 0; animation: none; }
   .v-glossary .gl-letter-mark { font-size: 18pt; }
 }
+
+/* 44 px touch targets (1.2.3): the controls this view sizes itself */
+@media (pointer: coarse) { .v-glossary .gl-jump-btn { min-width: 44px; min-height: 44px; } .v-glossary .gl-letter-top, .v-glossary .gl-related { min-height: 44px; } .v-glossary .gl-clear::before { content: ""; position: absolute; inset: -7px; } }

@@ -118,3 +118,6 @@ body[data-projector] .v-resources .res-item-actions { width: 100%; }
   .v-resources .res-help { border: 1px solid var(--line-2); }
   .v-resources .res-title { color: inherit; }
 }
+
+/* 44 px touch targets (1.2.3): the controls this view sizes itself */
+@media (pointer: coarse) { .v-resources .res-clear::before { content: ""; position: absolute; inset: -7px; } }

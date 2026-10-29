@@ -213,3 +213,6 @@ body[data-projector] .v-projector .pj-stage { min-height: min(72vh, 900px); }
   .v-projector .pj-timer { padding: 4px 8px 4px 10px; gap: 6px; }
   .v-projector .pj-presets { display: none; }
 }
+
+/* 44 px touch targets (1.2.3): the controls this view sizes itself */
+@media (pointer: coarse) { .v-projector .pj-timer-btn { width: 44px; min-height: 44px; } .v-projector .pj-preset { min-height: 44px; } }

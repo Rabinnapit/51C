@@ -255,8 +255,14 @@ Fiscal Law & Funding · Competition & Market Research · Acquisition Planning & 
 - `meta.site_url` is the website; `meta.app_qr` (rows of 0/1 from `tools/make_handout.py`) is drawn by `CORB.ui.qrSvg()`
   on the About page and the install page. `meta.whats_new` [{version, date, title, items[]}] is About's version list.
   Settings → Get the app shows install and downloads in the web edition and the website address in a single file.
-- Touch screens (`pointer: coarse`): `.btn.sm` grows to 42 px; top-bar tooltips open below the bar and align to the
-  window edge at both ends (`03-components.css`).
+- Touch screens (`pointer: coarse`, 1.2.3): every `.btn` (all sizes; small and icon buttons at least 44 px wide), `.input`/`.select`, `.chip`,
+  `.tabs button`, `.switch`, `.rate button`, `.side .nav`, `.mobile-nav button` and `.topbar .unit-select` are at least
+  44 px tall (`03-components.css`, `04-shell.css`); `.seg` keeps a 2 px rim around 40 px segments (46 px in all). A view that sizes a
+  control itself (rating keys, the process jump buttons, the regulations tabs, the projector timer, letter and team
+  buttons, search fields) repeats 44 px in a `pointer: coarse` block at the end of its stylesheet, and a small × that
+  must stay small (`.tour-x`, `.gl-clear`, `.lib-clear`, `.res-clear`) gets a 44 px hit area through `::before`. Keep new
+  controls at 44 px on touch. Top-bar tooltips open below the bar and align to the window edge at both ends
+  (`03-components.css`).
 - 1.2.2: `tools/build.py` copies `handout/` (the QR code and the install sheet from `tools/make_handout.py`) into
   `dist/web/handout/`, so the website serves `handout/Board_Ready_Install_Sheet.html`; Settings → Get the app → Share it
   (web edition) and About → Get it on your phone link to it and copy the link. About's "What is inside" counts the

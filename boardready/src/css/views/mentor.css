@@ -202,3 +202,6 @@ body[data-projector] .v-mentor .men-composer { position: static; }
   .v-mentor .men-body .rich.men-clamp::after, .v-mentor .men-more, .v-mentor .men-show-excerpt, .v-mentor .men-more-toggle { display: none !important; }
   .v-mentor .men-source-full, .v-mentor .men-more-sources { display: block !important; }
 }
+
+/* 44 px touch targets (1.2.3): the controls this view sizes itself */
+@media (pointer: coarse) { .v-mentor .men-mode-btn, .v-mentor .men-source-open { min-height: 44px; } }

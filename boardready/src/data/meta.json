@@ -8,7 +8,7 @@
     "name": "SFC Rabin Napit",
     "email": "rabin.napit.mil@army.mil"
   },
-  "version": "1.2.2",
+  "version": "1.2.3",
   "built_on": "",
   "content_verified_on": "2026-10-29",
   "next_board": "2026-10-14",
@@ -53,6 +53,15 @@
     "agree": "Select I agree to accept these terms and start using Board Ready. If you do not agree, please close it."
   },
   "whats_new": [
+    {
+      "version": "1.2.3",
+      "date": "2026-10-30",
+      "title": "Bigger targets for thumbs",
+      "items": [
+        "On a touch screen every button, field, chip, tab, switch, menu row and rating key is now at least 44 px tall, the size a thumb needs, and segmented pickers grow with them. The small × marks that clear a search or close the tour answer to a 44 px area around them.",
+        "With a mouse or trackpad nothing changes."
+      ]
+    },
     {
       "version": "1.2.2",
       "date": "2026-10-30",

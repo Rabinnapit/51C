@@ -50,6 +50,12 @@ the Federal Register notices as reported by Wiley, Nextgov and Washington Techno
   terms allow the facilitator editor and name the AI connector (version bumped, so everyone agrees again), the first-use
   dialog closes only by agreeing, the landing footer names the owner, build checks for all of it, LICENSE for both apps.
 
+## Done in 1.2.3 (30 Oct 2026)
+
+- 44 px touch targets on touch screens for every control: buttons of all sizes, fields, chips, tabs, segmented controls,
+  switches, menu rows, the bottom bar, rating keys, jump and letter buttons; the small clear and close marks answer to a
+  44 px area around them. Nothing changes with a mouse.
+
 ## Still open (follow-ups)
 
 - Accounts and cloud progress sync (B2B has an optional Supabase account; Board Ready keeps progress on the device).

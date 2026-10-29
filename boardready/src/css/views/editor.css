@@ -177,3 +177,6 @@ body[data-projector] .v-editor .ed-list { max-height: 60vh; }
   .v-editor .ed-bar, .v-editor .ed-list-card, .v-editor .ed-head-actions, .v-editor .ed-form-foot { display: none !important; }
   .v-editor .ed-work { display: block; }
 }
+
+/* 44 px touch targets (1.2.3): the controls this view sizes itself */
+@media (pointer: coarse) { .v-editor .ed-search .input { min-height: 44px; } }

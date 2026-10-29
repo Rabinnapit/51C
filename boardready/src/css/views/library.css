@@ -178,3 +178,6 @@ body[data-projector] .v-library .lib-count b { font-size: 2.3rem; }
   .v-library .lib-print a { color: inherit; text-decoration: none; }
   .v-library .lib-print .cite { padding: 0; border: 0; background: none; font-size: inherit; }
 }
+
+/* 44 px touch targets (1.2.3): the controls this view sizes itself */
+@media (pointer: coarse) { .v-library .lib-search .search .input, .v-library .lib-sort { min-height: 44px; } .v-library .lib-clear::before { content: ""; position: absolute; inset: -7px; } }
