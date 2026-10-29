@@ -15,7 +15,7 @@ its short terms of use before first use (free for personal study and for sharing
 rehosting or selling without written permission). The terms text is `terms` in `src/data/meta.json`; changing its
 `version` makes everyone accept the new terms on their next open.
 
-## What is inside (version 0.16.0)
+## What is inside (version 0.17.0)
 
 | Area | What the reader gets |
 |---|---|
@@ -72,6 +72,24 @@ One-time setup (already described here so it can be repeated):
 4. Open the **Actions** tab. "Build and publish B2B Exam Prep" runs now and after every future change. A green check means
    the app is live at https://rabinnapit.github.io/51C/. A red X on the very first run usually means step 2 was not
    done yet: do it, open the run and click **Re-run all jobs**.
+
+## Accounts (optional)
+
+Readers can create an account under Settings & help → Your account (website and installed app only). Their progress then
+saves to the account a few seconds after each change and comes back on any device where they sign in.
+
+- **Where:** the Supabase project **51C** (ref `efnoeusptnedvlaiomaa`, region us-east-1, free plan), kept apart from the
+  owner's other Supabase projects. `src/data/meta.json` → `sync` holds its address and the *publishable* key, which is
+  meant to be public; the database rules, not the key, protect the data.
+- **What is stored:** each account's email address and one `progress` row with the app's state. Each signed-in reader can
+  read and write only their own row (row-level security); signed-out visitors cannot read the table at all.
+- **Sign-up:** the `signup` function creates accounts that work at once, because the free plan sends only a few emails an
+  hour. There is no password reset yet. To add one later, set Authentication → URL Configuration → Site URL to
+  https://rabinnapit.github.io/51C/ in the Supabase dashboard.
+- **Free-plan note:** Supabase pauses a free project after about a week with no activity. If accounts stop working after
+  a quiet spell, open the project in the dashboard and choose Restore. The guide keeps working on each device meanwhile.
+- **Managing users:** Supabase dashboard → project 51C → Authentication → Users (deleting a user deletes their progress).
+- **Sources:** `supabase/migrations/` (the table and its rules) and `supabase/functions/signup/` (the sign-up function).
 
 ## The QR code and install sheet
 

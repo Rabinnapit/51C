@@ -1,0 +1,9 @@
+/* optional accounts (core/10-account.js, web edition only): the card on Settings & help */
+.acct-form { display: grid; gap: 10px; max-width: 420px; margin: 10px 0 6px; }
+.acct-who { display: flex; align-items: center; gap: 12px; }
+.acct-who > svg { width: 28px; height: 28px; color: var(--accent); flex: none; }
+.acct-who b { display: block; word-break: break-all; }
+.acct-who span { display: block; font-size: var(--fs-sm); color: var(--muted); }
+.acct-msg { margin: 8px 0 0; font-size: var(--fs-sm); }
+.acct-msg.bad { color: var(--danger); }
+.acct-msg.ok { color: var(--ok); }

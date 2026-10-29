@@ -20,9 +20,13 @@
     root.appendChild(h('div.grid.cols-2.help-grid', {}, steps.map(function (s) { return h('div.card.tight.help-step', {}, h('div.help-icon', {}, icon(s[0])), h('div', {}, h('b', {}, s[1]), h('p.small.muted', {}, s[2]))); })));
     root.appendChild(h('div.section-head', {}, h('h2', {}, 'Where your progress lives')));
     root.appendChild(h('div.card', {}, CORB.ui.rich(
-      ed === 'web' ? 'Your ticks, scores and flashcard history stay in this browser on this device. Nothing is sent anywhere. To move them to another device, use My data → Export, then Import on the other device.\n\nThis website updates itself: when the maintainer publishes a change, you get it the next time you open the guide with an internet connection.'
+      ed === 'web' ? 'Your ticks, scores and flashcard history stay in this browser on this device. Sign in to an account (below) to keep them in your account too and pick up on any device. Without one, nothing is sent anywhere. To move them to another device, use My data → Export, then Import on the other device.\n\nThis website updates itself: when the maintainer publishes a change, you get it the next time you open the guide with an internet connection.'
         : ed === 'preview' ? 'This is a preview copy. Your progress stays in this browser only, and file downloads and printing are turned off here. For daily use, get the full copy from the maintainer or the website.'
         : 'Your ticks, scores and flashcard history stay in this browser on this device. Nothing is sent anywhere.\n\nSome government computers erase browser data at restart. To keep your progress safe, use **Save progress** (top of the page, or My data) and pick this same B2B Exam Prep file. Your progress is then stored inside the file and comes back every time you open it.')));
+    if (ed === 'web' && CORB.account && CORB.account.ready()) {
+      root.appendChild(h('div.section-head', {}, h('h2', {}, 'Your account')));
+      root.appendChild(CORB.account.card());
+    }
     if (ed === 'web' && CORB.pwa) {
       root.appendChild(h('div.section-head', {}, h('h2', {}, 'Install B2B Exam Prep as an app')));
       root.appendChild(h('div.card', {}, CORB.pwa.isStandalone() ? h('p', {}, 'You are using the installed app. It works offline and updates itself.') : h('div.stack', {},

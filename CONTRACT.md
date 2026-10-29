@@ -44,6 +44,9 @@ src/js/core/04-data       queries over CORB_DATA, search index, citation URLs (F
 src/js/core/05-speech     read-aloud in sentence-sized chunks
 src/js/core/06-learning   SM-2 lite flashcards, quiz records, readiness by exam area, streak
 src/js/core/07-plan       dated plan: goal, 12-month experience, 36-month deadline, step status, .ics export
+src/js/core/10-account   web edition only: optional accounts (Supabase project 51C via plain fetch): sign in or create an
+                          account on Settings & help; CORB.state saves to the account after changes and comes back on any
+                          device; session in localStorage b2b.account. Backend sources in supabase/.
 src/js/core/08a-terms     the owner notice and terms of use: shown before first use and before the tour offer, again when
                           meta.terms.version changes (settings.termsAccepted); About and the side menu open them any time
 src/js/core/08-tour       the guided tour (same engine as Board Ready's): spotlight + card, offered once, ? button and ? key
@@ -66,7 +69,7 @@ Script order in the build: data, then `core/*` in file order, then `views/*`, th
 
 ## 4. Data modules (`window.CORB_DATA`)
 
-- `meta`: app_name, version, owner, copyright, terms ({title, version, intro, points[] with {email}, agree}), content_verified_on, site_url (https://rabinnapit.github.io/51C/; filled from GITHUB_REPOSITORY on GitHub Actions only when empty), app_qr (the QR code for
+- `meta`: app_name, version, sync ({url, key}: the Supabase project and its publishable key), owner, copyright, terms ({title, version, intro, points[] with {email}, agree}), content_verified_on, site_url (https://rabinnapit.github.io/51C/; filled from GITHUB_REPOSITORY on GitHub Actions only when empty), app_qr (the QR code for
   site_url as rows of 0 and 1, written by tools/make_handout.py and drawn on the About page), experience_months,
   deadline_months, maintainer, disclaimer, currency, credits. The build adds `built_on`, `build_id`, `edition`.
 - `cert`: `phases` (the four exam areas with the official question counts; they must total 150), requirements, deadlines,

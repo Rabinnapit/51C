@@ -103,6 +103,7 @@
     return section('works', 'How it works', h('div.ab-works', {},
       h('div.ab-work', {}, h('b', {}, 'Everything is in one file'), h('p', {}, 'The lessons, questions, games and even the fonts are inside the guide, so it opens from Teams, SharePoint, OneDrive or a thumb drive and works on government networks with no internet.')),
       h('div.ab-work', {}, h('b', {}, 'Your progress stays with you'), h('p', {}, where)),
+      ed === 'web' ? h('div.ab-work', {}, h('b', {}, 'Nothing is sent unless you sign in'), h('p', {}, 'There are no trackers. Accounts are optional: if you create one, only your email address and your progress are saved, so you can continue on any device.')) :
       h('div.ab-work', {}, h('b', {}, 'Nothing is sent anywhere'), h('p', {}, 'There are no accounts, trackers or outside services. The only link out is the feedback email, and only when you choose to send it.'))));
   }
 

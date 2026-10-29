@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.17.0 (29 October 2026): optional accounts
+
+- **Your progress in your account:** on the website and the installed app, Settings & help → Your account lets a reader
+  create an account or sign in with an email and a password. Their progress then saves to the account a few seconds after
+  every change and comes back on any other phone or computer where they sign in. A fresh device takes the account's
+  progress; if a device and the account both have different progress, the reader chooses which to keep. Accounts are
+  optional and the guide works the same without one. The offline file has no account code at all.
+- Backend: the Supabase project **51C** (separate from the owner's other projects): a `progress` table where each
+  signed-in reader can read and write only their own row, and a `signup` function that creates accounts that work at
+  once (no confirmation email). Sources in `supabase/`. The terms of use, About and the tour now say what an account
+  stores: the email address and the progress, nothing else.
+
 ## 0.16.0 (29 October 2026): B2B Exam Prep, install first
 
 - **New name: B2B Exam Prep** (it was B2B Guide), to say plainly what it is for. The home-screen label is **B2B Prep**,

@@ -90,7 +90,7 @@
         text: 'About tells you who builds this guide and how it stays current. Send feedback or report a problem from there.' },
       { title: 'Keep your progress', target: function () { return q('.topbar .save-btn') || side(navItem('settings')); },
         text: ed === 'offline' ? 'Your progress lives in this browser. Save progress stores it inside the B2B Exam Prep file, so a restart or a cleared browser cannot erase it. Settings & help can also export it.'
-          : ed === 'web' ? 'Your progress lives in this browser on this device. Settings & help can export it to a file and bring it back on another device.'
+          : ed === 'web' ? 'Your progress saves on this device by itself. To keep it in an account and continue on any phone or computer, sign in under Settings & help (optional).'
           : 'In this preview, progress stays in this browser only. Use the downloaded file or the website to keep it.' },
       { title: 'You are set', view: 'home', target: homeTarget,
         text: 'Start with this week\'s tasks. The ? button at the top of any page brings this tour back.' }
