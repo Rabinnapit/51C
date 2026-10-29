@@ -78,6 +78,8 @@
         text: '13 step-by-step checklists for real tasks: your first week, signing up for a course in AITAS, scheduling the exam, a simplified buy, a modification, closeout and more.' },
       { title: 'Practice', target: function () { return side(navGroup('Practice'), 'quiz'); },
         text: 'The practice test has 384 questions, each answer explained with where it is written. Practice by exam area, retry your misses, or take a timed simulator weighted like CON 3990V. Flashcards bring back what you miss.' },
+      { title: 'Ask ' + (CORB.buddy ? CORB.buddy.name() : 'Buddy'), target: function () { return q('.buddy-fab'); },
+        text: (CORB.buddy ? CORB.buddy.name() : 'Buddy') + ' is your study buddy: tap the chat bubble and ask in plain words, like "what is the micro-purchase threshold" or "how do I register in AITAS". It answers from the guide, on this device, with no internet and no AI account, and opens the page to read more. Need more depth? One tap sends your question to Google AI Mode, ChatGPT or Claude in your own account.' },
       { title: 'Arcade', optional: true, target: function () { return narrow() ? null : navItem('arcade'); },
         text: 'Six games on the same facts: RPG battles, a supply convoy, artillery, a qualification range, a space shooter and a sorting yard. Pick a pace from Recruit to Elite; every run ends with a study list.' },
       { title: 'Look it up', target: function () { return side(navGroup('Look it up'), 'glossary'); },

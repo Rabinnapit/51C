@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.19.0 (29 October 2026): Buddy, a new Home, pages that move
+
+- **Buddy, the study buddy.** A chat bubble on every page, in every edition (the offline file too). Ask in plain
+  words ("what is a KO", "how much is the SAT", "when do I have to protest", "how do I register in AITAS") and Buddy
+  answers from the guide itself, on the device, with no internet and no AI account: it finds the passage that answers
+  (glossary, FAR key numbers and deadlines, old-to-new numbers, lessons, certification facts and FAQ, the exam,
+  registering, experience, after certification, courses, how-to guides, official documents, flashcards, practice
+  questions, links, what changed), shows it with Open in the guide and Listen, lists other matches, and says "more"
+  gives the rest. Buddy is not an AI and says so. **More depth? Ask Google AI Mode, ChatGPT or Claude:** one tap opens
+  the reader's own AI with the question and the exam context (CON 3990V, the FAR after the 2026 overhaul) already
+  typed; nothing leaves the device until that tap. Starter questions, greetings and "who are you" are built in. The
+  name and tagline live in `meta.buddy`; the tour has a stop for it; Settings & help has an Ask Buddy button.
+- **A Home page that sells it.** The first-visit hero now reads like an app, not a manual: "Zero to certified.", the
+  free, fun way to pass CON 3990V, your plan in 30 seconds, lessons that play, 384 questions that explain themselves,
+  made by a 51C for new 51Cs and 1102s, with proof chips (79% pass on the first try, FY26; 35 lessons and 384
+  questions; no signal needed) and a soft glow behind it.
+- **Pages that move.** Sections and cards rise into view as the reader scrolls, once per page, never on a redraw,
+  and never when the reader has asked for less motion. Nothing can stay hidden: everything shows within four seconds
+  regardless.
+
 ## 0.18.0 (29 October 2026): the install page, and accounts with a name
 
 - **The install page.** Opening the website in a phone browser now shows one thing: the app's install page, with a

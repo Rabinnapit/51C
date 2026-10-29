@@ -106,7 +106,7 @@
     );
     var mobileItems = navDefs().filter(function (d) { return d.mobile; }).slice(0, 5);
     var mobile = h('nav.mobile-nav', { 'aria-label': 'Quick menu' }, mobileItems.map(function (d) { return h('button', { type: 'button', 'data-view': d.id, onclick: function () { CORB.go(d.id); } }, icon(d.icon || 'dot'), h('span', {}, d.short || d.title)); }));
-    var main = h('main.main', {}, h('div.update-slot'), top, h('div.content#content', { tabindex: '-1' }), mobile);
+    var main = h('main.main', {}, h('div.update-slot'), top, h('div.content#content', { tabindex: '-1' }), mobile, CORB.buddy ? CORB.buddy.fab() : null);
     shell = h('div.shell', {}, side, main);
     app.innerHTML = ''; app.appendChild(shell);
     paintTools(); paintBadges(); paintSide();
@@ -139,6 +139,25 @@
 
   // ---- render ----
   var leaveFn = null;
+  // sections and cards rise into view as the reader scrolls: once per page, never on a redraw of the same page
+  var revealKey = '';
+  function reveal(content, key) {
+    if (key === revealKey) return;
+    revealKey = key;
+    if (!window.IntersectionObserver || document.documentElement.getAttribute('data-motion') === 'reduce') return;
+    var items = [];
+    content.querySelectorAll('.view > *').forEach(function (el, i) {
+      if (i >= 40) return;
+      if (el.classList.contains('home-hero')) Array.prototype.forEach.call(el.children, function (c) { items.push(c); }); else items.push(el);
+    });
+    items.forEach(function (el) { el.classList.add('reveal'); });
+    var io = new IntersectionObserver(function (es) {
+      var j = 0;
+      es.forEach(function (e) { if (!e.isIntersecting) return; e.target.style.setProperty('--d', Math.min(j++, 8) * 70 + 'ms'); e.target.classList.add('in'); io.unobserve(e.target); });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.05 });
+    items.forEach(function (el) { io.observe(el); });
+    setTimeout(function () { items.forEach(function (el) { el.classList.add('in'); }); io.disconnect(); }, 4000);   // nothing ever stays hidden
+  }
   function render() {
     var r = parseHash(), def = CORB.views[r.id] || CORB.views.home;
     if (!def) { document.getElementById('app').innerHTML = '<div class="content"><div class="empty"><h3>Nothing to show</h3></div></div>'; return; }
@@ -159,6 +178,7 @@
     catch (e) { console.error('[B2B] view error', def.id, e); view.appendChild(CORB.ui.callout('danger', 'alert', 'This page hit an error', String(e && e.message || e))); }
     leaveFn = def.onLeave || null;
     window.scrollTo(0, 0);
+    reveal(content, def.id + '|' + JSON.stringify(r.params || {}));
     CORB.ui.closeTermPopover();
     CORB.emit('route', current);
   }

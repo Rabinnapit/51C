@@ -16,7 +16,7 @@
       ['search', 'Find anything', 'Press / or the Search button, then type a word, an acronym or a course number.']
     ];
     root.appendChild(h('div.callout.brass.mb-4', {}, icon('help'), h('div', {}, h('b', {}, 'New here?'), h('span', {}, 'A short tour points at each part of the guide and says what it is for. '),
-      h('div.row.mt-2', {}, h('button.btn.sm.primary', { type: 'button', onclick: function () { if (CORB.tour) CORB.tour.start(); } }, icon('play'), 'Take the tour'), h('a.btn.sm.ghost', { href: '#/about' }, icon('info'), 'About B2B Exam Prep')))));
+      h('div.row.mt-2', {}, h('button.btn.sm.primary', { type: 'button', onclick: function () { if (CORB.tour) CORB.tour.start(); } }, icon('play'), 'Take the tour'), CORB.buddy ? h('button.btn.sm', { type: 'button', onclick: function () { CORB.buddy.open(); } }, icon('message'), 'Ask ' + CORB.buddy.name()) : null, h('a.btn.sm.ghost', { href: '#/about' }, icon('info'), 'About B2B Exam Prep')))));
     root.appendChild(h('div.grid.cols-2.help-grid', {}, steps.map(function (s) { return h('div.card.tight.help-step', {}, h('div.help-icon', {}, icon(s[0])), h('div', {}, h('b', {}, s[1]), h('p.small.muted', {}, s[2]))); })));
     root.appendChild(h('div.section-head', {}, h('h2', {}, 'Where your progress lives')));
     root.appendChild(h('div.card', {}, CORB.ui.rich(

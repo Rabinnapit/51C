@@ -30,3 +30,11 @@
 .v-home .tour-tile .tile-icon { width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); }
 .v-home .tour-tile .tile-icon svg { width: 22px; height: 22px; }
 @media (max-width: 760px) { .v-home .home-three { grid-template-columns: minmax(0, 1fr); } .v-home .news .list-item { flex-direction: column; gap: 2px; } }
+
+/* the hero: a soft glow behind it and the proof chips under the lede */
+.v-home .home-hero { position: relative; }
+.v-home .home-hero::before { content: ""; position: absolute; left: -24px; right: -24px; top: -32px; height: 280px; z-index: -1; pointer-events: none;
+  background: radial-gradient(70% 85% at 18% 35%, var(--accent-soft), transparent 72%); }
+.v-home .home-proof { display: flex; flex-wrap: wrap; gap: 8px; margin-top: var(--space-3); }
+.v-home .home-proof span { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px 6px 9px; border-radius: var(--r-pill); background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: var(--fs-sm); }
+.v-home .home-proof svg { width: 16px; height: 16px; }

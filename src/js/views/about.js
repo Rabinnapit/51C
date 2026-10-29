@@ -8,6 +8,7 @@
   var IS = [
     ['route', 'A step-by-step path', 'Three questions turn into a dated plan and a 26-week exam path, from your first day to passing CON 3990V and earning the DoW Contracting Professional certification.'],
     ['book', 'A study and practice tool', 'Plain-language lessons, explained practice questions with a timed exam simulator, flashcards, how-to guides, a glossary, FAR & key numbers and the Arcade games.'],
+    ['message', 'Buddy, your study buddy', 'Tap the chat bubble and ask in plain words. Buddy finds the answer in the guide on your device, with no internet and no AI account, and opens the page to read more. For more depth, one tap sends your question to Google AI Mode, ChatGPT or Claude in your own account.'],
     ['save', 'One file that works offline', 'No install and no account. It runs without a network connection on a laptop or a phone, and your progress can be saved inside the file.']
   ];
   var IS_NOT = [

@@ -53,6 +53,9 @@ src/js/core/08a-terms     the owner notice and terms of use: shown before first 
 src/js/core/08-tour       the guided tour (same engine as Board Ready's): spotlight + card, offered once, ? button and ? key
 src/js/core/09-pwa        web edition only: the install page (one button per device: Chrome's install box, a hand-off to
                           Chrome or Safari, or Safari's three steps), service worker, update bar
+src/js/core/11-buddy      every edition: Buddy, the study buddy. An index of short passages over every content module
+                          (CORB.buddy.search), the chat panel (open/ask/close), the bubble the shell draws (fab), and the AI
+                          hand-off links (aiLinks: Google AI Mode, ChatGPT, Claude, question + exam context). Name in meta.buddy.
 src/js/views/*.js         home, path, plan, cert, courses, official, learn (+ lesson), howto, quiz, cards, arcade, games (quick drills), glossary, far, links, settings, about;
                           explain.js is not a view: the picture explainers (CORB.explain) shared by cert and official;
                           lessonfig.js is not a view either: the lesson pictures (CORB.lessonFig) drawn from the figs module

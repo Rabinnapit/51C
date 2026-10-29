@@ -58,9 +58,10 @@
     var h = CORB.ui.h, icon = CORB.ui.icon;
     var f = CORB.setupForm();
     root.appendChild(h('section.home-hero', {},
-      h('div.eyebrow', {}, 'Back to Basics · DoW Contracting Professional certification'),
-      hello(h), h('h1', {}, 'From day one to certified.'),
-      h('p.lede', {}, 'A plain-language guide for new 51C contracting NCOs and 1102 contract specialists. Answer three questions and B2B Exam Prep builds a dated plan and a 26-week path to pass the exam, then teaches and tests you on everything in it.'),
+      h('div.eyebrow', {}, 'Free \u00b7 Works offline \u00b7 Built by a 51C'),
+      hello(h), h('h1', {}, 'Zero to certified.'),
+      h('p.lede', {}, 'The free, fun way to pass CON 3990V. Your plan in 30 seconds. Lessons that play like pictures, 384 questions that explain themselves, flashcards and six games. Made by a 51C for new 51Cs and 1102s.'),
+      h('div.home-proof', {}, ['79% pass on the first try', '35 lessons, 384 questions', 'No signal needed'].map(function (t) { return h('span', {}, icon('check'), t); })),
       h('div.home-three', {},
         [['school', '5 courses', 'CON 1100, 1200V, 1300V, 7300V and 1400V'], ['award', '1 exam', 'CON 3990V: 150 questions, 70% to pass'], ['clipboard', '12 months', 'of full-time contracting experience']].map(function (x) {
           return h('div.three-item', {}, icon(x[0]), h('div', {}, h('b', {}, x[1]), h('span', {}, x[2])));
