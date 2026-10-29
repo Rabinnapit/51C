@@ -44,6 +44,12 @@ the Federal Register notices as reported by Wiley, Nextgov and Washington Techno
 - The QR install sheet (`tools/make_handout.py`, `handout/`) and the QR card on About and on the install page.
 - What's new on About, the website note in single-file copies, manifest shortcuts, bigger touch targets, top-bar tooltips below the bar, three more overhaul links.
 
+## Done in 1.2.2 (30 Oct 2026)
+
+- The install sheet served by the website (Settings → Get the app → Share it; About), "What is inside" on About, the
+  terms allow the facilitator editor and name the AI connector (version bumped, so everyone agrees again), the first-use
+  dialog closes only by agreeing, the landing footer names the owner, build checks for all of it, LICENSE for both apps.
+
 ## Still open (follow-ups)
 
 - Accounts and cloud progress sync (B2B has an optional Supabase account; Board Ready keeps progress on the device).

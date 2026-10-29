@@ -8,7 +8,9 @@ Reads site_url from src/data/meta.json and writes:
   handout/Board_Ready_Install_Sheet.pdf                    (PDFs stay out of git: print it from this computer)
   src/data/meta.json "app_qr"                              the same QR as rows of 0 and 1; the About page and the
                                                            web edition's install page draw it
-Run it again only if the address changes. People who scan the code get every later update by themselves.
+tools/build.py copies handout/ into the web edition, so the website serves the sheet at handout/Board_Ready_Install_Sheet.html
+(Settings -> Get the app -> Share it; About -> Get it on your phone). Run it again only if the address or the sheet's text
+changes. People who scan the code get every later update by themselves.
 Adapted from B2B Exam Prep's make_handout.py.
 """
 import html, json, shutil, subprocess, sys, tempfile
@@ -25,6 +27,7 @@ URL = META.get("site_url") or sys.exit("Set site_url in src/data/meta.json first
 WHO = META.get("owner") or (META.get("maintainer") or {}).get("name", "")
 COPY = META.get("copyright", "")
 NAME = META.get("app_name", "Board Ready")
+EMAIL = (META.get("maintainer") or {}).get("email", "")
 
 qr = segno.make(URL, error="m", micro=False)
 OUT.mkdir(exist_ok=True)
@@ -40,13 +43,14 @@ sheet = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(NAME)} - install sheet</title>
 <style>
 @page {{ size: Letter; margin: 0.45in; }}
 * {{ box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }}
 html, body {{ margin: 0; padding: 0; }}
 body {{ color: #14181f; background: #fff; font: 12.5pt/1.45 "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; }}
-.sheet {{ width: 7.4in; margin: 0 auto; }}
+.sheet {{ width: 7.4in; max-width: 100%; margin: 0 auto; }}
 .band {{ background: #173a6b; color: #fff; padding: 0.22in 0.3in 0.18in; border-radius: 0.08in 0.08in 0 0; }}
 .band h1 {{ margin: 0; font: 800 32pt/1 "Bahnschrift", "Segoe UI", Arial, sans-serif; letter-spacing: 0.01em; }}
 .band p {{ margin: 0.09in 0 0; font-size: 13pt; color: #d6e2f5; }}
@@ -69,6 +73,7 @@ li::before {{ content: counter(s); position: absolute; left: 0; top: 0.01in; wid
 .cell {{ border-radius: 0.06in; background: #f1f3f7; padding: 0.12in 0.14in; font-size: 11pt; line-height: 1.38; }}
 .cell b {{ display: block; margin-bottom: 0.03in; font-size: 12pt; color: #173a6b; }}
 .foot {{ margin-top: 0.2in; font-size: 9.5pt; line-height: 1.45; color: #5f6774; }}
+@media screen and (max-width: 640px) {{ body {{ padding: 8px; }} .scan, .steps, .does {{ grid-template-columns: 1fr; }} .band h1 {{ font-size: 24pt; }} .scan h2 {{ font-size: 20pt; }} }}
 </style>
 </head>
 <body>
@@ -107,7 +112,7 @@ li::before {{ content: counter(s); position: absolute; left: 0; top: 0.01in; wid
   <p class="foot"><b>{html.escape(COPY)}</b> Owned by {html.escape(WHO)}. Free for your own study and for sharing this sheet or the link;
   copying, changing or selling the app needs the owner's written permission.<br>A training aid, not official guidance: confirm citations, thresholds and local
   procedures with the Contracting &amp; Policy office. No tracking and no account: nothing you do in the app is sent anywhere.
-  Also works on Windows and Mac computers: open the same address in Edge or Chrome and choose Install.</p>
+  Also works on Windows and Mac computers: open the same address in Edge or Chrome and choose Install.{(' Questions: ' + html.escape(EMAIL) + '.') if EMAIL else ''}</p>
 </div>
 </body>
 </html>

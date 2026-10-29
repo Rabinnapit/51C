@@ -268,7 +268,17 @@
         h('a.btn', { href: 'downloads/1 - READ ME FIRST - How to install Board Ready.docx', download: '' }, icon('mail'), 'Email package: READ ME FIRST'),
         h('a.btn', { href: 'downloads/4 - ' + base + '-Candidate-Offline.html.docx', download: '' }, icon('mail'), 'Email package: candidate code document')),
       h('p.small.muted', {}, 'A downloaded copy keeps the date it was built' + (m.built_on ? ' (this build: ' + str(m.built_on).slice(0, 10) + ')' : '') + '. When the content changes, download it again.'));
-    return cardShell(sec('app'), [install, h('h3.set-sub', {}, 'Copies for computers without internet'), files]);
+    // the QR code and the install sheet (tools/make_handout.py, served at handout/), so a facilitator can pass the app on
+    var share = m.site_url && Array.isArray(m.app_qr) && m.app_qr.length && ui.qrSvg ? h('div.stack', {},
+      h('h3.set-sub', {}, 'Share it'),
+      h('div.set-share', {}, h('div.set-qr', { html: ui.qrSvg(m.app_qr, 'QR code for ' + m.site_url) }),
+        h('div', {},
+          h('p', {}, 'Anyone who scans this code gets the app. Print the install sheet for a study group, a notice board or a new candidate.'),
+          h('a.set-url', { href: m.site_url, target: '_blank', rel: 'noopener' }, m.site_url),
+          h('div.set-actions', {},
+            h('a.btn', { href: 'handout/Board_Ready_Install_Sheet.html', target: '_blank', rel: 'noopener' }, icon('print'), 'Print the install sheet'),
+            h('button.btn', { type: 'button', onclick: function () { ui.copyText(m.site_url); } }, icon('copy'), 'Copy the link'))))) : null;
+    return cardShell(sec('app'), [install, share, h('h3.set-sub', {}, 'Copies for computers without internet'), files]);
   }
 
   // ------------------------------------------------------------- ai connector

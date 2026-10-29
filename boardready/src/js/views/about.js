@@ -1,6 +1,7 @@
 /* VIEW: about — what this app is, what it is not, and how to read everything in it.
    Layout: the app name with its edition and dates, the developer and maintainer (where to report a problem),
-   the three candidate names (full edition), an is/is-not pair, the badge legend with the RFO baseline, sources,
+   the owner and terms, the phone app with its QR code and install sheet, what's new, the three candidate names (full
+   edition), an is/is-not pair, what is inside (counts from this build), the badge legend with the RFO baseline, sources,
    how progress is stored, how a facilitator updates content (full edition) and the keyboard shortcuts, collapsed.
    Data: CORB.DATA.meta (name_options, sources, disclaimer, version, built_on, content_verified_on).
    Renders sensible copy when meta is missing or partial. Never throws. Stores nothing. */
@@ -143,7 +144,27 @@
             h('li', {}, icon('phone'), h('span', {}, h('b', {}, 'iPhone: '), 'scan with the Camera app. The page opens in Safari: tap Share, then "Add to Home Screen", then Add.')),
             h('li', {}, icon('phone'), h('span', {}, h('b', {}, 'Android: '), 'scan with the Camera app, then tap "Install app". If the page opens in Samsung Internet, it offers "Install with Chrome" first.')),
             h('li', {}, icon('refresh'), h('span', {}, 'Open it once while online. After that it works offline, and new versions arrive by themselves.')),
-            web ? null : h('li', {}, icon('shield'), h('span', {}, 'Where the network blocks the website, keep using this file; the website\'s Settings page offers the newest file for download.')))))]);
+            web ? null : h('li', {}, icon('shield'), h('span', {}, 'Where the network blocks the website, keep using this file; the website\'s Settings page offers the newest file for download.'))),
+          h('div.ab-legend-actions', {},
+            web ? h('a.btn', { href: 'handout/Board_Ready_Install_Sheet.html', target: '_blank', rel: 'noopener' }, icon('print'), 'Print the install sheet') : null,
+            h('button.btn' + (web ? '.ghost' : ''), { type: 'button', onclick: function () { ui.copyText(m.site_url); } }, icon('copy'), 'Copy the link'))))]);
+  }
+
+  // ------------------------------------------------------------ what is inside
+  function inside() {
+    var D = CORB.DATA || {}, R = D.regulations || {};
+    function n(v) { return Array.isArray(v) ? v.length : 0; }
+    var games = 0;
+    try { var A = window.ARCADE, g = A && (A.games || A.order); games = Array.isArray(g) ? g.length : g && typeof g === 'object' ? Object.keys(g).length : 0; } catch (e) { games = 0; }
+    var items = [
+      ['book', n(D.questions), 'board questions', 'library'], ['quiz', n(D.mcq), 'quiz items', 'quiz'], ['layers', n(D.primers), 'study primers', 'primers'],
+      ['process', n((D.process || {}).steps), 'process steps', 'process'], ['refresh', arr(R.crosswalk).filter(function (c) { return c && c.confidence === 'verified'; }).length, 'old-to-new FAR pairs', 'regulations'],
+      ['scale', n(R.thresholds), 'dollar thresholds', 'regulations'], ['glossary', n(D.glossary), 'glossary terms', 'glossary'], ['gamepad', games, 'Arcade games', 'arcade'], ['link', n(D.resources), 'links checked', 'resources']
+    ].filter(function (x) { return x[1] && hasView(x[3]); });
+    if (!items.length) return null;
+    return section('inside', '', 'What is inside', h('div.ab-stats', {}, items.map(function (x) {
+      return h('a.ab-stat', { href: '#/' + x[3] }, h('span.ab-stat-icon', {}, icon(x[0])), h('b.num', {}, String(x[1])), h('span', {}, x[2]));
+    })), 'Every count comes from this build. Tap one to open it.');
   }
 
   // --------------------------------------------------------------- what's new
@@ -270,8 +291,8 @@
     var wrap = h('div.ab-app');
     root.appendChild(wrap);
     var blocks = CORB.isCandidateEdition()
-      ? [hero, maintainer, owner, phone, whatsNew, whatItIs, legend, storage, sources, shortcuts, closing]
-      : [hero, maintainer, owner, phone, whatsNew, names, whatItIs, legend, storage, sources, updating, shortcuts, closing];
+      ? [hero, maintainer, owner, phone, whatsNew, whatItIs, inside, legend, storage, sources, shortcuts, closing]
+      : [hero, maintainer, owner, phone, whatsNew, names, whatItIs, inside, legend, storage, sources, updating, shortcuts, closing];
     blocks.forEach(function (fn, i) {
       var node;
       try { node = fn(); } catch (e) { node = null; }

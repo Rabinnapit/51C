@@ -4,11 +4,11 @@
   "org": "411th Contracting Support Brigade",
   "org_short": "CORB prep · 411th CSB",
   "maintainer": {
-    "role": "Developer and maintainer",
+    "role": "Owner, developer and maintainer",
     "name": "SFC Rabin Napit",
     "email": "rabin.napit.mil@army.mil"
   },
-  "version": "1.2.1",
+  "version": "1.2.2",
   "built_on": "",
   "content_verified_on": "2026-10-29",
   "next_board": "2026-10-14",
@@ -38,21 +38,33 @@
   "copyright": "© 2026 Rabin Napit. All rights reserved.",
   "terms": {
     "title": "Terms of use",
-    "version": "2026-10-29.1",
+    "version": "2026-10-30.1",
     "intro": "Board Ready is owned by SFC Rabin Napit. Please read these short terms before you use it.",
     "points": [
       "**Owner.** Board Ready, including its code, design, primers, quiz items, scenarios and games, is the work of SFC Rabin Napit, who owns it. © 2026 Rabin Napit. All rights reserved.",
-      "**Free for your own study.** You may use it at no cost to prepare for a contracting officer review board or to run one.",
+      "**Free for your own study.** You may use it at no cost to prepare for a contracting officer review board, to run one, or to run your unit's study group and mock boards.",
       "**Sharing is welcome, unchanged.** You may share the official link or QR code, or pass on an unchanged copy of the file, so others can use it for their own study.",
-      "**Not allowed without the owner's written permission:** copying or changing its content or code; putting any part of it into another app, website, course or product; hosting a copy on another website; selling it or charging for it; removing the owner's name or these terms.",
+      "**Not allowed without the owner's written permission:** copying or changing its code or design; putting any part of it into another app, website, course or product; hosting a copy on another website; selling it or charging for it; removing the owner's name or these terms. Fixing or adding questions with the app's own content editor, and sharing that copy inside your unit, is allowed.",
       "**Training aid only.** It is not official guidance and is not endorsed by the U.S. Army, Army Contracting Command, the 411th Contracting Support Brigade or the Department of War. Every answer shows how far to trust it; always check the official sources it links to and your Contracting & Policy office. It is provided as is, without any warranty.",
       "**Public material stays public.** The regulations, statutes and government documents it quotes are public works of the U.S. Government and remain free for everyone. The fonts are used under the SIL Open Font License.",
-      "**Your privacy.** No tracking, no accounts and no outside services. Your progress and notes stay in your browser or in the copy of the file you save them into, and nothing is sent anywhere. A file with notes saved inside carries those notes to anyone you give it to.",
+      "**Your privacy.** No tracking and no accounts. Your progress and notes stay in your browser or in the copy of the file you save them into, and nothing is sent anywhere, unless you set up the optional AI connector in an edition that has one: then the questions you ask the mentor go to the service you chose, with your own key. A file with notes saved inside carries those notes to anyone you give it to.",
       "**Questions or permission:** email the owner at {email}."
     ],
     "agree": "Select I agree to accept these terms and start using Board Ready. If you do not agree, please close it."
   },
   "whats_new": [
+    {
+      "version": "1.2.2",
+      "date": "2026-10-30",
+      "title": "The install sheet on the website, what is inside, clearer terms",
+      "items": [
+        "Settings → Get the app → Share it: the QR code, the link and a one-page install sheet to print; About → Get it on your phone has the same sheet.",
+        "About → What is inside: every module with its count from this build, each a link.",
+        "The terms now say that facilitators may fix or add questions with the content editor, and what the optional AI connector sends. They changed, so the app asks you to accept them once more.",
+        "The first-use terms close only by agreeing; the landing page footer names the owner and opens them.",
+        "The build refuses to publish without the owner notice, the terms, the QR code and a current install sheet."
+      ]
+    },
     {
       "version": "1.2.1",
       "date": "2026-10-29",

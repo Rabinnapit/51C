@@ -37,6 +37,16 @@ in each version (`meta.whats_new`), and a single-file copy tells the reader wher
 gained shortcuts (long-press the icon: Quiz, Flashcards, Mock board, Library), small buttons grow on touch screens, and
 top-bar tooltips open below the bar. New links: the FAR Companion, the searchable overhauled FAR and the FAI hub.
 
+**Share it, what is inside, clearer terms (v1.2.2).** The website serves the install sheet itself
+(`handout/Board_Ready_Install_Sheet.html`, copied into the web edition by `build.py`): Settings → Get the app → Share it
+shows the QR code, the link, "Print the install sheet" and "Copy the link", and About → Get it on your phone has the same
+buttons. About gained "What is inside" (every module with its count from the build, each a link). The terms now allow
+facilitators to fix or add questions with the content editor and say what the optional AI connector sends, so their
+version changed and everyone is asked once more; the first-use dialog closes only by agreeing (no close button, and it
+comes back after Escape). The landing page footer names the owner and opens the terms. `check_content.py` fails the
+build when the owner notice, the terms, the QR code, a current install sheet or this version's What's new entry is
+missing, and READ ME FIRST names the owner and the website. The repository LICENSE now covers both apps.
+
 **On the web (v1.2.0).** The web edition is the candidate edition plus `core/09-pwa.js`: an install page on first open (one
 button for the device: Chrome's install box on Android, Safari's three taps on an iPhone, the address-bar install on a
 computer), a service worker that keeps the app working with no signal, a `version.json` check that offers a reload when a
@@ -142,7 +152,10 @@ the study-group game, is in the Board room. The contract for adding games is `do
 ## Distribute it
 
 The simplest way is the website: https://rabinnapit.github.io/51C/boardready/ installs as an app and keeps itself current.
-Where the network blocks the website, use the files. Army email blocks .html attachments, so email the Word packages in
+Print the install sheet (one Letter page with the QR code and the iPhone and Android steps) from Settings → Get the app →
+Share it on the website, or from `handout/Board_Ready_Install_Sheet.html`, for a study group, a notice board or a new
+candidate; the QR code alone is `handout/board-ready-qr.png` for slides and email. Where the network blocks the website,
+use the files. Army email blocks .html attachments, so email the Word packages in
 `dist/docx/` instead (the website's Settings page offers the same files).
 
 1. Email "1 - READ ME FIRST - How to install Board Ready.docx" with the code document for the edition you need from `dist/docx/`: "4 - BoardReady-Candidate-Offline.html.docx" to share with candidates, "3 - BoardReady-Candidate.html.docx" for the candidate edition with the AI connector, "2 - BoardReady.html.docx" for the full version. Inside the Army network the .html file itself can be shared on Teams or SharePoint; recipients click it and choose Open or Save.
@@ -185,8 +198,9 @@ python tools/publish_site.py
 `build_bank.py` and `merge_content.py` look for the source lists in `corb/` and `CORB2/` beside the CORB folder (any parent of
 the app that has them, or `CORB_SOURCES`). Dated content changes that are not in the source lists (the October 2026 re-check,
 for example) live in `tools/content_patches.py`; `merge_content.py` applies them on every merge, and `python
-tools/content_patches.py` applies them to `src/data` directly. `check_content.py` validates the data, the quiz bank and every
-script before a build; GitHub Actions runs it first. `publish_site.py` assembles `docs/boardready/` for GitHub Pages; the
+tools/content_patches.py` applies them to `src/data` directly. `check_content.py` validates the data, the quiz bank, the owner notice, the terms, the QR code, the install sheet, the
+What's new entry and every script before a build; GitHub Actions runs it first. `make_handout.py` (segno) remakes the QR
+code and the install sheet: run it when `site_url` or the sheet's text changes and commit `handout/` (the PDF stays out of git). `publish_site.py` assembles `docs/boardready/` for GitHub Pages; the
 workflow in `.github/workflows/pages.yml` runs all of this on every push to `main`, so nothing built is committed.
 
 `build_bank.py` merges the xlsx, the legacy CSV and the study decks into `src/data/questions.json` and writes a change log to `content/bank_changelog.md`.

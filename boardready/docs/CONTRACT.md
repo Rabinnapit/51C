@@ -257,6 +257,14 @@ Fiscal Law & Funding · Competition & Market Research · Acquisition Planning & 
   Settings → Get the app shows install and downloads in the web edition and the website address in a single file.
 - Touch screens (`pointer: coarse`): `.btn.sm` grows to 42 px; top-bar tooltips open below the bar and align to the
   window edge at both ends (`03-components.css`).
+- 1.2.2: `tools/build.py` copies `handout/` (the QR code and the install sheet from `tools/make_handout.py`) into
+  `dist/web/handout/`, so the website serves `handout/Board_Ready_Install_Sheet.html`; Settings → Get the app → Share it
+  (web edition) and About → Get it on your phone link to it and copy the link. About's "What is inside" counts the
+  modules of this build (`CORB.DATA`, `ARCADE.games`). `CORB.terms.available()`; the first-use dialog (`show(onAgree)`)
+  has no close button and `require()` brings it back if it is dismissed another way, until the reader agrees. The
+  landing page footer shows `meta.copyright` and opens the terms. `check_content.py` requires `owner`, `copyright`,
+  `site_url`, `terms` {version, points, agree}, a square `app_qr`, a self-contained install sheet that shows `site_url`,
+  and a `whats_new` entry for the current version. READ ME FIRST (`make_docx.py`) names the owner and the website.
 - Content that is not in the source lists goes in `tools/content_patches.py` as a dated function; `merge_content.py`
   applies it before writing `src/data`, so a merge never undoes it. `regulations.updates[]` (`{id, date, title, text,
   url, status, source}`) is the "What changed" panel in the Regulation explorer.

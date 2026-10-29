@@ -4,38 +4,110 @@
     {
       "name": "b2b-dev",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8790", "--directory", "src"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8790",
+        "--directory",
+        "src"
+      ],
       "port": 8790
     },
     {
       "name": "b2b-site",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8791", "--directory", "docs"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8791",
+        "--directory",
+        "docs"
+      ],
       "port": 8791
     },
     {
       "name": "b2b-dist",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8792", "--directory", "dist"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8792",
+        "--directory",
+        "dist"
+      ],
       "port": 8792
     },
     {
       "name": "boardready-dev",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8793", "--directory", "boardready/src"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8793",
+        "--directory",
+        "boardready/src"
+      ],
       "port": 8793
     },
     {
       "name": "boardready-dist",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8794", "--directory", "boardready/dist"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8794",
+        "--directory",
+        "boardready/dist"
+      ],
       "port": 8794
     },
     {
       "name": "boardready-site",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8795", "--directory", "docs/boardready"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8795",
+        "--directory",
+        "docs/boardready"
+      ],
       "port": 8795
+    },
+    {
+      "name": "boardready-dev-alt",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8811",
+        "--directory",
+        "boardready/src"
+      ],
+      "port": 8811
+    },
+    {
+      "name": "boardready-dist-alt",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8812",
+        "--directory",
+        "boardready/dist"
+      ],
+      "port": 8812
+    },
+    {
+      "name": "boardready-site-alt",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8813",
+        "--directory",
+        "docs/boardready"
+      ],
+      "port": 8813
     }
   ]
 }

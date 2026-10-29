@@ -33,7 +33,7 @@
               h('button.btn.lg.gold', { onclick: function () { enter('candidate', 'dashboard'); } }, icon('zap'), cand ? 'Start studying' : 'Start as a candidate'),
               cand ? null : h('button.btn.lg.l-ghost', { onclick: function () { enter('board', 'board'); } }, icon('users'), 'Board room'),
               cand ? null : h('button.btn.lg.l-ghost', { onclick: function () { enter('facilitator', 'dashboard'); } }, icon('settings'), 'Facilitator')),
-            h('div.l-trust.rise.rise-4', {}, icon('shield'), h('span', {}, 'No account needed. Nothing to install.'))
+            h('div.l-trust.rise.rise-4', {}, icon('shield'), h('span', {}, CORB.isWeb && CORB.isWeb() ? 'No account needed. Free, and it works offline.' : 'No account needed. Nothing to install.'))
           ),
           h('div.l-hero-panel.rise.rise-3', {},
             h('div.l-panel-head', {}, h('span.l-pip'), 'At a glance'),
@@ -48,7 +48,10 @@
             h('div.l-foot-btns', {},
               h('button.btn.sm.l-ghost', { onclick: function () { CORB.go('settings'); } }, icon('settings'), 'Settings'),
               h('button.btn.sm.l-ghost', { onclick: function () { CORB.go('about'); } }, icon('info'), cand ? 'About' : 'About & names'))),
-          h('div.l-foot-bar', {}, h('span', {}, CORB.appName() + ' · v' + (meta.version || '1.0') + (meta.built_on ? ' · built ' + meta.built_on : '')), h('span', {}, 'Not an official Army product. No official seals used.'))
+          h('div.l-foot-bar', {},
+            h('span', {}, CORB.appName() + ' · v' + (meta.version || '1.0') + (meta.built_on ? ' · built ' + meta.built_on : '') + (meta.copyright ? ' · ' + meta.copyright : '')),
+            h('span', {}, 'Not an official Army product. No official seals used. ',
+              CORB.terms && CORB.terms.available && CORB.terms.available() ? h('a', { href: '#', onclick: function (e) { e.preventDefault(); CORB.terms.show(); } }, 'Terms of use') : null))
         )
       );
       root.appendChild(page);

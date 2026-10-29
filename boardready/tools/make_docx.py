@@ -11,7 +11,7 @@ Each code document holds the HTML source, one line per paragraph.
 Every code document is round-tripped: the text is read back out of the .docx and compared to the HTML
 character by character. The script fails loudly if anything differs.
 """
-import sys, hashlib
+import sys, hashlib, json
 from pathlib import Path
 from docx import Document
 from docx.shared import Pt, Inches
@@ -133,6 +133,13 @@ def readme_doc(out_path: Path, stats):
     doc.add_heading("Sharing", level=2)
     doc.add_paragraph("Once saved, the file can go in a Teams or SharePoint folder or be emailed inside the Army network, and people just open it. "
                       "Progress stays on each person’s own device. A file with notes saved inside carries those notes, so share a fresh copy.")
+    meta = json.loads((APP / "src" / "data" / "meta.json").read_text(encoding="utf-8"))
+    if meta.get("owner"):
+        doc.add_heading("Owner, terms of use and the website", level=2)
+        doc.add_paragraph(f"{meta.get('app_name', 'Board Ready')} is owned by {meta['owner']} ({meta.get('copyright', '')}). It is free for your own study and for sharing "
+                          "unchanged; the full terms of use are in the app under About, and the app asks you to accept them the first time it opens."
+                          + (f" Where the network allows it, {meta['site_url']} installs the same app on a phone or computer and keeps itself current; "
+                             "the app's Settings page has a QR code and an install sheet to print." if meta.get("site_url") else ""))
     doc.add_paragraph("Training aid, not authoritative guidance. Verify citations, thresholds and local procedures with the Contracting & Policy office before relying on them.")
     doc.save(out_path)
 

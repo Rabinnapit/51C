@@ -98,7 +98,7 @@
         h('button.btn.sm.ghost', { type: 'button', onclick: function () { closeSide(); if (CORB.tour) CORB.tour.start(); } }, icon('help'), 'Guided tour')),
       h('button.side-collapse', { type: 'button', 'aria-label': 'Collapse the menu', onclick: function () { CORB.setSideMini(!isMini()); } }, icon('arrow-left'), h('span', {}, 'Collapse menu')),
       h('div.side-foot', {}, h('div', {}, 'Training aid · not authoritative guidance'), h('div.mt-2', {}, 'Content verified ', h('span.num', {}, meta.content_verified_on || '—'), ' · v', CORB.VERSION),
-        meta.copyright ? h('div.mt-2', {}, meta.copyright + ' ', h('a', { href: '#', onclick: function (e) { e.preventDefault(); if (CORB.terms) CORB.terms.show(); } }, 'Terms of use')) : null,
+        meta.copyright ? h('div.mt-2', {}, meta.copyright + ' ', h('a', { href: '#', onclick: function (e) { e.preventDefault(); closeSide(); if (CORB.terms) CORB.terms.show(); } }, 'Terms of use')) : null,
         maint ? h('div.mt-2.side-maint', {}, maint.role + ': ', h('a', { href: CORB.ui.maintainerMailto(), title: 'Email ' + maint.name + ' about a problem on this page', onclick: function (e) { e.currentTarget.href = CORB.ui.maintainerMailto(); } }, maint.name)) : null)
     );
 

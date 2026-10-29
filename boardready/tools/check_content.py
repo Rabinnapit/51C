@@ -3,7 +3,8 @@
   python tools/check_content.py
 
 Checks: every src/data/*.json parses; the modules the app needs are there with the shape docs/CONTRACT.md describes;
-meta.json carries version, app_name, maintainer and content_verified_on; no email address in the content apart from the
+meta.json carries version, app_name, maintainer, content_verified_on, the owner notice, the terms of use, the website's
+QR code (with the install sheet it belongs to) and a What's new entry for this version; no email address in the content apart from the
 maintainer's; every quiz item has exactly one right option and a reason per option; the right answer does not give itself
 away by length (the same rule as tools/merge_content.py); every view registers itself; and `node --check` passes on every
 script when Node is installed. Exit code 1 on any problem.
@@ -44,6 +45,31 @@ ns = (SRC / "js" / "core" / "00-namespace.js").read_text(encoding="utf-8")
 m = re.search(r"CORB\.VERSION = '([^']+)'", ns)
 if m and m.group(1) != meta.get("version"):
     P(f"CORB.VERSION {m.group(1)} differs from meta.json version {meta.get('version')}")
+
+# ---- owner notice, terms of use, the phone-app QR code and the install sheet (core/08a-terms.js, tools/make_handout.py) ----
+for key in ("owner", "copyright", "site_url"):
+    if not meta.get(key):
+        P(f"meta.json: {key} is missing")
+terms = meta.get("terms") or {}
+if not (terms.get("version") and terms.get("points") and terms.get("agree")):
+    P("meta.json: terms needs version, points and agree (the app shows them before first use)")
+qr = meta.get("app_qr")
+if meta.get("site_url") and not (isinstance(qr, list) and qr and all(isinstance(r, str) and len(r) == len(qr) and set(r) <= {"0", "1"} for r in qr)):
+    P("meta.json: app_qr is missing or malformed; run tools/make_handout.py")
+sheet = APP / "handout" / "Board_Ready_Install_Sheet.html"
+if meta.get("site_url") and not sheet.exists():
+    P("handout/Board_Ready_Install_Sheet.html is missing; run tools/make_handout.py")
+elif meta.get("site_url") and sheet.exists():
+    sheet_text = sheet.read_text(encoding="utf-8")
+    if meta["site_url"] not in sheet_text:
+        P("the install sheet does not show the current site_url; run tools/make_handout.py")
+    if re.search(r"<(script|link|img)[^>]+(src|href)=\"https?://", sheet_text):
+        P("the install sheet loads something from the network; it must stay self-contained")
+wn = meta.get("whats_new")
+if not isinstance(wn, list) or not wn or not all(isinstance(v, dict) and v.get("version") and v.get("items") for v in wn):
+    P("meta.json: whats_new needs a list of {version, date, title, items[]}")
+elif wn[0].get("version") != meta.get("version"):
+    P(f"meta.json: whats_new starts with {wn[0].get('version')} but the version is {meta.get('version')}; add this version's entry")
 
 questions = mods.get("questions") or []
 ids = [q.get("id") for q in questions]

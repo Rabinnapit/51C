@@ -165,6 +165,15 @@ def write_web_assets(built):
         shutil.rmtree(icons)
     if (WEB / "icons").exists():
         shutil.copytree(WEB / "icons", icons)
+    # the QR code and the install sheet (tools/make_handout.py), served beside the app at handout/
+    hand, dest = APP / "handout", out / "handout"
+    if dest.exists():
+        shutil.rmtree(dest)
+    if hand.exists():
+        dest.mkdir()
+        for f in sorted(hand.iterdir()):
+            if f.is_file() and f.suffix.lower() in (".html", ".svg", ".png", ".pdf"):
+                shutil.copyfile(f, dest / f.name)
     (out / "sw.js").write_text((WEB / "sw.js").read_text(encoding="utf-8").replace("__BUILD_ID__", BUILD_ID), encoding="utf-8")
     manifest = {
         "name": meta.get("app_name", "Board Ready"), "short_name": meta.get("app_name", "Board Ready"),
@@ -390,7 +399,7 @@ if __name__ == "__main__":
             for needle in ("CORE-09-PWA", "serviceWorker.register"):
                 if needle in ed_html:
                     probs.append(f"{ed}: {needle} is in the file")
-    print(f"web:  {web_dir} (manifest, sw.js build {BUILD_ID}, icons, version.json, downloads/)")
+    print(f"web:  {web_dir} (manifest, sw.js build {BUILD_ID}, icons, version.json, downloads/, handout/)")
     print(f"dev:  {dev}")
     print(f"css={len(css_files)} data={len(data_files)} core={len(core_files)} views={len(view_files)}")
     for f in data_files:

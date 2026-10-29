@@ -135,6 +135,13 @@ body[data-projector] .v-settings .set-grid { grid-template-columns: minmax(0, 1f
 /* 1.2.0: Get the app, voice tips */
 .v-settings .set-sub { margin: var(--space-5) 0 var(--space-3); font-size: var(--fs-lg); font-family: var(--font-body); font-weight: 800; }
 .v-settings .set-tips { margin: var(--space-3) 0 0; padding-left: 1.2em; color: var(--ink-2); font-size: var(--fs-sm); }
+/* Share it (1.2.2): the QR code, black on white in every theme, beside the link and the install sheet */
+.v-settings .set-share { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: var(--space-4); align-items: center; }
+.v-settings .set-qr { padding: 8px; border-radius: var(--r-md); background: #fff; box-shadow: inset 0 0 0 1px var(--line); line-height: 0; }
+.v-settings .set-qr svg { display: block; width: 100%; height: auto; }
+.v-settings .set-share p { margin: 0 0 var(--space-2); }
+.v-settings .set-url { display: inline-block; margin: 0 0 var(--space-3); font-weight: 700; word-break: break-all; }
+@media (max-width: 560px) { .v-settings .set-share { grid-template-columns: 1fr; } .v-settings .set-qr { max-width: 180px; } }
 .v-settings .set-tips li { margin: .3em 0; }
 .v-settings .set-more { margin-top: var(--space-3); font-size: var(--fs-sm); }
 .v-settings .set-more summary { cursor: pointer; font-weight: 700; color: var(--accent); }
