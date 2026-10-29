@@ -87,7 +87,8 @@
         h('button.btn.sm', { type: 'button', onclick: function () { CORB.cycleTextSize(); } }, icon('text'), 'Text size')),
       h('button.side-collapse', { type: 'button', 'aria-label': 'Collapse the menu', onclick: function () { CORB.setSideMini(!isMini()); } }, icon('arrow-left'), h('span', {}, 'Collapse menu')),
       h('div.side-foot', {},
-        h('div', {}, 'Unofficial training aid. Not endorsed by the Army, DoW or WarU.'),
+        meta.copyright ? h('div', {}, meta.copyright + ' ', h('a', { href: '#', onclick: function (e) { e.preventDefault(); if (CORB.terms) CORB.terms.show(); } }, 'Terms of use')) : null,
+        h('div.mt-2', {}, 'Unofficial training aid. Not endorsed by the Army, DoW or WarU.'),
         h('div.mt-2', {}, 'v' + (meta.version || '') + ' · content checked ' + CORB.util.fmtDate(meta.content_verified_on || '')),
         CORB.edition() === 'preview' ? h('div.mt-2', {}, 'Preview copy: file downloads and printing are off.') : null,
         maint ? h('div.mt-2', {}, h('a', { href: CORB.ui.feedbackMailto('feedback') || '#', onclick: function (e) { e.currentTarget.href = CORB.ui.feedbackMailto('feedback'); } }, 'Send feedback')) : null)
@@ -186,7 +187,10 @@
     if (!location.hash || location.hash === '#') { try { history.replaceState(null, '', '#/home'); } catch (e) { location.hash = '#/home'; } }
     render();
     CORB.emit('boot');
-    // the first time the guide opens, offer the tour once the page has drawn
-    setTimeout(function () { if (CORB.tour) CORB.tour.offer(); }, 900);
+    // the first time the guide opens: the terms of use, then the tour offer, once the page has drawn
+    setTimeout(function () {
+      function offer() { if (CORB.tour) CORB.tour.offer(); }
+      if (CORB.terms) CORB.terms.require(offer); else offer();
+    }, 900);
   };
 })();

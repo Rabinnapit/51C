@@ -7,6 +7,10 @@
   (iPhone: Safari, Share, Add to Home Screen; Android: Chrome, Install app). No app store, no account, no cost; it
   works offline after the first open, and every change pushed to GitHub reaches installed apps the next time they open.
 - **Get it on your phone** on the About page: the QR code and the install steps, so anyone with the guide can share it.
+- **Owner and terms of use:** on first open, B2B Guide now says it is owned by SFC Rabin Napit and asks the reader to
+  accept short terms of use (free for personal study; share the link or unchanged copies; no copying, changing,
+  rehosting or selling without written permission). The terms are on the About page and at the bottom of the side
+  menu, the tour's first stop names the owner, the install sheet carries the notice, and the repository has a LICENSE.
 - `tools/make_handout.py` makes the QR code (SVG and PNG) and a one-page install sheet to print (HTML and PDF) in
   `handout/`, modelled on the WHtR app's handout.
 

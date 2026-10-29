@@ -18,7 +18,8 @@ META_FILE = ROOT / "src" / "data" / "meta.json"
 OUT = ROOT / "handout"
 META = json.loads(META_FILE.read_text(encoding="utf-8"))
 URL = META.get("site_url") or sys.exit("Set site_url in src/data/meta.json first.")
-WHO = (META.get("maintainer") or {}).get("name", "")
+WHO = META.get("owner") or (META.get("maintainer") or {}).get("name", "")
+COPY = META.get("copyright", "")
 
 qr = segno.make(URL, error="m", micro=False)
 OUT.mkdir(exist_ok=True)
@@ -105,7 +106,8 @@ li::before {{ content: counter(s); position: absolute; left: 0; top: 0.01in; wid
     <div class="cell"><b>Learn and practice</b>35 lessons with pictures you can play, 374 explained practice questions, flashcards and six games.</div>
     <div class="cell"><b>Always current</b>New versions arrive by themselves when you are online. Your progress stays on your phone.</div>
   </div>
-  <p class="foot">An unofficial training aid built by {html.escape(WHO)} for new 51Cs and 1102s. It is not official guidance:
+  <p class="foot"><b>{html.escape(COPY)}</b> Owned by {html.escape(WHO)}. Free for your own study and for sharing this sheet or the link;
+  copying, changing or selling the app needs the owner's written permission.<br>An unofficial training aid for new 51Cs and 1102s. It is not official guidance:
   check the official sources it links to. No accounts and no tracking; nothing you do in the app is sent anywhere.
   Also works on Windows and Mac computers: open the same address in Edge or Chrome and choose Install.</p>
 </div>

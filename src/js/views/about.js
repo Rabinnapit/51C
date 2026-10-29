@@ -60,6 +60,17 @@
           link('a.btn', 'problem', [icon('alert'), 'Report a problem']))));
   }
 
+  // who owns the guide and the terms people agreed to on first use
+  function ownerTerms(h, icon) {
+    var m = CORB.meta();
+    if (!m.owner) return null;
+    return section('terms', 'Owner and terms of use', h('div.ab-terms', {},
+      h('p', {}, h('b', {}, (m.app_name || 'This guide') + ' is owned by ' + m.owner + '. '),
+        'Use it free for your own study, and share the official link or an unchanged copy. Copying it, changing it, putting it into another product or charging for it needs the owner\'s written permission.'),
+      m.copyright ? h('p.small.muted', {}, m.copyright) : null,
+      h('button.btn', { type: 'button', onclick: function () { if (CORB.terms) CORB.terms.show(); } }, icon('file'), 'Read the terms of use')));
+  }
+
   function whatItIs(h, icon) {
     function col(title, items, kind) {
       return h('div.ab-col.' + kind, {},
@@ -144,7 +155,7 @@
     blurb: 'What B2B Guide is, who maintains it, how to send feedback', keywords: 'about developer maintainer feedback contact version credits disclaimer offline privacy shortcuts',
     render: function (root) {
       var h = CORB.ui.h, icon = CORB.ui.icon;
-      var page = h('div.ab-app', {}, hero(h), maintainer(h, icon), whatItIs(h, icon), inside(h, icon), works(h), phone(h, icon), current(h), keys(h), fine(h, icon));
+      var page = h('div.ab-app', {}, hero(h), maintainer(h, icon), ownerTerms(h, icon), whatItIs(h, icon), inside(h, icon), works(h), phone(h, icon), current(h), keys(h), fine(h, icon));
       root.appendChild(page);
     } });
 })();

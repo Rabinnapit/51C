@@ -83,3 +83,12 @@
 .ab-steps li { display: flex; gap: 8px; align-items: flex-start; font-size: var(--fs-sm); }
 .ab-steps svg { flex: none; width: 16px; height: 16px; margin-top: 3px; color: var(--accent); }
 @media (max-width: 560px) { .ab-phone { grid-template-columns: 1fr; } .ab-qr { max-width: 220px; } }
+
+/* terms of use (core/08a-terms.js): shown before first use and from About and the side menu */
+.terms-intro { font-weight: 600; margin: 0 0 10px; }
+.terms-list { margin: 0; padding-left: 22px; display: grid; gap: 8px; }
+.terms-list li { line-height: 1.45; }
+.terms-list li p { margin: 0; }
+.terms-copy { margin: 12px 0 0; font-size: var(--fs-sm); color: var(--muted); }
+.terms-agree { margin: 12px 0 0; padding: 10px 12px; border-radius: var(--r-md); background: var(--accent-soft); font-size: var(--fs-sm); }
+.ab-terms p { margin: 0 0 10px; }

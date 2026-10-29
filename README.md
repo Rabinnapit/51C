@@ -7,6 +7,14 @@ every course, lessons, practice exams, flashcards, games, a glossary and a FAR r
 Unofficial training aid. Not endorsed by the U.S. Army, the Department of War or the Warfighting Acquisition University
 (WarU, formerly DAU). Content checked 28 October 2026.
 
+## Owner and license
+
+B2B Guide is owned by **SFC Rabin Napit** (© 2026 Rabin Napit, all rights reserved). This repository is public so the
+app can be hosted free; that does not make it open source: see [LICENSE](LICENSE). The app asks every reader to accept
+its short terms of use before first use (free for personal study and for sharing unchanged; no copying, changing,
+rehosting or selling without written permission). The terms text is `terms` in `src/data/meta.json`; changing its
+`version` makes everyone accept the new terms on their next open.
+
 ## What is inside (version 0.14.1)
 
 | Area | What the reader gets |

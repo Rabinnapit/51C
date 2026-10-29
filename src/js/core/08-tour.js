@@ -57,7 +57,7 @@
     var ed = CORB.edition();
     var list = [
       { title: 'What B2B Guide is', view: 'home', target: homeTarget,
-        text: 'A study and certification guide for new 51C Soldiers and 1102 civilians. It takes you to the DoW Contracting Professional certification: five courses, the CON 3990V exam and 12 months of experience. It works without internet; it is a training aid, not official guidance.' },
+        text: 'A study and certification guide for new 51C Soldiers and 1102 civilians' + (CORB.meta().owner ? ', owned and built by ' + CORB.meta().owner : '') + '. It takes you to the DoW Contracting Professional certification: five courses, the CON 3990V exam and 12 months of experience. It works without internet; it is a training aid, not official guidance.' },
       { title: 'Your home page', view: 'home', target: homeTarget,
         text: 'Home opens with this week on your exam path and your next step. Until you build your plan, it asks three quick questions to set your dates.' },
       { title: 'Exam path', target: function () { return side(navItem('path'), 'path'); },

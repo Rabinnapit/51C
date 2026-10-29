@@ -286,6 +286,18 @@ for l in M["lessons"]:
     if l["id"] not in figs:
         warns.append(f"lesson {l['id']} has no picture in figs.json")
 
+# every script must parse: on GitHub a syntax error would break the published app for everyone
+import shutil, subprocess
+node = shutil.which("node")
+if node:
+    for f in sorted((ROOT / "src" / "js").rglob("*.js")):
+        r = subprocess.run([node, "--check", str(f)], capture_output=True, text=True)
+        if r.returncode:
+            last = [l for l in r.stderr.strip().splitlines() if l.strip()][-1:] or ["syntax error"]
+            errors.append(f"{f.relative_to(ROOT).as_posix()}: {last[0]}")
+else:
+    warns.append("node not found, so the JavaScript syntax was not checked")
+
 for w in warns:
     print("warning:", w)
 for e in errors:
