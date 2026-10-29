@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.25.2 (30 October 2026): the terms and privacy on their own pages
+
+- **terms.html and privacy.html** on the website, built from the same text as the in-app terms, with a plain privacy
+  page (no tracking; what an account stores, with or without Google; how to delete it). About and the terms pop-up
+  link to them. Google asks for public links like these before it will show the app's name on its sign-in screen;
+  the 120-pixel logo for that review lives in the repository (`src/web/icons/logo-120.png`). Files in
+  `src/web/root/` are copied to the root of the site (a Search Console verification file lives there).
+
 ## 0.25.1 (30 October 2026): the sweep
 
 - **Eleven more questions** on the three thin job lessons: contingency thresholds and the determination behind them,

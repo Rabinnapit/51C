@@ -12,7 +12,8 @@
     return h('div.terms', {},
       t.intro ? h('p.terms-intro', {}, t.intro) : null,
       h('ol.terms-list', {}, (t.points || []).map(function (p) { return h('li', {}, CORB.ui.rich(String(p).replace('{email}', email))); })),
-      m.copyright ? h('p.terms-copy', {}, m.copyright) : null);
+      m.copyright ? h('p.terms-copy', {}, m.copyright) : null,
+      m.site_url ? h('p.terms-copy', {}, 'Also on the website: ', h('a', { href: m.site_url + 'terms.html', target: '_blank', rel: 'noopener' }, 'terms of use'), ' and ', h('a', { href: m.site_url + 'privacy.html', target: '_blank', rel: 'noopener' }, 'privacy'), '.') : null);
   }
 
   var terms = CORB.terms = {
