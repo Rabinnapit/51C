@@ -3,9 +3,9 @@
   python tools/make_handout.py        (needs segno: pip install segno; Microsoft Edge prints the PDF)
 
 Reads site_url from src/data/meta.json and writes:
-  handout/b2b-guide-qr.svg, handout/b2b-guide-qr.png   the QR code, for slides, posters and email
-  handout/B2B_Guide_Install_Sheet.html                 the install sheet; Edge prints it to
-  handout/B2B_Guide_Install_Sheet.pdf                  (PDFs stay out of git: print it from this computer)
+  handout/b2b-exam-prep-qr.svg, handout/b2b-exam-prep-qr.png   the QR code, for slides, posters and email
+  handout/B2B_Exam_Prep_Install_Sheet.html                 the install sheet; Edge prints it to
+  handout/B2B_Exam_Prep_Install_Sheet.pdf                  (PDFs stay out of git: print it from this computer)
   src/data/meta.json "app_qr"                          the same QR as rows of 0 and 1; the About page draws it
 Run it again only if the address changes. People who scan the code get every later update by themselves.
 """
@@ -23,8 +23,8 @@ COPY = META.get("copyright", "")
 
 qr = segno.make(URL, error="m", micro=False)
 OUT.mkdir(exist_ok=True)
-qr.save(OUT / "b2b-guide-qr.svg", scale=10, border=4)
-qr.save(OUT / "b2b-guide-qr.png", scale=12, border=4)
+qr.save(OUT / "b2b-exam-prep-qr.svg", scale=10, border=4)
+qr.save(OUT / "b2b-exam-prep-qr.png", scale=12, border=4)
 rows = ["".join("1" if cell else "0" for cell in row) for row in qr.matrix]
 
 # the About page draws the code from these rows; keep meta.json's one-key-per-line layout
@@ -42,7 +42,7 @@ sheet = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>B2B Guide - install sheet</title>
+<title>B2B Exam Prep - install sheet</title>
 <style>
 @page {{ size: Letter; margin: 0.45in; }}
 * {{ box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }}
@@ -76,7 +76,7 @@ li::before {{ content: counter(s); position: absolute; left: 0; top: 0.01in; wid
 <body>
 <div class="sheet">
   <div class="band">
-    <h1>B2B Guide</h1>
+    <h1>B2B Exam Prep</h1>
     <p>Free phone app for new 51C and 1102 contracting professionals &middot; works offline after the first open</p>
   </div>
   <div class="stripe"></div>
@@ -114,14 +114,14 @@ li::before {{ content: counter(s); position: absolute; left: 0; top: 0.01in; wid
 </body>
 </html>
 """
-html_file = OUT / "B2B_Guide_Install_Sheet.html"
+html_file = OUT / "B2B_Exam_Prep_Install_Sheet.html"
 html_file.write_text(sheet, encoding="utf-8")
 print("wrote", html_file.relative_to(ROOT), "and the QR code for", URL)
 
 edge = shutil.which("msedge") or next((p for p in [r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
                                                     r"C:\Program Files\Microsoft\Edge\Application\msedge.exe"] if Path(p).exists()), None)
 if edge:
-    pdf = OUT / "B2B_Guide_Install_Sheet.pdf"
+    pdf = OUT / "B2B_Exam_Prep_Install_Sheet.pdf"
     with tempfile.TemporaryDirectory() as profile:   # its own profile, so it works while Edge is open
         subprocess.run([edge, "--headless=new", "--disable-gpu", "--no-first-run", f"--user-data-dir={profile}", "--no-pdf-header-footer",
                         f"--print-to-pdf={pdf}", html_file.as_uri()], check=False, capture_output=True, timeout=120)

@@ -98,7 +98,7 @@
       h('button.btn.icon.ghost.menu-btn', { type: 'button', 'aria-label': 'Menu', 'data-tip': 'Collapse the menu', onclick: menuButton }, icon('menu')),
       h('div.top-title.grow', {}, h('span.top-eyebrow', {}, ''), h('strong.top-heading', {}, '')),
       h('button.btn.sm.ghost.search-btn', { type: 'button', onclick: function () { CORB.ui.palette(); }, 'aria-label': 'Search', title: 'Search (press /)' }, icon('search'), h('span.hide-sm', {}, 'Search'), h('kbd.hide-sm', {}, '/')),
-      h('button.btn.sm.save-btn', { type: 'button', hidden: true, onclick: saveToFile, title: 'Your progress is only in this browser. Save it into the B2B Guide file so a restart cannot erase it.' }, icon('save'), h('span.hide-sm', {}, 'Save progress')),
+      h('button.btn.sm.save-btn', { type: 'button', hidden: true, onclick: saveToFile, title: 'Your progress is only in this browser. Save it into the B2B Exam Prep file so a restart cannot erase it.' }, icon('save'), h('span.hide-sm', {}, 'Save progress')),
       h('button.btn.icon.sm.ghost.hide-sm.text-btn', { type: 'button', 'aria-label': 'Text size', 'data-tip': 'Text size', onclick: function () { CORB.cycleTextSize(); } }, icon('text')),
       h('button.btn.icon.sm.ghost.hide-sm.theme-btn', { type: 'button', 'aria-label': 'Day or night mode', 'data-tip': 'Day / night', onclick: function () { CORB.toggleTheme(); } }, icon('moon')),
       h('button.btn.icon.sm.ghost.tour-btn', { type: 'button', 'aria-label': 'Take the tour', 'data-tip': 'Tour (press ?)', onclick: function () { if (CORB.tour) CORB.tour.start(); else CORB.go('settings', { tab: 'help' }); } }, icon('help'))
@@ -128,7 +128,7 @@
       if (r.how === 'file') CORB.ui.toast('Progress saved into ' + r.name + '. Open that file next time.', 'ok', 5000);
       else CORB.ui.modal({ title: 'Your progress is in a new copy of the guide', body: CORB.ui.h('div.stack', {},
         CORB.ui.h('p', {}, 'This browser does not let the guide write to its own file, so it downloaded a copy named ', CORB.ui.h('b', {}, r.name), ' with your progress inside.'),
-        CORB.ui.h('p', {}, 'Move that copy to where you keep B2B Guide (Documents or OneDrive), replace the old file with it, and open it from there next time. Your progress comes back even if the browser was cleared.')),
+        CORB.ui.h('p', {}, 'Move that copy to where you keep B2B Exam Prep (Documents or OneDrive), replace the old file with it, and open it from there next time. Your progress comes back even if the browser was cleared.')),
         actions: [{ label: 'Got it', primary: true }] });
       paintTools(); return r;
     }).catch(function (e) { CORB.ui.toast('Progress was not saved into the file: ' + ((e && e.message) || e), 'danger', 6000); });
@@ -187,10 +187,11 @@
     if (!location.hash || location.hash === '#') { try { history.replaceState(null, '', '#/home'); } catch (e) { location.hash = '#/home'; } }
     render();
     CORB.emit('boot');
-    // the first time the guide opens: the terms of use, then the tour offer, once the page has drawn
+    // once the page has drawn: on the website, install the app first (core/09-pwa.js); then the terms of use, then the tour offer
     setTimeout(function () {
       function offer() { if (CORB.tour) CORB.tour.offer(); }
-      if (CORB.terms) CORB.terms.require(offer); else offer();
+      function terms() { if (CORB.terms) CORB.terms.require(offer); else offer(); }
+      if (CORB.pwa && CORB.pwa.first) CORB.pwa.first(terms); else terms();
     }, 900);
   };
 })();

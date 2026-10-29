@@ -109,7 +109,7 @@
 
   store.exportProgress = function () {
     var copy = U.deepClone(CORB.state); copy.meta.exportedAt = new Date().toISOString();
-    var file = 'B2B-Guide-progress_' + U.stamp() + '.json';
+    var file = 'B2B-Exam-Prep-progress_' + U.stamp() + '.json';
     return store.download(file, JSON.stringify(copy, null, 1), 'application/json') ? file : '';
   };
   store.importProgress = function (file) {
@@ -118,7 +118,7 @@
       r.onload = function () {
         try {
           var p = JSON.parse(r.result);
-          if (!p || p.version !== 'b2b-state-1') throw new Error('That file is not a B2B Guide progress file.');
+          if (!p || p.version !== 'b2b-state-1') throw new Error('That file is not a B2B Exam Prep progress file.');
           var st = defaults(); merge(st, p); st.meta.updatedAt = new Date().toISOString(); CORB.state = st;
           store.persistNow(); CORB.emit('change', { path: '*' }); resolve(p);
         } catch (e) { reject(e); }
@@ -146,7 +146,7 @@
   };
   store.appFileName = function () {
     var n = ''; try { n = decodeURIComponent(String(location.pathname || '').split('/').pop() || ''); } catch (e) {}
-    return /\.html?$/i.test(n) ? n : 'B2B-Guide.html';
+    return /\.html?$/i.test(n) ? n : 'B2B-Exam-Prep.html';
   };
   store.saveProgressToFile = function () {
     if (!CORB.can('saveFile')) return Promise.reject(new Error('this edition saves progress in the browser'));
@@ -158,7 +158,7 @@
     function done(how, fileName) { store.fileStamp = stamp; CORB.embedded = payload; store.persistNow(); CORB.emit('change', { path: 'file' }); return { how: how, name: fileName || name }; }
     function download() { if (!store.download(name, html, 'text/html')) throw new Error('the browser blocked the download'); return done('download'); }
     if (typeof window.showSaveFilePicker !== 'function') return Promise.resolve().then(download);
-    var pick = fileHandle ? Promise.resolve(fileHandle) : window.showSaveFilePicker({ suggestedName: name, types: [{ description: 'B2B Guide', accept: { 'text/html': ['.html', '.htm'] } }] });
+    var pick = fileHandle ? Promise.resolve(fileHandle) : window.showSaveFilePicker({ suggestedName: name, types: [{ description: 'B2B Exam Prep', accept: { 'text/html': ['.html', '.htm'] } }] });
     return pick.then(function (handle) {
       var ask = handle.requestPermission ? handle.requestPermission({ mode: 'readwrite' }) : Promise.resolve('granted');
       return ask.then(function (s) { if (s !== 'granted') throw new Error('permission refused'); return handle.createWritable(); })

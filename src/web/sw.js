@@ -1,4 +1,4 @@
-/* B2B Guide service worker (web edition). tools/build.py writes the build id below on every build.
+/* B2B Exam Prep service worker (web edition). tools/build.py writes the build id below on every build.
    Pages: network first, so an online reader always gets the newest guide; the saved copy is the offline fallback.
    Icons and the manifest: cache first. */
 var BUILD = '__BUILD_ID__';

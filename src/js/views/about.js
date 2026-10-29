@@ -1,4 +1,4 @@
-/* VIEW about — what B2B Guide is and is not, who builds and maintains it (and how to send feedback), what is inside, how it
+/* VIEW about — what B2B Exam Prep is and is not, who builds and maintains it (and how to send feedback), what is inside, how it
    works offline, how it stays current, keyboard shortcuts, the disclaimer and credits. Same layout family as Board
    Ready's About page. Data: CORB.DATA.meta (maintainer, disclaimer, currency, credits) and counts from the content. */
 (function () {
@@ -35,7 +35,7 @@
       h('div.ab-hero-mark', { 'aria-hidden': 'true' }, 'B2B'),
       h('div.ab-hero-copy', {},
         h('div.eyebrow', {}, 'About'),
-        h('h1', {}, m.app_name || 'B2B Guide'),
+        h('h1', {}, m.app_name || 'B2B Exam Prep'),
         h('p.ab-hero-lede', {}, m.tagline || ''),
         h('p.ab-hero-facts', {}, [editionName(), m.version ? 'version ' + m.version : '', m.content_verified_on ? 'content checked ' + CORB.util.fmtDate(m.content_verified_on) : ''].filter(Boolean).join(' · '))));
   }
@@ -53,7 +53,7 @@
       h('div.ab-maint-copy', {},
         h('div.eyebrow', {}, who.role || 'Developer and maintainer'),
         h('h2.ab-maint-name', { id: 'ab-h-maintainer' }, who.name),
-        h('p.ab-maint-line', {}, 'B2B Guide is designed, built and kept up to date by ' + who.name + ', a contracting NCO, for the Soldiers and civilians starting their contracting careers.'),
+        h('p.ab-maint-line', {}, 'B2B Exam Prep is designed, built and kept up to date by ' + who.name + ', a contracting NCO, for the Soldiers and civilians starting their contracting careers.'),
         h('p.ab-maint-line', {}, 'Found a wrong answer, a rule that changed or a page that does not work? Send feedback: it opens an email to ', h('a.ab-maint-mail', { href: 'mailto:' + who.email }, who.email), ' with the page and version already filled in.'),
         h('div.ab-maint-actions', {},
           link('a.btn.primary', 'feedback', [icon('mail'), 'Send feedback']),
@@ -77,7 +77,7 @@
         h('h3.ab-col-title', {}, icon(kind === 'is' ? 'check' : 'x'), title),
         h('div.ab-col-items', {}, items.map(function (it) { return h('div.ab-item', {}, h('span.ab-item-icon', {}, icon(it[0])), h('div', {}, h('b', {}, it[1]), h('p', {}, it[2]))); })));
     }
-    return section('what', 'What B2B Guide is, and is not', h('div.ab-cols', {}, col('What it is', IS, 'is'), col('What it is not', IS_NOT, 'not')),
+    return section('what', 'What B2B Exam Prep is, and is not', h('div.ab-cols', {}, col('What it is', IS, 'is'), col('What it is not', IS_NOT, 'not')),
       'An unofficial, plain-language guide for new 51C contracting NCOs and 1102 contract specialists working toward the DoW Contracting Professional certification.');
   }
 
@@ -99,7 +99,7 @@
     var ed = CORB.edition();
     var where = ed === 'web' ? 'Your ticks, scores and flashcard history stay in this browser on this device. To move them, use Settings & help → My data → Export, then Import on the other device.'
       : ed === 'preview' ? 'In this preview your progress stays in this browser only, and downloads and printing are off. Use the offline file or the website to keep your progress.'
-      : 'Your ticks, scores and flashcard history stay in this browser. Save progress stores them inside the B2B Guide file itself, so a computer restart or a cleared browser cannot erase them.';
+      : 'Your ticks, scores and flashcard history stay in this browser. Save progress stores them inside the B2B Exam Prep file itself, so a computer restart or a cleared browser cannot erase them.';
     return section('works', 'How it works', h('div.ab-works', {},
       h('div.ab-work', {}, h('b', {}, 'Everything is in one file'), h('p', {}, 'The lessons, questions, games and even the fonts are inside the guide, so it opens from Teams, SharePoint, OneDrive or a thumb drive and works on government networks with no internet.')),
       h('div.ab-work', {}, h('b', {}, 'Your progress stays with you'), h('p', {}, where)),
@@ -117,7 +117,7 @@
     return section('phone', 'Get it on your phone', h('div.ab-phone', {},
       h('div.ab-qr', { html: svg }),
       h('div', {},
-        h('p', {}, 'Scan this code with a phone camera to get B2B Guide as an app: free, with no app store and no account. Show it to anyone who needs it.'),
+        h('p', {}, 'Scan this code with a phone camera to get B2B Exam Prep as an app: free, with no app store and no account. Show it to anyone who needs it.'),
         h('a.ab-url', { href: m.site_url, target: '_blank', rel: 'noopener' }, m.site_url),
         h('ul.ab-steps', {},
           h('li', {}, icon('phone'), h('span', {}, h('b', {}, 'iPhone: '), 'open the link in Safari, tap Share, then Add to Home Screen.')),
@@ -152,7 +152,7 @@
   }
 
   CORB.registerView({ id: 'about', title: 'About', section: 'Help', icon: 'info', nav: true, order: 140,
-    blurb: 'What B2B Guide is, who maintains it, how to send feedback', keywords: 'about developer maintainer feedback contact version credits disclaimer offline privacy shortcuts',
+    blurb: 'What B2B Exam Prep is, who maintains it, how to send feedback', keywords: 'about developer maintainer feedback contact version credits disclaimer offline privacy shortcuts',
     render: function (root) {
       var h = CORB.ui.h, icon = CORB.ui.icon;
       var page = h('div.ab-app', {}, hero(h), maintainer(h, icon), ownerTerms(h, icon), whatItIs(h, icon), inside(h, icon), works(h), phone(h, icon), current(h), keys(h), fine(h, icon));

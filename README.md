@@ -1,4 +1,4 @@
-# B2B Guide
+# B2B Exam Prep
 
 **From day one to certified.** A plain-language guide for brand-new Army 51C contracting NCOs and 1102 contract
 specialists working toward the **DoW Contracting Professional certification** (Back-to-Basics): a dated plan, the rules,
@@ -9,13 +9,13 @@ Unofficial training aid. Not endorsed by the U.S. Army, the Department of War or
 
 ## Owner and license
 
-B2B Guide is owned by **SFC Rabin Napit** (© 2026 Rabin Napit, all rights reserved). This repository is public so the
+B2B Exam Prep is owned by **SFC Rabin Napit** (© 2026 Rabin Napit, all rights reserved). This repository is public so the
 app can be hosted free; that does not make it open source: see [LICENSE](LICENSE). The app asks every reader to accept
 its short terms of use before first use (free for personal study and for sharing unchanged; no copying, changing,
 rehosting or selling without written permission). The terms text is `terms` in `src/data/meta.json`; changing its
 `version` makes everyone accept the new terms on their next open.
 
-## What is inside (version 0.14.2)
+## What is inside (version 0.16.0)
 
 | Area | What the reader gets |
 |---|---|
@@ -35,12 +35,12 @@ rehosting or selling without written permission). The terms text is `terms` in `
 ## How people get it: three ways
 
 1. **The app (best): https://rabinnapit.github.io/51C/.** People scan the QR code (print
-   `handout/B2B_Guide_Install_Sheet.pdf`, or show the code on the guide's About page), open the link and add it to the
+   `handout/B2B_Exam_Prep_Install_Sheet.pdf`, or show the code on the guide's About page), open the link and add it to the
    home screen: on an iPhone, Safari, Share, Add to Home Screen; on Android, Chrome, Install app. It is free, needs no app
    store and no account, and works offline after the first open. **When you change the content on GitHub, everyone gets
    the new version the next time they open it** with an internet connection, and a bar offers a reload if a newer
    version came out while they had it open. Progress stays on each person's device.
-2. **The single file.** `B2B-Guide.html` (download it from the website's Help page, or build it locally into `dist/`).
+2. **The single file.** `B2B-Exam-Prep.html` (download it from the website's Help page, or build it locally into `dist/`).
    Put it on Teams or SharePoint, or a thumb drive. It works with no network. A copy keeps the date it was built, so a
    file someone saved last month will not update itself; its Help page links to the website for the newest version.
 3. **Army email.** Email blocks `.html` attachments, so send the two Word documents instead (READ ME FIRST + the code
@@ -69,15 +69,15 @@ One-time setup (already described here so it can be repeated):
 
    The user name in the address makes Git Credential Manager sign in as **Rabinnapit**, separately from any other GitHub
    account on this computer. When its sign-in window opens, sign in with that account.
-4. Open the **Actions** tab. "Build and publish B2B Guide" runs now and after every future change. A green check means
+4. Open the **Actions** tab. "Build and publish B2B Exam Prep" runs now and after every future change. A green check means
    the app is live at https://rabinnapit.github.io/51C/. A red X on the very first run usually means step 2 was not
    done yet: do it, open the run and click **Re-run all jobs**.
 
 ## The QR code and install sheet
 
 `python tools/make_handout.py` (needs `pip install segno`; Microsoft Edge prints the PDF) reads `site_url` from
-`src/data/meta.json` and writes `handout/b2b-guide-qr.svg` and `.png`, the printable
-`handout/B2B_Guide_Install_Sheet.html` and its PDF (PDFs stay off GitHub; print it from this computer), and the code
+`src/data/meta.json` and writes `handout/b2b-exam-prep-qr.svg` and `.png`, the printable
+`handout/B2B_Exam_Prep_Install_Sheet.html` and its PDF (PDFs stay off GitHub; print it from this computer), and the code
 the About page draws (`app_qr` in `meta.json`). Run it again only if the address changes: the code points at the
 address, and the address always serves the newest version.
 
@@ -100,7 +100,7 @@ Content is plain text in `src/data/*.json`, not inside the code. Typical updates
 
 Then commit to GitHub (GitHub Desktop: Commit, then Push; or edit the file directly on github.com and click Commit
 changes). The site rebuilds itself in about two minutes. Easiest of all: open this folder with Claude and ask, for
-example, "The SAT changed to $X on <date>; update B2B Guide", then push.
+example, "The SAT changed to $X on <date>; update B2B Exam Prep", then push.
 
 Before relying on a change, run the checks locally if you can:
 
@@ -117,7 +117,7 @@ python tools/make_docx.py
 ```
 
 `check_content.py` catches broken links between files, duplicate ids and questions without exactly one right answer.
-`build.py` writes `dist/B2B-Guide.html` (offline), `dist/B2B-Guide-Preview.html` (claude.ai preview) and `docs/` (the
+`build.py` writes `dist/B2B-Exam-Prep.html` (offline), `dist/B2B-Exam-Prep-Preview.html` (claude.ai preview) and `docs/` (the
 website). `make_docx.py` (needs `pip install python-docx`) writes the Word email package. Local preview: run
 `python -m http.server 8790 --directory src` and open `http://localhost:8790/index.dev.html`.
 
@@ -132,7 +132,7 @@ website). `make_docx.py` (needs `pip install python-docx`) writes the Word email
 
 ## Fusing with Board Ready
 
-B2B Guide is built on Board Ready's architecture on purpose: the same build approach (src to one HTML), the same core API
+B2B Exam Prep is built on Board Ready's architecture on purpose: the same build approach (src to one HTML), the same core API
 (`window.CORB`), compatible data shapes (glossary, quiz items, resources) and a matching design system. The plan for
 merging them into one career-long guide is in `CONTRACT.md`.
 

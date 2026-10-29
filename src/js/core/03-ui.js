@@ -249,7 +249,7 @@
       'Device and browser (for example NIPR laptop with Edge):', '', '',
       meta.app_name + ' ' + (meta.version || '') + ' (' + CORB.edition() + ' edition, build ' + (meta.build_id || '') + ')'
     ] : [
-      'B2B Guide tester feedback', '', 'I am: ' + (track || '51C / 1102 / supervisor'), '',
+      'B2B Exam Prep tester feedback', '', 'I am: ' + (track || '51C / 1102 / supervisor'), '',
       '1. What helped you most?', '', '', '2. What was confusing or hard to find?', '', '',
       '3. Anything wrong or out of date? (page and what it should say)', '', '',
       '4. What is missing for a brand-new 51C or 1102?', '', '', '5. Device and browser:', '', '',

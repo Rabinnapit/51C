@@ -56,7 +56,7 @@
   function steps() {
     var ed = CORB.edition();
     var list = [
-      { title: 'What B2B Guide is', view: 'home', target: homeTarget,
+      { title: 'What B2B Exam Prep is', view: 'home', target: homeTarget,
         text: 'A study and certification guide for new 51C Soldiers and 1102 civilians' + (CORB.meta().owner ? ', owned and built by ' + CORB.meta().owner : '') + '. It takes you to the DoW Contracting Professional certification: five courses, the CON 3990V exam and 12 months of experience. It works without internet; it is a training aid, not official guidance.' },
       { title: 'Your home page', view: 'home', target: homeTarget,
         text: 'Home opens with this week on your exam path and your next step. Until you build your plan, it asks three quick questions to set your dates.' },
@@ -89,7 +89,7 @@
       { title: 'About and feedback', target: function () { return side(navItem('about')); },
         text: 'About tells you who builds this guide and how it stays current. Send feedback or report a problem from there.' },
       { title: 'Keep your progress', target: function () { return q('.topbar .save-btn') || side(navItem('settings')); },
-        text: ed === 'offline' ? 'Your progress lives in this browser. Save progress stores it inside the B2B Guide file, so a restart or a cleared browser cannot erase it. Settings & help can also export it.'
+        text: ed === 'offline' ? 'Your progress lives in this browser. Save progress stores it inside the B2B Exam Prep file, so a restart or a cleared browser cannot erase it. Settings & help can also export it.'
           : ed === 'web' ? 'Your progress lives in this browser on this device. Settings & help can export it to a file and bring it back on another device.'
           : 'In this preview, progress stays in this browser only. Use the downloaded file or the website to keep it.' },
       { title: 'You are set', view: 'home', target: homeTarget,
@@ -265,7 +265,7 @@
       body: h('div.tour-offer', {},
         h('div.tour-offer-icon', {}, icon('help')),
         h('div', {},
-          h('p', {}, 'New here? A three-minute tour shows what B2B Guide is, opens the main pages and shows what each part is for.'),
+          h('p', {}, 'New here? A three-minute tour shows what B2B Exam Prep is, opens the main pages and shows what each part is for.'),
           h('p.muted.small', {}, 'The ? button at the top of the page starts it again any time.'))),
       sticky: true,
       actions: [

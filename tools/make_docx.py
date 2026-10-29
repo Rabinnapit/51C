@@ -3,8 +3,8 @@
   python tools/make_docx.py        (run tools/build.py first; needs python-docx)
 
 Writes to dist/docx/:
-  1 - READ ME FIRST - How to open B2B Guide.docx     step-by-step instructions
-  2 - B2B-Guide.html.docx                            the app's code, one line per paragraph
+  1 - READ ME FIRST - How to open B2B Exam Prep.docx     step-by-step instructions
+  2 - B2B-Exam-Prep.html.docx                            the app's code, one line per paragraph
 The code document is read back after saving and compared with the HTML character by character; the script stops
 if anything differs, so a damaged package never goes out. (Adapted from Board Ready's make_docx.py.)
 """
@@ -20,9 +20,9 @@ ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 OUT = DIST / "docx"
 OUT.mkdir(parents=True, exist_ok=True)
-HTML = "B2B-Guide.html"
-CODE_DOC = "2 - B2B-Guide.html.docx"
-README_DOC = "1 - READ ME FIRST - How to open B2B Guide.docx"
+HTML = "B2B-Exam-Prep.html"
+CODE_DOC = "2 - B2B-Exam-Prep.html.docx"
+README_DOC = "1 - READ ME FIRST - How to open B2B Exam Prep.docx"
 
 
 def no_proof(run):
@@ -61,8 +61,8 @@ def readme(out: Path, lines: int, utf8: int, site_url: str):
     doc = Document(); quiet(doc)
     sec = doc.sections[0]; sec.left_margin = sec.right_margin = Inches(1)
     doc.styles["Normal"].font.name = "Calibri"; doc.styles["Normal"].font.size = Pt(11)
-    doc.add_heading("B2B Guide: how to open it from these Word documents", level=1)
-    doc.add_paragraph("Army email blocks .html attachments, so B2B Guide travels inside a Word document as plain text. Word turns it back "
+    doc.add_heading("B2B Exam Prep: how to open it from these Word documents", level=1)
+    doc.add_paragraph("Army email blocks .html attachments, so B2B Exam Prep travels inside a Word document as plain text. Word turns it back "
                       "into a working file in about a minute. You need Microsoft Word and the Edge or Chrome browser. No administrator rights "
                       "and no internet connection are needed.")
     if site_url:
@@ -70,13 +70,13 @@ def readme(out: Path, lines: int, utf8: int, site_url: str):
                           "newest version and can be installed as an app.")
     doc.add_heading("Turn the code document back into a file", level=2)
     for s in [
-        "Open “2 - B2B-Guide.html.docx”. It looks like hundreds of pages of code; that is expected. If a yellow Protected View bar appears, click Enable Editing. Do not change any text.",
+        "Open “2 - B2B-Exam-Prep.html.docx”. It looks like hundreds of pages of code; that is expected. If a yellow Protected View bar appears, click Enable Editing. Do not change any text.",
         "Choose File, then Save As, then Browse. If you only see Save a Copy, use that.",
-        "Pick a folder you can find again, for example a new folder named B2B Guide in Documents or OneDrive.",
+        "Pick a folder you can find again, for example a new folder named B2B Exam Prep in Documents or OneDrive.",
         "Set “Save as type” to “Plain Text (*.txt)”.",
-        "In “File name”, type the name with the quotation marks: \"B2B-Guide.html\". Then click Save.",
+        "In “File name”, type the name with the quotation marks: \"B2B-Exam-Prep.html\". Then click Save.",
         "A File Conversion window opens. Choose “Other encoding”, then “Unicode (UTF-8)”. Leave “Insert line breaks” and “Allow character substitution” unchecked. Click OK, then close Word.",
-        "Open the folder and double-click B2B-Guide.html. It opens in your browser and works with no network.",
+        "Open the folder and double-click B2B-Exam-Prep.html. It opens in your browser and works with no network.",
     ]:
         doc.add_paragraph(s, style="List Number")
     word_bytes = utf8 + (lines - 1) + 3 + 2
@@ -91,7 +91,7 @@ def readme(out: Path, lines: int, utf8: int, site_url: str):
         doc.add_paragraph(s, style="List Bullet")
     doc.add_heading("Keep your progress", level=2)
     doc.add_paragraph("Your ticks, scores and flashcards are saved in the browser, and some government computers clear that at restart. "
-                      "Click Save progress (top of the page) and choose this same B2B-Guide.html file; replace it when asked. Your progress is "
+                      "Click Save progress (top of the page) and choose this same B2B-Exam-Prep.html file; replace it when asked. Your progress is "
                       "then stored inside the file. If the browser downloads a copy instead, move that copy into your folder and replace the old file.")
     doc.add_heading("Sharing", level=2)
     doc.add_paragraph("Once saved, the file can go on Teams or SharePoint or be emailed inside the Army network, and people just open it. "
@@ -105,7 +105,7 @@ if __name__ == "__main__":
     import json, re
     src = DIST / HTML
     if not src.exists():
-        raise SystemExit("dist/B2B-Guide.html is missing; run tools/build.py first")
+        raise SystemExit("dist/B2B-Exam-Prep.html is missing; run tools/build.py first")
     lines, utf8, digest = code_doc(src, OUT / CODE_DOC)
     m = re.search(r'"site_url":"([^"]*)"', src.read_text(encoding="utf-8"))
     readme(OUT / README_DOC, lines, utf8, m.group(1) if m else "")
@@ -117,6 +117,6 @@ if __name__ == "__main__":
         import shutil
         dl = docs / "downloads"
         dl.mkdir(exist_ok=True)
-        for name, target in ((README_DOC, "B2B-Guide-READ-ME-FIRST.docx"), (CODE_DOC, "B2B-Guide.html.docx")):
+        for name, target in ((README_DOC, "B2B-Exam-Prep-READ-ME-FIRST.docx"), (CODE_DOC, "B2B-Exam-Prep.html.docx")):
             shutil.copyfile(OUT / name, dl / target)
         print(f"copied both documents to {dl}")

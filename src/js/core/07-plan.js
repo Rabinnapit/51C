@@ -47,7 +47,7 @@
   plan.ics = function () {
     function d(s) { return s.replace(/-/g, ''); }
     function esc(s) { return String(s || '').replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n'); }
-    var lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//B2B Guide//Certification plan//EN', 'CALSCALE:GREGORIAN'];
+    var lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//B2B Exam Prep//Certification plan//EN', 'CALSCALE:GREGORIAN'];
     plan.steps().filter(function (s) { return !s.done; }).forEach(function (s) {
       lines.push('BEGIN:VEVENT', 'UID:' + s.id + '-' + d(s.target) + '@b2b-guide', 'DTSTAMP:' + d(U.today()) + 'T000000Z',
         'DTSTART;VALUE=DATE:' + d(s.target), 'DTEND;VALUE=DATE:' + d(U.addDays(s.target, 1)),

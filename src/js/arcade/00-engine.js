@@ -21,7 +21,7 @@
     gold: '#e6b85a', gold2: '#f6d991', pine: '#3fbf8a', pine2: '#8be0b9', sky: '#8cc8ff', green: '#5fd39a', red: '#ff6b6b', purple: '#b98cff', orange: '#ffa552',
     teal: '#4fd1c5', pink: '#ff7ab6', white: '#ffffff', gp: '#a3a9f2', pre: '#82b6ef', awd: '#f0b863', post: '#6fd3d9', job: '#d1bfa6' };
 
-  // ---- storage. Inside B2B Guide the view sets A.host, so scores, XP and question memory go into the reader's progress
+  // ---- storage. Inside B2B Exam Prep the view sets A.host, so scores, XP and question memory go into the reader's progress
   //      (exported, and saved into the HTML file). The standalone copy falls back to this browser's storage. ----
   A.host = null;
   A.save = {

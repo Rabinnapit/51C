@@ -72,7 +72,7 @@
             h('div.plan-count', {}, h('b.num', {}, pr.done + ' of ' + pr.total), ' steps done')),
           h('div.row.tight.no-print', {},
             h('button.btn.sm', { type: 'button', onclick: changeDates }, icon('edit'), 'Change dates'),
-            CORB.can('download') ? h('button.btn.sm', { type: 'button', onclick: function () { if (CORB.store.download('B2B-Guide-plan.ics', plan.ics(), 'text/calendar')) CORB.ui.toast('Calendar file downloaded. Open it to add the dates to Outlook.', 'ok', 4500); } }, icon('calendar'), 'Add to calendar') : null,
+            CORB.can('download') ? h('button.btn.sm', { type: 'button', onclick: function () { if (CORB.store.download('B2B-Exam-Prep-plan.ics', plan.ics(), 'text/calendar')) CORB.ui.toast('Calendar file downloaded. Open it to add the dates to Outlook.', 'ok', 4500); } }, icon('calendar'), 'Add to calendar') : null,
             CORB.can('print') ? h('button.btn.sm', { type: 'button', onclick: function () { window.print(); } }, icon('print'), 'Print') : null)),
         CORB.ui.bar(pr.pct, 'brass'),
         timeline(h, plan, U),

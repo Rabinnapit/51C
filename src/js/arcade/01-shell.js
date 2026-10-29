@@ -16,7 +16,7 @@
   }
   A.h = h;
   function meta() { return A.DATA.meta || {}; }
-  function appName() { return meta().app_name || 'B2B Guide'; }
+  function appName() { return meta().app_name || 'B2B Exam Prep'; }
   function fmt(n) { return Math.round(n || 0).toLocaleString('en-US'); }
   function host(fn) { return A.host && typeof A.host[fn] === 'function' ? A.host[fn] : null; }
   function setView() { if (!viewEl) { viewEl = h('div.ar-view'); root.appendChild(viewEl); } viewEl.innerHTML = ''; for (var i = 0; i < arguments.length; i++) if (arguments[i]) viewEl.appendChild(arguments[i]); }
@@ -510,7 +510,7 @@
     play: function (id, opts) { startGame(id, opts); return !!run; }
   };
 
-  // ---------- mount inside B2B Guide ----------
+  // ---------- mount inside B2B Exam Prep ----------
   A.mount = function (container, p) {
     A.unmount();
     params = p || {};

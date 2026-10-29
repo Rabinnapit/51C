@@ -1,5 +1,5 @@
 /* CORE-00-NAMESPACE
-   B2B Guide shares its core API with Board Ready (window.CORB, the family's original codename) on purpose:
+   B2B Exam Prep shares its core API with Board Ready (window.CORB, the family's original codename) on purpose:
    views and data modules can move between the two apps when they are fused. Storage keys differ (b2b.*). */
 (function () {
   'use strict';
@@ -22,7 +22,7 @@
   };
 
   CORB.meta = function () { return CORB.DATA.meta || {}; };
-  CORB.appName = function () { return CORB.meta().app_name || 'B2B Guide'; };
+  CORB.appName = function () { return CORB.meta().app_name || 'B2B Exam Prep'; };
   // Editions (tools/build.py writes meta.edition): 'offline' is the single file people pass around; 'web' is the GitHub Pages
   // site (installable, updates itself); 'preview' runs inside a claude.ai artifact, where downloads and printing are blocked.
   CORB.edition = function () { var e = CORB.meta().edition; return e === 'web' || e === 'preview' ? e : 'offline'; };

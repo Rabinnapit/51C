@@ -1,13 +1,13 @@
-"""Build B2B Guide.
+"""Build B2B Exam Prep.
 
   python tools/build.py
 
 Writes:
-  dist/B2B-Guide.html           offline edition: one self-contained file with no network code. This is the copy to put on
+  dist/B2B-Exam-Prep.html           offline edition: one self-contained file with no network code. This is the copy to put on
                                 Teams or SharePoint, email inside a Word document (tools/make_docx.py) or open from a thumb drive.
-  dist/B2B-Guide-Preview.html   preview edition for a claude.ai artifact: no outer <html> tags, no downloads, no printing.
+  dist/B2B-Exam-Prep-Preview.html   preview edition for a claude.ai artifact: no outer <html> tags, no downloads, no printing.
   docs/index.html               web edition for GitHub Pages: the same app plus "install as an app" and an update notice.
-  docs/B2B-Guide.html           a copy of the offline edition that the website offers for download
+  docs/B2B-Exam-Prep.html           a copy of the offline edition that the website offers for download
   docs/manifest.webmanifest, docs/sw.js, docs/icons/, docs/version.json, docs/.nojekyll
   src/index.dev.html            multi-file page for development (python -m http.server 8790 --directory src)
 
@@ -102,7 +102,7 @@ CONTENT_HASH = hashlib.sha256(json.dumps(MODS, sort_keys=True, ensure_ascii=Fals
                               + json.dumps(PAGES, sort_keys=True).encode("ascii")
                               + b"".join(f.read_bytes() for f in core_files + view_files + arcade_files + css_files)).hexdigest()[:10]
 META["build_id"] = CONTENT_HASH
-APP_FILE = re.sub(r"[^\w-]+", "-", META.get("app_name", "B2B Guide")).strip("-") or "B2B-Guide"
+APP_FILE = re.sub(r"[^\w-]+", "-", META.get("app_name", "B2B Exam Prep")).strip("-") or "B2B-Exam-Prep"
 
 
 def data_js(edition: str) -> str:
@@ -200,8 +200,8 @@ def write_web_assets():
     sw = (SRC / "web" / "sw.js").read_text(encoding="utf-8").replace("__BUILD_ID__", CONTENT_HASH)
     (DOCS / "sw.js").write_text(sw, encoding="utf-8")
     manifest = {
-        "name": META.get("app_name", "B2B Guide"),
-        "short_name": META.get("short_name", "B2B Guide"),
+        "name": META.get("app_name", "B2B Exam Prep"),
+        "short_name": META.get("short_name", "B2B Exam Prep"),
         "description": META.get("description", ""),
         "start_url": "./",
         "scope": "./",

@@ -1,4 +1,4 @@
-/* ARCADE GAME supply-line — Supply Line: a story convoy for B2B Guide. Lead two trucks from the Ops Center to the FOB
+/* ARCADE GAME supply-line — Supply Line: a story convoy for B2B Exam Prep. Lead two trucks from the Ops Center to the FOB
    through five checkpoints, one for each part of the contract life cycle (the FOB gate mixes them all). At each stop a
    contact sets the scene and six crates wait: a right answer loads one, a wrong answer costs fuel and the explanation
    comes over the radio. Load all six for the gold challenge coin. Original game; questions come from the guide's bank. */

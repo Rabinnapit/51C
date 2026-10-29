@@ -10,7 +10,7 @@
      {"t": "Request system access", "d": "Ask which systems your office uses (PIEE, SAM.gov, ACWS or PD2, VCE, GFEBS) and submit every role request this week."},
      {"t": "Write your IDP", "d": "List the five courses, the exam and target dates, and send it to your supervisor."},
      {"t": "Apply for CON 1100V", "d": "Pick the earliest class you can attend full time. See the course registration checklist."},
-     {"t": "Build your plan in B2B Guide", "d": "Home, then three questions. Print it or add the dates to your calendar."},
+     {"t": "Build your plan in B2B Exam Prep", "d": "Home, then three questions. Print it or add the dates to your calendar."},
      {"t": "Start studying 20 minutes a day", "d": "Begin with the Guiding Principles lessons and the FAR part titles flashcards."}
    ],
    "tips": ["Write down every login, office phone number and point of contact in one place.", "Ask to sit with a contract specialist for a day to see real actions."],
@@ -28,7 +28,7 @@
      {"t": "Read the welcome letter", "d": "It arrives about 25 days before class with links, pre-work and technical checks."},
      {"t": "Do the pre-work and test your equipment", "d": "Camera, microphone and the class software, on the computer you will use."},
      {"t": "Block your calendar", "d": "Virtual classes are full time. Ask your supervisor to cover your workload."},
-     {"t": "Mark the course in B2B Guide", "d": "Courses, then set My status to Signed up; set Done when you finish."}
+     {"t": "Mark the course in B2B Exam Prep", "d": "Courses, then set My status to Signed up; set Done when you finish."}
    ],
    "tips": ["Apply for the next course as soon as you know the current one's dates.", "Keep every completion certificate in one folder."],
    "watch": ["Missing a prerequisite can get you dropped from the class.", "Dropping late can cost your unit and the next student a seat."],
@@ -43,7 +43,7 @@
      {"t": "Create your Pearson account", "d": "Use the WarU page at pearsonvue.com/us/en/waru.html. Your name must match your ID exactly."},
      {"t": "Book a test center seat", "d": "Test centers are recommended. You have 90 days from authorization to test."},
      {"t": "Confirm the booking", "d": "No confirmation email means the booking did not finish. Go back and complete it."},
-     {"t": "Record the date in B2B Guide", "d": "Certification 101, The exam, My exam date."},
+     {"t": "Record the date in B2B Exam Prep", "d": "Certification 101, The exam, My exam date."},
      {"t": "Plan the last two weeks", "d": "Two full exam simulations, a review of every miss, and the FAR part titles every day."},
      {"t": "Test day", "d": "Government photo ID, arrive early, about 72 seconds per question, answer everything."},
      {"t": "Record your result", "d": "Certification 101, The exam, Record a result. A pass shows on your WarU transcript."}

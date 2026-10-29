@@ -16,18 +16,18 @@
       ['search', 'Find anything', 'Press / or the Search button, then type a word, an acronym or a course number.']
     ];
     root.appendChild(h('div.callout.brass.mb-4', {}, icon('help'), h('div', {}, h('b', {}, 'New here?'), h('span', {}, 'A short tour points at each part of the guide and says what it is for. '),
-      h('div.row.mt-2', {}, h('button.btn.sm.primary', { type: 'button', onclick: function () { if (CORB.tour) CORB.tour.start(); } }, icon('play'), 'Take the tour'), h('a.btn.sm.ghost', { href: '#/about' }, icon('info'), 'About B2B Guide')))));
+      h('div.row.mt-2', {}, h('button.btn.sm.primary', { type: 'button', onclick: function () { if (CORB.tour) CORB.tour.start(); } }, icon('play'), 'Take the tour'), h('a.btn.sm.ghost', { href: '#/about' }, icon('info'), 'About B2B Exam Prep')))));
     root.appendChild(h('div.grid.cols-2.help-grid', {}, steps.map(function (s) { return h('div.card.tight.help-step', {}, h('div.help-icon', {}, icon(s[0])), h('div', {}, h('b', {}, s[1]), h('p.small.muted', {}, s[2]))); })));
     root.appendChild(h('div.section-head', {}, h('h2', {}, 'Where your progress lives')));
     root.appendChild(h('div.card', {}, CORB.ui.rich(
       ed === 'web' ? 'Your ticks, scores and flashcard history stay in this browser on this device. Nothing is sent anywhere. To move them to another device, use My data → Export, then Import on the other device.\n\nThis website updates itself: when the maintainer publishes a change, you get it the next time you open the guide with an internet connection.'
         : ed === 'preview' ? 'This is a preview copy. Your progress stays in this browser only, and file downloads and printing are turned off here. For daily use, get the full copy from the maintainer or the website.'
-        : 'Your ticks, scores and flashcard history stay in this browser on this device. Nothing is sent anywhere.\n\nSome government computers erase browser data at restart. To keep your progress safe, use **Save progress** (top of the page, or My data) and pick this same B2B Guide file. Your progress is then stored inside the file and comes back every time you open it.')));
+        : 'Your ticks, scores and flashcard history stay in this browser on this device. Nothing is sent anywhere.\n\nSome government computers erase browser data at restart. To keep your progress safe, use **Save progress** (top of the page, or My data) and pick this same B2B Exam Prep file. Your progress is then stored inside the file and comes back every time you open it.')));
     if (ed === 'web' && CORB.pwa) {
-      root.appendChild(h('div.section-head', {}, h('h2', {}, 'Install B2B Guide as an app')));
+      root.appendChild(h('div.section-head', {}, h('h2', {}, 'Install B2B Exam Prep as an app')));
       root.appendChild(h('div.card', {}, CORB.pwa.isStandalone() ? h('p', {}, 'You are using the installed app. It works offline and updates itself.') : h('div.stack', {},
-        h('p', {}, 'Installing puts B2B Guide on your home screen or desktop like any other app. It opens without a browser bar, works offline, and still updates itself.'),
-        CORB.pwa.canInstall ? h('button.btn.primary', { type: 'button', onclick: function () { CORB.pwa.install().then(function (ok) { if (ok) CORB.render(); }); } }, icon('download'), 'Install B2B Guide')
+        h('p', {}, 'Installing puts B2B Exam Prep on your home screen or desktop like any other app. It opens without a browser bar, works offline, and still updates itself.'),
+        CORB.pwa.canInstall ? h('button.btn.primary', { type: 'button', onclick: function () { CORB.pwa.install().then(function (ok) { if (ok) CORB.render(); }); } }, icon('download'), 'Install B2B Exam Prep')
           : h('button.btn.primary', { type: 'button', onclick: function () { CORB.pwa.howTo(); } }, icon('phone'), 'Show me how to install'),
         h('ul.tips', {}, h('li', {}, 'Computer (Edge or Chrome): click the install icon at the right end of the address bar, or the browser menu → Apps → Install.'), h('li', {}, 'Android: browser menu (⋮) → Add to Home screen or Install app.'), h('li', {}, 'iPhone or iPad (Safari): Share button → Add to Home Screen.')))));
     }
@@ -35,9 +35,9 @@
       root.appendChild(h('div.section-head', {}, h('h2', {}, 'Copies for computers without internet')));
       root.appendChild(h('div.card', {}, h('p', {}, 'Some government networks block websites like this one. Download the single-file copy and share it on Teams or SharePoint, or use the Word package to send it by Army email (which blocks .html attachments).'),
         h('div.row.mt-3', {},
-          h('a.btn', { href: 'B2B-Guide.html', download: 'B2B-Guide.html' }, icon('download'), 'Offline copy (.html)'),
-          h('a.btn', { href: 'downloads/B2B-Guide-READ-ME-FIRST.docx', download: '' }, icon('file'), 'Email package: READ ME FIRST'),
-          h('a.btn', { href: 'downloads/B2B-Guide.html.docx', download: '' }, icon('file'), 'Email package: code document')),
+          h('a.btn', { href: 'B2B-Exam-Prep.html', download: 'B2B-Exam-Prep.html' }, icon('download'), 'Offline copy (.html)'),
+          h('a.btn', { href: 'downloads/B2B-Exam-Prep-READ-ME-FIRST.docx', download: '' }, icon('file'), 'Email package: READ ME FIRST'),
+          h('a.btn', { href: 'downloads/B2B-Exam-Prep.html.docx', download: '' }, icon('file'), 'Email package: code document')),
         h('p.small.muted.mt-3', {}, 'A downloaded copy keeps the date it was built. When the guide changes, download it again.')));
     }
     if (meta.site_url && ed !== 'web') root.appendChild(h('div.mt-4', {}, CORB.ui.callout('brass', 'refresh', 'Is there a newer version?', h('span', {}, 'This copy was built ' + CORB.util.fmtDate((meta.built_on || '').slice(0, 10)) + '. The newest guide is always on the website: ', h('a', { href: meta.site_url, target: '_blank', rel: 'noopener' }, meta.site_url)))));
@@ -75,14 +75,14 @@
     root.appendChild(h('div.card.stack', {},
       CORB.speech.available ? sw('settings.tts', 'Show Listen buttons', true) : h('p.muted', {}, 'This browser has no built-in voice, so Listen buttons are hidden. Edge on Windows has good voices.'),
       CORB.speech.available ? h('div.field', {}, h('label', { for: 'tts-rate' }, 'Speed'), h('div.row', {}, h('span.small', {}, 'Slower'), rate, h('span.small', {}, 'Faster'))) : null,
-      CORB.speech.available ? h('div', {}, h('button.btn', { type: 'button', onclick: function () { CORB.speech.speak('This is how B2B Guide sounds. A contracting officer is the only person who can bind the Government to a contract.'); } }, icon('volume'), 'Test the voice')) : null));
+      CORB.speech.available ? h('div', {}, h('button.btn', { type: 'button', onclick: function () { CORB.speech.speak('This is how B2B Exam Prep sounds. A contracting officer is the only person who can bind the Government to a contract.'); } }, icon('volume'), 'Test the voice')) : null));
   }
 
   function data(root, h, icon) {
     var ed = CORB.edition(), st = CORB.store;
     root.appendChild(h('div.card.stack', {}, h('h3', {}, 'Your progress'),
       h('p', {}, st.available === false ? 'This browser is blocking storage, so progress lasts only until you close the page. Use Save progress into this file or Export.' : 'Saved automatically in this browser on this device.'),
-      ed === 'offline' ? h('div.stack.tight', {}, h('p.small.muted', {}, 'Government computers often clear browser data at restart. Saving into the file keeps your progress inside B2B Guide itself.'),
+      ed === 'offline' ? h('div.stack.tight', {}, h('p.small.muted', {}, 'Government computers often clear browser data at restart. Saving into the file keeps your progress inside B2B Exam Prep itself.'),
         h('div', {}, h('button.btn.primary', { type: 'button', onclick: function () { CORB.saveProgressToFile(); } }, icon('save'), 'Save progress into this file')),
         st.fileStamp ? h('p.tiny.muted', {}, 'Last saved into the file: ' + CORB.util.fmtDateTime(st.fileStamp)) : null) : null));
     var file = h('input', { type: 'file', accept: '.json,application/json', hidden: true });

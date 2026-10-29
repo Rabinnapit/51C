@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.16.0 (29 October 2026): B2B Exam Prep, install first
+
+- **New name: B2B Exam Prep** (it was B2B Guide), to say plainly what it is for. The home-screen label is **B2B Prep**,
+  short enough to show in full under the icon. The files follow: `B2B-Exam-Prep.html`, the Word package and the
+  install sheet. The web address and the QR code do not change, and saved progress carries over. The terms of use
+  name the new title, so everyone accepts them once more.
+- **Install first:** anyone who opens the website in a phone or computer browser, most often from the QR code, now
+  sees "Install B2B Exam Prep first" before anything else: one Install button where the browser allows it (Android,
+  computers), picture steps for Safari on iPhone and iPad, or how to leave another app's browser. Continue in the
+  browser goes on to the terms and the tour and waits three days before asking again. The installed app never asks.
+
 ## 0.15.0 (29 October 2026): what to trust from outside the guide
 
 - **Study material from other places** on the exam page (Certification, The exam), in three picture cards: use first

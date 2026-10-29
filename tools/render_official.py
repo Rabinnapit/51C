@@ -1,4 +1,4 @@
-"""Render the official PDFs that B2B Guide carries inside the file into small page images.
+"""Render the official PDFs that B2B Exam Prep carries inside the file into small page images.
 
   python tools/render_official.py ["<folder with the official PDFs>"]
 

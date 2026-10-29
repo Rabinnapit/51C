@@ -1,4 +1,4 @@
-# B2B Guide: build contract
+# B2B Exam Prep: build contract
 
 Read this before changing code or content. It mirrors Board Ready's `app/docs/CONTRACT.md` so the two apps can be fused.
 
@@ -19,9 +19,9 @@ Read this before changing code or content. It mirrors Board Ready's `app/docs/CO
 
 | Edition | File | Differences |
 |---|---|---|
-| `offline` | `dist/B2B-Guide.html` (also `docs/B2B-Guide.html`) | Save progress into the file; no network code |
+| `offline` | `dist/B2B-Exam-Prep.html` (also `docs/B2B-Exam-Prep.html`) | Save progress into the file; no network code |
 | `web` | `docs/index.html` + `manifest.webmanifest` + `sw.js` + `version.json` + `icons/` | Installable app, offline cache, "newer version" bar, download links for the offline file and Word package |
-| `preview` | `dist/B2B-Guide-Preview.html` | For a claude.ai artifact: no outer `<html>` tags, downloads and printing hidden |
+| `preview` | `dist/B2B-Exam-Prep-Preview.html` | For a claude.ai artifact: no outer `<html>` tags, downloads and printing hidden |
 
 `CORB.can('download' | 'print' | 'saveFile' | 'install')` tells a view what the edition allows.
 

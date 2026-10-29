@@ -1,14 +1,9 @@
-/* Getting the app onto the phone (core/09-pwa.js, web edition only): the "Get the app" card and the install steps */
-.install-card { position: fixed; z-index: 900; left: 50%; bottom: calc(16px + env(safe-area-inset-bottom)); transform: translateX(-50%);
-  width: min(520px, calc(100vw - 24px)); display: flex; align-items: center; gap: 12px; padding: 12px 12px 12px 14px;
-  border-radius: var(--r-lg); background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow-lg); animation: inst-up .35s ease; }
-.install-card b { display: block; }
-.install-card span { display: block; font-size: var(--fs-sm); color: var(--muted); }
-.install-icon { width: 44px; height: 44px; border-radius: 10px; flex: none; }
-@keyframes inst-up { from { transform: translate(-50%, 24px); opacity: 0; } to { transform: translate(-50%, 0); opacity: 1; } }
-html[data-motion="reduce"] .install-card { animation: none; }
-@media (max-width: 860px) { .install-card { bottom: calc(76px + env(safe-area-inset-bottom)); } }   /* above the phone tab bar */
-@media print { .install-card { display: none; } }
+/* Getting the app onto the phone (core/09-pwa.js, web edition only): the install-first screen and the install steps */
+/* the first screen on the website: install the app before anything else */
+.install-icon { width: 56px; height: 56px; border-radius: 12px; flex: none; box-shadow: var(--shadow-sm); }
+.inst-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.inst-head h2 { margin: 0; font-size: var(--fs-xl); line-height: 1.15; }
+.inst-head p { margin: 4px 0 0; color: var(--muted); font-size: var(--fs-sm); }
 
 .inst-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; counter-reset: st; }
 .inst-steps li { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: var(--r-md); background: var(--panel-2); counter-increment: st; }
