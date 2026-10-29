@@ -17,7 +17,7 @@
 
   {"id": "L34", "phase": "job", "comp": "", "compName": "", "title": "The systems you will use", "minutes": 8,
    "summary": "Contracting runs on a handful of Government systems: SAM.gov for vendors, notices and contract data; PIEE for invoices, contract documents and appointments; your contract writing system; CPARS for performance; and VCE for Army contract files and warrants. Ask for accounts in your first week.",
-   "why": "You cannot work actions without them, and some roles take weeks to approve.",
+   "why": "You cannot work actions without them, and a role can take two to three weeks to approve, depending on how fast you request it and how fast the local system administrators act.",
    "sections": [
      {"h": "SAM.gov", "body": "- **Entity registration:** contractors must be registered before award (FAR 4.203).\n- **Exclusions:** check that a contractor is not suspended or debarred before award and before exercising options.\n- **Contract Opportunities:** where you post notices and solicitations.\n- **Contract data:** award reporting moved into SAM.gov when FPDS.gov was retired in February 2026."},
      {"h": "PIEE", "body": "The Procurement Integrated Enterprise Environment is DoW's single sign-on for many tools:\n- **Wide Area WorkFlow (WAWF):** invoices and receiving reports;\n- **Electronic Document Access (EDA):** signed contracts and modifications;\n- **Joint Appointment Module (JAM):** appointments such as CORs and purchase card officials;\n- a solicitation module and other tools."},

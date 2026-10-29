@@ -29,3 +29,6 @@ __pycache__/
 ~$*
 .DS_Store
 Thumbs.db
+
+# gh CLI state written by the repo-local credential helper
+.local/

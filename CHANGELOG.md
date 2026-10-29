@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.23.1 (29 October 2026): what the owner confirmed
+
+- From the owner's own experience in contracting support brigades: the local certification goal is 6 months in most
+  of them (Home setup, My plan, the FAQ); a system role takes two to three weeks to approve (Lesson 34); MICC's
+  onboarding program is Next Generation Acquisition Professional (NGAP) and other brigades run their own (My plan);
+  the certification request goes through CAMP and only authorized personnel can submit it (FAQ, how-to); a Soldier
+  who will miss the 36-month deadline is usually covered by an exception to policy (FAQ). `content/VERIFY.md` says what
+  is still open, and `content/RFI-2026-10-29.md` is the request for information the owner is sending to get it.
+
 ## 0.23.0 (29 October 2026): Continue with Google
 
 - **Sign in with Google.** The sign-in and create-account pop-ups now start with a Continue with Google button: one tap

@@ -50,7 +50,7 @@
       h('div.field', {}, h('label', { for: 'setup-start' }, '2. When did you start in your contracting job?'), startIn,
         h('div.hint', {}, 'Use the date you were assigned to a contracting position. Your 36-month certification clock starts then. A guess is fine; you can change it later.')),
       h('div.field', {}, h('div.label', {}, '3. When do you want to finish your courses and the exam?'), seg, goalIn,
-        h('div.hint', {}, 'Many brigades ask for 6 months. The rules allow 36 months for the whole certification.')));
+        h('div.hint', {}, 'Most contracting support brigades ask for 6 months. The rules allow 36 months for the whole certification.')));
     return { el: form, save: save };
   };
 

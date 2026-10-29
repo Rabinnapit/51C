@@ -3,7 +3,7 @@
   "note": "Steps with 'day' are spread across the reader's goal window (182 days = a 6-month goal) and scale to their own goal. Steps with 'months' are fixed from the start date. 'course' links a step to a course status; 'auto' ticks it from other progress.",
   "steps": [
     {"id": "s-meet", "phase": "setup", "day": 1, "who": "You and your supervisor", "title": "Meet your supervisor and ask for a mentor",
-     "detail": "Bring this plan. Ask three questions:\n- What is our local goal for my certification (many units say 6 months)?\n- Who is my Contracting Master Gunner (KMG)?\n- Who will be my mentor while I learn the job?"},
+     "detail": "Bring this plan. Ask three questions:\n- What is our local goal for my certification (most contracting support brigades say 6 months)?\n- Who is my Contracting Master Gunner (KMG)?\n- Who will be my mentor while I learn the job?"},
     {"id": "s-1102-orient", "phase": "setup", "day": 2, "tracks": ["1102"], "who": "You", "title": "Finish your new-employee requirements",
      "detail": "Complete the onboarding your civilian personnel office and command require: mandatory training, timekeeping, your performance plan. Ask your supervisor which office training you need before you can work contract actions."},
     {"id": "s-coded", "phase": "setup", "day": 2, "who": "Your supervisor or KMG", "title": "Confirm your position is coded for contracting",
@@ -17,7 +17,7 @@
     {"id": "s-apply1100", "phase": "setup", "day": 6, "who": "You", "howto": "register-course", "title": "Apply for CON 1100V, and line up CON 1200V",
      "detail": "Pick the earliest CON 1100V class you can attend full time. If your KMG says you may, also request a CON 1200V class that starts after CON 1100V ends. Seats fill fast."},
     {"id": "s-51c-onboard", "phase": "setup", "day": 10, "tracks": ["51c"], "who": "You", "title": "Ask about new-51C onboarding in your command",
-     "detail": "Some commands run onboarding for newly assessed 51Cs; for example, MICC ran a three-day Launch program for new contracting NCOs in July 2026. Ask your first sergeant or senior 51C what your command offers.", "verify": "Programs differ by command."},
+     "detail": "Some commands run onboarding for newly assessed 51Cs: MICC calls its program Next Generation Acquisition Professional (NGAP), and other brigades run their own, which are not published. Ask your first sergeant or senior 51C what your command offers.", "verify": "Programs differ by command."},
     {"id": "s-study", "phase": "setup", "day": 7, "who": "You", "lesson": "L01", "title": "Start the lessons: Guiding Principles first",
      "detail": "Spend 20 minutes a day in this guide. Start with the Guiding Principles lessons, then drill the FAR part titles in Flashcards. Guiding Principles is the biggest exam area (42 of 150 questions)."},
 

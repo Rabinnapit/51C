@@ -21,6 +21,7 @@ arrives, should be checked against this list and take precedence.
 | AITAS: Army training application in ATRRS; help through CAMP; address https://www.atrrs.army.mil/Aitas/Public/Landing/ | USAASC FAQ pages (via search; asc.army.mil blocks Korean IP addresses); address confirmed by the developer, SFC Rabin Napit, 29 Oct 2026 |
 | 51C: 9-week Army Acquisition Transition Course at TAAS, redesigned pilot July 2026 | Army.mil, "ALT-IO and DACM Office Shape a Stronger Acquisition Workforce" (25 Aug 2026) |
 | MICC Launch program for new 51Cs (July 2026) | Army.mil, "MICC Launch Program builds elite talent, strengthens contracting force" (2026), https://www.army.mil/article/294806/ |
+| 6-month local goal in most contracting support brigades; system roles take 2 to 3 weeks; MICC's onboarding is NGAP and other brigades run unpublished programs; the certification request goes through CAMP by authorized personnel; a missed 36-month deadline is usually handled by an exception to policy | The maintainer, SFC Rabin Napit, 29 Oct 2026 (open details in `content/RFI-2026-10-29.md`) |
 | DAU renamed Warfighting Acquisition University; catalog at icatalog.waru.edu | WarU iCatalog; press coverage of the November 2025 acquisition transformation |
 
 ## FAR, thresholds and the FAR Overhaul
