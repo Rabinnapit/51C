@@ -1,5 +1,6 @@
-/* ARCADE-01-SHELL — lobby (rank, pace, sound, game cabinets), play screen (HUD bar, prompt panel, fluid canvas stage,
-   answer panel), reading pause, pause menu, and results with XP, rank and a study list. */
+/* ARCADE-01-SHELL — lobby (rank, pace, sound, the campaign, game cabinets), play screen (HUD bar, prompt panel, fluid
+   canvas stage, answer panel, the Master Gunner's bubble), reading pause, pause menu, and results with XP, rank, the
+   campaign card and a study list. */
 (function () {
   'use strict';
   var A = window.ARCADE;
@@ -51,7 +52,7 @@
     screen.appendChild(h('header.ar-hero', {},
       h('div.ar-hero-copy', {}, h('div.ar-kicker', {}, h('i'), 'B2B Arcade'),
         h('h1.ar-h1', {}, 'Play your way ', h('em', {}, 'to the exam.')),
-        h('p.ar-lede', {}, 'Seven games built on the guide\'s checked question bank, key numbers, FAR parts, forms and glossary, one of them a rifle range in real 3D. Every miss lands on a study list with the answer, the reason and the FAR cite.')),
+        h('p.ar-lede', {}, 'Seven games built on the guide\'s checked question bank, key numbers, FAR parts, forms and glossary, two of them in real 3D, and a campaign briefed by your Master Gunner. Every miss lands on a study list with the answer, the reason and the FAR cite.')),
       rankCard(rk)));
     screen.appendChild(h('div.ar-setup', {},
       h('div.ar-pace-row', {}, h('span.ar-pace-label', {}, 'Pace'), h('div.ar-paces', { role: 'radiogroup', 'aria-label': 'Pace' }, A.TIERS.map(function (t, ti) {
@@ -62,6 +63,8 @@
       h('div.ar-sound', {}, soundButtons()),
       h('p.ar-pace-line', {}, h('b', { style: { '--tc': tier.color } }, tier.name + ': '), paceLine(tier), ' ', h('span', {}, 'New here? Start at Recruit.'))));
     var grid = h('div.ar-cabinets'), thumbs = [];
+    if (A.campaign && A.mentor) { try { screen.appendChild(A.campaign.section(thumbs)); } catch (e) { console.error('[arcade] campaign', e); } }
+    screen.appendChild(h('h2.ar-h2', {}, 'All games'));
     A.order.forEach(function (id, i) {
       var def = A.games[id], ok = true; try { ok = !def.dataOk || !!def.dataOk(A.DATA); } catch (e) { ok = false; }
       var best = A.best.get(id, tier.id), any = A.best.any(id);
@@ -96,7 +99,7 @@
       if (lobbyRaf !== token) return;
       if (now - last > 33) {
         last = now; var t = (now - t0) / 1000;
-        thumbs.forEach(function (th) { try { th.ctx.setTransform(1, 0, 0, 1, 0, 0); th.ctx.clearRect(0, 0, 480, 240); th.def.thumb(th.ctx, 480, 240, t); } catch (e) {} });
+        thumbs.forEach(function (th) { try { th.ctx.setTransform(1, 0, 0, 1, 0, 0); th.ctx.clearRect(0, 0, th.cv.width, th.cv.height); th.def.thumb(th.ctx, th.cv.width, th.cv.height, t); } catch (e) {} });
       }
       requestAnimationFrame(step);
     }
@@ -134,6 +137,9 @@
     var gateGo = h('button.ar-gate-go', { type: 'button', onclick: function () { releaseGate(); } }, '▶ Go');
     var gateEl = h('div.ar-gate', { hidden: true, role: 'status' }, h('div.ar-gate-copy', {}, gateTitle, gateSub), gateBarWrap, gateGo);
     box.appendChild(banner); box.appendChild(flashEl); box.appendChild(hint); box.appendChild(gateEl);
+    var mentorCv = h('canvas', { width: '88', height: '88', 'aria-hidden': 'true' }), mentorP = h('p'), mentorEl = h('div.ar-mentor', { hidden: true, role: 'status' }, mentorCv, h('div.ar-mentor-t', {}, h('b', {}, A.mentor ? A.mentor.name : ''), mentorP));
+    var mentor = { on: false, left: 0, mood: 'pleased', t0: 0 };
+    if (A.mentor) box.appendChild(mentorEl);
     if (def.gateAt) box.classList.add('gate-' + def.gateAt);   // where the reading-pause box hides the least of this game's scene
     var toolsEl = h('div.ar-tools', { hidden: true }), timerEl = h('div.ar-qtimer', { hidden: true }, h('span')), optsEl = h('div.ar-opts'), fbEl = h('div.ar-fb', { hidden: true });
     var choicesEl = h('section.ar-choices', { hidden: true }, toolsEl, timerEl, optsEl);
@@ -273,6 +279,12 @@
       get reading() { return !!(gate && gate.armed); },
       end: function (o) { finish(!!(o && o.won), o); },
       shake: function (px) { state.shake = Math.max(state.shake, px || 8); },
+      // the Master Gunner's bubble over the stage: say(mood, text, seconds); mood pleased | hint | worried | proud | brief
+      mentor: {
+        say: function (mood, text, secs) { if (!A.mentor || !text) return; mentor.on = true; mentor.mood = mood || 'pleased'; mentor.left = secs || A.clamp(1.6 + String(text).split(/\s+/).length * 0.32, 2.6, 7); mentor.t0 = performance.now(); mentorP.textContent = text; mentorEl.className = 'ar-mentor ' + mentor.mood; mentorEl.hidden = false; },
+        hide: function () { mentor.on = false; mentorEl.hidden = true; },
+        get showing() { return mentor.on; }
+      },
       flash: function (color) { flashEl.style.background = color || 'rgba(255,255,255,.6)'; flashEl.style.transition = 'none'; flashEl.style.opacity = '1'; requestAnimationFrame(function () { flashEl.style.transition = 'opacity .45s'; flashEl.style.opacity = '0'; }); },
       prompt: {
         set: function (o) { o = o || {}; pK.textContent = o.kicker || ''; pT.textContent = o.text || ''; pS.textContent = o.sub || ''; pS.hidden = !o.sub; promptEl.style.setProperty('--pc', o.color || A.C.gold); promptEl.classList.toggle('big', !!o.big); promptEl.hidden = false; requestAnimationFrame(fit); },
@@ -425,6 +437,7 @@
           if (contCb && contTimer > 0) { contTimer -= dt; if (contTimer <= 0) doContinue(); }
         }
         if (state.bannerTimer > 0) { state.bannerTimer -= dt; if (state.bannerTimer <= 0) banner.classList.remove('on'); }
+        if (mentor.on) { mentor.left -= dt; if (mentor.left <= 0) api.mentor.hide(); else { var mt = (performance.now() - mentor.t0) / 1000; try { A.mentor.draw(mentorCv.getContext('2d'), 88, mentor.mood, mt, { talk: mt < 1.1 }); } catch (e) {} } }
       }
       ctx.save(); ctx.setTransform(state.scale, 0, 0, state.scale, 0, 0);
       if (state.shake > 0) { ctx.translate(A.rand(-state.shake, state.shake), A.rand(-state.shake, state.shake)); state.shake = Math.max(0, state.shake - dt * 38); }
@@ -458,6 +471,7 @@
     var right = state.review.filter(function (r) { return r.ok; }).length, total = state.review.length;
     var bonus = won ? 50 : 0, xp = A.addXp(state.xp + bonus + (o.xpBonus || 0));
     var summary = { game: state.id, score: Math.round(state.score), right: right, total: total, pct: total ? Math.round(right / total * 100) : 0, won: !!won, tier: state.tier.id, record: rec.record, path: params.path || '' };
+    if (A.campaign && state.opts && state.opts.campaign) { try { state.campaignResult = A.campaign.onRunEnd(state, won, o); } catch (e) { console.error('[arcade] campaign', e); } }
     if (host('onRunEnd')) { try { host('onRunEnd')(summary); } catch (e) {} }
     return { rec: rec, xp: xp, right: right, total: total, summary: summary };
   }
@@ -474,11 +488,12 @@
     var screen = h('div.ar-results');
     screen.appendChild(h('div.ar-res-hero', {},
       h('div.ar-res-card.main', {},
-        h('div.ar-kicker', {}, h('i'), (def.icon ? def.icon + ' ' : '') + def.title + ' · ' + tier.name),
+        h('div.ar-kicker', {}, h('i'), (def.icon ? def.icon + ' ' : '') + def.title + ' · ' + tier.name + (state.opts && state.opts.campaign ? ' · ' + state.opts.campaign.title : '')),
         h('h2', {}, o.title || (won ? 'Mission complete' : 'Run over')),
         h('div.ar-big', {}, fmt(state.score)),
         h('div.ar-sub', {}, o.message || (acc == null ? 'No questions answered this run.' : 'You answered ' + right + ' of ' + total + ' correctly (' + acc + '%).')),
         o.badge ? h('div.ar-badge', { style: { '--bc': o.badge.color || A.C.gold } }, h('span.ar-badge-ico', { 'aria-hidden': 'true' }, o.badge.icon || '🏅'), h('div', {}, h('b', {}, o.badge.name), h('small', {}, o.badge.desc || ''))) : null,
+        state.campaignResult && A.campaign ? A.campaign.card(state) : null,
         rec.record && state.score > 0 ? h('div.ar-record', {}, '🏆 New personal best at ' + tier.name) : h('div.ar-sub', {}, 'Best at ' + tier.name + ': ' + fmt(rec.entry.best) + ' · plays: ' + rec.entry.plays),
         h('div.ar-xpline' + (xp.up ? '.up' : ''), {}, h('b', {}, '+' + fmt(xp.gained) + ' XP'),
           h('span', {}, xp.up ? 'Promoted to ' + rk.name + ' (level ' + rk.level + ')!' : rk.name + ' · ' + fmt(rk.to - rk.xp) + ' XP to ' + rk.next),
@@ -519,8 +534,14 @@
     if (params.tier) A.setTier(params.tier);
     if (!A.order.length) { setView(h('div.ar-lobby', {}, h('h1.ar-h1', {}, 'No games registered'))); return; }
     showLobby();
-    if (params.game && A.games[params.game]) startGame(params.game, { realm: params.realm || '' });
+    if (params.campaign && A.campaign) {
+      var ch = A.campaign.byN(params.campaign);
+      if (ch && A.campaign.unlocked(ch)) { A.campaign.sel = ch; var m = params.mission ? ch.missions[+params.mission - 1] : null; if (m) A.campaign.start(ch, m); else A.lobby('campaign'); }
+      return;
+    }
+    if (params.game && A.games[params.game]) startGame(params.game, { realm: params.realm || '', mission: params.mission || '' });
   };
+  A.start = function (id, opts) { if (root) startGame(id, opts); };
   A.unmount = function () { endRun(); stopLobby(); A.music.stop(); viewEl = null; root = null; };
-  A.lobby = function () { if (root) showLobby(); };
+  A.lobby = function (at) { if (!root) return; showLobby(); if (at === 'campaign') { var el = viewEl && viewEl.querySelector('#ar-camp'); if (el) { try { el.scrollIntoView({ block: 'start' }); } catch (e) {} } } };
 })();

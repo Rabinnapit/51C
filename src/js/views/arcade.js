@@ -152,8 +152,8 @@
 
   CORB.registerView({
     id: 'arcade', title: 'Arcade', section: 'Practice', icon: 'gamepad', nav: true, order: 90, full: true, mobileAs: 'quiz',
-    blurb: 'Seven games: a rifle range in real 3D, RPG battles, a supply convoy, artillery, a pop-up range, a space shooter and a sorting yard',
-    keywords: 'game games arcade play quest battle supply line convoy checkpoint challenge coin fire mission artillery range qualification shooter sort yard FAR parts thresholds glossary',
+    blurb: 'Seven games, two in real 3D: a rifle range, a supply convoy, RPG boss battles, artillery, a pop-up range, a space shooter and a sorting yard, plus the campaign Your first year as a 51C',
+    keywords: 'game games arcade play quest battle boss supply line convoy checkpoint challenge coin fire mission artillery range qualification shooter sort yard FAR parts thresholds glossary campaign chapter master gunner mentor',
     render: function (root, ctx) {
       var A = window.ARCADE, h = CORB.ui.h;
       if (!A || typeof A.mount !== 'function') {

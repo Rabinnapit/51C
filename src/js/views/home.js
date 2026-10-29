@@ -60,7 +60,7 @@
     root.appendChild(h('section.home-hero', {},
       h('div.eyebrow', {}, 'Free \u00b7 Works offline \u00b7 Built by a 51C'),
       hello(h), h('h1', {}, 'Zero to certified.'),
-      h('p.lede', {}, 'The free, fun way to pass CON 3990V. Your plan in 30 seconds. Lessons that play like pictures, 384 questions that explain themselves, flashcards and seven games, one in real 3D. Made by a 51C for new 51Cs and 1102s.'),
+      h('p.lede', {}, 'The free, fun way to pass CON 3990V. Your plan in 30 seconds. Lessons that play like pictures, 384 questions that explain themselves, flashcards and seven games, two in real 3D, with a campaign. Made by a 51C for new 51Cs and 1102s.'),
       h('div.home-proof', {}, ['79% pass on the first try (FY26)', '35 lessons, 384 questions', 'No signal needed'].map(function (t) { return h('span', {}, icon('check'), t); })),
       h('div.home-three', {},
         [['school', '5 courses', 'CON 1100, 1200V, 1300V, 7300V and 1400V'], ['award', '1 exam', 'CON 3990V: 150 questions, 70% to pass'], ['clipboard', '12 months', 'of full-time contracting experience']].map(function (x) {

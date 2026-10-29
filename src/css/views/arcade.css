@@ -202,3 +202,72 @@ html.ar-playing, html.ar-playing body { overflow: hidden; overscroll-behavior: n
 @media (max-width: 760px) { .ar-res-hero { grid-template-columns: minmax(0, 1fr); } .ar-res-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (prefers-reduced-motion: reduce) { .ar-cab, .ar-count, .ar-play.ar-hurt { animation: none; } }
 html[data-motion="reduce"] .ar-cab, html[data-motion="reduce"] .ar-count { animation: none; }
+
+/* ---- the campaign: the Master Gunner's brief, the chapter strip and the three missions ---- */
+.ar-h2 { margin: 26px 0 12px; font-family: var(--font-display); font-weight: 900; font-stretch: 88%; font-size: 1.35rem; color: #fff; }
+.ar-camp { --cc: var(--ar-gold); margin: 4px 0 8px; padding: 18px 18px 16px; border-radius: 20px; background: linear-gradient(160deg, color-mix(in srgb, var(--cc) 14%, rgba(255,255,255,.04)), rgba(255,255,255,.025)); border: 1px solid color-mix(in srgb, var(--cc) 40%, var(--ar-line)); animation: ar-rise .5s var(--ar-ease) both; }
+.ar-camp-head h2 { margin: 8px 0 6px; font-family: var(--font-display); font-weight: 900; font-stretch: 85%; font-size: clamp(1.5rem, 3.6vw, 2.2rem); line-height: 1.05; color: #fff; }
+.ar-camp-head p { margin: 0 0 14px; max-width: 70ch; color: var(--ar-ink2); font-size: 14px; line-height: 1.5; }
+.ar-camp-grid { display: grid; grid-template-columns: minmax(240px, 300px) minmax(0, 1fr); gap: 18px; align-items: start; }
+.ar-camp-mentor { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.ar-mentor-cv { display: block; border-radius: 50%; box-shadow: 0 18px 40px -18px #000; }
+.ar-camp-bubble { position: relative; width: 100%; padding: 12px 14px; border-radius: 14px; background: rgba(0,0,0,.42); border: 1px solid var(--ar-line); font-size: 13.5px; line-height: 1.5; color: var(--ar-ink2); }
+.ar-camp-bubble::before { content: ''; position: absolute; left: 50%; top: -7px; width: 12px; height: 12px; transform: translateX(-50%) rotate(45deg); background: rgba(0,0,0,.42); border-left: 1px solid var(--ar-line); border-top: 1px solid var(--ar-line); }
+.ar-camp-bubble b { display: block; color: #fff; font-family: var(--font-display); }
+.ar-camp-bubble small { display: block; margin-bottom: 6px; color: var(--ar-muted); font-size: 11.5px; }
+.ar-camp-bubble p { margin: 0; }
+.ar-camp-body { min-width: 0; display: flex; flex-direction: column; gap: 12px; }
+.ar-chapters { display: flex; flex-wrap: wrap; gap: 6px; }
+.ar-chapter { --cc: var(--ar-gold); display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 6px 12px 6px 8px; border-radius: 12px; border: 1px solid var(--ar-line); background: rgba(255,255,255,.035); color: var(--ar-ink2); text-align: left; }
+.ar-chapter .n { flex: none; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: rgba(255,255,255,.1); font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: #fff; }
+.ar-chapter .t { display: flex; flex-direction: column; line-height: 1.15; }
+.ar-chapter .t b { font-size: 13px; color: #fff; }
+.ar-chapter .t small { font-size: 11px; color: var(--ar-muted); }
+.ar-chapter.on { background: color-mix(in srgb, var(--cc) 18%, rgba(0,0,0,.3)); border-color: var(--cc); box-shadow: inset 0 0 0 1px var(--cc); }
+.ar-chapter.on .n { background: var(--cc); color: #10140c; }
+.ar-chapter.cleared .n { background: var(--ar-pine); color: #10140c; }
+.ar-chapter.locked { opacity: .5; cursor: default; }
+.ar-chapter.more { cursor: help; }
+.ar-camp-sub { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; font-size: 13.5px; color: var(--ar-muted); }
+.ar-camp-sub b { color: #fff; }
+.ar-missions { display: grid; gap: 8px; }
+.ar-mission { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 10px 14px 10px 10px; border-radius: 14px; border: 1px solid var(--ar-line); background: rgba(255,255,255,.04); text-align: left; transition: border-color .18s, background .18s, transform .18s var(--ar-ease); }
+.ar-mission:hover:not(:disabled) { border-color: var(--cc); background: color-mix(in srgb, var(--cc) 10%, rgba(255,255,255,.04)); transform: translateY(-1px); }
+.ar-mission:disabled { opacity: .5; cursor: default; }
+.ar-mission.next { border-color: color-mix(in srgb, var(--cc) 70%, transparent); box-shadow: 0 0 0 1px color-mix(in srgb, var(--cc) 35%, transparent), 0 20px 40px -30px var(--cc); }
+.ar-mission.ok { border-color: rgba(95,211,154,.4); }
+.ar-mission-n { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 10px; background: rgba(255,255,255,.1); font-family: var(--font-mono); font-size: 15px; font-weight: 800; color: #fff; }
+.ar-mission.ok .ar-mission-n { background: var(--ar-pine); color: #10140c; }
+.ar-mission-copy { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.ar-mission-copy b { color: #fff; font-size: 14.5px; }
+.ar-mission-copy span { font-size: 13px; color: var(--ar-ink2); line-height: 1.4; }
+.ar-mission-copy small { font-size: 12px; color: var(--ar-muted); }
+.ar-mission.ok .ar-mission-copy small { color: var(--ar-pine); }
+.ar-mission-go { color: var(--cc); font-weight: 850; white-space: nowrap; font-size: 13.5px; }
+@media (max-width: 760px) { .ar-camp-grid { grid-template-columns: minmax(0, 1fr); } .ar-camp-mentor { flex-direction: row; align-items: flex-start; } .ar-camp-mentor .ar-mentor-cv { width: 84px; height: 84px; flex: none; } .ar-camp-bubble::before { left: -7px; top: 22px; transform: rotate(-45deg); } .ar-mission { grid-template-columns: auto minmax(0, 1fr); } .ar-mission-go { grid-column: 2; justify-self: start; } }
+
+/* the Master Gunner's bubble over the stage */
+.ar-mentor { position: absolute; z-index: 3; left: 10px; bottom: 10px; display: flex; align-items: flex-end; gap: 8px; max-width: min(420px, calc(100% - 20px)); pointer-events: none; animation: ar-mentor-in .25s var(--ar-ease); }
+.ar-mentor canvas { flex: none; width: 64px; height: 64px; border-radius: 50%; box-shadow: 0 10px 24px -10px #000; }
+.ar-mentor-t { padding: 8px 12px; border-radius: 14px 14px 14px 4px; background: rgba(5,9,11,.86); border: 1px solid rgba(230,184,90,.45); font-size: 13px; line-height: 1.4; color: #e9efe9; }
+.ar-mentor-t b { display: block; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ar-gold); }
+.ar-mentor-t p { margin: 1px 0 0; }
+.ar-mentor.worried .ar-mentor-t { border-color: rgba(255,156,156,.55); }
+.ar-mentor.proud .ar-mentor-t { border-color: rgba(246,217,145,.8); }
+.ar-mentor.hint .ar-mentor-t { border-color: rgba(140,200,255,.5); }
+@keyframes ar-mentor-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@media (max-width: 640px) { .ar-mentor canvas { width: 48px; height: 48px; } .ar-mentor-t { font-size: 12.5px; padding: 6px 10px; } }
+@media (prefers-reduced-motion: reduce) { .ar-mentor, .ar-camp { animation: none; } }
+html[data-motion="reduce"] .ar-mentor, html[data-motion="reduce"] .ar-camp { animation: none; }
+
+/* the campaign card on the results screen */
+.ar-camp-card { --cc: var(--ar-gold); margin-top: 12px; display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; border-radius: 14px; border: 1px solid color-mix(in srgb, var(--cc) 55%, transparent); background: color-mix(in srgb, var(--cc) 10%, transparent); }
+.ar-camp-card.failed { border-color: rgba(255,156,156,.5); background: rgba(255,107,107,.07); }
+.ar-camp-card.cleared { border-color: rgba(246,217,145,.9); background: rgba(246,217,145,.12); }
+.ar-camp-card canvas { flex: none; width: 72px; height: 72px; border-radius: 50%; }
+.ar-camp-card-copy { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 4px; font-size: 13.5px; }
+.ar-camp-card-copy > b { font-family: var(--font-display); font-size: 1.1rem; color: #fff; }
+.ar-camp-card-copy p { margin: 0; color: var(--ar-ink2); line-height: 1.45; }
+.ar-camp-card-copy small { color: var(--ar-muted); }
+.ar-camp-card-copy .ar-row { margin-top: 6px; }
+@media (max-width: 420px) { .ar-camp-card { flex-direction: column; } }

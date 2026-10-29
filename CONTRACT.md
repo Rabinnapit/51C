@@ -63,9 +63,11 @@ src/js/views/*.js         home, path, plan, cert, courses, official, learn (+ le
 src/js/arcade/00-engine   window.ARCADE: register, palette, storage through A.host, pace levels, XP ranks, question memory, text, particles, floaters, sound, music
 src/js/arcade/01-shell   lobby, play screen (HUD, prompt panel, fluid canvas, answer panel, reading pause, pause menu), results with the study list
 src/js/arcade/02-feel    A.feel: Less-motion check, haptics, hit-stop, trauma shake, layered sounds (the game-feel kit every action game shares)
-src/js/arcade/03-gl      A.GL: WebGL probe, procedural PBR textures, the post pass (bloom, vignette, grain), RangeScene (the 3D range, the M4A1, the effects)
+src/js/arcade/03-gl      A.GL: WebGL probe, procedural PBR textures, the post pass (bloom, vignette, grain), LIGHT presets (dawn, day, gold, dusk, night), Stage (renderer, HDR sky, sun, haze, env), RangeScene (the 3D range, the M4A1, the effects), RoadScene (Supply Line's convoy, road and checkpoints)
+src/js/arcade/04-mentor  A.mentor: the Master Gunner (code-drawn portrait with moods, lines, one-line miss explanations)
+src/js/arcade/05-campaign A.campaign: the chapters (1 to 4), mission options, progress (progress.arcade.campaign), the lobby section and the results card
 src/js/vendor/three.min.js three.js r158 (MIT, LICENSE-three.txt beside it), re-wrapped into short lines for the Word package; never calls its loaders
-src/js/arcade/games/*.js range-day (real 3D on A.GL), contract-quest, supply-line, fire-mission, qual-range, part-patrol, sort-yard
+src/js/arcade/games/*.js range-day (real 3D on A.GL), contract-quest (the four bosses), supply-line (real 3D on A.GL.RoadScene, canvas 2D fallback), fire-mission, qual-range, part-patrol, sort-yard
 src/data/*.json           content (see section 4). <module>-<part>.json files join into <module>.
 src/official/*.webp       official document pages, <doc id>-<page>.webp, made by tools/render_official.py from the PDFs
                           (PDFs stay out of git); the build embeds them as the `pages` module
@@ -99,7 +101,7 @@ Script order in the build: data, then `core/*` in file order, then `views/*`, th
 - `path`: the 6-month exam path. `{title, lede, baseline_days: 182, exam_week, checked_on, how[], months: [{n, title, sub, phase}],
   weeks: [{n, m, title, goal, tasks: [{id, kind, t?, d?, …}], tip, class}], files[], checks: [{topic, src, said, now, status: ok|updated|fixed|verify, cite, verify?}], intel: [{t, d, lesson?, deck?}]}`.
   Task kinds: `lesson` (lesson), `read` (far: part number), `cards` (deck), `drill` (lessons[] | src | phase | missed | weak, n), `exam` (timed, n, target),
-  `course` (course), `game` (game: an Arcade id or a quick drill id; `realm` gp|pre|awd|post|all opens a Contract Quest realm or a Supply Line checkpoint; Supply Line also takes `mission`, the full run), `do` and `realexam` (view, params).
+  `course` (course), `game` (game: an Arcade id or a quick drill id; `realm` gp|pre|awd|post|all opens a Contract Quest realm or a Supply Line checkpoint; Supply Line also takes `mission`, the full run), `do` and `realexam` (view, params). `#/arcade?campaign=N` opens chapter N of the campaign (`&mission=K` starts its Kth mission).
   Week dates scale like `plan` steps (`baseline_days`). An Arcade run started from a task ticks it after three or more answers.
 - `figs`: `{lesson id: figure | [figure, ...]}`, the "At a glance" pictures on lesson pages. A figure is `{type, title, note?, ...}`;
   type is roles | flow | stack | sum | compare | ladder | scale | timeline | parts | chain | rank | bars | check (views/lessonfig.js
@@ -155,12 +157,14 @@ ARCADE.register({ id, title, icon, accent, genre, tagline, drills, controls, mus
 api.W / api.H (fluid: logical px = CSS px up to 960 x 900, inside the game's aspect range)  api.difficulty  api.opts  api.progress.pick(pool, keyOf) / correct()
 api.prompt.set({kicker, text, sub, color, big})  api.choices.set(items, onPick, {readOnly}) / lock / mark / disable / feedback({ok, title, body, cite, auto}, next) / tools(list) / timer(frac) / clear
 api.ready({text})  api.review.add({prompt, given, correct, ok, explanation, cite, lesson, qid, key})  api.score(n)  api.life(n)  api.xp(n)  api.end({won, title, message, badge, xpBonus})
-api.hud.set({...})  api.particles  api.floaters  api.audio  api.music  api.shake(px)  api.flash(color)
+api.hud.set({...})  api.particles  api.floaters  api.audio  api.music  api.shake(px)  api.flash(color)  api.mentor.say(mood, text, secs) / hide()
+api.opts from a campaign mission: { campaign: {ch, m, n, k, title, pass, of, unit}, cats, exposures (range-day), realm, lessons (supply-line), boss, lessons (contract-quest) }; api.end({... campaign: {value, of}}) reports the pass value
+ARCADE.start(id, opts)  ARCADE.lobby('campaign')  ARCADE.campaign.CHAPTERS / start(ch, m) / onRunEnd / card / section  ARCADE.mentor.draw(ctx, size, mood, t) / line(kind) / missLine(why)
 ARCADE.host = { get(k), set(k, v, quiet), speak(text), onAnswer(qid, ok), onRunEnd(summary), lessonHref(id), pathHref() }   (set by views/arcade.js)
 ARCADE._debug.play(id, opts) / start() / step(seconds) / run()   (automated checks; no UI)
 ```
 
-State (`b2b.state.v1`): `{version: 'b2b-state-1', profile: {track, start, goalMonths, goalDate, theme ('' or 'light' = day, the default; 'dark'; 'system'), textSize}, progress: {steps, courses, lessons, checks, quiz, missed, srs, howto, exp, games, exam, seen, bookmarks, path, arcade: {best, xp, quest, rot}}, settings: {tts, ttsRate, glossaryLinks, motion, setupDone, welcomeSeen, tourSeen, arcade: {tier, mute, music}}. Browser-only keys: `b2b.theme`, `b2b.textsize`, `b2b.side` ('mini' = the collapsed menu), meta: {updatedAt, lastOpened}}`.
+State (`b2b.state.v1`): `{version: 'b2b-state-1', profile: {track, start, goalMonths, goalDate, theme ('' or 'light' = day, the default; 'dark'; 'system'), textSize}, progress: {steps, courses, lessons, checks, quiz, missed, srs, howto, exp, games, exam, seen, bookmarks, path, arcade: {best, xp, quest, rot, campaign}}, settings: {tts, ttsRate, glossaryLinks, motion, setupDone, welcomeSeen, tourSeen, arcade: {tier, mute, music}}. Browser-only keys: `b2b.theme`, `b2b.textsize`, `b2b.side` ('mini' = the collapsed menu), meta: {updatedAt, lastOpened}}`.
 The copy saved inside the HTML file wins over the browser's copy when its `meta.updatedAt` is newer.
 
 ## 7. Fusing with Board Ready (the "ultimate guide")

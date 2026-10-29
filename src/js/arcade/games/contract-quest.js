@@ -2,6 +2,10 @@
    Pick a realm (one exam area), then beat two monsters and a boss with questions from the bank. A right answer fires the
    hero's RPG: more damage on a streak, on a fast answer, and on a Warrant Strike (charged by three right in a row). A wrong
    answer or a timeout lets the monster hit back for a heart. Every answer shows the reason and the FAR cite.
+   The four realm bosses are the four things that end careers: the Unauthorized Commitment, the Bid Bust, the Audit and
+   the Protest. Each asks its own family of questions, and at half health it enters a second phase with an attack of its
+   own on every miss (ratification, re-solicit, a finding, a stay of award). The Master Gunner briefs the boss and reacts
+   in a bubble. A campaign mission (api.opts.boss) is one boss alone with eight health, on the month's lessons.
    Realm stars (3 = no hearts lost) are kept in the reader's progress (progress.arcade.quest). */
 (function () {
   'use strict';
@@ -13,31 +17,49 @@
       theme: { sky: ['#0d1030', '#2a2f72', '#7d6fbf'], hill: ['#2b2f66', '#1c1f48'], ground: ['#2a2c5e', '#14162f'], mote: '#e9ebff', motes: 'snow', orb: '#f3f0ff' },
       foes: [{ name: 'Gift Goblin', kind: 'imp', color: '#62c98d', hp: 3, line: 'A little gift never hurt anyone...' },
         { name: 'Deviation Wisp', kind: 'wisp', color: '#8cc8ff', hp: 4, line: 'Who needs approval to skip a rule?' },
-        { name: 'The Unauthorized Commitment', kind: 'demon', color: '#ff5d5d', hp: 6, boss: true, line: 'Your COR already promised them the work!' }] },
+        { name: 'The Unauthorized Commitment', kind: 'demon', color: '#ff5d5d', hp: 6, boss: 'uc', line: 'Your COR already promised them the work!' }] },
     { id: 'pre', name: 'Pre-Award Plains', short: 'Pre-Award', sub: 'Pre-Award', icon: '2.0', color: '#82b6ef',
       theme: { sky: ['#071a2c', '#1f5b84', '#9bd2ea'], hill: ['#1d5a40', '#123d2b'], ground: ['#2a6340', '#123220'], mote: '#f7f1c4', motes: 'seeds', orb: '#fff6d6' },
       foes: [{ name: 'Vague Requirement', kind: 'blob', color: '#b39dff', hp: 3, line: 'Just buy... you know... the stuff.' },
         { name: 'Sole-Source Serpent', kind: 'serpent', color: '#4fd18b', hp: 4, line: 'Only one company could ever do this.' },
-        { name: 'Scope Creep', kind: 'vine', color: '#78c25a', hp: 6, boss: true, line: 'While you are at it, add a few more things...' }] },
+        { name: 'The Bid Bust', kind: 'bust', color: '#ff9d4a', hp: 6, boss: 'bust', line: 'One offer, no notice, no justification. What could go wrong?' }] },
     { id: 'awd', name: 'Award Arena', short: 'Award', sub: 'Award', icon: '3.0', color: '#f0b863',
       theme: { sky: ['#1c0d04', '#6e3510', '#f0a85a'], hill: ['#5a2c10', '#3a1c0a'], ground: ['#6e4b25', '#382510'], mote: '#ffcf86', motes: 'sparks', orb: '#ffe2a8' },
       foes: [{ name: 'Late Proposal Specter', kind: 'wisp', color: '#d6d3ff', hp: 3, line: 'It was only five minutes late...' },
         { name: 'Lowball Bandit', kind: 'imp', color: '#ff9d4a', hp: 4, line: 'Lowest price wins. Always. Right?' },
-        { name: 'The Protest Wraith', kind: 'wraith', color: '#b98cff', hp: 6, boss: true, line: 'Your evaluation was never documented!' }] },
+        { name: 'The Protest', kind: 'wraith', color: '#b98cff', hp: 6, boss: 'protest', line: 'Your evaluation was never documented!' }] },
     { id: 'post', name: 'Post-Award Fortress', short: 'Post-Award', sub: 'Post-Award', icon: '4.0', color: '#6fd3d9',
       theme: { sky: ['#03141a', '#0f4650', '#5fc3cb'], hill: ['#15393f', '#0b2529'], ground: ['#21444a', '#0d2428'], mote: '#c9f6f8', motes: 'rain', orb: '#d8fbff' },
       foes: [{ name: 'Constructive Change Golem', kind: 'golem', color: '#9aa7b4', hp: 3, line: 'The COR told me to add it. Pay me.' },
         { name: 'Invoice Imp', kind: 'imp', color: '#ffd166', hp: 4, line: 'Pay it now, inspect it later!' },
-        { name: 'The Claims Kraken', kind: 'kraken', color: '#45c7bb', hp: 6, boss: true, line: 'Six years to file, and I filed them all.' }] },
+        { name: 'The Audit', kind: 'audit', color: '#45c7bb', hp: 6, boss: 'audit', line: 'Show me the file. All of it.' }] },
     { id: 'all', name: 'Exam Citadel', short: 'Citadel', sub: 'Every exam area', icon: '★', color: '#e6b85a',
       theme: { sky: ['#0e0408', '#43121f', '#d79a4a'], hill: ['#2a0e17', '#180810'], ground: ['#3a1a22', '#1a0a0f'], mote: '#ffb35c', motes: 'embers', orb: '#ffd9a0' },
       foes: [{ name: 'Distractor Drone', kind: 'eye', color: '#ff7ab6', hp: 4, line: 'All of these answers look right...' },
         { name: 'Trick-Question Troll', kind: 'golem', color: '#86b86b', hp: 5, line: 'Read every word. Every. Word.' },
-        { name: 'The Gatekeeper', kind: 'gate', color: '#e6b85a', hp: 8, boss: true, line: '150 questions stand between you and certification.' }] }
+        { name: 'The Gatekeeper', kind: 'gate', color: '#e6b85a', hp: 8, boss: 'gate', line: '150 questions stand between you and certification.' }] }
   ];
+  // the four things that end careers: each asks its own family of lessons and has a second-phase attack on every miss
+  var BOSSES = {
+    uc: { id: 'uc', special: 'Ratification', specialText: 'Every miss now ratifies the commitment: the boss heals 1.', family: ['L02', 'L04', 'L05', 'L07', 'L08'],
+      intro: 'It feeds on promises made without a warrant. Remember who can bind the Government, what makes a contract, and what a ratification costs.' },
+    bust: { id: 'bust', special: 'Re-solicit', specialText: 'Every miss now re-solicits: your focus is lost and the next question is a hard one.', family: ['L13', 'L16', 'L18', 'L17', 'L12'],
+      intro: 'It lives on competition done wrong: no justification, the wrong method, a solicitation nobody could answer. Watch the thresholds.' },
+    audit: { id: 'audit', special: 'Finding', specialText: 'Every miss now writes a finding: it takes a potion or a scroll, or heals the boss.', family: ['L26', 'L27', 'L29', 'L30', 'L32', 'L21', 'L20'],
+      intro: 'It reads every file. Quality, changes signed by a contracting officer, claims and closeout: know the rules and the time limits.' },
+    protest: { id: 'protest', special: 'Stay of award', specialText: 'Every miss now stays the award: your focus is lost and your next hit does 1 damage.', family: ['L23', 'L24', 'L25', 'L22'],
+      intro: 'It feeds on evaluations nobody wrote down. Notices, debriefings, the protest clock. Documentation beats it.' },
+    gate: { id: 'gate', special: 'Trick question', specialText: 'Every miss now brings a hard question next.', family: [],
+      intro: 'Every area at once, like the real exam. Read every word; the Gatekeeper hides a NOT in half its questions.' }
+  };
 
   function bankOf(D) { return ((D && D.bank) || []).filter(function (q) { return q && q.stem && q.options && q.options.length === 4 && q.options.some(function (o) { return o.correct; }); }); }
-  function poolFor(D, realm) { var b = bankOf(D); return realm.id === 'all' ? b.filter(function (q) { return q.phase !== 'job'; }) : b.filter(function (q) { return q.phase === realm.id; }); }
+  // a realm's questions: its exam area; a campaign mission narrows them to the month's lessons when enough exist
+  function poolFor(D, realm, lessons) {
+    var b = bankOf(D);
+    if (lessons && lessons.length) { var l = b.filter(function (q) { return lessons.indexOf(q.lesson) >= 0; }); if (l.length >= 12) return l; }
+    return realm.id === 'all' ? b.filter(function (q) { return q.phase !== 'job'; }) : b.filter(function (q) { return q.phase === realm.id; });
+  }
   function starText(n) { var s = ''; for (var i = 0; i < 3; i++) s += i < n ? '★' : '☆'; return s; }
 
   // ---- drawing helpers ----
@@ -140,24 +162,20 @@
       if (Math.sin(t * 5) > 0.2) { ctx.strokeStyle = '#ff4d6d'; ctx.lineWidth = r * 0.04; ctx.beginPath(); ctx.moveTo(-r * 0.55, r * 0.05); ctx.lineTo(-r * 0.82, r * 0.05); ctx.lineTo(-r * 0.92, -r * 0.03); ctx.moveTo(-r * 0.82, r * 0.05); ctx.lineTo(-r * 0.92, r * 0.13); ctx.stroke(); }
       ctx.restore();
     },
-    vine: function (ctx, m) {
-      var r = m.r, t = m.t, c = m.c, f = m.flash, v;
-      ctx.save(); ctx.lineCap = 'round';
-      for (v = 0; v < 6; v++) {
-        var ang = -Math.PI / 2 + (v - 2.5) * 0.5, len = r * (1.45 + 0.35 * Math.sin(t * 1.5 + v)), sw = Math.sin(t * 2 + v * 1.3) * 0.5;
-        var ex = Math.cos(ang + sw * 0.4) * len, ey = Math.sin(ang + sw * 0.4) * len - r * 0.2;
-        ctx.strokeStyle = tone(c, -0.3 - (v % 2) * 0.12, f); ctx.lineWidth = r * 0.13;
-        ctx.beginPath(); ctx.moveTo(0, -r * 0.2); ctx.quadraticCurveTo(Math.cos(ang - sw) * len * 0.6, Math.sin(ang - sw) * len * 0.6 - r * 0.2, ex, ey); ctx.stroke();
-        ctx.fillStyle = tone(c, 0.25, f); ctx.save(); ctx.translate(ex, ey); ctx.rotate(ang + sw); ellipse(ctx, r * 0.12, 0, r * 0.2, r * 0.09); ctx.fill(); ctx.restore();
-        ctx.fillStyle = tone(c, -0.5, f); var mx = Math.cos(ang) * len * 0.45, my = Math.sin(ang) * len * 0.45 - r * 0.2; ctx.beginPath(); ctx.moveTo(mx - r * 0.05, my); ctx.lineTo(mx, my - r * 0.14); ctx.lineTo(mx + r * 0.05, my); ctx.fill();
-      }
-      ctx.translate(0, -r * 1.3 + Math.sin(t * 2) * r * 0.06);
-      for (var p = 0; p < 7; p++) { ctx.save(); ctx.rotate(p / 7 * Math.PI * 2 + t * 0.3); ctx.fillStyle = f ? '#fff' : (p % 2 ? '#e45b8f' : '#ff7ab6'); ellipse(ctx, 0, -r * 0.55, r * 0.22, r * 0.38); ctx.fill(); ctx.restore(); }
-      ellipse(ctx, 0, 0, r * 0.55, r * 0.5); ctx.fillStyle = fillOf(ctx, c, 0, 0, r * 0.55, f); ctx.fill();
-      eyes(ctx, 0, -r * 0.16, r * 0.13, r * 0.22, m.look, { squint: 0.75 });
-      var open = 0.08 + Math.abs(Math.sin(t * 2.2)) * 0.12;
-      ctx.fillStyle = '#250b14'; ctx.beginPath(); ctx.ellipse(0, r * 0.18, r * 0.26, r * open + 0.1, 0, 0, Math.PI * 2); ctx.fill();
-      ctx.fillStyle = '#fff'; for (var i = 0; i < 5; i++) { var tx = -r * 0.2 + i * r * 0.1; ctx.beginPath(); ctx.moveTo(tx, r * 0.18 - r * open); ctx.lineTo(tx + r * 0.05, r * 0.18 - r * open + r * 0.08); ctx.lineTo(tx + r * 0.1, r * 0.18 - r * open); ctx.fill(); }
+    bust: function (ctx, m) {
+      var r = m.r, t = m.t, c = m.c, f = m.flash, wob = Math.sin(t * 1.3) * 0.04;
+      ctx.save(); ctx.rotate(wob);
+      ctx.fillStyle = tone('#8a8a90', -0.25, f); ctx.fillRect(-r * 0.7, -r * 0.55, r * 1.4, r * 0.55); ctx.fillStyle = tone('#8a8a90', 0.1, f); ctx.fillRect(-r * 0.82, -r * 0.64, r * 1.64, r * 0.12);
+      ctx.fillStyle = fillOf(ctx, c, 0, -r * 1.1, r, f);
+      ctx.beginPath(); ctx.moveTo(-r * 0.95, -r * 0.62); ctx.quadraticCurveTo(-r * 0.6, -r * 1.3, -r * 0.3, -r * 1.36); ctx.lineTo(r * 0.3, -r * 1.36); ctx.quadraticCurveTo(r * 0.6, -r * 1.3, r * 0.95, -r * 0.62); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = fillOf(ctx, c, 0, -r * 1.85, r * 0.6, f); ellipse(ctx, 0, -r * 1.85, r * 0.5, r * 0.6); ctx.fill();
+      ctx.strokeStyle = '#2a1a1a'; ctx.lineWidth = r * 0.035; ctx.beginPath(); ctx.moveTo(-r * 0.2, -r * 2.32); ctx.lineTo(-r * 0.05, -r * 2.02); ctx.lineTo(-r * 0.26, -r * 1.76); ctx.moveTo(r * 0.5, -r * 1.12); ctx.lineTo(r * 0.3, -r * 0.92); ctx.lineTo(r * 0.46, -r * 0.7); ctx.stroke();
+      ctx.fillStyle = f ? '#fff' : '#3a2a2a'; ctx.beginPath(); ctx.moveTo(r * 0.3, -r * 2.3); ctx.lineTo(r * 0.5, -r * 2.15); ctx.lineTo(r * 0.35, -r * 2.04); ctx.closePath(); ctx.fill();
+      glowEyes(ctx, 0, -r * 1.92, r * 0.09, r * 0.2, '#ffb35c');
+      ctx.strokeStyle = '#3a2a2a'; ctx.lineWidth = r * 0.04; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(-r * 0.14, -r * 1.55); ctx.lineTo(r * 0.14, -r * 1.58); ctx.stroke();
+      ctx.save(); ctx.translate(0, -r * 0.95); ctx.rotate(-0.22); ctx.strokeStyle = '#c0392b'; ctx.lineWidth = r * 0.05; ctx.strokeRect(-r * 0.46, -r * 0.17, r * 0.92, r * 0.34); ctx.fillStyle = '#c0392b'; ctx.font = A.font(Math.max(8, r * 0.2), 'display', 900); ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('NO BIDS', 0, r * 0.01); ctx.restore();
+      ctx.save(); ctx.translate(r * 0.95, -r * 0.5); ctx.rotate(0.3 + Math.sin(t * 2) * 0.1); ctx.fillStyle = f ? '#fff' : '#f4ead2'; ctx.beginPath(); ctx.moveTo(-r * 0.25, -r * 0.36); ctx.lineTo(r * 0.25, -r * 0.36); ctx.lineTo(r * 0.2, r * 0.1); ctx.lineTo(r * 0.05, r * 0.36); ctx.lineTo(-r * 0.2, r * 0.2); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = '#7a1f2b'; ctx.font = A.font(Math.max(7, r * 0.12), 'display', 900); ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('RFP', 0, -r * 0.16); ctx.fillStyle = 'rgba(40,20,20,.4)'; for (var i = 0; i < 3; i++) ctx.fillRect(-r * 0.16, -r * 0.02 + i * r * 0.08, r * 0.3, r * 0.03); ctx.restore();
       ctx.restore();
     },
     wraith: function (ctx, m) {
@@ -188,22 +206,21 @@
       glowEyes(ctx, 0, -r * 1.74, r * 0.08, r * 0.14, '#ffd166');
       ctx.restore();
     },
-    kraken: function (ctx, m) {
-      var r = m.r, t = m.t, c = m.c, f = m.flash, i;
-      ctx.save(); ctx.lineCap = 'round';
-      for (i = 0; i < 6; i++) {
-        var bx = -r * 0.75 + i * r * 0.3, ex = bx * 1.55 + Math.sin(t * 2.4 + i * 1.7) * r * 0.3;
-        ctx.strokeStyle = tone(c, -0.28, f); ctx.lineWidth = r * 0.17 * (1 - Math.abs(i - 2.5) * 0.08);
-        ctx.beginPath(); ctx.moveTo(bx, -r * 0.9); ctx.quadraticCurveTo(bx + Math.sin(t * 2 + i) * r * 0.42, -r * 0.35, ex, -r * 0.04); ctx.stroke();
-        ctx.fillStyle = tone(c, -0.28, f); ellipse(ctx, ex + (ex > 0 ? r * 0.06 : -r * 0.06), -r * 0.08, r * 0.08, r * 0.08); ctx.fill();
-      }
-      ctx.beginPath(); ctx.moveTo(-r * 0.88, -r * 0.85); ctx.bezierCurveTo(-r * 0.98, -r * 2.25, r * 0.98, -r * 2.25, r * 0.88, -r * 0.85); ctx.closePath();
-      ctx.fillStyle = fillOf(ctx, c, 0, -r * 1.3, r * 0.9, f); ctx.fill();
-      ctx.fillStyle = f ? '#fff' : 'rgba(255,255,255,.16)'; ellipse(ctx, -r * 0.4, -r * 1.55, r * 0.12, r * 0.09); ctx.fill(); ellipse(ctx, r * 0.35, -r * 1.7, r * 0.09, r * 0.07); ctx.fill(); ellipse(ctx, r * 0.5, -r * 1.35, r * 0.07, r * 0.06); ctx.fill();
-      eyes(ctx, 0, -r * 1.08, r * 0.17, r * 0.32, m.look, { squint: 0.85 });
-      ctx.save(); ctx.translate(r * 1.05, -r * 0.55); ctx.rotate(0.2 + Math.sin(t * 2) * 0.08); ctx.fillStyle = f ? '#fff' : '#f4ead2'; ctx.fillRect(-r * 0.32, -r * 0.42, r * 0.64, r * 0.84);
-      ctx.fillStyle = '#0d4b45'; ctx.font = A.font(Math.max(8, r * 0.16), 'display', 900); ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('CLAIM', 0, -r * 0.18);
-      ctx.fillStyle = 'rgba(13,75,69,.4)'; for (i = 0; i < 3; i++) ctx.fillRect(-r * 0.22, r * 0.02 + i * r * 0.11, r * 0.44, r * 0.04); ctx.restore();
+    audit: function (ctx, m) {
+      var r = m.r, t = m.t, c = m.c, f = m.flash, hov = Math.sin(t * 2) * r * 0.1, flut = Math.sin(t * 6) * 0.08, i;
+      ctx.save(); ctx.translate(0, -r * 1.35 + hov);
+      [-1, 1].forEach(function (s) {
+        ctx.save(); ctx.scale(s, 1); ctx.rotate(-flut);
+        ctx.fillStyle = f ? '#fff' : '#efe6cf'; ctx.beginPath(); ctx.moveTo(0, -r * 0.8); ctx.quadraticCurveTo(r * 0.9, -r * 1.0, r * 1.1, -r * 0.7); ctx.lineTo(r * 1.0, r * 0.6); ctx.quadraticCurveTo(r * 0.6, r * 0.5, 0, r * 0.7); ctx.closePath(); ctx.fill();
+        ctx.strokeStyle = 'rgba(60,40,30,.35)'; ctx.lineWidth = r * 0.025; for (i = 0; i < 6; i++) { ctx.beginPath(); ctx.moveTo(r * 0.12, -r * 0.55 + i * r * 0.2); ctx.lineTo(r * 0.9, -r * 0.62 + i * r * 0.2); ctx.stroke(); }
+        ctx.fillStyle = '#c0392b'; ctx.font = A.font(Math.max(7, r * 0.13), 'mono', 800); ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.fillText('-$', r * 0.2, r * 0.3);
+        ctx.restore();
+      });
+      ctx.fillStyle = fillOf(ctx, c, 0, 0, r * 0.5, f); A.roundRect(ctx, -r * 0.22, -r * 0.95, r * 0.44, r * 1.75, r * 0.12); ctx.fill();
+      glowEyes(ctx, 0, -r * 0.45, r * 0.08, r * 0.1, '#ff5d5d');
+      ctx.save(); ctx.translate(r * 0.1, r * 0.9); ctx.rotate(-0.5 + Math.sin(t * 1.5) * 0.15); ctx.strokeStyle = tone(c, -0.3, f); ctx.lineWidth = r * 0.09; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, r * 0.5); ctx.stroke();
+      ctx.beginPath(); ctx.arc(0, -r * 0.3, r * 0.3, 0, Math.PI * 2); ctx.fillStyle = f ? '#fff' : 'rgba(180,230,240,.55)'; ctx.fill(); ctx.strokeStyle = tone(c, -0.3, f); ctx.lineWidth = r * 0.07; ctx.stroke(); ctx.restore();
+      ctx.save(); ctx.translate(-r * 0.6, r * 0.9); ctx.rotate(0.2 + Math.sin(t * 2.2) * 0.1); ctx.fillStyle = f ? '#fff' : '#ffd166'; A.roundRect(ctx, -r * 0.36, -r * 0.14, r * 0.72, r * 0.28, r * 0.04); ctx.fill(); ctx.fillStyle = '#5a2a00'; ctx.font = A.font(Math.max(7, r * 0.14), 'display', 900); ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('FINDING', 0, r * 0.01); ctx.restore();
       ctx.restore();
     },
     eye: function (ctx, m) {
@@ -241,7 +258,7 @@
       ctx.restore();
     }
   };
-  function monsterHeight(kind, r) { return { blob: 1.9, imp: 2.0, wisp: 2.8, demon: 2.7, serpent: 2.4, vine: 2.3, wraith: 2.5, golem: 2.1, kraken: 2.2, eye: 2.4, gate: 2.5 }[kind] * r || 2 * r; }
+  function monsterHeight(kind, r) { return { blob: 1.9, imp: 2.0, wisp: 2.8, demon: 2.7, serpent: 2.4, bust: 2.5, wraith: 2.5, golem: 2.1, audit: 2.6, eye: 2.4, gate: 2.5 }[kind] * r || 2 * r; }
 
   // The hero: a Soldier in OCP with a shoulder-fired RPG launcher. o = { flash, aim (radians, 0 = level), recoil (0..1),
   // loaded (a warhead sits in the muzzle), charged (Warrant Strike ready: the warhead glows gold) }
@@ -302,9 +319,9 @@
 
   A.register({
     id: 'contract-quest', title: 'Contract Quest', icon: '⚔️', accent: '#b98cff', genre: 'RPG battles', music: 'quest',
-    tagline: 'Fight through the four exam areas and the Exam Citadel. Right answers fire your RPG; wrong ones let the monsters hit back.',
+    tagline: 'Fight through the four exam areas and the Exam Citadel. Right answers fire your RPG; wrong ones let the monsters hit back. Each realm ends with one of the four things that end careers, and your Master Gunner is in your ear.',
     drills: 'All 384 bank questions, by exam area',
-    controls: 'Answer with 1 to 4, A to D, or a tap; Enter continues. Three right in a row charges a Warrant Strike (triple damage on your next right answer). Fast answers and streaks hit harder. Items: a 50/50 scroll removes two wrong answers; a potion gives back a heart. Clear a realm without losing a heart for three stars.',
+    controls: 'Answer with 1 to 4, A to D, or a tap; Enter continues. Three right in a row charges a Warrant Strike (triple damage on your next right answer). Fast answers and streaks hit harder. Items: a 50/50 scroll removes two wrong answers; a potion gives back a heart. Bosses ask their own family of questions and, at half health, attack on every miss. Clear a realm without losing a heart for three stars.',
     aspect: [0.95, 2.3], countdown: false, letterKeys: true, outTitle: 'Defeated',
     dataOk: function (D) { return bankOf(D).length >= 40; },
     thumb: function (ctx, w, h, t) {
@@ -325,8 +342,9 @@
       if (ph > 1.42 && ph < 2.2) A.text(ctx, '-2', w * 0.73, h * 0.3 - (ph - 1.42) * 30, { size: 30, fam: 'display', weight: 900, color: '#f6d991', align: 'center', stroke: 'rgba(0,0,0,.7)' });
     },
     create: function (api) {
-      var W = api.W, H = api.H, tier = api.difficulty, t = 0;
+      var W = api.W, H = api.H, tier = api.difficulty, t = 0, feel = A.feel, opts = api.opts || {};
       var quest = A.save.get('quest', {}); if (!quest || typeof quest !== 'object') quest = {};
+      var bossOnly = opts.boss && BOSSES[opts.boss] ? opts.boss : '', hardNext = false, held = false, rights = 0;
       var mode = 'map', realm = null, foes = [], foeIx = 0, foe = null, pool = [];
       var q = null, order = [], shown = 0, limit = 0, timer = 0, answered = false, used5050 = false;
       var streak = 0, focus = 0, charged = false, items = { scroll: 1, potion: 1 }, lost = 0;
@@ -355,7 +373,11 @@
         api.shake(rk.big ? 12 : 7);
         if (!rk.first || !foe || a.hit) return;
         a.hit = true; a.hitAt = a.t; foe.hp = Math.max(0, foe.hp - a.dmg); foe.flash = 0.14; foe.kb = 1;
-        api.audio.hit();
+        api.audio.hit(); feel.hitstop.hit(a.strike ? 90 : 50);
+        if (foe.def.boss && !foe.phase2 && foe.hp > 0 && foe.hp <= foe.maxHp / 2 && BOSSES[foe.def.boss]) {
+          foe.phase2 = true; var B2 = BOSSES[foe.def.boss];
+          setTimeout(function () { if (!foe || foe.hp <= 0) return; api.hud.set({ banner: 'Second phase: ' + B2.special, sub: B2.specialText, color: '#ff6b6b', bannerTime: 3.2 }); api.music.setIntense(true); api.audio.alarm(); api.shake(8); feel.buzz([40, 30, 40]); api.mentor.say('worried', A.mentor.line('worried'), 3.5); }, 500);
+        }
         api.floaters.add('-' + a.dmg, x, y - foeR() * 0.7, { size: a.strike ? 46 : a.dmg > 1 ? 36 : 30, color: a.strike ? '#f6d991' : '#fff' });
         if (a.fast) api.floaters.add('FAST!', x + 40, y - foeR() * 1.2, { size: 18, color: '#8be0b9' });
         if (a.strike) { beam = 0.5; api.flash('rgba(246,217,145,.55)'); }
@@ -397,7 +419,8 @@
         api.choices.tools(null);
       }
       function enter(r) {
-        realm = r; pool = poolFor(api.data, r); foes = r.foes.slice(); foeIx = 0; lost = 0;
+        realm = r; pool = poolFor(api.data, r, opts.lessons); foes = r.foes.slice(); foeIx = 0; lost = 0;
+        if (bossOnly) { var bd = r.foes.filter(function (f) { return f.boss === bossOnly; })[0] || r.foes[r.foes.length - 1]; var copy = {}; Object.keys(bd).forEach(function (k) { copy[k] = bd[k]; }); copy.hp = 8; foes = [copy]; }
         items = { scroll: 1, potion: 1 }; streak = 0; focus = 0; charged = false; mapSel = REALMS.indexOf(r);
         if (!pool.length) pool = bankOf(api.data);
         api.choices.clear(); api.prompt.clear(); api.music.play('battle'); api.audio.select();
@@ -412,11 +435,18 @@
         mode = 'intro';
         api.prompt.set({ kicker: realm.name + (d.boss ? ' · BOSS' : ' · encounter ' + (foeIx + 1) + ' of ' + foes.length), text: d.name, sub: '“' + d.line + '”', color: d.boss ? '#ff6b6b' : realm.color, big: true });
         api.choices.clear();
-        if (d.boss) { api.audio.bigBoom(); api.shake(10); api.flash('rgba(255,60,60,.35)'); api.hud.set({ banner: 'BOSS BATTLE', sub: d.name, color: '#ff6b6b', bannerTime: 2 }); }
+        if (d.boss) { api.audio.bigBoom(); api.shake(10); api.flash('rgba(255,60,60,.35)'); api.hud.set({ banner: 'BOSS BATTLE', sub: d.name, color: '#ff6b6b', bannerTime: 2 }); feel.buzz([30, 40, 60]); if (BOSSES[d.boss]) api.mentor.say('brief', BOSSES[d.boss].intro, 7); }
         else api.audio.whoosh();
       }
+      // a boss asks from its own family of lessons when the realm has enough of them; a re-solicit brings a hard one
+      function askPool() {
+        var src = pool, B = foe && foe.def.boss && BOSSES[foe.def.boss];
+        if (B && B.family.length) { var fam = pool.filter(function (q) { return B.family.indexOf(q.lesson) >= 0; }); if (fam.length >= 10) src = fam; }
+        if (hardNext) { hardNext = false; var hard = src.filter(function (q) { return q.d >= 3; }); if (hard.length < 3) hard = src.filter(function (q) { return q.d >= 2; }); if (hard.length >= 3) src = hard; }
+        return src;
+      }
       function ask() {
-        q = api.progress.pick(pool, function (x) { return x.id; });
+        q = api.progress.pick(askPool(), function (x) { return x.id; });
         order = api.shuffle([0, 1, 2, 3]); answered = false; used5050 = false; shown++;
         var words = (q.stem + ' ' + q.options.map(function (o) { return o.text; }).join(' ')).split(/\s+/).length;
         limit = tier.limit ? api.clamp(12 + words * 0.5, 20, 60) * tier.limit : 0; timer = limit;
@@ -460,18 +490,23 @@
         api.review.add({ prompt: q.stem, given: opt ? opt.text : '(no answer: time ran out)', correct: right.text, ok: ok, explanation: right.why, cite: q.cite, lesson: q.lesson, qid: q.id, key: q.id });
         var title, body;
         if (ok) {
-          streak++;
-          var fast = limit && timer > limit * 0.6, strike = charged, dmg = 1 + (streak >= 3 ? 1 : 0) + (fast ? 1 : 0);
-          if (strike) { dmg *= 3; charged = false; focus = 0; } else { focus = Math.min(3, focus + 1); if (focus >= 3) charged = true; }
+          streak++; rights++;
+          var fast = limit && timer > limit * 0.6, strike = charged && !held, dmg = 1 + (streak >= 3 ? 1 : 0) + (fast ? 1 : 0);
+          if (strike) { dmg *= 3; charged = false; focus = 0; } else if (!held) { focus = Math.min(3, focus + 1); if (focus >= 3) charged = true; }
+          if (held) { dmg = 1; held = false; }
           api.score(100 * dmg + 20 * Math.min(streak, 10) + (fast ? 80 : 0));
-          api.progress.correct();
+          api.progress.correct(); feel.buzz(8);
           anim = { type: 'attack', t: 0, dmg: dmg, strike: strike, fast: fast, hit: false };
           title = strike ? '⚡ Warrant Strike! ' + dmg + ' damage.' : (streak >= 3 ? 'Right! Combo ×' + streak + '.' : 'Right!') + (fast ? ' Fast hit.' : '');
+          if (anim.dmg === 1 && !strike && opt && foe.def.boss && foe.phase2 && title === 'Right!') title = 'Right, but the award was stayed: 1 damage.';
           body = opt.why;
           if (charged) title += ' Warrant Strike charged.';
+          if (streak === 3 || streak === 5 || streak === 7) api.mentor.say('pleased', A.mentor.LINES.streak[streak === 3 ? 0 : streak === 5 ? 1 : 2], 3);
+          else if (foe.def.boss && rights % 3 === 0) api.mentor.say('pleased', A.mentor.line('pleased'), 2.4);
         } else {
           streak = 0; focus = 0; charged = false; lost++;
           anim = { type: 'hurt', t: 0, hit: false };
+          if (foe.def.boss) api.mentor.say('hint', A.mentor.line('tips'), 3.5);
           title = opt ? 'Not quite.' : 'Time ran out.';
           body = (opt ? 'Your answer: ' + opt.text + '. ' + (opt.why || '') + ' ' : '') + 'Right answer: ' + right.text + '. ' + (right.why || '');
         }
@@ -479,6 +514,15 @@
         api.choices.feedback({ ok: ok, title: title, body: body, cite: q.cite, auto: ok && tier.read === 'off' ? 3 : 0 }, function () { if (anim) pending = advance; else advance(); });
       }
       function timeout() { if (answered) return; answered = true; api.audio.alarm(); resolve(null, -1); }
+      // the boss's second-phase attack after a miss
+      function special() {
+        var B = BOSSES[foe.def.boss]; if (!B) return; var kx = foeX(), ky = groundY() - foeR() * 1.7, sub = B.specialText;
+        if (B.id === 'uc') { foe.hp = Math.min(foe.maxHp, foe.hp + 1); api.floaters.add('+1 ratified', kx, ky, { size: 22, color: '#ff9c9c', life: 1.4 }); }
+        else if (B.id === 'bust' || B.id === 'gate') { focus = 0; charged = false; hardNext = true; if (B.id === 'bust') api.floaters.add('Focus lost', heroX(), groundY() - 130 * sc(), { size: 20, color: '#ff9c9c' }); }
+        else if (B.id === 'audit') { if (items.potion > 0) { items.potion--; sub = 'Finding: the Audit took your potion.'; } else if (items.scroll > 0) { items.scroll--; sub = 'Finding: the Audit took your 50/50 scroll.'; } else { foe.hp = Math.min(foe.maxHp, foe.hp + 1); sub = 'Finding: nothing left to take, so the boss heals 1.'; api.floaters.add('+1', kx, ky, { size: 22, color: '#ff9c9c' }); } }
+        else if (B.id === 'protest') { focus = 0; charged = false; held = true; api.floaters.add('Next hit held to 1', heroX(), groundY() - 130 * sc(), { size: 18, color: '#ff9c9c' }); }
+        api.hud.set({ banner: B.special, sub: sub, color: '#ff6b6b', bannerTime: 2.4 }); api.audio.alarm(); tools();
+      }
       function advance() {
         pending = null;
         if (lives() <= 0) return;
@@ -491,11 +535,10 @@
       }
       function clear() {
         var stars = lost === 0 ? 3 : lost === 1 ? 2 : 1;
-        var rec = quest[realm.id] || { stars: 0, clears: 0 }; rec.stars = Math.max(rec.stars || 0, stars); rec.clears = (rec.clears || 0) + 1; rec.last = new Date().toISOString().slice(0, 10);
-        quest[realm.id] = rec; A.save.set('quest', quest);
+        if (!bossOnly) { var rec = quest[realm.id] || { stars: 0, clears: 0 }; rec.stars = Math.max(rec.stars || 0, stars); rec.clears = (rec.clears || 0) + 1; rec.last = new Date().toISOString().slice(0, 10); quest[realm.id] = rec; A.save.set('quest', quest); }
         api.score(300 * stars); mode = 'clear'; clearT = 0; foe = null;
-        api.choices.clear(); api.prompt.set({ kicker: realm.name, text: 'Realm cleared  ' + starText(stars), sub: stars === 3 ? 'Flawless: no hearts lost.' : 'Clear it without losing a heart for three stars.', color: '#f6d991', big: true });
-        api.audio.fanfare(); api.hud.set({ banner: 'REALM CLEARED', sub: starText(stars), color: '#f6d991', bannerTime: 2.4 });
+        api.choices.clear(); api.prompt.set({ kicker: realm.name, text: bossOnly ? foes[0].name + ' defeated' : 'Realm cleared  ' + starText(stars), sub: stars === 3 ? 'Flawless: no hearts lost.' : bossOnly ? 'Its tricks are on your study list.' : 'Clear it without losing a heart for three stars.', color: '#f6d991', big: true });
+        api.audio.fanfare(); api.hud.set({ banner: bossOnly ? 'BOSS DOWN' : 'REALM CLEARED', sub: bossOnly ? foes[0].name : starText(stars), color: '#f6d991', bannerTime: 2.4 });
         api.particles.emit({ x: W / 2, y: H * 0.4, n: 90, color: ['#f6d991', '#e6b85a', '#ffffff', realm.color], speed: 420, gravity: 240, life: 1.6, shape: 'square', size: 7 });
         clearT = 0.001; earned = stars;
       }
@@ -609,7 +652,8 @@
               api.particles.emit({ x: kx, y: ky, n: 80, color: [foe.def.color, '#fff', A.shade(foe.def.color, 0.4)], speed: 380, gravity: 120, life: 1.2, size: 8 });
               api.particles.ring(kx, ky, { color: foe.def.color, grow: 420, life: 0.7, width: 6 });
               api.audio.boom(); api.floaters.add(foe.def.boss ? 'BOSS DEFEATED!' : 'DEFEATED!', kx, ky - foeR() * 1.4, { size: 26, color: '#f6d991', life: 1.4 });
-              api.score(foe.def.boss ? 500 : 200);
+              api.score(foe.def.boss ? 500 : 200); feel.buzz(foe.def.boss ? [30, 40, 80] : 20);
+              if (foe.def.boss) { api.music.setIntense(false); api.mentor.say('proud', A.mentor.line('boss'), 4); }
               var drop = foe.def.boss ? null : foeIx === 0 ? 'potion' : 'scroll';
               if (drop) { items[drop]++; api.floaters.add(drop === 'potion' ? '+1 🧪 Potion' : '+1 📜 Scroll', kx, ky - foeR() * 0.4, { size: 18, color: '#8be0b9', life: 1.6, vy: -40 }); api.audio.coin(); }
               tools();
@@ -619,10 +663,12 @@
           } else if (a.type === 'hurt') {
             foe.lunge = a.t < 0.3 ? A.ease.inCubic(a.t / 0.3) : a.t < 0.7 ? 1 - A.ease.outCubic((a.t - 0.3) / 0.4) : 0;
             if (!a.hit && a.t >= 0.3) {
-              a.hit = true; hero.flash = 0.25; api.audio.hurt(); api.shake(9); api.flash('rgba(255,70,70,.35)');
+              a.hit = true; hero.flash = 0.25; api.audio.hurt(); api.shake(9); api.flash('rgba(255,70,70,.35)'); feel.buzz([30, 40, 30]);
               api.particles.emit({ x: heroX(), y: groundY() - 55 * s, n: 22, color: ['#ff6b6b', '#ffb3b3'], speed: 260, gravity: 300, life: 0.6 });
               api.floaters.add('-1 ♥', heroX(), groundY() - 120 * s, { size: 26, color: '#ff6b6b' });
-              api.life(-1); tools();
+              var left = api.life(-1); tools();
+              if (left === 1) api.mentor.say('worried', A.mentor.line('low'), 3.5);
+              if (left > 0 && foe.def.boss && foe.phase2) special();
             }
             if (a.t >= 0.8) { anim = null; foe.lunge = 0; }
           }
@@ -637,6 +683,7 @@
           if (clearT > 2.6) {
             clearT = 0;
             var stars = earned;
+            if (bossOnly) { var bn = foes[0].name; api.end({ won: true, title: bn + ' defeated', message: 'Eight health, ' + shown + ' questions, ' + lost + (lost === 1 ? ' heart' : ' hearts') + ' lost.', xpBonus: 90 + stars * 20, campaign: { value: 1, of: 1 }, badge: { icon: '🏆', name: bn, desc: 'Boss down. ' + (lost === 0 ? 'Flawless.' : 'Its tricks are on the study list.'), color: realm.color } }); return; }
             api.end({ won: true, title: realm.name + ' cleared ' + starText(stars), message: 'You beat ' + foes.map(function (f) { return f.name; }).join(', ') + '.', xpBonus: 60 + stars * 30,
               badge: { icon: stars === 3 ? '🏆' : '⭐', name: starText(stars) + ' ' + realm.name, desc: stars === 3 ? 'Flawless: no hearts lost.' : lost + (lost === 1 ? ' heart' : ' hearts') + ' lost. Clear it without losing one for three stars.', color: realm.color } });
           }
@@ -668,11 +715,13 @@
         if (k === 'Enter' || k === ' ') enter(REALMS[mapSel]);
       }
 
-      var startRealm = null; REALMS.forEach(function (r) { if (api.opts && api.opts.realm === r.id) startRealm = r; });
+      var startRealm = null, wantRealm = bossOnly ? { uc: 'gp', bust: 'pre', audit: 'post', protest: 'awd', gate: 'all' }[bossOnly] : opts.realm;
+      REALMS.forEach(function (r) { if (wantRealm === r.id) startRealm = r; });
       if (startRealm) enter(startRealm); else showMap();
       return {
         update: update, draw: draw, onPointer: onPointer, onKey: onKey,
-        resize: function (w, h) { W = w; H = h; }
+        resize: function (w, h) { W = w; H = h; },
+        stats: function () { return { mode: mode, realm: realm && realm.id, foe: foe ? { name: foe.def.name, boss: foe.def.boss || '', hp: foe.hp, max: foe.maxHp, phase2: !!foe.phase2 } : null, foeIx: foeIx, focus: focus, charged: charged, held: held, hardNext: hardNext, items: items, lost: lost, streak: streak, anim: anim && anim.type }; }
       };
     }
   });
