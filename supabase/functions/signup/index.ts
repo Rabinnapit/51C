@@ -1,5 +1,5 @@
 // B2B Exam Prep: create an account that can sign in at once (no confirmation email; the free email service allows only a few an hour).
-// Public by design, like any sign-up form: it checks the email and password itself and never returns anyone's data.
+// Public by design, like any sign-up form: it checks the name, email and password itself and never returns anyone's data.
 // Deployed to the Supabase project 51C as "signup" with verify_jwt off.
 import { createClient } from "jsr:@supabase/supabase-js@2";
 
@@ -20,15 +20,17 @@ Deno.serve(async (req: Request) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors });
   if (req.method !== "POST") return reply({ error: "Use POST." }, 405, cors);
 
-  let body: { email?: unknown; password?: unknown };
-  try { body = await req.json(); } catch { return reply({ error: "Send the email and password as JSON." }, 400, cors); }
+  let body: { name?: unknown; email?: unknown; password?: unknown };
+  try { body = await req.json(); } catch { return reply({ error: "Send the name, email and password as JSON." }, 400, cors); }
+  const name = String(body.name ?? "").trim().replace(/\s+/g, " ");
   const email = String(body.email ?? "").trim().toLowerCase();
   const password = String(body.password ?? "");
+  if (name.length < 1 || name.length > 60) return reply({ error: "Enter your name (up to 60 characters)." }, 400, cors);
   if (email.length > 254 || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return reply({ error: "Enter a valid email address." }, 400, cors);
   if (password.length < 8 || password.length > 72) return reply({ error: "Use a password of 8 to 72 characters." }, 400, cors);
 
   const admin = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!, { auth: { persistSession: false, autoRefreshToken: false } });
-  const { error } = await admin.auth.admin.createUser({ email, password, email_confirm: true });
+  const { error } = await admin.auth.admin.createUser({ email, password, email_confirm: true, user_metadata: { name } });
   if (error) {
     const taken = /already|registered|exists/i.test(error.message);
     return reply({ error: taken ? "An account with that email already exists. Sign in instead." : "Could not create the account right now. Please try again later." }, taken ? 409 : 400, cors);

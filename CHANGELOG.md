@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.18.0 (29 October 2026): the install page, and accounts with a name
+
+- **The install page.** Opening the website in a phone browser now shows one thing: the app's install page, with a
+  single button for that phone, instead of the guide behind a pop-up. Android, Chrome: **Install app** opens Chrome's
+  own install box, one tap. Samsung Internet (and Edge, Opera, Firefox and the browsers inside QR and social apps):
+  **Install with Chrome** hands the page to Chrome, because those browsers build their own app package, which Google
+  Play Protect blocks as "unsafe" (the warning readers saw with 0.17.0), or only make a browser shortcut. iPhone and
+  iPad, Safari: the three taps (Share, Add to Home Screen, Add) with a pointer at the Share button, because Apple
+  allows no install button on a website; other iPhone browsers get **Open in Safari**. After an install the page says
+  so and points at the new icon. "Not now, use the website in this browser" stays, in small print, and waits three
+  days before asking again. Settings & help → Install the app shows the same page again.
+- **Accounts with a name; sign-up as a pop-up.** Sign in is now a button in the top bar of the website and the
+  installed app. Creating an account asks for a name, an email address and a password, with an eye button to show the
+  password, a terms-of-use checkbox and the terms to read right there. The guide then greets the reader by first name
+  at the top of Home and in the account screen. The account screen (the initials in the top bar) saves now, changes
+  the name, signs out, or deletes the account and its saved progress for good. Sign-in with Google and password reset
+  are built in and switch on once the owner finishes the Google and Supabase setup (README, Accounts).
+- The handout, About, Settings & help and the README describe the new install path. The website tells iPhones to
+  label the app "B2B Prep" (apple-mobile-web-app-title), and the manifest names itself as a related app so Chrome can
+  tell the page when the app is already installed.
+
 ## 0.17.0 (29 October 2026): optional accounts
 
 - **Your progress in your account:** on the website and the installed app, Settings & help → Your account lets a reader

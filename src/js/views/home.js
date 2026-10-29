@@ -1,6 +1,8 @@
 /* VIEW home — first visit: three questions that build the plan. Returning: next step, milestones, study, what's new */
 (function () {
   'use strict';
+  // "Hello, Name!" for a signed-in reader (accounts are on the website and the app only)
+  function hello(h) { var n = window.CORB.account && window.CORB.account.signedIn() && window.CORB.account.firstName(); return n ? h('p.hello', {}, 'Hello, ' + n + '!') : null; }
   var CORB = window.CORB;
   var TRACKS = [
     { id: '51c', title: '51C Soldier', sub: 'Contracting NCO, new to the MOS', icon: 'shield' },
@@ -57,7 +59,7 @@
     var f = CORB.setupForm();
     root.appendChild(h('section.home-hero', {},
       h('div.eyebrow', {}, 'Back to Basics · DoW Contracting Professional certification'),
-      h('h1', {}, 'From day one to certified.'),
+      hello(h), h('h1', {}, 'From day one to certified.'),
       h('p.lede', {}, 'A plain-language guide for new 51C contracting NCOs and 1102 contract specialists. Answer three questions and B2B Exam Prep builds a dated plan and a 26-week path to pass the exam, then teaches and tests you on everything in it.'),
       h('div.home-three', {},
         [['school', '5 courses', 'CON 1100, 1200V, 1300V, 7300V and 1400V'], ['award', '1 exam', 'CON 3990V: 150 questions, 70% to pass'], ['clipboard', '12 months', 'of full-time contracting experience']].map(function (x) {
@@ -96,7 +98,7 @@
       var goal = plan.goal(), left = U.daysUntil(goal);
       root.appendChild(h('section.home-head', {},
         h('div', {}, h('div.eyebrow', {}, CORB.trackLabel(plan.track()) || 'Your path'),
-          h('h1', {}, 'Day ' + plan.dayNumber() + ' of your path'),
+          hello(h), h('h1', {}, 'Day ' + plan.dayNumber() + ' of your path'),
           h('p.lede', {}, left >= 0 ? 'Goal for courses and exam: ' + U.fmtDate(goal) + ' (' + U.plural(left, 'day') + ' to go).' : 'Your goal date (' + U.fmtDate(goal) + ') has passed. Pick a new one in My plan.'))));
     } else {
       root.appendChild(h('section.home-head', {}, h('div', {}, h('div.eyebrow', {}, 'Welcome'), h('h1', {}, 'Look around'),

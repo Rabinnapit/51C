@@ -7,3 +7,35 @@
 .acct-msg { margin: 8px 0 0; font-size: var(--fs-sm); }
 .acct-msg.bad { color: var(--danger); }
 .acct-msg.ok { color: var(--ok); }
+
+/* sign-up and sign-in pop-ups, the account screen, the top bar button and the Home greeting */
+.acct-modal { display: grid; gap: 10px; }
+.acct-modal .acct-form { max-width: none; margin: 0; }
+.acct-go { width: 100%; justify-content: center; min-height: 46px; }
+.pw { position: relative; }
+.pw .input { padding-right: 48px; }
+.pw-eye { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; display: grid; place-items: center;
+  border: 0; border-radius: var(--r-md); background: none; color: var(--muted); cursor: pointer; }
+.pw-eye:hover, .pw-eye[aria-pressed="true"] { color: var(--accent); }
+.pw-eye svg { width: 20px; height: 20px; }
+.google-btn { width: 100%; justify-content: center; gap: 10px; min-height: 46px; background: #fff; color: #1f1f1f; border: 1px solid #dadce0; font-weight: 600; }
+.g-logo { width: 20px; height: 20px; display: inline-grid; }
+.g-logo svg { width: 100%; height: 100%; }
+.acct-or { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: var(--fs-sm); }
+.acct-or::before, .acct-or::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.acct-agree { display: flex; align-items: center; gap: 10px; font-size: var(--fs-sm); cursor: pointer; }
+.acct-agree input { width: 20px; height: 20px; accent-color: var(--accent); }
+.acct-terms summary, .acct-more summary { cursor: pointer; font-size: var(--fs-sm); color: var(--accent); font-weight: 600; }
+.acct-terms .terms { max-height: 220px; overflow: auto; margin-top: 8px; padding: 10px; border-radius: var(--r-md); background: var(--panel-2); font-size: var(--fs-sm); }
+.acct-more { padding-top: 6px; border-top: 1px solid var(--line); }
+.acct-more[open] { padding-bottom: 4px; }
+.acct-more .acct-form { margin-top: 8px; }
+.acct-switch { margin: 4px 0 0; text-align: center; font-size: var(--fs-sm); color: var(--muted); }
+.linkish { border: 0; background: none; padding: 0; color: var(--accent); font: inherit; font-weight: 600; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+.avatar { width: 30px; height: 30px; border-radius: 50%; display: inline-grid; place-items: center; background: var(--accent); color: var(--accent-ink, #fff);
+  font-weight: 800; font-size: 13px; letter-spacing: .02em; flex: none; }
+.avatar.lg { width: 48px; height: 48px; font-size: 18px; }
+.acct-btn { gap: 6px; }
+.acct-btn .avatar { width: 28px; height: 28px; }
+@media (max-width: 380px) { .acct-label { display: none; } }
+.hello { margin: 0 0 4px; font-weight: 700; color: var(--accent); font-size: var(--fs-lg); }

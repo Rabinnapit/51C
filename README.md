@@ -34,10 +34,13 @@ rehosting or selling without written permission). The terms text is `terms` in `
 
 ## How people get it: three ways
 
-1. **The app (best): https://rabinnapit.github.io/51C/.** People scan the QR code (print
-   `handout/B2B_Exam_Prep_Install_Sheet.pdf`, or show the code on the guide's About page), open the link and add it to the
-   home screen: on an iPhone, Safari, Share, Add to Home Screen; on Android, Chrome, Install app. It is free, needs no app
-   store and no account, and works offline after the first open. **When you change the content on GitHub, everyone gets
+1. **The app (best): https://rabinnapit.github.io/51C/.** People scan the QR code with the phone's Camera app
+   (print `handout/B2B_Exam_Prep_Install_Sheet.pdf`, or show the code on the guide's About page). The page that opens is
+   the app's install page with one button for that phone. Android: **Install app**, Chrome's own install box; Samsung
+   Internet and other browsers get **Install with Chrome**, because they build their own package, which Google Play
+   Protect blocks as "unsafe". iPhone and iPad: Safari's three taps (Share, Add to Home Screen, Add), the only way Apple
+   allows; other iPhone browsers get **Open in Safari**. It is free, needs no app store and no account, and works
+   offline after the first open. **When you change the content on GitHub, everyone gets
    the new version the next time they open it** with an internet connection, and a bar offers a reload if a newer
    version came out while they had it open. Progress stays on each person's device.
 2. **The single file.** `B2B-Exam-Prep.html` (download it from the website's Help page, or build it locally into `dist/`).
@@ -75,21 +78,34 @@ One-time setup (already described here so it can be repeated):
 
 ## Accounts (optional)
 
-Readers can create an account under Settings & help → Your account (website and installed app only). Their progress then
-saves to the account a few seconds after each change and comes back on any device where they sign in.
+Readers tap **Sign in** in the top bar (website and installed app only) to create an account with their name, an email
+address and a password, or to sign in. Their progress then saves to the account a few seconds after each change and
+comes back on any device where they sign in, and Home greets them by first name.
 
 - **Where:** the Supabase project **51C** (ref `efnoeusptnedvlaiomaa`, region us-east-1, free plan), kept apart from the
   owner's other Supabase projects. `src/data/meta.json` → `sync` holds its address and the *publishable* key, which is
   meant to be public; the database rules, not the key, protect the data.
-- **What is stored:** each account's email address and one `progress` row with the app's state. Each signed-in reader can
+- **What is stored:** each account's name, email address and one `progress` row with the app's state. Each signed-in reader can
   read and write only their own row (row-level security); signed-out visitors cannot read the table at all.
-- **Sign-up:** the `signup` function creates accounts that work at once, because the free plan sends only a few emails an
-  hour. There is no password reset yet. To add one later, set Authentication → URL Configuration → Site URL to
-  https://rabinnapit.github.io/51C/ in the Supabase dashboard.
+- **Sign-up:** the `signup` function creates accounts that work at once (no confirmation email: the free plan sends only
+  a few an hour) and stores the name. `delete-account` deletes the caller's own account and its progress.
+- **Google sign-in and password reset** are built in but switched off (`src/data/meta.json` → `sync.google` and
+  `sync.reset`) until the owner sets them up, by hand, in their own dashboards:
+  1. Supabase dashboard → project 51C → Authentication → URL Configuration: Site URL `https://rabinnapit.github.io/51C/`,
+     redirect URLs `https://rabinnapit.github.io/51C/**` and `http://localhost:8791/**`. This alone makes password
+     reset work: set `sync.reset` to true, build and publish.
+  2. Google Cloud Console, signed in as the owner: a project, the OAuth consent screen (External, app name B2B Exam
+     Prep) and an OAuth client of type Web application with the authorised JavaScript origin
+     `https://rabinnapit.github.io` and the redirect URI `https://efnoeusptnedvlaiomaa.supabase.co/auth/v1/callback`.
+  3. Supabase → Authentication → Providers → Google: switch it on and paste the client ID and client secret there,
+     never into the app or this repository.
+  4. Set `sync.google` to true in `meta.json`, build and publish: the sign-in and sign-up pop-ups then show
+     "Continue with Google".
 - **Free-plan note:** Supabase pauses a free project after about a week with no activity. If accounts stop working after
   a quiet spell, open the project in the dashboard and choose Restore. The guide keeps working on each device meanwhile.
 - **Managing users:** Supabase dashboard → project 51C → Authentication → Users (deleting a user deletes their progress).
-- **Sources:** `supabase/migrations/` (the table and its rules) and `supabase/functions/signup/` (the sign-up function).
+- **Sources:** `supabase/migrations/` (the table and its rules), `supabase/functions/signup/` and
+  `supabase/functions/delete-account/`.
 
 ## The QR code and install sheet
 

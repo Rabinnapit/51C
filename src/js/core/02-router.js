@@ -101,6 +101,7 @@
       h('button.btn.sm.save-btn', { type: 'button', hidden: true, onclick: saveToFile, title: 'Your progress is only in this browser. Save it into the B2B Exam Prep file so a restart cannot erase it.' }, icon('save'), h('span.hide-sm', {}, 'Save progress')),
       h('button.btn.icon.sm.ghost.hide-sm.text-btn', { type: 'button', 'aria-label': 'Text size', 'data-tip': 'Text size', onclick: function () { CORB.cycleTextSize(); } }, icon('text')),
       h('button.btn.icon.sm.ghost.hide-sm.theme-btn', { type: 'button', 'aria-label': 'Day or night mode', 'data-tip': 'Day / night', onclick: function () { CORB.toggleTheme(); } }, icon('moon')),
+      CORB.account && CORB.account.ready() ? CORB.account.topButton() : null,
       h('button.btn.icon.sm.ghost.tour-btn', { type: 'button', 'aria-label': 'Take the tour', 'data-tip': 'Tour (press ?)', onclick: function () { if (CORB.tour) CORB.tour.start(); else CORB.go('settings', { tab: 'help' }); } }, icon('help'))
     );
     var mobileItems = navDefs().filter(function (d) { return d.mobile; }).slice(0, 5);
@@ -150,7 +151,7 @@
     var navDef = CORB.views[navId] || def;
     shell.querySelector('.top-eyebrow').textContent = navDef.section || '';
     shell.querySelector('.top-heading').textContent = def.topTitle ? def.topTitle(r.params) : def.title || '';
-    document.title = (def.title ? def.title + ' · ' : '') + CORB.appName();
+    document.title = (def.id === 'home' || !def.title ? '' : def.title + ' · ') + CORB.appName();   // Home is just the app name, so a home-screen shortcut is named cleanly
     var content = shell.querySelector('#content'); content.innerHTML = '';
     content.className = 'content' + (def.wide ? ' wide' : '') + (def.full ? ' full' : '');
     var view = CORB.ui.h('div.view.view-enter.v-' + def.id); content.appendChild(view);

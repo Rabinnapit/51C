@@ -30,10 +30,11 @@
     if (ed === 'web' && CORB.pwa) {
       root.appendChild(h('div.section-head', {}, h('h2', {}, 'Install B2B Exam Prep as an app')));
       root.appendChild(h('div.card', {}, CORB.pwa.isStandalone() ? h('p', {}, 'You are using the installed app. It works offline and updates itself.') : h('div.stack', {},
-        h('p', {}, 'Installing puts B2B Exam Prep on your home screen or desktop like any other app. It opens without a browser bar, works offline, and still updates itself.'),
-        CORB.pwa.canInstall ? h('button.btn.primary', { type: 'button', onclick: function () { CORB.pwa.install().then(function (ok) { if (ok) CORB.render(); }); } }, icon('download'), 'Install B2B Exam Prep')
-          : h('button.btn.primary', { type: 'button', onclick: function () { CORB.pwa.howTo(); } }, icon('phone'), 'Show me how to install'),
-        h('ul.tips', {}, h('li', {}, 'Computer (Edge or Chrome): click the install icon at the right end of the address bar, or the browser menu → Apps → Install.'), h('li', {}, 'Android: browser menu (⋮) → Add to Home screen or Install app.'), h('li', {}, 'iPhone or iPad (Safari): Share button → Add to Home Screen.')))));
+        h('p', {}, 'The installed app has its own icon, opens full screen without a browser bar, works with no signal, and updates itself.'),
+        h('button.btn.primary', { type: 'button', onclick: function () { CORB.pwa.showInstall(); } }, icon('download'), 'Install the app'),
+        h('ul.tips', {}, h('li', {}, 'Android: Chrome installs it with one tap. Samsung Internet and other browsers cannot: they make a shortcut or show an "unsafe app" warning, so the page hands over to Chrome.'),
+          h('li', {}, 'iPhone or iPad: Safari only (Apple\'s rule). Share → Add to Home Screen → Add.'),
+          h('li', {}, 'Computer: Edge or Chrome, the install icon at the right end of the address bar.')))));
     }
     if (ed === 'web') {
       root.appendChild(h('div.section-head', {}, h('h2', {}, 'Copies for computers without internet')));

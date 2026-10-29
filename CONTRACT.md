@@ -44,13 +44,15 @@ src/js/core/04-data       queries over CORB_DATA, search index, citation URLs (F
 src/js/core/05-speech     read-aloud in sentence-sized chunks
 src/js/core/06-learning   SM-2 lite flashcards, quiz records, readiness by exam area, streak
 src/js/core/07-plan       dated plan: goal, 12-month experience, 36-month deadline, step status, .ics export
-src/js/core/10-account   web edition only: optional accounts (Supabase project 51C via plain fetch): sign in or create an
-                          account on Settings & help; CORB.state saves to the account after changes and comes back on any
-                          device; session in localStorage b2b.account. Backend sources in supabase/.
+src/js/core/10-account   web edition only: optional accounts (Supabase project 51C via plain fetch): Sign in button in the
+                          top bar, sign-up (name, email, password) and sign-in pop-ups, account screen, hello by first name
+                          on Home; CORB.state saves to the account after changes and comes back on any device; session in
+                          localStorage b2b.account. Google and password reset behind meta.sync flags. Sources in supabase/.
 src/js/core/08a-terms     the owner notice and terms of use: shown before first use and before the tour offer, again when
                           meta.terms.version changes (settings.termsAccepted); About and the side menu open them any time
 src/js/core/08-tour       the guided tour (same engine as Board Ready's): spotlight + card, offered once, ? button and ? key
-src/js/core/09-pwa        web edition only: service worker, update bar, install prompt
+src/js/core/09-pwa        web edition only: the install page (one button per device: Chrome's install box, a hand-off to
+                          Chrome or Safari, or Safari's three steps), service worker, update bar
 src/js/views/*.js         home, path, plan, cert, courses, official, learn (+ lesson), howto, quiz, cards, arcade, games (quick drills), glossary, far, links, settings, about;
                           explain.js is not a view: the picture explainers (CORB.explain) shared by cert and official;
                           lessonfig.js is not a view either: the lesson pictures (CORB.lessonFig) drawn from the figs module

@@ -147,7 +147,8 @@ def assemble(edition: str, dev: bool = False) -> str:
         webhead = ('<link rel="manifest" href="manifest.webmanifest">\n'
                    '<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">\n'
                    '<meta name="apple-mobile-web-app-capable" content="yes">\n'
-                   '<meta name="mobile-web-app-capable" content="yes">')
+                   '<meta name="mobile-web-app-capable" content="yes">\n'
+                   '<meta name="apple-mobile-web-app-title" content="' + META.get("short_name", "B2B Prep") + '">')
     if edition == "preview":
         webhead = '<meta name="claude:viewport-fit-sides" content="cover">'
     html = (template.replace("<!--@icon-->", favicon_tag()).replace("<!--@webhead-->", webhead)
@@ -214,6 +215,8 @@ def write_web_assets():
             {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
             {"src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
         ],
+        # lets Chrome on Android answer navigator.getInstalledRelatedApps() for this very app
+        "related_applications": [{"platform": "webapp", "url": META.get("site_url", "").rstrip("/") + "/manifest.webmanifest"}],
     }
     (DOCS / "manifest.webmanifest").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     latest = (MODS.get("updates") or {}).get("guide_changes", [{}])

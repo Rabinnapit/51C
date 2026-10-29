@@ -16,6 +16,7 @@
   }
 
   var terms = CORB.terms = {
+    body: body,
     accepted: function () { var v = T().version; return !v || CORB.get(KEY) === v; },
     // with onAgree: the first-use version, which only closes by agreeing; without: a reading copy with a Close button
     show: function (onAgree) {

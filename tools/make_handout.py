@@ -85,20 +85,20 @@ li::before {{ content: counter(s); position: absolute; left: 0; top: 0.01in; wid
     <div>
       <span class="k">SCAN WITH YOUR PHONE CAMERA</span>
       <h2>Get the app in one minute</h2>
-      <p>Open the link, then add it to your home screen. No app store, no account, no cost.</p>
+      <p>The page that opens has one job: put the app on your phone. No app store, no cost.</p>
       <span class="url">{url}</span>
     </div>
   </div>
   <div class="steps">
     <div class="col"><h3>iPhone <span>(Safari)</span></h3><ol>
-      <li>Scan the code, or type the address, and open it in <b>Safari</b>.</li>
-      <li>Tap <b>Share</b> (the square with an arrow).</li>
+      <li>Scan the code with the <b>Camera</b> app: the page opens in <b>Safari</b>.</li>
+      <li>Tap <b>Share</b> (the square with an arrow) in the bar at the bottom. If that bar shows <b>&middot;&middot;&middot;</b>, tap it first.</li>
       <li>Tap <b>Add to Home Screen</b>, then <b>Add</b>.</li>
       <li>Open it from the new icon once while online.</li></ol></div>
     <div class="col"><h3>Android <span>(Chrome)</span></h3><ol>
-      <li>Scan the code and open the link in <b>Chrome</b>.</li>
-      <li>Tap <b>Install app</b> when it is offered, or the menu (three dots), then <b>Install app</b> or <b>Add to Home screen</b>.</li>
-      <li>Tap <b>Install</b>.</li>
+      <li>Scan the code with the <b>Camera</b> app.</li>
+      <li>Tap <b>Install app</b>. If the page opened in Samsung Internet, tap <b>Install with Chrome</b> first: only Chrome installs it without a warning.</li>
+      <li>Tap <b>Install</b> in the box that appears.</li>
       <li>Open it from the new icon once while online.</li></ol></div>
   </div>
   <div class="does">
@@ -108,7 +108,7 @@ li::before {{ content: counter(s); position: absolute; left: 0; top: 0.01in; wid
   </div>
   <p class="foot"><b>{html.escape(COPY)}</b> Owned by {html.escape(WHO)}. Free for your own study and for sharing this sheet or the link;
   copying, changing or selling the app needs the owner's written permission.<br>An unofficial training aid for new 51Cs and 1102s. It is not official guidance:
-  check the official sources it links to. No accounts and no tracking; nothing you do in the app is sent anywhere.
+  check the official sources it links to. No tracking. An account is optional: without one, nothing you do in the app is sent anywhere.
   Also works on Windows and Mac computers: open the same address in Edge or Chrome and choose Install.</p>
 </div>
 </body>
