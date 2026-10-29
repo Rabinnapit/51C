@@ -131,7 +131,20 @@ name.
      `https://efnoeusptnedvlaiomaa.supabase.co/auth/v1/callback`.
   3. Supabase → Authentication → Sign In / Providers → Google: enabled, with that client's ID and secret pasted in.
   To switch Google off again, set `sync.google` to false, build and publish; readers who signed in with Google stay
-  signed in on their devices until they sign out. (Should the Google client ever be reset, Supabase holds a Client
+  signed in on their devices until they sign out.
+  - **The name on Google's screen.** Google shows "to continue to efnoeusptnedvlaiomaa.supabase.co" until the app's
+    *branding* (name and logo) passes Google's brand review. Groundwork done on 30 October 2026: the site has public
+    `terms.html` and `privacy.html` (written by `tools/build.py` from `meta.terms`), the Branding page links to them,
+    `https://rabinnapit.github.io/51C/` is a verified Search Console property of rabinnapit700@gmail.com (the
+    verification file lives in `src/web/root/` and is copied to the site root: keep it), and the 120-pixel logo is
+    `src/web/icons/logo-120.png`, uploaded on the Branding page and saved. The first "Verify branding" run (30 Oct
+    2026, about 06:40 Korea time) came back with one issue: the home page site "is not registered to you: verify
+    ownership, then wait 24 hours". Ownership was verified minutes earlier, so the next step is simply to open
+    Google Cloud → Google Auth Platform → Branding → the "Information and summary" (i) button → Verification status →
+    View issues → "I have fixed the issues" → Proceed, a day or more later. Google did not object to the Supabase
+    domain in the authorized domains. Sign-in keeps working while branding is unverified; Google just shows the
+    Supabase host name instead of the app's name and logo. Supabase's custom auth domain (about $10 a month) would
+    put the owner's own domain there too; the $0 plan skips it. (Should the Google client ever be reset, Supabase holds a Client
   Secret you can replace there; nothing in the repository changes.)
 - **Password reset** is built in but stays off (`sync.reset` false) because the app sends no email by design. Turning it
   on would need only `sync.reset` true, a build and a publish (the Site URL and redirect URLs above are already set),
