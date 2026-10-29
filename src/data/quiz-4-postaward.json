@@ -50,7 +50,7 @@
      {"text": "Government source inspection at the factory", "correct": false, "why": "Source inspection is for higher-risk items."},
      {"text": "A third-party auditor hired for every commercial buy", "correct": false, "why": "Not required as a rule."},
      {"text": "No quality checks at all, since the item is commercial", "correct": false, "why": "The Government still inspects at acceptance."}]},
-  {"id": "Q2705", "lesson": "L27", "phase": "post", "comp": "4.1.2", "d": 1, "stem": "For services, where is the Government's surveillance approach written down?", "cite": "DFARS 237.872",
+  {"id": "Q2705", "lesson": "L27", "phase": "post", "comp": "4.1.2", "d": 1, "stem": "For services, where is the Government's surveillance approach written down?", "cite": "DFARS 237.172",
    "options": [{"text": "In the quality assurance surveillance plan (QASP)", "correct": true, "why": "The QASP tells the COR what, how and how often to check."},
      {"text": "In the contractor's proposal and quality control plan", "correct": false, "why": "The proposal describes the contractor's approach."},
      {"text": "In CPARS, with the ratings", "correct": false, "why": "CPARS records results, not the plan."},

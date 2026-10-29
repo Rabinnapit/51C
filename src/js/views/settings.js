@@ -56,7 +56,8 @@
         h('p.small.muted.mt-3', {}, 'The buttons open your email with questions filled in. If nothing opens, write to ', h('b', {}, maint.email), ' (', maint.name, ', ', maint.role.toLowerCase(), ').')));
     }
     root.appendChild(h('div.section-head', {}, h('h2', {}, 'Keyboard')));
-    root.appendChild(h('div.card.small', {}, h('div.row', {}, h('kbd', {}, '/'), 'Search'), h('div.row.mt-2', {}, h('kbd', {}, 'Esc'), 'Close a window'), h('div.row.mt-2', {}, h('kbd', {}, 'Space'), 'Flip a flashcard; ', h('kbd', {}, '1'), h('kbd', {}, '2'), h('kbd', {}, '3'), ' grade it')));
+    root.appendChild(h('div.card.small', {}, h('div.row', {}, h('kbd', {}, '/'), 'Search'), h('div.row.mt-2', {}, h('kbd', {}, 'Esc'), 'Close a window'), h('div.row.mt-2', {}, h('kbd', {}, 'Space'), 'Flip a flashcard; ', h('kbd', {}, '1'), h('kbd', {}, '2'), h('kbd', {}, '3'), ' grade it'),
+      h('div.row.mt-2', {}, h('kbd', {}, '1'), '–', h('kbd', {}, '4'), ' answer a practice question; ', h('kbd', {}, 'Enter'), ' or ', h('kbd', {}, '→'), ' next question; in the exam simulator ', h('kbd', {}, '←'), ' back and ', h('kbd', {}, 'F'), ' flag')));
   }
 
   function profile(root, h, icon) {

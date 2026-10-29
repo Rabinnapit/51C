@@ -34,10 +34,13 @@
       });
     } });
 
+  // a short check at the end of the lesson: up to six of the lesson's own questions (the class and test-taker questions
+  // mapped to the lesson are many on some topics); the rest are one tap away as a practice set on that lesson
   function check(lesson, h, icon) {
-    var qs = CORB.data.questionsFor(lesson.id); if (!qs.length) return null;
+    var all = CORB.data.questionsFor(lesson.id); if (!all.length) return null;
+    var own = all.filter(function (q) { return !q.src; }), qs = (own.length >= 3 ? own : all).slice(0, 6);
     var right = 0, answered = 0;
-    var wrap = h('section.lesson-check', {}, h('div.section-head', {}, h('h2', {}, icon('quiz'), ' Check yourself'), h('span.muted', {}, qs.length + ' questions')));
+    var wrap = h('section.lesson-check', {}, h('div.section-head', {}, h('h2', {}, icon('quiz'), ' Check yourself'), h('span.muted', {}, qs.length + (all.length > qs.length ? ' of ' + all.length + ' questions' : ' questions'))));
     var result = h('div.check-result', { hidden: true });
     qs.forEach(function (q, qi) {
       var opts = CORB.util.shuffle(q.options), box = h('div.card.qbox');
@@ -65,6 +68,8 @@
       wrap.appendChild(box);
     });
     wrap.appendChild(result);
+    if (all.length > qs.length) wrap.appendChild(h('div.row.tight.mt-3', {}, h('button.btn', { type: 'button', onclick: function () { CORB.quiz.start({ mode: 'practice', lessons: [lesson.id], n: all.length, label: lesson.title }); } }, icon('quiz'), 'Practice all ' + all.length + ' questions on this lesson'),
+      h('span.small.muted', {}, 'Includes the B2B class and test-taker questions on this topic.')));
     return wrap;
   }
 

@@ -4,6 +4,8 @@
   var CORB = window.CORB;
   var S = null;           // the quiz in progress (kept while the reader moves around the app)
   var timerId = null;
+  var keyHandler = null;  // keyboard shortcuts while a question is on screen: 1-4 or A-D answer, Enter or → next, ← back and F flag in the simulator
+  function unkey() { if (keyHandler) { document.removeEventListener('keydown', keyHandler); keyHandler = null; } }
 
   function pickWeighted(n, all) {
     var phases = CORB.data.phases(), out = [], used = {};
@@ -33,7 +35,7 @@
   CORB.quiz = { start: start };
   function finish() {
     if (!S || S.finished) return;
-    clearInterval(timerId);
+    clearInterval(timerId); unkey();
     S.finished = true; S.ended = Date.now();
     var byPhase = {}, right = 0;
     S.items.forEach(function (it) {
@@ -136,6 +138,21 @@
     var nextBtn = h('button.btn.primary.lg', { type: 'button', disabled: !exam && !it.done, onclick: function () { if (last) { if (exam) { var un = S.items.filter(function (x) { return x.pick < 0; }).length; CORB.ui.confirm(un ? CORB.util.plural(un, 'question') + ' not answered. Finish anyway?' : 'Finish and see your score?', { ok: 'Finish' }).then(function (ok) { if (ok) finish(); }); } else finish(); } else { S.i++; CORB.render(); } } }, last ? 'Finish' : 'Next', icon(last ? 'check' : 'arrow-right'));
     root.appendChild(h('div.q-nav', {}, h('button.btn', { type: 'button', disabled: S.i === 0 || !exam, hidden: !exam, onclick: function () { S.i--; CORB.render(); } }, icon('arrow-left'), 'Back'), h('span.grow'), nextBtn));
     if (!exam && it.done) showFeedback(!!it.opts[it.pick].correct, it.opts[it.pick]);
+    if (window.matchMedia && window.matchMedia('(pointer: fine)').matches) card.appendChild(h('p.tiny.muted.mt-3.q-keys', {}, 'Keys: ', h('kbd', {}, '1'), '–', h('kbd', {}, '4'), ' answer · ', h('kbd', {}, 'Enter'), ' or ', h('kbd', {}, '→'), ' next' + (exam ? ' · ' : ''), exam ? h('kbd', {}, '←') : null, exam ? ' back · ' : null, exam ? h('kbd', {}, 'F') : null, exam ? ' flag' : null));
+    unkey();
+    keyHandler = function (e) {
+      if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey) return;
+      var t = e.target, tag = t && t.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || (t && t.isContentEditable)) return;
+      if (document.querySelector('.modal-scrim, .tour-layer, .buddy, .pop')) return;
+      var k = e.key, idx = { '1': 0, '2': 1, '3': 2, '4': 3, a: 0, b: 1, c: 2, d: 3 }[k.length === 1 ? k.toLowerCase() : k];
+      if (idx != null) { if (btns[idx] && !btns[idx].disabled) { e.preventDefault(); btns[idx].click(); } return; }
+      var onControl = document.activeElement && /^(BUTTON|A|INPUT|SELECT|TEXTAREA)$/.test(document.activeElement.tagName);
+      if ((k === 'ArrowRight' || (k === 'Enter' && !onControl)) && !nextBtn.disabled) { e.preventDefault(); nextBtn.click(); return; }
+      if (k === 'ArrowLeft' && exam && S.i > 0) { e.preventDefault(); S.i--; CORB.render(); return; }
+      if ((k === 'f' || k === 'F') && exam) { e.preventDefault(); it.flag = !it.flag; CORB.render(); }
+    };
+    document.addEventListener('keydown', keyHandler);
     if (exam) {
       root.appendChild(h('details.acc.mt-4', {}, h('summary', {}, icon('grid'), 'All questions', icon('chevron', 'chev')), h('div.acc-body', {}, h('div.q-grid', {}, S.items.map(function (x, xi) {
         return h('button' + (xi === S.i ? '.cur' : '') + (x.pick >= 0 ? '.ans' : '') + (x.flag ? '.flag' : ''), { type: 'button', 'aria-label': 'Question ' + (xi + 1), onclick: function () { S.i = xi; CORB.render(); } }, String(xi + 1));
@@ -179,5 +196,5 @@
       if (p.start === 'missed') { start({ mode: 'missed', n: 25, label: 'Missed questions' }); return; }
       if (p.run) run(root, h, icon); else if (p.result) result(root, h, icon); else setup(root, h, icon, p);
     },
-    onLeave: function () { clearInterval(timerId); } });
+    onLeave: function () { clearInterval(timerId); unkey(); } });
 })();

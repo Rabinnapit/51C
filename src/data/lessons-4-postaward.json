@@ -27,7 +27,7 @@
    "example": {"title": "The hidden crack", "body": "Six months after acceptance, castings delivered under a supply contract crack in use. Testing shows an internal flaw that no reasonable inspection at delivery would have found. That is a latent defect, so the Government can still demand a remedy even though it accepted the castings."},
    "remember": ["Inspect before you accept; acceptance is final except for latent defects, fraud, gross mistakes amounting to fraud, or a warranty.", "Services: the QASP says what, how and how often."],
    "mistakes": ["Signing a receiving report before anyone checked the delivery.", "Accepting nonconforming work without consideration."],
-   "terms": ["QASP", "COR", "PIEE", "MIRR"], "cites": ["FAR 46.2", "FAR 46.4", "FAR 46.5", "FAR 46.6", "FAR 46.7", "DFARS 237.872"]},
+   "terms": ["QASP", "COR", "PIEE", "MIRR"], "cites": ["FAR 46.2", "FAR 46.4", "FAR 46.5", "FAR 46.6", "FAR 46.7", "DFARS 237.172"]},
 
   {"id": "L28", "phase": "post", "comp": "4.1.3", "compName": "Manage Subcontracts", "title": "Subcontracts", "minutes": 8,
    "summary": "The Government's contract is with the prime contractor only. The prime manages its subcontractors, but for some contracts the contracting officer must consent to certain subcontracts, and large businesses must meet their small business subcontracting plans.",

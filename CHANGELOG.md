@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.22.0 (29 October 2026): the content audit
+
+- **Every lesson and question read against the FAR Overhaul.** All 35 lessons and 384 questions were checked, cite by
+  cite, against the RFO part pages on acquisition.gov (Parts 1, 3, 4, 5, 7 to 13, 15, 17, 18, 22, 32, 33, 37, 42 to 44,
+  46, 47 and 49) and DFARS Part 237. Thirteen corrections, the largest in Lesson 1: the guiding principles are now the
+  seven RFO principles in FAR 1.102(a), not the pre-overhaul "best value, public trust, public policy" vision. Others:
+  DFARS 237.172 for the QASP (237.872 does not exist), FAR 47.303 and 46.505 for f.o.b. terms and risk of loss,
+  FAR 10.001 and 15.101(c) for sources sought notices and RFIs (5.103 is FFRDC and bundling notices now), the RFO
+  wording of the competitive range and clarifications, 15.404 "Cost and/or price analysis", the 52.212 clauses in the
+  commercial example, CCON 015B, and tighter answers on sealed bidding and the order of sources. The full log is in
+  `content/AUDIT-2026-10-29.md`.
+- **Seven glossary terms added** that the lessons and questions used without defining: PIID, GSAR, CBAR, QAR, SSDD, DFAS
+  and EPA (250 terms).
+- **Check yourself is short again.** A lesson's end-of-lesson check shows up to six of its own questions; the class and
+  test-taker questions on the same topic (up to 32 on one lesson) sit behind "Practice all N questions on this lesson".
+- **Keyboard in the Practice test.** 1 to 4 or A to D answer, Enter or → next; in the exam simulator ← back and F flag.
+  Listed in Settings & help → Keyboard.
+
 ## 0.21.1 (29 October 2026): Buddy's bubble draws itself
 
 - On the same 12-second beat as the nudge, the chat bubble's outline draws itself from a dot at its tail and three

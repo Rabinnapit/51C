@@ -246,7 +246,7 @@
      {"text": "Any defect found within one year of delivery", "correct": false, "why": "There is no general one-year exception; a warranty might create one."},
      {"text": "Patent defects that a reasonable inspection would have found", "correct": false, "why": "Patent defects are what inspection is meant to catch before acceptance."},
      {"text": "Defects the COR reports later in writing", "correct": false, "why": "Who reports a defect does not change finality."}]},
-  {"id": "Q0802", "lesson": "L08", "phase": "gp", "comp": "1.2", "d": 2, "stem": "Under f.o.b. origin terms, when does the risk of loss pass to the Government?", "cite": "FAR 47.302",
+  {"id": "Q0802", "lesson": "L08", "phase": "gp", "comp": "1.2", "d": 2, "stem": "Under f.o.b. origin terms, when does the risk of loss pass to the Government?", "cite": "FAR 46.505 and 47.303-1",
    "options": [{"text": "When the seller delivers the goods to the carrier at the origin", "correct": true, "why": "Under f.o.b. origin the Government bears the risk during transportation."},
      {"text": "When the goods arrive at the destination named in the contract", "correct": false, "why": "That is f.o.b. destination."},
      {"text": "When the invoice is paid", "correct": false, "why": "Payment timing does not move risk of loss."},
