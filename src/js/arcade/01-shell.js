@@ -51,7 +51,7 @@
     screen.appendChild(h('header.ar-hero', {},
       h('div.ar-hero-copy', {}, h('div.ar-kicker', {}, h('i'), 'B2B Arcade'),
         h('h1.ar-h1', {}, 'Play your way ', h('em', {}, 'to the exam.')),
-        h('p.ar-lede', {}, 'Six games built on the guide\'s checked question bank, key numbers, FAR parts, forms and glossary. Every miss lands on a study list with the answer, the reason and the FAR cite.')),
+        h('p.ar-lede', {}, 'Seven games built on the guide\'s checked question bank, key numbers, FAR parts, forms and glossary, one of them a rifle range in real 3D. Every miss lands on a study list with the answer, the reason and the FAR cite.')),
       rankCard(rk)));
     screen.appendChild(h('div.ar-setup', {},
       h('div.ar-pace-row', {}, h('span.ar-pace-label', {}, 'Pace'), h('div.ar-paces', { role: 'radiogroup', 'aria-label': 'Pace' }, A.TIERS.map(function (t, ti) {

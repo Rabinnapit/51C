@@ -8,7 +8,7 @@
   A.VERSION = '1.0.0';
   A.DATA = A.DATA || {};
   A.games = {}; A.order = [];
-  var LIST_ORDER = ['contract-quest', 'supply-line', 'fire-mission', 'qual-range', 'part-patrol', 'sort-yard'];
+  var LIST_ORDER = ['range-day', 'contract-quest', 'supply-line', 'fire-mission', 'qual-range', 'part-patrol', 'sort-yard'];
   function listRank(id) { var i = LIST_ORDER.indexOf(id); return i < 0 ? LIST_ORDER.length : i; }
   A.register = function (def) {
     if (!def || !def.id) throw new Error('register needs an id');

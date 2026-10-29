@@ -62,7 +62,10 @@ src/js/views/*.js         home, path, plan, cert, courses, official, learn (+ le
                           lessonfig.js is not a view either: the lesson pictures (CORB.lessonFig) drawn from the figs module
 src/js/arcade/00-engine   window.ARCADE: register, palette, storage through A.host, pace levels, XP ranks, question memory, text, particles, floaters, sound, music
 src/js/arcade/01-shell   lobby, play screen (HUD, prompt panel, fluid canvas, answer panel, reading pause, pause menu), results with the study list
-src/js/arcade/games/*.js contract-quest, supply-line, fire-mission, qual-range, part-patrol, sort-yard
+src/js/arcade/02-feel    A.feel: Less-motion check, haptics, hit-stop, trauma shake, layered sounds (the game-feel kit every action game shares)
+src/js/arcade/03-gl      A.GL: WebGL probe, procedural PBR textures, the post pass (bloom, vignette, grain), RangeScene (the 3D range, the M4A1, the effects)
+src/js/vendor/three.min.js three.js r158 (MIT, LICENSE-three.txt beside it), re-wrapped into short lines for the Word package; never calls its loaders
+src/js/arcade/games/*.js range-day (real 3D on A.GL), contract-quest, supply-line, fire-mission, qual-range, part-patrol, sort-yard
 src/data/*.json           content (see section 4). <module>-<part>.json files join into <module>.
 src/official/*.webp       official document pages, <doc id>-<page>.webp, made by tools/render_official.py from the PDFs
                           (PDFs stay out of git); the build embeds them as the `pages` module
@@ -70,7 +73,7 @@ src/web/                  icons (tools/make_icons.py), favicon.svg, sw.js templa
 handout/                  the QR code and the printable install sheet for the phone app (tools/make_handout.py)
 ```
 
-Script order in the build: data, then `core/*` in file order, then `views/*`, then `arcade/*` and `arcade/games/*`, then the boot block, which must stay last
+Script order in the build: data, then `core/*` in file order, then `views/*`, then `vendor/*`, then `arcade/*` and `arcade/games/*`, then the boot block, which must stay last
 (it snapshots the page for "save progress into this file").
 
 ## 4. Data modules (`window.CORB_DATA`)

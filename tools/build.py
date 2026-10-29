@@ -26,7 +26,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "src"
 DIST = ROOT / "dist"
 DOCS = ROOT / "docs"
-SIZE_BUDGET = 4 * 1024 * 1024
+SIZE_BUDGET = 5 * 1024 * 1024   # three.js adds about 0.65 MB to every edition
 
 template = (SRC / "index.html").read_text(encoding="utf-8")
 css_files = sorted((SRC / "css").glob("*.css")) + sorted((SRC / "css" / "views").glob("*.css"))
@@ -34,7 +34,9 @@ core_files = sorted((SRC / "js" / "core").glob("*.js"))
 view_files = sorted((SRC / "js" / "views").glob("*.js"))
 # the Arcade engine, shell and games load after the views; the arcade view mounts them when it renders
 arcade_files = sorted((SRC / "js" / "arcade").glob("*.js")) + sorted((SRC / "js" / "arcade" / "games").glob("*.js"))
-WEB_ONLY_CORE = {"09-pwa.js", "10-account.js", "12-voices.js"}   # install, updates and optional accounts: web edition only
+# bundled libraries (three.js for the real-3D games) load just before the arcade; MIT licenses sit beside them
+vendor_files = sorted((SRC / "js" / "vendor").glob("*.js"))
+WEB_ONLY_CORE = {"09-pwa.js", "10-account.js", "12-voices.js"}   # install, updates, optional accounts and cloud voices: web edition only
 
 
 def js_safe(s: str) -> str:
@@ -100,7 +102,7 @@ if repo and "/" in repo and not META.get("site_url"):
     META["site_url"] = f"https://{owner.lower()}.github.io/{name}/"
 CONTENT_HASH = hashlib.sha256(json.dumps(MODS, sort_keys=True, ensure_ascii=False).encode("utf-8")
                               + json.dumps(PAGES, sort_keys=True).encode("ascii")
-                              + b"".join(f.read_bytes() for f in core_files + view_files + arcade_files + css_files)).hexdigest()[:10]
+                              + b"".join(f.read_bytes() for f in core_files + view_files + vendor_files + arcade_files + css_files)).hexdigest()[:10]
 META["build_id"] = CONTENT_HASH
 APP_FILE = re.sub(r"[^\w-]+", "-", META.get("app_name", "B2B Exam Prep")).strip("-") or "B2B-Exam-Prep"
 
@@ -136,12 +138,12 @@ def assemble(edition: str, dev: bool = False) -> str:
         data = f'<script src="data/_bundle.js{v}"></script>'
         core = "\n".join(f'<script src="js/core/{f.name}{v}"></script>' for f in cores)
         views = "\n".join(f'<script src="js/views/{f.name}{v}"></script>' for f in view_files)
-        views += "\n" + "\n".join(f'<script src="{f.relative_to(SRC).as_posix()}{v}"></script>' for f in arcade_files)
+        views += "\n" + "\n".join(f'<script src="{f.relative_to(SRC).as_posix()}{v}"></script>' for f in vendor_files + arcade_files)
     else:
         styles = "\n".join(f'<style data-src="{f.name}">\n{f.read_text(encoding="utf-8")}\n</style>' for f in css_files)
         data = f'<script data-src="data">\n{data_js(edition)}\n</script>'
         core = "\n".join(f'<script data-src="{f.name}">\n{js_safe(f.read_text(encoding="utf-8"))}\n</script>' for f in cores)
-        views = "\n".join(f'<script data-src="{f.name}">\n{js_safe(f.read_text(encoding="utf-8"))}\n</script>' for f in view_files + arcade_files)
+        views = "\n".join(f'<script data-src="{f.name}">\n{js_safe(f.read_text(encoding="utf-8"))}\n</script>' for f in view_files + vendor_files + arcade_files)
     webhead = ""
     if edition == "web":
         webhead = ('<link rel="manifest" href="manifest.webmanifest">\n'
@@ -181,8 +183,10 @@ def check(html: str, edition: str):
     if "BOOT-LAST-BLOCK" not in html[last:]:
         problems.append("boot block is not the last script block")
     if edition in ("offline", "preview"):
+        # three.js carries fetch() inside loaders the app never calls (no model or texture files exist); the app's own code stays network-free
+        app_html = re.sub(r'<script data-src="three\.min\.js">.*?</script>', "", html, flags=re.S)
         for needle in ("fetch(", "XMLHttpRequest", "sendBeacon", "new WebSocket", "serviceWorker.register"):
-            if needle in html:
+            if needle in app_html:
                 problems.append(f"{edition}: '{needle}' found; network code belongs in core/09-pwa.js (web edition only)")
     if edition == "preview" and "<title>" not in html[:8192]:
         problems.append("preview: <title> is not in the first 8 KB")

@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.25.0 (30 October 2026): Range Day, the first game in real 3D
+
+- **Range Day.** The qualification range rebuilt in real 3D, first in the Arcade: the tower reads a glossary clue, three
+  plywood targets pop up downrange carrying terms, and you fire an M4A1 at the right one before they drop. Twenty
+  exposures and thirty rounds a table, scored like a rifle table: 18 hits Expert, 15 Sharpshooter, 12 Marksman. Paces,
+  rounds, the reading pause, XP, ranks and the study list all work as in every other game; missed terms come back.
+- **How it looks.** Physically based materials with textures generated in code (sand, dirt, plywood, paper, gunmetal), an
+  HDR sky whose sun also lights the metal, soft shadows, haze, terrain with hills, trees, rocks, sandbags, the range
+  tower, and a post pass with bloom, vignette and film grain. The rifle is an M4A1 as the Army issues it: flat-top
+  upper with an M68 close-combat optic, rail with tan covers and a PEQ-15, vertical grip, A2 flash hider, 30-round
+  magazine. Every shot has a muzzle flash that lights the lane, smoke, ejected brass, a camera kick and recoil; every
+  hit has splinters, sparks, dust, a bullet hole, a 60 ms freeze and a buzz on Android.
+- **The feel kit.** A shared module for all games: Less motion awareness, haptics, hit-stop, trauma shake and layered
+  sounds. Range Day lowers its own picture quality by itself on a slow phone.
+- **three.js** (MIT License) is now bundled inside the single file, which grows by about 0.65 MB. The offline NIPR
+  edition stays network-free: the library's loaders are never used, and the build still checks every edition.
+- The lobby, the tour and Home now say seven games. Qual Range, the 2D version of the same drill, stays.
+
 ## 0.24.0 (30 October 2026): the app's own voices
 
 - **Four voices that sound the same on every phone.** Settings & help → Display → Read aloud → Voice now lists App
