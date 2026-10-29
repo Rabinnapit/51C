@@ -248,7 +248,7 @@
       body: h('div.tour-offer', {},
         h('div.tour-offer-icon', {}, icon('help')),
         h('div', {},
-          h('p', {}, 'New here? A short tour shows what each part of the app is for.'),
+          h('p', {}, (((CORB.DATA || {}).meta || {}).owner ? CORB.appName() + ' is the work of ' + CORB.DATA.meta.owner + '. ' : '') + 'New here? A short tour shows what each part of the app is for.'),
           h('p.muted.small', {}, 'The ? button at the top of the page starts it again any time.'))),
       sticky: true,
       actions: [

@@ -118,7 +118,23 @@ def patch_2026_10_29(mods):
             src.append(line)
 
 
-PATCHES = [patch_2026_10_29]
+def patch_2026_10_29_links(mods):
+    """Three official overhaul resources B2B Exam Prep verified on 29 Oct 2026 (links re-checked live here the same day)."""
+    rs = mods.get("resources")
+    if not isinstance(rs, list):
+        return
+    for r in [
+        {"title": "FAR Companion - the non-regulatory buying guides that go with the overhauled FAR (acquisition.gov PDF)", "url": "https://www.acquisition.gov/sites/default/files/page_file_uploads/far-companion.pdf", "kind": "reference", "access": "public",
+         "note": "Practice guidance, not regulation: useful for the 'how would you approach it' half of a board answer. Cite the FAR, not the Companion."},
+        {"title": "The overhauled FAR as one searchable PDF (RFO.pdf, acquisition.gov)", "url": "https://www.acquisition.gov/sites/default/files/page_file_uploads/RFO.pdf", "kind": "regulation", "access": "public",
+         "note": "About 8 MB. Search it for a new citation number when the part pages are slow; the per-part deviation guides stay the authoritative text."},
+        {"title": "FAI FAR Overhaul hub - training and resources for the acquisition workforce", "url": "https://www.fai.gov/node/40180", "kind": "training", "access": "public",
+         "note": "The Federal Acquisition Institute's overhaul page: part-by-part training, crosswalks and recorded sessions."},
+    ]:
+        _ensure(rs, "url", r["url"], r)
+
+
+PATCHES = [patch_2026_10_29, patch_2026_10_29_links]
 
 
 def apply(mods):

@@ -8,6 +8,8 @@ BLUF: Board Ready, the free warrant board study app, now installs on your phone 
 
 Open the link and tap the one button it shows for your device (Android: Install app in Chrome; iPhone: Share, then Add to Home Screen; computer: the install icon in the address bar). After that it opens from its own icon, works with no signal, and tells you when a newer version is out. Your progress and notes stay on your device.
 
+A one-page sheet with the QR code is attached for the notice board; the code is also on the app's About page.
+
 If the network blocks the website, the single file still works: download it from the app's Settings page (Get the app), or ask me for the Word package for Army email.
 
 What is new in v1.2:

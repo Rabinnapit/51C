@@ -8,7 +8,7 @@
     "name": "SFC Rabin Napit",
     "email": "rabin.napit.mil@army.mil"
   },
-  "version": "1.2.0",
+  "version": "1.2.1",
   "built_on": "",
   "content_verified_on": "2026-10-29",
   "next_board": "2026-10-14",
@@ -32,5 +32,100 @@
   "board_rule": {
     "week": 2,
     "weekday": 3
-  }
+  },
+  "site_url": "https://rabinnapit.github.io/51C/boardready/",
+  "owner": "SFC Rabin Napit",
+  "copyright": "© 2026 Rabin Napit. All rights reserved.",
+  "terms": {
+    "title": "Terms of use",
+    "version": "2026-10-29.1",
+    "intro": "Board Ready is owned by SFC Rabin Napit. Please read these short terms before you use it.",
+    "points": [
+      "**Owner.** Board Ready, including its code, design, primers, quiz items, scenarios and games, is the work of SFC Rabin Napit, who owns it. © 2026 Rabin Napit. All rights reserved.",
+      "**Free for your own study.** You may use it at no cost to prepare for a contracting officer review board or to run one.",
+      "**Sharing is welcome, unchanged.** You may share the official link or QR code, or pass on an unchanged copy of the file, so others can use it for their own study.",
+      "**Not allowed without the owner's written permission:** copying or changing its content or code; putting any part of it into another app, website, course or product; hosting a copy on another website; selling it or charging for it; removing the owner's name or these terms.",
+      "**Training aid only.** It is not official guidance and is not endorsed by the U.S. Army, Army Contracting Command, the 411th Contracting Support Brigade or the Department of War. Every answer shows how far to trust it; always check the official sources it links to and your Contracting & Policy office. It is provided as is, without any warranty.",
+      "**Public material stays public.** The regulations, statutes and government documents it quotes are public works of the U.S. Government and remain free for everyone. The fonts are used under the SIL Open Font License.",
+      "**Your privacy.** No tracking, no accounts and no outside services. Your progress and notes stay in your browser or in the copy of the file you save them into, and nothing is sent anywhere. A file with notes saved inside carries those notes to anyone you give it to.",
+      "**Questions or permission:** email the owner at {email}."
+    ],
+    "agree": "Select I agree to accept these terms and start using Board Ready. If you do not agree, please close it."
+  },
+  "whats_new": [
+    {
+      "version": "1.2.1",
+      "date": "2026-10-29",
+      "title": "Owner notice, terms of use and the QR install sheet",
+      "items": [
+        "The terms of use appear once before first use; About and the side menu show them any time.",
+        "A QR code on the About page and on the install page: scan it with a phone camera to get the app.",
+        "Settings tells the single-file copies where the newest version is.",
+        "Links to the FAR Companion, the searchable overhauled FAR (RFO.pdf) and the FAI overhaul hub.",
+        "Bigger buttons on touch screens; top-bar tooltips open below the bar."
+      ]
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-29",
+      "title": "On the web: install it as an app",
+      "items": [
+        "Board Ready installs from https://rabinnapit.github.io/51C/boardready/ on Android, iPhone and computers, works offline and updates itself.",
+        "The side menu collapses to a rail of icons; four text sizes; day, night or match-the-device theme.",
+        "Read-aloud with the device's natural voices and contracting pronunciation (K O, core, dee-fars).",
+        "The next board date is computed from the cadence, never stale.",
+        "Content re-checked on 29 October 2026: FAR overhaul rulemaking status, DoD class deviations, CAS thresholds in force, the Army 8(a) competition memo; see \"What changed\" in the Regulation explorer."
+      ]
+    },
+    {
+      "version": "1.1.1",
+      "date": "2026-10-29",
+      "title": "Fairer quiz",
+      "items": [
+        "255 quiz items rewritten so the longest answer choice is no longer the giveaway (right in about a fifth of items)."
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "title": "Less on screen",
+      "items": [
+        "Answers start hidden, at most three badges per card, the dashboard hides empty scores, Start first on the practice pages, better on a phone."
+      ]
+    }
+  ],
+  "app_qr": [
+    "111111101010101100010011001111111",
+    "100000100011100011001011001000001",
+    "101110101010010011100010001011101",
+    "101110101111111011000010101011101",
+    "101110100001001110111101001011101",
+    "100000101101111110110010101000001",
+    "111111101010101010101010101111111",
+    "000000001101110111011111000000000",
+    "010101111110111010010101111101101",
+    "000110011011111110001100111100011",
+    "010000100101011101010010011110111",
+    "101000010011111111000100001011010",
+    "011101110010000110001101111101001",
+    "101100011110101011010100100110111",
+    "001100100000110100101011011111010",
+    "000010001000100101110110101000010",
+    "111011110011010111001111101010010",
+    "100010010010011001100111100101010",
+    "011011110100101110001110101000111",
+    "011001001010001100011110011100010",
+    "110101111110000100011101100100010",
+    "010001001010110000001100111101111",
+    "111111100001010010111000111111101",
+    "011101011001101001010101010011011",
+    "101010111101001100001100111110010",
+    "000000001110100111010111100011011",
+    "111111101101100111100000101011110",
+    "100000101001100111111110100010010",
+    "101110100101000110011110111111010",
+    "101110101110111110100001001011110",
+    "101110100010100101000010100011001",
+    "100000101000111000000101111001000",
+    "111111100111000011001100111011010"
+  ]
 }

@@ -62,10 +62,19 @@
     map: '<path d="M9 4l6 2 6-2v14l-6 2-6-2-6 2V6z"/><path d="M9 4v14M15 6v14"/>', key: '<circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l2 2M14 9l2 2"/>', globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
     help: '<circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 1 1 3.3 2.3c-.6.3-.9.8-.9 1.5v.5M12 17h.01"/>',
     timer: '<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/>',
+    phone: '<rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/>',
     copy: '<rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>', text: '<path d="M4 7V4h16v3M9 20h6M12 4v16"/>', mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>', hand: '<path d="M8 12V6a2 2 0 1 1 4 0v5M12 11V4a2 2 0 1 1 4 0v7M16 11V7a2 2 0 1 1 4 0v8a6 6 0 0 1-6 6h-2a6 6 0 0 1-5.4-3.4L4.5 14a2 2 0 0 1 3.5-2l1 1.5"/>', zap: '<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>', message: '<path d="M4 4h16v12H8l-4 4z"/>', grid: '<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>'
   };
   ui.icon = function (name, cls) { var s = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); s.setAttribute('viewBox', '0 0 24 24'); s.setAttribute('fill', 'none'); s.setAttribute('stroke', 'currentColor'); s.setAttribute('stroke-width', '1.8'); s.setAttribute('stroke-linecap', 'round'); s.setAttribute('stroke-linejoin', 'round'); s.setAttribute('aria-hidden', 'true'); s.setAttribute('data-icon', name); if (cls) s.setAttribute('class', cls); s.innerHTML = P[name] || P.dot; return s; };
   ui.iconNames = Object.keys(P);
+  // the app's QR code (meta.app_qr, rows of 0 and 1 from tools/make_handout.py) as an SVG string; black on white so cameras read it
+  ui.qrSvg = function (rows, label) {
+    rows = Array.isArray(rows) ? rows : []; var n = rows.length; if (!n) return '';
+    var d = '';
+    rows.forEach(function (r, y) { var re = /1+/g, run; while ((run = re.exec(String(r)))) d += 'M' + (run.index + 4) + ' ' + (y + 4) + 'h' + run[0].length + 'v1h-' + run[0].length + 'z'; });
+    return '<svg viewBox="0 0 ' + (n + 8) + ' ' + (n + 8) + '" shape-rendering="crispEdges" role="img" aria-label="' + ui.esc(label || 'QR code') + '">' +
+      '<rect width="100%" height="100%" fill="#fff"/><path fill="#000" d="' + d + '"/></svg>';
+  };
   // copy text to the clipboard (the install page's "Copy the link"); falls back to a selected text box on older browsers
   ui.copyText = function (text) {
     text = String(text == null ? '' : text);

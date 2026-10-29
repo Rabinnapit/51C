@@ -38,9 +38,13 @@ the Federal Register notices as reported by Wiley, Nextgov and Washington Techno
 | WarU | DAU became the Warfighting Acquisition University (waru.edu) | Resource titles and glossary say WarU (formerly DAU) |
 | Army Warranting Program Policy, AFARS | Policy v12 (Mar 2026) still current as far as public sources show; the AFARS lives on PAM during the overhaul. PAM needs a CAC, so these are not re-verified here | Marked "verify on PAM" in the sources list |
 
-## Not in 1.2.0 (follow-ups)
+## Done in 1.2.1 (the same night)
 
-- Terms-of-use screen and owner notice like B2B Exam Prep (a product decision for the owner).
-- A QR install sheet (`make_handout.py`) for Board Ready.
+- Terms-of-use screen and owner notice like B2B Exam Prep (`core/08a-terms.js`, `meta.terms`).
+- The QR install sheet (`tools/make_handout.py`, `handout/`) and the QR card on About and on the install page.
+- What's new on About, the website note in single-file copies, manifest shortcuts, bigger touch targets, top-bar tooltips below the bar, three more overhaul links.
+
+## Still open (follow-ups)
+
 - Accounts and cloud progress sync (B2B has an optional Supabase account; Board Ready keeps progress on the device).
 - Fusing B2B Exam Prep and Board Ready into one career-long guide (the long-term plan in B2B's CONTRACT.md).

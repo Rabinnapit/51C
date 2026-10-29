@@ -403,5 +403,26 @@
   "access": "public",
   "status": "ok",
   "checked_on": "2026-09-13"
+ },
+ {
+  "title": "FAR Companion - the non-regulatory buying guides that go with the overhauled FAR (acquisition.gov PDF)",
+  "url": "https://www.acquisition.gov/sites/default/files/page_file_uploads/far-companion.pdf",
+  "kind": "reference",
+  "access": "public",
+  "note": "Practice guidance, not regulation: useful for the 'how would you approach it' half of a board answer. Cite the FAR, not the Companion."
+ },
+ {
+  "title": "The overhauled FAR as one searchable PDF (RFO.pdf, acquisition.gov)",
+  "url": "https://www.acquisition.gov/sites/default/files/page_file_uploads/RFO.pdf",
+  "kind": "regulation",
+  "access": "public",
+  "note": "About 8 MB. Search it for a new citation number when the part pages are slow; the per-part deviation guides stay the authoritative text."
+ },
+ {
+  "title": "FAI FAR Overhaul hub - training and resources for the acquisition workforce",
+  "url": "https://www.fai.gov/node/40180",
+  "kind": "training",
+  "access": "public",
+  "note": "The Federal Acquisition Institute's overhaul page: part-by-part training, crosswalks and recorded sessions."
  }
 ]

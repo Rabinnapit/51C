@@ -98,6 +98,7 @@
         h('button.btn.sm.ghost', { type: 'button', onclick: function () { closeSide(); if (CORB.tour) CORB.tour.start(); } }, icon('help'), 'Guided tour')),
       h('button.side-collapse', { type: 'button', 'aria-label': 'Collapse the menu', onclick: function () { CORB.setSideMini(!isMini()); } }, icon('arrow-left'), h('span', {}, 'Collapse menu')),
       h('div.side-foot', {}, h('div', {}, 'Training aid · not authoritative guidance'), h('div.mt-2', {}, 'Content verified ', h('span.num', {}, meta.content_verified_on || '—'), ' · v', CORB.VERSION),
+        meta.copyright ? h('div.mt-2', {}, meta.copyright + ' ', h('a', { href: '#', onclick: function (e) { e.preventDefault(); if (CORB.terms) CORB.terms.show(); } }, 'Terms of use')) : null,
         maint ? h('div.mt-2.side-maint', {}, maint.role + ': ', h('a', { href: CORB.ui.maintainerMailto(), title: 'Email ' + maint.name + ' about a problem on this page', onclick: function (e) { e.currentTarget.href = CORB.ui.maintainerMailto(); } }, maint.name)) : null)
     );
 
@@ -267,6 +268,7 @@
     render();
     CORB.emit('boot');
     var offer = function () { if (CORB.tour && CORB.tour.offer) setTimeout(function () { try { CORB.tour.offer(); } catch (e) {} }, 900); };   // first open: offer the guided tour
-    if (CORB.pwa && CORB.pwa.first) CORB.pwa.first(offer); else offer();   // the web edition shows its install page first
+    var terms = function () { if (CORB.terms && CORB.terms.require) CORB.terms.require(offer); else offer(); };   // the owner notice and terms, once
+    if (CORB.pwa && CORB.pwa.first) CORB.pwa.first(terms); else terms();   // the web edition shows its install page first
   };
 })();

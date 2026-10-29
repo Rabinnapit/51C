@@ -50,7 +50,9 @@ WEBHEAD = ('<link rel="manifest" href="manifest.webmanifest">\n'
            '<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">\n'
            '<meta name="apple-mobile-web-app-capable" content="yes">\n'
            '<meta name="mobile-web-app-capable" content="yes">\n'
-           '<meta name="apple-mobile-web-app-title" content="Board Ready">')
+           '<meta name="apple-mobile-web-app-title" content="Board Ready">\n'
+           '<meta name="apple-mobile-web-app-status-bar-style" content="default">\n'
+           '<meta name="theme-color" content="#0e121a" media="(prefers-color-scheme: dark)">')
 
 
 def favicon_tag() -> str:
@@ -167,12 +169,20 @@ def write_web_assets(built):
     manifest = {
         "name": meta.get("app_name", "Board Ready"), "short_name": meta.get("app_name", "Board Ready"),
         "description": "Study app for the Army contracting officer warrant board: board questions, flashcards, quiz, mock board, mentor and games. Works offline.",
+        "id": "./", "lang": "en", "categories": ["education"],
         "start_url": "./", "scope": "./", "display": "standalone", "orientation": "any",
         "background_color": "#f6f4ee", "theme_color": "#173a6b",
         "icons": [
             {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
             {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
             {"src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
+        ],
+        # long-press the icon on Android or right-click it on a computer: straight into practice
+        "shortcuts": [
+            {"name": "Quiz", "url": "./#/quiz?start=1", "icons": [{"src": "icons/icon-192.png", "sizes": "192x192"}]},
+            {"name": "Flashcards", "url": "./#/flashcards", "icons": [{"src": "icons/icon-192.png", "sizes": "192x192"}]},
+            {"name": "Mock board", "url": "./#/mockboard", "icons": [{"src": "icons/icon-192.png", "sizes": "192x192"}]},
+            {"name": "Question library", "url": "./#/library", "icons": [{"src": "icons/icon-192.png", "sizes": "192x192"}]},
         ],
         # lets Chrome on Android answer navigator.getInstalledRelatedApps() for this very app
         "related_applications": [{"platform": "webapp", "url": (meta.get("site_url") or "").rstrip("/") + "/manifest.webmanifest"}],

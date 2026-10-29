@@ -29,6 +29,14 @@ hidden, a question card carries at most three badges, the dashboard hides its re
 something to measure, the quiz, flashcards and mock board put Start first with their settings behind "Change settings", and
 each page states privacy and keyboard help once instead of on every screen. Nothing was removed from the question bank.
 
+**Owner, terms and the QR sheet (v1.2.1).** The app names its owner (SFC Rabin Napit) and shows short terms of use once
+before first use (`core/08a-terms.js`, text in `meta.terms`; About and the side menu show them any time). The About page
+and the web edition's install page carry a QR code for the website (`tools/make_handout.py` writes it into `meta.app_qr`
+and prints `handout/Board_Ready_Install_Sheet.pdf`, a one-page sheet to post or hand out). About also lists what is new
+in each version (`meta.whats_new`), and a single-file copy tells the reader where the newest version is. The manifest
+gained shortcuts (long-press the icon: Quiz, Flashcards, Mock board, Library), small buttons grow on touch screens, and
+top-bar tooltips open below the bar. New links: the FAR Companion, the searchable overhauled FAR and the FAI hub.
+
 **On the web (v1.2.0).** The web edition is the candidate edition plus `core/09-pwa.js`: an install page on first open (one
 button for the device: Chrome's install box on Android, Safari's three taps on an iPhone, the address-bar install on a
 computer), a service worker that keeps the app working with no signal, a `version.json` check that offers a reload when a
@@ -83,8 +91,8 @@ in the menu. The bottom bar is Dashboard, Library, Cards, Quiz and Board.
 | Group games | 2 | Board Jeopardy (6 x 5, in the Board room); You're the KO (4 branching cases, in Scenarios) |
 | RFO crosswalk | 139 verified pairs | old-to-new citation map, live-verified on acquisition.gov and the DoD class deviations |
 | Thresholds | 33 | current dollar values with cites, marked "verify" until C&P confirms |
-| Glossary | 221 | terms and acronyms |
-| Resources | 45 | links, each checked |
+| Glossary | 224 | terms and acronyms |
+| Resources | 48 | links, each checked (the FAR Companion, RFO.pdf and the FAI hub added 29 Oct 2026) |
 | Process guide | 10 steps | 411th workflow, Policy v12, reciprocity note, VCE guide |
 
 Verification detail: `content/VERIFICATION.md`.
@@ -188,7 +196,7 @@ workflow in `.github/workflows/pages.yml` runs all of this on every push to `mai
 `build.py` inlines everything, the Arcade included, into the three single-file editions and the web edition (`dist/web/`: `index.html`, `manifest.webmanifest`, `sw.js`, icons, `version.json` and the files as downloads) and refuses to build if any external resource sneaks in. It leaves out questions tagged only for Grants or Agreements officers (and their quiz items) and the study-group notes; `src/data` keeps both. The candidate edition leaves out `board.js`, `projector.js`, `jeopardy.js` and `editor.js` and sets `meta.edition` to `candidate`.
 `make_docx.py` packages both files as Word documents for email, checks that the text comes back out exactly, and writes the READ ME FIRST instructions with the expected file sizes.
 
-Rename the app by editing `app_name` in `src/data/meta.json` and rebuilding. Change the next board date in the same file. The developer and maintainer name and email, shown on the About page and in the sidebar, are under `maintainer` in the same file.
+Rename the app by editing `app_name` in `src/data/meta.json` and rebuilding. The owner, copyright and terms text are `owner`, `copyright` and `terms` there (change `terms.version` and everyone accepts the new terms on their next open); `whats_new` is the About page's version list; `site_url` is the website (run `tools/make_handout.py` again if it changes). Change the next board date in the same file. The developer and maintainer name and email, shown on the About page and in the sidebar, are under `maintainer` in the same file.
 
 ## Development
 
@@ -200,8 +208,10 @@ src/js/views/         one file per view (registers itself)
 src/data/*.json       content modules (inlined at build time)
 src/arcade/           the Arcade: shell (js/app.js, js/core/engine.js), one file per game in js/games/, css/
 src/web/              web edition only: sw.js (service worker), icons/ and favicon.svg (tools/make_icons.py)
+handout/              the QR code and the one-page install sheet (tools/make_handout.py); the PDF is printed here, not committed
+js/core/08a-terms.js  owner notice and terms of use (meta.terms), shown once before first use
 js/core/09-pwa.js     web edition only: install page, service worker registration, update bar
-tools/                build_bank.py, merge_content.py, content_patches.py, check_content.py, build.py, make_docx.py, publish_site.py, make_icons.py, check_ladder.py, fetch_fonts.py, qa_browser.js
+tools/                build_bank.py, merge_content.py, content_patches.py, check_content.py, build.py, make_docx.py, publish_site.py, make_icons.py, make_handout.py, check_ladder.py, fetch_fonts.py, qa_browser.js
 docs/CONTRACT.md      the build contract every module follows
 ```
 

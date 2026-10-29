@@ -3,7 +3,7 @@
   'use strict';
   window.CORB_DATA = window.CORB_DATA || {};
   var CORB = window.CORB = window.CORB || {};
-  CORB.VERSION = '1.2.0';
+  CORB.VERSION = '1.2.1';
   CORB.DATA = window.CORB_DATA;
   CORB.views = {};
   CORB.viewOrder = [];

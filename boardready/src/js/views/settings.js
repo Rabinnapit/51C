@@ -13,7 +13,7 @@
   var SECTIONS = [
     { id: 'profile', title: 'Profile', icon: 'user', blurb: 'Your name, organization and warrant class' },
     { id: 'appearance', title: 'Appearance', icon: 'sun', blurb: CORB.isCandidateEdition() ? 'Theme, text size and answers' : 'Theme, text size, projector mode and answers' },
-    { id: 'app', title: 'Get the app', icon: 'download', blurb: 'Install it on a phone or computer, or download a copy for computers without internet' },
+    { id: 'app', title: 'Get the app', icon: 'download', blurb: (CORB.isWeb && CORB.isWeb()) ? 'Install it on a phone or computer, or download a copy for computers without internet' : 'The newest version is on the website, where it installs as an app' },
     { id: 'voice', title: 'Voice', icon: 'volume', blurb: 'Read questions aloud' },
     { id: 'ai', title: 'AI connector', icon: 'spark', blurb: 'Optional endpoint for the mentor and mock-board feedback' },
     { id: 'boardroom', title: 'Board room', icon: 'key', blurb: 'Keep candidates out of the scoring views' },
@@ -31,7 +31,7 @@
   function sec(id) { for (var i = 0; i < SECTIONS.length; i++) { if (SECTIONS[i].id === id) return SECTIONS[i]; } return SECTIONS[0]; }
   function cand() { return CORB.isCandidateEdition(); }
   function online() { return CORB.hasConnector(); }
-  function shown(id) { return !(cand() && id === 'boardroom') && !(!online() && id === 'ai') && !(id === 'app' && !(CORB.isWeb && CORB.isWeb())); }
+  function shown(id) { return !(cand() && id === 'boardroom') && !(!online() && id === 'ai') && !(id === 'app' && !meta().site_url && !(CORB.isWeb && CORB.isWeb())); }
   function arr(v) { return Array.isArray(v) ? v : []; }
   function str(v) { return v == null ? '' : String(v); }
   function meta() { return (CORB.DATA && CORB.DATA.meta) || {}; }
@@ -239,8 +239,18 @@
 
 
   // ------------------------------------------------------------- get the app (web edition)
+  function fileAppCard(m) {
+    return cardShell(sec('app'), [h('div.stack', {},
+      h('p', {}, 'This copy was built ' + (m.built_on ? util.fmtDate(str(m.built_on).slice(0, 10)) : 'on an earlier date') + ' and does not update itself. The newest version is always on the website, and on a phone it installs as an app that updates by itself:'),
+      h('p', {}, h('a', { href: m.site_url, target: '_blank', rel: 'noopener' }, m.site_url)),
+      h('div.set-actions', {},
+        h('a.btn.primary', { href: m.site_url, target: '_blank', rel: 'noopener' }, icon('external'), 'Open the website'),
+        hasView('about') ? h('button.btn', { type: 'button', onclick: function () { CORB.go('about', { section: 'phone' }); } }, icon('phone'), 'Show the QR code') : null),
+      h('p.small.muted', {}, 'Where the network blocks the website, keep using this file: the website\'s Settings page offers the newest file for download.'))]);
+  }
   function appCard() {
     var m = meta(), standalone = safe(function () { return !!(CORB.pwa && CORB.pwa.isStandalone()); }, false);
+    if (!(CORB.isWeb && CORB.isWeb())) return fileAppCard(m);
     var base = str(m.app_name || 'Board Ready').replace(/[^\w-]+/g, '');
     var install = standalone ? h('p', {}, 'You are using the installed app. It works offline and updates itself when a newer build is published.')
       : h('div.stack', {},

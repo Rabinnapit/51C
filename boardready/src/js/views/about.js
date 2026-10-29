@@ -18,7 +18,7 @@
 
   var IS = [
     ['cards', 'A study and rehearsal tool', 'The board questions from the source lists with answers, citations and a verification status, plus flashcards, a quiz, scenarios, mock boards' + (CORB.isCandidateEdition() ? ' and the Arcade.' : ' and a projector mode for group sessions.')],
-    ['shield', 'One file', 'No install and no account. It works without a network connection, on a laptop or a phone.']
+    ['shield', (CORB.isWeb && CORB.isWeb()) ? 'An app, or one file' : 'One file', 'No account. It works without a network connection, on a laptop or a phone' + ((CORB.isWeb && CORB.isWeb()) ? ', and installs from the website with one tap.' : '; the website version installs as an app.')]
   ];
   var IS_NOT = [
     ['alert', 'Not authoritative guidance', 'It is a training aid built from study material. It does not state policy and it is not legal advice. The FAR, DFARS, AFARS, the Army Warranting Program Policy and your C&P office always win.'],
@@ -111,6 +111,51 @@
         h('b', {}, 'The facilitator makes the call'),
         'Set meta.app_name in the content metadata and rebuild the single file. The name then appears in the sidebar, the browser tab, saved copies and every printed sheet. Nobody has to touch a view to change it.'))],
       'The brigade has not settled on a name. All three were drafted for the same app and the choice is a facilitator decision, not a code change.');
+  }
+
+
+  // ------------------------------------------------------- owner and terms
+  function owner() {
+    var m = meta();
+    if (!m.owner && !m.copyright) return null;
+    var t = m.terms || {};
+    return section('owner', '', 'Owner and terms of use',
+      [h('p.ab-body', {}, (m.app_name || 'Board Ready') + ' is the work of ' + str(m.owner || '') + '. ' + (m.copyright ? m.copyright + ' ' : '') +
+        'Free for your own study and for sharing unchanged; copying, changing, rehosting or selling it needs the owner\'s written permission.'),
+       h('div.ab-legend-actions', {},
+         t.points && t.points.length ? h('button.btn', { type: 'button', onclick: function () { if (CORB.terms) CORB.terms.show(); } }, icon('shield'), 'Read the terms of use') : null,
+         safe(function () { return ui.maintainer(); }, null) ? h('a.btn.ghost', { href: safe(function () { return ui.maintainerMailto(''); }, '#') }, icon('mail'), 'Ask for permission') : null)]);
+  }
+
+  // ------------------------------------------- the phone app and the website
+  function phone() {
+    var m = meta(), rows = arr(m.app_qr), web = !!(CORB.isWeb && CORB.isWeb());
+    if (!m.site_url) return null;
+    var svg = rows.length && ui.qrSvg ? ui.qrSvg(rows, 'QR code for ' + m.site_url) : '';
+    return section('phone', '', web ? 'Share it: the phone app' : 'The newest version, and the phone app',
+      [h('div.ab-phone', {},
+        svg ? h('div.ab-qr', { html: svg }) : null,
+        h('div', {},
+          web ? null : h('p', {}, 'This copy was built ' + (m.built_on ? util.fmtDate(str(m.built_on).slice(0, 10)) : 'on an earlier date') + ' and does not update itself. The newest version is always on the website, where it installs as an app:'),
+          web ? h('p', {}, 'Scan this code with a phone camera to get ' + (m.app_name || 'Board Ready') + ' as an app: free, with no app store and no account. Show it to anyone who needs it.') : null,
+          h('a.ab-url', { href: m.site_url, target: '_blank', rel: 'noopener' }, m.site_url),
+          h('ul.ab-steps', {},
+            h('li', {}, icon('phone'), h('span', {}, h('b', {}, 'iPhone: '), 'scan with the Camera app. The page opens in Safari: tap Share, then "Add to Home Screen", then Add.')),
+            h('li', {}, icon('phone'), h('span', {}, h('b', {}, 'Android: '), 'scan with the Camera app, then tap "Install app". If the page opens in Samsung Internet, it offers "Install with Chrome" first.')),
+            h('li', {}, icon('refresh'), h('span', {}, 'Open it once while online. After that it works offline, and new versions arrive by themselves.')),
+            web ? null : h('li', {}, icon('shield'), h('span', {}, 'Where the network blocks the website, keep using this file; the website\'s Settings page offers the newest file for download.')))))]);
+  }
+
+  // --------------------------------------------------------------- what's new
+  function whatsNew() {
+    var list = arr(meta().whats_new).filter(function (v) { return v && v.version; });
+    if (!list.length) return null;
+    return section('new', '', 'What\'s new',
+      h('div.ab-new', {}, list.map(function (v, i) {
+        return h('details.ab-new-item', { open: i === 0 },
+          h('summary', {}, h('b', {}, 'Version ' + str(v.version)), v.date ? h('span.muted', {}, ' · ' + util.fmtDate(v.date)) : null, v.title ? h('span', {}, ' · ' + str(v.title)) : null),
+          h('ul', {}, arr(v.items).map(function (it) { return h('li', {}, str(it)); })));
+      })));
   }
 
   // --------------------------------------------------------------- is / not
@@ -225,8 +270,8 @@
     var wrap = h('div.ab-app');
     root.appendChild(wrap);
     var blocks = CORB.isCandidateEdition()
-      ? [hero, maintainer, whatItIs, legend, storage, sources, shortcuts, closing]
-      : [hero, maintainer, names, whatItIs, legend, storage, sources, updating, shortcuts, closing];
+      ? [hero, maintainer, owner, phone, whatsNew, whatItIs, legend, storage, sources, shortcuts, closing]
+      : [hero, maintainer, owner, phone, whatsNew, names, whatItIs, legend, storage, sources, updating, shortcuts, closing];
     blocks.forEach(function (fn, i) {
       var node;
       try { node = fn(); } catch (e) { node = null; }

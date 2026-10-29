@@ -43,3 +43,5 @@
 @keyframes inst-bounce { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 10px); } }
 @keyframes inst-spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .inst-arrow, .inst-wait svg { animation: none; } }
+.inst-qr { width: 164px; margin: 16px auto 0; padding: 8px; border-radius: 10px; background: #fff; box-shadow: inset 0 0 0 1px var(--line); line-height: 0; }
+.inst-qr svg { width: 100%; height: auto; }

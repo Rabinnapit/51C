@@ -125,3 +125,23 @@ body[data-projector] .v-about .ab-cols { grid-template-columns: minmax(0, 1fr); 
   .v-about .ab-legend-actions { display: none; }
   .v-about .ab-hero, .v-about .ab-sec { box-shadow: none; break-inside: avoid; animation: none; }
 }
+
+/* 1.2.1: the phone app (the QR code stays black on white in night mode so cameras can read it), terms, what's new */
+.v-about .ab-phone { display: grid; grid-template-columns: 180px 1fr; gap: 22px; align-items: center; }
+.v-about .ab-qr { padding: 10px; border-radius: var(--r-md); background: #fff; box-shadow: inset 0 0 0 1px var(--line); line-height: 0; }
+.v-about .ab-qr svg { width: 100%; height: auto; }
+.v-about .ab-url { display: inline-block; margin: 4px 0 10px; font-weight: 700; word-break: break-all; }
+.v-about .ab-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.v-about .ab-steps li { display: flex; gap: 8px; align-items: flex-start; font-size: var(--fs-sm); }
+.v-about .ab-steps li > svg { flex: none; width: 16px; height: 16px; margin-top: 3px; color: var(--accent); }
+@media (max-width: 560px) { .v-about .ab-phone { grid-template-columns: 1fr; } .v-about .ab-qr { max-width: 220px; } }
+.v-about .ab-new { display: grid; gap: 8px; }
+.v-about .ab-new-item { padding: 10px 14px; border-radius: var(--r-md); background: var(--panel-2); border: 1px solid var(--line); }
+.v-about .ab-new-item summary { cursor: pointer; font-size: var(--fs-sm); }
+.v-about .ab-new-item ul { margin: 8px 0 0; padding-left: 1.2em; font-size: var(--fs-sm); color: var(--ink-2); }
+.v-about .ab-new-item li { margin: .25em 0; }
+.terms-intro { font-weight: 600; margin: 0 0 10px; }
+.terms-list { margin: 0; padding-left: 22px; display: grid; gap: 8px; }
+.terms-list li { line-height: 1.45; }
+.terms-copy { margin: 12px 0 0; font-size: var(--fs-sm); color: var(--muted); }
+.terms-agree { margin: 12px 0 0; padding: 10px 12px; border-radius: var(--r-md); background: var(--accent-soft); font-size: var(--fs-sm); }

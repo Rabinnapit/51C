@@ -249,6 +249,14 @@ Fiscal Law & Funding · Competition & Market Research · Acquisition Planning & 
   411th's second Wednesday) whenever the stored date has passed.
 - Read-aloud (`05-speech.js`) is the engine shared with B2B Exam Prep: `sp.voices()`, `sp.setVoice(id)`
   (`settings.voice`), `sp.segments(text)`, `settings.ttsTone` `lively` | `even`; `sp.listen()` is Board Ready's own.
+- Owner and terms (1.2.1): `meta.owner`, `meta.copyright`, `meta.terms` {title, version, intro, points[], agree};
+  `CORB.terms.require(then)` runs after the install page and before the tour offer (router boot); `CORB.terms.show()`
+  is the reading copy (About, side foot). A new `terms.version` asks everyone again (`settings.termsAccepted`).
+- `meta.site_url` is the website; `meta.app_qr` (rows of 0/1 from `tools/make_handout.py`) is drawn by `CORB.ui.qrSvg()`
+  on the About page and the install page. `meta.whats_new` [{version, date, title, items[]}] is About's version list.
+  Settings → Get the app shows install and downloads in the web edition and the website address in a single file.
+- Touch screens (`pointer: coarse`): `.btn.sm` grows to 42 px; top-bar tooltips open below the bar and align to the
+  window edge at both ends (`03-components.css`).
 - Content that is not in the source lists goes in `tools/content_patches.py` as a dated function; `merge_content.py`
   applies it before writing `src/data`, so a merge never undoes it. `regulations.updates[]` (`{id, date, title, text,
   url, status, source}`) is the "What changed" panel in the Regulation explorer.

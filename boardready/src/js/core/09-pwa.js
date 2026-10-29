@@ -203,7 +203,9 @@
         body.appendChild(big('Install app', 'download', function () { pwa.install().then(function (ok) { if (page && ok) { state = 'done'; draw(); } }); }));
         body.appendChild(h('p.inst-note', {}, 'Puts it in your Start menu or Dock, like any program.'));
       } else body.appendChild(big('Open the website', 'arrow-right', function () { close(true); }));
-      body.appendChild(h('p.inst-note', {}, 'On a phone, open this same address: the app installs there.'));
+      var rows = meta().app_qr;
+      if (rows && rows.length && CORB.ui.qrSvg) body.appendChild(h('div.inst-qr', { html: CORB.ui.qrSvg(rows, 'QR code for ' + location.origin + location.pathname) }));
+      body.appendChild(h('p.inst-note', {}, rows && rows.length ? 'On a phone, scan this code with the camera: the app installs there.' : 'On a phone, open this same address: the app installs there.'));
     }
     if (!(p.desktop && !pwa.canInstall)) foot.appendChild(skip);
   }

@@ -186,3 +186,10 @@
 
 /* ---- keyboard focus ring for cards ---- */
 .card:focus-visible, .qcard:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; }
+
+/* top-bar tooltips open below the bar (above would be off screen) and stay inside the window at both ends */
+.topbar [data-tip]:hover::after { top: calc(100% + 6px); bottom: auto; }
+.topbar .menu-btn[data-tip]:hover::after { left: 0; transform: none; }
+.topbar .text-btn[data-tip]:hover::after, .topbar .theme-btn[data-tip]:hover::after, .topbar .help-btn[data-tip]:hover::after, .topbar .projector-btn[data-tip]:hover::after { left: auto; right: 0; transform: none; }
+/* a thumb needs more than 32 px: small buttons grow on touch screens, and the layout wraps around them */
+@media (pointer: coarse) { .btn.sm, .btn.icon.sm { min-height: 42px; } .btn.icon.sm { min-width: 42px; } }
