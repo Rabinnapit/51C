@@ -27,7 +27,8 @@
       root.appendChild(h('div.section-head', {}, h('h2', {}, 'Install B2B Guide as an app')));
       root.appendChild(h('div.card', {}, CORB.pwa.isStandalone() ? h('p', {}, 'You are using the installed app. It works offline and updates itself.') : h('div.stack', {},
         h('p', {}, 'Installing puts B2B Guide on your home screen or desktop like any other app. It opens without a browser bar, works offline, and still updates itself.'),
-        CORB.pwa.canInstall ? h('button.btn.primary', { type: 'button', onclick: function () { CORB.pwa.install().then(function (ok) { if (ok) CORB.render(); }); } }, icon('download'), 'Install B2B Guide') : null,
+        CORB.pwa.canInstall ? h('button.btn.primary', { type: 'button', onclick: function () { CORB.pwa.install().then(function (ok) { if (ok) CORB.render(); }); } }, icon('download'), 'Install B2B Guide')
+          : h('button.btn.primary', { type: 'button', onclick: function () { CORB.pwa.howTo(); } }, icon('phone'), 'Show me how to install'),
         h('ul.tips', {}, h('li', {}, 'Computer (Edge or Chrome): click the install icon at the right end of the address bar, or the browser menu → Apps → Install.'), h('li', {}, 'Android: browser menu (⋮) → Add to Home screen or Install app.'), h('li', {}, 'iPhone or iPad (Safari): Share button → Add to Home Screen.')))));
     }
     if (ed === 'web') {

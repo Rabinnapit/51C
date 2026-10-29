@@ -15,7 +15,7 @@ its short terms of use before first use (free for personal study and for sharing
 rehosting or selling without written permission). The terms text is `terms` in `src/data/meta.json`; changing its
 `version` makes everyone accept the new terms on their next open.
 
-## What is inside (version 0.14.1)
+## What is inside (version 0.14.2)
 
 | Area | What the reader gets |
 |---|---|

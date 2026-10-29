@@ -1,0 +1,19 @@
+/* Getting the app onto the phone (core/09-pwa.js, web edition only): the "Get the app" card and the install steps */
+.install-card { position: fixed; z-index: 900; left: 50%; bottom: calc(16px + env(safe-area-inset-bottom)); transform: translateX(-50%);
+  width: min(520px, calc(100vw - 24px)); display: flex; align-items: center; gap: 12px; padding: 12px 12px 12px 14px;
+  border-radius: var(--r-lg); background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow-lg); animation: inst-up .35s ease; }
+.install-card b { display: block; }
+.install-card span { display: block; font-size: var(--fs-sm); color: var(--muted); }
+.install-icon { width: 44px; height: 44px; border-radius: 10px; flex: none; }
+@keyframes inst-up { from { transform: translate(-50%, 24px); opacity: 0; } to { transform: translate(-50%, 0); opacity: 1; } }
+html[data-motion="reduce"] .install-card { animation: none; }
+@media (max-width: 860px) { .install-card { bottom: calc(76px + env(safe-area-inset-bottom)); } }   /* above the phone tab bar */
+@media print { .install-card { display: none; } }
+
+.inst-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; counter-reset: st; }
+.inst-steps li { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: var(--r-md); background: var(--panel-2); counter-increment: st; }
+.inst-steps li::before { content: counter(st); flex: none; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--accent); color: var(--accent-ink, #fff); font-weight: 800; font-size: var(--fs-sm); }
+.inst-steps li > svg, .inst-key { flex: none; width: 34px; height: 34px; padding: 6px; border-radius: 8px; background: var(--panel); color: var(--accent); box-shadow: inset 0 0 0 1px var(--line); }
+.inst-key svg { width: 100%; height: 100%; display: block; }
+.inst-note { margin: 12px 0 0; font-size: var(--fs-sm); color: var(--ink-2); }

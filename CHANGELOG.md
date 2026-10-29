@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.14.2 (29 October 2026): install the app from the browser
+
+- People who scan the QR code land in a browser, so the website now shows a **Get the B2B Guide app** card (after the
+  terms and the tour offer): on Android and computers its **Install** button opens the device's own install dialog;
+  on iPhone and iPad it opens picture steps for Safari's Share, Add to Home Screen. Inside another app's browser (some
+  QR scanners) it says to open the page in Safari or Chrome first. Not now hides it for a week; the Help page has the
+  same steps (Show me how to install). Web edition only: the offline file never shows it.
+
 ## 0.14.1 (29 October 2026): the phone app
 
 - **B2B Guide is a free phone app** at https://rabinnapit.github.io/51C/, published from the public repository
