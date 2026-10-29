@@ -154,9 +154,31 @@
   // ---- speaking: one utterance per piece, chained with its pause; cancel stops the chain ----
   var queueId = 0, keep = [];   // Chrome forgets onend for an utterance that was garbage-collected, so the last few are kept
   function clamp(x, a, b) { return Math.max(a, Math.min(b, x)); }
+  // an app voice that is not on the device yet: fetch it in the background once, speak with the phone's voice meanwhile
+  var appWarned = {};
+  function appFailed(app, err) {
+    if (appWarned[app.id]) return; appWarned[app.id] = true;
+    var V = CORB.voices;
+    if (err && err.code === 'not-downloaded' && navigator.onLine) {
+      CORB.ui.toast('Downloading ' + app.name + ' (about ' + app.mb + ' MB) in the background. Until it arrives, the phone\'s own voice reads.', '', 5000);
+      V.download(app.id).then(function () { CORB.ui.toast(app.name + ' is ready. The next Listen uses it.', 'ok', 4000); }, function (e) { CORB.ui.toast('Could not download ' + app.name + ': ' + (e && e.message || e), 'warn', 6000); });
+    } else if (err && err.code === 'not-downloaded') CORB.ui.toast(app.name + ' is not downloaded yet and you are offline; the phone\'s own voice reads for now.', 'warn', 5000);
+    else CORB.ui.toast(app.name + ' could not start on this device (' + (err && err.message || err) + '); the phone\'s own voice reads instead.', 'warn', 6000);
+  }
   sp.speak = function (text, o) {
     o = o || {};
-    if (!sp.available || !CORB.get('settings.tts', true)) { if (!sp.available) CORB.ui.toast('Read-aloud is not available in this browser.', 'warn'); if (o.onend) o.onend(); return false; }
+    if (!CORB.get('settings.tts', true)) { if (o.onend) o.onend(); return false; }
+    var app = !o.device && CORB.voices && CORB.voices.selected && CORB.voices.selected();
+    if (app) {
+      var mine = ++queueId; try { if (synth) synth.cancel(); } catch (e) {}
+      sp.speaking = true; CORB.emit('speech', { speaking: true });
+      var took = CORB.voices.speak(sp.segments(text), { rate: o.rate || CORB.get('settings.ttsRate', 1) || 1,
+        onend: function () { if (mine !== queueId) return; sp.speaking = false; CORB.emit('speech', { speaking: false }); if (o.onend) o.onend(); },
+        onfail: function (err) { if (mine !== queueId) return; sp.speaking = false; appFailed(app, err); var again = {}; for (var k in o) again[k] = o[k]; again.device = true; sp.speak(text, again); } });
+      if (took) return true;
+      sp.speaking = false;
+    }
+    if (!synth || !window.SpeechSynthesisUtterance) { CORB.ui.toast('Read-aloud is not available in this browser.', 'warn'); if (o.onend) o.onend(); return false; }
     try {
       var my = ++queueId, list = sp.segments(text), i = 0, voice = o.voice || sp.current();
       var base = o.rate || CORB.get('settings.ttsRate', 1) || 1, lively = CORB.get('settings.ttsTone', 'lively') !== 'even';
@@ -178,6 +200,6 @@
       return true;
     } catch (e) { sp.speaking = false; if (o.onend) o.onend(); return false; }
   };
-  sp.stop = function () { queueId++; try { if (synth) synth.cancel(); } catch (e) {} sp.speaking = false; CORB.emit('speech', { speaking: false }); document.querySelectorAll('.speaking').forEach(function (b) { b.classList.remove('speaking'); if (b.lastChild && b.lastChild.nodeType === 3) b.lastChild.textContent = 'Listen'; }); };
+  sp.stop = function () { queueId++; if (CORB.voices) { try { CORB.voices.stop(); } catch (e) {} } try { if (synth) synth.cancel(); } catch (e) {} sp.speaking = false; CORB.emit('speech', { speaking: false }); document.querySelectorAll('.speaking').forEach(function (b) { b.classList.remove('speaking'); if (b.lastChild && b.lastChild.nodeType === 3) b.lastChild.textContent = 'Listen'; }); };
   window.addEventListener('hashchange', function () { if (sp.speaking) sp.stop(); });
 })();

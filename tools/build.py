@@ -34,7 +34,7 @@ core_files = sorted((SRC / "js" / "core").glob("*.js"))
 view_files = sorted((SRC / "js" / "views").glob("*.js"))
 # the Arcade engine, shell and games load after the views; the arcade view mounts them when it renders
 arcade_files = sorted((SRC / "js" / "arcade").glob("*.js")) + sorted((SRC / "js" / "arcade" / "games").glob("*.js"))
-WEB_ONLY_CORE = {"09-pwa.js", "10-account.js"}   # install, updates and optional accounts: web edition only
+WEB_ONLY_CORE = {"09-pwa.js", "10-account.js", "12-voices.js"}   # install, updates and optional accounts: web edition only
 
 
 def js_safe(s: str) -> str:

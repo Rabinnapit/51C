@@ -41,7 +41,8 @@ src/js/core/01-store      state, persistence, export/import, save progress into 
 src/js/core/02-router     hash routing, shell, theme, text size, keyboard, boot
 src/js/core/03-ui         h(), icons, badges, rich text (bold, lists, cite links, glossary links), modal, toast, palette
 src/js/core/04-data       queries over CORB_DATA, search index, citation URLs (FAR cites open the RFO part page)
-src/js/core/05-speech     read-aloud: voices, contracting pronunciation, and delivery piece by piece with its own tone and pause (settings.ttsTone)
+src/js/core/05-speech     read-aloud: voices, contracting pronunciation, and delivery piece by piece with its own tone and pause (settings.ttsTone); hands the text to an app voice when one is chosen
+src/js/core/12-voices     web only: the app's own Piper voices (download once into Cache Storage, synthesize in a worker with ONNX Runtime Web, play through Web Audio); settings.voice = 'app:<id>'
 src/js/core/06-learning   SM-2 lite flashcards, quiz records, readiness by exam area, streak
 src/js/core/07-plan       dated plan: goal, 12-month experience, 36-month deadline, step status, .ics export
 src/js/core/10-account   web edition only: optional accounts (Supabase project 51C via plain fetch): Sign in button in the

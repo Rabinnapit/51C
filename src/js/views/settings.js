@@ -80,33 +80,70 @@
     root.appendChild(h('div.section-head', {}, h('h2', {}, 'Read aloud')));
     var SAMPLE = 'Hi, this is how B2B Exam Prep sounds.\nWho can bind the Government to a contract? Only the contracting officer, the KO.\nBelow the micro-purchase threshold, $15,000, you can buy without competitive quotes, as long as the price is reasonable.\nReady when you are.';
     var tone = CORB.get('settings.ttsTone', 'lively') === 'even' ? 'even' : 'lively';
-    // the device's English voices, natural ones first; the chosen one lives in settings.voice
+    // the device's English voices, natural ones first, then the app's own downloadable voices; the choice lives in settings.voice
     function voicePicker() {
+      var AV = CORB.voices && CORB.voices.available ? CORB.voices : null, haveIds = [];
       var sel = h('select#tts-voice.input', { 'aria-label': 'Voice' });
+      var dlBar = CORB.ui.bar(0), dlText = h('span.small.muted', {}, ''), dl = h('div.stack.tight.mt-2', { hidden: true }, dlText, dlBar);
       function fill() {
         var list = CORB.speech.voices(), cur = CORB.get('settings.voice', '');
         sel.innerHTML = '';
         sel.appendChild(h('option', { value: '' }, 'Best voice on this device' + (list[0] ? ': ' + list[0].name : '')));
         function group(label, vs) { if (!vs.length) return; var g = h('optgroup', { label: label }); vs.forEach(function (v) { g.appendChild(h('option', { value: v.id }, v.name)); }); sel.appendChild(g); }
-        group('Natural voices', list.filter(function (v) { return v.natural; })); group('Standard voices', list.filter(function (v) { return !v.natural; }));
-        sel.value = list.some(function (v) { return v.id === cur; }) ? cur : '';
+        if (AV) { var ag = h('optgroup', { label: 'App voices: download once, then offline' }); AV.list().forEach(function (v) { ag.appendChild(h('option', { value: 'app:' + v.id }, v.name + ' · ' + v.who + (haveIds.indexOf(v.id) >= 0 ? ' · downloaded' : ' · ' + v.mb + ' MB'))); }); sel.appendChild(ag); }
+        group(AV ? 'Natural voices on this device' : 'Natural voices', list.filter(function (v) { return v.natural; })); group(AV ? 'Standard voices on this device' : 'Standard voices', list.filter(function (v) { return !v.natural; }));
+        var isApp = cur.indexOf('app:') === 0 && AV && AV.get(cur.slice(4));
+        sel.value = isApp || list.some(function (v) { return v.id === cur; }) ? cur : '';
       }
       fill();
+      if (AV) AV.downloaded().then(function (ids) { haveIds = ids; if (sel.isConnected) fill(); });
       var off = CORB.on('voices', function () { if (sel.isConnected) fill(); else off(); });
-      sel.addEventListener('change', function () { CORB.speech.setVoice(sel.value); CORB.speech.speak(SAMPLE); });
-      return sel;
+      var off2 = CORB.on('voices-changed', function () { if (!sel.isConnected) { off2(); return; } if (AV) AV.downloaded().then(function (ids) { haveIds = ids; fill(); paintManage(); }); });
+      sel.addEventListener('change', function () {
+        var val = sel.value, prev = CORB.get('settings.voice', '');
+        if (val.indexOf('app:') === 0 && AV) {
+          var v = AV.get(val.slice(4));
+          AV.ready(v.id).then(function (ready) {
+            if (ready) { CORB.speech.setVoice(val); CORB.speech.speak(SAMPLE); return; }
+            var need = v.mb + (haveIds.length ? 0 : AV.RUNTIME_MB);
+            if (!navigator.onLine) { CORB.ui.toast('You are offline. ' + v.name + ' needs a one-time download of about ' + need + ' MB.', 'warn', 5000); sel.value = prev; return; }
+            dl.hidden = false; dlText.textContent = 'Downloading ' + v.name + ' (about ' + need + ' MB, once)…'; sel.disabled = true;
+            AV.download(v.id, function (p) { dlText.textContent = 'Downloading ' + v.name + ': ' + Math.round(p.loadedMB) + ' of ' + Math.round(p.totalMB) + ' MB'; var nb = CORB.ui.bar(p.pct); dlBar.replaceWith(nb); dlBar = nb; })
+              .then(function () { dl.hidden = true; sel.disabled = false; CORB.speech.setVoice(val); CORB.ui.toast(v.name + ' is ready and works offline from now on.', 'ok', 4000); CORB.speech.speak(SAMPLE); },
+                function (err) { dl.hidden = true; sel.disabled = false; sel.value = prev; CORB.ui.toast('Could not download ' + v.name + ': ' + (err && err.message || err), 'danger', 6000); });
+          });
+          return;
+        }
+        CORB.speech.setVoice(val); CORB.speech.speak(SAMPLE);
+      });
+      var manageRow = h('div.row.tight.mt-2', {});
+      function paintManage() {
+        if (!AV) return;
+        AV.downloaded().then(function (ids) {
+          manageRow.innerHTML = '';
+          if (!ids.length) { manageRow.appendChild(h('span.small.muted', {}, 'No app voice is downloaded yet. Pick one in the list to download it.')); return; }
+          ids.forEach(function (id) { var v = AV.get(id); if (!v) return; manageRow.appendChild(h('button.btn.sm.ghost', { type: 'button', onclick: function () { CORB.ui.confirm('Remove ' + v.name + ' from this device? You can download it again later.', { ok: 'Remove' }).then(function (ok) { if (!ok) return; AV.remove(id).then(function () { if (CORB.get('settings.voice') === 'app:' + id) CORB.speech.setVoice(''); CORB.render(); }); }); } }, icon('x'), 'Remove ' + v.name)); });
+          manageRow.appendChild(h('button.btn.sm.ghost', { type: 'button', onclick: function () { CORB.ui.confirm('Remove every app voice and the speech engine from this device?', { ok: 'Remove all' }).then(function (ok) { if (!ok) return; AV.removeAll().then(function () { if ((CORB.get('settings.voice') || '').indexOf('app:') === 0) CORB.speech.setVoice(''); CORB.render(); }); }); } }, 'Remove all (frees about ' + (AV.RUNTIME_MB + 63 * ids.length) + ' MB)'));
+        });
+      }
+      paintManage();
+      var manage = AV ? h('details.inst-more.mt-2', {}, h('summary', {}, 'About the app voices'),
+        h('p.small.muted', {}, 'Four voices that run inside the app: Amber and Joe (US), Cori and Leo (UK). Each is a one-time download of about 63 MB, plus 31 MB for the speech engine the first time; after that they work offline and sound the same on every phone. Download on Wi-Fi. They come from the owner\'s GitHub page, not from a cloud service: nothing you read is sent anywhere.'),
+        manageRow) : null;
+      return h('div', {}, sel, dl, manage);
     }
     var ok = CORB.speech.available;
     root.appendChild(h('div.card.stack', {},
       ok ? sw('settings.tts', 'Show Listen buttons', true) : h('p.muted', {}, 'This browser has no built-in voice, so Listen buttons are hidden. Edge on Windows has good voices.'),
-      ok ? h('div.field', {}, h('label', { for: 'tts-voice' }, 'Voice'), voicePicker(), h('p.small.muted', {}, 'Voices come from your phone or computer; natural ones sound like a person. The list shows the best first.')) : null,
+      ok ? h('div.field', {}, h('label', { for: 'tts-voice' }, 'Voice'), voicePicker(), h('p.small.muted', {}, (CORB.voices && CORB.voices.available ? 'App voices run inside the app and sound the same on every phone, after a one-time download. The other voices come from your phone or computer; natural ones sound like a person. ' : 'Voices come from your phone or computer; natural ones sound like a person. ') + 'The list shows the best first.')) : null,
       ok ? h('div.field', {}, h('div.label', {}, 'Tone'), seg([['lively', 'Lively'], ['even', 'Even']], tone, function (v) { CORB.set('settings.ttsTone', v); CORB.speech.speak(SAMPLE); }),
         h('p.small.muted', {}, 'Lively reads the way a person does: questions rise, sentences settle, a heading gets a breath, a list keeps a beat. Even keeps one steady tone.')) : null,
       ok ? h('div.field', {}, h('label', { for: 'tts-rate' }, 'Speed'), h('div.row', {}, h('span.small', {}, 'Slower'), rate, h('span.small', {}, 'Faster'))) : null,
       ok ? h('div.row', {}, h('button.btn', { type: 'button', onclick: function () { CORB.speech.speak(SAMPLE); } }, icon('volume'), 'Hear a sample'), h('button.btn.ghost', { type: 'button', onclick: function () { CORB.speech.stop(); } }, icon('stop'), 'Stop')) : null,
       ok ? h('details.inst-more', {}, h('summary', {}, 'Want a more human voice?'), h('ul.tips', {},
+        CORB.voices && CORB.voices.available ? h('li', {}, h('b', {}, 'Any phone: '), 'pick an App voice in the list above. On Android, Chrome ignores the voice you choose from the phone\'s own list and always speaks with the system default, so an App voice is the way to get a man\'s voice or a UK accent there.') : null,
         h('li', {}, h('b', {}, 'iPhone or iPad: '), 'Settings → Accessibility → Spoken Content → Voices → English → download an Enhanced or Premium voice (Ava, Zoe, Evan). Reload this page, then pick it above.'),
-        h('li', {}, h('b', {}, 'Android: '), 'Settings → General management (or System) → Language → Text-to-speech → Google Speech Services → Install voice data. Samsung phones also offer Samsung text-to-speech voices.'),
+        h('li', {}, h('b', {}, 'Android: '), 'Settings → General management (or System) → Language → Text-to-speech → Google Speech Services → Install voice data → English → pick a different voice (some are men). That changes the one voice Chrome uses. Samsung phones also offer Samsung text-to-speech voices.'),
         h('li', {}, h('b', {}, 'Windows: '), 'Microsoft Edge has natural voices built in (Aria, Guy, Jenny); Chrome has only the basic ones.'),
         h('li', {}, h('b', {}, 'Mac: '), 'System Settings → Accessibility → Spoken Content → System voice → Manage Voices → download an Enhanced voice.'))) : null));
   }

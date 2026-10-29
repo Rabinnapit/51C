@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.24.0 (30 October 2026): the app's own voices
+
+- **Four voices that sound the same on every phone.** Settings & help → Display → Read aloud → Voice now lists App
+  voices: Amber and Joe (US, a woman and a man) and Cori and Leo (UK). Each is a one-time download of about 63 MB,
+  plus 31 MB for the speech engine the first time, from the owner's GitHub page (not a cloud service); after that it
+  works offline, on the website and the installed app. Pick one and it downloads with a progress bar, then speaks the
+  sample. Remove any of them under "About the app voices".
+- **Why.** On Android, Chrome ignores the voice you pick from the phone's list and always uses the system default, so
+  the five "voices" the phone offered all sounded the same (and all female). The app voices are Piper neural voices
+  run on the device with ONNX Runtime Web in a worker, so the accent and the gender you choose are what you hear.
+  The phone's own voices stay available, and Apple's Enhanced and Premium voices remain the best choice on an iPhone.
+- The offline NIPR file is unchanged: it cannot download anything, so it keeps using the computer's voices.
+
 ## 0.23.2 (29 October 2026): the terms say what Google shares
 
 - **Terms of use updated** (version 2026-10-29.5, so everyone agrees once more on their next open): the privacy point
