@@ -1,0 +1,25 @@
+Subject: Board Ready is now an app: install it from one link (v1.2)
+
+Team,
+
+BLUF: Board Ready, the free warrant board study app, now installs on your phone or computer from one link and keeps itself up to date:
+
+    https://rabinnapit.github.io/51C/boardready/
+
+Open the link and tap the one button it shows for your device (Android: Install app in Chrome; iPhone: Share, then Add to Home Screen; computer: the install icon in the address bar). After that it opens from its own icon, works with no signal, and tells you when a newer version is out. Your progress and notes stay on your device.
+
+If the network blocks the website, the single file still works: download it from the app's Settings page (Get the app), or ask me for the Word package for Army email.
+
+What is new in v1.2:
+- The menu folds to a strip of icons on a laptop, and there are four text sizes and a night mode that can follow your phone.
+- Read aloud now uses your device's natural voices and says things the way we say them (K O, core, dee-fars, "six point one oh three dash one").
+- The Regulation explorer has a "What changed" panel: where the FAR overhaul stands (proposed rules of 23 June and 18 September 2026, no final rule yet), the DoD class deviations since September, the CAS thresholds in force since 1 October, and the Army's April 2026 preference for competition in the 8(a) program.
+- The next board date comes from the cadence (second Wednesday), so it is never out of date.
+
+Everything in the app is a training aid, not official guidance: confirm citations, thresholds and local procedures with C&P.
+
+Tell me what is wrong, missing or confusing: reply to this email, or use the email link on the app's About page.
+
+V/r,
+SFC Rabin Napit
+rabin.napit.mil@army.mil
