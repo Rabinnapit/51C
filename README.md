@@ -22,7 +22,7 @@ its short terms of use before first use (free for personal study and for sharing
 rehosting or selling without written permission). The terms text is `terms` in `src/data/meta.json`; changing its
 `version` makes everyone accept the new terms on their next open.
 
-## What is inside (version 0.17.0)
+## What is inside (version 0.23.2)
 
 | Area | What the reader gets |
 |---|---|
@@ -37,7 +37,7 @@ rehosting or selling without written permission). The terms text is `terms` in `
 | Flashcards | 14 decks with spaced repetition: FAR part titles (the 20 on the exam and all 53), acronyms, key terms, key numbers, deadlines, courses, certification facts, roles, contract types, and from the B2B class: the Jeopardy review, UCF sections, common forms and PIID letters. |
 | Arcade | Six games on the guide's own content, with four paces (Recruit to Elite), XP and ranks, sound and optional music, and a study list after every run: **Contract Quest** (RPG battles through the four exam areas and the Exam Citadel, all 374 bank questions), **Supply Line** (a story convoy: five checkpoints along the contract life cycle, crates for right answers, challenge coins for clean runs), **Fire Mission** (artillery: thresholds, deadlines, forms, J&A approvals, contract types), **Qual Range** (pop-up targets for the 243 glossary terms, scored Expert to Marksman), **Part Patrol** (space shooter: FAR parts, UCF sections, PIID letters, boss fights on bank questions) and **Sort Yard** (conveyor sorting: life-cycle phases, dollar thresholds, UCF parts, contract-type families). Works with a mouse, a keyboard or a touch screen, and on a phone held upright. The four quick drills (FAR Part Match, Which phase?, Threshold check, Who carries the risk?) stay at the bottom of the lobby. |
 | Look it up | Glossary of 243 terms (any acronym in the guide can be tapped for its meaning), FAR & key numbers (how to read a citation, all 53 RFO part titles, 44 old-to-new numbers, thresholds and deadlines, what changed lately) and 37 official links. |
-| For everyone | **Buddy**, a chat bubble on every page that answers questions from the guide on the device (not an AI; one tap sends the question to Google AI Mode, ChatGPT or Claude in the reader's own account for more depth); a guided tour (the ? button), an About page with the developer and maintainer and a feedback button, a side menu that collapses to icons, read-aloud on every lesson, card and question with a choice of the device's voices (natural ones first), a Lively tone that rises on questions, settles at the end of a sentence and pauses after a heading, and contracting pronunciation; four text sizes; day mode by default with night and follow-my-device; search with `/`; works on phones; no network needed; progress can be saved inside the file itself. |
+| For everyone | Optional **accounts** on the website and the installed app (an email address and a password, or Continue with Google) that save progress to pick up on any phone or computer; **Buddy**, a chat bubble on every page that answers questions from the guide on the device (not an AI; one tap sends the question to Google AI Mode, ChatGPT or Claude in the reader's own account for more depth); a guided tour (the ? button), an About page with the developer and maintainer and a feedback button, a side menu that collapses to icons, read-aloud on every lesson, card and question with a choice of the device's voices (natural ones first), a Lively tone that rises on questions, settles at the end of a sentence and pauses after a heading, and contracting pronunciation; four text sizes; day mode by default with night and follow-my-device; search with `/`; works on phones; no network needed; progress can be saved inside the file itself. |
 
 ## How people get it: three ways
 
@@ -93,8 +93,10 @@ name.
 - **Where:** the Supabase project **51C** (ref `efnoeusptnedvlaiomaa`, region us-east-1, free plan), kept apart from the
   owner's other Supabase projects. `src/data/meta.json` → `sync` holds its address and the *publishable* key, which is
   meant to be public; the database rules, not the key, protect the data.
-- **What is stored:** each account's name, email address and one `progress` row with the app's state. Each signed-in reader can
-  read and write only their own row (row-level security); signed-out visitors cannot read the table at all.
+- **What is stored:** each account's name, email address and one `progress` row with the app's state; for a Google sign-in,
+  Supabase also keeps the identity Google shares (name, email address, profile picture link, Google account ID). Each
+  signed-in reader can read and write only their own row (row-level security); signed-out visitors cannot read the
+  table at all.
 - **Sign-up:** the `signup` function creates accounts that work at once (no confirmation email: the free plan sends only
   a few an hour) and stores the name. `delete-account` deletes the caller's own account and its progress.
 - **Google sign-in** is on (`src/data/meta.json` → `sync.google`): the sign-in and sign-up pop-ups start with

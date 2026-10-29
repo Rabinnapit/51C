@@ -163,7 +163,10 @@
     return session().then(function (s) { return call('/functions/v1/delete-account', { method: 'POST', token: s.access }); })
       .then(function () { save(null); changed(); });
   };
-  acct.google = function () { location.href = cfg().url + '/auth/v1/authorize?provider=google&redirect_to=' + encodeURIComponent(home()); };
+  acct.google = function () {
+    if (navigator.onLine === false) { CORB.ui.toast('You are offline. Connect to the internet to continue with Google.', 'warn', 5000); return; }
+    location.href = cfg().url + '/auth/v1/authorize?provider=google&redirect_to=' + encodeURIComponent(home());
+  };
   acct.sendReset = function (email) {
     return call('/auth/v1/recover?redirect_to=' + encodeURIComponent(home()), { method: 'POST', body: { email: String(email || '').trim().toLowerCase() } });
   };
@@ -348,7 +351,7 @@
       box.appendChild(h('p', {}, 'Optional. Create a free account to save your progress, then pick up where you left off on any phone or computer. Without one, your progress stays on this device only.'));
       box.appendChild(h('div.row', {}, h('button.btn.primary', { type: 'button', onclick: function () { acct.openSignUp(); } }, icon('plus'), 'Create account'),
         h('button.btn', { type: 'button', onclick: function () { acct.openSignIn(); } }, icon('user'), 'Sign in')));
-      box.appendChild(h('p.tiny.muted', {}, 'Only your name, email address and progress are stored, with Supabase in the United States.'));
+      box.appendChild(h('p.tiny.muted', {}, 'Only your name, email address and progress are stored, with Supabase in the United States (with Google, also the profile picture link Google shares).'));
     }
     draw();
     CORB.on('change', function (e) { var p = e && e.path; if ((p === 'account' || p === '*') && box.isConnected) draw(); });

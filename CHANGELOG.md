@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.23.2 (29 October 2026): the terms say what Google shares
+
+- **Terms of use updated** (version 2026-10-29.5, so everyone agrees once more on their next open): the privacy point
+  now says an account can be created with an email address and a password or with a Google account, and that a Google
+  sign-in also passes on the profile picture link Google shares; nothing else is collected. The account card on
+  Settings & help and README → Accounts say the same.
+- **Continue with Google while offline** now says to connect first, instead of opening a browser error page.
+- README: What is inside lists the optional accounts; Accounts has the Google Cloud project and client details.
+
 ## 0.23.1 (29 October 2026): what the owner confirmed
 
 - From the owner's own experience in contracting support brigades: the local certification goal is 6 months in most
