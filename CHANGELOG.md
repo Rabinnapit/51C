@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.21.1 (29 October 2026): Buddy's bubble draws itself
+
+- On the same 12-second beat as the nudge, the chat bubble's outline draws itself from a dot at its tail and three
+  typing dots pop in one after another, so the icon reads as "someone to talk to" rather than a flat dialog box.
+  Static (and the nudge off) once Buddy has been opened, and always under Less motion.
+
 ## 0.21.0 (29 October 2026): rise and fall
 
 - **Read-aloud talks like a person reads.** Text is now spoken piece by piece, each with its own tone: questions rise,

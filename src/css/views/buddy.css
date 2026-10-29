@@ -10,8 +10,16 @@
 .buddy-fab.nudge::after { content: ''; position: absolute; inset: -3px; border-radius: inherit; border: 2px solid var(--accent); opacity: 0; pointer-events: none; animation: buddy-ring 12s ease-out 3s infinite; }
 @keyframes buddy-nudge { 0%, 10%, 100% { transform: none; } 2% { transform: translateY(-5px) scale(1.06); } 4.5% { transform: none; } 6.5% { transform: translateY(-3px) scale(1.03); } 8.5% { transform: none; } }
 @keyframes buddy-ring { 0% { opacity: .75; transform: scale(1); } 9% { opacity: 0; transform: scale(1.55); } 9.1%, 100% { opacity: 0; transform: scale(1); } }
-@media (prefers-reduced-motion: reduce) { .buddy-fab.nudge, .buddy-fab.nudge::after { animation: none; } }
-html[data-motion="reduce"] .buddy-fab.nudge, html[data-motion="reduce"] .buddy-fab.nudge::after { animation: none; }
+/* the icon on the same beat: the bubble's outline draws itself from a dot at the tail, then three typing dots pop in */
+.buddy-fab .bb-ic { display: inline-flex; }
+.buddy-fab.nudge .bb-line { stroke-dasharray: 100; animation: bb-draw 12s ease-out 3s infinite; }
+.buddy-fab.nudge .bb-dot { transform-box: fill-box; transform-origin: center; animation: bb-dot 12s ease-out 3s infinite; }
+.buddy-fab.nudge .bb-dot:nth-child(3) { animation-delay: 3.25s; }
+.buddy-fab.nudge .bb-dot:nth-child(4) { animation-delay: 3.5s; }
+@keyframes bb-draw { 0% { stroke-dashoffset: 100; } 9% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 0; } }
+@keyframes bb-dot { 0%, 8% { opacity: 0; transform: scale(.3); } 11% { opacity: 1; transform: scale(1.25); } 13%, 100% { opacity: 1; transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .buddy-fab.nudge, .buddy-fab.nudge::after, .buddy-fab .bb-line, .buddy-fab .bb-dot { animation: none; } }
+html[data-motion="reduce"] .buddy-fab.nudge, html[data-motion="reduce"] .buddy-fab.nudge::after, html[data-motion="reduce"] .bb-line, html[data-motion="reduce"] .bb-dot { animation: none; }
 @media (max-width: 860px) {
   .buddy-fab { bottom: calc(74px + env(safe-area-inset-bottom, 0px)); padding: 13px; }   /* above the quick menu; icon only */
   .buddy-fab span { display: none; }

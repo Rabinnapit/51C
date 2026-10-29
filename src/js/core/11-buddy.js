@@ -204,8 +204,13 @@
     document.querySelectorAll('.buddy-fab').forEach(function (b) { b.hidden = false; });
   };
   buddy.isOpen = function () { return !!panel; };
-  // the chat bubble the shell draws on every page; it nudges on a steady beat (CSS) until Buddy has been opened once
+  // the chat bubble the shell draws on every page. Until Buddy has been opened once it nudges on a steady beat (CSS):
+  // the bubble draws itself from a dot at its tail, three typing dots pop in, the button lifts and a ring spreads.
+  var BUBBLE = '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">' +
+    '<path class="bb-line" pathLength="100" d="M12 20.5l-3.6-3.5H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2.4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '<circle class="bb-dot" cx="8" cy="10.5" r="1.4" fill="currentColor"/><circle class="bb-dot" cx="12" cy="10.5" r="1.4" fill="currentColor"/><circle class="bb-dot" cx="16" cy="10.5" r="1.4" fill="currentColor"/></svg>';
   buddy.fab = function () {
-    return h('button.buddy-fab' + (CORB.get('settings.buddyUsed') ? '' : '.nudge'), { type: 'button', 'aria-label': 'Ask ' + name(), title: 'Ask ' + name() + ' a question', hidden: !!panel, onclick: function () { buddy.open(); } }, icon('message'), h('span', {}, 'Ask ' + name()));
+    var ic = h('span.bb-ic', { 'aria-hidden': 'true' }); ic.innerHTML = BUBBLE;
+    return h('button.buddy-fab' + (CORB.get('settings.buddyUsed') ? '' : '.nudge'), { type: 'button', 'aria-label': 'Ask ' + name(), title: 'Ask ' + name() + ' a question', hidden: !!panel, onclick: function () { buddy.open(); } }, ic, h('span', {}, 'Ask ' + name()));
   };
 })();
