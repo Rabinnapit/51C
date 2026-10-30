@@ -56,12 +56,14 @@
       metal: texFrom(T, function (i) { var v = 36 + fine[i] * 18; return [v, v + 2, v + 5]; }, true), metalR: texFrom(T, function (i) { var v = 90 + fine[i] * 110; return [v, v, v]; }, false), metalN: normalFrom(T, fine, 0.6),
       paper: texFrom(128, function (i) { var v = 236 + fine[i * 4 % (T * T)] * 16; return [v, v - 4, v - 14]; }, true),
       rock: texFrom(T, function (i) { var v = 84 + sandH[i] * 70; return [v + 8, v, v - 8]; }, true),
+      snow: texFrom(T, function (i) { var v = 226 + fine[i] * 26, b = sandH[i] * 10; return [v - 4, v - 1 + b * 0.3, Math.min(255, v + 6 + b)]; }, true),
+      grass: texFrom(T, function (i) { var h = sandH[i], p = mix3([66, 98, 42], [118, 150, 70], h); if (fine[i] > 0.8) p = mix3(p, [150, 140, 80], 0.5); return p; }, true),
       road: texFrom(T, function (i, x, y) { var v = 46 + fine[i] * 22 + sandH[i] * 8, u = x / T, w = y / T, p = [v, v + 1, v + 3]; if (Math.abs(w - 0.5) < 0.012 && u < 0.42) p = [214, 178, 60]; if (Math.abs(w - 0.055) < 0.01 || Math.abs(w - 0.945) < 0.01) p = [212, 210, 200]; return p; }, true),
       soft: softTexture('rgba(255,255,255,1)', 'rgba(255,255,255,.6)'), flash: softTexture('rgba(255,255,255,1)', 'rgba(255,220,130,.9)'),
       smoke: softTexture('rgba(200,200,200,.8)', 'rgba(170,170,170,.45)'), dust: softTexture('rgba(215,195,150,.9)', 'rgba(190,165,120,.5)'), cloud: softTexture('rgba(255,255,255,.95)', 'rgba(255,255,255,.55)'),
       fineH: fine
     };
-    TEX.sand.repeat.set(80, 80); TEX.sandN.repeat.set(80, 80); TEX.dirt.repeat.set(12, 3); TEX.dirtN.repeat.set(12, 3); TEX.wood.repeat.set(1, 2); TEX.woodN.repeat.set(1, 2);
+    TEX.sand.repeat.set(80, 80); TEX.sandN.repeat.set(80, 80); TEX.snow.repeat.set(80, 80); TEX.grass.repeat.set(80, 80); TEX.dirt.repeat.set(12, 3); TEX.dirtN.repeat.set(12, 3); TEX.wood.repeat.set(1, 2); TEX.woodN.repeat.set(1, 2);
     return TEX;
   };
 
@@ -216,6 +218,7 @@
     dawn: { top: 0x2a2060, horizon: 0xe8a080, bot: 0x6a5a62, sunDir: [0.85, 0.16, -0.35], sunColor: 0xffb27a, sun: 1.7, haze: 0.55, fog: 0xd2aaa4, fogD: 0.0052, hemiSky: 0x7a6aaa, hemiGround: 0x5a4a3a, hemi: 0.3, night: 0.05, exposure: 1.0 },
     gold: { top: 0x4a2a12, horizon: 0xf6c37c, bot: 0x8a6a3c, sunDir: [-0.7, 0.2, -0.45], sunColor: 0xffc27a, sun: 2.3, haze: 0.6, fog: 0xe4bd8c, fogD: 0.0046, hemiSky: 0xb08860, hemiGround: 0x6a5030, hemi: 0.3, night: 0, exposure: 1.0 },
     dusk: { top: 0x0a2e3a, horizon: 0x8fc4c8, bot: 0x3a4a4a, sunDir: [0.35, 0.08, -0.6], sunColor: 0xb08a6a, sun: 0.9, haze: 0.5, fog: 0x5f8a90, fogD: 0.0058, hemiSky: 0x4a7a88, hemiGround: 0x2a3a3a, hemi: 0.45, night: 0.35, exposure: 1.05 },
+    winter: { top: 0x5a6f8a, horizon: 0xc9d2da, bot: 0x9aa2aa, sunDir: [0.4, 0.35, -0.5], sunColor: 0xe8eef5, sun: 1.5, haze: 0.4, fog: 0xc3ccd4, fogD: 0.006, hemiSky: 0x9fb0c4, hemiGround: 0x8a8f94, hemi: 0.5, night: 0, exposure: 1.0 },
     night: { top: 0x04071a, horizon: 0x2a3a6e, bot: 0x141a2a, sunDir: [-0.35, 0.6, -0.4], sunColor: 0xa8bcff, sun: 0.45, haze: 0.15, fog: 0x1a2238, fogD: 0.0075, hemiSky: 0x3a4a7a, hemiGround: 0x14181f, hemi: 0.5, night: 1, exposure: 1.2 }
   };
 
@@ -365,6 +368,15 @@
     St.setLight(opts.light || 'day', typeof opts.light === 'string' ? opts.light : 'day'); St.refreshEnv();
     return St;
   };
+
+  // ---- range skins (seasons): terrain colours, ground texture, leaves and light. Cosmetics only. ----
+  GL.SKINS = {
+    desert: { light: 'day', base: [0.72, 0.62, 0.42], green: [0.33, 0.45, 0.24], rock: [0.5, 0.47, 0.44], ground: 'sand', leaf: 0x2f5a2a, trees: 1, bush: 0x5a6a3a },
+    winter: { light: 'winter', base: [0.88, 0.9, 0.94], green: [0.74, 0.78, 0.82], rock: [0.52, 0.55, 0.6], ground: 'snow', leaf: 0x3e5244, trees: 1, bush: 0x6a7470 },
+    forest: { light: 'day', base: [0.38, 0.5, 0.27], green: [0.2, 0.38, 0.16], rock: [0.42, 0.42, 0.38], ground: 'grass', leaf: 0x245222, trees: 2, bush: 0x3f5a2e },
+    summer: { light: 'gold', base: [0.78, 0.66, 0.4], green: [0.58, 0.54, 0.28], rock: [0.54, 0.5, 0.44], ground: 'sand', leaf: 0x4f6b2a, trees: 0.8, bush: 0x6e6e3c }
+  };
+  GL.skin = function (id) { return GL.SKINS[id] || GL.SKINS.desert; };
 
   // ---- the kit: props and effects the scenes share. kit(St) binds materials and particle pools to one stage. ----
   GL.kit = function (St) {

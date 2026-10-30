@@ -8,11 +8,11 @@
   GL.RangeScene = function (opts) {
     opts = opts || {};
     var reduce = opts.reduce || function () { return false; };
-    var St = GL.Stage({ mobile: opts.mobile, fov: 58, far: 700, shadow: { l: -30, r: 30, t: 30, b: -30, far: 220 }, light: 'day' });
+    var SK = GL.skin(opts.skin), St = GL.Stage({ mobile: opts.mobile, fov: 58, far: 700, shadow: { l: -30, r: 30, t: 30, b: -30, far: 220 }, light: SK.light });
     var scene = St.scene, camera = St.camera, X = St.X, std = St.std, mobile = St.mobile, sun = St.sun;
     sun.target.position.set(0, 0, -12); St.push();
     var S = { t: 0, boards: [], recoil: 0, flashT: 0, aberr: 0, white: 0, yaw: 0, pitch: 0, w: 4, h: 4, tri: 0, calls: 0, quality: 2 };
-    var sandMat = std({ map: X.sand, normalMap: X.sandN, roughness: 0.95 }), dirtMat = std({ map: X.dirt, normalMap: X.dirtN, roughness: 0.98 }), woodMat = std({ map: X.wood, normalMap: X.woodN, roughness: 0.8 });
+    var sandMat = std({ map: X[SK.ground] || X.sand, normalMap: X.sandN, roughness: 0.95 }), dirtMat = std({ map: X.dirt, normalMap: X.dirtN, roughness: 0.98 }), woodMat = std({ map: X.wood, normalMap: X.woodN, roughness: 0.8 });
     var steelMat = std({ map: X.metal, roughnessMap: X.metalR, normalMap: X.metalN, metalness: 0.9, roughness: 0.5, color: 0x8a8f96 }), rockMat = std({ map: X.rock, roughness: 0.92 });
     var fineN = normalFrom(256, X.fineH, 0.8); fineN.repeat.set(4, 4); var concMat = std({ color: 0x9a9890, roughness: 0.9, normalMap: fineN });
     var bagTex = X.dirt.clone(); bagTex.repeat.set(2, 1); bagTex.needsUpdate = true; var bagMat = std({ map: bagTex, roughness: 0.95, color: 0xc9b58a });
@@ -25,16 +25,16 @@
     var terrGeo = new THREE.PlaneGeometry(700, 460, 110, 72); terrGeo.rotateX(-Math.PI / 2); terrGeo.translate(0, 0, -250);
     (function () { var pos = terrGeo.attributes.position, hf = fbm(128, 5, 5, 0.55), col = new Float32Array(pos.count * 3), c = new THREE.Color();
       for (var i = 0; i < pos.count; i++) { var x = pos.getX(i), z = pos.getZ(i), u = Math.floor((x + 350) / 700 * 127), v = Math.floor((z + 480) / 460 * 127), hgt = hf[v * 128 + u], dist = -z - 28, kk = clamp(dist / 50, 0, 1), y = Math.pow(hgt, 1.7) * 75 * kk - 0.6;
-        pos.setY(i, y); var g = clamp((y - 6) / 30, 0, 1), rock = clamp((y - 30) / 30, 0, 1); c.setRGB(0.72, 0.62, 0.42).lerp(new THREE.Color(0.33, 0.45, 0.24), g).lerp(new THREE.Color(0.5, 0.47, 0.44), rock); col[i * 3] = c.r; col[i * 3 + 1] = c.g; col[i * 3 + 2] = c.b; }
+        pos.setY(i, y); var g = clamp((y - 6) / 30, 0, 1), rock = clamp((y - 30) / 30, 0, 1); c.setRGB(SK.base[0], SK.base[1], SK.base[2]).lerp(new THREE.Color(SK.green[0], SK.green[1], SK.green[2]), g).lerp(new THREE.Color(SK.rock[0], SK.rock[1], SK.rock[2]), rock); col[i * 3] = c.r; col[i * 3 + 1] = c.g; col[i * 3 + 2] = c.b; }
       terrGeo.computeVertexNormals(); terrGeo.setAttribute('color', new THREE.BufferAttribute(col, 3)); })();
     var terrN = X.dirtN.clone(); terrN.repeat.set(70, 46); terrN.needsUpdate = true; var terrain = new THREE.Mesh(terrGeo, std({ vertexColors: true, roughness: 0.96, normalMap: terrN })); terrain.receiveShadow = true; scene.add(terrain);
     function jitter(geo, ax, ay, az, seed) { var p = geo.attributes.position; for (var i = 0; i < p.count; i++) { var key = Math.round(p.getX(i) * 97) * 3 + Math.round(p.getY(i) * 89) * 7 + Math.round(p.getZ(i) * 83) * 11, j = hash(key, seed) - 0.5; p.setXYZ(i, p.getX(i) * (1 + j * ax), p.getY(i) * (1 + j * ay), p.getZ(i) * (1 + j * az)); } geo.computeVertexNormals(); }
     var berm = new THREE.Mesh(new THREE.SphereGeometry(1, 36, 18), dirtMat); jitter(berm.geometry, 0.05, 0.12, 0.08, 31); berm.scale.set(36, 3.4, 6.5); berm.position.set(0, -0.7, -27); berm.receiveShadow = berm.castShadow = true; scene.add(berm);
     for (i = 0; i < 26; i++) { var rg = new THREE.IcosahedronGeometry(1, 1); jitter(rg, 0.5, 0.6, 0.5, 100 + i); var rk = new THREE.Mesh(rg, rockMat), sc = 0.4 + hash(i, 41) * 1.6, side = hash(i, 43) > 0.5 ? 1 : -1; rk.scale.setScalar(sc); rk.position.set(side * (7 + hash(i, 45) * 40), sc * 0.4 - 0.2, -14 - hash(i, 47) * 100); rk.rotation.y = hash(i, 49) * 6; rk.castShadow = rk.receiveShadow = true; scene.add(rk); }
-    var trunkMat = std({ map: X.wood, roughness: 0.9, color: 0x8a6a48 }), leafMat = std({ color: 0x2f5a2a, roughness: 0.9 });
-    for (i = 0; i < 18; i++) { var tr = new THREE.Group(), th = 5 + hash(i, 61) * 4, trunk = new THREE.Mesh(new THREE.CylinderGeometry(0.18, 0.32, th, 8), trunkMat); trunk.position.y = th / 2; trunk.castShadow = true; tr.add(trunk);
+    var trunkMat = std({ map: X.wood, roughness: 0.9, color: 0x8a6a48 }), leafMat = std({ color: SK.leaf, roughness: 0.9 });
+    for (i = 0; i < Math.round(18 * SK.trees); i++) { var tr = new THREE.Group(), th = 5 + hash(i, 61) * 4, trunk = new THREE.Mesh(new THREE.CylinderGeometry(0.18, 0.32, th, 8), trunkMat); trunk.position.y = th / 2; trunk.castShadow = true; tr.add(trunk);
       for (var j = 0; j < 3; j++) { var fg = new THREE.IcosahedronGeometry(1, 1); jitter(fg, 0.35, 0.35, 0.35, 200 + i * 3 + j); var fol = new THREE.Mesh(fg, leafMat), fs = 2.2 + hash(i + j, 63) * 2; fol.scale.setScalar(fs); fol.position.set((hash(i, j + 70) - 0.5) * 2.2, th - 1 + j * 1.6, (hash(i, j + 80) - 0.5) * 2.2); fol.castShadow = true; tr.add(fol); }
-      tr.position.set((hash(i, 67) > 0.5 ? 1 : -1) * (16 + hash(i, 69) * 70), -0.2, -45 - hash(i, 71) * 110); scene.add(tr); }
+      tr.position.set((hash(i, 67) > 0.5 ? 1 : -1) * (16 + hash(i, 69) * 70), -0.2, -45 - hash(i % 18, 71) * 110 - (i >= 18 ? 30 : 0)); scene.add(tr); }
     var tower = new THREE.Group(); [[-1.3, -1.3], [1.3, -1.3], [-1.3, 1.3], [1.3, 1.3]].forEach(function (p) { var leg = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.14, 6, 8), steelMat); leg.position.set(p[0], 3, p[1]); leg.castShadow = true; tower.add(leg); });
     var cabin = new THREE.Mesh(new THREE.BoxGeometry(3.4, 2.4, 3.4), std({ color: 0x5c6b4a, roughness: 0.85 })); cabin.position.y = 7.2; cabin.castShadow = true; tower.add(cabin);
     var roof = new THREE.Mesh(new THREE.BoxGeometry(4, 0.2, 4), std({ color: 0x3a3f36, roughness: 0.8 })); roof.position.y = 8.5; tower.add(roof);

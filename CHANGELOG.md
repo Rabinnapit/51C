@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.29.0 (30 October 2026): the range card, the qualification table and the seasons
+
+- **Today's range card.** The Arcade now opens with three five-minute missions picked for the date, one each from
+  three different games (a ten-target table, a convoy stop, six fire missions, a sector, a shift at the yard or a boss).
+  Pass all three to close the card: 20 XP a mission, 50 for the card. A closed card a day builds a streak; miss a day
+  and one repair a week keeps it alive. Home shows the card, the streak and what to play next.
+- **This week's qualification table.** Every answer in any game fires one target, right or wrong, until the week's
+  forty are fired; then the table is scored against the Army rifle standard: 23 hits Marksman, 30 Sharpshooter, 36
+  Expert. The lobby shows the forty targets as they are fired, the badge stays on Home until Monday, and the last
+  weeks' badges line up under the table.
+- **Seasons and range skins.** The fiscal year's quarters are the seasons (FY27 Quarter 1 is October to December);
+  each has a skin for Range Day and Fire Mission: Desert, Korea winter (snow and a cold sky), Forest (green slopes
+  and more trees) and High summer (golden light). The season's skin is on by itself; pick any other in the lobby.
+  Cosmetics only, nothing to buy. The lobby counts the cards closed this season.
+- The Arcade can open straight onto a mission from Home (#/arcade?daily=N).
+
 ## 0.28.4 (14 November 2026): the 3D games on a phone
 
 - **No more blank game screen.** On a phone a 3D game could sit on a black or frozen screen for several seconds while

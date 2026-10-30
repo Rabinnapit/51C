@@ -10,11 +10,12 @@
   GL.GunScene = function (opts) {
     opts = opts || {};
     var reduce = opts.reduce || function () { return false; };
-    var St = GL.Stage({ mobile: opts.mobile, reduce: reduce, fov: 50, far: 1200, shadow: { l: -45, r: 45, t: 60, b: -30, far: 320 }, light: 'day' });
+    var SK = GL.skin(opts.skin), St = GL.Stage({ mobile: opts.mobile, reduce: reduce, fov: 50, far: 1200, shadow: { l: -45, r: 45, t: 60, b: -30, far: 320 }, light: SK.light });
     St.post.u.exposure.value = 0.92;
     var K = GL.kit(St), scene = St.scene, camera = St.camera, X = St.X, std = St.std, fx = K.fx, mobile = St.mobile, i;
+    K.mat.leaf.color.set(SK.leaf); K.mat.bush.color.set(SK.bush);
     St.sun.target.position.set(0, 0, -30); St.push();
-    var S = { t: 0, w: 4, h: 4, tri: 0, calls: 0, gl2: St.gl2, hdr: St.hdr, canvas: St.canvas, camera: camera, scene: scene, light: 'day', recoil: 0, flashT: 0, aimOn: false, wind: 0, targets: [], shell: null, trauma: 0, punch: 0 };   // flashT starts at 0: a NaN light intensity would black out the whole frame
+    var S = { t: 0, w: 4, h: 4, tri: 0, calls: 0, gl2: St.gl2, hdr: St.hdr, canvas: St.canvas, camera: camera, scene: scene, light: SK.light, recoil: 0, flashT: 0, aimOn: false, wind: 0, targets: [], shell: null, trauma: 0, punch: 0 };   // flashT starts at 0: a NaN light intensity would black out the whole frame
     var G = 22;   // a heavier gravity than Earth's keeps the arc tall and the flight short
 
     // ---- terrain: an analytic height field with the same noise the mesh was built from ----
@@ -30,14 +31,14 @@
     S.hAt = hAt;
     var terrGeo = new THREE.PlaneGeometry(360, 360, 150, 150); terrGeo.rotateX(-Math.PI / 2); terrGeo.translate(0, 0, -140);
     (function () { var pos = terrGeo.attributes.position, col = new Float32Array(pos.count * 3), c = new THREE.Color();
-      for (var k = 0; k < pos.count; k++) { var x = pos.getX(k), z = pos.getZ(k), y = hAt(x, z); pos.setY(k, y); var g = clamp((y - 1) / 10, 0, 1), rock = clamp((y - 14) / 12, 0, 1), flat = z > -9 ? 0.4 : 0; c.setRGB(0.50, 0.42, 0.28).lerp(new THREE.Color(0.24, 0.38, 0.18), g * 0.9).lerp(new THREE.Color(0.42, 0.40, 0.37), rock).lerp(new THREE.Color(0.52, 0.46, 0.34), flat); col[k * 3] = c.r; col[k * 3 + 1] = c.g; col[k * 3 + 2] = c.b; }
+      for (var k = 0; k < pos.count; k++) { var x = pos.getX(k), z = pos.getZ(k), y = hAt(x, z); pos.setY(k, y); var g = clamp((y - 1) / 10, 0, 1), rock = clamp((y - 14) / 12, 0, 1), flat = z > -9 ? 0.4 : 0; c.setRGB(SK.base[0] * 0.72, SK.base[1] * 0.7, SK.base[2] * 0.68).lerp(new THREE.Color(SK.green[0] * 0.78, SK.green[1] * 0.84, SK.green[2] * 0.75), g * 0.9).lerp(new THREE.Color(SK.rock[0] * 0.85, SK.rock[1] * 0.85, SK.rock[2] * 0.85), rock).lerp(new THREE.Color(SK.base[0] * 0.74, SK.base[1] * 0.74, SK.base[2] * 0.8), flat); col[k * 3] = c.r; col[k * 3 + 1] = c.g; col[k * 3 + 2] = c.b; }
       terrGeo.computeVertexNormals(); terrGeo.setAttribute('color', new THREE.BufferAttribute(col, 3)); })();
     var terrN = K.tex(X.dirtN, 36, 36), terrain = new THREE.Mesh(terrGeo, std({ vertexColors: true, roughness: 0.96, normalMap: terrN })); terrain.receiveShadow = true; scene.add(terrain);
     K.hills(scene, { len: 1400, depth: 300, segs: 180, xc: 0, zc: -420, amp: 70, seed: 13, near: -290, far: -380 });
     var pad = new THREE.Mesh(new THREE.CircleGeometry(5.5, 24), std({ map: K.tex(X.dirt, 3, 3), normalMap: K.tex(X.dirtN, 3, 3), roughness: 0.98 })); pad.rotation.x = -Math.PI / 2; pad.position.y = 0.02; pad.receiveShadow = true; scene.add(pad);
     K.sandbags(scene, 0, 0, 14, 4.9);
     for (i = 0; i < 3; i++) { var cr = K.crate({ label: 'HE', color: '#4f5a3c' }, 0.8); cr.position.set(3.3 + (i % 2) * 0.9, 0.4 + Math.floor(i / 2) * 0.8, 2.2 + (i % 2) * 0.1); cr.rotation.y = 0.2 * i; scene.add(cr); }
-    for (i = 0; i < 26; i++) { var tr = K.tree(i), tx = (hash(i, 67) - 0.5) * 140, tz = -48 - hash(i, 71) * 110; if (Math.abs(tx) < 14 && tz > -75) tx += 20; tr.position.set(tx, hAt(tx, tz) - 0.3, tz); scene.add(tr); }
+    for (i = 0; i < Math.round(26 * SK.trees); i++) { var tr = K.tree(i), tx = (hash(i, 67) - 0.5) * 140, tz = -48 - hash(i % 26, 71) * 110 - (i >= 26 ? 25 : 0); if (Math.abs(tx) < 14 && tz > -75) tx += 20; tr.position.set(tx, hAt(tx, tz) - 0.3, tz); scene.add(tr); }
     for (i = 0; i < 20; i++) { var rk = K.rock(i), rx = (hash(i, 45) - 0.5) * 120, rz = -14 - hash(i, 47) * 100; rk.position.set(rx, hAt(rx, rz) + rk.position.y, rz); scene.add(rk); }
     for (i = 0; i < 16; i++) { var bs = K.bush(i), bx = (hash(i, 55) - 0.5) * 60, bz = -9 - hash(i, 57) * 40; bs.position.set(bx, hAt(bx, bz) + bs.position.y, bz); scene.add(bs); }
 

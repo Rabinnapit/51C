@@ -73,11 +73,11 @@
     if (opts.fams && opts.fams.length) { var sub = all.filter(function (f) { return opts.fams.indexOf(f.fam) >= 0; }); if (sub.length >= 8) all = sub; }
     var MIS = opts.missions > 0 ? opts.missions : MISSIONS;
     var coarse = false; try { coarse = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
-    var scene = new A.GL.GunScene({ mobile: coarse, reduce: feel.reduce, width: 640, height: 400 });
+    var scene = new A.GL.GunScene({ mobile: coarse, reduce: feel.reduce, width: 640, height: 400, skin: A.season ? A.season.skin() : '' });
     var mission = null, missionNo = 0, rounds = ROUNDS, streak = 0, targets = [], phase = 'aim', phaseT = 0, timer = 0, limit = 0, note = '', noteT = 0, reveal = 0, wind = 0, right = 0;
     var gov = A.GL.governor(scene), scale = 1, glW = 0, glH = 0, aimP = null;
     var tierIx = Math.max(0, ['recruit', 'regular', 'veteran', 'elite'].indexOf(tier.id)), previewFrac = [1, 0.5, 0.22, 0][tierIx];
-    var LIGHTS = ['day', 'gold', 'dawn', 'night', 'dusk'];
+    var LIGHTS = [scene.light, 'gold', 'dawn', 'night', 'dusk'];
     api.progress.configure({ perLevel: 4 });
 
     function screenOf(tg) { var p = scene.project(scene.targetPoint(tg)); return { x: p.x * W, y: p.y * H }; }

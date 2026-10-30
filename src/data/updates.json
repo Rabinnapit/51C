@@ -93,6 +93,12 @@
   ],
   "guide_changes": [
     {
+      "version": "0.29.0",
+      "date": "2026-10-30",
+      "title": "The range card, the qualification table and the seasons",
+      "notes": "Three five-minute missions a day on a range card, with a streak you can repair once a week; a weekly 40-target qualification table scored like the Army rifle standard (23 Marksman, 30 Sharpshooter, 36 Expert) that every answer in any game fires; and fiscal-year seasons with range skins for Range Day and Fire Mission (Desert, Korea winter, Forest, High summer). Home shows the card and the badge."
+    },
+    {
       "version": "0.28.4",
       "date": "2026-11-14",
       "title": "The 3D games on a phone",

@@ -152,6 +152,9 @@
     };
   }
 
+  // Home reads the range card, the streak and the weekly table through this: data built and the host connected, no UI
+  CORB.arcadeReady = function () { var A = window.ARCADE; if (!A || typeof A.mount !== 'function' || !A.daily) return null; try { A.DATA = buildData(); connect(A); } catch (e) { return null; } return A; };
+
   CORB.registerView({
     id: 'arcade', title: 'Arcade', section: 'Practice', icon: 'gamepad', nav: true, order: 90, full: true, mobileAs: 'quiz',
     blurb: 'Seven games, five in real 3D: a rifle range, a supply convoy, artillery, a space shooter, a dispatch yard, RPG boss battles and a pop-up range, plus the twelve-chapter campaign Your first year as a 51C',

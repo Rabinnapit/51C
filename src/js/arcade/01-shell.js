@@ -63,6 +63,7 @@
       h('div.ar-sound', {}, soundButtons()),
       h('p.ar-pace-line', {}, h('b', { style: { '--tc': tier.color } }, tier.name + ': '), paceLine(tier), ' ', h('span', {}, 'New here? Start at Recruit.'))));
     var grid = h('div.ar-cabinets'), thumbs = [];
+    if (A.daily) { try { screen.appendChild(A.daily.section()); screen.appendChild(A.table.section()); } catch (e) { console.error('[arcade] daily', e); } }
     if (A.campaign && A.mentor) { try { screen.appendChild(A.campaign.section(thumbs)); } catch (e) { console.error('[arcade] campaign', e); } }
     screen.appendChild(h('h2.ar-h2', {}, 'All games'));
     A.order.forEach(function (id, i) {
@@ -304,7 +305,11 @@
       life: function (n) { state.lives = A.clamp(state.lives + (n || 0), 0, 9); drawLives(); if (n < 0) { playEl.classList.remove('ar-hurt'); void playEl.offsetWidth; playEl.classList.add('ar-hurt'); } if (state.lives <= 0) setTimeout(function () { if (!state.ended) finish(false, { title: def.outTitle || 'Out of lives' }); }, 650); return state.lives; },
       xp: function (n) { state.xp += Math.max(0, n || 0); return state.xp; },
       // r: { prompt, given, correct, ok, explanation, cite, lesson, qid, key }
-      review: { add: function (r) { if (!r) return; state.review.push(r); noteResult(r); if (r.ok) state.xp += 10; if (r.qid && host('onAnswer')) { try { host('onAnswer')(r.qid, !!r.ok); } catch (e) {} } } },
+      review: { add: function (r) {
+        if (!r) return; state.review.push(r); noteResult(r); if (r.ok) state.xp += 10; if (r.qid && host('onAnswer')) { try { host('onAnswer')(r.qid, !!r.ok); } catch (e) {} }
+        // every answer fires one target on this week's qualification table
+        if (A.table) { try { var tr = A.table.record(!!r.ok); if (tr && tr.justFired) { api.hud.set({ banner: 'Table fired: ' + tr.badgeName, sub: tr.hits + ' of 40 hits this week', color: '#f6d991', bannerTime: 3.2 }); A.audio.fanfare(); } } catch (e) {} }
+      } },
       // a new question became active: Recruit freezes until Go, Regular gives a reading window, Veteran and Elite do nothing
       ready: function (o) {
         if (tier.read === 'off') return false;
@@ -578,6 +583,7 @@
     var bonus = won ? 50 : 0, xp = A.addXp(state.xp + bonus + (o.xpBonus || 0));
     var summary = { game: state.id, score: Math.round(state.score), right: right, total: total, pct: total ? Math.round(right / total * 100) : 0, won: !!won, tier: state.tier.id, record: rec.record, path: params.path || '' };
     if (A.campaign && state.opts && state.opts.campaign) { try { state.campaignResult = A.campaign.onRunEnd(state, won, o); } catch (e) { console.error('[arcade] campaign', e); } }
+    if (A.daily && state.opts && state.opts.daily) { try { state.dailyResult = A.daily.onRunEnd(state, won, o); } catch (e) { console.error('[arcade] daily', e); } }
     if (host('onRunEnd')) { try { host('onRunEnd')(summary); } catch (e) {} }
     return { rec: rec, xp: xp, right: right, total: total, summary: summary };
   }
@@ -594,12 +600,13 @@
     var screen = h('div.ar-results');
     screen.appendChild(h('div.ar-res-hero', {},
       h('div.ar-res-card.main', {},
-        h('div.ar-kicker', {}, h('i'), (def.icon ? def.icon + ' ' : '') + def.title + ' · ' + tier.name + (state.opts && state.opts.campaign ? ' · ' + state.opts.campaign.title : '')),
+        h('div.ar-kicker', {}, h('i'), (def.icon ? def.icon + ' ' : '') + def.title + ' · ' + tier.name + (state.opts && state.opts.campaign ? ' · ' + state.opts.campaign.title : '') + (state.opts && state.opts.daily ? ' · ' + state.opts.daily.title : '')),
         h('h2', {}, o.title || (won ? 'Mission complete' : 'Run over')),
         h('div.ar-big', {}, fmt(state.score)),
         h('div.ar-sub', {}, o.message || (acc == null ? 'No questions answered this run.' : 'You answered ' + right + ' of ' + total + ' correctly (' + acc + '%).')),
         o.badge ? h('div.ar-badge', { style: { '--bc': o.badge.color || A.C.gold } }, h('span.ar-badge-ico', { 'aria-hidden': 'true' }, o.badge.icon || '🏅'), h('div', {}, h('b', {}, o.badge.name), h('small', {}, o.badge.desc || ''))) : null,
         state.campaignResult && A.campaign ? A.campaign.card(state) : null,
+        state.dailyResult && A.daily ? A.daily.card(state) : null,
         rec.record && state.score > 0 ? h('div.ar-record', {}, '🏆 New personal best at ' + tier.name) : h('div.ar-sub', {}, 'Best at ' + tier.name + ': ' + fmt(rec.entry.best) + ' · plays: ' + rec.entry.plays),
         h('div.ar-xpline' + (xp.up ? '.up' : ''), {}, h('b', {}, '+' + fmt(xp.gained) + ' XP'),
           h('span', {}, xp.up ? 'Promoted to ' + rk.name + ' (level ' + rk.level + ')!' : rk.name + ' · ' + fmt(rk.to - rk.xp) + ' XP to ' + rk.next),
@@ -645,9 +652,10 @@
       if (ch && A.campaign.unlocked(ch)) { A.campaign.sel = ch; var m = params.mission ? ch.missions[+params.mission - 1] : null; if (m) A.campaign.start(ch, m); else A.lobby('campaign'); }
       return;
     }
+    if (params.daily && A.daily) { var dm = A.daily.today().missions[+params.daily - 1]; if (dm) A.daily.start(dm.def); else A.lobby('daily'); return; }
     if (params.game && A.games[params.game]) startGame(params.game, { realm: params.realm || '', mission: params.mission || '' });
   };
   A.start = function (id, opts) { if (root) startGame(id, opts); };
   A.unmount = function () { endRun(); stopLobby(); A.music.stop(); viewEl = null; root = null; };
-  A.lobby = function (at) { if (!root) return; showLobby(); if (at === 'campaign') { var el = viewEl && viewEl.querySelector('#ar-camp'); if (el) { try { el.scrollIntoView({ block: 'start' }); } catch (e) {} } } };
+  A.lobby = function (at) { if (!root) return; showLobby(); var sel = at === 'campaign' ? '#ar-camp' : at === 'daily' ? '#ar-daily' : at === 'week' ? '#ar-week' : ''; if (sel) { var el = viewEl && viewEl.querySelector(sel); if (el) { try { el.scrollIntoView({ block: 'start' }); } catch (e) {} } } };
 })();

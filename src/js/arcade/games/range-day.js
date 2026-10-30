@@ -58,7 +58,7 @@
       if (opts.exposures > 0) { EXPOSURES = opts.exposures; AMMO = Math.round(EXPOSURES * 1.5); }
       var coarse = false; try { coarse = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
       var scene = null, glError = null;
-      try { scene = new A.GL.RangeScene({ mobile: coarse, reduce: feel.reduce, width: 640, height: 400, fit: FIT }); } catch (e) { glError = e; }
+      try { scene = new A.GL.RangeScene({ mobile: coarse, reduce: feel.reduce, width: 640, height: 400, fit: FIT, skin: A.season ? A.season.skin() : '' }); } catch (e) { glError = e; }
       if (!scene) {
         setTimeout(function () { api.end({ won: false, title: '3D not available', message: 'This device could not start the 3D range' + (glError && glError.message ? ' (' + glError.message + ')' : '') + '. Qual Range is the same drill in 2D.' }); }, 2200);
         return { update: function () {}, draw: function (ctx) { A.text(ctx, 'Starting the 3D range failed on this device. Qual Range is the same drill in 2D.', 30, 60, { size: 18, color: A.C.ink, maxWidth: W - 60 }); } };
