@@ -6,7 +6,7 @@ WarU material, when it arrives) should confirm or correct them.
 | # | Item | Where it appears | Why it needs checking |
 |---|---|---|---|
 | 1 | How Army members submit the certification request (CAMP, who approves) | FAQ "How do I apply for the certification once I am done?"; how-to "Apply for your certification"; plan step "Apply for your certification" | Maintainer confirmed 29 Oct 2026: the request goes through CAMP by personnel authorized in CAMP. Who exactly, and the approval time, are in the RFI (`content/RFI-2026-10-29.md`) |
-| 2 | Whether AATC (the 51C MOS course) counts toward any CON course | FAQ "Does the 51C course at TAAS count for any certification course?" | No official mapping found |
+| 2 | Whether AATC (the 51C MOS course) counts toward any CON course | FAQ "Does the 51C course at TAAS count for any certification course?" | Answered 30 Oct 2026: USAASC's NCO career planning page says AATC gives the WarU course equivalencies, leaving experience, CON 3900V or 3910 and the exam. Each Soldier should still confirm on their WarU transcript |
 | 3 | AITAS screens and approval routing | Certification 101, Sign up; how-to "Register for a WarU course (Army)" | From USAASC FAQ snippets; routing differs by organization |
 | 4 | Your brigade or unit goal (often 6 months) and what it covers | Home setup; My plan; FAQ "Do I have to finish in 6 months?" | Maintainer confirmed 29 Oct 2026: 6 months in most contracting support brigades. Whether it is published policy is in the RFI |
 | 5 | What happens to 51Cs who miss the 36-month deadline | FAQ "What if I miss the 36-month deadline?" | Maintainer confirmed 29 Oct 2026: usually an exception to policy. Its length and approver are in the RFI |

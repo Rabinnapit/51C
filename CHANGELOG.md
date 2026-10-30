@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.28.2 (30 October 2026): what the 51C proponent said
+
+- **Four career questions, answered from the proponent.** After an October 2026 professional development session with
+  the 51C proponent (the Army DACM Office at USAASC), checked against the USAASC pages: who the proponent is and when to
+  contact them (with the team's org box); what to tell a Soldier who wants to become a 51C (eligibility, the CAMP
+  application, the FY26 panel dates, results and the next window); where the promotion-board guidance is (DA PAM
+  600-25, the Board Brief Supplement, the 51C NCO career map); and what the proponent says about a job off the 51C path.
+- **AATC counts.** The proponent's page says the 51C course at Huntsville gives the WarU course equivalencies, leaving
+  one year of experience, CON 3900V or 3910 and the exam. The FAQ and the plan's transcript step now say so; confirm on
+  your own transcript.
+- Three new Career links (USAASC NCO career planning, reclassification, points of contact), four glossary terms
+  (Proponent, SRR, AAPDS, Board Brief Supplement), and the sources and verify logs updated. The transcript itself stays
+  out of the repo.
+
 ## 0.28.1 (30 October 2026): Fire Mission no longer starts black
 
 - **Fire Mission's first frames were black until the first shot.** The muzzle-flash timer started undefined, so the
