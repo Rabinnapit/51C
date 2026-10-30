@@ -18,7 +18,7 @@ DPR = int(sys.argv[2]) if len(sys.argv) > 2 else 2
 RESUME = sys.argv[3] if len(sys.argv) > 3 else None
 ONLY = len(sys.argv) > 4 and sys.argv[4] == "only"
 FPS = 30; DT = 1000.0 / FPS; Q = 92
-ORDER = ["home", "setup", "path", "cert", "lessons", "quiz", "cards", "arcade", "buddy", "lookup", "phone", "c_open", "c_title", "c_end"]
+ORDER = ["home", "setup", "path", "cert", "lessons", "voice", "quiz", "cards", "arcade", "buddy", "lookup", "phone", "c_open", "c_title", "c_end"]
 TERMS = json.load(open(os.path.join(REPO, "src", "data", "meta.json"), encoding="utf-8"))["terms"]["version"]
 FONTS = open(os.path.join(REPO, "src", "css", "00-fonts.css"), encoding="utf-8").read()
 
@@ -211,6 +211,26 @@ def seg_lessons(r, page):     # 9.6 s: the list, lesson one's picture playing pa
     r.anim(2.6, lambda p: f"(() => {{ const rg = document.querySelector('.lf-type-calc .lf-range'); if (!rg) return; rg.value = String(Math.round(1000 * {p:.4f})); rg.dispatchEvent(new Event('input', {{bubbles: true}})); }})()")
     r.fill(9.6)
 
+def seg_voice(r, page):       # 7.2 s: Listen to the lesson; then Settings: the voice list with the app's own voices, Hear a sample
+    r.seg("voice"); r.js("__ensureSetup()"); go(r, "lesson", {"id": "L05"}, wait=900)
+    LB = "[...document.querySelectorAll('button')].find(b => /Listen to the lesson/.test(b.textContent))"
+    lb = elem_center(page, LB, (800, 253))
+    cur_move(r, 1200, 620, lb[0], lb[1], 0.7)
+    cur_click(r, LB + ".click()", 6)
+    r.real(300); r.settle(6); r.hold(0.8, settle=0)                        # the button reads Stop while it speaks
+    r.js("if (CORB.speech) CORB.speech.stop()")
+    go(r, "settings", {"tab": "display"}, wait=800)
+    # the voice picker opened as a list, so the app's own voices show; Joe selected; the list and Hear a sample both in view
+    r.js("const s = document.getElementById('tts-voice'); if (s) { s.size = 7; const o = [...s.options].find(o => /\\bJoe\\b/.test(o.textContent)); if (o) o.selected = true; }")
+    r.settle(5)
+    y = r.top("document.querySelector('label[for=tts-voice]')", 400, 100)
+    r.js(f"window.scrollTo(0, {y})"); r.settle(5); r.hold(1.0, settle=0)
+    HS = "[...document.querySelectorAll('button')].find(b => /Hear a sample/.test(b.textContent))"
+    hs = elem_center(page, HS, (900, 760))
+    cur_move(r, lb[0], lb[1], hs[0], hs[1], 0.7); r.hold(1.0, settle=0)
+    cur_click(r, HS + ".click()", 6)                                        # the Joe sample plays here in the mix
+    r.real(300); r.settle(4); r.fill(7.2)
+
 def seg_quiz(r, page):        # 7.2 s: Quick 10 -> a question -> the right answer, explained with its citation
     r.seg("quiz"); r.js("__ensureSetup()"); go(r, "quiz"); r.hold(0.9, settle=0)
     ST = "[...document.querySelectorAll('button')].find(b => b.textContent.trim() === 'Start')"
@@ -255,9 +275,10 @@ def range_fire(r, page):
 def seg_arcade(r, page):      # 9.6 s: the lobby's cabinets, then Range Day: the tower's clue, three boards, two shots
     r.seg("arcade"); r.js("__ensureSetup()"); r.sub = 2; go(r, "arcade", wait=1500, settle=30)
     CAB = "[...document.querySelectorAll('.ar-cab')].find(c => /Range Day/.test(c.textContent))"
+    r.anim(0.5)                                                            # the lobby opens with the campaign
+    r.scroll_to(0, r.top("document.querySelector('.ar-cabinets')", 900, 120), 0.8)   # down to the cabinets
     cab = elem_center(page, CAB, (420, 650))
-    r.anim(0.7)
-    cur_move(r, 1400, 900, cab[0], cab[1] + 30, 0.9); r.anim(0.4)
+    cur_move(r, 1400, 900, cab[0], cab[1] + 30, 0.7); r.anim(0.3)
     cur_click(r, CAB + ".click()", 6)
     r.real(1800); r.js("__cur.hide()"); r.settle(4); r.js("ARCADE._debug.start()"); r.settle(4); r.real(300)
     r.anim(0.8)                                                            # the clue and the reading gate
@@ -324,9 +345,9 @@ PHONE_HTML = """
 .card{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,#1b4a39 0%,#10281f 46%,#070d0a 100%)}
 .card:after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 320px 90px rgba(0,0,0,.72);pointer-events:none}
 .grid{position:absolute;inset:0;opacity:.07;background-image:linear-gradient(#e2b65c 1px,transparent 1px),linear-gradient(90deg,#e2b65c 1px,transparent 1px);background-size:96px 96px}
-.left{position:absolute;left:170px;top:250px;width:900px;font-family:"Archivo","Segoe UI",sans-serif;font-weight:800;color:#f5f8f4}
-.line{font-size:92px;line-height:1.1;margin-bottom:28px;opacity:0;transform:translateY(24px)}
-.line.brass{color:#e2b65c;margin-top:30px;font-size:70px}
+.left{position:absolute;left:150px;top:150px;width:1000px;font-family:"Archivo","Segoe UI",sans-serif;font-weight:800;color:#f5f8f4}
+.line{font-size:84px;line-height:1.1;margin-bottom:22px;opacity:0;transform:translateY(24px)}
+.line.brass{color:#e2b65c;margin-top:28px;font-size:52px;line-height:1.15}
 .eyebrow{font-family:"JetBrains Mono","Consolas",monospace;letter-spacing:.42em;font-size:24px;color:#e2b65c;text-transform:uppercase;margin-bottom:40px;font-weight:400}
 .phone{position:absolute;left:1220px;top:90px;width:430px;height:900px;border-radius:60px;background:#0b100d;box-shadow:0 50px 120px -30px rgba(0,0,0,.9),0 0 0 2px #2a3a31,0 0 0 10px #141c17;padding:16px}
 .screen{position:relative;width:100%;height:100%;border-radius:46px;overflow:hidden;background:#f3f5f1}
@@ -335,14 +356,15 @@ PHONE_HTML = """
 </style>
 <div class="card"><div class="grid"></div>
 <div class="left"><div class="eyebrow">One guide, every screen</div>
-<div class="line" id="l0">On your phone.</div><div class="line" id="l1">On your laptop.</div><div class="line" id="l2">On a NIPR desktop.</div>
-<div class="line brass" id="l3">Free. No app store.</div></div>
+<div class="line" id="l0">On your phone.</div><div class="line" id="l1">On your laptop.</div><div class="line" id="l2">On your tablet.</div>
+<div class="line brass" id="l3">Updated as regulations and policies change.</div>
+<div class="line brass" id="l4" style="margin-top:12px">Free. No app store.</div></div>
 <div class="phone" id="ph"><div class="notch"></div><div class="screen"><img id="s0" src="{S0}"><img id="s1" src="{S1}"><img id="s2" src="{S2}"></div></div>
 </div>
 <script>
 window.__anim = p => {
   const fade = (el, t0, len) => { const q = Math.min(1, Math.max(0, (p - t0) / len)); el.style.opacity = q; el.style.transform = 'translateY(' + (24 * (1 - q)) + 'px)'; };
-  fade(l0, 0.04, 0.09); fade(l1, 0.26, 0.09); fade(l2, 0.48, 0.09); fade(l3, 0.72, 0.09);
+  fade(l0, 0.03, 0.08); fade(l1, 0.19, 0.08); fade(l2, 0.35, 0.08); fade(l3, 0.53, 0.08); fade(l4, 0.78, 0.08);
   const imgs = [s0, s1, s2]; const seg = 1 / 3;
   imgs.forEach((im, i) => { const a0 = i * seg, a1 = a0 + seg; let o = 0;
     if (i === 0) o = p < a1 - 0.06 ? 1 : Math.max(0, 1 - (p - (a1 - 0.06)) / 0.06);
@@ -354,13 +376,13 @@ window.__anim = p => {
 """
 def img64(path): return "data:image/png;base64," + base64.b64encode(open(path, "rb").read()).decode()
 
-def seg_phone(r, page, ctx):   # 7.2 s composite: four lines and a phone cycling through three screens
+def seg_phone(r, page, ctx):   # 9.6 s composite: five lines and a phone cycling through three screens
     r.seg("phone"); ax = aux_page(r, ctx); keep = r.page; r.page = ax
     ph = os.path.join(ROOT, "phone_src")
     ax.set_content("<!doctype html><html><head><meta charset='utf-8'><style>" + FONTS + "html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#070d0a}</style></head><body>"
                    + PHONE_HTML.replace("{S0}", img64(os.path.join(ph, "home.png"))).replace("{S1}", img64(os.path.join(ph, "lesson.png"))).replace("{S2}", img64(os.path.join(ph, "arcade.png"))) + "</body></html>")
     ax.wait_for_timeout(500); ax.evaluate("document.fonts.ready.then(() => 1)"); ax.wait_for_timeout(200)
-    r.anim(7.2, lambda p: f"__anim({p:.4f})")
+    r.anim(9.6, lambda p: f"__anim({p:.4f})")
     r.page = keep
 
 def card_push(r, ctx, png_name, seconds, z0=1.0, z1=1.06):

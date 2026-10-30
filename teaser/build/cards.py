@@ -11,7 +11,7 @@ os.makedirs(OUT, exist_ok=True)
 
 FONTS = open(os.path.join(REPO, "src", "css", "00-fonts.css"), encoding="utf-8").read()
 ICON = "data:image/png;base64," + base64.b64encode(open(os.path.join(REPO, "src", "web", "icons", "icon-512.png"), "rb").read()).decode()
-QR = open(os.path.join(REPO, "handout", "b2b-exam-prep-qr.svg"), encoding="utf-8").read()
+QR = open(os.path.join(REPO, "handout", "b2b-exam-prep-qr.svg"), encoding="utf-8").read().replace("<svg ", '<svg viewBox="0 0 370 370" ', 1)   # segno writes no viewBox; without one the code clips when scaled
 
 CSS = """
 *{margin:0;padding:0;box-sizing:border-box}
@@ -28,6 +28,7 @@ body{color:#eef3ee;font-family:"Manrope","Segoe UI Variable Text","Segoe UI",san
 .huge small{font-size:120px;letter-spacing:.02em;color:#f5f8f4;vertical-align:baseline}
 .tag{font-size:42px;color:#d4ddd6;margin-top:30px;letter-spacing:.01em;font-weight:400;text-align:center}
 .tag b{color:#f5f8f4;font-weight:700}
+.tag.brass{color:#e2b65c;font-weight:700;font-family:"Archivo","Segoe UI",sans-serif;font-size:46px}
 .rule{width:560px;height:2px;background:linear-gradient(90deg,transparent,#e2b65c,transparent);margin-top:34px}
 .foot{position:absolute;bottom:62px;left:0;right:0;text-align:center;font-family:"JetBrains Mono","Consolas",monospace;font-size:21px;letter-spacing:.32em;color:#8ea397;text-transform:uppercase}
 .icon{width:184px;height:184px;border-radius:40px;box-shadow:0 24px 70px -20px rgba(0,0,0,.8),0 0 0 1px rgba(226,182,92,.25)}
@@ -52,7 +53,7 @@ CARDS = {
         <div class="eyebrow">DoW Contracting Professional certification</div>
         <div class="huge">36 <small>MONTHS.</small></div>
         <div class="rule"></div>
-        <div class="tag">Most brigades want it in <b>six</b>.</div>
+        <div class="tag">Most Brigades want it in <b>six</b>.</div>
         <div class="foot">For new 51C Soldiers and 1102 civilians</div></div>"""),
     "card_title": card(f"""<div class="card"><div class="grid"></div>
         <div class="eyebrow">Free &nbsp;·&nbsp; works offline &nbsp;·&nbsp; built by a 51C</div>
@@ -61,10 +62,11 @@ CARDS = {
         <div class="tag">From day one to <b>certified</b>.</div>
         <div class="foot">Plan · lessons · practice · flashcards · arcade · buddy</div></div>"""),
     "card_end": card(f"""<div class="card"><div class="grid"></div>
-        <div class="brand" style="margin-top:-40px"><img class="icon" src="{ICON}" alt="" style="width:150px;height:150px;border-radius:34px"><div class="title sm">B2B Exam Prep</div></div>
+        <div class="brand" style="margin-top:-70px"><img class="icon" src="{ICON}" alt="" style="width:150px;height:150px;border-radius:34px"><div class="title sm">B2B Exam Prep</div></div>
         <div class="tag" style="margin-top:22px">From day one to <b>certified</b>.</div>
-        <div class="qrbox"><div class="qr">{QR}</div><div class="url">rabinnapit.github.io/51C<small>Scan with the phone's camera · free · no app store</small></div></div>
-        <div class="foot">Owned and built by SFC Rabin Napit &nbsp;·&nbsp; unofficial training aid, not endorsed by the Army, DoW or WarU</div></div>"""),
+        <div class="tag brass" style="margin-top:16px">Built by a 51C, for 51Cs and 1102s.</div>
+        <div class="qrbox" style="margin-top:38px"><div class="qr">{QR}</div><div class="url"><small style="margin-top:0;font-size:26px;color:#f5f8f4">Scan with the phone's camera</small><small>Free &nbsp;·&nbsp; no app store &nbsp;·&nbsp; updates itself</small></div></div>
+        <div class="foot" style="line-height:1.7">Owned and built by SFC Rabin Napit<br>Unofficial training aid &nbsp;·&nbsp; not endorsed by the Army, DoW or WarU</div></div>"""),
 }
 CAPS = {
     "cap_home":     ("Home", "Zero to certified"),
@@ -76,11 +78,12 @@ CAPS = {
     "cap_tryit":    ("Try it", "Every dollar rule answers for any amount"),
     "cap_quiz":     ("Practice test", "395 questions · every answer explained"),
     "cap_cards":    ("Flashcards", "14 decks · spaced repetition"),
-    "cap_arcade":   ("Arcade", "Seven games on the guide's own content"),
+    "cap_voice":    ("Read aloud", "Four app voices · offline after one download"),
+    "cap_arcade":   ("Arcade", "Seven games · two in real 3D"),
     "cap_range":    ("Range Day", "The qualification range, in real 3D"),
     "cap_buddy":    ("Ask Buddy", "Answers from the guide, on your device"),
     "cap_lookup":   ("Look it up", "250 terms · 53 FAR parts · thresholds"),
-    "cap_phone":    ("Everywhere", "Phone · laptop · NIPR · free"),
+    "cap_phone":    ("Everywhere", "Phone · laptop · tablet · free"),
 }
 for k, (e, l) in CAPS.items():
     CARDS[k] = card(f'<div class="cap"><div class="bar"></div><div class="txt"><div class="e">{e}</div><div class="l">{l}</div></div></div>')

@@ -2,7 +2,7 @@
 100 BPM (bar = 2.4 s), A minor rising to C major at the close. Same instrument library as the CSE teaser
 (synth_music.py: pure synthesis, no samples), a new piece: a ticking clock under the hook, a plucked motif for the
 study pages, taikos for the title, an arcade drive, and a major-key lift for "certified".
-Hits on bars 6 (14.4 s title), 15 (36.0 s certification), 27 (64.8 s Arcade accent) and 39 (93.6 s end card).
+Hits on bars 6 (14.4 s title), 15 (36.0 s certification), 30 (72.0 s Arcade accent) and 43 (103.2 s end card).
 Usage: python music_b2b.py <out.wav>
 """
 import os, sys
@@ -12,8 +12,8 @@ from synth_music import (SR, sec, midi, rng, adsr, osc_saw, lp, hp, Mix, make_ir
                          hat, cymbal, riser, braam, pulse, blip, pluck, noise, T)
 
 BPM = 100; B = 60 / BPM; BAR = 4 * B
-HIT1, HIT2, ACC, HIT3 = 6, 15, 27, 39
-FINAL_TAIL = 11.2                      # the end card: 93.6 -> 104.8
+HIT1, HIT2, ACC, HIT3 = 6, 15, 30, 43
+FINAL_TAIL = 11.2                      # the end card: 103.2 -> 114.4
 TOTAL = HIT3 * BAR + FINAL_TAIL
 
 def pad2(chord, dur, att=0.9, rel=1.5, fc=1400, detune=8, voices=3):
@@ -53,9 +53,10 @@ def section(b):
     if b < HIT1: return "build"         # home: the pulse enters
     if b < HIT2: return "drive"         # title through the exam path
     if b < 22: return "drive2"          # certification, lessons
+    if b < 25: return "voice"           # read aloud: the bed steps back so the app's own voice can be heard
     if b < ACC: return "study"          # practice test, flashcards: the plucked motif leads
-    if b < 31: return "arcade"          # Range Day: heavy
-    if b < 34: return "buddy"           # the chat: light, ticking hats and blips
+    if b < 34: return "arcade"          # Range Day: heavy
+    if b < 37: return "buddy"           # the chat: light, ticking hats and blips
     if b < HIT3: return "rebuild"       # look it up, every screen: snare roll into the close
     return "final"
 
@@ -80,22 +81,23 @@ def build():
             for k in range(4): m.add(tick(k == 0), t0 + k * B, g * (1.0 if k % 2 == 0 else 0.75), pan=(0.35 if k % 2 else -0.35), verb=0.25)
         # ---- pads: one per two bars, chord-cycle aligned ----
         if s not in ("intro",) and (b - HIT1) % 2 == 0:
-            g = {"build": 0.22, "study": 0.34, "buddy": 0.30, "arcade": 0.30}.get(s, 0.34)
-            fc = {"study": 1100, "buddy": 1300}.get(s, 1500)
+            g = {"build": 0.22, "study": 0.34, "buddy": 0.30, "arcade": 0.30, "voice": 0.26}.get(s, 0.34)
+            fc = {"study": 1100, "buddy": 1300, "voice": 900}.get(s, 1500)
             m.add(pad2(ch, 2 * BAR + 0.6, att=0.5, fc=fc), t0, g, verb=0.45)
         # ---- the plucked motif: 8ths through the study pages, 16ths in the chat, sparse elsewhere ----
         arp = ARP.get(id(ch), ARP[id(AM)])
-        if s in ("study", "buddy", "drive2"):
+        if s in ("study", "buddy", "drive2", "voice"):
             div = 4 if s == "buddy" else 2; steps = 4 * div
             for k in range(steps):
+                if s == "voice" and k % 4: continue                           # one pluck a beat under the spoken sample
                 note = arp[k % 4] + (12 if (k // 4) % 2 and s == "buddy" else 0)
-                g = (0.30 if s == "study" else 0.22 if s == "drive2" else 0.20) * (1.0 if k % div == 0 else 0.7)
+                g = (0.30 if s == "study" else 0.22 if s == "drive2" else 0.16 if s == "voice" else 0.20) * (1.0 if k % div == 0 else 0.7)
                 m.add(pluck(note, 0.22, fc0=3600, fc1=500), t0 + k * B / div, g, pan=(-0.45 if k % 2 == 0 else 0.45), verb=0.35)
         if s in ("drive", "rebuild") and b % 2 == 1:
             for k in range(4): m.add(pluck(arp[k], 0.2, fc0=3000, fc1=500), t0 + 2 * B + k * B / 2, 0.16, pan=(-0.4 if k % 2 else 0.4), verb=0.35)
         # ---- hats ----
-        if s in ("build", "study"):
-            for k in range(8): m.add(hat(), t0 + k * B / 2, 0.14 if k % 2 else 0.2, pan=0.3)
+        if s in ("build", "study", "voice"):
+            for k in range(8): m.add(hat(), t0 + k * B / 2, (0.14 if k % 2 else 0.2) * (0.6 if s == "voice" else 1.0), pan=0.3)
         elif s == "buddy":
             for k in range(16): m.add(hat(), t0 + k * B / 4, 0.10 if k % 2 else 0.16, pan=0.25 if k % 4 else -0.2)
             for _ in range(3):
@@ -108,8 +110,8 @@ def build():
                 for k in range(16): m.add(hat(), t0 + k * B / 4, 0.09 if k % 2 else 0.0, pan=0.2)
         # ---- pulse bass ----
         if s != "intro":
-            g = {"build": 0.18 + 0.05 * (b - 2), "study": 0.30, "buddy": 0.32, "rebuild": 0.38, "arcade": 0.46}.get(s, 0.42)
-            fc = {"build": 500 + 200 * b, "study": 700, "buddy": 900, "arcade": 1500}.get(s, 1200)
+            g = {"build": 0.18 + 0.05 * (b - 2), "study": 0.30, "buddy": 0.32, "rebuild": 0.38, "arcade": 0.46, "voice": 0.20}.get(s, 0.42)
+            fc = {"build": 500 + 200 * b, "study": 700, "buddy": 900, "arcade": 1500, "voice": 500}.get(s, 1200)
             for k in range(8):
                 m.add(pulse(root, B / 2 * 0.9, fc=fc), t0 + k * B / 2, g * (1.0 if k % 2 == 0 else 0.75))
             if s == "arcade":
@@ -149,7 +151,8 @@ def build():
         if b == ACC:
             m.add(taiko(1.5), t0, 1.0, verb=0.5); m.add(cymbal(2.0), t0, 0.3, verb=0.4); m.add(boom(2.4), t0, 0.7, verb=0.5)
             m.add(braam(ch, BAR, att=0.05, rel=1.0, fc1=2400, drive=2.0), t0, 0.5, verb=0.4)
-        if b in (10, 19, 29, 36): m.add(braam(ch, 2 * BAR, att=0.35, rel=1.2, fc1=2400), t0, 0.40, verb=0.4)
+        if b in (10, 19, 32, 39): m.add(braam(ch, 2 * BAR, att=0.35, rel=1.2, fc1=2400), t0, 0.40, verb=0.4)
+        if b == 25: m.add(taiko(), t0, 0.6, verb=0.5)                        # the study pages pick the drive back up
         if b in (HIT2 - 1, ACC - 1): m.add(riser(BAR), t0, 0.6, verb=0.3)
         if b == HIT1 - 1: m.add(riser(BAR * 0.5, 150, 5000), t0 + BAR * 0.5, 0.4, verb=0.3)
         if b == HIT3 - 2: m.add(riser(2 * BAR, 120, 7000), t0, 0.7, verb=0.3)

@@ -25,17 +25,20 @@ TL = [
     ("path",    26.4,  36.0, "cap_path",    0.4),
     ("cert",    36.0,  43.2, [("cap_cert", 0.5, 3.3), ("cap_official", 3.7, 99)], 0.25),
     ("lessons", 43.2,  52.8, [("cap_lessons", 0.5, 5.6), ("cap_tryit", 5.9, 99)], 0.4),
-    ("quiz",    52.8,  60.0, "cap_quiz",    0.3),
-    ("cards",   60.0,  64.8, "cap_cards",   0.4),
-    ("arcade",  64.8,  74.4, [("cap_arcade", 0.4, 2.1), ("cap_range", 2.6, 99)], 0.3),
-    ("buddy",   74.4,  81.6, "cap_buddy",   0.3),
-    ("lookup",  81.6,  86.4, "cap_lookup",  0.4),
-    ("phone",   86.4,  93.6, None,          0.4),
-    ("c_end",   93.6,  104.8, None,         0.3),
+    ("voice",   52.8,  60.0, [("cap_voice", 0.5, 4.2)], 0.4),      # gone before the cursor presses Hear a sample
+    ("quiz",    60.0,  67.2, "cap_quiz",    0.3),
+    ("cards",   67.2,  72.0, "cap_cards",   0.4),
+    ("arcade",  72.0,  81.6, [("cap_arcade", 0.4, 2.1), ("cap_range", 2.6, 99)], 0.3),
+    ("buddy",   81.6,  88.8, "cap_buddy",   0.3),
+    ("lookup",  88.8,  93.6, "cap_lookup",  0.4),
+    ("phone",   93.6,  103.2, None,         0.4),
+    ("c_end",   103.2, 114.4, None,         0.3),
 ]
-END = 104.8
-VO = {"L01": 0.4, "L02": 6.4, "L03": 14.8, "L04": 20.2, "L05": 26.8, "L06": 36.4, "L07": 43.6, "L08": 53.1, "L09": 61.3,
-      "L10": 65.2, "L11a": 74.8, "L11b": 76.6, "L11c": 78.0, "L12": 82.1, "L13": 87.6, "L14": 94.2}
+END = 114.4
+VO = {"L01": 0.4, "L02": 6.4, "L03": 14.8, "L04": 20.2, "L05": 26.8, "L06": 36.4, "L07": 43.6, "LV": 53.0, "L08": 60.9, "L09": 69.0,
+      "L10": 72.4, "L11a": 82.0, "L11b": 83.8, "L11c": 85.2, "L12": 89.3, "L13": 94.5, "L14": 103.8}
+# the app's own voice (Piper "Joe", synthesized from the same model the app downloads), played when the cursor presses Hear a sample
+SAMPLES = {"voice_joe.wav": (57.5, 0.6)}
 PFX = (TAG + "_") if TAG else ""
 OUTS = ((PFX + "B2B_Exam_Prep_Teaser_1080p.mp4", 1080, 28.0, 160), (PFX + "B2B_Exam_Prep_Teaser_Email_720p.mp4", 720, 19.0, 112))
 MUSIC, VONLY = "music_b2b.wav", PFX + "video_only.mp4"
@@ -135,6 +138,10 @@ def audio(mix_name="mix.wav"):
         v = sg.sosfilt(hpf, decode(os.path.join(NARR, lid + ".mp3")))
         env = env_follow(v, att=0.005, rel=0.12); v = v * np.minimum(1.0, (0.12 / (env + 1e-6)) ** 0.5)
         v = v / (np.max(np.abs(v)) + 1e-9) * 0.7
+        i = int(t0 * SR); m = min(len(v), n - i); voice[i:i + m] += v[:m]
+    for name, (t0, gain) in SAMPLES.items():
+        v = sg.sosfilt(hpf, decode(os.path.join(AUD, name)))
+        v = v / (np.max(np.abs(v)) + 1e-9) * gain
         i = int(t0 * SR); m = min(len(v), n - i); voice[i:i + m] += v[:m]
     music, sr = sf.read(os.path.join(AUD, MUSIC)); assert sr == SR
     music = music[:n] if len(music) >= n else np.pad(music, ((0, n - len(music)), (0, 0)))

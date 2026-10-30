@@ -20,15 +20,16 @@ LINES = [
     ("L05", "The exam path: twenty-six dated weeks, monthly checkpoints, and two full simulations before exam week."),
     ("L06", "The rules, explained in pictures, beside the real official documents."),
     ("L07", "Thirty-five plain-English lessons, organized like the exam. Every picture plays. Every dollar rule has a try-it tool."),
+    ("LV", "It reads aloud too, in four voices that work offline."),
     ("L08", "Nearly four hundred questions, each answer explained with a citation. Plus a timed simulator, like the real exam."),
     ("L09", "Fourteen flashcard decks that remember what you forget."),
-    ("L10", "Then the Arcade: seven games on the same content. Range Day puts you on the qualification range, in real 3D."),
+    ("L10", "Then the Arcade: seven games on the same content, two of them in real 3D. Range Day puts you on the qualification range."),
     ("L11a", "Ask Buddy."),
     ("L11b", "When can I take the exam?"),
     ("L11c", "Answered from the guide, on your device. No signal needed."),
     ("L12", "Two hundred fifty terms, all the FAR parts, every threshold and deadline."),
-    ("L13", "On your phone, your laptop, or a nipper desktop. No app store. Free."),
-    ("L14", "Built by a contracting N-C-O, for new fifty-one Charlies and eleven-oh-twos. B-to-B Exam Prep. From day one to certified."),
+    ("L13", "On your phone, your laptop, or your tablet. Updated as regulations and policies change. No app store. Free."),
+    ("L14", "Built by a fifty-one Charlie, for fifty-one Charlies and eleven-oh-twos. B-to-B Exam Prep. From day one to certified."),
 ]
 
 VARIANTS = [
