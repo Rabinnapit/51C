@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.26.2 (30 October 2026): Range Day boards keep their distance
+
+- **Range Day.** The three target boards no longer touch or overlap on screen (two boards side by side could read as
+  one wide board). The lanes now widen with each row's distance, so neighbouring boards keep a gap from any angle,
+  and the first level draws its boards at 25 and 50 metres only. The distance signs and the flag moved outward to
+  stay clear of the wider lanes.
+
 ## 0.26.1 (30 October 2026): text size in one place
 
 - **Text size left the side menu.** The bottom panel of the menu now shows Day / night only; text size stays under

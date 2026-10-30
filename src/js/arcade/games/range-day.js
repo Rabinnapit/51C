@@ -11,7 +11,9 @@
   var EXPOSURES = 20, AMMO = 30, FULL = 20;
   var EXPOSE = { recruit: 16, regular: 12, veteran: 9, elite: 7 };
   var SWAY = { recruit: 0, regular: 0, veteran: 0.012, elite: 0.022 };   // sight drift as a fraction of the screen, mouse and keyboard only
-  var LANES = [-1.55, 0, 1.55], ROWS = [{ z: -5.5, m: 25 }, { z: -8.5, m: 50 }, { z: -12, m: 75 }];
+  // Boards are 2.2 m wide. A lane's x grows with the row's distance, so on screen the lanes stay 0.38 of the distance
+  // apart: more than the widest pair of neighbours (a 25 m board beside a 50 m one) needs to never touch.
+  var LANES = [-2.1, 0, 2.1], ROWS = [{ z: -5.5, m: 25 }, { z: -8.5, m: 50 }, { z: -12, m: 75 }];
 
   function termsOf(D) { return ((D && D.terms) || []).filter(function (t) { return t && t.term && t.clue; }); }
   // the rifle standard scaled to the table: Expert 36 of 40, Sharpshooter 30, Marksman 23 (18, 15 and 12 of 20)
@@ -79,8 +81,8 @@
         var term = api.progress.pick(pool, function (x) { return x.id; });
         var mode = lvl <= 1 && term.acronym && term.expansion ? 'exp' : 'def';
         var opts = A.shuffle([term].concat(pickDecoys(term, 2)));
-        var rows = A.shuffle(lvl <= 1 ? [0, 1, 1, 0] : lvl === 2 ? [0, 1, 2] : [1, 2, 2]).slice(0, 3);
-        var list = opts.map(function (o, i) { var row = ROWS[rows[i]]; return { letter: 'ABC'[i], text: o.term, data: o, x: LANES[i] * Math.pow(-row.z / 5.5, 0.9), z: row.z, delay: i * 0.09 + (feel.reduce() ? 0 : 0.15), m: row.m }; });
+        var rows = A.shuffle(lvl <= 1 ? [0, 1, 1] : lvl === 2 ? [0, 1, 2] : [1, 2, 2]).slice(0, 3);
+        var list = opts.map(function (o, i) { var row = ROWS[rows[i]]; return { letter: 'ABC'[i], text: o.term, data: o, x: LANES[i] * (-row.z / 5.5), z: row.z, delay: i * 0.09 + (feel.reduce() ? 0 : 0.15), m: row.m }; });
         targets = scene.setBoards(list).map(function (b, i) { b.term = list[i].data; b.ok = b.term === term; b.m = list[i].m; b.state = 'rise'; return b; });
         cur = { term: term, mode: mode, text: mode === 'exp' ? term.expansion : term.clue };
         exposeMax = (EXPOSE[tier.id] || 11) + (mode === 'def' ? Math.min(6, cur.text.split(/\s+/).length * 0.12) : 0); expose = exposeMax;
