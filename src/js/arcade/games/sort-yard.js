@@ -1,7 +1,9 @@
-/* GAME: sort-yard — a warehouse sorting line. Crates roll down the conveyor carrying a task, a purchase, a UCF section or a
-   contract type; flip the diverter and drop each into the right bay before it reaches the end of the belt. Four shifts, one
+/* GAME: sort-yard — Dispatch, a sorting yard. Crates roll down the conveyor carrying a task, a purchase, a UCF section or a
+   contract type; swing the diverter and send each into the right bay before it reaches the end of the belt. Four shifts, one
    per sorting line (life-cycle phase, dollar thresholds, UCF parts, contract-type families), seven crates each. Five right in
-   a row starts a Rush: a faster belt and double points until the next miss. A wrong bay costs a life. */
+   a row starts a Rush: a faster belt and double points until the next miss. A wrong bay costs a life.
+   Drawn in real 3D (A.GL.YardScene: a floodlit yard at dusk, the belt, bays that light up, a forklift) where WebGL works;
+   the canvas-2D drawing below is the fallback. A campaign mission (api.opts) can pick the lines and the crates a shift. */
 (function () {
   'use strict';
   var A = window.ARCADE;
@@ -28,8 +30,8 @@
   }
 
   A.register({
-    id: 'sort-yard', title: 'Sort Yard', icon: '📦', accent: '#e6b85a', genre: 'Sorting line', music: 'drive',
-    tagline: 'Crates roll down the line. Flip the diverter and drop each one in the right bay before the next one comes.',
+    id: 'sort-yard', title: 'Dispatch', icon: '📦', accent: '#e6b85a', genre: 'Sorting yard · real 3D', music: 'drive',
+    tagline: 'Crates roll off the belt in a floodlit yard. Swing the diverter and send each one to the right bay before the next one comes.',
     drills: 'Life-cycle phases, dollar thresholds, UCF parts, contract-type families',
     controls: 'Left and right (or A and D) move the diverter; Down, Space or Enter drops the crate now for a speed bonus. Number keys 1 to 4 drop straight into that bay. Tap or click a bay to send the crate there. Five right in a row starts a Rush: faster belt, double points.',
     aspect: [0.55, 1.9], gateAt: 'middle',
@@ -44,9 +46,15 @@
       var cols = ['#82b6ef', '#f0b863', '#6fd3d9'], labs = ['Pre-Award', 'Award', 'Post-Award'], sel = Math.floor(t * 0.6) % 3;
       for (var i = 0; i < 3; i++) { var bx = w * (0.18 + i * 0.32); ctx.fillStyle = '#20282d'; A.roundRect(ctx, bx - 62, h * 0.72, 124, h * 0.25, 8); ctx.fill(); ctx.fillStyle = cols[i]; ctx.fillRect(bx - 62, h * 0.72, 124, 6); A.text(ctx, labs[i], bx, h * 0.86, { size: 15, weight: 800, color: i === sel ? '#fff' : '#a9b4ba', align: 'center' }); }
       ctx.save(); ctx.translate(w / 2, h * 0.64); ctx.rotate((sel - 1) * 0.6); ctx.fillStyle = '#e6b85a'; ctx.fillRect(-6, 0, 12, 40); ctx.restore();
+      if (A.GL && A.GL.ok()) A.pill(ctx, 'REAL 3D', 14, 22, { size: 12, bg: 'rgba(0,0,0,.55)', color: '#f6d991', stroke: '#e6b85a' });
     },
     create: function (api) {
-      var W = api.W, H = api.H, tier = api.difficulty, lines = linesOf(api.data), t = 0;
+      var W = api.W, H = api.H, tier = api.difficulty, lines = linesOf(api.data), t = 0, feel = A.feel, opts = api.opts || {};
+      if (opts.lines && opts.lines.length) { var subL = lines.filter(function (l) { return opts.lines.indexOf(l.id) >= 0; }); if (subL.length) lines = subL; }
+      var CR = opts.crates > 0 ? opts.crates : CRATES;
+      var coarse = false; try { coarse = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
+      var scene = null; if (A.GL && A.GL.ok() && A.GL.YardScene) { try { scene = new A.GL.YardScene({ mobile: coarse, reduce: feel.reduce, width: 640, height: 400 }); } catch (e) { console.error('[sort-yard] 3D failed, drawing in 2D', e); scene = null; } }
+      var frames = 0, slow = 0, scale = 1, glW = 0, glH = 0;
       var shift = -1, line = null, k = 0, crate = null, sel = 1, armAng = 0, streak = 0, rush = false, flashBay = -1, flashT = 0, flashOk = false;
       var falling = [], sparks = [], phase = 'start', phaseT = 0.3, rollerT = 0, forkX = 0.2, forkDir = 1, sorted = 0;
       api.progress.configure({ perLevel: 5 });
@@ -68,19 +76,19 @@
       function nextShift() {
         shift++;
         if (shift >= lines.length) { finish(); return; }
-        line = lines[shift]; k = 0; sel = Math.floor((line.bins.length - 1) / 2);
+        line = lines[shift]; k = 0; sel = Math.floor((line.bins.length - 1) / 2); if (scene) { scene.setBays(line.bins); scene.select(sel); }
         api.hud.set({ banner: 'Shift ' + (shift + 1) + ': ' + line.title, sub: line.ask, color: '#e6b85a', bannerTime: 1.5 });
         api.audio.alarm();
         phase = 'gap'; phaseT = 1.4;
       }
       function nextCrate() {
         k++;
-        if (k > CRATES) { nextShift(); return; }
+        if (k > CR) { nextShift(); return; }
         var it = api.progress.pick(line.items, function (x) { return x.id; }), sz = crateSize(it.text);
         var travel = BELT[Math.min(api.progress.level, 3) - 1] * (rush ? 0.8 : 1);
         crate = { it: it, y: sz.h / 2 + 6, y0: sz.h / 2 + 6, w: sz.w, h: sz.h, fs: sz.fs, t: 0, T: travel, pop: 0 };
-        phase = 'belt';
-        api.prompt.set({ kicker: 'Shift ' + (shift + 1) + ' of ' + lines.length + ' · ' + line.title + ' · crate ' + k + ' of ' + CRATES + (it.__via === 'review' ? ' · missed before' : ''), text: it.text, sub: line.ask, color: '#e6b85a' });
+        phase = 'belt'; if (scene) scene.setCrate(it.text, 'CRATE ' + k + ' / ' + CR);
+        api.prompt.set({ kicker: 'Shift ' + (shift + 1) + ' of ' + lines.length + ' · ' + line.title + ' · crate ' + k + ' of ' + CR + (it.__via === 'review' ? ' · missed before' : ''), text: it.text, sub: line.ask, color: '#e6b85a' });
         api.ready({ text: it.text, delay: 0.25 });
       }
       function drop(bayIx, early) {
@@ -88,19 +96,23 @@
         if (bayIx != null) sel = bayIx;
         var b = bays()[sel], bin = line.bins[sel], it = crate.it, ok = bin.id === it.bin, right = line.bins.filter(function (x) { return x.id === it.bin; })[0];
         var frac = api.clamp(1 - crate.t / crate.T, 0, 1);
-        falling.push({ x: W / 2, y: crate.y, tx: b.cx, ty: b.y + b.h * 0.45, t: 0, w: crate.w, h: crate.h, fs: crate.fs, text: it.text, ok: ok });
-        api.audio.whoosh();
+        if (scene) { scene.drop(sel, ok); var bp = scene.project(scene.bayPoint(sel)); b = { cx: bp.x * W, y: bp.y * H, h: 0 }; }
+        else falling.push({ x: W / 2, y: crate.y, tx: b.cx, ty: b.y + b.h * 0.45, t: 0, w: crate.w, h: crate.h, fs: crate.fs, text: it.text, ok: ok });
+        api.audio.whoosh(); feel.buzz(ok ? 10 : [30, 40, 30]);
         api.review.add({ prompt: line.ask + ' ' + it.text, given: bin.label, correct: right ? right.label : it.bin, ok: ok, explanation: it.why, cite: it.cite, key: it.id });
         sorted++;
         if (ok) {
           streak++; var pts = Math.round((100 + (early ? frac * 120 : 0) + streak * 15) * (rush ? 2 : 1));
           api.score(pts); api.progress.correct();
           api.floaters.add('+' + pts, b.cx, b.y - 20, { size: 22, color: rush ? '#ff7ab6' : '#f6d991' });
-          if (streak >= 5 && !rush) { rush = true; api.music.setIntense(true); api.hud.set({ banner: 'RUSH!', sub: 'Faster belt, double points until a miss.', color: '#ff7ab6', bannerTime: 1.6 }); api.audio.levelUp(); }
+          if (scene) { setTimeout(function () { api.audio.correct(); api.audio.thud(); }, 450); }
+          if (streak === 3) api.mentor.say('pleased', A.mentor.LINES.streak[0], 2.6);
+          if (streak >= 5 && !rush) { rush = true; api.music.setIntense(true); api.hud.set({ banner: 'RUSH!', sub: 'Faster belt, double points until a miss.', color: '#ff7ab6', bannerTime: 1.6 }); api.audio.levelUp(); if (scene) scene.rush(true); api.mentor.say('proud', 'Five straight. Rush is on: faster belt, double points.', 3); }
         } else {
-          streak = 0; if (rush) { rush = false; api.music.setIntense(false); }
+          streak = 0; if (rush) { rush = false; api.music.setIntense(false); if (scene) scene.rush(false); }
           api.hud.set({ banner: 'Wrong bay', sub: 'It goes to ' + (right ? right.label : it.bin), color: '#ff6b6b', bannerTime: 2 });
-          api.life(-1);
+          if (scene) setTimeout(function () { api.audio.wrong(); api.audio.clank(); api.shake(feel.reduce() ? 0 : 8); }, 450);
+          var left = api.life(-1); api.mentor.say(left === 1 ? 'worried' : 'hint', (left === 1 ? A.mentor.line('low') + ' ' : '') + A.mentor.oneLine(it.why) || A.mentor.line('tips'), 4);
         }
         flashBay = ok ? sel : line.bins.indexOf(right); flashOk = ok; flashT = ok ? 0.6 : 1.4;
         crate = null; phase = 'gap'; phaseT = ok ? 0.45 : 1.2;
@@ -110,11 +122,12 @@
         if (pct >= 90) badge = { icon: '🏗️', name: 'Yard Boss', desc: right + ' of ' + sorted + ' crates in the right bay.', color: '#f6d991' };
         else if (pct >= 75) badge = { icon: '📦', name: 'Shift Lead', desc: right + ' of ' + sorted + ' right. 90% makes Yard Boss.', color: '#e6b85a' };
         else badge = { icon: '🦺', name: 'Sorter in training', desc: right + ' of ' + sorted + ' right. Study the list below, then run another shift.', color: '#c2cdc6' };
-        api.end({ won: true, title: 'Shifts complete', message: 'You sorted ' + sorted + ' crates (' + pct + '% right).', badge: badge, xpBonus: Math.round(pct / 2) });
+        api.end({ won: true, title: 'Shifts complete', message: 'You sorted ' + sorted + ' crates (' + pct + '% right).', badge: badge, xpBonus: Math.round(pct / 2), campaign: { value: right, of: sorted } });
       }
 
-      function update(dt) {
-        t += dt; rollerT += dt * (rush ? 1.4 : 1); flashT = Math.max(0, flashT - dt);
+      function update(dt, rdt) {
+        t += dt; rollerT += dt * (rush ? 1.4 : 1); flashT = Math.max(0, flashT - dt); rdt = rdt || dt;
+        if (scene) { if (crate) scene.crateAt(crate.t / crate.T); scene.select(sel); if (flashT > 0) scene.flashBay(flashBay, flashOk, flashT); scene.update(rdt, feel.hitstop.frozen()); frames++; if (rdt > 0.026) slow++; if (frames >= 90) { if (slow > 45 && scale > 0.6) { scale = scale > 0.8 ? 0.75 : 0.6; scene.setQuality(scale > 0.7 ? 1 : 0); } frames = 0; slow = 0; } }
         forkX += forkDir * dt * 0.05; if (forkX > 0.85 || forkX < 0.1) forkDir *= -1;
         var target = line ? (sel - (line.bins.length - 1) / 2) * 0.55 : 0; armAng = A.lerp(armAng, target, Math.min(1, dt * 14));
         if (phase === 'start') { phaseT -= dt; if (phaseT <= 0) nextShift(); }
@@ -134,7 +147,19 @@
         });
       }
 
+      function scoreboard(ctx) {
+        ctx.fillStyle = 'rgba(0,0,0,.45)'; A.roundRect(ctx, 10, 10, 150, 46, 10); ctx.fill();
+        A.text(ctx, 'SHIFT ' + Math.max(1, shift + 1) + ' / ' + lines.length, 22, 30, { size: 13, fam: 'mono', weight: 800, color: '#f6d991' });
+        A.text(ctx, 'SORTED ' + sorted + (streak >= 2 ? ' · ×' + streak : ''), 22, 47, { size: 11, fam: 'mono', weight: 800, color: '#dfe6e1' });
+        if (rush) A.text(ctx, 'RUSH ×2', W - 14, 32, { size: 18, fam: 'display', weight: 900, color: Math.floor(t * 6) % 2 ? '#ff7ab6' : '#fff', align: 'right', stroke: 'rgba(0,0,0,.6)', strokeWidth: 4 });
+        if (crate && phase === 'belt') { var tw = Math.min(240, W * 0.4), fr = api.clamp(1 - crate.t / crate.T, 0, 1); ctx.fillStyle = 'rgba(0,0,0,.35)'; A.roundRect(ctx, W / 2 - tw / 2, 10, tw, 8, 4); ctx.fill(); ctx.fillStyle = fr < 0.25 ? '#ff6b6b' : '#e6b85a'; A.roundRect(ctx, W / 2 - tw / 2, 10, tw * fr, 8, 4); ctx.fill(); }
+      }
       function draw(ctx) {
+        if (scene) {
+          var cw = ctx.canvas.width, ch = ctx.canvas.height, dpr = Math.min(2, window.devicePixelRatio || 1), kq = Math.min(1, (coarse ? 1.5 : 2) / dpr) * scale, gw = Math.round(cw * kq), gh = Math.round(ch * kq);
+          if (gw !== glW || gh !== glH) { glW = gw; glH = gh; scene.resize(gw, gh); }
+          scene.render(); ctx.drawImage(scene.canvas, 0, 0, W, H); scoreboard(ctx); return;
+        }
         var g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#1d2428'); g.addColorStop(1, '#0c1013'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
         ctx.fillStyle = '#161c20'; for (var b = 0; b < 6; b++) ctx.fillRect(b * W / 5 - 8, 0, 16, H * 0.7);
         ctx.fillStyle = '#232b30'; ctx.fillRect(0, H * 0.18, W, 10);
@@ -197,13 +222,16 @@
       }
       function onPointer(e) {
         if (!line || phase !== 'belt') return;
+        if (scene) { var pk = scene.pick(e.x / W * 2 - 1, -(e.y / H) * 2 + 1); if (pk && pk.bay != null) { if (e.type === 'move' && !e.touch) sel = pk.bay; if (e.type === 'up') drop(pk.bay, true); } else if (pk && pk.crate && e.type === 'up') drop(null, true); return; }
         var bs = bays();
         for (var i = 0; i < bs.length; i++) { var b = bs[i]; if (e.x >= b.x && e.x <= b.x + b.w && e.y >= b.y - 30) { if (e.type === 'move' && !e.touch) sel = i; if (e.type === 'up') drop(i, true); return; } }
         if (e.type === 'up' && crate && Math.abs(e.x - W / 2) < crate.w / 2 && Math.abs(e.y - crate.y) < crate.h / 2) drop(null, true);
       }
 
       return { update: update, draw: draw, onKey: onKey, onPointer: onPointer, resize: function (w, h) { W = w; H = h; if (crate) { var sz = crateSize(crate.it.text); crate.w = sz.w; crate.h = sz.h; crate.fs = sz.fs; } },
-        debug: function () { return { phase: phase, line: line && line.id, crate: crate && crate.it, sel: sel, sorted: sorted, rush: rush }; } };
+        destroy: function () { if (scene) scene.dispose(); },
+        debug: function () { return { phase: phase, line: line && line.id, crate: crate && crate.it, sel: sel, sorted: sorted, rush: rush }; },
+        stats: function () { return { gl: !!scene, scene: scene, tri: scene && scene.tri, calls: scene && scene.calls, phase: phase, line: line && line.id, shift: shift, k: k, crate: crate && crate.it.text, bin: crate && crate.it.bin, bins: line && line.bins.map(function (b) { return b.id; }), sel: sel, sorted: sorted, right: api.progress.right, rush: rush }; } };
     }
   });
 })();

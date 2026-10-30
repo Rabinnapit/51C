@@ -81,7 +81,7 @@
       { title: 'Ask ' + (CORB.buddy ? CORB.buddy.name() : 'Buddy'), target: function () { return q('.buddy-fab'); },
         text: (CORB.buddy ? CORB.buddy.name() : 'Buddy') + ' is your study buddy: tap the chat bubble and ask in plain words, like "what is the micro-purchase threshold" or "how do I register in AITAS". It answers from the guide, on this device, with no internet and no AI account, and opens the page to read more. Need more depth? One tap sends your question to Google AI Mode, ChatGPT or Claude in your own account.' },
       { title: 'Arcade', optional: true, target: function () { return narrow() ? null : navItem('arcade'); },
-        text: 'Seven games on the same facts, two in real 3D: a rifle range, a supply convoy, RPG boss battles, artillery, a pop-up range, a space shooter and a sorting yard, plus a campaign briefed by your Master Gunner. Pick a pace from Recruit to Elite; every run ends with a study list.' },
+        text: 'Seven games on the same facts, five in real 3D: a rifle range, a supply convoy, artillery, a space shooter, a dispatch yard, RPG boss battles and a pop-up range, plus a twelve-chapter campaign briefed by your Master Gunner. Pick a pace from Recruit to Elite; every run ends with a study list.' },
       { title: 'Look it up', target: function () { return side(navGroup('Look it up'), 'glossary'); },
         text: 'The glossary explains every acronym (tap any underlined acronym on a page to see it). FAR & key numbers lists the parts, thresholds and deadlines in FAR Overhaul numbering. Official links opens WarU, AITAS, Pearson and SAM.gov.' },
       { title: 'Search everything', target: function () { return q('.topbar .search-btn'); },

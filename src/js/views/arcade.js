@@ -1,4 +1,4 @@
-/* VIEW arcade — the B2B Arcade: seven games on the guide's own content, opened inside the app.
+/* VIEW arcade — the B2B Arcade: seven games on the guide's own content (five in real 3D) and the campaign, opened inside the app.
    The engine and games live in src/js/arcade/ (tools/build.py inlines them after the views). This view builds ARCADE.DATA
    from CORB_DATA (question bank, key numbers, deadlines, forms, FAR parts, UCF, PIID letters, glossary, sorting sets),
    points the Arcade's storage at the reader's progress (progress.arcade, saved into the file like everything else),
@@ -152,8 +152,8 @@
 
   CORB.registerView({
     id: 'arcade', title: 'Arcade', section: 'Practice', icon: 'gamepad', nav: true, order: 90, full: true, mobileAs: 'quiz',
-    blurb: 'Seven games, two in real 3D: a rifle range, a supply convoy, RPG boss battles, artillery, a pop-up range, a space shooter and a sorting yard, plus the campaign Your first year as a 51C',
-    keywords: 'game games arcade play quest battle boss supply line convoy checkpoint challenge coin fire mission artillery range qualification shooter sort yard FAR parts thresholds glossary campaign chapter master gunner mentor',
+    blurb: 'Seven games, five in real 3D: a rifle range, a supply convoy, artillery, a space shooter, a dispatch yard, RPG boss battles and a pop-up range, plus the twelve-chapter campaign Your first year as a 51C',
+    keywords: 'game games arcade play quest battle boss supply line convoy checkpoint challenge coin fire mission artillery range qualification shooter sort yard dispatch FAR parts thresholds glossary campaign chapter master gunner mentor',
     render: function (root, ctx) {
       var A = window.ARCADE, h = CORB.ui.h;
       if (!A || typeof A.mount !== 'function') {

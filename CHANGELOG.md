@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.28.0 (30 October 2026): five games in real 3D and the whole first year
+
+- **Fire Mission in real 3D.** An M777-style howitzer on a plateau fires across a valley at trucks parked on the far
+  slope, each under a sign board with an answer. Tap the target or the ground; the shell flies a real arc with a smoke
+  trail, the muzzle blast lights the gun line, the impact throws sparks, debris and dust, scorches the ground and leaves
+  the truck burning. Wind still pushes the round on harder levels; the observer still calls ADD or DROP. The time of day
+  changes every three missions. The canvas-2D version (elevation and charge) stays as the fallback.
+- **Part Patrol in real 3D.** The same patrol, now a lit fighter over a planet: carriers with lit label boards and shield
+  bubbles, drones, laser bolts, the Audit Dreadnought with real turrets lettered A to D and armor plates that go dark as
+  they break, explosions with light. The ship banks as it moves; a finger on the screen still steers it.
+- **Dispatch (was Sort Yard) in real 3D.** A floodlit yard at dusk: the belt brings each crate from the warehouse with its
+  text on a board, the diverter arm swings to the bay you pick, the crate flies in and stacks when right or gets kicked
+  out in sparks when wrong. Bays light up, a forklift works the back, the Rush turns the lights pink.
+- **Campaign chapters 5 to 12.** The whole first year is open: review (month 5), exam week (6), downrange contingency
+  contracting (7), the systems (8), price and cost (9), sources and small business (10), changes and closeout (11) and
+  the whole life cycle in one sitting (12). Every game has missions now; Fire Mission, Part Patrol and Dispatch take
+  campaign options (fact families, sectors, sorting lines, crates a shift) and report their pass value.
+- The shared 3D kit (materials, crates, wheels, trucks, a forklift, a Soldier, signs, hills, explosions) now lives in
+  one place; each scene has its own file. The lobby, the tour and Home say five games in real 3D.
+
 ## 0.27.0 (30 October 2026): onboarding with a voice and a theme
 
 - **Onboarding in four steps.** The first visit is now a short wizard instead of one form: who you are, your dates,

@@ -93,6 +93,12 @@
   ],
   "guide_changes": [
     {
+      "version": "0.28.0",
+      "date": "2026-10-30",
+      "title": "Five games in real 3D and the whole first year",
+      "notes": "Fire Mission (an M777 across a valley, trucks that burn), Part Patrol (a fighter over a planet, the Dreadnought with real turrets) and Dispatch, the sorting yard that was Sort Yard, are now drawn in real 3D like Range Day and Supply Line. The campaign is complete: chapters 5 to 12 cover the review, exam week and the first year on the job, three missions each across every game."
+    },
+    {
       "version": "0.27.0",
       "date": "2026-10-30",
       "title": "Onboarding with a voice and a theme",

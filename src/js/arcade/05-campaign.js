@@ -1,9 +1,10 @@
-/* ARCADE-05-CAMPAIGN — "Your first year as a 51C": a campaign of chapters, one a month, briefed by the Master Gunner.
-   Each chapter is three short missions across the games with the questions that month would really throw at you: a
-   range table on the month's terms, a convoy stop on its lessons and a boss fight against one of the four things that end
-   careers (the Unauthorized Commitment, the Bid Bust, the Audit, the Protest). Chapters 1 to 4 follow the four exam areas
-   in the order of the 6-month exam path; 5 to 12 come in a later update. Progress is saved with the rest of the Arcade's
-   (progress.arcade.campaign). The shell draws the lobby section and the results card from here. */
+/* ARCADE-05-CAMPAIGN — "Your first year as a 51C": twelve chapters, one a month, briefed by the Master Gunner. Each
+   chapter is three short missions across the games with the questions that month would really throw at you. Chapters 1
+   to 4 follow the four exam areas in the order of the 6-month exam path (a range table, a convoy stop, a boss fight);
+   5 and 6 are the review and the exam; 7 to 12 are the rest of the first year on the job (contingency, the systems, price
+   and cost, sources and small business, changes and closeout, and the whole life cycle in one sitting), spread over every
+   game. Progress is saved with the rest of the Arcade's (progress.arcade.campaign). The shell draws the lobby section and
+   the results card from here. */
 (function () {
   'use strict';
   var A = window.ARCADE; if (!A) return;
@@ -41,10 +42,73 @@
         { id: 'm1', game: 'range-day', title: 'Words of award', what: 'A ten-target table on award, pricing and competition terms.', pass: 6, of: 10, unit: 'hits', opts: { cats: ['Award', 'Pricing', 'Competition'], exposures: 10 } },
         { id: 'm2', game: 'supply-line', title: 'River Bridge', what: 'Six crates at CP3 on award: price and cost analysis, negotiation, source selection, notices, debriefings and protests.', pass: 4, of: 6, unit: 'crates', opts: { realm: 'awd', lessons: L(20, 25) } },
         { id: 'm3', game: 'contract-quest', title: 'The Protest', what: 'A boss fight. It feeds on source selections nobody documented: evaluation, award notices, debriefings and the protest clock.', pass: 1, of: 1, unit: 'boss', opts: { boss: 'protest', lessons: ['L23', 'L24', 'L25', 'L22'] } }
+      ] },
+    { id: 'ch5', n: 5, month: 'Month 5', title: 'Review', sub: 'Close the gaps', phase: 'mix', color: '#e6b85a', icon: '✔',
+      brief: 'Your class practice exam is marked and the RFO changes are fresh in your head. Month five is review: the key numbers, the deadlines, where every task sits in the life cycle and which dollar lane a buy falls in. Missions: Fire Mission on the numbers and deadlines, Dispatch on the life cycle and the dollar lanes, and the Gatekeeper at the Exam Citadel, who asks from every area at once.',
+      clear: 'The gaps are closed. Numbers, deadlines, the life cycle and the lanes: you answer them without thinking now, which is the point.',
+      missions: [
+        { id: 'm1', game: 'fire-mission', title: 'Numbers and deadlines', what: 'Eight fire missions on the dollar thresholds and the time limits.', pass: 5, of: 8, unit: 'targets', opts: { fams: ['dollars', 'days'], missions: 8 } },
+        { id: 'm2', game: 'sort-yard', title: 'Life cycle and lanes', what: 'Two shifts at the yard: which phase a task belongs to, and which buying lane a purchase falls in.', pass: 9, of: 12, unit: 'crates', opts: { lines: ['phase', 'dollars'], crates: 6 } },
+        { id: 'm3', game: 'contract-quest', title: 'The Gatekeeper', what: 'A boss fight at the Exam Citadel. It asks from every area, and hides a NOT in half its questions.', pass: 1, of: 1, unit: 'boss', opts: { boss: 'gate' } }
+      ] },
+    { id: 'ch6', n: 6, month: 'Month 6', title: 'Test-ready', sub: 'Exam week', phase: 'mix', color: '#f6d991', icon: '★',
+      brief: 'Exam week. 150 questions, three hours, 70 percent to pass, closed book. Month six is the full rehearsal with every area in play. Missions: Part Patrol on the FAR part titles, the UCF and the PIID, a twenty-target table across the whole glossary, and the FOB Gate, where every area is asked at once.',
+      clear: 'Certified. That is the first year\'s biggest day, and you earned it. Now the real work starts.',
+      missions: [
+        { id: 'm1', game: 'part-patrol', title: 'Parts, sections and letters', what: 'One sector: three carriers to shoot down (FAR parts, UCF sections, PIID letters) and the Audit Dreadnought.', pass: 4, of: 5, unit: 'hits', opts: { fams: ['part', 'ucf', 'piid'], sectors: 1 } },
+        { id: 'm2', game: 'range-day', title: 'The full table', what: 'A twenty-target table across every glossary term: the qualification standard.', pass: 12, of: 20, unit: 'hits', opts: { exposures: 20 } },
+        { id: 'm3', game: 'supply-line', title: 'FOB Gate', what: 'Six crates at CP5 with questions from all four exam areas, at night.', pass: 4, of: 6, unit: 'crates', opts: { realm: 'all' } }
+      ] },
+    { id: 'ch7', n: 7, month: 'Month 7', title: 'Downrange', sub: 'Contingency contracting', phase: 'job', color: '#d1bfa6', icon: '7',
+      brief: 'Certified, and now the unit deploys. Month seven is contingency contracting: the raised thresholds, the field ordering officer and the SF 44, the contingency contracting officer, SPOT, and the rules that change when the shooting starts. Missions: the range on contingency terms, Fire Mission on the thresholds and the forms, and the FOB Gate with the deployed rules in play.',
+      clear: 'You know what changes downrange and what never does: the authority still has to be in writing, and the file still has to be kept.',
+      missions: [
+        { id: 'm1', game: 'range-day', title: 'Words from downrange', what: 'A ten-target table on contingency and roles terms.', pass: 6, of: 10, unit: 'hits', opts: { cats: ['Contingency', 'Roles'], exposures: 10 } },
+        { id: 'm2', game: 'fire-mission', title: 'Thresholds and forms', what: 'Eight fire missions on the dollar thresholds, contingency ones included, and the forms.', pass: 5, of: 8, unit: 'targets', opts: { fams: ['dollars', 'form'], missions: 8 } },
+        { id: 'm3', game: 'supply-line', title: 'FOB Gate, deployed', what: 'Six crates at CP5 on contingency contracting, buying methods, the money rules and authority.', pass: 4, of: 6, unit: 'crates', opts: { realm: 'all', lessons: ['L33', 'L16', 'L05', 'L02'] } }
+      ] },
+    { id: 'ch8', n: 8, month: 'Month 8', title: 'The systems', sub: 'What you log into', phase: 'job', color: '#8cc8ff', icon: '8',
+      brief: 'Month eight is the systems: SAM, PIEE and WAWF, FPDS, CPARS, EDA, GFEBS, the GPE and the rest. Every one has an acronym and a job, and every one asks for a role you had to request. Missions: the range on the systems terms, Part Patrol on PIID letters and UCF sections, and Dispatch on the Uniform Contract Format.',
+      clear: 'Every system has a name and a job in your head now. The PIID tells you the instrument, the UCF tells you where to look.',
+      missions: [
+        { id: 'm1', game: 'range-day', title: 'The systems', what: 'A ten-target table on the systems terms.', pass: 6, of: 10, unit: 'hits', opts: { cats: ['Systems', 'Administration'], exposures: 10 } },
+        { id: 'm2', game: 'part-patrol', title: 'Letters and sections', what: 'One sector on PIID letters and UCF sections, then the Audit Dreadnought.', pass: 4, of: 5, unit: 'hits', opts: { fams: ['piid', 'ucf'], sectors: 1 } },
+        { id: 'm3', game: 'sort-yard', title: 'The UCF', what: 'One shift at the yard: which part of the Uniform Contract Format each section sits in.', pass: 5, of: 7, unit: 'crates', opts: { lines: ['ucf'], crates: 7 } }
+      ] },
+    { id: 'ch9', n: 9, month: 'Month 9', title: 'Price and cost', sub: 'The numbers behind the price', phase: 'awd', color: '#f0b863', icon: '9',
+      brief: 'Month nine goes back to the money with sharper tools: price analysis, cost analysis, certified cost or pricing data and the TINA threshold, indirect costs, and a fair and reasonable price you can defend. Missions: the range on pricing and money terms, Fire Mission on the dollar thresholds and contract types, and the Audit, who knows every number.',
+      clear: 'Price analysis compares prices; cost analysis looks inside them. You know which one the regulation wants, and when certified data is required.',
+      missions: [
+        { id: 'm1', game: 'range-day', title: 'Pricing words', what: 'A ten-target table on pricing, money and contract-type terms.', pass: 6, of: 10, unit: 'hits', opts: { cats: ['Pricing', 'Money', 'Contract types'], exposures: 10 } },
+        { id: 'm2', game: 'fire-mission', title: 'Thresholds and types', what: 'Eight fire missions on the dollar thresholds and the contract types.', pass: 5, of: 8, unit: 'targets', opts: { fams: ['dollars', 'type'], missions: 8 } },
+        { id: 'm3', game: 'contract-quest', title: 'The Audit, again', what: 'A boss fight on price and cost analysis, contract types and the money rules.', pass: 1, of: 1, unit: 'boss', opts: { boss: 'audit', lessons: ['L20', 'L21', 'L15', 'L05'] } }
+      ] },
+    { id: 'ch10', n: 10, month: 'Month 10', title: 'Sources', sub: 'Small business and required sources', phase: 'pre', color: '#82b6ef', icon: '10',
+      brief: 'Month ten is who you buy from: the required sources, AbilityOne and Federal Prison Industries, the small business programs, set-asides and the rule of two, and the Federal Supply Schedules. Missions: the range on small business and planning terms, Market Square on sources and competition, and Part Patrol on the FAR parts.',
+      clear: 'You check the required sources first, you know when a set-aside is required, and you can name the FAR part for each of them.',
+      missions: [
+        { id: 'm1', game: 'range-day', title: 'Sources and set-asides', what: 'A ten-target table on small business, planning and competition terms.', pass: 6, of: 10, unit: 'hits', opts: { cats: ['Small business', 'Planning', 'Competition'], exposures: 10 } },
+        { id: 'm2', game: 'supply-line', title: 'Market Square, sources', what: 'Six crates at CP2 on market research, required sources, small business, competition and commercial buys.', pass: 4, of: 6, unit: 'crates', opts: { realm: 'pre', lessons: ['L10', 'L11', 'L12', 'L13', 'L17'] } },
+        { id: 'm3', game: 'part-patrol', title: 'The FAR parts', what: 'One sector on the FAR part titles, then the Audit Dreadnought.', pass: 4, of: 5, unit: 'hits', opts: { fams: ['part'], sectors: 1 } }
+      ] },
+    { id: 'ch11', n: 11, month: 'Month 11', title: 'Changes and closeout', sub: 'The end of the contract', phase: 'post', color: '#6fd3d9', icon: '11',
+      brief: 'Month eleven is the end of the contract: changes only a contracting officer can sign, constructive changes, requests for equitable adjustment and claims, the deadlines that run in days and years, terminations and closeout. Missions: the range on changes and disputes terms, Fire Mission on the deadlines and the forms, and the Supply Depot on post-award.',
+      clear: 'Every change signed by a CO, every claim answered on time, every file closed on schedule. That is how a contract ends well.',
+      missions: [
+        { id: 'm1', game: 'range-day', title: 'Changes and claims', what: 'A ten-target table on changes, disputes and administration terms.', pass: 6, of: 10, unit: 'hits', opts: { cats: ['Changes and disputes', 'Administration'], exposures: 10 } },
+        { id: 'm2', game: 'fire-mission', title: 'Deadlines and forms', what: 'Eight fire missions on the time limits and the forms.', pass: 5, of: 8, unit: 'targets', opts: { fams: ['days', 'form'], missions: 8 } },
+        { id: 'm3', game: 'supply-line', title: 'Supply Depot, the end of the contract', what: 'Six crates at CP4 on changes, disputes, terminations, closeout and administration.', pass: 4, of: 6, unit: 'crates', opts: { realm: 'post', lessons: ['L29', 'L30', 'L31', 'L32', 'L26'] } }
+      ] },
+    { id: 'ch12', n: 12, month: 'Month 12', title: 'The whole life cycle', sub: 'One year in', phase: 'mix', color: '#3fbf8a', icon: '12',
+      brief: 'A year in. Month twelve runs the whole life cycle in one sitting: the full convoy from the Ops Center to the FOB, a twenty-target table on every term, and the Exam Citadel with everything you have. Missions: Supply Line, the full mission; Range Day, twenty targets; the Citadel, two monsters and the Gatekeeper.',
+      clear: 'Twelve months, every chapter cleared. You ran the whole life cycle on the road and in the file. Welcome to the shop: you are no longer the new one.',
+      missions: [
+        { id: 'm1', game: 'supply-line', title: 'The full mission', what: 'All five checkpoints, Ops Center to FOB Gate, thirty crates.', pass: 20, of: 30, unit: 'crates', opts: { mission: 'full' } },
+        { id: 'm2', game: 'range-day', title: 'Twenty targets', what: 'A full twenty-target table across every glossary term.', pass: 12, of: 20, unit: 'hits', opts: { exposures: 20 } },
+        { id: 'm3', game: 'contract-quest', title: 'The Exam Citadel', what: 'The whole realm: the Distractor Drone, the Trick-Question Troll and the Gatekeeper, questions from every area.', pass: 1, of: 1, unit: 'boss', opts: { realm: 'all' } }
       ] }
   ];
-  C.LOCKED = { title: 'Chapters 5 to 12', text: 'The exam, contingency contracting, the systems you will use and the rest of your first year. Coming in a later update.' };
-  C.GAME = { 'range-day': { icon: '🎯', name: 'Range Day' }, 'supply-line': { icon: '🚚', name: 'Supply Line' }, 'contract-quest': { icon: '⚔️', name: 'Contract Quest' } };
+  C.GAME = { 'range-day': { icon: '🎯', name: 'Range Day' }, 'supply-line': { icon: '🚚', name: 'Supply Line' }, 'contract-quest': { icon: '⚔️', name: 'Contract Quest' }, 'fire-mission': { icon: '💥', name: 'Fire Mission' }, 'part-patrol': { icon: '🚀', name: 'Part Patrol' }, 'sort-yard': { icon: '📦', name: 'Dispatch' } };
 
   function today() { return new Date().toISOString().slice(0, 10); }
   function all() { var p = A.save.get('campaign', {}); return p && typeof p === 'object' ? p : {}; }
@@ -64,7 +128,7 @@
     return o;
   };
   C.start = function (ch, m) { if (A.start) A.start(m.game, C.opts(ch, m)); };
-  function passText(m) { return m.unit === 'boss' ? 'Pass: bring the boss down' : 'Pass: ' + m.pass + ' of ' + m.of + ' ' + m.unit; }
+  function passText(m) { return m.unit === 'boss' ? (m.opts && m.opts.realm ? 'Pass: clear the realm' : 'Pass: bring the boss down') : 'Pass: ' + m.pass + ' of ' + m.of + ' ' + m.unit; }
 
   // the shell calls this when a campaign run ends (o.campaign = { value, of } from the game); returns what the card shows
   C.onRunEnd = function (state, won, o) {
@@ -117,14 +181,13 @@
       var ch = C.sel, done = C.passedCount(ch), cleared = C.cleared(ch), next = C.nextMission(ch);
       wrap.style.setProperty('--cc', ch.color);
       wrap.appendChild(h('div.ar-camp-head', {}, h('div.ar-kicker', {}, h('i'), 'Campaign'), h('h2', {}, 'Your first year as a 51C'),
-        h('p', {}, 'Twelve chapters, one a month, briefed by your Master Gunner. Four are open. Each is three short missions across the games with the questions that month would throw at you; pass all three to open the next chapter.')));
+        h('p', {}, 'Twelve chapters, one a month, briefed by your Master Gunner: the four exam areas, the review and the exam, then the first year on the job. Each is three short missions across the games with the questions that month would throw at you; pass all three to open the next chapter.')));
       var strip = h('div.ar-chapters', { role: 'tablist', 'aria-label': 'Chapters' });
       C.CHAPTERS.forEach(function (c) {
         var un = C.unlocked(c), cl = C.cleared(c), on = c === ch;
         strip.appendChild(h('button.ar-chapter' + (on ? '.on' : '') + (cl ? '.cleared' : '') + (un ? '' : '.locked'), { type: 'button', role: 'tab', 'aria-selected': on ? 'true' : 'false', disabled: !un, style: { '--cc': c.color }, title: un ? c.month + ': ' + c.title : 'Clear chapter ' + (c.n - 1) + ' first', onclick: function () { C.sel = c; render(); } },
           h('span.n', {}, cl ? '✓' : un ? String(c.n) : '🔒'), h('span.t', {}, h('b', {}, c.month), h('small', {}, c.title))));
       });
-      strip.appendChild(h('div.ar-chapter.locked.more', { title: C.LOCKED.text }, h('span.n', {}, '🔒'), h('span.t', {}, h('b', {}, '5 to 12'), h('small', {}, 'Later update'))));
       var mentor = h('div.ar-camp-mentor', {}, portrait(112, cleared ? 'proud' : 'brief', anim),
         h('div.ar-camp-bubble', {}, h('b', {}, A.mentor.name), h('small', {}, A.mentor.title), h('p', {}, cleared ? ch.clear : ch.brief)));
       var list = h('div.ar-missions');

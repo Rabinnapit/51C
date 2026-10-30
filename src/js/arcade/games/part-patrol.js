@@ -2,13 +2,16 @@
    instrument; three or four carriers fly in carrying labels (Part 19, Section E, Letter F). Shoot down the carrier that
    matches; destroying a wrong one or letting the right one escape costs a life. Drones swoop and shoot; power-ups give
    spread shot, rapid fire, a shield refill or slow time. Each sector ends with the Audit Dreadnought: a bank question
-   with four turrets lettered A to D. Shoot the turret with the right answer to break an armor plate. Three sectors. */
+   with four turrets lettered A to D. Shoot the turret with the right answer to break an armor plate. Three sectors.
+   The simulation lives in the canvas's own pixels; where WebGL works, A.GL.PatrolScene draws it in real 3D (a lit fighter
+   over a planet, carriers with lit label boards, the Dreadnought with real turrets), and the canvas-2D drawing below is
+   the fallback. A campaign mission (api.opts) can limit the fact families and the sectors. */
 (function () {
   'use strict';
   var A = window.ARCADE;
   if (!A || typeof A.register !== 'function') return;
 
-  var FAMS = ['part', 'ucf', 'piid'];
+  var FAMS = ['part', 'ucf', 'piid'], THREE = window.THREE;
   var KICK = { part: 'FAR part', ucf: 'UCF section', piid: 'PIID letter' };
   var SUB = { part: 'Shoot down the carrier with its FAR part number. Leave the others.', ucf: 'Shoot down the carrier with its UCF section letter. Leave the others.', piid: 'Shoot down the carrier with its PIID letter (position 9). Leave the others.' };
   var SECTORS = 3, WAVES = 3, PLATES = [2, 2, 3];
@@ -53,8 +56,8 @@
   }
 
   A.register({
-    id: 'part-patrol', title: 'Part Patrol', icon: '🚀', accent: '#8cc8ff', genre: 'Space shooter', music: 'space',
-    tagline: 'Fly the patrol, shoot down the carrier that answers the briefing, then beat the Audit Dreadnought.',
+    id: 'part-patrol', title: 'Part Patrol', icon: '🚀', accent: '#8cc8ff', genre: 'Space shooter · real 3D', music: 'space',
+    tagline: 'Fly the patrol over a planet in real 3D, shoot down the carrier that answers the briefing, then beat the Audit Dreadnought.',
     drills: 'FAR part titles, UCF sections, PIID letters; boss fights use bank questions',
     controls: 'Move with the arrow keys or WASD; on a touch screen drag anywhere to fly; with a mouse the ship follows the pointer. You fire on your own. Shoot down only the carrier whose label answers the briefing; destroying a wrong carrier, or letting the right one escape, costs a life. Bullets and drones drain your shield. Boss: shoot the turret lettered with the right answer.',
     aspect: [0.46, 1.5], orient: 'portrait',
@@ -71,9 +74,15 @@
       drawShip(ctx, sx, h * 0.8, 1.3, t, {});
       drawDrone(ctx, { x: w * 0.2 + Math.sin(t * 2) * 30, y: h * 0.45, seed: 1, flash: 0 }, t);
       drawDrone(ctx, { x: w * 0.82, y: h * 0.52 + Math.cos(t * 2) * 20, seed: 2, flash: 0 }, t);
+      if (A.GL && A.GL.ok()) A.pill(ctx, 'REAL 3D', 14, 22, { size: 12, bg: 'rgba(0,0,0,.55)', color: '#f6d991', stroke: '#e6b85a' });
     },
     create: function (api) {
-      var W = api.W, H = api.H, tier = api.difficulty, all = factsOf(api.data), bank = bossBank(api.data), t = 0;
+      var W = api.W, H = api.H, tier = api.difficulty, all = factsOf(api.data), bank = bossBank(api.data), t = 0, feel = A.feel, opts = api.opts || {};
+      if (opts.fams && opts.fams.length) { var subF = all.filter(function (f) { return opts.fams.indexOf(f.fam) >= 0; }); if (subF.length >= 10) all = subF; }
+      var SEC = opts.sectors > 0 ? Math.min(SECTORS, opts.sectors) : SECTORS, wavesRight = 0, platesBroken = 0;
+      var coarse = false; try { coarse = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
+      var scene = null; if (A.GL && A.GL.ok() && A.GL.PatrolScene) { try { scene = new A.GL.PatrolScene({ mobile: coarse, reduce: feel.reduce, width: 520, height: 640 }); } catch (e) { console.error('[part-patrol] 3D failed, drawing in 2D', e); scene = null; } }
+      var frames = 0, slow = 0, scale = 1, glW = 0, glH = 0;
       var ti = Math.max(0, ['recruit', 'regular', 'veteran', 'elite'].indexOf(tier.id));
       var ship = { x: W / 2, y: H * 0.82, shield: 3, inv: 0, fireT: 0, flash: 0, tx: null, ty: null };
       var bullets = [], eb = [], drones = [], carriers = [], powers = [], stars = [], boss = null;
@@ -100,7 +109,7 @@
         api.ready({ text: f.prompt, delay: 0.75 });
       }
       function waveDone(ok, given) {
-        var f = cur.f;
+        var f = cur.f; if (ok) wavesRight++;
         api.review.add({ prompt: KICK[f.fam] + ': ' + f.prompt, given: given, correct: label(f), ok: ok, explanation: f.why, cite: f.cite, key: f.id });
         carriers.forEach(function (c) { if (c.alive) c.warp = 0.001; if (c.ok && !ok) c.reveal = 2; });
         phase = 'between'; phaseT = ok ? 1.3 : 2.2;
@@ -127,7 +136,7 @@
         var given = q.options[boss.order['ABCD'.indexOf(tu.letter)]];
         api.review.add({ prompt: q.stem, given: tu.letter + ': ' + given.text, correct: right.text, ok: tu.ok, explanation: right.why, cite: q.cite, lesson: q.lesson, qid: q.id, key: q.id });
         if (tu.ok) {
-          boss.plates--; boss.flash = 0.3; streak++; api.score(600 + streak * 50); api.progress.correct();
+          boss.plates--; boss.flash = 0.3; streak++; platesBroken++; api.score(600 + streak * 50); api.progress.correct(); feel.buzz([20, 30, 50]);
           api.audio.bigBoom(); api.shake(12); api.flash('rgba(255,210,122,.4)');
           api.floaters.add('ARMOR BROKEN', boss.x, boss.y + 70 * S(), { size: 24, color: '#f6d991', life: 1.4 });
           if (boss.plates <= 0) { boss.dying = 0.001; api.choices.clear(); api.hud.set({ banner: 'DREADNOUGHT DESTROYED', sub: sector < SECTORS ? 'Sector ' + sector + ' clear' : 'Patrol complete', color: '#f6d991', bannerTime: 2.4 }); api.score(1500); return; }
@@ -143,22 +152,25 @@
       // ---- combat ----
       function hurt() {
         if (ship.inv > 0) return;
-        ship.shield--; ship.inv = 1.1; ship.flash = 0.2; api.audio.hurt(); api.shake(6);
+        ship.shield--; ship.inv = 1.1; ship.flash = 0.2; api.audio.hurt(); api.shake(feel.reduce() ? 0 : 6); feel.buzz([30, 40, 30]); if (scene) scene.flashAt(ship.x, ship.y, 2, new THREE.Color(2, 4, 5));
         api.particles.emit({ x: ship.x, y: ship.y, n: 16, color: ['#7ee0ff', '#fff'], speed: 220, gravity: 0, life: 0.5 });
         if (ship.shield < 0) { ship.shield = 3; ship.inv = 2.2; api.floaters.add('-1 ♥', ship.x, ship.y - 40, { size: 22, color: '#ff6b6b' }); api.life(-1); }
       }
       function boom(x, y, big, color) {
-        api.particles.emit({ x: x, y: y, n: big ? 70 : 18, color: [color || '#ffb347', '#fff3c4', '#ff6b4a'], speed: big ? 420 : 220, gravity: 0, life: big ? 1 : 0.5, size: big ? 7 : 4, drag: 0.95 });
+        if (scene) { scene.boom(x, y, big, color); if (big) feel.hitstop.hit(50); }
+        api.particles.emit({ x: x, y: y, n: scene ? (big ? 24 : 6) : (big ? 70 : 18), color: [color || '#ffb347', '#fff3c4', '#ff6b4a'], speed: big ? 420 : 220, gravity: 0, life: big ? 1 : 0.5, size: big ? 7 : 4, drag: 0.95 });
         api.particles.ring(x, y, { color: color || '#ffd27a', grow: big ? 420 : 200, life: big ? 0.6 : 0.35, width: big ? 6 : 3 });
         if (big) api.audio.bigBoom(); else api.audio.pop();
+        if (big) feel.buzz(30);
       }
       function killDrone(d, chain) {
         d.dead = true; api.score(15); boom(d.x, d.y, false);
         if (!chain && Math.random() < 0.12) { var keys = Object.keys(POWERS); powers.push({ x: d.x, y: d.y, k: keys[Math.floor(Math.random() * keys.length)], t: 0 }); }
       }
 
-      function update(dt) {
-        t += dt; var s = S(), K = api.input.keys, sk = slowK();
+      function update(dt, rdt) {
+        t += dt; var s = S(), K = api.input.keys, sk = slowK(); rdt = rdt || dt;
+        if (scene) { shipVx = (ship.x - lastSx) / Math.max(0.001, dt); shipVy = (ship.y - lastSy) / Math.max(0.001, dt); lastSx = ship.x; lastSy = ship.y; scene.update(rdt, feel.hitstop.frozen()); frames++; if (rdt > 0.026) slow++; if (frames >= 90) { if (slow > 45 && scale > 0.6) { scale = scale > 0.8 ? 0.75 : 0.6; scene.setQuality(scale > 0.7 ? 1 : 0); } frames = 0; slow = 0; } }
         stars.forEach(function (st) { st.y += dt * (0.02 + st.l * 0.05) * (phase === 'between' ? 3 : 1); if (st.y > 1) { st.y -= 1; st.x = Math.random(); } });
         spread = Math.max(0, spread - dt); rapid = Math.max(0, rapid - dt); slow = Math.max(0, slow - dt);
         ship.inv = Math.max(0, ship.inv - dt); ship.flash = Math.max(0, ship.flash - dt);
@@ -214,8 +226,8 @@
                 if (b.dead || !c.alive || Math.abs(b.x - c.x) > c.w / 2 || Math.abs(b.y - c.y) > c.h / 2) return;
                 b.dead = true;
                 if (c.enter < 1 || c.shield > 0) { c.bubble = 0.15; api.particles.emit({ x: b.x, y: b.y, n: 3, color: ['#8cc8ff'], speed: 90, gravity: 0, life: 0.2, size: 3 }); return; }   // shielded while it flies in: read the labels first
-                c.hp--; c.flash = 0.1; api.audio.hit();
-                api.particles.emit({ x: b.x, y: b.y, n: 5, color: ['#cfe8ff', '#fff'], speed: 120, gravity: 0, life: 0.3, size: 3 });
+                c.hp--; c.flash = 0.1; api.audio.hit(); if (scene) scene.sparks(b.x, b.y, 5);
+                api.particles.emit({ x: b.x, y: b.y, n: scene ? 2 : 5, color: ['#cfe8ff', '#fff'], speed: 120, gravity: 0, life: 0.3, size: 3 });
                 if (!c.ok && !c.warned) { c.warned = true; api.floaters.add('✗ NOT THIS ONE', c.x, c.y - c.h, { size: 15, color: '#ff9c9c', life: 1 }); }
                 if (c.hp <= 0) {
                   c.alive = false; boom(c.x, c.y, true, c.ok ? '#5fd39a' : '#ff6b6b');
@@ -245,7 +257,7 @@
             if (Math.random() < 0.35) boom(boss.x + A.rand(-1, 1) * W * 0.3, boss.y + A.rand(-30, 40), Math.random() < 0.3, '#ffb347');
             if (boss.dying > 2.4) {
               boss = null; eb = []; api.music.setIntense(false);
-              if (sector >= SECTORS) { finish(true); return; }
+              if (sector >= SEC) { finish(true); return; }
               sector++; wave = 0; phase = 'between'; phaseT = 1.2;
               api.hud.set({ banner: 'SECTOR ' + sector, sub: 'Faster drones, closer decoys.', color: '#8cc8ff', bannerTime: 2 });
             }
@@ -268,8 +280,8 @@
         if (phase === 'start') { phaseT -= dt; if (phaseT <= 0) nextWave(); }
       }
       function finish(won) {
-        api.end({ won: won, title: won ? 'Patrol complete' : 'Patrol over', message: 'You cleared ' + (won ? SECTORS : sector - 1) + ' of ' + SECTORS + ' sectors.', xpBonus: won ? 120 : 0,
-          badge: won ? { icon: '🚀', name: 'Ace of the patrol', desc: 'Three Audit Dreadnoughts down.', color: '#8cc8ff' } : null });
+        api.end({ won: won, title: won ? 'Patrol complete' : 'Patrol over', message: 'You cleared ' + (won ? SEC : sector - 1) + ' of ' + SEC + ' sectors.', xpBonus: won ? 40 * SEC : 0, campaign: { value: wavesRight + platesBroken, of: SEC * WAVES + PLATES.slice(0, SEC).reduce(function (a, b) { return a + b; }, 0) },
+          badge: won ? { icon: '🚀', name: 'Ace of the patrol', desc: (SEC === 1 ? 'The Audit Dreadnought is down.' : SEC + ' Audit Dreadnoughts down.'), color: '#8cc8ff' } : null });
       }
 
       function drawCarrier(ctx, c) {
@@ -310,7 +322,28 @@
         ctx.restore();
       }
 
+      function draw3D(ctx) {
+        var cw = ctx.canvas.width, ch = ctx.canvas.height, dpr = Math.min(2, window.devicePixelRatio || 1), kq = Math.min(1, (coarse ? 1.5 : 2) / dpr) * scale;
+        var gw = Math.round(cw * kq), gh = Math.round(ch * kq);
+        if (gw !== glW || gh !== glH) { glW = gw; glH = gh; scene.resize(gw, gh); }
+        scene.field(W, H);
+        var bossW = Math.min(W * 0.86, 560 * S());
+        scene.sync({ ship: { x: ship.x, y: ship.y, vx: shipVx, vy: shipVy, inv: ship.inv, flash: ship.flash, hidden: ship.inv > 0 && Math.floor(t * 16) % 2 === 1 }, bullets: bullets, eb: eb, drones: drones, carriers: carriers, powers: powers.map(function (p) { p.color = POWERS[p.k].color; return p; }), boss: boss ? { x: boss.x, y: boss.y, width: bossW, plates: boss.plates, max: boss.max, turrets: boss.turrets, flash: boss.flash, dying: boss.dying, enter: boss.enter } : null, between: phase === 'between' });
+        scene.render(); ctx.drawImage(scene.canvas, 0, 0, W, H);
+        hud(ctx);
+      }
+      var shipVx = 0, shipVy = 0, lastSx = 0, lastSy = 0;
+      function hud(ctx) {
+        for (var k = 0; k < 3; k++) { ctx.fillStyle = k < ship.shield ? '#7ee0ff' : 'rgba(255,255,255,.15)'; ctx.fillRect(12 + k * 16, H - 16, 12, 6); }
+        A.text(ctx, 'SHIELD', 12, H - 22, { size: 10, fam: 'mono', weight: 800, color: '#9fb4c9' });
+        var tags = []; if (spread > 0) tags.push('SPREAD ' + Math.ceil(spread)); if (rapid > 0) tags.push('RAPID ' + Math.ceil(rapid)); if (slow > 0) tags.push('SLOW ' + Math.ceil(slow));
+        if (tags.length) A.text(ctx, tags.join(' · '), W - 12, H - 14, { size: 11, fam: 'mono', weight: 800, color: '#ffd166', align: 'right' });
+        A.text(ctx, 'SECTOR ' + sector + (boss ? ' · BOSS' : ' · WAVE ' + Math.max(1, Math.min(wave, WAVES))), 12, 20, { size: 11, fam: 'mono', weight: 800, color: '#9fb4c9' });
+        if (streak >= 2) A.text(ctx, 'STREAK ×' + streak, W - 12, 20, { size: 12, fam: 'mono', weight: 800, color: '#f6d991', align: 'right' });
+        if (slow > 0) { ctx.fillStyle = 'rgba(140,200,255,.06)'; ctx.fillRect(0, 0, W, H); }
+      }
       function draw(ctx) {
+        if (scene) { draw3D(ctx); return; }
         var g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#04050d'); g.addColorStop(1, '#10173a'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
         var nx = W * (0.7 + Math.sin(t * 0.05) * 0.1), ny = H * ((t * 0.01) % 1.4 - 0.2), ng = ctx.createRadialGradient(nx, ny, 10, nx, ny, W * 0.6);
         ng.addColorStop(0, 'rgba(185,140,255,.22)'); ng.addColorStop(1, 'rgba(185,140,255,0)'); ctx.fillStyle = ng; ctx.fillRect(0, 0, W, H);
@@ -334,6 +367,7 @@
       }
 
       function onPointer(e) {
+        if (scene) { var lp = scene.toLogical(e.x / W * 2 - 1, -(e.y / H) * 2 + 1); if (lp) { e = { type: e.type, x: lp.x, y: lp.y, touch: e.touch }; } }
         if (e.touch) {
           if (e.type === 'down') keysDrag = { x: e.x, y: e.y, sx: ship.x, sy: ship.y };
           else if (e.type === 'move' && keysDrag) { ship.tx = keysDrag.sx + (e.x - keysDrag.x) * 1.3; ship.ty = keysDrag.sy + (e.y - keysDrag.y) * 1.3; }
@@ -342,7 +376,9 @@
       }
 
       return { update: update, draw: draw, onPointer: onPointer, resize: function (w, h) { var fx = ship.x / W, fy = ship.y / H; W = w; H = h; ship.x = fx * W; ship.y = fy * H; },
-        debug: function () { return { phase: phase, sector: sector, wave: wave, ship: ship, carriers: carriers, boss: boss }; } };
+        destroy: function () { if (scene) scene.dispose(); },
+        debug: function () { return { phase: phase, sector: sector, wave: wave, ship: ship, carriers: carriers, boss: boss }; },
+        stats: function () { return { gl: !!scene, scene: scene, tri: scene && scene.tri, calls: scene && scene.calls, phase: phase, sector: sector, wave: wave, ship: [Math.round(ship.x), Math.round(ship.y)], carriers: carriers.map(function (c) { return { label: c.label, ok: c.ok, x: Math.round(c.x), y: Math.round(c.y), alive: c.alive, hp: c.hp }; }), boss: boss && { plates: boss.plates, turrets: boss.turrets.map(function (tu) { return [tu.letter, tu.ok, tu.alive]; }) }, wavesRight: wavesRight, platesBroken: platesBroken }; } };
     }
   });
 })();

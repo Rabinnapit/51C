@@ -63,11 +63,12 @@ src/js/views/*.js         home, path, plan, cert, courses, official, learn (+ le
 src/js/arcade/00-engine   window.ARCADE: register, palette, storage through A.host, pace levels, XP ranks, question memory, text, particles, floaters, sound, music
 src/js/arcade/01-shell   lobby, play screen (HUD, prompt panel, fluid canvas, answer panel, reading pause, pause menu), results with the study list
 src/js/arcade/02-feel    A.feel: Less-motion check, haptics, hit-stop, trauma shake, layered sounds (the game-feel kit every action game shares)
-src/js/arcade/03-gl      A.GL: WebGL probe, procedural PBR textures, the post pass (bloom, vignette, grain), LIGHT presets (dawn, day, gold, dusk, night), Stage (renderer, HDR sky, sun, haze, env), RangeScene (the 3D range, the M4A1, the effects), RoadScene (Supply Line's convoy, road and checkpoints)
+src/js/arcade/03-gl      A.GL: WebGL probe, procedural PBR textures, the post pass (bloom, vignette, grain), LIGHT presets (dawn, day, gold, dusk, night), Stage (renderer, HDR sky, sun, haze, env), kit(St) (shared materials, crates, wheels, trucks, forklift, Soldier, signs, hills, trees, rocks, pooled effects: dust, smoke, flashes, fire, sparks, debris, lights, scorches, explosion)
+src/js/arcade/03a-03e    the scenes, one file each on Stage + kit: RangeScene (03a), RoadScene (03b), GunScene (03c, Fire Mission: analytic terrain hAt, howitzer, shell flight, wrecks), PatrolScene (03d, Part Patrol: the 2D simulation's snapshot placed on a tilted field, planet, Dreadnought), YardScene (03e, Dispatch: belt, bays, diverter, flying crates)
 src/js/arcade/04-mentor  A.mentor: the Master Gunner (code-drawn portrait with moods, lines, one-line miss explanations)
 src/js/arcade/05-campaign A.campaign: the chapters (1 to 4), mission options, progress (progress.arcade.campaign), the lobby section and the results card
 src/js/vendor/three.min.js three.js r158 (MIT, LICENSE-three.txt beside it), re-wrapped into short lines for the Word package; never calls its loaders
-src/js/arcade/games/*.js range-day (real 3D on A.GL), contract-quest (the four bosses), supply-line (real 3D on A.GL.RoadScene, canvas 2D fallback), fire-mission, qual-range, part-patrol, sort-yard
+src/js/arcade/games/*.js range-day (real 3D), contract-quest (the four bosses), supply-line, fire-mission, part-patrol, sort-yard (Dispatch) (each real 3D on its scene with the canvas-2D game kept as the fallback), qual-range (2D)
 src/data/*.json           content (see section 4). <module>-<part>.json files join into <module>.
 src/official/*.webp       official document pages, <doc id>-<page>.webp, made by tools/render_official.py from the PDFs
                           (PDFs stay out of git); the build embeds them as the `pages` module
@@ -158,7 +159,7 @@ api.W / api.H (fluid: logical px = CSS px up to 960 x 900, inside the game's asp
 api.prompt.set({kicker, text, sub, color, big})  api.choices.set(items, onPick, {readOnly}) / lock / mark / disable / feedback({ok, title, body, cite, auto}, next) / tools(list) / timer(frac) / clear
 api.ready({text})  api.review.add({prompt, given, correct, ok, explanation, cite, lesson, qid, key})  api.score(n)  api.life(n)  api.xp(n)  api.end({won, title, message, badge, xpBonus})
 api.hud.set({...})  api.particles  api.floaters  api.audio  api.music  api.shake(px)  api.flash(color)  api.mentor.say(mood, text, secs) / hide()
-api.opts from a campaign mission: { campaign: {ch, m, n, k, title, pass, of, unit}, cats, exposures (range-day), realm, lessons (supply-line), boss, lessons (contract-quest) }; api.end({... campaign: {value, of}}) reports the pass value
+api.opts from a campaign mission: { campaign: {ch, m, n, k, title, pass, of, unit}, cats, exposures (range-day), realm, lessons, mission (supply-line), boss, realm, lessons (contract-quest), fams, missions (fire-mission), fams, sectors (part-patrol), lines, crates (sort-yard) }; api.end({... campaign: {value, of}}) reports the pass value
 ARCADE.start(id, opts)  ARCADE.lobby('campaign')  ARCADE.campaign.CHAPTERS / start(ch, m) / onRunEnd / card / section  ARCADE.mentor.draw(ctx, size, mood, t) / line(kind) / missLine(why)
 ARCADE.host = { get(k), set(k, v, quiet), speak(text), onAnswer(qid, ok), onRunEnd(summary), lessonHref(id), pathHref() }   (set by views/arcade.js)
 ARCADE._debug.play(id, opts) / start() / step(seconds) / run()   (automated checks; no UI)

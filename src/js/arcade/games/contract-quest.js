@@ -684,7 +684,7 @@
             clearT = 0;
             var stars = earned;
             if (bossOnly) { var bn = foes[0].name; api.end({ won: true, title: bn + ' defeated', message: 'Eight health, ' + shown + ' questions, ' + lost + (lost === 1 ? ' heart' : ' hearts') + ' lost.', xpBonus: 90 + stars * 20, campaign: { value: 1, of: 1 }, badge: { icon: '🏆', name: bn, desc: 'Boss down. ' + (lost === 0 ? 'Flawless.' : 'Its tricks are on the study list.'), color: realm.color } }); return; }
-            api.end({ won: true, title: realm.name + ' cleared ' + starText(stars), message: 'You beat ' + foes.map(function (f) { return f.name; }).join(', ') + '.', xpBonus: 60 + stars * 30,
+            api.end({ won: true, title: realm.name + ' cleared ' + starText(stars), message: 'You beat ' + foes.map(function (f) { return f.name; }).join(', ') + '.', xpBonus: 60 + stars * 30, campaign: { value: 1, of: 1 },
               badge: { icon: stars === 3 ? '🏆' : '⭐', name: starText(stars) + ' ' + realm.name, desc: stars === 3 ? 'Flawless: no hearts lost.' : lost + (lost === 1 ? ' heart' : ' hearts') + ' lost. Clear it without losing one for three stars.', color: realm.color } });
           }
         }

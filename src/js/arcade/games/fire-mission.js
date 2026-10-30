@@ -1,8 +1,10 @@
 /* GAME: fire-mission — artillery. A call for fire names a fact (a dollar threshold, a deadline, a form, a J&A approver or a
-   contract type); three or four targets on the ridge carry answer signs. Lay the howitzer (elevation and charge; wind on
-   harder levels) and fire. Hitting the right target scores, more on the first round; hitting a wrong target costs a life and
-   shows the right one; three misses abort the mission with no life lost. The observer calls ADD or DROP after a miss.
-   Twelve missions a run, then a battery rating. */
+   contract type); three or four targets on the far slope carry answer signs. Tap the target (or the ground where the round
+   should land) and fire; wind pushes the round on harder levels. Hitting the right target scores, more on the first round;
+   hitting a wrong target costs a life and shows the right one; three misses abort the mission with no life lost. The
+   observer calls ADD or DROP after a miss. Twelve missions a run, then a battery rating.
+   Drawn in real 3D (A.GL.GunScene: an M777-style howitzer, a valley, trucks that burn) where WebGL works; the canvas-2D
+   game below (elevation and charge) is the fallback for anything older. */
 (function () {
   'use strict';
   var A = window.ARCADE;
@@ -65,12 +67,136 @@
     ctx.restore();
   }
 
+  // ---- the 3D game: the scene flies the shell and burns the trucks; this owns the missions, rounds and scoring ----
+  function create3D(api) {
+    var W = api.W, H = api.H, tier = api.difficulty, all = factsOf(api.data), t = 0, feel = A.feel, opts = api.opts || {};
+    if (opts.fams && opts.fams.length) { var sub = all.filter(function (f) { return opts.fams.indexOf(f.fam) >= 0; }); if (sub.length >= 8) all = sub; }
+    var MIS = opts.missions > 0 ? opts.missions : MISSIONS;
+    var coarse = false; try { coarse = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
+    var scene = new A.GL.GunScene({ mobile: coarse, reduce: feel.reduce, width: 640, height: 400 });
+    var mission = null, missionNo = 0, rounds = ROUNDS, streak = 0, targets = [], phase = 'aim', phaseT = 0, timer = 0, limit = 0, note = '', noteT = 0, reveal = 0, wind = 0, right = 0;
+    var frames = 0, slow = 0, scale = 1, glW = 0, glH = 0, aimP = null;
+    var tierIx = Math.max(0, ['recruit', 'regular', 'veteran', 'elite'].indexOf(tier.id)), previewFrac = [1, 0.5, 0.22, 0][tierIx];
+    var LIGHTS = ['day', 'gold', 'dawn', 'night', 'dusk'];
+    api.progress.configure({ perLevel: 4 });
+
+    function screenOf(tg) { var p = scene.project(scene.targetPoint(tg)); return { x: p.x * W, y: p.y * H }; }
+    function newMission() {
+      missionNo++;
+      if (missionNo > MIS) { finish(); return; }
+      var lvl = api.progress.level, f = api.progress.pick(all, function (x) { return x.id; });
+      var choice = A.shuffle([f].concat(decoys(all, f, lvl >= 3 ? 3 : 2, lvl))), cnt = choice.length, r = rng(Date.now() % 100000 + missionNo * 97);
+      var list = choice.map(function (o, i) { var fx = (i + 0.5) / cnt; return { letter: 'ABCD'[i], text: o.answer, data: o, x: (fx - 0.5) * 50 + (r() - 0.5) * 5, z: -31 - r() * 11 }; });
+      targets = scene.setTargets(list); targets.forEach(function (tg, i) { tg.ok = list[i].data === f; });
+      mission = { f: f }; wind = lvl <= 1 ? 0 : (r() < 0.5 ? -1 : 1) * (lvl === 2 ? 0.25 + r() * 0.3 : 0.5 + r() * 0.5); scene.wind = wind;
+      rounds = ROUNDS; note = ''; reveal = 0; phase = 'aim'; phaseT = 0; scene.hideAim(); aimP = null;
+      if ((missionNo - 1) % 3 === 0) scene.setLight(LIGHTS[Math.floor((missionNo - 1) / 3) % LIGHTS.length]);
+      limit = tier.limit ? 32 * tier.limit : 0; timer = limit; api.hud.set({ time: limit ? limit : null });
+      api.prompt.set({ kicker: 'Fire mission ' + missionNo + ' of ' + MIS + ' · ' + FAM_NAME[f.fam] + (f.__via === 'review' ? ' · missed before' : ''), text: f.prompt, sub: FAM_HINT[f.fam] + (wind ? ' Watch the wind.' : ''), color: '#ffa552' });
+      api.choices.set(list.map(function (o) { return { text: o.text, tag: o.letter }; }), null, { readOnly: true });
+      api.ready({ text: f.prompt });
+    }
+    function fire() {
+      if (phase !== 'aim' || scene.shell || rounds <= 0 || api.reading || !scene.aimOn) return;
+      rounds--; phase = 'flight'; scene.fire(); api.audio.cannon(); api.shake(feel.reduce() ? 0 : 6); feel.buzz(20);
+    }
+    function impact(res) {
+      var p = res.point, hit = res.hit, best = 1e9, f = mission.f;
+      if (!hit) targets.forEach(function (tg) { if (!tg.alive) return; var d = Math.sqrt((tg.x - p.x) * (tg.x - p.x) + (tg.z - p.z) * (tg.z - p.z)); if (d < 6.5 && d < best) { best = d; hit = tg; } });
+      scene.impact(p, !!hit); api.audio.boom(); api.shake(feel.reduce() ? 0 : (hit ? 10 : 6)); feel.buzz(hit ? [20, 30, 50] : 25);
+      if (hit && hit.ok) {
+        scene.wreck(hit); scene.mark(hit, 'ok'); streak++; right++;
+        var used = ROUNDS - rounds, direct = !!res.direct, pts = [300, 200, 120][Math.min(2, used - 1)] + (direct ? 100 : 0) + streak * 40 + (limit ? Math.round(timer / limit * 100) : 0), sp = screenOf(hit);
+        api.score(pts); api.progress.correct(); feel.hitstop.hit(70);
+        api.floaters.add(direct ? 'DIRECT HIT +' + pts : 'TARGET DESTROYED +' + pts, sp.x, sp.y - 40, { size: 22, color: '#f6d991', life: 1.4 });
+        api.audio.correct(); api.flash('rgba(255,210,122,.28)');
+        api.review.add({ prompt: f.prompt, given: hit.text, correct: f.answer, ok: true, explanation: f.why, cite: f.cite, key: f.id });
+        if (streak === 3 || streak === 5 || streak === 7) api.mentor.say('pleased', A.mentor.LINES.streak[streak === 3 ? 0 : streak === 5 ? 1 : 2], 3);
+        phase = 'result'; phaseT = 2.0;
+      } else if (hit) {
+        scene.wreck(hit); scene.mark(hit, 'no'); streak = 0; reveal = 2.4; targets.forEach(function (x) { if (x.ok) scene.mark(x, 'ok'); });
+        var sp2 = screenOf(hit); api.floaters.add('WRONG TARGET', sp2.x, sp2.y - 40, { size: 22, color: '#ff8080', life: 1.6 });
+        api.hud.set({ banner: 'Check fire!', sub: 'Right target: ' + f.answer, color: '#ff6b6b', bannerTime: 2.2 }); api.audio.wrong();
+        api.review.add({ prompt: f.prompt, given: hit.text, correct: f.answer, ok: false, explanation: f.why, cite: f.cite, key: f.id });
+        var left = api.life(-1); api.mentor.say(left === 1 ? 'worried' : 'hint', (left === 1 ? A.mentor.line('low') + ' ' : A.mentor.line('hint') + ' ') + 'It was ' + f.answer + '.', 4);
+        phase = 'result'; phaseT = 2.9;
+      } else {
+        var near = null, nd = 1e9; targets.forEach(function (tg) { if (!tg.alive) return; var d = Math.abs(tg.z - p.z) + Math.abs(tg.x - p.x) * 0.3; if (d < nd) { nd = d; near = tg; } });
+        var meters = Math.max(10, Math.round(nd * 2.5 / 10) * 10), sp3 = scene.project(p);
+        if (rounds > 0) { note = (near && p.z < near.z ? 'DROP ' : 'ADD ') + meters; noteT = 2.6; api.floaters.add('SPLASH · ' + note, sp3.x * W, Math.max(60, sp3.y * H - 30), { size: 16, color: '#fff', life: 1.5 }); phase = 'aim'; }
+        else abort('Out of rounds');
+      }
+    }
+    function abort(why) {
+      var f = mission.f; streak = 0; reveal = 2.4; note = ''; targets.forEach(function (x) { if (x.ok) scene.mark(x, 'ok'); });
+      api.hud.set({ banner: why, sub: 'Right target: ' + f.answer, color: '#ffa552', bannerTime: 2.2 });
+      api.review.add({ prompt: f.prompt, given: '(no hit)', correct: f.answer, ok: false, explanation: f.why, cite: f.cite, key: f.id });
+      api.audio.wrong(); phase = 'result'; phaseT = 2.6; if (scene.shell) scene.impact(scene.shell.p, false);
+    }
+    function finish() {
+      var pct = Math.round(right / MIS * 100), badge;
+      if (pct >= 90) badge = { icon: '🎖️', name: 'King of Battle', desc: right + ' of ' + MIS + ' missions on target.', color: '#f6d991' };
+      else if (pct >= 75) badge = { icon: '💥', name: 'Steel on target', desc: right + ' of ' + MIS + ' missions on target. ' + Math.ceil(MIS * 0.9) + ' or more makes King of Battle.', color: '#ffa552' };
+      else if (pct >= 50) badge = { icon: '🎯', name: 'Adjusting fire', desc: right + ' of ' + MIS + ' on target. Review the misses below, then fire again.', color: '#8cc8ff' };
+      else badge = { icon: '📋', name: 'Back to the FDC', desc: right + ' of ' + MIS + ' on target. Study the list below and try again.', color: '#c2cdc6' };
+      api.end({ won: true, title: 'Fire missions complete', message: 'You hit ' + right + ' of ' + MIS + ' targets.', badge: badge, xpBonus: right * 5, campaign: { value: right, of: MIS } });
+    }
+    function update(gdt, dt) {
+      t += dt; rdt = dt; noteT = Math.max(0, noteT - dt); reveal = Math.max(0, reveal - dt);
+      if (mission && phase === 'aim' && limit && !api.reading) { timer -= gdt; api.hud.set({ time: Math.max(0, timer) }); if (timer <= 0) abort('Mission aborted: time'); }
+      var K = api.input.keys, step = 14 * dt;
+      if (mission && phase === 'aim' && !api.reading && (K.has('ArrowUp') || K.has('ArrowDown') || K.has('ArrowLeft') || K.has('ArrowRight') || K.has('w') || K.has('s') || K.has('a') || K.has('d'))) {
+        var ap = aimP || scene.aimPoint(); if (!aimP) aimP = ap;
+        if (K.has('ArrowUp') || K.has('w')) ap.z -= step; if (K.has('ArrowDown') || K.has('s')) ap.z += step; if (K.has('ArrowLeft') || K.has('a')) ap.x -= step; if (K.has('ArrowRight') || K.has('d')) ap.x += step;
+        ap.x = A.clamp(ap.x, -60, 60); ap.z = A.clamp(ap.z, -90, -9); scene.setAim(ap);
+      }
+      var res = scene.update(dt, feel.hitstop.frozen());
+      if (phase === 'flight' && res && res !== 'flying') { if (res.lost) { scene.impact(res.point, false); if (rounds > 0) { note = 'LOST · ' + (res.point.z < -60 ? 'DROP a lot' : 'ADD a lot'); noteT = 2.6; phase = 'aim'; } else abort('Out of rounds'); } else impact(res); }
+      scene.showArc(mission && phase === 'aim' && scene.aimOn && !api.reading ? previewFrac : 0);
+      if (phase === 'result') { phaseT -= gdt; if (phaseT <= 0) newMission(); }
+      frames++; if (dt > 0.026) slow++; if (frames >= 90) { if (slow > 45 && scale > 0.6) { scale = scale > 0.8 ? 0.75 : 0.6; scene.setQuality(scale > 0.7 ? 1 : 0); } frames = 0; slow = 0; }
+    }
+    var rdt = 0;
+    function draw(ctx) {
+      var cw = ctx.canvas.width, ch = ctx.canvas.height, dpr = Math.min(2, window.devicePixelRatio || 1), kq = Math.min(1, (coarse ? 1.5 : 2) / dpr) * scale;
+      var gw = Math.round(cw * kq), gh = Math.round(ch * kq);
+      if (gw !== glW || gh !== glH) { glW = gw; glH = gh; scene.resize(gw, gh); }
+      scene.render(); ctx.drawImage(scene.canvas, 0, 0, W, H);
+      // rounds, the wind sock and the observer's call
+      ctx.fillStyle = 'rgba(0,0,0,.45)'; A.roundRect(ctx, 10, 10, 132, 46, 10); ctx.fill();
+      A.text(ctx, 'MISSION ' + Math.min(missionNo, MIS) + ' / ' + MIS, 22, 30, { size: 12, fam: 'mono', weight: 800, color: '#f6d991' });
+      for (var rr = 0; rr < ROUNDS; rr++) { ctx.fillStyle = rr < rounds ? '#e6b85a' : 'rgba(255,255,255,.2)'; A.roundRect(ctx, 22 + rr * 11, 36, 7, 14, 3); ctx.fill(); }
+      A.text(ctx, 'RDS', 60, 48, { size: 10, fam: 'mono', weight: 800, color: '#c2cdc6' });
+      if (streak >= 3) A.text(ctx, 'STREAK ×' + streak, 150, 31, { size: 13, fam: 'mono', weight: 800, color: '#f6d991', stroke: 'rgba(0,0,0,.5)', strokeWidth: 3 });
+      var wx = W - 60, wy = 30;
+      ctx.strokeStyle = '#ddd'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(wx, wy - 12); ctx.lineTo(wx, wy + 26); ctx.stroke();
+      var wl = 10 + Math.abs(wind) * 34, dir = wind >= 0 ? 1 : -1, flap = Math.sin(t * 8) * 3 * (Math.abs(wind) + 0.2);
+      ctx.fillStyle = wind ? '#ff8a3d' : '#9aa'; ctx.beginPath(); ctx.moveTo(wx, wy - 12); ctx.lineTo(wx + dir * wl, wy - 7 + flap); ctx.lineTo(wx + dir * wl, wy - 1 + flap); ctx.lineTo(wx, wy + 2); ctx.closePath(); ctx.fill();
+      A.text(ctx, wind ? 'WIND ' + (wind > 0 ? '→ ' : '← ') + Math.round(Math.abs(wind) * 12) + ' kt' : 'CALM', wx, wy + 44, { size: 12, fam: 'mono', weight: 800, color: '#fff', align: 'center', stroke: 'rgba(0,0,0,.5)', strokeWidth: 3 });
+      if (noteT > 0) A.text(ctx, 'OBSERVER: ' + note, W / 2, 26, { size: 15, fam: 'mono', weight: 800, color: '#fff3c4', align: 'center', stroke: 'rgba(0,0,0,.6)', strokeWidth: 4, alpha: Math.min(1, noteT) });
+      if (mission && phase === 'aim' && !scene.aimOn && !api.reading) A.text(ctx, coarse ? 'Tap a target, or the ground where the round should land' : 'Point at a target and click to fire', W / 2, H - 18, { size: 13, weight: 700, color: '#fff', align: 'center', stroke: 'rgba(0,0,0,.6)', strokeWidth: 3 });
+    }
+    function onPointer(e) {
+      if (!mission || phase !== 'aim' || scene.shell || api.reading) return;
+      var pk = scene.pick(e.x / W * 2 - 1, -(e.y / H) * 2 + 1);
+      if (e.type === 'down' || (e.type === 'move' && (api.input.pointer.down || !e.touch))) { scene.setAim(pk.point); aimP = null; }
+      if (e.type === 'up') { scene.setAim(pk.point); aimP = null; fire(); }
+    }
+    function onKey(k, down) { if (down && (k === ' ' || k === 'Enter')) { if (!scene.aimOn) { var tg = targets.filter(function (x) { return x.alive; })[0]; if (tg) scene.setAim(new THREE.Vector3(tg.x, tg.y, tg.z)); } fire(); } }
+    newMission();
+    return {
+      update: update, draw: draw, onKey: onKey, onPointer: onPointer, resize: function (w, h) { W = w; H = h; }, destroy: function () { scene.dispose(); },
+      stats: function () { return { gl: true, scene: scene, tri: scene.tri, calls: scene.calls, light: scene.light, phase: phase, mission: missionNo, rounds: rounds, right: right, targets: targets.map(function (tg) { var p = screenOf(tg); return { ok: tg.ok, text: tg.text, alive: tg.alive, x: Math.round(p.x), y: Math.round(p.y) }; }) }; }
+    };
+  }
+  var THREE = window.THREE;
+
   A.register({
-    id: 'fire-mission', title: 'Fire Mission', icon: '💥', accent: '#ffa552', genre: 'Artillery', music: 'drive',
-    tagline: 'Read the call for fire, lay the howitzer and drop a round on the target that carries the right number, deadline or form.',
+    id: 'fire-mission', title: 'Fire Mission', icon: '💥', accent: '#ffa552', genre: 'Artillery · real 3D', music: 'drive',
+    tagline: 'Read the call for fire, lay the howitzer and drop a round on the target that carries the right number, deadline or form. In real 3D: a valley, trucks that burn, a shell you can follow.',
     drills: 'Dollar thresholds, deadlines, forms, J&A approvals, contract types',
-    controls: 'Mouse or touch: point at the spot where the round should land and click or tap to fire (on a touch screen you can drag to adjust, then let go). Keyboard: up and down set elevation, left and right set the charge, Space or Enter fires. The dotted arc shows the shot on easier paces; on harder levels wind pushes the round, so aim upwind. Three rounds per mission; a wrong target costs a life.',
-    aspect: [1.0, 2.3], orient: 'landscape',
+    controls: 'Tap or click the target you want to hit, or the ground where the round should land (on a touch screen you can drag to adjust, then let go). Keyboard: the arrows move the aim point, Space or Enter fires. The dotted arc shows the shot on easier paces; on harder levels wind pushes the round, so aim upwind. Three rounds per mission; a wrong target costs a life.',
+    aspect: [0.62, 2.3], orient: 'landscape',
     dataOk: function (D) { return factsOf(D).length >= 12; },
     thumb: function (ctx, w, h, t) {
       var g = ctx.createLinearGradient(0, 0, 0, h); g.addColorStop(0, '#1b2a4a'); g.addColorStop(0.65, '#c8714a'); g.addColorStop(1, '#f3c07a'); ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
@@ -86,8 +212,17 @@
       var k = (t % 2.4) / 1.6;
       if (k <= 1) { var sx = 80 + k * (w * 0.85 - 80), sy = h * 0.72 - Math.sin(k * Math.PI) * h * 0.55 + k * 10; ctx.fillStyle = '#fff3c4'; ctx.shadowColor = '#ffd27a'; ctx.shadowBlur = 14; ctx.beginPath(); ctx.arc(sx, sy, 4, 0, Math.PI * 2); ctx.fill(); ctx.shadowBlur = 0; }
       else { var e = (k - 1) * 2; ctx.globalAlpha = Math.max(0, 1 - e); ctx.fillStyle = '#ffb347'; ctx.beginPath(); ctx.arc(w * 0.85, h * 0.72, 10 + e * 50, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1; }
+      if (A.GL && A.GL.ok()) A.pill(ctx, 'REAL 3D', 14, 22, { size: 12, bg: 'rgba(0,0,0,.55)', color: '#f6d991', stroke: '#e6b85a' });
     },
     create: function (api) {
+      if (A.GL && A.GL.ok() && A.GL.GunScene) { try { return create3D(api); } catch (e) { console.error('[fire-mission] 3D failed, drawing in 2D', e); } }
+      return create2D(api);
+    }
+  });
+
+  // ---- the canvas-2D game (the fallback): elevation and charge, the shell drawn by hand ----
+  function create2D(api) {
+    {
       var W = api.W, H = api.H, tier = api.difficulty, all = factsOf(api.data), t = 0;
       var ground = [], targets = [], shell = null, mission = null, missionNo = 0, rounds = ROUNDS, streak = 0;
       var angle = 45, charge = 0.62, recoil = 0, flashT = 0, trail = [], clouds = [], phase = 'aim', phaseT = 0;
@@ -304,5 +439,5 @@
         resize: function () { if (shell) return; var old = targets.map(function (tg) { return tg.alive; }); build(); targets.forEach(function (tg, i) { tg.alive = old[i]; }); }
       };
     }
-  });
+  }
 })();
