@@ -1,42 +1,246 @@
 {
   "far_updates": [
-    {"date": "2026-10-19", "title": "Comments closed on the second batch of FAR Overhaul proposed rules", "body": "The FAR Council's second set of four proposed rules, published 18 September 2026, covered about 16 more FAR parts. Four more proposed rules and then the final rules are still to come. Until then, DoW keeps using its RFO class deviations.", "source": "FAR Council proposed rules (Federal Register)", "url": "https://www.acquisition.gov/far-overhaul"},
-    {"date": "2026-10-01", "title": "CON 7300V Price Analysis is now required for certification", "body": "For the DoW Contracting Professional certification, CON 7300V must be completed after CON 1300V. Components decide whether it applies to people already working on their certification; DoW expects them to take it. Already certified? It is encouraged, not required.", "source": "DPCAP memo, Contracting Functional Area Certification Change for FY27 (5 Jun 2026)", "url": "https://www.acq.osd.mil/dpap/policy/policyvault/USA001296-26-DPCAP.pdf"},
-    {"date": "2026-10-01", "title": "New certification exam FAQs", "body": "FY26 average score was 74.8% and 79% passed on the first try. Test centers pass about 4% more than online testing. Answers come from the RFO-updated FAR and DFARS. Up to three attempts in 12 months, at least 30 days apart.", "source": "DoW Contracting Professional Certification Exam FAQs (1 Oct 2026)", "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/workforce-development.html"},
-    {"date": "2026-09-18", "title": "Second batch of FAR Overhaul proposed rules", "body": "Four more proposed rules continued the formal rulemaking phase of the overhaul.", "source": "FAR Council"},
-    {"date": "2026-07-01", "title": "DoW certified cost or pricing data threshold is now $10 million", "body": "For DoW prime contracts awarded after 30 June 2026, certified cost or pricing data are required above $10 million unless an exception applies (FY2026 NDAA; DFARS 215.403-3 class deviation). The FAR figure for other agencies stays $2.5 million.", "source": "10 U.S.C. 3702; DoW Class Deviation for DFARS Part 215"},
-    {"date": "2026-06-23", "title": "Formal rulemaking for the FAR Overhaul begins", "body": "The first four proposed rules covered 21 FAR parts. Formal rules will eventually replace the class deviations agencies use today.", "source": "FAR Council"},
-    {"date": "2026-05-11", "title": "CON 1400V updated for the FAR Overhaul", "body": "Classes starting on or after 11 May 2026 teach the RFO-updated post-award rules.", "source": "WarU iCatalog", "url": "https://icatalog.waru.edu/CourseDetail/12527"},
-    {"date": "2026-03-31", "title": "CON 3990V now tests the RFO FAR", "body": "The updated certification exam went live on 31 March 2026 (the last legacy exam was 30 March). About 30% of the question bank changed; the competencies did not. Study materials that use pre-RFO numbers, like many class slides, need checking: see Exam path, Class material check.", "source": "WarU, How the RFO Will Affect CON Certification: Student FAQ Sheet (16 Apr 2026)", "url": "https://www.dau.edu/revolutionary-far-overhaul"},
-    {"date": "2026-02-24", "title": "FPDS.gov retired; award reporting is in SAM.gov", "body": "Contract award data is now reported and searched in SAM.gov.", "source": "GSA / SAM.gov"},
-    {"date": "2026-02-01", "title": "DoW adopts the FAR Overhaul", "body": "DoW's RFO class deviations, with matching DFARS changes, took effect. Many FAR sections were renumbered: for example, sole-source authority moved from 6.302-1 to 6.103-1 and ratification from 1.602-3 to 1.405.", "source": "DoW RFO class deviations", "url": "https://www.acq.osd.mil/dpap/dars/dfars_far_overhaul_class_deviations.html"},
-    {"date": "2025-12-18", "title": "FY2026 NDAA signed", "body": "Among many acquisition changes, it raised DoW's certified cost or pricing data threshold (for awards after 30 June 2026) and DoW's justification approval levels ($10 million contracting officer, $100 million competition advocate, $500 million head of the contracting activity).", "source": "Pub. L. 119-60"},
-    {"date": "2025-11-07", "title": "DAU becomes the Warfighting Acquisition University (WarU)", "body": "The school that teaches the certification courses and owns the exam was renamed as part of DoW's acquisition transformation. Its catalog moved to icatalog.waru.edu.", "source": "DoW announcement"},
-    {"date": "2025-10-01", "title": "Inflation adjustment raises key thresholds", "body": "Micro-purchase threshold $15,000 (from $10,000), simplified acquisition threshold $350,000 (from $250,000), FAR certified cost or pricing data threshold $2.5 million, and commercial simplified procedures $9 million.", "source": "FAR Case 2024-001 (FAC 2025-06)"},
-    {"date": "2025-04-15", "title": "The Revolutionary FAR Overhaul begins", "body": "Executive Order 14275 directed the FAR Council to cut the FAR back to what law requires and rewrite it in plain language.", "source": "Executive Order 14275"}
+    {
+      "date": "2026-10-19",
+      "title": "Comments closed on the second batch of FAR Overhaul proposed rules",
+      "body": "The FAR Council's second set of four proposed rules, published 18 September 2026, covered about 16 more FAR parts. Four more proposed rules and then the final rules are still to come. Until then, DoW keeps using its RFO class deviations.",
+      "source": "FAR Council proposed rules (Federal Register)",
+      "url": "https://www.acquisition.gov/far-overhaul"
+    },
+    {
+      "date": "2026-10-01",
+      "title": "CON 7300V Price Analysis is now required for certification",
+      "body": "For the DoW Contracting Professional certification, CON 7300V must be completed after CON 1300V. Components decide whether it applies to people already working on their certification; DoW expects them to take it. Already certified? It is encouraged, not required.",
+      "source": "DPCAP memo, Contracting Functional Area Certification Change for FY27 (5 Jun 2026)",
+      "url": "https://www.acq.osd.mil/dpap/policy/policyvault/USA001296-26-DPCAP.pdf"
+    },
+    {
+      "date": "2026-10-01",
+      "title": "New certification exam FAQs",
+      "body": "FY26 average score was 74.8% and 79% passed on the first try. Test centers pass about 4% more than online testing. Answers come from the RFO-updated FAR and DFARS. Up to three attempts in 12 months, at least 30 days apart.",
+      "source": "DoW Contracting Professional Certification Exam FAQs (1 Oct 2026)",
+      "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/workforce-development.html"
+    },
+    {
+      "date": "2026-09-18",
+      "title": "Second batch of FAR Overhaul proposed rules",
+      "body": "Four more proposed rules continued the formal rulemaking phase of the overhaul.",
+      "source": "FAR Council"
+    },
+    {
+      "date": "2026-07-01",
+      "title": "DoW certified cost or pricing data threshold is now $10 million",
+      "body": "For DoW prime contracts awarded after 30 June 2026, certified cost or pricing data are required above $10 million unless an exception applies (FY2026 NDAA; DFARS 215.403-3 class deviation). The FAR figure for other agencies stays $2.5 million.",
+      "source": "10 U.S.C. 3702; DoW Class Deviation for DFARS Part 215"
+    },
+    {
+      "date": "2026-06-23",
+      "title": "Formal rulemaking for the FAR Overhaul begins",
+      "body": "The first four proposed rules covered 21 FAR parts. Formal rules will eventually replace the class deviations agencies use today.",
+      "source": "FAR Council"
+    },
+    {
+      "date": "2026-05-11",
+      "title": "CON 1400V updated for the FAR Overhaul",
+      "body": "Classes starting on or after 11 May 2026 teach the RFO-updated post-award rules.",
+      "source": "WarU iCatalog",
+      "url": "https://icatalog.waru.edu/CourseDetail/12527"
+    },
+    {
+      "date": "2026-03-31",
+      "title": "CON 3990V now tests the RFO FAR",
+      "body": "The updated certification exam went live on 31 March 2026 (the last legacy exam was 30 March). About 30% of the question bank changed; the competencies did not. Study materials that use pre-RFO numbers, like many class slides, need checking: see Exam path, Class material check.",
+      "source": "WarU, How the RFO Will Affect CON Certification: Student FAQ Sheet (16 Apr 2026)",
+      "url": "https://www.dau.edu/revolutionary-far-overhaul"
+    },
+    {
+      "date": "2026-02-24",
+      "title": "FPDS.gov retired; award reporting is in SAM.gov",
+      "body": "Contract award data is now reported and searched in SAM.gov.",
+      "source": "GSA / SAM.gov"
+    },
+    {
+      "date": "2026-02-01",
+      "title": "DoW adopts the FAR Overhaul",
+      "body": "DoW's RFO class deviations, with matching DFARS changes, took effect. Many FAR sections were renumbered: for example, sole-source authority moved from 6.302-1 to 6.103-1 and ratification from 1.602-3 to 1.405.",
+      "source": "DoW RFO class deviations",
+      "url": "https://www.acq.osd.mil/dpap/dars/dfars_far_overhaul_class_deviations.html"
+    },
+    {
+      "date": "2025-12-18",
+      "title": "FY2026 NDAA signed",
+      "body": "Among many acquisition changes, it raised DoW's certified cost or pricing data threshold (for awards after 30 June 2026) and DoW's justification approval levels ($10 million contracting officer, $100 million competition advocate, $500 million head of the contracting activity).",
+      "source": "Pub. L. 119-60"
+    },
+    {
+      "date": "2025-11-07",
+      "title": "DAU becomes the Warfighting Acquisition University (WarU)",
+      "body": "The school that teaches the certification courses and owns the exam was renamed as part of DoW's acquisition transformation. Its catalog moved to icatalog.waru.edu.",
+      "source": "DoW announcement"
+    },
+    {
+      "date": "2025-10-01",
+      "title": "Inflation adjustment raises key thresholds",
+      "body": "Micro-purchase threshold $15,000 (from $10,000), simplified acquisition threshold $350,000 (from $250,000), FAR certified cost or pricing data threshold $2.5 million, and commercial simplified procedures $9 million.",
+      "source": "FAR Case 2024-001 (FAC 2025-06)"
+    },
+    {
+      "date": "2025-04-15",
+      "title": "The Revolutionary FAR Overhaul begins",
+      "body": "Executive Order 14275 directed the FAR Council to cut the FAR back to what law requires and rewrite it in plain language.",
+      "source": "Executive Order 14275"
+    }
   ],
   "guide_changes": [
-    {"version": "0.25.1", "date": "2026-10-30", "title": "Eleven more questions, a cite fixed, bigger buttons on phones", "notes": "The contingency, systems and exam lessons gained eleven questions. Lesson 33 now cites DFARS 225.371-3 and clause 252.225-7040 for SPOT. Buddy answers questions about voices. Cite chips, lesson Play buttons, glossary letters and the top-bar buttons are easier to tap on a phone."},
-    {"version": "0.25.0", "date": "2026-10-30", "title": "Range Day: the rifle range in real 3D", "notes": "A new Arcade game drawn in real 3D: the tower reads a glossary clue, three targets pop up with terms, and you fire an M4A1 at the right one. Twenty exposures and thirty rounds, scored Expert, Sharpshooter or Marksman like a rifle table. Real light and shadows, bloom, brass, splinters and bullet holes. Qual Range, the 2D version, stays."},
-    {"version": "0.24.0", "date": "2026-10-30", "title": "App voices: a man or a woman, US or UK, the same on every phone", "notes": "Settings & help → Display → Read aloud → Voice now offers four App voices (Amber, Joe, Cori, Leo). Each is a one-time download of about 63 MB (plus 31 MB for the speech engine the first time) and then works offline. On Android the phone's own voice list could not change the voice; these can."},
-    {"version": "0.23.2", "date": "2026-10-29", "title": "Terms of use: Google sign-in spelled out", "notes": "The terms now say you can create your account with Google and what Google passes on (your name, email address and profile picture link); nothing else is collected. Because the terms changed, the app asks you to agree once more. Continue with Google while offline now tells you to connect first."},
-    {"version": "0.23.1", "date": "2026-10-29", "title": "What the owner confirmed about the Army process", "notes": "The local goal is 6 months in most contracting support brigades; a system role takes two to three weeks; MICC's onboarding is NGAP; the certification request goes through CAMP by authorized personnel; a missed 36-month deadline is usually covered by an exception to policy."},
-    {"version": "0.23.0", "date": "2026-10-29", "title": "Continue with Google", "notes": "The Sign in pop-up now starts with a Continue with Google button: one tap with your Google account, no password to make up or remember, and your progress saves to the account the same way. Email and password still work, and the app says hello by the name on your Google account."},
-    {"version": "0.22.0", "date": "2026-10-29", "title": "Every lesson and question checked against the FAR Overhaul", "notes": "All 35 lessons and 384 questions were read against the RFO text on acquisition.gov, cite by cite. Thirteen corrections, the biggest in Lesson 1: the guiding principles are now the seven RFO principles in FAR 1.102(a). Also fixed: the QASP cite (DFARS 237.172), f.o.b. and risk-of-loss cites, sources sought and RFI cites, the competitive range wording, and a credential code. Seven glossary terms added. A lesson's Check yourself now shows up to six questions with a button for the rest, and the Practice test takes keyboard shortcuts (1 to 4, Enter, arrows, F)."},
-    {"version": "0.21.0", "date": "2026-10-29", "title": "Read-aloud with rise and fall", "notes": "Listen buttons now read the way a person does: questions rise, sentences settle, headings get a breath, lists keep a beat. Settings & help → Display → Read aloud has a Tone switch (Lively or Even) beside the voice and speed. FAR cites, Part IV, plurals and twenty more contracting words are said the way people say them. Buddy's bubble draws itself from a dot and gives a gentle, regular nudge until you open it once."},
-    {"version": "0.20.0", "date": "2026-10-29", "title": "Pick a voice that sounds like a person", "notes": "Settings & help → Read aloud lists the voices on your phone or computer, natural ones first, with a sample and a speed slider, and tells you how to download a more human voice. Listen buttons now say acronyms and course numbers the way contracting people say them."},
-    {"version": "0.19.0", "date": "2026-10-29", "title": "Meet Buddy, your study buddy", "notes": "Tap the chat bubble on any page and ask in plain words: what is a KO, how much is the SAT, how do I register in AITAS. Buddy answers from the guide on your device, with no internet and no AI account, and opens the page to read more. Need more depth? One tap sends your question to Google AI Mode, ChatGPT or Claude in your own account. Home has a new look, and pages now rise into view as you scroll."},
-    {"version": "0.18.0", "date": "2026-10-29", "title": "One install button, and accounts with your name", "notes": "Open the website on a phone and you get the app's install page with one button for your phone: Install app in Chrome on Android, Install with Chrome in Samsung Internet (which otherwise shows an unsafe-app warning), or the three Safari taps on an iPhone. Sign in now sits in the top bar; creating an account asks for your name, can show your password while you type it, and the app says hello by name."},
-    {"version": "0.17.0", "date": "2026-10-29", "title": "Save your progress to an account", "notes": "Optional: under Settings & help → Your account, create an account with your email and a password. Your progress saves to it after every change and comes back on any phone or computer where you sign in."},
-    {"version": "0.16.0", "date": "2026-10-29", "title": "B2B Guide is now B2B Exam Prep", "notes": "New name, same app: B2B Exam Prep (B2B Prep on your home screen). Opening it in a browser now asks you to install the app first, with one tap on Android or three Safari steps on iPhone. Your progress carries over."},
-    {"version": "0.15.0", "date": "2026-10-29", "title": "What to trust from outside the guide", "notes": "The exam page (Certification, The exam) now has Study material from other places: what to use first (CON 3910, the exam FAQ, the FAR Companion, the whole RFO in one PDF, FAI's FAR Overhaul training and Pearson's demo test), how to check a Quizlet deck or free site before you trust it, and why to skip anything sold as the real exam. Most free decks online were made before the exam moved to the overhauled FAR on 31 March 2026. Ten new practice questions cover the exam areas the bank had few questions on: Skills and Roles, Situational Assessment, Team Dynamics, the seller's Plan Sales and Prepare Offer, and Plan Negotiations. Links has five new official links."},
-    {"version": "0.14.2", "date": "2026-10-29", "title": "Install the app in one tap", "notes": "Opened B2B Guide in a phone browser? A Get the app card now installs it on Android with one tap, and shows iPhone users the three Safari steps. Once installed it opens full screen from its own icon and keeps your progress."},
-    {"version": "0.14.1", "date": "2026-10-29", "title": "B2B Guide is now a phone app", "notes": "Scan the QR code (About page, or the printed install sheet) to install B2B Guide on an iPhone or Android phone: free, no app store, no account. It works offline after the first open, and new versions arrive by themselves. B2B Guide now opens with short terms of use: it is owned by SFC Rabin Napit, free for your own study and for sharing unchanged, but not to copy, change or sell."},
-    {"version": "0.14.0", "date": "2026-10-29", "title": "Lesson pictures and a fairer question bank", "notes": "Every lesson now opens with pictures you can play (each part lights up and is read aloud) and, for the dollar rules, Try it tools that answer for any amount: who does what, the dollar ladder, the contract-type risk scale, the debriefing and protest clocks, closeout times and more, in icons and short words. The practice questions were rebalanced so the right answer is no longer usually the longest option, so practice scores now show real readiness. The guided tour now opens every main page, including Official documents. The AITAS links now open the AITAS landing page, where you register for courses."},
-    {"version": "0.13.0", "date": "2026-10-28", "title": "Official documents, picture explanations and Supply Line", "notes": "New Arcade game, Supply Line: lead a supply convoy to the FOB through five checkpoints, one for each part of the contract life cycle; right answers load the cargo and clean runs earn challenge coins. New Official documents page: 26 DoW and WarU documents behind the certification, each with a simple picture version and the real pages (the exam FAQ, roadmap, flowchart, CON 7300V memo, career model, competency model and more open inside the file, without internet). Certification 101 now explains the exam with pictures: the exam journey step by step, the 48-hour and 90-day rules, retakes, the 36-month clock, continuous learning points and your career path. New study tips from the WarU exam team, updated credential codes, and continuous learning that starts when you join, not when you certify."},
-    {"version": "0.12.0", "date": "2026-10-28", "title": "Guided tour, About page and day mode", "notes": "A guided tour shows what each part of the guide is for (offered on first open; the ? button or the ? key starts it again). New About page with the developer and maintainer and a feedback button. The side menu collapses to a rail of icons. Day mode is now the default (Settings & help can follow your device instead). Top bar labels no longer run off the top of the window. In Contract Quest a right answer now fires your RPG."},
-    {"version": "0.11.0", "date": "2026-10-28", "title": "The B2B Arcade", "notes": "Practice → Arcade: five action games on the guide's own content. Contract Quest (RPG battles through the four exam areas), Fire Mission (artillery on thresholds, deadlines and forms), Qual Range (pop-up targets for glossary terms, scored Expert to Marksman), Part Patrol (a space shooter on FAR parts, UCF sections and PIID letters) and Sort Yard (a conveyor sorting line). Four paces, XP and ranks, and a study list after every run. The exam path has nine Arcade tasks; the old games are now Quick drills."},
-    {"version": "0.10.0", "date": "2026-10-28", "title": "6-Month Exam Path and the B2B class materials", "notes": "New Exam path: 26 dated weeks with tasks, weekly checks and monthly timed checkpoints. The Back to Basics class materials were checked against the RFO FAR: 143 class practice questions added (91 still right, 38 updated, 14 corrected), 34 questions on topics past test takers reported, 52 class claims checked, 31 test-taker topics, and four new flashcard decks (Jeopardy review, UCF, forms, PIID letters). Fixed a lesson that still listed the reserved 52.212-5."},
-    {"version": "0.9.0", "date": "2026-10-23", "title": "First test version", "notes": "Plan builder, Certification 101, 19 courses, 35 lessons, 197 practice questions with an exam simulator, flashcards, four games, a glossary of about 245 terms and a FAR reference. Built for testing with new 51Cs and 1102s."}
+    {
+      "version": "0.26.1",
+      "date": "2026-10-30",
+      "title": "Text size in one place",
+      "notes": "The side menu's bottom panel now shows Day / night only. Text size is set under Settings & help, Display tab; on a wide screen the Aa button at the top still cycles it."
+    },
+    {
+      "version": "0.26.0",
+      "date": "2026-10-30",
+      "title": "Supply Line in real 3D, four bosses, the Master Gunner and the campaign",
+      "notes": "Supply Line's convoy is now drawn in real 3D, from dawn at the Ops Center to night at the FOB, with the five checkpoints as real places. Contract Quest's bosses are the Unauthorized Commitment, the Bid Bust, the Audit and the Protest, each with its own questions and a second-phase attack. Your Master Gunner briefs and reacts in a bubble. The campaign, Your first year as a 51C, opens with chapters 1 to 4: three missions each across Range Day, Supply Line and a boss fight."
+    },
+    {
+      "version": "0.25.2",
+      "date": "2026-10-30",
+      "title": "Terms and privacy on their own pages",
+      "notes": "The terms of use and a plain privacy page (no tracking; what an account stores, with or without Google; how to delete it) now have their own pages on the website, linked from About, so you can read or share them without opening the app."
+    },
+    {
+      "version": "0.25.1",
+      "date": "2026-10-30",
+      "title": "Eleven more questions, a cite fixed, bigger buttons on phones",
+      "notes": "The contingency, systems and exam lessons gained eleven questions. Lesson 33 now cites DFARS 225.371-3 and clause 252.225-7040 for SPOT. Buddy answers questions about voices. Cite chips, lesson Play buttons, glossary letters and the top-bar buttons are easier to tap on a phone."
+    },
+    {
+      "version": "0.25.0",
+      "date": "2026-10-30",
+      "title": "Range Day: the rifle range in real 3D",
+      "notes": "A new Arcade game drawn in real 3D: the tower reads a glossary clue, three targets pop up with terms, and you fire an M4A1 at the right one. Twenty exposures and thirty rounds, scored Expert, Sharpshooter or Marksman like a rifle table. Real light and shadows, bloom, brass, splinters and bullet holes. Qual Range, the 2D version, stays."
+    },
+    {
+      "version": "0.24.0",
+      "date": "2026-10-30",
+      "title": "App voices: a man or a woman, US or UK, the same on every phone",
+      "notes": "Settings & help → Display → Read aloud → Voice now offers four App voices (Amber, Joe, Cori, Leo). Each is a one-time download of about 63 MB (plus 31 MB for the speech engine the first time) and then works offline. On Android the phone's own voice list could not change the voice; these can."
+    },
+    {
+      "version": "0.23.2",
+      "date": "2026-10-29",
+      "title": "Terms of use: Google sign-in spelled out",
+      "notes": "The terms now say you can create your account with Google and what Google passes on (your name, email address and profile picture link); nothing else is collected. Because the terms changed, the app asks you to agree once more. Continue with Google while offline now tells you to connect first."
+    },
+    {
+      "version": "0.23.1",
+      "date": "2026-10-29",
+      "title": "What the owner confirmed about the Army process",
+      "notes": "The local goal is 6 months in most contracting support brigades; a system role takes two to three weeks; MICC's onboarding is NGAP; the certification request goes through CAMP by authorized personnel; a missed 36-month deadline is usually covered by an exception to policy."
+    },
+    {
+      "version": "0.23.0",
+      "date": "2026-10-29",
+      "title": "Continue with Google",
+      "notes": "The Sign in pop-up now starts with a Continue with Google button: one tap with your Google account, no password to make up or remember, and your progress saves to the account the same way. Email and password still work, and the app says hello by the name on your Google account."
+    },
+    {
+      "version": "0.22.0",
+      "date": "2026-10-29",
+      "title": "Every lesson and question checked against the FAR Overhaul",
+      "notes": "All 35 lessons and 384 questions were read against the RFO text on acquisition.gov, cite by cite. Thirteen corrections, the biggest in Lesson 1: the guiding principles are now the seven RFO principles in FAR 1.102(a). Also fixed: the QASP cite (DFARS 237.172), f.o.b. and risk-of-loss cites, sources sought and RFI cites, the competitive range wording, and a credential code. Seven glossary terms added. A lesson's Check yourself now shows up to six questions with a button for the rest, and the Practice test takes keyboard shortcuts (1 to 4, Enter, arrows, F)."
+    },
+    {
+      "version": "0.21.0",
+      "date": "2026-10-29",
+      "title": "Read-aloud with rise and fall",
+      "notes": "Listen buttons now read the way a person does: questions rise, sentences settle, headings get a breath, lists keep a beat. Settings & help → Display → Read aloud has a Tone switch (Lively or Even) beside the voice and speed. FAR cites, Part IV, plurals and twenty more contracting words are said the way people say them. Buddy's bubble draws itself from a dot and gives a gentle, regular nudge until you open it once."
+    },
+    {
+      "version": "0.20.0",
+      "date": "2026-10-29",
+      "title": "Pick a voice that sounds like a person",
+      "notes": "Settings & help → Read aloud lists the voices on your phone or computer, natural ones first, with a sample and a speed slider, and tells you how to download a more human voice. Listen buttons now say acronyms and course numbers the way contracting people say them."
+    },
+    {
+      "version": "0.19.0",
+      "date": "2026-10-29",
+      "title": "Meet Buddy, your study buddy",
+      "notes": "Tap the chat bubble on any page and ask in plain words: what is a KO, how much is the SAT, how do I register in AITAS. Buddy answers from the guide on your device, with no internet and no AI account, and opens the page to read more. Need more depth? One tap sends your question to Google AI Mode, ChatGPT or Claude in your own account. Home has a new look, and pages now rise into view as you scroll."
+    },
+    {
+      "version": "0.18.0",
+      "date": "2026-10-29",
+      "title": "One install button, and accounts with your name",
+      "notes": "Open the website on a phone and you get the app's install page with one button for your phone: Install app in Chrome on Android, Install with Chrome in Samsung Internet (which otherwise shows an unsafe-app warning), or the three Safari taps on an iPhone. Sign in now sits in the top bar; creating an account asks for your name, can show your password while you type it, and the app says hello by name."
+    },
+    {
+      "version": "0.17.0",
+      "date": "2026-10-29",
+      "title": "Save your progress to an account",
+      "notes": "Optional: under Settings & help → Your account, create an account with your email and a password. Your progress saves to it after every change and comes back on any phone or computer where you sign in."
+    },
+    {
+      "version": "0.16.0",
+      "date": "2026-10-29",
+      "title": "B2B Guide is now B2B Exam Prep",
+      "notes": "New name, same app: B2B Exam Prep (B2B Prep on your home screen). Opening it in a browser now asks you to install the app first, with one tap on Android or three Safari steps on iPhone. Your progress carries over."
+    },
+    {
+      "version": "0.15.0",
+      "date": "2026-10-29",
+      "title": "What to trust from outside the guide",
+      "notes": "The exam page (Certification, The exam) now has Study material from other places: what to use first (CON 3910, the exam FAQ, the FAR Companion, the whole RFO in one PDF, FAI's FAR Overhaul training and Pearson's demo test), how to check a Quizlet deck or free site before you trust it, and why to skip anything sold as the real exam. Most free decks online were made before the exam moved to the overhauled FAR on 31 March 2026. Ten new practice questions cover the exam areas the bank had few questions on: Skills and Roles, Situational Assessment, Team Dynamics, the seller's Plan Sales and Prepare Offer, and Plan Negotiations. Links has five new official links."
+    },
+    {
+      "version": "0.14.2",
+      "date": "2026-10-29",
+      "title": "Install the app in one tap",
+      "notes": "Opened B2B Guide in a phone browser? A Get the app card now installs it on Android with one tap, and shows iPhone users the three Safari steps. Once installed it opens full screen from its own icon and keeps your progress."
+    },
+    {
+      "version": "0.14.1",
+      "date": "2026-10-29",
+      "title": "B2B Guide is now a phone app",
+      "notes": "Scan the QR code (About page, or the printed install sheet) to install B2B Guide on an iPhone or Android phone: free, no app store, no account. It works offline after the first open, and new versions arrive by themselves. B2B Guide now opens with short terms of use: it is owned by SFC Rabin Napit, free for your own study and for sharing unchanged, but not to copy, change or sell."
+    },
+    {
+      "version": "0.14.0",
+      "date": "2026-10-29",
+      "title": "Lesson pictures and a fairer question bank",
+      "notes": "Every lesson now opens with pictures you can play (each part lights up and is read aloud) and, for the dollar rules, Try it tools that answer for any amount: who does what, the dollar ladder, the contract-type risk scale, the debriefing and protest clocks, closeout times and more, in icons and short words. The practice questions were rebalanced so the right answer is no longer usually the longest option, so practice scores now show real readiness. The guided tour now opens every main page, including Official documents. The AITAS links now open the AITAS landing page, where you register for courses."
+    },
+    {
+      "version": "0.13.0",
+      "date": "2026-10-28",
+      "title": "Official documents, picture explanations and Supply Line",
+      "notes": "New Arcade game, Supply Line: lead a supply convoy to the FOB through five checkpoints, one for each part of the contract life cycle; right answers load the cargo and clean runs earn challenge coins. New Official documents page: 26 DoW and WarU documents behind the certification, each with a simple picture version and the real pages (the exam FAQ, roadmap, flowchart, CON 7300V memo, career model, competency model and more open inside the file, without internet). Certification 101 now explains the exam with pictures: the exam journey step by step, the 48-hour and 90-day rules, retakes, the 36-month clock, continuous learning points and your career path. New study tips from the WarU exam team, updated credential codes, and continuous learning that starts when you join, not when you certify."
+    },
+    {
+      "version": "0.12.0",
+      "date": "2026-10-28",
+      "title": "Guided tour, About page and day mode",
+      "notes": "A guided tour shows what each part of the guide is for (offered on first open; the ? button or the ? key starts it again). New About page with the developer and maintainer and a feedback button. The side menu collapses to a rail of icons. Day mode is now the default (Settings & help can follow your device instead). Top bar labels no longer run off the top of the window. In Contract Quest a right answer now fires your RPG."
+    },
+    {
+      "version": "0.11.0",
+      "date": "2026-10-28",
+      "title": "The B2B Arcade",
+      "notes": "Practice → Arcade: five action games on the guide's own content. Contract Quest (RPG battles through the four exam areas), Fire Mission (artillery on thresholds, deadlines and forms), Qual Range (pop-up targets for glossary terms, scored Expert to Marksman), Part Patrol (a space shooter on FAR parts, UCF sections and PIID letters) and Sort Yard (a conveyor sorting line). Four paces, XP and ranks, and a study list after every run. The exam path has nine Arcade tasks; the old games are now Quick drills."
+    },
+    {
+      "version": "0.10.0",
+      "date": "2026-10-28",
+      "title": "6-Month Exam Path and the B2B class materials",
+      "notes": "New Exam path: 26 dated weeks with tasks, weekly checks and monthly timed checkpoints. The Back to Basics class materials were checked against the RFO FAR: 143 class practice questions added (91 still right, 38 updated, 14 corrected), 34 questions on topics past test takers reported, 52 class claims checked, 31 test-taker topics, and four new flashcard decks (Jeopardy review, UCF, forms, PIID letters). Fixed a lesson that still listed the reserved 52.212-5."
+    },
+    {
+      "version": "0.9.0",
+      "date": "2026-10-23",
+      "title": "First test version",
+      "notes": "Plan builder, Certification 101, 19 courses, 35 lessons, 197 practice questions with an exam simulator, flashcards, four games, a glossary of about 245 terms and a FAR reference. Built for testing with new 51Cs and 1102s."
+    }
   ]
 }

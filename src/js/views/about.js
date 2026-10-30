@@ -69,7 +69,8 @@
       h('p', {}, h('b', {}, (m.app_name || 'This guide') + ' is owned by ' + m.owner + '. '),
         'Use it free for your own study, and share the official link or an unchanged copy. Copying it, changing it, putting it into another product or charging for it needs the owner\'s written permission.'),
       m.copyright ? h('p.small.muted', {}, m.copyright) : null,
-      h('button.btn', { type: 'button', onclick: function () { if (CORB.terms) CORB.terms.show(); } }, icon('file'), 'Read the terms of use')));
+      h('button.btn', { type: 'button', onclick: function () { if (CORB.terms) CORB.terms.show(); } }, icon('file'), 'Read the terms of use'),
+      m.site_url ? h('p.small.muted', {}, 'Also on the website: ', h('a', { href: m.site_url + 'terms.html', target: '_blank', rel: 'noopener' }, 'terms of use'), ' and ', h('a', { href: m.site_url + 'privacy.html', target: '_blank', rel: 'noopener' }, 'privacy'), '.') : null));
   }
 
   function whatItIs(h, icon) {

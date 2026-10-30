@@ -83,8 +83,7 @@
         }));
       })),
       h('div.side-tools', {},
-        h('button.btn.sm', { type: 'button', onclick: function () { CORB.toggleTheme(); } }, icon('moon'), 'Day / night'),
-        h('button.btn.sm', { type: 'button', onclick: function () { CORB.cycleTextSize(); } }, icon('text'), 'Text size')),
+        h('button.btn.sm', { type: 'button', onclick: function () { CORB.toggleTheme(); } }, icon('moon'), 'Day / night')),
       h('button.side-collapse', { type: 'button', 'aria-label': 'Collapse the menu', onclick: function () { CORB.setSideMini(!isMini()); } }, icon('arrow-left'), h('span', {}, 'Collapse menu')),
       h('div.side-foot', {},
         meta.copyright ? h('div', {}, meta.copyright + ' ', h('a', { href: '#', onclick: function (e) { e.preventDefault(); if (CORB.terms) CORB.terms.show(); } }, 'Terms of use')) : null,

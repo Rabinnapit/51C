@@ -8,7 +8,7 @@ Writes:
   dist/B2B-Exam-Prep-Preview.html   preview edition for a claude.ai artifact: no outer <html> tags, no downloads, no printing.
   docs/index.html               web edition for GitHub Pages: the same app plus "install as an app" and an update notice.
   docs/B2B-Exam-Prep.html           a copy of the offline edition that the website offers for download
-  docs/manifest.webmanifest, docs/sw.js, docs/icons/, docs/version.json, docs/.nojekyll
+  docs/manifest.webmanifest, docs/sw.js, docs/icons/, docs/version.json, docs/.nojekyll, docs/terms.html, docs/privacy.html
   src/index.dev.html            multi-file page for development (python -m http.server 8790 --directory src)
 
 Content lives in src/data/*.json. A file named <module>-<part>.json is joined into <module>, in file-name order
@@ -19,7 +19,7 @@ Checks: no external script, style, font or image references; one embeddedState b
 script; the offline and preview editions contain no fetch, XMLHttpRequest or service worker code; size budget.
 Run tools/check_content.py first to validate the content itself.
 """
-import base64, json, os, re, sys, shutil, hashlib, datetime
+import base64, json, os, re, sys, shutil, hashlib, datetime, html as htmlmod
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -195,6 +195,79 @@ def check(html: str, edition: str):
     return problems
 
 
+
+SITE_CSS = (":root{color-scheme:light}body{margin:0;font:17px/1.55 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:#f3f5f1;color:#1b2420}"
+            "main{max-width:44rem;margin:0 auto;padding:28px 20px 60px}header{display:flex;align-items:center;gap:12px;margin-bottom:22px}"
+            "header img{width:44px;height:44px;border-radius:10px}header a{color:#1f5e46;text-decoration:none;font-weight:700;font-size:1.05rem}"
+            "h1{font-size:1.9rem;line-height:1.2;margin:.2em 0 .5em;color:#1f5e46}h2{font-size:1.2rem;margin:1.4em 0 .4em;color:#1f5e46}"
+            "ol,ul{padding-left:1.3em}li{margin:.5em 0}a{color:#1f5e46}.muted{color:#5b665f;font-size:.95rem}"
+            "footer{margin-top:36px;border-top:1px solid #d7ddd8;padding-top:14px;font-size:.92rem;color:#5b665f}")
+
+
+def site_page(title: str, body: str) -> str:
+    """A plain public page next to the app (terms.html, privacy.html): the app's colours, system fonts, no scripts."""
+    name = META.get("app_name", "B2B Exam Prep")
+    esc = htmlmod.escape
+    parts = ["<!doctype html>", "<html lang='en'>", "<head>", "<meta charset='utf-8'>",
+             "<meta name='viewport' content='width=device-width, initial-scale=1'>",
+             "<title>" + esc(title) + " · " + esc(name) + "</title>",
+             "<link rel='icon' href='icons/icon-32.png'>", "<style>" + SITE_CSS + "</style>", "</head>", "<body>", "<main>",
+             "<header><img src='icons/icon-192.png' alt=''><a href='./'>" + esc(name) + "</a></header>",
+             body,
+             "<footer><p>" + esc(META.get("copyright", "")) + " · <a href='./'>Open " + esc(name) + "</a> · "
+             "<a href='terms.html'>Terms of use</a> · <a href='privacy.html'>Privacy</a></p></footer>",
+             "</main>", "</body>", "</html>", ""]
+    return "\n".join(parts)
+
+
+def write_site_pages():
+    """terms.html and privacy.html, generated from meta.terms so the website and the app always say the same thing
+    (Google's sign-in screen review asks for public links to both). Also copies any file in src/web/root/ (such as a
+    Search Console verification file) to the root of the site."""
+    t = META.get("terms") or {}
+    name = META.get("app_name", "B2B Exam Prep")
+    email = (META.get("maintainer") or {}).get("email", "")
+    esc = htmlmod.escape
+
+    def rich(text: str) -> str:
+        out = esc(str(text).replace("{email}", email))
+        out = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", out)
+        if email:
+            out = out.replace(esc(email), "<a href='mailto:" + esc(email) + "'>" + esc(email) + "</a>")
+        return out
+
+    points = t.get("points") or []
+    terms_body = "\n".join(
+        ["<h1>" + esc(t.get("title", "Terms of use")) + "</h1>"]
+        + (["<p>" + rich(t["intro"]) + "</p>"] if t.get("intro") else [])
+        + ["<ol>"] + ["<li>" + rich(p) + "</li>" for p in points] + ["</ol>"]
+        + ["<p class='muted'>Version " + esc(str(t.get("version", ""))) + ". The app shows these terms on first use and again whenever they change.</p>"])
+    privacy_point = next((str(p) for p in points if "privacy" in str(p).lower()), "")
+    privacy_point = re.sub(r"^\*\*[^*]+\*\*\s*", "", privacy_point)
+    privacy_body = "\n".join(
+        ["<h1>Privacy</h1>",
+         "<p><strong>" + esc(name) + " does no tracking.</strong> No ads, no analytics, no tracking cookies. "
+         "Your study progress lives on your own phone or computer unless you choose to create an account.</p>"]
+        + (["<h2>Accounts</h2>", "<p>" + rich(privacy_point) + "</p>"] if privacy_point else [])
+        + ["<h2>What an account stores</h2>", "<ul>",
+           "<li>Your name, your email address and your study progress, kept by Supabase (the account service) in the United States.</li>",
+           "<li>If you sign in with Google: the name, email address and profile picture link that Google shares with the account service, "
+           "and your Google account ID, so Google can recognise you next time.</li>",
+           "<li>Nothing else. The app never sees your password; Supabase stores only a scrambled form of it.</li>", "</ul>",
+           "<h2>Delete your account</h2>",
+           "<p>In the app, open your account from the top bar and choose <strong>Delete my account</strong>. The account and the "
+           "progress saved in it are deleted for good; the progress on your device stays.</p>",
+           "<h2>Questions</h2>",
+           "<p>Email the owner at <a href='mailto:" + esc(email) + "'>" + esc(email) + "</a>. The full "
+           "<a href='terms.html'>terms of use</a> are on their own page.</p>"])
+    (DOCS / "terms.html").write_text(site_page(t.get("title", "Terms of use"), terms_body), encoding="utf-8")
+    (DOCS / "privacy.html").write_text(site_page("Privacy", privacy_body), encoding="utf-8")
+    root = SRC / "web" / "root"
+    if root.exists():
+        for f in root.iterdir():
+            if f.is_file():
+                shutil.copyfile(f, DOCS / f.name)
+
 def write_web_assets():
     DOCS.mkdir(exist_ok=True)
     (DOCS / ".nojekyll").write_text("", encoding="utf-8")
@@ -245,6 +318,7 @@ if __name__ == "__main__":
         print(f"{edition:8} {out.relative_to(ROOT)}  {out.stat().st_size/1024/1024:.2f} MB")
     shutil.copyfile(outputs["offline"], DOCS / f"{APP_FILE}.html")
     write_web_assets()
+    write_site_pages()
     dev = SRC / "index.dev.html"
     dev.write_text(assemble("offline", dev=True), encoding="utf-8")
     print(f"dev      {dev.relative_to(ROOT)}")

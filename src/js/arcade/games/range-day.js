@@ -8,24 +8,26 @@
   var A = window.ARCADE;
   if (!A || typeof A.register !== 'function') return;
 
-  var EXPOSURES = 20, AMMO = 30;
+  var EXPOSURES = 20, AMMO = 30, FULL = 20;
   var EXPOSE = { recruit: 16, regular: 12, veteran: 9, elite: 7 };
   var SWAY = { recruit: 0, regular: 0, veteran: 0.012, elite: 0.022 };   // sight drift as a fraction of the screen, mouse and keyboard only
   var LANES = [-1.55, 0, 1.55], ROWS = [{ z: -5.5, m: 25 }, { z: -8.5, m: 50 }, { z: -12, m: 75 }];
 
   function termsOf(D) { return ((D && D.terms) || []).filter(function (t) { return t && t.term && t.clue; }); }
+  // the rifle standard scaled to the table: Expert 36 of 40, Sharpshooter 30, Marksman 23 (18, 15 and 12 of 20)
   function badgeFor(hits) {
-    if (hits >= 18) return { icon: '🏅', name: 'Expert', desc: hits + ' of ' + EXPOSURES + ' hits. Expert is 18 or more (36 of 40 on a rifle table).', color: '#f6d991' };
-    if (hits >= 15) return { icon: '🥈', name: 'Sharpshooter', desc: hits + ' of ' + EXPOSURES + ' hits. 18 makes Expert.', color: '#c9d6e3' };
-    if (hits >= 12) return { icon: '🥉', name: 'Marksman', desc: hits + ' of ' + EXPOSURES + ' hits. 15 makes Sharpshooter.', color: '#e0a36b' };
-    return { icon: '🔁', name: 'Unqualified: re-fire', desc: hits + ' of ' + EXPOSURES + ' hits. 12 qualifies. Study the list below and re-fire.', color: '#ff9c9c' };
+    var ex = Math.ceil(EXPOSURES * 0.9), sh = Math.ceil(EXPOSURES * 0.75), mk = Math.ceil(EXPOSURES * 0.6);
+    if (hits >= ex) return { icon: '🏅', name: 'Expert', desc: hits + ' of ' + EXPOSURES + ' hits. Expert is ' + ex + ' or more (36 of 40 on a rifle table).', color: '#f6d991' };
+    if (hits >= sh) return { icon: '🥈', name: 'Sharpshooter', desc: hits + ' of ' + EXPOSURES + ' hits. ' + ex + ' makes Expert.', color: '#c9d6e3' };
+    if (hits >= mk) return { icon: '🥉', name: 'Marksman', desc: hits + ' of ' + EXPOSURES + ' hits. ' + sh + ' makes Sharpshooter.', color: '#e0a36b' };
+    return { icon: '🔁', name: 'Unqualified: re-fire', desc: hits + ' of ' + EXPOSURES + ' hits. ' + mk + ' qualifies. Study the list below and re-fire.', color: '#ff9c9c' };
   }
 
   A.register({
     id: 'range-day', title: 'Range Day', icon: '🎯', accent: '#e6b85a', genre: 'Rifle range · real 3D', music: 'tense',
     tagline: 'The qualification range in real 3D. The tower reads a clue, three targets pop up carrying terms, and you fire the M4A1 at the right one before they drop.',
     drills: 'The 243-term glossary: acronyms and definitions',
-    controls: 'Tap or click a target to fire. Keyboard: left and right move the sight between targets, Space or Enter fires. 20 exposures and 30 rounds: 18 hits for Expert, 15 Sharpshooter, 12 Marksman. On Veteran and Elite the sight sways, so time your shot.',
+    controls: 'Tap or click a target to fire. Keyboard: left and right move the sight between targets, Space or Enter fires. 20 exposures and 30 rounds: 18 hits for Expert, 15 Sharpshooter, 12 Marksman (a campaign table is 10 targets and 15 rounds). On Veteran and Elite the sight sways, so time your shot.',
     aspect: [0.5, 2.3], gateAt: 'top', noLives: true, livesLabel: 'Rounds', outTitle: 'Out of ammunition',
     livesText: function (st) { return st.inst && st.inst.ammoText ? st.inst.ammoText() : ''; },
     dataOk: function (D) { return termsOf(D).length >= 20 && !!(A.GL && A.GL.ok()); },
@@ -47,7 +49,10 @@
       A.pill(ctx, 'REAL 3D', 14, 22, { size: 12, bg: 'rgba(0,0,0,.55)', color: '#f6d991', stroke: '#e6b85a' });
     },
     create: function (api) {
-      var W = api.W, H = api.H, tier = api.difficulty, terms = termsOf(api.data), t = 0, feel = A.feel;
+      var W = api.W, H = api.H, tier = api.difficulty, terms = termsOf(api.data), t = 0, feel = A.feel, opts = api.opts || {};
+      // a campaign mission narrows the terms to the month's glossary categories and shortens the table
+      if (opts.cats && opts.cats.length) { var sub = terms.filter(function (x) { return opts.cats.indexOf(x.cat) >= 0; }); if (sub.length >= 12) terms = sub; }
+      if (opts.exposures > 0) { EXPOSURES = opts.exposures; AMMO = Math.round(EXPOSURES * 1.5); }
       var coarse = false; try { coarse = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
       var scene = null, glError = null;
       try { scene = new A.GL.RangeScene({ mobile: coarse, reduce: feel.reduce, width: 640, height: 400 }); } catch (e) { glError = e; }
@@ -86,7 +91,7 @@
       }
       function finish() {
         var b = badgeFor(hits);
-        api.end({ won: hits >= 12, title: b.name, message: 'You hit ' + hits + ' of ' + EXPOSURES + ' targets with ' + (AMMO - ammo) + ' rounds.', badge: b, xpBonus: hits * 4 + (hits >= 18 ? 60 : 0) });
+        api.end({ won: hits >= Math.ceil(EXPOSURES * 0.6), title: b.name, message: 'You hit ' + hits + ' of ' + EXPOSURES + ' targets with ' + (AMMO - ammo) + ' rounds.', badge: b, xpBonus: hits * 4 + (hits >= Math.ceil(EXPOSURES * 0.9) ? 60 : 0), campaign: { value: hits, of: EXPOSURES } });
       }
       function screenOf(b) { var p = scene.project(b); return { x: p.x * W, y: p.y * H }; }
       function live() { return targets.filter(function (b) { return b.fall < 0; }).sort(function (a, b) { return screenOf(a).x - screenOf(b).x; }); }
@@ -100,6 +105,7 @@
         if (!tg) {
           scene.dustAt(r.point); feel.sfx.pop();
           api.floaters.add('MISS', x, y - 16, { size: 14, color: '#fff', life: 0.6 });
+          if (ammo === Math.ceil(AMMO * 0.2)) api.mentor.say('worried', 'Rounds are running low. Pick your target before you fire.', 3.5);
           if (ammo <= 0) endExposure(null);
           return;
         }
@@ -111,6 +117,7 @@
           if (!feel.reduce()) api.flash('rgba(255,245,220,.16)');
           scene.mark(tg, 'ok'); scene.fall(tg, 0.05);
           api.floaters.add('HIT +' + pts, p.x, p.y - 40, { size: 22, color: '#8ff0bd' });
+          if (streak === 3 || streak === 5 || streak === 7) api.mentor.say('pleased', A.mentor.LINES.streak[streak === 3 ? 0 : streak === 5 ? 1 : 2], 3);
           api.review.add({ prompt: cur.text, given: term.term, correct: term.term + (term.expansion ? ' (' + term.expansion + ')' : ''), ok: true, explanation: '', key: term.id });
           endExposure(true);
         } else {
@@ -118,6 +125,7 @@
           scene.mark(tg, 'no'); scene.fall(tg, 0.1);
           targets.forEach(function (x2) { if (x2.ok) scene.mark(x2, 'ok'); });
           api.floaters.add('WRONG TARGET', p.x, p.y - 40, { size: 18, color: '#ff9c9c' });
+          api.mentor.say('hint', A.mentor.line('hint') + ' ' + (tg.term.expansion ? tg.term.term + ' is ' + tg.term.expansion + '. ' : '') + term.term + ' was the target.', 5);
           api.review.add({ prompt: cur.text, given: tg.term.term, correct: term.term + (term.expansion ? ' (' + term.expansion + ')' : ''), ok: false, explanation: (tg.term.expansion ? tg.term.term + ' is ' + tg.term.expansion + '. ' : '') + 'The answer was ' + term.term + '.', key: term.id });
           endExposure(false);
         }

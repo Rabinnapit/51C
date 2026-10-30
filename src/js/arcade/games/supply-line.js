@@ -1,7 +1,9 @@
 /* ARCADE GAME supply-line — Supply Line: a story convoy for B2B Exam Prep. Lead two trucks from the Ops Center to the FOB
    through five checkpoints, one for each part of the contract life cycle (the FOB gate mixes them all). At each stop a
    contact sets the scene and six crates wait: a right answer loads one, a wrong answer costs fuel and the explanation
-   comes over the radio. Load all six for the gold challenge coin. Original game; questions come from the guide's bank. */
+   comes over the radio. Load all six for the gold challenge coin. Original game; questions come from the guide's bank.
+   Drawn in real 3D (A.GL.RoadScene: the road from dawn at the Ops Center to night at the FOB) where WebGL works; the
+   canvas-2D drawing below is the fallback for anything older, and still paints the route map, the coins and the HUD. */
 (function () {
   'use strict';
   var A = window.ARCADE;
@@ -11,23 +13,23 @@
     { id: 'gp', n: 1, name: 'Ops Center', sub: 'Guiding Principles', code: '1.0', color: '#a3a9f2', who: 'Chief of Contracting', kind: 'ops',
       line: 'Welcome to the team. Before we roll, show me you know the rules of the road: authority, ethics and good records.',
       radio: 'Convoy, this is Chief. Roll out to the Ops Center.',
-      sky: ['#1b1440', '#5b3d7a', '#e59a7f'], hills: ['#3d3263', '#2c2550'], ground: '#4a4262' },
+      sky: ['#1b1440', '#5b3d7a', '#e59a7f'], hills: ['#3d3263', '#2c2550'], ground: '#4a4262', light: 'dawn' },
     { id: 'pre', n: 2, name: 'Market Square', sub: 'Pre-Award', code: '2.0', color: '#82b6ef', who: 'Supply officer (S4)', kind: 'market',
       line: 'We need generators, water and parts. Help me turn that into a requirement the market can bid on.',
       radio: 'A good requirement says what you need, not who should sell it.',
-      sky: ['#0f3558', '#3f86b8', '#b9dff2'], hills: ['#4a7a5e', '#335a45'], ground: '#7c6c4a' },
+      sky: ['#0f3558', '#3f86b8', '#b9dff2'], hills: ['#4a7a5e', '#335a45'], ground: '#7c6c4a', light: 'day' },
     { id: 'awd', n: 3, name: 'River Bridge', sub: 'Award', code: '3.0', color: '#f0b863', who: 'Pricing analyst', kind: 'bridge',
       line: 'Three offers came in. Cross this bridge with a fair price and a winner you can defend.',
       radio: 'Price analysis compares prices. Cost analysis looks inside the price.',
-      sky: ['#3a1d0a', '#b0612a', '#f6c37c'], hills: ['#7a5430', '#5a3c22'], ground: '#8a6a3c' },
+      sky: ['#3a1d0a', '#b0612a', '#f6c37c'], hills: ['#7a5430', '#5a3c22'], ground: '#8a6a3c', light: 'gold' },
     { id: 'post', n: 4, name: 'Supply Depot', sub: 'Post-Award', code: '4.0', color: '#6fd3d9', who: 'Contracting officer\'s representative (COR)', kind: 'depot',
       line: 'The contract is signed. Now we make sure we get what we paid for, on time.',
       radio: 'Only a contracting officer can change the contract. Not the COR, not the commander.',
-      sky: ['#062a33', '#167487', '#7fd0d6'], hills: ['#245a60', '#173f44'], ground: '#55635a' },
+      sky: ['#062a33', '#167487', '#7fd0d6'], hills: ['#245a60', '#173f44'], ground: '#55635a', light: 'dusk' },
     { id: 'all', n: 5, name: 'FOB Gate', sub: 'All four exam areas', code: 'FOB', color: '#e6b85a', who: 'Base commander', kind: 'fob', night: true,
       line: 'Last checkpoint. Everything you learned on the road, one more time, and the FOB is yours.',
       radio: 'Read every word. NOT and EXCEPT decide many answers.',
-      sky: ['#05091a', '#16204a', '#34457e'], hills: ['#18203e', '#10162c'], ground: '#2a2f45' }
+      sky: ['#05091a', '#16204a', '#34457e'], hills: ['#18203e', '#10162c'], ground: '#2a2f45', light: 'night' }
   ];
   var CRATES = [{ label: 'WATER', color: '#3f93cf' }, { label: 'FUEL', color: '#c9473f' }, { label: 'MRE', color: '#8f7a46' },
     { label: 'MED', color: '#eeeeee', ink: '#c0392b' }, { label: 'COMMS', color: '#5e7f36' }, { label: 'PARTS', color: '#7d838c' }];
@@ -35,7 +37,12 @@
   var COIN = { 2: { name: 'Gold', a: '#fff1b8', b: '#e6b85a', c: '#9a6d1c' }, 1: { name: 'Silver', a: '#ffffff', b: '#c7ced6', c: '#7d8792' } };
 
   function bankOf(D) { return ((D && D.bank) || []).filter(function (q) { return q && q.stem && q.options && q.options.length === 4 && q.options.some(function (o) { return o.correct; }); }); }
-  function poolFor(D, cp) { var b = bankOf(D); return cp.id === 'all' ? b.filter(function (q) { return q.phase !== 'job'; }) : b.filter(function (q) { return q.phase === cp.id; }); }
+  // a checkpoint's questions: its exam area; a campaign mission narrows them to the month's lessons when enough exist
+  function poolFor(D, cp, lessons) {
+    var b = bankOf(D);
+    if (lessons && lessons.length) { var l = b.filter(function (q) { return lessons.indexOf(q.lesson) >= 0; }); if (l.length >= PER_CP * 2) return l; }
+    return cp.id === 'all' ? b.filter(function (q) { return q.phase !== 'job'; }) : b.filter(function (q) { return q.phase === cp.id; });
+  }
   function coinOf(missed) { return missed === 0 ? 2 : missed <= 2 ? 1 : 0; }
 
   // ---- drawing: vehicles, crates, people, coins and the five checkpoints ----
@@ -192,8 +199,8 @@
   }
 
   A.register({
-    id: 'supply-line', title: 'Supply Line', icon: '🚚', accent: '#e6b85a', genre: 'Story convoy', music: 'drive',
-    tagline: 'Lead a supply convoy to the FOB. Five checkpoints, one for each part of the contract life cycle: right answers load the cargo, clean runs earn challenge coins.',
+    id: 'supply-line', title: 'Supply Line', icon: '🚚', accent: '#e6b85a', genre: 'Story convoy · real 3D', music: 'drive',
+    tagline: 'Lead a supply convoy to the FOB in real 3D, from dawn at the Ops Center to night at the gate. Five checkpoints, one for each part of the contract life cycle: right answers load the cargo, clean runs earn challenge coins.',
     drills: 'Bank questions by exam area, explained after every answer',
     controls: 'Answer with 1 to 4, A to D, or a tap; Enter continues. Each right answer loads a crate. A wrong answer costs fuel, and the radio explains the right answer. Load all 6 crates at a checkpoint for its gold challenge coin (4 or 5 earns silver). Run one checkpoint or the full mission.',
     aspect: [0.95, 2.3], countdown: false, letterKeys: true, outTitle: 'Out of fuel',
@@ -204,9 +211,15 @@
       var bob = Math.sin(t * 9) * 1.2;
       cargoTruck(ctx, w * 0.12, gy + 8, s, -t * 9, bob, CRATES.slice(0, 4), false); leadTruck(ctx, w * 0.12 + 112, gy + 8, s, -t * 9, -bob, false);
       coin(ctx, w * 0.82, h * 0.34, 26, t, 2, '3.0');
+      if (A.GL && A.GL.ok()) A.pill(ctx, 'REAL 3D', 14, 22, { size: 12, bg: 'rgba(0,0,0,.55)', color: '#f6d991', stroke: '#e6b85a' });
     },
     create: function (api) {
-      var W = api.W, H = api.H, t = 0, tier = api.difficulty;
+      var W = api.W, H = api.H, t = 0, tier = api.difficulty, feel = A.feel, opts = api.opts || {};
+      var coarse = false; try { coarse = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
+      // the 3D road where WebGL works; otherwise the 2D drawing below
+      var scene = null; if (A.GL && A.GL.ok()) { try { scene = new A.GL.RoadScene({ mobile: coarse, reduce: feel.reduce, width: 640, height: 400 }); } catch (e) { console.error('[supply-line] 3D failed, drawing in 2D', e); scene = null; } }
+      var LEG = 40, LEG1 = 30, PLACE3 = 21, OFF_M = 36, frames = 0, slow = 0, scale = 1, glW = 0, glH = 0;   // meters along the road
+      function PX() { return W / 32; }   // pixels per meter in the 2D drawing
       var mode = 'map', mission = [], leg = 0, cp = CPS[0], pool = [], q = null, order = [], answered = false;
       var asked = 0, loaded = 0, missed = 0, bay = [], streak = 0, limit = 0, timer = 0, anim = null, pending = null;
       var scroll = 0, drive = null, places = [], gateOpen = 0, coinShow = null, totals = { crates: 0, asked: 0, gold: 0, silver: 0 }, mapSel = 0, mapHover = -1;
@@ -231,15 +244,17 @@
         mission = list; leg = 0; totals = { crates: 0, asked: 0, gold: 0, silver: 0 }; streak = 0;
         api.choices.clear(); api.prompt.clear(); api.audio.select();
         places = []; scroll = 0; gateOpen = 0; coinShow = null; off = 0; carry = []; endT = 0; ended = false;
+        if (scene) { scene.clearPlaces(); scene.clearBed(); scene.clearBay(); scene.setContact(null); scene.gate(0); scene.scroll = 0; scene.off = 0; }
         go(CPS[mission[0]], true);
       }
       // drive to the next checkpoint: the scenery scrolls and the stop slides in from the right
       function go(next, first) {
-        cp = next; pool = poolFor(api.data, cp); if (pool.length < PER_CP) pool = bankOf(api.data);
-        var dist = W * (first ? 0.9 : 1.25);
-        drive = { t: 0, len: first ? 2.2 : 3, from: scroll, to: scroll + dist };
-        places.push({ kind: cp.kind, wx: drive.to + placeX(), cp: cp });
+        cp = next; pool = poolFor(api.data, cp, opts.lessons); if (pool.length < PER_CP) pool = bankOf(api.data);
+        var dist = first ? LEG1 : LEG;
+        drive = { t: 0, len: first ? 2.2 : 3.2, from: scroll, to: scroll + dist };
+        places.push({ kind: cp.kind, wx: drive.to + (scene ? PLACE3 : placeX() / PX()), cp: cp });
         if (places.length > 2) places.shift();
+        if (scene) { scene.place(cp.kind, drive.to + PLACE3); scene.clearBay(); scene.setContact(null); if (first) scene.setLight(cp.light || 'day'); else scene.driveLight(cp.light || 'day', drive.len * 0.85); }
         bay = []; asked = 0; loaded = 0; missed = 0; mode = 'drive';
         api.prompt.set({ kicker: 'Radio · Chief of Contracting', text: cp.radio, sub: 'Next stop: CP' + cp.n + ' ' + cp.name + ' (' + cp.sub + ')', color: cp.color });
         api.choices.clear(); api.audio.whoosh();
@@ -247,6 +262,7 @@
       function arrive() {
         mode = 'brief'; drive = null; api.audio.thud();
         for (var i = 0; i < PER_CP; i++) bay.push({ c: CRATES[i], state: 'wait', fly: 0 });
+        if (scene) { var here = places[places.length - 1]; scene.clearBed(); scene.setBay(CRATES.slice(0, PER_CP), here.wx); scene.setContact(cp.kind, here.wx); scene.wave(true); scene.dustAt(scene.point('lead'), 6); feel.buzz(10); }
         api.prompt.set({ kicker: 'CP' + cp.n + ' ' + cp.name + ' · ' + cp.who, text: '“' + cp.line + '”', sub: 'Six crates to load: ' + cp.sub + ' questions. A wrong answer costs fuel.', color: cp.color, big: true });
         api.choices.set([{ text: 'Start loading ▶', tag: '1' }], function () { ask(); }, { cols: 1 });
       }
@@ -261,9 +277,10 @@
         api.prompt.set({ kicker: 'CP' + cp.n + ' ' + cp.name + ' · crate ' + (asked + 1) + ' of ' + PER_CP + ' (' + bay[asked].c.label + ')' + (ph ? ' · ' + ph.name : '') + (q.__via === 'review' ? ' · missed before' : ''), text: q.stem, color: ph ? ph.color : cp.color });
         api.choices.set(order.map(function (k) { return { text: q.options[k].text }; }), pick);
         api.choices.timer(limit ? 1 : null);
-        mode = 'ask';
+        mode = 'ask'; if (scene) scene.wave(false);
       }
       function pick(i) { if (mode !== 'ask' || answered) return; answered = true; resolve(q.options[order[i]], i); }
+      function fuelPoint() { if (scene) { var p = scene.project(scene.point('cargo')); return { x: p.x * W, y: p.y * H }; } return { x: convoyX() + 140 * sc(), y: gy() - 110 * sc() }; }
       function resolve(opt, i) {
         var right = null, ri = -1;
         order.forEach(function (k, j) { if (q.options[k].correct) { right = q.options[k]; ri = j; } });
@@ -277,12 +294,18 @@
           var fast = limit && timer > limit * 0.6;
           api.score(100 + 20 * Math.min(streak, 10) + (fast ? 60 : 0)); api.progress.correct(); api.audio.correct();
           box.state = 'fly'; box.fly = 0; anim = { type: 'load', box: box, slot: loaded - 1, t: 0 };
+          if (scene) scene.load(asked - 1, loaded - 1);
+          feel.buzz(8);
+          if (streak === 3 || streak === 5) api.mentor.say('pleased', A.mentor.LINES.streak[streak === 3 ? 0 : 1]);
           title = (streak >= 3 ? 'Loaded! ' + streak + ' in a row.' : 'Loaded!') + (fast ? ' Fast.' : '');
           body = opt.why;
         } else {
           streak = 0; missed++; box.state = 'left';
           api.audio.wrong(); api.shake(6); api.life(-1); anim = { type: 'miss', t: 0 };
-          api.floaters.add('−1 fuel', convoyX() + 140 * sc(), gy() - 110 * sc(), { color: '#ff8a80', size: 22 });
+          if (scene) scene.reject(asked - 1);
+          feel.buzz([30, 40, 30]);
+          var fp = fuelPoint(); api.floaters.add('−1 fuel', fp.x, fp.y, { color: '#ff8a80', size: 22 });
+          if (api.hud && tier.lives && api.life(0) === 1) api.mentor.say('worried', A.mentor.line('low'), 4);
           title = opt ? 'Radio: not that one.' : 'Radio: time ran out.';
           body = (opt ? 'Your answer: ' + opt.text + '. ' + (opt.why || '') + ' ' : '') + 'Right answer: ' + right.text + '. ' + (right.why || '');
         }
@@ -303,7 +326,8 @@
         if (grade > (rec[cp.id] || 0)) { rec[cp.id] = grade; A.save.set('supply', rec); }
         coinShow = grade ? { grade: grade, t: 0, code: cp.code } : null;
         mode = 'coin'; api.choices.clear();
-        if (grade) { api.audio.fanfare(); api.particles.emit({ x: W / 2, y: H * 0.36, n: 40, color: [COIN[grade].a, COIN[grade].b, '#ffffff'], speed: 260, gravity: 120, life: 1.2, shape: 'square', size: 7 }); api.score(grade === 2 ? 500 : 200); }
+        if (grade) { api.audio.fanfare(); api.particles.emit({ x: W / 2, y: H * 0.36, n: 40, color: [COIN[grade].a, COIN[grade].b, '#ffffff'], speed: 260, gravity: 120, life: 1.2, shape: 'square', size: 7 }); api.score(grade === 2 ? 500 : 200); feel.buzz(grade === 2 ? [20, 30, 40] : 20); }
+        if (grade === 2) api.mentor.say('proud', A.mentor.line('proud') + ' All six, gold coin.', 4); else if (!grade) api.mentor.say('worried', 'No coin this time. The radio told you why; the study list will too.', 4);
         var last = leg >= mission.length - 1;
         api.prompt.set({ kicker: 'CP' + cp.n + ' ' + cp.name + ' · cleared', text: grade === 2 ? 'Gold challenge coin: all 6 crates loaded.' : grade === 1 ? 'Silver challenge coin: ' + loaded + ' of 6 crates loaded.' : loaded + ' of 6 crates loaded. No coin this time.', sub: grade === 2 ? 'Clean run.' : 'Load all 6 for the gold coin. Your misses are on the study list at the end.', color: grade ? COIN[grade].b : cp.color, big: true });
         api.choices.set([{ text: last ? (mission.length > 1 ? 'Open the gate ▶' : 'Finish ▶') : 'Drive to CP' + CPS[mission[leg + 1]].n + ' ' + CPS[mission[leg + 1]].name + ' ▶', tag: '1' }], function () { next(); }, { cols: 1 });
@@ -318,24 +342,29 @@
       function finish() {
         var full = mission.length > 1, coins = totals.gold + totals.silver;
         var title = full ? 'Mission complete: ' + totals.crates + ' of ' + totals.asked + ' crates delivered' : cp.name + ' cleared';
-        api.end({ won: true, title: title, message: totals.gold + ' gold and ' + totals.silver + ' silver challenge coins.', xpBonus: (full ? 120 : 40) + totals.gold * 30 + totals.silver * 12,
+        api.end({ won: true, title: title, message: totals.gold + ' gold and ' + totals.silver + ' silver challenge coins.', xpBonus: (full ? 120 : 40) + totals.gold * 30 + totals.silver * 12, campaign: { value: full ? totals.crates : loaded, of: full ? totals.asked : PER_CP },
           badge: { icon: totals.gold === mission.length ? '🎖️' : '🪙', name: full ? (totals.gold === 5 ? 'Five gold coins' : coins + ' coins earned') : (COIN[rec[cp.id]] ? COIN[rec[cp.id]].name + ' coin, ' + cp.name : cp.name), desc: full ? 'You delivered the FOB\'s supplies through the whole contract life cycle.' : 'Load all 6 crates for the gold coin.', color: '#e6b85a' } });
       }
 
-      function update(dt) {
-        t += dt;
+      function update(dt, rdt) {
+        t += dt; rdt = rdt || dt;
         if (mode === 'ask' && limit && !answered) { timer -= dt; api.choices.timer(timer / limit); if (timer <= 0) timeout(); }
         if (drive) {
           drive.t += dt; var k = api.clamp(drive.t / drive.len, 0, 1);
           scroll = api.lerp(drive.from, drive.to, api.ease.inOutQuad(k));
-          if (mode === 'deliver') { gateOpen = Math.min(1, gateOpen + dt * 1.4); off = api.ease.inCubic(api.clamp((drive.t - 0.6) / (drive.len - 0.6), 0, 1)) * W * 1.1; }
+          if (mode === 'deliver') { gateOpen = Math.min(1, gateOpen + dt * 1.4); off = api.ease.inCubic(api.clamp((drive.t - 0.6) / (drive.len - 0.6), 0, 1)) * OFF_M; }
           if (k >= 1) {
             if (mode === 'drive') arrive();
             else if (mode === 'deliver') { drive = null; mode = 'end'; api.audio.levelUp(); for (var f = 0; f < 4; f++) api.particles.emit({ x: W * (0.3 + f * 0.15), y: H * 0.25, n: 26, color: ['#ffd76a', '#ff7ab6', '#8cc8ff', '#ffffff'], speed: 220, gravity: 90, life: 1.4, shape: 'spark', size: 6 }); }
           }
         }
         if (mode === 'end' && !ended) { endT += dt; if (endT > 1.5) { ended = true; finish(); } }
-        var pos = scroll + off; roll -= (pos - rollAt) / (14 * sc()); rollAt = pos;
+        var pos = (scroll + off) * PX(); roll -= (pos - rollAt) / (14 * sc()); rollAt = pos;
+        if (scene) {
+          scene.scroll = scroll; scene.off = off; scene.gate(gateOpen); scene.update(rdt, feel.hitstop.frozen());
+          // adaptive quality: if frames run slow for a while, render smaller and drop the multisampling
+          frames++; if (rdt > 0.026) slow++; if (frames >= 90) { if (slow > 45 && scale > 0.6) { scale = scale > 0.8 ? 0.75 : 0.6; scene.setQuality(scale > 0.7 ? 1 : 0); } frames = 0; slow = 0; }
+        }
         if (anim) {
           anim.t += dt;
           if (anim.type === 'load') { anim.box.fly = Math.min(1, anim.t / 0.7); if (anim.t >= 0.7) { anim.box.state = 'on'; api.audio.clank(); anim = null; } }
@@ -347,11 +376,17 @@
 
       function draw(ctx) {
         if (mode === 'map') { drawMap(ctx); return; }
-        var s = sc(), y = gy(), moving = !!drive, spin = roll, bob = moving ? Math.sin(t * 16) * 1.4 * s : 0;
-        sky(ctx, cp, W, H, y, t, scroll); road(ctx, cp, W, H, y, scroll, s);
-        places.forEach(function (p) { var px = p.wx - scroll; if (px > -420 * s && px < W + 40) place(ctx, p.kind, px, y, s, t, { open: p.kind === 'fob' ? gateOpen : 0 }); });
-        var here = places[places.length - 1], hx = here ? here.wx - scroll : W;
-        var cx = convoyX() + off, travel = mode === 'drive' || mode === 'deliver' || mode === 'end';
+        if (scene) {
+          var cw = ctx.canvas.width, ch = ctx.canvas.height, dpr = Math.min(2, window.devicePixelRatio || 1), kq = Math.min(1, (coarse ? 1.5 : 2) / dpr) * scale;
+          var gw = Math.round(cw * kq), gh = Math.round(ch * kq);
+          if (gw !== glW || gh !== glH) { glW = gw; glH = gh; scene.resize(gw, gh); }
+          scene.render(); ctx.drawImage(scene.canvas, 0, 0, W, H);
+          drawHud(ctx, sc()); return;
+        }
+        var s = sc(), y = gy(), moving = !!drive, spin = roll, bob = moving ? Math.sin(t * 16) * 1.4 * s : 0, sp = scroll * PX();
+        sky(ctx, cp, W, H, y, t, sp); road(ctx, cp, W, H, y, sp, s);
+        places.forEach(function (p) { var px = p.wx * PX() - sp; if (px > -420 * s && px < W + 40) place(ctx, p.kind, px, y, s, t, { open: p.kind === 'fob' ? gateOpen : 0 }); });
+        var cx = convoyX() + off * PX(), travel = mode === 'drive' || mode === 'deliver' || mode === 'end';
         if (mode === 'brief' || mode === 'ask' || mode === 'anim' || mode === 'coin') person(ctx, bayX() + 124 * s, y + 4 * s, s, cp.kind === 'market' ? '#7d6a52' : '#55603d', t, mode === 'brief');
         if (!travel) drawBay(ctx, s, y);
         cargoTruck(ctx, cx, y + 8 * s, s, spin, bob, travel ? carry : onBed(), cp.night);
@@ -417,10 +452,14 @@
         if (k === 'Enter') start([mapSel]);
       }
 
-      var want = api.opts && api.opts.realm, ix = -1;
+      var want = opts.realm, ix = -1;
       CPS.forEach(function (c, i) { if (c.id === want) ix = i; });
-      if (want === 'mission') start([0, 1, 2, 3, 4]); else if (ix >= 0) start([ix]); else showMap();
-      return { update: update, draw: draw, onPointer: onPointer, onKey: onKey, resize: function (w, h) { W = w; H = h; } };
+      if (want === 'mission' || opts.mission === 'full') start([0, 1, 2, 3, 4]); else if (ix >= 0) start([ix]); else showMap();
+      return {
+        update: update, draw: draw, onPointer: onPointer, onKey: onKey, resize: function (w, h) { W = w; H = h; },
+        destroy: function () { if (scene) scene.dispose(); },
+        stats: function () { return { gl: !!scene, scene: scene, tri: scene && scene.tri, calls: scene && scene.calls, light: scene && scene.light, mode: mode, cp: cp.id, scroll: Math.round(scroll), loaded: loaded, missed: missed, scale: scale }; }
+      };
     }
   });
 })();

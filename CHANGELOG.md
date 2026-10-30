@@ -1,5 +1,45 @@
 # Changelog
 
+## 0.26.1 (30 October 2026): text size in one place
+
+- **Text size left the side menu.** The bottom panel of the menu now shows Day / night only; text size stays under
+  Settings & help, Display tab, where it already was (on a wide screen the Aa button in the top bar still cycles it).
+  The tour's "Easier to read" step on a phone now points there.
+
+## 0.26.0 (30 October 2026): the convoy in real 3D, the four bosses, the Master Gunner and the campaign
+
+- **Supply Line in real 3D.** The convoy stage is now drawn by the same engine as Range Day: an FMTV-style cargo truck
+  and an armored lead truck built from boxes and cylinders, a road that slides past with hills at two depths, trees,
+  rocks, bushes and poles that recycle ahead of you, and the five checkpoints as real places: the Ops Center's tents and
+  antenna mast, Market Square's striped stalls, the River Bridge over water, the Supply Depot's warehouse and forklift,
+  and FOB Keystone's HESCO wall, guard tower, gate arm and floodlight. The day passes as you drive: dawn at the Ops
+  Center, noon at the market, golden hour at the bridge, dusk at the depot, stars and headlights at the FOB. Crates fly
+  from the pallet onto the bed on a right answer and get a red X on a wrong one; the contact waves you in; dust rises
+  from the wheels. The canvas-2D version stays as the fallback where WebGL is missing.
+- **The four things that end careers.** Contract Quest's realm bosses are now the Unauthorized Commitment, the Bid
+  Bust, the Audit and the Protest. Each asks its own family of questions, and at half health enters a second phase with
+  an attack of its own on every miss: a ratification heals the boss, a re-solicit costs your focus and brings a hard
+  question, a finding takes a potion or a scroll, a stay of award holds your next hit to 1 damage.
+- **The Master Gunner.** Your Contracting Master Gunner, drawn in code, briefs every chapter and boss, reacts to your
+  answers in a bubble over the stage (pleased, a hint, worried when your hearts run low, proud when a boss falls or a
+  coin is gold) and explains a wrong target in one line.
+- **Campaign: Your first year as a 51C.** Chapters 1 to 4 (the four exam areas, in the order of the 6-month exam path):
+  each is three missions, a ten-target Range Day table on the month's terms, a Supply Line stop on the month's lessons
+  and a boss fight on its family. Pass all three to open the next chapter; a cleared chapter is worth 150 XP. Progress
+  is saved with the rest of the Arcade's. Chapters 5 to 12 come in a later update.
+- **Range Day** scales its badges to the table: a ten-target campaign table is Expert at 9, Sharpshooter at 8, Marksman
+  at 6, and the Master Gunner names the term you missed.
+- The lobby now opens with the campaign, then "All games". Haptics wait for your first tap, so phones no longer log a
+  blocked vibration.
+
+## 0.25.2 (30 October 2026): the terms and privacy on their own pages
+
+- **terms.html and privacy.html** on the website, built from the same text as the in-app terms, with a plain privacy
+  page (no tracking; what an account stores, with or without Google; how to delete it). About and the terms pop-up
+  link to them. Google asks for public links like these before it will show the app's name on its sign-in screen;
+  the 120-pixel logo for that review lives in the repository (`src/web/icons/logo-120.png`). Files in
+  `src/web/root/` are copied to the root of the site (a Search Console verification file lives there).
+
 ## 0.25.1 (30 October 2026): the sweep
 
 - **Eleven more questions** on the three thin job lessons: contingency thresholds and the determination behind them,

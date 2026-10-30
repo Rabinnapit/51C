@@ -10,7 +10,7 @@
     try { if (document.documentElement.getAttribute('data-motion') === 'reduce') return true; return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); } catch (e) { return false; }
   };
   // a short buzz on phones that have a motor (Android); silent elsewhere and under Less motion
-  feel.buzz = function (pattern) { if (feel.reduce()) return; try { if (navigator.vibrate) navigator.vibrate(pattern); } catch (e) {} };
+  feel.buzz = function (pattern) { if (feel.reduce()) return; try { if (navigator.vibrate && (!navigator.userActivation || navigator.userActivation.hasBeenActive)) navigator.vibrate(pattern); } catch (e) {} };
   // trauma: a 0..1 value that decays; the shake amplitude is trauma squared, so small hits barely move the camera
   feel.trauma = function () {
     var v = 0;
