@@ -93,6 +93,12 @@
   ],
   "guide_changes": [
     {
+      "version": "0.28.1",
+      "date": "2026-10-30",
+      "title": "Fire Mission no longer starts black",
+      "notes": "The 3D valley showed a black picture until the first round was fired; the muzzle-flash light started with an invalid intensity. Fixed."
+    },
+    {
       "version": "0.28.0",
       "date": "2026-10-30",
       "title": "Five games in real 3D and the whole first year",

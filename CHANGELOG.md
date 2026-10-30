@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.28.1 (30 October 2026): Fire Mission no longer starts black
+
+- **Fire Mission's first frames were black until the first shot.** The muzzle-flash timer started undefined, so the
+  flash light's intensity was not-a-number and the lighting shader blacked out the whole picture; it is now zero from
+  the start. Found with a pixel sample of the stage canvas in the browser pane.
+
 ## 0.28.0 (30 October 2026): five games in real 3D and the whole first year
 
 - **Fire Mission in real 3D.** An M777-style howitzer on a plateau fires across a valley at trucks parked on the far

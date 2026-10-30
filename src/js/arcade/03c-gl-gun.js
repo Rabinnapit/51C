@@ -14,7 +14,7 @@
     St.post.u.exposure.value = 0.92;
     var K = GL.kit(St), scene = St.scene, camera = St.camera, X = St.X, std = St.std, fx = K.fx, mobile = St.mobile, i;
     St.sun.target.position.set(0, 0, -30); St.push();
-    var S = { t: 0, w: 4, h: 4, tri: 0, calls: 0, gl2: St.gl2, hdr: St.hdr, canvas: St.canvas, camera: camera, scene: scene, light: 'day', recoil: 0, aimOn: false, wind: 0, targets: [], shell: null, trauma: 0, punch: 0 };
+    var S = { t: 0, w: 4, h: 4, tri: 0, calls: 0, gl2: St.gl2, hdr: St.hdr, canvas: St.canvas, camera: camera, scene: scene, light: 'day', recoil: 0, flashT: 0, aimOn: false, wind: 0, targets: [], shell: null, trauma: 0, punch: 0 };   // flashT starts at 0: a NaN light intensity would black out the whole frame
     var G = 22;   // a heavier gravity than Earth's keeps the arc tall and the flight short
 
     // ---- terrain: an analytic height field with the same noise the mesh was built from ----
