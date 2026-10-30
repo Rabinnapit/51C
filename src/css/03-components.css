@@ -223,3 +223,25 @@ html[data-motion="reduce"] .reveal { opacity: 1; transform: none; transition: no
 @media print { .reveal { opacity: 1; transform: none; } }
 /* the eyebrow line reads at 4.5:1 or better in day and night mode (it was 3.6:1 in day mode) */
 .eyebrow { color: color-mix(in srgb, var(--accent-2) 76%, var(--ink)); }
+
+/* ---- look picker: colour theme swatches (left half day, right half night) ---- */
+.swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 118px), 1fr)); gap: 10px; }
+.swatch { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 12px 8px 10px; border-radius: var(--r-lg); border: 2px solid var(--line); background: var(--panel); text-align: center; min-width: 0; transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease); }
+.swatch:hover { border-color: var(--line-2); }
+.swatch.on { border-color: var(--accent); background: var(--accent-soft); }
+.swatch b { font-size: var(--fs-sm); }
+.swatch small { font-size: var(--fs-xs); color: var(--muted); line-height: 1.25; }
+.swatch-dot { position: relative; width: 48px; height: 48px; border-radius: 50%; margin-bottom: 4px; border: 1px solid var(--line-2); background: linear-gradient(90deg, var(--db) 0 50%, var(--nb) 50% 100%); box-shadow: var(--shadow-sm); }
+.swatch-dot::before, .swatch-dot::after { content: ''; position: absolute; top: 14px; width: 16px; height: 16px; border-radius: 50%; }
+.swatch-dot::before { left: 7px; background: var(--d); }
+.swatch-dot::after { right: 7px; background: var(--n); }
+.look-picker .hint { margin-top: 6px; }
+/* ---- onboarding wizard ---- */
+.wizard-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.wizard-head h2 { margin: 4px 0 2px; }
+.wizard-head p { margin: 0; }
+.wiz-dots { display: flex; gap: 6px; padding-top: 6px; flex: none; }
+.wiz-dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--line-2); }
+.wiz-dots i.on { background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.wiz-dots i.done { background: var(--ok); }
+.wizard-body { margin-top: var(--space-4); min-height: 160px; }

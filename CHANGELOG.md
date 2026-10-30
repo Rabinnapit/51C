@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.27.0 (30 October 2026): onboarding with a voice and a theme
+
+- **Onboarding in four steps.** The first visit is now a short wizard instead of one form: who you are, your dates,
+  how it looks, and read-aloud. The look step offers day or night, six colour themes and the text size; the voice step
+  lists the device's voices and the app voices with a sample, so a reader hears the guide before the plan is built.
+  Each choice applies as it is tapped; the plan saves at the end. "Look around first" still skips it.
+- **Six colour themes, each with a day and a night look:** Pine (the default), Navy, Desert, Maroon, Slate, and Black
+  and gold. A theme changes the accent, the paper and the panels but never the four life-cycle colours, so a lesson or
+  question still shows where it sits. Pick one in Settings & help → Display → Theme, in the side menu's new Theme
+  button, or during onboarding; the swatch shows the day colour on the left and the night colour on the right. The
+  theme is remembered on the device and saved into the offline file with the rest of the look.
+
 ## 0.26.2 (30 October 2026): Range Day boards keep their distance
 
 - **Range Day.** The three target boards no longer touch or overlap on screen (two boards side by side could read as

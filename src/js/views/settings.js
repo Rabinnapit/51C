@@ -65,73 +65,88 @@
     root.appendChild(h('div.card', {}, f.el, h('div.row.mt-5', {}, h('button.btn.primary', { type: 'button', onclick: function () { if (f.save()) { CORB.ui.toast('Profile saved. Your plan dates moved to match.', 'ok'); CORB.render(); } } }, icon('save'), 'Save'))));
   }
 
+  var SAMPLE = 'Hi, this is how B2B Exam Prep sounds.\nWho can bind the Government to a contract? Only the contracting officer, the KO.\nBelow the micro-purchase threshold, $15,000, you can buy without competitive quotes, as long as the price is reasonable.\nReady when you are.';
+  CORB.VOICE_SAMPLE = SAMPLE;
+  function voicePicker() {
+  var h = CORB.ui.h, icon = CORB.ui.icon;
+    var AV = CORB.voices && CORB.voices.available ? CORB.voices : null, haveIds = [];
+    var sel = h('select#tts-voice.input', { 'aria-label': 'Voice' });
+    var dlBar = CORB.ui.bar(0), dlText = h('span.small.muted', {}, ''), dl = h('div.stack.tight.mt-2', { hidden: true }, dlText, dlBar);
+    function fill() {
+      var list = CORB.speech.voices(), cur = CORB.get('settings.voice', '');
+      sel.innerHTML = '';
+      sel.appendChild(h('option', { value: '' }, 'Best voice on this device' + (list[0] ? ': ' + list[0].name : '')));
+      function group(label, vs) { if (!vs.length) return; var g = h('optgroup', { label: label }); vs.forEach(function (v) { g.appendChild(h('option', { value: v.id }, v.name)); }); sel.appendChild(g); }
+      if (AV) { var ag = h('optgroup', { label: 'App voices: download once, then offline' }); AV.list().forEach(function (v) { ag.appendChild(h('option', { value: 'app:' + v.id }, v.name + ' · ' + v.who + (haveIds.indexOf(v.id) >= 0 ? ' · downloaded' : ' · ' + v.mb + ' MB'))); }); sel.appendChild(ag); }
+      group(AV ? 'Natural voices on this device' : 'Natural voices', list.filter(function (v) { return v.natural; })); group(AV ? 'Standard voices on this device' : 'Standard voices', list.filter(function (v) { return !v.natural; }));
+      var isApp = cur.indexOf('app:') === 0 && AV && AV.get(cur.slice(4));
+      sel.value = isApp || list.some(function (v) { return v.id === cur; }) ? cur : '';
+    }
+    fill();
+    if (AV) AV.downloaded().then(function (ids) { haveIds = ids; if (sel.isConnected) fill(); });
+    var off = CORB.on('voices', function () { if (sel.isConnected) fill(); else off(); });
+    var off2 = CORB.on('voices-changed', function () { if (!sel.isConnected) { off2(); return; } if (AV) AV.downloaded().then(function (ids) { haveIds = ids; fill(); paintManage(); }); });
+    sel.addEventListener('change', function () {
+      var val = sel.value, prev = CORB.get('settings.voice', '');
+      if (val.indexOf('app:') === 0 && AV) {
+        var v = AV.get(val.slice(4));
+        AV.ready(v.id).then(function (ready) {
+          if (ready) { CORB.speech.setVoice(val); CORB.speech.speak(SAMPLE); return; }
+          var need = v.mb + (haveIds.length ? 0 : AV.RUNTIME_MB);
+          if (!navigator.onLine) { CORB.ui.toast('You are offline. ' + v.name + ' needs a one-time download of about ' + need + ' MB.', 'warn', 5000); sel.value = prev; return; }
+          dl.hidden = false; dlText.textContent = 'Downloading ' + v.name + ' (about ' + need + ' MB, once)…'; sel.disabled = true;
+          AV.download(v.id, function (p) { dlText.textContent = 'Downloading ' + v.name + ': ' + Math.round(p.loadedMB) + ' of ' + Math.round(p.totalMB) + ' MB'; var nb = CORB.ui.bar(p.pct); dlBar.replaceWith(nb); dlBar = nb; })
+            .then(function () { dl.hidden = true; sel.disabled = false; CORB.speech.setVoice(val); CORB.ui.toast(v.name + ' is ready and works offline from now on.', 'ok', 4000); CORB.speech.speak(SAMPLE); },
+              function (err) { dl.hidden = true; sel.disabled = false; sel.value = prev; CORB.ui.toast('Could not download ' + v.name + ': ' + (err && err.message || err), 'danger', 6000); });
+        });
+        return;
+      }
+      CORB.speech.setVoice(val); CORB.speech.speak(SAMPLE);
+    });
+    var manageRow = h('div.row.tight.mt-2', {});
+    function paintManage() {
+      if (!AV) return;
+      AV.downloaded().then(function (ids) {
+        manageRow.innerHTML = '';
+        if (!ids.length) { manageRow.appendChild(h('span.small.muted', {}, 'No app voice is downloaded yet. Pick one in the list to download it.')); return; }
+        ids.forEach(function (id) { var v = AV.get(id); if (!v) return; manageRow.appendChild(h('button.btn.sm.ghost', { type: 'button', onclick: function () { CORB.ui.confirm('Remove ' + v.name + ' from this device? You can download it again later.', { ok: 'Remove' }).then(function (ok) { if (!ok) return; AV.remove(id).then(function () { if (CORB.get('settings.voice') === 'app:' + id) CORB.speech.setVoice(''); CORB.render(); }); }); } }, icon('x'), 'Remove ' + v.name)); });
+        manageRow.appendChild(h('button.btn.sm.ghost', { type: 'button', onclick: function () { CORB.ui.confirm('Remove every app voice and the speech engine from this device?', { ok: 'Remove all' }).then(function (ok) { if (!ok) return; AV.removeAll().then(function () { if ((CORB.get('settings.voice') || '').indexOf('app:') === 0) CORB.speech.setVoice(''); CORB.render(); }); }); } }, 'Remove all (frees about ' + (AV.RUNTIME_MB + 63 * ids.length) + ' MB)'));
+      });
+    }
+    paintManage();
+    var manage = AV ? h('details.inst-more.mt-2', {}, h('summary', {}, 'About the app voices'),
+      h('p.small.muted', {}, 'Four voices that run inside the app: Amber and Joe (US), Cori and Leo (UK). Each is a one-time download of about 63 MB, plus 31 MB for the speech engine the first time; after that they work offline and sound the same on every phone. Download on Wi-Fi. They come from the owner\'s GitHub page, not from a cloud service: nothing you read is sent anywhere.'),
+      manageRow) : null;
+    return h('div', {}, sel, dl, manage);
+  }
+  // the look picker: day or night, the colour theme (CORB.PALETTES) and the text size, each applied as soon as it is tapped.
+  // Shared by Settings -> Display, the side menu's Theme sheet and the onboarding on Home.
+  function lookPicker() {
+    var h = CORB.ui.h;
+    function cur() { var t = CORB.get('profile.theme'); return t === 'dark' || t === 'system' ? t : 'light'; }
+    var modeSeg = h('div.seg', { role: 'radiogroup', 'aria-label': 'Day or night' }), swatches = h('div.swatches', { role: 'radiogroup', 'aria-label': 'Theme' }), sizeSeg = h('div.seg', { role: 'radiogroup', 'aria-label': 'Text size' });
+    function paintMode() { modeSeg.innerHTML = ''; var t = cur(); [['light', 'Day'], ['dark', 'Night'], ['system', 'Match my device']].forEach(function (o) { modeSeg.appendChild(h('button' + (o[0] === t ? '.on' : ''), { type: 'button', role: 'radio', 'aria-checked': o[0] === t ? 'true' : 'false', onclick: function () { CORB.setTheme(o[0]); paintMode(); } }, o[1])); }); }
+    function paintSw() { swatches.innerHTML = ''; var p = CORB.get('profile.palette') || ''; (CORB.PALETTES || []).forEach(function (pal) { var on = pal.id === p; swatches.appendChild(h('button.swatch' + (on ? '.on' : ''), { type: 'button', role: 'radio', 'aria-checked': on ? 'true' : 'false', title: pal.sub, onclick: function () { CORB.setPalette(pal.id); paintSw(); } }, h('span.swatch-dot', { style: { '--d': pal.day[0], '--db': pal.day[1], '--n': pal.night[0], '--nb': pal.night[1] } }), h('b', {}, pal.name), h('small', {}, pal.sub))); }); }
+    function paintSize() { sizeSeg.innerHTML = ''; var n = +CORB.get('profile.textSize', 0) || 0; [[0, 'Normal'], [1, 'Large'], [2, 'Larger'], [3, 'Largest']].forEach(function (o) { sizeSeg.appendChild(h('button' + (o[0] === n ? '.on' : ''), { type: 'button', role: 'radio', 'aria-checked': o[0] === n ? 'true' : 'false', onclick: function () { CORB.setTextSize(o[0]); paintSize(); } }, o[1])); }); }
+    paintMode(); paintSw(); paintSize();
+    return h('div.look-picker.stack.loose', {},
+      h('div.field', {}, h('div.label', {}, 'Day or night'), modeSeg, h('div.hint', {}, 'Each theme has a day look and a night look; the left half of a swatch is day, the right half night.')),
+      h('div.field', {}, h('div.label', {}, 'Theme'), swatches),
+      h('div.field', {}, h('div.label', {}, 'Text size'), sizeSeg));
+  }
+  CORB.lookPicker = lookPicker; CORB.voicePicker = voicePicker;
   function display(root, h, icon) {
-    var theme = CORB.get('profile.theme'), size = +CORB.get('profile.textSize', 0) || 0;
-    theme = theme === 'dark' || theme === 'system' ? theme : 'light';
     function seg(opts, cur, fn) { return h('div.seg', {}, opts.map(function (o) { return h('button' + (o[0] === cur ? '.on' : ''), { type: 'button', onclick: function () { fn(o[0]); CORB.render(); } }, o[1]); })); }
     var rate = h('input#tts-rate', { type: 'range', min: '0.7', max: '1.4', step: '0.1', value: String(CORB.get('settings.ttsRate', 1)) });
     rate.addEventListener('change', function () { CORB.set('settings.ttsRate', +rate.value); });
     function sw(path, label, def) { var i = h('input', { type: 'checkbox', checked: CORB.get(path, def) !== false }); i.addEventListener('change', function () { CORB.set(path, i.checked); if (path === 'settings.glossaryLinks') CORB.data.invalidate(); }); return h('label.switch', {}, i, label); }
     root.appendChild(h('div.card.stack.loose', {},
-      h('div.field', {}, h('div.label', {}, 'Day or night'), seg([['light', 'Day'], ['dark', 'Night'], ['system', 'Match my device']], theme, function (v) { CORB.setTheme(v); })),
-      h('div.field', {}, h('div.label', {}, 'Text size'), seg([[0, 'Normal'], [1, 'Large'], [2, 'Larger'], [3, 'Largest']], size, function (v) { CORB.setTextSize(v); })),
+      lookPicker(),
       h('div.field', {}, h('div.label', {}, 'Motion'), seg([['', 'Normal'], ['reduce', 'Less motion']], CORB.get('settings.motion') || '', function (v) { CORB.setMotion(v); })),
       sw('settings.glossaryLinks', 'Underline acronyms I can tap for a meaning', true)));
     root.appendChild(h('div.section-head', {}, h('h2', {}, 'Read aloud')));
-    var SAMPLE = 'Hi, this is how B2B Exam Prep sounds.\nWho can bind the Government to a contract? Only the contracting officer, the KO.\nBelow the micro-purchase threshold, $15,000, you can buy without competitive quotes, as long as the price is reasonable.\nReady when you are.';
     var tone = CORB.get('settings.ttsTone', 'lively') === 'even' ? 'even' : 'lively';
     // the device's English voices, natural ones first, then the app's own downloadable voices; the choice lives in settings.voice
-    function voicePicker() {
-      var AV = CORB.voices && CORB.voices.available ? CORB.voices : null, haveIds = [];
-      var sel = h('select#tts-voice.input', { 'aria-label': 'Voice' });
-      var dlBar = CORB.ui.bar(0), dlText = h('span.small.muted', {}, ''), dl = h('div.stack.tight.mt-2', { hidden: true }, dlText, dlBar);
-      function fill() {
-        var list = CORB.speech.voices(), cur = CORB.get('settings.voice', '');
-        sel.innerHTML = '';
-        sel.appendChild(h('option', { value: '' }, 'Best voice on this device' + (list[0] ? ': ' + list[0].name : '')));
-        function group(label, vs) { if (!vs.length) return; var g = h('optgroup', { label: label }); vs.forEach(function (v) { g.appendChild(h('option', { value: v.id }, v.name)); }); sel.appendChild(g); }
-        if (AV) { var ag = h('optgroup', { label: 'App voices: download once, then offline' }); AV.list().forEach(function (v) { ag.appendChild(h('option', { value: 'app:' + v.id }, v.name + ' · ' + v.who + (haveIds.indexOf(v.id) >= 0 ? ' · downloaded' : ' · ' + v.mb + ' MB'))); }); sel.appendChild(ag); }
-        group(AV ? 'Natural voices on this device' : 'Natural voices', list.filter(function (v) { return v.natural; })); group(AV ? 'Standard voices on this device' : 'Standard voices', list.filter(function (v) { return !v.natural; }));
-        var isApp = cur.indexOf('app:') === 0 && AV && AV.get(cur.slice(4));
-        sel.value = isApp || list.some(function (v) { return v.id === cur; }) ? cur : '';
-      }
-      fill();
-      if (AV) AV.downloaded().then(function (ids) { haveIds = ids; if (sel.isConnected) fill(); });
-      var off = CORB.on('voices', function () { if (sel.isConnected) fill(); else off(); });
-      var off2 = CORB.on('voices-changed', function () { if (!sel.isConnected) { off2(); return; } if (AV) AV.downloaded().then(function (ids) { haveIds = ids; fill(); paintManage(); }); });
-      sel.addEventListener('change', function () {
-        var val = sel.value, prev = CORB.get('settings.voice', '');
-        if (val.indexOf('app:') === 0 && AV) {
-          var v = AV.get(val.slice(4));
-          AV.ready(v.id).then(function (ready) {
-            if (ready) { CORB.speech.setVoice(val); CORB.speech.speak(SAMPLE); return; }
-            var need = v.mb + (haveIds.length ? 0 : AV.RUNTIME_MB);
-            if (!navigator.onLine) { CORB.ui.toast('You are offline. ' + v.name + ' needs a one-time download of about ' + need + ' MB.', 'warn', 5000); sel.value = prev; return; }
-            dl.hidden = false; dlText.textContent = 'Downloading ' + v.name + ' (about ' + need + ' MB, once)…'; sel.disabled = true;
-            AV.download(v.id, function (p) { dlText.textContent = 'Downloading ' + v.name + ': ' + Math.round(p.loadedMB) + ' of ' + Math.round(p.totalMB) + ' MB'; var nb = CORB.ui.bar(p.pct); dlBar.replaceWith(nb); dlBar = nb; })
-              .then(function () { dl.hidden = true; sel.disabled = false; CORB.speech.setVoice(val); CORB.ui.toast(v.name + ' is ready and works offline from now on.', 'ok', 4000); CORB.speech.speak(SAMPLE); },
-                function (err) { dl.hidden = true; sel.disabled = false; sel.value = prev; CORB.ui.toast('Could not download ' + v.name + ': ' + (err && err.message || err), 'danger', 6000); });
-          });
-          return;
-        }
-        CORB.speech.setVoice(val); CORB.speech.speak(SAMPLE);
-      });
-      var manageRow = h('div.row.tight.mt-2', {});
-      function paintManage() {
-        if (!AV) return;
-        AV.downloaded().then(function (ids) {
-          manageRow.innerHTML = '';
-          if (!ids.length) { manageRow.appendChild(h('span.small.muted', {}, 'No app voice is downloaded yet. Pick one in the list to download it.')); return; }
-          ids.forEach(function (id) { var v = AV.get(id); if (!v) return; manageRow.appendChild(h('button.btn.sm.ghost', { type: 'button', onclick: function () { CORB.ui.confirm('Remove ' + v.name + ' from this device? You can download it again later.', { ok: 'Remove' }).then(function (ok) { if (!ok) return; AV.remove(id).then(function () { if (CORB.get('settings.voice') === 'app:' + id) CORB.speech.setVoice(''); CORB.render(); }); }); } }, icon('x'), 'Remove ' + v.name)); });
-          manageRow.appendChild(h('button.btn.sm.ghost', { type: 'button', onclick: function () { CORB.ui.confirm('Remove every app voice and the speech engine from this device?', { ok: 'Remove all' }).then(function (ok) { if (!ok) return; AV.removeAll().then(function () { if ((CORB.get('settings.voice') || '').indexOf('app:') === 0) CORB.speech.setVoice(''); CORB.render(); }); }); } }, 'Remove all (frees about ' + (AV.RUNTIME_MB + 63 * ids.length) + ' MB)'));
-        });
-      }
-      paintManage();
-      var manage = AV ? h('details.inst-more.mt-2', {}, h('summary', {}, 'About the app voices'),
-        h('p.small.muted', {}, 'Four voices that run inside the app: Amber and Joe (US), Cori and Leo (UK). Each is a one-time download of about 63 MB, plus 31 MB for the speech engine the first time; after that they work offline and sound the same on every phone. Download on Wi-Fi. They come from the owner\'s GitHub page, not from a cloud service: nothing you read is sent anywhere.'),
-        manageRow) : null;
-      return h('div', {}, sel, dl, manage);
-    }
     var ok = CORB.speech.available;
     root.appendChild(h('div.card.stack', {},
       ok ? sw('settings.tts', 'Show Listen buttons', true) : h('p.muted', {}, 'This browser has no built-in voice, so Listen buttons are hidden. Edge on Windows has good voices.'),

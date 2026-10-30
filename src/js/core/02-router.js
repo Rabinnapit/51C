@@ -30,6 +30,21 @@
     t = t === 'dark' || t === 'system' ? t : 'light';
     applyTheme(t); CORB.set('profile.theme', t); paintTools();
   };
+  // colour themes: the base pine look is '', the others set data-palette (their day and night values live in 01-tokens.css)
+  CORB.PALETTES = [
+    { id: '', name: 'Pine', sub: 'Field guide, the default', day: ['#1f5e46', '#f3f5f1'], night: ['#6fc7a5', '#0e1411'] },
+    { id: 'navy', name: 'Navy', sub: 'Service blue', day: ['#1e4f8c', '#f2f4f8'], night: ['#7fb0ff', '#0c1118'] },
+    { id: 'desert', name: 'Desert', sub: 'Tan and olive', day: ['#8a5a1e', '#f6f3ec'], night: ['#e0a860', '#14110c'] },
+    { id: 'maroon', name: 'Maroon', sub: 'Crimson and brass', day: ['#7a2434', '#f6f2f3'], night: ['#ff8fa3', '#130d10'] },
+    { id: 'slate', name: 'Slate', sub: 'Quiet gray-blue', day: ['#3b4b63', '#f3f4f6'], night: ['#a7b8d6', '#0f1215'] },
+    { id: 'army', name: 'Black and gold', sub: 'Army colours', day: ['#1f1f1f', '#f4f3f0'], night: ['#e6c067', '#0f0f0f'] }
+  ];
+  function knownPalette(p) { return CORB.PALETTES.some(function (x) { return x.id === p; }) ? p : ''; }
+  function applyPalette(p) { var d = document.documentElement; p = knownPalette(p || ''); if (p) d.setAttribute('data-palette', p); else d.removeAttribute('data-palette'); }
+  CORB.setPalette = function (p) { p = knownPalette(p || ''); applyPalette(p); CORB.set('profile.palette', p); };
+  CORB.paletteName = function () { var p = knownPalette(CORB.get('profile.palette') || ''); return CORB.PALETTES.filter(function (x) { return x.id === p; })[0].name; };
+  // the look sheet from the side menu: day or night, the colour theme and the text size in one place
+  CORB.lookModal = function () { if (!CORB.lookPicker) return; CORB.ui.modal({ title: 'How it looks', body: CORB.lookPicker(), actions: [{ label: 'Done', primary: true }] }); };
   // ---- the side menu can shrink to a rail of icons on a wide screen (remembered in this browser) ----
   function narrow() { try { return window.matchMedia('(max-width: 860px)').matches; } catch (e) { return window.innerWidth <= 860; } }
   function isMini() { return document.documentElement.getAttribute('data-side') === 'mini'; }
@@ -83,7 +98,8 @@
         }));
       })),
       h('div.side-tools', {},
-        h('button.btn.sm', { type: 'button', onclick: function () { CORB.toggleTheme(); } }, icon('moon'), 'Day / night')),
+        h('button.btn.sm', { type: 'button', onclick: function () { CORB.toggleTheme(); } }, icon('moon'), 'Day / night'),
+        h('button.btn.sm', { type: 'button', onclick: function () { closeSide(); CORB.lookModal(); } }, icon('eye'), 'Theme')),
       h('button.side-collapse', { type: 'button', 'aria-label': 'Collapse the menu', onclick: function () { CORB.setSideMini(!isMini()); } }, icon('arrow-left'), h('span', {}, 'Collapse menu')),
       h('div.side-foot', {},
         meta.copyright ? h('div', {}, meta.copyright + ' ', h('a', { href: '#', onclick: function (e) { e.preventDefault(); if (CORB.terms) CORB.terms.show(); } }, 'Terms of use')) : null,
@@ -199,7 +215,7 @@
   // ---- boot ----
   CORB.boot = function () {
     CORB.store.load();
-    applyTheme(CORB.get('profile.theme'));
+    applyTheme(CORB.get('profile.theme')); applyPalette(CORB.get('profile.palette'));
     if (CORB.store.safeGet('b2b.side') === 'mini') document.documentElement.setAttribute('data-side', 'mini');
     var tx = +CORB.get('profile.textSize', 0) || 0; if (tx) document.documentElement.setAttribute('data-text', String(tx)); else document.documentElement.removeAttribute('data-text');
     if (CORB.get('settings.motion') === 'reduce') document.documentElement.setAttribute('data-motion', 'reduce');

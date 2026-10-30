@@ -93,6 +93,12 @@
   ],
   "guide_changes": [
     {
+      "version": "0.27.0",
+      "date": "2026-10-30",
+      "title": "Onboarding with a voice and a theme",
+      "notes": "The first visit is a four-step setup: who you are, your dates, how it looks (day or night, six colour themes, text size) and read-aloud (pick a voice, hear a sample). Themes are also in Settings & help → Display and in the side menu's Theme button; each has a day and a night look."
+    },
+    {
       "version": "0.26.2",
       "date": "2026-10-30",
       "title": "Range Day boards keep their distance",

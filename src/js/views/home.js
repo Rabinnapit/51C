@@ -1,4 +1,5 @@
-/* VIEW home — first visit: three questions that build the plan. Returning: next step, milestones, study, what's new */
+/* VIEW home — first visit: a four-step onboarding (who you are, your dates, how it looks, read aloud) that builds the plan.
+   Returning: next step, milestones, study, what's new */
 (function () {
   'use strict';
   // "Hello, Name!" for a signed-in reader (accounts are on the website and the app only)
@@ -45,13 +46,21 @@
       CORB.set('settings.setupDone', true);
       return true;
     }
-    var form = h('div.stack.loose.setup-form', {},
-      h('div.field', {}, h('div.label', {}, '1. Who are you?'), trackGrid),
-      h('div.field', {}, h('label', { for: 'setup-start' }, '2. When did you start in your contracting job?'), startIn,
-        h('div.hint', {}, 'Use the date you were assigned to a contracting position. Your 36-month certification clock starts then. A guess is fine; you can change it later.')),
-      h('div.field', {}, h('div.label', {}, '3. When do you want to finish your courses and the exam?'), seg, goalIn,
-        h('div.hint', {}, 'Most contracting support brigades ask for 6 months. The rules allow 36 months for the whole certification.')));
-    return { el: form, save: save };
+    var n = o.split ? '' : null;
+    var whoField = h('div.field', {}, h('div.label', {}, (n === null ? '1. ' : '') + 'Who are you?'), trackGrid);
+    var startField = h('div.field', {}, h('label', { for: 'setup-start' }, (n === null ? '2. ' : '') + 'When did you start in your contracting job?'), startIn,
+      h('div.hint', {}, 'Use the date you were assigned to a contracting position. Your 36-month certification clock starts then. A guess is fine; you can change it later.'));
+    var goalField = h('div.field', {}, h('div.label', {}, (n === null ? '3. ' : '') + 'When do you want to finish your courses and the exam?'), seg, goalIn,
+      h('div.hint', {}, 'Most contracting support brigades ask for 6 months. The rules allow 36 months for the whole certification.'));
+    // one step at a time in the onboarding: valid('who') and valid('dates') check a part without saving
+    function valid(part) {
+      if (part === 'who' && !st.track) { CORB.ui.toast('Pick who you are first.', 'warn'); return false; }
+      if (part === 'dates' && st.months === 0 && (!st.goalDate || st.goalDate <= st.start)) { CORB.ui.toast('Pick a goal date after your start date.', 'warn'); return false; }
+      return true;
+    }
+    if (o.split) return { who: whoField, dates: h('div.stack.loose', {}, startField, goalField), valid: valid, save: save };
+    var form = h('div.stack.loose.setup-form', {}, whoField, startField, goalField);
+    return { el: form, save: save, valid: valid };
   };
 
   function firstVisit(root) {
@@ -66,11 +75,40 @@
         [['school', '5 courses', 'CON 1100, 1200V, 1300V, 7300V and 1400V'], ['award', '1 exam', 'CON 3990V: 150 questions, 70% to pass'], ['clipboard', '12 months', 'of full-time contracting experience']].map(function (x) {
           return h('div.three-item', {}, icon(x[0]), h('div', {}, h('b', {}, x[1]), h('span', {}, x[2])));
         }))));
-    root.appendChild(h('section.card.raised.setup-card', {}, h('h2', {}, 'Build my plan'), h('p.muted', {}, 'Takes 30 seconds. Nothing leaves this device.'), f.el,
-      h('div.row.mt-5', {}, h('button.btn.primary.lg', { type: 'button', onclick: function () { if (f.save()) { CORB.ui.toast('Your plan and 6-month exam path are ready', 'ok'); CORB.go('path'); } } }, 'Build my plan', icon('arrow-right')),
-        h('button.btn.ghost', { type: 'button', onclick: function () { CORB.set('settings.welcomeSeen', true); CORB.render(); } }, 'Look around first'),
-        h('button.btn.ghost', { type: 'button', onclick: function () { if (CORB.tour) CORB.tour.start(); } }, icon('help'), 'Show me around'))));
+    root.appendChild(onboarding(h, icon));
     root.appendChild(tour());
+  }
+
+  // ---- the onboarding: four short steps; the look and the voice apply as soon as they are tapped, the plan saves at the end ----
+  function onboarding(h, icon) {
+    var f = CORB.setupForm({ split: true }), step = 0;
+    function voiceStep() {
+      if (!CORB.speech || !CORB.speech.available || !CORB.voicePicker) return h('p.muted', {}, 'Read-aloud is not available in this browser, so there is no voice to pick. Everything else works.');
+      return h('div.stack', {}, h('div.field', {}, h('div.label', {}, 'Voice'), CORB.voicePicker()),
+        h('div.row', {}, h('button.btn', { type: 'button', onclick: function () { CORB.speech.speak(CORB.VOICE_SAMPLE || 'Hi, this is how B2B Exam Prep sounds.'); } }, icon('volume'), 'Hear a sample'), h('button.btn.ghost', { type: 'button', onclick: function () { CORB.speech.stop(); } }, icon('stop'), 'Stop')),
+        h('div.hint', {}, 'Picking a voice plays the sample. The Listen button on every lesson, question and card uses it. Change it later in Settings & help → Display → Read aloud.'));
+    }
+    var steps = [
+      { title: 'Who are you?', sub: 'The guide tailors its plan and its words to you.', el: f.who, check: function () { return f.valid('who'); } },
+      { title: 'Your dates', sub: 'Your 36-month certification clock starts the day you were assigned to contracting.', el: f.dates, check: function () { return f.valid('dates'); } },
+      { title: 'How it looks', sub: 'Day or night, a colour theme and the text size. Change any of them later in Settings & help → Display.', el: CORB.lookPicker ? CORB.lookPicker() : h('div') },
+      { title: 'Read aloud', sub: 'Every lesson, question and card can be read to you. Pick a voice and hear a sample.', el: voiceStep() }
+    ];
+    var head = h('div.wizard-head'), body = h('div.wizard-body'), foot = h('div.row.mt-5');
+    function paint() {
+      var s = steps[step];
+      head.innerHTML = ''; body.innerHTML = ''; foot.innerHTML = '';
+      head.appendChild(h('div', {}, h('div.eyebrow', {}, 'Step ' + (step + 1) + ' of ' + steps.length), h('h2', {}, s.title), h('p.muted', {}, s.sub)));
+      head.appendChild(h('div.wiz-dots', { 'aria-hidden': 'true' }, steps.map(function (x, i) { return h('i' + (i < step ? '.done' : i === step ? '.on' : '')); })));
+      body.appendChild(s.el);
+      if (step > 0) foot.appendChild(h('button.btn', { type: 'button', onclick: function () { step--; paint(); } }, icon('arrow-left'), 'Back'));
+      if (step < steps.length - 1) foot.appendChild(h('button.btn.primary.lg', { type: 'button', onclick: function () { if (s.check && !s.check()) return; step++; paint(); try { body.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e) {} } }, 'Next', icon('arrow-right')));
+      else foot.appendChild(h('button.btn.primary.lg', { type: 'button', onclick: function () { if (f.save()) { CORB.ui.toast('Your plan and 6-month exam path are ready', 'ok'); CORB.go('path'); } else { step = 0; paint(); } } }, 'Build my plan', icon('check')));
+      foot.appendChild(h('button.btn.ghost', { type: 'button', onclick: function () { CORB.set('settings.welcomeSeen', true); CORB.render(); } }, 'Look around first'));
+      if (step === 0) foot.appendChild(h('button.btn.ghost', { type: 'button', onclick: function () { if (CORB.tour) CORB.tour.start(); } }, icon('help'), 'Show me around'));
+    }
+    paint();
+    return h('section.card.raised.setup-card.wizard', {}, head, h('p.muted.small', {}, 'About a minute. Nothing leaves this device.'), body, foot);
   }
 
   function tour() {

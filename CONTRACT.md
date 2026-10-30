@@ -164,7 +164,7 @@ ARCADE.host = { get(k), set(k, v, quiet), speak(text), onAnswer(qid, ok), onRunE
 ARCADE._debug.play(id, opts) / start() / step(seconds) / run()   (automated checks; no UI)
 ```
 
-State (`b2b.state.v1`): `{version: 'b2b-state-1', profile: {track, start, goalMonths, goalDate, theme ('' or 'light' = day, the default; 'dark'; 'system'), textSize}, progress: {steps, courses, lessons, checks, quiz, missed, srs, howto, exp, games, exam, seen, bookmarks, path, arcade: {best, xp, quest, rot, campaign}}, settings: {tts, ttsRate, glossaryLinks, motion, setupDone, welcomeSeen, tourSeen, arcade: {tier, mute, music}}. Browser-only keys: `b2b.theme`, `b2b.textsize`, `b2b.side` ('mini' = the collapsed menu), meta: {updatedAt, lastOpened}}`.
+State (`b2b.state.v1`): `{version: 'b2b-state-1', profile: {track, start, goalMonths, goalDate, theme ('' or 'light' = day, the default; 'dark'; 'system'), palette ('' = pine, or navy | desert | maroon | slate | army; data-palette on <html>, values in 01-tokens.css), textSize}, progress: {steps, courses, lessons, checks, quiz, missed, srs, howto, exp, games, exam, seen, bookmarks, path, arcade: {best, xp, quest, rot, campaign}}, settings: {tts, ttsRate, glossaryLinks, motion, setupDone, welcomeSeen, tourSeen, arcade: {tier, mute, music}}. Browser-only keys: `b2b.theme`, `b2b.palette`, `b2b.textsize`, `b2b.side` ('mini' = the collapsed menu), meta: {updatedAt, lastOpened}}`.
 The copy saved inside the HTML file wins over the browser's copy when its `meta.updatedAt` is newer.
 
 ## 7. Fusing with Board Ready (the "ultimate guide")

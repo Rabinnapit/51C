@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   var CORB = window.CORB, U = CORB.util;
-  var KEY = 'b2b.state.v1', THEME = 'b2b.theme', TEXT = 'b2b.textsize';
+  var KEY = 'b2b.state.v1', THEME = 'b2b.theme', PALETTE = 'b2b.palette', TEXT = 'b2b.textsize';
 
   var store = CORB.store = {
     available: null,
@@ -14,7 +14,7 @@
   function defaults() {
     return {
       version: 'b2b-state-1',
-      profile: { track: '', start: '', goalMonths: 6, goalDate: '', theme: '', textSize: 0 },
+      profile: { track: '', start: '', goalMonths: 6, goalDate: '', theme: '', palette: '', textSize: 0 },
       progress: {
         steps: {},        // plan step id -> date done
         courses: {},      // course id -> { status: 'registered'|'done', date }
@@ -61,6 +61,7 @@
     if (file && (!mine || store.fileStamp > mineAt)) merge(st, file);
     else if (mine) merge(st, mine);
     var th = store.safeGet(THEME); if (th !== null) st.profile.theme = th;
+    var pl = store.safeGet(PALETTE); if (pl !== null) st.profile.palette = pl;
     var tx = store.safeGet(TEXT); if (tx !== null && /^[0-3]$/.test(tx)) st.profile.textSize = +tx;
     st.meta.lastOpened = new Date().toISOString();
     CORB.state = st;
@@ -80,6 +81,7 @@
     for (var i = 0; i < parts.length - 1; i++) { if (cur[parts[i]] == null || typeof cur[parts[i]] !== 'object') cur[parts[i]] = {}; cur = cur[parts[i]]; }
     if (value === undefined) delete cur[parts[parts.length - 1]]; else cur[parts[parts.length - 1]] = value;
     if (path === 'profile.theme') store.safeSet(THEME, value || '');
+    if (path === 'profile.palette') store.safeSet(PALETTE, value || '');
     if (path === 'profile.textSize') store.safeSet(TEXT, String(value || 0));
     if (path.indexOf('progress') === 0 || path.indexOf('profile') === 0) CORB.state.meta.updatedAt = new Date().toISOString();
     if (!(opts && opts.noPersist)) persist();
@@ -153,7 +155,7 @@
     if (typeof window.PRISTINE_HTML !== 'string') return Promise.reject(new Error('this copy cannot save itself'));
     var stamp = CORB.state.meta.updatedAt || new Date().toISOString(); CORB.state.meta.updatedAt = stamp;
     var payload = { version: 'b2b-embedded-1', savedAt: new Date().toISOString(), state: U.deepClone(CORB.state),
-      settings: { theme: CORB.get('profile.theme') || '', textSize: CORB.get('profile.textSize') || 0 } };
+      settings: { theme: CORB.get('profile.theme') || '', palette: CORB.get('profile.palette') || '', textSize: CORB.get('profile.textSize') || 0 } };
     var html = store.buildSavedHtml(window.PRISTINE_HTML, JSON.stringify(payload)), name = store.appFileName();
     function done(how, fileName) { store.fileStamp = stamp; CORB.embedded = payload; store.persistNow(); CORB.emit('change', { path: 'file' }); return { how: how, name: fileName || name }; }
     function download() { if (!store.download(name, html, 'text/html')) throw new Error('the browser blocked the download'); return done('download'); }
