@@ -32,7 +32,7 @@
   A.register({
     id: 'qual-range', title: 'Qual Range', icon: '🎯', accent: '#5fd39a', genre: 'Pop-up range', music: 'tense',
     tagline: 'Targets pop up carrying contracting terms. Read the clue from the tower and engage the right one before it drops.',
-    drills: 'The 243-term glossary: acronyms and definitions',
+    drills: 'Contracting terms from the glossary: acronyms and definitions',
     controls: 'Aim with the mouse and click to fire, or tap a target on a touch screen. Keyboard: left and right move between targets, Space or Enter fires. 20 exposures and 30 rounds: 18 hits for Expert, 15 Sharpshooter, 12 Marksman. On Veteran and Elite the sight sways, so time your shot.',
     aspect: [0.62, 2.3], gateAt: 'top', noLives: true, livesLabel: 'Rounds', outTitle: 'Out of ammunition',
     livesText: function (st) { return st.inst && st.inst.ammoText ? st.inst.ammoText() : ''; },

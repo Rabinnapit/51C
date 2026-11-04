@@ -5,7 +5,7 @@
   var session = null;
 
   function decks() {
-    var D = CORB.DATA, far = (D.far || {}), gl = CORB.data.glossary();
+    var D = CORB.DATA, far = (D.far || {}), gl = CORB.data.glossary().filter(function (g) { return g.drill !== false; });   // drill: false = lookup only (old names such as DAU)
     var isAcr = function (t) { return /^[A-Z0-9][A-Z0-9&()/.-]{1,11}$/.test(t) && /[A-Z]/.test(t); };
     var out = [
       { id: 'far-exam', title: 'FAR part titles on the exam', sub: 'The 20 titles the exam says to know', icon: 'scale',

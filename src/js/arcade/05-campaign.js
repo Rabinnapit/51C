@@ -15,7 +15,7 @@
       brief: 'Welcome to the shop. Month one is the rules of the road: who can bind the Government, how the FAR is built, what makes a contract, the money rules, ethics and the file. Nothing in this job works without them. Three missions: a table on the range, a stop at the Ops Center, and a boss who promised work he had no authority to promise.',
       clear: 'Chapter one is in the file. You know who signs and why it matters. Next month we buy something.',
       missions: [
-        { id: 'm1', game: 'range-day', title: 'Terms of the trade', what: 'A ten-target table on the words of month one: roles, the regulations, ethics, money and your career.', pass: 6, of: 10, unit: 'hits', opts: { cats: ['Roles', 'Regulations', 'Ethics', 'Money', 'Training and career'], exposures: 10 } },
+        { id: 'm1', game: 'range-day', title: 'Terms of the trade', what: 'A ten-target table on the words of month one: roles, the regulations, ethics and money.', pass: 6, of: 10, unit: 'hits', opts: { cats: ['Roles', 'Regulations', 'Ethics', 'Money'], exposures: 10 } },
         { id: 'm2', game: 'supply-line', title: 'Ops Center', what: 'Six crates at CP1 on the Guiding Principles: authority, the contract, the money rules, ethics and the file.', pass: 4, of: 6, unit: 'crates', opts: { realm: 'gp', lessons: L(1, 8).concat(['L35']) } },
         { id: 'm3', game: 'contract-quest', title: 'The Unauthorized Commitment', what: 'A boss fight. It feeds on promises made without a warrant: authority, what makes a contract, the money rules and the file.', pass: 1, of: 1, unit: 'boss', opts: { boss: 'uc', lessons: ['L02', 'L04', 'L05', 'L07', 'L08'] } }
       ] },

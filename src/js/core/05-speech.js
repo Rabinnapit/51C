@@ -19,11 +19,16 @@
   var NATURAL = /natural|neural|premium|enhanced|\bonline\b/i;
   var GOOD = /\b(Google|Siri|Samantha|Ava|Zoe|Evan|Allison|Nicky|Aria|Jenny|Guy|Emma|Andrew|Brian|Sonia|Ryan|Libby|Michelle|Jane|Ana|Christopher|Eric|Steffan|Roger)\b/i;
   var POOR = /espeak|compact|Microsoft (David|Zira|Mark|Hazel|George|Susan|Catherine|James|Richard)( Desktop)?$/i;
+  // Apple's novelty voices sing, bubble or whisper the text (a tester picked Bells and heard nothing useful): never listed
+  var TOY = /^(Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Deranged|Good News|Hysterical|Jester|Organ|Pipe Organ|Superstar|Trinoids|Whisper|Wobble|Zarvox)\b/i;
+  // Apple's older robotic voices stay in the list, below the others
+  var ROBOT = /^(Eddy|Flo|Grandma|Grandpa|Reed|Rocko|Sandy|Shelley|Fred|Junior|Kathy|Ralph|Agnes|Bruce|Vicki|Victoria|Princess)\b/i;
   function score(v) {
     var s = 0, n = v.name || '', l = v.lang || '';
     if (NATURAL.test(n)) s += 6;
     if (GOOD.test(n)) s += 3;
     if (POOR.test(n)) s -= 2;
+    if (ROBOT.test(n)) s -= 3;
     if (/^en[-_]?US/i.test(l)) s += 2; else if (/^en/i.test(l)) s += 1; else s -= 10;
     return s;
   }
@@ -37,7 +42,7 @@
   // the English voices this device has, best first: {id, name, natural, lang, voice}
   sp.voices = function () {
     return all().map(function (v) { return { id: v.voiceURI || v.name, name: label(v), natural: NATURAL.test(v.name) || /Google|Siri/i.test(v.name), lang: v.lang, s: score(v), voice: v }; })
-      .filter(function (x) { return x.s > -5; }).sort(function (a, b) { return b.s - a.s || a.name.localeCompare(b.name); });
+      .filter(function (x) { return x.s > -5 && !TOY.test(x.voice.name || ''); }).sort(function (a, b) { return b.s - a.s || a.name.localeCompare(b.name); });
   };
   function pickVoice() {
     var list = sp.voices(); if (!list.length) return null;
@@ -151,6 +156,24 @@
   };
   sp.prepare = function (text) { return sp.segments(text).map(function (s) { return s.text; }).join(' '); };
 
+  // ---- iPhone and iPad: play through the Silent switch the way a video does, and wake a paused speech engine ----
+  var IOS = /iP(hone|ad|od)/.test(navigator.userAgent || '') || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  sp.ios = IOS;
+  var woke = false;
+  sp.wake = function () {   // called inside the tap that asked for sound
+    try { if (navigator.audioSession && navigator.audioSession.type !== 'playback') navigator.audioSession.type = 'playback'; } catch (e) {}
+    try { if (synth && synth.paused) synth.resume(); } catch (e) {}
+    if (woke || !IOS) return; woke = true;
+    try {   // a fifth of a second of silence through an audio element moves the page to media playback
+      var n = 1600, b = new Uint8Array(44 + n), dv = new DataView(b.buffer), put = function (o, s) { for (var i = 0; i < s.length; i++) b[o + i] = s.charCodeAt(i); };
+      put(0, 'RIFF'); dv.setUint32(4, 36 + n, true); put(8, 'WAVEfmt '); dv.setUint32(16, 16, true); dv.setUint16(20, 1, true); dv.setUint16(22, 1, true);
+      dv.setUint32(24, 8000, true); dv.setUint32(28, 8000, true); dv.setUint16(32, 1, true); dv.setUint16(34, 8, true); put(36, 'data'); dv.setUint32(40, n, true); b.fill(128, 44);
+      var a = new Audio(URL.createObjectURL(new Blob([b], { type: 'audio/wav' }))); a.setAttribute('playsinline', '');
+      var p = a.play(); if (p && p.catch) p.catch(function () {});
+    } catch (e) {}
+  };
+  function noSound() { CORB.ui.toast('No sound? Turn the volume up' + (IOS ? ' and check Silent mode (the switch or Action button on the side)' : '') + ', then try again. Another voice in Settings → Display → Read aloud may also help.', 'warn', 7000); }
+
   // ---- speaking: one utterance per piece, chained with its pause; cancel stops the chain ----
   var queueId = 0, keep = [];   // Chrome forgets onend for an utterance that was garbage-collected, so the last few are kept
   function clamp(x, a, b) { return Math.max(a, Math.min(b, x)); }
@@ -168,6 +191,7 @@
   sp.speak = function (text, o) {
     o = o || {};
     if (!CORB.get('settings.tts', true)) { if (o.onend) o.onend(); return false; }
+    sp.wake();
     var app = !o.device && CORB.voices && CORB.voices.selected && CORB.voices.selected();
     if (app) {
       var mine = ++queueId; try { if (synth) synth.cancel(); } catch (e) {}
@@ -182,7 +206,8 @@
     try {
       var my = ++queueId, list = sp.segments(text), i = 0, voice = o.voice || sp.current();
       var base = o.rate || CORB.get('settings.ttsRate', 1) || 1, lively = CORB.get('settings.ttsTone', 'lively') !== 'even';
-      var busy = synth.speaking || synth.pending; synth.cancel();
+      // cancel only what is playing: an iPhone can drop an utterance queued right after cancel() even when nothing played
+      var busy = synth.speaking || synth.pending, started = false; if (busy) synth.cancel();
       sp.speaking = true; CORB.emit('speech', { speaking: true });
       function finish() { if (my !== queueId) return; sp.speaking = false; CORB.emit('speech', { speaking: false }); if (o.onend) o.onend(); }
       function next() {
@@ -191,12 +216,15 @@
         var s = list[i++], u = new SpeechSynthesisUtterance(s.text), done = false;
         u.rate = clamp(base * (lively ? s.rate : 1), 0.5, 2); u.pitch = lively ? s.pitch : 1;
         if (voice) { u.voice = voice; u.lang = voice.lang || 'en-US'; } else u.lang = 'en-US';
-        u.onend = function () { if (done || my !== queueId) return; done = true; if (s.pause && i < list.length) setTimeout(next, s.pause); else next(); };
+        u.onstart = function () { started = true; };
+        u.onend = function () { if (done || my !== queueId) return; done = true; started = true; if (s.pause && i < list.length) setTimeout(next, s.pause); else next(); };
         u.onerror = function (e) { if (done || my !== queueId) return; done = true; if (e && (e.error === 'interrupted' || e.error === 'canceled')) return; finish(); };
         keep.push(u); if (keep.length > 6) keep.shift();
         synth.speak(u);
       }
       if (busy) setTimeout(next, 80); else next();   // Android drops an utterance queued in the same tick as cancel()
+      // a voice that never starts (blocked or broken) must not leave the Listen button stuck: stop and say what to check
+      setTimeout(function () { if (my === queueId && !started && !synth.speaking && !synth.pending) { finish(); noSound(); } }, 3500);
       return true;
     } catch (e) { sp.speaking = false; if (o.onend) o.onend(); return false; }
   };

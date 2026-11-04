@@ -12,8 +12,10 @@
   var EXPOSE = { recruit: 16, regular: 12, veteran: 9, elite: 7 };
   var SWAY = { recruit: 0, regular: 0, veteran: 0.012, elite: 0.022 };   // sight drift as a fraction of the screen, mouse and keyboard only
   // Boards are 2.2 m wide. A lane's x grows with the row's distance, so on screen the lanes stay 0.38 of the distance
-  // apart: more than the widest pair of neighbours (a 25 m board beside a 50 m one) needs to never touch.
+  // apart: more than the widest pair of neighbours (a 25 m board beside a 50 m one) needs to never touch. FIT tells the
+  // scene where the outer lanes are, so a phone held upright backs the camera off until every board is on screen.
   var LANES = [-2.1, 0, 2.1], ROWS = [{ z: -5.5, m: 25 }, { z: -8.5, m: 50 }, { z: -12, m: 75 }];
+  var FIT = { half: 1.3, rows: ROWS.map(function (r) { return { z: r.z, x: LANES[LANES.length - 1] * (-r.z / 5.5) }; }) };
 
   function termsOf(D) { return ((D && D.terms) || []).filter(function (t) { return t && t.term && t.clue; }); }
   // the rifle standard scaled to the table: Expert 36 of 40, Sharpshooter 30, Marksman 23 (18, 15 and 12 of 20)
@@ -28,7 +30,7 @@
   A.register({
     id: 'range-day', title: 'Range Day', icon: '🎯', accent: '#e6b85a', genre: 'Rifle range · real 3D', music: 'tense',
     tagline: 'The qualification range in real 3D. The tower reads a clue, three targets pop up carrying terms, and you fire the M4A1 at the right one before they drop.',
-    drills: 'The 243-term glossary: acronyms and definitions',
+    drills: 'Contracting terms from the glossary: acronyms and definitions',
     controls: 'Tap or click a target to fire. Keyboard: left and right move the sight between targets, Space or Enter fires. 20 exposures and 30 rounds: 18 hits for Expert, 15 Sharpshooter, 12 Marksman (a campaign table is 10 targets and 15 rounds). On Veteran and Elite the sight sways, so time your shot.',
     aspect: [0.5, 2.3], gateAt: 'top', noLives: true, livesLabel: 'Rounds', outTitle: 'Out of ammunition',
     livesText: function (st) { return st.inst && st.inst.ammoText ? st.inst.ammoText() : ''; },
@@ -57,7 +59,7 @@
       if (opts.exposures > 0) { EXPOSURES = opts.exposures; AMMO = Math.round(EXPOSURES * 1.5); }
       var coarse = false; try { coarse = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
       var scene = null, glError = null;
-      try { scene = new A.GL.RangeScene({ mobile: coarse, reduce: feel.reduce, width: 640, height: 400 }); } catch (e) { glError = e; }
+      try { scene = new A.GL.RangeScene({ mobile: coarse, reduce: feel.reduce, width: 640, height: 400, fit: FIT }); } catch (e) { glError = e; }
       if (!scene) {
         setTimeout(function () { api.end({ won: false, title: '3D not available', message: 'This device could not start the 3D range' + (glError && glError.message ? ' (' + glError.message + ')' : '') + '. Qual Range is the same drill in 2D.' }); }, 2200);
         return { update: function () {}, draw: function (ctx) { A.text(ctx, 'Starting the 3D range failed on this device. Qual Range is the same drill in 2D.', 30, 60, { size: 18, color: A.C.ink, maxWidth: W - 60 }); } };
@@ -193,7 +195,7 @@
         resize: function (w, h) { W = w; H = h; },
         destroy: function () { scene.dispose(); },
         ammoText: function () { return ammo + ' / ' + AMMO; },
-        stats: function () { return { tri: scene.tri, calls: scene.calls, gl2: scene.gl2, hdr: scene.hdr, scale: scale, gl: [glW, glH], phase: phase, n: n, hits: hits, ammo: ammo, targets: targets.map(function (b) { var p = screenOf(b); return { ok: b.ok, text: b.text, x: Math.round(p.x), y: Math.round(p.y), fall: b.fall }; }) }; }
+        stats: function () { return { tri: scene.tri, calls: scene.calls, gl2: scene.gl2, hdr: scene.hdr, scale: scale, gl: [glW, glH], W: W, H: H, back: scene.back || 0, phase: phase, n: n, hits: hits, ammo: ammo, cat: cur && cur.term ? cur.term.cat : '', targets: targets.map(function (b) { var p = screenOf(b), s = scene.span(b); return { ok: b.ok, text: b.text, cat: b.term ? b.term.cat : '', x: Math.round(p.x), y: Math.round(p.y), l: Math.round(s[0] * W), r: Math.round(s[1] * W), fall: b.fall }; }) }; }
       };
     }
   });

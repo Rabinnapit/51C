@@ -58,8 +58,9 @@
       g.fillStyle = b.mark === 'ok' ? '#3fbf8a' : b.mark === 'no' ? '#ff5c5c' : '#e6b85a'; g.beginPath(); g.arc(60, 60, 44, 0, Math.PI * 2); g.fill();
       g.fillStyle = '#1b1407'; g.font = A.font(56, 'display', 800); g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(b.letter, 60, 64);
       g.strokeStyle = '#2a2420'; g.lineWidth = 5; g.globalAlpha = 0.5; g.beginPath(); g.arc(452, 60, 34, 0, Math.PI * 2); g.stroke(); g.beginPath(); g.arc(452, 60, 12, 0, Math.PI * 2); g.stroke(); g.globalAlpha = 1;
-      g.fillStyle = '#1c1a16'; var sizes = [66, 56, 48, 40, 34], fs = 66, lines = [b.text];
-      for (var s = 0; s < sizes.length; s++) { fs = sizes[s]; g.font = A.font(fs, 'body', 700); lines = A.wrap(g, b.text, 440); if (lines.length <= (fs <= 48 ? 4 : 3)) break; }
+      // a short term gets big letters (on a phone the far boards are small); the top line stays clear of the letter disc
+      g.fillStyle = '#1c1a16'; var sizes = [96, 84, 72, 66, 56, 48, 40, 34], fs = 66, lines = [b.text];
+      for (var s = 0; s < sizes.length; s++) { fs = sizes[s]; g.font = A.font(fs, 'body', 700); lines = A.wrap(g, b.text, 440); if (lines.length <= (fs >= 96 ? 1 : fs >= 72 ? 2 : fs <= 48 ? 4 : 3)) break; }
       var y0 = 200 - (lines.length - 1) * fs * 0.6; lines.forEach(function (ln, i) { g.fillText(ln, 256, y0 + i * fs * 1.2); });
       if (b.mark === 'no') { g.strokeStyle = 'rgba(255,60,60,.85)'; g.lineWidth = 14; g.beginPath(); g.moveTo(40, 40); g.lineTo(472, 280); g.moveTo(472, 40); g.lineTo(40, 280); g.stroke(); }
       var t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t;
@@ -124,11 +125,12 @@
 
     // shooting
     var ray = new THREE.Raycaster(), ndc = new THREE.Vector2();
-    S.aim = function (nx, ny) { ndc.set(nx, ny); ray.setFromCamera(ndc, camera); var hits = ray.intersectObjects(S.boards.filter(function (b) { return b.fall < 0; }).map(function (b) { return b.hit; }), false); return hits.length ? { board: hits[0].object.userData.board, point: hits[0].point } : { board: null, point: ray.ray.at(14, new THREE.Vector3()) }; };
+    S.aim = function (nx, ny) { ndc.set(nx, ny); ray.setFromCamera(ndc, camera); var hits = ray.intersectObjects(S.boards.filter(function (b) { return b.fall < 0; }).map(function (b) { return b.hit; }), false); return hits.length ? { board: hits[0].object.userData.board, point: hits[0].point } : { board: null, point: ray.ray.at(14 + (S.back || 0), new THREE.Vector3()) }; };
     S.shoot = function (nx, ny) { S.recoil = 1; S.flashT = 1; if (!reduce()) { S.aberr = 0.006; S.white = 0.06; } ejectBrass(); puffSmoke(); return S.aim(nx, ny); };
     S.hitFx = function (point, base, ok) { emit(splinters, point, ok ? 26 : 12, ok ? 3.2 : 2.5); if (ok) emit(sparks, point, 10, 4); if (base) emitDust(base, 6); };
     S.dustAt = function (p) { emitDust(p, 4); };
     S.project = function (b) { var v = new THREE.Vector3(); b.hit.getWorldPosition(v); v.project(camera); return { x: (v.x + 1) / 2, y: (1 - v.y) / 2 }; };
+    S.span = function (b) { var v = new THREE.Vector3(); return [-1.3, 1.3].map(function (dx) { b.hit.localToWorld(v.set(dx, 0, 0)); v.project(camera); return (v.x + 1) / 2; }); };   // the hit box's left and right edge on screen (checks)
 
     // update and render
     var baseFov = 58, baseCam = new THREE.Vector3(0, 1.55, 0);
@@ -152,7 +154,15 @@
       clouds.position.x = Math.sin(S.t * 0.02) * 6;
       var mp = moteGeo.attributes.position.array; for (i = 0; i < mp.length; i += 3) { mp[i + 1] += Math.sin(S.t * 0.8 + i) * 0.002; mp[i] += 0.03 * dt; if (mp[i] > 4) mp[i] = -4; } moteGeo.attributes.position.needsUpdate = true;
     };
-    S.resize = function (w, h) { if (!St.resize(w, h)) return; S.w = St.w; S.h = St.h; baseFov = S.h > S.w ? 66 : 56; camera.fov = baseFov; camera.updateProjectionMatrix(); };
+    // every board on screen at any shape: on a narrow phone the camera steps back from the firing line until the outer
+    // lanes fit (opts.fit: the hit box's half width and each row's z and outer-lane x, from range-day.js)
+    function backOff(aspect, fov) {
+      var f = opts.fit; if (!f || !f.rows) return 0;
+      var tanH = Math.tan(fov * Math.PI / 360) * aspect * 0.94, d = 0;
+      f.rows.forEach(function (r) { d = Math.max(d, (Math.abs(r.x) + f.half) / tanH + r.z); });
+      return clamp(d, 0, 9);
+    }
+    S.resize = function (w, h) { if (!St.resize(w, h)) return; S.w = St.w; S.h = St.h; baseFov = S.h > S.w ? 66 : 56; baseCam.z = S.back = backOff(S.w / S.h, baseFov); camera.fov = baseFov; camera.updateProjectionMatrix(); };
     S.render = function () { St.aberr = S.aberr; St.white = S.white; St.render(S.t); S.tri = St.tri; S.calls = St.calls; };
     S.setQuality = function (q) { St.setQuality(q); S.quality = St.quality; };
     S.dispose = function () { St.dispose(); };

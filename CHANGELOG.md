@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.28.3 (4 November 2026): what the first tester found
+
+- **Hear a sample on iPhones.** Apple's novelty voices (Bells, Bubbles, Zarvox and the rest sing or bubble the text)
+  are no longer offered, and the older robotic ones sit at the bottom of the list. Read-aloud no longer cancels an
+  empty queue right before it speaks, which an iPhone can answer with silence, and on iPhones it asks Safari for media
+  playback, the way a video plays, before it speaks. A voice that never starts now stops within a few seconds and says
+  what to check (volume, Silent mode, another voice) instead of leaving Listen stuck; the voice picker on iPhones says
+  the same. The app voices also pick up again after a phone call or a trip to the home screen.
+- **Range Day fits an upright phone.** On a narrow screen the targets in the outer lanes were cut off. The camera now
+  steps back from the firing line until all three boards and their tap areas are on screen, at any phone size, and
+  short terms get bigger letters so the far boards stay readable.
+- **Exam words only on the range.** Range Day and Qual Range no longer ask about training and career terms (AITAS,
+  CAMP, Pearson VUE, the proponent's board guidance): CON 3990V does not test them. They stay in the glossary and in
+  Certification 101, and the first campaign chapter's range table drops them too.
+- **DAU is WarU's old name.** The glossary entry says so, and DAU no longer comes up as a flashcard or a game question.
+
 ## 0.28.2 (30 October 2026): what the 51C proponent said
 
 - **Four career questions, answered from the proponent.** After an October 2026 professional development session with

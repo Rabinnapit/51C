@@ -135,7 +135,8 @@
 
   // ---- playback: each sentence arrives as PCM and is queued back to back, with the reader's pauses between ----
   var ctx = null, playing = null, playId = 0;
-  function audioCtx() { if (!ctx) ctx = new AC(); if (ctx.state === 'suspended') { try { ctx.resume(); } catch (e) {} } return ctx; }
+  // an iPhone also leaves a context 'interrupted' after a call or a trip to the home screen; resume anything not running
+  function audioCtx() { if (!ctx) ctx = new AC(); if (ctx.state !== 'running') { try { var r = ctx.resume(); if (r && r.catch) r.catch(function () {}); } catch (e) {} } return ctx; }
   function stopPlayback() { if (playing) { var p = playing; playing = null; p.ended = true; p.sources.forEach(function (s) { try { s.onended = null; s.stop(); } catch (e) {} }); } }
   function schedule(p, pcm, rate, pauseMs) {
     var c = audioCtx(), n = Math.max(1, pcm.length), buf = c.createBuffer(1, n, rate);

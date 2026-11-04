@@ -117,7 +117,8 @@
     var manage = AV ? h('details.inst-more.mt-2', {}, h('summary', {}, 'About the app voices'),
       h('p.small.muted', {}, 'Four voices that run inside the app: Amber and Joe (US), Cori and Leo (UK). Each is a one-time download of about 63 MB, plus 31 MB for the speech engine the first time; after that they work offline and sound the same on every phone. Download on Wi-Fi. They come from the owner\'s GitHub page, not from a cloud service: nothing you read is sent anywhere.'),
       manageRow) : null;
-    return h('div', {}, sel, dl, manage);
+    var tip = CORB.speech.ios ? h('p.small.muted.mt-2', {}, 'No sound on an iPhone or iPad? Turn the volume up and check Silent mode (the switch or Action button on the side).') : null;
+    return h('div', {}, sel, dl, tip, manage);
   }
   // the look picker: day or night, the colour theme (CORB.PALETTES) and the text size, each applied as soon as it is tapped.
   // Shared by Settings -> Display, the side menu's Theme sheet and the onboarding on Home.

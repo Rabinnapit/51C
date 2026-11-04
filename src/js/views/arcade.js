@@ -62,9 +62,11 @@
     return out;
   }
 
-  // ---- glossary terms with the term hidden in its own definition ----
+  // ---- glossary terms with the term hidden in its own definition. Exam words only: the training-and-career entries
+  //      (AITAS, CAMP, Pearson VUE, the proponent's terms) and lookup-only ones (drill: false, such as DAU) stay in the
+  //      glossary and out of the games, after a tester was asked career questions on the range ----
   function terms() {
-    return CORB.data.glossary().map(function (g) {
+    return CORB.data.glossary().filter(function (g) { return g.drill !== false && g.cat !== 'Training and career'; }).map(function (g) {
       var term = tidy(g.term), exp = tidy(g.expansion || ''), def = tidy(g.definition || ''), clue = def;
       [term, exp].concat(g.alias || []).filter(function (w) { return w && w.length > 1; }).sort(function (a, b) { return b.length - a.length; }).forEach(function (w) {
         clue = clue.replace(new RegExp('(^|[^\\w])' + esc(w) + '(?=$|[^\\w])', 'gi'), '$1____');
