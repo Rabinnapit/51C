@@ -93,6 +93,12 @@
   ],
   "guide_changes": [
     {
+      "version": "0.28.4",
+      "date": "2026-11-14",
+      "title": "The 3D games on a phone",
+      "notes": "A 3D game no longer sits on a blank screen while it loads on a phone: it opens on a loading card and starts when its first frame is ready. The games test the phone's graphics once and pick simpler drawing when needed, hold a steady frame rate by drawing smaller, and say so and offer Restart if the phone stops the 3D view. Under the game list, \"Check this phone\" runs a 3D test whose result you can send to the developer."
+    },
+    {
       "version": "0.28.3",
       "date": "2026-11-04",
       "title": "Fixes from the first tester",

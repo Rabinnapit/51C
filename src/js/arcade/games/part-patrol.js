@@ -82,7 +82,7 @@
       var SEC = opts.sectors > 0 ? Math.min(SECTORS, opts.sectors) : SECTORS, wavesRight = 0, platesBroken = 0;
       var coarse = false; try { coarse = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
       var scene = null; if (A.GL && A.GL.ok() && A.GL.PatrolScene) { try { scene = new A.GL.PatrolScene({ mobile: coarse, reduce: feel.reduce, width: 520, height: 640 }); } catch (e) { console.error('[part-patrol] 3D failed, drawing in 2D', e); scene = null; } }
-      var frames = 0, slow = 0, scale = 1, glW = 0, glH = 0;
+      var gov = scene ? A.GL.governor(scene) : null, scale = 1, glW = 0, glH = 0;
       var ti = Math.max(0, ['recruit', 'regular', 'veteran', 'elite'].indexOf(tier.id));
       var ship = { x: W / 2, y: H * 0.82, shield: 3, inv: 0, fireT: 0, flash: 0, tx: null, ty: null };
       var bullets = [], eb = [], drones = [], carriers = [], powers = [], stars = [], boss = null;
@@ -170,7 +170,7 @@
 
       function update(dt, rdt) {
         t += dt; var s = S(), K = api.input.keys, sk = slowK(); rdt = rdt || dt;
-        if (scene) { shipVx = (ship.x - lastSx) / Math.max(0.001, dt); shipVy = (ship.y - lastSy) / Math.max(0.001, dt); lastSx = ship.x; lastSy = ship.y; scene.update(rdt, feel.hitstop.frozen()); frames++; if (rdt > 0.026) slow++; if (frames >= 90) { if (slow > 45 && scale > 0.6) { scale = scale > 0.8 ? 0.75 : 0.6; scene.setQuality(scale > 0.7 ? 1 : 0); } frames = 0; slow = 0; } }
+        if (scene) { shipVx = (ship.x - lastSx) / Math.max(0.001, dt); shipVy = (ship.y - lastSy) / Math.max(0.001, dt); lastSx = ship.x; lastSy = ship.y; scene.update(rdt, feel.hitstop.frozen()); }
         stars.forEach(function (st) { st.y += dt * (0.02 + st.l * 0.05) * (phase === 'between' ? 3 : 1); if (st.y > 1) { st.y -= 1; st.x = Math.random(); } });
         spread = Math.max(0, spread - dt); rapid = Math.max(0, rapid - dt); slow = Math.max(0, slow - dt);
         ship.inv = Math.max(0, ship.inv - dt); ship.flash = Math.max(0, ship.flash - dt);
@@ -323,6 +323,7 @@
       }
 
       function draw3D(ctx) {
+        scale = gov.frame(api.paused);
         var cw = ctx.canvas.width, ch = ctx.canvas.height, dpr = Math.min(2, window.devicePixelRatio || 1), kq = Math.min(1, (coarse ? 1.5 : 2) / dpr) * scale;
         var gw = Math.round(cw * kq), gh = Math.round(ch * kq);
         if (gw !== glW || gh !== glH) { glW = gw; glH = gh; scene.resize(gw, gh); }
@@ -376,7 +377,7 @@
       }
 
       return { update: update, draw: draw, onPointer: onPointer, resize: function (w, h) { var fx = ship.x / W, fy = ship.y / H; W = w; H = h; ship.x = fx * W; ship.y = fy * H; },
-        destroy: function () { if (scene) scene.dispose(); },
+        destroy: function () { if (scene) scene.dispose(); }, loading: scene ? A.GL.loader(scene) : null,
         debug: function () { return { phase: phase, sector: sector, wave: wave, ship: ship, carriers: carriers, boss: boss }; },
         stats: function () { return { gl: !!scene, scene: scene, tri: scene && scene.tri, calls: scene && scene.calls, phase: phase, sector: sector, wave: wave, ship: [Math.round(ship.x), Math.round(ship.y)], carriers: carriers.map(function (c) { return { label: c.label, ok: c.ok, x: Math.round(c.x), y: Math.round(c.y), alive: c.alive, hp: c.hp }; }), boss: boss && { plates: boss.plates, turrets: boss.turrets.map(function (tu) { return [tu.letter, tu.ok, tu.alive]; }) }, wavesRight: wavesRight, platesBroken: platesBroken }; } };
     }

@@ -54,7 +54,7 @@
       var CR = opts.crates > 0 ? opts.crates : CRATES;
       var coarse = false; try { coarse = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
       var scene = null; if (A.GL && A.GL.ok() && A.GL.YardScene) { try { scene = new A.GL.YardScene({ mobile: coarse, reduce: feel.reduce, width: 640, height: 400 }); } catch (e) { console.error('[sort-yard] 3D failed, drawing in 2D', e); scene = null; } }
-      var frames = 0, slow = 0, scale = 1, glW = 0, glH = 0;
+      var gov = scene ? A.GL.governor(scene) : null, scale = 1, glW = 0, glH = 0;
       var shift = -1, line = null, k = 0, crate = null, sel = 1, armAng = 0, streak = 0, rush = false, flashBay = -1, flashT = 0, flashOk = false;
       var falling = [], sparks = [], phase = 'start', phaseT = 0.3, rollerT = 0, forkX = 0.2, forkDir = 1, sorted = 0;
       api.progress.configure({ perLevel: 5 });
@@ -127,7 +127,7 @@
 
       function update(dt, rdt) {
         t += dt; rollerT += dt * (rush ? 1.4 : 1); flashT = Math.max(0, flashT - dt); rdt = rdt || dt;
-        if (scene) { if (crate) scene.crateAt(crate.t / crate.T); scene.select(sel); if (flashT > 0) scene.flashBay(flashBay, flashOk, flashT); scene.update(rdt, feel.hitstop.frozen()); frames++; if (rdt > 0.026) slow++; if (frames >= 90) { if (slow > 45 && scale > 0.6) { scale = scale > 0.8 ? 0.75 : 0.6; scene.setQuality(scale > 0.7 ? 1 : 0); } frames = 0; slow = 0; } }
+        if (scene) { if (crate) scene.crateAt(crate.t / crate.T); scene.select(sel); if (flashT > 0) scene.flashBay(flashBay, flashOk, flashT); scene.update(rdt, feel.hitstop.frozen()); }
         forkX += forkDir * dt * 0.05; if (forkX > 0.85 || forkX < 0.1) forkDir *= -1;
         var target = line ? (sel - (line.bins.length - 1) / 2) * 0.55 : 0; armAng = A.lerp(armAng, target, Math.min(1, dt * 14));
         if (phase === 'start') { phaseT -= dt; if (phaseT <= 0) nextShift(); }
@@ -156,6 +156,7 @@
       }
       function draw(ctx) {
         if (scene) {
+          scale = gov.frame(api.paused);
           var cw = ctx.canvas.width, ch = ctx.canvas.height, dpr = Math.min(2, window.devicePixelRatio || 1), kq = Math.min(1, (coarse ? 1.5 : 2) / dpr) * scale, gw = Math.round(cw * kq), gh = Math.round(ch * kq);
           if (gw !== glW || gh !== glH) { glW = gw; glH = gh; scene.resize(gw, gh); }
           scene.render(); ctx.drawImage(scene.canvas, 0, 0, W, H); scoreboard(ctx); return;
@@ -229,7 +230,7 @@
       }
 
       return { update: update, draw: draw, onKey: onKey, onPointer: onPointer, resize: function (w, h) { W = w; H = h; if (crate) { var sz = crateSize(crate.it.text); crate.w = sz.w; crate.h = sz.h; crate.fs = sz.fs; } },
-        destroy: function () { if (scene) scene.dispose(); },
+        destroy: function () { if (scene) scene.dispose(); }, loading: scene ? A.GL.loader(scene) : null,
         debug: function () { return { phase: phase, line: line && line.id, crate: crate && crate.it, sel: sel, sorted: sorted, rush: rush }; },
         stats: function () { return { gl: !!scene, scene: scene, tri: scene && scene.tri, calls: scene && scene.calls, phase: phase, line: line && line.id, shift: shift, k: k, crate: crate && crate.it.text, bin: crate && crate.it.bin, bins: line && line.bins.map(function (b) { return b.id; }), sel: sel, sorted: sorted, right: api.progress.right, rush: rush }; } };
     }

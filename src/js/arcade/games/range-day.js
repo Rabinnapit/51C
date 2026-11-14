@@ -34,7 +34,7 @@
     controls: 'Tap or click a target to fire. Keyboard: left and right move the sight between targets, Space or Enter fires. 20 exposures and 30 rounds: 18 hits for Expert, 15 Sharpshooter, 12 Marksman (a campaign table is 10 targets and 15 rounds). On Veteran and Elite the sight sways, so time your shot.',
     aspect: [0.5, 2.3], gateAt: 'top', noLives: true, livesLabel: 'Rounds', outTitle: 'Out of ammunition',
     livesText: function (st) { return st.inst && st.inst.ammoText ? st.inst.ammoText() : ''; },
-    dataOk: function (D) { return termsOf(D).length >= 20 && !!(A.GL && A.GL.ok()); },
+    needs3D: true, dataOk: function (D) { return termsOf(D).length >= 20 && !!(A.GL && A.GL.ok()); },
     thumb: function (ctx, w, h, t) {
       var hz = h * 0.46, g = ctx.createLinearGradient(0, 0, 0, hz); g.addColorStop(0, '#2d5f9a'); g.addColorStop(1, '#a9c9e6'); ctx.fillStyle = g; ctx.fillRect(0, 0, w, hz);
       ctx.fillStyle = '#ffd980'; ctx.beginPath(); ctx.arc(w * 0.78, hz * 0.42, 16, 0, Math.PI * 2); ctx.fill();
@@ -65,7 +65,7 @@
         return { update: function () {}, draw: function (ctx) { A.text(ctx, 'Starting the 3D range failed on this device. Qual Range is the same drill in 2D.', 30, 60, { size: 18, color: A.C.ink, maxWidth: W - 60 }); } };
       }
       var n = 0, ammo = AMMO, hits = 0, streak = 0, targets = [], cur = null, phase = 'wait', phaseT = 0.6, expose = 0, exposeMax = 1;
-      var aim = { x: W / 2, y: H * 0.55 }, focus = -1, lastTouch = coarse, kick = 0, hitMark = 0, first = true, frames = 0, slow = 0, scale = coarse ? 1 : 1, glW = 0, glH = 0;
+      var aim = { x: W / 2, y: H * 0.55 }, focus = -1, lastTouch = coarse, kick = 0, hitMark = 0, first = true, gov = A.GL.governor(scene), scale = 1, glW = 0, glH = 0;
       var sway = SWAY[tier.id] || 0;
       api.progress.configure({ perLevel: 5 });
 
@@ -155,10 +155,9 @@
           if (expose <= 0) endExposure(null);
           if (focus >= 0) { var lv = live(), ft = lv[Math.min(focus, lv.length - 1)]; if (ft) { var p = screenOf(ft); aim.x = A.lerp(aim.x, p.x, Math.min(1, dt * 14)); aim.y = A.lerp(aim.y, p.y, Math.min(1, dt * 14)); } }
         } else if (phase === 'down' || phase === 'wait') { phaseT -= gdt; if (phaseT <= 0) newExposure(); }
-        // adaptive quality: if frames run slow for a while, render smaller and drop the multisampling
-        frames++; if (dt > 0.026) slow++; if (frames >= 90) { if (slow > 45 && scale > 0.6) { scale = scale > 0.8 ? 0.75 : 0.6; scene.setQuality(scale > 0.7 ? 1 : 0); } frames = 0; slow = 0; }
       }
       function draw(ctx) {
+        scale = gov.frame(api.paused);   // slow frames: draw smaller, then without soft shadows (GL.governor)
         var cw = ctx.canvas.width, ch = ctx.canvas.height, dpr = Math.min(2, window.devicePixelRatio || 1), k = Math.min(1, (coarse ? 1.5 : 2) / dpr) * scale;
         var gw = Math.round(cw * k), gh = Math.round(ch * k);
         if (gw !== glW || gh !== glH) { glW = gw; glH = gh; scene.resize(gw, gh); }
@@ -193,7 +192,7 @@
       return {
         update: update, draw: draw, onPointer: onPointer, onKey: onKey,
         resize: function (w, h) { W = w; H = h; },
-        destroy: function () { scene.dispose(); },
+        destroy: function () { scene.dispose(); }, loading: A.GL.loader(scene),
         ammoText: function () { return ammo + ' / ' + AMMO; },
         stats: function () { return { tri: scene.tri, calls: scene.calls, gl2: scene.gl2, hdr: scene.hdr, scale: scale, gl: [glW, glH], W: W, H: H, back: scene.back || 0, phase: phase, n: n, hits: hits, ammo: ammo, cat: cur && cur.term ? cur.term.cat : '', targets: targets.map(function (b) { var p = screenOf(b), s = scene.span(b); return { ok: b.ok, text: b.text, cat: b.term ? b.term.cat : '', x: Math.round(p.x), y: Math.round(p.y), l: Math.round(s[0] * W), r: Math.round(s[1] * W), fall: b.fall }; }) }; }
       };

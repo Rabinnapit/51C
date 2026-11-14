@@ -166,6 +166,7 @@
     S.render = function () { St.aberr = S.aberr; St.white = S.white; St.render(S.t); S.tri = St.tri; S.calls = St.calls; };
     S.setQuality = function (q) { St.setQuality(q); S.quality = St.quality; };
     S.dispose = function () { St.dispose(); };
+    S.stage = St; S.warm = St.warm; Object.defineProperty(S, 'ready', { get: function () { return St.ready; } });
     S.canvas = St.canvas; S.camera = camera; S.scene = scene; S.hdr = St.hdr; S.gl2 = St.gl2;
     S.resize(opts.width || 640, opts.height || 400);
     return S;

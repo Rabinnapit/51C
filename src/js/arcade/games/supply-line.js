@@ -218,7 +218,7 @@
       var coarse = false; try { coarse = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
       // the 3D road where WebGL works; otherwise the 2D drawing below
       var scene = null; if (A.GL && A.GL.ok()) { try { scene = new A.GL.RoadScene({ mobile: coarse, reduce: feel.reduce, width: 640, height: 400 }); } catch (e) { console.error('[supply-line] 3D failed, drawing in 2D', e); scene = null; } }
-      var LEG = 40, LEG1 = 30, PLACE3 = 21, OFF_M = 36, frames = 0, slow = 0, scale = 1, glW = 0, glH = 0;   // meters along the road
+      var LEG = 40, LEG1 = 30, PLACE3 = 21, OFF_M = 36, gov = null, scale = 1, glW = 0, glH = 0;   // meters along the road
       function PX() { return W / 32; }   // pixels per meter in the 2D drawing
       var mode = 'map', mission = [], leg = 0, cp = CPS[0], pool = [], q = null, order = [], answered = false;
       var asked = 0, loaded = 0, missed = 0, bay = [], streak = 0, limit = 0, timer = 0, anim = null, pending = null;
@@ -363,7 +363,6 @@
         if (scene) {
           scene.scroll = scroll; scene.off = off; scene.gate(gateOpen); scene.update(rdt, feel.hitstop.frozen());
           // adaptive quality: if frames run slow for a while, render smaller and drop the multisampling
-          frames++; if (rdt > 0.026) slow++; if (frames >= 90) { if (slow > 45 && scale > 0.6) { scale = scale > 0.8 ? 0.75 : 0.6; scene.setQuality(scale > 0.7 ? 1 : 0); } frames = 0; slow = 0; }
         }
         if (anim) {
           anim.t += dt;
@@ -377,6 +376,8 @@
       function draw(ctx) {
         if (mode === 'map') { drawMap(ctx); return; }
         if (scene) {
+          if (!gov) gov = A.GL.governor(scene);
+          scale = gov.frame(api.paused);
           var cw = ctx.canvas.width, ch = ctx.canvas.height, dpr = Math.min(2, window.devicePixelRatio || 1), kq = Math.min(1, (coarse ? 1.5 : 2) / dpr) * scale;
           var gw = Math.round(cw * kq), gh = Math.round(ch * kq);
           if (gw !== glW || gh !== glH) { glW = gw; glH = gh; scene.resize(gw, gh); }
@@ -457,7 +458,7 @@
       if (want === 'mission' || opts.mission === 'full') start([0, 1, 2, 3, 4]); else if (ix >= 0) start([ix]); else showMap();
       return {
         update: update, draw: draw, onPointer: onPointer, onKey: onKey, resize: function (w, h) { W = w; H = h; },
-        destroy: function () { if (scene) scene.dispose(); },
+        destroy: function () { if (scene) scene.dispose(); }, loading: scene ? A.GL.loader(scene) : null,
         stats: function () { return { gl: !!scene, scene: scene, tri: scene && scene.tri, calls: scene && scene.calls, light: scene && scene.light, mode: mode, cp: cp.id, scroll: Math.round(scroll), loaded: loaded, missed: missed, scale: scale }; }
       };
     }

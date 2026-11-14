@@ -141,6 +141,7 @@
     S.render = function () { St.render(S.t); S.tri = St.tri; S.calls = St.calls; };
     S.setQuality = function (q) { St.setQuality(q); };
     S.dispose = function () { St.dispose(); };
+    S.stage = St; S.warm = St.warm; Object.defineProperty(S, 'ready', { get: function () { return St.ready; } });
     S.resize(opts.width || 520, opts.height || 640);
     return S;
   };

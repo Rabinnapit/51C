@@ -66,8 +66,11 @@
   };
 
   // ---- the post pass: scene -> HDR target -> bright pass -> blur -> composite (ACES, bloom, vignette, grain, chromatic kick) ----
-  GL.Post = function (renderer, isGL2) {
-    var rtType = isGL2 && (renderer.extensions.has('EXT_color_buffer_float') || renderer.extensions.has('EXT_color_buffer_half_float')) ? THREE.HalfFloatType : THREE.UnsignedByteType;
+  // tier 0 HDR targets with multisampling, 1 HDR without, 2 8-bit targets, 3 no post pass (the scene goes straight to the
+  // screen with three's own tone mapping). The first stage on a device picks the best tier that draws (GL.probe).
+  GL.Post = function (renderer, isGL2, tier) {
+    tier = tier || 0;
+    var rtType = tier < 2 && isGL2 && (renderer.extensions.has('EXT_color_buffer_float') || renderer.extensions.has('EXT_color_buffer_half_float')) ? THREE.HalfFloatType : THREE.UnsignedByteType;
     var samples = 0;
     var sceneRT = new THREE.WebGLRenderTarget(2, 2, { type: rtType, samples: samples }), brightRT = new THREE.WebGLRenderTarget(2, 2, { type: rtType }), blurA = new THREE.WebGLRenderTarget(2, 2, { type: rtType }), blurB = new THREE.WebGLRenderTarget(2, 2, { type: rtType });
     var QVS = 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }';
@@ -86,8 +89,12 @@
     var post = {
       u: compMat.uniforms, hdr: rtType === THREE.HalfFloatType,
       size: function (W, H) { sceneRT.setSize(W, H); brightRT.setSize(Math.max(1, W >> 1), Math.max(1, H >> 1)); blurA.setSize(Math.max(1, W >> 2), Math.max(1, H >> 2)); blurB.setSize(Math.max(1, W >> 2), Math.max(1, H >> 2)); },
-      msaa: function (n) { if (!isGL2 || n === samples) return; samples = n; sceneRT.dispose(); sceneRT = new THREE.WebGLRenderTarget(Math.max(2, blurA.width << 2), Math.max(2, blurA.height << 2), { type: rtType, samples: n }); },
+      msaa: function (n) { if (tier > 0) n = 0; if (!isGL2 || n === samples) return; samples = n; sceneRT.dispose(); sceneRT = new THREE.WebGLRenderTarget(Math.max(2, blurA.width << 2), Math.max(2, blurA.height << 2), { type: rtType, samples: n }); },
+      tier: tier,
+      // what render() binds before drawing the scene: shaders compiled ahead of time must match it
+      bind: function () { if (tier >= 3) { renderer.setRenderTarget(null); renderer.toneMapping = THREE.ACESFilmicToneMapping; } else renderer.setRenderTarget(sceneRT); },
       render: function (scene, camera, time) {
+        if (tier >= 3) { renderer.setRenderTarget(null); renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = compMat.uniforms.exposure.value; renderer.render(scene, camera); post.tri = renderer.info.render.triangles; post.calls = renderer.info.render.calls; return; }
         renderer.setRenderTarget(sceneRT); renderer.render(scene, camera); post.tri = renderer.info.render.triangles; post.calls = renderer.info.render.calls;
         brightMat.uniforms.tex.value = sceneRT.texture; pass(brightMat, brightRT);
         blurMat.uniforms.texel.value.set(1 / blurA.width, 1 / blurA.height);
@@ -101,6 +108,105 @@
       dispose: function () { [sceneRT, brightRT, blurA, blurB].forEach(function (r) { r.dispose(); }); brightMat.dispose(); blurMat.dispose(); compMat.dispose(); }
     };
     return post;
+  };
+
+  // ---- what the 3D layer noticed on this device (shown by the Arcade's phone check) ----
+  GL.TIER_NAMES = ['full effects', 'full effects without edge smoothing', 'basic colour', 'simple drawing, no glow', 'not working'];
+  GL.notes = [];
+  GL.note = function (kind, msg) { GL.notes.push({ at: new Date().toTimeString().slice(0, 8), kind: kind, msg: String(msg || '') }); if (GL.notes.length > 30) GL.notes.shift(); };
+  // one bright square through the post pass; true when it reaches the screen bright (some phone GPUs cannot draw into the
+  // HDR or multisampled targets and give a black frame instead)
+  GL.probe = function (renderer, post) {
+    try {
+      var gl = renderer.getContext(); if (gl.isContextLost()) return false;
+      var s = new THREE.Scene(), cam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 10), geo = new THREE.PlaneGeometry(2, 2), mat = new THREE.MeshBasicMaterial({ color: 0xb0b0b0 }), m = new THREE.Mesh(geo, mat);
+      m.position.z = -1; s.add(m);
+      renderer.setSize(16, 16, false); post.size(16, 16);
+      var u = post.u, vig = u.vig.value, grain = u.grain.value; u.vig.value = 0; u.grain.value = 0;
+      post.render(s, cam, 0);
+      var px = new Uint8Array(4); gl.readPixels(8, 8, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, px);
+      u.vig.value = vig; u.grain.value = grain; geo.dispose(); mat.dispose();
+      return px[0] > 60 && px[1] > 60 && px[2] > 60;
+    } catch (e) { GL.note('probe', e && e.message); return false; }
+  };
+  // the canvases behind the shared textures, which outlive every run
+  GL.sharedImages = function () { var set = new Set(); if (TEX) Object.keys(TEX).forEach(function (k) { var t = TEX[k]; if (t && t.image) set.add(t.image); }); return set; };
+  // a game's loading(): true until its scene's shaders are compiled. The compile starts on the second call, after the
+  // shell has painted its loading card once.
+  GL.loader = function (S) { var n = 0; return function () { if (!S || !S.warm || S.ready) return false; if (++n === 2) S.warm(); return true; }; };
+  GL.report = function () {
+    var out = { webgl: 'none', gpu: '', maxTex: 0, parallel: false, float: false };
+    try {
+      var c = document.createElement('canvas'), g = c.getContext('webgl2'), v = 2; if (!g) { g = c.getContext('webgl'); v = 1; }
+      if (g) {
+        out.webgl = 'WebGL ' + v; var di = g.getExtension('WEBGL_debug_renderer_info');
+        out.gpu = String(di ? g.getParameter(di.UNMASKED_RENDERER_WEBGL) : g.getParameter(g.RENDERER));
+        out.maxTex = g.getParameter(g.MAX_TEXTURE_SIZE); out.parallel = !!g.getExtension('KHR_parallel_shader_compile');
+        out.float = !!(g.getExtension('EXT_color_buffer_float') || g.getExtension('EXT_color_buffer_half_float'));
+        var lx = g.getExtension('WEBGL_lose_context'); if (lx) lx.loseContext();
+      }
+      c.width = c.height = 1;
+    } catch (e) { out.err = e && e.message; }
+    out.tier = GL.tier; out.tierName = GL.tier != null ? GL.TIER_NAMES[GL.tier] : 'not tested yet'; out.warmMs = GL.lastWarm; out.notes = GL.notes.slice(-10);
+    return out;
+  };
+  // the Arcade's "check this phone": build a stage from scratch (the probe runs again from the best tier), draw a frame
+  GL.selfTest = function (mobile) {
+    var t0 = performance.now(), St = null, res;
+    try { St = GL.Stage({ mobile: mobile, probe: true }); St.resize(64, 64); St.render(0); res = GL.tier === 4 || St.errors() ? 'does not work: a scene shader did not compile' : 'works: ' + GL.TIER_NAMES[GL.tier]; }
+    catch (e) { res = 'does not work: ' + (e && e.message); }
+    var ms = Math.round(performance.now() - t0); if (St) St.dispose();
+    var r = GL.report(); r.result = res; r.testMs = ms; return r;
+  };
+
+  // ---- the frame-rate governor the 3D games share. frame() is called once per drawn frame and returns the share of the
+  //      full drawing size to use. It reads real frame times (the shell caps the game clock at 50 ms, which hides a slow
+  //      phone) in windows of about ten frames, leaving out the longest one (a single long gap is a map screen or a
+  //      hitch, not the frame rate; on a struggling device long frames come back in every window). It steps down within
+  //      a second or two, takes a step back when it did not help (then the processor is the limit, not the graphics
+  //      chip), never steps up again (no flicker), and sends the games to their 2D versions when even the smallest
+  //      size stays under about five frames a second. No step recompiles a shader. ----
+  GL.PACE = [[1, 2], [0.75, 1], [0.6, 0], [0.48, -1], [0.36, -2]];   // [share of the drawing size, quality (St.setQuality)]
+  GL.governor = function (S) {
+    var LAST = GL.PACE.length - 1, level = 0, last = 0, win = [], skip = 4, before = 0, judging = false, jn = 0, jsum = 0, hold = false, mild = 0, dead = 0, stalls = 0, g = { scale: 1, level: 0, avg: 0 };
+    function set(l) { level = l; g.level = l; g.scale = GL.PACE[l][0]; try { if (S && S.setQuality) S.setQuality(GL.PACE[l][1]); } catch (e) {} win = []; skip = 3; mild = 0; }
+    function down(avg, to) { before = avg; judging = true; jn = 0; jsum = 0; GL.note('pace', 'frames took ' + Math.round(avg) + ' ms: drawing at ' + Math.round(GL.PACE[to][0] * 100) + '%'); set(to); }
+    if (S) S.pace = g;   // for the phone check and the tests
+    g.frame = function (paused) {
+      var now = performance.now(), ms = last ? now - last : 0; last = now; g.frames = (g.frames || 0) + 1;
+      if (paused) { last = 0; return g.scale; }   // the pause card and the countdown are not the game's rate
+      if (!ms || (typeof document !== 'undefined' && document.hidden)) return g.scale;
+      if (skip > 0) { skip--; return g.scale; }   // texture uploads and a new render target are not the steady rate
+      win.push(ms);
+      var total = 0, mx = 0, i; for (i = 0; i < win.length; i++) { total += win[i]; if (win[i] > mx) mx = win[i]; }
+      // a window: ten frames, or as few as three when they are very slow
+      if (!(win.length >= 10 || (win.length >= 3 && total - mx > 1500))) return g.scale;
+      var avg = (total - mx) / (win.length - 1), whole = total / win.length; win = [];
+      // a long stall in every window (three in a row) is the frame rate too, not a one-off gap
+      if (whole > 250) { if (++stalls >= 3) avg = Math.max(avg, whole); } else stalls = 0;
+      g.avg = avg;
+      if (judging) {   // did the last step help? Two windows, or one when it is plainly bad
+        jn++; jsum += avg;
+        if (jn < 2 && avg <= 70) return g.scale;
+        var a = jsum / jn; judging = false;
+        if (a > before * 0.85 && before <= 70 && a <= 70) { hold = true; GL.note('pace', 'drawing smaller did not help (' + Math.round(a) + ' ms a frame): back to ' + Math.round(GL.PACE[level - 1][0] * 100) + '%'); set(level - 1); return g.scale; }
+        avg = a;
+      }
+      if (avg > 70) {   // under 14 frames a second: always act, whatever was tried before
+        mild = 0;
+        if (level < LAST) down(avg, avg > 400 ? LAST : level + 1);
+        else if (avg > 180 && !g.gaveUp && ++dead >= 2) {
+          // the smallest drawing size and still under about five frames a second: this device cannot run the 3D scenes.
+          // The games restart in their 2D versions (the shell listens on GL.onFail).
+          g.gaveUp = true; GL.note('pace', 'still ' + Math.round(avg) + ' ms a frame at the smallest size: switching to the 2D games');
+          GL.tier = 4; GL._ok = false; if (typeof GL.onFail === 'function') { try { GL.onFail(); } catch (e) {} }
+        }
+      } else if (avg > 36 && !hold && level < LAST) {   // a mild slowdown: four windows in a row, tried once
+        if (++mild >= 4) down(avg, level + 1);
+      } else { mild = 0; dead = 0; }
+      return g.scale;
+    };
+    return g;
   };
 
   // ---- lighting presets: the sky, the sun, the haze and the fill light of one time of day. A scene applies one or blends
@@ -118,13 +224,36 @@
   GL.Stage = function (opts) {
     opts = opts || {};
     if (!THREE) throw new Error('three.js is not loaded');
+    if (GL.tier === 4 && !opts.probe) throw new Error('3D drawing does not work in this browser');   // found earlier on this page
     var mobile = !!opts.mobile;
     var canvas = document.createElement('canvas'); canvas.width = 4; canvas.height = 4;
     var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: false, powerPreference: 'high-performance', alpha: false });
     var isGL2 = renderer.capabilities.isWebGL2;
-    renderer.setPixelRatio(1); renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap; renderer.outputColorSpace = THREE.SRGBColorSpace; renderer.toneMapping = THREE.NoToneMapping;
+    renderer.setPixelRatio(1); renderer.shadowMap.enabled = true; renderer.shadowMap.type = mobile ? THREE.PCFShadowMap : THREE.PCFSoftShadowMap; renderer.outputColorSpace = THREE.SRGBColorSpace; renderer.toneMapping = THREE.NoToneMapping;
     var scene = new THREE.Scene(), camera = new THREE.PerspectiveCamera(opts.fov || 58, 1, 0.05, opts.far || 700), X = GL.textures();
-    var post = GL.Post(renderer, isGL2); post.msaa(mobile ? 2 : 4);
+    var shaderErrors = 0, warmP = null, probing = GL.tier == null || !!opts.probe;   // during the self-test a failed shader only means: try the next tier
+    renderer.debug.onShaderError = function (gl, program, vs, fs) {
+      shaderErrors++; var m = ''; try { m = [gl.getProgramInfoLog(program), gl.getShaderInfoLog(vs), gl.getShaderInfoLog(fs)].join(' ').replace(/\s+/g, ' ').trim(); } catch (e) {}
+      GL.note('shader', m.slice(0, 240) || 'a shader did not compile'); console.error('[arcade] 3D shader failed: ' + m.slice(0, 400));
+      // past the self-test this is a scene material: the 3D scenes cannot be drawn here, so the games use their 2D versions
+      if (!probing && GL.tier !== 4) { GL.tier = 4; GL._ok = false; if (typeof GL.onFail === 'function') { try { GL.onFail(); } catch (e) {} } }
+    };
+    // the first stage on this device (or the phone check) tests the post pass and steps down until a tier draws
+    function makePost(t) { var po = GL.Post(renderer, isGL2, t); po.msaa(mobile ? 2 : 4); return po; }   // tier 0 is tested with its multisampling on
+    var tier = GL.tier != null && !opts.probe ? Math.min(3, GL.tier) : 0, post = makePost(tier);
+    if (GL.tier == null || opts.probe) {
+      while (!GL.probe(renderer, post)) {
+        post.dispose();
+        if (tier >= 3) {
+          GL.note('probe', 'no drawing method worked'); GL.tier = 4; GL._ok = false;
+          try { renderer.dispose(); var lx = renderer.getContext().getExtension('WEBGL_lose_context'); if (lx) lx.loseContext(); } catch (e) {}
+          throw new Error('3D drawing does not work in this browser');
+        }
+        tier++; GL.note('probe', 'stepping down to ' + GL.TIER_NAMES[tier]); post = makePost(tier);
+      }
+      GL.tier = tier; GL._ok = true;
+    }
+    probing = false;
     var skyU = { top: { value: new THREE.Color() }, horizon: { value: new THREE.Color() }, bot: { value: new THREE.Color() }, sunDir: { value: new THREE.Vector3(0.5, 0.55, -0.4) }, sunColor: { value: new THREE.Color() }, haze: { value: 0.35 }, night: { value: 0 } };
     var skyMat = new THREE.ShaderMaterial({ side: THREE.BackSide, depthWrite: false, uniforms: skyU,
       vertexShader: 'varying vec3 vW; void main(){ vec4 w = modelMatrix * vec4(position, 1.0); vW = w.xyz; gl_Position = projectionMatrix * viewMatrix * w; }',
@@ -132,7 +261,7 @@
         'void main(){ vec3 d = normalize(vW - cameraPosition); float h = d.y; vec3 sky = mix(horizon, top, pow(clamp(h, 0.0, 1.0), 0.45)); sky = mix(bot, sky, smoothstep(-0.25, 0.03, h));' +
         ' float s = max(dot(d, sunDir), 0.0); sky += sunColor * (pow(s, 1400.0) * 9.0 + pow(s, 24.0) * 0.35 + pow(s, 3.0) * haze);' +
         ' if (night > 0.001) { vec3 c = floor(d * 230.0); float r = fract(sin(dot(c, vec3(12.9898, 78.233, 37.719))) * 43758.5453); float tw = 0.6 + 0.4 * sin(r * 40.0 + vW.x * 0.01); sky += vec3(1.6, 1.7, 2.0) * smoothstep(0.994, 0.9985, r) * tw * night * smoothstep(0.02, 0.25, h); }' +
-        ' gl_FragColor = vec4(sky, 1.0); }' });
+        ' gl_FragColor = vec4(sky, 1.0);\n#include <tonemapping_fragment>\n#include <colorspace_fragment>\n}' });
     scene.add(new THREE.Mesh(new THREE.SphereGeometry(550, 32, 16), skyMat));
     var envScene = new THREE.Scene(); envScene.add(new THREE.Mesh(new THREE.SphereGeometry(50, 24, 12), skyMat));
     var pmrem = new THREE.PMREMGenerator(renderer), envTex = null;
@@ -144,6 +273,12 @@
     scene.add(sun); scene.add(sun.target);
     var St = { canvas: canvas, renderer: renderer, gl2: isGL2, scene: scene, camera: camera, X: X, post: post, skyU: skyU, sun: sun, hemi: hemi, w: 4, h: 4, tri: 0, calls: 0, quality: 2, hdr: post.hdr, mobile: mobile, aberr: 0, white: 0, light: 'day' , reduce: opts.reduce || function () { return false; } };
     St.std = function (o) { return new THREE.MeshStandardMaterial(o); };
+    St.tier = tier; St.errors = function () { return shaderErrors; };
+    // the browser can take the GPU back (low memory, the app in the background): the run shows a restart card (shell)
+    canvas.addEventListener('webglcontextlost', function (e) {
+      e.preventDefault(); if (St.disposed) return; St.lost = true; GL.note('lost', 'the browser stopped the 3D view');
+      if (typeof GL.onLost === 'function') { try { GL.onLost(St); } catch (x) {} }
+    }, false);
     // the live light values; set() copies a preset, blend() mixes two, push() writes them into the sky, sun, fog and fill
     var cur = { top: new THREE.Color(), horizon: new THREE.Color(), bot: new THREE.Color(), sunDir: new THREE.Vector3(), sunColor: new THREE.Color(), sun: 1, haze: 0.3, fog: new THREE.Color(), fogD: 0.004, hemiSky: new THREE.Color(), hemiGround: new THREE.Color(), hemi: 0.3, night: 0, exposure: 1 };
     var ca = new THREE.Color(), cb = new THREE.Color(), va = new THREE.Vector3(), vb = new THREE.Vector3();
@@ -173,10 +308,56 @@
       w = Math.max(4, Math.round(w)); h = Math.max(4, Math.round(h)); if (w === St.w && h === St.h) return false;
       St.w = w; St.h = h; renderer.setSize(w, h, false); post.size(w, h); camera.aspect = w / h; camera.updateProjectionMatrix(); return true;
     };
-    St.render = function (t) { post.u.aberr.value = St.aberr; post.u.white.value = St.white; post.render(scene, camera, t); St.tri = post.tri; St.calls = post.calls; };
-    // quality: 2 full, 1 lighter shadows and no multisampling, 0 also no soft shadows
-    St.setQuality = function (q) { if (q === St.quality) return; St.quality = q; post.msaa(q >= 2 ? (mobile ? 2 : 4) : 0); var sz = q >= 2 ? (mobile ? 1024 : 2048) : 1024; sun.shadow.mapSize.set(sz, sz); if (sun.shadow.map) { sun.shadow.map.dispose(); sun.shadow.map = null; } renderer.shadowMap.type = q >= 1 ? THREE.PCFSoftShadowMap : THREE.PCFShadowMap; renderer.shadowMap.needsUpdate = true; };
-    St.dispose = function () { try { post.dispose(); pmrem.dispose(); if (envTex) envTex.dispose(); renderer.dispose(); var ext = renderer.getContext().getExtension('WEBGL_lose_context'); if (ext) ext.loseContext(); } catch (e) {} };
+    St.render = function (t) { if (St.lost || St.disposed) return; if (shadowEvery > 1 && shadowTick++ % shadowEvery === 0) renderer.shadowMap.needsUpdate = true; post.u.aberr.value = St.aberr; post.u.white.value = St.white; post.render(scene, camera, t); St.tri = post.tri; St.calls = post.calls; };
+    // quality: 2 full; 1 no multisampling and a smaller shadow map; 0, -1, -2 also redraw the shadows every 2nd, 4th, 8th
+    // frame. No step changes a shader, so no step freezes the game while shaders recompile.
+    var shadowEvery = 1, shadowTick = 0;
+    St.setQuality = function (q) {
+      if (q === St.quality) return; St.quality = q; post.msaa(q >= 2 ? (mobile ? 2 : 4) : 0);
+      var sz = q >= 2 ? (mobile ? 1024 : 2048) : 1024;
+      if (sun.shadow.mapSize.x !== sz) { sun.shadow.mapSize.set(sz, sz); if (sun.shadow.map) { sun.shadow.map.dispose(); sun.shadow.map = null; } }
+      shadowEvery = q >= 1 ? 1 : q === 0 ? 2 : q === -1 ? 4 : 8; renderer.shadowMap.autoUpdate = shadowEvery === 1; renderer.shadowMap.needsUpdate = true;
+    };
+    // shaders compile in the background where the browser can (KHR_parallel_shader_compile, polled here so a stage that is
+    // disposed or lost stops polling); until St.ready the game
+    // shows the shell's loading card, so a phone never sits frozen on a black stage
+    St.ready = false;
+    St.warm = function () {
+      if (warmP) return warmP;
+      var t0 = performance.now();
+      warmP = new Promise(function (resolve) {
+        var over = false;
+        function done(err) { if (over) return; over = true; if (err) GL.note('warm', (err && err.message) || err); St.ready = true; St.warmMs = Math.round(performance.now() - t0); GL.lastWarm = St.warmMs; resolve(St.warmMs); }
+        try {
+          if (St.lost || St.disposed || typeof renderer.compile !== 'function') { done(); return; }
+          var gl = renderer.getContext(), ext = gl.getExtension('KHR_parallel_shader_compile');
+          post.bind(); var mats = renderer.compile(scene, camera); renderer.setRenderTarget(null);
+          if (!ext || !mats || !mats.forEach) { done(); return; }   // no background compile here: the first frame waits instead
+          var poll = function () {
+            if (St.disposed || St.lost) { done(); return; }
+            var left = 0;
+            mats.forEach(function (m) { var pr = renderer.properties.get(m).currentProgram; if (pr && pr.program && !gl.getProgramParameter(pr.program, ext.COMPLETION_STATUS_KHR)) left++; });
+            if (left && performance.now() - t0 < 30000) setTimeout(poll, 16); else done();
+          };
+          setTimeout(poll, 16);
+        } catch (e) { done(e); }
+      });
+      return warmP;
+    };
+    // a run's own canvases go back to zero size: iOS Safari counts canvas memory until the garbage collector runs and draws
+    // new canvases blank once the total passes its limit
+    St.dispose = function () {
+      if (St.disposed) return; St.disposed = true;
+      var keep = GL.sharedImages();
+      try {
+        scene.traverse(function (o) {
+          var ms = !o.material ? [] : Array.isArray(o.material) ? o.material : [o.material];
+          ms.forEach(function (m) { ['map', 'emissiveMap', 'normalMap', 'roughnessMap', 'alphaMap'].forEach(function (k) { var tx = m[k], im = tx && tx.image; if (im && im.getContext && !keep.has(im)) { im.width = 0; im.height = 0; } }); });
+        });
+      } catch (e) {}
+      try { post.dispose(); pmrem.dispose(); if (envTex) envTex.dispose(); renderer.dispose(); var ext = renderer.getContext().getExtension('WEBGL_lose_context'); if (ext) ext.loseContext(); } catch (e) {}
+      canvas.width = 1; canvas.height = 1;
+    };
     // position-hashed vertex jitter: the same vertex always moves the same way, so shared edges stay closed
     St.jitter = function (geo, ax, ay, az, seed) { var p = geo.attributes.position; for (var i = 0; i < p.count; i++) { var key = Math.round(p.getX(i) * 97) * 3 + Math.round(p.getY(i) * 89) * 7 + Math.round(p.getZ(i) * 83) * 11, j = hash(key, seed) - 0.5; p.setXYZ(i, p.getX(i) * (1 + j * ax), p.getY(i) * (1 + j * ay), p.getZ(i) * (1 + j * az)); } geo.computeVertexNormals(); return geo; };
     // a canvas texture with text on a painted board (signs, labels)

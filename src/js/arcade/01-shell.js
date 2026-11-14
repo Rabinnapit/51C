@@ -76,7 +76,7 @@
           h('h3', {}, h('span.ar-cab-emoji', { 'aria-hidden': 'true' }, def.icon || ''), def.title),
           h('p.tag', {}, def.tagline || ''),
           h('div.drills', {}, def.drills ? 'Drills · ' + def.drills : ''),
-          h('div.foot', {}, best && best.plays ? h('span', {}, 'Best ', h('b', {}, fmt(best.best)), ' at ' + tier.name) : any ? h('span', {}, h('b', {}, String(any.plays)), any.plays === 1 ? ' play' : ' plays', ' · not yet at ' + tier.name) : h('span', {}, ok ? 'Not played yet' : 'Needs content'),
+          h('div.foot', {}, best && best.plays ? h('span', {}, 'Best ', h('b', {}, fmt(best.best)), ' at ' + tier.name) : any ? h('span', {}, h('b', {}, String(any.plays)), any.plays === 1 ? ' play' : ' plays', ' · not yet at ' + tier.name) : h('span', {}, ok ? 'Not played yet' : def.needs3D && !(A.GL && A.GL.ok()) ? 'Needs 3D graphics. Qual Range is the same drill in 2D.' : 'Needs content'),
             h('span.go', {}, ok ? 'Play ▶' : 'Locked')))));
     });
     screen.appendChild(grid);
@@ -86,8 +86,43 @@
     screen.appendChild(h('div.ar-note', {}, h('span', { 'aria-hidden': 'true' }, '🎓'), h('div', {}, h('b', {}, 'Training aid, not official guidance. '),
       'Game content comes from this guide\'s checked data (content checked ' + (meta().content_verified_on || '2026') + ', FAR Overhaul numbering). Scores, XP and missed questions stay in your progress and are saved with it; nothing is sent anywhere.',
       h('span.ar-keys', {}, ' Keyboard: arrows or WASD move, Space or Enter acts, 1 to 4 answer, P pauses, M mutes.'))));
+    if (A.GL && A.GL.selfTest) screen.appendChild(phoneCheck());
     setView(screen);
     runLobby(thumbs);
+  }
+  // "Game screen blank or stuck?": a 3D test on this device and a report the player can copy and send
+  function phoneCheck() {
+    var out = h('pre.ar-check-out', { hidden: true }), text = '', copyBtn, mailBtn, who = (meta().maintainer || {}).email || '';
+    function fmtReport(r) {
+      var lines = ['B2B Exam Prep ' + (meta().version || '') + ' · Arcade phone check · ' + new Date().toISOString().slice(0, 16).replace('T', ' '),
+        '3D: ' + r.result + (r.testMs != null ? ' (' + r.testMs + ' ms)' : ''),
+        'Graphics: ' + r.webgl + (r.gpu ? ' · ' + r.gpu : '') + (r.maxTex ? ' · textures up to ' + r.maxTex : ''),
+        'Background shader compile: ' + (r.parallel ? 'yes' : 'no') + ' · HDR targets: ' + (r.float ? 'yes' : 'no'),
+        'Last 3D game load: ' + (r.warmMs != null ? (r.warmMs / 1000).toFixed(1) + ' s' : 'none yet'),
+        'Screen: ' + window.innerWidth + ' × ' + window.innerHeight + ' · pixel ratio ' + (window.devicePixelRatio || 1),
+        'Browser: ' + navigator.userAgent];
+      (r.notes || []).forEach(function (n) { lines.push('Note ' + n.at + ' ' + n.kind + ': ' + n.msg); });
+      return lines.join('\n');
+    }
+    function test() {
+      out.hidden = false; out.textContent = 'Testing…'; copyBtn.hidden = true; mailBtn.hidden = true;
+      setTimeout(function () {
+        var coarse = false; try { coarse = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
+        var r; try { r = A.GL.selfTest(coarse); } catch (e) { r = { result: 'test failed: ' + (e && e.message), webgl: '?', notes: [] }; }
+        text = fmtReport(r); out.textContent = text; copyBtn.hidden = false; copyBtn.textContent = 'Copy the result';
+        if (who) { mailBtn.href = 'mailto:' + who + '?subject=' + encodeURIComponent(appName() + ': Arcade phone check') + '&body=' + encodeURIComponent('What happened (which game, what you saw):\r\n\r\n\r\n' + text.replace(/\n/g, '\r\n')); mailBtn.hidden = false; }
+      }, 60);
+    }
+    function copy() {
+      function done() { copyBtn.textContent = 'Copied'; }
+      function fallback() { try { var rg = document.createRange(); rg.selectNodeContents(out); var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(rg); document.execCommand('copy'); done(); } catch (e) {} }
+      try { if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fallback); else fallback(); } catch (e) { fallback(); }
+    }
+    copyBtn = h('button.ar-btn', { type: 'button', hidden: true, onclick: copy }, 'Copy the result');
+    mailBtn = h('a.ar-btn', { href: '#', hidden: true }, 'Email it to the developer');
+    return h('details.ar-check', {}, h('summary', {}, 'Game screen blank or stuck? Check this phone'),
+      h('p', {}, 'A quick 3D test on this device. The games pick simpler drawing by themselves when a phone needs it. If a game still will not show, send the result to the developer.'),
+      h('div.ar-row', {}, h('button.ar-btn.gold', { type: 'button', onclick: test }, '▶ Run the 3D test'), copyBtn, mailBtn), out);
   }
   // the cabinets play a small attract-mode animation, about 30 frames a second
   function runLobby(thumbs) {
@@ -184,11 +219,13 @@
       box.style.width = Math.floor(bw) + 'px'; box.style.height = Math.floor(bh) + 'px';
       var k = Math.max(bw / 960, bh / 900, 1); if (bw / k < 360) k = bw / 360;
       var W = Math.round(bw / k), H = Math.round(bh / k), dpr = Math.min(2, window.devicePixelRatio || 1);
-      canvas.width = Math.max(1, Math.round(bw * dpr)); canvas.height = Math.max(1, Math.round(bh * dpr));
+      var cw = Math.max(1, Math.round(bw * dpr)), ch = Math.max(1, Math.round(bh * dpr)), resized = canvas.width !== cw || canvas.height !== ch;
+      if (resized) { canvas.width = cw; canvas.height = ch; }   // setting the size clears the canvas, even to the same size
       var changed = W !== state.W || H !== state.H;
       state.W = W; state.H = H; state.scale = canvas.width / W;
       try { ctx.letterSpacing = '0.01px'; } catch (e) {}
       if (changed && inst && inst.resize) safe(function () { inst.resize(W, H); });
+      if (resized && state.waitLoad) { try { drawLoading(); } catch (e) {} }   // the card stays on while the stage changes size
       var portrait = bw / bh < 1;
       var coarse = false; try { coarse = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
       if (def.orient && coarse && ((def.orient === 'landscape' && portrait) || (def.orient === 'portrait' && aw / ah > 1.25))) {
@@ -337,18 +374,76 @@
     state.progress = api.progress;
 
     fit();
-    try { inst = def.create(api); } catch (e) { console.error('[arcade] create failed', e); inst = { update: function () {}, draw: function (c) { A.text(c, 'This game hit an error: ' + (e && e.message), 30, 60, { size: 18, color: A.C.red, maxWidth: state.W - 60 }); } }; }
-    state.inst = inst;
-    if (inst.resize) safe(function () { inst.resize(state.W, state.H); });
+    // the game is built on the third frame, after the loading card has reached the screen: a 3D scene takes a moment to
+    // build on a phone, and its shaders longer to compile (inst.loading() is true until they are ready)
+    var built = false;
+    inst = { loading: function () { return true; }, update: function () {}, draw: function () {} };
+    function failedInst(e) {
+      var msg = String((e && e.message) || e || ''), gl = /3D|WebGL|webgl|three/i.test(msg) || /3D/.test(def.genre || '');
+      return { update: function () {}, draw: function (c) {
+        var W = state.W, H = state.H; c.fillStyle = A.C.bg; c.fillRect(0, 0, W, H);
+        A.text(c, 'This game could not start on this device.', W / 2, H / 2 - 34, { size: 18, weight: 800, align: 'center', color: '#f6d991', maxWidth: W - 40 });
+        A.text(c, gl ? 'It needs 3D graphics, and this browser could not draw them. Contract Quest and Qual Range need no 3D.' : 'Go back and try again, or pick another game.', W / 2, H / 2, { size: 14, align: 'center', color: '#c2cdc6', maxWidth: W - 48 });
+        A.text(c, msg.slice(0, 140), W / 2, H / 2 + 70, { size: 11, align: 'center', color: '#8a958f', maxWidth: W - 48 });
+      } };
+    }
+    function build() {
+      if (built || run !== state) return; built = true;
+      try { inst = def.create(api); } catch (e) { console.error('[arcade] create failed', e); if (A.GL && A.GL.note) A.GL.note('start', def.title + ': ' + (e && e.message)); inst = failedInst(e); }
+      state.inst = inst;
+      if (inst.resize) safe(function () { inst.resize(state.W, state.H); });
+    }
+    state.build = build; state.inst = inst;
+    function isLoading() { if (!built) return true; if (!inst.loading) return false; try { return !!inst.loading(); } catch (e) { return false; } }
     if (def.music) A.music.play(def.music);
 
     // ---- countdown ----
     var cd = 0, countEl = null;
-    if (def.countdown !== false) {
-      var count = 3; countEl = h('div.ar-count', {}, '3'); box.appendChild(countEl); state.paused = true;
+    function countdown() {
+      if (def.countdown === false) return;
+      var count = (performance.now() - loadStart) / 1000 > 1.5 ? 1 : 3; countEl = h('div.ar-count', {}, String(count)); box.appendChild(countEl); state.paused = true;   // one beat when the load already took a while
       cd = setInterval(function () { count--; if (count > 0) { countEl.textContent = String(count); countEl.style.animation = 'none'; void countEl.offsetWidth; countEl.style.animation = ''; A.audio.tick(); } else { clearInterval(cd); countEl.remove(); state.paused = false; A.audio.powerup(); } }, 650);
     }
-    state.skipCountdown = function () { clearInterval(cd); if (countEl && countEl.parentNode) countEl.remove(); state.paused = false; };
+    var loadStart = performance.now();   // real time: the game clock is capped per frame and would hide a long build
+    state.waitLoad = true; state.loadT = 0;
+    state.skipCountdown = function () { build(); state.waitLoad = false; clearInterval(cd); if (countEl && countEl.parentNode) countEl.remove(); state.paused = false; };
+    // while the game loads: no clock, no input, a card with the game's name and a moving bar
+    var loadFrames = 0;
+    function waitLoading(dt) {
+      state.loadT += dt; loadFrames++;
+      if (!built && loadFrames >= 3) build();
+      if (!isLoading()) { state.waitLoad = false; if (!state.paused) countdown(); return false; }
+      drawLoading(); return true;
+    }
+    function drawLoading() {
+      var W = state.W, H = state.H, t = (performance.now() - loadStart) / 1000, cx = W / 2, cy = H / 2;
+      ctx.save(); ctx.setTransform(state.scale, 0, 0, state.scale, 0, 0);
+      ctx.fillStyle = A.C.bg; ctx.fillRect(-2, -2, W + 4, H + 4);
+      A.text(ctx, (def.icon ? def.icon + '  ' : '') + def.title, cx, cy - 26, { size: 22, weight: 800, align: 'center', color: '#f6d991', maxWidth: W - 32 });
+      A.text(ctx, built ? 'Building the 3D scene' : 'Loading', cx, cy + 2, { size: 15, align: 'center', color: '#c2cdc6' });
+      var bw = Math.min(240, W - 80), bx = cx - bw / 2, by = cy + 20, seg = bw * 0.32, x = bx - seg + (bw + seg) * ((t * 0.7) % 1);
+      ctx.fillStyle = 'rgba(255,255,255,.12)'; A.roundRect(ctx, bx, by, bw, 6, 3); ctx.fill();
+      ctx.save(); A.roundRect(ctx, bx, by, bw, 6, 3); ctx.clip(); ctx.fillStyle = '#e6b85a'; ctx.fillRect(x, by, seg, 6); ctx.restore();
+      if (t > 5) A.text(ctx, 'The first start takes longest on a phone. Later starts are quicker.', cx, by + 34, { size: 12, align: 'center', color: '#8f9b95', maxWidth: W - 48 });
+      ctx.restore();
+    }
+    // the phone took the 3D view back: say so and offer a restart instead of leaving a frozen or black stage
+    var lostEl = null;
+    function onLost() {
+      if (run !== state || lostEl || state.ended) return;
+      lostEl = h('div.ar-pause.ar-lost', { role: 'alertdialog', 'aria-label': 'The 3D view stopped' }, h('div.ar-pause-box', {},
+        h('h3', {}, 'The 3D view stopped'),
+        h('p.ar-howto', {}, 'The phone took the graphics back, usually to save memory or after the app sat in the background. Restart the game to carry on.'),
+        h('div.ar-row', {}, h('button.ar-btn.gold.lg', { type: 'button', onclick: function () { startGame(id, opts); } }, '↻ Restart the game'),
+          h('button.ar-btn.lg', { type: 'button', onclick: function () { showLobby(); } }, 'All games'))));
+      box.appendChild(lostEl); state.paused = true;
+    }
+    if (A.GL) A.GL.onLost = onLost;
+    function onFail() {
+      if (run !== state || state.ended || state.failed3D) return; state.failed3D = true;
+      setTimeout(function () { if (run === state && !state.ended) startGame(id, opts); }, 0);   // not from inside the draw call that found it
+    }
+    if (A.GL) A.GL.onFail = onFail;
 
     // ---- input. Captured on the document while playing so the guide's own shortcuts (/, Escape) stay out of the game ----
     function toLogical(e) { var r = canvas.getBoundingClientRect(); return { x: (e.clientX - r.left) / r.width * state.W, y: (e.clientY - r.top) / r.height * state.H }; }
@@ -362,7 +457,7 @@
       if (k === 'm' || k === 'M') { A.audio.setMuted(!A.audio.muted); muteBtn.textContent = A.audio.muted ? '🔇' : '🔊'; return; }
       if (k === 'p' || k === 'P' || k === 'Escape') { togglePause(); e.preventDefault(); return; }
       if ([' ', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Enter'].indexOf(k) >= 0 && !(e.target && e.target.closest && e.target.closest('.ar-pause'))) e.preventDefault();
-      if (state.paused) return;
+      if (state.paused || state.waitLoad) return;
       if (gate && gate.armed) { if (k === ' ' || k === 'Enter' || k === 'g' || k === 'G') { if (!e.repeat) releaseGate(); return; } if (e.repeat) return; releaseGate(); }
       if (contCb && (k === 'Enter' || k === ' ')) { if (!e.repeat) doContinue(); return; }
       if (choiceCb && !e.repeat) {
@@ -371,7 +466,7 @@
       }
       if (!state.keys.has(k)) { state.keys.add(k); if (inst.onKey) safe(function () { inst.onKey(k, true, e.repeat); }); }
     }
-    function onKeyUp(e) { if (typing(e)) return; state.keys.delete(e.key); if (!state.paused && inst.onKey) safe(function () { inst.onKey(e.key, false); }); }
+    function onKeyUp(e) { if (typing(e)) return; state.keys.delete(e.key); if (!state.paused && !state.waitLoad && inst.onKey) safe(function () { inst.onKey(e.key, false); }); }
     function onPointer(type) {
       return function (e) {
         if (state.ended) return;
@@ -381,7 +476,7 @@
         var p = toLogical(e), dx = p.x - state.pointer.x, dy = p.y - state.pointer.y;
         state.pointer.x = p.x; state.pointer.y = p.y; if (type === 'down') state.pointer.down = true; if (type === 'up') state.pointer.down = false;
         state.pointer.type = e.pointerType || 'mouse';
-        if (!state.paused && inst.onPointer) safe(function () { inst.onPointer({ type: type, x: p.x, y: p.y, dx: type === 'move' ? dx : 0, dy: type === 'move' ? dy : 0, touch: e.pointerType === 'touch' || e.pointerType === 'pen' }); });
+        if (!state.paused && !state.waitLoad && inst.onPointer) safe(function () { inst.onPointer({ type: type, x: p.x, y: p.y, dx: type === 'move' ? dx : 0, dy: type === 'move' ? dy : 0, touch: e.pointerType === 'touch' || e.pointerType === 'pen' }); });
         if (type !== 'move') e.preventDefault();
       };
     }
@@ -393,7 +488,7 @@
     // ---- pause ----
     var pauseEl = null;
     function togglePause(force) {
-      if (state.ended) return;
+      if (state.ended || lostEl) return;   // the "3D view stopped" card is already up: restart is the only way on
       var to = force != null ? force : !state.paused; if (to === state.paused && (pauseEl || !to)) return;
       state.paused = to; pauseBtn.textContent = to ? '▶' : '⏸';
       if (to) {
@@ -419,10 +514,11 @@
 
     // ---- loop ----
     var last = performance.now(), raf = 0;
-    function frameLoop(t) { if (state.ended) return; var dt = Math.min(.05, (t - last) / 1000); last = t; tick(dt); if (!state.ended) raf = requestAnimationFrame(frameLoop); }
+    function frameLoop(t) { if (state.ended) return; var dt = Math.max(0, Math.min(.05, (t - last) / 1000)); last = t; tick(dt); if (!state.ended) raf = requestAnimationFrame(frameLoop); }
     state.tick = tick;
     function tick(dt) {
       if (state.ended) return;
+      if (state.waitLoad && waitLoading(dt)) return;
       if (!state.paused) {
         state.elapsed += dt;
         if (gate && gate.armed) {
@@ -455,6 +551,8 @@
       document.removeEventListener('keydown', onKeyDown, true); document.removeEventListener('keyup', onKeyUp, true);
       window.removeEventListener('resize', fit); document.removeEventListener('visibilitychange', onVis); if (ro) ro.disconnect();
       try { inst.destroy && inst.destroy(); } catch (e) {}
+      if (A.GL && A.GL.onLost === onLost) A.GL.onLost = null;
+      if (A.GL && A.GL.onFail === onFail) A.GL.onFail = null;
       A.music.stop(); A.music.setIntense(false);
       if (host('stopSpeak')) host('stopSpeak')();
       if (playEl.parentNode) playEl.parentNode.removeChild(playEl);
@@ -522,7 +620,7 @@
     run: function () { return run; },
     start: function () { if (run && run.skipCountdown) run.skipCountdown(); return !!run; },
     step: function (sec) { var r = run; if (!r || !r.tick) return false; var n = Math.max(1, Math.round((sec || 0) / 0.05)); for (var i = 0; i < n && !r.ended; i++) r.tick(0.05); return true; },
-    play: function (id, opts) { startGame(id, opts); return !!run; }
+    play: function (id, opts) { startGame(id, opts); if (run && run.build) run.build(); return !!run; }
   };
 
   // ---------- mount inside B2B Exam Prep ----------

@@ -75,7 +75,7 @@
     var coarse = false; try { coarse = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
     var scene = new A.GL.GunScene({ mobile: coarse, reduce: feel.reduce, width: 640, height: 400 });
     var mission = null, missionNo = 0, rounds = ROUNDS, streak = 0, targets = [], phase = 'aim', phaseT = 0, timer = 0, limit = 0, note = '', noteT = 0, reveal = 0, wind = 0, right = 0;
-    var frames = 0, slow = 0, scale = 1, glW = 0, glH = 0, aimP = null;
+    var gov = A.GL.governor(scene), scale = 1, glW = 0, glH = 0, aimP = null;
     var tierIx = Math.max(0, ['recruit', 'regular', 'veteran', 'elite'].indexOf(tier.id)), previewFrac = [1, 0.5, 0.22, 0][tierIx];
     var LIGHTS = ['day', 'gold', 'dawn', 'night', 'dusk'];
     api.progress.configure({ perLevel: 4 });
@@ -154,10 +154,10 @@
       if (phase === 'flight' && res && res !== 'flying') { if (res.lost) { scene.impact(res.point, false); if (rounds > 0) { note = 'LOST · ' + (res.point.z < -60 ? 'DROP a lot' : 'ADD a lot'); noteT = 2.6; phase = 'aim'; } else abort('Out of rounds'); } else impact(res); }
       scene.showArc(mission && phase === 'aim' && scene.aimOn && !api.reading ? previewFrac : 0);
       if (phase === 'result') { phaseT -= gdt; if (phaseT <= 0) newMission(); }
-      frames++; if (dt > 0.026) slow++; if (frames >= 90) { if (slow > 45 && scale > 0.6) { scale = scale > 0.8 ? 0.75 : 0.6; scene.setQuality(scale > 0.7 ? 1 : 0); } frames = 0; slow = 0; }
     }
     var rdt = 0;
     function draw(ctx) {
+      scale = gov.frame(api.paused);
       var cw = ctx.canvas.width, ch = ctx.canvas.height, dpr = Math.min(2, window.devicePixelRatio || 1), kq = Math.min(1, (coarse ? 1.5 : 2) / dpr) * scale;
       var gw = Math.round(cw * kq), gh = Math.round(ch * kq);
       if (gw !== glW || gh !== glH) { glW = gw; glH = gh; scene.resize(gw, gh); }
@@ -185,7 +185,7 @@
     function onKey(k, down) { if (down && (k === ' ' || k === 'Enter')) { if (!scene.aimOn) { var tg = targets.filter(function (x) { return x.alive; })[0]; if (tg) scene.setAim(new THREE.Vector3(tg.x, tg.y, tg.z)); } fire(); } }
     newMission();
     return {
-      update: update, draw: draw, onKey: onKey, onPointer: onPointer, resize: function (w, h) { W = w; H = h; }, destroy: function () { scene.dispose(); },
+      update: update, draw: draw, onKey: onKey, onPointer: onPointer, resize: function (w, h) { W = w; H = h; }, destroy: function () { scene.dispose(); }, loading: A.GL.loader(scene),
       stats: function () { return { gl: true, scene: scene, tri: scene.tri, calls: scene.calls, light: scene.light, phase: phase, mission: missionNo, rounds: rounds, right: right, targets: targets.map(function (tg) { var p = screenOf(tg); return { ok: tg.ok, text: tg.text, alive: tg.alive, x: Math.round(p.x), y: Math.round(p.y) }; }) }; }
     };
   }

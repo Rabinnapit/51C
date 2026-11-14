@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.28.4 (14 November 2026): the 3D games on a phone
+
+- **No more blank game screen.** On a phone a 3D game could sit on a black or frozen screen for several seconds while
+  it built its scene and the phone compiled its graphics, long enough to look broken. A game now opens at once on a
+  loading card with its name and a moving bar, builds behind it, compiles in the background where the phone allows it,
+  and counts down only when the first frame is ready (one beat instead of three when the load already took a while).
+- **Simpler drawing when a phone needs it.** Before the first 3D game, the app draws one test square through its
+  effects and steps down until the square shows: full effects, no edge smoothing, basic colour, then plain drawing
+  with no glow. A phone whose graphics chip cannot draw into the richer targets used to show a black scene.
+- **A frame rate the phone can hold.** The five 3D games share one governor that reads real frame times. It draws
+  smaller within a second or two when frames run slow, takes the step back if it did not help, and no longer changes
+  anything that makes the phone recompile its graphics mid-game. Phones start with the lighter shadow filter. A
+  device that cannot reach about five frames a second at the smallest size gets the 2D version of the game.
+- **When the phone takes the graphics back.** If the phone stops the 3D view (low memory, or the app sat in the
+  background), the game says so and offers Restart instead of staying black. If a scene cannot be drawn at all, Fire
+  Mission, Part Patrol, Dispatch and Supply Line run in 2D, and Range Day says to use Qual Range.
+- **Check this phone.** Under the game list: "Game screen blank or stuck? Check this phone" runs a 3D test and shows
+  a short result (the graphics chip, the drawing mode chosen, load time) to copy or email to the developer.
+- A game that fails to start shows a plain message instead of small red text. Each finished run hands its drawing
+  memory back to the phone.
+
 ## 0.28.3 (4 November 2026): what the first tester found
 
 - **Hear a sample on iPhones.** Apple's novelty voices (Bells, Bubbles, Zarvox and the rest sing or bubble the text)
