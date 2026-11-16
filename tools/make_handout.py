@@ -48,7 +48,9 @@ else:
     raw = raw.replace('  "site_url": ', line + '  "site_url": ', 1)
 META_FILE.write_text(raw, encoding="utf-8")
 
-svg = qr.svg_inline(scale=10, border=4)
+# a viewBox instead of a fixed 410 x 410 size: the box below is narrower than that, and without a viewBox the browser
+# crops the drawing (the printed code lost its right and bottom halves and could not be scanned) instead of scaling it
+svg = qr.svg_inline(scale=10, border=4, omitsize=True)
 url = html.escape(URL)
 sheet = f"""<!DOCTYPE html>
 <html lang="en">
