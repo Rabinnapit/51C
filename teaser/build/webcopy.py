@@ -88,13 +88,13 @@ def probe_dur(path):
 def encode():
     dur = probe_dur(MASTER); vbr = int(TARGET_MB * 8e6 / dur / 1000) - ABR - 8
     out = os.path.join(OUT, "intro.mp4"); log = os.path.join(TEASER, "audio", "pass_web")
-    vf = "scale=1280:720:flags=lanczos:in_range=pc:out_range=tv:in_color_matrix=bt601:out_color_matrix=bt709,format=yuv420p"
+    vf = "scale=1280:720:flags=lanczos:in_range=tv:out_range=tv:in_color_matrix=bt709:out_color_matrix=bt709,format=yuv420p"
     common = ["-vf", vf, "-c:v", "libx264", "-preset", "slow", "-profile:v", "high", "-level", "3.1", "-b:v", f"{vbr}k",
               "-maxrate", f"{int(vbr * 2.2)}k", "-bufsize", f"{int(vbr * 4)}k", "-g", "60", "-color_range", "tv",
               "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709", "-passlogfile", log]
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", MASTER] + common + ["-pass", "1", "-an", "-f", "mp4", os.devnull], check=True)
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", MASTER] + common + ["-pass", "2", "-c:a", "aac", "-b:a", f"{ABR}k", "-ar", "48000",
-                    "-movflags", "+faststart", out], check=True)
+                    "-movflags", "+faststart+write_colr", out], check=True)
     print("intro.mp4: %.1f MB, video %d kbit/s, %.1f s" % (os.path.getsize(out) / 1e6, vbr, dur))
     poster = os.path.join(OUT, "intro-poster.jpg")
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", "16.5", "-i", MASTER, "-frames:v", "1", "-vf", "scale=1280:720:flags=lanczos", "-q:v", "4", poster], check=True)

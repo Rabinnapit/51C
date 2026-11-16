@@ -11,7 +11,11 @@ L04 says "Four quick steps", L10 "five of them in real 3D", L12 "Two hundred fif
 to make room); the captions follow, and the official-documents caption says "one tap away" instead of "in the file"
 (8 of the 26 are stored in the app). The capture marks the intro as seen and hides Home's "Watch the intro" button,
 so the video does not show itself. The end card's QR code is the new `?install=1` code (33 modules, bigger than v1.1's);
-`cards.py` now sizes it from the SVG itself, so its quiet zone is no longer clipped. The web copy the app plays is
+`cards.py` now sizes it from the SVG itself, so its quiet zone is no longer clipped. After the independent video
+review: Home pulls out from 1.045x to 1.0 (no snap when the still gives way to the live page), Range Day's cabinet press
+and ripple stay in the lobby and the game starts off camera (no loading frames, no cursor over the range), Buddy's panel
+is enlarged by a style rule before it opens, the app's Try-it box is wide enough for $1,000,000,000, and the masters are
+encoded in standard range BT.709 at High@4.1 with colour tags (the frames are full-range BT.601 JPEGs). The web copy the app plays is
 `src/web/root/intro.mp4` (see Build, step 8).
 
 v1.1 changes (the owner's review of v1.0): the hook card reads "Most Brigades want it in six."; a read-aloud shot after the

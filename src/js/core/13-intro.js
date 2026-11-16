@@ -72,8 +72,8 @@
     var skip = h('button.btn.primary.intro-skip', { type: 'button', onclick: function () { close(replay ? 'replay' : 'skip'); } }, replay ? 'Close' : 'Skip the intro', icon(replay ? 'x' : 'arrow-right'));
     layer = h('div.intro-layer', { role: 'dialog', 'aria-modal': 'true', 'aria-label': (CORB.meta().app_name || 'The app') + ' in ' + intro.minutes() + ' minutes' },
       h('div.intro-box', {},
-        h('div.intro-head', {}, h('img.intro-icon', { src: 'icons/icon-192.png', alt: '' }), h('div', {}, h('b', {}, (CORB.meta().app_name || '') + ' in ' + intro.minutes() + ' minutes'), h('small', {}, 'What it does for a new 51C or 1102'))),
-        h('div.intro-frame', {}, video, replay ? null : soundBtn, playBtn),
+        h('div.intro-head', {}, h('img.intro-icon', { src: 'icons/icon-192.png', alt: '' }), h('div', {}, h('b', {}, (CORB.meta().app_name || '') + ' in ' + intro.minutes() + ' minutes'), h('small', {}, 'What it does for a new 51C or 1102')), replay ? null : soundBtn),
+        h('div.intro-frame', {}, video, playBtn),
         words,
         h('div.intro-foot', {}, skip, replay ? null : h('p.intro-later', {}, 'Watch it any time: ', h('b', {}, 'Settings & help'), ' or ', h('b', {}, 'About'), ', "Watch the intro".'))));
     document.body.appendChild(layer); document.body.style.overflow = 'hidden';

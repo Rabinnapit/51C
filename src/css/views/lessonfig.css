@@ -183,7 +183,7 @@ button.lf-term:hover { box-shadow: inset 0 0 0 2px var(--lf); }
 .lf-calc { display: grid; gap: 10px; }
 .lf-calc-label { font-size: var(--fs-sm); font-weight: 600; color: var(--ink-2); }
 .lf-calc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
-.lf-amount { width: 11.5ch; padding: 6px 10px; border: 1px solid var(--line-2); border-radius: var(--r-md); background: var(--panel); color: var(--lf); font: inherit; font-size: var(--fs-lg); font-weight: 800; font-variant-numeric: tabular-nums; }
+.lf-amount { width: 16ch; max-width: 100%; box-sizing: border-box; padding: 6px 10px; border: 1px solid var(--line-2); border-radius: var(--r-md); background: var(--panel); color: var(--lf); font: inherit; font-size: var(--fs-lg); font-weight: 800; font-variant-numeric: tabular-nums; }
 .lf-range { flex: 1 1 200px; min-width: 0; accent-color: var(--lf); height: 28px; }
 .lf-toggle { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: var(--r-pill); border: 1px solid var(--line-2); background: var(--panel); color: var(--ink-2); font: inherit; font-size: var(--fs-sm); cursor: pointer; }
 .lf-toggle svg { width: 14px; height: 14px; opacity: 0; }

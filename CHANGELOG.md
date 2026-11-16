@@ -12,7 +12,9 @@
 - **The intro is up to date (teaser v1.2).** Filmed again from this version: the four-step onboarding, the Arcade with
   five games in real 3D and the range card, 395 questions, 254 terms. The narrator now says "four quick steps", "five of
   them in real 3D" and "two hundred fifty-four terms"; the official-documents caption no longer says all 26 are in the
-  file (8 are).
+  file (8 are). The independent video review's points are in too: Range Day now cuts in clean (no loading frames or
+  stray cursor), Buddy's panel and Home's opening move no longer jump, and the files use standard video range
+  (BT.709), so no player crushes their blacks.
 - **Scan, press Install.** The QR code (About, the install sheet) carries `?install=1`, so a scan always opens the
   install page, even on a phone that chose "Not now" in the last three days. Android, any browser: one **Install app**
   button. Samsung Internet and the other Android browsers still hand the page to Chrome, because the copy they build is
@@ -63,6 +65,8 @@
   moves to the install button; the phone's bar turns dark with the intro. Home's "Watch the 2-minute intro" button is
   full tap size; the tour card never grows taller than the screen; "training NCO", "training POC" and similar
   questions bring Buddy to the KMG; in an app's own browser, "Why Chrome?" no longer says that browser can install.
+  "Sound on" sits above the picture, clear of the player's own buttons, and the lessons' Try-it box shows amounts up
+  to $1,000,000,000 in full.
 
 ## 0.29.0 (16 November 2026): the range card, the qualification table and the seasons
 

@@ -109,12 +109,14 @@ def chain(clips):
 def encode(video, mix, out, height, target_mb, abr_k):
     """Two-pass x264 to a file-size target."""
     vbr = int((target_mb * 8388608 / END - abr_k * 1000) * 0.97)
-    vf = ["-vf", f"scale=-2:{height}:flags=lanczos"] if height != 1080 else []
-    rate = ["-c:v", "libx264", "-b:v", str(vbr), "-maxrate", str(int(vbr * 1.6)), "-bufsize", str(vbr * 3), "-preset", "slow", "-pix_fmt", "yuv420p"]
+    # the frames are full-range BT.601 (JPEG screenshots): the delivered files are standard-range BT.709, tagged
+    vf = ["-vf", f"scale=-2:{height}:flags=lanczos:in_range=pc:out_range=tv:in_color_matrix=bt601:out_color_matrix=bt709,format=yuv420p"]
+    rate = ["-c:v", "libx264", "-b:v", str(vbr), "-maxrate", str(int(vbr * 1.6)), "-bufsize", str(vbr * 3), "-preset", "slow", "-pix_fmt", "yuv420p",
+            "-profile:v", "high", "-level", "4.1", "-color_range", "tv", "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709"]
     log = os.path.join(AUD, "pass_" + os.path.splitext(os.path.basename(out))[0])
     run(["-i", video] + vf + rate + ["-pass", "1", "-passlogfile", log, "-an", "-f", "null", "NUL"])
     run(["-i", video, "-i", mix, "-map", "0:v", "-map", "1:a"] + vf + rate + ["-pass", "2", "-passlogfile", log,
-         "-af", "loudnorm=I=-16:TP=-1.5:LRA=11", "-ar", "48000", "-c:a", "aac", "-b:a", f"{abr_k}k", "-movflags", "+faststart", "-shortest", out])
+         "-af", "loudnorm=I=-16:TP=-1.5:LRA=11", "-ar", "48000", "-c:a", "aac", "-b:a", f"{abr_k}k", "-movflags", "+faststart+write_colr", "-shortest", out])
     size = os.path.getsize(out) / 1048576
     print(f"{os.path.basename(out)}: {size:.1f} MB (target {target_mb:.1f}, video {vbr/1e6:.2f} Mbps)", flush=True); return size
 

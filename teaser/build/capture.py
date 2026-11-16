@@ -147,7 +147,7 @@ def go(r, view, params=None, wait=800, settle=20):
 # ---------------- segments (durations sit on the 2.4 s bar grid) ----------------
 def seg_home(r, page):        # 9.6 s: the first-visit hero, then down to "Build my plan"
     r.seg("home"); r.js("__resetSetup()"); go(r, "home", wait=1000, settle=30)
-    r.still_push(4.8, 1.0, 1.045, 50, 30)
+    r.still_push(4.8, 1.045, 1.0, 50, 30)
     y = r.top("document.querySelector('.setup-card')", 700, 90)
     r.scroll_to(0, y, 3.6); r.fill(9.6)
 
@@ -281,8 +281,9 @@ def seg_arcade(r, page):      # 9.6 s: the lobby's cabinets, then Range Day: the
     r.scroll_to(0, r.top("document.querySelector('.ar-cabinets')", 900, 120), 0.8)   # down to the cabinets
     cab = elem_center(page, CAB, (420, 650))
     cur_move(r, 1400, 900, cab[0], cab[1] + 30, 0.7); r.anim(0.3)
-    cur_click(r, CAB + ".click()", 6)
-    r.real(1800); r.js("__cur.hide()"); r.settle(4); r.js("ARCADE._debug.start()"); r.settle(4); r.real(300)
+    cur_click(r, "", 6)                                                      # press and ripple, still in the lobby
+    r.js("__cur.hide(); " + CAB + ".click()")                              # the game starts off camera
+    r.real(1800); r.settle(4); r.js("ARCADE._debug.start()"); r.settle(24); r.real(300)
     r.anim(0.8)                                                            # the clue and the reading gate
     r.js("const g = document.querySelector('.ar-gate-go'); if (g) g.click()"); r.anim(0.9)   # boards rise
     range_fire(r, page)
@@ -296,11 +297,11 @@ def seg_arcade(r, page):      # 9.6 s: the lobby's cabinets, then Range Day: the
 
 def seg_buddy(r, page):       # 7.2 s: the bubble, the question typed, the answer from the guide
     r.seg("buddy"); r.js("__ensureSetup(); ARCADE && ARCADE.unmount && ARCADE.unmount()"); go(r, "learn")
+    r.js("if (!document.getElementById('__bz')) { const st = document.createElement('style'); st.id = '__bz'; st.textContent = '.buddy{zoom:1.3;right:20px!important;bottom:20px!important}'; document.head.appendChild(st); }")
     fab = elem_center(page, "document.querySelector('.buddy-fab')", (1830, 1035))
     cur_move(r, 1000, 520, fab[0], fab[1], 0.8)
     cur_click(r, "document.querySelector('.buddy-fab').click()", 6)
     r.real(400); r.settle(6)
-    r.js("const p = document.querySelector('.buddy'); if (p) { p.style.zoom = '1.3'; p.style.right = '20px'; p.style.bottom = '20px'; }")
     r.js("__cur.hide()"); r.hold(0.8, settle=4)
     r.js("document.querySelector('.buddy input.input').focus()")
     type_text(r, page, "When can I take the exam?", 2)
