@@ -221,6 +221,7 @@
       function PX() { return W / 32; }   // pixels per meter in the 2D drawing
       var mode = 'map', mission = [], leg = 0, cp = CPS[0], pool = [], q = null, order = [], answered = false;
       var asked = 0, loaded = 0, missed = 0, bay = [], streak = 0, limit = 0, timer = 0, anim = null, pending = null;
+      api.partial = function () { var full = mission.length > 1; return { value: full ? totals.crates : loaded, of: full ? totals.asked : PER_CP }; };   // out of lives: the crates so far
       var scroll = 0, drive = null, places = [], gateOpen = 0, coinShow = null, totals = { crates: 0, asked: 0, gold: 0, silver: 0 }, mapSel = 0, mapHover = -1;
       var roll = 0, rollAt = 0, off = 0, carry = [], endT = 0, ended = false;
       var rec = A.save.get('supply', {}); if (!rec || typeof rec !== 'object') rec = {};

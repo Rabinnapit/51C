@@ -52,7 +52,10 @@
   CON 7300V answer covers everyone not yet certified on 1 October 2026. The tour, About and the first-week how-to say
   four onboarding steps; the QR steps (About, the install sheet) mention the intro; and the intro goes straight on to
   the install page if the video cannot load. Caught before release in 0.29.0's new parts: drawing the weekly table
-  counted as a change to the reader's progress (with an account, the sync would have asked which copy to keep);
+  counted as a change to the reader's progress (with an account, the sync would have asked which copy to keep), and so,
+  since earlier versions, did the day's first look at the Arcade or a lesson (seeing a page still counts toward the
+  study streak; it just no longer counts as a change, so a reader opening the app on the Arcade gets the account's
+  newer progress instead of a "Which progress should we keep?" question);
   Fire Mission's 2D version (phones without 3D) now runs and scores the range card's mission instead of passing it at
   any score; the season counts every closed card of the quarter. Also: "/" and "?" no longer open search or the tour
   over the first-use terms, the phone check no longer says "does not work" when the simplest drawing works (nor puts
@@ -67,6 +70,18 @@
   questions bring Buddy to the KMG; in an app's own browser, "Why Chrome?" no longer says that browser can install.
   "Sound on" sits above the picture, clear of the player's own buttons, and the lessons' Try-it box shows amounts up
   to $1,000,000,000 in full.
+- **From the Arcade review.** Every 3D game left its 3D renderer in memory after it ended, held by a listener three.js
+  leaves on what the games share (the sprite geometry, the procedural textures): about 3 MB a game, and past 16 games
+  in one sitting the browser starts dropping 3D views (older than this release, but the range card makes long sessions
+  likely). Finished runs now let go of it: after 12 games, 4 3D contexts in memory (3 before the first game) and 28 MB
+  of script memory, instead of 13 and 52 MB. The
+  stage no longer flashes blank for a frame when it changes size (Contract Quest does on most questions). The results
+  screen's XP line counts the range card's and the campaign's XP, so a promotion they bring is announced. A failed
+  range-card mission offers "Try again" instead of "Next on the card" with the same mission. A run that ends out of
+  lives counts the targets and crates it did land. When a slow phone gives up on 3D during Range Day, the run ends with
+  its answers kept, says the device was too slow (not that 3D does not work), and offers Qual Range instead of a
+  Play again that could only fail. Fire Mission no longer asks to turn the phone sideways (on a phone its stage is
+  smaller that way). On a 320-pixel-wide phone the Paused and "3D view stopped" cards fit their buttons on screen.
 
 ## 0.29.0 (16 November 2026): the range card, the qualification table and the seasons
 

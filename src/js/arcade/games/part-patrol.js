@@ -79,6 +79,7 @@
       var W = api.W, H = api.H, tier = api.difficulty, all = factsOf(api.data), bank = bossBank(api.data), t = 0, feel = A.feel, opts = api.opts || {};
       if (opts.fams && opts.fams.length) { var subF = all.filter(function (f) { return opts.fams.indexOf(f.fam) >= 0; }); if (subF.length >= 10) all = subF; }
       var SEC = opts.sectors > 0 ? Math.min(SECTORS, opts.sectors) : SECTORS, wavesRight = 0, platesBroken = 0;
+      api.partial = function () { return { value: wavesRight + platesBroken, of: SEC * WAVES + PLATES.slice(0, SEC).reduce(function (a, b) { return a + b; }, 0) }; };   // out of lives: what was cleared so far
       var coarse = false; try { coarse = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
       var scene = null; if (A.GL && A.GL.ok() && A.GL.PatrolScene) { try { scene = new A.GL.PatrolScene({ mobile: coarse, reduce: feel.reduce, width: 520, height: 640 }); } catch (e) { console.error('[part-patrol] 3D failed, drawing in 2D', e); scene = null; } }
       var gov = scene ? A.GL.governor(scene) : null, scale = 1, glW = 0, glH = 0;

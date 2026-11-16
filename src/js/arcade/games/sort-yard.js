@@ -56,6 +56,7 @@
       var gov = scene ? A.GL.governor(scene) : null, scale = 1, glW = 0, glH = 0;
       var shift = -1, line = null, k = 0, crate = null, sel = 1, armAng = 0, streak = 0, rush = false, flashBay = -1, flashT = 0, flashOk = false;
       var falling = [], sparks = [], phase = 'start', phaseT = 0.3, rollerT = 0, forkX = 0.2, forkDir = 1, sorted = 0;
+      api.partial = function () { return { value: api.progress.right, of: sorted }; };   // out of lives: the crates sorted right so far
       api.progress.configure({ perLevel: 5 });
 
       function bays() {

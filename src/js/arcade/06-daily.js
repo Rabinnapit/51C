@@ -178,8 +178,10 @@
     var r = state.dailyResult, h = A.h; if (!r) return null;
     var t = r.today, line = r.stale ? 'That card was for ' + fmtDay(state.opts.daily.date) + '; today has a new one.' : r.closedNow ? (r.repaired ? 'Card closed, and the streak was repaired (one repair a week): ' + t.streak + ' days.' : 'Card closed. Streak: ' + t.streak + (t.streak === 1 ? ' day.' : ' days.')) : r.passed ? 'Mission passed. ' + (3 - t.done) + ' to go on today\'s card.' : (r.m.unit === 'boss' ? 'The boss is still standing; the card stays open.' : r.value + ' of ' + r.m.of + ' ' + r.m.unit + '; the mission takes ' + r.m.pass + '.');
     var actions = [];
-    if (!r.stale && t.next && !t.closed) actions.push(h('button.ar-btn.gold', { type: 'button', onclick: function () { daily.start(t.next.def); } }, 'Next on the card: ' + t.next.def.title + ' ▶'));
-    else if (!r.passed && !r.stale) actions.push(h('button.ar-btn.gold', { type: 'button', onclick: function () { daily.start(r.m); } }, '↻ Try again'));
+    // a mission not passed, and next on the card anyway: the button says so (it said "Next on the card: <this one>")
+    var again = !r.stale && !r.passed && !t.closed && (!t.next || t.next.def.id === r.m.id);
+    if (again) actions.push(h('button.ar-btn.gold', { type: 'button', onclick: function () { daily.start(r.m); } }, '↻ Try again'));
+    else if (!r.stale && t.next && !t.closed) actions.push(h('button.ar-btn.gold', { type: 'button', onclick: function () { daily.start(t.next.def); } }, 'Next on the card: ' + t.next.def.title + ' ▶'));
     actions.push(h('button.ar-btn', { type: 'button', onclick: function () { A.lobby('daily'); } }, 'Range card'));
     return h('div.ar-camp-card' + (r.closedNow ? '.cleared' : r.passed ? '.passed' : '.failed'), { style: { '--cc': '#e6b85a' } },
       h('div.ar-camp-card-copy', {},

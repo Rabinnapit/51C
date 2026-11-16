@@ -220,6 +220,7 @@
       var bw = aw, bh = ah;
       if (bw / bh > hi) bw = bh * hi; else if (bw / bh < lo) bh = bw / lo;
       box.style.width = Math.floor(bw) + 'px'; box.style.height = Math.floor(bh) + 'px';
+      box.classList.toggle('ar-tight', bh < 360);   // a short stage (a small phone held upright): the pause cards tighten
       var k = Math.max(bw / 960, bh / 900, 1); if (bw / k < 360) k = bw / 360;
       var W = Math.round(bw / k), H = Math.round(bh / k), dpr = Math.min(2, window.devicePixelRatio || 1);
       var cw = Math.max(1, Math.round(bw * dpr)), ch = Math.max(1, Math.round(bh * dpr)), resized = canvas.width !== cw || canvas.height !== ch;
@@ -229,6 +230,7 @@
       try { ctx.letterSpacing = '0.01px'; } catch (e) {}
       if (changed && inst && inst.resize) safe(function () { inst.resize(W, H); });
       if (resized && state.waitLoad) { try { drawLoading(); } catch (e) {} }   // the card stays on while the stage changes size
+      else if (resized && state.paintFrame) { try { state.paintFrame(); } catch (e) {} }   // a running game redraws at once: no blank frame
       var portrait = bw / bh < 1;
       var coarse = false; try { coarse = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
       if (def.orient && coarse && ((def.orient === 'landscape' && portrait) || (def.orient === 'portrait' && aw / ah > 1.25))) {
@@ -239,6 +241,9 @@
     var ro = null;
     if (window.ResizeObserver) { ro = new ResizeObserver(function () { fit(); }); ro.observe(stage); }
     window.addEventListener('resize', fit);
+
+    // a run that ends out of lives still landed what it landed: a game with a mission count sets api.partial
+    function partial() { try { return typeof api.partial === 'function' ? api.partial() : undefined; } catch (e) { return undefined; } }
 
     // ---- the api a game sees ----
     var api = {
@@ -302,7 +307,7 @@
         if (o.banner !== undefined) { if (o.banner) { banner.innerHTML = ''; banner.appendChild(h('b', {}, o.banner)); if (o.sub) banner.appendChild(h('small', {}, o.sub)); banner.style.setProperty('--bc', o.color || A.C.gold); banner.classList.add('on'); state.bannerTimer = o.bannerTime || 1.6; } else banner.classList.remove('on'); }
       } },
       score: function (n) { state.score = Math.max(0, state.score + (n || 0)); hudScore.textContent = fmt(state.score); if (state.score > api.bestScore) hudBest.textContent = fmt(state.score); return state.score; },
-      life: function (n) { state.lives = A.clamp(state.lives + (n || 0), 0, 9); drawLives(); if (n < 0) { playEl.classList.remove('ar-hurt'); void playEl.offsetWidth; playEl.classList.add('ar-hurt'); } if (state.lives <= 0) setTimeout(function () { if (!state.ended) finish(false, { title: def.outTitle || 'Out of lives' }); }, 650); return state.lives; },
+      life: function (n) { state.lives = A.clamp(state.lives + (n || 0), 0, 9); drawLives(); if (n < 0) { playEl.classList.remove('ar-hurt'); void playEl.offsetWidth; playEl.classList.add('ar-hurt'); } if (state.lives <= 0) setTimeout(function () { if (!state.ended) finish(false, { title: def.outTitle || 'Out of lives', campaign: partial() }); }, 650); return state.lives; },
       xp: function (n) { state.xp += Math.max(0, n || 0); return state.xp; },
       // r: { prompt, given, correct, ok, explanation, cite, lesson, qid, key }
       review: { add: function (r) {
@@ -453,6 +458,11 @@
     if (A.GL) A.GL.onLost = onLost;
     function onFail() {
       if (run !== state || state.ended || state.failed3D) return; state.failed3D = true;
+      // a game with no 2D version (Range Day) ends here and keeps the answers given; the others start again in 2D
+      if (def.needs3D) {
+        setTimeout(function () { if (run === state && !state.ended) finish(false, A.no3D(def, A.GL && A.GL.tooSlow ? 'This device became too slow for the 3D range, so the Arcade has moved its games to 2D until the page is reloaded.' : 'The 3D view stopped working on this device.', partial())); }, 0);
+        return;
+      }
       setTimeout(function () { if (run === state && !state.ended) startGame(id, opts); }, 0);   // not from inside the draw call that found it
     }
     if (A.GL) A.GL.onFail = onFail;
@@ -557,6 +567,16 @@
       if (inst.drawTop) safe(function () { inst.drawTop(ctx); });
       ctx.restore();
     }
+    // one frame drawn outside the loop (after the stage changes size, which clears the canvas)
+    state.paintFrame = function () {
+      if (state.ended || state.waitLoad) return;
+      ctx.save(); ctx.setTransform(state.scale, 0, 0, state.scale, 0, 0);
+      ctx.fillStyle = A.C.bg; ctx.fillRect(-30, -30, state.W + 60, state.H + 60);
+      safe(function () { inst.draw(ctx); });
+      particles.draw(ctx); floaters.draw(ctx);
+      if (inst.drawTop) safe(function () { inst.drawTop(ctx); });
+      ctx.restore();
+    };
     raf = requestAnimationFrame(frameLoop);
 
     function safe(fn) { try { fn(); } catch (e) { console.error('[arcade] ' + id, e); } }
@@ -576,6 +596,11 @@
     function finish(won, o) { if (state.ended) return; o = o || {}; state.cleanup(); run = null; if (o.quiet) { record(state, won, o); return; } showResults(state, won, o); }
   }
   function endRun() { if (run && run.cleanup) run.cleanup(); run = null; }
+  // the end of a 3D-only game on a device that cannot draw it, or became too slow to: the results offer its 2D twin
+  A.no3D = function (def, why, campaign) {
+    var alt = def && def.alt2D && A.games[def.alt2D];
+    return { won: false, title: '3D not available', message: why + (alt ? ' ' + alt.title + ' is the same drill in 2D.' : ''), campaign: campaign, alt: alt ? { id: def.alt2D, label: 'Play ' + alt.title } : null };
+  };
 
   // ---------- results ----------
   function record(state, won, o) {
@@ -585,6 +610,9 @@
     var summary = { game: state.id, score: Math.round(state.score), right: right, total: total, pct: total ? Math.round(right / total * 100) : 0, won: !!won, tier: state.tier.id, record: rec.record, path: params.path || '' };
     if (A.campaign && state.opts && state.opts.campaign) { try { state.campaignResult = A.campaign.onRunEnd(state, won, o); } catch (e) { console.error('[arcade] campaign', e); } }
     if (A.daily && state.opts && state.opts.daily) { try { state.dailyResult = A.daily.onRunEnd(state, won, o); } catch (e) { console.error('[arcade] daily', e); } }
+    // the XP line counts what the campaign and the range card added too, and announces a promotion they brought
+    var extra = (state.campaignResult && state.campaignResult.xp || 0) + (state.dailyResult && state.dailyResult.xp || 0);
+    if (extra > 0) { var now = A.rank(); xp = { gained: xp.gained + extra, before: xp.before, after: now, up: now.level > xp.before.level }; }
     if (host('onRunEnd')) { try { host('onRunEnd')(summary); } catch (e) {} }
     return { rec: rec, xp: xp, right: right, total: total, summary: summary };
   }
@@ -612,7 +640,8 @@
         h('div.ar-xpline' + (xp.up ? '.up' : ''), {}, h('b', {}, '+' + fmt(xp.gained) + ' XP'),
           h('span', {}, xp.up ? 'Promoted to ' + rk.name + ' (level ' + rk.level + ')!' : rk.name + ' · ' + fmt(rk.to - rk.xp) + ' XP to ' + rk.next),
           h('div.ar-xpbar', {}, h('span', { style: { width: Math.round(rk.pct * 100) + '%' } }))),
-        h('div.ar-res-actions', {}, h('button.ar-btn.gold.lg', { type: 'button', onclick: function () { startGame(state.id, state.opts); } }, '↻ Play again'), h('button.ar-btn.lg', { type: 'button', onclick: function () { showLobby(); } }, 'All games'), pathBtn),
+        h('div.ar-res-actions', {}, o.alt ? h('button.ar-btn.gold.lg', { type: 'button', onclick: function () { startGame(o.alt.id, {}); } }, o.alt.label + ' ▶')
+          : h('button.ar-btn.gold.lg', { type: 'button', onclick: function () { startGame(state.id, state.opts); } }, '↻ Play again'), h('button.ar-btn.lg', { type: 'button', onclick: function () { showLobby(); } }, 'All games'), pathBtn),
         nudge),
       h('div.ar-res-card', {}, h('div.ar-kicker', {}, h('i'), 'This run'), h('div.ar-res-grid', {},
         h('div', {}, h('small', {}, 'Accuracy'), h('b', {}, acc == null ? '—' : acc + '%')), h('div', {}, h('small', {}, 'Answered'), h('b', {}, String(total))), h('div', {}, h('small', {}, 'Level'), h('b', {}, String(state.level))),

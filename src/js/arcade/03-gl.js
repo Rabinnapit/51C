@@ -133,6 +133,15 @@
   };
   // the canvases behind the shared textures, which outlive every run
   GL.sharedImages = function () { var set = new Set(); if (TEX) Object.keys(TEX).forEach(function (k) { var t = TEX[k]; if (t && t.image) set.add(t.image); }); return set; };
+  // what outlives a run: three's one geometry for every sprite and the shared textures. Each renderer that drew them left a
+  // 'dispose' listener on them, and that listener kept the whole renderer (its context, programs, the run's canvases) in
+  // memory after the run: about 3 MB a game, and past 16 games the browser starts dropping 3D views. Disposing them runs
+  // those listeners, which let go; three uploads them again on the next run.
+  var spriteGeo = null;
+  GL.releaseShared = function () {
+    try { if (!spriteGeo && THREE && THREE.Sprite) spriteGeo = new THREE.Sprite().geometry; if (spriteGeo) spriteGeo.dispose(); } catch (e) {}
+    if (TEX) Object.keys(TEX).forEach(function (k) { var t = TEX[k]; try { if (t && t.isTexture) t.dispose(); } catch (e) {} });
+  };
   // a game's loading(): true until its scene's shaders are compiled. The compile starts on the second call, after the
   // shell has painted its loading card once.
   GL.loader = function (S) { var n = 0; return function () { if (!S || !S.warm || S.ready) return false; if (++n === 2) S.warm(); return true; }; };
@@ -229,7 +238,7 @@
   GL.Stage = function (opts) {
     opts = opts || {};
     if (!THREE) throw new Error('three.js is not loaded');
-    if (GL.tier === 4 && !opts.probe) throw new Error('3D drawing does not work in this browser');   // found earlier on this page
+    if (GL.tier === 4 && !opts.probe) throw new Error(GL.tooSlow ? 'this device was too slow for the 3D scenes' : '3D drawing does not work in this browser');   // found earlier on this page
     var mobile = !!opts.mobile;
     var canvas = document.createElement('canvas'); canvas.width = 4; canvas.height = 4;
     var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: false, powerPreference: 'high-performance', alpha: false });
@@ -360,7 +369,9 @@
           ms.forEach(function (m) { ['map', 'emissiveMap', 'normalMap', 'roughnessMap', 'alphaMap'].forEach(function (k) { var tx = m[k], im = tx && tx.image; if (im && im.getContext && !keep.has(im)) { im.width = 0; im.height = 0; } }); });
         });
       } catch (e) {}
-      try { post.dispose(); pmrem.dispose(); if (envTex) envTex.dispose(); renderer.dispose(); var ext = renderer.getContext().getExtension('WEBGL_lose_context'); if (ext) ext.loseContext(); } catch (e) {}
+      try { post.dispose(); pmrem.dispose(); if (envTex) envTex.dispose(); renderer.dispose(); } catch (e) {}
+      GL.releaseShared();
+      try { var ext = renderer.getContext().getExtension('WEBGL_lose_context'); if (ext) ext.loseContext(); } catch (e) {}
       canvas.width = 1; canvas.height = 1;
     };
     // position-hashed vertex jitter: the same vertex always moves the same way, so shared edges stay closed

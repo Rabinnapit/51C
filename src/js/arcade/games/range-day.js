@@ -34,7 +34,7 @@
     controls: 'Tap or click a target to fire. Keyboard: left and right move the sight between targets, Space or Enter fires. 20 exposures and 30 rounds: 18 hits for Expert, 15 Sharpshooter, 12 Marksman (a campaign table is 10 targets and 15 rounds). On Veteran and Elite the sight sways, so time your shot.',
     aspect: [0.5, 2.3], gateAt: 'top', noLives: true, livesLabel: 'Rounds', outTitle: 'Out of ammunition',
     livesText: function (st) { return st.inst && st.inst.ammoText ? st.inst.ammoText() : ''; },
-    needs3D: true, dataOk: function (D) { return termsOf(D).length >= 20 && !!(A.GL && A.GL.ok()); },
+    needs3D: true, alt2D: 'qual-range', dataOk: function (D) { return termsOf(D).length >= 20 && !!(A.GL && A.GL.ok()); },
     thumb: function (ctx, w, h, t) {
       var hz = h * 0.46, g = ctx.createLinearGradient(0, 0, 0, hz); g.addColorStop(0, '#2d5f9a'); g.addColorStop(1, '#a9c9e6'); ctx.fillStyle = g; ctx.fillRect(0, 0, w, hz);
       ctx.fillStyle = '#ffd980'; ctx.beginPath(); ctx.arc(w * 0.78, hz * 0.42, 16, 0, Math.PI * 2); ctx.fill();
@@ -61,12 +61,15 @@
       var scene = null, glError = null;
       try { scene = new A.GL.RangeScene({ mobile: coarse, reduce: feel.reduce, width: 640, height: 400, fit: FIT, skin: A.season ? A.season.skin() : '' }); } catch (e) { glError = e; }
       if (!scene) {
-        setTimeout(function () { api.end({ won: false, title: '3D not available', message: 'This device could not start the 3D range' + (glError && glError.message ? ' (' + glError.message + ')' : '') + '. Qual Range is the same drill in 2D.' }); }, 2200);
-        return { update: function () {}, draw: function (ctx) { A.text(ctx, 'Starting the 3D range failed on this device. Qual Range is the same drill in 2D.', 30, 60, { size: 18, color: A.C.ink, maxWidth: W - 60 }); } };
+        var why = A.GL && A.GL.tooSlow ? 'This device was too slow for the 3D range, so the Arcade has moved its games to 2D until the page is reloaded.'
+          : 'This device could not start the 3D range' + (glError && glError.message ? ' (' + glError.message + ')' : '') + '.';
+        setTimeout(function () { api.end(A.no3D(A.games['range-day'], why)); }, 2200);
+        return { update: function () {}, draw: function (ctx) { A.text(ctx, why + ' Qual Range is the same drill in 2D.', 30, 60, { size: 18, color: A.C.ink, maxWidth: W - 60 }); } };
       }
       var n = 0, ammo = AMMO, hits = 0, streak = 0, targets = [], cur = null, phase = 'wait', phaseT = 0.6, expose = 0, exposeMax = 1;
       var aim = { x: W / 2, y: H * 0.55 }, focus = -1, lastTouch = coarse, kick = 0, hitMark = 0, first = true, gov = A.GL.governor(scene), scale = 1, glW = 0, glH = 0;
       var sway = SWAY[tier.id] || 0;
+      api.partial = function () { return { value: hits, of: EXPOSURES }; };   // a run cut short: the hits so far
       api.progress.configure({ perLevel: 5 });
 
       function pickDecoys(term, k) {

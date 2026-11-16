@@ -122,6 +122,14 @@ html.ar-playing, html.ar-playing body { overflow: hidden; overscroll-behavior: n
 .ar-pause { position: absolute; inset: 0; z-index: 5; display: grid; place-items: center; background: rgba(3,6,7,.72); backdrop-filter: blur(3px); padding: 16px; overflow: auto; }
 .ar-pause-box { width: min(560px, 100%); padding: 20px; border-radius: 18px; background: #0d171b; border: 1px solid var(--ar-line); }
 .ar-pause-box h3 { margin: 0 0 6px; font-family: var(--font-display); font-size: 1.6rem; }
+/* a short stage (a 320 x 568 phone held upright): the Paused and "3D view stopped" cards start at the top, drop the help
+   text and tighten, so their buttons show without scrolling (the pace buttons stay reachable by scrolling the card) */
+.ar-tight .ar-pause { padding: 8px; place-items: start center; }
+.ar-tight .ar-pause-box { padding: 12px; border-radius: 14px; }
+.ar-tight .ar-pause-box h3 { font-size: 1.2rem; margin-bottom: 8px; }
+.ar-tight .ar-pause-box .ar-howto { display: none; }
+.ar-tight .ar-pause-box .ar-btn.lg { min-height: 44px; padding: 8px 12px; font-size: 14px; }
+.ar-tight .ar-levels { margin-top: 8px; }
 .ar-howto { margin: 0 0 14px; color: var(--ar-ink2); font-size: 14px; line-height: 1.5; }
 .ar-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .ar-levels { margin-top: 14px; display: flex; flex-direction: column; gap: 6px; }

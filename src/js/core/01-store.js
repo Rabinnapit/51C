@@ -83,16 +83,17 @@
     if (path === 'profile.theme') store.safeSet(THEME, value || '');
     if (path === 'profile.palette') store.safeSet(PALETTE, value || '');
     if (path === 'profile.textSize') store.safeSet(TEXT, String(value || 0));
-    if (path.indexOf('progress') === 0 || path.indexOf('profile') === 0) CORB.state.meta.updatedAt = new Date().toISOString();
+    if ((path.indexOf('progress') === 0 || path.indexOf('profile') === 0) && !(opts && opts.stamp === false)) CORB.state.meta.updatedAt = new Date().toISOString();
     if (!(opts && opts.noPersist)) persist();
     if (!(opts && opts.silent)) CORB.emit('change', { path: path, value: value });
     return value;
   };
   CORB.update = function (path, fn) { return CORB.set(path, fn(CORB.get(path))); };
   CORB.push = function (path, item, cap) { var arr = CORB.get(path, []); arr = Array.isArray(arr) ? arr.slice() : []; arr.push(item); if (cap && arr.length > cap) arr = arr.slice(-cap); return CORB.set(path, arr); };
-  // once a day per page: a page seen again the same day is not a change (it would make the account sync think this
-  // device's progress is newer than the account's)
-  CORB.touch = function (id) { if (CORB.get('progress.seen.' + id) === U.today()) return; CORB.set('progress.seen.' + id, U.today(), { silent: true }); };
+  // the day a page was last seen (for the streak), once a day per page. Seeing a page is not a change: it does not stamp
+  // the progress as changed, or the account sync would think this device's progress is newer than the account's and ask
+  // which to keep. Real study (an answer, a lesson done) stamps through its own write, and the next save carries this.
+  CORB.touch = function (id) { if (CORB.get('progress.seen.' + id) === U.today()) return; CORB.set('progress.seen.' + id, U.today(), { silent: true, stamp: false }); };
 
   // ---- has this reader done anything yet? ----
   store.hasProgress = function () {

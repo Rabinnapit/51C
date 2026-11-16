@@ -75,6 +75,7 @@
     var coarse = false; try { coarse = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
     var scene = new A.GL.GunScene({ mobile: coarse, reduce: feel.reduce, width: 640, height: 400, skin: A.season ? A.season.skin() : '' });
     var mission = null, missionNo = 0, rounds = ROUNDS, streak = 0, targets = [], phase = 'aim', phaseT = 0, timer = 0, limit = 0, note = '', noteT = 0, reveal = 0, wind = 0, right = 0;
+    api.partial = function () { return { value: right, of: MIS }; };   // out of lives: the targets landed so far
     var gov = A.GL.governor(scene), scale = 1, glW = 0, glH = 0, aimP = null;
     var tierIx = Math.max(0, ['recruit', 'regular', 'veteran', 'elite'].indexOf(tier.id)), previewFrac = [1, 0.5, 0.22, 0][tierIx];
     var LIGHTS = [scene.light, 'gold', 'dawn', 'night', 'dusk'];
@@ -196,7 +197,7 @@
     tagline: 'Read the call for fire, lay the howitzer and drop a round on the target that carries the right number, deadline or form. In real 3D: a valley, trucks that burn, a shell you can follow.',
     drills: 'Dollar thresholds, deadlines, forms, J&A approvals, contract types',
     controls: 'Tap or click the target you want to hit, or the ground where the round should land (on a touch screen you can drag to adjust, then let go). Keyboard: the arrows move the aim point, Space or Enter fires. The dotted arc shows the shot on easier paces; on harder levels wind pushes the round, so aim upwind. Three rounds per mission; a wrong target costs a life.',
-    aspect: [0.62, 2.3], orient: 'landscape',
+    aspect: [0.62, 2.3],   // no "turn sideways" hint: on a phone the stage is shorter, not bigger, in landscape
     dataOk: function (D) { return factsOf(D).length >= 12; },
     thumb: function (ctx, w, h, t) {
       var g = ctx.createLinearGradient(0, 0, 0, h); g.addColorStop(0, '#1b2a4a'); g.addColorStop(0.65, '#c8714a'); g.addColorStop(1, '#f3c07a'); ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
@@ -226,6 +227,7 @@
       // the same mission settings as the 3D game: a range-card or campaign mission sets the families and the count
       if (gopts.fams && gopts.fams.length) { var sub = all.filter(function (x) { return gopts.fams.indexOf(x.fam) >= 0; }); if (sub.length >= 8) all = sub; }
       var MISSIONS = gopts.missions > 0 ? gopts.missions : 12;
+      api.partial = function () { return { value: api.progress.right, of: MISSIONS }; };   // out of lives: the targets landed so far
       var ground = [], targets = [], shell = null, mission = null, missionNo = 0, rounds = ROUNDS, streak = 0;
       var angle = 45, charge = 0.62, recoil = 0, flashT = 0, trail = [], clouds = [], phase = 'aim', phaseT = 0;
       var timer = 0, limit = 0, note = '', noteT = 0, gunX = 0, gunY = 0, g = 0, vmax = 0, wind = 0, reveal = 0;
