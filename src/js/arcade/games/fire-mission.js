@@ -222,7 +222,10 @@
   // ---- the canvas-2D game (the fallback): elevation and charge, the shell drawn by hand ----
   function create2D(api) {
     {
-      var W = api.W, H = api.H, tier = api.difficulty, all = factsOf(api.data), t = 0;
+      var W = api.W, H = api.H, tier = api.difficulty, all = factsOf(api.data), t = 0, gopts = api.opts || {};
+      // the same mission settings as the 3D game: a range-card or campaign mission sets the families and the count
+      if (gopts.fams && gopts.fams.length) { var sub = all.filter(function (x) { return gopts.fams.indexOf(x.fam) >= 0; }); if (sub.length >= 8) all = sub; }
+      var MISSIONS = gopts.missions > 0 ? gopts.missions : 12;
       var ground = [], targets = [], shell = null, mission = null, missionNo = 0, rounds = ROUNDS, streak = 0;
       var angle = 45, charge = 0.62, recoil = 0, flashT = 0, trail = [], clouds = [], phase = 'aim', phaseT = 0;
       var timer = 0, limit = 0, note = '', noteT = 0, gunX = 0, gunY = 0, g = 0, vmax = 0, wind = 0, reveal = 0;
@@ -315,7 +318,7 @@
         else if (pct >= 75) badge = { icon: '💥', name: 'Steel on target', desc: right + ' of ' + MISSIONS + ' missions on target. 11 or more makes King of Battle.', color: '#ffa552' };
         else if (pct >= 50) badge = { icon: '🎯', name: 'Adjusting fire', desc: right + ' of ' + MISSIONS + ' on target. Review the misses below, then fire again.', color: '#8cc8ff' };
         else badge = { icon: '📋', name: 'Back to the FDC', desc: right + ' of ' + MISSIONS + ' on target. Study the list below and try again.', color: '#c2cdc6' };
-        api.end({ won: true, title: 'Fire missions complete', message: 'You hit ' + right + ' of ' + MISSIONS + ' targets.', badge: badge, xpBonus: right * 5 });
+        api.end({ won: true, title: 'Fire missions complete', message: 'You hit ' + right + ' of ' + MISSIONS + ' targets.', badge: badge, xpBonus: right * 5, campaign: { value: right, of: MISSIONS } });
       }
 
       function trajectory(n, chg, w) {

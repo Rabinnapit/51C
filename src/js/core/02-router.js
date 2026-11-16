@@ -34,6 +34,7 @@
     // (browsers take a theme-color only as an opaque colour, and some cannot read the newer colour syntax)
     var go = function () { try {
       var m = document.querySelector('meta[name="theme-color"]'); if (!m) return;
+      if (document.querySelector('.intro-layer')) { m.setAttribute('content', '#0b100e'); return; }   // the intro's dark layer is on top
       var bar = document.querySelector('.topbar'), cv = document.createElement('canvas'); cv.width = cv.height = 1;
       var x = cv.getContext('2d'); if (!x) return;
       x.fillStyle = '#ffffff'; x.fillRect(0, 0, 1, 1);
@@ -225,6 +226,7 @@
     var tag = (e.target && e.target.tagName || '').toLowerCase();
     if (tag === 'input' || tag === 'textarea' || tag === 'select' || (e.target && e.target.isContentEditable)) return;
     if (e.ctrlKey || e.metaKey || e.altKey) return;
+    if (CORB.ui.modalLocked && CORB.ui.modalLocked()) { if (e.key === '/' || e.key === '?') e.preventDefault(); return; }   // the first-use terms: only "I agree" goes on
     if (e.key === '/') { e.preventDefault(); CORB.ui.palette(); }
     if (e.key === '?' && CORB.tour && current.id !== 'arcade') { e.preventDefault(); CORB.tour.start(); }
     if (e.key === 'Escape') { if (!CORB.ui.modalLocked()) CORB.ui.closeModal(); closeSide(); }

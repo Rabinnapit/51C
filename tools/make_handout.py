@@ -103,12 +103,12 @@ li::before {{ content: counter(s); position: absolute; left: 0; top: 0.01in; wid
   </div>
   <div class="steps">
     <div class="col"><h3>iPhone <span>(Apple allows no install button)</span></h3><ol>
-      <li>Scan the code with the <b>Camera</b> app: the install page opens.</li>
+      <li>Scan the code with the <b>Camera</b> app. A 2-minute intro plays (<b>Skip</b> is fine), then the install page opens.</li>
       <li>Tap <b>Share</b> (the square with an arrow). In Safari it is in the bar at the bottom; if that bar shows <b>&middot;&middot;&middot;</b>, tap it first.</li>
       <li>Tap <b>Add to Home Screen</b>, then <b>Add</b>.</li>
       <li>Open it from the new icon once while online.</li></ol></div>
     <div class="col"><h3>Android <span>(any browser)</span></h3><ol>
-      <li>Scan the code with the <b>Camera</b> app: the install page opens.</li>
+      <li>Scan the code with the <b>Camera</b> app. A 2-minute intro plays (<b>Skip</b> is fine), then the install page opens.</li>
       <li>Tap <b>Install app</b>. In Samsung Internet a list asks which app to open: choose <b>Chrome</b> (only Chrome installs it without a warning), then tap <b>Install app</b> there.</li>
       <li>Tap <b>Install</b> in the box that appears.</li>
       <li>Open it from the new icon once while online.</li></ol></div>

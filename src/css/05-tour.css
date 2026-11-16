@@ -10,7 +10,7 @@
 .tour-layer { position: fixed; inset: 0; z-index: 150; }
 .tour-spot { position: fixed; left: 50%; top: 50%; width: 0; height: 0; border-radius: 12px; box-shadow: 0 0 0 200vmax rgba(10, 16, 12, .58); pointer-events: none; transition: left .28s var(--ease), top .28s var(--ease), width .28s var(--ease), height .28s var(--ease); }
 .tour-spot.on { outline: 2px solid var(--accent-2); outline-offset: 2px; }
-.tour-card { position: fixed; left: 50%; top: 40%; width: min(380px, calc(100vw - 24px)); padding: 14px 18px 14px; border-radius: var(--r-lg); background: var(--panel); color: var(--ink); border: 1px solid var(--line); box-shadow: var(--shadow-lg); transition: left .28s var(--ease), top .28s var(--ease); }
+.tour-card { position: fixed; left: 50%; top: 40%; width: min(380px, calc(100vw - 24px)); max-height: calc(100vh - 24px); overflow: auto; padding: 14px 18px 14px; border-radius: var(--r-lg); background: var(--panel); color: var(--ink); border: 1px solid var(--line); box-shadow: var(--shadow-lg); transition: left .28s var(--ease), top .28s var(--ease); }
 .tour-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .tour-step { font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-2); font-variant-numeric: tabular-nums; }
 .tour-x { width: 30px; height: 30px; margin-right: -8px; display: grid; place-items: center; border-radius: 8px; color: var(--muted); }
@@ -23,6 +23,7 @@
 .tour-dots i { width: 6px; height: 6px; border-radius: 50%; background: var(--line-2); }
 .tour-dots i.on { background: var(--accent); }
 .tour-actions { display: flex; gap: 6px; margin-left: auto; flex: none; }
+@media (max-width: 420px) and (max-height: 720px) { .tour-card { max-height: 46vh; padding: 12px 14px; } }
 @media (prefers-reduced-motion: reduce) { .tour-spot, .tour-card { transition: none; } }
 html[data-motion="reduce"] .tour-spot, html[data-motion="reduce"] .tour-card { transition: none; }
 @media print { .tour-layer { display: none !important; } }

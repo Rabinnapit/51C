@@ -42,6 +42,8 @@
   padding: 22px 0 calc(4px + env(safe-area-inset-bottom, 0px)); background: linear-gradient(to top, var(--bg) 70%, transparent);
   color: var(--accent); font-weight: 800; font-size: var(--fs-sm); white-space: nowrap; pointer-events: none; }
 .inst-arrow svg { width: 36px; height: 36px; animation: inst-bounce 1.3s var(--ease) infinite; }
+.inst-arrow-off { opacity: 0; visibility: hidden; }
+.inst-arrow { transition: opacity .2s, visibility .2s; }
 @keyframes inst-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
 @keyframes inst-spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .inst-arrow svg, .inst-wait svg { animation: none; } }

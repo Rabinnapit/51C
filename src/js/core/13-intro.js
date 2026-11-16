@@ -13,13 +13,16 @@
   var CORB = window.CORB;
   var SEEN = 'b2b.introSeen';
   var intro = CORB.intro = {};
-  var layer = null, firstThen = null, video = null, prevFocus = null, keyH = null;
+  var layer = null, firstThen = null, video = null, prevFocus = null, keyH = null, madeInert = [], barBefore = null;
 
   function cfg() { var m = CORB.meta() || {}; return m.intro && m.intro.src ? m.intro : null; }
   intro.available = function () { return !!cfg() && CORB.edition() === 'web' && /^https?:$/.test(location.protocol); };
   intro.minutes = function () { var c = cfg(); return c && c.minutes ? c.minutes : 2; };
   // read before boot: the install page's own boot step tidies the address (core/09-pwa.js)
   var FORCED = /[?&]intro=1(&|$)/.test(location.search);
+  // the install page handed this page over from another browser (Samsung Internet to Chrome, an app's browser to
+  // Safari, a copied link): the reader met the intro there, so this browser goes straight to the install button
+  var HANDOFF = /[?&]install=(chrome|safari|next)(&|$)/.test(location.search);
   function forced() { return FORCED; }
   function seen() { try { return !!localStorage.getItem(SEEN); } catch (e) { return true; } }
   function markSeen() { try { localStorage.setItem(SEEN, String(Date.now())); } catch (e) {} }
@@ -43,9 +46,14 @@
     try { if (video) { video.pause(); video.removeAttribute('src'); video.load(); } } catch (e) {}
     if (keyH) document.removeEventListener('keydown', keyH, true);
     layer.remove(); layer = null; video = null; keyH = null;
-    document.body.style.overflow = document.querySelector('.inst-page') ? 'hidden' : '';
+    madeInert.forEach(function (el) { el.removeAttribute('inert'); }); madeInert = [];
+    var bar = document.querySelector('meta[name="theme-color"]'); if (CORB.syncBar) CORB.syncBar(); else if (bar && barBefore) bar.setAttribute('content', barBefore);
+    var inst = document.querySelector('.inst-page');
+    document.body.style.overflow = inst ? 'hidden' : '';
     if (reason !== 'replay') markSeen();
-    try { if (prevFocus && prevFocus.focus) prevFocus.focus({ preventScroll: true }); } catch (e) {}
+    // focus goes to the install page's button when it is next, otherwise back where it was
+    var next = inst ? (inst.querySelector('.inst-big') || inst.querySelector('button')) : prevFocus;
+    try { if (next && next.focus) next.focus({ preventScroll: true }); } catch (e) {}
     var t = firstThen; firstThen = null; if (t) setTimeout(t, 200);
   }
 
@@ -69,11 +77,27 @@
         words,
         h('div.intro-foot', {}, skip, replay ? null : h('p.intro-later', {}, 'Watch it any time: ', h('b', {}, 'Settings & help'), ' or ', h('b', {}, 'About'), ', "Watch the intro".'))));
     document.body.appendChild(layer); document.body.style.overflow = 'hidden';
+    // what is behind the layer cannot take focus or taps; the phone's own bar turns dark with it
+    [document.getElementById('app'), document.querySelector('.inst-page')].forEach(function (el) { if (el && !el.hasAttribute('inert')) { el.setAttribute('inert', ''); madeInert.push(el); } });
+    var bar = document.querySelector('meta[name="theme-color"]'); if (bar) { barBefore = bar.getAttribute('content'); bar.setAttribute('content', '#0b100e'); }
     if (video.textTracks && video.textTracks.length) cueLine(video.textTracks[0], words);
     else video.addEventListener('loadedmetadata', function () { if (video && video.textTracks && video.textTracks[0]) cueLine(video.textTracks[0], words); });
     video.addEventListener('ended', function () { setTimeout(function () { close(replay ? 'replay' : 'ended'); }, 700); });
+    // the video could not load (no signal, a missing file): the first visit goes straight on; a replay says why
+    video.addEventListener('error', function () {
+      if (!replay) { close('skip'); return; }
+      words.textContent = 'The intro needs an internet connection. Try again when you are online.'; soundBtn.hidden = true; playBtn.hidden = true;
+    });
     video.addEventListener('volumechange', function () { if (video && !video.muted) soundBtn.hidden = true; });
-    keyH = function (e) { if (e.key === 'Escape') { e.stopPropagation(); e.preventDefault(); close(replay ? 'replay' : 'skip'); } };
+    keyH = function (e) {
+      if (e.key === 'Escape') { e.stopPropagation(); e.preventDefault(); close(replay ? 'replay' : 'skip'); return; }
+      if (e.key === 'Tab' && layer) {   // Tab stays inside the intro
+        var f = Array.prototype.filter.call(layer.querySelectorAll('button, video[controls], a[href]'), function (el) { return !el.hidden && el.offsetParent !== null; });
+        if (!f.length) return;
+        var at = f.indexOf(document.activeElement);
+        if (e.shiftKey && at <= 0) { e.preventDefault(); f[f.length - 1].focus(); } else if (!e.shiftKey && (at === -1 || at === f.length - 1)) { e.preventDefault(); f[0].focus(); }
+      }
+    };
     document.addEventListener('keydown', keyH, true);
     function start(withSound) {
       if (!video) return;
@@ -82,15 +106,16 @@
       var pr; try { pr = video.play(); } catch (e) { pr = null; }
       if (pr && pr.catch) pr.catch(function () { if (playBtn) playBtn.hidden = false; });
     }
-    // sound on: the voice from the top, unless the viewer is well into it
-    function sound() { if (!video) return; video.muted = false; soundBtn.hidden = true; if (video.currentTime < 8) video.currentTime = 0; start(true); }
-    if (saveData() && !replay) playBtn.hidden = false; else start(replay);
+    // sound on: the voice from the top (the words ran silently until now)
+    function sound() { if (!video) return; video.muted = false; soundBtn.hidden = true; try { video.currentTime = 0; } catch (e) {} start(true); try { skip.focus({ preventScroll: true }); } catch (e) {} }
+    if (saveData() && !replay) { playBtn.hidden = false; soundBtn.hidden = true; } else start(replay);
     setTimeout(function () { try { skip.focus({ preventScroll: true }); } catch (e) {} }, 60);
   };
 
   CORB.on('boot', function () {
     if (!intro.available()) return;
     if (forced()) { try { history.replaceState(null, '', location.pathname + location.search.replace(/([?&])intro=1(&|$)/, '$1').replace(/[?&]$/, '') + (location.hash || '')); } catch (e) {} }
+    if (HANDOFF && !forced()) { markSeen(); return; }
     if (forced() || (!standalone() && !seen())) intro.play();
   });
 })();

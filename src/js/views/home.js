@@ -13,7 +13,7 @@
   CORB.TRACKS = TRACKS;
   CORB.trackLabel = function (id) { var t = TRACKS.filter(function (x) { return x.id === id; })[0]; return t ? t.title : ''; };
 
-  // ---- the three setup questions (also used by My plan → Change dates) ----
+  // ---- the setup questions (also used by My plan → Change dates) ----
   CORB.setupForm = function (o) {
     o = o || {};
     var h = CORB.ui.h, icon = CORB.ui.icon, U = CORB.util;
@@ -71,7 +71,7 @@
       hello(h), h('h1', {}, 'Zero to certified.'),
       h('p.lede', {}, 'The free, fun way to pass CON 3990V. Your plan in 30 seconds. Lessons that play like pictures, ' + nq + ' questions that explain themselves, flashcards and seven games, five in real 3D, with a twelve-chapter campaign. Made by a 51C for new 51Cs and 1102s.'),
       h('div.home-proof', {}, ['79% pass on the first try (FY26)', nl + ' lessons, ' + nq + ' questions', 'No signal needed'].map(function (t) { return h('span', {}, icon('check'), t); })),
-      CORB.intro && CORB.intro.available() ? h('button.btn.sm.home-intro', { type: 'button', onclick: function () { CORB.intro.play({ replay: true }); } }, icon('play'), 'Watch the ' + CORB.intro.minutes() + '-minute intro') : null,
+      CORB.intro && CORB.intro.available() ? h('button.btn.home-intro', { type: 'button', onclick: function () { CORB.intro.play({ replay: true }); } }, icon('play'), 'Watch the ' + CORB.intro.minutes() + '-minute intro') : null,
       h('div.home-three', {},
         [['school', '5 courses', 'CON 1100, 1200V, 1300V, 7300V and 1400V'], ['award', '1 exam', 'CON 3990V: 150 questions, 70% to pass'], ['clipboard', '12 months', 'of full-time contracting experience']].map(function (x) {
           return h('div.three-item', {}, icon(x[0]), h('div', {}, h('b', {}, x[1]), h('span', {}, x[2])));

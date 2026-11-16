@@ -154,10 +154,12 @@
   };
   // the Arcade's "check this phone": build a stage from scratch (the probe runs again from the best tier), draw a frame
   GL.selfTest = function (mobile) {
-    var t0 = performance.now(), St = null, res;
+    var t0 = performance.now(), St = null, res, before = GL.tier, beforeOk = GL._ok;
     try { St = GL.Stage({ mobile: mobile, probe: true }); St.resize(64, 64); St.render(0); res = GL.tier === 4 || St.errors() ? 'does not work: a scene shader did not compile' : 'works: ' + GL.TIER_NAMES[GL.tier]; }
     catch (e) { res = 'does not work: ' + (e && e.message); }
     var ms = Math.round(performance.now() - t0); if (St) St.dispose();
+    var slow = before === 4 && !!GL.tooSlow;   // set by the governor when it sent the games to 2D
+    if (slow) { GL.tier = 4; GL._ok = beforeOk; res += '; the games stay in 2D here: this device was too slow for the 3D scenes'; }
     var r = GL.report(); r.result = res; r.testMs = ms; return r;
   };
 
@@ -200,7 +202,7 @@
         else if (avg > 180 && !g.gaveUp && ++dead >= 2) {
           // the smallest drawing size and still under about five frames a second: this device cannot run the 3D scenes.
           // The games restart in their 2D versions (the shell listens on GL.onFail).
-          g.gaveUp = true; GL.note('pace', 'still ' + Math.round(avg) + ' ms a frame at the smallest size: switching to the 2D games');
+          g.gaveUp = true; GL.tooSlow = true; GL.note('pace', 'still ' + Math.round(avg) + ' ms a frame at the smallest size: switching to the 2D games');
           GL.tier = 4; GL._ok = false; if (typeof GL.onFail === 'function') { try { GL.onFail(); } catch (e) {} }
         }
       } else if (avg > 36 && !hold && level < LAST) {   // a mild slowdown: four windows in a row, tried once
@@ -236,7 +238,7 @@
     var scene = new THREE.Scene(), camera = new THREE.PerspectiveCamera(opts.fov || 58, 1, 0.05, opts.far || 700), X = GL.textures();
     var shaderErrors = 0, warmP = null, probing = GL.tier == null || !!opts.probe;   // during the self-test a failed shader only means: try the next tier
     renderer.debug.onShaderError = function (gl, program, vs, fs) {
-      shaderErrors++; var m = ''; try { m = [gl.getProgramInfoLog(program), gl.getShaderInfoLog(vs), gl.getShaderInfoLog(fs)].join(' ').replace(/\s+/g, ' ').trim(); } catch (e) {}
+      if (!probing) shaderErrors++; var m = ''; try { m = [gl.getProgramInfoLog(program), gl.getShaderInfoLog(vs), gl.getShaderInfoLog(fs)].join(' ').replace(/\s+/g, ' ').trim(); } catch (e) {}
       GL.note('shader', m.slice(0, 240) || 'a shader did not compile'); console.error('[arcade] 3D shader failed: ' + m.slice(0, 400));
       // past the self-test this is a scene material: the 3D scenes cannot be drawn here, so the games use their 2D versions
       if (!probing && GL.tier !== 4) { GL.tier = 4; GL._ok = false; if (typeof GL.onFail === 'function') { try { GL.onFail(); } catch (e) {} } }

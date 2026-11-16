@@ -7,7 +7,7 @@
   its captions are in the picture and its words run under it, which helps readers whose first language is not English.
   "Sound on" plays it from the top with the voice; Skip, Escape or the end of the video go on to the install page. It
   never plays in the installed app, only once on a device, and waits on its poster with Data Saver on. "Watch the
-  intro" on Home, About and Settings & help plays it any time. The video streams from the website (about 14 MB); the
+  intro" in About and Settings & help (and on Home until the plan is built) plays it any time. The video streams from the website (about 14 MB); the
   offline file stays the same size and the service worker leaves the video alone.
 - **The intro is up to date (teaser v1.2).** Filmed again from this version: the four-step onboarding, the Arcade with
   five games in real 3D and the range card, 395 questions, 254 terms. The narrator now says "four quick steps", "five of
@@ -23,8 +23,8 @@
   top, so the arrow to Share can no longer cover it. Reprint the install sheet: `handout/` has the new code, its counts
   come from the content (35 lessons, 395 questions, seven games), and it now prints on one page.
 - **What the 51C proponent said, in full.** The complete transcript of the October 2026 session, checked against
-  USAASC's pages, adds only what bears on certification: in the Army, a 51C who had not met the year of experience by
-  1 October 2026 needs CON 7300V to certify, even after passing the exam; a new question, "CON 7300V is full. What do I
+  USAASC's pages, adds only what bears on certification: in the Army, anyone not yet certified on 1 October 2026 needs CON
+  7300V to certify, even after passing the exam; a new question, "CON 7300V is full. What do I
   do?" (waitlists into May 2027, no substitute course yet, tell your KMG early); a bachelor's degree is not needed to
   apply for the certification, though USAASC says 51C NCOs must earn one to be fully MOS qualified; the next
   reclassification window (11 January to 23 April 2027, panel 3 May 2027). My plan, the exam path and the CON 7300V page
@@ -44,7 +44,25 @@
 - **Found by the independent review.** After a 10-target range-card or campaign Range Day, a normal Range Day ran the
   short table too (since 0.26); every run now sets its own size. Home's "Play the next mission" opens the first mission
   still open on today's card, even when the others were passed out of order. On iPhones the arrow to Share sits on a
-  strip in the page colour along the bottom edge, so it never prints over the install steps.
+  strip in the page colour along the bottom edge, so it never prints over the install steps. Buddy now searches the
+  "Who does what" roles (it skipped them), so "who is my training NCO" finds the KMG. The degree answer cites USAASC
+  and the proponent, not DoDI 5000.66 (which exempts enlisted members of the Contingency Contracting Force). The
+  CON 7300V answer covers everyone not yet certified on 1 October 2026. The tour, About and the first-week how-to say
+  four onboarding steps; the QR steps (About, the install sheet) mention the intro; and the intro goes straight on to
+  the install page if the video cannot load. Caught before release in 0.29.0's new parts: drawing the weekly table
+  counted as a change to the reader's progress (with an account, the sync would have asked which copy to keep);
+  Fire Mission's 2D version (phones without 3D) now runs and scores the range card's mission instead of passing it at
+  any score; the season counts every closed card of the quarter. Also: "/" and "?" no longer open search or the tour
+  over the first-use terms, the phone check no longer says "does not work" when the simplest drawing works (nor puts
+  3D back on a device the games had sent to 2D as too slow), a range card left open past midnight opens today's card
+  instead of yesterday's mission, and pausing while a game loads now gives the 3-2-1 count on Resume.
+- **From the device review.** The intro shows once per person: when the install page hands over to Chrome (from
+  Samsung Internet) or to Safari (from an app's own browser), the second browser goes straight to the install button.
+  "Sound on" always starts the intro from the top. On iPhones the arrow to Share shows only while it covers nothing
+  (on short screens it appears once the steps are scrolled clear of it). Keyboard focus stays inside the intro, then
+  moves to the install button; the phone's bar turns dark with the intro. Home's "Watch the 2-minute intro" button is
+  full tap size; the tour card never grows taller than the screen; "training NCO", "training POC" and similar
+  questions bring Buddy to the KMG; in an app's own browser, "Why Chrome?" no longer says that browser can install.
 
 ## 0.29.0 (16 November 2026): the range card, the qualification table and the seasons
 

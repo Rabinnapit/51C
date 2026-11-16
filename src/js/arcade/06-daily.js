@@ -55,7 +55,7 @@
     { id: 'boss-protest', game: 'contract-quest', title: 'The Protest', what: 'A boss fight on source selection and the protest clock.', pass: 1, of: 1, unit: 'boss', opts: { boss: 'protest' } }
   ];
   function all() { var d = A.save.get('daily', {}); return d && typeof d === 'object' ? d : {}; }
-  function save(d) { var keys = Object.keys(d.days || {}).sort(); while (keys.length > 60) delete d.days[keys.shift()]; A.save.set('daily', d); }
+  function save(d) { var keys = Object.keys(d.days || {}).sort(); while (keys.length > 100) delete d.days[keys.shift()]; A.save.set('daily', d); }
   function available(m) { var def = A.games[m.game]; if (!def) return false; try { return !def.dataOk || !!def.dataOk(A.DATA); } catch (e) { return false; } }
   // the three missions of a day: seeded by the date, three different games, only games this copy can run
   daily.missions = function (key) {
@@ -74,7 +74,10 @@
     o.daily = { date: dayKey(), id: m.id, title: 'Range card · ' + m.title, pass: m.pass, of: m.of, unit: m.unit };
     return o;
   };
-  daily.start = function (m) { if (A.start) A.start(m.game, daily.opts(m)); };
+  daily.start = function (m) {
+    if (!daily.missions().some(function (x) { return x.id === m.id; })) { if (A.lobby) A.lobby('daily'); return; }   // a new day: today's card instead
+    if (A.start) A.start(m.game, daily.opts(m));
+  };
   function repairFree(d, today) { return !d.repairAt || addDays(d.repairAt, 7) <= today; }
   // called by the shell when a range-card run ends; closes the card and moves the streak when all three are passed
   daily.onRunEnd = function (state, won, o) {
@@ -129,7 +132,9 @@
     A.save.set('table', t, !just);
     return { fired: t.fired, hits: t.hits, badge: badge, badgeName: table.NAMES[badge], justFired: just };
   };
-  table.week = function () { var t = rollWeek(tableAll()); A.save.set('table', t, true); var badge = table.badgeOf(t.hits, t.fired), need = t.hits >= 36 ? null : t.hits >= 30 ? ['Expert', 36] : t.hits >= 23 ? ['Sharpshooter', 30] : ['Marksman', 23]; return { week: t.week, fired: t.fired, hits: t.hits, shots: t.shots || '', badge: badge, badgeName: table.NAMES[badge], icon: table.ICONS[badge], need: need, history: t.history }; };
+  // read only: the week rolls over in memory; record() saves it with the next answer (a write here, on every Home or
+  // lobby draw, made the account sync see this device as newer than the account and ask which copy to keep)
+  table.week = function () { var t = rollWeek(tableAll()); var badge = table.badgeOf(t.hits, t.fired), need = t.hits >= 36 ? null : t.hits >= 30 ? ['Expert', 36] : t.hits >= 23 ? ['Sharpshooter', 30] : ['Marksman', 23]; return { week: t.week, fired: t.fired, hits: t.hits, shots: t.shots || '', badge: badge, badgeName: table.NAMES[badge], icon: table.ICONS[badge], need: need, history: t.history }; };
 
   // ---- lobby sections and the results card ----
   function passText(m) { return m.unit === 'boss' ? 'Pass: bring the boss down' : 'Pass: ' + m.pass + ' of ' + m.of + ' ' + m.unit; }

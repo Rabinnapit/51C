@@ -28,7 +28,7 @@
     return i > n * 0.5 ? cut.slice(0, i + 1) : cut.replace(/\s\S*$/, '') + '…';
   }
   // the first useful string in an item of unknown shape (cert.json has several small shapes)
-  var T_KEYS = ['title', 'name', 'k', 'q', 't', 'h', 'code', 'term', 'label'], X_KEYS = ['plain', 'a', 'v', 'd', 'body', 'text', 'note', 'definition', 'about', 'summary', 'why', 'desc'];
+  var T_KEYS = ['title', 'name', 'k', 'q', 't', 'h', 'code', 'term', 'label'], X_KEYS = ['plain', 'a', 'v', 'd', 'body', 'text', 'note', 'definition', 'about', 'summary', 'why', 'desc', 'does'];
   function pick(o, keys) { if (typeof o === 'string') return o; for (var i = 0; i < keys.length; i++) if (o && typeof o[keys[i]] === 'string' && o[keys[i]]) return o[keys[i]]; return ''; }
 
   // ---- the index: short passages, each with the place in the guide that holds it ----

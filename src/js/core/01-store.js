@@ -90,7 +90,9 @@
   };
   CORB.update = function (path, fn) { return CORB.set(path, fn(CORB.get(path))); };
   CORB.push = function (path, item, cap) { var arr = CORB.get(path, []); arr = Array.isArray(arr) ? arr.slice() : []; arr.push(item); if (cap && arr.length > cap) arr = arr.slice(-cap); return CORB.set(path, arr); };
-  CORB.touch = function (id) { CORB.set('progress.seen.' + id, U.today(), { silent: true }); };
+  // once a day per page: a page seen again the same day is not a change (it would make the account sync think this
+  // device's progress is newer than the account's)
+  CORB.touch = function (id) { if (CORB.get('progress.seen.' + id) === U.today()) return; CORB.set('progress.seen.' + id, U.today(), { silent: true }); };
 
   // ---- has this reader done anything yet? ----
   store.hasProgress = function () {

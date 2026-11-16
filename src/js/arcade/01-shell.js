@@ -405,7 +405,7 @@
     if (def.music) A.music.play(def.music);
 
     // ---- countdown ----
-    var cd = 0, countEl = null, counting = false;
+    var cd = 0, countEl = null, counting = false, countLater = false;
     function countdown() {
       if (def.countdown === false) return;
       var count = (performance.now() - loadStart) / 1000 > 1.5 ? 1 : 3; countEl = h('div.ar-count', {}, String(count)); box.appendChild(countEl); state.paused = true; counting = true;   // one beat when the load already took a while
@@ -419,7 +419,7 @@
     function waitLoading(dt) {
       state.loadT += dt; loadFrames++;
       if (!built && loadFrames >= 3) build();
-      if (!isLoading()) { state.waitLoad = false; if (!state.paused) countdown(); return false; }
+      if (!isLoading()) { state.waitLoad = false; if (!state.paused) countdown(); else countLater = true; return false; }
       try { drawLoading(); } catch (e) {}
       return true;
     }
@@ -518,6 +518,7 @@
         var first = pauseEl.querySelector('button'); if (first) try { first.focus({ preventScroll: true }); } catch (e) {}
       } else {
         if (pauseEl) { pauseEl.remove(); pauseEl = null; } state.keys.clear();
+        if (countLater) { countLater = false; countdown(); }   // the game loaded while paused: count it in now
         if (def.music) A.music.play(A.music.track || def.music);
         try { if (document.activeElement && document.activeElement.blur) document.activeElement.blur(); } catch (e) {}
       }

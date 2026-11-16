@@ -59,7 +59,7 @@
       { title: 'What B2B Exam Prep is', view: 'home', target: homeTarget,
         text: 'A study and certification guide for new 51C Soldiers and 1102 civilians' + (CORB.meta().owner ? ', owned and built by ' + CORB.meta().owner : '') + '. It takes you to the DoW Contracting Professional certification: five courses, the CON 3990V exam and 12 months of experience. It works without internet; it is a training aid, not official guidance.' },
       { title: 'Your home page', view: 'home', target: homeTarget,
-        text: 'Home opens with this week on your exam path and your next step. Until you build your plan, it asks three quick questions to set your dates.' },
+        text: 'Home opens with this week on your exam path and your next step. Until you build your plan, it walks you through four short steps: who you are, your dates, the look and a voice.' },
       { title: 'Exam path', target: function () { return side(navItem('path'), 'path'); },
         text: '26 dated weeks to pass CON 3990V. Each week has a goal, lessons, a FAR reading, flashcards and a 10-question check, and each month ends with a timed checkpoint.' },
       { title: 'My plan', target: function () { return side(navItem('plan')); },
@@ -250,6 +250,7 @@
   tour.running = function () { return !!T; };
   tour.start = function () {
     if (T) return;
+    if (CORB.ui && CORB.ui.modalLocked && CORB.ui.modalLocked()) return;   // never over the first-use terms: they close only by agreeing
     try { CORB.ui.closeModal(); } catch (e) {}
     try { var sc = document.getElementById('sideScrim'); if (sc) sc.click(); } catch (e) {}
     T = { i: 0, token: 0, list: steps(), returnFocus: document.activeElement };

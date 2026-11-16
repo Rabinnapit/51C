@@ -200,7 +200,7 @@
      "tasks": [
        {"id": "w15-l22", "kind": "lesson", "lesson": "L22"},
        {"id": "w15-far15", "kind": "read", "far": 15, "t": "Read FAR 15.407 and 15.408", "d": "Price negotiation, prenegotiation objectives and documenting the negotiation."},
-       {"id": "w15-c7300", "kind": "do", "t": "Start CON 7300V", "d": "Required since 1 October 2026, after CON 1300V. Brush up on Excel first. Seats run out months ahead: request yours early.", "view": "courses", "params": {"id": "con7300"}},
+       {"id": "w15-c7300", "kind": "do", "t": "Start CON 7300V", "d": "Required since 1 October 2026, after CON 1300V. Brush up on Excel first. In late 2026 seats ran out months ahead: request yours early.", "view": "courses", "params": {"id": "con7300"}},
        {"id": "w15-chk", "kind": "drill", "t": "Weekly check: negotiation", "lessons": ["L22"], "n": 10}
      ],
      "tip": "Know which document goes where: prenegotiation objectives before you negotiate, the price negotiation memorandum after (15.408), and a memo for record for a no-cost change.",
@@ -323,7 +323,7 @@
     {"name": "Pop quiz: FAR parts", "status": "read", "what": "Match 21 descriptions to FAR parts. Covered by the FAR part flashcards and the FAR Part Match game (RFO titles)."},
     {"name": "Study Guide for Exam (test-taker notes)", "status": "read", "what": "Topic lists from people who took the exam. Each topic is checked under Test-taker tips."},
     {"name": "CON 3990V (test-taker notes)", "status": "read", "what": "One test taker's recalled topics and advice. Checked under Test-taker tips; recalled exam questions are not copied."},
-    {"name": "Contracting Study Guide V9 (19 May 2025)", "status": "read", "what": "Read on 29 October 2026 from an unprotected copy. It predates the FAR Overhaul and follows the same competency structure as this guide; its substance was already covered here, and three small additions came from it (version 0.22.1)."}
+    {"name": "Contracting Study Guide V9 (19 May 2025)", "status": "read", "what": "Read on 29 October 2026 from an unprotected copy. It predates the FAR Overhaul and follows the same competency structure as this guide; its substance was already covered here, and three small additions came from it (version 0.23.1)."}
   ],
   "checks": [
     {"topic": "Exam format", "src": "Day 1", "said": "150 questions from a pool of about 600, multiple choice, 70% to pass, about 10 unscored trial questions.", "now": "150 questions, 3 hours, 70%, closed book (official exam FAQ). The pool size and unscored items are not in the FAQ.", "status": "ok", "cite": ""},

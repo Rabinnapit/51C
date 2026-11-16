@@ -93,13 +93,13 @@
   };
   function here(flag) { return location.host + location.pathname + (flag ? '?install=' + flag : ''); }
   function scheme() { return location.protocol.replace(':', ''); }
-  function armedUrl() { return location.origin + location.pathname + '?install=1'; }
+  function armedUrl() { return location.origin + location.pathname + '?install=next'; }   // copied to another browser: no second intro there
   // Android: open this page in Chrome. An Android intent link naming Chrome's package; the Play Store page for Chrome
   // if Chrome is missing. Chromium-based browsers (Samsung Internet included) answer it with a two-entry list,
   // Chrome or themselves; "?install=chrome" tells the page which choice brought it back.
   function chromeLink() { return 'intent://' + here('chrome') + '#Intent;scheme=' + scheme() + ';package=com.android.chrome;S.browser_fallback_url=' + encodeURIComponent(PLAY_CHROME) + ';end'; }
   // iPhone: open this page in Safari (x-safari- works on iOS 15, 17 and 18, not 16; the page copes when it does not)
-  function safariLink() { return 'x-safari-' + scheme() + '://' + here('1'); }
+  function safariLink() { return 'x-safari-' + scheme() + '://' + here('safari'); }
   function keyIcon(svg) { return CORB.ui.h('span.inst-key', { html: '<svg viewBox="0 0 24 24" aria-hidden="true">' + svg + '</svg>' }); }
   function shareIcon() { return keyIcon('<path d="M12 3v12M8 7l4-4 4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 11H5v10h14V11h-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'); }
   function addIcon() { return keyIcon('<rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'); }
@@ -131,6 +131,7 @@
     if (!page) {
       page = h('div.inst-page', { role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Install B2B Exam Prep' });
       document.body.appendChild(page); document.body.style.overflow = 'hidden';
+      page.addEventListener('scroll', arrowFit, { passive: true });
       var app = document.getElementById('app'); if (app) app.setAttribute('inert', '');
     }
     var body = h('div.inst-body'), foot = h('div.inst-foot');
@@ -144,7 +145,8 @@
     // why the page does not simply install from Samsung Internet (and the others)
     function whyChrome() {
       return h('details.inst-more', {}, h('summary', {}, 'Why Chrome?'),
-        h('p', {}, p.name.charAt(0).toUpperCase() + p.name.slice(1) + ' can install web apps too, but it builds its own copy of the app, and Google Play Protect blocks that copy on newer phones ("built for an older version of Android"). Chrome\'s copy is signed by Google and installs clean, with its own icon. Checked October 2026.'));
+        h('p', {}, p.inApp ? 'The browser inside this app cannot install apps. Chrome can: its copy of the app is signed by Google and installs clean, with its own icon.'
+          : p.name.charAt(0).toUpperCase() + p.name.slice(1) + ' can install web apps too, but it builds its own copy of the app, and Google Play Protect blocks that copy on newer phones ("built for an older version of Android"). Chrome\'s copy is signed by Google and installs clean, with its own icon. Checked October 2026.'));
     }
     function notOpened(app2) {
       return h('details.inst-more', {}, h('summary', {}, app2 + ' did not open?'),
@@ -240,7 +242,21 @@
     var arrowUp = state === 'ask' && p.ios && !p.inApp && p.safari && !p.ipad;
     if (arrowUp) { skip.textContent = 'Not now'; skip.classList.add('inst-skip-top'); page.insertBefore(skip, page.firstChild); }
     else if (!(p.desktop && !pwa.canInstall)) foot.appendChild(skip);
+    if (arrowUp) { arrowFit(); requestAnimationFrame(arrowFit); setTimeout(arrowFit, 400); }
+    // keyboard and screen readers start on the page's own button (not while the intro is still on top)
+    setTimeout(function () {
+      if (!page || document.querySelector('.intro-layer') || page.contains(document.activeElement)) return;
+      var b = page.querySelector('.inst-big') || page.querySelector('.inst-card button'); if (b) { try { b.focus({ preventScroll: true }); } catch (e) {} }
+    }, 80);
   }
+  // the arrow to Safari's Share button shows only while it covers nothing: on a short screen it waits until the reader
+  // has scrolled the steps clear of it
+  function arrowFit() {
+    var a = page && page.querySelector('.inst-arrow'), card = page && page.querySelector('.inst-card'); if (!a || !card) return;
+    var clear = card.getBoundingClientRect().bottom <= window.innerHeight - a.offsetHeight + 6;
+    a.classList.toggle('inst-arrow-off', !clear);
+  }
+  window.addEventListener('resize', arrowFit);
   // a hand-off that worked hides this tab; when the reader comes back, offer the button again
   document.addEventListener('visibilitychange', function () {
     if (page && document.visibilityState === 'visible' && /^opening-/.test(state)) { state = 'ask'; draw(); }

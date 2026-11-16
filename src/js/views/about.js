@@ -6,7 +6,7 @@
   var CORB = window.CORB;
 
   var IS = [
-    ['route', 'A step-by-step path', 'Three questions turn into a dated plan and a 26-week exam path, from your first day to passing CON 3990V and earning the DoW Contracting Professional certification.'],
+    ['route', 'A step-by-step path', 'Four short steps turn into a dated plan and a 26-week exam path, from your first day to passing CON 3990V and earning the DoW Contracting Professional certification.'],
     ['book', 'A study and practice tool', 'Plain-language lessons, explained practice questions with a timed exam simulator, flashcards, how-to guides, a glossary, FAR & key numbers and the Arcade games.'],
     ['message', 'Buddy, your study buddy', 'Tap the chat bubble and ask in plain words. Buddy finds the answer in the guide on your device, with no internet and no AI account, and opens the page to read more. For more depth, one tap sends your question to Google AI Mode, ChatGPT or Claude in your own account.'],
     ['save', 'One file that works offline', 'No install and no account. It runs without a network connection on a laptop or a phone, and your progress can be saved inside the file.']
@@ -123,8 +123,8 @@
         h('p', {}, 'Scan this code with a phone camera to get B2B Exam Prep as an app: free, with no app store and no account. Show it to anyone who needs it.'),
         h('a.ab-url', { href: m.site_url, target: '_blank', rel: 'noopener' }, m.site_url),
         h('ul.ab-steps', {},
-          h('li', {}, icon('phone'), h('span', {}, h('b', {}, 'iPhone: '), 'scan with the Camera app. The install page opens: tap Share, then "Add to Home Screen", then Add (Apple allows no install button).')),
-          h('li', {}, icon('phone'), h('span', {}, h('b', {}, 'Android: '), 'scan with the Camera app, then tap "Install app". In Samsung Internet a list asks which app to open: choose Chrome, which does the install.')),
+          h('li', {}, icon('phone'), h('span', {}, h('b', {}, 'iPhone: '), 'scan with the Camera app. After the 2-minute intro (Skip is fine), the install page opens: tap Share, then "Add to Home Screen", then Add (Apple allows no install button).')),
+          h('li', {}, icon('phone'), h('span', {}, h('b', {}, 'Android: '), 'scan with the Camera app; after the 2-minute intro (Skip is fine), tap "Install app". In Samsung Internet a list asks which app to open: choose Chrome, which does the install.')),
           h('li', {}, icon('refresh'), h('span', {}, 'Open it once while online. After that it works offline, and new versions arrive by themselves.'))),
         CORB.intro && CORB.intro.available() ? h('button.btn.mt-3', { type: 'button', onclick: function () { CORB.intro.play({ replay: true }); } }, icon('play'), 'Watch the intro (' + CORB.intro.minutes() + ' minutes)') : null)));
   }
