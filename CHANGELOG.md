@@ -20,6 +20,12 @@
   a short result (the graphics chip, the drawing mode chosen, load time) to copy or email to the developer.
 - A game that fails to start shows a plain message instead of small red text. Each finished run hands its drawing
   memory back to the phone.
+- **What the review found.** Pausing during the 3-2-1 count (P, or switching to another app) now holds the game until
+  Resume; before, the game started under the Paused card. When the phone takes the graphics back, the card also stops
+  the count and the music, puts Restart in focus, and "← Games" still leads back to the list. "Email it to the
+  developer" now shows in Check this phone (the address never reached it), its buttons are 44 px tall, it says
+  "device" on a computer, and the report gives its time as UTC. The five 3D cabinets said "real 3D" twice; they say
+  it once, and not at all on a device where 3D does not work.
 
 ## 0.28.3 (4 November 2026): what the first tester found
 

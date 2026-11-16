@@ -74,7 +74,6 @@
       drawShip(ctx, sx, h * 0.8, 1.3, t, {});
       drawDrone(ctx, { x: w * 0.2 + Math.sin(t * 2) * 30, y: h * 0.45, seed: 1, flash: 0 }, t);
       drawDrone(ctx, { x: w * 0.82, y: h * 0.52 + Math.cos(t * 2) * 20, seed: 2, flash: 0 }, t);
-      if (A.GL && A.GL.ok()) A.pill(ctx, 'REAL 3D', 14, 22, { size: 12, bg: 'rgba(0,0,0,.55)', color: '#f6d991', stroke: '#e6b85a' });
     },
     create: function (api) {
       var W = api.W, H = api.H, tier = api.difficulty, all = factsOf(api.data), bank = bossBank(api.data), t = 0, feel = A.feel, opts = api.opts || {};

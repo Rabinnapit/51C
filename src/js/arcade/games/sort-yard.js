@@ -46,7 +46,6 @@
       var cols = ['#82b6ef', '#f0b863', '#6fd3d9'], labs = ['Pre-Award', 'Award', 'Post-Award'], sel = Math.floor(t * 0.6) % 3;
       for (var i = 0; i < 3; i++) { var bx = w * (0.18 + i * 0.32); ctx.fillStyle = '#20282d'; A.roundRect(ctx, bx - 62, h * 0.72, 124, h * 0.25, 8); ctx.fill(); ctx.fillStyle = cols[i]; ctx.fillRect(bx - 62, h * 0.72, 124, 6); A.text(ctx, labs[i], bx, h * 0.86, { size: 15, weight: 800, color: i === sel ? '#fff' : '#a9b4ba', align: 'center' }); }
       ctx.save(); ctx.translate(w / 2, h * 0.64); ctx.rotate((sel - 1) * 0.6); ctx.fillStyle = '#e6b85a'; ctx.fillRect(-6, 0, 12, 40); ctx.restore();
-      if (A.GL && A.GL.ok()) A.pill(ctx, 'REAL 3D', 14, 22, { size: 12, bg: 'rgba(0,0,0,.55)', color: '#f6d991', stroke: '#e6b85a' });
     },
     create: function (api) {
       var W = api.W, H = api.H, tier = api.difficulty, lines = linesOf(api.data), t = 0, feel = A.feel, opts = api.opts || {};

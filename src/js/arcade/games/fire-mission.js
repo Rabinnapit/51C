@@ -212,7 +212,6 @@
       var k = (t % 2.4) / 1.6;
       if (k <= 1) { var sx = 80 + k * (w * 0.85 - 80), sy = h * 0.72 - Math.sin(k * Math.PI) * h * 0.55 + k * 10; ctx.fillStyle = '#fff3c4'; ctx.shadowColor = '#ffd27a'; ctx.shadowBlur = 14; ctx.beginPath(); ctx.arc(sx, sy, 4, 0, Math.PI * 2); ctx.fill(); ctx.shadowBlur = 0; }
       else { var e = (k - 1) * 2; ctx.globalAlpha = Math.max(0, 1 - e); ctx.fillStyle = '#ffb347'; ctx.beginPath(); ctx.arc(w * 0.85, h * 0.72, 10 + e * 50, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1; }
-      if (A.GL && A.GL.ok()) A.pill(ctx, 'REAL 3D', 14, 22, { size: 12, bg: 'rgba(0,0,0,.55)', color: '#f6d991', stroke: '#e6b85a' });
     },
     create: function (api) {
       if (A.GL && A.GL.ok() && A.GL.GunScene) { try { return create3D(api); } catch (e) { console.error('[fire-mission] 3D failed, drawing in 2D', e); } }

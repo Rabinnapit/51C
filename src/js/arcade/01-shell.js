@@ -71,7 +71,7 @@
       var cv = h('canvas', { width: '480', height: '240', 'aria-hidden': 'true' });
       if (def.thumb) thumbs.push({ cv: cv, def: def });
       grid.appendChild(h('button.ar-cab' + (ok ? '' : '.off'), { type: 'button', style: { '--accent': def.accent || A.C.gold, animationDelay: (i * 70) + 'ms' }, disabled: !ok, onclick: function () { if (ok) startGame(id); } },
-        h('div.ar-cab-art', {}, def.thumb ? cv : h('span.ar-cab-ico', {}, def.icon || '🎮'), h('span.ar-genre', {}, def.genre || 'Arcade')),
+        h('div.ar-cab-art', {}, def.thumb ? cv : h('span.ar-cab-ico', {}, def.icon || '🎮'), h('span.ar-genre', {}, (A.GL && A.GL.ok() ? def.genre : String(def.genre || '').replace(/\s*·\s*real 3D/i, '')) || 'Arcade')),
         h('div.ar-cab-body', {},
           h('h3', {}, h('span.ar-cab-emoji', { 'aria-hidden': 'true' }, def.icon || ''), def.title),
           h('p.tag', {}, def.tagline || ''),
@@ -93,8 +93,10 @@
   // "Game screen blank or stuck?": a 3D test on this device and a report the player can copy and send
   function phoneCheck() {
     var out = h('pre.ar-check-out', { hidden: true }), text = '', copyBtn, mailBtn, who = (meta().maintainer || {}).email || '';
+    var touch = false; try { touch = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
+    var dev = touch ? 'phone' : 'device';
     function fmtReport(r) {
-      var lines = ['B2B Exam Prep ' + (meta().version || '') + ' · Arcade phone check · ' + new Date().toISOString().slice(0, 16).replace('T', ' '),
+      var lines = ['B2B Exam Prep ' + (meta().version || '') + ' · Arcade phone check · ' + new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC',
         '3D: ' + r.result + (r.testMs != null ? ' (' + r.testMs + ' ms)' : ''),
         'Graphics: ' + r.webgl + (r.gpu ? ' · ' + r.gpu : '') + (r.maxTex ? ' · textures up to ' + r.maxTex : ''),
         'Background shader compile: ' + (r.parallel ? 'yes' : 'no') + ' · HDR targets: ' + (r.float ? 'yes' : 'no'),
@@ -120,8 +122,8 @@
     }
     copyBtn = h('button.ar-btn', { type: 'button', hidden: true, onclick: copy }, 'Copy the result');
     mailBtn = h('a.ar-btn', { href: '#', hidden: true }, 'Email it to the developer');
-    return h('details.ar-check', {}, h('summary', {}, 'Game screen blank or stuck? Check this phone'),
-      h('p', {}, 'A quick 3D test on this device. The games pick simpler drawing by themselves when a phone needs it. If a game still will not show, send the result to the developer.'),
+    return h('details.ar-check', {}, h('summary', {}, 'Game screen blank or stuck? Check this ' + dev),
+      h('p', {}, 'A quick 3D test on this ' + dev + '. The games pick simpler drawing by themselves when a ' + dev + ' needs it. If a game still will not show, send the result to the developer.'),
       h('div.ar-row', {}, h('button.ar-btn.gold', { type: 'button', onclick: test }, '▶ Run the 3D test'), copyBtn, mailBtn), out);
   }
   // the cabinets play a small attract-mode animation, about 30 frames a second
@@ -159,7 +161,7 @@
     var pauseBtn = h('button.ar-btn.sm', { type: 'button', title: 'Pause (P)', 'aria-label': 'Pause', onclick: function () { togglePause(); } }, '⏸');
     var muteBtn = h('button.ar-btn.sm.ar-hide-xs', { type: 'button', title: 'Sound (M)', 'aria-label': 'Sound', onclick: function () { A.audio.setMuted(!A.audio.muted); muteBtn.textContent = A.audio.muted ? '🔇' : '🔊'; } }, A.audio.muted ? '🔇' : '🔊');
     var bar = h('header.ar-bar', {},
-      h('button.ar-btn.sm', { type: 'button', title: 'Back to the game list', onclick: function () { if (state.ended || !state.review.length) showLobby(); else togglePause(true); } }, '← ', h('span.ar-hide-xs', {}, 'Games')),
+      h('button.ar-btn.sm', { type: 'button', title: 'Back to the game list', onclick: function () { if (state.ended || !state.review.length || lostEl) showLobby(); else togglePause(true); } }, '← ', h('span.ar-hide-xs', {}, 'Games')),
       h('div.ar-bar-title', {}, h('b', {}, (def.icon ? def.icon + ' ' : '') + def.title), h('span.ar-chip', { style: { '--tc': tier.color } }, tier.name)),
       h('div.ar-hud', {}, h('div.ar-hud-i', {}, h('small', {}, 'Score'), hudScore), h('div.ar-hud-i.ar-hide-sm', {}, h('small', {}, 'Best'), hudBest), h('div.ar-hud-i.ar-hide-xs', {}, h('small', {}, 'Level'), hudLevel), timeItem, h('div.ar-hud-i', {}, h('small', {}, def.livesLabel || 'Lives'), hudLives)),
       muteBtn, pauseBtn);
@@ -398,22 +400,23 @@
     if (def.music) A.music.play(def.music);
 
     // ---- countdown ----
-    var cd = 0, countEl = null;
+    var cd = 0, countEl = null, counting = false;
     function countdown() {
       if (def.countdown === false) return;
-      var count = (performance.now() - loadStart) / 1000 > 1.5 ? 1 : 3; countEl = h('div.ar-count', {}, String(count)); box.appendChild(countEl); state.paused = true;   // one beat when the load already took a while
-      cd = setInterval(function () { count--; if (count > 0) { countEl.textContent = String(count); countEl.style.animation = 'none'; void countEl.offsetWidth; countEl.style.animation = ''; A.audio.tick(); } else { clearInterval(cd); countEl.remove(); state.paused = false; A.audio.powerup(); } }, 650);
+      var count = (performance.now() - loadStart) / 1000 > 1.5 ? 1 : 3; countEl = h('div.ar-count', {}, String(count)); box.appendChild(countEl); state.paused = true; counting = true;   // one beat when the load already took a while
+      cd = setInterval(function () { count--; if (count > 0) { countEl.textContent = String(count); countEl.style.animation = 'none'; void countEl.offsetWidth; countEl.style.animation = ''; A.audio.tick(); } else { clearInterval(cd); counting = false; countEl.remove(); if (!pauseEl && !lostEl) { state.paused = false; A.audio.powerup(); } } }, 650);   // a pause card that came up during 3-2-1 keeps the clock held
     }
     var loadStart = performance.now();   // real time: the game clock is capped per frame and would hide a long build
     state.waitLoad = true; state.loadT = 0;
-    state.skipCountdown = function () { build(); state.waitLoad = false; clearInterval(cd); if (countEl && countEl.parentNode) countEl.remove(); state.paused = false; };
+    state.skipCountdown = function () { build(); state.waitLoad = false; clearInterval(cd); counting = false; if (countEl && countEl.parentNode) countEl.remove(); state.paused = false; };
     // while the game loads: no clock, no input, a card with the game's name and a moving bar
     var loadFrames = 0;
     function waitLoading(dt) {
       state.loadT += dt; loadFrames++;
       if (!built && loadFrames >= 3) build();
       if (!isLoading()) { state.waitLoad = false; if (!state.paused) countdown(); return false; }
-      drawLoading(); return true;
+      try { drawLoading(); } catch (e) {}
+      return true;
     }
     function drawLoading() {
       var W = state.W, H = state.H, t = (performance.now() - loadStart) / 1000, cx = W / 2, cy = H / 2;
@@ -424,19 +427,23 @@
       var bw = Math.min(240, W - 80), bx = cx - bw / 2, by = cy + 20, seg = bw * 0.32, x = bx - seg + (bw + seg) * ((t * 0.7) % 1);
       ctx.fillStyle = 'rgba(255,255,255,.12)'; A.roundRect(ctx, bx, by, bw, 6, 3); ctx.fill();
       ctx.save(); A.roundRect(ctx, bx, by, bw, 6, 3); ctx.clip(); ctx.fillStyle = '#e6b85a'; ctx.fillRect(x, by, seg, 6); ctx.restore();
-      if (t > 5) A.text(ctx, 'The first start takes longest on a phone. Later starts are quicker.', cx, by + 34, { size: 12, align: 'center', color: '#8f9b95', maxWidth: W - 48 });
+      if (t > 5) A.text(ctx, 'The first start takes the longest. Later starts are quicker.', cx, by + 34, { size: 12, align: 'center', color: '#8f9b95', maxWidth: W - 48 });
       ctx.restore();
     }
     // the phone took the 3D view back: say so and offer a restart instead of leaving a frozen or black stage
     var lostEl = null;
     function onLost() {
       if (run !== state || lostEl || state.ended) return;
+      clearInterval(cd); counting = false; if (countEl && countEl.parentNode) countEl.remove();
+      if (pauseEl) { pauseEl.remove(); pauseEl = null; }
+      try { A.music.stop(); } catch (e) {}
       lostEl = h('div.ar-pause.ar-lost', { role: 'alertdialog', 'aria-label': 'The 3D view stopped' }, h('div.ar-pause-box', {},
         h('h3', {}, 'The 3D view stopped'),
-        h('p.ar-howto', {}, 'The phone took the graphics back, usually to save memory or after the app sat in the background. Restart the game to carry on.'),
+        h('p.ar-howto', {}, 'The device took the graphics back, usually to save memory or after the app sat in the background. Restart the game to carry on.'),
         h('div.ar-row', {}, h('button.ar-btn.gold.lg', { type: 'button', onclick: function () { startGame(id, opts); } }, '↻ Restart the game'),
           h('button.ar-btn.lg', { type: 'button', onclick: function () { showLobby(); } }, 'All games'))));
       box.appendChild(lostEl); state.paused = true;
+      var rb = lostEl.querySelector('button'); if (rb) { try { rb.focus({ preventScroll: true }); } catch (e) {} }
     }
     if (A.GL) A.GL.onLost = onLost;
     function onFail() {
@@ -489,8 +496,9 @@
     var pauseEl = null;
     function togglePause(force) {
       if (state.ended || lostEl) return;   // the "3D view stopped" card is already up: restart is the only way on
-      var to = force != null ? force : !state.paused; if (to === state.paused && (pauseEl || !to)) return;
-      state.paused = to; pauseBtn.textContent = to ? '▶' : '⏸';
+      var was = counting ? !!pauseEl : state.paused;   // during 3-2-1 the clock is held anyway, so the card is what toggles
+      var to = force != null ? force : !was; if (to === was && (pauseEl || !to)) return;
+      state.paused = to || counting; pauseBtn.textContent = to ? '▶' : '⏸';
       if (to) {
         A.music.stop();
         pauseEl = h('div.ar-pause', { role: 'dialog', 'aria-label': 'Paused' }, h('div.ar-pause-box', {}, h('h3', {}, 'Paused'),

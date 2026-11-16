@@ -211,7 +211,6 @@
       var bob = Math.sin(t * 9) * 1.2;
       cargoTruck(ctx, w * 0.12, gy + 8, s, -t * 9, bob, CRATES.slice(0, 4), false); leadTruck(ctx, w * 0.12 + 112, gy + 8, s, -t * 9, -bob, false);
       coin(ctx, w * 0.82, h * 0.34, 26, t, 2, '3.0');
-      if (A.GL && A.GL.ok()) A.pill(ctx, 'REAL 3D', 14, 22, { size: 12, bg: 'rgba(0,0,0,.55)', color: '#f6d991', stroke: '#e6b85a' });
     },
     create: function (api) {
       var W = api.W, H = api.H, t = 0, tier = api.difficulty, feel = A.feel, opts = api.opts || {};

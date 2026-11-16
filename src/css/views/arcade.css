@@ -276,4 +276,5 @@ html[data-motion="reduce"] .ar-mentor, html[data-motion="reduce"] .ar-camp { ani
 .ar-check summary { cursor: pointer; font-weight: 700; color: #f6d991; min-height: 44px; display: flex; align-items: center; }
 .ar-check p { margin: 4px 0 10px; color: #c2cdc6; }
 .ar-check .ar-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.ar-check .ar-btn { min-height: 44px; }
 .ar-check-out { margin: 12px 0 0; padding: 10px 12px; border-radius: 10px; background: #071013; color: #d8e2dc; font-size: 12px; line-height: 1.5; white-space: pre-wrap; word-break: break-word; user-select: all; -webkit-user-select: all; }

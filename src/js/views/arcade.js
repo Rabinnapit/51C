@@ -118,7 +118,7 @@
     var phases = CORB.data.phases().map(function (p) { return { id: p.id, name: p.name, short: p.short || p.name, color: PHASE_COLORS[p.id] }; });
     phases.push({ id: 'job', name: 'On the job', short: 'On the job', color: PHASE_COLORS.job });
     built = {
-      meta: { app_name: CORB.appName(), version: meta.version, content_verified_on: meta.content_verified_on },
+      meta: { app_name: CORB.appName(), version: meta.version, content_verified_on: meta.content_verified_on, maintainer: meta.maintainer },
       bank: CORB.data.questions().map(function (q) { return { id: q.id, phase: q.phase, lesson: q.lesson, d: q.d || 2, stem: q.stem, cite: q.cite || '', options: (q.options || []).map(function (o) { return { text: o.text, correct: !!o.correct, why: o.why || '' }; }) }; }),
       phases: phases, facts: facts(), terms: terms(), sorts: sorts(),
       quick: [

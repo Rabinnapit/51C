@@ -50,7 +50,6 @@
       ctx.save(); ctx.translate(w * 0.74, h * 0.98); ctx.rotate(-0.55); ctx.fillStyle = '#1c1f22'; ctx.fillRect(-18, -14, 140, 26); ctx.fillStyle = '#a98e62'; ctx.fillRect(40, -18, 46, 12); ctx.fillStyle = '#3a3f45'; ctx.fillRect(110, -8, 60, 12); ctx.fillStyle = '#1c1f22'; ctx.fillRect(-10, 10, 18, 40); ctx.restore();
       var cx = w * 0.5 + Math.sin(t * 0.9) * w * 0.22, cy = h * 0.5 + Math.cos(t * 1.3) * 14;
       ctx.strokeStyle = '#fff'; ctx.lineWidth = 2.5; ctx.beginPath(); ctx.moveTo(cx - 22, cy); ctx.lineTo(cx - 8, cy); ctx.moveTo(cx + 8, cy); ctx.lineTo(cx + 22, cy); ctx.moveTo(cx, cy - 22); ctx.lineTo(cx, cy - 8); ctx.moveTo(cx, cy + 8); ctx.lineTo(cx, cy + 22); ctx.stroke();
-      A.pill(ctx, 'REAL 3D', 14, 22, { size: 12, bg: 'rgba(0,0,0,.55)', color: '#f6d991', stroke: '#e6b85a' });
     },
     create: function (api) {
       var W = api.W, H = api.H, tier = api.difficulty, terms = termsOf(api.data), t = 0, feel = A.feel, opts = api.opts || {};
