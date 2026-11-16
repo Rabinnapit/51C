@@ -93,14 +93,20 @@
   ],
   "guide_changes": [
     {
+      "version": "0.30.0",
+      "date": "2026-11-16",
+      "title": "Ready for everyone",
+      "notes": "The website now opens on a two-minute intro video the first time (muted, with its words under it; tap Sound on, or Skip). Watch it again from Home, About or Settings & help. The QR code always lands on the install page, with one Install app button on any Android browser. Certification 101 adds what the 51C proponent said about CON 7300V, the degree and the next reclassification window, and a new question on full CON 7300V classes. Plus fixes from the release check: the terms of use, the phone's top-bar colour, Buddy, the tour and six practice questions."
+    },
+    {
       "version": "0.29.0",
-      "date": "2026-10-30",
+      "date": "2026-11-16",
       "title": "The range card, the qualification table and the seasons",
       "notes": "Three five-minute missions a day on a range card, with a streak you can repair once a week; a weekly 40-target qualification table scored like the Army rifle standard (23 Marksman, 30 Sharpshooter, 36 Expert) that every answer in any game fires; and fiscal-year seasons with range skins for Range Day and Fire Mission (Desert, Korea winter, Forest, High summer). Home shows the card and the badge."
     },
     {
       "version": "0.28.4",
-      "date": "2026-11-14",
+      "date": "2026-11-16",
       "title": "The 3D games on a phone",
       "notes": "A 3D game no longer sits on a blank screen while it loads on a phone: it opens on a loading card and starts when its first frame is ready. The games test the phone's graphics once and pick simpler drawing when needed, hold a steady frame rate by drawing smaller, and say so and offer Restart if the phone stops the 3D view. Under the game list, \"Check this phone\" runs a 3D test whose result you can send to the developer."
     },

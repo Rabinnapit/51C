@@ -70,19 +70,19 @@ CARDS = {
 }
 CAPS = {
     "cap_home":     ("Home", "Zero to certified"),
-    "cap_plan":     ("My plan", "Three questions → every step dated"),
+    "cap_plan":     ("My plan", "Four quick steps → every step dated"),
     "cap_path":     ("Exam path", "26 dated weeks · checkpoints · simulations"),
     "cap_cert":     ("Certification 101", "The rules, explained in pictures"),
-    "cap_official": ("Official documents", "26 DoW and WarU documents, in the file"),
+    "cap_official": ("Official documents", "26 DoW and WarU documents, one tap away"),
     "cap_lessons":  ("Lessons", "35 lessons · pictures that play"),
     "cap_tryit":    ("Try it", "Every dollar rule answers for any amount"),
     "cap_quiz":     ("Practice test", "395 questions · every answer explained"),
     "cap_cards":    ("Flashcards", "14 decks · spaced repetition"),
     "cap_voice":    ("Read aloud", "Four app voices · offline after one download"),
-    "cap_arcade":   ("Arcade", "Seven games · two in real 3D"),
+    "cap_arcade":   ("Arcade", "Seven games · five in real 3D"),
     "cap_range":    ("Range Day", "The qualification range, in real 3D"),
     "cap_buddy":    ("Ask Buddy", "Answers from the guide, on your device"),
-    "cap_lookup":   ("Look it up", "250 terms · 53 FAR parts · thresholds"),
+    "cap_lookup":   ("Look it up", "254 terms · 53 FAR parts · thresholds"),
     "cap_phone":    ("Everywhere", "Phone · laptop · tablet · free"),
 }
 for k, (e, l) in CAPS.items():

@@ -123,9 +123,10 @@
         h('p', {}, 'Scan this code with a phone camera to get B2B Exam Prep as an app: free, with no app store and no account. Show it to anyone who needs it.'),
         h('a.ab-url', { href: m.site_url, target: '_blank', rel: 'noopener' }, m.site_url),
         h('ul.ab-steps', {},
-          h('li', {}, icon('phone'), h('span', {}, h('b', {}, 'iPhone: '), 'scan with the Camera app. The page opens in Safari: tap Share, then "Add to Home Screen", then Add.')),
-          h('li', {}, icon('phone'), h('span', {}, h('b', {}, 'Android: '), 'scan with the Camera app, then tap "Install app". If the page opens in Samsung Internet, it offers "Install with Chrome" first.')),
-          h('li', {}, icon('refresh'), h('span', {}, 'Open it once while online. After that it works offline, and new versions arrive by themselves.'))))));
+          h('li', {}, icon('phone'), h('span', {}, h('b', {}, 'iPhone: '), 'scan with the Camera app. The install page opens: tap Share, then "Add to Home Screen", then Add (Apple allows no install button).')),
+          h('li', {}, icon('phone'), h('span', {}, h('b', {}, 'Android: '), 'scan with the Camera app, then tap "Install app". In Samsung Internet a list asks which app to open: choose Chrome, which does the install.')),
+          h('li', {}, icon('refresh'), h('span', {}, 'Open it once while online. After that it works offline, and new versions arrive by themselves.'))),
+        CORB.intro && CORB.intro.available() ? h('button.btn.mt-3', { type: 'button', onclick: function () { CORB.intro.play({ replay: true }); } }, icon('play'), 'Watch the intro (' + CORB.intro.minutes() + ' minutes)') : null)));
   }
 
   function current(h) {

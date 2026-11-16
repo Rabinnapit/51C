@@ -23,7 +23,7 @@
     show: function (onAgree) {
       var h = CORB.ui.h, t = T();
       CORB.ui.modal({
-        title: t.title || 'Terms of use', wide: true, sticky: !!onAgree,
+        title: t.title || 'Terms of use', wide: true, sticky: !!onAgree, locked: !!onAgree,
         body: h('div', {}, body(h), onAgree && t.agree ? h('p.terms-agree', {}, t.agree) : null),
         actions: onAgree
           ? [{ label: 'I agree', primary: true, onClick: function () { CORB.set(KEY, t.version); onAgree(); } }]

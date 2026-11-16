@@ -65,9 +65,9 @@
       { title: 'My plan', target: function () { return side(navItem('plan')); },
         text: 'Every step to certification with a date: your courses, the exam, 12 months of experience and the 36-month deadline. You can add the dates to your calendar.' },
       { title: 'Certification 101', view: 'cert', target: function () { return q('.v-cert .tabs') || pageHead(); },
-        text: 'The rules in one place, explained with pictures: what certification takes, signing up for courses in AITAS, the exam step by step, retakes, the 36-month clock, life after certification and 21 questions answered. Each tab is one topic.' },
+        text: 'The rules in one place, explained with pictures: what certification takes, signing up for courses in AITAS, the exam step by step, retakes, the 36-month clock, life after certification and ' + (((CORB.DATA || {}).cert || {}).faq || []).length + ' questions answered. Each tab is one topic.' },
       { title: 'Official documents', view: 'official', target: function () { return q('.doc-grid') || pageHead(); },
-        text: '26 real DoW and WarU documents behind the certification: the exam FAQ, roadmap and flowchart, policy memos, the career and competency models. Each has a Simple version in pictures and the real pages, which open even without internet.' },
+        text: '26 real DoW and WarU documents behind the certification: the exam FAQ, roadmap and flowchart, policy memos, the career and competency models. Many have a Simple version in pictures, and the key ones carry their real pages, which open even without internet.' },
       { title: 'Courses', view: 'courses', target: pageHead,
         text: 'Every course you need, in order: what it teaches, how to get ready, how long it runs and how to sign up. Set each one to Signed up or Done to track your progress.' },
       { title: 'Lessons', view: 'learn', target: function () { return q('.learn-top') || pageHead(); },
@@ -77,7 +77,7 @@
       { title: 'How-to guides', target: function () { return side(navItem('howto'), 'learn'); },
         text: '13 step-by-step checklists for real tasks: your first week, signing up for a course in AITAS, scheduling the exam, a simplified buy, a modification, closeout and more.' },
       { title: 'Practice', target: function () { return side(navGroup('Practice'), 'quiz'); },
-        text: 'The practice test has 384 questions, each answer explained with where it is written. Practice by exam area, retry your misses, or take a timed simulator weighted like CON 3990V. Flashcards bring back what you miss.' },
+        text: 'The practice test has ' + CORB.data.questions().length + ' questions, each answer explained with where it is written. Practice by exam area, retry your misses, or take a timed simulator weighted like CON 3990V. Flashcards bring back what you miss.' },
       { title: 'Ask ' + (CORB.buddy ? CORB.buddy.name() : 'Buddy'), target: function () { return q('.buddy-fab'); },
         text: (CORB.buddy ? CORB.buddy.name() : 'Buddy') + ' is your study buddy: tap the chat bubble and ask in plain words, like "what is the micro-purchase threshold" or "how do I register in AITAS". It answers from the guide, on this device, with no internet and no AI account, and opens the page to read more. Need more depth? One tap sends your question to Google AI Mode, ChatGPT or Claude in your own account.' },
       { title: 'Arcade', optional: true, target: function () { return narrow() ? null : navItem('arcade'); },
@@ -90,7 +90,7 @@
         text: (narrow() ? 'Open the menu for day or night. For a bigger text size, go to Settings & help, Display tab.' : 'Make the text bigger, or switch between day and night.') + ' Day is the default. Listen buttons read lessons aloud.' },
       { title: 'About and feedback', target: function () { return side(navItem('about')); },
         text: 'About tells you who builds this guide and how it stays current. Send feedback or report a problem from there.' },
-      { title: 'Keep your progress', target: function () { return q('.topbar .save-btn') || side(navItem('settings')); },
+      { title: 'Keep your progress', target: function () { var b = q('.topbar .save-btn'); return shown(b) ? b : side(navItem('settings')); },
         text: ed === 'offline' ? 'Your progress lives in this browser. Save progress stores it inside the B2B Exam Prep file, so a restart or a cleared browser cannot erase it. Settings & help can also export it.'
           : ed === 'web' ? 'Your progress saves on this device by itself. To keep it in an account and continue on any phone or computer, sign in under Settings & help (optional).'
           : 'In this preview, progress stays in this browser only. Use the downloaded file or the website to keep it.' },
@@ -122,17 +122,19 @@
     window.addEventListener('scroll', T.onMove, true);
   }
 
+  // an optional step whose target this screen does not have is skipped, so it is not counted either
+  function skipped(s) { if (!s.optional || !s.target) return false; try { return !s.target(); } catch (e) { return true; } }
   function paint() {
-    var s = T.list[T.i], n = T.list.length, last = T.i === n - 1;
+    var vis = T.list.filter(function (x) { return !skipped(x); }), s = T.list[T.i], n = vis.length, at = Math.max(0, vis.indexOf(s)), last = at === n - 1;
     var card = T.card;
     card.innerHTML = '';
     card.appendChild(h('div.tour-top', {},
-      h('span.tour-step', {}, 'Step ' + (T.i + 1) + ' of ' + n),
+      h('span.tour-step', {}, 'Step ' + (at + 1) + ' of ' + n),
       h('button.tour-x', { type: 'button', 'aria-label': 'Close the tour', onclick: function () { finish(); } }, icon('x'))));
     card.appendChild(h('h3#tour-title', {}, s.title));
     card.appendChild(h('p.tour-text#tour-text', {}, s.text));
     var dots = [];
-    for (var i = 0; i < n; i++) dots.push(h('i' + (i === T.i ? '.on' : '')));
+    for (var i = 0; i < n; i++) dots.push(h('i' + (i === at ? '.on' : '')));
     T.nextBtn = h('button.btn.sm.primary', { type: 'button', onclick: next }, last ? 'Finish' : 'Next', icon(last ? 'check' : 'arrow-right'));
     card.appendChild(h('div.tour-foot', {},
       h('div.tour-dots', { 'aria-hidden': 'true' }, dots),
@@ -141,7 +143,7 @@
           ? h('button.btn.sm.ghost', { type: 'button', onclick: back }, icon('arrow-left'), 'Back')
           : h('button.btn.sm.ghost', { type: 'button', onclick: function () { finish(); } }, 'Skip tour'),
         T.nextBtn)));
-    T.live.textContent = 'Step ' + (T.i + 1) + ' of ' + n + ': ' + s.title;
+    T.live.textContent = 'Step ' + (at + 1) + ' of ' + n + ': ' + s.title;
     try { T.nextBtn.focus({ preventScroll: true }); } catch (e) {}
   }
 

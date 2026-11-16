@@ -21,7 +21,7 @@ supervisors or mentors. At least two should try it on a NIPR computer and two on
 > 3. Take a Quick 10 in Practice test, then try 10 flashcards.
 > 4. Open Certification 101 and find out how to sign up for the exam.
 >
-> Then use Help → "Send tester feedback" (it opens an email with five short questions), or just reply to this email.
+> Then use Settings & help → "Send feedback" (it opens an email with five short questions), or just reply to this email.
 > This is an unofficial training aid; double-check anything you rely on with your Contracting Master Gunner (KMG).
 
 ## What to look for in the feedback

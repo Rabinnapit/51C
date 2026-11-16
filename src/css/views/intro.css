@@ -1,0 +1,25 @@
+/* The intro video (core/13-intro.js, web edition only): a dark layer above the install page on the first visit, and the
+   player behind every "Watch the intro" button */
+.intro-layer { position: fixed; inset: 0; z-index: 450; overflow: auto; -webkit-overflow-scrolling: touch; background: #0b100e; color: #eef3ef;
+  display: flex; align-items: center; justify-content: center; padding: max(16px, env(safe-area-inset-top, 0px)) 12px max(16px, env(safe-area-inset-bottom, 0px)); }
+.intro-box { width: 100%; max-width: 960px; display: flex; flex-direction: column; gap: 12px; }
+.intro-head { display: flex; align-items: center; gap: 12px; }
+.intro-head b { display: block; font-size: var(--fs-lg); line-height: 1.2; }
+.intro-head small { display: block; color: #a9b8b0; font-size: var(--fs-sm); }
+.intro-icon { width: 44px; height: 44px; border-radius: 12px; flex: none; }
+.intro-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background: #000; box-shadow: 0 20px 60px -20px rgba(0,0,0,.8); }
+.intro-video { display: block; width: 100%; height: 100%; object-fit: contain; background: #000; }
+.intro-sound { position: absolute; left: 10px; top: 10px; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 8px 14px;
+  border: 0; border-radius: var(--r-pill); background: rgba(0,0,0,.66); color: #fff; font: inherit; font-weight: 800; cursor: pointer; }
+.intro-sound svg { width: 20px; height: 20px; }
+.intro-sound[hidden], .intro-play[hidden] { display: none; }
+.intro-play { position: absolute; inset: 0; margin: auto; width: max-content; height: max-content; display: inline-flex; align-items: center; gap: 10px;
+  min-height: 56px; padding: 14px 22px; border: 0; border-radius: var(--r-pill); background: #e6b85a; color: #1b1407; font: inherit; font-weight: 850; font-size: var(--fs-md); cursor: pointer; }
+.intro-play svg { width: 24px; height: 24px; }
+.intro-words { min-height: 3em; margin: 0; text-align: center; font-size: var(--fs-md); line-height: 1.45; color: #f3f6f4; }
+.intro-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 16px; }
+.intro-skip { min-height: 48px; }
+.intro-later { margin: 0; color: #a9b8b0; font-size: var(--fs-sm); text-align: center; }
+.intro-later b { color: #eef3ef; }
+.home-intro { margin-top: 12px; }
+@media (max-width: 640px) and (orientation: portrait) { .intro-box { gap: 10px; } .intro-head b { font-size: var(--fs-md); } .intro-words { font-size: var(--fs-sm); } }

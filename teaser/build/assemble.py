@@ -36,7 +36,7 @@ TL = [
 ]
 END = 114.4
 VO = {"L01": 0.4, "L02": 6.4, "L03": 14.8, "L04": 20.2, "L05": 26.8, "L06": 36.4, "L07": 43.6, "LV": 53.0, "L08": 60.9, "L09": 69.0,
-      "L10": 72.4, "L11a": 82.0, "L11b": 83.8, "L11c": 85.2, "L12": 89.3, "L13": 94.5, "L14": 103.8}
+      "L10": 72.4, "L11a": 82.0, "L11b": 83.8, "L11c": 85.2, "L12": 89.3, "L13": 94.9, "L14": 103.8}
 # the app's own voice (Piper "Joe", synthesized from the same model the app downloads), played when the cursor presses Hear a sample
 SAMPLES = {"voice_joe.wav": (57.5, 0.6)}
 PFX = (TAG + "_") if TAG else ""

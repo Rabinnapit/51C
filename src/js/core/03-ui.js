@@ -172,15 +172,18 @@
 
   // ---- modal ----
   var modalEl = null, lastFocus = null;
+  // locked: no close button, no Escape, no click outside; only the modal's own buttons close it (the first-use terms)
+  ui.modalLocked = function () { return !!(modalEl && modalEl.locked); };
   ui.closeModal = function () { if (modalEl) { modalEl.remove(); modalEl = null; document.body.style.overflow = ''; if (lastFocus && lastFocus.focus) try { lastFocus.focus(); } catch (e) {} } };
   ui.modal = function (o) {
     ui.closeModal(); lastFocus = document.activeElement;
     var body = typeof o.body === 'string' ? h('div', { html: o.body }) : o.body;
     var box = h('div.modal' + (o.wide ? '.wide' : ''), { role: 'dialog', 'aria-modal': 'true', 'aria-label': o.title || 'Dialog' },
-      o.title !== false ? h('div.modal-head', {}, h('h3', {}, o.title || ''), h('button.btn.icon.sm.ghost', { type: 'button', 'aria-label': 'Close', onclick: ui.closeModal }, ui.icon('x'))) : null,
+      o.title !== false ? h('div.modal-head', {}, h('h3', {}, o.title || ''), o.locked ? null : h('button.btn.icon.sm.ghost', { type: 'button', 'aria-label': 'Close', onclick: ui.closeModal }, ui.icon('x'))) : null,
       h('div.modal-body', {}, body),
       o.actions && o.actions.length ? h('div.modal-foot', {}, o.actions.map(function (a) { return h('button.btn' + (a.primary ? '.primary' : '') + (a.danger ? '.danger' : ''), { type: 'button', onclick: function () { var r = a.onClick && a.onClick(); if (r !== false && !a.keepOpen) ui.closeModal(); } }, a.icon ? ui.icon(a.icon) : null, a.label); })) : null);
-    modalEl = h('div.modal-scrim', { onclick: function (e) { if (e.target === modalEl && !o.sticky) ui.closeModal(); } }, box);
+    modalEl = h('div.modal-scrim', { onclick: function (e) { if (e.target === modalEl && !o.sticky && !o.locked) ui.closeModal(); } }, box);
+    modalEl.locked = !!o.locked;
     document.body.appendChild(modalEl); document.body.style.overflow = 'hidden';
     var f = box.querySelector('input, textarea, select, .modal-foot button.primary, .modal-body button, button'); if (f) setTimeout(function () { try { f.focus(); } catch (e) {} }, 30);
     return box;
@@ -251,12 +254,12 @@
       'Device and browser (for example NIPR laptop with Edge):', '', '',
       meta.app_name + ' ' + (meta.version || '') + ' (' + CORB.edition() + ' edition, build ' + (meta.build_id || '') + ')'
     ] : [
-      'B2B Exam Prep tester feedback', '', 'I am: ' + (track || '51C / 1102 / supervisor'), '',
+      meta.app_name + ' feedback', '', 'I am: ' + (track || '51C / 1102 / supervisor'), '',
       '1. What helped you most?', '', '', '2. What was confusing or hard to find?', '', '',
       '3. Anything wrong or out of date? (page and what it should say)', '', '',
       '4. What is missing for a brand-new 51C or 1102?', '', '', '5. Device and browser:', '', '',
       meta.app_name + ' ' + (meta.version || '') + ' (' + CORB.edition() + ' edition, build ' + (meta.build_id || '') + ')'
     ];
-    return 'mailto:' + who.email + '?subject=' + encodeURIComponent(meta.app_name + (kind === 'problem' ? ': problem report' : ': tester feedback')) + '&body=' + encodeURIComponent(body.join('\r\n'));
+    return 'mailto:' + who.email + '?subject=' + encodeURIComponent(meta.app_name + (kind === 'problem' ? ': problem report' : ': feedback')) + '&body=' + encodeURIComponent(body.join('\r\n'));
   };
 })();

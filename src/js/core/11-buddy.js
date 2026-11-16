@@ -61,7 +61,7 @@
     arr(ex.retake).forEach(function (s) { add('The exam', 'Retakes', s, 'cert', { tab: 'exam' }, 'retake fail failed again attempts wait', 1.1); });
     arr(cert.requirements).forEach(function (s) { add('Requirement', pick(s, T_KEYS) || 'Requirement', pick(s, X_KEYS), 'cert', { tab: 'overview' }, 'need required requirement certification', 1.2); });
     arr(cert.deadlines).forEach(function (s) { add('Deadline', pick(s, T_KEYS) || 'Certification deadline', pick(s, X_KEYS), 'cert', { tab: 'overview' }, 'months deadline grace time how long', 1.5); });
-    arr(cert.roles).forEach(function (s) { add('Who does what', pick(s, T_KEYS) || 'Role', pick(s, X_KEYS), 'cert', { tab: 'overview' }, 'role who does', 1); });
+    arr(cert.roles).forEach(function (s) { add('Who does what', pick(s, T_KEYS) || 'Role', pick(s, X_KEYS), 'cert', { tab: 'overview' }, 'role who does' + (s.keywords ? ' ' + s.keywords : ''), 1); });
     if (cert.education) add('Certification', 'Education requirement', cert.education, 'cert', { tab: 'overview' }, 'degree college credits education', 1.1);
     if (reg.intro) add('Registering', 'How to register in AITAS for courses and the exam', reg.intro, 'cert', { tab: 'signup' }, 'aitas register sign up enroll apply', 1.3);
     arr(reg.steps).forEach(function (s, i) { add('Registering', 'Register, step ' + (i + 1) + ': ' + (pick(s, T_KEYS) || ''), pick(s, X_KEYS) || pick(s, T_KEYS), 'cert', { tab: 'signup' }, 'aitas register', 1); });
@@ -84,6 +84,8 @@
     [/how long|how many (months|days|years)|deadline|time limit|grace period|by when|when (do|must|should) i/, 'Deadline', 1.6],
     [/how much|dollar|\$|threshold|limit/, 'Key number', 1.3], [/which course|what course|course/, 'Course', 1.3],
     [/how do i|how to|where do i|steps to/, 'How-to', 1.3], [/what is|what does|whats|mean|define|stand for/, 'Term', 1.25]];
+  // a few questions have one right first answer whatever the wording: the training contact is the KMG, never the proponent
+  var PIN = [[/training (contact|nco|poc|person|coordinator|office)|who (do|should|can) i (ask|talk to|see)|my (trainer|mentor for certification)|master gunner/, /^KMG|^Contracting Master Gunner/]];
   buddy.search = function (q, limit) {
     if (!idx) build();
     var ql = String(q || '').toLowerCase(), qs = toks(q), whole = norm(q).split(/\s+/).filter(function (w) { return w && !STOP[w]; }).join(' ');   // the question without its filler
@@ -102,6 +104,7 @@
       if (head === whole || tl === whole) s += 14; else if (whole.length > 2 && tl.indexOf(whole) >= 0) s += 7;
       s *= it.w;
       for (var m = 0; m < INTENT.length; m++) if (it.type === INTENT[m][1] && INTENT[m][0].test(ql)) s *= INTENT[m][2];   // the kind of question hints at the kind of answer
+      for (var pn = 0; pn < PIN.length; pn++) if (PIN[pn][0].test(ql) && PIN[pn][1].test(it.title)) s *= 3;
       out.push({ it: it, s: s, hits: hits, n: qs.length });
     }
     out.sort(function (a, b) { return b.s - a.s; });
@@ -205,13 +208,26 @@
     document.querySelectorAll('.buddy-fab').forEach(function (b) { b.hidden = false; });
   };
   buddy.isOpen = function () { return !!panel; };
-  // the chat bubble the shell draws on every page. Until Buddy has been opened once it nudges on a steady beat (CSS):
-  // the bubble draws itself from a dot at its tail, three typing dots pop in, the button lifts and a ring spreads.
+  // the chat bubble the shell draws on every page. Until Buddy has been opened once it nudges now and then, at random
+  // moments (a few seconds after a page opens, then every 9 to 30 seconds): the bubble draws itself from a dot at its
+  // tail, three typing dots pop in, the button lifts and a ring spreads (CSS .nudge.go). Never while the tab is hidden
+  // or Buddy is open; Less motion turns the movement off (CSS).
+  var nudgeT = 0;
+  function nudgeSoon(ms) {
+    clearTimeout(nudgeT);
+    nudgeT = setTimeout(function () {
+      if (CORB.get('settings.buddyUsed')) return;
+      var b = document.querySelector('.buddy-fab.nudge:not([hidden])');
+      if (b && !panel && !document.hidden) { b.classList.remove('go'); void b.offsetWidth; b.classList.add('go'); setTimeout(function () { b.classList.remove('go'); }, 1900); }
+      nudgeSoon(9000 + Math.random() * 21000);
+    }, ms);
+  }
   var BUBBLE = '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">' +
     '<path class="bb-line" pathLength="100" d="M12 20.5l-3.6-3.5H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2.4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
     '<circle class="bb-dot" cx="8" cy="10.5" r="1.4" fill="currentColor"/><circle class="bb-dot" cx="12" cy="10.5" r="1.4" fill="currentColor"/><circle class="bb-dot" cx="16" cy="10.5" r="1.4" fill="currentColor"/></svg>';
   buddy.fab = function () {
     var ic = h('span.bb-ic', { 'aria-hidden': 'true' }); ic.innerHTML = BUBBLE;
+    if (!CORB.get('settings.buddyUsed')) nudgeSoon(3000 + Math.random() * 4000);
     return h('button.buddy-fab' + (CORB.get('settings.buddyUsed') ? '' : '.nudge'), { type: 'button', 'aria-label': 'Ask ' + name(), title: 'Ask ' + name() + ' a question', hidden: !!panel, onclick: function () { buddy.open(); } }, ic, h('span', {}, 'Ask ' + name()));
   };
 })();

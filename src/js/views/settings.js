@@ -7,7 +7,7 @@
   function help(root, h, icon) {
     var meta = CORB.meta(), ed = CORB.edition();
     var steps = [
-      ['route', 'Build your plan', 'Home asks three questions and turns them into dated steps in My plan. Tick steps as you finish them.'],
+      ['route', 'Build your plan', 'Home walks you through four short steps (who you are, your dates, the look, a voice) and turns them into dated steps in My plan. Tick steps as you finish them.'],
       ['certificate', 'Learn the rules', 'Certification 101 explains the courses, the exam, the 12 months of experience and who does what.'],
       ['book', 'Study a little every day', 'Lessons are about ten minutes each. Tap any word with a dotted underline to see what it means.'],
       ['volume', 'Listen instead of reading', 'Every lesson, card and question has a Listen button. It works without the internet.'],
@@ -29,11 +29,13 @@
     }
     if (ed === 'web' && CORB.pwa) {
       root.appendChild(h('div.section-head', {}, h('h2', {}, 'Install B2B Exam Prep as an app')));
-      root.appendChild(h('div.card', {}, CORB.pwa.isStandalone() ? h('p', {}, 'You are using the installed app. It works offline and updates itself.') : h('div.stack', {},
+      root.appendChild(h('div.card', {}, CORB.pwa.isStandalone() ? h('div.stack', {}, h('p', {}, 'You are using the installed app. It works offline and updates itself.'),
+          CORB.intro && CORB.intro.available() ? h('div', {}, h('button.btn', { type: 'button', onclick: function () { CORB.intro.play({ replay: true }); } }, icon('play'), 'Watch the intro (' + CORB.intro.minutes() + ' minutes)')) : null) : h('div.stack', {},
         h('p', {}, 'The installed app has its own icon, opens full screen without a browser bar, works with no signal, and updates itself.'),
-        h('button.btn.primary', { type: 'button', onclick: function () { CORB.pwa.showInstall(); } }, icon('download'), 'Install the app'),
-        h('ul.tips', {}, h('li', {}, 'Android: Chrome installs it with one tap. Samsung Internet and other browsers cannot: they make a shortcut or show an "unsafe app" warning, so the page hands over to Chrome.'),
-          h('li', {}, 'iPhone or iPad: Safari only (Apple\'s rule). Share → Add to Home Screen → Add.'),
+        h('div.row', {}, h('button.btn.primary', { type: 'button', onclick: function () { CORB.pwa.showInstall(); } }, icon('download'), 'Install the app'),
+          CORB.intro && CORB.intro.available() ? h('button.btn', { type: 'button', onclick: function () { CORB.intro.play({ replay: true }); } }, icon('play'), 'Watch the intro') : null),
+        h('ul.tips', {}, h('li', {}, 'Android: Chrome installs it with one tap. Samsung Internet and other browsers hand the page to Chrome, because the copy they build is blocked by Google Play Protect on newer phones: choose Chrome in the list that appears.'),
+          h('li', {}, 'iPhone or iPad: Share → Add to Home Screen → Add. Apple allows no install button; the three taps work in Safari and, since iOS 16.4, in Chrome and the other iPhone browsers.'),
           h('li', {}, 'Computer: Edge or Chrome, the install icon at the right end of the address bar.')))));
     }
     if (ed === 'web') {
@@ -49,9 +51,9 @@
     var maint = CORB.ui.maintainer();
     if (maint) {
       root.appendChild(h('div.section-head', {}, h('h2', {}, 'Feedback')));
-      root.appendChild(h('div.card', {}, h('p', {}, 'This is a test version. Your feedback decides what changes next: what helped, what confused you, and anything that is wrong or out of date.'),
+      root.appendChild(h('div.card', {}, h('p', {}, 'Your feedback decides what changes next: what helped, what confused you, and anything that is wrong or out of date.'),
         h('div.row.mt-3', {},
-          h('a.btn.primary', { href: CORB.ui.feedbackMailto('feedback') }, icon('mail'), 'Send tester feedback'),
+          h('a.btn.primary', { href: CORB.ui.feedbackMailto('feedback') }, icon('mail'), 'Send feedback'),
           h('a.btn', { href: CORB.ui.feedbackMailto('problem') }, icon('alert'), 'Report a problem')),
         h('p.small.muted.mt-3', {}, 'The buttons open your email with questions filled in. If nothing opens, write to ', h('b', {}, maint.email), ' (', maint.name, ', ', maint.role.toLowerCase(), ').')));
     }

@@ -34,6 +34,7 @@
 .inst-done p { margin: 0; color: var(--ink-2); }
 .inst-foot { margin-top: 22px; text-align: center; }
 .inst-skip { color: var(--muted); font-weight: 600; font-size: var(--fs-sm); }
+.inst-skip-top { align-self: flex-end; flex: none; min-height: 44px; padding: 0 4px; margin: -12px -4px 4px 0; }   /* in the flow above the card: never on top of the title */
 
 /* iPhone: points at Safari's bar, where Share lives */
 .inst-arrow { position: fixed; left: 50%; bottom: calc(8px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); display: flex; flex-direction: column; align-items: center;

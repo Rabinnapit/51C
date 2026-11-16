@@ -24,7 +24,7 @@ FONTS = open(os.path.join(REPO, "src", "css", "00-fonts.css"), encoding="utf-8")
 
 # terms accepted, tour seen, Buddy's nudge already spent; then the virtual clock
 INIT = r"""
-try { localStorage.setItem('b2b.installAsked', String(Date.now()));
+try { localStorage.setItem('b2b.installAsked', String(Date.now())); localStorage.setItem('b2b.introSeen', String(Date.now()));
   localStorage.setItem('b2b.state.v1', JSON.stringify({version:'b2b-state-1', settings:{termsAccepted:'%s', tourSeen:true, buddyUsed:true}, meta:{updatedAt:new Date().toISOString()}})); } catch(e) {}
 (() => {
   const RD = Date; const base = RD.now(); let vt = 0; let q = [];
@@ -44,7 +44,7 @@ SETUP = r"""
   const st = document.createElement('style'); st.id = '__teaser';
   st.textContent = '.reveal{opacity:1!important;transform:none!important;transition:none!important}'
     + '.buddy-fab.nudge,.buddy-fab.nudge *{animation:none!important}'
-    + '.toasts{display:none!important}'
+    + '.toasts{display:none!important}.home-intro{display:none!important}'
     + 'html{scrollbar-width:none}::-webkit-scrollbar{display:none}';
   document.head.appendChild(st);
 })();
@@ -156,21 +156,23 @@ def pre_setup(r, page):
     y = r.top("document.querySelector('.setup-card')", 700, 90)
     r.js(f"window.scrollTo(0, {y})"); r.settle(10)
 
-def seg_setup(r, page):       # 7.2 s: pick "51C Soldier", Build my plan -> the exam path appears -> My plan from the menu
+def seg_setup(r, page):       # 7.2 s: the four-step wizard: 51C Soldier, Next past the dates, the look and the voice, Build my plan -> the exam path
     r.seg("setup")
-    ch = elem_center(page, "document.querySelector('.setup-form .choice')", (740, 620))
-    cur_move(r, 1180, 380, ch[0], ch[1], 0.8)
-    cur_click(r, "document.querySelector('.setup-form .choice').click()", 6)
-    r.hold(0.5, settle=0)
-    bt = elem_center(page, "[...document.querySelectorAll('.setup-card button')].find(b => /Build my plan/.test(b.textContent))", (660, 1000))
-    cur_move(r, ch[0], ch[1], bt[0], bt[1], 0.7)
-    cur_click(r, "[...document.querySelectorAll('.setup-card button')].find(b => /Build my plan/.test(b.textContent)).click()", 8)
-    r.real(600); r.settle(12); r.hold(1.0, settle=0)                       # Exam path: week one, dated
-    nv = elem_center(page, "document.querySelector('.side .nav[data-view=\"plan\"]')", (80, 233))
-    cur_move(r, bt[0], bt[1], nv[0], nv[1], 0.7)
-    cur_click(r, "document.querySelector('.side .nav[data-view=\"plan\"]').click()", 6)
-    r.real(600); r.settle(12); r.js("__cur.hide()"); r.hold(0.6, settle=0)
-    r.scroll_to(0, 380, max(0.8, 7.2 - r.dur() - 0.4)); r.fill(7.2)
+    CH = "document.querySelector('.setup-card .choice')"
+    NEXT = "[...document.querySelectorAll('.setup-card button')].find(b => /^\\s*(Next|Build my plan)/.test(b.textContent))"
+    ch = elem_center(page, CH, (740, 620))
+    cur_move(r, 1180, 380, ch[0], ch[1], 0.7)
+    cur_click(r, CH + ".click()", 6)
+    r.hold(0.35, settle=0)
+    at = ch
+    for i in range(4):                                                      # Next, Next, Next, Build my plan
+        nx = elem_center(page, NEXT, (700, 1000))
+        cur_move(r, at[0], at[1], nx[0], nx[1], 0.45 if i else 0.6)
+        cur_click(r, NEXT + ".click()", 6)
+        r.real(250); r.settle(6); at = nx
+        if i < 3: r.hold(0.35, settle=0)                                    # each step on screen for a moment
+    r.real(600); r.settle(12); r.js("__cur.hide()")                        # Exam path: week one, dated
+    r.fill(7.2)
 
 def seg_path(r, page):        # 9.6 s: this week, then all 26 weeks scrolling past
     r.seg("path"); r.js("__ensureSetup()"); go(r, "path")

@@ -36,7 +36,7 @@ view_files = sorted((SRC / "js" / "views").glob("*.js"))
 arcade_files = sorted((SRC / "js" / "arcade").glob("*.js")) + sorted((SRC / "js" / "arcade" / "games").glob("*.js"))
 # bundled libraries (three.js for the real-3D games) load just before the arcade; MIT licenses sit beside them
 vendor_files = sorted((SRC / "js" / "vendor").glob("*.js"))
-WEB_ONLY_CORE = {"09-pwa.js", "10-account.js", "12-voices.js"}   # install, updates, optional accounts and cloud voices: web edition only
+WEB_ONLY_CORE = {"09-pwa.js", "10-account.js", "12-voices.js", "13-intro.js"}   # install, updates, optional accounts, cloud voices and the intro video: web edition only
 
 
 def js_safe(s: str) -> str:

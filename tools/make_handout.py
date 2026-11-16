@@ -7,6 +7,8 @@ Reads site_url from src/data/meta.json and writes:
   handout/B2B_Exam_Prep_Install_Sheet.html                 the install sheet; Edge prints it to
   handout/B2B_Exam_Prep_Install_Sheet.pdf                  (PDFs stay out of git: print it from this computer)
   src/data/meta.json "app_qr"                          the same QR as rows of 0 and 1; the About page draws it
+The code encodes site_url + "?install=1": the website then always opens on its install page (core/09-pwa.js), even on a
+phone that chose "Not now" before. The sheet prints the plain address for anyone who types it.
 Run it again only if the address changes. People who scan the code get every later update by themselves.
 """
 import html, json, re, shutil, subprocess, sys, tempfile
@@ -17,11 +19,21 @@ ROOT = Path(__file__).resolve().parents[1]
 META_FILE = ROOT / "src" / "data" / "meta.json"
 OUT = ROOT / "handout"
 META = json.loads(META_FILE.read_text(encoding="utf-8"))
+# the counts on the sheet come from the content, so the sheet never goes stale
+DATA = META_FILE.parent
+def _items(f):
+    d = json.loads(f.read_text(encoding="utf-8"))
+    return d if isinstance(d, list) else d.get("questions", d.get("lessons", d.get("items", [])))
+N_Q = sum(len(_items(f)) for f in DATA.glob("quiz-*.json"))
+N_L = sum(len(_items(f)) for f in DATA.glob("lessons-*.json"))
+N_G = len(list((ROOT / "src" / "js" / "arcade" / "games").glob("*.js")))
+WORDS = {5: "five", 6: "six", 7: "seven", 8: "eight", 9: "nine"}
 URL = META.get("site_url") or sys.exit("Set site_url in src/data/meta.json first.")
 WHO = META.get("owner") or (META.get("maintainer") or {}).get("name", "")
 COPY = META.get("copyright", "")
 
-qr = segno.make(URL, error="m", micro=False)
+QR_URL = URL + "?install=1"   # a scan lands on the install page every time
+qr = segno.make(QR_URL, error="m", micro=False)
 OUT.mkdir(exist_ok=True)
 qr.save(OUT / "b2b-exam-prep-qr.svg", scale=10, border=4)
 qr.save(OUT / "b2b-exam-prep-qr.png", scale=12, border=4)
@@ -90,20 +102,20 @@ li::before {{ content: counter(s); position: absolute; left: 0; top: 0.01in; wid
     </div>
   </div>
   <div class="steps">
-    <div class="col"><h3>iPhone <span>(Safari)</span></h3><ol>
-      <li>Scan the code with the <b>Camera</b> app: the page opens in <b>Safari</b>.</li>
-      <li>Tap <b>Share</b> (the square with an arrow) in the bar at the bottom. If that bar shows <b>&middot;&middot;&middot;</b>, tap it first.</li>
+    <div class="col"><h3>iPhone <span>(Apple allows no install button)</span></h3><ol>
+      <li>Scan the code with the <b>Camera</b> app: the install page opens.</li>
+      <li>Tap <b>Share</b> (the square with an arrow). In Safari it is in the bar at the bottom; if that bar shows <b>&middot;&middot;&middot;</b>, tap it first.</li>
       <li>Tap <b>Add to Home Screen</b>, then <b>Add</b>.</li>
       <li>Open it from the new icon once while online.</li></ol></div>
-    <div class="col"><h3>Android <span>(Chrome)</span></h3><ol>
-      <li>Scan the code with the <b>Camera</b> app.</li>
-      <li>Tap <b>Install app</b>. If the page opened in Samsung Internet, tap <b>Install with Chrome</b> first: only Chrome installs it without a warning.</li>
+    <div class="col"><h3>Android <span>(any browser)</span></h3><ol>
+      <li>Scan the code with the <b>Camera</b> app: the install page opens.</li>
+      <li>Tap <b>Install app</b>. In Samsung Internet a list asks which app to open: choose <b>Chrome</b> (only Chrome installs it without a warning), then tap <b>Install app</b> there.</li>
       <li>Tap <b>Install</b> in the box that appears.</li>
       <li>Open it from the new icon once while online.</li></ol></div>
   </div>
   <div class="does">
     <div class="cell"><b>Get certified</b>The courses in order, signing up in AITAS, the CON 3990V exam step by step, and 26 official documents.</div>
-    <div class="cell"><b>Learn and practice</b>35 lessons with pictures you can play, 374 explained practice questions, flashcards and six games.</div>
+    <div class="cell"><b>Learn and practice</b>{N_L} lessons with pictures you can play, {N_Q} explained practice questions, flashcards and {WORDS.get(N_G, N_G)} games.</div>
     <div class="cell"><b>Always current</b>New versions arrive by themselves when you are online. Your progress stays on your phone.</div>
   </div>
   <p class="foot"><b>{html.escape(COPY)}</b> Owned by {html.escape(WHO)}. Free for your own study and for sharing this sheet or the link;
@@ -116,13 +128,13 @@ li::before {{ content: counter(s); position: absolute; left: 0; top: 0.01in; wid
 """
 html_file = OUT / "B2B_Exam_Prep_Install_Sheet.html"
 html_file.write_text(sheet, encoding="utf-8")
-print("wrote", html_file.relative_to(ROOT), "and the QR code for", URL)
+print("wrote", html_file.relative_to(ROOT), "and the QR code for", QR_URL)
 
 edge = shutil.which("msedge") or next((p for p in [r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
                                                     r"C:\Program Files\Microsoft\Edge\Application\msedge.exe"] if Path(p).exists()), None)
 if edge:
     pdf = OUT / "B2B_Exam_Prep_Install_Sheet.pdf"
-    with tempfile.TemporaryDirectory() as profile:   # its own profile, so it works while Edge is open
+    with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as profile:   # its own profile, so it works while Edge is open (it may leave crash-report files behind)
         subprocess.run([edge, "--headless=new", "--disable-gpu", "--no-first-run", f"--user-data-dir={profile}", "--no-pdf-header-footer",
                         f"--print-to-pdf={pdf}", html_file.as_uri()], check=False, capture_output=True, timeout=120)
     print("printed", pdf.relative_to(ROOT) if pdf.exists() else "nothing: open the HTML sheet and print it to PDF")

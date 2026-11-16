@@ -18,6 +18,7 @@ self.addEventListener('fetch', function (e) {
   if (req.method !== 'GET' || new URL(req.url).origin !== self.location.origin) return;
   var url = new URL(req.url);
   if (/version\.json$/.test(url.pathname)) return;                       // always from the network
+  if (/\.(mp4|webm|vtt)$/.test(url.pathname)) return;                     // the intro video streams in ranges: the browser fetches it itself
   var isPage = req.mode === 'navigate' || /\/$|\.html$/.test(url.pathname);
   if (isPage) {
     e.respondWith(fetch(req).then(function (res) {

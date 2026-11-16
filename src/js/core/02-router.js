@@ -25,7 +25,27 @@
   function applyTheme(t) {
     var d = document.documentElement;
     if (t === 'dark') d.setAttribute('data-theme', 'dark'); else if (t === 'system') d.removeAttribute('data-theme'); else d.setAttribute('data-theme', 'light');
+    syncBar();
   }
+  // the browser's own bar (Android's status bar, Safari's tab bar, an installed app's title bar) takes the colour of the
+  // page's top bar, so it follows day, night and the colour theme
+  function syncBar() {
+    // the top bar is slightly see-through: paint the page colour, then the bar over it, and read back one plain #rrggbb
+    // (browsers take a theme-color only as an opaque colour, and some cannot read the newer colour syntax)
+    var go = function () { try {
+      var m = document.querySelector('meta[name="theme-color"]'); if (!m) return;
+      var bar = document.querySelector('.topbar'), cv = document.createElement('canvas'); cv.width = cv.height = 1;
+      var x = cv.getContext('2d'); if (!x) return;
+      x.fillStyle = '#ffffff'; x.fillRect(0, 0, 1, 1);
+      x.fillStyle = getComputedStyle(document.body).backgroundColor || '#ffffff'; x.fillRect(0, 0, 1, 1);
+      if (bar) { x.fillStyle = getComputedStyle(bar).backgroundColor || 'transparent'; x.fillRect(0, 0, 1, 1); }
+      var d = x.getImageData(0, 0, 1, 1).data, hex = '#' + [d[0], d[1], d[2]].map(function (n) { return (n < 16 ? '0' : '') + n.toString(16); }).join('');
+      m.setAttribute('content', hex);
+    } catch (e) {} };
+    if (window.requestAnimationFrame) requestAnimationFrame(go); else go();
+  }
+  CORB.syncBar = syncBar;
+  try { window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', syncBar); } catch (e) {}
   CORB.setTheme = function (t) {
     t = t === 'dark' || t === 'system' ? t : 'light';
     applyTheme(t); CORB.set('profile.theme', t); paintTools();
@@ -40,7 +60,7 @@
     { id: 'army', name: 'Black and gold', sub: 'Army colours', day: ['#1f1f1f', '#f4f3f0'], night: ['#e6c067', '#0f0f0f'] }
   ];
   function knownPalette(p) { return CORB.PALETTES.some(function (x) { return x.id === p; }) ? p : ''; }
-  function applyPalette(p) { var d = document.documentElement; p = knownPalette(p || ''); if (p) d.setAttribute('data-palette', p); else d.removeAttribute('data-palette'); }
+  function applyPalette(p) { var d = document.documentElement; p = knownPalette(p || ''); if (p) d.setAttribute('data-palette', p); else d.removeAttribute('data-palette'); syncBar(); }
   CORB.setPalette = function (p) { p = knownPalette(p || ''); applyPalette(p); CORB.set('profile.palette', p); };
   CORB.paletteName = function () { var p = knownPalette(CORB.get('profile.palette') || ''); return CORB.PALETTES.filter(function (x) { return x.id === p; })[0].name; };
   // the look sheet from the side menu: day or night, the colour theme and the text size in one place
@@ -207,7 +227,7 @@
     if (e.ctrlKey || e.metaKey || e.altKey) return;
     if (e.key === '/') { e.preventDefault(); CORB.ui.palette(); }
     if (e.key === '?' && CORB.tour && current.id !== 'arcade') { e.preventDefault(); CORB.tour.start(); }
-    if (e.key === 'Escape') { CORB.ui.closeModal(); closeSide(); }
+    if (e.key === 'Escape') { if (!CORB.ui.modalLocked()) CORB.ui.closeModal(); closeSide(); }
   });
   window.addEventListener('resize', CORB.util.debounce(paintSide, 150));
   document.addEventListener('scroll', function () { sideTip(null); }, true);
@@ -222,12 +242,15 @@
     window.addEventListener('hashchange', render);
     if (!location.hash || location.hash === '#') { try { history.replaceState(null, '', '#/home'); } catch (e) { location.hash = '#/home'; } }
     render();
+    syncBar();
     CORB.emit('boot');
-    // once the page has drawn: on the website, install the app first (core/09-pwa.js); then the terms of use, then the tour offer
+    // once the page has drawn: on the website, the intro video (core/13-intro.js), then the install page (core/09-pwa.js);
+    // then the terms of use, then the tour offer
     setTimeout(function () {
       function offer() { if (CORB.tour) CORB.tour.offer(); }
       function terms() { if (CORB.terms) CORB.terms.require(offer); else offer(); }
-      if (CORB.pwa && CORB.pwa.first) CORB.pwa.first(terms); else terms();
+      function install() { if (CORB.pwa && CORB.pwa.first) CORB.pwa.first(terms); else terms(); }
+      if (CORB.intro && CORB.intro.first) CORB.intro.first(install); else install();
     }, 900);
   };
 })();

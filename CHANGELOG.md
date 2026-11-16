@@ -1,6 +1,46 @@
 # Changelog
 
-## 0.29.0 (30 October 2026): the range card, the qualification table and the seasons
+## 0.30.0 (16 November 2026): ready for everyone
+
+- **The two-minute intro, first.** The first visit in a browser (the QR code, or a shared link) opens on the intro
+  video, above the install page. It starts muted, because browsers only start a video by themselves without sound;
+  its captions are in the picture and its words run under it, which helps readers whose first language is not English.
+  "Sound on" plays it from the top with the voice; Skip, Escape or the end of the video go on to the install page. It
+  never plays in the installed app, only once on a device, and waits on its poster with Data Saver on. "Watch the
+  intro" on Home, About and Settings & help plays it any time. The video streams from the website (about 14 MB); the
+  offline file stays the same size and the service worker leaves the video alone.
+- **The intro is up to date (teaser v1.2).** Filmed again from this version: the four-step onboarding, the Arcade with
+  five games in real 3D and the range card, 395 questions, 254 terms. The narrator now says "four quick steps", "five of
+  them in real 3D" and "two hundred fifty-four terms"; the official-documents caption no longer says all 26 are in the
+  file (8 are).
+- **Scan, press Install.** The QR code (About, the install sheet) carries `?install=1`, so a scan always opens the
+  install page, even on a phone that chose "Not now" in the last three days. Android, any browser: one **Install app**
+  button. Samsung Internet and the other Android browsers still hand the page to Chrome, because the copy they build is
+  blocked by Google Play Protect on Android 14 and later (Samsung support issue 123, open since April 2026); the short
+  list on the way is Chromium's own rule, so the page says "choose Chrome", and picking Samsung Internet now explains
+  instead of looping. Chrome says so when the app is already installed. iPhone: the three taps (Share, Add to Home
+  Screen, Add) in Safari and, since iOS 16.4, in Chrome and the other iPhone browsers; in Safari "Not now" sits at the
+  top, so the arrow to Share can no longer cover it. Reprint the install sheet: `handout/` has the new code.
+- **What the 51C proponent said, in full.** The complete transcript of the October 2026 session, checked against
+  USAASC's pages, adds only what bears on certification: in the Army, a 51C who had not met the year of experience by
+  1 October 2026 needs CON 7300V to certify, even after passing the exam; a new question, "CON 7300V is full. What do I
+  do?" (waitlists into May 2027, no substitute course yet, tell your KMG early); a bachelor's degree is not needed to
+  apply for the certification, though USAASC says 51C NCOs must earn one to be fully MOS qualified; the next
+  reclassification window (11 January to 23 April 2027, panel 3 May 2027). My plan, the exam path and the CON 7300V page
+  say to request a seat early. The IDP step names CAPMIS: Army Career Tracker has been retired. "I am offered a job
+  outside the 51C path" no longer quotes the proponent: that answer was about officers working toward both program
+  management and contracting.
+- **Checked before release.** The terms of use on first use close only with "I agree" (the close button and Escape
+  let a reader past them). The phone's own top bar takes the app's colour, by day and night, in every colour theme,
+  instead of staying pine green. Buddy's bubble nudges at random moments, as asked, and "who is my training contact"
+  finds the Contracting Master Gunner. Home, the tour and Contract Quest take their counts from the content (395
+  questions, 26 questions in Certification 101), the tour counts only the steps a screen shows, and its Official
+  documents stop says what is really there. Settings & help says four onboarding steps and "Send feedback". Six practice
+  questions no longer give the answer away by its length. The exam path names Dispatch, and the class-material list
+  shows the Contracting Study Guide V9 as read. "Forgot your password?" now says a new account needs a different email
+  address (the same one is refused) or that the owner can reset the password.
+
+## 0.29.0 (16 November 2026): the range card, the qualification table and the seasons
 
 - **Today's range card.** The Arcade now opens with three five-minute missions picked for the date, one each from
   three different games (a ten-target table, a convoy stop, six fire missions, a sector, a shift at the yard or a boss).
@@ -16,7 +56,7 @@
   Cosmetics only, nothing to buy. The lobby counts the cards closed this season.
 - The Arcade can open straight onto a mission from Home (#/arcade?daily=N).
 
-## 0.28.4 (14 November 2026): the 3D games on a phone
+## 0.28.4 (16 November 2026): the 3D games on a phone
 
 - **No more blank game screen.** On a phone a 3D game could sit on a black or frozen screen for several seconds while
   it built its scene and the phone compiled its graphics, long enough to look broken. A game now opens at once on a

@@ -9,6 +9,7 @@ import edge_tts
 VOICE, RATE, PITCH = "en-US-AndrewMultilingualNeural", "-5%", "-3Hz"
 OUT = sys.argv[1] if len(sys.argv) > 1 else "../narration"
 MODE = sys.argv[2] if len(sys.argv) > 2 else "lines"
+ONLY = set(sys.argv[3].split(",")) if len(sys.argv) > 3 else None   # e.g. L04,L10,L12: only those lines
 os.makedirs(OUT, exist_ok=True)
 
 # spoken text is tuned for the engine; on-screen text uses the app's own spelling
@@ -16,18 +17,18 @@ LINES = [
     ("L01", "Day one. New unit. New job. And the certification clock is already running."),
     ("L02", "Five courses. One exam. Twelve months of experience. And nobody hands you the map."),
     ("L03", "Introducing B-to-B Exam Prep. From day one to certified."),
-    ("L04", "Three questions, and it builds your plan: every step dated, from week one to exam day."),
+    ("L04", "Four quick steps, and it builds your plan: every step dated, from week one to exam day."),
     ("L05", "The exam path: twenty-six dated weeks, monthly checkpoints, and two full simulations before exam week."),
     ("L06", "The rules, explained in pictures, beside the real official documents."),
     ("L07", "Thirty-five plain-English lessons, organized like the exam. Every picture plays. Every dollar rule has a try-it tool."),
     ("LV", "It reads aloud too, in four voices that work offline."),
     ("L08", "Nearly four hundred questions, each answer explained with a citation. Plus a timed simulator, like the real exam."),
     ("L09", "Fourteen flashcard decks that remember what you forget."),
-    ("L10", "Then the Arcade: seven games on the same content, two of them in real 3D. Range Day puts you on the qualification range."),
+    ("L10", "Then the Arcade: seven games on the same content, five of them in real 3D. Range Day puts you on the qualification range."),
     ("L11a", "Ask Buddy."),
     ("L11b", "When can I take the exam?"),
     ("L11c", "Answered from the guide, on your device. No signal needed."),
-    ("L12", "Two hundred fifty terms, all the FAR parts, every threshold and deadline."),
+    ("L12", "Two hundred fifty-four terms, all the FAR parts, every threshold and deadline."),
     ("L13", "On your phone, your laptop, or your tablet. Updated as regulations and policies change. No app store. Free."),
     ("L14", "Built by a fifty-one Charlie, for fifty-one Charlies and eleven-oh-twos. B-to-B Exam Prep. From day one to certified."),
 ]
@@ -57,6 +58,7 @@ async def synth(id_, text, timing):
 async def main():
     timing = {}
     items = (LINES if MODE in ("all", "lines") else []) + (VARIANTS if MODE in ("all", "variants") else [])
+    items = [x for x in items if not ONLY or x[0] in ONLY]
     for id_, text in items:
         for attempt in range(3):
             try:

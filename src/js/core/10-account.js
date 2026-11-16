@@ -254,7 +254,7 @@
       c.google ? googleButton(h) : null, c.google ? h('div.acct-or', {}, h('span', {}, 'or')) : null, form,
       h('button.linkish', { type: 'button', onclick: function () {
         err.className = 'acct-msg bad'; err.textContent = '';
-        if (!c.reset) { err.className = 'acct-msg'; err.textContent = 'This app sends no email, so there is no reset link. Create a new account with a new password: the progress on this device stays with you' + (c.google ? ', or continue with Google, which needs no password.' : '.'); return; }
+        if (!c.reset) { err.className = 'acct-msg'; err.textContent = 'This app sends no email, so there is no reset link. Make a new account with a different email address (this one is taken), or email the owner from Settings & help to have the password reset. Either way, the progress on this device stays with you' + (c.google ? '. Or continue with Google, which needs no password.' : '.'); return; }
         if (!email.value) { err.textContent = 'Type your email above first.'; return; }
         acct.sendReset(email.value).then(function () { err.className = 'acct-msg ok'; err.textContent = 'Check your email for a link to set a new password.'; },
           function (x) { err.className = 'acct-msg bad'; err.textContent = x.message; });
