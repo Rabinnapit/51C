@@ -55,7 +55,8 @@
       var W = api.W, H = api.H, tier = api.difficulty, terms = termsOf(api.data), t = 0, feel = A.feel, opts = api.opts || {};
       // a campaign mission narrows the terms to the month's glossary categories and shortens the table
       if (opts.cats && opts.cats.length) { var sub = terms.filter(function (x) { return opts.cats.indexOf(x.cat) >= 0; }); if (sub.length >= 12) terms = sub; }
-      if (opts.exposures > 0) { EXPOSURES = opts.exposures; AMMO = Math.round(EXPOSURES * 1.5); }
+      // every run sets its own table size: a 10-target range-card or campaign mission must not shrink the next full run
+      EXPOSURES = opts.exposures > 0 ? opts.exposures : FULL; AMMO = Math.round(EXPOSURES * 1.5);
       var coarse = false; try { coarse = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
       var scene = null, glError = null;
       try { scene = new A.GL.RangeScene({ mobile: coarse, reduce: feel.reduce, width: 640, height: 400, fit: FIT, skin: A.season ? A.season.skin() : '' }); } catch (e) { glError = e; }

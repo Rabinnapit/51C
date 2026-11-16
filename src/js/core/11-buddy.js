@@ -85,7 +85,7 @@
     [/how much|dollar|\$|threshold|limit/, 'Key number', 1.3], [/which course|what course|course/, 'Course', 1.3],
     [/how do i|how to|where do i|steps to/, 'How-to', 1.3], [/what is|what does|whats|mean|define|stand for/, 'Term', 1.25]];
   // a few questions have one right first answer whatever the wording: the training contact is the KMG, never the proponent
-  var PIN = [[/training (contact|nco|poc|person|coordinator|office)|who (do|should|can) i (ask|talk to|see)|my (trainer|mentor for certification)|master gunner/, /^KMG|^Contracting Master Gunner/]];
+  var PIN = [[/\btraining (contact|nco|poc|person|coordinator|office)\b|\bwho (do|should|can) i (ask|talk to|see)\b|\bmy (trainer|mentor for certification)\b|\bmaster gunner\b/, /^KMG\b|^Contracting Master Gunner\b/]];
   buddy.search = function (q, limit) {
     if (!idx) build();
     var ql = String(q || '').toLowerCase(), qs = toks(q), whole = norm(q).split(/\s+/).filter(function (w) { return w && !STOP[w]; }).join(' ');   // the question without its filler

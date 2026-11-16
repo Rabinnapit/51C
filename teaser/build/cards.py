@@ -2,7 +2,7 @@
 a dark field) and its own embedded fonts (Archivo, Manrope, JetBrains Mono from src/css/00-fonts.css), at 3840x2160
 (1920x1080 @2x). Usage: python cards.py <outdir>
 """
-import base64, os, sys
+import re, base64, os, sys
 from playwright.sync_api import sync_playwright
 
 HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.dirname(os.path.dirname(HERE))
@@ -11,7 +11,9 @@ os.makedirs(OUT, exist_ok=True)
 
 FONTS = open(os.path.join(REPO, "src", "css", "00-fonts.css"), encoding="utf-8").read()
 ICON = "data:image/png;base64," + base64.b64encode(open(os.path.join(REPO, "src", "web", "icons", "icon-512.png"), "rb").read()).decode()
-QR = open(os.path.join(REPO, "handout", "b2b-exam-prep-qr.svg"), encoding="utf-8").read().replace("<svg ", '<svg viewBox="0 0 370 370" ', 1)   # segno writes no viewBox; without one the code clips when scaled
+_QR = open(os.path.join(REPO, "handout", "b2b-exam-prep-qr.svg"), encoding="utf-8").read()
+_QS = re.search(r'width="(\d+)"', _QR).group(1)   # the code's own size: a longer address makes a bigger code
+QR = _QR.replace("<svg ", '<svg viewBox="0 0 %s %s" ' % (_QS, _QS), 1)   # segno writes no viewBox; without one the code clips when scaled
 
 CSS = """
 *{margin:0;padding:0;box-sizing:border-box}

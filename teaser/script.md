@@ -10,7 +10,9 @@ lobby with the range card, the qualification table and the season; five games in
 L04 says "Four quick steps", L10 "five of them in real 3D", L12 "Two hundred fifty-four terms" (L13 starts 0.4 s later
 to make room); the captions follow, and the official-documents caption says "one tap away" instead of "in the file"
 (8 of the 26 are stored in the app). The capture marks the intro as seen and hides Home's "Watch the intro" button,
-so the video does not show itself. The web copy the app plays is `src/web/root/intro.mp4` (see Build, step 8).
+so the video does not show itself. The end card's QR code is the new `?install=1` code (33 modules, bigger than v1.1's);
+`cards.py` now sizes it from the SVG itself, so its quiet zone is no longer clipped. The web copy the app plays is
+`src/web/root/intro.mp4` (see Build, step 8).
 
 v1.1 changes (the owner's review of v1.0): the hook card reads "Most Brigades want it in six."; a read-aloud shot after the
 lessons, with the app's own Joe voice saying its sample sentence in the mix; the Arcade line says two games are in real

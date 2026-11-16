@@ -155,7 +155,7 @@
         h('div.row.between', {}, h('div.eyebrow', {}, 'Range card · ' + ds.date), CORB.ui.badge(ds.closed ? 'ok' : 'brass', ds.closed ? 'Card closed' : ds.done + ' of 3 passed', ds.closed ? 'check' : 'target')),
         h('h2', {}, ds.closed ? 'Done for today. Nice work.' : ds.next ? 'Next: ' + ds.next.title : 'Three missions today'),
         h('p.muted', {}, streakText + ' ' + (w.badge ? 'This week\'s table: ' + w.icon + ' ' + w.badgeName + ', ' + w.hits + ' of 40.' : w.fired ? 'This week\'s table: ' + w.hits + ' hits of ' + w.fired + ' fired, ' + (40 - w.fired) + ' to go.' : 'Every answer in a game fires a target on this week\'s 40-target table.')),
-        h('div.row.mt-4', {}, h('a.btn.primary', { href: ds.closed || !ds.next ? '#/arcade' : '#/arcade?daily=' + (ds.done + 1) }, icon('gamepad'), ds.closed ? 'Open the Arcade' : 'Play the next mission'), h('a.btn.ghost', { href: '#/arcade' }, 'Range card'))));
+        h('div.row.mt-4', {}, h('a.btn.primary', { href: ds.closed || !ds.next ? '#/arcade' : '#/arcade?daily=' + (ds.nextN || ds.done + 1) }, icon('gamepad'), ds.closed ? 'Open the Arcade' : 'Play the next mission'), h('a.btn.ghost', { href: '#/arcade' }, 'Range card'))));
     }
 
     // this week on the 6-month exam path

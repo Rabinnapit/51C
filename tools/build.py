@@ -190,6 +190,11 @@ def check(html: str, edition: str):
                 problems.append(f"{edition}: '{needle}' found; network code belongs in core/09-pwa.js (web edition only)")
     if edition == "preview" and "<title>" not in html[:8192]:
         problems.append("preview: <title> is not in the first 8 KB")
+    # a control character in the page (a shell that turned "\b" in a regex into a backspace, say) breaks the Word
+    # email package, which refuses non-XML characters, and usually a regex too
+    ctl = re.search(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", html)
+    if ctl:
+        problems.append(f"{edition}: control character {ctl.group()!r} near: {html[max(0, ctl.start() - 60):ctl.start()]!r}")
     if len(html.encode("utf-8")) > SIZE_BUDGET:
         problems.append(f"size {len(html.encode('utf-8'))/1024/1024:.2f} MB is over the {SIZE_BUDGET/1024/1024:.0f} MB budget")
     return problems

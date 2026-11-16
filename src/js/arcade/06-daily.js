@@ -185,5 +185,5 @@
         h('div.ar-row', {}, actions)));
   };
   // for Home: a short summary of the card, the streak and the table
-  daily.summary = function () { var t = daily.today(), sn = daily.streakNow(), w = table.week(); return { date: t.label, done: t.done, closed: t.closed, next: t.next ? t.next.def : null, streak: sn.streak, lost: sn.lost || 0, atRisk: !!sn.atRisk, table: w, season: season.current() }; };
+  daily.summary = function () { var t = daily.today(), sn = daily.streakNow(), w = table.week(); return { date: t.label, done: t.done, closed: t.closed, next: t.next ? t.next.def : null, nextN: t.next ? t.missions.indexOf(t.next) + 1 : 0, streak: sn.streak, lost: sn.lost || 0, atRisk: !!sn.atRisk, table: w, season: season.current() }; };
 })();

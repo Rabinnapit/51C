@@ -20,7 +20,8 @@
   list on the way is Chromium's own rule, so the page says "choose Chrome", and picking Samsung Internet now explains
   instead of looping. Chrome says so when the app is already installed. iPhone: the three taps (Share, Add to Home
   Screen, Add) in Safari and, since iOS 16.4, in Chrome and the other iPhone browsers; in Safari "Not now" sits at the
-  top, so the arrow to Share can no longer cover it. Reprint the install sheet: `handout/` has the new code.
+  top, so the arrow to Share can no longer cover it. Reprint the install sheet: `handout/` has the new code, its counts
+  come from the content (35 lessons, 395 questions, seven games), and it now prints on one page.
 - **What the 51C proponent said, in full.** The complete transcript of the October 2026 session, checked against
   USAASC's pages, adds only what bears on certification: in the Army, a 51C who had not met the year of experience by
   1 October 2026 needs CON 7300V to certify, even after passing the exam; a new question, "CON 7300V is full. What do I
@@ -38,7 +39,12 @@
   documents stop says what is really there. Settings & help says four onboarding steps and "Send feedback". Six practice
   questions no longer give the answer away by its length. The exam path names Dispatch, and the class-material list
   shows the Contracting Study Guide V9 as read. "Forgot your password?" now says a new account needs a different email
-  address (the same one is refused) or that the owner can reset the password.
+  address (the same one is refused) or that the owner can reset the password. The build now refuses a page that
+  carries a stray control character, which breaks the Word email package.
+- **Found by the independent review.** After a 10-target range-card or campaign Range Day, a normal Range Day ran the
+  short table too (since 0.26); every run now sets its own size. Home's "Play the next mission" opens the first mission
+  still open on today's card, even when the others were passed out of order. On iPhones the arrow to Share sits on a
+  strip in the page colour along the bottom edge, so it never prints over the install steps.
 
 ## 0.29.0 (16 November 2026): the range card, the qualification table and the seasons
 
