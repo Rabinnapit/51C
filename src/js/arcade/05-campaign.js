@@ -127,7 +127,9 @@
     o.campaign = { ch: ch.id, m: m.id, n: ch.n, k: ch.missions.indexOf(m) + 1, title: 'Chapter ' + ch.n + ' · ' + m.title, pass: m.pass, of: m.of, unit: m.unit, color: ch.color };
     return o;
   };
-  C.start = function (ch, m) { if (A.start) A.start(m.game, C.opts(ch, m)); };
+  // Range Day's missions run as Qual Range, its 2D twin, where the phone cannot draw 3D: no month is ever blocked
+  C.start = function (ch, m) { if (A.start) A.start((A.runAs && A.runAs(m.game)) || m.game, C.opts(ch, m)); };
+  function andList(a) { return a.length <= 1 ? a.join('') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1]; }
   function passText(m) { return m.unit === 'boss' ? (m.opts && m.opts.realm ? 'Pass: clear the realm' : 'Pass: bring the boss down') : 'Pass: ' + m.pass + ' of ' + m.of + ' ' + m.unit; }
 
   // the shell calls this when a campaign run ends (o.campaign = { value, of } from the game); returns what the card shows
@@ -174,32 +176,38 @@
   };
   // the lobby section: the Master Gunner's brief, the chapter strip and the three missions of the selected chapter
   C.section = function (anim) {
-    var h = A.h, wrap = h('section.ar-camp', { id: 'ar-camp' });
+    var h = A.h, wrap = h('section.ar-camp', { id: 'ar-camp' }), lockNote = '';
     if (!C.sel || !C.unlocked(C.sel)) C.sel = C.current();
     function render() {
       wrap.innerHTML = '';
-      var ch = C.sel, done = C.passedCount(ch), cleared = C.cleared(ch), next = C.nextMission(ch);
+      var ch = C.sel, done = C.passedCount(ch), cleared = C.cleared(ch), next = C.nextMission(ch), nextCh = C.CHAPTERS[C.CHAPTERS.indexOf(ch) + 1] || null;
+      var left = ch.missions.filter(function (m) { var r = C.missionRec(ch, m); return !(r && r.passed); });
       wrap.style.setProperty('--cc', ch.color);
       wrap.appendChild(h('div.ar-camp-head', {}, h('div.ar-kicker', {}, h('i'), 'Campaign'), h('h2', {}, 'Your first year as a 51C'),
         h('p', {}, 'Twelve chapters, one a month, briefed by your Master Gunner: the four exam areas, the review and the exam, then the first year on the job. Each is three short missions across the games with the questions that month would throw at you; pass all three to open the next chapter.')));
       var strip = h('div.ar-chapters', { role: 'tablist', 'aria-label': 'Chapters' });
       C.CHAPTERS.forEach(function (c) {
         var un = C.unlocked(c), cl = C.cleared(c), on = c === ch;
-        strip.appendChild(h('button.ar-chapter' + (on ? '.on' : '') + (cl ? '.cleared' : '') + (un ? '' : '.locked'), { type: 'button', role: 'tab', 'aria-selected': on ? 'true' : 'false', disabled: !un, style: { '--cc': c.color }, title: un ? c.month + ': ' + c.title : 'Clear chapter ' + (c.n - 1) + ' first', onclick: function () { C.sel = c; render(); } },
+        strip.appendChild(h('button.ar-chapter' + (on ? '.on' : '') + (cl ? '.cleared' : '') + (un ? '' : '.locked'), { type: 'button', role: 'tab', 'aria-selected': on ? 'true' : 'false', 'aria-disabled': un ? null : 'true', style: { '--cc': c.color }, title: un ? c.month + ': ' + c.title : 'Clear ' + C.CHAPTERS[c.n - 2].month + ' first',
+          // a locked month says what opens it (a tester could not tell how to get from month one to month two)
+          onclick: function () { if (un) { C.sel = c; lockNote = ''; } else { var prev = C.CHAPTERS[c.n - 2]; lockNote = c.month + ' (' + c.title + ') opens when all three missions of ' + prev.month + ' are passed' + (C.unlocked(prev) && !C.cleared(prev) ? ': ' + (3 - C.passedCount(prev)) + ' to go in ' + prev.month + '.' : '.'); } render(); } },
           h('span.n', {}, cl ? '✓' : un ? String(c.n) : '🔒'), h('span.t', {}, h('b', {}, c.month), h('small', {}, c.title))));
       });
       var mentor = h('div.ar-camp-mentor', {}, portrait(112, cleared ? 'proud' : 'brief', anim),
         h('div.ar-camp-bubble', {}, h('b', {}, A.mentor.name), h('small', {}, A.mentor.title), h('p', {}, cleared ? ch.clear : ch.brief)));
       var list = h('div.ar-missions');
       ch.missions.forEach(function (m, i) {
-        var r = C.missionRec(ch, m), g = C.GAME[m.game] || { icon: '🎮', name: m.game }, ok = !!(r && r.passed), isNext = m === next, def = A.games[m.game], can = def && (!def.dataOk || def.dataOk(A.DATA));
+        var r = C.missionRec(ch, m), g = C.GAME[m.game] || { icon: '🎮', name: m.game }, ok = !!(r && r.passed), isNext = m === next, run = A.runAs ? A.runAs(m.game) : m.game, can = !!run, in2D = run && run !== m.game ? ' · in 2D here: ' + A.games[run].title : '';
         var status = ok ? 'Passed' + (m.unit !== 'boss' ? ' · best ' + r.best + ' of ' + m.of : '') : r ? 'Best ' + r.best + ' of ' + m.of + ' · ' + passText(m).replace('Pass: ', 'needs ') : passText(m);
         list.appendChild(h('button.ar-mission' + (ok ? '.ok' : '') + (isNext ? '.next' : ''), { type: 'button', disabled: !can, onclick: function () { C.start(ch, m); } },
           h('span.ar-mission-n', {}, ok ? '✓' : String(i + 1)),
-          h('span.ar-mission-copy', {}, h('b', {}, g.icon + ' ' + g.name + ' · ' + m.title), h('span', {}, m.what), h('small', {}, can ? status : 'Not available on this device')),
+          h('span.ar-mission-copy', {}, h('b', {}, g.icon + ' ' + g.name + ' · ' + m.title), h('span', {}, m.what), h('small', {}, can ? status + in2D : 'Not available on this device')),
           h('span.ar-mission-go', {}, ok ? 'Again ↻' : isNext ? 'Play ▶' : 'Play')));
       });
-      wrap.appendChild(h('div.ar-camp-grid', {}, mentor, h('div.ar-camp-body', {}, strip, h('div.ar-camp-sub', {}, h('b', {}, 'Chapter ' + ch.n + ' · ' + ch.title + ': ' + ch.sub), h('span', {}, cleared ? 'Cleared. Play any mission again for a better score.' : done + ' of 3 missions passed.')), list)));
+      wrap.appendChild(h('div.ar-camp-grid', {}, mentor, h('div.ar-camp-body', {}, strip, lockNote ? h('p.ar-camp-lock', { role: 'status' }, '🔒 ' + lockNote) : null,
+        h('div.ar-camp-sub', {}, h('b', {}, 'Chapter ' + ch.n + ' · ' + ch.title + ': ' + ch.sub),
+          h('span', {}, cleared ? 'Cleared. ' + (nextCh ? nextCh.month + ' (' + nextCh.title + ') is open: tap it above.' : 'Play any mission again for a better score.')
+            : done + ' of 3 missions passed. ' + (nextCh ? 'To open ' + nextCh.month + ', pass ' + andList(left.map(function (m) { return (C.GAME[m.game] || { name: m.game }).name + ' · ' + m.title; })) + '.' : 'Pass ' + (left.length === 1 ? 'it' : 'them') + ' to finish the year.'))), list)));
     }
     render();
     return wrap;

@@ -133,6 +133,12 @@
 .lf-item, .lf-title { transition: box-shadow .25s ease, transform .25s ease, background-color .25s ease; }
 .lf .lf-on { position: relative; z-index: 1; border-radius: var(--r-md); box-shadow: 0 0 0 3px var(--lf), var(--shadow-md); transform: scale(1.03); }
 .lf .lf-title.lf-on { box-shadow: none; transform: none; color: var(--lf); }
+/* while a picture plays, a spotlight: the other parts dim, so the part being read is unmistakable (a key part's
+   own outline, such as the contracting officer's, no longer looks like the one being read) */
+.lf.lf-playing .lf-item, .lf-anim.lf-in.lf-playing .lf-item { transition: opacity .3s ease, box-shadow .25s ease, transform .25s ease; transition-delay: 0s; }   /* no build-up stagger */
+.lf.lf-playing .lf-item:not(.lf-on) { opacity: .42; }
+.lf.lf-playing .lf-on { transform: scale(1.05); box-shadow: 0 0 0 3px var(--lf), 0 10px 28px color-mix(in srgb, var(--lf) 35%, transparent); }
+.lf.lf-playing .lf-title.lf-on { transform: none; box-shadow: none; }
 
 /* build-up as the figure scrolls into view (skipped with reduced motion, and never in print) */
 .lf-anim .lf-item { opacity: 0; transform: translateY(14px); }
@@ -149,7 +155,7 @@
 .lf-pop { animation: lf-pop .35s ease; }
 @keyframes lf-pop { from { transform: scale(.97); opacity: .4; } to { transform: none; opacity: 1; } }
 html[data-motion="reduce"] .lf-pop { animation: none; }
-@media (prefers-reduced-motion: reduce) { .lf-pop { animation: none; } .lf .lf-on { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .lf-pop { animation: none; } .lf .lf-on, .lf.lf-playing .lf-on { transform: none; } }
 
 /* hands-on: a sum that loses a part, a check that fails a test */
 button.lf-term { font: inherit; color: inherit; border: 0; cursor: pointer; }

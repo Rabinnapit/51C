@@ -5,93 +5,114 @@
       "title": "Comments closed on the second batch of FAR Overhaul proposed rules",
       "body": "The FAR Council's second set of four proposed rules, published 18 September 2026, covered about 16 more FAR parts. Four more proposed rules and then the final rules are still to come. Until then, DoW keeps using its RFO class deviations.",
       "source": "FAR Council proposed rules (Federal Register)",
-      "url": "https://www.acquisition.gov/far-overhaul"
+      "url": "https://www.acquisition.gov/far-overhaul",
+      "details": "The public had until 19 October 2026 to comment on the four September proposed rules. The FAR Council (the group that writes the FAR) now reviews those comments before it writes the final rules. Its notices say the overhaul has twelve proposed rules in all, so four are still to come; none had been published by 18 November 2026. Four parts on the exam's list of 20 are not in any proposed rule yet: Parts 19, 31, 42 and 46. Until final rules take effect, DoW keeps using its RFO class deviations, and that RFO text is what the exam tests. WarU has said it will adjust the exam, and announce when, if rulemaking changes what the exam covers."
     },
     {
       "date": "2026-10-01",
       "title": "CON 7300V Price Analysis is now required for certification",
       "body": "For the DoW Contracting Professional certification, CON 7300V must be completed after CON 1300V. Components decide whether it applies to people already working on their certification; DoW expects them to take it. Already certified? It is encouraged, not required.",
       "source": "DPCAP memo, Contracting Functional Area Certification Change for FY27 (5 Jun 2026)",
-      "url": "https://www.acq.osd.mil/dpap/policy/policyvault/USA001296-26-DPCAP.pdf"
+      "url": "https://www.acq.osd.mil/dpap/policy/policyvault/USA001296-26-DPCAP.pdf",
+      "details": "A DPCAP memo signed 5 June 2026 made CON 7300V part of the DoW Contracting Professional certification from 1 October 2026. DoW's analysis of exam results showed that pricing is the skill where the workforce can improve the most, and CON 1300V does not teach it in enough depth. The course is 28 hours over 7 days, all virtual: mostly self-paced for three days, then instructor-led days that end with a graded price analysis simulation. WarU suggests an Excel course first if Excel is new to you. Since 1 October 2026, people still working toward their certification get first priority for seats. Ask your Contracting Master Gunner (KMG) early whether the rule applies to you and when to request a seat."
     },
     {
       "date": "2026-10-01",
       "title": "New certification exam FAQs",
       "body": "FY26 average score was 74.8% and 79% passed on the first try. Test centers pass about 4% more than online testing. Answers come from the RFO-updated FAR and DFARS. Up to three attempts in 12 months, at least 30 days apart.",
       "source": "DoW Contracting Professional Certification Exam FAQs (1 Oct 2026)",
-      "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/workforce-development.html"
+      "url": "https://www.acq.osd.mil/asda/dpc/cp/policy/workforce-development.html",
+      "details": "DPCAP's exam FAQ dated 1 October 2026 is the newest official word on CON 3990V; the app's Official documents page has a copy. Besides the FY26 results, it confirms these points:\n- 150 multiple-choice questions and 3 hours of seat time (the tutorial and breaks count), closed book, 70% to pass.\n- DoW recommends a Pearson test center; use online testing (OnVUE) only by exception.\n- Reschedule at least 48 hours ahead. Cancelling without a new date uses one of your three tries.\n- If your first try fails, take CON 3900V before the next one (unless you took it before; CON 3910 is its prerequisite).\n- Know the titles of the 20 FAR parts it lists, and read FAR Part 15 closely: many questions come from it."
     },
     {
       "date": "2026-09-18",
       "title": "Second batch of FAR Overhaul proposed rules",
       "body": "Four more proposed rules continued the formal rulemaking phase of the overhaul.",
-      "source": "FAR Council"
+      "source": "FAR Council",
+      "details": "On 18 September 2026 the FAR Council (the group that writes the FAR) published four more proposed rules in the Federal Register. Together they cover Parts 8, 9, 12, 13, 14, 15, 16, 17, 27, 28, 35, 36, 38, 44, 47 and 51, plus more clause changes in Part 52. Six of these are on the exam's list of 20 FAR parts: 8, 12, 13, 15, 16 and 44. A proposed rule is a draft for public comment; it is not in effect yet, so keep studying the RFO text DoW uses now. GSA also made a related proposal on 22 September 2026. It would move the Federal Supply Schedule (FSS) ordering steps out of the FAR and into GSA's own rules (GSAR part 538)."
     },
     {
       "date": "2026-07-01",
       "title": "DoW certified cost or pricing data threshold is now $10 million",
-      "body": "For DoW prime contracts awarded after 30 June 2026, certified cost or pricing data are required above $10 million unless an exception applies (FY2026 NDAA; DFARS 215.403-3 class deviation). The FAR figure for other agencies stays $2.5 million.",
-      "source": "10 U.S.C. 3702; DoW Class Deviation for DFARS Part 215"
+      "body": "For DoW prime contracts awarded after 30 June 2026, certified cost or pricing data are required above $10 million unless an exception applies (FY2026 NDAA; DFARS 215.403-3 class deviation). The governmentwide FAR figure is still $2.5 million.",
+      "source": "10 U.S.C. 3702; DoW Class Deviation for DFARS Part 215",
+      "details": "The FY2026 NDAA changed the law (10 U.S.C. 3702), and DoW put the new figure into DFARS 215.403-3(a) through its Part 215 class deviation. For DoW, the award date decides the line: after 30 June 2026 it is $10 million; on or before that date it stays $2.5 million unless the contract says otherwise. FAR 15.403-2 still forbids asking for certified cost or pricing data in these cases:\n- at or below the SAT\n- adequate price competition\n- prices set by law or regulation\n- commercial products and commercial services (also when modifying a contract for them)\n- a waiver from the head of the contracting activity (HCA)"
     },
     {
       "date": "2026-06-23",
       "title": "Formal rulemaking for the FAR Overhaul begins",
-      "body": "The first four proposed rules covered 21 FAR parts. Formal rules will eventually replace the class deviations agencies use today.",
-      "source": "FAR Council"
+      "body": "The first four proposed rules covered Parts 1 to 7, 10, 33, 49 and others. Formal rules will eventually replace the class deviations agencies use today.",
+      "source": "FAR Council",
+      "details": "On 23 June 2026 the FAR Council (the group that writes the FAR) published the first four proposed rules of the overhaul. They appeared in the Federal Register, where the Government publishes new rules, and comments were due by 23 July 2026. They cover Parts 1 to 7, 10, 18, 24, 26, 29, 33, 37, 39, 40, 41, 49 and 53, plus clause changes in Part 52. OMB, the White House budget office, called this the first of three releases; the notices say twelve proposed rules in all. A proposed rule is a draft and is not in effect, so DoW contracting officers keep using the RFO class deviations. Ten of these parts are on the exam's list of 20 (1 to 7, 10, 33 and 49), so learn their RFO numbers and titles well."
     },
     {
       "date": "2026-05-11",
       "title": "CON 1400V updated for the FAR Overhaul",
       "body": "Classes starting on or after 11 May 2026 teach the RFO-updated post-award rules.",
       "source": "WarU iCatalog",
-      "url": "https://icatalog.waru.edu/CourseDetail/12527"
+      "url": "https://icatalog.waru.edu/CourseDetail/12527",
+      "details": "WarU's catalog page for CON 1400V says the course now matches the RFO, and everyone enrolled from 11 May 2026 gets the new content. It is still 5 class days, virtual, and needs only CON 1100 or 1100V first, so you can take it while you wait for a CON 1300V seat. WarU's student FAQ of 16 April 2026 says the core learning goals of the certification courses did not change much; the examples and terms changed to match the RFO. If you took CON 1400V before 11 May 2026, check your notes against the RFO numbers (FAR & key numbers, Old → new numbers). Also, until RFO rulemaking ends, CON 1100 runs 4 full days instead of 8."
     },
     {
       "date": "2026-03-31",
       "title": "CON 3990V now tests the RFO FAR",
       "body": "The updated certification exam went live on 31 March 2026 (the last legacy exam was 30 March). About 30% of the question bank changed; the competencies did not. Study materials that use pre-RFO numbers, like many class slides, need checking: see Exam path, Class material check.",
       "source": "WarU, How the RFO Will Affect CON Certification: Student FAQ Sheet (16 Apr 2026)",
-      "url": "https://www.dau.edu/revolutionary-far-overhaul"
+      "url": "https://www.waru.edu/revolutionary-far-overhaul",
+      "details": "WarU switched the exam to its RFO version all at once, so every exam from 31 March 2026 uses it. Its student FAQ of 16 April 2026 says the RFO did not change the DoW contracting competencies in substance. So the exam still tests the same skills, at the initial readiness level. It also says the recent dollar threshold changes did not change any question or answer, because of how the questions are written. The prep courses CON 3910 and CON 3900V were updated by 1 March 2026. Before you trust a deck, slide or practice test, check its date: anything made before 31 March 2026 may teach old FAR numbers."
     },
     {
       "date": "2026-02-24",
       "title": "FPDS.gov retired; award reporting is in SAM.gov",
       "body": "Contract award data is now reported and searched in SAM.gov.",
-      "source": "GSA / SAM.gov"
+      "source": "GSA / SAM.gov",
+      "details": "On 24 February 2026, GSA finished moving FPDS.gov's public functions into SAM.gov and shut down ezSearch, the old FPDS search tool. All contract award data that was in FPDS.gov is now in SAM.gov, and old FPDS.gov links go to SAM.gov. Anyone with a SAM.gov account can search it; you must sign in, but no special role is needed. Contract writing systems still send award data, now through SAM.gov's contract awards portal (sam.gov/contracting for federal users). Older slides and guides that say FPDS mean this data: look for it in SAM.gov, for example when you research past awards and prices."
     },
     {
       "date": "2026-02-01",
       "title": "DoW adopts the FAR Overhaul",
       "body": "DoW's RFO class deviations, with matching DFARS changes, took effect. Many FAR sections were renumbered: for example, sole-source authority moved from 6.302-1 to 6.103-1 and ratification from 1.602-3 to 1.405.",
       "source": "DoW RFO class deviations",
-      "url": "https://www.acq.osd.mil/dpap/dars/dfars_far_overhaul_class_deviations.html"
+      "url": "https://www.acq.osd.mil/dpap/dars/dfars_far_overhaul_class_deviations.html",
+      "details": "A DPCAP memo signed 19 December 2025 announced DoW's first 31 RFO class deviations, effective 1 February 2026; the last ones came in early March 2026. The deviations tell contracting officers to use the RFO text of each FAR part on acquisition.gov, plus a revised DFARS part and PGI. That text replaces the old text in the Code of Federal Regulations. DoW kept the DFARS rules that law requires or sound buying needs; most other policies were removed, rewritten or moved to the PGI. DPCAP has revised many deviations since, several between July and October 2026, so always use the current version on DPCAP's class deviation page. Old templates and slides still show pre-RFO numbers: match them to the new ones with the app's Old → new numbers list."
     },
     {
       "date": "2025-12-18",
       "title": "FY2026 NDAA signed",
       "body": "Among many acquisition changes, it raised DoW's certified cost or pricing data threshold (for awards after 30 June 2026) and DoW's justification approval levels ($10 million contracting officer, $100 million competition advocate, $500 million head of the contracting activity).",
-      "source": "Pub. L. 119-60"
+      "source": "Pub. L. 119-60",
+      "details": "The National Defense Authorization Act (NDAA) for Fiscal Year 2026 became law on 18 December 2025 as Public Law 119-60. DoW put its new figures into its DFARS class deviations; the governmentwide FAR figures are lower, so always check whether DoW's DFARS or the FAR applies. Section 1804 changed two sets of numbers you will use:\n- Certified cost or pricing data: above $10 million for DoW prime contracts entered into after 30 June 2026 (DFARS 215.403-3).\n- Justification and approval (J&A): contracting officer up to $10 million; competition advocate over $10 million to $100 million; head of the contracting activity over $100 million to $500 million; senior procurement executive over $500 million (DFARS Table 206-1)."
     },
     {
       "date": "2025-11-07",
       "title": "DAU becomes the Warfighting Acquisition University (WarU)",
       "body": "The school that teaches the certification courses and owns the exam was renamed as part of DoW's acquisition transformation. Its catalog moved to icatalog.waru.edu.",
-      "source": "DoW announcement"
+      "source": "Secretary of War's speech, 7 November 2025",
+      "url": "https://www.war.gov/News/Speeches/Speech/Article/4359074/remarks-by-secretary-of-war-pete-hegseth-on-the-arsenal-of-freedom-as-delivered/",
+      "details": "Secretary of War Pete Hegseth announced the change in a speech on 7 November 2025. He said the school would become a competency-based institution that teaches through projects on real problems and case studies. It is the same school: it still teaches the certification courses (CON 1100V, 1200V, 1300V, 1400V and 7300V) and runs the CON 3990V exam. Its catalog is at icatalog.waru.edu, and old dau.edu links open on waru.edu. Older certificates, transcripts and slides, and even some laws, still say DAU; they mean the same school."
     },
     {
       "date": "2025-10-01",
       "title": "Inflation adjustment raises key thresholds",
       "body": "Micro-purchase threshold $15,000 (from $10,000), simplified acquisition threshold $350,000 (from $250,000), FAR certified cost or pricing data threshold $2.5 million, and commercial simplified procedures $9 million.",
-      "source": "FAR Case 2024-001 (FAC 2025-06)"
+      "source": "FAR Case 2024-001 (FAC 2025-06)",
+      "details": "This five-year inflation update (FAR Case 2024-001) came out in Federal Acquisition Circular 2025-06 on 27 August 2025 and took effect on 1 October 2025. For DoW awards after 30 June 2026, the certified cost or pricing data line is now $10 million instead of $2.5 million. The same update also raised these figures, which older flashcard decks and guides still show at their old values:\n- Contingency micro-purchase threshold: $25,000 inside the U.S. and $40,000 outside.\n- Contingency SAT: $1 million inside the U.S. and $2 million outside.\n- Small business subcontracting plans: over $900,000 ($2 million for construction)."
     },
     {
       "date": "2025-04-15",
       "title": "The Revolutionary FAR Overhaul begins",
-      "body": "Executive Order 14275 directed the FAR Council to cut the FAR back to what law requires and rewrite it in plain language.",
-      "source": "Executive Order 14275"
+      "body": "Executive Order 14275 said the FAR should keep only what the law requires or what sound buying needs. OFPP and the FAR Council answered with the Revolutionary FAR Overhaul, a plain-language rewrite.",
+      "source": "Executive Order 14275",
+      "details": "The President signed Executive Order 14275, Restoring Common Sense to Federal Procurement, on 15 April 2025. It says the FAR should keep only rules that a law requires or that are essential to sound buying, and remove the rest. It gave the head of the Office of Federal Procurement Policy (OFPP) 180 days to start amending the FAR. OFPP does this work with the FAR Council (the group that writes the FAR) and the agencies. They named the work the Revolutionary FAR Overhaul (RFO): a part-by-part rewrite in plain language, with model text for the parts released from 28 May to 7 November 2025. That is why the FAR you study has new section numbers and shorter text."
     }
   ],
   "guide_changes": [
+    {
+      "version": "0.31.0",
+      "date": "2026-11-18",
+      "title": "What the field test found",
+      "notes": "Most lessons now end with a short game on that lesson's own questions or words. On a phone that cannot draw 3D, Range Day's campaign and range-card missions play as Qual Range, the same drill in 2D, so no month is blocked; a locked month says what opens it, and the Arcade explains itself in three steps. Read-aloud stops when you move on and says \"dash\" in citations, and while a picture plays, the part being read pops. FAR links open at the cited section and paragraph, U.S. Code links open the right section, and each item under What changed lately opens to the whole story. Also: KO instead of CO in the games, PD2 removed, VCE-PCF, a Guiding Principles bay in Dispatch, and the intro shows the read-aloud."
+    },
     {
       "version": "0.30.0",
       "date": "2026-11-16",

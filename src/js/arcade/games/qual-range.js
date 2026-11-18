@@ -13,11 +13,14 @@
   var ROWS = [{ z: 0.12, m: 50 }, { z: 0.3, m: 100 }, { z: 0.48, m: 150 }, { z: 0.66, m: 200 }, { z: 0.84, m: 300 }];
 
   function termsOf(D) { return ((D && D.terms) || []).filter(function (t) { return t && t.term && t.clue; }); }
+  // the rifle-table marks scaled to the table: 90% Expert, 75% Sharpshooter, 60% Marksman (18, 15, 12 of 20)
+  function marks() { return { ex: Math.ceil(EXPOSURES * 0.9), sh: Math.ceil(EXPOSURES * 0.75), mk: Math.ceil(EXPOSURES * 0.6) }; }
   function badgeFor(hits) {
-    if (hits >= 18) return { icon: '🏅', name: 'Expert', desc: hits + ' of ' + EXPOSURES + ' hits. Expert is 18 or more (36 of 40 on a rifle table).', color: '#f6d991' };
-    if (hits >= 15) return { icon: '🥈', name: 'Sharpshooter', desc: hits + ' of ' + EXPOSURES + ' hits. 18 makes Expert.', color: '#c9d6e3' };
-    if (hits >= 12) return { icon: '🥉', name: 'Marksman', desc: hits + ' of ' + EXPOSURES + ' hits. 15 makes Sharpshooter.', color: '#e0a36b' };
-    return { icon: '🔁', name: 'Unqualified: re-fire', desc: hits + ' of ' + EXPOSURES + ' hits. 12 qualifies. Study the list below and re-fire.', color: '#ff9c9c' };
+    var k = marks();
+    if (hits >= k.ex) return { icon: '🏅', name: 'Expert', desc: hits + ' of ' + EXPOSURES + ' hits. Expert is ' + k.ex + ' or more' + (EXPOSURES === 20 ? ' (36 of 40 on a rifle table).' : '.'), color: '#f6d991' };
+    if (hits >= k.sh) return { icon: '🥈', name: 'Sharpshooter', desc: hits + ' of ' + EXPOSURES + ' hits. ' + k.ex + ' makes Expert.', color: '#c9d6e3' };
+    if (hits >= k.mk) return { icon: '🥉', name: 'Marksman', desc: hits + ' of ' + EXPOSURES + ' hits. ' + k.sh + ' makes Sharpshooter.', color: '#e0a36b' };
+    return { icon: '🔁', name: 'Unqualified: re-fire', desc: hits + ' of ' + EXPOSURES + ' hits. ' + k.mk + ' qualifies. Study the list below and re-fire.', color: '#ff9c9c' };
   }
   function drawSil(ctx, x, y, sc, up, color, outline) {
     // an E-type silhouette hinged at its base; up = 0 (down) .. 1 (up)
@@ -51,11 +54,17 @@
       ctx.strokeStyle = '#ff5d5d'; ctx.lineWidth = 2.5; ctx.beginPath(); ctx.arc(cx, cy, 16, 0, Math.PI * 2); ctx.moveTo(cx - 24, cy); ctx.lineTo(cx - 8, cy); ctx.moveTo(cx + 8, cy); ctx.lineTo(cx + 24, cy); ctx.moveTo(cx, cy - 24); ctx.lineTo(cx, cy - 8); ctx.moveTo(cx, cy + 8); ctx.lineTo(cx, cy + 24); ctx.stroke();
     },
     create: function (api) {
-      var W = api.W, H = api.H, tier = api.difficulty, terms = termsOf(api.data), t = 0;
+      var W = api.W, H = api.H, tier = api.difficulty, terms = termsOf(api.data), t = 0, opts = api.opts || {};
+      // a mission sets its own table: Range Day's campaign and range-card missions run here on a phone without 3D (the
+      // month's glossary categories, ten targets), and a lesson's game uses that lesson's own words
+      if (opts.cats && opts.cats.length) { var sub = terms.filter(function (x) { return opts.cats.indexOf(x.cat) >= 0; }); if (sub.length >= 12) terms = sub; }
+      var own = opts.terms && opts.terms.length ? terms.filter(function (x) { return opts.terms.indexOf(x.term) >= 0; }) : [];
+      EXPOSURES = opts.exposures > 0 ? opts.exposures : 20; AMMO = Math.round(EXPOSURES * 1.5);
       var n = 0, ammo = AMMO, hits = 0, streak = 0, targets = [], cur = null, phase = 'wait', phaseT = 0.2, expose = 0, exposeMax = 1;
       var aim = { x: W / 2, y: H * 0.6 }, focus = -1, kick = 0, muzzle = 0, tracer = null, lastTouch = false, flagT = 0, dust = [];
       var sway = SWAY[tier.id] || 0, first = true, lastCtx = null;
       api.progress.configure({ perLevel: 5 });
+      api.partial = function () { return { value: hits, of: EXPOSURES }; };   // a run cut short: the hits so far
 
       function horizon() { return H * 0.36; }
       function rowY(z) { return horizon() + (H * 0.88 - horizon()) * Math.pow(1 - z, 1.35); }
@@ -73,6 +82,7 @@
         if (n > EXPOSURES || ammo <= 0) { finish(); return; }
         var lvl = api.progress.level, pool = lvl <= 1 ? terms.filter(function (x) { return x.acronym && x.expansion; }) : terms;
         if (pool.length < 12) pool = terms;
+        if (own.length >= 3) pool = own;   // a lesson's game: the right answer is always one of the lesson's words
         var term = api.progress.pick(pool, function (x) { return x.id; });
         var mode = lvl <= 1 && term.acronym && term.expansion ? 'exp' : 'def';
         var opts = A.shuffle([term].concat(pickDecoys(term, lvl >= 3 ? 3 : 2)));
@@ -89,7 +99,7 @@
       }
       function finish() {
         var b = badgeFor(hits);
-        api.end({ won: hits >= 12, title: b.name, message: 'You hit ' + hits + ' of ' + EXPOSURES + ' targets with ' + (AMMO - ammo) + ' rounds.', badge: b, xpBonus: hits * 4 + (hits >= 18 ? 60 : 0) });
+        api.end({ won: hits >= marks().mk, title: b.name, message: 'You hit ' + hits + ' of ' + EXPOSURES + ' targets with ' + (AMMO - ammo) + ' rounds.', badge: b, xpBonus: hits * 4 + (hits >= marks().ex ? 60 : 0), campaign: { value: hits, of: EXPOSURES } });
       }
       function tPos(tg) { var sc = rowScale(tg.z); return { x: laneX(tg.lane, tg.z), y: rowY(tg.z), sc: sc }; }
       function placard(ctx, tg, p, draw) {

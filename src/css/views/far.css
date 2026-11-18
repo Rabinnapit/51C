@@ -35,3 +35,8 @@
   .v-far .table.numbers td.val { font-size: 1.1rem; color: var(--accent); }
   .v-far .table td .cite { white-space: normal; }
 }
+/* the longer story behind each change */
+.v-far .tl-more { margin-top: 6px; }
+.v-far .tl-more summary { cursor: pointer; color: var(--accent); font-weight: 700; font-size: var(--fs-sm); min-height: 32px; display: flex; align-items: center; }
+.v-far .tl-more .rich { margin-top: 4px; }
+.v-far .tl-item { scroll-margin-top: calc(var(--top-h, 56px) + 16px); }

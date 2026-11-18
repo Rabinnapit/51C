@@ -224,7 +224,7 @@
        {"id": "w17-cp", "kind": "exam", "t": "Month 4 checkpoint: 100 questions, timed", "n": 100, "target": 70}
      ],
      "tip": "Protest timing in one line: solicitation problems before closing; everything else at GAO within 10 days of knowing; issues from a required debriefing within 5 days of it; stay if filed within 10 days of award or 5 days of the debriefing.",
-     "class": "Day 4's protest material (three forums, agency 35 days, GAO 100 days) is still right. The RFO adds that the CO should consult legal counsel on learning of a protest (FAR 33.103(a))."},
+     "class": "Day 4's protest material (three forums, agency 35 days, GAO 100 days) is still right. The RFO adds that the KO should consult legal counsel on learning of a protest (FAR 33.103(a))."},
     {"n": 18, "m": 5, "title": "Your class practice exam, updated for the RFO",
      "goal": "Work through the B2B class practice exam, now corrected for the RFO, and read what changed.",
      "tasks": [
@@ -365,7 +365,7 @@
     {"topic": "Claims and appeals", "src": "Day 4", "said": "Claim certified over $100,000; final decision; ASBCA 90 days; Court of Federal Claims 12 months; keep performing.", "now": "Same (2.101, 33.205-6, 52.233-1).", "status": "ok", "cite": "FAR 33.205-6"},
     {"topic": "ADR", "src": "Day 4, study guide", "said": "Agencies are encouraged to use ADR. Voluntary or required?", "now": "Voluntary by definition (33.201).", "status": "ok", "cite": "FAR 33.201"},
     {"topic": "Postaward orientation", "src": "Day 5", "said": "Most effective when held promptly after award (old subpart 42.5).", "now": "Still a contract administration function (42.302(a)(3)), but the RFO removed the detailed orientation subpart; 42.5 is now indirect cost rates.", "status": "updated", "cite": "FAR 42.302"},
-    {"topic": "CPARS", "src": "Day 5, study guide", "said": "Used over the SAT; can a contractor protest a rating?", "now": "Evaluations are required over the SAT, at least annually and at completion. Contractors get 14 days to comment; disagreements go to a level above the CO. A rating is not protestable.", "status": "ok", "cite": "FAR 42.1103"},
+    {"topic": "CPARS", "src": "Day 5, study guide", "said": "Used over the SAT; can a contractor protest a rating?", "now": "Evaluations are required over the SAT, at least annually and at completion. Contractors get 14 days to comment; disagreements go to a level above the KO. A rating is not protestable.", "status": "ok", "cite": "FAR 42.1103"},
     {"topic": "Changes", "src": "Day 5", "said": "Changes clauses 52.243-1 to -7; within general scope; 30 days to assert an adjustment; duty to proceed.", "now": "Same. Change orders are now subpart 43.3, and the duty to proceed is 43.301(b).", "status": "ok", "cite": "FAR 43.301"},
     {"topic": "Nonconformance classes", "src": "Day 5", "said": "Minor = likely to materially reduce usability; major = likely to result in failure.", "now": "Wrong on the slide. Major = likely to fail OR materially reduce usability; minor = NOT likely to materially reduce usability; critical = hazardous or unsafe.", "status": "fixed", "cite": "FAR 46.101"},
     {"topic": "Source versus destination inspection", "src": "Day 5", "said": "FAR 46.402 and 46.403 lists.", "now": "Same section numbers and lists.", "status": "ok", "cite": "FAR 46.402"},

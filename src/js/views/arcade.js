@@ -100,7 +100,9 @@
     var mpt = num.mpt || 15000, sat = num.sat || 350000, ph = {};
     CORB.data.phases().forEach(function (p) { ph[p.id] = p; });
     var lines = [];
-    lines.push({ id: 'phase', title: 'Contract life cycle', ask: 'Which phase does this task belong to?', bins: ['pre', 'awd', 'post'].map(function (id) { return { id: id, label: (ph[id] || {}).name || id, color: PHASE_COLORS[id] }; }),
+    // four bays, the four exam areas: a Guiding Principles task (ethics, authority, the file) belongs to every phase,
+    // and without its own bay a tester was told "gp" was the answer with only pre-award, award and post-award to pick
+    lines.push({ id: 'phase', title: 'Contract life cycle', ask: 'Which phase does this task belong to, or does it apply in every phase?', bins: ['gp', 'pre', 'awd', 'post'].map(function (id) { return id === 'gp' ? { id: 'gp', label: 'Every phase', sub: (ph.gp || {}).name || 'Guiding Principles', color: PHASE_COLORS.gp } : { id: id, label: (ph[id] || {}).name || id, color: PHASE_COLORS[id] }; }),
       items: (G.phase_sort || []).map(function (t, i) { return { id: 'ph-' + i, text: tidy(t.task), bin: t.answer, why: tidy(t.why || ''), cite: '', d: 1 }; }) });
     lines.push({ id: 'dollars', title: 'Dollar thresholds', ask: 'Which buying lane does this purchase of supplies fall in?', bins: [{ id: 'mp', label: 'Micro-purchase', sub: 'up to ' + money(mpt), color: '#5fd39a' }, { id: 'sap', label: 'Simplified', sub: 'up to ' + money(sat), color: '#8cc8ff' }, { id: 'above', label: 'Above the SAT', sub: 'over ' + money(sat), color: '#ffa552' }], items: dollarItems(mpt, sat) });
     var ucfBin = { a: 'I', b: 'I', c: 'I', d: 'I', e: 'I', f: 'I', g: 'I', h: 'I', i: 'II', j: 'III', k: 'IV', l: 'IV', m: 'IV' };
@@ -132,6 +134,34 @@
     return built;
   }
 
+  // ---- a game for most lessons, on that lesson's own questions or words (a tester asked for games woven into the lessons,
+  //      "not in every lesson"). Four lessons meet their boss, two sort crates, word-rich lessons go to the range, and
+  //      question-rich ones run a checkpoint; thin lessons keep only their Check yourself questions. ----
+  var LESSON_GAMES = {
+    L02: { game: 'contract-quest', opts: { boss: 'uc' }, what: 'A boss fight: the Unauthorized Commitment.' },
+    L13: { game: 'contract-quest', opts: { boss: 'bust' }, what: 'A boss fight: the Bid Bust.' },
+    L25: { game: 'contract-quest', opts: { boss: 'protest' }, what: 'A boss fight: the Protest.' },
+    L29: { game: 'contract-quest', opts: { boss: 'audit' }, what: 'A boss fight: the Audit.' },
+    L15: { game: 'sort-yard', opts: { lines: ['types'], crates: 7 }, what: 'Seven crates: which family is each contract type?' },
+    L16: { game: 'sort-yard', opts: { lines: ['dollars'], crates: 7 }, what: 'Seven crates: which buying lane is each purchase in?' }
+  };
+  var GAME_NAMES = { 'contract-quest': ['⚔️', 'Contract Quest'], 'sort-yard': ['📦', 'Dispatch'], 'range-day': ['🎯', 'Range Day'], 'supply-line': ['🚚', 'Supply Line'] };
+  CORB.lessonGame = function (id) {
+    var all = CORB.data.lessons(), l = CORB.data.lesson(id); if (!l) return null;
+    var qs = CORB.data.questions().filter(function (q) { return q.lesson === l.id; }), drill = {};
+    terms().forEach(function (t) { drill[t.term] = true; });
+    var words = (l.terms || []).filter(function (t) { return drill[tidy(t)]; }).map(tidy), pick = LESSON_GAMES[l.id], g, what;
+    if (pick) { g = { game: pick.game, opts: JSON.parse(JSON.stringify(pick.opts)) }; what = pick.what; }
+    else if (words.length >= 6) { g = { game: 'range-day', opts: { terms: words, exposures: words.length >= 8 ? 10 : 8 } }; what = 'The tower reads a clue; fire at the right one of this lesson\'s ' + words.length + ' terms.'; }
+    else if (qs.length >= 9) { g = { game: 'supply-line', opts: { realm: l.phase === 'job' ? 'post' : l.phase } }; what = 'Six crates at one checkpoint, each loaded by a question from this lesson.'; }
+    else return null;
+    if (g.game !== 'sort-yard') { g.opts.lessons = [l.id]; g.opts.lessonOnly = true; }
+    var n = all.indexOf(l) + 1, topics = (l.sections || []).map(function (s) { return tidy(s.h); }).filter(Boolean).slice(0, 4);
+    g.opts.lesson = { id: l.id, n: n, title: tidy(l.title), topics: topics, what: what };
+    g.icon = GAME_NAMES[g.game][0]; g.name = GAME_NAMES[g.game][1]; g.what = what;
+    return g;
+  };
+
   function path(k) { return (SETTINGS.indexOf(k) >= 0 ? 'settings.arcade.' : 'progress.arcade.') + k; }
   function connect(A) {
     A.host = {
@@ -147,6 +177,7 @@
         if (s.path && s.total >= 3) CORB.emit('path-quiz', { id: s.path, pct: s.pct });
       },
       lessonHref: function (id) { var l = CORB.data.lesson(id); return l ? { href: '#/lesson?id=' + encodeURIComponent(id), title: l.title } : null; },
+      lessonGame: function (id) { return CORB.lessonGame(id); },
       pathHref: function () { return '#/path'; },
       playing: function () {}
     };

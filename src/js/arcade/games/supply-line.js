@@ -38,9 +38,10 @@
 
   function bankOf(D) { return ((D && D.bank) || []).filter(function (q) { return q && q.stem && q.options && q.options.length === 4 && q.options.some(function (o) { return o.correct; }); }); }
   // a checkpoint's questions: its exam area; a campaign mission narrows them to the month's lessons when enough exist
-  function poolFor(D, cp, lessons) {
+  // a lesson's game (strict) asks only that lesson's questions when it has a few
+  function poolFor(D, cp, lessons, strict) {
     var b = bankOf(D);
-    if (lessons && lessons.length) { var l = b.filter(function (q) { return lessons.indexOf(q.lesson) >= 0; }); if (l.length >= PER_CP * 2) return l; }
+    if (lessons && lessons.length) { var l = b.filter(function (q) { return lessons.indexOf(q.lesson) >= 0; }); if (l.length >= (strict ? 4 : PER_CP * 2)) return l; }
     return cp.id === 'all' ? b.filter(function (q) { return q.phase !== 'job'; }) : b.filter(function (q) { return q.phase === cp.id; });
   }
   function coinOf(missed) { return missed === 0 ? 2 : missed <= 2 ? 1 : 0; }
@@ -249,7 +250,7 @@
       }
       // drive to the next checkpoint: the scenery scrolls and the stop slides in from the right
       function go(next, first) {
-        cp = next; pool = poolFor(api.data, cp, opts.lessons); if (pool.length < PER_CP) pool = bankOf(api.data);
+        cp = next; pool = poolFor(api.data, cp, opts.lessons, opts.lessonOnly); if (pool.length < (opts.lessonOnly ? 4 : PER_CP)) pool = bankOf(api.data);
         var dist = first ? LEG1 : LEG;
         drive = { t: 0, len: first ? 2.2 : 3.2, from: scroll, to: scroll + dist };
         places.push({ kind: cp.kind, wx: drive.to + (scene ? PLACE3 : placeX() / PX()), cp: cp });

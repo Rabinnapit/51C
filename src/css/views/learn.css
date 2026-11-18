@@ -23,6 +23,10 @@
 .v-lesson .remember h3, .v-lesson .mistakes h3 { font-size: var(--fs-lg); }
 .v-lesson .remember .row svg { width: 22px; height: 22px; color: var(--accent-2); }
 .v-lesson .mistakes .row svg { width: 22px; height: 22px; color: var(--danger); }
+/* the game offer: one card in most lessons, on that lesson's own questions or words */
+.v-lesson .lesson-game { display: flex; gap: 14px; align-items: flex-start; margin-top: 18px; border-color: color-mix(in srgb, var(--accent-2) 40%, transparent); background: var(--accent-2-soft); }
+.v-lesson .lesson-game h3 { font-size: var(--fs-lg); margin: 0 0 4px; }
+.v-lesson .lesson-game-ico { flex: none; width: 48px; height: 48px; display: grid; place-items: center; border-radius: 14px; font-size: 26px; background: color-mix(in srgb, var(--accent-2) 22%, transparent); }
 .v-lesson .l-refs h4 { font-size: var(--fs-md); font-family: var(--font-body); font-weight: 800; }
 .v-lesson .lesson-check .section-head h2 { display: flex; align-items: center; gap: 8px; }
 .v-lesson .qbox { margin-bottom: 12px; }

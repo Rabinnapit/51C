@@ -197,13 +197,13 @@
     if (!player) return;
     var p = player; player = null; clearTimeout(p.timer);
     if (CORB.speech && CORB.speech.available && p.spoke) CORB.speech.stop();
-    p.fig.querySelectorAll('.lf-on').forEach(function (x) { x.classList.remove('lf-on'); });
+    p.fig.querySelectorAll('.lf-on').forEach(function (x) { x.classList.remove('lf-on'); }); p.fig.classList.remove('lf-playing');
     setBtn(p.btn, false);
   }
   function play(fig, btn) {
     var same = player && player.fig === fig; stopPlay(); if (same) return;
     var parts = [fig.querySelector('.lf-title')].concat([].slice.call(fig.querySelectorAll('.lf-item'))).filter(Boolean);
-    fig.classList.add('lf-in');
+    fig.classList.add('lf-in'); fig.classList.add('lf-playing');   // the spotlight: the other parts dim while it reads
     var me = player = { fig: fig, btn: btn, i: -1, timer: 0, spoke: false }; setBtn(btn, true);
     function next() {
       if (player !== me) return;
@@ -216,7 +216,7 @@
       function go() { if (!moved) { moved = true; clearTimeout(me.timer); me.timer = setTimeout(next, 350); } }
       if (CORB.speech && CORB.speech.available && text) {
         me.spoke = true;
-        CORB.speech.speak(text, { onend: go });
+        CORB.speech.speak(text, { onend: go, owner: fig });
         me.timer = setTimeout(go, 2500 + text.length * 90);   // keep going if the voice never reports the end
       } else me.timer = setTimeout(go, 1300 + text.length * 25);
     }

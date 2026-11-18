@@ -221,7 +221,7 @@
      {"text": "An email to the COR, who then updates the delivery schedule in the contract file", "correct": false, "why": "The COR cannot change the contract, and an email is not a modification."},
      {"text": "A note in CPARS recording the new date as agreed on the call", "correct": false, "why": "CPARS records performance; it does not change contracts."}]},
   {"id": "Q0705", "lesson": "L07", "phase": "gp", "comp": "1.7", "d": 1, "stem": "Where does the Army keep contract files electronically?", "cite": "AFARS 5104.101",
-   "options": [{"text": "In the Paperless Contract File in VCE", "correct": true, "why": "AFARS directs Army contract files into VCE's Paperless Contract File."},
+   "options": [{"text": "In VCE-PCF, the Paperless Contract File", "correct": true, "why": "AFARS directs Army contract files into VCE's Paperless Contract File."},
      {"text": "In SAM.gov, next to the contract's award data", "correct": false, "why": "SAM.gov holds registrations, notices and award data, not contract files."},
      {"text": "In PIEE Wide Area WorkFlow, next to the invoices", "correct": false, "why": "WAWF handles invoices and receiving reports."},
      {"text": "In GFEBS, with the purchase request and the funding", "correct": false, "why": "GFEBS is the Army's financial system."}]},

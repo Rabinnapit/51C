@@ -55,9 +55,10 @@
 
   function bankOf(D) { return ((D && D.bank) || []).filter(function (q) { return q && q.stem && q.options && q.options.length === 4 && q.options.some(function (o) { return o.correct; }); }); }
   // a realm's questions: its exam area; a campaign mission narrows them to the month's lessons when enough exist
-  function poolFor(D, realm, lessons) {
+  // a lesson's game (strict) asks only that lesson's questions when it has a few
+  function poolFor(D, realm, lessons, strict) {
     var b = bankOf(D);
-    if (lessons && lessons.length) { var l = b.filter(function (q) { return lessons.indexOf(q.lesson) >= 0; }); if (l.length >= 12) return l; }
+    if (lessons && lessons.length) { var l = b.filter(function (q) { return lessons.indexOf(q.lesson) >= 0; }); if (l.length >= (strict ? 4 : 12)) return l; }
     return realm.id === 'all' ? b.filter(function (q) { return q.phase !== 'job'; }) : b.filter(function (q) { return q.phase === realm.id; });
   }
   function starText(n) { var s = ''; for (var i = 0; i < 3; i++) s += i < n ? '★' : '☆'; return s; }
@@ -419,7 +420,7 @@
         api.choices.tools(null);
       }
       function enter(r) {
-        realm = r; pool = poolFor(api.data, r, opts.lessons); foes = r.foes.slice(); foeIx = 0; lost = 0;
+        realm = r; pool = poolFor(api.data, r, opts.lessons, opts.lessonOnly); foes = r.foes.slice(); foeIx = 0; lost = 0;
         if (bossOnly) { var bd = r.foes.filter(function (f) { return f.boss === bossOnly; })[0] || r.foes[r.foes.length - 1]; var copy = {}; Object.keys(bd).forEach(function (k) { copy[k] = bd[k]; }); copy.hp = 8; foes = [copy]; }
         items = { scroll: 1, potion: 1 }; streak = 0; focus = 0; charged = false; mapSel = REALMS.indexOf(r);
         if (!pool.length) pool = bankOf(api.data);

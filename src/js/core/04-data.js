@@ -81,16 +81,28 @@
   data.invalidate = function () { idx = null; gIndex = null; };
 
   // ---- citation links. FAR cites use RFO numbering, so they open the RFO part page (the codified FAR still shows old numbers) ----
+  // the exact place on the RFO page (far_anchors.json, made by tools/far_anchors.py from the pages themselves): the
+  // section's id, and for a paragraph its opening words as a text fragment, so the browser scrolls to and marks it
+  var RFO_PART = 'https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-';
+  function farAnchor(r) {
+    var A = D.far_anchors || {}, key = r.replace(/^FAR\s+/i, ''), a = A[key];
+    if (a && a.p && a.id) return RFO_PART + a.p + '#' + a.id + (a.t ? ':~:text=' + encodeURIComponent(a.t).replace(/-/g, '%2D') : '');
+    if ((A._missing || []).indexOf(key) >= 0) return false;   // an old FAR number quoted on purpose: not on the RFO pages, so no link
+    return null;
+  }
   data.citeUrl = function (ref) {
     var r = String(ref).replace(/^RFO\s+/i, '').replace(/\s+/g, ' ');
     var m = /^(DFARS PGI|AFARS PGI|PGI|FAR|DFARS|AFARS)\s+(?:Part\s+|Subpart\s+)?(\d{1,4})/i.exec(r);
     if (m) {
       var fw = m[1].toUpperCase(), n = parseInt(m[2], 10);
-      if (fw === 'FAR') return n >= 1 && n <= 53 ? 'https://www.acquisition.gov/far-overhaul/far-part-deviation-guide/far-overhaul-part-' + n : 'https://www.acquisition.gov/far-overhaul';
+      if (fw === 'FAR') { var at = farAnchor(r); if (at === false) return null; if (at) return at; }
+      if (fw === 'FAR') return n >= 1 && n <= 53 ? RFO_PART + n : 'https://www.acquisition.gov/far-overhaul';
       if (fw === 'DFARS' || fw === 'PGI' || fw === 'DFARS PGI') return 'https://www.acq.osd.mil/dpap/dars/dfars_far_overhaul_class_deviations.html';
       return 'https://www.acquisition.gov/afars';
     }
-    var u = /^(\d{1,2}) U\.S\.C\. (?:§\s*)?(\d{3,5}[a-z]?)/i.exec(r); if (u) return 'https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title' + u[1] + '-section' + u[2] + '&num=0&edition=prelim';
+    // the U.S. Code: Cornell's Legal Information Institute, the official text one section per page. The House site's
+    // section links answered "Page Not Found" (November 2026) and govinfo's failed about a third of the time
+    var u = /^(\d{1,2}) U\.S\.C\. (?:§\s*)?(\d{3,5}[a-z]?)/i.exec(r); if (u) return 'https://www.law.cornell.edu/uscode/text/' + u[1] + '/' + u[2];
     var c = /^(\d{1,2}) CFR (?:§\s*)?(\d{1,4})(?:\.(\d+))?/i.exec(r); if (c) return 'https://www.ecfr.gov/current/title-' + c[1] + '/part-' + c[2] + (c[3] ? '/section-' + c[2] + '.' + c[3] : '');
     if (/^DoDI 5000\.66/i.test(r)) return 'https://www.esd.whs.mil/Directives/issuances/dodi/';
     return null;

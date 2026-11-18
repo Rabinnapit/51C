@@ -35,7 +35,7 @@ arrives, should be checked against this list and take precedence.
 | RFO part titles, section numbers, old-to-new crosswalk, thresholds (MPT $15K, SAT $350K, contingency figures, SaP $9M, TINA $2.5M FAR / $10M DoW after 30 Jun 2026, DoW J&A Table 206-1, CDA $100K, DoW order protest $35M, Prompt Payment 4.75%) | Board Ready `app/src/data/regulations.json`, verified on acquisition.gov, DoW class deviations, eCFR and the U.S. Code on 13-14 Sep 2026 |
 | RFO Part 4 closeout times (Table 4-2), Part 5 notice thresholds ($20K, 10/15 days) and response times (Table 5-3), Part 12 simplified procedures and micro-purchases, Part 13 scope and single-source D&F | acquisition.gov FAR Overhaul part pages 4, 5, 12, 13 (read 22 Oct 2026) |
 | RFO part titles 1-19 | acquisition.gov FAR Part Deviation Guide (read 22 Oct 2026) |
-| Formal rulemaking: 4 proposed rules 23 Jun 2026 (21 parts), 4 more 18 Sep 2026 (about 16 parts, comments due 19 Oct 2026), 4 still to come, no final rules yet | Law-firm and trade summaries of the Federal Register notices (Oct 2026) |
+| Formal rulemaking: 4 proposed rules 23 Jun 2026 (19 parts by the Federal Register titles; OMB said 17; the earlier "21" came from law-firm summaries and was dropped 18 Nov 2026), 4 more 18 Sep 2026 (about 16 parts, comments due 19 Oct 2026), 4 still to come, no final rules yet | Law-firm and trade summaries of the Federal Register notices (Oct 2026) |
 | DoW RFO class deviations effective 1 Feb 2026 | DoW rollout memo (Dec 2025) and Army Warranting Program Policy v12 (via Board Ready) |
 | ACWS replaced PD2/SPS-A; SPS-A retired Dec 2025 | Army.mil and trade press |
 | FPDS.gov retired 24 Feb 2026; award data in SAM.gov | Maintainer's SAM/FPDS skill notes |

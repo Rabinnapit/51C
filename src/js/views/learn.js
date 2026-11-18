@@ -97,6 +97,17 @@
       if (l.example) root.appendChild(h('section.card.example', {}, h('div.eyebrow', {}, 'Picture this'), h('h3', {}, l.example.title), CORB.ui.rich(l.example.body)));
       if ((l.remember || []).length) root.appendChild(h('section.card.remember', {}, h('div.row.tight', {}, icon('bulb'), h('h3', {}, 'Remember it')), h('ul.tips', {}, l.remember.map(function (t) { return h('li', {}, CORB.ui.rich(t)); }))));
       if ((l.mistakes || []).length) root.appendChild(h('section.card.mistakes', {}, h('div.row.tight', {}, icon('alert'), h('h3', {}, 'Common mistakes')), h('ul.tips', {}, l.mistakes.map(function (t) { return h('li', {}, CORB.ui.rich(t)); }))));
+      // most lessons offer one game on their own questions or words (CORB.lessonGame); thin lessons keep only Check yourself
+      var lg = CORB.lessonGame ? CORB.lessonGame(l.id) : null;
+      if (lg) {
+        var gameCard = h('section.card.lesson-game.no-print', { 'aria-label': 'A game on this lesson' },
+          h('div.lesson-game-ico', { 'aria-hidden': 'true' }, lg.icon),
+          h('div.grow', {}, h('h3', {}, 'Want to play a game on this topic?'),
+            h('p.small.muted', {}, lg.name + ': ' + lg.what + ' About three minutes, on this lesson only.'),
+            h('div.row.tight.mt-2', {}, h('a.btn.primary.sm', { href: '#/arcade?lesson=' + encodeURIComponent(l.id) }, icon('gamepad'), 'Yes, play'),
+              h('button.btn.sm.ghost', { type: 'button', onclick: function () { gameCard.remove(); } }, 'Not now'))));
+        root.appendChild(gameCard);
+      }
       var foot = h('div.grid.cols-2.l-refs', {});
       if ((l.cites || []).length) foot.appendChild(h('div.card.tight', {}, h('h4', {}, 'Where it is written'), h('div.row.tight.mt-2', {}, l.cites.map(function (c) { var u = CORB.data.citeUrl(c); return u ? h('a.cite', { href: u, target: '_blank', rel: 'noopener' }, c) : h('span.cite', {}, c); })), h('p.tiny.muted.mt-2', {}, 'FAR citations use the FAR Overhaul (RFO) numbers in force for DoW since 1 February 2026.')));
       if ((l.terms || []).length) foot.appendChild(h('div.card.tight', {}, h('h4', {}, 'Key terms'), h('div.row.tight.mt-2', {}, l.terms.map(function (t) { var g = CORB.data.term(t); return h('button.chip', { type: 'button', onclick: function (e) { if (g) CORB.ui.showTerm(g.term, e.currentTarget); else CORB.go('glossary', { q: t }); } }, t); }))));

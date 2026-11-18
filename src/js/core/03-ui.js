@@ -141,7 +141,7 @@
       h('div.gl-term', {}, g.term), g.expansion ? h('div.gl-exp', {}, g.expansion) : null,
       h('p', {}, g.definition),
       h('div.row.tight', {},
-        CORB.speech && CORB.speech.available ? h('button.btn.sm', { type: 'button', onclick: function () { CORB.speech.speak(g.term + '. ' + (g.expansion || '') + '. ' + g.definition); } }, ui.icon('volume'), 'Listen') : null,
+        CORB.speech && CORB.speech.available ? h('button.btn.sm', { type: 'button', onclick: function (e) { CORB.speech.speak(g.term + '. ' + (g.expansion || '') + '. ' + g.definition, { owner: e.currentTarget }); } }, ui.icon('volume'), 'Listen') : null,
         h('button.btn.sm', { type: 'button', onclick: function () { closePop(); CORB.go('glossary', { q: g.term }); } }, ui.icon('glossary'), 'Glossary'),
         h('button.btn.sm.ghost', { type: 'button', onclick: closePop, 'aria-label': 'Close' }, ui.icon('x'))));
     document.body.appendChild(pop);
@@ -206,12 +206,13 @@
   };
   ui.listenBtn = function (getText, label) {
     if (!CORB.speech || !CORB.speech.available) return null;
-    var b = h('button.btn.sm', { type: 'button', 'aria-label': 'Listen' }, ui.icon('volume'), label || 'Listen');
+    var b = h('button.btn.sm', { type: 'button', 'aria-label': 'Listen', 'data-label': label || 'Listen' }, ui.icon('volume'), label || 'Listen');
     b.addEventListener('click', function () {
       if (b.classList.contains('speaking')) { CORB.speech.stop(); return; }
       document.querySelectorAll('.speaking').forEach(function (x) { x.classList.remove('speaking'); });
       b.classList.add('speaking'); b.lastChild.textContent = 'Stop';
-      CORB.speech.speak(typeof getText === 'function' ? getText() : getText, { onend: function () { b.classList.remove('speaking'); b.lastChild.textContent = label || 'Listen'; } });
+      // the button owns the reading: the next question, a flipped card or another tab removes it and the voice stops
+      CORB.speech.speak(typeof getText === 'function' ? getText() : getText, { owner: b, onend: function () { b.classList.remove('speaking'); b.lastChild.textContent = label || 'Listen'; } });
       if (!CORB.get('settings.voiceTip')) { CORB.set('settings.voiceTip', true); setTimeout(function () { ui.toast('Want another voice or tone? Settings & help → Display → Read aloud.', '', 5000); }, 1500); }   // once
     });
     return b;

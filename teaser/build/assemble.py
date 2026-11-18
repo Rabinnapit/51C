@@ -25,7 +25,7 @@ TL = [
     ("path",    26.4,  36.0, "cap_path",    0.4),
     ("cert",    36.0,  43.2, [("cap_cert", 0.5, 3.3), ("cap_official", 3.7, 99)], 0.25),
     ("lessons", 43.2,  52.8, [("cap_lessons", 0.5, 5.6), ("cap_tryit", 5.9, 99)], 0.4),
-    ("voice",   52.8,  60.0, [("cap_voice", 0.5, 4.2)], 0.4),      # gone before the cursor presses Hear a sample
+    ("voice",   52.8,  60.0, [("cap_voice", 0.5, 3.5)], 0.4),      # gone before the cards start to pop
     ("quiz",    60.0,  67.2, "cap_quiz",    0.3),
     ("cards",   67.2,  72.0, "cap_cards",   0.4),
     ("arcade",  72.0,  81.6, [("cap_arcade", 0.4, 2.1), ("cap_range", 2.6, 99)], 0.3),
@@ -35,10 +35,11 @@ TL = [
     ("c_end",   103.2, 114.4, None,         0.3),
 ]
 END = 114.4
-VO = {"L01": 0.4, "L02": 6.4, "L03": 14.8, "L04": 20.2, "L05": 26.8, "L06": 36.4, "L07": 43.6, "LV": 53.0, "L08": 60.9, "L09": 69.0,
+VO = {"L01": 0.4, "L02": 6.4, "L03": 14.8, "L04": 20.2, "L05": 26.8, "L06": 36.4, "L07": 43.6, "LV": 52.6, "L08": 60.9, "L09": 69.0,
       "L10": 72.4, "L11a": 82.0, "L11b": 83.8, "L11c": 85.2, "L12": 89.3, "L13": 94.9, "L14": 103.8}
-# the app's own voice (Piper "Joe", synthesized from the same model the app downloads), played when the cursor presses Hear a sample
-SAMPLES = {"voice_joe.wav": (57.5, 0.6)}
+# the app's own voice (Piper "Joe", the model the app downloads) reading lesson one's "Who does what" picture, each card
+# popping as it is said (v1.3): the title, then the Customer card. The narrator's LV line ends at 56.15 s.
+SAMPLES = {"joe_title.wav": (56.35, 0.6), "joe_customer.wav": (57.8, 0.6)}
 PFX = (TAG + "_") if TAG else ""
 OUTS = ((PFX + "B2B_Exam_Prep_Teaser_1080p.mp4", 1080, 28.0, 160), (PFX + "B2B_Exam_Prep_Teaser_Email_720p.mp4", 720, 19.0, 112))
 MUSIC, VONLY = "music_b2b.wav", PFX + "video_only.mp4"

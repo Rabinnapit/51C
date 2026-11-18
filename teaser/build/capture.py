@@ -197,41 +197,44 @@ def seg_cert(r, page):        # 7.2 s: the exam at a glance and the exam journey
     cur_click(r, "[...document.querySelectorAll('button[role=tab]')].find(b => /official/i.test(b.textContent)).click()", 6)
     r.real(700); r.settle(12); r.js("__cur.hide()"); r.fill(7.2)
 
-def seg_lessons(r, page):     # 9.6 s: the list, lesson one's picture playing part by part, then a Try-it tool sweeping the dollars
+def seg_lessons(r, page):     # 9.6 s: the list, lesson four's picture playing part by part, then a Try-it tool sweeping the dollars
+    # (lesson one's "Who does what" picture is the read-aloud shot's, so this one shows another: What makes a contract)
     r.seg("lessons"); r.js("__ensureSetup()"); go(r, "learn"); r.hold(1.2, settle=0)
-    go(r, "lesson", {"id": "L01"}, wait=900)
+    go(r, "lesson", {"id": "L04"}, wait=900)
     r.scroll_to(0, r.top("document.querySelector('.lesson-figs')", 500, 110), 0.8)
     FIG = "const fig = document.querySelector('.lesson-figs figure.lf'); const parts = [fig.querySelector('.lf-title')].concat([...fig.querySelectorAll('.lf-item')]).filter(Boolean);"
-    r.js(FIG + " fig.classList.add('lf-in'); const b = fig.querySelector('.lf-play'); if (b) { b.setAttribute('aria-pressed', 'true'); b.replaceChildren(CORB.ui.icon('stop'), 'Stop'); }")
+    r.js(FIG + " fig.classList.add('lf-in'); fig.classList.add('lf-playing'); const b = fig.querySelector('.lf-play'); if (b) { b.setAttribute('aria-pressed', 'true'); b.replaceChildren(CORB.ui.icon('stop'), 'Stop'); }")
     n = r.ev("(() => { " + FIG + " return parts.length; })()")
     per = 3.4 / max(1, n)
     for i in range(n):
         r.js(FIG + f" parts.forEach(p => p.classList.remove('lf-on')); parts[{i}].classList.add('lf-on')"); r.hold(per, settle=2)
-    r.js(FIG + " parts.forEach(p => p.classList.remove('lf-on')); const b = fig.querySelector('.lf-play'); if (b) { b.setAttribute('aria-pressed', 'false'); b.replaceChildren(CORB.ui.icon('play'), 'Play'); }")
+    r.js(FIG + " parts.forEach(p => p.classList.remove('lf-on')); fig.classList.remove('lf-playing'); const b = fig.querySelector('.lf-play'); if (b) { b.setAttribute('aria-pressed', 'false'); b.replaceChildren(CORB.ui.icon('play'), 'Play'); }")
     go(r, "lesson", {"id": "L13"}, wait=900)
     r.scroll_to(0, r.top("document.querySelector('.lf-type-calc')", 600, 100), 0.7)
     r.anim(2.6, lambda p: f"(() => {{ const rg = document.querySelector('.lf-type-calc .lf-range'); if (!rg) return; rg.value = String(Math.round(1000 * {p:.4f})); rg.dispatchEvent(new Event('input', {{bubbles: true}})); }})()")
     r.fill(9.6)
 
-def seg_voice(r, page):       # 7.2 s: Listen to the lesson; then Settings: the voice list with the app's own voices, Hear a sample
-    r.seg("voice"); r.js("__ensureSetup()"); go(r, "lesson", {"id": "L05"}, wait=900)
-    LB = "[...document.querySelectorAll('button')].find(b => /Listen to the lesson/.test(b.textContent))"
-    lb = elem_center(page, LB, (800, 253))
-    cur_move(r, 1200, 620, lb[0], lb[1], 0.7)
-    cur_click(r, LB + ".click()", 6)
-    r.real(300); r.settle(6); r.hold(0.8, settle=0)                        # the button reads Stop while it speaks
-    r.js("if (CORB.speech) CORB.speech.stop()")
-    go(r, "settings", {"tab": "display"}, wait=800)
-    # the voice picker opened as a list, so the app's own voices show; Joe selected; the list and Hear a sample both in view
-    r.js("const s = document.getElementById('tts-voice'); if (s) { s.size = 7; const o = [...s.options].find(o => /\\bJoe\\b/.test(o.textContent)); if (o) o.selected = true; }")
-    r.settle(5)
-    y = r.top("document.querySelector('label[for=tts-voice]')", 400, 100)
-    r.js(f"window.scrollTo(0, {y})"); r.settle(5); r.hold(1.0, settle=0)
-    HS = "[...document.querySelectorAll('button')].find(b => /Hear a sample/.test(b.textContent))"
-    hs = elem_center(page, HS, (900, 760))
-    cur_move(r, lb[0], lb[1], hs[0], hs[1], 0.7); r.hold(1.0, settle=0)
-    cur_click(r, HS + ".click()", 6)                                        # the Joe sample plays here in the mix
-    r.real(300); r.settle(4); r.fill(7.2)
+# the read-aloud shot (v1.3, the owner's ask): lesson one's "Who does what" picture read by the app's own Joe voice, each
+# card popping as it is said. Times in the shot: the slot starts at 52.8 s, the narrator ends at 56.15 s, Joe says the
+# title at 56.41-57.55 s and "Customer. Needs it and pays for it." at 57.84-59.73 s (assemble.py SAMPLES).
+VOICE_PLAY, POP_TITLE, POP_CUSTOMER = 3.38, 3.61, 5.04
+
+def seg_voice(r, page):       # 7.2 s: Play on lesson one's picture; the title, then the Customer card, pop as Joe reads them
+    r.seg("voice"); r.js("__ensureSetup()"); go(r, "lesson", {"id": "L01"}, wait=900)
+    FIG = "const fig = document.querySelector('.lesson-figs figure.lf'); const parts = [fig.querySelector('.lf-title')].concat([...fig.querySelectorAll('.lf-item')]).filter(Boolean);"
+    r.js(FIG + " fig.classList.add('lf-in')")
+    r.scroll_to(0, r.top("document.querySelector('.lesson-figs')", 500, 110), 0.6)
+    PB = "document.querySelector('.lesson-figs figure.lf .lf-play')"
+    pb = elem_center(page, PB, (1500, 300))
+    cur_move(r, 1250, 820, pb[0], pb[1], 0.9)
+    r.hold(max(0.1, VOICE_PLAY - r.dur()), settle=0)                     # the narrator finishes, then Play
+    cur_click(r, FIG + " fig.classList.add('lf-playing'); const b = fig.querySelector('.lf-play'); if (b) { b.setAttribute('aria-pressed', 'true'); b.replaceChildren(CORB.ui.icon('stop'), 'Stop'); }", 4)
+    r.js("__cur.hide()")                                                  # nothing over the cards while they pop
+    r.hold(max(0.04, POP_TITLE - r.dur()), settle=0)
+    r.js(FIG + " parts.forEach(p => p.classList.remove('lf-on')); parts[0].classList.add('lf-on')"); r.anim(0.3)   # "Who does what on the team"
+    r.hold(max(0.04, POP_CUSTOMER - r.dur()), settle=0)
+    r.js(FIG + " parts.forEach(p => p.classList.remove('lf-on')); parts[1].classList.add('lf-on')"); r.anim(0.35)  # "Customer. Needs it and pays for it."
+    r.fill(7.2)
 
 def seg_quiz(r, page):        # 7.2 s: Quick 10 -> a question -> the right answer, explained with its citation
     r.seg("quiz"); r.js("__ensureSetup()"); go(r, "quiz"); r.hold(0.9, settle=0)

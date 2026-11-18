@@ -210,7 +210,7 @@
       {"code": "CCON 024A", "title": "Operational Contracting Credential", "for": "", "why": "Base, post, camp and station contracting: the work of most installation offices."},
       {"code": "CCON 022A", "title": "Simplified Acquisition Procedures (Purchasing) Credential", "for": "", "why": "Buys at or below the simplified acquisition threshold, where most new specialists start."},
       {"code": "CCON 025A", "title": "Contracting for Services Credential", "for": "", "why": "Service contracts, performance work statements and surveillance."},
-      {"code": "CCON 003A", "title": "Proposal Analysis Credential", "for": "", "why": "More practice with price and cost analysis after CON 7300V."}
+      {"code": "CCON 003B", "title": "Proposal Analysis Credential", "for": "", "why": "More practice with price and cost analysis after CON 7300V."}
     ],
     "reciprocity": "The FAC-C (Professional) certification used by civilian agencies and the DoW Contracting Professional certification are treated as equal under a memorandum of understanding signed 16 October 2023, so your DACM can accept one for the other. Both require the CON 3990V exam. If you came to DoW with only a legacy FAC-C, or none, ask your career manager what you still need. Civilian agencies require 100 continuous learning hours every 2 years (since May 2024); DoW requires 80."
   },

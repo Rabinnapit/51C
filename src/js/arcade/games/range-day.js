@@ -55,6 +55,8 @@
       var W = api.W, H = api.H, tier = api.difficulty, terms = termsOf(api.data), t = 0, feel = A.feel, opts = api.opts || {};
       // a campaign mission narrows the terms to the month's glossary categories and shortens the table
       if (opts.cats && opts.cats.length) { var sub = terms.filter(function (x) { return opts.cats.indexOf(x.cat) >= 0; }); if (sub.length >= 12) terms = sub; }
+      // a lesson's game: the right answer is always one of the lesson's own words (the decoys still come from all terms)
+      var own = opts.terms && opts.terms.length ? terms.filter(function (x) { return opts.terms.indexOf(x.term) >= 0; }) : [];
       // every run sets its own table size: a 10-target range-card or campaign mission must not shrink the next full run
       EXPOSURES = opts.exposures > 0 ? opts.exposures : FULL; AMMO = Math.round(EXPOSURES * 1.5);
       var coarse = false; try { coarse = window.matchMedia('(pointer: coarse)').matches; } catch (e) {}
@@ -63,8 +65,8 @@
       if (!scene) {
         var why = A.GL && A.GL.tooSlow ? 'This device was too slow for the 3D range, so the Arcade has moved its games to 2D until the page is reloaded.'
           : 'This device could not start the 3D range' + (glError && glError.message ? ' (' + glError.message + ')' : '') + '.';
-        setTimeout(function () { api.end(A.no3D(A.games['range-day'], why)); }, 2200);
-        return { update: function () {}, draw: function (ctx) { A.text(ctx, why + ' Qual Range is the same drill in 2D.', 30, 60, { size: 18, color: A.C.ink, maxWidth: W - 60 }); } };
+        setTimeout(function () { api.end(A.no3D(A.games['range-day'], why)); }, 900);   // straight to the card that offers Qual Range
+        return { noCount: true, update: function () {}, draw: function (ctx) { A.text(ctx, why + ' Qual Range is the same drill in 2D.', 30, 60, { size: 18, color: A.C.ink, maxWidth: W - 60 }); } };
       }
       var n = 0, ammo = AMMO, hits = 0, streak = 0, targets = [], cur = null, phase = 'wait', phaseT = 0.6, expose = 0, exposeMax = 1;
       var aim = { x: W / 2, y: H * 0.55 }, focus = -1, lastTouch = coarse, kick = 0, hitMark = 0, first = true, gov = A.GL.governor(scene), scale = 1, glW = 0, glH = 0;
@@ -83,6 +85,7 @@
         if (n > EXPOSURES || ammo <= 0) { finish(); return; }
         var lvl = api.progress.level, pool = lvl <= 1 ? terms.filter(function (x) { return x.acronym && x.expansion; }) : terms;
         if (pool.length < 12) pool = terms;
+        if (own.length >= 3) pool = own;
         var term = api.progress.pick(pool, function (x) { return x.id; });
         var mode = lvl <= 1 && term.acronym && term.expansion ? 'exp' : 'def';
         var opts = A.shuffle([term].concat(pickDecoys(term, 2)));

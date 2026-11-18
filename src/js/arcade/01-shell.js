@@ -54,6 +54,14 @@
         h('h1.ar-h1', {}, 'Play your way ', h('em', {}, 'to the exam.')),
         h('p.ar-lede', {}, 'Seven games built on the guide\'s checked question bank, key numbers, FAR parts, forms and glossary, five of them in real 3D, and a twelve-chapter campaign briefed by your Master Gunner. Every miss lands on a study list with the answer, the reason and the FAR cite.')),
       rankCard(rk)));
+    // how the Arcade works, in three steps that jump to their section (a tester could not tell how the months open)
+    function jump(sel) { var el = screen.querySelector(sel); if (el) { try { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) { el.scrollIntoView(); } } }
+    var how = [A.daily ? ['🎯', 'Range card', 'Three short missions a day. Close the card to keep your streak.', '#ar-daily'] : null,
+      A.campaign ? ['🗓️', 'Campaign', 'One month at a time: pass a month\'s three missions to open the next.', '#ar-camp'] : null,
+      ['🎮', 'Any game', 'Any game below, any time, or the game at the end of a lesson.', '.ar-cabinets']].filter(Boolean);
+    screen.appendChild(h('nav.ar-how', { 'aria-label': 'How the Arcade works' }, how.map(function (s, i) {
+      return h('button.ar-how-step', { type: 'button', onclick: function () { jump(s[3]); } }, h('span.ar-how-n', {}, String(i + 1)), h('span.ar-how-copy', {}, h('b', {}, s[0] + ' ' + s[1]), h('small', {}, s[2])));
+    })));
     screen.appendChild(h('div.ar-setup', {},
       h('div.ar-pace-row', {}, h('span.ar-pace-label', {}, 'Pace'), h('div.ar-paces', { role: 'radiogroup', 'aria-label': 'Pace' }, A.TIERS.map(function (t, ti) {
         var on = t.id === tier.id;
@@ -67,18 +75,18 @@
     if (A.campaign && A.mentor) { try { screen.appendChild(A.campaign.section(thumbs)); } catch (e) { console.error('[arcade] campaign', e); } }
     screen.appendChild(h('h2.ar-h2', {}, 'All games'));
     A.order.forEach(function (id, i) {
-      var def = A.games[id], ok = true; try { ok = !def.dataOk || !!def.dataOk(A.DATA); } catch (e) { ok = false; }
+      var def = A.games[id], ok = A.canRun(id), twin = ok ? null : A.runAs(id);   // Range Day without 3D: its cabinet starts Qual Range
       var best = A.best.get(id, tier.id), any = A.best.any(id);
       var cv = h('canvas', { width: '480', height: '240', 'aria-hidden': 'true' });
       if (def.thumb) thumbs.push({ cv: cv, def: def });
-      grid.appendChild(h('button.ar-cab' + (ok ? '' : '.off'), { type: 'button', style: { '--accent': def.accent || A.C.gold, animationDelay: (i * 70) + 'ms' }, disabled: !ok, onclick: function () { if (ok) startGame(id); } },
+      grid.appendChild(h('button.ar-cab' + (ok || twin ? '' : '.off'), { type: 'button', style: { '--accent': def.accent || A.C.gold, animationDelay: (i * 70) + 'ms' }, disabled: !ok && !twin, onclick: function () { if (ok) startGame(id); else if (twin) startGame(twin); } },
         h('div.ar-cab-art', {}, def.thumb ? cv : h('span.ar-cab-ico', {}, def.icon || '🎮'), h('span.ar-genre', {}, (A.GL && A.GL.ok() ? def.genre : String(def.genre || '').replace(/\s*·\s*real 3D/i, '')) || 'Arcade')),
         h('div.ar-cab-body', {},
           h('h3', {}, h('span.ar-cab-emoji', { 'aria-hidden': 'true' }, def.icon || ''), def.title),
           h('p.tag', {}, def.tagline || ''),
           h('div.drills', {}, def.drills ? 'Drills · ' + def.drills : ''),
-          h('div.foot', {}, best && best.plays ? h('span', {}, 'Best ', h('b', {}, fmt(best.best)), ' at ' + tier.name) : any ? h('span', {}, h('b', {}, String(any.plays)), any.plays === 1 ? ' play' : ' plays', ' · not yet at ' + tier.name) : h('span', {}, ok ? 'Not played yet' : def.needs3D && !(A.GL && A.GL.ok()) ? 'Needs 3D graphics. Qual Range is the same drill in 2D.' : 'Needs content'),
-            h('span.go', {}, ok ? 'Play ▶' : 'Locked')))));
+          h('div.foot', {}, best && best.plays ? h('span', {}, 'Best ', h('b', {}, fmt(best.best)), ' at ' + tier.name) : any ? h('span', {}, h('b', {}, String(any.plays)), any.plays === 1 ? ' play' : ' plays', ' · not yet at ' + tier.name) : h('span', {}, ok ? 'Not played yet' : twin ? 'This phone cannot draw its 3D, so it plays as ' + A.games[twin].title + ', the same drill in 2D.' : def.needs3D && !(A.GL && A.GL.ok()) ? 'Needs 3D graphics. Qual Range is the same drill in 2D.' : 'Needs content'),
+            h('span.go', {}, ok ? 'Play ▶' : twin ? 'Play in 2D ▶' : 'Locked')))));
     });
     screen.appendChild(grid);
     var quick = A.DATA.quick || [];
@@ -392,7 +400,7 @@
     inst = { loading: function () { return true; }, update: function () {}, draw: function () {} };
     function failedInst(e) {
       var msg = String((e && e.message) || e || ''), gl = /3D|WebGL|webgl|three/i.test(msg) || /3D/.test(def.genre || '');
-      return { update: function () {}, draw: function (c) {
+      return { noCount: true, update: function () {}, draw: function (c) {
         var W = state.W, H = state.H; c.fillStyle = A.C.bg; c.fillRect(0, 0, W, H);
         A.text(c, 'This game could not start on this device.', W / 2, H / 2 - 34, { size: 18, weight: 800, align: 'center', color: '#f6d991', maxWidth: W - 40 });
         A.text(c, gl ? 'It needs 3D graphics, and this browser could not draw them. Contract Quest and Qual Range need no 3D.' : 'Go back and try again, or pick another game.', W / 2, H / 2, { size: 14, align: 'center', color: '#c2cdc6', maxWidth: W - 48 });
@@ -412,7 +420,7 @@
     // ---- countdown ----
     var cd = 0, countEl = null, counting = false, countLater = false;
     function countdown() {
-      if (def.countdown === false) return;
+      if (def.countdown === false || (inst && inst.noCount)) return;   // a game that could not start shows why, with no 3-2-1 over it
       var count = (performance.now() - loadStart) / 1000 > 1.5 ? 1 : 3; countEl = h('div.ar-count', {}, String(count)); box.appendChild(countEl); state.paused = true; counting = true;   // one beat when the load already took a while
       cd = setInterval(function () { count--; if (count > 0) { countEl.textContent = String(count); countEl.style.animation = 'none'; void countEl.offsetWidth; countEl.style.animation = ''; A.audio.tick(); } else { clearInterval(cd); counting = false; countEl.remove(); if (!pauseEl && !lostEl) { state.paused = false; A.audio.powerup(); } } }, 650);   // a pause card that came up during 3-2-1 keeps the clock held
     }
@@ -509,14 +517,19 @@
 
     // ---- pause ----
     var pauseEl = null;
-    function togglePause(force) {
+    // brief: a card in place of Paused before a lesson's game starts (the lesson, its topics, Start); the scene loads behind it
+    function togglePause(force, brief) {
       if (state.ended || lostEl) return;   // the "3D view stopped" card is already up: restart is the only way on
       var was = counting ? !!pauseEl : state.paused;   // during 3-2-1 the clock is held anyway, so the card is what toggles
       var to = force != null ? force : !was; if (to === was && (pauseEl || !to)) return;
       state.paused = to || counting; pauseBtn.textContent = to ? '▶' : '⏸';
       if (to) {
         A.music.stop();
-        pauseEl = h('div.ar-pause', { role: 'dialog', 'aria-label': 'Paused' }, h('div.ar-pause-box', {}, h('h3', {}, 'Paused'),
+        if (brief) pauseEl = h('div.ar-pause.ar-brief', { role: 'dialog', 'aria-label': brief.title }, h('div.ar-pause-box', {},
+          h('div.ar-kicker', {}, h('i'), brief.kicker), h('h3', {}, brief.title), h('p.ar-howto', {}, brief.text),
+          h('div.ar-row', {}, h('button.ar-btn.gold.lg', { type: 'button', onclick: function () { togglePause(false); } }, 'Start ▶'),
+            brief.back ? h('a.ar-btn.lg', { href: brief.back }, '← Back to the lesson') : h('button.ar-btn.lg', { type: 'button', onclick: function () { showLobby(); } }, 'All games'))));
+        else pauseEl = h('div.ar-pause', { role: 'dialog', 'aria-label': 'Paused' }, h('div.ar-pause-box', {}, h('h3', {}, 'Paused'),
           h('p.ar-howto', {}, def.controls || ''),
           h('div.ar-row', {}, h('button.ar-btn.gold.lg', { type: 'button', onclick: function () { togglePause(false); } }, '▶ Resume'),
             h('button.ar-btn.lg', { type: 'button', onclick: function () { finish(false, { title: 'Run ended' }); } }, 'End run'),
@@ -578,6 +591,10 @@
       ctx.restore();
     };
     raf = requestAnimationFrame(frameLoop);
+    // a game started from a lesson opens on the lesson: what this round asks and its topics, then Start
+    if (opts && opts.lesson) { var L = opts.lesson, back = host('lessonHref') && host('lessonHref')(L.id);
+      togglePause(true, { kicker: 'From your lesson', title: 'Lesson ' + L.n + ' · ' + L.title,
+        text: (L.what ? L.what + ' ' : '') + (L.topics && L.topics.length ? 'Topics: ' + L.topics.join(' · ') + '.' : ''), back: back ? back.href : '' }); }
 
     function safe(fn) { try { fn(); } catch (e) { console.error('[arcade] ' + id, e); } }
     state.cleanup = function () {
@@ -596,6 +613,10 @@
     function finish(won, o) { if (state.ended) return; o = o || {}; state.cleanup(); run = null; if (o.quiet) { record(state, won, o); return; } showResults(state, won, o); }
   }
   function endRun() { if (run && run.cleanup) run.cleanup(); run = null; }
+  // what this device can run: a 3D-only game (Range Day) with a 2D twin runs as the twin (Qual Range) where 3D cannot be
+  // drawn, with the same mission settings, so no campaign month or range card is ever blocked by the phone's graphics
+  A.canRun = function (id) { var d = A.games[id]; if (!d) return false; try { return !d.dataOk || !!d.dataOk(A.DATA); } catch (e) { return false; } };
+  A.runAs = function (id) { if (A.canRun(id)) return id; var d = A.games[id]; return d && d.alt2D && A.canRun(d.alt2D) ? d.alt2D : null; };
   // the end of a 3D-only game on a device that cannot draw it, or became too slow to: the results offer its 2D twin
   A.no3D = function (def, why, campaign) {
     var alt = def && def.alt2D && A.games[def.alt2D];
@@ -625,11 +646,12 @@
     if (up && total >= 5 && acc >= 85) nudge = h('div.ar-nudge', {}, h('b', {}, 'Ready for more?'), h('span', {}, acc + '% at ' + tier.name + '.'), h('button.ar-btn.gold', { type: 'button', onclick: function () { A.setTier(up.id); startGame(state.id, state.opts); } }, 'Try ' + up.name));
     else if (down && total >= 4 && acc != null && acc < 50) nudge = h('div.ar-nudge.down', {}, h('b', {}, 'Too fast?'), h('span', {}, 'Drop a pace; the questions stay the same.'), h('button.ar-btn', { type: 'button', onclick: function () { A.setTier(down.id); startGame(state.id, state.opts); } }, 'Play at ' + down.name));
     var rk = xp.after;
-    var pathBtn = params.path && host('pathHref') ? h('a.ar-btn.lg', { href: host('pathHref')() }, '← My exam path') : null;
+    var lessonBack = state.opts && state.opts.lesson && host('lessonHref') ? host('lessonHref')(state.opts.lesson.id) : null;
+    var pathBtn = lessonBack ? h('a.ar-btn.lg', { href: lessonBack.href }, '← Back to the lesson') : params.path && host('pathHref') ? h('a.ar-btn.lg', { href: host('pathHref')() }, '← My exam path') : null;
     var screen = h('div.ar-results');
     screen.appendChild(h('div.ar-res-hero', {},
       h('div.ar-res-card.main', {},
-        h('div.ar-kicker', {}, h('i'), (def.icon ? def.icon + ' ' : '') + def.title + ' · ' + tier.name + (state.opts && state.opts.campaign ? ' · ' + state.opts.campaign.title : '') + (state.opts && state.opts.daily ? ' · ' + state.opts.daily.title : '')),
+        h('div.ar-kicker', {}, h('i'), (def.icon ? def.icon + ' ' : '') + def.title + ' · ' + tier.name + (state.opts && state.opts.campaign ? ' · ' + state.opts.campaign.title : '') + (state.opts && state.opts.daily ? ' · ' + state.opts.daily.title : '') + (state.opts && state.opts.lesson ? ' · Lesson ' + state.opts.lesson.n : '')),
         h('h2', {}, o.title || (won ? 'Mission complete' : 'Run over')),
         h('div.ar-big', {}, fmt(state.score)),
         h('div.ar-sub', {}, o.message || (acc == null ? 'No questions answered this run.' : 'You answered ' + right + ' of ' + total + ' correctly (' + acc + '%).')),
@@ -683,6 +705,8 @@
       return;
     }
     if (params.daily && A.daily) { var dm = A.daily.today().missions[+params.daily - 1]; if (dm) A.daily.start(dm.def); else A.lobby('daily'); return; }
+    // a lesson's game (#/arcade?lesson=L05): the lesson's own questions or words, as its 2D twin where 3D cannot be drawn
+    if (params.lesson && host('lessonGame')) { var lg = host('lessonGame')(params.lesson); if (lg) { startGame(A.runAs(lg.game) || lg.game, lg.opts); return; } }
     if (params.game && A.games[params.game]) startGame(params.game, { realm: params.realm || '', mission: params.mission || '' });
   };
   A.start = function (id, opts) { if (root) startGame(id, opts); };

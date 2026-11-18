@@ -81,7 +81,12 @@
     t = t.replace(/\bCON (\d)(\d)00(V?)\b/g, 'CON $1$2 hundred $3').replace(/\b(\d{2})(\d{2})V\b/g, '$1 $2 V').replace(/\bFY ?(\d{2})\b/g, 'F Y $1');   // CON 1300V: thirteen hundred V; 3990V: thirty-nine ninety V
     t = t.replace(/\b(Part|Level|Phase|Tier|Type|Class) (I{1,3}|IV)\b/g, function (m, a, r) { return a + ' ' + ROMAN[r]; }).replace(/\bTable (\d+)-(\d+)/g, 'Table $1 dash $2');
     // cites and decimals: 15.404-1 is "fifteen point four oh four dash one"; 13.5 stays "thirteen point five"
-    t = t.replace(/(\d)\.(\d+)(?:-(\d+))?/g, function (m, a, f, d) { return a + ' point ' + (f.length >= 3 ? f.split('').map(function (x) { return x === '0' ? 'oh' : x; }).join(' ') : f) + (d ? ' dash ' + d : ''); });
+    t = t.replace(/[‐‑‒−](?=\d)/g, '-');   // look-alike dashes before a digit read like the hyphen
+    t = t.replace(/(\d)\.(\d+)((?:-\d+)*)/g, function (m, a, f, d) { return a + ' point ' + (f.length >= 3 ? f.split('').map(function (x) { return x === '0' ? 'oh' : x; }).join(' ') : f) + d.replace(/-(\d+)/g, ' dash $1'); });   // DFARS 215.103-2-70 too
+    // a voice reads any other dash before a number as "minus": "-1, -2 and -4" after a cite, the spaced parts of a cite
+    // ("15 . 4 04 -1 (b)"), DA PAM 600-25 and contract numbers like W911S8-23-D-0123 all say "dash"
+    t = t.replace(/\b([A-Z0-9]*\d[A-Z0-9]*(?:-[A-Z0-9]+)+)\b/g, function (m) { return m.replace(/-/g, ' dash '); })
+      .replace(/(\d)-(\d)/g, '$1 dash $2').replace(/(^|[\s(,;])-(\d)/g, '$1dash $2');
     t = t.replace(SAY_RE, function (m, pre, k) { return pre + SAY[k]; });
     t = t.replace(/\b([A-Z]{2,5})(s?)\b/g, function (m, a, s) { return WORDS.test(a) ? a.toLowerCase() + s : a.split('').join(' ') + (s ? "'s" : ''); });   // anything else in capitals is spelled out
     return t.replace(/[ \t]+/g, ' ').replace(/ +([,.;:!?])/g, '$1').replace(/,([.;:!?])/g, '$1').replace(/,\s*,/g, ',').replace(/ *\n */g, '\n');
@@ -188,9 +193,19 @@
     } else if (err && err.code === 'not-downloaded') CORB.ui.toast(app.name + ' is not downloaded yet and you are offline; the phone\'s own voice reads for now.', 'warn', 5000);
     else CORB.ui.toast(app.name + ' could not start on this device (' + (err && err.message || err) + '); the phone\'s own voice reads instead.', 'warn', 6000);
   }
+  // what started the reading (a Listen button, the figure being played): when it leaves the page or is hidden (the next
+  // practice question, a flipped card, another tab, a closed pop-up), the voice stops. A tester heard the last
+  // question go on while they had moved on.
+  var owner = null, watch = 0;
+  function gone(el) { return !el.isConnected || !el.getClientRects().length; }
+  function watchOwner() {
+    clearInterval(watch); if (!owner) return;
+    watch = setInterval(function () { if (!sp.speaking) { clearInterval(watch); owner = null; return; } if (owner && gone(owner)) sp.stop(); }, 400);
+  }
   sp.speak = function (text, o) {
     o = o || {};
     if (!CORB.get('settings.tts', true)) { if (o.onend) o.onend(); return false; }
+    owner = o.owner && o.owner.nodeType === 1 ? o.owner : null; watchOwner();
     sp.wake();
     var app = !o.device && CORB.voices && CORB.voices.selected && CORB.voices.selected();
     if (app) {
@@ -228,6 +243,7 @@
       return true;
     } catch (e) { sp.speaking = false; if (o.onend) o.onend(); return false; }
   };
-  sp.stop = function () { queueId++; if (CORB.voices) { try { CORB.voices.stop(); } catch (e) {} } try { if (synth) synth.cancel(); } catch (e) {} sp.speaking = false; CORB.emit('speech', { speaking: false }); document.querySelectorAll('.speaking').forEach(function (b) { b.classList.remove('speaking'); if (b.lastChild && b.lastChild.nodeType === 3) b.lastChild.textContent = 'Listen'; }); };
-  window.addEventListener('hashchange', function () { if (sp.speaking) sp.stop(); });
+  sp.stop = function () { queueId++; clearInterval(watch); owner = null; if (CORB.voices) { try { CORB.voices.stop(); } catch (e) {} } try { if (synth) synth.cancel(); } catch (e) {} sp.speaking = false; CORB.emit('speech', { speaking: false }); document.querySelectorAll('.speaking').forEach(function (b) { b.classList.remove('speaking'); if (b.lastChild && b.lastChild.nodeType === 3) b.lastChild.textContent = b.getAttribute('data-label') || 'Listen'; }); };
+  // another page always stops it
+  window.addEventListener('hashchange', function () { if (sp.speaking || owner) sp.stop(); });
 })();

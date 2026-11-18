@@ -1,8 +1,15 @@
-# B2B Exam Prep teaser: script, shot list and build (v1.2, 2026-11-16)
+# B2B Exam Prep teaser: script, shot list and build (v1.3, 2026-11-18)
 
 A 114-second introduction video in the style of the CSE teaser (`Interactive Map/Distributions/Teaser`): real screens
 of the app driven by a visible cursor, one narrator, lower-left captions, three title cards, and a procedural trailer
 bed whose hits land on the cuts. Ad-style: it shows what the guide does for a brand-new 51C or 1102, not how it is built.
+
+v1.3 changes (the owner's field test, 18 November 2026, app 0.31.0): the read-aloud shot now shows what the owner called "a really cool
+demo": lesson one's "Who does what on the team" picture read by the app's own Joe voice, each card popping as it is said (the
+title, then "Customer. Needs it and pays for it."; `audio/joe_title.wav` and `audio/joe_customer.wav`, Piper en_US-joe-medium,
+the model the app downloads; `assemble.py` SAMPLES). The narrator's LV line starts 0.4 s earlier (52.6 s) to make room; the
+Settings voice list and the "Hear a sample" line are gone. The lessons shot now plays lesson four's picture ("What makes a
+contract") so the same picture does not appear twice. `webcopy.py` captions each app-voice line.
 
 v1.2 changes (the release check of 16 November 2026, so the video matches app 0.30.0, which now opens on it): every
 screen filmed again from 0.30.0 (the four-step onboarding with Next past the dates, the look and the voice; the Arcade
@@ -50,7 +57,7 @@ A minor rising to C major on the end card; every cut is on a bar line, hits at 1
 | 0:27 | L05 | The exam path: twenty-six dated weeks, monthly checkpoints, and two full simulations before exam week. |
 | 0:36 | L06 | The rules, explained in pictures, beside the real official documents. |
 | 0:44 | L07 | Thirty-five plain-English lessons, organized like the exam. Every picture plays. Every dollar rule has a try-it tool. |
-| 0:53 | LV | It reads aloud too, in four voices that work offline. *(then the app's Joe voice: "Hi, this is how B2B Exam Prep sounds.")* |
+| 0:52.6 | LV | It reads aloud too, in four voices that work offline. *(then the app's Joe voice reads the picture: "Who does what on the team." "Customer. Needs it and pays for it.")* |
 | 1:01 | L08 | Nearly four hundred questions, each answer explained with a citation. Plus a timed simulator, like the real exam. |
 | 1:09 | L09 | Fourteen flashcard decks that remember what you forget. |
 | 1:12 | L10 | Then the Arcade: seven games on the same content, five of them in real 3D. Range Day puts you on the qualification range. |
@@ -69,8 +76,8 @@ A minor rising to C major on the end card; every cut is on a bar line, hits at 1
 | 0:19–0:26 | setup | the four-step onboarding: cursor picks 51C Soldier, Next past the dates, the look and the voice, Build my plan; the exam path appears |
 | 0:26–0:36 | path | Exam path: this week, then "All 26 weeks" scrolling past with the monthly checkpoints |
 | 0:36–0:43 | cert | HIT · Certification 101, the exam tab: CON 3990V at a glance and the exam journey picture; Official documents library; one real document's official pages |
-| 0:43–0:53 | lessons | the lesson list; lesson 1's "Who does what" picture playing part by part; lesson 13's Try-it tool sweeping the dollars |
-| 0:53–1:00 | voice | lesson 5: cursor presses Listen to the lesson; Settings → Display → Read aloud, the voice list open with the four app voices (Joe selected); cursor presses Hear a sample and Joe speaks |
+| 0:43–0:53 | lessons | the lesson list; lesson 4's "What makes a contract" picture playing part by part; lesson 13's Try-it tool sweeping the dollars |
+| 0:53–1:00 | voice | lesson 1's "Who does what on the team" picture: the cursor presses Play; the title, then the Customer card, pop as Joe reads them |
 | 1:00–1:07 | quiz | Practice test: Quick 10, a question, the right answer explained with its citation |
 | 1:07–1:12 | cards | Flashcards: the Acronyms deck, the question side, the flip |
 | 1:12–1:22 | arcade | ACCENT · the Arcade lobby's cabinets; Range Day in 3D: the tower's clue, three boards rise, the sight walks to the answer, two shots |

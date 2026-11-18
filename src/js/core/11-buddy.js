@@ -140,7 +140,7 @@
       h('p', {}, CORB.ui.rich ? CORB.ui.rich(it.text) : it.text),
       h('div.row', {},
         h('button.btn.sm', { type: 'button', onclick: function () { openIt(it); } }, icon('arrow-right'), 'Open in the guide'),
-        speakable ? h('button.btn.sm.ghost', { type: 'button', onclick: function () { CORB.speech.speak(it.title + '. ' + it.text); } }, icon('volume'), 'Listen') : null));
+        speakable ? h('button.btn.sm.ghost', { type: 'button', onclick: function (e) { CORB.speech.speak(it.title + '. ' + it.text, { owner: e.currentTarget }); } }, icon('volume'), 'Listen') : null));
   }
   function more(list) {
     if (!list.length) return null;

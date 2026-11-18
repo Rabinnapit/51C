@@ -231,7 +231,7 @@
     },
     "warrant": {
       "steps": [
-        ["user", "Selection", "Training, experience, education and judgment are checked (FAR 1.603-2). Often a test, an interview or a CORB."],
+        ["user", "Selection", "Your training, experience and judgment are reviewed under your agency's warrant program (FAR 1.403-1). Often a test, an interview or a CORB."],
         ["certificate", "Appointment", "Your warrant is an SF 1402 Certificate of Appointment. It states your limits."],
         ["x", "Termination", "By letter: for example reassignment, leaving the job or poor performance. Never backdated."]
       ],

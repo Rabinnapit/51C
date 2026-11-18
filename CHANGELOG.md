@@ -1,5 +1,43 @@
 # Changelog
 
+## 0.31.0 (18 November 2026): what the field test found
+
+- **Games in the lessons.** 26 of the 35 lessons now end with "Want to play a game on this topic?": a short game on that
+  lesson's own questions or words. Four lessons meet their boss in Contract Quest (who can bind the Government, competition,
+  changes, protests), contract types and buying lanes sort crates in Dispatch, word-rich lessons go to Range Day with the
+  lesson's own terms, and the others run a Supply Line checkpoint loaded by the lesson's questions. The game opens on a card
+  that names the lesson and its topics, and its results lead back to the lesson. Thin lessons keep only Check yourself, so
+  not every lesson pushes a game.
+- **Never stuck without 3D.** On a phone that cannot draw the 3D range (a Google Pixel 10 Pro XL in testing), Range Day's
+  campaign and range-card missions play as Qual Range, the same drill in 2D, with the same terms and table size, and count
+  for the mission; Range Day's cabinet says so and plays Qual Range instead of showing Locked. A month that is still locked
+  says what opens it when tapped, the line under the months names the missions still to pass, and the Arcade shows how it
+  works in three steps (range card, campaign, any game). The 3-2-1 count no longer runs over a game that could not start.
+- **Read-aloud.** The voice stops when you move on: to another page, the next practice question, a flipped card, another
+  tab or a closed pop-up (it went on reading the old question). Citations say "dash", never "minus": 52.212-1, -2 and -4,
+  DFARS 215.103-2-70, DA PAM 600-25, contract numbers and the parts of a citation. While a lesson picture plays, the part
+  being read pops and the others dim, so a key part's own outline (the contracting officer's) is no longer mistaken for it.
+- **Links that land.** FAR citations open at the cited section on the RFO page, and a cited paragraph is scrolled to and
+  marked (a text fragment of its opening words): `tools/far_anchors.py` reads the RFO pages and writes
+  `src/data/far_anchors.json` (371 citations placed). Old FAR numbers quoted on purpose (the old-to-new table, the class
+  material notes) are no longer links into pages where they do not exist; the table's RFO column now links. U.S. Code
+  citations open the cited section on Cornell's Legal Information Institute (the House site's section links now answer
+  "Page Not Found").
+- **What changed lately** items open to the whole story: Home's three go straight to it, and the FAR page's list has
+  Read more under each summary.
+- **What the research found.** Writing the longer change notes against the official sources turned up four slips, now
+  fixed: the first FAR Overhaul proposed rules did not cover "21 parts" (the Federal Register titles name 19; the
+  count is gone); Executive Order 14275 keeps what law requires or sound buying needs and directs OFPP, and the
+  plain-language rewrite is how OFPP and the FAR Council carried it out; the warrant explainer cited FAR 1.603-2, which
+  the RFO does not have (now FAR 1.403-1); and WarU now lists the Proposal Analysis Credential as CCON 003B, not 003A.
+- **Content.** The games and flashcards use KO, the Army's abbreviation, not CO (the glossary keeps CO as a lookup); a
+  practice question and two exam-path notes say KO too. PD2 is gone (the Army retired it for ACWS). The Army's contract
+  file is VCE-PCF, the Paperless Contract File (new glossary entry PCF). The KMG entry says just "Master Gunner".
+  Dispatch's life-cycle line has a fourth bay, "Every phase" for Guiding Principles tasks (a tester was told "gp" was the
+  answer with only pre-award, award and post-award to choose from).
+- **The intro (teaser v1.3).** The read-aloud shot now shows lesson one's "Who does what" picture read by the app's own Joe
+  voice, each card popping as it is said; the lessons shot plays lesson four's picture.
+
 ## 0.30.0 (16 November 2026): ready for everyone
 
 - **The two-minute intro, first.** The first visit in a browser (the QR code, or a shared link) opens on the intro

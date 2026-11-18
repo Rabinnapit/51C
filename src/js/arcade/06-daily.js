@@ -56,7 +56,8 @@
   ];
   function all() { var d = A.save.get('daily', {}); return d && typeof d === 'object' ? d : {}; }
   function save(d) { var keys = Object.keys(d.days || {}).sort(); while (keys.length > 100) delete d.days[keys.shift()]; A.save.set('daily', d); }
-  function available(m) { var def = A.games[m.game]; if (!def) return false; try { return !def.dataOk || !!def.dataOk(A.DATA); } catch (e) { return false; } }
+  // a mission stays on the card on any device: Range Day's run as Qual Range, its 2D twin, where 3D cannot be drawn
+  function available(m) { return A.runAs ? !!A.runAs(m.game) : !!A.games[m.game]; }
   // the three missions of a day: seeded by the date, three different games, only games this copy can run
   daily.missions = function (key) {
     key = key || dayKey(); var r = rng(seed(key)), pool = daily.POOL.filter(available), out = [], games = {};
@@ -76,7 +77,7 @@
   };
   daily.start = function (m) {
     if (!daily.missions().some(function (x) { return x.id === m.id; })) { if (A.lobby) A.lobby('daily'); return; }   // a new day: today's card instead
-    if (A.start) A.start(m.game, daily.opts(m));
+    if (A.start) A.start((A.runAs && A.runAs(m.game)) || m.game, daily.opts(m));
   };
   function repairFree(d, today) { return !d.repairAt || addDays(d.repairAt, 7) <= today; }
   // called by the shell when a range-card run ends; closes the card and moves the streak when all three are passed
@@ -145,10 +146,10 @@
     wrap.appendChild(h('div.ar-daily-head', {}, h('div', {}, h('div.ar-kicker', {}, h('i'), 'Today\'s range card · ' + t.label), h('h2', {}, t.closed ? 'Card closed for today' : t.done + ' of 3 missions passed')), streakChip));
     var list = h('div.ar-missions');
     t.missions.forEach(function (x, i) {
-      var m = x.def, g = G[m.game] || { icon: '🎮', name: m.game }, isNext = t.next && t.next.def === m;
+      var m = x.def, g = G[m.game] || { icon: '🎮', name: m.game }, isNext = t.next && t.next.def === m, run = A.runAs ? A.runAs(m.game) : m.game, in2D = run && run !== m.game ? ' · in 2D here: ' + A.games[run].title : '';
       list.appendChild(h('button.ar-mission' + (x.passed ? '.ok' : '') + (isNext ? '.next' : ''), { type: 'button', onclick: function () { daily.start(m); } },
         h('span.ar-mission-n', {}, x.passed ? '✓' : String(i + 1)),
-        h('span.ar-mission-copy', {}, h('b', {}, g.icon + ' ' + g.name + ' · ' + m.title), h('span', {}, m.what), h('small', {}, x.passed ? 'Passed' + (m.unit !== 'boss' ? ' · best ' + x.value + ' of ' + m.of : '') : x.plays ? 'Best ' + x.value + ' of ' + m.of + ' · ' + passText(m).replace('Pass: ', 'needs ') : passText(m))),
+        h('span.ar-mission-copy', {}, h('b', {}, g.icon + ' ' + g.name + ' · ' + m.title), h('span', {}, m.what), h('small', {}, (x.passed ? 'Passed' + (m.unit !== 'boss' ? ' · best ' + x.value + ' of ' + m.of : '') : x.plays ? 'Best ' + x.value + ' of ' + m.of + ' · ' + passText(m).replace('Pass: ', 'needs ') : passText(m)) + in2D)),
         h('span.ar-mission-go', {}, x.passed ? 'Again ↻' : isNext ? 'Play ▶' : 'Play')));
     });
     wrap.appendChild(list);

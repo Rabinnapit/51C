@@ -39,10 +39,23 @@ def vo_starts():
     m = re.search(r"VO = (\{.*?\})", src, re.S)
     return json.loads(m.group(1).replace("'", '"'))
 
+# what the app's voice says in each sample (assemble.py SAMPLES), for the captions
+SAMPLE_TEXT = {"joe_title.wav": "“Who does what on the team.”", "joe_customer.wav": "“Customer. Needs it and pays for it.”",
+               "voice_joe.wav": "“Hi, this is how B2B Exam Prep sounds.”"}
+
 def samples():
     src = open(os.path.join(HERE, "assemble.py"), encoding="utf-8").read()
-    m = re.search(r'SAMPLES = \{"voice_joe\.wav": \(([\d.]+),', src)
-    return float(m.group(1)) if m else None
+    m = re.search(r"SAMPLES = (\{.*?\})", src, re.S)
+    if not m: return []
+    out = []
+    for name, t in re.findall(r'"([\w.]+\.wav)": \(([\d.]+),', m.group(1)):
+        p = os.path.join(TEASER, "audio", name); dur = 2.6
+        try:
+            import wave
+            with wave.open(p, "rb") as w: dur = w.getnframes() / w.getframerate()
+        except Exception: pass
+        out.append((name, float(t), dur))
+    return out
 
 def ts(t):
     h = int(t // 3600); m = int(t % 3600 // 60); s = t % 60
@@ -70,8 +83,8 @@ def captions():
             a = min(a, nb - 1); b = max(a + 1, min(b, nb))
             start = base + words[a][0]; end = base + words[b - 1][0] + words[b - 1][1] + 0.25
             cues.append([start, end, piece])
-    j = samples()
-    if j: cues.append([j, j + 2.6, "(the app voice) “Hi, this is how B2B Exam Prep sounds.”"])
+    for name, t, dur in samples():
+        if name in SAMPLE_TEXT: cues.append([t, t + dur, "(the app voice) " + SAMPLE_TEXT[name]])
     cues.sort(key=lambda c: c[0])
     for i in range(len(cues) - 1):   # no overlaps: a cue ends where the next one starts
         if cues[i][1] > cues[i + 1][0] - 0.02: cues[i][1] = cues[i + 1][0] - 0.02

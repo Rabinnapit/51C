@@ -43,7 +43,8 @@
   function moved(root, F, h) {
     root.appendChild(h('p.muted.prose', {}, 'The FAR Overhaul renumbered many sections. Older guides, templates and people still use the old numbers, so it pays to recognize both. These are the ones a new contract specialist meets most.'));
     root.appendChild(h('div.card.flush.scroll-x', {}, h('table.table', {}, h('thead', {}, h('tr', {}, h('th', {}, 'Topic'), h('th', {}, 'Old number'), h('th', {}, 'RFO number'))),
-      h('tbody', {}, (F.crosswalk || []).map(function (c) { return h('tr', {}, h('td', {}, c.what), h('td', {}, h('span.cite', {}, c.old)), h('td', {}, h('span.cite', {}, c.new))); })))));
+      // the RFO number opens at its section on acquisition.gov; the old number is not on the RFO pages, so it stays text
+      h('tbody', {}, (F.crosswalk || []).map(function (c) { var u = CORB.data.citeUrl(c.new); return h('tr', {}, h('td', {}, c.what), h('td', {}, h('span.cite', {}, c.old)), h('td', {}, u ? h('a.cite', { href: u, target: '_blank', rel: 'noopener', title: 'Open on the official site' }, c.new) : h('span.cite', {}, c.new))); })))));
     if (F.crosswalk_note) root.appendChild(h('p.tiny.muted.mt-3', {}, F.crosswalk_note));
   }
 
@@ -61,12 +62,18 @@
     root.appendChild(h('p.tiny.muted.mt-3', {}, 'Checked ' + CORB.util.fmtDate(F.checked_on || (CORB.meta().content_verified_on)) + '.'));
   }
 
-  function whatsNew(root, F, h) {
-    var U = CORB.data.updates();
-    root.appendChild(h('p.muted.prose', {}, 'Contracting rules are changing fast. This list shows the changes that matter to a new 51C or 1102, newest first. When the maintainer updates the guide, new entries appear here.'));
-    root.appendChild(h('div.timeline', {}, (U.far_updates || []).map(function (u) {
-      return h('div.tl-item', {}, h('div.tl-date.num', {}, CORB.util.fmtDate(u.date)), h('div.tl-body', {}, h('b', {}, u.title), CORB.ui.rich(u.body), u.source ? h('div.tiny.muted.mt-1', {}, u.url ? h('a', { href: u.url, target: '_blank', rel: 'noopener' }, u.source) : u.source) : null));
+  function whatsNew(root, F, h, icon, params) {
+    var U = CORB.data.updates(), open = params && params.open != null ? String(params.open) : '', target = null;
+    root.appendChild(h('p.muted.prose', {}, 'Contracting rules are changing fast. This list shows the changes that matter to a new 51C or 1102, newest first. Tap Read more for the whole story. When the maintainer updates the guide, new entries appear here.'));
+    // each change: the short summary, then the longer story behind Read more (Home's list opens straight to one)
+    root.appendChild(h('div.timeline', {}, (U.far_updates || []).map(function (u, i) {
+      var more = u.details ? h('details.tl-more', { open: String(i) === open ? true : null }, h('summary', {}, 'Read more'), CORB.ui.rich(u.details)) : null;
+      var item = h('div.tl-item', { id: 'upd-' + i }, h('div.tl-date.num', {}, CORB.util.fmtDate(u.date)), h('div.tl-body', {}, h('b', {}, u.title), CORB.ui.rich(u.body), more, u.source ? h('div.tiny.muted.mt-1', {}, u.url ? h('a', { href: u.url, target: '_blank', rel: 'noopener' }, u.source) : u.source) : null));
+      if (String(i) === open) target = item;
+      return item;
     })));
+    // after the page has drawn and reset its scroll: the chosen change, just under the top bar
+    if (target) requestAnimationFrame(function () { setTimeout(function () { try { target.scrollIntoView({ block: 'start', behavior: 'smooth' }); } catch (e) { target.scrollIntoView(); } }, 250); });
     if ((U.guide_changes || []).length) {
       root.appendChild(h('div.section-head', {}, h('h2', {}, 'Changes to this guide')));
       root.appendChild(h('div.card.flush', {}, h('div.list', {}, U.guide_changes.map(function (g) { return h('div.list-item', { style: { padding: '12px 16px' } }, h('span.num.small', { style: { minWidth: '90px' } }, 'v' + g.version), h('div.grow', {}, h('b', {}, g.title), h('div.small.muted', {}, g.notes), h('div.tiny.muted', {}, CORB.util.fmtDate(g.date)))); }))));

@@ -7,7 +7,7 @@
      {"t": "Get your CAC, email and certificates working", "d": "You need them for every system that follows."},
      {"t": "Check your AITAS profile", "d": "Your supervisor's email address must be right or your training requests will stall."},
      {"t": "Log in to the WarU learning system and check your transcript", "d": "Look for courses you may already have. Save a copy of the transcript."},
-     {"t": "Request system access", "d": "Ask which systems your office uses (PIEE, SAM.gov, ACWS or PD2, VCE, GFEBS) and submit every role request this week."},
+     {"t": "Request system access", "d": "Ask which systems your office uses (PIEE, SAM.gov, ACWS, VCE-PCF, GFEBS) and submit every role request this week."},
      {"t": "Write your IDP", "d": "List the five courses, the exam and target dates, and send it to your supervisor."},
      {"t": "Apply for CON 1100V", "d": "Pick the earliest class you can attend full time. See the course registration checklist."},
      {"t": "Build your plan in B2B Exam Prep", "d": "Home, then four short steps. Print it or add the dates to your calendar."},
@@ -160,7 +160,7 @@
      {"t": "Deobligate excess funds", "d": "Coordinate with the resource manager so the customer can reuse them."},
      {"t": "Finish the final CPARS", "d": "Fair, factual and specific."},
      {"t": "Prepare the completion statement", "d": "Use your office's closeout checklist."},
-     {"t": "Close the file in the system of record", "d": "In the Army, the VCE Paperless Contract File."}
+     {"t": "Close the file in the system of record", "d": "In the Army, VCE-PCF, the Paperless Contract File in VCE."}
    ],
    "tips": ["Close simplified buys as soon as delivery and payment are confirmed."],
    "watch": ["Old unliquidated obligations are audit findings and can mean canceled funds."],

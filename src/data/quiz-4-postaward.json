@@ -201,7 +201,7 @@
      {"text": "36 months", "correct": false, "why": "That is for indirect-rate contracts."},
      {"text": "5 years", "correct": false, "why": "Too long."}]},
   {"id": "Q3204", "lesson": "L32", "phase": "post", "comp": "4.2.1", "d": 2, "stem": "A purchase under simplified acquisition procedures is considered closed when:", "cite": "FAR 4.308",
-   "options": [{"text": "When the CO receives evidence of receipt of the property and final payment", "correct": true, "why": "Simplified buys close on delivery and payment."},
+   "options": [{"text": "When the KO receives evidence of receipt of the property and final payment", "correct": true, "why": "Simplified buys close on delivery and payment."},
      {"text": "Six months after award, if no claims are pending", "correct": false, "why": "The trigger is receipt and payment."},
      {"text": "After a full closeout audit by DCAA", "correct": false, "why": "Simplified buys do not need audits to close."},
      {"text": "When the COR confirms in writing that the work was satisfactory and the file is complete", "correct": false, "why": "Unrelated."}]},

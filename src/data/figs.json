@@ -71,7 +71,7 @@
       {"icon": "award", "t": "Award", "s": "Evaluation, price, decision"},
       {"icon": "eye", "t": "Administer", "s": "Modifications, letters, MFRs"},
       {"icon": "folder", "t": "Close out", "s": "Completion statement"}],
-    "note": "If it is not in the file, it did not happen. Army files go in the VCE Paperless Contract File."},
+    "note": "If it is not in the file, it did not happen. Army files go in VCE-PCF, the Paperless Contract File."},
 
   "L08": [
     {"type": "compare", "title": "Rights on each side",
@@ -366,7 +366,7 @@
     "cols": [
       {"icon": "globe", "t": "SAM.gov", "rows": ["Vendor registration", "Exclusions", "Notices and solicitations", "Award data"]},
       {"icon": "key", "t": "PIEE", "rows": ["WAWF: invoices and receiving reports", "EDA: signed contracts", "JAM: COR appointments"]},
-      {"icon": "folder", "t": "Army and DoW tools", "rows": ["ACWS: contract writing", "VCE: contract files", "GFEBS: funds", "CPARS, SPRS, eSRS"]}]},
+      {"icon": "folder", "t": "Army and DoW tools", "rows": ["ACWS: contract writing", "VCE-PCF: contract files", "GFEBS: funds", "CPARS, SPRS, eSRS"]}]},
 
   "L35": [
     {"type": "bars", "title": "Where the 150 exam questions come from",
