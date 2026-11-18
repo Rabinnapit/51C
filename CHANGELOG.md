@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.31.2 (18 November 2026): Range Day never stops at an error
+
+- **Range Day moves to Qual Range by itself.** The tester's Google Pixel 10 Pro XL passed the Arcade's first small 3D check,
+  then refused to start the 3D range ("Error creating WebGL context"), so Range Day stopped at an error card. Now, when a
+  phone will not start 3D, the same run goes straight on as Qual Range, the same drill in 2D, with the same mission, lesson
+  or range-card settings, so it still counts. A short note says why once ("Same drill, in 2D"), or the lesson's opening
+  card says it. 3D then stays off until the page is reloaded, and Range Day's cabinet says "Play in 2D". Links straight to
+  one game (the exam path, the FAR and certification pages) take the same route.
+- **The phone check says why.** When a browser refuses 3D, the Arcade's "Check this phone" report now gives the browser's
+  own reason (for example, that 3D is turned off or was blocked on the page), so a tester can send it in.
+
 ## 0.31.1 (18 November 2026): sound on, and no Go button
 
 - **The intro tries to start with sound.** A browser that allows it plays the intro with the voice at once. Phones refuse

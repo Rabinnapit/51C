@@ -108,6 +108,12 @@
   ],
   "guide_changes": [
     {
+      "version": "0.31.2",
+      "date": "2026-11-18",
+      "title": "Range Day never stops at an error",
+      "notes": "On a phone that will not start 3D (a Google Pixel 10 Pro XL in testing), Range Day now goes straight on as Qual Range, the same drill in 2D, with the same mission, lesson or range-card settings, so it still counts; a short note says why. The Arcade's Check this phone report now gives the browser's own reason when it refuses 3D."
+    },
+    {
       "version": "0.31.1",
       "date": "2026-11-18",
       "title": "Sound on, and no Go button",
