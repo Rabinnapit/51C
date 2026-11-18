@@ -13,9 +13,12 @@
   function hash(i, seed) { var x = Math.sin(i * 12.9898 + seed * 78.233) * 43758.5453; return x - Math.floor(x); }
   function clamp(x, a, b) { return Math.max(a, Math.min(b, x)); }
   GL.hash = hash; GL.clamp = clamp;
+  // the browser's own reason when it will not make a 3D context (Chrome says, for example, that WebGL is turned off or that
+  // the page was blocked after a graphics crash), kept in the notes of the Arcade's phone check
+  function refusal(c) { var why = { msg: '' }; try { c.addEventListener('webglcontextcreationerror', function (ev) { why.msg = String((ev && ev.statusMessage) || ''); }, false); } catch (e) {} return why; }
   GL.ok = function () {
     if (!THREE) return false; if (GL._ok != null) return GL._ok;
-    try { var c = document.createElement('canvas'), g = c.getContext('webgl2') || c.getContext('webgl'); GL._ok = !!g; if (g) { var lose = g.getExtension('WEBGL_lose_context'); if (lose) lose.loseContext(); } } catch (e) { GL._ok = false; }
+    try { var c = document.createElement('canvas'), why = refusal(c), g = c.getContext('webgl2') || c.getContext('webgl'); GL._ok = !!g; if (g) { var lose = g.getExtension('WEBGL_lose_context'); if (lose) lose.loseContext(); } else GL.note('context', 'no 3D context' + (why.msg ? ': ' + why.msg : '')); } catch (e) { GL._ok = false; }
     return GL._ok;
   };
 
@@ -148,7 +151,8 @@
   GL.report = function () {
     var out = { webgl: 'none', gpu: '', maxTex: 0, parallel: false, float: false };
     try {
-      var c = document.createElement('canvas'), g = c.getContext('webgl2'), v = 2; if (!g) { g = c.getContext('webgl'); v = 1; }
+      var c = document.createElement('canvas'), why = refusal(c), g = c.getContext('webgl2'), v = 2; if (!g) { g = c.getContext('webgl'); v = 1; }
+      if (!g) GL.note('context', 'no 3D context' + (why.msg ? ': ' + why.msg : ''));
       if (g) {
         out.webgl = 'WebGL ' + v; var di = g.getExtension('WEBGL_debug_renderer_info');
         out.gpu = String(di ? g.getParameter(di.UNMASKED_RENDERER_WEBGL) : g.getParameter(g.RENDERER));
@@ -240,8 +244,15 @@
     if (!THREE) throw new Error('three.js is not loaded');
     if (GL.tier === 4 && !opts.probe) throw new Error(GL.tooSlow ? 'this device was too slow for the 3D scenes' : '3D drawing does not work in this browser');   // found earlier on this page
     var mobile = !!opts.mobile;
-    var canvas = document.createElement('canvas'); canvas.width = 4; canvas.height = 4;
-    var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: false, powerPreference: 'high-performance', alpha: false });
+    var canvas = document.createElement('canvas'), refused = refusal(canvas), renderer; canvas.width = 4; canvas.height = 4;
+    try { renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: false, powerPreference: 'high-performance', alpha: false }); }
+    catch (e) {
+      // the browser would not make a 3D context at all, even where the first small check passed (Chrome refuses one on
+      // some phone graphics chips, and on a page after a graphics crash). 3D stays off for the rest of this visit, so every
+      // game uses its 2D drawing or its 2D twin until the page is reloaded
+      GL.note('context', ((e && e.message) || 'no 3D context') + (refused.msg ? ' (' + refused.msg + ')' : '')); GL.tier = 4; GL._ok = false;
+      throw new Error('the browser would not start 3D graphics here' + (refused.msg ? ': ' + refused.msg : ''));
+    }
     var isGL2 = renderer.capabilities.isWebGL2;
     renderer.setPixelRatio(1); renderer.shadowMap.enabled = true; renderer.shadowMap.type = mobile ? THREE.PCFShadowMap : THREE.PCFSoftShadowMap; renderer.outputColorSpace = THREE.SRGBColorSpace; renderer.toneMapping = THREE.NoToneMapping;
     var scene = new THREE.Scene(), camera = new THREE.PerspectiveCamera(opts.fov || 58, 1, 0.05, opts.far || 700), X = GL.textures();

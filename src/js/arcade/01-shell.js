@@ -157,6 +157,8 @@
   function startGame(id, opts) {
     var def = A.games[id]; if (!def) return;
     opts = opts || {};
+    // a run moved here from a 3D game this device could not start says so once: a replay keeps the settings, not the note
+    var from3D = opts.from3D || ''; if (from3D) { var o2 = {}; Object.keys(opts).forEach(function (k) { if (k !== 'from3D') o2[k] = opts[k]; }); opts = o2; }
     stopLobby();
     if (run) endRun();
     var tier = A.tier();
@@ -596,7 +598,8 @@
     // a game started from a lesson opens on the lesson: what this round asks and its topics, then Start
     if (opts && opts.lesson) { var L = opts.lesson, back = host('lessonHref') && host('lessonHref')(L.id);
       togglePause(true, { kicker: 'From your lesson', title: 'Lesson ' + L.n + ' · ' + L.title,
-        text: (L.what ? L.what + ' ' : '') + (L.topics && L.topics.length ? 'Topics: ' + L.topics.join(' · ') + '.' : ''), back: back ? back.href : '' }); }
+        text: (from3D ? from3D + ' ' : '') + (L.what ? L.what + ' ' : '') + (L.topics && L.topics.length ? 'Topics: ' + L.topics.join(' · ') + '.' : ''), back: back ? back.href : '' }); }
+    else if (from3D) api.hud.set({ banner: 'Same drill, in 2D', sub: from3D, color: '#ffa552', bannerTime: 5 });
 
     function safe(fn) { try { fn(); } catch (e) { console.error('[arcade] ' + id, e); } }
     state.cleanup = function () {
@@ -709,7 +712,8 @@
     if (params.daily && A.daily) { var dm = A.daily.today().missions[+params.daily - 1]; if (dm) A.daily.start(dm.def); else A.lobby('daily'); return; }
     // a lesson's game (#/arcade?lesson=L05): the lesson's own questions or words, as its 2D twin where 3D cannot be drawn
     if (params.lesson && host('lessonGame')) { var lg = host('lessonGame')(params.lesson); if (lg) { startGame(A.runAs(lg.game) || lg.game, lg.opts); return; } }
-    if (params.game && A.games[params.game]) startGame(params.game, { realm: params.realm || '', mission: params.mission || '' });
+    // a link to one game (the exam path, the FAR and certification pages): as its 2D twin where 3D cannot be drawn
+    if (params.game && A.games[params.game]) startGame(A.runAs(params.game) || params.game, { realm: params.realm || '', mission: params.mission || '' });
   };
   A.start = function (id, opts) { if (root) startGame(id, opts); };
   A.unmount = function () { endRun(); stopLobby(); A.music.stop(); viewEl = null; root = null; };

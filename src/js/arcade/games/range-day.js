@@ -63,6 +63,18 @@
       var scene = null, glError = null;
       try { scene = new A.GL.RangeScene({ mobile: coarse, reduce: feel.reduce, width: 640, height: 400, fit: FIT, skin: A.season ? A.season.skin() : '' }); } catch (e) { glError = e; }
       if (!scene) {
+        // no 3D range on this device (the browser would not make a 3D context, or the device proved too slow for 3D): 3D
+        // stays off for this visit, and this same run starts again at once as Qual Range, the same drill in 2D, with the
+        // same mission, lesson or range-card settings, so it still counts. The loading card stays up until it does. Only a
+        // device that cannot run Qual Range either gets the card below that says why.
+        if (A.GL) { A.GL._ok = false; A.GL.tier = 4; }
+        var twin = A.games['range-day'].alt2D, gone = false;
+        if (twin && A.start && A.canRun(twin)) {
+          var told = (A.GL && A.GL.tooSlow ? 'This device was too slow for the 3D range' : 'The 3D range could not start on this device') + ', so this is Qual Range: the same drill in 2D.';
+          var o2 = {}; Object.keys(opts).forEach(function (k) { o2[k] = opts[k]; }); o2.from3D = told;
+          setTimeout(function () { if (!gone) A.start(twin, o2); }, 0);   // not from inside the frame that tried to build the range
+          return { noCount: true, loading: function () { return true; }, update: function () {}, draw: function () {}, destroy: function () { gone = true; } };
+        }
         var why = A.GL && A.GL.tooSlow ? 'This device was too slow for the 3D range, so the Arcade has moved its games to 2D until the page is reloaded.'
           : 'This device could not start the 3D range' + (glError && glError.message ? ' (' + glError.message + ')' : '') + '.';
         setTimeout(function () { api.end(A.no3D(A.games['range-day'], why)); }, 900);   // straight to the card that offers Qual Range
