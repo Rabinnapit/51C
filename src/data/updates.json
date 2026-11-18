@@ -108,6 +108,12 @@
   ],
   "guide_changes": [
     {
+      "version": "0.32.1",
+      "date": "2026-11-18",
+      "title": "The intro video's voice part, as before",
+      "notes": "The intro video is back to the version from 16 November (v1.2): its read-aloud part shows the voice settings again, with the app's Joe voice playing Hear a sample. The owner preferred it to the newer cut, where lesson one's picture popped as it was read."
+    },
+    {
       "version": "0.32.0",
       "date": "2026-11-18",
       "title": "CON 7300V: sign up in AITAS",

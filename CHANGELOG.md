@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.32.1 (18 November 2026): the intro video's voice part, as before
+
+- **The intro video is v1.2 again.** The owner looked at v1.3's read-aloud shot (lesson one's "Who does what" picture,
+  its cards popping as Joe read them) and preferred v1.2's, which shows the voice settings: the voice list with the
+  app's own voices and Hear a sample in Joe's voice. `src/web/root/intro.mp4`, `intro-poster.jpg` and `intro.vtt` are
+  v1.2's files again (byte for byte from 0.30.0), and so are the teaser's `capture.py`, `assemble.py` and `script.md`,
+  so a later recut keeps that shot. The intro's start (sound first, Tap for sound) is unchanged from 0.31.1.
+
 ## 0.32.0 (18 November 2026): CON 7300V, sign up in AITAS
 
 - **CON 7300V: how to sign up.** Several 51Cs asked about CON 7300V for the new Back-to-Basics requirement: WarU's catalog
