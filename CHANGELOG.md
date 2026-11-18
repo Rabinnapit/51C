@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.32.0 (18 November 2026): CON 7300V, sign up in AITAS
+
+- **CON 7300V: how to sign up.** Several 51Cs asked about CON 7300V for the new Back-to-Basics requirement: WarU's catalog
+  shows no dates, because Army students sign up in AITAS. The course page now has a "How to sign up" box with the direct
+  AITAS link and the owner's three steps: sign in with your CAC on a government computer, set up your profile (log out and
+  back in if the classes do not show), then Apply and have your supervisor approve at least five business days before the
+  Res. Close Date.
+- **Class dates and seats.** A folded list of the 67 CON 7300V classes copied from AITAS on 18 November 2026 (the owner's
+  screenshot and spreadsheet; `src/data/classes.json`, refresh it when a newer list comes in): dates, class number, time
+  zone, Res. Close Date and the seats or waitlist of that day, filtered by time zone or open seats. It shows only classes
+  still to start and says when the list is out of date. Certification 101 > Sign up points to it.
+- **Common AITAS questions.** 24 questions from the AITAS FAQ that bear on courses and the exam, in plain words and folded
+  by topic (signing up, cancelling and no-shows, the exam, help), with the official links where an answer needs one. The
+  CMU, PM-exam and GO/SES items are left out, and so is the "Acquisition Training Office" wording (the KMG rule).
+- **Buddy** answers from the new questions, the AITAS steps and the class dates ("when are the CON 7300V classes?",
+  "what is the Res. Close Date?", "what does $Best mean?"). Questions written with a period in the middle are reworded
+  with a colon, because Buddy keeps periods inside words for FAR numbers.
+- "CON 7300V is full. What do I do?" now says to sign up in AITAS and what the 18 November list showed.
+
 ## 0.31.2 (18 November 2026): Range Day never stops at an error
 
 - **Range Day moves to Qual Range by itself.** The tester's Google Pixel 10 Pro XL passed the Arcade's first small 3D check,

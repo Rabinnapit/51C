@@ -42,14 +42,35 @@
     if (C.education) root.appendChild(h('div.mt-5', {}, CORB.ui.callout('info', 'school', 'College degree?', C.education)));
   }
 
-  function signup(root, C, h, icon) {
-    var R = C.register || {};
+  function signup(root, C, h, icon, params) {
+    var R = C.register || {}, open = params && params.open != null ? String(params.open) : '', target = null;
+    // the course everyone is asking about: straight to its AITAS link and class dates
+    if (R.c7300) root.appendChild(h('div.mb-4', {}, CORB.ui.callout('info', 'calendar', 'CON 7300V', h('div', {}, CORB.ui.rich(R.c7300),
+      h('a.btn.sm.mt-2', { href: '#/courses?id=con7300&show=classes' }, icon('school'), 'CON 7300V sign-up and class dates')))));
     root.appendChild(h('div.card.raised', {}, h('h2', {}, 'Apply for a WarU course (Army)'), R.intro ? CORB.ui.rich(R.intro) : null,
       h('ol.steps-list', {}, (R.steps || []).map(function (s) { return h('li', {}, h('b', {}, s.t), s.d ? CORB.ui.rich(s.d) : null); })),
       R.verify ? h('div.mt-3', {}, CORB.ui.verifyBadge(R.verify)) : null));
     if ((R.tips || []).length) root.appendChild(h('div.card.mt-4', {}, h('h3', {}, 'Tips that save you a month'), h('ul.tips', {}, R.tips.map(function (t) { return h('li', {}, CORB.ui.rich(t)); }))));
     root.appendChild(h('div.row.mt-4', {}, (R.links || []).map(function (l) { return CORB.ui.extLink(l.url, l.label, '.btn.primary'); }),
       h('a.btn', { href: '#/howto?id=register-course' }, icon('steps'), 'Checklist: register for a course'), h('a.btn', { href: '#/courses' }, icon('school'), 'All courses')));
+    // the AITAS questions that bear on courses and the exam, folded by topic so the page stays short (Buddy answers from them too)
+    if ((R.faq || []).length) {
+      var groups = [];
+      R.faq.forEach(function (f, i) { var g = groups.filter(function (x) { return x.name === f.g; })[0]; if (!g) groups.push(g = { name: f.g, items: [] }); g.items.push({ f: f, i: i }); });
+      var src = R.faq_source;
+      root.appendChild(h('div.section-head', {}, h('h2', {}, 'Common AITAS questions'), src ? CORB.ui.extLink(src.url, 'AITAS', '.btn.sm') : null));
+      if (src && src.as_of) root.appendChild(h('p.tiny.muted', {}, 'From the AITAS FAQ, ' + CORB.util.fmtDate(src.as_of) + ', in plain words. Tap a question to open it.'));
+      groups.forEach(function (g) {
+        root.appendChild(h('div.aitas-group', {}, h('h3', {}, g.name), h('div.stack.tight', {}, g.items.map(function (x) {
+          var d = h('details.acc', { id: 'aitas-' + x.i, open: open === 'a' + x.i ? true : null }, h('summary', {}, icon('help'), h('span', {}, x.f.q), icon('chevron', 'chev')),
+            h('div.acc-body', {}, CORB.ui.rich(x.f.a), (x.f.links || []).length ? h('div.row.tight.mt-2', {}, x.f.links.map(function (l) { return CORB.ui.extLink(l.url, l.label, '.btn.sm'); })) : null));
+          if (open === 'a' + x.i) target = d;
+          return d;
+        }))));
+      });
+    }
+    // Buddy's link opens one question: bring it into view once the page has drawn
+    if (target) requestAnimationFrame(function () { setTimeout(function () { try { target.scrollIntoView({ block: 'start', behavior: 'smooth' }); } catch (e) { target.scrollIntoView(); } }, 250); });
   }
 
   function exam(root, C, h, icon) {

@@ -21,7 +21,55 @@
 
   function list(title, items, h) { return items && items.length ? h('div.c-sec', {}, h('h4', {}, title), h('ul.tips', {}, items.map(function (t) { return h('li', {}, CORB.ui.rich(t)); }))) : null; }
 
-  function card(c, h, icon, open) {
+  // a course with its own AITAS page (CON 7300V): the three steps and the button
+  function aitasBox(c, h, icon) {
+    var A = c.aitas; if (!A || !A.url) return null;
+    return h('div.c-sec.c-aitas', {}, h('h4', {}, 'How to sign up'), A.note ? h('p.small', {}, A.note) : null,
+      h('ol.c-steps', {}, (A.steps || []).map(function (s) { return h('li', {}, CORB.ui.rich(s)); })),
+      h('div.row.tight', {}, CORB.ui.extLink(A.url, 'Open ' + c.code + ' in AITAS', '.btn.primary.sm'),
+        h('a.btn.sm', { href: '#/cert?tab=signup' }, icon('help'), 'AITAS questions')));
+  }
+
+  // the class list copied from AITAS (data/classes.json): only classes still to start, with the seats and waits of the
+  // day it was copied, filtered by time zone or open seats. Folded, so the course page stays short.
+  function classRow(x, h) {
+    var st = x.seats > 0 ? CORB.ui.badge('ok', x.seats + (x.seats === 1 ? ' seat open' : ' seats open'))
+      : x.waits > 0 ? CORB.ui.badge('warn', 'Full · ' + x.waits + ' waiting') : CORB.ui.badge('neutral', 'No open seats');
+    var onsite = /^5\d\d$/.test(x.n);
+    return h('li.cl-row', { 'data-tz': x.tz, 'data-open': x.seats > 0 ? '1' : '' },
+      h('span.cl-date', {}, CORB.util.fmtShort(x.start) + ' – ' + CORB.util.fmtDate(x.end)),
+      h('span.cl-meta', {}, h('b', {}, 'Class ' + x.n), ' · ' + x.tz, onsite ? h('span', { title: 'Classes numbered 5xx are usually onsites: seats set aside for one group first' }, ' · onsite') : null,
+        h('span.tiny.muted', {}, 'Res. close ' + CORB.util.fmtShort(x.close))),
+      h('span.cl-st', {}, st));
+  }
+  function classList(c, h, icon, openIt) {
+    var K = (CORB.DATA.classes || {})[c.id]; if (!K || !(K.classes || []).length) return null;
+    var today = CORB.util.today(), up = K.classes.filter(function (x) { return x.start >= today; }), asOf = CORB.util.fmtDate(K.as_of);
+    var body = h('div.cl-body');
+    if (!up.length) body.appendChild(h('p.small', {}, 'The class list in this guide is out of date. Open AITAS for the current dates.'));
+    else {
+      var open = up.filter(function (x) { return x.seats > 0; }), tzs = [];
+      up.forEach(function (x) { if (tzs.indexOf(x.tz) < 0) tzs.push(x.tz); });
+      var EW = ['Eastern', 'Central', 'Mountain', 'Pacific', 'Alaska', 'Hawaii'];   // east to west, as on a map
+      tzs.sort(function (p, q) { return (EW.indexOf(p) + 1 || 99) - (EW.indexOf(q) + 1 || 99); });
+      body.appendChild(h('p.small', {}, up.length + ' classes from ' + CORB.util.fmtDate(up[0].start) + ' to ' + CORB.util.fmtDate(up[up.length - 1].start) + ', online, listed by time zone. On ' + asOf + ', ' + open.length + ' had open seats' +
+        (open[0] ? '; the earliest was Class ' + open[0].n + ' (' + open[0].tz + '), starting ' + CORB.util.fmtDate(open[0].start) + '.' : '.')));
+      body.appendChild(h('p.tiny.muted', {}, 'Seats and waitlists change every day, and AITAS has the full list. Pick a time zone whose class hours you can attend.'));
+      var rows = h('ul.cl-list', {}, up.map(function (x) { return classRow(x, h); }));
+      var chips = h('div.chips.cl-chips', { role: 'group', 'aria-label': 'Show classes' });
+      var picks = [['', 'All', up.length], ['open', 'Open seats', open.length]].concat(tzs.map(function (t) { return [t, t, up.filter(function (x) { return x.tz === t; }).length]; }));
+      function show(key) {
+        Array.prototype.forEach.call(rows.children, function (li) { li.hidden = !(key === '' || (key === 'open' ? li.getAttribute('data-open') === '1' : li.getAttribute('data-tz') === key)); });
+        Array.prototype.forEach.call(chips.children, function (b) { var on = b.getAttribute('data-k') === key; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+      }
+      picks.forEach(function (p) { chips.appendChild(h('button.chip', { type: 'button', 'data-k': p[0], 'aria-pressed': 'false', onclick: function () { show(p[0]); } }, p[1], h('span.count', {}, String(p[2])))); });
+      body.appendChild(chips); body.appendChild(rows); show('');
+    }
+    body.appendChild(h('div.row.tight', {}, CORB.ui.extLink(K.url, 'Live list in AITAS', '.btn.sm')));
+    return h('details.c-classes', { open: openIt ? true : null }, h('summary', {}, icon('calendar'), h('span.grow', {}, h('b', {}, 'Class dates and seats'), h('span.tiny.muted', {}, ' from AITAS, ' + asOf)), icon('chevron', 'chev')), body);
+  }
+
+  function card(c, h, icon, open, openClasses) {
     var st = (CORB.get('progress.courses.' + c.id) || {});
     var det = h('details.course' + (st.status === 'done' ? '.is-done' : ''), { id: 'c-' + c.id, open: !!open },
       h('summary', {},
@@ -38,6 +86,7 @@
           c.length ? h('div', {}, h('span.k', {}, 'Length'), h('span', {}, c.length)) : null,
           c.delivery ? h('div', {}, h('span.k', {}, 'Format'), h('span', {}, c.delivery)) : null,
           c.clps ? h('div', {}, h('span.k', {}, 'Continuous learning points'), h('span', {}, String(c.clps))) : null),
+        aitasBox(c, h, icon), classList(c, h, icon, openClasses),
         list('What you will learn', c.learn, h), list('Before it starts', c.before, h), list('How to do well', c.pass, h), list('Good to know', c.notes, h),
         c.lessons && c.lessons.length ? h('div.c-sec', {}, h('h4', {}, 'Study these lessons first'), h('div.row.tight', {}, c.lessons.map(function (lid) { var l = CORB.data.lesson(lid); return l ? h('a.btn.sm', { href: '#/lesson?id=' + lid }, icon('book'), l.title) : null; }))) : null,
         h('div.c-actions', {}, h('span.small.muted', {}, 'My status'), statusSeg(c, h),
@@ -61,7 +110,7 @@
         return h('button.chip' + (group === g[0] ? '.on' : ''), { type: 'button', onclick: function () { CORB.go('courses', { group: g[0] }); } }, g[1], h('span.count', {}, String(n)));
       })));
       var shown = all.filter(function (c) { return group === 'all' || (group === 'exam' ? (c.group === 'exam' || c.group === 'prep') : c.group === group); });
-      root.appendChild(h('div.stack.tight.course-list', {}, shown.map(function (c) { return card(c, h, icon, p.id === c.id); })));
+      root.appendChild(h('div.stack.tight.course-list', {}, shown.map(function (c) { return card(c, h, icon, p.id === c.id, p.id === c.id && p.show === 'classes'); })));
       root.appendChild(h('div.mt-5', {}, CORB.ui.callout('info', 'info', 'Course names and lengths change', 'WarU (formerly DAU) updates its catalog often, and CON 1100 is shorter while the FAR Overhaul rules are being finalized. Before you register, open the official course page and read your welcome letter (it arrives about 25 days before class).')));
       if (p.id) setTimeout(function () { var el = document.getElementById('c-' + p.id); if (el) el.scrollIntoView({ block: 'start', behavior: 'smooth' }); }, 60);
     } });

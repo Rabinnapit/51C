@@ -66,6 +66,18 @@
     if (reg.intro) add('Registering', 'How to register in AITAS for courses and the exam', reg.intro, 'cert', { tab: 'signup' }, 'aitas register sign up enroll apply', 1.3);
     arr(reg.steps).forEach(function (s, i) { add('Registering', 'Register, step ' + (i + 1) + ': ' + (pick(s, T_KEYS) || ''), pick(s, X_KEYS) || pick(s, T_KEYS), 'cert', { tab: 'signup' }, 'aitas register', 1); });
     arr(reg.tips).forEach(function (s) { add('Registering', 'Registration tip', s, 'cert', { tab: 'signup' }, 'aitas register', 1); });
+    // the AITAS FAQ (courses and the exam): each answer opens its own question on the Sign up tab
+    arr(reg.faq).forEach(function (f, i) { add('AITAS', f.q, f.a + arr(f.links).map(function (l) { return ' ' + l.label + ': ' + l.url; }).join(''), 'cert', { tab: 'signup', open: 'a' + i }, 'aitas ' + (f.g || '') + ' ' + (f.k || '') + ' register apply class request', 1.35); });
+    // a course with its own AITAS page, and the class list copied from AITAS (upcoming classes only)
+    var KL = raw('classes') || {}, today = CORB.util.today();
+    D.courses().forEach(function (c) {
+      if (c.aitas) add('Registering', 'Sign up for ' + c.code + ' in AITAS', (c.aitas.note || '') + ' ' + arr(c.aitas.steps).map(function (s, i) { return (i + 1) + '. ' + s; }).join(' ') + ' ' + c.aitas.url, 'courses', { id: c.id }, 'aitas register sign up apply enroll how ' + c.code + ' ' + (c.short || ''), 1.45);
+      var K = KL[c.id], up = K ? arr(K.classes).filter(function (x) { return x.start >= today; }) : [];
+      if (!up.length) return;
+      var open = up.filter(function (x) { return x.seats > 0; });
+      add('Class dates', c.code + ' class dates and seats', up.length + ' classes from ' + CORB.util.fmtDate(up[0].start) + ' to ' + CORB.util.fmtDate(up[up.length - 1].start) + ', online, by time zone. On ' + CORB.util.fmtDate(K.as_of) + ', ' + open.length + ' had open seats' +
+        (open[0] ? '; the earliest was Class ' + open[0].n + ' (' + open[0].tz + '), starting ' + CORB.util.fmtDate(open[0].start) : '') + '. Seats change every day: AITAS has the live list.', 'courses', { id: c.id, show: 'classes' }, 'class dates schedule when next start seats open waitlist time zone ' + c.code + ' ' + (c.short || ''), 1.4);
+    });
     if (exp.intro) add('Experience', 'The 12 months of experience', exp.intro, 'cert', { tab: 'experience' }, 'ojt on the job experience months work', 1.2);
     arr(exp.items).forEach(function (s) { add('Experience', pick(s, T_KEYS) || 'Experience', pick(s, X_KEYS), 'cert', { tab: 'experience' }, 'experience', 1); });
     if (af.cl) add('After certification', 'Continuous learning', af.cl, 'cert', { tab: 'after' }, 'clp points hours continuous learning keep', 1.2);
@@ -83,9 +95,12 @@
   var INTENT = [
     [/how long|how many (months|days|years)|deadline|time limit|grace period|by when|when (do|must|should) i/, 'Deadline', 1.6],
     [/how much|dollar|\$|threshold|limit/, 'Key number', 1.3], [/which course|what course|course/, 'Course', 1.3],
-    [/how do i|how to|where do i|steps to/, 'How-to', 1.3], [/what is|what does|whats|mean|define|stand for/, 'Term', 1.25]];
+    [/how do i|how to|where do i|steps to/, 'How-to', 1.3], [/what is|what does|whats|mean|define|stand for/, 'Term', 1.25],
+    [/\bwhen\b|next class|class dates?|schedule|start date|seats? (open|left)/, 'Class dates', 1.4]];
   // a few questions have one right first answer whatever the wording: the training contact is the KMG, never the proponent
-  var PIN = [[/\btraining (contact|nco|poc|person|coordinator|office)\b|\bwho (do|should|can) i (ask|talk to|see)\b|\bmy (trainer|mentor for certification)\b|\bmaster gunner\b/, /^KMG\b|^Contracting Master Gunner\b/]];
+  var PIN = [[/\btraining (contact|nco|poc|person|coordinator|office)\b|\bwho (do|should|can) i (ask|talk to|see)\b|\bmy (trainer|mentor for certification)\b|\bmaster gunner\b/, /^KMG\b|^Contracting Master Gunner\b/],
+    [/\$best|cost[- ]effective location|\bcel\b/, /^What does \$Best mean/],
+    [/\bwho (approves?|signs?|okays?)\b|\bapprov\w* (my|an?|the) (aitas |training |course |class |exam )?request/, /^Who approves/]];   // the AITAS class list's $Best, not best value
   buddy.search = function (q, limit) {
     if (!idx) build();
     var ql = String(q || '').toLowerCase(), qs = toks(q), whole = norm(q).split(/\s+/).filter(function (w) { return w && !STOP[w]; }).join(' ');   // the question without its filler

@@ -19,3 +19,25 @@
 .v-courses .c-sec h4 { font-size: var(--fs-md); font-family: var(--font-body); font-weight: 800; }
 .v-courses .c-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding-top: 12px; border-top: 1px dashed var(--line-2); }
 @media (max-width: 560px) { .v-courses details.course > summary { flex-wrap: wrap; } .v-courses .c-code { min-width: 0; } }
+/* CON 7300V: signing up in AITAS, and the class list copied from AITAS (folded) */
+.v-courses .c-aitas { padding: 14px 16px; border-radius: var(--r-md); background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line)); display: flex; flex-direction: column; gap: 8px; }
+.v-courses .c-aitas p, .v-courses .c-steps .rich p { margin: 0; }
+.v-courses .c-steps { margin: 0; padding-left: 1.4em; display: flex; flex-direction: column; gap: 6px; }
+.v-courses details.c-classes { border: 1px solid var(--line); border-radius: var(--r-md); background: var(--panel-2); scroll-margin-top: 80px; }
+.v-courses details.c-classes > summary { list-style: none; display: flex; align-items: center; gap: 10px; padding: 12px 14px; cursor: pointer; min-height: 48px; }
+.v-courses details.c-classes > summary::-webkit-details-marker { display: none; }
+.v-courses details.c-classes > summary > svg:first-child { width: 20px; height: 20px; color: var(--accent); flex: none; }
+.v-courses .cl-body { padding: 0 14px 14px; display: flex; flex-direction: column; gap: 10px; }
+.v-courses .cl-body p { margin: 0; }
+.v-courses .cl-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); max-height: 420px; overflow: auto; overscroll-behavior: contain; }
+.v-courses .cl-row { display: grid; grid-template-columns: minmax(10.5em, auto) 1fr auto; gap: 2px 12px; align-items: center; padding: 9px 4px; border-bottom: 1px solid var(--line); font-size: var(--fs-sm); }
+.v-courses .cl-row[hidden] { display: none; }
+.v-courses .cl-date { font-weight: 700; white-space: nowrap; }
+.v-courses .cl-meta { display: flex; flex-wrap: wrap; gap: 0 4px; align-items: baseline; min-width: 0; }
+.v-courses .cl-meta .tiny { flex-basis: 100%; }
+@media (max-width: 560px) {
+  .v-courses .cl-row { grid-template-columns: 1fr auto; }
+  .v-courses .cl-date { grid-column: 1; grid-row: 1; white-space: normal; }
+  .v-courses .cl-st { grid-column: 2; grid-row: 1; }
+  .v-courses .cl-meta { grid-column: 1 / -1; grid-row: 2; }
+}

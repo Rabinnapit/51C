@@ -108,6 +108,12 @@
   ],
   "guide_changes": [
     {
+      "version": "0.32.0",
+      "date": "2026-11-18",
+      "title": "CON 7300V: sign up in AITAS",
+      "notes": "Many 51Cs asked how to get into CON 7300V when WarU's catalog shows no dates: Army students sign up in AITAS. Courses, then CON 7300V, now has the direct AITAS link, the three steps (sign in with your CAC, set up your profile, log out and back in if the classes do not show) and the class dates copied from AITAS on 18 November 2026: filter by time zone or open seats. Certification 101, Sign up, adds 24 common AITAS questions in plain words (Res. Close Date, waitlists, priority, cancelling, the 90-day exam window, retakes, help), and Buddy answers from them."
+    },
+    {
       "version": "0.31.2",
       "date": "2026-11-18",
       "title": "Range Day never stops at an error",
