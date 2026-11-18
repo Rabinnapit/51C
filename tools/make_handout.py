@@ -58,16 +58,16 @@ sheet = f"""<!DOCTYPE html>
 <meta charset="utf-8">
 <title>B2B Exam Prep - install sheet</title>
 <style>
-@page {{ size: Letter; margin: 0.45in; }}
+@page {{ size: Letter; margin: 0.4in; }}
 * {{ box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }}
 html, body {{ margin: 0; padding: 0; }}
 body {{ color: #14211b; background: #fff; font: 12.5pt/1.45 "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; }}
 .sheet {{ width: 7.4in; margin: 0 auto; }}
-.band {{ background: #1f5e46; color: #fff; padding: 0.2in 0.3in 0.16in; border-radius: 0.08in 0.08in 0 0; }}
+.band {{ background: #1f5e46; color: #fff; padding: 0.18in 0.26in 0.14in; border-radius: 0.08in 0.08in 0 0; }}
 .band h1 {{ margin: 0; font: 800 32pt/1 "Bahnschrift", "Segoe UI", Arial, sans-serif; letter-spacing: 0.01em; }}
-.band p {{ margin: 0.09in 0 0; font-size: 13pt; color: #d9ecdf; }}
+.band p {{ margin: 0.07in 0 0; font-size: 12pt; color: #d9ecdf; }}
 .stripe {{ height: 0.12in; background: linear-gradient(90deg, #4e57b0 0 25%, #23649f 25% 50%, #a2620f 50% 75%, #0e7480 75%); }}
-.scan {{ display: grid; grid-template-columns: 2.25in 1fr; gap: 0.32in; align-items: center; margin-top: 0.2in; }}
+.scan {{ display: grid; grid-template-columns: 2.1in 1fr; gap: 0.3in; align-items: center; margin-top: 0.16in; }}
 .qrbox {{ border: 1.5pt solid #14211b; border-radius: 0.06in; padding: 0.05in; line-height: 0; }}
 .qrbox svg {{ display: block; width: 100%; height: auto; }}
 .k {{ display: inline-block; background: #1f5e46; color: #fff; font-size: 10pt; letter-spacing: 0.12em; padding: 0.05in 0.1in 0.04in; border-radius: 0.04in; }}
@@ -81,49 +81,57 @@ body {{ color: #14211b; background: #fff; font: 12.5pt/1.45 "Segoe UI", system-u
 ol {{ margin: 0; padding: 0; list-style: none; counter-reset: s; }}
 li {{ position: relative; padding: 0 0 0.07in 0.36in; counter-increment: s; font-size: 11.5pt; line-height: 1.36; }}
 li::before {{ content: counter(s); position: absolute; left: 0; top: 0.01in; width: 0.24in; height: 0.24in; border-radius: 50%; background: #1f5e46; color: #fff; text-align: center; font: 700 10.5pt/0.24in "Bahnschrift", Arial, sans-serif; }}
-.does {{ display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.12in; margin-top: 0.18in; }}
-.cell {{ border-radius: 0.06in; background: #f1f4f2; padding: 0.12in 0.14in; font-size: 11pt; line-height: 1.38; }}
+.does {{ display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.12in; margin-top: 0.14in; }}
+.cell {{ border-radius: 0.06in; background: #f1f4f2; padding: 0.1in 0.13in; font-size: 10.5pt; line-height: 1.32; }}
 .cell b {{ display: block; margin-bottom: 0.03in; font-size: 12pt; color: #1f5e46; }}
-.foot {{ margin-top: 0.16in; font-size: 9pt; line-height: 1.4; color: #4b5a52; break-inside: avoid; }}
+.foot {{ margin-top: 0.12in; font-size: 9pt; line-height: 1.4; color: #4b5a52; break-inside: avoid; }}
+.sec {{ display: flex; align-items: center; gap: 0.12in; margin: 0.12in 0 0.06in; font: 600 10pt "Segoe UI", Arial, sans-serif; letter-spacing: 0.1em; color: #1f5e46; }}
+.sec::before, .sec::after {{ content: ""; flex: 1; border-top: 1.2pt solid #d6ded9; }}
+.steps.app {{ margin-top: 0; }}
+.web {{ display: grid; grid-template-columns: 0.46in 1fr; gap: 0.16in; align-items: center; border: 1.5pt solid #14211b; border-radius: 0.06in; padding: 0.12in 0.2in; font-size: 11.5pt; line-height: 1.38; }}
+.web svg {{ display: block; width: 0.46in; height: 0.46in; }}
+.web b.t {{ display: block; font: 800 13pt/1.25 "Bahnschrift", "Segoe UI", Arial, sans-serif; margin-bottom: 0.02in; }}
 </style>
 </head>
 <body>
 <div class="sheet">
   <div class="band">
     <h1>B2B Exam Prep</h1>
-    <p>Free phone app for new 51C and 1102 contracting professionals &middot; works offline after the first open</p>
+    <p>Free Back-to-Basics exam prep for 51Cs and 1102s &middot; Pass CON 3990V and get certified</p>
   </div>
   <div class="stripe"></div>
   <div class="scan">
     <div class="qrbox">{svg}</div>
     <div>
-      <span class="k">SCAN WITH YOUR PHONE CAMERA</span>
-      <h2>Get the app in one minute</h2>
-      <p>The page that opens has one job: put the app on your phone. No app store, no cost.</p>
+      <span class="k">SCAN WITH YOUR PHONE OR TABLET CAMERA</span>
+      <h2>Get it in one minute</h2>
+      <p>Or open the address below on any phone, tablet or computer. A 2-minute intro plays first (<b>Skip</b> is fine), then the install page opens. No app store, no cost.</p>
       <span class="url">{url}</span>
     </div>
   </div>
-  <div class="steps">
-    <div class="col"><h3>iPhone <span>(Apple allows no install button)</span></h3><ol>
-      <li>Scan the code with the <b>Camera</b> app. A 2-minute intro plays (<b>Skip</b> is fine), then the install page opens.</li>
-      <li>Tap <b>Share</b> (the square with an arrow). In Safari it is in the bar at the bottom; if that bar shows <b>&middot;&middot;&middot;</b>, tap it first.</li>
+  <div class="sec">ADD THE FREE APP</div>
+  <div class="steps app">
+    <div class="col"><h3>iPhone, iPad <span>(in Safari)</span></h3><ol>
+      <li>Tap <b>Share</b> (the square with an arrow): at the bottom on an iPhone, at the top on an iPad. If you see <b>&middot;&middot;&middot;</b>, tap it first.</li>
       <li>Tap <b>Add to Home Screen</b>, then <b>Add</b>.</li>
-      <li>Open it from the new icon once while online.</li></ol></div>
-    <div class="col"><h3>Android <span>(any browser)</span></h3><ol>
-      <li>Scan the code with the <b>Camera</b> app. A 2-minute intro plays (<b>Skip</b> is fine), then the install page opens.</li>
-      <li>Tap <b>Install app</b>. In Samsung Internet a list asks which app to open: choose <b>Chrome</b> (only Chrome installs it without a warning), then tap <b>Install app</b> there.</li>
+      <li>Open the new icon once while online. Then it works offline.</li></ol></div>
+    <div class="col"><h3>Android <span>(phone or tablet)</span></h3><ol>
+      <li>Tap <b>Install app</b>. If Samsung Internet asks which app to use, choose <b>Chrome</b>, then tap <b>Install app</b> there.</li>
       <li>Tap <b>Install</b> in the box that appears.</li>
-      <li>Open it from the new icon once while online.</li></ol></div>
+      <li>Open the new icon once while online. Then it works offline.</li></ol></div>
   </div>
+  <div class="sec">OR USE IT IN YOUR BROWSER</div>
+  <div class="web"><svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="#1f5e46" stroke-width="3"><circle cx="24" cy="24" r="21"/><ellipse cx="24" cy="24" rx="9.5" ry="21"/><path d="M3 24h42M7 13.5h34M7 34.5h34" stroke-width="2.2"/></svg>
+    <div><b class="t">Nothing to install. Works on computers too.</b>On the install page, tap <b>Not now</b> (some computers say <b>Open the website</b>) and keep going in the browser.
+      On a computer, Edge or Chrome can also <b>Install</b> it as an app.</div></div>
   <div class="does">
     <div class="cell"><b>Get certified</b>The courses in order, signing up in AITAS, the CON 3990V exam step by step, and 26 official documents.</div>
     <div class="cell"><b>Learn and practice</b>{N_L} lessons with pictures you can play, {N_Q} explained practice questions, flashcards and {WORDS.get(N_G, N_G)} games.</div>
-    <div class="cell"><b>Always current</b>New versions arrive by themselves when you are online. Your progress stays on your phone.</div>
+    <div class="cell"><b>Always current</b>New versions arrive by themselves when you are online. Your progress stays on your device.</div>
   </div>
   <p class="foot"><b>{html.escape(COPY)}</b> Owned by {html.escape(WHO)}. Free for your own study and for sharing this sheet or the link;
   copying, changing or selling the app needs the owner's written permission.<br>An unofficial training aid for new 51Cs and 1102s. It is not official guidance:
-  check the official sources it links to. No tracking. An account is optional: without one, nothing you do in the app is sent anywhere.
-  Also works on Windows and Mac computers: open the same address in Edge or Chrome and choose Install.</p>
+  check the official sources it links to. No tracking. An account is optional: without one, nothing you do in the app is sent anywhere.</p>
 </div>
 </body>
 </html>
