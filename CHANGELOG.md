@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.31.1 (18 November 2026): sound on, and no Go button
+
+- **The intro tries to start with sound.** A browser that allows it plays the intro with the voice at once. Phones refuse
+  sound before the first tap (Apple and Google both do on a site the phone has not seen, and no web page can change that),
+  so there it plays silently, captions in the picture, under a big "Tap for sound": one tap anywhere on the video plays it
+  from the top with the voice. It replaces the small Sound on button the owner found easy to miss.
+- **No more Go button.** At Recruit, the easiest pace, each new question waited for a Go button that a tester missed ("why
+  is this not working?"). It now gets a long reading pause, about half again as long as Regular's (4 to 14 seconds by the
+  length of the text), with a bar that fills, and the game goes on by itself; Space or a tap still starts it sooner.
+
 ## 0.31.0 (18 November 2026): what the field test found
 
 - **Games in the lessons.** 26 of the 35 lessons now end with "Want to play a game on this topic?": a short game on that

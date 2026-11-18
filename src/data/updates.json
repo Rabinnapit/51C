@@ -108,6 +108,12 @@
   ],
   "guide_changes": [
     {
+      "version": "0.31.1",
+      "date": "2026-11-18",
+      "title": "Sound on, and no Go button",
+      "notes": "The intro tries to start with sound. Where the phone keeps it silent until the first tap (every phone does on a first visit), one tap anywhere on the video plays it from the top with the voice. At Recruit pace, each question now gets a long reading pause that ends by itself, instead of waiting for a Go button."
+    },
+    {
       "version": "0.31.0",
       "date": "2026-11-18",
       "title": "What the field test found",

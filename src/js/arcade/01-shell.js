@@ -33,7 +33,7 @@
   // ---------- lobby ----------
   function paceLine(t) {
     var speed = t.timeScale < 0.7 ? 'Slow motion' : t.timeScale < 1 ? 'A bit slower than full speed' : t.timeScale === 1 ? 'Full speed' : 'Faster than full speed';
-    var read = t.read === 'hold' ? 'Each question waits until you press Go.' : t.read === 'brief' ? 'A short pause to read each question.' : 'No pause to read.';
+    var read = t.read === 'hold' ? 'Each question waits until you press Go.' : t.read === 'long' ? 'A long pause to read each question; it goes on by itself.' : t.read === 'brief' ? 'A short pause to read each question.' : 'No pause to read.';
     return speed + ' and ' + t.lives + ' lives. ' + read;
   }
   function rankCard(rk) {
@@ -328,9 +328,11 @@
         if (tier.read === 'off') return false;
         if (typeof o === 'string') o = { text: o };
         o = o || {};
-        var words = String(o.text || pT.textContent || '').split(/\s+/).filter(Boolean).length, left = A.clamp(1.2 + words * 0.3, 2.5, 9);
+        // the reading window ends by itself: Recruit's ('long') is about half again as long as Regular's
+        var words = String(o.text || pT.textContent || '').split(/\s+/).filter(Boolean).length, long = tier.read === 'long';
+        var left = long ? A.clamp(2.5 + words * 0.45, 4, 14) : A.clamp(1.2 + words * 0.3, 2.5, 9);
         if (gate && gate.armed) { gateEl.hidden = true; box.classList.remove('is-reading'); }
-        gate = { mode: tier.read, delay: o.delay != null ? o.delay : 0.35, armed: false, left: left, total: left };
+        gate = { mode: long ? 'brief' : tier.read, delay: o.delay != null ? o.delay : 0.35, armed: false, left: left, total: left };
         return true;
       },
       get reading() { return !!(gate && gate.armed); },

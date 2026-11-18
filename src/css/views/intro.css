@@ -23,3 +23,15 @@
 .intro-later b { color: #eef3ef; }
 .home-intro { margin-top: 12px; }
 @media (max-width: 640px) and (orientation: portrait) { .intro-box { gap: 10px; } .intro-head b { font-size: var(--fs-md); } .intro-words { font-size: var(--fs-sm); } }
+/* while a phone keeps the first play silent: the whole picture is the sound button, with one big pill in the middle */
+.intro-tap { position: absolute; inset: 0; z-index: 2; display: grid; place-items: center; padding: 0; border: 0; cursor: pointer;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,.18), rgba(0,0,0,.42)); color: #1b1407; -webkit-tap-highlight-color: transparent; }
+.intro-tap[hidden] { display: none; }
+.intro-tap-pill { display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 12px 26px; border-radius: 999px;
+  background: #e6b85a; color: #1b1407; font-weight: 850; font-size: clamp(17px, 2.6vw, 22px); box-shadow: 0 10px 30px rgba(0,0,0,.45);
+  animation: intro-tap-pulse 1.6s ease-in-out infinite; }
+.intro-tap-pill svg { width: 26px; height: 26px; }
+.intro-tap:focus-visible .intro-tap-pill { outline: 3px solid #fff; outline-offset: 3px; }
+@keyframes intro-tap-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+html[data-motion="reduce"] .intro-tap-pill { animation: none; }
+@media (prefers-reduced-motion: reduce) { .intro-tap-pill { animation: none; } }

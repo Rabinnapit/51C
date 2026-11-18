@@ -50,10 +50,11 @@
     }
   };
 
-  // ---- pace levels (Recruit is the default on a first visit). timeScale slows or speeds the game clock; read: 'hold' waits
-  //      for Go on each new question, 'brief' pauses for a reading window, 'off' never pauses; limit scales question timers ----
+  // ---- pace levels (Recruit is the default on a first visit). timeScale slows or speeds the game clock; read: 'long' and
+  //      'brief' pause for a reading window that ends by itself (long is Recruit's, about half again as long), 'off' never
+  //      pauses; limit scales question timers. Recruit used to wait for a Go button, which a tester found easy to miss ----
   A.TIERS = [
-    { id: 'recruit', name: 'Recruit', badge: 'Easy', color: A.C.green, timeScale: 0.62, lives: 5, read: 'hold', limit: 0, desc: 'Slow motion, 5 lives and no question timer. Each new question waits until you press Go.' },
+    { id: 'recruit', name: 'Recruit', badge: 'Easy', color: A.C.green, timeScale: 0.62, lives: 5, read: 'long', limit: 0, desc: 'Slow motion, 5 lives and no question timer. A long pause to read each question, then it goes on by itself.' },
     { id: 'regular', name: 'Regular', badge: 'Medium', color: A.C.sky, timeScale: 0.8, lives: 4, read: 'brief', limit: 1.4, desc: 'A bit slower than full speed and 4 lives. A short reading pause before each question.' },
     { id: 'veteran', name: 'Veteran', badge: 'Hard', color: A.C.orange, timeScale: 1, lives: 3, read: 'off', limit: 1, desc: 'Full speed and 3 lives. No reading pause: you read while it moves.' },
     { id: 'elite', name: 'Elite', badge: 'Expert', color: A.C.red, timeScale: 1.22, lives: 2, read: 'off', limit: 0.7, desc: 'Faster than full speed, short timers and only 2 lives. Exam-day pressure.' }

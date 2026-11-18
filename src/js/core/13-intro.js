@@ -1,9 +1,11 @@
 /* CORE-13-INTRO (web edition only; tools/build.py leaves this file out of the offline and preview editions)
    The two-minute intro video (teaser/, published as intro.mp4 next to the page).
    1. First visit in a browser (the QR code, or a link someone shared): the website opens on the video, above the
-      install page. It starts muted, because browsers only let a page start a video without sound; its captions are in
-      the picture and its words run under it. "Sound on" plays it from the top with the voice. Skip, Escape or the end
-      of the video go on to the install page. Never in the installed app, and only once on a device (b2b.introSeen);
+      install page, and tries to start it with the voice. Phones refuse sound before the first tap (Apple and Google both
+      do, on a site a phone has not seen), so there it plays silently with its captions in the picture and its words under
+      it, under a big "Tap for sound": one tap anywhere on the video plays it from the top with the voice (the owner asked
+      for sound on a first visit; this is as close as a web page can get). Skip, Escape or the end of the video go on to
+      the install page. Never in the installed app, and only once on a device (b2b.introSeen);
       "?intro=1" in the address shows it again.
    2. "Watch the intro" (Home, About, Settings & help) plays it any time, in any browser or in the installed app.
    With Data Saver on, or when the browser refuses to start a muted video, it waits on the poster with a Play button.
@@ -63,7 +65,10 @@
     var h = CORB.ui.h, icon = CORB.ui.icon, replay = !!opts.replay;
     prevFocus = document.activeElement;
     var words = h('p.intro-words', { 'aria-live': 'off' });
-    var soundBtn = h('button.intro-sound', { type: 'button', onclick: function () { sound(); } }, icon('volume'), 'Sound on');
+    var soundBtn = h('button.intro-sound', { type: 'button', hidden: true, onclick: function () { sound(); } }, icon('volume'), 'Sound on');
+    // the whole picture is the sound button while the phone keeps it silent: the first tap anywhere brings the voice in
+    var tapEl = h('button.intro-tap', { type: 'button', hidden: true, 'aria-label': 'Tap for sound: the intro starts again with the voice', onclick: function () { sound(); } },
+      h('span.intro-tap-pill', {}, icon('volume'), 'Tap for sound'));
     var playBtn = h('button.intro-play', { type: 'button', hidden: true, 'aria-label': 'Play the intro', onclick: function () { start(true); } }, h('span', { html: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>' }), 'Play the ' + intro.minutes() + '-minute intro');
     video = h('video.intro-video', { playsinline: '', 'webkit-playsinline': '', preload: saveData() && !replay ? 'none' : 'auto', poster: c.poster || '', controls: '' });
     video.muted = !replay; video.defaultMuted = !replay; if (!replay) video.setAttribute('muted', '');
@@ -73,7 +78,7 @@
     layer = h('div.intro-layer', { role: 'dialog', 'aria-modal': 'true', 'aria-label': (CORB.meta().app_name || 'The app') + ' in ' + intro.minutes() + ' minutes' },
       h('div.intro-box', {},
         h('div.intro-head', {}, h('img.intro-icon', { src: 'icons/icon-192.png', alt: '' }), h('div', {}, h('b', {}, (CORB.meta().app_name || '') + ' in ' + intro.minutes() + ' minutes'), h('small', {}, 'What it does for a new 51C or 1102')), replay ? null : soundBtn),
-        h('div.intro-frame', {}, video, playBtn),
+        h('div.intro-frame', {}, video, tapEl, playBtn),
         words,
         h('div.intro-foot', {}, skip, replay ? null : h('p.intro-later', {}, 'Watch it any time: ', h('b', {}, 'Settings & help'), ' or ', h('b', {}, 'About'), ', "Watch the intro".'))));
     document.body.appendChild(layer); document.body.style.overflow = 'hidden';
@@ -86,9 +91,9 @@
     // the video could not load (no signal, a missing file): the first visit goes straight on; a replay says why
     video.addEventListener('error', function () {
       if (!replay) { close('skip'); return; }
-      words.textContent = 'The intro needs an internet connection. Try again when you are online.'; soundBtn.hidden = true; playBtn.hidden = true;
+      words.textContent = 'The intro needs an internet connection. Try again when you are online.'; soundBtn.hidden = true; tapEl.hidden = true; playBtn.hidden = true;
     });
-    video.addEventListener('volumechange', function () { if (video && !video.muted) soundBtn.hidden = true; });
+    video.addEventListener('volumechange', function () { if (video && !video.muted) { soundBtn.hidden = true; tapEl.hidden = true; } });
     keyH = function (e) {
       if (e.key === 'Escape') { e.stopPropagation(); e.preventDefault(); close(replay ? 'replay' : 'skip'); return; }
       if (e.key === 'Tab' && layer) {   // Tab stays inside the intro
@@ -101,14 +106,28 @@
     document.addEventListener('keydown', keyH, true);
     function start(withSound) {
       if (!video) return;
-      if (withSound) { video.muted = false; soundBtn.hidden = true; }
+      if (withSound) { video.muted = false; soundBtn.hidden = true; tapEl.hidden = true; }
       playBtn.hidden = true;
       var pr; try { pr = video.play(); } catch (e) { pr = null; }
       if (pr && pr.catch) pr.catch(function () { if (playBtn) playBtn.hidden = false; });
     }
     // sound on: the voice from the top (the words ran silently until now)
-    function sound() { if (!video) return; video.muted = false; soundBtn.hidden = true; try { video.currentTime = 0; } catch (e) {} start(true); try { skip.focus({ preventScroll: true }); } catch (e) {} }
-    if (saveData() && !replay) { playBtn.hidden = false; soundBtn.hidden = true; } else start(replay);
+    function sound() { if (!video) return; video.muted = false; soundBtn.hidden = true; tapEl.hidden = true; try { video.currentTime = 0; } catch (e) {} start(true); try { skip.focus({ preventScroll: true }); } catch (e) {} }
+    // a first visit asks for sound first; where the browser refuses (every phone, before a tap), it plays silently under
+    // "Tap for sound", and if even a silent start is refused, it waits on the poster with Play
+    function begin() {
+      if (!video) return;
+      video.muted = false; video.defaultMuted = false; video.removeAttribute('muted');
+      var pr; try { pr = video.play(); } catch (e) { pr = null; }
+      function silent() {
+        if (!video) return;
+        video.muted = true; video.defaultMuted = true; video.setAttribute('muted', ''); tapEl.hidden = false;
+        var p2; try { p2 = video.play(); } catch (e) { p2 = null; }
+        if (p2 && p2.catch) p2.catch(function () { if (!video) return; tapEl.hidden = true; playBtn.hidden = false; });
+      }
+      if (pr && pr.then) pr.then(function () { tapEl.hidden = true; }, silent); else silent();
+    }
+    if (saveData() && !replay) { playBtn.hidden = false; soundBtn.hidden = true; } else if (replay) start(true); else begin();
     setTimeout(function () { try { skip.focus({ preventScroll: true }); } catch (e) {} }, 60);
   };
 
