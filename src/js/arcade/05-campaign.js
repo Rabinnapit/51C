@@ -184,7 +184,7 @@
       var left = ch.missions.filter(function (m) { var r = C.missionRec(ch, m); return !(r && r.passed); });
       wrap.style.setProperty('--cc', ch.color);
       wrap.appendChild(h('div.ar-camp-head', {}, h('div.ar-kicker', {}, h('i'), 'Campaign'), h('h2', {}, 'Your first year as a 51C'),
-        h('p', {}, 'Twelve chapters, one a month, briefed by your Master Gunner: the four exam areas, the review and the exam, then the first year on the job. Each is three short missions across the games with the questions that month would throw at you; pass all three to open the next chapter.')));
+        h('p', {}, 'Twelve chapters, one a month: the four exam areas, the review and the exam, then the first year on the job. Pass a chapter\'s three missions to open the next.')));
       var strip = h('div.ar-chapters', { role: 'tablist', 'aria-label': 'Chapters' });
       C.CHAPTERS.forEach(function (c) {
         var un = C.unlocked(c), cl = C.cleared(c), on = c === ch;

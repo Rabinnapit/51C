@@ -153,7 +153,7 @@
         h('span.ar-mission-go', {}, x.passed ? 'Again ↻' : isNext ? 'Play ▶' : 'Play')));
     });
     wrap.appendChild(list);
-    wrap.appendChild(h('p.ar-daily-foot', {}, 'Three five-minute missions a day, picked for the date. Pass all three to close the card and keep your streak. Miss a day? One repair a week keeps the streak alive' + (sn.repairFree ? '.' : ' (used this week).') + (t.best > 1 ? ' Best streak: ' + t.best + ' days.' : '')));
+    wrap.appendChild(h('p.ar-daily-foot', {}, 'Three five-minute missions a day. Pass all three to close the card and keep your streak. One repair a week covers a missed day' + (sn.repairFree ? '.' : ' (used this week).') + (t.best > 1 ? ' Best streak: ' + t.best + ' days.' : '')));
     return wrap;
   };
   table.section = function () {

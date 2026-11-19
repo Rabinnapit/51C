@@ -4,7 +4,7 @@
 (function () {
   'use strict';
   var A = window.ARCADE;
-  var root = null, viewEl = null, run = null, lobbyRaf = 0, params = {};
+  var root = null, viewEl = null, run = null, lobbyRaf = 0, params = {}, skipPops = 0, markLater = false, mounting = false;
 
   function h(tag, attrs) {
     var m = /^([a-z0-9-]+)?((?:[.#][\w-]+)*)$/i.exec(tag || 'div'); var el = document.createElement((m && m[1]) || 'div');
@@ -23,6 +23,29 @@
   function setView() { if (!viewEl) { viewEl = h('div.ar-view'); root.appendChild(viewEl); } viewEl.innerHTML = ''; for (var i = 0; i < arguments.length; i++) if (arguments[i]) viewEl.appendChild(arguments[i]); }
   function scrollTop() { try { window.scrollTo(0, 0); } catch (e) {} }
 
+  // ---------- Back while playing ----------
+  // A game covers the page but the address stays #/arcade, so the browser's Back (or a phone's back gesture) used to
+  // leave for the page before and drop the run. Now starting a game adds ONE history entry with the same address and
+  // { arPlay: 1 } in history.state (pushState with no hash change: the router, which listens to hashchange, never sees
+  // it). Back pops that entry and onPop does what "← Games" does: the lobby, or the pause card with the entry put back,
+  // so a second Back reaches the lobby. Every button that leads back to the lobby takes the entry off again (dropMark:
+  // one history.back() that onPop ignores), so Back from the lobby goes to the page before the Arcade in one press.
+  // A reload keeps history.state: mount drops a leftover entry unless the link itself names a game, which then reuses it.
+  function onMark() { try { return !!(history.state && history.state.arPlay); } catch (e) { return false; } }
+  function markPlay() {
+    if (skipPops) { markLater = true; return; }   // a drop is still on its way: put the entry back once it has landed
+    if (onMark()) return;                          // Play again, Restart, a 2D twin: the run before already holds it
+    try { history.pushState({ arPlay: 1 }, '', location.href); } catch (e) {}
+  }
+  function dropMark() { if (skipPops || !onMark()) return; skipPops++; try { history.back(); } catch (e) { skipPops--; } }
+  function onPop() {
+    if (skipPops) { skipPops--; if (markLater) { markLater = false; if (run) markPlay(); } return; }
+    if (!root || !/^#\/arcade(\?|$)/.test(location.hash)) return;   // a link out of the Arcade: the router takes it
+    if (onMark()) { if (!run) dropMark(); return; }   // Forward onto an old game's entry: nothing to resume, step off it
+    if (run && run.goBack) run.goBack(true);
+    else if (viewEl && viewEl.querySelector('.ar-results')) showLobby();
+  }
+
   function soundButtons() {
     var fx = h('button.ar-btn.sm.ar-tog', { type: 'button', 'aria-pressed': A.audio.muted ? 'false' : 'true', title: 'Sound effects (M)', onclick: function () { A.audio.setMuted(!A.audio.muted); paint(); } });
     var mu = h('button.ar-btn.sm.ar-tog', { type: 'button', 'aria-pressed': A.music.on ? 'true' : 'false', title: 'Music', onclick: function () { A.music.set(!A.music.on); paint(); } });
@@ -37,41 +60,45 @@
     return speed + ' and ' + t.lives + ' lives. ' + read;
   }
   function rankCard(rk) {
-    return h('div.ar-rank', {},
+    return h('div.ar-rank.compact', {},
       h('div.ar-rank-badge', { 'aria-hidden': 'true' }, h('b', {}, String(rk.level))),
       h('div.ar-rank-copy', {}, h('small', {}, 'Your rank · level ' + rk.level), h('strong', {}, rk.name),
         h('div.ar-xpbar', { role: 'progressbar', 'aria-valuemin': '0', 'aria-valuemax': '100', 'aria-valuenow': String(Math.round(rk.pct * 100)), 'aria-label': 'XP to the next rank' }, h('span', { style: { width: Math.round(rk.pct * 100) + '%' } })),
         h('small', {}, fmt(rk.xp) + ' XP · ' + fmt(rk.to - rk.xp) + ' to ' + rk.next)));
   }
   function showLobby() {
+    if (!mounting) dropMark();
     if (run) endRun();
     stopLobby(); A.music.stop();
     document.title = 'Arcade · ' + appName();
     var tier = A.tier(), rk = A.rank();
     var screen = h('div.ar-lobby');
-    screen.appendChild(h('header.ar-hero', {},
-      h('div.ar-hero-copy', {}, h('div.ar-kicker', {}, h('i'), 'B2B Arcade'),
-        h('h1.ar-h1', {}, 'Play your way ', h('em', {}, 'to the exam.')),
-        h('p.ar-lede', {}, 'Seven games built on the guide\'s checked question bank, key numbers, FAR parts, forms and glossary, five of them in real 3D, and a twelve-chapter campaign briefed by your Master Gunner. Every miss lands on a study list with the answer, the reason and the FAR cite.')),
-      rankCard(rk)));
-    // how the Arcade works, in three steps that jump to their section (a tester could not tell how the months open)
+    // the first screen answers "what do I play now": a short header, then today's range card with one Play button.
+    // The three "how it works" steps fold into one line (they looked like buttons and pushed Play below a laptop's fold).
     function jump(sel) { var el = screen.querySelector(sel); if (el) { try { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) { el.scrollIntoView(); } } }
     var how = [A.daily ? ['🎯', 'Range card', 'Three short missions a day. Close the card to keep your streak.', '#ar-daily'] : null,
       A.campaign ? ['🗓️', 'Campaign', 'One month at a time: pass a month\'s three missions to open the next.', '#ar-camp'] : null,
       ['🎮', 'Any game', 'Any game below, any time, or the game at the end of a lesson.', '.ar-cabinets']].filter(Boolean);
-    screen.appendChild(h('nav.ar-how', { 'aria-label': 'How the Arcade works' }, how.map(function (s, i) {
-      return h('button.ar-how-step', { type: 'button', onclick: function () { jump(s[3]); } }, h('span.ar-how-n', {}, String(i + 1)), h('span.ar-how-copy', {}, h('b', {}, s[0] + ' ' + s[1]), h('small', {}, s[2])));
-    })));
-    screen.appendChild(h('div.ar-setup', {},
+    var howEl = h('details.ar-how', {}, h('summary', {}, 'How the Arcade works'), h('ol', {}, how.map(function (s, i) {
+      return h('li', {}, h('button.ar-how-step', { type: 'button', onclick: function () { jump(s[3]); } }, h('span.ar-how-n', {}, String(i + 1)), h('span.ar-how-copy', {}, h('b', {}, s[0] + ' ' + s[1]), h('small', {}, s[2]))));
+    })), h('p', {}, 'Five games are in real 3D. Every miss goes on a study list with the answer, the reason and the FAR cite.'));
+    screen.appendChild(h('header.ar-hero', {},
+      h('div.ar-hero-copy', {}, h('div.ar-kicker', {}, h('i'), 'B2B Arcade'),
+        h('h1.ar-h1', {}, 'Play your way ', h('em', {}, 'to the exam.')),
+        h('p.ar-lede', {}, 'Seven games and a campaign, all on the guide\'s own checked questions.'),
+        howEl),
+      rankCard(rk)));
+    var setup = h('div.ar-setup', {},
       h('div.ar-pace-row', {}, h('span.ar-pace-label', {}, 'Pace'), h('div.ar-paces', { role: 'radiogroup', 'aria-label': 'Pace' }, A.TIERS.map(function (t, ti) {
         var on = t.id === tier.id;
         return h('button.ar-pace' + (on ? '.on' : ''), { type: 'button', role: 'radio', 'aria-checked': on ? 'true' : 'false', title: t.badge + ': ' + t.desc, style: { '--tc': t.color }, onclick: function () { var y = window.scrollY; A.setTier(t.id); showLobby(); window.scrollTo(0, y); } },
           h('span.ar-tier-dots', {}, [0, 1, 2, 3].map(function (k) { return h('i' + (k <= ti ? '.on' : '')); })), h('b', {}, t.name), h('small', {}, t.badge));
       }))),
       h('div.ar-sound', {}, soundButtons()),
-      h('p.ar-pace-line', {}, h('b', { style: { '--tc': tier.color } }, tier.name + ': '), paceLine(tier), ' ', h('span', {}, 'New here? Start at Recruit.'))));
-    var grid = h('div.ar-cabinets'), thumbs = [];
-    if (A.daily) { try { screen.appendChild(A.daily.section()); screen.appendChild(A.table.section()); } catch (e) { console.error('[arcade] daily', e); } }
+      h('p.ar-pace-line', {}, h('b', { style: { '--tc': tier.color } }, tier.name + ': '), paceLine(tier), ' ', h('span', {}, 'New here? Start at Recruit.')));
+    var grid = h('div.ar-cabinets'), thumbs = [], week = null;
+    if (A.daily) { try { screen.appendChild(dailyCard()); week = A.table.section(); } catch (e) { console.error('[arcade] daily', e); } }
+    screen.appendChild(setup);
     if (A.campaign && A.mentor) { try { screen.appendChild(A.campaign.section(thumbs)); } catch (e) { console.error('[arcade] campaign', e); } }
     screen.appendChild(h('h2.ar-h2', {}, 'All games'));
     A.order.forEach(function (id, i) {
@@ -89,6 +116,7 @@
             h('span.go', {}, ok ? 'Play ▶' : twin ? 'Play in 2D ▶' : 'Locked')))));
     });
     screen.appendChild(grid);
+    if (week) screen.appendChild(week);
     var quick = A.DATA.quick || [];
     if (quick.length) screen.appendChild(h('section.ar-quick', {}, h('h2', {}, 'Quick drills'), h('p', {}, 'The same facts without the action: tap-to-answer rounds that work with a screen reader.'),
       h('div.ar-quick-row', {}, quick.map(function (q) { return h('a.ar-quick-item', { href: q.href }, h('b', {}, q.title), h('span', {}, q.sub || '')); }))));
@@ -98,6 +126,16 @@
     if (A.GL && A.GL.selfTest) screen.appendChild(phoneCheck());
     setView(screen);
     runLobby(thumbs);
+  }
+  // today's range card with ONE big Play button for the next mission under its title (the mission rows stay below it)
+  function dailyCard() {
+    var sec = A.daily.section(), t = A.daily.today(), list = sec.querySelector('.ar-missions');
+    if (t.next && !t.closed) {
+      var m = t.next.def, n = t.missions.indexOf(t.next) + 1, G = (A.campaign && A.campaign.GAME) || {}, g = G[m.game] || { icon: '' };
+      var go = h('button.ar-btn.gold.lg.ar-daily-go', { type: 'button', onclick: function () { A.daily.start(m); } }, '▶ Play mission ' + n, h('span', {}, (g.icon ? g.icon + ' ' : '') + m.title));
+      sec.insertBefore(go, list);
+    }
+    return sec;
   }
   // "Game screen blank or stuck?": a 3D test on this device and a report the player can copy and send
   function phoneCheck() {
@@ -165,6 +203,7 @@
     A.audio.resume();
     document.title = def.title + ' · Arcade';
     if (host('playing')) host('playing')(true);
+    markPlay();
 
     // ---- DOM ----
     var hudScore = h('b', {}, '0'), hudBest = h('b', {}, fmt((A.best.get(id, tier.id) || {}).best || 0)), hudLevel = h('b', {}, '1'), hudTime = h('b', {}, ''), hudLives = h('span.ar-lives', { 'aria-label': 'Lives' });
@@ -172,7 +211,7 @@
     var pauseBtn = h('button.ar-btn.sm', { type: 'button', title: 'Pause (P)', 'aria-label': 'Pause', onclick: function () { togglePause(); } }, '⏸');
     var muteBtn = h('button.ar-btn.sm.ar-hide-xs', { type: 'button', title: 'Sound (M)', 'aria-label': 'Sound', onclick: function () { A.audio.setMuted(!A.audio.muted); muteBtn.textContent = A.audio.muted ? '🔇' : '🔊'; } }, A.audio.muted ? '🔇' : '🔊');
     var bar = h('header.ar-bar', {},
-      h('button.ar-btn.sm', { type: 'button', title: 'Back to the game list', onclick: function () { if (state.ended || !state.review.length || lostEl) showLobby(); else togglePause(true); } }, '← ', h('span.ar-hide-xs', {}, 'Games')),
+      h('button.ar-btn.sm', { type: 'button', title: 'Back to the game list', onclick: function () { state.goBack(false); } }, '← ', h('span.ar-hide-xs', {}, 'Games')),
       h('div.ar-bar-title', {}, h('b', {}, (def.icon ? def.icon + ' ' : '') + def.title), h('span.ar-chip', { style: { '--tc': tier.color } }, tier.name)),
       h('div.ar-hud', {}, h('div.ar-hud-i', {}, h('small', {}, 'Score'), hudScore), h('div.ar-hud-i.ar-hide-sm', {}, h('small', {}, 'Best'), hudBest), h('div.ar-hud-i.ar-hide-xs', {}, h('small', {}, 'Level'), hudLevel), timeItem, h('div.ar-hud-i', {}, h('small', {}, def.livesLabel || 'Lives'), hudLives)),
       muteBtn, pauseBtn);
@@ -204,6 +243,12 @@
     var state = { id: id, def: def, tier: tier, score: 0, lives: tier.lives, maxLives: tier.lives, level: 1, elapsed: 0, gameTime: 0, review: [], ended: false, paused: false, shake: 0, bannerTimer: 0, keys: new Set(), pointer: { x: 0, y: 0, down: false }, xp: 0, W: 960, H: 540, scale: 1, opts: opts };
     run = state;
     var gate = null, swallowPointer = null, inst = null, choiceCb = null, contCb = null, contTimer = 0;
+    // "← Games", the browser's Back and a phone's back gesture: the lobby when nothing is at stake, else the pause card.
+    // From history the entry Back took is put back first, so a second Back (from the pause card) reaches the lobby.
+    state.goBack = function (fromHistory) {
+      if (state.ended || !state.review.length || lostEl || (fromHistory && pauseEl)) { showLobby(); return; }
+      togglePause(true); if (fromHistory) markPlay();
+    };
 
     // ---- question memory across runs ----
     var runId = String(Date.now()), recent = [], rotKey = id;
@@ -713,6 +758,13 @@
   A.mount = function (container, p) {
     A.unmount();
     params = p || {};
+    skipPops = 0; markLater = false;
+    window.addEventListener('popstate', onPop);
+    mounting = true;
+    try { mountRoute(container); } finally { mounting = false; }
+    if (!run) dropMark();   // a reload on a game's entry that opened the lobby: Back must not need two presses
+  };
+  function mountRoute(container) {
     root = container; root.classList.add('arcade-root');
     A.rotation.reset();
     if (params.tier) A.setTier(params.tier);
@@ -728,8 +780,8 @@
     if (params.lesson && host('lessonGame')) { var lg = host('lessonGame')(params.lesson); if (lg) { startGame(A.runAs(lg.game) || lg.game, lg.opts); return; } }
     // a link to one game (the exam path, the FAR and certification pages): as its 2D twin where 3D cannot be drawn
     if (params.game && A.games[params.game]) startGame(A.runAs(params.game) || params.game, { realm: params.realm || '', mission: params.mission || '' });
-  };
+  }
   A.start = function (id, opts) { if (root) startGame(id, opts); };
-  A.unmount = function () { endRun(); stopLobby(); A.music.stop(); viewEl = null; root = null; };
+  A.unmount = function () { window.removeEventListener('popstate', onPop); endRun(); stopLobby(); A.music.stop(); viewEl = null; root = null; };
   A.lobby = function (at) { if (!root) return; showLobby(); var sel = at === 'campaign' ? '#ar-camp' : at === 'daily' ? '#ar-daily' : at === 'week' ? '#ar-week' : ''; if (sel) { var el = viewEl && viewEl.querySelector(sel); if (el) { try { el.scrollIntoView({ block: 'start' }); } catch (e) {} } } };
 })();
