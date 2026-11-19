@@ -257,6 +257,8 @@ html[data-motion="reduce"] .reveal { opacity: 1; transform: none; transition: no
 .wizard-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
 .wizard-head h2 { margin: 4px 0 2px; }
 .wizard-head p { margin: 0; }
+.wizard-head { scroll-margin-top: calc(var(--top-h) + 16px); }
+.wizard-head .wiz-skip { margin: 10px 0 8px; }
 .wiz-dots { display: flex; gap: 6px; padding-top: 6px; flex: none; }
 .wiz-dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--line-2); }
 .wiz-dots i.on { background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }

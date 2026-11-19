@@ -30,7 +30,7 @@
   function navItem(view) { return q('.side .nav[data-view="' + view + '"]'); }
   function phoneTab(view) { return q('.mobile-nav button[data-view="' + view + '"]'); }
   // On a phone the side menu is closed, so menu steps point at the phone bar or the menu button instead.
-  function side(el, view) { return narrow() ? (view && phoneTab(view)) || q('.topbar .menu-btn') : el; }
+  function side(el, view) { return narrow() ? (view && phoneTab(view)) || phoneTab('more') || q('.topbar .menu-btn') : el; }   // the rest of the menu is behind More
   function clamp(n, lo, hi) { return Math.max(lo, Math.min(hi, n)); }
   // a step may point at several elements at once; the highlight covers all of them
   function unionRect(els) {
@@ -59,11 +59,9 @@
       { title: 'What B2B Exam Prep is', view: 'home', target: homeTarget,
         text: 'A study and certification guide for new 51C Soldiers and 1102 civilians' + (CORB.meta().owner ? ', owned and built by ' + CORB.meta().owner : '') + '. It takes you to the DoW Contracting Professional certification: five courses, the CON 3990V exam and 12 months of experience. It works without internet; it is a training aid, not official guidance.' },
       { title: 'Your home page', view: 'home', target: homeTarget,
-        text: 'Home opens with this week on your exam path and your next step. Until you build your plan, it walks you through four short steps: who you are, your dates, the look and a voice.' },
-      { title: 'Exam path', target: function () { return side(navItem('path'), 'path'); },
-        text: '26 dated weeks to pass CON 3990V. Each week has a goal, lessons, a FAR reading, flashcards and a 10-question check, and each month ends with a timed checkpoint.' },
-      { title: 'My plan', target: function () { return side(navItem('plan')); },
-        text: 'Every step to certification with a date: your courses, the exam, 12 months of experience and the 36-month deadline. You can add the dates to your calendar.' },
+        text: 'Home opens with the next thing to do this week. Until you build your plan, it asks who you are and your dates; picking a look and a voice is optional.' },
+      { title: 'My plan', target: function () { return side(navItem('plan'), 'plan'); },
+        text: '26 dated weeks to pass CON 3990V: each has lessons, a FAR reading, flashcards and a 10-question check, and each month ends with a timed checkpoint. Steps and dates lists every step to certification: your courses, the exam, 12 months of experience and the 36-month deadline.' },
       { title: 'Certification 101', view: 'cert', target: function () { return q('.v-cert .tabs') || pageHead(); },
         text: 'The rules in one place, explained with pictures: what certification takes, signing up for courses in AITAS, the exam step by step, retakes, the 36-month clock, life after certification and ' + (((CORB.DATA || {}).cert || {}).faq || []).length + ' questions answered. Each tab is one topic.' },
       { title: 'Official documents', view: 'official', target: function () { return q('.doc-grid') || pageHead(); },
@@ -76,18 +74,18 @@
         text: 'Every lesson starts with pictures. Press Play to see each part light up and hear it read aloud. In lessons with dollar rules, Try it tools answer for any amount you pick.' },
       { title: 'How-to guides', target: function () { return side(navItem('howto'), 'learn'); },
         text: '13 step-by-step checklists for real tasks: your first week, signing up for a course in AITAS, scheduling the exam, a simplified buy, a modification, closeout and more.' },
-      { title: 'Practice', target: function () { return side(navGroup('Practice'), 'quiz'); },
+      { title: 'Practice', target: function () { return side(navGroup('Practice'), 'practice'); },
         text: 'The practice test has ' + CORB.data.questions().length + ' questions, each answer explained with where it is written. Practice by exam area, retry your misses, or take a timed simulator weighted like CON 3990V. Flashcards bring back what you miss.' },
       { title: 'Ask ' + (CORB.buddy ? CORB.buddy.name() : 'Buddy'), target: function () { return q('.buddy-fab'); },
         text: (CORB.buddy ? CORB.buddy.name() : 'Buddy') + ' is your study buddy: tap the chat bubble and ask in plain words, like "what is the micro-purchase threshold" or "how do I register in AITAS". It answers from the guide, on this device, with no internet and no AI account, and opens the page to read more. Need more depth? One tap sends your question to Google AI Mode, ChatGPT or Claude in your own account.' },
       { title: 'Arcade', optional: true, target: function () { return narrow() ? null : navItem('arcade'); },
         text: 'Seven games on the same facts, five in real 3D: a rifle range, a supply convoy, artillery, a space shooter, a dispatch yard, RPG boss battles and a pop-up range, plus a twelve-chapter campaign briefed by your Master Gunner. Pick a pace from Recruit to Elite; every run ends with a study list.' },
-      { title: 'Look it up', target: function () { return side(navGroup('Look it up'), 'glossary'); },
+      { title: 'Look it up', target: function () { return side(navGroup('Look it up')); },
         text: 'The glossary explains every acronym (tap any underlined acronym on a page to see it). FAR & key numbers lists the parts, thresholds and deadlines in FAR Overhaul numbering. Official links opens WarU, AITAS, Pearson and SAM.gov.' },
       { title: 'Search everything', target: function () { return q('.topbar .search-btn'); },
         text: 'Find any lesson, term, course or FAR part from any page. On a keyboard, press the / key.' },
-      { title: 'Easier to read', target: function () { return narrow() ? q('.topbar .menu-btn') : [q('.topbar .text-btn'), q('.topbar .theme-btn')].filter(Boolean); },
-        text: (narrow() ? 'Open the menu for day or night. For a bigger text size, go to Settings & help, Display tab.' : 'Make the text bigger, or switch between day and night.') + ' Day is the default. Listen buttons read lessons aloud.' },
+      { title: 'Easier to read', target: function () { return narrow() ? phoneTab('more') : [q('.topbar .text-btn'), q('.topbar .theme-btn')].filter(Boolean); },
+        text: (narrow() ? 'Tap More for day or night. For a bigger text size, open Settings & help, Display.' : 'Make the text bigger, or switch between day and night.') + ' Day is the default. Listen buttons read lessons aloud.' },
       { title: 'About and feedback', target: function () { return side(navItem('about')); },
         text: 'About tells you who builds this guide and how it stays current. Send feedback or report a problem from there.' },
       { title: 'Keep your progress', target: function () { var b = q('.topbar .save-btn'); return shown(b) ? b : side(navItem('settings')); },

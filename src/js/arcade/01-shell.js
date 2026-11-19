@@ -711,7 +711,7 @@
     else if (down && total >= 4 && acc != null && acc < 50) nudge = h('div.ar-nudge.down', {}, h('b', {}, 'Too fast?'), h('span', {}, 'Drop a pace; the questions stay the same.'), h('button.ar-btn', { type: 'button', onclick: function () { A.setTier(down.id); startGame(state.id, state.opts); } }, 'Play at ' + down.name));
     var rk = xp.after;
     var lessonBack = state.opts && state.opts.lesson && host('lessonHref') ? host('lessonHref')(state.opts.lesson.id) : null;
-    var pathBtn = lessonBack ? h('a.ar-btn.lg', { href: lessonBack.href }, '← Back to the lesson') : params.path && host('pathHref') ? h('a.ar-btn.lg', { href: host('pathHref')() }, '← My exam path') : null;
+    var pathBtn = lessonBack ? h('a.ar-btn.lg', { href: lessonBack.href }, '← Back to the lesson') : params.path && host('pathHref') ? h('a.ar-btn.lg', { href: host('pathHref')() }, '← My plan') : null;
     var screen = h('div.ar-results');
     screen.appendChild(h('div.ar-res-hero', {},
       h('div.ar-res-card.main', {},

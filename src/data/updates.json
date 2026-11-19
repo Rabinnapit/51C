@@ -108,6 +108,12 @@
   ],
   "guide_changes": [
     {
+      "version": "0.35.0",
+      "date": "2026-11-19",
+      "title": "One plan page, and a phone bar with More",
+      "notes": "Exam path and My plan are now one page, My plan, with three tabs: This week, All weeks, Steps and dates. It shows one goal date, the same one as Home; old links to the Exam path open it. On a phone the bar is Home, Plan, Learn, Practice and More: Practice opens Quick 10, the Practice test, Flashcards and the Arcade, and More holds everything else (Glossary, FAR, Certification 101, Courses, Settings). Setting up asks who you are and your dates; the look and the voice are optional and can be skipped. The first-visit terms are three short lines, with the full text one tap away."
+    },
+    {
       "version": "0.34.0",
       "date": "2026-11-19",
       "title": "One next step, and an app that behaves like an app",

@@ -38,3 +38,7 @@
   .v-plan .step { flex-wrap: wrap; }
 }
 @media print { .v-plan .step-more { display: block !important; } .v-plan .more-btn { display: none; } }
+
+/* ---- 0.35.0: one page. The weeks of the exam path (views/path.css) and the dated steps share it ---- */
+.v-plan .plan-extras { margin-bottom: var(--space-4); }
+.v-plan .back-link { margin-bottom: 4px; }

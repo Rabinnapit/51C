@@ -1,4 +1,4 @@
-/* VIEW home — first visit: a four-step onboarding (who you are, your dates, how it looks, read aloud) that builds the plan.
+/* VIEW home — first visit: a four-step onboarding (who you are, your dates; how it looks and read aloud are optional) that builds the plan.
    Returning: one thing to do next, the plan's next step, quick tiles, where you stand, what's new */
 (function () {
   'use strict';
@@ -80,7 +80,8 @@
     root.appendChild(tour());
   }
 
-  // ---- the onboarding: four short steps; the look and the voice apply as soon as they are tapped, the plan saves at the end ----
+  // ---- the onboarding: four short steps; the look and the voice apply as soon as they are tapped, the plan saves at the end.
+  //      Steps 3 and 4 are optional (0.35.0): Skip at the top of step 3 builds the plan with the look and the voice as they are ----
   function onboarding(h, icon) {
     var f = CORB.setupForm({ split: true }), step = 0;
     function voiceStep() {
@@ -96,16 +97,18 @@
       { title: 'Read aloud', sub: 'Every lesson, question and card can be read to you. Pick a voice and hear a sample.', el: voiceStep() }
     ];
     var head = h('div.wizard-head'), body = h('div.wizard-body'), foot = h('div.row.mt-5');
+    function finish() { if (f.save()) { CORB.ui.toast('Your plan is ready', 'ok'); CORB.go('plan'); } else { step = 0; paint(); } }
     function paint() {
-      var s = steps[step];
+      var s = steps[step], optional = step >= 2;
       head.innerHTML = ''; body.innerHTML = ''; foot.innerHTML = '';
-      head.appendChild(h('div', {}, h('div.eyebrow', {}, 'Step ' + (step + 1) + ' of ' + steps.length), h('h2', {}, s.title), h('p.muted', {}, s.sub)));
+      head.appendChild(h('div', {}, h('div.eyebrow', {}, 'Step ' + (step + 1) + ' of ' + steps.length + (optional ? ' · optional' : '')), h('h2', {}, s.title), h('p.muted', {}, s.sub),
+        optional && step < steps.length - 1 ? h('button.btn.sm.wiz-skip', { type: 'button', onclick: finish }, 'Skip, build my plan', icon('arrow-right')) : null));   // at the top: on a phone the buttons below are two screens down
       head.appendChild(h('div.wiz-dots', { 'aria-hidden': 'true' }, steps.map(function (x, i) { return h('i' + (i < step ? '.done' : i === step ? '.on' : '')); })));
       body.appendChild(s.el);
       if (step > 0) foot.appendChild(h('button.btn', { type: 'button', onclick: function () { step--; paint(); } }, icon('arrow-left'), 'Back'));
-      if (step < steps.length - 1) foot.appendChild(h('button.btn.primary.lg', { type: 'button', onclick: function () { if (s.check && !s.check()) return; step++; paint(); try { body.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e) {} } }, 'Next', icon('arrow-right')));
-      else foot.appendChild(h('button.btn.primary.lg', { type: 'button', onclick: function () { if (f.save()) { CORB.ui.toast('Your plan and 6-month exam path are ready', 'ok'); CORB.go('path'); } else { step = 0; paint(); } } }, 'Build my plan', icon('check')));
-      foot.appendChild(h('button.btn.ghost', { type: 'button', onclick: function () { CORB.set('settings.welcomeSeen', true); CORB.render(); } }, 'Look around first'));
+      if (step < steps.length - 1) foot.appendChild(h('button.btn.primary.lg', { type: 'button', onclick: function () { if (s.check && !s.check()) return; step++; paint(); try { head.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e) {} } }, 'Next', icon('arrow-right')));   // the new step's title, not the middle of its options
+      else foot.appendChild(h('button.btn.primary.lg', { type: 'button', onclick: finish }, 'Build my plan', icon('check')));
+      if (!optional) foot.appendChild(h('button.btn.ghost', { type: 'button', onclick: function () { CORB.set('settings.welcomeSeen', true); CORB.render(); } }, 'Look around first'));   // once the dates are in, leaving would throw them away
       if (step === 0) foot.appendChild(h('button.btn.ghost', { type: 'button', onclick: function () { if (CORB.tour) CORB.tour.start(); } }, icon('help'), 'Show me around'));
     }
     paint();
@@ -115,8 +118,7 @@
   function tour() {
     var h = CORB.ui.h, icon = CORB.ui.icon;
     var items = [
-      ['path', 'target', 'Exam path', '26 weeks to pass CON 3990V, week by week.'],
-      ['plan', 'route', 'My plan', 'Every step to certification, with dates.'],
+      ['plan', 'route', 'My plan', '26 weeks to pass CON 3990V, and every dated step to certified.'],
       ['cert', 'certificate', 'Certification 101', 'The rules, the exam and who does what.'],
       ['courses', 'school', 'Courses', 'What each course covers and how to pass it.'],
       ['learn', 'book', 'Lessons', 'Short lessons in plain English, with examples.'],
@@ -131,8 +133,8 @@
       })));
   }
 
-  // The one thing to do next on the Exam path, as a button that goes straight to it. Checks, checkpoints, games and
-  // to-dos are started or ticked on the Exam path's own row (it knows the quiz setup), so those open this week.
+  // The one thing to do next this week, as a button that goes straight to it. Checks, checkpoints, games and to-dos are
+  // started or ticked on their own row of My plan's This week (it knows the quiz setup), so those open this week.
   function taskGo(t) {
     var lesson = t.kind === 'lesson' ? CORB.data.lesson(t.lesson) : null, course = t.kind === 'course' ? CORB.data.course(t.course) : null;
     var title = t.t || (lesson ? lesson.title : course ? course.code + ' ' + course.title : 'This week\'s next task');
@@ -141,7 +143,7 @@
     if (t.kind === 'read') return { title: title, kind: 'FAR reading', label: 'Open Part ' + t.far, icon: 'scale', href: '#/far?tab=parts&q=' + t.far };
     if (course) return { title: title, kind: 'Course', label: 'About the course', icon: 'school', href: '#/courses?id=' + course.id };
     if (t.view) return { title: title, kind: 'To do', label: 'Open it', icon: 'arrow-right', href: '#/' + t.view + (t.params ? '?' + Object.keys(t.params).map(function (k) { return encodeURIComponent(k) + '=' + encodeURIComponent(t.params[k]); }).join('&') : '') };
-    return { title: title, kind: { drill: 'Check', exam: 'Checkpoint', game: 'Game', realexam: 'The exam', 'do': 'To do' }[t.kind] || '', label: 'Open this week', icon: 'target', href: '#/path' };
+    return { title: title, kind: { drill: 'Check', exam: 'Checkpoint', game: 'Game', realexam: 'The exam', 'do': 'To do' }[t.kind] || '', label: 'Open this week', icon: 'target', href: '#/plan' };
   }
 
   // A returning reader gets ONE thing to do next and one primary button. Everything else is a tile, a number or a fold.
@@ -153,14 +155,14 @@
       root.appendChild(h('section.home-head', {},
         h('div', {}, h('div.eyebrow', {}, CORB.trackLabel(plan.track()) || 'Your path'),
           hello(h), h('h1', {}, 'Day ' + plan.dayNumber() + ' of your path'),
-          h('p.lede', {}, left >= 0 ? 'Goal for courses and exam: ' + U.fmtDate(goal) + ' (' + U.plural(left, 'day') + ' to go).' : h('span', {}, 'Your goal date (' + U.fmtDate(goal) + ') has passed. ', h('a', { href: '#/plan' }, 'Pick a new one'), '.')))));
+          h('p.lede', {}, left >= 0 ? 'Goal for courses and exam: ' + U.fmtDate(goal) + ' (' + U.plural(left, 'day') + ' to go).' : h('span', {}, 'Your goal date (' + U.fmtDate(goal) + ') has passed. ', h('a', { href: '#/plan?tab=steps' }, 'Pick a new one'), '.')))));
     } else {
       root.appendChild(h('section.home-head', {}, h('div', {}, h('div.eyebrow', {}, 'Welcome'), h('h1', {}, 'Look around'),
         h('p.lede', {}, 'When you are ready, build your plan so the guide can put dates on every step.'),
         h('button.btn.primary.mt-3', { type: 'button', onclick: function () { CORB.set('settings.welcomeSeen', false); CORB.render(); } }, icon('route'), 'Build my plan'))));
     }
 
-    // ---- up next: this week's next task on the 6-month exam path, with the one primary button of the page ----
+    // ---- up next: this week's next task of the 26 weeks, with the one primary button of the page ----
     var nl = CORB.data.nextLesson(), upIsLesson = false;
     if (setup && CORB.path && CORB.path.weeks().length) {
       var pw = CORB.path.currentWeek(), wk = CORB.path.week(pw), ws = CORB.path.weekStats(wk), nextTask = wk.tasks.filter(function (t) { return !CORB.path.taskDone(t); })[0];
@@ -171,11 +173,11 @@
         h('h2', {}, go ? go.title : 'Week ' + pw + ' is done. Nice work.'),
         h('p.muted.small', {}, go ? [go.kind, wk.title].filter(Boolean).join(' · ') : 'Look ahead to next week, or practice what you missed.'),
         CORB.ui.bar(ws.pct, 'brass'),
-        h('div.row.mt-4', {}, h('a.btn.primary.lg', { href: go ? go.href : '#/path' }, icon(go ? go.icon : 'target'), go ? go.label : 'Open my exam path'),
-          go && go.href !== '#/path' ? h('a.btn.ghost', { href: '#/path' }, 'This week', icon('arrow-right')) : null)));
+        h('div.row.mt-4', {}, h('a.btn.primary.lg', { href: go ? go.href : '#/plan' }, icon(go ? go.icon : 'target'), go ? go.label : 'Open my plan'),
+          go && go.href !== '#/plan' ? h('a.btn.ghost', { href: '#/plan' }, 'This week', icon('arrow-right')) : null)));
     }
 
-    // ---- from the plan: the next dated step, as a compact row (its details are on My plan) ----
+    // ---- from the plan: the next dated step, as a compact row (its details are on My plan, Steps and dates) ----
     if (setup) {
       var nx = plan.nextSteps(1)[0];
       if (nx) {
@@ -186,7 +188,7 @@
           h('div.row.tight.mt-3', {},
             h('button.btn.sm', { type: 'button', onclick: function () { if (nx.course) { CORB.set('progress.courses.' + nx.course, { status: 'done', date: U.today() }); } plan.setStep(nx.id, true); CORB.ui.toast('Done. Nice work.', 'ok'); CORB.render(); } }, icon('check'), 'Mark done'),
             nx.howto ? h('a.btn.sm', { href: '#/howto?id=' + nx.howto }, icon('steps'), 'Show me how') : nx.course ? h('a.btn.sm', { href: '#/courses?id=' + nx.course }, icon('school'), 'About this course') : null,
-            h('a.btn.sm.ghost', { href: '#/plan' }, 'Details', icon('arrow-right')))));
+            h('a.btn.sm.ghost', { href: '#/plan?tab=steps' }, 'Details', icon('arrow-right')))));
       }
     }
 

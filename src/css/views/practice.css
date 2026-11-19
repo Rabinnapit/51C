@@ -1,0 +1,16 @@
+/* VIEW practice — the Practice tab: four tiles, two by two on a phone */
+.v-practice { max-width: 860px; margin: 0 auto; }
+.v-practice .practice-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
+.v-practice .p-tile { display: flex; flex-direction: column; gap: 2px; padding: 14px; min-height: 148px; text-decoration: none; color: var(--ink); }
+.v-practice .p-tile .tile-icon { width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); margin-bottom: 6px; }
+.v-practice .p-tile .tile-icon svg { width: 24px; height: 24px; }
+.v-practice .p-tile b { font-family: var(--font-display); font-size: var(--fs-lg); font-weight: 800; }
+.v-practice .p-tile .p-status { margin-top: auto; padding-top: 6px; }
+.v-practice .p-tile .p-status .badge { max-width: 100%; }
+@media (max-width: 860px) { .v-practice .page-head { margin-bottom: var(--space-3); } }
+@media (min-width: 861px) { .v-practice .p-tile { padding: var(--space-4); min-height: 172px; } }
+.v-practice .p-tile.main { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent), var(--shadow-sm); }
+.v-practice .p-tile.main .tile-icon { background: var(--accent); color: var(--bg); }
+.v-practice .p-ready { display: flex; align-items: center; gap: var(--space-4); margin-top: var(--space-4); }
+@media (min-width: 861px) { .v-practice .practice-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 340px) { .v-practice .practice-grid { grid-template-columns: minmax(0, 1fr); } .v-practice .p-tile { min-height: 0; } }

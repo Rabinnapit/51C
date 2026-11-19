@@ -88,7 +88,7 @@
     try { decks = CORB.decks ? CORB.decks().length : arr(D.cards).length; } catch (e) { decks = arr(D.cards).length; }
     var weeks = CORB.path && CORB.path.total ? CORB.path.total() : 26;
     var items = [
-      ['target', weeks, 'week exam path', 'path'], ['school', CORB.data.courses().length, 'courses explained', 'courses'], ['book', CORB.data.lessons().length, 'short lessons', 'learn'],
+      ['route', weeks, 'week plan', 'plan'], ['school', CORB.data.courses().length, 'courses explained', 'courses'], ['book', CORB.data.lessons().length, 'short lessons', 'learn'],
       ['quiz', CORB.data.questions().length, 'practice questions', 'quiz'], ['cards', decks, 'flashcard decks', 'cards'], ['gamepad', games, 'Arcade games', 'arcade'],
       ['glossary', CORB.data.glossary().length, 'glossary terms', 'glossary'], ['steps', CORB.data.howtos().length, 'how-to guides', 'howto']
     ].filter(function (x) { return x[1] && CORB.views[x[3]]; });

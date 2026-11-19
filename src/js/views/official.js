@@ -117,7 +117,7 @@
     if (rel.length) root.appendChild(h('section.mt-6', {}, h('div.section-head', {}, h('h2', {}, 'More in ' + (g ? g.title : 'this group'))), h('div.doc-grid', {}, rel.map(function (x) { return docCard(x, h, icon); }))));
   }
 
-  CORB.registerView({ id: 'official', mobileAs: 'path', title: 'Official documents', section: 'Get certified', icon: 'file', nav: true, order: 45,
+  CORB.registerView({ id: 'official', title: 'Official documents', section: 'Get certified', icon: 'file', nav: true, order: 45,
     blurb: 'The real DoW and WarU documents, with picture versions',
     keywords: 'official documents PDF DPCAP WarU FAQ roadmap flowchart user experience career field model competency model narrative memo policy reciprocity FAC-C continuous learning CL DoDI 5000.66 CON 7300V OJT tool warrant',
     render: function (root, ctx) {

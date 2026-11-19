@@ -9,7 +9,7 @@
     "**Do the tasks in order.** Lessons and drills tick themselves; tick FAR readings and other tasks yourself.",
     "**Score the checks honestly.** Hit each month's checkpoint target before you move on; if you miss, repeat the month's drills and retake it.",
     "**Behind? Do not skip the checkpoint.** Push the next week's reading instead.",
-    "**Your dates follow your plan.** The path starts on your start date in My plan and stretches if your goal is longer than 6 months."
+    "**Your dates follow your plan.** The 26 weeks start on your start date and stretch if your goal is longer than 6 months."
   ],
   "months": [
     {"n": 1, "title": "Foundation", "sub": "How the FAR works, who can bind the Government, ethics and money rules. Course: CON 1100V.", "phase": "gp"},
@@ -228,7 +228,7 @@
     {"n": 18, "m": 5, "title": "Your class practice exam, updated for the RFO",
      "goal": "Work through the B2B class practice exam, now corrected for the RFO, and read what changed.",
      "tasks": [
-       {"id": "w18-check", "kind": "do", "t": "Read the Class material check", "d": "What the class materials say, what the FAR says now, and why some answers changed.", "view": "path", "params": {"tab": "check"}},
+       {"id": "w18-check", "kind": "do", "t": "Read the Class material check", "d": "What the class materials say, what the FAR says now, and why some answers changed.", "view": "plan", "params": {"tab": "check"}},
        {"id": "w18-cx1", "kind": "drill", "t": "Class practice exam, set 1 (50 questions)", "src": "class", "n": 50},
        {"id": "w18-missed", "kind": "drill", "t": "Retry what you missed", "missed": true, "n": 25},
        {"id": "w18-cards", "kind": "cards", "deck": "b2b-jeopardy", "t": "Flashcards: B2B Jeopardy review"},
@@ -240,7 +240,7 @@
      "goal": "Lock in the FAR Overhaul changes the exam now tests, and drill the topics past test takers reported.",
      "tasks": [
        {"id": "w19-rfo", "kind": "do", "t": "Read FAR & key numbers: What changed lately", "d": "Old and new FAR numbers, thresholds and deadlines.", "view": "far"},
-       {"id": "w19-tips", "kind": "do", "t": "Read the test-taker topics", "d": "What people who took CON 3990V say to know, checked against the RFO.", "view": "path", "params": {"tab": "tips"}},
+       {"id": "w19-tips", "kind": "do", "t": "Read the test-taker topics", "d": "What people who took CON 3990V say to know, checked against the RFO.", "view": "plan", "params": {"tab": "tips"}},
        {"id": "w19-tx", "kind": "drill", "t": "Drill: test-taker topics (25 questions)", "src": "tips", "n": 25},
        {"id": "w19-cx2", "kind": "drill", "t": "Class practice exam, set 2 (50 questions)", "src": "class", "n": 50},
        {"id": "w19-cards", "kind": "cards", "deck": "b2b-forms", "t": "Flashcards: Common forms"}
@@ -306,7 +306,7 @@
     {"n": 26, "m": 6, "title": "Finish line",
      "goal": "Courses and exam done. Keep learning on the job.",
      "tasks": [
-       {"id": "w26-plan", "kind": "do", "t": "Update My plan", "d": "Mark your courses and exam done so your timeline shows what is left.", "view": "plan"},
+       {"id": "w26-plan", "kind": "do", "t": "Update your steps and dates", "d": "Mark your courses and exam done so your timeline shows what is left.", "view": "plan", "params": {"tab": "steps"}},
        {"id": "w26-job", "kind": "lesson", "lesson": "L34"},
        {"id": "w26-mentor", "kind": "do", "t": "Pay it forward", "d": "Share this guide with the next new 51C or 1102 in your office."}
      ],

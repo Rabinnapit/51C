@@ -32,7 +32,7 @@
       limit: o.mode === 'exam' ? Math.round(pool.length * 72) : 0, finished: false };
     CORB.go('quiz', { run: '1' });
   }
-  CORB.quiz = { start: start };
+  CORB.quiz = { start: start, going: function () { return S && !S.finished ? { i: S.i, n: S.items.length, label: S.label } : null; } };
   function finish() {
     if (!S || S.finished) return;
     clearInterval(timerId); unkey();
@@ -85,7 +85,7 @@
     var nClass = CORB.data.questions().filter(function (q) { return q.src === 'class'; }).length, nTips = CORB.data.questions().filter(function (q) { return q.src === 'tips'; }).length;
     if (nClass) root.appendChild(h('div.card.mt-4.class-sets', {}, h('div.row.between', {}, h('div', {}, h('h3', {}, 'From your B2B class'),
       h('p.small.muted', {}, 'The Back to Basics class practice exam (' + nClass + ' questions), checked against the RFO FAR and corrected where the rules changed, plus ' + nTips + ' questions on topics past test takers reported. Each answer says what changed.')),
-      h('a.btn.sm.ghost', { href: '#/path?tab=check' }, icon('clipboard'), 'What changed')),
+      h('a.btn.sm.ghost', { href: '#/plan?tab=check' }, icon('clipboard'), 'What changed')),
       h('div.row.tight.mt-3', {},
         h('button.btn', { type: 'button', onclick: function () { start({ mode: 'practice', src: 'class', n: 25, label: 'B2B class practice exam' }); } }, icon('play'), 'Class exam · 25'),
         h('button.btn', { type: 'button', onclick: function () { start({ mode: 'exam', src: 'class', n: 50, label: 'B2B class exam, timed · 50' }); } }, icon('timer'), 'Timed · 50'),
@@ -172,7 +172,7 @@
     var pc = CORB.util.pct(S.right, S.items.length), pass = pc >= 70;
     root.appendChild(h('div.card.raised.result-hero', {}, CORB.ui.ring(pc, pc + '%', pass ? 'var(--ok)' : 'var(--accent-2)', 120),
       h('div', {}, h('div.eyebrow', {}, S.label), h('h1', {}, pass ? 'Passing score' : 'Keep going'), h('p.lede', {}, S.right + ' of ' + S.items.length + ' right. The real exam needs 70%.' + (S.mode === 'exam' ? ' Time used: ' + fmtTime((S.ended - S.started) / 1000) + '.' : '')),
-        h('div.row.tight.mt-3', {}, S.path ? h('a.btn.primary', { href: '#/path' }, icon('route'), 'Back to my exam path') : null,
+        h('div.row.tight.mt-3', {}, S.path ? h('a.btn.primary', { href: '#/plan' }, icon('route'), 'Back to this week') : null,
           h('button.btn' + (S.path ? '' : '.primary'), { type: 'button', onclick: function () { S = null; CORB.go('quiz'); } }, icon('refresh'), 'New quiz'),
           S.items.some(function (x) { return !x.ok; }) ? h('button.btn', { type: 'button', onclick: function () { start({ mode: 'missed', n: 25, label: 'Missed questions' }); } }, icon('repeat'), 'Retry the ones I missed') : null))));
     // the first score a reader earns is the moment to offer an account (once; core/10-account.js decides)
@@ -193,7 +193,7 @@
     })));
   }
 
-  CORB.registerView({ id: 'quiz', title: 'Practice test', section: 'Practice', icon: 'quiz', nav: true, order: 70, mobile: true, short: 'Practice',
+  CORB.registerView({ id: 'quiz', title: 'Practice test', section: 'Practice', icon: 'quiz', nav: true, order: 70, mobileAs: 'practice',
     blurb: 'Exam-style questions and a timed exam simulator', keywords: 'quiz test exam practice simulator questions CON 3990V',
     badge: function () { return 0; },
     render: function (root, ctx) {

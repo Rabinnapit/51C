@@ -105,3 +105,14 @@
   .topbar .top-title.is-home .top-eyebrow { display: none; }
   .topbar .top-title.is-home::before { content: attr(data-app); font-family: var(--font-display); font-weight: 800; font-size: 1.02rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 }
+
+/* ---- phones (0.35.0): the bar is Home, Plan, Learn, Practice and More. More opens the menu, so the top bar has no menu
+   button; the menu slides in from More's side and lists only the pages the bar does not hold ---- */
+@media (max-width: 860px) {
+  .topbar .menu-btn { display: none; }
+  .shell > .side.open { inset: 0 0 0 auto; border-right: 0; border-left: 1px solid var(--line); padding-left: 0; padding-right: env(safe-area-inset-right, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); animation: side-in var(--dur) var(--ease); }
+  .side .nav[data-bar], .side .nav-group.all-bar { display: none; }
+  .mobile-nav button.more-btn.open { color: var(--accent); }
+  .shell.menu-open .buddy-fab { display: none; }   /* it sat on the last rows of the menu */
+}
+@keyframes side-in { from { transform: translateX(28px); opacity: 0; } to { transform: none; opacity: 1; } }

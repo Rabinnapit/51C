@@ -1,8 +1,9 @@
-/* VIEW path — the 6-month exam path: 26 dated weeks of tasks with monthly checkpoints, the B2B class material check, and test-taker topics */
+/* The 6-month exam path: 26 dated weeks of tasks with monthly checkpoints, the B2B class material check and the test-taker
+   topics. Since 0.35.0 it has no page of its own: My plan (views/plan.js) shows it as This week and All weeks through
+   CORB.path.draw, and the old address #/path lands there. */
 (function () {
   'use strict';
   var CORB = window.CORB;
-  var TABS = [['week', 'This week'], ['all', 'All 26 weeks'], ['check', 'Class material check'], ['tips', 'Test-taker tips']];
   var STATUS = { ok: ['ok', 'Still right', 'check'], updated: ['info', 'Updated', 'refresh'], fixed: ['warn', 'Corrected', 'alert'], verify: ['verify', 'Verify locally', 'flag'] };
 
   function P() { return CORB.DATA.path || { weeks: [], months: [], checks: [], intel: [], files: [] }; }
@@ -17,7 +18,6 @@
   path.currentWeek = function () { var t = CORB.util.today(), cur = 1; path.weeks().forEach(function (w) { if (path.weekStart(w.n) <= t) cur = w.n; }); return cur; };
   path.week = function (n) { return path.weeks().filter(function (w) { return w.n === n; })[0] || null; };
   path.month = function (m) { return (P().months || []).filter(function (x) { return x.n === m; })[0] || { n: m, title: '', sub: '' }; };
-  path.examDate = function () { return CORB.get('progress.exam.scheduled') || path.weekStart(P().exam_week || 24); };
 
   // ---- task state. Lessons, courses and the real exam tick themselves; drills and checkpoints record their score ----
   function rec(id) { return CORB.get('progress.path.' + id); }
@@ -61,8 +61,8 @@
     return '#/games?game=' + encodeURIComponent(t.game);
   }
 
-  // picking another week stays on this page: swap the history entry so Back leaves the Exam path in one press
-  function weekLink(n) { return function (e) { if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return; e.preventDefault(); CORB.go('path', { w: n }, { replace: true }); }; }
+  // picking another week stays on this page: swap the history entry so Back leaves My plan in one press
+  function weekLink(n) { return function (e) { if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return; e.preventDefault(); CORB.go('plan', { w: n }, { replace: true }); }; }
 
   // ---- one task row ----
   function taskRow(t, h, icon) {
@@ -98,20 +98,20 @@
   function weekTab(root, h, icon, params) {
     var U = CORB.util, cur = path.currentWeek(), n = U.clamp(+params.w || cur, 1, path.total()), w = path.week(n);
     if (!w) { root.appendChild(h('div.empty', {}, 'No weeks in the path data.')); return; }
-    var m = path.month(w.m), st = path.weekStats(w), prog = path.progress(), exam = path.examDate(), left = U.daysUntil(exam);
-    if (!CORB.plan.hasSetup()) root.appendChild(h('div.mb-4', {}, CORB.ui.callout('brass', 'calendar', 'Your path starts today until you set your start date', h('span', {}, 'Build your plan so the weeks line up with your real start date and goal. ',
+    var m = path.month(w.m), st = path.weekStats(w), prog = path.progress(), goal = CORB.plan.goal(), left = U.daysUntil(goal), sched = CORB.get('progress.exam.scheduled');   // one goal date, the one Home shows
+    if (!CORB.plan.hasSetup()) root.appendChild(h('div.mb-4', {}, CORB.ui.callout('brass', 'calendar', 'These weeks start today', h('span', {}, 'Set your start date and goal so the weeks line up with them. ',
       h('button.btn.sm.mt-2', { type: 'button', onclick: changeDates }, icon('route'), 'Set my dates')))));
     var when = n === cur ? 'This week' : n < cur ? 'Earlier week' : 'Coming up';
     root.appendChild(h('section.card.raised.path-hero', {},
       h('div.grow', {}, h('div.eyebrow', {}, 'Week ' + n + ' of ' + path.total() + ' · Month ' + w.m + ': ' + m.title),
         h('h2', {}, w.title), h('div.row.tight.mt-2', {}, CORB.ui.badge(n === cur ? 'brass' : 'neutral', when + ' · ' + U.fmtShort(path.weekStart(n)) + ' to ' + U.fmtShort(path.weekEnd(n)), 'calendar'), h('span.small.muted', {}, st.done + ' of ' + st.total + ' tasks done')),
         h('p.lede.mt-3', {}, w.goal)),
-      h('div.path-ring', {}, CORB.ui.ring(prog.pct, prog.pct + '%', 'var(--accent)', 96), h('div.tiny.muted.center', {}, 'of the whole path'),
-        h('div.small.center.mt-2', {}, h('b', {}, left >= 0 ? U.plural(left, 'day') : 'Exam date passed'), h('div.tiny.muted', {}, (CORB.get('progress.exam.scheduled') ? 'to your exam' : 'to your target exam week') + ' · ' + U.fmtShort(exam))))));
+      h('div.path-ring', {}, CORB.ui.ring(prog.pct, prog.pct + '%', 'var(--accent)', 96), h('div.tiny.muted.center', {}, 'of all ' + path.total() + ' weeks'),
+        h('div.small.center.mt-2.path-goal', {}, h('b', {}, left >= 0 ? U.plural(left, 'day') : 'Goal date passed'), h('div.tiny.muted', {}, (left >= 0 ? 'to your goal · ' : 'It was ') + U.fmtShort(goal)), sched ? h('div.tiny.muted', {}, 'Exam booked ' + U.fmtShort(sched)) : null))));
     root.appendChild(h('div.row.between.week-nav', {},
-      n > 1 ? h('button.btn.sm.ghost', { type: 'button', onclick: function () { CORB.go('path', { w: n - 1 }, { replace: true }); } }, icon('chevron-left'), 'Week ' + (n - 1)) : h('span'),
-      n !== cur ? h('button.btn.sm', { type: 'button', onclick: function () { CORB.go('path', {}, { replace: true }); } }, icon('calendar'), 'Back to this week') : h('span'),
-      n < path.total() ? h('button.btn.sm.ghost', { type: 'button', onclick: function () { CORB.go('path', { w: n + 1 }, { replace: true }); } }, 'Week ' + (n + 1), icon('chevron-right')) : h('span')));
+      n > 1 ? h('button.btn.sm.ghost', { type: 'button', onclick: function () { CORB.go('plan', { w: n - 1 }, { replace: true }); } }, icon('chevron-left'), 'Week ' + (n - 1)) : h('span'),
+      n !== cur ? h('button.btn.sm', { type: 'button', onclick: function () { CORB.go('plan', {}, { replace: true }); } }, icon('calendar'), 'Back to this week') : h('span'),
+      n < path.total() ? h('button.btn.sm.ghost', { type: 'button', onclick: function () { CORB.go('plan', { w: n + 1 }, { replace: true }); } }, 'Week ' + (n + 1), icon('chevron-right')) : h('span')));
     var left2 = h('div.stack', {},
       h('div.stack.tight.tasks', {}, w.tasks.map(function (t) { return taskRow(t, h, icon); })),
       w.tip ? CORB.ui.callout('info', 'bulb', 'How to study this week', CORB.ui.rich(w.tip)) : null,
@@ -125,7 +125,7 @@
     return h('div.card.month-card', {}, h('div.eyebrow', {}, 'Month ' + mn + ' of 6'), h('h3', {}, m.title), h('p.small.muted', {}, m.sub),
       h('div.list.mt-3', {}, weeks.map(function (w) {
         var s = path.weekStats(w), late = w.n < cur && s.done < s.total;
-        return h('a.list-item.week-mini' + (w.n === sel ? '.on' : ''), { href: '#/path?w=' + w.n, onclick: weekLink(w.n) }, h('span.num.small', {}, 'W' + w.n), h('span.grow.small', {}, w.title),
+        return h('a.list-item.week-mini' + (w.n === sel ? '.on' : ''), { href: '#/plan?w=' + w.n, onclick: weekLink(w.n) }, h('span.num.small', {}, 'W' + w.n), h('span.grow.small', {}, w.title),
           s.done === s.total ? CORB.ui.badge('ok', 'Done', 'check') : late ? CORB.ui.badge('warn', s.done + '/' + s.total) : h('span.tiny.muted', {}, s.done + '/' + s.total));
       })),
       cps.map(function (t) { var b = path.best(t); return h('div.cp-row.mt-3', {}, icon('timer'), h('div.grow', {}, h('b.small', {}, t.t), h('div.tiny.muted', {}, 'Target ' + t.target + '%' + (b != null ? ' · your best ' + b + '%' : ' · not taken yet'))), b != null && b >= t.target ? CORB.ui.badge('ok', 'Met', 'check') : null); }));
@@ -155,7 +155,7 @@
           return h('details.acc.week-acc' + (w.n === cur ? '.cur' : ''), { open: w.n === cur }, h('summary', {}, h('span.num.week-n', {}, 'W' + w.n), h('span.grow', {}, w.title), chip, icon('chevron', 'chev')),
             h('div.acc-body', {}, h('p', {}, w.goal),
               h('ul.week-tasks', {}, w.tasks.map(function (tk) { var dn = path.taskDone(tk); var l = tk.kind === 'lesson' ? CORB.data.lesson(tk.lesson) : null, c = tk.kind === 'course' ? CORB.data.course(tk.course) : null; return h('li' + (dn ? '.done' : ''), {}, CORB.ui.icon(dn ? 'check' : 'dot'), tk.t || (l ? 'Lesson: ' + l.title : c ? c.code : tk.id)); })),
-              h('a.btn.sm.mt-2', { href: '#/path?w=' + w.n, onclick: weekLink(w.n) }, 'Open week ' + w.n, icon('arrow-right'))));
+              h('a.btn.sm.mt-2', { href: '#/plan?w=' + w.n, onclick: weekLink(w.n) }, 'Open week ' + w.n, icon('arrow-right'))));
         }))));
     });
   }
@@ -174,7 +174,7 @@
       h('span.small.muted', {}, 'Each answer shows whether it changed and why.')));
     var f = params.f || 'all';
     var seg = h('div.seg.mt-5', { role: 'radiogroup', 'aria-label': 'Filter' }, [['all', 'All ' + list.length], ['changed', 'Changed by the RFO'], ['ok', 'Still right'], ['verify', 'Check locally']].map(function (x) {
-      return h('button' + (f === x[0] ? '.on' : ''), { type: 'button', onclick: function () { CORB.go('path', { tab: 'check', f: x[0] }, { replace: true }); } }, x[1]);
+      return h('button' + (f === x[0] ? '.on' : ''), { type: 'button', onclick: function () { CORB.go('plan', { tab: 'check', f: x[0] }, { replace: true }); } }, x[1]);
     }));
     root.appendChild(h('div.section-head', {}, h('h2', {}, 'What the class taught, and what the FAR says now')));
     root.appendChild(seg);
@@ -209,15 +209,11 @@
     CORB.ui.modal({ title: 'Set my dates', body: f.el, actions: [{ label: 'Cancel' }, { label: 'Save', primary: true, onClick: function () { if (!f.save()) return false; CORB.ui.toast('Dates saved', 'ok'); CORB.render(); } }] });
   }
 
-  CORB.registerView({ id: 'path', title: 'Exam path', section: 'Start', icon: 'target', nav: true, order: 15, mobile: true, short: 'Path',
-    blurb: '26 weeks to pass CON 3990V', keywords: 'six month 6-month exam path weekly study plan schedule CON 3990V checkpoint B2B class material check test taker tips RFO',
-    badge: function () { try { var w = path.week(path.currentWeek()); if (!w) return 0; var s = path.weekStats(w); return s.total - s.done; } catch (e) { return 0; } },
-    topTitle: function (p) { return p.tab === 'check' ? 'Class material check' : p.tab === 'tips' ? 'Test-taker tips' : 'Exam path'; },
-    render: function (root, ctx) {
-      var h = CORB.ui.h, icon = CORB.ui.icon, p = ctx.params, tab = p.tab || 'week', X = P();
-      root.appendChild(CORB.ui.pageHead({ eyebrow: 'CON 3990V · ' + path.total() + ' weeks', title: X.title || '6-Month Exam Path', lede: tab === 'week' ? X.lede : null }));
-      root.appendChild(h('div.tabs', { role: 'tablist' }, TABS.map(function (t) { return h('button' + (t[0] === tab ? '.on' : ''), { type: 'button', role: 'tab', 'aria-selected': t[0] === tab ? 'true' : 'false', onclick: function () { CORB.go('path', t[0] === 'week' ? {} : { tab: t[0] }, { replace: true }); } }, t[1]); })));
-      var body = h('div.tab-body'); root.appendChild(body);
-      ({ week: weekTab, all: allTab, check: checkTab, tips: tipsTab }[tab] || weekTab)(body, h, icon, p);
-    } });
+  path.draw = { week: weekTab, all: allTab, check: checkTab, tips: tipsTab };
+
+  // the Exam path page became part of My plan in 0.35.0: old links, bookmarks and home-screen shortcuts land there
+  CORB.registerView({ id: 'path', redirect: function (p) {
+    var q = {}; if (p.tab && p.tab !== 'week') q.tab = p.tab; if (p.w) q.w = p.w; if (p.f) q.f = p.f;
+    return { id: 'plan', params: q };
+  }, render: function () {} });
 })();

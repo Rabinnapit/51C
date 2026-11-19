@@ -15,14 +15,21 @@
   CORB.route = function () { return current; };
   // opts.replace: swap the current history entry instead of adding one. In-page tabs, chips and filters use it, so
   // Back leaves the page in one press instead of stepping through every tab the reader opened.
+  function hashOf(id, params) {
+    var ks = params ? Object.keys(params).filter(function (k) { return params[k] != null && params[k] !== ''; }) : [];
+    return '#/' + id + (ks.length ? '?' + ks.map(function (k) { return encodeURIComponent(k) + '=' + encodeURIComponent(params[k]); }).join('&') : '');
+  }
   CORB.go = function (id, params, opts) {
-    var qs = params && Object.keys(params).length ? '?' + Object.keys(params).filter(function (k) { return params[k] != null && params[k] !== ''; }).map(function (k) { return encodeURIComponent(k) + '=' + encodeURIComponent(params[k]); }).join('&') : '';
-    var target = '#/' + id + qs;
+    var target = hashOf(id, params);
     if (location.hash === target) render();
     else if (opts && opts.replace) { try { history.replaceState(history.state, '', target); render(); } catch (e) { location.replace(target); } }   // replaceState fires no hashchange, so draw here
     else location.hash = target;
   };
 
+  // the phone's bottom bar: the pages marked mobile (they need not be on the side menu: Practice is a phone page), in order
+  function barDefs() { return CORB.viewOrder.map(function (id) { return CORB.views[id]; }).filter(function (d) { return d.mobile; }).sort(function (a, b) { return (a.order || 99) - (b.order || 99); }).slice(0, 4); }
+  // a side-menu page the bar already covers: a tab of its own, or a tile of the Practice tab
+  function inBar(d) { return !!(d.mobile || d.mobileAs === 'practice'); }
   function navDefs() { return CORB.viewOrder.map(function (id) { return CORB.views[id]; }).filter(function (d) { return d.nav; }).sort(function (a, b) { return (a.order || 99) - (b.order || 99); }); }
   function isDark() { var t = document.documentElement.getAttribute('data-theme'); if (t) return t === 'dark'; return !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches); }
   // Day is the default. 'dark' is night; 'system' follows the device's own light or dark setting.
@@ -116,8 +123,8 @@
     var side = h('aside.side', { 'aria-label': 'Main menu' },
       h('a.brand', { href: '#/home', onclick: closeSide }, h('div.mark', {}, 'B2B'), h('div', {}, h('b', {}, CORB.appName()), h('small', {}, meta.tagline_short || 'Contracting certification, step by step'))),
       h('nav', { 'aria-label': 'Sections' }, SECTIONS.filter(function (s) { return groups[s]; }).map(function (s) {
-        return h('div.nav-group', {}, h('div.nav-label', {}, s), groups[s].map(function (d) {
-          return h('button.nav', { type: 'button', 'data-view': d.id, 'data-mini-tip': d.title, onclick: function () { sideTip(null); CORB.go(d.id); closeSide(); },
+        return h('div.nav-group' + (groups[s].every(inBar) ? '.all-bar' : ''), {}, h('div.nav-label', {}, s), groups[s].map(function (d) {
+          return h('button.nav', { type: 'button', 'data-view': d.id, 'data-bar': inBar(d) ? '1' : null, 'data-mini-tip': d.title, onclick: function () { sideTip(null); CORB.go(d.id); closeSide(); },
             onmouseenter: function (e) { sideTip(e.currentTarget); }, onmouseleave: function () { sideTip(null); }, onfocus: function (e) { sideTip(e.currentTarget); }, onblur: function () { sideTip(null); } },
             icon(d.icon || 'dot'), h('span', {}, d.title), d.badge ? h('span.count', { 'data-badge': d.id }) : null);
         }));
@@ -145,8 +152,9 @@
       CORB.account && CORB.account.ready() ? CORB.account.topButton() : null,
       h('button.btn.icon.sm.ghost.tour-btn', { type: 'button', 'aria-label': 'Take the tour', 'data-tip': 'Tour (press ?)', onclick: function () { if (CORB.tour) CORB.tour.start(); else CORB.go('settings', { tab: 'help' }); } }, icon('help'))
     );
-    var mobileItems = navDefs().filter(function (d) { return d.mobile; }).slice(0, 5);
-    var mobile = h('nav.mobile-nav', { 'aria-label': 'Quick menu' }, mobileItems.map(function (d) { return h('button', { type: 'button', 'data-view': d.id, onclick: function () { CORB.go(d.id); } }, icon(d.icon || 'dot'), h('span', {}, d.short || d.title)); }));
+    // the phone's bar: four tabs and More, which opens the rest of the menu (the side menu without the pages the tabs cover)
+    var mobile = h('nav.mobile-nav', { 'aria-label': 'Quick menu' }, barDefs().map(function (d) { return h('button', { type: 'button', 'data-view': d.id, onclick: function () { closeSide(); CORB.go(d.id); } }, icon(d.icon || 'dot'), h('span', {}, d.short || d.title)); }),
+      h('button.more-btn', { type: 'button', 'data-view': 'more', 'aria-haspopup': 'true', 'aria-expanded': 'false', onclick: function () { if (sideOpen()) closeSide(); else openSide(); } }, icon('menu'), h('span', {}, 'More')));
     var main = h('main.main', {}, h('div.update-slot'), top, h('div.content#content', { tabindex: '-1' }), mobile, CORB.buddy ? CORB.buddy.fab() : null);
     shell = h('div.shell', {}, side, main);
     app.innerHTML = ''; app.appendChild(shell);
@@ -176,8 +184,16 @@
       paintTools(); return r;
     }).catch(function (e) { CORB.ui.toast('Progress was not saved into the file: ' + ((e && e.message) || e), 'danger', 6000); });
   };
-  function openSide() { var s = shell && shell.querySelector('.side'); if (!s) return; s.classList.add('open'); var scrim = CORB.ui.h('div.side-scrim', { onclick: closeSide }); scrim.id = 'sideScrim'; document.body.appendChild(scrim); var f = s.querySelector('.nav.active, .nav'); if (f) f.focus(); }
-  function closeSide() { var s = shell && shell.querySelector('.side'); if (s) s.classList.remove('open'); var sc = document.getElementById('sideScrim'); if (sc) sc.remove(); }
+  function sideOpen() { var s = shell && shell.querySelector('.side'); return !!(s && s.classList.contains('open')); }
+  function moreBtn(open) { var b = shell && shell.querySelector('.mobile-nav .more-btn'); if (b) { b.setAttribute('aria-expanded', open ? 'true' : 'false'); b.classList.toggle('open', open); } }
+  function openSide() {
+    var s = shell && shell.querySelector('.side'); if (!s || sideOpen()) return;
+    s.classList.add('open'); shell.classList.add('menu-open'); moreBtn(true);   // menu-open: the Buddy button steps aside
+    var scrim = CORB.ui.h('div.side-scrim', { onclick: closeSide }); scrim.id = 'sideScrim'; document.body.appendChild(scrim);
+    var navs = Array.prototype.filter.call(s.querySelectorAll('.nav'), function (b) { return b.offsetParent !== null; });   // on a phone some are hidden: the bar has them
+    var f = navs.filter(function (b) { return b.classList.contains('active'); })[0] || navs[0]; if (f) f.focus();
+  }
+  function closeSide() { var s = shell && shell.querySelector('.side'); if (s) s.classList.remove('open'); if (shell) shell.classList.remove('menu-open'); var sc = document.getElementById('sideScrim'); if (sc) sc.remove(); moreBtn(false); }
 
   // ---- render ----
   var leaveFn = null;
@@ -202,11 +218,18 @@
   }
   function render() {
     var r = parseHash(), def = CORB.views[r.id] || CORB.views.home;
+    // a page that moved (Exam path is part of My plan): swap the address for the new one, then draw that page
+    if (def && def.redirect) {
+      var to = def.redirect(r.params) || { id: 'home' };
+      try { history.replaceState(history.state, '', hashOf(to.id, to.params)); } catch (e) {}
+      r = { id: to.id, params: to.params || {} }; def = CORB.views[r.id] || CORB.views.home;
+    }
     if (!def) { document.getElementById('app').innerHTML = '<div class="content"><div class="empty"><h3>Nothing to show</h3></div></div>'; return; }
     if (leaveFn) { try { leaveFn(); } catch (e) {} leaveFn = null; }
     current = { id: def.id, params: r.params };
     if (!shell || !document.body.contains(shell)) buildShell();
     var navId = def.navAs || def.id, mobId = def.mobileAs || navId;
+    if (!barDefs().some(function (d) { return d.id === mobId; })) mobId = 'more';   // everything else was opened from More
     shell.querySelectorAll('.nav').forEach(function (b) { var on = b.getAttribute('data-view') === navId; b.classList.toggle('active', on); b.setAttribute('aria-current', on ? 'page' : 'false'); });
     shell.querySelectorAll('.mobile-nav button').forEach(function (b) { var on = b.getAttribute('data-view') === mobId; b.classList.toggle('active', on); b.setAttribute('aria-current', on ? 'page' : 'false'); });
     shell.classList.toggle('in-run', def.id === 'quiz' && !!r.params.run);   // the Buddy button sat on the quiz's Next button on a phone

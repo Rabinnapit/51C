@@ -2,7 +2,7 @@
    The engine and games live in src/js/arcade/ (tools/build.py inlines them after the views). This view builds ARCADE.DATA
    from CORB_DATA (question bank, key numbers, deadlines, forms, FAR parts, UCF, PIID letters, glossary, sorting sets),
    points the Arcade's storage at the reader's progress (progress.arcade, saved into the file like everything else),
-   records missed bank questions for Practice test, and ticks Exam path game tasks. */
+   records missed bank questions for Practice test, and ticks the game tasks of My plan's weeks. */
 (function () {
   'use strict';
   var CORB = window.CORB;
@@ -178,7 +178,7 @@
       },
       lessonHref: function (id) { var l = CORB.data.lesson(id); return l ? { href: '#/lesson?id=' + encodeURIComponent(id), title: l.title } : null; },
       lessonGame: function (id) { return CORB.lessonGame(id); },
-      pathHref: function () { return '#/path'; },
+      pathHref: function () { return '#/plan'; },
       playing: function () {}
     };
   }
@@ -187,7 +187,7 @@
   CORB.arcadeReady = function () { var A = window.ARCADE; if (!A || typeof A.mount !== 'function' || !A.daily) return null; try { A.DATA = buildData(); connect(A); } catch (e) { return null; } return A; };
 
   CORB.registerView({
-    id: 'arcade', title: 'Arcade', section: 'Practice', icon: 'gamepad', nav: true, order: 90, full: true, mobileAs: 'quiz',
+    id: 'arcade', title: 'Arcade', section: 'Practice', icon: 'gamepad', nav: true, order: 90, full: true, mobileAs: 'practice',
     blurb: 'Seven games, five in real 3D: a rifle range, a supply convoy, artillery, a space shooter, a dispatch yard, RPG boss battles and a pop-up range, plus the twelve-chapter campaign Your first year as a 51C',
     keywords: 'game games arcade play quest battle boss supply line convoy checkpoint challenge coin fire mission artillery range qualification shooter sort yard dispatch FAR parts thresholds glossary campaign chapter master gunner mentor',
     render: function (root, ctx) {

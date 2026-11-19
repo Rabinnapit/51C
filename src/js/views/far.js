@@ -80,7 +80,7 @@
     }
   }
 
-  CORB.registerView({ id: 'far', mobileAs: 'glossary', title: 'FAR & key numbers', section: 'Look it up', icon: 'scale', nav: true, order: 110,
+  CORB.registerView({ id: 'far', title: 'FAR & key numbers', section: 'Look it up', icon: 'scale', nav: true, order: 110,
     blurb: 'FAR part titles, thresholds, deadlines and what changed', keywords: 'FAR DFARS AFARS RFO overhaul citation part titles thresholds micro-purchase simplified acquisition threshold SAT TINA deadlines protest closeout crosswalk what is new updates',
     render: function (root, ctx) {
       var h = CORB.ui.h, icon = CORB.ui.icon, F = CORB.DATA.far || {}, tab = ctx.params.tab || 'basics';

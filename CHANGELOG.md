@@ -1,5 +1,39 @@
 # Changelog
 
+## 0.35.0 (19 November 2026): one plan page, and a phone bar with More
+
+The four structural choices left open by 0.34.0, as the owner decided them on 19 November 2026.
+
+- **Exam path and My plan are one page: My plan.** Two pages planned the same six months and showed two goal dates
+  (the Exam path counted to "your target exam week", the start of week 24: 157 days where Home and My plan said 178).
+  - Tabs: **This week** (opens first), **All weeks**, **Steps and dates** (the dated checklist, the timeline, Change
+    dates, Add to calendar, Print).
+  - **One goal date everywhere**: the week card counts the days to the goal, the same date and number as Home; a booked
+    exam shows under it as "Exam booked".
+  - Test-taker tips and the Class material check are reading pages opened from All weeks, each with a link back.
+  - **Old links keep working**: `#/path`, `#/path?w=3`, `#/path?tab=all|check|tips` land on the same place in My plan
+    without leaving a history entry (a view can now carry `redirect`, handled in the router). `CORB.path` (the 26-week
+    engine) is unchanged; `views/path.js` exports its tabs as `CORB.path.draw`, `views/plan.js` owns the page.
+  - Search finds My plan for "exam path" (a page can list former names in `aka`).
+- **The phone's bar is Home, Plan, Learn, Practice, More.**
+  - **Practice** is a new page of four tiles: Quick 10, Practice test, Flashcards, Arcade. Quick 10 is highlighted; with
+    a quiz in progress the Practice test tile says "Resume: n of N" and is the highlighted one. Cards due and today's
+    range card show on their tiles.
+  - **More** opens the menu from its own side, listing only what the bar does not hold: Certification 101, Courses,
+    Official documents, How-to guides, Glossary, FAR & key numbers, Official links, Settings & help, About. The top
+    bar's menu button is gone on phones. More stays lit on those pages. The Buddy button steps aside while the menu
+    is open.
+  - On a computer nothing moves except the side menu's one My plan entry.
+- **Setup: four steps, the last two optional.** Steps 3 (how it looks) and 4 (read aloud) are marked optional; step 3
+  has "Skip, build my plan" at its top (on a phone the buttons under the theme picker are two screens down), and a
+  new step opens on its title instead of the middle of its options. "Look around first" shows only on steps 1 and 2,
+  before the dates are typed.
+- **First-visit terms: the short version.** Three lines (free for your own study; unofficial training aid; no
+  tracking) with "Read the full terms" folded under them and I agree. The terms themselves and their version are
+  unchanged, so nobody is asked again; About and the menu still open the full text.
+- **The tour** has one My plan stop instead of two (17 stops on a phone, 584 words; it was 741) and points at More
+  where it used to point at the menu button.
+
 ## 0.34.0 (19 November 2026): one next step, and an app that behaves like an app
 
 The owner asked for the whole app to be looked at as a new user would see it, "more like apps and web apps". Three

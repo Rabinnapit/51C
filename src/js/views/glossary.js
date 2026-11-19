@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   var CORB = window.CORB;
-  CORB.registerView({ id: 'glossary', title: 'Glossary', section: 'Look it up', icon: 'glossary', nav: true, order: 100, mobile: true, short: 'Glossary',
+  CORB.registerView({ id: 'glossary', title: 'Glossary', section: 'Look it up', icon: 'glossary', nav: true, order: 100,
     blurb: 'Every acronym, explained', keywords: 'acronym term definition dictionary meaning',
     render: function (root, ctx) {
       var h = CORB.ui.h, icon = CORB.ui.icon;

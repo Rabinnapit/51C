@@ -105,7 +105,7 @@
     }
   }
 
-  CORB.registerView({ id: 'games', mobileAs: 'quiz', navAs: 'arcade', title: 'Quick drills', section: 'Practice', icon: 'gamepad', nav: false, order: 91,
+  CORB.registerView({ id: 'games', mobileAs: 'practice', navAs: 'arcade', title: 'Quick drills', section: 'Practice', icon: 'gamepad', nav: false, order: 91,
     blurb: 'Quick games for FAR titles, phases, thresholds and risk', keywords: 'game match FAR part titles phase sort thresholds contract type risk',
     render: function (root, ctx) {
       var h = CORB.ui.h, icon = CORB.ui.icon, G = CORB.DATA.games || {}, id = ctx.params.game;

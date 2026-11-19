@@ -73,7 +73,7 @@
   }
   var keyHandler = null;
 
-  CORB.registerView({ id: 'cards', mobileAs: 'quiz', title: 'Flashcards', section: 'Practice', icon: 'cards', nav: true, order: 80,
+  CORB.registerView({ id: 'cards', mobileAs: 'practice', title: 'Flashcards', section: 'Practice', icon: 'cards', nav: true, order: 80,
     blurb: 'FAR part titles, acronyms and key numbers', keywords: 'flashcards memorize FAR part titles acronyms thresholds spaced repetition',
     badge: function () { try { return decks().reduce(function (a, d) { return a + counts(d).due; }, 0); } catch (e) { return 0; } },
     render: function (root, ctx) {

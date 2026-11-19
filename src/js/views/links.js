@@ -3,7 +3,7 @@
   'use strict';
   var CORB = window.CORB;
   var ORDER = ['Certification and training', 'Regulations', 'Army contracting', 'Systems you will use', 'Guides and handbooks', 'Practice and games', 'Career'];
-  CORB.registerView({ id: 'links', mobileAs: 'glossary', title: 'Official links', section: 'Look it up', icon: 'link', nav: true, order: 120,
+  CORB.registerView({ id: 'links', title: 'Official links', section: 'Look it up', icon: 'link', nav: true, order: 120,
     blurb: 'Official websites, with what each is for', keywords: 'links websites WarU iCatalog AITAS ATRRS CAMP Pearson acquisition.gov SAM.gov PIEE WAWF',
     render: function (root) {
       var h = CORB.ui.h, icon = CORB.ui.icon, all = CORB.data.links();
