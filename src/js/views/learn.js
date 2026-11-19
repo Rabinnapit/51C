@@ -60,6 +60,7 @@
             CORB.set('progress.checks.' + lesson.id, { right: right, total: qs.length, date: CORB.util.today() });
             result.hidden = false; result.innerHTML = '';
             result.appendChild(CORB.ui.callout(right === qs.length ? 'ok' : 'info', right === qs.length ? 'trophy' : 'info', right + ' of ' + qs.length + ' right', right === qs.length ? 'You have this one. Mark the lesson done and move on.' : 'Read the explanations above, then mark the lesson done when it makes sense. Missed questions come back in Practice test → Missed questions.'));
+            var ask = CORB.account && CORB.account.ask ? CORB.account.ask('results') : null; if (ask) result.appendChild(ask);   // the first score: offer an account, once
           }
         });
         return b;

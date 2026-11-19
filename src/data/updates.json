@@ -108,6 +108,12 @@
   ],
   "guide_changes": [
     {
+      "version": "0.34.0",
+      "date": "2026-11-19",
+      "title": "One next step, and an app that behaves like an app",
+      "notes": "Home now shows one thing to do next, with one button that goes straight to it; the rest are tiles, numbers and folds (about three phone screens instead of seven or eight). The phone's top bar no longer cuts off page titles. Back stays inside the Arcade during a game, and no longer steps through every tab you opened. Search closes with Escape and lists pages first. Tabs, chips and buttons are bigger on touch screens. A lesson ends with one button: Done, then the next lesson. The Arcade opens on today's range card. On a computer there is no install stop, and the Buddy button stays out of the way of a quiz."
+    },
+    {
       "version": "0.33.0",
       "date": "2026-11-19",
       "title": "Simpler settings, and games that fill the window",

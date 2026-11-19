@@ -1,5 +1,51 @@
 # Changelog
 
+## 0.34.0 (19 November 2026): one next step, and an app that behaves like an app
+
+The owner asked for the whole app to be looked at as a new user would see it, "more like apps and web apps". Three
+independent reviews of 0.33.0 did that (a new 51C on a phone; a laptop, a monitor and a tablet; a text inventory), and
+this release is what they agreed on that needed no decision from the owner.
+
+- **Home shows one thing to do next.** For a returning reader it was 6.7 to 8.5 phone screens with four primary buttons
+  (the range card, the Exam path week, the plan step, the next lesson). Now:
+  - **Up next**: this week's next Exam path task, named, with the page's one primary button that goes straight to it
+    (the lesson, the deck, the FAR part, the course) and "This week" beside it;
+  - **From your plan**: the next dated step as a compact row (Mark done, Show me how, Details);
+  - three **quick tiles**: Quick 10, Flashcards (cards due), today's range card with the streak;
+  - the four milestones two by two on a phone, readiness folded on a phone, "What changed lately" as dates and titles on
+    a phone, and the "What is inside" page tiles only until a plan exists. About three screens in the installed app.
+- **Phone top bar.** It showed the page title cut off ("Settings & ...", "Certificatio...") above the page's own heading,
+  and "Sign in" wrapped onto two lines. It now names the section (the app's name on Home); the account is an icon with a
+  dot while signed out.
+- **Back behaves.**
+  - During a game, Back (and a phone's back gesture) used to leave the Arcade and drop the run. A game now holds one
+    history entry: Back returns to the game list, or to the pause card when answers were given (a second Back reaches
+    the list); every button back to the list removes the entry, so Back from the list leaves in one press. A reload
+    mid-game opens the list.
+  - Tabs, chips and filters replace the history entry instead of adding one (`CORB.go(id, params, { replace: true })`):
+    Back leaves Certification 101, FAR, Exam path, Settings, Courses, Lessons and How-to in one press.
+- **Search.** Escape closes it (the handler used to ignore keys typed in its own box); pages come first ("plan" finds
+  My plan, "arcade" the Arcade); Quick drills can be found; Enter right after typing searches at once.
+- **Touch.** On touch screens tabs, chips and segmented buttons are at least 44 px tall and a task's checkbox takes a
+  44 px tap. On a phone a long row of tabs wraps into a grid of even boxes (Certification 101's seven tabs were 820 px in
+  a 358 px row).
+- **Lessons end with one button**: "Done · Next: <the next lesson>" instead of a button beside a separate Next card.
+- **Practice test** with a quiz in progress: "Resume: question n of N" is the one primary button.
+- **The Arcade's list opens on today's range card** with one "Play mission n" button (its bottom edge on a 1366 x 650
+  laptop: 394 px, was 717; on a phone 496, was 1255). The 47-word intro is one sentence; the three "how it works" cards
+  fold into one line; the weekly table moved below All games.
+- **First visit.** A computer gets no full-page install stop (an Install button appears in the top bar when the browser
+  can install; the QR code and `?install=1` still open the page, and phones still get it). The intro video fits a short
+  window, so Skip is on the first screen. The tour pop-up is not shown over Home's setup wizard, which offers the tour.
+- **The Buddy button** is hidden during a quiz (it sat on Next) and tucks away while a phone scrolls down.
+- **An account, asked for once at the right moment**: on the first results screen (a finished quiz or a lesson's Check
+  yourself) "Save this score on every device", once more on Home a week later, then never (`CORB.account.ask`).
+- **Shorter intros.** Exam path 70 words to 11; FAR 36 to 11; "What is new" 37 to 18; Certification 101 23 to 14; the
+  Courses callout 40 to 26; the Practice test's note 40 to 18.
+
+Left for the owner to decide (not changed here): merging Exam path and My plan, the phone's five bottom tabs, the
+theme and voice steps of the setup wizard, the length of the first-visit terms, and a phone-sized cut of the intro video.
+
 ## 0.33.0 (19 November 2026): simpler settings, and games that fill the window
 
 The owner's review: Help said too much (pages that explain themselves were explained again), My data is not needed

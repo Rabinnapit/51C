@@ -175,6 +175,8 @@
         h('div.row.tight.mt-3', {}, S.path ? h('a.btn.primary', { href: '#/path' }, icon('route'), 'Back to my exam path') : null,
           h('button.btn' + (S.path ? '' : '.primary'), { type: 'button', onclick: function () { S = null; CORB.go('quiz'); } }, icon('refresh'), 'New quiz'),
           S.items.some(function (x) { return !x.ok; }) ? h('button.btn', { type: 'button', onclick: function () { start({ mode: 'missed', n: 25, label: 'Missed questions' }); } }, icon('repeat'), 'Retry the ones I missed') : null))));
+    // the first score a reader earns is the moment to offer an account (once; core/10-account.js decides)
+    var ask = CORB.account && CORB.account.ask ? CORB.account.ask('results') : null; if (ask) root.appendChild(ask);
     var by = {}; S.items.forEach(function (it) { var b = by[it.q.phase] = by[it.q.phase] || [0, 0]; b[1]++; if (it.ok) b[0]++; });
     root.appendChild(h('div.section-head', {}, h('h2', {}, 'By exam area'), h('span.muted', {}, 'The Pearson score report shows the same four areas')));
     root.appendChild(h('div.grid.cols-4', {}, CORB.data.phases().map(function (p) {
