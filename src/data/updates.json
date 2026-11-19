@@ -108,6 +108,12 @@
   ],
   "guide_changes": [
     {
+      "version": "0.35.1",
+      "date": "2026-11-19",
+      "title": "The intro video shows today's app",
+      "notes": "The two-minute intro was filmed again from this version: one My plan page instead of Exam path and My plan, the shorter setup, the new Settings and Arcade screens, and a phone with the bar Home, Plan, Learn, Practice, More. The words are the same except one line, which no longer names the Exam path."
+    },
+    {
       "version": "0.35.0",
       "date": "2026-11-19",
       "title": "One plan page, and a phone bar with More",

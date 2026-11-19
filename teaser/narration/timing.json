@@ -289,82 +289,67 @@
   ]
  },
  "L05": {
-  "text": "The exam path: twenty-six dated weeks, monthly checkpoints, and two full simulations before exam week.",
-  "dur": 7.25,
+  "text": "Twenty-six dated weeks, monthly checkpoints, and two full simulations before exam week.",
+  "dur": 6.039,
   "words": [
    [
     0.105,
-    0.066,
-    "The"
+    0.566,
+    "Twenty-six"
    ],
    [
-    0.171,
-    0.461,
-    "exam"
-   ],
-   [
-    0.632,
-    0.632,
-    "path"
-   ],
-   [
-    1.513,
-    0.605,
-    "twenty-six"
-   ],
-   [
-    2.132,
-    0.289,
+    0.671,
+    0.303,
     "dated"
    ],
    [
-    2.434,
-    0.592,
+    0.987,
+    0.566,
     "weeks"
    ],
    [
-    3.224,
-    0.382,
+    1.75,
+    0.447,
     "monthly"
    ],
    [
-    3.605,
-    0.816,
+    2.211,
+    0.855,
     "checkpoints"
    ],
    [
-    4.658,
-    0.158,
+    3.316,
+    0.171,
     "and"
    ],
    [
-    4.829,
-    0.303,
+    3.632,
+    0.276,
     "two"
    ],
    [
-    5.145,
+    3.908,
     0.303,
     "full"
    ],
    [
-    5.461,
-    0.711,
+    4.224,
+    0.724,
     "simulations"
    ],
    [
-    6.171,
-    0.355,
+    4.961,
+    0.342,
     "before"
    ],
    [
-    6.526,
-    0.395,
+    5.316,
+    0.382,
     "exam"
    ],
    [
-    6.921,
-    0.329,
+    5.697,
+    0.342,
     "week"
    ]
   ]

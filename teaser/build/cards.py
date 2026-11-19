@@ -73,7 +73,7 @@ CARDS = {
 CAPS = {
     "cap_home":     ("Home", "Zero to certified"),
     "cap_plan":     ("My plan", "Four quick steps → every step dated"),
-    "cap_path":     ("Exam path", "26 dated weeks · checkpoints · simulations"),
+    "cap_path":     ("My plan", "26 dated weeks · checkpoints · simulations"),
     "cap_cert":     ("Certification 101", "The rules, explained in pictures"),
     "cap_official": ("Official documents", "26 DoW and WarU documents, one tap away"),
     "cap_lessons":  ("Lessons", "35 lessons · pictures that play"),

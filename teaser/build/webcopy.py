@@ -19,7 +19,7 @@ WRITTEN = {
     "L02": ["Five courses. One exam. Twelve months of experience.", "And nobody hands you the map."],
     "L03": ["Introducing B2B Exam Prep.", "From day one to certified."],
     "L04": ["Four quick steps, and it builds your plan:", "every step dated, from week one to exam day."],
-    "L05": ["The exam path: 26 dated weeks, monthly checkpoints,", "and two full simulations before exam week."],
+    "L05": ["26 dated weeks, monthly checkpoints,", "and two full simulations before exam week."],
     "L06": ["The rules, explained in pictures,", "beside the real official documents."],
     "L07": ["35 plain-English lessons, organized like the exam.", "Every picture plays.", "Every dollar rule has a try-it tool."],
     "LV": ["It reads aloud too, in four voices that work offline."],
@@ -88,7 +88,7 @@ def captions():
     cues.sort(key=lambda c: c[0])
     for i in range(len(cues) - 1):   # no overlaps: a cue ends where the next one starts
         if cues[i][1] > cues[i + 1][0] - 0.02: cues[i][1] = cues[i + 1][0] - 0.02
-    out = ["WEBVTT", "", "NOTE B2B Exam Prep intro (teaser v1.2): the narration, sentence by sentence", ""]
+    out = ["WEBVTT", "", "NOTE B2B Exam Prep intro (teaser v1.4): the narration, sentence by sentence", ""]
     for i, (a, b, text) in enumerate(cues, 1):
         out += [str(i), f"{ts(a)} --> {ts(b)}", text, ""]
     open(os.path.join(OUT, "intro.vtt"), "w", encoding="utf-8", newline="\n").write("\n".join(out))

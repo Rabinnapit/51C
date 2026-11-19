@@ -1,6 +1,15 @@
-# B2B Exam Prep teaser: script, shot list and build (v1.2, 2026-11-16)
+# B2B Exam Prep teaser: script, shot list and build (v1.4, 2026-11-19)
 
-**Live cut: v1.2** (again since app 0.32.1, 18 November 2026). A v1.3 cut made for app 0.31.0 replaced the read-aloud
+**Live cut: v1.4** (app 0.35.1, 19 November 2026): v1.2's script and shots, every screen filmed again from app 0.35.0.
+What changed on screen since v1.2 was filmed (0.30.0): Exam path and My plan are one page (the side menu shows one My
+plan entry; the setup ends on My plan's This week; the plan shot is My plan with This week, All weeks, Steps and
+dates), the setup's steps 3 and 4 say optional, Settings & help is the slimmer 0.33.0 page, the Arcade opens on today's
+range card, and the phone in the last shot has the bar Home, Plan, Learn, Practice, More. L05 no longer names the Exam
+path ("Twenty-six dated weeks, ...", 6.0 s, starts at 27.0 s); its caption card reads "My plan". Everything else
+(the other sixteen narration lines, the music, the title cards, the timeline) is v1.2's. The read-aloud shot is still
+the voice settings with Hear a sample, as the owner asked.
+
+**History.** v1.2 was live from app 0.30.0, and again from 0.32.1 (18 November 2026). A v1.3 cut made for app 0.31.0 replaced the read-aloud
 shot with lesson one's "Who does what" picture read by the app's Joe voice, its cards popping as he spoke (and moved
 the lessons shot to lesson four). The owner preferred v1.2's read-aloud shot, which shows the voice settings with
 Hear a sample, so the app plays v1.2 again and these scripts are v1.2's. The v1.3 scripts are in git at 3259a7b
@@ -54,7 +63,7 @@ A minor rising to C major on the end card; every cut is on a bar line, hits at 1
 | 0:06 | L02 | Five courses. One exam. Twelve months of experience. And nobody hands you the map. |
 | 0:15 | L03 | Introducing B2B Exam Prep. From day one to certified. |
 | 0:20 | L04 | Four quick steps, and it builds your plan: every step dated, from week one to exam day. |
-| 0:27 | L05 | The exam path: twenty-six dated weeks, monthly checkpoints, and two full simulations before exam week. |
+| 0:27 | L05 | Twenty-six dated weeks, monthly checkpoints, and two full simulations before exam week. |
 | 0:36 | L06 | The rules, explained in pictures, beside the real official documents. |
 | 0:44 | L07 | Thirty-five plain-English lessons, organized like the exam. Every picture plays. Every dollar rule has a try-it tool. |
 | 0:53 | LV | It reads aloud too, in four voices that work offline. *(then the app's Joe voice: "Hi, this is how B2B Exam Prep sounds.")* |
@@ -73,8 +82,8 @@ A minor rising to C major on the end card; every cut is on a bar line, hits at 1
 | 0:00–0:05 | c_open | dark pine card: "36 MONTHS." / "Most Brigades want it in six." (the hook) |
 | 0:05–0:14 | home | the first-visit Home ("Zero to certified."), slow push-in, then down to Build my plan |
 | 0:14–0:19 | c_title | HIT · app icon, "B2B EXAM PREP", "From day one to certified." |
-| 0:19–0:26 | setup | the four-step onboarding: cursor picks 51C Soldier, Next past the dates, the look and the voice, Build my plan; the exam path appears |
-| 0:26–0:36 | path | Exam path: this week, then "All 26 weeks" scrolling past with the monthly checkpoints |
+| 0:19–0:26 | setup | the four-step onboarding: cursor picks 51C Soldier, Next past the dates, the look and the voice (both marked optional), Build my plan; My plan appears on This week |
+| 0:26–0:36 | path | My plan: This week, then "All weeks" scrolling past with the monthly checkpoints |
 | 0:36–0:43 | cert | HIT · Certification 101, the exam tab: CON 3990V at a glance and the exam journey picture; Official documents library; one real document's official pages |
 | 0:43–0:53 | lessons | the lesson list; lesson 1's "Who does what" picture playing part by part; lesson 13's Try-it tool sweeping the dollars |
 | 0:53–1:00 | voice | lesson 5: cursor presses Listen to the lesson; Settings → Display → Read aloud, the voice list open with the four app voices (Joe selected); cursor presses Hear a sample and Joe speaks |
@@ -86,7 +95,7 @@ A minor rising to C major on the end card; every cut is on a bar line, hits at 1
 | 1:34–1:43 | phone | composite: "On your phone. On your laptop. On your tablet." / "Updated as regulations and policies change." / "Free. No app store." with a phone cycling Home, a lesson, the Arcade |
 | 1:43–1:54 | c_end | HIT · icon, "B2B Exam Prep", "From day one to certified.", "Built by a 51C, for 51Cs and 1102s.", the QR code; fade out |
 
-Captions (lower left, brass bar): Home · Zero to certified; My plan · Four quick steps → every step dated; Exam path ·
+Captions (lower left, brass bar): Home · Zero to certified; My plan · Four quick steps → every step dated; My plan ·
 26 dated weeks · checkpoints · simulations; Certification 101 · The rules, explained in pictures; Official documents ·
 26 DoW and WarU documents, one tap away; Lessons · 35 lessons · pictures that play; Try it · Every dollar rule answers
 for any amount; Read aloud · Four app voices · offline after one download; Practice test · 395 questions · every answer

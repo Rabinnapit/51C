@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.35.1 (19 November 2026): the intro video shows today's app
+
+The website opens on the two-minute intro, and it was still the film of app 0.30.0: an Exam path page that no longer
+exists, two plan entries in the side menu, the old Settings page, the old Arcade lobby and the old phone bar. The owner
+asked for the updated parts to be filmed again and the old content taken out of the frame; since the side menu is in
+every desktop shot, that meant every screen.
+
+- **Teaser v1.4** (`teaser/`, `meta.intro.version` 1.4): v1.2's script, shots and timeline, every screen captured again
+  from 0.35.0. The setup ends on My plan; the plan shot is My plan (This week, then All weeks); the setup's steps 3 and 4
+  say optional; the phone in the last shot has the bar Home, Plan, Learn, Practice, More. The read-aloud shot is still
+  the voice settings with Hear a sample.
+- **One narration line changed**: L05 no longer starts "The exam path:" ("Twenty-six dated weeks, monthly checkpoints,
+  and two full simulations before exam week."). Its caption card reads "My plan". The captions file follows. The other
+  sixteen lines, the music and the three title cards are v1.2's.
+- `teaser/build/capture.py` opens `plan` and the "All weeks" tab; `build/sheet.py` makes a contact sheet per shot from a
+  frames folder (used to check a low-resolution test capture before the full one).
+
 ## 0.35.0 (19 November 2026): one plan page, and a phone bar with More
 
 The four structural choices left open by 0.34.0, as the owner decided them on 19 November 2026.

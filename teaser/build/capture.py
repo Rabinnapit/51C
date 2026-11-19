@@ -156,7 +156,7 @@ def pre_setup(r, page):
     y = r.top("document.querySelector('.setup-card')", 700, 90)
     r.js(f"window.scrollTo(0, {y})"); r.settle(10)
 
-def seg_setup(r, page):       # 7.2 s: the four-step wizard: 51C Soldier, Next past the dates, the look and the voice, Build my plan -> the exam path
+def seg_setup(r, page):       # 7.2 s: the four-step wizard: 51C Soldier, Next past the dates, the look and the voice, Build my plan -> My plan, this week
     r.seg("setup")
     CH = "document.querySelector('.setup-card .choice')"
     NEXT = "[...document.querySelectorAll('.setup-card button')].find(b => /^\\s*(Next|Build my plan)/.test(b.textContent))"
@@ -171,15 +171,15 @@ def seg_setup(r, page):       # 7.2 s: the four-step wizard: 51C Soldier, Next p
         cur_click(r, NEXT + ".click()", 6)
         r.real(250); r.settle(6); at = nx
         if i < 3: r.hold(0.35, settle=0)                                    # each step on screen for a moment
-    r.real(600); r.settle(12); r.js("__cur.hide()")                        # Exam path: week one, dated
+    r.real(600); r.settle(12); r.js("__cur.hide()")                        # My plan: week one, dated
     r.fill(7.2)
 
-def seg_path(r, page):        # 9.6 s: this week, then all 26 weeks scrolling past
-    r.seg("path"); r.js("__ensureSetup()"); go(r, "path")
+def seg_path(r, page):        # 9.6 s: My plan (the Exam path page is part of it since app 0.35.0): this week, then all 26 weeks scrolling past
+    r.seg("path"); r.js("__ensureSetup()"); go(r, "plan")
     r.hold(2.0, settle=0)
-    tb = elem_center(page, "[...document.querySelectorAll('button')].find(b => b.textContent.trim() === 'All 26 weeks')", (700, 300))
+    tb = elem_center(page, "[...document.querySelectorAll('button')].find(b => b.textContent.trim() === 'All weeks')", (700, 300))
     cur_move(r, 1250, 760, tb[0], tb[1], 0.7)
-    cur_click(r, "[...document.querySelectorAll('button')].find(b => b.textContent.trim() === 'All 26 weeks').click()", 6)
+    cur_click(r, "[...document.querySelectorAll('button')].find(b => b.textContent.trim() === 'All weeks').click()", 6)
     r.real(600); r.settle(12); r.js("__cur.hide()"); r.hold(0.8, settle=0)
     r.scroll_to(0, 1500, 4.6); r.fill(9.6)
 
@@ -328,7 +328,9 @@ def aux_page(r, ctx):
 def phone_shots(br):
     """Phone-sized screens of the web edition (Android Chrome user agent) for the composite."""
     out = os.path.join(ROOT, "phone_src"); os.makedirs(out, exist_ok=True)
-    ctx = br.new_context(viewport={"width": 412, "height": 915}, device_scale_factor=2, is_mobile=True, has_touch=True,
+    # 412 x 862 has the proportions of the composite phone screen (430 x 900), so the whole screen shows, the bottom bar included
+    # (at 915 the picture was taller than the frame and the bar, Home / Plan / Learn / Practice / More, was cut off)
+    ctx = br.new_context(viewport={"width": 412, "height": 862}, device_scale_factor=2, is_mobile=True, has_touch=True,
                          user_agent="Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36")
     ctx.add_init_script(INIT); pg = ctx.new_page()
     pg.goto(URL + "#/home", wait_until="load", timeout=60000); pg.wait_for_timeout(1500)

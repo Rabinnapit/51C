@@ -18,7 +18,7 @@ LINES = [
     ("L02", "Five courses. One exam. Twelve months of experience. And nobody hands you the map."),
     ("L03", "Introducing B-to-B Exam Prep. From day one to certified."),
     ("L04", "Four quick steps, and it builds your plan: every step dated, from week one to exam day."),
-    ("L05", "The exam path: twenty-six dated weeks, monthly checkpoints, and two full simulations before exam week."),
+    ("L05", "Twenty-six dated weeks, monthly checkpoints, and two full simulations before exam week."),
     ("L06", "The rules, explained in pictures, beside the real official documents."),
     ("L07", "Thirty-five plain-English lessons, organized like the exam. Every picture plays. Every dollar rule has a try-it tool."),
     ("LV", "It reads aloud too, in four voices that work offline."),
