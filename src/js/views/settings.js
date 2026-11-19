@@ -181,7 +181,7 @@
       if (tab === 'data') tab = 'profile';   // My data is gone (19 Nov 2026): the account, or the offline file's own save, is on My profile
       if (tab === 'about') { location.replace('#/about'); return; }   // About has its own page now; old links still work
       root.appendChild(CORB.ui.pageHead({ title: 'Settings & help' }));
-      root.appendChild(h('div.tabs', { role: 'tablist' }, TABS.map(function (t) { return h('button' + (t[0] === tab ? '.on' : ''), { type: 'button', role: 'tab', 'aria-selected': t[0] === tab ? 'true' : 'false', onclick: function () { CORB.go('settings', { tab: t[0] }); } }, t[1]); })));
+      root.appendChild(h('div.tabs', { role: 'tablist' }, TABS.map(function (t) { return h('button' + (t[0] === tab ? '.on' : ''), { type: 'button', role: 'tab', 'aria-selected': t[0] === tab ? 'true' : 'false', onclick: function () { CORB.go('settings', { tab: t[0] }, { replace: true }); } }, t[1]); })));
       var body = h('div'); root.appendChild(body);
       ({ help: help, profile: profile, display: display }[tab] || profile)(body, h, icon);
     } });

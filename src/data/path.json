@@ -1,14 +1,14 @@
 {
   "title": "6-Month Exam Path",
-  "lede": "26 weeks, about 5 hours a week, from your first day to passing CON 3990V. Each week has a short goal, a few tasks, a FAR reading and a 10-question check. Each month ends with a timed checkpoint. It follows the order of your courses and the official exam blueprint, and every question was checked against the RFO FAR in force since the exam was updated on 31 March 2026.",
+  "lede": "26 weeks, about 5 hours a week, one check each week.",
   "baseline_days": 182,
   "exam_week": 24,
   "checked_on": "2026-10-28",
   "how": [
-    "**About 5 hours a week.** 30 to 45 minutes on weekdays (a lesson, the FAR reading, 10 flashcards), plus one longer block on the weekend for the weekly check.",
-    "**Do the tasks in order.** Lessons and drills tick themselves when you finish them. Tick FAR readings and other tasks yourself.",
-    "**Score the checks honestly.** Each month ends with a timed checkpoint. Hit the target before you move on; if you miss, repeat the month's drills and retake it.",
-    "**Behind? Do not skip the checkpoint.** Push the next week's reading instead. The checkpoints are what tell you whether you are ready.",
+    "**About 5 hours a week:** 30 to 45 minutes on weekdays (a lesson, the FAR reading, 10 flashcards) and a longer weekend block for the weekly check.",
+    "**Do the tasks in order.** Lessons and drills tick themselves; tick FAR readings and other tasks yourself.",
+    "**Score the checks honestly.** Hit each month's checkpoint target before you move on; if you miss, repeat the month's drills and retake it.",
+    "**Behind? Do not skip the checkpoint.** Push the next week's reading instead.",
     "**Your dates follow your plan.** The path starts on your start date in My plan and stretches if your goal is longer than 6 months."
   ],
   "months": [

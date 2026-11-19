@@ -42,7 +42,7 @@
       if (p.id) { var x = CORB.data.howto(p.id); if (x) { detail(root, x, h, icon); return; } }
       var cat = p.cat || 'all';
       root.appendChild(CORB.ui.pageHead({ title: 'How-to guides', lede: 'Step-by-step checklists. Some walk you through your own certification paperwork; others walk through real contracting tasks the way a contracting office does them.' }));
-      root.appendChild(h('div.chips.mb-4', {}, CATS.map(function (c) { return h('button.chip' + (cat === c[0] ? '.on' : ''), { type: 'button', onclick: function () { CORB.go('howto', { cat: c[0] }); } }, c[1]); })));
+      root.appendChild(h('div.chips.mb-4', {}, CATS.map(function (c) { return h('button.chip' + (cat === c[0] ? '.on' : ''), { type: 'button', onclick: function () { CORB.go('howto', { cat: c[0] }, { replace: true }); } }, c[1]); })));
       var list = CORB.data.howtos().filter(function (x) { return cat === 'all' || x.cat === cat; });
       root.appendChild(h('div.grid.auto', {}, list.map(function (x) {
         var s = CORB.get('progress.howto.' + x.id) || {}, d = Object.keys(s).filter(function (k) { return s[k]; }).length, n = (x.steps || []).length;

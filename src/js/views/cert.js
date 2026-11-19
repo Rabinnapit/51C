@@ -183,8 +183,8 @@
     render: function (root, ctx) {
       var h = CORB.ui.h, icon = CORB.ui.icon, C = CORB.DATA.cert || {};
       var tab = ctx.params.tab || 'overview';
-      root.appendChild(CORB.ui.pageHead({ title: 'Certification 101', lede: C.lede || 'The DoW Contracting Professional certification in plain English: what it takes, in what order, and how to sign up.' }));
-      root.appendChild(h('div.tabs', { role: 'tablist' }, TABS.map(function (t) { return h('button' + (t[0] === tab ? '.on' : ''), { type: 'button', role: 'tab', 'aria-selected': t[0] === tab ? 'true' : 'false', onclick: function () { CORB.go('cert', { tab: t[0] }); } }, t[1]); })));
+      root.appendChild(CORB.ui.pageHead({ title: 'Certification 101', lede: 'What it takes to get certified, in what order, and how to sign up.' }));
+      root.appendChild(h('div.tabs', { role: 'tablist' }, TABS.map(function (t) { return h('button' + (t[0] === tab ? '.on' : ''), { type: 'button', role: 'tab', 'aria-selected': t[0] === tab ? 'true' : 'false', onclick: function () { CORB.go('cert', { tab: t[0] }, { replace: true }); } }, t[1]); })));
       var body = h('div.tab-body'); root.appendChild(body);
       ({ overview: overview, signup: signup, exam: exam, experience: experience, after: after, faq: faq, sources: sources }[tab] || overview)(body, C, h, icon, ctx.params);
     } });

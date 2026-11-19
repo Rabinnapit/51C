@@ -13,10 +13,14 @@
     return { id: id, params: params };
   }
   CORB.route = function () { return current; };
-  CORB.go = function (id, params) {
+  // opts.replace: swap the current history entry instead of adding one. In-page tabs, chips and filters use it, so
+  // Back leaves the page in one press instead of stepping through every tab the reader opened.
+  CORB.go = function (id, params, opts) {
     var qs = params && Object.keys(params).length ? '?' + Object.keys(params).filter(function (k) { return params[k] != null && params[k] !== ''; }).map(function (k) { return encodeURIComponent(k) + '=' + encodeURIComponent(params[k]); }).join('&') : '';
     var target = '#/' + id + qs;
-    if (location.hash === target) render(); else location.hash = target;
+    if (location.hash === target) render();
+    else if (opts && opts.replace) { try { history.replaceState(history.state, '', target); render(); } catch (e) { location.replace(target); } }   // replaceState fires no hashchange, so draw here
+    else location.hash = target;
   };
 
   function navDefs() { return CORB.viewOrder.map(function (id) { return CORB.views[id]; }).filter(function (d) { return d.nav; }).sort(function (a, b) { return (a.order || 99) - (b.order || 99); }); }
@@ -228,6 +232,8 @@
   // ---- keyboard ----
   document.addEventListener('keydown', function (e) {
     var tag = (e.target && e.target.tagName || '').toLowerCase();
+    // Escape closes a dialog even while its own text box has focus (the search palette always does)
+    if (e.key === 'Escape' && e.target && e.target.closest && e.target.closest('.modal-scrim')) { if (!CORB.ui.modalLocked()) CORB.ui.closeModal(); return; }
     if (tag === 'input' || tag === 'textarea' || tag === 'select' || (e.target && e.target.isContentEditable)) return;
     if (e.ctrlKey || e.metaKey || e.altKey) return;
     if (CORB.ui.modalLocked && CORB.ui.modalLocked()) { if (e.key === '/' || e.key === '?') e.preventDefault(); return; }   // the first-use terms: only "I agree" goes on

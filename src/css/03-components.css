@@ -131,6 +131,16 @@ button.card { text-align: left; width: 100%; display: block; font: inherit; colo
 .tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--line); margin-bottom: var(--space-5); overflow-x: auto; overflow-y: hidden; scrollbar-width: thin; }
 .tabs button { min-height: 44px; padding: 10px 14px; font-weight: 750; font-size: var(--fs-sm); color: var(--muted); border-bottom: 3px solid transparent; margin-bottom: -1px; white-space: nowrap; }
 .tabs button.on { color: var(--accent); border-bottom-color: var(--accent); }
+/* Phones: a row of tabs wider than the screen hid most of them off the edge (Certification 101: 7 tabs, 820 px in a
+   358 px row). Instead the tabs wrap into a grid of evenly sized boxes, so every section shows without scrolling.
+   Columns follow the tab count: 7 → 4+3, 5 → 3+2, 4 → 2+2, 3 → one row. */
+@media (max-width: 640px) {
+  .tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; border-bottom: 0; overflow: visible; }
+  .tabs:has(> button:last-child:nth-child(2)), .tabs:has(> button:last-child:nth-child(4)) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tabs:has(> button:last-child:nth-child(3)), .tabs:has(> button:last-child:nth-child(5)), .tabs:has(> button:last-child:nth-child(6)) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .tabs button { white-space: normal; padding: 6px 6px; line-height: 1.2; font-size: var(--fs-xs); text-align: center; border: 1px solid var(--line); border-radius: var(--r-md); margin: 0; background: var(--panel); }
+  .tabs button.on { background: var(--accent-soft); border-color: var(--accent); }
+}
 
 /* ---- accordion ---- */
 .acc { border: 1px solid var(--line); border-radius: var(--r-md); background: var(--panel); }
@@ -156,6 +166,13 @@ button.card { text-align: left; width: 100%; display: block; font: inherit; colo
 .check .check-title { font-weight: 750; }
 .check.done .check-title { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--muted-2); }
 .check .check-sub { font-size: var(--fs-sm); color: var(--muted); margin-top: 2px; }
+/* Touch screens: 44 px targets (WCAG 2.5.5). The visible checkbox stays 24 px; an invisible 44 x 44 layer on it takes the tap.
+   Mouse layouts keep their 36 px chips and buttons. */
+@media (pointer: coarse) {
+  .chip, .seg button, .tabs button { min-height: 44px; }
+  .check input { position: relative; }
+  .check input::before { content: ""; position: absolute; left: -12px; top: -12px; width: 44px; height: 44px; }
+}
 
 /* ---- modal / toast ---- */
 .modal-scrim { position: fixed; inset: 0; z-index: 100; background: var(--scrim); backdrop-filter: blur(3px); display: grid; place-items: center; padding: 16px; padding-top: max(16px, env(safe-area-inset-top, 0px)); padding-bottom: max(16px, env(safe-area-inset-bottom, 0px)); animation: fade var(--dur) var(--ease); }

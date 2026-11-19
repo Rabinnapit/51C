@@ -64,7 +64,7 @@
 
   function whatsNew(root, F, h, icon, params) {
     var U = CORB.data.updates(), open = params && params.open != null ? String(params.open) : '', target = null;
-    root.appendChild(h('p.muted.prose', {}, 'Contracting rules are changing fast. This list shows the changes that matter to a new 51C or 1102, newest first. Tap Read more for the whole story. When the maintainer updates the guide, new entries appear here.'));
+    root.appendChild(h('p.muted.prose', {}, 'Changes that matter to a new 51C or 1102, newest first; tap Read more for the whole story.'));
     // each change: the short summary, then the longer story behind Read more (Home's list opens straight to one)
     root.appendChild(h('div.timeline', {}, (U.far_updates || []).map(function (u, i) {
       var more = u.details ? h('details.tl-more', { open: String(i) === open ? true : null }, h('summary', {}, 'Read more'), CORB.ui.rich(u.details)) : null;
@@ -84,8 +84,8 @@
     blurb: 'FAR part titles, thresholds, deadlines and what changed', keywords: 'FAR DFARS AFARS RFO overhaul citation part titles thresholds micro-purchase simplified acquisition threshold SAT TINA deadlines protest closeout crosswalk what is new updates',
     render: function (root, ctx) {
       var h = CORB.ui.h, icon = CORB.ui.icon, F = CORB.DATA.far || {}, tab = ctx.params.tab || 'basics';
-      root.appendChild(CORB.ui.pageHead({ title: 'FAR & key numbers', lede: 'The Federal Acquisition Regulation (FAR) is the rulebook for buying things for the Government. Here is how it is organized, how to read a citation, the numbers you will use every week, and what changed lately.' }));
-      root.appendChild(h('div.tabs', { role: 'tablist' }, TABS.map(function (t) { return h('button' + (t[0] === tab ? '.on' : ''), { type: 'button', role: 'tab', 'aria-selected': t[0] === tab ? 'true' : 'false', onclick: function () { CORB.go('far', { tab: t[0] }); } }, t[1]); })));
+      root.appendChild(CORB.ui.pageHead({ title: 'FAR & key numbers', lede: 'The Federal Acquisition Regulation (FAR) is the rulebook for Government buying.' }));
+      root.appendChild(h('div.tabs', { role: 'tablist' }, TABS.map(function (t) { return h('button' + (t[0] === tab ? '.on' : ''), { type: 'button', role: 'tab', 'aria-selected': t[0] === tab ? 'true' : 'false', onclick: function () { CORB.go('far', { tab: t[0] }, { replace: true }); } }, t[1]); })));
       var body = h('div'); root.appendChild(body);
       ({ basics: basics, parts: parts, moved: moved, numbers: numbers, 'new': whatsNew }[tab] || basics)(body, F, h, icon, ctx.params);
     } });

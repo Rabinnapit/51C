@@ -11,9 +11,9 @@
       root.appendChild(CORB.ui.pageHead({ title: 'Lessons', lede: 'Short lessons in plain English, in the same four areas as the exam. Each takes about ten minutes, has a real-world example, and ends with a few questions to check yourself.' }));
       root.appendChild(h('div.card.learn-top', {}, h('div.row.between', {}, h('b', {}, st.done + ' of ' + st.total + ' lessons done'), CORB.data.nextLesson() ? h('a.btn.primary.sm', { href: '#/lesson?id=' + CORB.data.nextLesson().id }, icon('play'), st.done ? 'Continue' : 'Start the first lesson') : null), CORB.ui.bar(U.pct(st.done, st.total))));
       var phases = CORB.data.phases().concat([CORB.data.phase('job')]);
-      root.appendChild(h('div.chips.mt-4.mb-2', {}, [h('button.chip' + (phase === 'all' ? '.on' : ''), { type: 'button', onclick: function () { CORB.go('learn'); } }, 'All')].concat(phases.map(function (p) {
+      root.appendChild(h('div.chips.mt-4.mb-2', {}, [h('button.chip' + (phase === 'all' ? '.on' : ''), { type: 'button', onclick: function () { CORB.go('learn', {}, { replace: true }); } }, 'All')].concat(phases.map(function (p) {
         var n = CORB.data.lessonsIn(p.id).length; if (!n) return null;
-        return h('button.chip' + (phase === p.id ? '.on' : ''), { type: 'button', onclick: function () { CORB.go('learn', { phase: p.id }); } }, h('span.phase-dot.ph-' + p.id), p.short, h('span.count', {}, String(n)));
+        return h('button.chip' + (phase === p.id ? '.on' : ''), { type: 'button', onclick: function () { CORB.go('learn', { phase: p.id }, { replace: true }); } }, h('span.phase-dot.ph-' + p.id), p.short, h('span.count', {}, String(n)));
       }))));
       var num = 0;
       phases.forEach(function (p) {
@@ -116,7 +116,7 @@
       var ck = check(l, h, icon); if (ck) root.appendChild(ck);
       root.appendChild(h('nav.lesson-nav.no-print', { 'aria-label': 'Lesson navigation' },
         prev ? h('a.card.lift', { href: '#/lesson?id=' + prev.id }, h('span.tiny.muted', {}, '← Previous'), h('b', {}, prev.title)) : h('span'),
-        h('button.btn' + (done ? '' : '.primary'), { type: 'button', onclick: function () { CORB.scoring.setLessonDone(l.id, true); CORB.ui.toast('Lesson done', 'ok'); if (next) CORB.go('lesson', { id: next.id }); else CORB.go('learn'); } }, icon('check'), next ? 'Done, next lesson' : 'Done'),
-        next ? h('a.card.lift.next', { href: '#/lesson?id=' + next.id }, h('span.tiny.muted', {}, 'Next →'), h('b', {}, next.title)) : h('span')));
+        // one control that says what happens: marks this lesson done and opens the next one (it used to sit beside a separate "Next" card)
+        h('button.btn.primary.lesson-done', { type: 'button', onclick: function () { CORB.scoring.setLessonDone(l.id, true); CORB.ui.toast('Lesson done', 'ok'); if (next) CORB.go('lesson', { id: next.id }); else CORB.go('learn'); } }, icon('check'), next ? h('span', {}, 'Done · Next: ', h('b', {}, next.title)) : 'Done')));
     } });
 })();

@@ -238,9 +238,29 @@
       });
     }
     function go(it) { ui.closeModal(); CORB.go(it.view, it.params); }
-    function run() { items = CORB.data.search(input.value, { limit: 14 }); sel = 0; draw(); }
+    // pages first: someone typing "plan" or "settings" wants the page, not four glossary terms that mention it. A page
+    // matches on its title (best) or its keywords; pages kept off the menu (Quick drills) count when they have a blurb.
+    function pageHits(q) {
+      var whole = String(q || '').toLowerCase().trim(), ws = whole.split(/[^a-z0-9]+/).filter(function (w) { return w.length > 1; }); if (!ws.length) return [];
+      function hasAll(text, pre) { var tw = text.toLowerCase().split(/[^a-z0-9]+/); return ws.every(function (w) { return tw.some(function (t) { return pre && w.length > 2 ? t.indexOf(w) === 0 : t === w; }); }); }
+      return (CORB.viewOrder || Object.keys(CORB.views)).map(function (k) { return CORB.views[k]; }).filter(function (v) { return v && v.title && (v.nav || v.blurb); }).map(function (v) {
+        var t = v.title.toLowerCase(), s = t === whole ? 100 : t.indexOf(whole) >= 0 ? 60 : hasAll(v.title, true) ? 40 : hasAll(v.keywords || '', true) ? 10 : 0;
+        return { s: s, it: { type: 'Page', title: v.title, sub: v.blurb || '', view: v.id, params: {} } };
+      }).filter(function (r) { return r.s; }).sort(function (a, b) { return b.s - a.s; }).slice(0, 3).map(function (r) { return r.it; });
+    }
+    var ran = null;
+    function run() {
+      var q = input.value, pages = pageHits(q), seen = {}; ran = q;
+      pages.forEach(function (p) { seen[p.view] = 1; });
+      items = pages.concat(CORB.data.search(q, { limit: 14 }).filter(function (it) { return !(it.type === 'Page' && seen[it.view]); })).slice(0, 14); sel = 0; draw();
+    }
     input.addEventListener('input', CORB.util.debounce(run, 80));
-    input.addEventListener('keydown', function (e) { if (e.key === 'ArrowDown') { sel = Math.min(items.length - 1, sel + 1); draw(); e.preventDefault(); } if (e.key === 'ArrowUp') { sel = Math.max(0, sel - 1); draw(); e.preventDefault(); } if (e.key === 'Enter' && items[sel]) go(items[sel]); });
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown') { sel = Math.min(items.length - 1, sel + 1); draw(); e.preventDefault(); }
+      if (e.key === 'ArrowUp') { sel = Math.max(0, sel - 1); draw(); e.preventDefault(); }
+      if (e.key === 'Enter') { if (ran !== input.value) run(); if (items[sel]) { e.preventDefault(); go(items[sel]); } }   // typed fast: search now, not after the debounce
+      if (e.key === 'Escape') { e.preventDefault(); ui.closeModal(); }
+    });
     run();
   };
 

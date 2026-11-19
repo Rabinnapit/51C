@@ -107,11 +107,11 @@
       if (group === 'all' && !p.id) root.appendChild(h('div.card.flow-card.mb-5', {}, CORB.courseFlow()));
       root.appendChild(h('div.chips.mb-4', { role: 'tablist' }, GROUPS.map(function (g) {
         var n = g[0] === 'all' ? all.length : all.filter(function (c) { return g[0] === 'exam' ? (c.group === 'exam' || c.group === 'prep') : c.group === g[0]; }).length;
-        return h('button.chip' + (group === g[0] ? '.on' : ''), { type: 'button', onclick: function () { CORB.go('courses', { group: g[0] }); } }, g[1], h('span.count', {}, String(n)));
+        return h('button.chip' + (group === g[0] ? '.on' : ''), { type: 'button', onclick: function () { CORB.go('courses', { group: g[0] }, { replace: true }); } }, g[1], h('span.count', {}, String(n)));
       })));
       var shown = all.filter(function (c) { return group === 'all' || (group === 'exam' ? (c.group === 'exam' || c.group === 'prep') : c.group === group); });
       root.appendChild(h('div.stack.tight.course-list', {}, shown.map(function (c) { return card(c, h, icon, p.id === c.id, p.id === c.id && p.show === 'classes'); })));
-      root.appendChild(h('div.mt-5', {}, CORB.ui.callout('info', 'info', 'Course names and lengths change', 'WarU (formerly DAU) updates its catalog often, and CON 1100 is shorter while the FAR Overhaul rules are being finalized. Before you register, open the official course page and read your welcome letter (it arrives about 25 days before class).')));
+      root.appendChild(h('div.mt-5', {}, CORB.ui.callout('info', 'info', 'Course names and lengths change', 'WarU (formerly DAU) changes courses often, so before you register, check the official course page and your welcome letter (it comes about 25 days before class).')));
       if (p.id) setTimeout(function () { var el = document.getElementById('c-' + p.id); if (el) el.scrollIntoView({ block: 'start', behavior: 'smooth' }); }, 60);
     } });
 })();

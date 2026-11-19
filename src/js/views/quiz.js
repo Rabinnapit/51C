@@ -62,10 +62,14 @@
   function setup(root, h, icon, p) {
     var missed = CORB.scoring.missedIds().length, bank = CORB.data.questions().length;
     root.appendChild(CORB.ui.pageHead({ title: 'Practice test', lede: 'Exam-style questions written from the official competency list and the RFO FAR. Each answer explains why, and shows where the rule is written.' }));
-    if (S && !S.finished) root.appendChild(h('div.callout.brass.mb-4', {}, icon('clock'), h('div', {}, h('b', {}, 'You have a quiz in progress'), h('span', {}, (S.label || 'Quiz') + ' · question ' + (S.i + 1) + ' of ' + S.items.length + '. '), h('a', { href: '#/quiz?run=1' }, 'Go back to it'))));
-    root.appendChild(h('div.card.raised.quiz-hero', {},
+    // a quiz in progress: Resume is the one primary button and the Quick 10 Start steps down to a secondary one
+    var going = S && !S.finished;
+    if (going) root.appendChild(h('div.card.raised.quiz-hero.quiz-resume.mb-4', {},
+      h('div', {}, h('h2', {}, 'Quiz in progress'), h('p.muted', {}, S.label || 'Quiz')),
+      h('button.btn.primary.lg', { type: 'button', onclick: function () { CORB.go('quiz', { run: '1' }); } }, icon('play'), 'Resume: question ' + (S.i + 1) + ' of ' + S.items.length)));
+    root.appendChild(h('div.card' + (going ? '' : '.raised') + '.quiz-hero', {},
       h('div', {}, h('h2', {}, 'Quick 10'), h('p.muted', {}, '10 mixed questions with the answer explained after each one. A good daily habit.')),
-      h('button.btn.primary.lg', { type: 'button', onclick: function () { start({ mode: 'practice', n: 10, label: 'Quick 10' }); } }, icon('play'), 'Start')));
+      h('button.btn' + (going ? '' : '.primary.lg'), { type: 'button', onclick: function () { start({ mode: 'practice', n: 10, label: 'Quick 10' }); } }, icon('play'), going ? 'Start a new Quick 10' : 'Start')));
     var phaseSel = h('select.select#q-phase', {}, [h('option', { value: '' }, 'All four areas')].concat(CORB.data.phases().map(function (ph) { return h('option', { value: ph.id, selected: p.phase === ph.id }, ph.code + ' ' + ph.name); })));
     var nSel = h('select.select#q-n', {}, [10, 25, 50].map(function (n) { return h('option', { value: String(n) }, n + ' questions'); }));
     var exN = h('div.seg', { role: 'radiogroup', 'aria-label': 'Exam length' }), exChoice = 50;
@@ -92,7 +96,7 @@
         var pc = CORB.util.pct(r.correct, r.total);
         return h('div.list-item.hist', {}, h('span.num.hist-pc' + (pc >= 70 ? '.ok' : '.low'), {}, pc + '%'), h('div.grow', {}, h('b', {}, r.label || r.mode), h('div.tiny.muted', {}, r.correct + ' of ' + r.total + ' right · ' + CORB.util.fmtDateTime(r.ts))));
       })))));
-    root.appendChild(h('p.muted.small.mt-5', {}, 'The bank has ' + bank + ' questions. They are practice questions written for this guide or adapted from B2B class material and checked against the RFO, not questions from the real exam, which WarU keeps secure. Pass mark on the real exam: 70%.'));
+    root.appendChild(h('p.muted.small.mt-5', {}, bank + ' practice questions written for this guide, not real exam questions; the real exam pass mark is 70%.'));
   }
 
   // ---- running ----
