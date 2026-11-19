@@ -1,5 +1,31 @@
 # Changelog
 
+## 0.35.2 (20 November 2026): the intro video in phone size
+
+The intro is a recording of a 1920 x 1080 screen. In the player on a phone it is about 380 px wide, so a 16 px word on
+the filmed screen is drawn about 3 px tall: the film could be followed, not read. The owner asked for a phone-sized cut.
+
+- **A phone held upright plays the phone-sized cut** (`meta.intro.tall`: `intro-tall.mp4`, 720 x 1280, about 12 MB, and
+  `intro-tall-poster.jpg`). It is the same film: the same fifteen shots on the same timeline, the same narration and
+  music (the sound mix is the wide cut's), the same captions file. Every screen is filmed from the app at a phone's
+  size (360 px wide), so the app's words are four to five times larger in the picture; taps show as a touch dot.
+  The app's screen sits under a band that carries each shot's caption, so no caption covers the app.
+- **Which cut plays** is decided when the intro opens: `(orientation: portrait) and (max-width: 640px)` gets the phone
+  cut, everything else the wide one (a tablet, a laptop, a phone on its side). **Turning the phone** swaps the cut at
+  the same second, still playing, with the sound as it was (in full screen the picture is left alone until full
+  screen ends). `CORB.intro.cut()` says which one is on screen.
+- **The player fits the phone**: the upright picture is as tall as the screen allows with the title, the words under
+  the picture and Skip still in view; a screen under 700 px tall drops the "Watch it any time" line to give it room.
+- **The film** (`teaser/build/`): `capture_tall.py` (the phone shots; it reuses `capture.py`'s recorder), `cards_tall.py`
+  (portrait title cards, the band and its captions), `assemble_tall.py`, `verify_tall.py`, `webcopy_tall.py`,
+  `sheet_tall.py` (a contact sheet per shot). The composite near the end shows the guide on a phone, a laptop and a
+  tablet. Range Day is played by touch: Skip, then a tap on the board with the answer. `teaser/script.md` has the build.
+- **Glossary on a phone: the tools no longer cover the terms.** Filming at phone size showed it: the search box, four
+  rows of letters and six rows of topics stay on screen as the page scrolls, 567 px tall. On a 780 px phone that left
+  85 px for the terms, and nothing on a small phone. On screens up to 640 px wide the letters and the topics are now
+  one row each that slides sideways (181 px in all, 471 px left for terms on the same phone); the letter and the topic
+  that are picked stay in view. Nothing changes on a computer.
+
 ## 0.35.1 (19 November 2026): the intro video shows today's app
 
 The website opens on the two-minute intro, and it was still the film of app 0.30.0: an Exam path page that no longer

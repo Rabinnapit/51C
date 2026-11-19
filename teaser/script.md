@@ -121,4 +121,28 @@ parts · thresholds.
    poster from the title card and writes the captions file from `narration/timing.json`, into `src/web/root/`
    (`intro.mp4`, `intro-poster.jpg`, `intro.vtt`); `tools/build.py` copies them next to the page.
 
+## The phone-sized cut (portrait, 1080 x 1920; since app 0.35.2)
+
+The wide cut is a recording of a 1920 x 1080 screen: in the player on a phone a 16 px word is drawn about 3 px tall.
+The phone-sized cut is the same film at a phone's size: the same fifteen shots at the same times, the same narration,
+music and captions file (`audio/mix.wav` and `intro.vtt` are shared), every screen filmed again from the app in a
+360 x 560 viewport at 3x. The app plays it on a phone held upright (`meta.intro.tall`, `core/13-intro.js`).
+
+- **Picture**: the app's screen (1080 x 1680) under a 240 px band that carries the shot's caption, so no caption covers
+  the app; the title cards and the composite fill the frame. Taps show as a touch dot (no mouse cursor).
+- **What differs from the wide cut's shots**: Home scrolls to the three things the certification takes while the
+  narrator names them; the setup scrolls to each step's Next; the quiz starts from the Practice page's Quick 10 tile;
+  Range Day is played by touch (Skip on the reading time, then a tap on the board with the answer); the composite shows
+  the guide on a phone, a laptop and a tablet. The quiz question, the flashcard and the range's terms are fixed by a
+  seed (`QUIZ_SEED`, `CARD_SEED`, `RANGE_SEED`; `capture_tall.py <dir> 2 seeds` lists short questions to choose from).
+- **Build** (in `teaser/build/`, after the wide cut's steps 0 to 4 and 6, which make the narration, the music and the mix):
+  1. `python cards_tall.py` — portrait title cards, the band and its captions, into `../cards_tall`.
+  2. `python capture_tall.py ../frames_tall_smoke 2` and `python sheet_tall.py ../frames_tall_smoke ../frames_tall_smoke/_sheets all 9 400 3`
+     — a quick look at every shot first; then `python capture_tall.py ../frames_tall 3` (add `quiz,cards only` to redo some).
+  3. `python assemble_tall.py` (or `--finish`) — clips, the same xfade chain, the wide cut's mix, two encodes:
+     `B2B_Exam_Prep_Teaser_Phone_1080x1920.mp4` and `B2B_Exam_Prep_Teaser_Phone_720x1280.mp4`.
+  4. `python verify_tall.py` — contact sheet, stream facts, loudness.
+  5. `python webcopy_tall.py` — `src/web/root/intro-tall.mp4` (720 x 1280, about 12 MB) and `intro-tall-poster.jpg`.
+- Recut both cuts together whenever the app changes what they show.
+
 Heavy build products (frames, clips, audio, cards, MP3s, MP4s, logs) are ignored by git (`teaser/.gitignore`).

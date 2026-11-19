@@ -23,6 +23,14 @@
 .intro-later b { color: #eef3ef; }
 .home-intro { margin-top: 12px; }
 @media (max-width: 640px) and (orientation: portrait) { .intro-box { gap: 10px; } .intro-head b { font-size: var(--fs-md); } .intro-words { font-size: var(--fs-sm); } }
+/* the phone-sized cut (a phone held upright, core/13-intro.js): an upright picture, as tall as the screen allows with the
+   title, the words and Skip still in view; a short screen drops the "Watch it any time" line to give it room */
+.intro-layer.tall .intro-frame { aspect-ratio: 9 / 16; align-self: center; min-width: 180px;
+  width: min(100%, calc((100vh - 252px) * 9 / 16)); width: min(100%, calc((100dvh - 252px) * 9 / 16)); }
+@media (max-height: 700px) {
+  .intro-layer.tall .intro-later { display: none; }
+  .intro-layer.tall .intro-frame { width: min(100%, calc((100vh - 200px) * 9 / 16)); width: min(100%, calc((100dvh - 200px) * 9 / 16)); }
+}
 /* while a phone keeps the first play silent: the whole picture is the sound button, with one big pill in the middle */
 .intro-tap { position: absolute; inset: 0; z-index: 2; display: grid; place-items: center; padding: 0; border: 0; cursor: pointer;
   background: radial-gradient(ellipse at center, rgba(0,0,0,.18), rgba(0,0,0,.42)); color: #1b1407; -webkit-tap-highlight-color: transparent; }

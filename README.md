@@ -43,7 +43,7 @@ rehosting or selling without written permission). The terms text is `terms` in `
 ## How people get it: three ways
 
 1. **The app (best): https://rabinnapit.github.io/51C/.** The first visit in a browser opens on the two-minute intro
-   video (`src/web/root/intro.mp4`, made by `teaser/`): it starts muted with its words under the picture, "Sound on"
+   video (`src/web/root/intro.mp4`, and `intro-tall.mp4` for a phone held upright, both made by `teaser/`): it starts muted with its words under the picture, "Sound on"
    plays it with the voice, and Skip or the end of the video goes on to the install page. It never plays in the installed
    app or the offline file and only once per device; "Watch the intro" in About and Settings & help (and on Home until the plan is built) replays it.
    People scan the QR code with the phone's Camera app

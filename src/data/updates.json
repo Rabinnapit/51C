@@ -108,6 +108,12 @@
   ],
   "guide_changes": [
     {
+      "version": "0.35.2",
+      "date": "2026-11-20",
+      "title": "The intro video in phone size",
+      "notes": "On a phone held upright, the two-minute intro now plays a phone-sized cut: the same film, shot again at a phone's size, so the words on the screens can be read. Turn the phone on its side and the wide cut takes over at the same second. Glossary on a phone: the letters and the topics are now one row each that slides sideways, so the terms have room. Before, the search tools covered most of the screen once you scrolled."
+    },
+    {
       "version": "0.35.1",
       "date": "2026-11-19",
       "title": "The intro video shows today's app",

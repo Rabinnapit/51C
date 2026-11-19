@@ -24,6 +24,11 @@
         });
         chips.innerHTML = '';
         [''].concat(cats).forEach(function (c) { chips.appendChild(h('button.chip' + (st.cat === c ? '.on' : ''), { type: 'button', onclick: function () { st.cat = c; st.limit = 80; paintFilters(); paint(); } }, c || 'All topics')); });
+        // on a phone each row slides sideways: the letter and the topic that are picked stay in view after the redraw
+        [letters, chips].forEach(function (row) {
+          var on = row.querySelector('.on'); if (!on || row.scrollWidth <= row.clientWidth + 1) return;
+          row.scrollLeft = Math.max(0, on.offsetLeft - row.offsetLeft - (row.clientWidth - on.offsetWidth) / 2);
+        });
       }
       function match(g) {
         if (st.cat && g.cat !== st.cat) return false;

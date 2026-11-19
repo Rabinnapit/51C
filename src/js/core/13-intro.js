@@ -9,13 +9,17 @@
       "?intro=1" in the address shows it again.
    2. "Watch the intro" (Home, About, Settings & help) plays it any time, in any browser or in the installed app.
    With Data Saver on, or when the browser refuses to start a muted video, it waits on the poster with a Play button.
+   3. A phone held upright plays the phone-sized cut (meta.intro.tall, intro-tall.mp4: the same film on the same
+      timeline, shot at a phone's size so its words can be read). Turned on its side, the wide cut takes over at the
+      same second; the captions file is shared.
    The video streams from the site; the service worker leaves it alone (src/web/sw.js). */
 (function () {
   'use strict';
   var CORB = window.CORB;
   var SEEN = 'b2b.introSeen';
   var intro = CORB.intro = {};
-  var layer = null, firstThen = null, video = null, prevFocus = null, keyH = null, madeInert = [], barBefore = null;
+  var layer = null, firstThen = null, video = null, prevFocus = null, keyH = null, madeInert = [], barBefore = null, turnMq = null, turnH = null;
+  var UPRIGHT = '(orientation: portrait) and (max-width: 640px)';
 
   function cfg() { var m = CORB.meta() || {}; return m.intro && m.intro.src ? m.intro : null; }
   intro.available = function () { return !!cfg() && CORB.edition() === 'web' && /^https?:$/.test(location.protocol); };
@@ -30,6 +34,10 @@
   function markSeen() { try { localStorage.setItem(SEEN, String(Date.now())); } catch (e) {} }
   function standalone() { return !!(CORB.pwa && CORB.pwa.isStandalone && CORB.pwa.isStandalone()); }
   function saveData() { try { return !!(navigator.connection && navigator.connection.saveData); } catch (e) { return false; } }
+  // the phone-sized cut, for a phone held upright
+  function upright(c) { try { return !!(c && c.tall && c.tall.src && window.matchMedia(UPRIGHT).matches); } catch (e) { return false; } }
+  function cut(c, tall) { return tall ? { src: c.tall.src, poster: c.tall.poster || c.poster || '' } : { src: c.src, poster: c.poster || '' }; }
+  intro.cut = function () { return layer ? (layer.classList.contains('tall') ? 'tall' : 'wide') : ''; };
 
   // the router calls this once the page has drawn; `then` goes on to the install page, the terms and the tour offer
   intro.first = function (then) { if (layer) firstThen = then || null; else if (then) then(); };
@@ -47,6 +55,7 @@
     if (!layer) return;
     try { if (video) { video.pause(); video.removeAttribute('src'); video.load(); } } catch (e) {}
     if (keyH) document.removeEventListener('keydown', keyH, true);
+    if (turnMq && turnH) { try { turnMq.removeEventListener('change', turnH); document.removeEventListener('fullscreenchange', turnH); } catch (e) {} } turnMq = null; turnH = null;
     layer.remove(); layer = null; video = null; keyH = null;
     madeInert.forEach(function (el) { el.removeAttribute('inert'); }); madeInert = [];
     var bar = document.querySelector('meta[name="theme-color"]'); if (CORB.syncBar) CORB.syncBar(); else if (bar && barBefore) bar.setAttribute('content', barBefore);
@@ -62,7 +71,7 @@
   // opts.replay: from a "Watch the intro" button (starts with sound, since a tap started it)
   intro.play = function (opts) {
     opts = opts || {}; var c = cfg(); if (!c || layer) return;
-    var h = CORB.ui.h, icon = CORB.ui.icon, replay = !!opts.replay;
+    var h = CORB.ui.h, icon = CORB.ui.icon, replay = !!opts.replay, tall = upright(c), film = cut(c, tall);
     prevFocus = document.activeElement;
     var words = h('p.intro-words', { 'aria-live': 'off' });
     var soundBtn = h('button.intro-sound', { type: 'button', hidden: true, onclick: function () { sound(); } }, icon('volume'), 'Sound on');
@@ -70,12 +79,12 @@
     var tapEl = h('button.intro-tap', { type: 'button', hidden: true, 'aria-label': 'Tap for sound: the intro starts again with the voice', onclick: function () { sound(); } },
       h('span.intro-tap-pill', {}, icon('volume'), 'Tap for sound'));
     var playBtn = h('button.intro-play', { type: 'button', hidden: true, 'aria-label': 'Play the intro', onclick: function () { start(true); } }, h('span', { html: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>' }), 'Play the ' + intro.minutes() + '-minute intro');
-    video = h('video.intro-video', { playsinline: '', 'webkit-playsinline': '', preload: saveData() && !replay ? 'none' : 'auto', poster: c.poster || '', controls: '' });
+    video = h('video.intro-video', { playsinline: '', 'webkit-playsinline': '', preload: saveData() && !replay ? 'none' : 'auto', poster: film.poster, controls: '' });
     video.muted = !replay; video.defaultMuted = !replay; if (!replay) video.setAttribute('muted', '');
     if (c.captions) { var tr = h('track', { kind: 'captions', srclang: 'en', label: 'English', src: c.captions }); video.appendChild(tr); }
-    video.src = c.src;
+    video.src = film.src;
     var skip = h('button.btn.primary.intro-skip', { type: 'button', onclick: function () { close(replay ? 'replay' : 'skip'); } }, replay ? 'Close' : 'Skip the intro', icon(replay ? 'x' : 'arrow-right'));
-    layer = h('div.intro-layer', { role: 'dialog', 'aria-modal': 'true', 'aria-label': (CORB.meta().app_name || 'The app') + ' in ' + intro.minutes() + ' minutes' },
+    layer = h('div.intro-layer' + (tall ? '.tall' : ''), { role: 'dialog', 'aria-modal': 'true', 'aria-label': (CORB.meta().app_name || 'The app') + ' in ' + intro.minutes() + ' minutes' },
       h('div.intro-box', {},
         h('div.intro-head', {}, h('img.intro-icon', { src: 'icons/icon-192.png', alt: '' }), h('div', {}, h('b', {}, (CORB.meta().app_name || '') + ' in ' + intro.minutes() + ' minutes'), h('small', {}, 'What it does for a new 51C or 1102')), replay ? null : soundBtn),
         h('div.intro-frame', {}, video, tapEl, playBtn),
@@ -104,6 +113,29 @@
       }
     };
     document.addEventListener('keydown', keyH, true);
+    // the phone was turned: the other cut takes over at the same second (both cuts share one timeline and one captions file)
+    if (c.tall && c.tall.src) {
+      try {
+        turnMq = window.matchMedia(UPRIGHT);
+        turnH = function () {
+          if (!video || !layer) return;
+          // in full screen the picture is left alone; this runs again when full screen ends
+          if (document.fullscreenElement || video.webkitDisplayingFullscreen) return;
+          var now = upright(c); if (now === tall) return;
+          var at = video.currentTime || 0, going = !video.paused && !video.ended, muted = video.muted;
+          tall = now; film = cut(c, tall); layer.classList.toggle('tall', tall);
+          var again = function () {
+            if (!video) return; video.removeEventListener('loadedmetadata', again);
+            try { video.currentTime = at; } catch (e) {}
+            if (going) { var p; try { p = video.play(); } catch (e) { p = null; } if (p && p.catch) p.catch(function () { if (video) playBtn.hidden = false; }); }
+          };
+          video.addEventListener('loadedmetadata', again);
+          video.poster = film.poster; video.src = film.src; video.muted = muted;
+        };
+        turnMq.addEventListener('change', turnH);
+        document.addEventListener('fullscreenchange', turnH); video.addEventListener('webkitendfullscreen', turnH);
+      } catch (e) { turnMq = null; turnH = null; }
+    }
     function start(withSound) {
       if (!video) return;
       if (withSound) { video.muted = false; soundBtn.hidden = true; tapEl.hidden = true; }
