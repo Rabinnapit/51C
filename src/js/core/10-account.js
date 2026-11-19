@@ -325,11 +325,33 @@
         } }, icon('trash'), 'Delete my account'))) });
   };
 
+  // ---- asking at the right moment. The owner wants readers to open an account (progress then follows them), without
+  //      nagging: one ask on the first results screen ("Save this score on every device"), one more a week later on
+  //      Home, then never. The count lives in this browser only (b2b.acctAsk), not in the synced progress. ----
+  var ASK = 'b2b.acctAsk', askLive = {};
+  function askState() { try { return JSON.parse(localStorage.getItem(ASK) || '{}') || {}; } catch (e) { return {}; } }
+  function askSave(st) { try { localStorage.setItem(ASK, JSON.stringify(st)); } catch (e) {} }
+  acct.ask = function (where) {   // 'results' or 'home'; a small card, or null when it is not the moment
+    if (!acct.ready() || acct.signedIn()) return null;
+    var st = askState(), n = st.n || 0, now = Date.now();
+    if (!st.first) { st.first = now; askSave(st); }
+    var due = where === 'results' ? n === 0 : (n === 0 ? now - st.first >= 7 * 864e5 : n === 1 && now - (st.at || 0) >= 7 * 864e5);
+    if (!due && !askLive[where]) return null;
+    if (!askLive[where]) { askLive[where] = true; askSave({ first: st.first, n: n + 1, at: now }); }   // shown counts as asked; it stays for this visit
+    var h = CORB.ui.h, icon = CORB.ui.icon, box;
+    function close() { askLive[where] = false; if (box && box.parentNode) box.parentNode.removeChild(box); }
+    box = h('div.card.acct-ask', { role: 'region', 'aria-label': 'Save your progress in an account' }, h('span.acct-ask-ico', { 'aria-hidden': 'true' }, icon('user')),
+      h('div.acct-ask-copy', {}, h('b', {}, where === 'results' ? 'Save this score on every device' : 'Keep your progress on every device'), h('span', {}, 'A free account takes 30 seconds.')),
+      h('div.row.tight', {}, h('button.btn.primary.sm', { type: 'button', onclick: function () { close(); acct.openSignUp(); } }, 'Create account'),
+        h('button.btn.sm.ghost', { type: 'button', onclick: close }, 'Not now')));
+    return box;
+  };
+
   // the top bar's account button: initials once signed in, otherwise Sign in
   acct.topButton = function () {
     var h = CORB.ui.h, b = h('button.btn.sm.ghost.acct-btn', { type: 'button', onclick: function () { if (acct.signedIn()) acct.openMenu(); else acct.openSignIn(); } });
     function paint() {
-      b.innerHTML = '';
+      b.innerHTML = ''; b.classList.toggle('out', !acct.signedIn());   // signed out: the phone bar shows the icon with a dot
       if (acct.signedIn()) { b.appendChild(h('span.avatar', {}, initials())); b.setAttribute('aria-label', 'Your account'); b.title = acct.name() || acct.email(); }
       else { b.appendChild(CORB.ui.icon('user')); b.appendChild(h('span.acct-label', {}, 'Sign in')); b.setAttribute('aria-label', 'Sign in'); b.title = 'Sign in to save your progress'; }
     }

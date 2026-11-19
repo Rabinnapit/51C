@@ -1,8 +1,8 @@
 /* The intro video (core/13-intro.js, web edition only): a dark layer above the install page on the first visit, and the
    player behind every "Watch the intro" button */
 .intro-layer { position: fixed; inset: 0; z-index: 450; overflow: auto; -webkit-overflow-scrolling: touch; background: #0b100e; color: #eef3ef;
-  display: flex; align-items: center; justify-content: center; padding: max(16px, env(safe-area-inset-top, 0px)) 12px max(16px, env(safe-area-inset-bottom, 0px)); }
-.intro-box { width: 100%; max-width: 960px; display: flex; flex-direction: column; gap: 12px; }
+  display: flex; align-items: flex-start; justify-content: center; padding: max(16px, env(safe-area-inset-top, 0px)) 12px max(16px, env(safe-area-inset-bottom, 0px)); }
+.intro-box { width: 100%; max-width: min(960px, max(320px, calc((100vh - 250px) * 16 / 9))); margin: auto; display: flex; flex-direction: column; gap: 12px; }
 .intro-head { display: flex; align-items: center; gap: 12px; }
 .intro-head b { display: block; font-size: var(--fs-lg); line-height: 1.2; }
 .intro-head small { display: block; color: #a9b8b0; font-size: var(--fs-sm); }

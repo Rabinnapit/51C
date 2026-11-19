@@ -86,3 +86,22 @@
 /* top-bar buttons keep their tap size when the title is long */
 .topbar .btn.icon { flex: none; min-width: 40px; }
 .topbar .menu-btn { min-width: 44px; }
+
+/* phones: the bar names the section only. The page title was cut off here ("Settings & ...") and repeated in the page's
+   own heading 100 px lower; the account button is its icon, with a dot while signed out (0.34.0) */
+@media (max-width: 640px) {
+  .topbar .top-heading { display: none; }
+  .topbar .top-eyebrow { font-size: .8rem; letter-spacing: .14em; }
+  .topbar .acct-label { display: none; }
+  .topbar .acct-btn.out { position: relative; min-width: 44px; justify-content: center; }
+  .topbar .acct-btn.out::after { content: ""; position: absolute; top: 8px; right: 8px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 0 2px var(--bg); }
+}
+/* the Install button: only a computer's browser that offers to install shows it */
+.topbar .install-btn[hidden] { display: none; }
+@media (max-width: 1100px) { .topbar .install-btn span { display: none; } }
+/* a quiz run keeps the bottom of the screen for its own buttons */
+.shell.in-run .buddy-fab { display: none; }
+@media (max-width: 640px) {
+  .topbar .top-title.is-home .top-eyebrow { display: none; }
+  .topbar .top-title.is-home::before { content: attr(data-app); font-family: var(--font-display); font-weight: 800; font-size: 1.02rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+}

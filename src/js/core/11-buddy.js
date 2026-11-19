@@ -243,6 +243,14 @@
   buddy.fab = function () {
     var ic = h('span.bb-ic', { 'aria-hidden': 'true' }); ic.innerHTML = BUBBLE;
     if (!CORB.get('settings.buddyUsed')) nudgeSoon(3000 + Math.random() * 4000);
+    // on a phone the button tucks away while the reader scrolls down (it covered the answer or the button under it) and
+    // comes back on the way up or at the top
+    var lastY = 0;
+    window.addEventListener('scroll', function () {
+      var y = window.pageYOffset || 0, b = document.querySelector('.buddy-fab'); if (!b) return;
+      if (Math.abs(y - lastY) < 12) return;
+      b.classList.toggle('tuck', y > lastY && y > 120); lastY = y;
+    }, { passive: true });
     return h('button.buddy-fab' + (CORB.get('settings.buddyUsed') ? '' : '.nudge'), { type: 'button', 'aria-label': 'Ask ' + name(), title: 'Ask ' + name() + ' a question', hidden: !!panel, onclick: function () { buddy.open(); } }, ic, h('span', {}, 'Ask ' + name()));
   };
 })();

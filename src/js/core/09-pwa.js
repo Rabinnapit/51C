@@ -111,6 +111,10 @@
   function shouldShow() {
     if (pwa.isStandalone() || !/^https?:$/.test(location.protocol)) return false;
     if (ARMED) { try { history.replaceState(null, '', location.pathname + (location.hash || '#/home')); } catch (e) {} return true; }
+    // A computer is not where this app gets installed first, and a browser that cannot install it showed only "Open the
+    // website": no full-page stop there. The top bar offers Install when the browser can; the QR code and ?install=1
+    // (above) still open this page on any device.
+    if (pwa.platform().desktop) return false;
     try { if (Date.now() - (+localStorage.getItem(ASKED) || 0) < 3 * 864e5) return false; } catch (e) {}
     return true;
   }

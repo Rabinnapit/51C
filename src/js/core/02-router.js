@@ -135,6 +135,7 @@
       h('div.top-title.grow', {}, h('span.top-eyebrow', {}, ''), h('strong.top-heading', {}, '')),
       h('button.btn.sm.ghost.search-btn', { type: 'button', onclick: function () { CORB.ui.palette(); }, 'aria-label': 'Search', title: 'Search (press /)' }, icon('search'), h('span.hide-sm', {}, 'Search'), h('kbd.hide-sm', {}, '/')),
       h('button.btn.sm.save-btn', { type: 'button', hidden: true, onclick: saveToFile, title: 'Your progress is only in this browser. Save it into the B2B Exam Prep file so a restart cannot erase it.' }, icon('save'), h('span.hide-sm', {}, 'Save progress')),
+      h('button.btn.sm.install-btn', { type: 'button', hidden: true, title: 'Install B2B Exam Prep as an app on this computer', onclick: function () { if (CORB.pwa) CORB.pwa.install(); } }, icon('download'), h('span', {}, 'Install app')),
       h('button.btn.icon.sm.ghost.hide-sm.text-btn', { type: 'button', 'aria-label': 'Text size', 'data-tip': 'Text size', onclick: function () { CORB.cycleTextSize(); } }, icon('text')),
       h('button.btn.icon.sm.ghost.hide-sm.theme-btn', { type: 'button', 'aria-label': 'Day or night mode', 'data-tip': 'Day / night', onclick: function () { CORB.toggleTheme(); } }, icon('moon')),
       CORB.account && CORB.account.ready() ? CORB.account.topButton() : null,
@@ -151,6 +152,7 @@
     if (!shell) return;
     var tb = shell.querySelector('.theme-btn'); if (tb) { tb.innerHTML = ''; tb.appendChild(CORB.ui.icon(isDark() ? 'sun' : 'moon')); }
     var sb = shell.querySelector('.save-btn'); if (sb) sb.hidden = !(CORB.store.unsaved && CORB.store.unsaved());
+    var ib = shell.querySelector('.install-btn'); if (ib) ib.hidden = !(CORB.pwa && CORB.pwa.canInstall && !CORB.pwa.isStandalone() && CORB.pwa.platform().desktop);
   }
   function paintBadges() {
     if (!shell) return;
@@ -203,8 +205,10 @@
     var navId = def.navAs || def.id, mobId = def.mobileAs || navId;
     shell.querySelectorAll('.nav').forEach(function (b) { var on = b.getAttribute('data-view') === navId; b.classList.toggle('active', on); b.setAttribute('aria-current', on ? 'page' : 'false'); });
     shell.querySelectorAll('.mobile-nav button').forEach(function (b) { var on = b.getAttribute('data-view') === mobId; b.classList.toggle('active', on); b.setAttribute('aria-current', on ? 'page' : 'false'); });
+    shell.classList.toggle('in-run', def.id === 'quiz' && !!r.params.run);   // the Buddy button sat on the quiz's Next button on a phone
     var navDef = CORB.views[navId] || def;
     shell.querySelector('.top-eyebrow').textContent = navDef.section || '';
+    var tt = shell.querySelector('.top-title'); tt.setAttribute('data-app', CORB.appName()); tt.classList.toggle('is-home', def.id === 'home');   // a phone's bar shows the app's name on Home, the section elsewhere
     shell.querySelector('.top-heading').textContent = def.topTitle ? def.topTitle(r.params) : def.title || '';
     document.title = (def.id === 'home' || !def.title ? '' : def.title + ' · ') + CORB.appName();   // Home is just the app name, so a home-screen shortcut is named cleanly
     var content = shell.querySelector('#content'); content.innerHTML = '';
@@ -249,7 +253,13 @@
     // once the page has drawn: on the website, the intro video (core/13-intro.js), then the install page (core/09-pwa.js);
     // then the terms of use, then the tour offer
     setTimeout(function () {
-      function offer() { if (CORB.tour) CORB.tour.offer(); }
+      // Home's first-visit wizard already has "Show me around": a pop-up asking the same would be one more layer
+      // before the first screen. The offer counts as made; the tour is on the ? button and under Help.
+      function offer() {
+        if (!CORB.tour) return;
+        if (current.id === 'home' && !CORB.plan.hasSetup() && !CORB.get('settings.welcomeSeen') && !CORB.get('settings.tourSeen')) { CORB.set('settings.tourSeen', true, { silent: true, stamp: false }); return; }
+        CORB.tour.offer();
+      }
       function terms() { if (CORB.terms) CORB.terms.require(offer); else offer(); }
       function install() { if (CORB.pwa && CORB.pwa.first) CORB.pwa.first(terms); else terms(); }
       if (CORB.intro && CORB.intro.first) CORB.intro.first(install); else install();

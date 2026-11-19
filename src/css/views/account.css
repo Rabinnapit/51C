@@ -39,3 +39,10 @@
 .acct-btn .avatar { width: 28px; height: 28px; }
 @media (max-width: 380px) { .acct-label { display: none; } }
 .hello { margin: 0 0 4px; font-weight: 700; color: var(--accent); font-size: var(--fs-lg); }
+
+/* the ask for an account, on the first results screen and once on Home a week in */
+.acct-ask { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 14px; border-left: 5px solid var(--accent); }
+.acct-ask-ico { flex: none; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); }
+.acct-ask-ico svg { width: 22px; height: 22px; }
+.acct-ask-copy { flex: 1 1 220px; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.acct-ask-copy span { color: var(--muted); font-size: var(--fs-sm); }
