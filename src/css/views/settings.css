@@ -6,3 +6,16 @@
 .v-settings .help-step p { margin-top: 2px; }
 .v-settings h3 { font-size: var(--fs-lg); }
 .v-settings input[type=range] { flex: 1; max-width: 320px; accent-color: var(--accent); }
+/* the settings lists: rows the way a phone's settings read */
+.v-settings .set-first { margin-top: 0; }
+.v-settings .set-list { overflow: hidden; }
+.v-settings .set-row { display: grid; grid-template-columns: 42px minmax(0, 1fr) 20px; gap: 14px; align-items: center; width: 100%; min-height: 64px; padding: 10px 16px; text-align: left; color: inherit; text-decoration: none; background: none; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; cursor: pointer; }
+.v-settings .set-row:last-child { border-bottom: 0; }
+.v-settings .set-row:hover, .v-settings .set-row:focus-visible { background: var(--panel-2); }
+.v-settings .set-ico { width: 42px; height: 42px; border-radius: 11px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); }
+.v-settings .set-ico svg { width: 22px; height: 22px; }
+.v-settings .set-copy { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.v-settings .set-copy b { font-size: var(--fs-md); }
+.v-settings .set-copy small { font-size: var(--fs-sm); color: var(--muted); }
+.v-settings .set-go { width: 20px; height: 20px; color: var(--muted); }
+.v-settings .set-over > summary > svg:first-child { color: var(--danger, #b3261e); }

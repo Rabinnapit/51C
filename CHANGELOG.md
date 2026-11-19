@@ -1,5 +1,36 @@
 # Changelog
 
+## 0.33.0 (19 November 2026): simpler settings, and games that fill the window
+
+The owner's review: Help said too much (pages that explain themselves were explained again), My data is not needed
+(readers should open an account, not carry files between devices), and in a browser the games were cut off at the sides.
+
+- **Settings & help: My profile, Display, Help**, in that order, and My profile opens first.
+  - **My profile** starts with the account (create one or sign in; "your progress follows you to any phone or
+    computer"), then who you are and your dates, then Start over (clear progress, erase everything), folded.
+  - **Help** is a list of seven rows, the way a phone's settings read: Take the tour, Ask Buddy, Watch the intro, Install
+    the app, Send feedback, Report a problem, About. Gone from it: the seven "Build your plan / Study a little every day"
+    cards, "Where your progress lives", the install how-to per phone (the install page shows it) and the keyboard list
+    (About has it). About 110 words instead of about 520.
+  - **My data is gone** from the website and the app: an account moves progress between devices. Old links to it open My
+    profile. The offline file has no accounts, so its My profile keeps "Save progress into this file", with export and
+    import folded under "Move it to another computer".
+  - **"Copies for computers without internet" is archived**, not deleted: the offline file and the Word email package
+    are still built and published; `"offline_copies": true` in `src/data/meta.json` shows the card again.
+- **The Arcade in a browser window.** A browser's window is shorter than the installed app's (and on a computer much
+  wider), and the answers under the picture took the height: the picture shrank to a strip with empty bars at its sides
+  (Supply Line on a 1366 x 650 laptop: 725 x 315 with 321 px of nothing on each side; on a phone held sideways 184 x 80).
+  - On a wide window the answers sit **beside** the picture (`.ar-play.ar-wide`): always at 1.6 to 1 and wider (a
+    laptop, a phone held sideways), and on a sideways tablet for a list of four or more answers. 886 x 510 on that laptop,
+    480 x 317 on the sideways phone, where the question moves above the answers too.
+  - A phone browser held upright keeps a minimum picture height (30% of the window); a long answer list gives way and
+    scrolls, and the answer rows are tighter there. Supply Line on an iPhone in Safari: 390 x 199 instead of 345 x 150.
+  - On a phone held sideways the ranges' prompt runs as one line.
+  - A picture that still does not reach the sides (the ranges at 2.3 to 1, Part Patrol's upright field) gets rounded
+    corners and a thin frame, so it reads as a screen and not as cut off.
+  - **Supply Line's map**: the first and last labels ("Guiding Principles", "All four exam areas") ran off the left and
+    right on a 360 px phone; every label is now pulled in from the edge.
+
 ## 0.32.1 (18 November 2026): the intro video's voice part, as before
 
 - **The intro video is v1.2 again.** The owner looked at v1.3's read-aloud shot (lesson one's "Who does what" picture,

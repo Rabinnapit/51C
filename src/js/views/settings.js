@@ -1,44 +1,34 @@
-/* VIEW settings — help, profile, display and read-aloud, my data (save, export, import, reset), about */
+/* VIEW settings — my profile (account, who you are, start over), display and read-aloud, help (a short list of actions) */
 (function () {
   'use strict';
   var CORB = window.CORB;
-  var TABS = [['help', 'Help'], ['profile', 'My profile'], ['display', 'Display'], ['data', 'My data']];
+  var TABS = [['profile', 'My profile'], ['display', 'Display'], ['help', 'Help']];
 
+  // one row of a settings list, the way a phone's settings read: an icon, a title, one short line, and where it goes
+  function row(h, icon, o) {
+    var inner = [h('span.set-ico', {}, icon(o.icon)), h('span.set-copy', {}, h('b', {}, o.title), o.sub ? h('small', {}, o.sub) : null), icon(o.ext ? 'external' : 'chevron-right', 'set-go')];
+    return o.href ? h('a.set-row', { href: o.href }, inner) : h('button.set-row', { type: 'button', onclick: o.go }, inner);
+  }
+
+  // Help is what a reader can DO from here. What each page is for is on the page itself and in the tour, so it is not
+  // repeated here (the owner: "over communicating and overwhelming").
   function help(root, h, icon) {
-    var meta = CORB.meta(), ed = CORB.edition();
-    var steps = [
-      ['route', 'Build your plan', 'Home walks you through four short steps (who you are, your dates, the look, a voice) and turns them into dated steps in My plan. Tick steps as you finish them.'],
-      ['certificate', 'Learn the rules', 'Certification 101 explains the courses, the exam, the 12 months of experience and who does what.'],
-      ['book', 'Study a little every day', 'Lessons are about ten minutes each. Tap any word with a dotted underline to see what it means.'],
-      ['volume', 'Listen instead of reading', 'Every lesson, card and question has a Listen button. It works without the internet.'],
-      ['quiz', 'Practice like the real exam', 'Practice test explains every answer. The exam simulator is timed and mixed like CON 3990V.'],
-      ['cards', 'Drill what you must memorize', 'Flashcards bring back what you miss. Start with the FAR part titles.'],
-      ['search', 'Find anything', 'Press / or the Search button, then type a word, an acronym or a course number.']
-    ];
-    root.appendChild(h('div.callout.brass.mb-4', {}, icon('help'), h('div', {}, h('b', {}, 'New here?'), h('span', {}, 'A short tour points at each part of the guide and says what it is for. '),
-      h('div.row.mt-2', {}, h('button.btn.sm.primary', { type: 'button', onclick: function () { if (CORB.tour) CORB.tour.start(); } }, icon('play'), 'Take the tour'), CORB.buddy ? h('button.btn.sm', { type: 'button', onclick: function () { CORB.buddy.open(); } }, icon('message'), 'Ask ' + CORB.buddy.name()) : null, h('a.btn.sm.ghost', { href: '#/about' }, icon('info'), 'About B2B Exam Prep')))));
-    root.appendChild(h('div.grid.cols-2.help-grid', {}, steps.map(function (s) { return h('div.card.tight.help-step', {}, h('div.help-icon', {}, icon(s[0])), h('div', {}, h('b', {}, s[1]), h('p.small.muted', {}, s[2]))); })));
-    root.appendChild(h('div.section-head', {}, h('h2', {}, 'Where your progress lives')));
-    root.appendChild(h('div.card', {}, CORB.ui.rich(
-      ed === 'web' ? 'Your ticks, scores and flashcard history stay in this browser on this device. Sign in to an account (below) to keep them in your account too and pick up on any device. Without one, nothing is sent anywhere. To move them to another device, use My data → Export, then Import on the other device.\n\nThis website updates itself: when the maintainer publishes a change, you get it the next time you open the guide with an internet connection.'
-        : ed === 'preview' ? 'This is a preview copy. Your progress stays in this browser only, and file downloads and printing are turned off here. For daily use, get the full copy from the maintainer or the website.'
-        : 'Your ticks, scores and flashcard history stay in this browser on this device. Nothing is sent anywhere.\n\nSome government computers erase browser data at restart. To keep your progress safe, use **Save progress** (top of the page, or My data) and pick this same B2B Exam Prep file. Your progress is then stored inside the file and comes back every time you open it.')));
-    if (ed === 'web' && CORB.account && CORB.account.ready()) {
-      root.appendChild(h('div.section-head', {}, h('h2', {}, 'Your account')));
-      root.appendChild(CORB.account.card());
+    var meta = CORB.meta(), ed = CORB.edition(), maint = CORB.ui.maintainer(), rows = [];
+    rows.push(row(h, icon, { icon: 'play', title: 'Take the tour', sub: 'A short walk through the app, one stop at a time', go: function () { if (CORB.tour) CORB.tour.start(); } }));
+    if (CORB.buddy) rows.push(row(h, icon, { icon: 'message', title: 'Ask ' + CORB.buddy.name(), sub: 'Type a question, get the answer from the guide', go: function () { CORB.buddy.open(); } }));
+    if (CORB.intro && CORB.intro.available()) rows.push(row(h, icon, { icon: 'play', title: 'Watch the intro', sub: CORB.intro.minutes() + ' minutes', go: function () { CORB.intro.play({ replay: true }); } }));
+    if (ed === 'web' && CORB.pwa && !CORB.pwa.isStandalone()) rows.push(row(h, icon, { icon: 'download', title: 'Install the app', sub: 'Its own icon, full screen, works with no signal', go: function () { CORB.pwa.showInstall(); } }));
+    if (maint) {
+      rows.push(row(h, icon, { icon: 'mail', title: 'Send feedback', sub: 'What helped, what confused you, what to add', href: CORB.ui.feedbackMailto('feedback') }));
+      rows.push(row(h, icon, { icon: 'alert', title: 'Report a problem', sub: 'Something wrong, broken or out of date', href: CORB.ui.feedbackMailto('problem') }));
     }
-    if (ed === 'web' && CORB.pwa) {
-      root.appendChild(h('div.section-head', {}, h('h2', {}, 'Install B2B Exam Prep as an app')));
-      root.appendChild(h('div.card', {}, CORB.pwa.isStandalone() ? h('div.stack', {}, h('p', {}, 'You are using the installed app. It works offline and updates itself.'),
-          CORB.intro && CORB.intro.available() ? h('div', {}, h('button.btn', { type: 'button', onclick: function () { CORB.intro.play({ replay: true }); } }, icon('play'), 'Watch the intro (' + CORB.intro.minutes() + ' minutes)')) : null) : h('div.stack', {},
-        h('p', {}, 'The installed app has its own icon, opens full screen without a browser bar, works with no signal, and updates itself.'),
-        h('div.row', {}, h('button.btn.primary', { type: 'button', onclick: function () { CORB.pwa.showInstall(); } }, icon('download'), 'Install the app'),
-          CORB.intro && CORB.intro.available() ? h('button.btn', { type: 'button', onclick: function () { CORB.intro.play({ replay: true }); } }, icon('play'), 'Watch the intro') : null),
-        h('ul.tips', {}, h('li', {}, 'Android: Chrome installs it with one tap. Samsung Internet and other browsers hand the page to Chrome, because the copy they build is blocked by Google Play Protect on newer phones: choose Chrome in the list that appears.'),
-          h('li', {}, 'iPhone or iPad: Share → Add to Home Screen → Add. Apple allows no install button; the three taps work in Safari and, since iOS 16.4, in Chrome and the other iPhone browsers.'),
-          h('li', {}, 'Computer: Edge or Chrome, the install icon at the right end of the address bar.')))));
-    }
-    if (ed === 'web') {
+    rows.push(row(h, icon, { icon: 'info', title: 'About ' + (meta.app_name || 'this guide'), sub: 'Version ' + meta.version + ' · who builds it, how it stays current, keyboard shortcuts', href: '#/about' }));
+    root.appendChild(h('div.card.flush.set-list', {}, rows));
+    if (maint) root.appendChild(h('p.tiny.muted.mt-3', {}, 'Feedback opens your email with the page and version filled in. If nothing opens, write to ', h('b', {}, maint.email), '.'));
+    if (meta.site_url && ed !== 'web') root.appendChild(h('div.mt-4', {}, CORB.ui.callout('brass', 'refresh', 'Is there a newer version?', h('span', {}, 'This copy was built ' + CORB.util.fmtDate((meta.built_on || '').slice(0, 10)) + '. The newest guide is always on the website: ', h('a', { href: meta.site_url, target: '_blank', rel: 'noopener' }, meta.site_url)))));
+    // ARCHIVED 19 Nov 2026 (the owner: accounts and the installed app come first). The offline file and the Word email
+    // package are still built and published; set "offline_copies": true in src/data/meta.json to show this card again.
+    if (ed === 'web' && meta.offline_copies) {
       root.appendChild(h('div.section-head', {}, h('h2', {}, 'Copies for computers without internet')));
       root.appendChild(h('div.card', {}, h('p', {}, 'Some government networks block websites like this one. Download the single-file copy and share it on Teams or SharePoint, or use the Word package to send it by Army email (which blocks .html attachments).'),
         h('div.row.mt-3', {},
@@ -47,24 +37,18 @@
           h('a.btn', { href: 'downloads/B2B-Exam-Prep.html.docx', download: '' }, icon('file'), 'Email package: code document')),
         h('p.small.muted.mt-3', {}, 'A downloaded copy keeps the date it was built. When the guide changes, download it again.')));
     }
-    if (meta.site_url && ed !== 'web') root.appendChild(h('div.mt-4', {}, CORB.ui.callout('brass', 'refresh', 'Is there a newer version?', h('span', {}, 'This copy was built ' + CORB.util.fmtDate((meta.built_on || '').slice(0, 10)) + '. The newest guide is always on the website: ', h('a', { href: meta.site_url, target: '_blank', rel: 'noopener' }, meta.site_url)))));
-    var maint = CORB.ui.maintainer();
-    if (maint) {
-      root.appendChild(h('div.section-head', {}, h('h2', {}, 'Feedback')));
-      root.appendChild(h('div.card', {}, h('p', {}, 'Your feedback decides what changes next: what helped, what confused you, and anything that is wrong or out of date.'),
-        h('div.row.mt-3', {},
-          h('a.btn.primary', { href: CORB.ui.feedbackMailto('feedback') }, icon('mail'), 'Send feedback'),
-          h('a.btn', { href: CORB.ui.feedbackMailto('problem') }, icon('alert'), 'Report a problem')),
-        h('p.small.muted.mt-3', {}, 'The buttons open your email with questions filled in. If nothing opens, write to ', h('b', {}, maint.email), ' (', maint.name, ', ', maint.role.toLowerCase(), ').')));
-    }
-    root.appendChild(h('div.section-head', {}, h('h2', {}, 'Keyboard')));
-    root.appendChild(h('div.card.small', {}, h('div.row', {}, h('kbd', {}, '/'), 'Search'), h('div.row.mt-2', {}, h('kbd', {}, 'Esc'), 'Close a window'), h('div.row.mt-2', {}, h('kbd', {}, 'Space'), 'Flip a flashcard; ', h('kbd', {}, '1'), h('kbd', {}, '2'), h('kbd', {}, '3'), ' grade it'),
-      h('div.row.mt-2', {}, h('kbd', {}, '1'), '–', h('kbd', {}, '4'), ' answer a practice question; ', h('kbd', {}, 'Enter'), ' or ', h('kbd', {}, '→'), ' next question; in the exam simulator ', h('kbd', {}, '←'), ' back and ', h('kbd', {}, 'F'), ' flag')));
   }
 
   function profile(root, h, icon) {
+    var ed = CORB.edition(), st = CORB.store, acct = ed === 'web' && CORB.account && CORB.account.ready();
+    // the account comes first: it is how progress follows a reader to another phone or computer
+    if (acct) { root.appendChild(h('div.section-head.set-first', {}, h('h2', {}, 'Your account'))); root.appendChild(CORB.account.card()); }
+    if (st.available === false) root.appendChild(h('div.mt-4', {}, CORB.ui.callout('warn', 'alert', 'This browser is not keeping your progress', acct ? 'It blocks storage, so progress lasts only until you close the page. Sign in to an account to keep it.' : 'It blocks storage, so progress lasts only until you close the page.' + (ed === 'offline' ? ' Use Save progress into this file, below.' : ''))));
     var f = CORB.setupForm();
+    if (acct) root.appendChild(h('div.section-head', {}, h('h2', {}, 'About you')));
     root.appendChild(h('div.card', {}, f.el, h('div.row.mt-5', {}, h('button.btn.primary', { type: 'button', onclick: function () { if (f.save()) { CORB.ui.toast('Profile saved. Your plan dates moved to match.', 'ok'); CORB.render(); } } }, icon('save'), 'Save'))));
+    if (ed === 'offline') keepInFile(root, h, icon);
+    startOver(root, h, icon);
   }
 
   var SAMPLE = 'Hi, this is how B2B Exam Prep sounds.\nWho can bind the Government to a contract? Only the contracting officer, the KO.\nBelow the micro-purchase threshold, $15,000, you can buy without competitive quotes, as long as the price is reasonable.\nReady when you are.';
@@ -166,33 +150,39 @@
         h('li', {}, h('b', {}, 'Mac: '), 'System Settings → Accessibility → Spoken Content → System voice → Manage Voices → download an Enhanced voice.'))) : null));
   }
 
-  function data(root, h, icon) {
-    var ed = CORB.edition(), st = CORB.store;
-    root.appendChild(h('div.card.stack', {}, h('h3', {}, 'Your progress'),
-      h('p', {}, st.available === false ? 'This browser is blocking storage, so progress lasts only until you close the page. Use Save progress into this file or Export.' : 'Saved automatically in this browser on this device.'),
-      ed === 'offline' ? h('div.stack.tight', {}, h('p.small.muted', {}, 'Government computers often clear browser data at restart. Saving into the file keeps your progress inside B2B Exam Prep itself.'),
-        h('div', {}, h('button.btn.primary', { type: 'button', onclick: function () { CORB.saveProgressToFile(); } }, icon('save'), 'Save progress into this file')),
-        st.fileStamp ? h('p.tiny.muted', {}, 'Last saved into the file: ' + CORB.util.fmtDateTime(st.fileStamp)) : null) : null));
-    var file = h('input', { type: 'file', accept: '.json,application/json', hidden: true });
+  // The offline file only (no accounts there): government computers often clear browser data, so the file itself holds
+  // the progress; moving it to another computer is the folded export and import. On the website an account does both.
+  function keepInFile(root, h, icon) {
+    var st = CORB.store, file = h('input', { type: 'file', accept: '.json,application/json', hidden: true });
     file.addEventListener('change', function () { var f = file.files && file.files[0]; if (!f) return; st.importProgress(f).then(function () { CORB.ui.toast('Progress imported', 'ok'); CORB.render(); }).catch(function (e) { CORB.ui.toast(e.message || 'Import failed', 'danger', 5000); }); });
-    root.appendChild(h('div.card.stack.mt-4', {}, h('h3', {}, 'Move to another device'),
-      h('p.small.muted', {}, 'Export makes a small file with your progress. Import it on another computer or phone.'),
-      h('div.row', {}, CORB.can('download') ? h('button.btn', { type: 'button', onclick: function () { var n = st.exportProgress(); if (n) CORB.ui.toast('Saved ' + n, 'ok'); } }, icon('download'), 'Export progress') : null,
-        h('button.btn', { type: 'button', onclick: function () { file.click(); } }, icon('upload'), 'Import progress'), file)));
-    root.appendChild(h('div.card.stack.mt-4', {}, h('h3', {}, 'Start over'),
-      h('div.row', {},
-        h('button.btn.danger', { type: 'button', onclick: function () { CORB.ui.confirm('Clear all ticks, scores and flashcard history? Your profile and plan dates stay.', { ok: 'Clear progress', danger: true }).then(function (ok) { if (ok) { st.resetProgress(); CORB.ui.toast('Progress cleared'); CORB.render(); } }); } }, icon('trash'), 'Clear progress'),
-        h('button.btn.danger', { type: 'button', onclick: function () { CORB.ui.confirm('Erase everything, including your profile? The guide will start fresh.', { ok: 'Erase everything', danger: true }).then(function (ok) { if (ok) { st.resetAll(); CORB.go('home'); CORB.render(); } }); } }, icon('trash'), 'Erase everything'))));
+    root.appendChild(h('div.section-head', {}, h('h2', {}, 'Your progress')));
+    root.appendChild(h('div.card.stack', {},
+      h('p', {}, 'Government computers often clear browser data at restart. Saving into the file keeps your progress inside B2B Exam Prep itself.'),
+      h('div', {}, h('button.btn.primary', { type: 'button', onclick: function () { CORB.saveProgressToFile(); } }, icon('save'), 'Save progress into this file')),
+      st.fileStamp ? h('p.tiny.muted', {}, 'Last saved into the file: ' + CORB.util.fmtDateTime(st.fileStamp)) : null,
+      h('details.inst-more', {}, h('summary', {}, 'Move it to another computer'),
+        h('p.small.muted', {}, 'Export makes a small file with your progress. Import it in the copy on the other computer.'),
+        h('div.row.mt-2', {}, CORB.can('download') ? h('button.btn.sm', { type: 'button', onclick: function () { var n = st.exportProgress(); if (n) CORB.ui.toast('Saved ' + n, 'ok'); } }, icon('download'), 'Export progress') : null,
+          h('button.btn.sm', { type: 'button', onclick: function () { file.click(); } }, icon('upload'), 'Import progress'), file))));
+  }
+  function startOver(root, h, icon) {
+    var st = CORB.store;
+    root.appendChild(h('details.acc.mt-5.set-over', {}, h('summary', {}, icon('trash'), h('span', {}, 'Start over'), icon('chevron', 'chev')),
+      h('div.acc-body', {}, h('p.small.muted', {}, 'Clear progress removes your ticks, scores and flashcard history and keeps your profile. Erase everything starts the guide fresh.'),
+        h('div.row.mt-3', {},
+          h('button.btn.danger', { type: 'button', onclick: function () { CORB.ui.confirm('Clear all ticks, scores and flashcard history? Your profile and plan dates stay.', { ok: 'Clear progress', danger: true }).then(function (ok) { if (ok) { st.resetProgress(); CORB.ui.toast('Progress cleared'); CORB.render(); } }); } }, icon('trash'), 'Clear progress'),
+          h('button.btn.danger', { type: 'button', onclick: function () { CORB.ui.confirm('Erase everything, including your profile? The guide will start fresh.', { ok: 'Erase everything', danger: true }).then(function (ok) { if (ok) { st.resetAll(); CORB.go('home'); CORB.render(); } }); } }, icon('trash'), 'Erase everything')))));
   }
 
   CORB.registerView({ id: 'settings', title: 'Settings & help', section: 'Help', icon: 'settings', nav: true, order: 130,
-    blurb: 'Help, display, read-aloud, your data, feedback', keywords: 'help settings text size dark mode night read aloud voice export import save progress reset feedback install app update version about',
+    blurb: 'Your profile and account, display, read-aloud and help', keywords: 'help settings profile account sign in text size dark mode night theme read aloud voice start over reset feedback install app tour version about',
     render: function (root, ctx) {
-      var h = CORB.ui.h, icon = CORB.ui.icon, tab = ctx.params.tab || 'help';
+      var h = CORB.ui.h, icon = CORB.ui.icon, tab = ctx.params.tab || 'profile';
+      if (tab === 'data') tab = 'profile';   // My data is gone (19 Nov 2026): the account, or the offline file's own save, is on My profile
       if (tab === 'about') { location.replace('#/about'); return; }   // About has its own page now; old links still work
       root.appendChild(CORB.ui.pageHead({ title: 'Settings & help' }));
       root.appendChild(h('div.tabs', { role: 'tablist' }, TABS.map(function (t) { return h('button' + (t[0] === tab ? '.on' : ''), { type: 'button', role: 'tab', 'aria-selected': t[0] === tab ? 'true' : 'false', onclick: function () { CORB.go('settings', { tab: t[0] }); } }, t[1]); })));
       var body = h('div'); root.appendChild(body);
-      ({ help: help, profile: profile, display: display, data: data }[tab] || help)(body, h, icon);
+      ({ help: help, profile: profile, display: display }[tab] || profile)(body, h, icon);
     } });
 })();

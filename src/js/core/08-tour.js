@@ -91,8 +91,8 @@
       { title: 'About and feedback', target: function () { return side(navItem('about')); },
         text: 'About tells you who builds this guide and how it stays current. Send feedback or report a problem from there.' },
       { title: 'Keep your progress', target: function () { var b = q('.topbar .save-btn'); return shown(b) ? b : side(navItem('settings')); },
-        text: ed === 'offline' ? 'Your progress lives in this browser. Save progress stores it inside the B2B Exam Prep file, so a restart or a cleared browser cannot erase it. Settings & help can also export it.'
-          : ed === 'web' ? 'Your progress saves on this device by itself. To keep it in an account and continue on any phone or computer, sign in under Settings & help (optional).'
+        text: ed === 'offline' ? 'Your progress lives in this browser. Save progress stores it inside the B2B Exam Prep file, so a restart or a cleared browser cannot erase it. Settings & help, My profile, can also export it.'
+          : ed === 'web' ? 'Your progress saves on this device by itself. To keep it and continue on any phone or computer, sign in to a free account: the button at the top, or Settings & help.'
           : 'In this preview, progress stays in this browser only. Use the downloaded file or the website to keep it.' },
       { title: 'You are set', view: 'home', target: homeTarget,
         text: 'Start with this week\'s tasks. The ? button at the top of any page brings this tour back.' }

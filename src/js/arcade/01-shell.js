@@ -231,6 +231,7 @@
       if (bw / bh > hi) bw = bh * hi; else if (bw / bh < lo) bh = bw / lo;
       box.style.width = Math.floor(bw) + 'px'; box.style.height = Math.floor(bh) + 'px';
       box.classList.toggle('ar-tight', bh < 360);   // a short stage (a small phone held upright): the pause cards tighten
+      box.classList.toggle('ar-framed', bw < aw - 6 || bh < ah - 6);   // the picture does not reach the stage's edges: frame it, so it reads as a screen and not as cut off
       var k = Math.max(bw / 960, bh / 900, 1); if (bw / k < 360) k = bw / 360;
       var W = Math.round(bw / k), H = Math.round(bh / k), dpr = Math.min(2, window.devicePixelRatio || 1);
       var cw = Math.max(1, Math.round(bw * dpr)), ch = Math.max(1, Math.round(bh * dpr)), resized = canvas.width !== cw || canvas.height !== ch;
@@ -251,6 +252,19 @@
     var ro = null;
     if (window.ResizeObserver) { ro = new ResizeObserver(function () { fit(); }); ro.observe(stage); }
     window.addEventListener('resize', fit);
+    // a wide window (a laptop browser, a tablet or a phone held sideways): the answers sit beside the picture, not under it.
+    // Under it they took the height, and the picture shrank to a strip with empty bars at its sides (a browser window is
+    // shorter than the installed app's). The stage's own observer refits the picture when the layout flips.
+    // A laptop or a sideways phone (1.6 to 1 and wider) always; a sideways tablet (1.2 to 1.6) only for a list of four or
+    // more answers, because a short tool row under a wide picture suits it better there (Fire Mission).
+    function layout() {
+      var w = window.innerWidth, hh = window.innerHeight, r = w / hh;
+      var wide = !choicesEl.hidden && w >= 720 && (r >= 1.6 || (r >= 1.2 && optsEl.children.length >= 4));
+      if (playEl.classList.contains('ar-wide') !== wide) playEl.classList.toggle('ar-wide', wide);
+    }
+    var mo = null;
+    if (window.MutationObserver) { mo = new MutationObserver(layout); mo.observe(choicesEl, { attributes: true, attributeFilter: ['hidden'] }); mo.observe(optsEl, { childList: true }); }
+    window.addEventListener('resize', layout); layout();
 
     // a run that ends out of lives still landed what it landed: a game with a mission count sets api.partial
     function partial() { try { return typeof api.partial === 'function' ? api.partial() : undefined; } catch (e) { return undefined; } }
@@ -605,7 +619,7 @@
     state.cleanup = function () {
       state.ended = true; cancelAnimationFrame(raf); clearInterval(cd); clearTimeout(hint._t);
       document.removeEventListener('keydown', onKeyDown, true); document.removeEventListener('keyup', onKeyUp, true);
-      window.removeEventListener('resize', fit); document.removeEventListener('visibilitychange', onVis); if (ro) ro.disconnect();
+      window.removeEventListener('resize', fit); window.removeEventListener('resize', layout); document.removeEventListener('visibilitychange', onVis); if (ro) ro.disconnect(); if (mo) mo.disconnect();
       try { inst.destroy && inst.destroy(); } catch (e) {}
       if (A.GL && A.GL.onLost === onLost) A.GL.onLost = null;
       if (A.GL && A.GL.onFail === onFail) A.GL.onFail = null;

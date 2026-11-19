@@ -99,7 +99,7 @@
 
   function works(h) {
     var ed = CORB.edition();
-    var where = ed === 'web' ? 'Your ticks, scores and flashcard history stay in this browser on this device. To move them, use Settings & help → My data → Export, then Import on the other device.'
+    var where = ed === 'web' ? 'Your ticks, scores and flashcard history stay in this browser on this device. Sign in to a free account to keep them and pick up on any phone or computer.'
       : ed === 'preview' ? 'In this preview your progress stays in this browser only, and downloads and printing are off. Use the offline file or the website to keep your progress.'
       : 'Your ticks, scores and flashcard history stay in this browser. Save progress stores them inside the B2B Exam Prep file itself, so a computer restart or a cleared browser cannot erase them.';
     return section('works', 'How it works', h('div.ab-works', {},

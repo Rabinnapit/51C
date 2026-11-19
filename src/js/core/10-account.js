@@ -348,10 +348,10 @@
         box.appendChild(h('div.row.mt-3', {}, h('button.btn.sm.primary', { type: 'button', onclick: acct.openMenu }, icon('user'), 'Your account')));
         return;
       }
-      box.appendChild(h('p', {}, 'Optional. Create a free account to save your progress, then pick up where you left off on any phone or computer. Without one, your progress stays on this device only.'));
+      box.appendChild(h('p', {}, 'Create a free account and your progress follows you to any phone or computer. Without one, it stays on this device only.'));
       box.appendChild(h('div.row', {}, h('button.btn.primary', { type: 'button', onclick: function () { acct.openSignUp(); } }, icon('plus'), 'Create account'),
         h('button.btn', { type: 'button', onclick: function () { acct.openSignIn(); } }, icon('user'), 'Sign in')));
-      box.appendChild(h('p.tiny.muted', {}, 'Only your name, email address and progress are stored, with Supabase in the United States (with Google, also the profile picture link Google shares).'));
+      box.appendChild(h('p.tiny.muted.mt-3', {}, 'Only your name, email address and progress are stored, with Supabase in the United States (with Google, also the profile picture link Google shares).'));
     }
     draw();
     CORB.on('change', function (e) { var p = e && e.path; if ((p === 'account' || p === '*') && box.isConnected) draw(); });

@@ -433,8 +433,12 @@
           ctx.fillStyle = on ? c.color : '#2c3324'; ctx.beginPath(); ctx.arc(p.x, p.y, r, 0, Math.PI * 2); ctx.fill();
           ctx.strokeStyle = c.color; ctx.lineWidth = 3 * s; ctx.stroke();
           A.text(ctx, 'CP' + c.n, p.x, p.y + 5 * s, { size: 15 * s, fam: 'display', color: on ? '#10140c' : c.color, align: 'center' });
-          A.text(ctx, c.name, p.x, p.y + r + 22 * s, { size: 13 * s, fam: 'display', color: '#efe8d0', align: 'center' });
-          A.text(ctx, c.sub, p.x, p.y + r + 38 * s, { size: 11 * s, color: 'rgba(239,232,208,.7)', align: 'center' });
+          // each label is centred on its checkpoint but pulled in from the picture's edge: on a narrow phone the first
+          // and the last ("Guiding Principles", "All four exam areas") used to run off the left and the right
+          [[c.name, 22, { size: 13 * s, fam: 'display', color: '#efe8d0', align: 'center' }], [c.sub, 38, { size: 11 * s, color: 'rgba(239,232,208,.7)', align: 'center' }]].forEach(function (L) {
+            ctx.save(); ctx.font = A.font(L[2].size, L[2].fam || 'body'); var half = ctx.measureText(L[0]).width / 2 + 6; ctx.restore();
+            A.text(ctx, L[0], half * 2 >= W ? W / 2 : api.clamp(p.x, half, W - half), p.y + r + L[1] * s, L[2]);
+          });
         });
         ctx.save(); ctx.translate(W - 46 * s, 46 * s); ctx.fillStyle = 'rgba(230,220,180,.8)'; ctx.beginPath(); ctx.moveTo(0, -22 * s); ctx.lineTo(7 * s, 0); ctx.lineTo(0, 22 * s); ctx.lineTo(-7 * s, 0); ctx.closePath(); ctx.fill();
         A.text(ctx, 'N', 0, -28 * s, { size: 12 * s, fam: 'mono', color: 'rgba(230,220,180,.8)', align: 'center' }); ctx.restore();

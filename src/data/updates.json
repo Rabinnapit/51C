@@ -108,6 +108,12 @@
   ],
   "guide_changes": [
     {
+      "version": "0.33.0",
+      "date": "2026-11-19",
+      "title": "Simpler settings, and games that fill the window",
+      "notes": "Settings & help is shorter and reads like a phone's settings: My profile (your account first, then who you are), Display, and Help as a short list (the tour, Buddy, the intro, install, feedback, About). My data is gone: sign in to a free account and your progress follows you to any phone or computer. In a browser window the Arcade's games now use the space: on a computer, a tablet or a phone held sideways the answers sit beside the picture instead of under it, a phone browser keeps a taller picture, and Supply Line's map labels no longer run off the sides of a narrow phone."
+    },
+    {
       "version": "0.32.1",
       "date": "2026-11-18",
       "title": "The intro video's voice part, as before",
