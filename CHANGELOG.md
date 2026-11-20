@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.35.3 (20 November 2026): opens on a slow connection, and new CON 7300V dates
+
+The owner could not open the guide on any device on the morning of 20 November. The site was up and served 0.35.2 to
+every browser engine; the connection was the problem: about 1 Mbit/s to every host (Cloudflare's speed test included),
+so the 2 MB page (gzip) took 15 to 35 seconds. The installed app made it worse than it had to be.
+
+- **The installed app opens from its saved copy when the network is slow** (`src/web/sw.js`). Pages were network
+  first, and the saved copy was used only when the fetch failed outright, so the app waited for the whole page every
+  time it opened. Measured with a local server that sends the page at 125 KB/s: 36 s to open, and on a connection that
+  stalls after the headers it never opened (150 s). Now the network gets 3 seconds to deliver the whole page (not just
+  start it); after that the saved copy opens, and the new page is saved when it arrives (it opens next time, and the
+  app's update check offers it). Same test: 3.3 s slow, 3.3 s stalled (Chromium and WebKit), 0.3 s on a good
+  connection as before. A first visit has nothing saved and still waits for the page.
+- **An update downloads the page once, not twice**: the service worker saved it as both `./` and `index.html` (2 MB
+  each, gzip), so on a slow connection a new version took twice as long to arrive. It saves `./` only, and
+  `index.html` opens that. A phone with 0.35.2 installed still opens slowly once (its old service worker is in charge
+  until 0.35.3 has downloaded); after that it opens in about 3 seconds. Tested from 0.35.2 to 0.35.3 in Chromium and
+  WebKit: the update takes over, the old copy is dropped, and the app opens stalled (3.4 s) and offline (0.4 s).
+- **CON 7300V class list of 20 November 2026** (`data/classes.json`, from the owner's AITAS spreadsheet): 63 classes
+  from 8 December 2026 to 21 September 2027 in five time zones; 35 with open seats, the earliest Class 372 (Pacific,
+  2 February 2027, 5 seats, reservations close 27 January). New: Class 553 (Central, 2 March 2027, 36 seats). No longer
+  listed: the five classes starting 1 and 7 December (308, 309, 310, 311, 367). Seats or waits changed on 26 others
+  (552 and 339 are now full). The FAQ answer that quotes the list says 20 November; what it says still holds.
+
 ## 0.35.2 (20 November 2026): the intro video in phone size
 
 The intro is a recording of a 1920 x 1080 screen. In the player on a phone it is about 380 px wide, so a 16 px word on

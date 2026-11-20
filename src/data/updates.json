@@ -108,6 +108,12 @@
   ],
   "guide_changes": [
     {
+      "version": "0.35.3",
+      "date": "2026-11-20",
+      "title": "Opens on a slow connection, and new CON 7300V dates",
+      "notes": "The installed app now opens in about 3 seconds even on a slow or stalled connection: it uses the copy saved on your phone and downloads the update in the background. Before, it waited for the whole guide to download again, which on a slow connection took over half a minute, and on a stalled one never finished. Courses, CON 7300V: the class list from AITAS of 20 November 2026, 63 classes to September 2027; 35 had open seats, the earliest Class 372 (Pacific), starting 2 February 2027."
+    },
+    {
       "version": "0.35.2",
       "date": "2026-11-20",
       "title": "The intro video in phone size",
